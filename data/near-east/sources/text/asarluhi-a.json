@@ -1,0 +1,86 @@
+{
+ "slug": "asarluhi-a",
+ "source": "ETCSL",
+ "siglum": "ETCSL 4.01.1",
+ "source_url": "https://etcsl.orinst.ox.ac.uk/cgi-bin/etcsl.cgi?text=t.4.01.1",
+ "license": "ETCSL（Oxford）轉寫與英譯，非商業學術使用",
+ "compositions": [
+  {
+   "num": "4.01.1",
+   "title_en": "A hymn to Asarluḫi (Asarluḫi A)",
+   "segments": [
+    {
+     "ref": "1–11",
+     "orig": "[X X] /gibil{?}-la\\ [...]\ninim maḫ [...]\nid₂-lu₂-ru-gu₂ a-ra₂ maḫ [(X)] X AN [...]\nmu-še₃ mu-ri-in-/sa₄\\\nlu₂ zid kug-sig₁₇ mu-un-dadag-/ge\\-[en]\nlu₂-erim₂-e ud za-ḫa-al-e ba-ab-šum₂-/mu\\-[un]",
+     "orig_lines": [
+      "6",
+      "7",
+      "8",
+      "9",
+      "10",
+      "11"
+     ],
+     "en": "5 lines missing …… new ……. …… august words. Enki has named you with the name Id-lu-rugu (i.e. River of the ordeal, an epithet of Asarluḫi) , the sublime course ……. You cleanse the just man like gold, and you hand over the wicked to extinction."
+    },
+    {
+     "ref": "12–19",
+     "orig": "umuš ĝalga dim₂-ma ga zid-de₃-eš gu₇-a\ne-ne ad gal dug₄-dug₄\ngal-zu maḫ dumu-saĝ {d}en-ki-ke₄\n[...] u₃-tud kilib-ba-bi mu-e-šum₂-/mu\\\n{d}asar-lu₂-ḫi ĝeštug₂ /bad\\ a-a-ni-gin₇ gal-[zu]\nigi-ĝal₂-tuku niĝ₂-nam buru₃-buru₃-e e-ne-/ra niĝ₂-nam\\ [...]\nnir-ĝal₂ dumu abzu{!} ĝeštug₂ kug šu du₇ {d}/marduk\\ ĝalga tum₂\nalan maḫ an ki-a me niĝ₂-nam-ma igi zu-zu",
+     "orig_lines": [
+      "12",
+      "13",
+      "14",
+      "15",
+      "16",
+      "17",
+      "18",
+      "19"
+     ],
+     "en": "Nourished on the good milk of intelligence, advice and reason, his voice resounds loudly. August sage, firstborn son of Enki, he gives …… to all who are born. Profoundly intelligent, as wise as his father, possessed of understanding, Asarluḫi penetrates everything. Nothing …… him. Lordly son of the abzu, endowed with holy wisdom, he is Marduk, the bringer of counsel. Tall in stature, he can survey all the divine powers of heaven and earth."
+    },
+    {
+     "ref": "20–28",
+     "orig": "dumu ĝeštug₂ daĝal šu du₇ a-ra₂ si gal gi ḫal-ḫal-la-ke₄\n{d}asar-lu₂-ḫi uru₅ maḫ nam gal tar-re\nšu bar a-ra₂ niĝ₂-nam nu-zu-zu\nan gal an ki-še₃ me ba-a\nmu₇-mu₇ mu-e-šub-eš\ndiĝir igi sag₉ igi ni₁₀-ni₁₀ nam-lu₂-ulu₃\nulutim₂ ḫi-li sud tibira{ra} gal-an-zu kiĝ₂ gal-le ak\nad gal di-kud eš₃ maḫ-a inim-ma nu-kam₃-me\na-ra₂-ni maḫ šir₃-ra-ni ga-am₃-ed₃ mu-ni pa ga-am₃-e₃",
+     "orig_lines": [
+      "20",
+      "21",
+      "22",
+      "23",
+      "24",
+      "25",
+      "26",
+      "27",
+      "28"
+     ],
+     "en": "Son endowed with a broad understanding, whose movement is that of an animal with large horns in the split reeds; Asarluḫi, mighty deluge determining great fates, unleashed and knowing no course whatsoever! When great An shared out the divine powers for heaven and earth, incantations fell to your lot. Scanning all mankind with a glance, god of benign features, with an attractive physique; most skilled metalworker, creating masterpieces; counsellor and judge, whose word in the august sanctuary is unalterable and whose character is sublime: I shall exalt him in song and glorify his name."
+    },
+    {
+     "ref": "29–36",
+     "orig": "saĝ gun₃-gun₃-nu abzu{!} sukkal-maḫ eridug{ki}-ga\n{d}asar-lu₂-ḫi nir-ĝal₂\n/enkum\\ ninkum\n/abgal\\ abrig₂ MUNUS.LAGAR.BAD MUNUS.LAGAR.ME EN X X X [...]\nka kug ba-a-zu igi-bi ḫu-mu-un-/ši\\-[ĝal₂]\nud šu₂-uš-e e₃-bi za-ra ḫu-mu-ra-an-sig₁₀-/ga₁₄\\\nšu sikil ĝiri₃ sikil niĝ₂-nam kug-ku₃-ug šu-luḫ dadag-ga\nnam-šita₄ e₂-abzu zu₂ keše₂-bi za-e-me-en",
+     "orig_lines": [
+      "29",
+      "30",
+      "31",
+      "32",
+      "33",
+      "34",
+      "35",
+      "36"
+     ],
+     "en": "Eloquent one of the abzu, great minister of Eridug, lordly Asarluḫi! The enkum and ninkum priests, the abgal and abrig priests, the …… priestesses and the …… all pay attention when you open your holy mouth. Daily as they go forth, they circumambulate (?) you. Cleansing the purification rites with pure hands and pure tread, holy in every respect, you are the supervisor of the purification priests of E-abzu."
+    },
+    {
+     "ref": "37–41",
+     "orig": "kuara{ki} iri ki aĝ₂ šag₄-ge pad₃-da-zu\nḫul₂-la ḫu-mu-u₈-da-an-tuš\n{d}asar-lu₂-ḫi nun šag₄ daĝal mu-še₃ mu-ri-/in\\-[sa₄]\nmuš₂-bi-še₃ MI NI bi₂-in-ak{?}\n[...]-/ba\\-an nam-nin-e [...]",
+     "orig_lines": [
+      "37",
+      "38",
+      "39",
+      "40",
+      "41"
+     ],
+     "en": "Kuara, the beloved city which you have chosen in your heart, lives in joy because of you. The generous-hearted Prince (Enki) named you with the name Asarluḫi. 2 lines unclear or fragmentary up to 5 lines missing"
+    }
+   ]
+  }
+ ]
+}

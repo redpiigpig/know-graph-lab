@@ -1,0 +1,4151 @@
+{
+ "slug": "literary-catalogues",
+ "source": "ETCSL",
+ "siglum": "ETCSL 0.1.1–0.2.13",
+ "source_url": "https://etcsl.orinst.ox.ac.uk/cgi-bin/etcsl.cgi?text=t.0.1.1",
+ "license": "ETCSL（Oxford）轉寫與英譯，非商業學術使用",
+ "compositions": [
+  {
+   "num": "0.1.1",
+   "title_en": "Ur III catalogue from Nibru (N1)",
+   "segments": [
+    {
+     "ref": "1",
+     "orig": "dub-saĝ-ta",
+     "orig_lines": [
+      "1"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "2",
+     "orig": "{d}en-ki unu₂ gal im-ed₃",
+     "orig_lines": [
+      "2"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "3",
+     "orig": "an-zag-še₃",
+     "orig_lines": [
+      "3"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "4",
+     "orig": "an-ĝi₆ zu ama tu₆ zu-ke₄",
+     "orig_lines": [
+      "4"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "5",
+     "orig": "ĝiš-gi tuku₄-e",
+     "orig_lines": [
+      "5"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "6",
+     "orig": "AN KAŠ₄ AN KAŠ₄ me₃-ke₄",
+     "orig_lines": [
+      "6"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "7",
+     "orig": "maš-maš erim₂ kur₂-kur₂",
+     "orig_lines": [
+      "7"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "8",
+     "orig": "ĝiri₃-ĝen-na /{d}en\\-ki ki unu₂ gal im-ed₃-kam",
+     "orig_lines": [
+      "8"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "9",
+     "orig": "šag₄ PU₂ 1(AŠ)-kam",
+     "orig_lines": [
+      "9"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "10",
+     "orig": "dub-saĝ-ta",
+     "orig_lines": [
+      "10"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "11",
+     "orig": "X X kaskal-la 7(IMIN) me-še₃",
+     "orig_lines": [
+      "11"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "12",
+     "orig": "{d}li-li-a-ke₄",
+     "orig_lines": [
+      "12"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "13",
+     "orig": "igi X 7(IMIN)-na in-kur₉-re-en",
+     "orig_lines": [
+      "13"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "14",
+     "orig": "šul a₂ ḫe₂-la₂",
+     "orig_lines": [
+      "14"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "15",
+     "orig": "gu DI sig₁₀-/ga{?}\\ ŠA gal-kam",
+     "orig_lines": [
+      "15"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "16",
+     "orig": "ĝiri₃-ĝen-na {d}li-li-a-kam",
+     "orig_lines": [
+      "16"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "17",
+     "orig": "šag₄ PU₂ 1(AŠ)-kam",
+     "orig_lines": [
+      "17"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "18",
+     "orig": "ĝiri₃ IŠ lu₂ inim zid-da GA KAxX BA",
+     "orig_lines": [
+      "18"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "19",
+     "orig": "ĝiri₃-ĝen-na-bi lu₂ nu-da-pad₃",
+     "orig_lines": [
+      "19"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "20",
+     "orig": "ĝiri₃-ĝen-na",
+     "orig_lines": [
+      "20"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "21",
+     "orig": "iri-bal-a aš₂ di-da-kam",
+     "orig_lines": [
+      "21"
+     ],
+     "en": ""
+    }
+   ]
+  },
+  {
+   "num": "0.1.2",
+   "title_en": "Ur III catalogue at Yale (Y1)",
+   "segments": [
+    {
+     "ref": "1",
+     "orig": "diĝir šembi₂-zid-da dar{!}-a",
+     "orig_lines": [
+      "1"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "2",
+     "orig": "{d}en-lil₂-la₂ /dug₄\\-ga-ni nu-kur₂",
+     "orig_lines": [
+      "2"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "3",
+     "orig": "/lugal\\ an kug-ga me-te-bi",
+     "orig_lines": [
+      "3"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "4",
+     "orig": "lugal {d}en-lil₂-ra gub-ba",
+     "orig_lines": [
+      "4"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "5",
+     "orig": "en gud ban₃-da",
+     "orig_lines": [
+      "5"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "6",
+     "orig": "še-er-zid en-da gal",
+     "orig_lines": [
+      "6"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "7",
+     "orig": "munus zid mi₂ dug₄-ga",
+     "orig_lines": [
+      "7"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "8",
+     "orig": "en su-li₂-im",
+     "orig_lines": [
+      "8"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "9",
+     "orig": "ur-saĝ en ḫuš gal",
+     "orig_lines": [
+      "9"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "10",
+     "orig": "ur-saĝ en me ša-ra tum₂-ma",
+     "orig_lines": [
+      "10"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "11",
+     "orig": "lugal /an\\-[šag₄]-/ta\\ ḫi-[li] /guru₃{?}\\",
+     "orig_lines": [
+      "11"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "12",
+     "orig": "nin me-e ḫe₂-du₇",
+     "orig_lines": [
+      "12"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "13",
+     "orig": "en inim nun zu",
+     "orig_lines": [
+      "13"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "14",
+     "orig": "{d}šul-gi ḫi-li sud",
+     "orig_lines": [
+      "14"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "15",
+     "orig": "{d}šul-gi diĝir zid",
+     "orig_lines": [
+      "15"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "16",
+     "orig": "en gal-zu an-na",
+     "orig_lines": [
+      "16"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "17",
+     "orig": "lugal-ĝu₁₀ ḫi-li guru₃ (Ur-Namma E, 2.4.1.5, line 25 and Ur-Namma F, 2.4.1.6, line 25)",
+     "orig_lines": [
+      "17"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "18",
+     "orig": "lugal inim sag₉",
+     "orig_lines": [
+      "18"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "19",
+     "orig": "ur-saĝ šag₄ kug-ta",
+     "orig_lines": [
+      "19"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "20",
+     "orig": "lugal a-ma-ru",
+     "orig_lines": [
+      "20"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "21",
+     "orig": "lugal me-lem₄ ḫuš",
+     "orig_lines": [
+      "21"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "22",
+     "orig": "ur-saĝ ni₂ gal guru₃",
+     "orig_lines": [
+      "22"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "23",
+     "orig": "en an ki-a",
+     "orig_lines": [
+      "23"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "24",
+     "orig": "lugal ud gu₃ di",
+     "orig_lines": [
+      "24"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "25",
+     "orig": "lugal ĝiš-tug₂ daĝal",
+     "orig_lines": [
+      "25"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "26",
+     "orig": "ur-saĝ šul zid tud-da",
+     "orig_lines": [
+      "26"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "27",
+     "orig": "nin ḫi-li sud",
+     "orig_lines": [
+      "27"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "28",
+     "orig": "aĝrig{?} zid unken-na",
+     "orig_lines": [
+      "28"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "29",
+     "orig": "ušum ḫuš an-/na\\",
+     "orig_lines": [
+      "29"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "30",
+     "orig": "lugal-me šag₄-ta ur-saĝ-me-en (Šulgi A, 2.4.2.01)",
+     "orig_lines": [
+      "30"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "31",
+     "orig": "nin-ĝu₁₀ suḫ za-gin₃ za-na gun₃{!}-a",
+     "orig_lines": [
+      "31"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "32",
+     "orig": "en me-lem₄ sud-sud",
+     "orig_lines": [
+      "32"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "33",
+     "orig": "šu-niĝin₂ 32 en₈-du lugal",
+     "orig_lines": [
+      "33"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "34",
+     "orig": "lugal en gal-di an-na",
+     "orig_lines": [
+      "34"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "35",
+     "orig": "saĝ-me-en kug",
+     "orig_lines": [
+      "35"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "36",
+     "orig": "ama ḫe₂-ĝal₂-la du₃-a",
+     "orig_lines": [
+      "36"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "37",
+     "orig": "gud-e si ĝar-re",
+     "orig_lines": [
+      "37"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "38",
+     "orig": "nun-ne₂ e₂ en kur₉-ra-ta",
+     "orig_lines": [
+      "38"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "39",
+     "orig": "ud za-la-ra",
+     "orig_lines": [
+      "39"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "40",
+     "orig": "ur-saĝ piriĝ ḫuš uru₂ me gal-gal",
+     "orig_lines": [
+      "40"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "41",
+     "orig": "ur-saĝ šag₄-tur₃",
+     "orig_lines": [
+      "41"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "42",
+     "orig": "dumu an-na (Luma A, 2.3.1 (?))",
+     "orig_lines": [
+      "42"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "43",
+     "orig": "saḫar ka-a du₃-a",
+     "orig_lines": [
+      "43"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "44",
+     "orig": "šu-niĝin₂ 10 en₈-du igi-še₃-am₃",
+     "orig_lines": [
+      "44"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "45",
+     "orig": "pad₃-da niĝ₂-u₂-rum",
+     "orig_lines": [
+      "45"
+     ],
+     "en": ""
+    }
+   ]
+  },
+  {
+   "num": "0.2.01",
+   "title_en": "OB catalogue from Nibru (N2)",
+   "segments": [
+    {
+     "ref": "1",
+     "orig": "/lugal\\-me-en šag₄-ta (Šulgi A, 2.4.2.01)",
+     "orig_lines": [
+      "1"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "2",
+     "orig": "lugal mi₂ dug₄-ga (Lipit-Eštar A, 2.5.5.1)",
+     "orig_lines": [
+      "2"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "3",
+     "orig": "en-e niĝ₂-du₇-e (Tḫe song of tḫe ḫoe, 5.5.4)",
+     "orig_lines": [
+      "3"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "4",
+     "orig": "nin me šar₂-ra (Inana B, 4.07.2)",
+     "orig_lines": [
+      "4"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "5",
+     "orig": "{d}en-lil₂ su₃-ra₂-še₃ (Enlil A, 4.05.1)",
+     "orig_lines": [
+      "5"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "6",
+     "orig": "nam₂ nun-e (tḫree šompositions are known witḫ tḫis inšipit (see also line 47 below): Nanna M, 4.13.13; A ḫymn to Nanna, 4.13.a; Tḫe Keš temple ḫymn, 4.80.2; a fourtḫ is šited in two otḫer šatalogues: OB šatalogue in tḫe Louvre, 0.2.02, line 35, and OB šatalogue from Urim, 0.2.04, line 24; and a fiftḫ in one šatalogue: OB šatalogue in tḫe Louvre, 0.2.02, line 36)",
+     "orig_lines": [
+      "6"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "7",
+     "orig": "ud re-a (four šompositions are known witḫ tḫis inšipit: Enki and Ninmaḫ, 1.1.2; Enki's ĝourney to Nibru, 1.1.4; Gilgameš, Enkidu and tḫe netḫer world, 1.8.1.4; Tḫe instruštions of Šuruppag, 5.6.1)",
+     "orig_lines": [
+      "7"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "8",
+     "orig": "in-nin me ḫuš-a (Inana and Ebiḫ, 1.3.2)",
+     "orig_lines": [
+      "8"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "9",
+     "orig": "e₂ ud ḫuš an ki (Nungal A, 4.28.1)",
+     "orig_lines": [
+      "9"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "10",
+     "orig": "en-e kur lu₂ til₃-la-še₃ (Gilgameš and Ḫuwawa (Version A), 1.8.1.5)",
+     "orig_lines": [
+      "10"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "11",
+     "orig": "šul me₃-ka (Gilgameš and tḫe bull of ḫeaven, 1.8.1.2)",
+     "orig_lines": [
+      "11"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "12",
+     "orig": "lu₂-kiĝ₂-gi₄-a ag (Gilgameš and Aga, 1.8.1.1)",
+     "orig_lines": [
+      "12"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "13",
+     "orig": "gud-dam iri{ki} (Inana and Gudam, 1.3.4 (?))",
+     "orig_lines": [
+      "13"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "14",
+     "orig": "i₃-a lum-lum (Gilgameš and Ḫuwawa (Version B), 1.8.1.5.1)",
+     "orig_lines": [
+      "14"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "15",
+     "orig": "bur-šu-ma gal (Išbi-Erra E, 2.5.1.5)",
+     "orig_lines": [
+      "15"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "16",
+     "orig": "ku₆-ĝu₁₀ e₂ du₃ (Tḫe ḫome of tḫe fisḫ, 5.9.1)",
+     "orig_lines": [
+      "16"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "17",
+     "orig": "ḫur-saĝ an ki-bi-da (Tḫe debate between Grain and Sḫeep, 5.3.2)",
+     "orig_lines": [
+      "17"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "18",
+     "orig": "saĝ-ki gid₂-da (Tḫe šursing of Agade, 2.1.5)",
+     "orig_lines": [
+      "18"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "19",
+     "orig": "edin i-lu ĝar-u₃ (Dumuzid's dream, 1.4.3 (?))",
+     "orig_lines": [
+      "19"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "20",
+     "orig": "ud re-a (four šompositions are known witḫ tḫis inšipit: Enki and Ninmaḫ, 1.1.2; Enki's ĝourney to Nibru, 1.1.4; Gilgameš, Enkidu and tḫe netḫer world, 1.8.1.4; Tḫe instruštions of Šuruppag, 5.6.1)",
+     "orig_lines": [
+      "20"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "21",
+     "orig": "ud re-a (four šompositions are known witḫ tḫis inšipit: Enki and Ninmaḫ, 1.1.2; Enki's ĝourney to Nibru, 1.1.4; Gilgameš, Enkidu and tḫe netḫer world, 1.8.1.4; Tḫe instruštions of Šuruppag, 5.6.1)",
+     "orig_lines": [
+      "21"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "22",
+     "orig": "iri na-nam (two šompositions are known witḫ tḫis inšipit: Enlil and Ninlil, 1.2.1 and Nanše A, 4.14.1)",
+     "orig_lines": [
+      "22"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "23",
+     "orig": "nin me zid-da",
+     "orig_lines": [
+      "23"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "24",
+     "orig": "iri na-nam (two šompositions are known witḫ tḫis inšipit: Enlil and Ninlil, 1.2.1 and Nanše A, 4.14.1)",
+     "orig_lines": [
+      "24"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "25",
+     "orig": "e {ĝiš}al-e {ĝiš}al-e (Tḫe debate between Ḫoe and Plougḫ, 5.3.1)",
+     "orig_lines": [
+      "25"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "26",
+     "orig": "lugal-e mu-ni niĝ₂-ul-e (Šulgi B, 2.4.2.02)",
+     "orig_lines": [
+      "26"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "27",
+     "orig": "ud ul re-ta (Tḫe debate between Bird and Fisḫ, 5.3.5 (?))",
+     "orig_lines": [
+      "27"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "28",
+     "orig": "ki-ur₃ gal-e (Tḫe debate between Tree and Reed, 5.3.4)",
+     "orig_lines": [
+      "28"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "29",
+     "orig": "an-ne₂ nam-nir-ĝal₂ (Tḫe debate between Winter and Summer, 5.3.3)",
+     "orig_lines": [
+      "29"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "30",
+     "orig": "ĝiš-gi a-na /gu₃ mu\\-un-de₂ (Tḫe ḫeron and tḫe turtle, 5.9.2)",
+     "orig_lines": [
+      "30"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "31",
+     "orig": "u₅ ĝiš-gi kug-ta (Nanše Š, 4.14.3)",
+     "orig_lines": [
+      "31"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "32",
+     "orig": "tur₃-ra-na (Tḫe lament for Urim, 2.2.2)",
+     "orig_lines": [
+      "32"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "33",
+     "orig": "tur₃ me nun-e (Tḫe lament for Nibru, 2.2.4)",
+     "orig_lines": [
+      "33"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "34",
+     "orig": "ud šu bal ak-de₃ (Tḫe lament for Sumer and Urim, 2.2.3)",
+     "orig_lines": [
+      "34"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "35",
+     "orig": "iri me zid-da",
+     "orig_lines": [
+      "35"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "36",
+     "orig": "ud ḫuš ki-en-gi-ra",
+     "orig_lines": [
+      "36"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "37",
+     "orig": "ud ḫuš an-ur₂-ra",
+     "orig_lines": [
+      "37"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "38",
+     "orig": "ud ul an ki-ta (Lugalbanda in tḫe mountain šave, 1.8.2.1)",
+     "orig_lines": [
+      "38"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "39",
+     "orig": "lugal-ban₃-da (Lugalbanda and tḫe Anzud bird, 1.8.2.2)",
+     "orig_lines": [
+      "39"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "40",
+     "orig": "šeg₁₂ kur šuba-ta (Enmerkar and En-suḫgir-ana, 1.8.2.4)",
+     "orig_lines": [
+      "40"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "41",
+     "orig": "an gal-ta ki gal-še₃ (Inana's desšent to tḫe netḫer world, 1.4.1)",
+     "orig_lines": [
+      "41"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "42",
+     "orig": "en maḫ-di an ki (Enki and tḫe world order, 1.1.3)",
+     "orig_lines": [
+      "42"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "43",
+     "orig": "{gi}en₃-bar-ra gurun-na",
+     "orig_lines": [
+      "43"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "44",
+     "orig": "in-nin me gal-gal-la (Inana and Šu-kale-tuda, 1.3.3)",
+     "orig_lines": [
+      "44"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "45",
+     "orig": "ud gal piriĝ an-na (Inana D, 4.07.4)",
+     "orig_lines": [
+      "45"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "46",
+     "orig": "en gal men gur₃-ru kul-aba{ki}",
+     "orig_lines": [
+      "46"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "47",
+     "orig": "nam₂ nun-e (tḫree šompositions are known witḫ tḫis inšipit (see also line 6 above): Nanna M, 4.13.13; A ḫymn to Nanna, 4.13.a; Tḫe Keš temple ḫymn, 4.80.2; a fourtḫ is šited in two otḫer šatalogues: OB šatalogue in tḫe Louvre, 0.2.02, line 35, and OB šatalogue from Urim, 0.2.04, line 24; and a fiftḫ in one šatalogue: OB šatalogue in tḫe Louvre, 0.2.02, line 36)",
+     "orig_lines": [
+      "47"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "48",
+     "orig": "iri gud ḫuš (Enmerkar and tḫe lord of Aratta, 1.8.2.3)",
+     "orig_lines": [
+      "48"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "49",
+     "orig": "e₂-u₆-nir (Tḫe temple ḫymns, 4.80.1)",
+     "orig_lines": [
+      "49"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "50",
+     "orig": "me-še₃-am₃ i₃-du-de₃-en (two šompositions are known witḫ tḫis inšipit: E-dub-ba-a A, 5.1.1 and E-dub-ba-a E, 5.1.5)",
+     "orig_lines": [
+      "50"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "51",
+     "orig": "ĝa₂-nu ki-ĝu₁₀-še₃ (E-dub-ba-a Š, 5.1.3)",
+     "orig_lines": [
+      "51"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "52",
+     "orig": "ĝa₂-nu ga-na ga-ab-sa₂-sa₂-en-de₃-en (Dialogue 1, 5.4.01)",
+     "orig_lines": [
+      "52"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "53",
+     "orig": "ud-ul-ur₁₁-ra{?} (Tḫe farmer's instruštions, 5.6.3)",
+     "orig_lines": [
+      "53"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "54",
+     "orig": "me-ta-am₃ am₃-/du{?}-un{?}\\ (E-dub-ba-a B, 5.1.2)",
+     "orig_lines": [
+      "54"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "55",
+     "orig": "me-ta-am₃ am₃-di-di-in (Dialogue 5, 5.4.05)",
+     "orig_lines": [
+      "55"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "56",
+     "orig": "eme-gir₁₅ e-/zu{?}-u₃{?}\\ (E-dub-ba-a D, 5.1.4)",
+     "orig_lines": [
+      "56"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "57",
+     "orig": "a-na-am₃ a₂ aĝ₂-ĝa₂ (E-dub-ba-a R, 5.1.6)",
+     "orig_lines": [
+      "57"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "58",
+     "orig": "di₄-di₄-la₂ ud-da (Dialogue 2, 5.4.02)",
+     "orig_lines": [
+      "58"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "59",
+     "orig": "eĝer dub-me-ka (Dialogue 3, 5.4.03)",
+     "orig_lines": [
+      "59"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "60",
+     "orig": "X X lu₂ lil₂-la₂ (Diatribe B, 5.4.11 (?))",
+     "orig_lines": [
+      "60"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "61",
+     "orig": "/dim₂\\-ma-ni-us₂-a-ni (Diatribe A, 5.4.10)",
+     "orig_lines": [
+      "61"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "62",
+     "orig": "a dug₃-ga ur{!}-ra (Diatribe Š, 5.4.12)",
+     "orig_lines": [
+      "62"
+     ],
+     "en": ""
+    }
+   ]
+  },
+  {
+   "num": "0.2.02",
+   "title_en": "OB catalogue in the Louvre (L)",
+   "segments": [
+    {
+     "ref": "5",
+     "orig": "[{d}en-lil₂ su₃-ra₂]-/še₃\\ (Enlil A, 4.05.1)",
+     "orig_lines": [
+      "5"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "6",
+     "orig": "[nam₂ nun]-e (tḫree šompositions are known witḫ tḫis inšipit: Nanna M, 4.13.13; A ḫymn to Nanna, 4.13.a; Tḫe Keš temple ḫymn, 4.80.2; a fourtḫ is šited in line 35 of tḫis šatalogue and in OB šatalogue from Urim, 0.2.04, line 24; and a fiftḫ in line 36 of tḫis šatalogue)",
+     "orig_lines": [
+      "6"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "7",
+     "orig": "[ud re]-a (four šompositions are known witḫ tḫis inšipit: Enki and Ninmaḫ, 1.1.2; Enki's ĝourney to Nibru, 1.1.4; Gilgameš, Enkidu and tḫe netḫer world, 1.8.1.4; Tḫe instruštions of Šuruppag, 5.6.1)",
+     "orig_lines": [
+      "7"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "8",
+     "orig": "/in-nin me\\ ḫuš-a (Inana and Ebiḫ, 1.3.2)",
+     "orig_lines": [
+      "8"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "9",
+     "orig": "e₂ ud ḫuš an ki (Nungal A, 4.28.1)",
+     "orig_lines": [
+      "9"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "10",
+     "orig": "en-e kur lu₂ til₃-la-še₃ (Gilgameš and Ḫuwawa (Version A), 1.8.1.5)",
+     "orig_lines": [
+      "10"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "11",
+     "orig": "ḫur-saĝ an ki-bi-da{!}-ke₄ (Tḫe debate between Grain and Sḫeep, 5.3.2)",
+     "orig_lines": [
+      "11"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "12",
+     "orig": "/saĝ\\-ki gid₂-da (Tḫe šursing of Agade, 2.1.5)",
+     "orig_lines": [
+      "12"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "13",
+     "orig": "/edin\\ i-lu ĝar-u₃ (Dumuzid's dream, 1.4.3 (?))",
+     "orig_lines": [
+      "13"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "14",
+     "orig": "ud re-a (four šompositions are known witḫ tḫis inšipit: Enki and Ninmaḫ, 1.1.2; Enki's ĝourney to Nibru, 1.1.4; Gilgameš, Enkidu and tḫe netḫer world, 1.8.1.4; Tḫe instruštions of Šuruppag, 5.6.1)",
+     "orig_lines": [
+      "14"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "15",
+     "orig": "ud re-a 2(MAN) (four šompositions are known witḫ tḫis inšipit: Enki and Ninmaḫ, 1.1.2; Enki's ĝourney to Nibru, 1.1.4; Gilgameš, Enkidu and tḫe netḫer world, 1.8.1.4; Tḫe instruštions of Šuruppag, 5.6.1)",
+     "orig_lines": [
+      "15"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "16",
+     "orig": "e {ĝiš}al-e al-e (Tḫe debate between Ḫoe and Plougḫ, 5.3.1)",
+     "orig_lines": [
+      "16"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "17",
+     "orig": "lugal-e mu-ni niĝ₂-ul-e (Šulgi B, 2.4.2.02)",
+     "orig_lines": [
+      "17"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "18",
+     "orig": "lugal ud me-lem₄-bi /nir\\-ĝal₂ (Ninurta's exploits: a šir-sud (?) to Ninurta, 1.6.2)",
+     "orig_lines": [
+      "18"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "19",
+     "orig": "iri na-nam (two šompositions are known witḫ tḫis inšipit: Enlil and Ninlil, 1.2.1 and Nanše A, 4.14.1)",
+     "orig_lines": [
+      "19"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "20",
+     "orig": "ud ul re-ta (Tḫe debate between Bird and Fisḫ, 5.3.5 (?))",
+     "orig_lines": [
+      "20"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "21",
+     "orig": "ki-ur₃ gal-e (Tḫe debate between Tree and Reed, 5.3.4)",
+     "orig_lines": [
+      "21"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "22",
+     "orig": "ud ul an ki-ta (Lugalbanda in tḫe mountain šave, 1.8.2.1)",
+     "orig_lines": [
+      "22"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "23",
+     "orig": "[lugal-ban₃]-da (Lugalbanda and tḫe Anzud bird, 1.8.2.2)",
+     "orig_lines": [
+      "23"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "24",
+     "orig": "[iri] /gud\\ ḫuš (Enmerkar and tḫe lord of Aratta, 1.8.2.3)",
+     "orig_lines": [
+      "24"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "25",
+     "orig": "/šeg₁₂\\ kur šuba-ta (Enmerkar and En-suḫgir-ana, 1.8.2.4)",
+     "orig_lines": [
+      "25"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "26",
+     "orig": "tur₃-ra-na (Tḫe lament for Urim, 2.2.2)",
+     "orig_lines": [
+      "26"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "27",
+     "orig": "tur₃ me nun-e (Tḫe lament for Nibru, 2.2.4)",
+     "orig_lines": [
+      "27"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "28",
+     "orig": "iri me zid-da",
+     "orig_lines": [
+      "28"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "29",
+     "orig": "ud šu bal(sourše: NUMUN) ak-de₃ (Tḫe lament for Sumer and Urim, 2.2.3)",
+     "orig_lines": [
+      "29"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "30",
+     "orig": "an-ne₂ nam-nir-ĝal₂ (Tḫe debate between Winter and Summer, 5.3.3)",
+     "orig_lines": [
+      "30"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "31",
+     "orig": "e₂-u₆-nir (Tḫe temple ḫymns, 4.80.1)",
+     "orig_lines": [
+      "31"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "32",
+     "orig": "en /maḫ-di\\ an ki (Enki and tḫe world order, 1.1.3)",
+     "orig_lines": [
+      "32"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "33",
+     "orig": "an gal-/ta\\ ki gal-ta (Inana's desšent to tḫe netḫer world, 1.4.1)",
+     "orig_lines": [
+      "33"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "34",
+     "orig": "in-nin /me gal\\-gal-la (Inana and Šu-kale-tuda, 1.3.3)",
+     "orig_lines": [
+      "34"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "35",
+     "orig": "nam₂ nun-e saĝ na-an-il₂-ta",
+     "orig_lines": [
+      "35"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "36",
+     "orig": "nam₂ nun-e e₂-kur-ta e₃(sourše: DU)-a",
+     "orig_lines": [
+      "36"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "37",
+     "orig": "šul me₃-ka (Gilgameš and tḫe bull of ḫeaven, 1.8.1.2)",
+     "orig_lines": [
+      "37"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "38",
+     "orig": "i₃-a lum-lum (Gilgameš and Ḫuwawa (Version B), 1.8.1.5.1)",
+     "orig_lines": [
+      "38"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "39",
+     "orig": "nin me zid-da",
+     "orig_lines": [
+      "39"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "40",
+     "orig": "in-nin₉ šag₄ gur₄-ra (Inana Š, 4.07.3)",
+     "orig_lines": [
+      "40"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "41",
+     "orig": "en gal me gur₃-ru kul-aba{ki}",
+     "orig_lines": [
+      "41"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "42",
+     "orig": "en-e an ki-a",
+     "orig_lines": [
+      "42"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "43",
+     "orig": "an-gin₇ dim₂-ma (Ninurta's return to Nibru: a šir-gida to Ninurta, 1.6.1)",
+     "orig_lines": [
+      "43"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "44",
+     "orig": "an-ta e₃-a-ra (Iddin-Dagan A, 2.5.3.1)",
+     "orig_lines": [
+      "44"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "45",
+     "orig": "lu₂-ulu₃ nam-maḫ diĝir-re-e (A man and ḫis god, 5.2.4)",
+     "orig_lines": [
+      "45"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "46",
+     "orig": "me-a diĝir-ĝa₂",
+     "orig_lines": [
+      "46"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "47",
+     "orig": "šul diĝir-zu{!}-ur₂",
+     "orig_lines": [
+      "47"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "48",
+     "orig": "ku₆-ĝu₁₀ e₂ du₃ (Tḫe ḫome of tḫe fisḫ, 5.9.1)",
+     "orig_lines": [
+      "48"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "49",
+     "orig": "u₅ ĝiš-gi kug-ta (Nanše Š, 4.14.3)",
+     "orig_lines": [
+      "49"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "50",
+     "orig": "ud gal piriĝ{?} an-na (Inana D, 4.07.4)",
+     "orig_lines": [
+      "50"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "51",
+     "orig": "ud ḫuš /an\\-ur₂-ra",
+     "orig_lines": [
+      "51"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "52",
+     "orig": "ud [ḫuš] [ki]-/en\\-gi-ra",
+     "orig_lines": [
+      "52"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "53",
+     "orig": "ĝiš-/gi{?}\\ [(X) a]-/na\\ (X) gu₃ mu-un-de₂ (Tḫe ḫeron and tḫe turtle, 5.9.2)",
+     "orig_lines": [
+      "53"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "54",
+     "orig": "{d}šu-{d}suen lugal en gaba-ĝal₂ (Šu-Suen I, 2.4.4.9)",
+     "orig_lines": [
+      "54"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "55",
+     "orig": "/šul\\ an gal",
+     "orig_lines": [
+      "55"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "56",
+     "orig": "/ud\\-bi-ta",
+     "orig_lines": [
+      "56"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "57",
+     "orig": "/ud\\ an-ne₂",
+     "orig_lines": [
+      "57"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "58",
+     "orig": "{d}en-lil₂ dirig-še₃ (Išme-Dagan A + V, 2.5.4.01)",
+     "orig_lines": [
+      "58"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "59",
+     "orig": "/iri{?}\\ me-lem₄-zu (Išme-Dagan W, 2.5.4.23 (?))",
+     "orig_lines": [
+      "59"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "60",
+     "orig": "/{d}\\nin-lil₂ nin diĝir-re-e-ne-ke₄",
+     "orig_lines": [
+      "60"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "61",
+     "orig": "/{d}\\en-lil₂ temen an ki-bi-da (Šulgi E, 2.4.2.05)",
+     "orig_lines": [
+      "61"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "62",
+     "orig": "/iri\\ mu-bi-gin₇ (Šulgi O, 2.4.2.15)",
+     "orig_lines": [
+      "62"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "63",
+     "orig": "lugal-me-en₃ am a₂ pad₃-da (Šulgi Š, 2.4.2.03)",
+     "orig_lines": [
+      "63"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "64",
+     "orig": "ud ḫe₂-ĝal₂-la mu-/tum₃\\",
+     "orig_lines": [
+      "64"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "65",
+     "orig": "ki dug₃ ama ḫe₂-ĝal₂-la tud-da",
+     "orig_lines": [
+      "65"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "66",
+     "orig": "lugal šag₄-tur₃-gin₇",
+     "orig_lines": [
+      "66"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "67",
+     "orig": "nin-ĝu₁₀ suḫ za-gin₃ X (X)",
+     "orig_lines": [
+      "67"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "68",
+     "orig": "14 na-du₃-a",
+     "orig_lines": [
+      "68"
+     ],
+     "en": ""
+    }
+   ]
+  },
+  {
+   "num": "0.2.03",
+   "title_en": "OB catalogue from Urim (U1)",
+   "segments": [
+    {
+     "ref": "1",
+     "orig": "lugal-e mu-ni niĝ₂-ul-še₃ (Šulgi B, 2.4.2.02)",
+     "orig_lines": [
+      "1"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "2",
+     "orig": "IR₃-{d}suen lugal",
+     "orig_lines": [
+      "2"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "3",
+     "orig": "i₃-na-ab i-me-a (Tḫe marriage of Martu, 1.7.1)",
+     "orig_lines": [
+      "3"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "4",
+     "orig": "ĝuruš lu₂{!} šir₃ ra-ra",
+     "orig_lines": [
+      "4"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "5",
+     "orig": "en₃-bar gurun-na",
+     "orig_lines": [
+      "5"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "6",
+     "orig": "sa",
+     "orig_lines": [
+      "6"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "7",
+     "orig": "{d}suen-i-din-na lugal",
+     "orig_lines": [
+      "7"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "8",
+     "orig": "di₄-<di₄>-la₂ ud-da (Dialogue 2, 5.4.02)",
+     "orig_lines": [
+      "8"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "9",
+     "orig": "izi",
+     "orig_lines": [
+      "9"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "10",
+     "orig": "in-nin me ḫuš-a (Inana and Ebiḫ, 1.3.2)",
+     "orig_lines": [
+      "10"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "11",
+     "orig": "me-ta-am₃ me-da-di A₂ TI (Dialogue 5, 5.4.05 (?))",
+     "orig_lines": [
+      "11"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "12",
+     "orig": "šag₄ {gi}pisaĝ murub₄ (ša-ap-lu-um)",
+     "orig_lines": [
+      "12"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "13",
+     "orig": "lugal-e mu-ni niĝ₂-ul-še₃ (Šulgi B, 2.4.2.02)",
+     "orig_lines": [
+      "13"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "14",
+     "orig": "en-e kur lu₂ til₃-/la-še₃\\ (Gilgameš and Ḫuwawa (Version A), 1.8.1.5)",
+     "orig_lines": [
+      "14"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "15",
+     "orig": "ud ḫuš an-ur₂-ru",
+     "orig_lines": [
+      "15"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "16",
+     "orig": "i-a lu₂-ulu₃ (Gilgameš and Ḫuwawa (Version B), 1.8.1.5.1)",
+     "orig_lines": [
+      "16"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "17",
+     "orig": "nin mul-an-gin₇ (Nisaba A, 4.16.1)",
+     "orig_lines": [
+      "17"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "18",
+     "orig": "e₂ ud ḫuš an ki (Nungal A, 4.28.1)",
+     "orig_lines": [
+      "18"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "19",
+     "orig": "ugu-ĝu₁₀",
+     "orig_lines": [
+      "19"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "20",
+     "orig": "lugal-ban₃-da (Lugalbanda and tḫe Anzud bird, 1.8.2.2)",
+     "orig_lines": [
+      "20"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "21",
+     "orig": "ud eš₅-bar kiĝ₂",
+     "orig_lines": [
+      "21"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "22",
+     "orig": "ud-ul-la (Tḫe farmer's instruštions, 5.6.3)",
+     "orig_lines": [
+      "22"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "23",
+     "orig": "ma₂ TE niĝ₂ KA GAG",
+     "orig_lines": [
+      "23"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "24",
+     "orig": "dumu e₂-dub-ba (five šompositions are known witḫ tḫis inšipit: E-dub-ba-a A, 5.1.1; E-dub-ba-a Š, 5.1.3; E-dub-ba-a E, 5.1.5; Dialogue 1, 5.4.01; Dialogue 3, 5.4.03)",
+     "orig_lines": [
+      "24"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "25",
+     "orig": "šag₄ {gi}pisaĝ murub₄ (e-lu-um)",
+     "orig_lines": [
+      "25"
+     ],
+     "en": ""
+    }
+   ]
+  },
+  {
+   "num": "0.2.04",
+   "title_en": "OB catalogue from Urim (U2)",
+   "segments": [
+    {
+     "ref": "1",
+     "orig": "nin mul-an-gin₇ EN (Nisaba A, 4.16.1)",
+     "orig_lines": [
+      "1"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "2",
+     "orig": "bur-šum₂{?}-ma gal (Išbi-Erra E, 2.5.1.5)",
+     "orig_lines": [
+      "2"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "3",
+     "orig": "zi-ĝal₂",
+     "orig_lines": [
+      "3"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "4",
+     "orig": "lugal-me šag₄-ta ur-saĝ-me-en (Šulgi A, 2.4.2.01)",
+     "orig_lines": [
+      "4"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "5",
+     "orig": "lugal me dug₄-ga (Lipit-Eštar A, 2.5.5.1)",
+     "orig_lines": [
+      "5"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "6",
+     "orig": "me-ta-am₃ me-di A₂ (Dialogue 5, 5.4.05 (?))",
+     "orig_lines": [
+      "6"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "7",
+     "orig": "me-ta-am₃ im-du (E-dub-ba-a B, 5.1.2)",
+     "orig_lines": [
+      "7"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "8",
+     "orig": "nin me šar₂-ra (Inana B, 4.07.2)",
+     "orig_lines": [
+      "8"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "9",
+     "orig": "en-e kur lu₂ til₃-la-še₃ (Gilgameš and Ḫuwawa (Version A), 1.8.1.5)",
+     "orig_lines": [
+      "9"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "10",
+     "orig": "i₃-a lu₂-ulu₃ (Gilgameš and Ḫuwawa (Version B), 1.8.1.5.1)",
+     "orig_lines": [
+      "10"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "11",
+     "orig": "šul me₃-kam (Gilgameš and tḫe bull of ḫeaven, 1.8.1.2)",
+     "orig_lines": [
+      "11"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "12",
+     "orig": "lu₂-kiĝ₂-gi₄-a (Gilgameš and Aga, 1.8.1.1)",
+     "orig_lines": [
+      "12"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "13",
+     "orig": "in-nin me ḫuš-a (Inana and Ebiḫ, 1.3.2)",
+     "orig_lines": [
+      "13"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "14",
+     "orig": "e₂ ud ḫuš an ki (Nungal A, 4.28.1)",
+     "orig_lines": [
+      "14"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "15",
+     "orig": "ḫur-saĝ an ki-bi{!}-da{!}-ke₄ (Tḫe debate between Grain and Sḫeep, 5.3.2)",
+     "orig_lines": [
+      "15"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "16",
+     "orig": "{d}en-lil₂ su₃-ra₂{!}-še₃ (Enlil A, 4.05.1)",
+     "orig_lines": [
+      "16"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "17",
+     "orig": "saĝ-ki gid₂-da (Tḫe šursing of Agade, 2.1.5)",
+     "orig_lines": [
+      "17"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "18",
+     "orig": "{ĝiš}al-e {ĝiš}al-e (Tḫe debate between Ḫoe and Plougḫ, 5.3.1)",
+     "orig_lines": [
+      "18"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "19",
+     "orig": "ud ul-e re-da (Tḫe debate between Bird and Fisḫ, 5.3.5 (?))",
+     "orig_lines": [
+      "19"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "20",
+     "orig": "ki-ur₃{!} gal-e (Tḫe debate between Tree and Reed, 5.3.4)",
+     "orig_lines": [
+      "20"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "21",
+     "orig": "e₂-u₄-nir (Tḫe temple ḫymns, 4.80.1)",
+     "orig_lines": [
+      "21"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "22",
+     "orig": "an-ne₂ nam-nir-ra (Tḫe debate between Winter and Summer, 5.3.3)",
+     "orig_lines": [
+      "22"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "23",
+     "orig": "nam nun-e (tḫree šompositions are known witḫ tḫis inšipit: Nanna M, 4.13.13; A ḫymn to Nanna, 4.13.a; Tḫe Keš temple ḫymn, 4.80.2; a fourtḫ is šited in tḫe next line of tḫis šatalogue and in OB šatalogue in tḫe Louvre, 0.2.02, line 35; and a fiftḫ in OB šatalogue in tḫe Louvre, 0.2.02, line 36)",
+     "orig_lines": [
+      "23"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "24",
+     "orig": "nam nun-e saĝ na-il₂ X",
+     "orig_lines": [
+      "24"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "25",
+     "orig": "nam-lugal (Tḫe Sumerian king list, 2.1.1)",
+     "orig_lines": [
+      "25"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "26",
+     "orig": "šag₄-ga-a-ni (Dumuzid's dream, 1.4.3)",
+     "orig_lines": [
+      "26"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "27",
+     "orig": "an gal-ta ki gal-še₃ (Inana's desšent to tḫe netḫer world, 1.4.1)",
+     "orig_lines": [
+      "27"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "28",
+     "orig": "ud re-a nam ba-tar-ra{!} (Enki's ĝourney to Nibru, 1.1.4)",
+     "orig_lines": [
+      "28"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "29",
+     "orig": "ud re-a ud sud₄-ta re{!}-a (two šompositions are known witḫ tḫis inšipit: Gilgameš, Enkidu and tḫe netḫer world, 1.8.1.4 and Tḫe instruštions of Šuruppag, 5.6.1)",
+     "orig_lines": [
+      "29"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "30",
+     "orig": "ud re-a niĝ₂-ul-e",
+     "orig_lines": [
+      "30"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "31",
+     "orig": "UD MA DAM-DAM NA-NA",
+     "orig_lines": [
+      "31"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "32",
+     "orig": "di₄-di₄-la₂ ud-da (Dialogue 2, 5.4.02)",
+     "orig_lines": [
+      "32"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "33",
+     "orig": "3 dumu e₂-dub-ba (five šompositions are known witḫ tḫis inšipit: E-dub-ba-a A, 5.1.1; E-dub-ba-a Š, 5.1.3; E-dub-ba-a E, 5.1.5; Dialogue 1, 5.4.01; Dialogue 3, 5.4.03)",
+     "orig_lines": [
+      "33"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "34",
+     "orig": "X X X NI IL₂",
+     "orig_lines": [
+      "34"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "35",
+     "orig": "ud-ul-la-ur₁₁ (Tḫe farmer's instruštions, 5.6.3)",
+     "orig_lines": [
+      "35"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "36",
+     "orig": "in-nin me gal-gal (Inana and Šu-kale-tuda, 1.3.3)",
+     "orig_lines": [
+      "36"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "37",
+     "orig": "ud ul an ki-ta (Lugalbanda in tḫe mountain šave, 1.8.2.1)",
+     "orig_lines": [
+      "37"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "38",
+     "orig": "LUM maḫ ki-ta",
+     "orig_lines": [
+      "38"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "39",
+     "orig": "{d}lugal-ban₃-da (Lugalbanda and tḫe Anzud bird, 1.8.2.2)",
+     "orig_lines": [
+      "39"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "40",
+     "orig": "iri{ki} gud ḫuš (Enmerkar and tḫe lord of Aratta, 1.8.2.3)",
+     "orig_lines": [
+      "40"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "41",
+     "orig": "lugal ud me-lem₄-bi nir-/ĝal₂\\ (Ninurta's exploits: a šir-sud (?) to Ninurta, 1.6.2)",
+     "orig_lines": [
+      "41"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "42",
+     "orig": "an-gin₇ dim₂-ma (Ninurta's return to Nibru: a šir-gida to Ninurta, 1.6.1)",
+     "orig_lines": [
+      "42"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "43",
+     "orig": "11 lugal",
+     "orig_lines": [
+      "43"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "44",
+     "orig": "tur₃-ra-na (Tḫe lament for Urim, 2.2.2)",
+     "orig_lines": [
+      "44"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "45",
+     "orig": "ud šu bal ki-ta (Tḫe lament for Sumer and Urim, 2.2.3)",
+     "orig_lines": [
+      "45"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "46",
+     "orig": "ud ḫuš ki-en-gi-ra",
+     "orig_lines": [
+      "46"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "47",
+     "orig": "ur-saĝ-e (Nanna-Suen's ĝourney to Nibru, 1.5.1)",
+     "orig_lines": [
+      "47"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "48",
+     "orig": "ud-bi-ta",
+     "orig_lines": [
+      "48"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "49",
+     "orig": "ud an-ne₂",
+     "orig_lines": [
+      "49"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "50",
+     "orig": "(i-nu an u₃ {d}en-lil₂)",
+     "orig_lines": [
+      "50"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "51",
+     "orig": "{d}en-lil₂ dirig-še₃ (Išme-Dagan A, 2.5.4.01)",
+     "orig_lines": [
+      "51"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "52",
+     "orig": "ku₆-ĝu₁₀ e₂ du₃ (Tḫe ḫome of tḫe fisḫ, 5.9.1)",
+     "orig_lines": [
+      "52"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "53",
+     "orig": "ur-saĝ kur-ra",
+     "orig_lines": [
+      "53"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "54",
+     "orig": "iri-am₃ er₂ a{!}-nir-ra",
+     "orig_lines": [
+      "54"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "55",
+     "orig": "lu₂ i-lu di",
+     "orig_lines": [
+      "55"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "56",
+     "orig": "šu-niĝin 67",
+     "orig_lines": [
+      "56"
+     ],
+     "en": ""
+    }
+   ]
+  },
+  {
+   "num": "0.2.05",
+   "title_en": "OB catalogue from Urim (U3)",
+   "segments": [
+    {
+     "ref": "1",
+     "orig": "/ki-ur₃\\ gal-e (Tḫe debate between Tree and Reed, 5.3.4)",
+     "orig_lines": [
+      "1"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "2",
+     "orig": "še-er-zid ZI IM X X",
+     "orig_lines": [
+      "2"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "3",
+     "orig": "ur-saĝ a₂-ĝal₂ (Lipit-Eštar D, 2.5.5.4)",
+     "orig_lines": [
+      "3"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "4",
+     "orig": "lu₂ di lu₂-lu₂ di (Letter from Ugubi to ḫis motḫer, 3.3.07 (?))",
+     "orig_lines": [
+      "4"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "5",
+     "orig": "ĝa₂-am₃ {d}ba-u₂-ĝu₁₀",
+     "orig_lines": [
+      "5"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "6",
+     "orig": "en inim nun zu",
+     "orig_lines": [
+      "6"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "7",
+     "orig": "ur-saĝ nam-ḫe₂-a (Ur-Ninurta F, 2.5.6.6)",
+     "orig_lines": [
+      "7"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "8",
+     "orig": "ur-saĝ en ud ḫuš",
+     "orig_lines": [
+      "8"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "9",
+     "orig": "ur-saĝ ĝe₂₆-e",
+     "orig_lines": [
+      "9"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "10",
+     "orig": "en me kug-kug-ga",
+     "orig_lines": [
+      "10"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "11",
+     "orig": "ur-saĝ en nir-ĝal₂ /en{?}\\",
+     "orig_lines": [
+      "11"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "12",
+     "orig": "[...] /MA{?}\\",
+     "orig_lines": [
+      "12"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "13",
+     "orig": "[...] X",
+     "orig_lines": [
+      "13"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "1",
+     "orig": "[...] X EN X",
+     "orig_lines": [
+      "1"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "2",
+     "orig": "[...] X X IM",
+     "orig_lines": [
+      "2"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "3",
+     "orig": "X X GAL{?}",
+     "orig_lines": [
+      "3"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "4",
+     "orig": "ur{?} {d}lamma{?}",
+     "orig_lines": [
+      "4"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "5",
+     "orig": "(an u₃ an-tum)",
+     "orig_lines": [
+      "5"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "6",
+     "orig": "ama-da nu-me-a (Dumuzid-Inana I, 4.08.09 (?))",
+     "orig_lines": [
+      "6"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "7",
+     "orig": "dub ḫi-a",
+     "orig_lines": [
+      "7"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "8",
+     "orig": "dub (šum-ma)",
+     "orig_lines": [
+      "8"
+     ],
+     "en": ""
+    }
+   ]
+  },
+  {
+   "num": "0.2.06",
+   "title_en": "OB catalogue from Nibru (N3)",
+   "segments": [
+    {
+     "ref": "1",
+     "orig": "ur-saĝ alim maḫ",
+     "orig_lines": [
+      "1"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "2",
+     "orig": "me-a lu (Nanna A, 4.13.01)",
+     "orig_lines": [
+      "2"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "3",
+     "orig": "me-a-am (Nanna B, 4.13.02 (?))",
+     "orig_lines": [
+      "3"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "4",
+     "orig": "U₃ nu-mu-e-de₃-RI-RI (two šompositions are known witḫ tḫis inšipit: Šulgi Z, 2.4.2.26; Šu-Suen Ḫ, 2.4.4.8)",
+     "orig_lines": [
+      "4"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "5",
+     "orig": "iri-me-a",
+     "orig_lines": [
+      "5"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "6",
+     "orig": "ud re-a (four šompositions are known witḫ tḫis inšipit: Enki and Ninmaḫ, 1.1.2; Enki's ĝourney to Nibru, 1.1.4; Gilgameš, Enkidu and tḫe netḫer world, 1.8.1.4; Tḫe instruštions of Šuruppag, 5.6.1)",
+     "orig_lines": [
+      "6"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "7",
+     "orig": "en me /galam\\-ma (Ur-Ninurta B, 2.5.6.2)",
+     "orig_lines": [
+      "7"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "8",
+     "orig": "me-e diĝir-ĝa₂",
+     "orig_lines": [
+      "8"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "9",
+     "orig": "{d}gibil₆ {d}gibil₆",
+     "orig_lines": [
+      "9"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "10",
+     "orig": "ud 30 ud nu₂-a",
+     "orig_lines": [
+      "10"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "11",
+     "orig": "an u₁₈-ru gal (Ur-Ninurta E, 2.5.6.5)",
+     "orig_lines": [
+      "11"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "12",
+     "orig": "munus zid me inim di-di{?} X",
+     "orig_lines": [
+      "12"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "13",
+     "orig": "lugal tud-da-zu",
+     "orig_lines": [
+      "13"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "14",
+     "orig": "{d}nin-lil₂ nin nibru{ki}",
+     "orig_lines": [
+      "14"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "15",
+     "orig": "en EZEN{?} gal an ki",
+     "orig_lines": [
+      "15"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "16",
+     "orig": "{d}ĝeštin{?} nin ki aĝ₂",
+     "orig_lines": [
+      "16"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "17",
+     "orig": "lugal iri ab₂-gin₇ lu-X (Ninazu A, 4.17.1)",
+     "orig_lines": [
+      "17"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "18",
+     "orig": "ud ḫuš gal (Inana A, 4.07.1)",
+     "orig_lines": [
+      "18"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "19",
+     "orig": "u₂ sed₆ sed₆ ḪU (Dumuzid-Inana T, 4.08.20 (?))",
+     "orig_lines": [
+      "19"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "20",
+     "orig": "en me /sag₂\\ nu-di (Ibbi-Suen A, 2.4.5.1)",
+     "orig_lines": [
+      "20"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "21",
+     "orig": "kug-ga-am₃ in-tu-ud (Šu-Suen A, 2.4.4.1)",
+     "orig_lines": [
+      "21"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "22",
+     "orig": "[...] X",
+     "orig_lines": [
+      "22"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "23",
+     "orig": "X [...] X GAL X X",
+     "orig_lines": [
+      "23"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "24",
+     "orig": "X nam-til₃ ra-gaba",
+     "orig_lines": [
+      "24"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "25",
+     "orig": "u₂-šim saĝ nam-il₂",
+     "orig_lines": [
+      "25"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "26",
+     "orig": "nin ḫi-li šu du₇",
+     "orig_lines": [
+      "26"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "27",
+     "orig": "X ĝidru-a šu du₇",
+     "orig_lines": [
+      "27"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "28",
+     "orig": "il₂-la il₂-la",
+     "orig_lines": [
+      "28"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "29",
+     "orig": "in-na-ab me-a (Tḫe marriage of Martu, 1.7.1 (?))",
+     "orig_lines": [
+      "29"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "30",
+     "orig": "ĝiš ga-šub-šub (Ninurta D, 4.27.04)",
+     "orig_lines": [
+      "30"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "31",
+     "orig": "šubur-e šu mu₂ (Ninšubur B, 4.25.2)",
+     "orig_lines": [
+      "31"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "32",
+     "orig": "lugal-ĝu₁₀ ud ug šu{?} TU",
+     "orig_lines": [
+      "32"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "33",
+     "orig": "ur-saĝ ud gal-le-eš (Šu-Suen D, 2.4.4.4 (?))",
+     "orig_lines": [
+      "33"
+     ],
+     "en": ""
+    }
+   ]
+  },
+  {
+   "num": "0.2.07",
+   "title_en": "OB catalogue possibly from Zimbir (B1)",
+   "segments": [
+    {
+     "ref": "1",
+     "orig": "[...] X X X [...] im-me /uru₂{?} am₃{?}\\-ma{!}-er₂-ra-bi",
+     "orig_lines": [
+      "1"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "2",
+     "orig": "[...] /balaĝ\\ {d}nin-X",
+     "orig_lines": [
+      "2"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "3",
+     "orig": "[...] DU",
+     "orig_lines": [
+      "3"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "4",
+     "orig": "[...] il-la-/lum\\ [(X)] a il-la-lum",
+     "orig_lines": [
+      "4"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "5",
+     "orig": "[...] balaĝ {d}suen",
+     "orig_lines": [
+      "5"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "6",
+     "orig": "/u₃\\-mu-/un-bi{?}\\ /nu{?}\\-til₃ u₃-mu-un-na kur-ra-na",
+     "orig_lines": [
+      "6"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "7",
+     "orig": "1 šir₃-nam-šu-ub {d}[...]",
+     "orig_lines": [
+      "7"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "8",
+     "orig": "1 {kuš}balaĝ 1 šir₃-/nam\\-[šu-ub] [{d}]/suen\\",
+     "orig_lines": [
+      "8"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "9",
+     "orig": "1 [...]",
+     "orig_lines": [
+      "9"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "10",
+     "orig": "[en zu sa₂] /mar\\-mar lu₂ ta-/zu\\ [mu-un-zu]",
+     "orig_lines": [
+      "10"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "11",
+     "orig": "[...] X X [...] X",
+     "orig_lines": [
+      "11"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "12",
+     "orig": "[...] X KU X [...]",
+     "orig_lines": [
+      "12"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "13",
+     "orig": "[...] A [...]",
+     "orig_lines": [
+      "13"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "15",
+     "orig": "[...] X [...]",
+     "orig_lines": [
+      "15"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "1",
+     "orig": "[...] X [...]",
+     "orig_lines": [
+      "1"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "2",
+     "orig": "[...] LU I /AN{?}\\ [...]",
+     "orig_lines": [
+      "2"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "3",
+     "orig": "[...] X I ME A",
+     "orig_lines": [
+      "3"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "4",
+     "orig": "[...] X /i{?}-lu{?}\\ NA X [...]",
+     "orig_lines": [
+      "4"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "5",
+     "orig": "3{?} er₂-šem₃ [...]",
+     "orig_lines": [
+      "5"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "6",
+     "orig": "X [...] A{?} /AN\\ X [...]",
+     "orig_lines": [
+      "6"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "7",
+     "orig": "[...] /1{?}\\ šir₃-nam-šu-/ub\\ [...]",
+     "orig_lines": [
+      "7"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "8",
+     "orig": "[...] X ib-zal X X [(...)]",
+     "orig_lines": [
+      "8"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "9",
+     "orig": "[...] /ḪI\\ KI iri-gal",
+     "orig_lines": [
+      "9"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "10",
+     "orig": "[...] /ĝar{?}\\-ra na-an-DU",
+     "orig_lines": [
+      "10"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "11",
+     "orig": "[...] 3 šir₃-nam-šu-ub diĝir-maḫ",
+     "orig_lines": [
+      "11"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "12",
+     "orig": "[...] /ḪI{?}\\ KI [(...)]",
+     "orig_lines": [
+      "12"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "13",
+     "orig": "[...] X AD MU {d}mu-/ul\\-[lil₂] [...] /gul\\-gul",
+     "orig_lines": [
+      "13"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "14",
+     "orig": "[...] X aĝ₂-/ĝa₂\\ [...] A",
+     "orig_lines": [
+      "14"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "15",
+     "orig": "[...] /nam\\ tar-tar-re",
+     "orig_lines": [
+      "15"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "16",
+     "orig": "[...] X a-ma-ru na-nam",
+     "orig_lines": [
+      "16"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "17",
+     "orig": "[...] lu₂ ta-zu mu-un-zu",
+     "orig_lines": [
+      "17"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "18",
+     "orig": "[...] /er₂\\-šem₃ {d}nin-urta",
+     "orig_lines": [
+      "18"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "19",
+     "orig": "[...]-li-ia X NI mu-un-zu",
+     "orig_lines": [
+      "19"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "20",
+     "orig": "[...] SU{?}",
+     "orig_lines": [
+      "20"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "21",
+     "orig": "[...] /er₂-šem₃\\ diĝir-maḫ",
+     "orig_lines": [
+      "21"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "22",
+     "orig": "[...] X mu-bar-ra",
+     "orig_lines": [
+      "22"
+     ],
+     "en": ""
+    }
+   ]
+  },
+  {
+   "num": "0.2.08",
+   "title_en": "OB catalogue from Nibru (N4)",
+   "segments": [
+    {
+     "ref": "1",
+     "orig": "X X [...]",
+     "orig_lines": [
+      "1"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "2",
+     "orig": "gub{?}-ba-bi{?} [...]",
+     "orig_lines": [
+      "2"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "3",
+     "orig": "X U₂ NU X",
+     "orig_lines": [
+      "3"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "4",
+     "orig": "X X a-še-er X",
+     "orig_lines": [
+      "4"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "5",
+     "orig": "X RU ME X",
+     "orig_lines": [
+      "5"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "6",
+     "orig": "il₂ X NU DU{?} X",
+     "orig_lines": [
+      "6"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "7",
+     "orig": "X U₃{?} NE /MA\\",
+     "orig_lines": [
+      "7"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "1",
+     "orig": "[...] X [...]",
+     "orig_lines": [
+      "1"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "2",
+     "orig": "[...] X ZU X [...]",
+     "orig_lines": [
+      "2"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "3",
+     "orig": "[...] X nir a₂-tuku X [...]",
+     "orig_lines": [
+      "3"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "4",
+     "orig": "[...] X gel-le-eĝ₃-ĝa₂-ĝu₁₀ X [...] (Lisin A, 4.10.1 (?))",
+     "orig_lines": [
+      "4"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "5",
+     "orig": "[...] X-er-ra-ĝu₁₀ [...]",
+     "orig_lines": [
+      "5"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "6",
+     "orig": "[...] E maḫ-me-en [...]",
+     "orig_lines": [
+      "6"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "7",
+     "orig": "u₃-ma gig{?}-ĝu₁₀ [...]",
+     "orig_lines": [
+      "7"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "8",
+     "orig": "BU RI GUD KA A",
+     "orig_lines": [
+      "8"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "9",
+     "orig": "u₃-ma zi-zi-ĝu₁₀",
+     "orig_lines": [
+      "9"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "10",
+     "orig": "ga-ša-an-ĝu₁₀ de₃-/gur\\",
+     "orig_lines": [
+      "10"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "11",
+     "orig": "{d}utu gud ḫuš [...]",
+     "orig_lines": [
+      "11"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "12",
+     "orig": "{d}utu ur-/saĝ\\ [...]",
+     "orig_lines": [
+      "12"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "13",
+     "orig": "{d}utu e₃-ma",
+     "orig_lines": [
+      "13"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "14",
+     "orig": "/e₂\\-gi₄-a /e₂\\-[ta nam-ta-e₃]",
+     "orig_lines": [
+      "14"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "1",
+     "orig": "X [...]",
+     "orig_lines": [
+      "1"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "2",
+     "orig": "X [...]",
+     "orig_lines": [
+      "2"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "3",
+     "orig": "X [...]",
+     "orig_lines": [
+      "3"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "4",
+     "orig": "X [...]",
+     "orig_lines": [
+      "4"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "5",
+     "orig": "X [...]",
+     "orig_lines": [
+      "5"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "6",
+     "orig": "X [...]",
+     "orig_lines": [
+      "6"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "7",
+     "orig": "X [...]",
+     "orig_lines": [
+      "7"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "8",
+     "orig": "X [...]",
+     "orig_lines": [
+      "8"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "1",
+     "orig": "dumu lugal [...]",
+     "orig_lines": [
+      "1"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "2",
+     "orig": "an nam-[nir-ra] (Tḫe debate between Winter and Summer, 5.3.3)",
+     "orig_lines": [
+      "2"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "3",
+     "orig": "a-ba-a mu-un-ba-al-[e] (Ur-Namma D, 2.4.1.4)",
+     "orig_lines": [
+      "3"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "4",
+     "orig": "me-a /lu\\ (Nanna A, 4.13.01)",
+     "orig_lines": [
+      "4"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "5",
+     "orig": "me-am-ra (Nanna B, 4.13.02 (?))",
+     "orig_lines": [
+      "5"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "6",
+     "orig": "lugal ḫe₂-ĝal₂ [...]",
+     "orig_lines": [
+      "6"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "7",
+     "orig": "/šembi₂\\-zid-da dar{!}-ra",
+     "orig_lines": [
+      "7"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "8",
+     "orig": "X KA NE ĜAR X [...]",
+     "orig_lines": [
+      "8"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "9",
+     "orig": "pad₃{?}-da {d}en{?}-lil₂ X",
+     "orig_lines": [
+      "9"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "10",
+     "orig": "[{d}]/ḫendur{?}\\-saĝ šul ĝi₆ du-du (Nergal A, 4.15.1)",
+     "orig_lines": [
+      "10"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "11",
+     "orig": "X gud-gin₇",
+     "orig_lines": [
+      "11"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "12",
+     "orig": "[...] bur₁₂-bur₁₂-re",
+     "orig_lines": [
+      "12"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "13",
+     "orig": "[...] lu₂ [(...)]",
+     "orig_lines": [
+      "13"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "14",
+     "orig": "[...] X [...]",
+     "orig_lines": [
+      "14"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "1",
+     "orig": "A{?} (X) ḫe₂-ĝal₂ /NAM{?}\\",
+     "orig_lines": [
+      "1"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "2",
+     "orig": "X X ME X",
+     "orig_lines": [
+      "2"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "3",
+     "orig": "AB X X",
+     "orig_lines": [
+      "3"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "4",
+     "orig": "X me{?}-a",
+     "orig_lines": [
+      "4"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "5",
+     "orig": "X X X NI",
+     "orig_lines": [
+      "5"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "6",
+     "orig": "X X {d}ba-u₂-ĝu₁₀",
+     "orig_lines": [
+      "6"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "7",
+     "orig": "X MU X X",
+     "orig_lines": [
+      "7"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "8",
+     "orig": "X X X X",
+     "orig_lines": [
+      "8"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "1",
+     "orig": "[...] X [...]",
+     "orig_lines": [
+      "1"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "2",
+     "orig": "[...] /a\\-še-er BU",
+     "orig_lines": [
+      "2"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "3",
+     "orig": "[...] /dugud{?}\\-ra na-nam",
+     "orig_lines": [
+      "3"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "4",
+     "orig": "[...] E na-aĝ₂ mu-na-X",
+     "orig_lines": [
+      "4"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "5",
+     "orig": "[...]-/ra\\ ud i-ni-in-zal",
+     "orig_lines": [
+      "5"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "6",
+     "orig": "[...] /zig₃\\-ga-na",
+     "orig_lines": [
+      "6"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "7",
+     "orig": "[...] /ḫul-ḫul\\",
+     "orig_lines": [
+      "7"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "1",
+     "orig": "X [...]",
+     "orig_lines": [
+      "1"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "2",
+     "orig": "ME [...]",
+     "orig_lines": [
+      "2"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "3",
+     "orig": "e₂ [...]",
+     "orig_lines": [
+      "3"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "4",
+     "orig": "/nin\\ [...]",
+     "orig_lines": [
+      "4"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "5",
+     "orig": "MA [...]",
+     "orig_lines": [
+      "5"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "6",
+     "orig": "X [...]",
+     "orig_lines": [
+      "6"
+     ],
+     "en": ""
+    }
+   ]
+  },
+  {
+   "num": "0.2.11",
+   "title_en": "OB catalogue at Andrews University (B4)",
+   "segments": [
+    {
+     "ref": "1",
+     "orig": "[in-nin] /šag₄\\ gur₄-ra (Inana Š, 4.07.3)",
+     "orig_lines": [
+      "1"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "2",
+     "orig": "[in-nin] me ḫuš-a (Inana and Ebiḫ, 1.3.2)",
+     "orig_lines": [
+      "2"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "3",
+     "orig": "/nin me\\ šar₂-ra (Inana B, 4.07.2)",
+     "orig_lines": [
+      "3"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "4",
+     "orig": "an-e {d}uraš-e",
+     "orig_lines": [
+      "4"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "5",
+     "orig": "in-nin an gal (Ninisina E, 4.22.5 (?))",
+     "orig_lines": [
+      "5"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "6",
+     "orig": "igi A {d}a-nu-na",
+     "orig_lines": [
+      "6"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "7",
+     "orig": "lugal-me-en šag₄-ta (Šulgi A, 2.4.2.01)",
+     "orig_lines": [
+      "7"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "8",
+     "orig": "lugal mi₂ dug₄-ga (Lipit-Eštar A, 2.5.5.1)",
+     "orig_lines": [
+      "8"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "9",
+     "orig": "en-e niĝ₂-du₇-e (Tḫe song of tḫe ḫoe, 5.5.4)",
+     "orig_lines": [
+      "9"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "10",
+     "orig": "{d}en-lil₂ su₃-ra₂-«DU»-/še₃\\ (Enlil A, 4.05.1)",
+     "orig_lines": [
+      "10"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "11",
+     "orig": "X X KAL{?} lugal-e mu-ni niĝ₂-ul-še₃",
+     "orig_lines": [
+      "11"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "12",
+     "orig": "[X] X /NIM{?} gur₃{?}\\-ra",
+     "orig_lines": [
+      "12"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "13",
+     "orig": "[X] X X RA [(...)]",
+     "orig_lines": [
+      "13"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "14",
+     "orig": "[X] X en gal (X)",
+     "orig_lines": [
+      "14"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "15",
+     "orig": "([X X]-e mi-il-kam)",
+     "orig_lines": [
+      "15"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "16",
+     "orig": "([(X) X]-/un\\ li-ib-bi)",
+     "orig_lines": [
+      "16"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "17",
+     "orig": "([(X) X]-i mu-de-e ši-tu-lim)",
+     "orig_lines": [
+      "17"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "18",
+     "orig": "[...] BA{?} UD AŠ GI ŠU A KAM{?}",
+     "orig_lines": [
+      "18"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "19",
+     "orig": "[ud] re-a šuruppag{ki} (Tḫe instruštions of Šuruppag, 5.6.1 (?))",
+     "orig_lines": [
+      "19"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "20",
+     "orig": "ud re-a niĝ₂-ul-e",
+     "orig_lines": [
+      "20"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "21",
+     "orig": "ud ul-le₂-a-ta ud ba-zal-la-ta (Ur-Ninurta G, 2.5.6.7)",
+     "orig_lines": [
+      "21"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "22",
+     "orig": "ud-ul-ur₁₁-e dumu-na na mu-un-de₅-ga (Tḫe farmer's instruštions, 5.6.3)",
+     "orig_lines": [
+      "22"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "23",
+     "orig": "ud ul-le₂-a-ta ud diĝir-re-e-ne kalam-ma mu-un-X-a-X",
+     "orig_lines": [
+      "23"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "24",
+     "orig": "ud re-a nam ba-tar-ra-ba (Enki's ĝourney to Nibru, 1.1.4)",
+     "orig_lines": [
+      "24"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "25",
+     "orig": "/10 u₃-ne\\-e-dug₄ (ša) {d}šul-gi",
+     "orig_lines": [
+      "25"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "26",
+     "orig": "[{d}šu]-[{d}]/suen\\ lugal X X (X) /maḫ\\ u₃-na-a-dug₄",
+     "orig_lines": [
+      "26"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "27",
+     "orig": "[{d}su-mu]-/la\\-el lugal-ĝu₁₀-ra u₃-na-a-dug₄",
+     "orig_lines": [
+      "27"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "28",
+     "orig": "[...] X X X X A",
+     "orig_lines": [
+      "28"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "29",
+     "orig": "[...] X A X X X X",
+     "orig_lines": [
+      "29"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "30",
+     "orig": "[...] am-si ni₂-te-na",
+     "orig_lines": [
+      "30"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "31",
+     "orig": "[...] /u₃{?}-ne{?}\\-X",
+     "orig_lines": [
+      "31"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "32",
+     "orig": "[...] X lugal ĝiš-gid₂-da BU X /BI{?}\\",
+     "orig_lines": [
+      "32"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "33",
+     "orig": "[...] X X X",
+     "orig_lines": [
+      "33"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "34",
+     "orig": "[...] šag₄ BA X X X",
+     "orig_lines": [
+      "34"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "35",
+     "orig": "[...] X X X X IN AN X BI",
+     "orig_lines": [
+      "35"
+     ],
+     "en": ""
+    }
+   ]
+  },
+  {
+   "num": "0.2.12",
+   "title_en": "OB catalogue at Yale (Y2)",
+   "segments": [
+    {
+     "ref": "1",
+     "orig": "[lugal-me]-/en\\ (Šulgi A, 2.4.2.01)",
+     "orig_lines": [
+      "1"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "2",
+     "orig": "lugal mi₂ dug₄ (Lipit-Eštar A, 2.5.5.1)",
+     "orig_lines": [
+      "2"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "3",
+     "orig": "en-e niĝ₂ (Tḫe song of tḫe ḫoe, 5.5.4)",
+     "orig_lines": [
+      "3"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "4",
+     "orig": "nin me (Inana B, 4.07.2)",
+     "orig_lines": [
+      "4"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "5",
+     "orig": "bur-šu (Išbi-Erra E, 2.5.1.5)",
+     "orig_lines": [
+      "5"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "6",
+     "orig": "/dumu\\ e₂ (five šompositions are known witḫ tḫis inšipit: E-dub-ba-a A, 5.1.1; E-dub-ba-a Š, 5.1.3; E-dub-ba-a E, 5.1.5; Dialogue 1, 5.4.01; Dialogue 3, 5.4.03)",
+     "orig_lines": [
+      "6"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "7",
+     "orig": "dumu e₂ (five šompositions are known witḫ tḫis inšipit: E-dub-ba-a A, 5.1.1; E-dub-ba-a Š, 5.1.3; E-dub-ba-a E, 5.1.5; Dialogue 1, 5.4.01; Dialogue 3, 5.4.03)",
+     "orig_lines": [
+      "7"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "8",
+     "orig": "dumu e₂ (five šompositions are known witḫ tḫis inšipit: E-dub-ba-a A, 5.1.1; E-dub-ba-a Š, 5.1.3; E-dub-ba-a E, 5.1.5; Dialogue 1, 5.4.01; Dialogue 3, 5.4.03)",
+     "orig_lines": [
+      "8"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "9",
+     "orig": "NAM{?}",
+     "orig_lines": [
+      "9"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "10",
+     "orig": "{d}inana{?}",
+     "orig_lines": [
+      "10"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "11",
+     "orig": "šag₄-ga{?} AN",
+     "orig_lines": [
+      "11"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "12",
+     "orig": "in-nin",
+     "orig_lines": [
+      "12"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "13",
+     "orig": "/u₆\\ (Tḫe Temple ḫymns, 4.80.1)",
+     "orig_lines": [
+      "13"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "1",
+     "orig": "DIŠ a",
+     "orig_lines": [
+      "1"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "2",
+     "orig": "DIŠ an",
+     "orig_lines": [
+      "2"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "3",
+     "orig": "{ĝiš}taškarin",
+     "orig_lines": [
+      "3"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "4",
+     "orig": "{gi}gašam",
+     "orig_lines": [
+      "4"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "5",
+     "orig": "udu",
+     "orig_lines": [
+      "5"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "6",
+     "orig": "{na₄}ka-gen₆-na",
+     "orig_lines": [
+      "6"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "7",
+     "orig": "ZI{?} DU₈{?}",
+     "orig_lines": [
+      "7"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "8",
+     "orig": "lu₂ X",
+     "orig_lines": [
+      "8"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "9",
+     "orig": "/NE{?}\\ BI",
+     "orig_lines": [
+      "9"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "10",
+     "orig": "X X",
+     "orig_lines": [
+      "10"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "11",
+     "orig": "X X",
+     "orig_lines": [
+      "11"
+     ],
+     "en": ""
+    }
+   ]
+  },
+  {
+   "num": "0.2.13",
+   "title_en": "OB catalogue from Nibru (N6)",
+   "segments": [
+    {
+     "ref": "1",
+     "orig": "in-nin₉ barag gal an /ki\\",
+     "orig_lines": [
+      "1"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "2",
+     "orig": "en eš-bar an ki šu-[na ĝal₂]",
+     "orig_lines": [
+      "2"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "3",
+     "orig": "šul me-dim₂ sag₉ sig₇ še-še-er-ra",
+     "orig_lines": [
+      "3"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "4",
+     "orig": "diĝir nam-ḫe u₃-tud-da an-na (A ḫymn for Šu-Suen, 2.4.4.a)",
+     "orig_lines": [
+      "4"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "5",
+     "orig": "lu₂ en nun-na lu₂ nun-na",
+     "orig_lines": [
+      "5"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "6",
+     "orig": "gud-dam a₂ bar šu ĝal₂{?}",
+     "orig_lines": [
+      "6"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "7",
+     "orig": "lugal{!} gu₂-za suḫ₁₀-bi ši-du₈ nam-lugal{!}-zu (Ninurta G, 4.27.07)",
+     "orig_lines": [
+      "7"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "8",
+     "orig": "ur-saĝ kal{?}-kal{?}-la giri₁₇ šu du₃",
+     "orig_lines": [
+      "8"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "9",
+     "orig": "šuba-a na-nam niĝ₂ gun₃-na",
+     "orig_lines": [
+      "9"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "10",
+     "orig": "šuba la₂ šuba la₂",
+     "orig_lines": [
+      "10"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "11",
+     "orig": "ĝe₂₆-e u₂-lal₃-a mu-zu",
+     "orig_lines": [
+      "11"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "12",
+     "orig": "lugal ḫi-li gur₃-ru (Ur-Namma E, 2.4.1.5, line 25 and Ur-Namma F, 2.4.1.6, line 25)",
+     "orig_lines": [
+      "12"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "13",
+     "orig": "lu-lu-a-bi lu-lu (Nanna D, 4.13.04)",
+     "orig_lines": [
+      "13"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "14",
+     "orig": "e₂ sikil ki sikil-a",
+     "orig_lines": [
+      "14"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "15",
+     "orig": "kur gal kur-ra a₂ aĝ₂ /gal{?}\\",
+     "orig_lines": [
+      "15"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "16",
+     "orig": "e₂ ud-gin₇ ki-gal-la gub-ba (Tḫe Keš temple ḫymn, 4.80.2, line 88)",
+     "orig_lines": [
+      "16"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "17",
+     "orig": "egir₃ šu dadag me giri₁₇-zal dug₃{?}",
+     "orig_lines": [
+      "17"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "18",
+     "orig": "nin an-gin₇ maḫ KA bal-bal",
+     "orig_lines": [
+      "18"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "19",
+     "orig": "/nun{?}\\ nam-DUB{?} ma₂{?} nam-DUB{?}",
+     "orig_lines": [
+      "19"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "20",
+     "orig": "e-el-lu ama mu-gi₁₇-ib",
+     "orig_lines": [
+      "20"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "21",
+     "orig": "me-e nu-sag₃-ge X DI en{?}-ra",
+     "orig_lines": [
+      "21"
+     ],
+     "en": ""
+    },
+    {
+     "ref": "22",
+     "orig": "ab₂ nun-e an-na{?} kur un₃-na",
+     "orig_lines": [
+      "22"
+     ],
+     "en": ""
+    }
+   ]
+  }
+ ]
+}

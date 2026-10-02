@@ -1,0 +1,267 @@
+{
+ "slug": "nin-me-sara",
+ "source": "ETCSL",
+ "siglum": "ETCSL 4.07.2",
+ "source_url": "https://etcsl.orinst.ox.ac.uk/cgi-bin/etcsl.cgi?text=t.4.07.2",
+ "license": "ETCSL（Oxford）轉寫與英譯，非商業學術使用",
+ "compositions": [
+  {
+   "num": "4.07.2",
+   "title_en": "The exaltation of Inana (Inana B)",
+   "segments": [
+    {
+     "ref": "1–12",
+     "orig": "nin me šar₂-ra ud dalla e₃-a (Šited in OB šatalogue from Nibru, at Pḫiladelpḫia, 0.2.01, line 4; OB šatalogue from Urim (U2), 0.2.04, line 8; OB šatalogue at Andrews University, 0.2.11, line 3; OB šatalogue at Yale, 0.2.12, Seg. A, line 4)\nmunus zid me-lem₄ gur₃-ru ki aĝ₂ an uraš-a\nnu-gig an-na suḫ-gir₁₁ gal-gal-la\naga zid-de₃ ki aĝ₂ nam-en-na tum₂-ma\nme 7-bi šu sa₂ dug₄-ga\nnin-ĝu₁₀ me gal-gal-la saĝ keše₂-bi za-e-me-en\nme mu-e-il₂ me šu-zu-še₃ mu-e-la₂\nme mu-e-ur₄ me gaba-za bi₂-tab\nušumgal-gin₇ kur-re uš₁₁ ba-e-šum₂\n{d}iškur-gin₇ ki šegₓ(KAxLI) gi₄-a-za {d}ezina₂ la-ba-e-ši-ĝal₂\na-ma-ru kur-bi-ta ed₃-de₃\nsaĝ-kal an ki-a {d}inana-bi-me-en",
+     "orig_lines": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10",
+      "11",
+      "12"
+     ],
+     "en": "Lady of all the divine powers, resplendent light, righteous woman clothed in radiance, beloved of An and Uraš! Mistress of heaven, with the great diadem, who loves the good headdress befitting the office of en priestess, who has seized all seven of its divine powers! My lady, you are the guardian of the great divine powers! You have taken up the divine powers, you have hung the divine powers from your hand. You have gathered up the divine powers, you have clasped the divine powers to your breast. Like a dragon you have deposited venom on the foreign lands. When like Iškur you roar at the earth, no vegetation can stand up to you. As a flood descending upon (?) those foreign lands, powerful one of heaven and earth, you are their Inana."
+    },
+    {
+     "ref": "13–19",
+     "orig": "izi bar₇-bar₇-ra kalam-e šeĝ₃-ĝa₂\nan-ne₂ me šum₂-ma nin ur-ra u₅-a\ninim kug an-na-ta inim dug₄-dug₄\nbiluda{da} gal-gal-la niĝ₂-zu a-ba mu-un-zu\nkur gul-gul ud-de₃ a₂ ba-e-šum₂\nki aĝ₂ {d}en-lil₂-la₂ kalam-ma ni₂ mi-ni-ri\na₂ aĝ₂-ĝa₂ an-na-ke₄ ba-gub-be₂-en",
+     "orig_lines": [
+      "13",
+      "14",
+      "15",
+      "16",
+      "17",
+      "18",
+      "19"
+     ],
+     "en": "Raining blazing fire down upon the Land, endowed with divine powers by An, lady who rides upon a beast, whose words are spoken at the holy command of An! The great rites are yours: who can fathom them? Destroyer of the foreign lands, you confer strength on the storm. Beloved of Enlil, you have made awesome terror weigh upon the Land. You stand at the service of An's commands."
+    },
+    {
+     "ref": "20–33",
+     "orig": "nin-ĝu₁₀ za-pa-aĝ₂-zu-še₃ kur i₃-gam-gam-e\nni₂ me-lem₄ u₁₈-lu-da nam-lu₂-ulu₃\nniĝ₂-me-ĝar ĝiri₃-bi u₃-mu-ri-gub\nme-ta me ḫuš-bi šu ba-e-re-ti\ni-dub er₂-ra-ke₄ ĝal₂ ma-ra-ab-taka₄\ne₂ a-nir gal-gal-la sila-ba mu-ri-du\nigi me₃-ta niĝ₂ ma-ra-ta-si-ig\nnin-ĝu₁₀ a₂ ni₂-za {na₄}zu₂ zu₂ i₃-gu₇-e\nud du₇-du₇-gin₇ i₃-du₇-du₇-de₃-en\nud gu₃ ra-ra-da gu₃ im-da-ab-ra-ra-an\n{d}iškur-da šegₓ(KAxLI) mu-da-an-gi₄-gi₄-in\nim-ḫul-im-ḫul-da im-da-kuš₂-u₃-de₃-en\nĝiri₃-za nu-kuš₂-u₃ i₃-im-si\nbalaĝ a-nir-ra-ta i-lu im-da-ab-be₂",
+     "orig_lines": [
+      "20",
+      "21",
+      "22",
+      "23",
+      "24",
+      "25",
+      "26",
+      "27",
+      "28",
+      "29",
+      "30",
+      "31",
+      "32",
+      "33"
+     ],
+     "en": "At your battle-cry, my lady, the foreign lands bow low. When humanity comes before you in awed silence at the terrifying radiance and tempest, you grasp the most terrible of all the divine powers. Because of you, the threshold of tears is opened, and people walk along the path of the house of great lamentations. In the van of battle, all is struck down before you. With your strength, my lady, teeth can crush flint. You charge forward like a charging storm. You roar with the roaring storm, you continually thunder with Iškur. You spread exhaustion with the stormwinds, while your own feet remain tireless. With the lamenting balaĝ drum a lament is struck up."
+    },
+    {
+     "ref": "34–41",
+     "orig": "nin-ĝu₁₀ {d}a-nun-na diĝir gal-gal-e-ne\nsu-din{mušen} dal-la-gin₇ du₆-de₃ mu-e-ši-ib-ra-aš\nigi ḫuš-a-za {la-ba-sug₂-ge-de₃-eš} {(some mss. ḫave instead:) la-ba-sug₂-ge-eš-am₃}\nsaĝ-ki ḫuš-a-za saĝ nu-mu-un-de₃-ĝa₂-ĝa₂\nšag₄ ib₂-ba-za a-ba ib₂-te-en-te-en\nšag₄ ḫul-ĝal₂-la-za te-en-ten-bi maḫ-am₃\nnin ur₅ i₃-sag₉ nin šag₄ i₃-ḫul₂\nib₂-ba nu-te-en-te-en dumu gal {d}suen-na",
+     "orig_lines": [
+      "34",
+      "35",
+      "36",
+      "37",
+      "38",
+      "39",
+      "40",
+      "41"
+     ],
+     "en": "My lady, the great Anuna gods fly from you to the ruin mounds like scudding bats. They dare not stand before your terrible gaze. They dare not confront your terrible countenance. Who can cool your raging heart? Your malevolent anger is too great to cool. Lady, can your mood be soothed? Lady, can your heart be gladdened? Eldest daughter of Suen, your rage cannot be cooled!"
+    },
+    {
+     "ref": "42–59",
+     "orig": "nin kur-ra dirig-ga a-ba ki-za ba-an-tum₃\n{ḫur-saĝ ki-za} {(2 mss. ḫave instead:) kur saĝ-ki-za} ba-e-de₃-gid₂-de₃-en {d}ezina₂ niĝ₂-gig-bi\n{abul-la-ba} {(1 ms. ḫas instead:) e₂-gal-la-ba} izi mu-ni-in-ri-ri\nid₂-ba uš₂ ma-ra-an-de₂ uĝ₃-bi {ma-ra-na₈-na₈} {(2 mss. ḫave instead:) ba-ra-na₈-na₈}\nugnim-bi ni₂-bi-a ma-ra-ab-laḫ₅-e\nzu₂ keše₂-bi ni₂-bi-a ma-ra-ab-si-il-le\nĝuruš a₂-tuku-bi ni₂-bi-a ma-ra-ab-sug₂-ge-eš\niri-ba ki-e-ne-di-ba mir i-ib₂-si\nĝuruš šag₄-gan-bi LU₂-eš₂ ma-ra-ab-sar-re-eš\niri kur za-ra li-bi₂-in-dug₄-ga-am₃\na-a ugu-zu li-bi₂-in-eš-am₃\ninim kug-zu bi₂-in-dug₄ ki ĝiri₃-za ḫe₂-eb-gi₄\nšag₄ tur₃-bi-ta ĝiri₃ ḫe₂-eb₂-ta-an-ze₂-er\nmunus-bi dam-a-ni-ta sag₉-ga na-an-da-ab-be₂\nĝi₆ u₃-na ad na-an-di-ni-ib-gi₄-gi₄\nniĝ₂ kug šag₄-ga-na nam-mu-da-an-bur₂-re\nu₃-sumun₂ zid-zid dumu gal {d}suen-na\nnin an-ra dirig-ga a-ba ki-za ba-an-tum₃",
+     "orig_lines": [
+      "42",
+      "43",
+      "44",
+      "45",
+      "46",
+      "47",
+      "48",
+      "49",
+      "50",
+      "51",
+      "52",
+      "53",
+      "54",
+      "55",
+      "56",
+      "57",
+      "58",
+      "59"
+     ],
+     "en": "Lady supreme over the foreign lands, who can take anything from your province? {Once you have extended your province over the hills} {(2 mss. have instead:) If you frown at the mountains}, vegetation there is ruined. Their {great gateways} {(1 ms. has instead:) palaces} are set afire. Blood is poured into their rivers because of you, and their people {must drink it} {(2 mss. have instead:) could not drink}. They must lead their troops captive before you, all together. They must scatter their élite regiments for you, all together. They must stand their able-bodied young men at your service, all together. Tempests have filled the dancing-places of their cities. They drive their young men before you as prisoners. Your holy command has been spoken over the city which has not declared \"The foreign lands are yours!\", wherever they have not declared \"It is your own father's!\"; and it is brought back under your feet. Responsible care is removed from its sheepfolds. Its woman no longer speaks affectionately with her husband; at dead of night she no longer takes counsel with him, and she no longer reveals to him the pure thoughts of her heart. Impetuous wild cow, great daughter of Suen, lady greater than An, who can take anything from your province?"
+    },
+    {
+     "ref": "60–65",
+     "orig": "me zid-de₃ nin gal nin-e-ne\nšag₄ kug-ta e₃-a ama ugu-ni-ir dirig-ga\ngal-zu igi-ĝal₂ nin kur-kur-ra\nzi-ĝal₂ uĝ₃ lu-a šir₃ kug-zu ga-am₃-dug₄\ndiĝir zid me-a tum₂-ma gal-bi dug₄-ga-zu maḫ-am₃\nšag₄ su₃-ra₂ munus zid šag₄ zalag-zalag-ga {me-zu} {(2 mss. ḫave instead:) me zid} {(1 ms. ḫas instead:) me kug} ga-mu-ra-ab-dug₄",
+     "orig_lines": [
+      "60",
+      "61",
+      "62",
+      "63",
+      "64",
+      "65"
+     ],
+     "en": "Great queen of queens, issue of a holy womb for righteous divine powers, greater than your own mother, wise and sage, lady of all the foreign lands, life-force of the teeming people: I will recite your holy song! True goddess fit for divine powers, your splendid utterances are magnificent. Deep-hearted, good woman with a radiant heart, I will enumerate {your divine powers} {(2 mss. have instead:) good divine powers} {(1 ms. has instead:) holy divine powers} for you!"
+    },
+    {
+     "ref": "66–73",
+     "orig": "ĝi₆-par₃ kug-ĝa₂ ḫu-mu-ši-in-kur₉-re-en\nen-me-en en-ḫe₂-du₇-an-na-me-en\n{gi}ma-sa₂-ab i₃-gur₃-ru asil-la₂ i₃-dug₄\n{ki-sig₁₀-ga} {(1 ms. ḫas instead:) kiĝ₂-sig-ga-ĝu₁₀} bi₂-ib-ĝar ĝe₂₆-e nu-mu-un-til₃-le-en\nud-de₃ ba-te ud mu-da-bil₂\nĝissu ne ba-te u₁₈-lu-da im-mi-dul\nka lal₃-ĝu₁₀ šu uḫ₃-a ba-ab-dug₄\nniĝ₂ ur₅ sag₉-sag₉-ĝu₁₀ saḫar-ta ba-da-gi₄",
+     "orig_lines": [
+      "66",
+      "67",
+      "68",
+      "69",
+      "70",
+      "71",
+      "72",
+      "73"
+     ],
+     "en": "I, En-ḫedu-ana the en priestess, entered my holy ĝipar in your service. I carried the ritual basket, and intoned the song of joy. But {funeral offerings were} {(1 ms. has instead:) my ritual meal was} brought, as if I had never lived there. I approached the light, but the light was scorching hot to me. I approached that shade, but I was covered with a storm. My honeyed mouth became scum. My ability to soothe moods vanished."
+    },
+    {
+     "ref": "74–80",
+     "orig": "nam-ĝu₁₀ {d}suen lugal-an-ne₂\nan-ra dug₄-mu-na-ab an-ne₂ ḫa-ma-du₈-e\na-da-lam an-ra ba-an-na-ab-be₂-en an-ne₂ mu-e-du₈-e\nnam lugal-an-ne₂ munus-e ba-ab-kar-re\nkur a-ma-ru ĝiri₃-ni-še₃ i₃-nu₂\nmunus-bi in-ga-maḫ iri mu-un-da-ab-tuku₄-e\ngub-ba šag₄-ga-na ḫa-ma-sed-de₃",
+     "orig_lines": [
+      "74",
+      "75",
+      "76",
+      "77",
+      "78",
+      "79",
+      "80"
+     ],
+     "en": "Suen, tell An about Lugal-Ane and my fate! May An undo it for me! As soon as you tell An about it, An will release me. The woman will take the destiny away from Lugal-Ane; foreign lands and flood lie at her feet. The woman too is exalted, and can make cities tremble. Step forward, so that she will cool her heart for me."
+    },
+    {
+     "ref": "81–90",
+     "orig": "en-ḫe₂-du₇-an-na-me-en a-ra-zu ga-mu-ra-ab-dug₄\ner₂-ĝa₂ kaš dug₃-ga-gin₇\nkug {d}inana-ra šu ga-mu-ni-ri-bar {di-zu} {(some mss. ḫave instead:) silim-ma} ga-mu-ra-ab-dug₄\n{d}aš-im₂-babbar na-an-kuš₂-u₃-de₃-en\nšu-luḫ an kug-ga-ke₄ niĝ₂-nam-ma-ni in-kur₂\nan-da e₂-an-na ḫa-ba-da-an-kar\ndiĝir lu₂ gu-la-ta ni₂ ba-ra-ba-da-te\ne₂-bi la-la-bi ba-ra-mu-un-gi₄ ḫi-li-bi ba-ra-mu-un-til\ne₂-bi e₂ ḫul-a ḫu-mu-un-di-ni-in-kur₉\ntab mu-ši-in-kur₉-ra-ni ninim-ma-ni ḫu-mu-un-te",
+     "orig_lines": [
+      "81",
+      "82",
+      "83",
+      "84",
+      "85",
+      "86",
+      "87",
+      "88",
+      "89",
+      "90"
+     ],
+     "en": "I, En-ḫedu-ana, will recite a prayer to you. To you, holy Inana, I shall give free vent to my tears like sweet beer! I shall say to her {\"Your decision!\"} {(some mss. have instead:) \"Greetings!\"} Do not be anxious about Ašimbabbar. In connection with the purification rites of holy An, Lugal-Ane has altered everything of his, and has stripped An of the E-ana. He has not stood in awe of the greatest deity. He has turned that temple, whose attractions were inexhaustible, whose beauty was endless, into a destroyed temple. While he entered before me as if he was a partner, really he approached out of envy."
+    },
+    {
+     "ref": "91–108",
+     "orig": "{d}sumun₂-zid-ĝu₁₀ lu₂ ḫu-mu-sar-re-en lu₂ ḫe₂-em-mi-dab₅-be₂-en\nki zi-šag₄-ĝal₂-la-ka ĝe₂₆-e a-na-me-en\nki-bal ḫul gig {d}nanna-za-ke₄-eš an-ne₂ ḫa-ba-ab-šum₂-mu\niri-bi an-ne₂ ḫa-ba-ra-an-si-il-le\n{d}en-lil₂-le nam ḫa-ba-da-an-kud-de₃\ndumu er₂ pad₃-da-bi ama-ni na-an-sed₄-e\nnin a-nir ki ĝar-ra\n{ĝiš}ma₂ a-nir-ra-zu ki kur₂-ra ḫe₂-bi₂-ib-taka₄\nšir₃ kug-ĝa₂-ke₄-eš i₃-ug₅-ge-de₃-en\nĝe₂₆-e {d}nanna-ĝu₁₀ { en₃-ĝu₁₀ ba-ra-an-tar } {(1 ms. ḫas instead:) / di\\-[ĝu₁₀ ba]-ra-bi₂-in-kud }\nki-lul-la ḫe₂-eb-gul-gul-en\n{d}aš-im₂-babbar-e di-ĝu₁₀ ba-ra-bi₂-in-dug₄\nbi-in-dug₄ nam-ĝu₁₀ li-bi₂-in-dug₄ nam-ĝu₁₀\nu₃-ma gub-gub-ba e₂-ta ba-ra-an-e₃-en\nsim{mušen}-gin₇ ab-ta ba-ra-an-dal-en zi-ĝu₁₀ im-mi-gu₇\n{ĝiš}kiši₁₆ kur-ra-ke₄ bi₂-in-du-e-en\n{aga} {(1 ms. ḫas instead:) tug₂} zid nam-en-na mu-da-an-kar\nĝiri₂ ba-da-ra ma-an-šum₂ a-ra-ab-du₇ ma-an-dug₄",
+     "orig_lines": [
+      "91",
+      "92",
+      "93",
+      "94",
+      "95",
+      "96",
+      "97",
+      "98",
+      "99",
+      "100",
+      "101",
+      "102",
+      "103",
+      "104",
+      "105",
+      "106",
+      "107",
+      "108"
+     ],
+     "en": "My good divine wild cow, drive out the man, capture the man! In the place of divine encouragement, what is my standing now? May An extradite the land which is a malevolent rebel against your Nanna! May An smash that city! May Enlil curse it! May its plaintive child not be placated by his mother! Lady, with the laments begun, may your ship of lamentation be abandoned in hostile territory. Must I die because of my holy songs? My Nanna has {paid no heed to me} {(1 ms. has instead:) has not decided my case}. He has destroyed me utterly in renegade territory. Ašimbabbar has certainly not pronounced a verdict on me. What is it to me if he has pronounced it? What is it to me if he has not pronounced it? He stood there in triumph and drove me out of the temple. He made me fly like a swallow from the window; I have exhausted my life-strength. He made me walk through the thorn bushes of the mountains. He stripped me of the rightful {crown} {(1 ms. has instead:) garment} of the en priestess. He gave me a knife and dagger, saying to me \"These are appropriate ornaments for you.\""
+    },
+    {
+     "ref": "109–121",
+     "orig": "nin kal-kal-la an-ne₂ ki aĝ₂\nšag₄ kug-zu maḫ-a ki-bi ḫa-ma-gi₄-gi₄\nnitalam ki aĝ₂ {d}ušumgal-an-na-ka\nan-ur₂ an-pa nin gal-bi-me-en\n{d}a-nun-na-ke₄-ne gu₂ ĝiš ma-ra-an-ĝar-re-eš\nu₃-tud-da-ta nin ban₃-da-me-en\n{d}a-nun-na diĝir gal-gal-e-ne a-gin₇ ba-e-ne-dirig-ga\n{d}a-nun-na-ke₄-ne nundum-nundum-bi-ta ki su-ub ma-ra-ak-ke₄-ne\ndi ni₂-ĝa₂ nu-mu-un-til di kur₂ di-ĝu₁₀-gin₇ igi-ĝa₂ mu-un-niĝin₂\nĝiš-nu₂ {gi-rin-na} {(1 ms. ḫas instead:) gi-rin-ĝa₂} šu nu-um-mi-la₂\ninim dug₄-ga {d}nin-gal lu₂-ra nu-mu-na-bur₂\nen dadag-ga {d}nanna-me-en\nnin ki aĝ₂ an-na-ĝu₁₀ šag₄-zu ḫa-ma-sed-de₃",
+     "orig_lines": [
+      "109",
+      "110",
+      "111",
+      "112",
+      "113",
+      "114",
+      "115",
+      "116",
+      "117",
+      "118",
+      "119",
+      "120",
+      "121"
+     ],
+     "en": "Most precious lady, beloved by An, your holy heart is great; may it be assuaged on my behalf! Beloved spouse of Ušumgal-ana, you are the great lady of the horizon and zenith of the heavens. The Anuna have submitted to you. From birth you were the junior queen: how supreme you are now over the Anuna, the great gods! The Anuna kiss the ground with their lips before you. But my own trial is not yet concluded, although a hostile verdict encloses me as if it were my own verdict. I did not reach out my hands to {the} {(1 ms. has instead:) my} flowered bed. I did not reveal the pronouncements of Ningal to anybody. My lady beloved of An, may your heart be calmed towards me, the brilliant en priestess of Nanna!"
+    },
+    {
+     "ref": "122–138",
+     "orig": "ḫe₂-zu ḫe₂-zu-am₃ {d}nanna li-bi₂-in-dug₄-ga za-a-kam bi₂-in-dug₄-ga\nan-gin₇ maḫ-a-za ḫe₂-zu-am₃\nki-gin₇ daĝal-la-za ḫe₂-zu-am₃\nki-bal gul-gul-lu-za ḫe₂-zu-am₃\nkur-ra gu₃ de₂-e-za ḫe₂-zu-am₃\nsaĝ ĝiš ra-ra-za ḫe₂-zu-am₃\nur-gin₇ ad₆ gu₇-u₃-za ḫe₂-zu-am₃\nigi ḫuš-a-za ḫe₂-zu-am₃\nigi ḫuš-bi il₂-il₂-i-za ḫe₂-zu-am₃\nigi gun₃-gun₃-na-za ḫe₂-zu-am₃\nuru₁₆-na nu-še-ga-za ḫe₂-zu-am₃\nu₃-ma gub-gub-bu-za ḫe₂-zu-am₃\n{d}nanna li-bi₂-in-dug₄-ga za-a-kam bi₂-in-dug₄-ga\nnin-ĝu₁₀ ib₂-gu-ul-en i₃-maḫ-en\nnin ki aĝ₂ an-na-ĝu₁₀ {mir-mir-za} {(1 ms. ḫas instead:) barag-barag-/za\\} ga-am₃-dug₄\nne-mur mu-dub šu-luḫ si bi₂-sa₂\ne₂-eš₂-dam-kug ma-ra-ĝal₂ šag₄-zu na-ma-sed-de₃",
+     "orig_lines": [
+      "122",
+      "123",
+      "124",
+      "125",
+      "126",
+      "127",
+      "128",
+      "129",
+      "130",
+      "131",
+      "132",
+      "133",
+      "134",
+      "135",
+      "136",
+      "137",
+      "138"
+     ],
+     "en": "It must be known! It must be known! Nanna has not yet spoken out! He has said, \"He is yours!\" Be it known that you are lofty as the heavens! Be it known that you are broad as the earth! Be it known that you destroy the rebel lands! Be it known that you roar at the foreign lands! Be it known that you crush heads! Be it known that you devour corpses like a dog! Be it known that your gaze is terrible! Be it known that you lift your terrible gaze! Be it known that you have flashing eyes! Be it known that you are unshakeable and unyielding! Be it known that you always stand triumphant! That Nanna has not yet spoken out, and that he has said \"He is yours!\" has made you greater, my lady; you have become the greatest! My lady beloved by An, I shall tell of all your {rages} {(1 ms. has instead:) daises}! I have heaped up the coals in the censer, and prepared the purification rites. The E-ešdam-kug shrine awaits you. Might your heart not be appeased towards me?"
+    },
+    {
+     "ref": "139–143",
+     "orig": "im-ma-si im-ma-dirig-ga-ta nin UN-gal ma-ra-dug₄\nniĝ₂ ĝi₆ u₃-na ma-ra-an-dug₄-ga-am₃\ngala-e an-bar₇-ka šu ḫu-mu-ra-ab-gi₄-gi₄\ndam dab₅-ba-za-ke₄-eš dumu dab₅-ba-za-ke₄-eš\nib₂-ba-zu ib₂-gu-ul šag₄-zu nu-te-en-te-en",
+     "orig_lines": [
+      "139",
+      "140",
+      "141",
+      "142",
+      "143"
+     ],
+     "en": "Since it was full, too full for me, great exalted lady, I have recited this song for you. May a singer repeat to you at noon that which was recited to you at dead of night: \"Because of your captive spouse, because of your captive child, your rage is increased, your heart unassuaged.\""
+    },
+    {
+     "ref": "144–154",
+     "orig": "nin gu₂-tuku nir-ĝal₂ gu₂-en-na-ke₄\nsizkur₂-ra-na šu ba-an-ši-in-ti\nšag₄ kug {d}inana ki-bi ba-an-na-ab-gi₄\nud ba-an-na-dug₃ la-la ba-an-sud-sud ḫi-li ma-az ba-an-du₈-du₈\niti₆ e₃-a-gin₇ la-la ba-an-guru₃\n{d}nanna u₆ zid-de₃-eš mu-un-e₃\nama-ni {d}nin-gal-am₃ šudu₃ mu-na-an-ša₄\nĝiš-kan₄-na-ke₄ silim-ma mu-na-ab-be₂\nnu-gig-ra dug₄-ga-ni maḫ-am₃\nkur gul-gul an-da me ba-a\nnin-ĝu₁₀ ḫi-li gu₂ e₃ {d}inana za₃-mi₂",
+     "orig_lines": [
+      "144",
+      "145",
+      "146",
+      "147",
+      "148",
+      "149",
+      "150",
+      "151",
+      "152",
+      "153",
+      "154"
+     ],
+     "en": "The powerful lady, respected in the gathering of rulers, has accepted her offerings from her. Inana's holy heart has been assuaged. The light was sweet for her, delight extended over her, she was full of fairest beauty. Like the light of the rising moon, she exuded delight. Nanna came out to gaze at her properly, and her mother Ningal blessed her. The door posts greeted her. Everyone's speech to the mistress is exalted. Praise be to the destroyer of foreign lands, endowed with divine powers by An, to my lady enveloped in beauty, to Inana!"
+    }
+   ]
+  }
+ ]
+}

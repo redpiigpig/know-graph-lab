@@ -1,0 +1,543 @@
+{
+ "slug": "iddin-dagan-a",
+ "source": "ETCSL",
+ "siglum": "ETCSL 2.5.3.1",
+ "source_url": "https://etcsl.orinst.ox.ac.uk/cgi-bin/etcsl.cgi?text=t.2.5.3.1",
+ "license": "ETCSL（Oxford）轉寫與英譯，非商業學術使用",
+ "compositions": [
+  {
+   "num": "2.5.3.1",
+   "title_en": "A šir-namursaĝa to Ninsiana for Iddin-Dagan (Iddin-Dagan A)",
+   "segments": [
+    {
+     "ref": "1–16",
+     "orig": "[an-ta e₃-a-ra an-ta e₃-a]-ra [silim-ma ga]-na-ab-be₂-en (Šited in OB šatalogue in tḫe Louvre, 0.2.02, line 44)\n[nu-u₈]-/gig\\ an-ta e₃-a-ra [silim]-ma ga-na-ab-be₂-en\n[nin] gal an-na {d}inana-ra silim-ma ga-na-ab-be₂-en\nizi-ĝar kug an-e si-a-ra\nsu₃-ra₂-aĝ₂ {d}inana-ra ud-gin₇ zalag-ge-ra\nnin gal an-na {d}inana-ra silim-ma ga-na-ab-be₂-en\nnu-u₈-gig nin ni₂ gur₃-ru {d}a-nun-na-ke₄-ne\nnir-ĝal₂ an ki si gal si-a\ndumu gal {d}suen-na {d}inana-ra silim-ma ga-na-ab-be₂-en\nnam-maḫ-a-na nam-gal-la-na nam-nir-ĝal₂ buluĝ₃-ĝa₂-na\nan-usan{an}-na dalla e₃-a-na\nizi-ĝar kug an-e si-a-na\n{d}nanna {d}utu-gin₇ an-na gub-ba-na\nsig-ta igi-nim-še₃ kur-kur-ra zu-am₃\nnu-u₈-gig an-na-ka nam-gal-la-na\nin-nin₉-ra šir₃-re-eš ga-na-ab-be₂-en",
+     "orig_lines": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10",
+      "11",
+      "12",
+      "13",
+      "14",
+      "15",
+      "16"
+     ],
+     "en": "I shall greet her who ascends above, her who ascends above, I shall greet the Mistress who ascends above, I shall greet the great lady of heaven, Inana! I shall greet the holy torch who fills the heavens, the light, Inana, her who shines like daylight, the great lady of heaven, Inana! I shall greet the Mistress, the most awesome lady among the Anuna gods; the respected one who fills heaven and earth with her huge brilliance; the eldest daughter of Suen, Inana! For the young lady I shall sing a song about her grandeur, about her greatness, about her exalted dignity; about her radiantly ascending at evening; about her filling the heaven like a holy torch; about her stance in the heavens, as noticeable by all lands, from the south to the highlands, as that of Nanna or of Utu; about the greatness of the mistress of heaven!"
+    },
+    {
+     "ref": "17",
+     "orig": "ki-ru-gu₂ 1-a-kam",
+     "orig_lines": [
+      "17"
+     ],
+     "en": "1st kirugu."
+    },
+    {
+     "ref": "18",
+     "orig": "e₃-a-ni ur-saĝ-am₃",
+     "orig_lines": [
+      "18"
+     ],
+     "en": "Her rising is that of a warrior."
+    },
+    {
+     "ref": "19",
+     "orig": "ĝiš-gi₄-ĝal₂-bi-im",
+     "orig_lines": [
+      "19"
+     ],
+     "en": "Ĝišgiĝal."
+    },
+    {
+     "ref": "20–33",
+     "orig": "an-na nam-mi-in-gub u₃-sumun₂ zid an-na-kam\nki-a nir mi-ni-in-ĝal₂ nin kur-kur-ra-kam\nabzu eridug{ki}-ga me šu ba-ni-in-ti\na-a-ni {d}en-ki-ke₄ saĝ-e-eš mu-ni-in-rig₇\nnam-en nam-lugal-la šu-ni-še₃ mu-u₈-ĝar\nan-da barag gal-la dur₂ mu-da-an-ĝar\n{d}en-lil₂-da kalam-ma-na nam mu-un-di-ni-ib-tar-re\nitid-da ud-sakar-ra me šu du₇-du₇-de₃\ndiĝir kalam-ma-ke₄ gu₂ mu-na-an-si-si-iš\n{d}a-nun-na gal-gal im-ši-gam-e-de₃-eš\nsizkur a-ra-zu-a ši-im-ma-sug₂-sug₂-ge-eš\nnam-šita kur-kur-ra mu-na-da-ab-be₂-ne\nnin-ĝu₁₀ di kalam-ma ki-bi-še₃ i₃-kud-de₃\n[{d}inana-ke₄] ka-aš bar kalam-ma {d}en-lil₂-[da] i₃-bar-[re]\nsaĝ gig₂-ga-ni igi-ni-še₃ i₃-dib-be₂",
+     "orig_lines": [
+      "20",
+      "21",
+      "22",
+      "23",
+      "24",
+      "25",
+      "26",
+      "27",
+      "28",
+      "29",
+      "30",
+      "31",
+      "32",
+      "32A",
+      "33"
+     ],
+     "en": "When standing in the heavens she is the good wild cow of An, on earth she instils respect; she is the lady of all the lands. She received the divine powers in the abzu, in Eridug; her father Enki presented them to her. He placed the lordship and kingship in her hands. She takes her seat on the great dais with An; she determines the fates in her Land with Enlil. Monthly, at the new moon, the gods of the Land gather around her so that the divine powers are perfected. The great Anuna gods, having bowed before them, stand there with prayers and supplications and utter prayers on behalf of all the lands. My lady decrees judgments in due order for the Land. {(2 mss. add the line:) Inana decides verdicts for the Land together with Enlil.} Her black-headed people parade before her."
+    },
+    {
+     "ref": "34",
+     "orig": "ki-ru-gu₂ 2-kam-ma-am₃",
+     "orig_lines": [
+      "34"
+     ],
+     "en": "2nd kirugu."
+    },
+    {
+     "ref": "35–43",
+     "orig": "{ĝiš}al-ĝar kug-ga-ke₄ šu mu-na-tag-ge\nkug {d}inana-ra igi-ni-še₃ i₃-dib-be₂\nnin gal an-na {d}inana-ra silim-ma ga-na-ab-be₂-en\nub₃ kug li-li-is₃ kug šu mu-na-tag-ge\nkug {d}inana-ra igi-ni-še₃ i₃-dib-be₂\nnin gal an-na {d}inana-ra silim-ma ga-na-ab-be₂-en\nbalaĝ kug li-li-is₃ kug šu mu-na-dar-e\nkug {d}inana-ra igi-ni-še₃ i₃-dib-be₂\nnam-[maḫ-a-na nam]-gal-a-na\nnam-nir{!}-[ĝal₂] /buluĝ₃\\-a-na\nan-u₂-sa₁₁-/an-na\\ dalla e₃-a-ra\n{dumu gal {d}suen-na} {(some mss. ḫave instead:) nin gal an-na} {d}inana-ra silim-ma ga-na-ab-be₂-en",
+     "orig_lines": [
+      "35",
+      "36",
+      "37",
+      "38",
+      "39",
+      "40",
+      "41",
+      "42",
+      "42A",
+      "42B",
+      "42C",
+      "43"
+     ],
+     "en": "Making silver alĝar instruments sound for her, they parade before her, holy Inana. I shall greet the great lady of heaven, Inana! Making holy ub and holy lilis drums sound for her, they parade before her, holy Inana. I shall greet the great lady of heaven, Inana! Beating (?) holy balaĝ and holy lilis drums for her, they parade before her, holy Inana. I shall greet {(1 ms. adds:) in (?) her grandeur, in (?) her greatness, in (?) her exalted dignity as she ascends radiantly at evening,} {the eldest daughter of Suen} {(some mss. have instead:) the great lady of heaven}, Inana!"
+    },
+    {
+     "ref": "44",
+     "orig": "ki-ru-gu₂ 3-kam-ma-am₃",
+     "orig_lines": [
+      "44"
+     ],
+     "en": "3rd kirugu."
+    },
+    {
+     "ref": "45–58",
+     "orig": "saĝ-ur-saĝ-e-ne suḫ mu-na-an-dub-dub-bu-uš\nkug {d}inana-ra igi-ni-še₃ i₃-dib-be₂\ngu₂-bar niĝ₂-dara₂ gun₃ mu-na-an-gun₃-gun₃-ne-eš\nkug {d}inana-ra igi-ni-še₃ i₃-dib-be₂\nkuš nam-diĝir-ra su-bi-a mu-un-ĝal₂\nkug {d}inana-ra igi-ni-še₃ i₃-dib-be₂\n{lu₂} {(1 ms. ḫas instead:) lugal} zid nin saĝ-tuku munus um-ma gal-gal-la\nkug {d}inana-ra igi-ni-še₃ i₃-dib-be₂\nbalaĝ niĝ₂ sed-de₃ ba-KU-a zag mi-ni-ib-gub-gub-be₂\nkug {d}inana-ra igi-ni-še₃ i₃-dib-be₂\n{tug₂}niĝ₂-la₂ a₂ me₃ da-da-ra-še₃ mu-dug₄\nkug {d}inana-ra igi-ni-še₃ i₃-dib-be₂\nĝiš-gid₂-da a₂ me₃ šu-bi-a mu-un-ĝal₂\nkug {d}inana-ra igi-ni-še₃ i₃-dib-be₂",
+     "orig_lines": [
+      "45",
+      "46",
+      "47",
+      "48",
+      "49",
+      "50",
+      "51",
+      "52",
+      "53",
+      "54",
+      "55",
+      "56",
+      "57",
+      "58"
+     ],
+     "en": "Tightening their hairgrips for her, male prostitutes parade before her, holy Inana. Their locks of hair at the back are adorned for her with coloured rags (?); they parade before her, holy Inana. Clothed (?) in the leather (?) of divinity, they parade before her, holy Inana. The trustworthy {man} {(1 ms. has instead:) king} and the proud lady, the doyenne of the great wise women, parade before her, holy Inana. Those who are in charge (?) of beating (?) the soothing balaĝ drums parade before her, holy Inana. Each girded with a sword belt, the strength of battle, they parade before her, holy Inana. Grasping a spear, the strength of battle, in their hands, they parade before her, holy Inana."
+    },
+    {
+     "ref": "59",
+     "orig": "ki-ru-gu₂ 4-kam-ma-am₃",
+     "orig_lines": [
+      "59"
+     ],
+     "en": "4th kirugu."
+    },
+    {
+     "ref": "60–68",
+     "orig": "a₂ zid-da-bi tug₂ nitaḫ₂ bi₂-in-mur₁₀\nkug {d}inana-ra igi-ni-še₃ i₃-dib-be₂\nnin gal an-na {d}inana-ra silim-ma ga-na-ab-be₂-en\na₂ gab₂-bu-bi-a tug₂ nam-munus mu-ni-si-ig\nkug {d}inana-ra igi-ni-še₃ i₃-dib-be₂\nnin gal an-na {d}inana-ra silim-ma ga-na-ab-be₂-en\nešemen₂ gu-du gun₃-a a-da-min₃ mu-na-e\nkug inana-ra igi-ni-še₃ i₃-dib-be₂\n{dumu gal {d}suen-na} {(1 ms. ḫas instead:) nin gal an-na} {d}inana-ra silim-ma ga-na-ab-be₂-en",
+     "orig_lines": [
+      "60",
+      "61",
+      "62",
+      "63",
+      "64",
+      "65",
+      "66",
+      "67",
+      "68"
+     ],
+     "en": "Dressed with men's clothing on the right side, they parade before her, holy Inana. I shall greet the great lady of heaven, Inana! Adorned (?) with women's clothing on the left side, they parade before her, holy Inana. I shall greet the great lady of heaven, Inana! Competing with skipping ropes of (?) coloured cords for her, they parade before her, holy Inana. I shall greet {the eldest daughter of Suen} {(1 ms. has instead:) the great lady of heaven}, Inana!"
+    },
+    {
+     "ref": "69",
+     "orig": "ki-ru-gu₂ 5-kam-ma-am₃",
+     "orig_lines": [
+      "69"
+     ],
+     "en": "5th kirugu."
+    },
+    {
+     "ref": "70–81",
+     "orig": "ĝuruš {ĝiš}rab₃ ĝar-ra mu-na-šir₃-šir₃-re-eš\nkug {d}inana-ra igi-ni-še₃ i₃-dib-be₂\nki-sikil šu-gi₄-a saĝ-ki gu₂ la₂-e\nkug {d}inana-ra igi-ni-še₃ i₃-dib-be₂\nĝiri₂ ba-da-ra igi-ni-še₃ UR X X ZA X\nkug {d}inana-ra igi-ni-še₃ i₃-[dib-be₂]\nkur-ĝar-ra ed₃-da ba-da-ra šu bi₂-in-du₈-uš\nkug {d}inana-ra igi-ni-še₃ i₃-dib-be₂\nĝiri₂ uš₂ dul₄-dul₄-e urin i₃-su₃-e\nkug {d}inana-ra igi-ni-še₃ i₃-dib-be₂\nbarag gu₂-en-na-ka uš₂ i₃-bal-bal-e\ntigi šem₃ {kuš}a₂-la₂-e gu₃ nun mu-ni-ib-be₂",
+     "orig_lines": [
+      "70",
+      "71",
+      "72",
+      "73",
+      "74",
+      "75",
+      "76",
+      "77",
+      "78",
+      "79",
+      "80",
+      "81"
+     ],
+     "en": "Young men wearing neck-stocks sing to her and parade before her, holy Inana. Young women, šugia priestesses, coiffured, parade before her, holy Inana. …… sword and dagger for her, they parade before her, holy Inana. With daggers in their hands, …… kurĝara priests parade before her, holy Inana. Those who cover their swords with gore spatter blood as they parade before her, holy Inana. Blood is poured on the dais standing in the guena hall, as tigi, šem and ala drums are made to sound loudly."
+    },
+    {
+     "ref": "82–87",
+     "orig": "nu-u₈-gig an sikil-la dili-ni nam-mi-in-gub\nkur-kur saĝ gig₂ uĝ₃ {udu-gin₇} {(1 ms. ḫas instead:) u₈-gin₇} lu-a\nnin-ĝu₁₀ an-šag₄-ta u₆ dug₃-ge-eš im-me\nkug {d}inana-ra igi-ni-še₃ i₃-dib-be₂\nnin an-usan-na {d}inana maḫ-am₃\nki-sikil {d}inana me-teš₂ mu-e-i-i\n{nin an-usan an-zag-še₃ la₂-a} {(1 ms. ḫas instead tḫe line:) nin an-še₃ la₂-a {d}inana /maḫ\\-[am₃]}",
+     "orig_lines": [
+      "82",
+      "83",
+      "84",
+      "84A",
+      "85",
+      "86",
+      "87"
+     ],
+     "en": "The Mistress stands alone in the pure heavens. From the midst of heaven my lady looks with joy at all the lands and the black headed people, who are as numerous as {sheep} {(1 ms. has instead:) ewes}. {(some mss. add the line:) They parade before her, holy Inana.} I praise the lady of the evening, Inana, the august one, the young lady, Inana. {The lady of the evening reaches the borders of heaven!} {(1 ms. has instead:) The lady exalted as high as the heaven, Inana, is august!}"
+    },
+    {
+     "ref": "88",
+     "orig": "ki-ru-gu₂ 6-kam-ma-[am₃]",
+     "orig_lines": [
+      "88"
+     ],
+     "en": "6th kirugu."
+    },
+    {
+     "ref": "89–105",
+     "orig": "an-usan-na mul /dalla\\ [e₃-a {mul}dili-bad] ud gal an kug-[ge si-a]\nnin an-usan-na ur-saĝ-ĝa₂ an-ta nam-ta-[an-e₃]\nuĝ₃-e kur-kur-ra igi mu-un-ši-ib-il₂-il₂-i\nnitaḫ₂ mu-un-sikil-e munus mu-un-zalag-/ga\\\ngud-de₃ {ĝiš}šudul-bi-a saĝ mu-ni-ib-bal-e\nudu-bi amaš-bi-a saḫar mu-na-an-dub-dub-bu-uš\nmaš₂-anše lu-a {d}šakkan₂-na niĝ₂-zi-ĝal₂ edin-na\nniĝ₂-ur₂-4 {an niĝ₂-daĝal-ba} {(1 ms. ḫas instead:) an-/edin\\ [daĝal-la]}\npu₂-{ĝiš}kiri₆ mu₂-sar ĝiš-gi sig₇-ga\nku₆ engur-ra-ke₄ mušen an-na-[ke₄]\nnin-ĝu₁₀ ki-nu₂-bi-še₃ ĝiri₃ [mu-ni]-ib-ul₄-e\nzi-ĝal₂ uĝ₃ lu-a dub₃ mu-un-ši-gam-e\nnin-ĝu₁₀ gu₃ de₂-a bur-šu-ma-e-ne\ngu₇ naĝ gal-gal-e niĝ₂ mi-ni-ib-gu-ul-gu-ul-lu-ne\nnin-ĝu₁₀ kalam-ma-na ni₂ mu-ni-ib-te-en-ten\nešemen kalam-ma ezem-ma du₃-du₃\nšul-e nitalam-a-ni šag₄ ša-mu-un-di-ni-ib-kuš₂-u₃",
+     "orig_lines": [
+      "89",
+      "90",
+      "91",
+      "92",
+      "93",
+      "94",
+      "95",
+      "96",
+      "97",
+      "98",
+      "99",
+      "100",
+      "101",
+      "102",
+      "103",
+      "104",
+      "105"
+     ],
+     "en": "When at evening, the radiant star, the Venus star, the great light which fills the holy heavens, the lady of the evening, ascends above like a warrior, the people in all the lands lift their gaze to her. The men purify themselves, the woman cleanse themselves. The oxen toss (?) their heads in their yoke. The sheep stir up dust in their pens. Because of my lady, the numerous beasts of Šakkan, the creatures of the plain, the four-legged animals {under the broad heavens} {(1 ms. has instead:) of the broad high (?) plain}, the orchards and gardens, the plots, the green reedbeds, the fish of the deep, the birds of heaven, all hasten to their sleeping places. All the living creatures and the numerous people bend the knee before her. When called for (?) by my lady, the matriarchs plentifully provide food and drink, and my lady refreshes herself in her Land. There is play in the Land, which is made festive. The young men take pleasure in their spouses."
+    },
+    {
+     "ref": "106–110",
+     "orig": "nin-ĝu₁₀ an-šag₄-ta u₆ dug₃-ge-eš im-me\nkug {d}inana-ra igi-ni-še₃ i₃-dib-be₂\nnin an-usan-na {d}inana maḫ-/am₃\\\nki-sikil {d}inana me-teš₂ mu-e-i-i\nnin an-usan-na an-zag-še₃ maḫ-/am₃\\",
+     "orig_lines": [
+      "106",
+      "107",
+      "108",
+      "109",
+      "110"
+     ],
+     "en": "From the midst of heaven my lady looks down with joy. They parade before her, holy Inana. The lady of the evening, Inana, is august; I praise the young lady, Inana. The lady of the evening, her grandeur reaches the borders of heaven!"
+    },
+    {
+     "ref": "111",
+     "orig": "ki-ru-gu₂ 7-kam-ma-am₃",
+     "orig_lines": [
+      "111"
+     ],
+     "en": "7th kirugu."
+    },
+    {
+     "ref": "112–121",
+     "orig": "an-zib₂-ba zag ḫi-li an-na me-te an daĝal-la\nĝi₆ u₃-na iti₆-gin₇ mu-un-e₃\nan-bar₇-gana₂ ud-ud-gin₇ mu-un-e₃\nama₅ kalam-ma-ka u₂ dug₃ ĝar-ra-ba\nkur-kur saĝ gig₂ uĝ₃ gu₂ si-a-ba\nama₅ kalam-ma-ka du₈-du₈ ĝar-ra-ba\nur₃-ra nu₂-a bad₃-da nu₂-a\n[X X] KA-KA mu-na-an-sug₂-ge-eš inim-bi mu-na-an-tum₃-uš\nud-bi-a inim mu-ni-in-zu erim₂-du mu-ni-in-zu\nerim₂-du di erim₂ ba-ab-šum₂-mu ḫul-ĝal₂ mu-un-gul-le\nsi sa₂-ra igi zid mu-un-ši-bar nam dug₃ mi-ni-in-tar",
+     "orig_lines": [
+      "112",
+      "113",
+      "114",
+      "115",
+      "116",
+      "116A",
+      "117",
+      "118",
+      "119",
+      "120",
+      "121"
+     ],
+     "en": "At night the skilled and beautiful one (?), the joy of An, the ornament of broad heaven, appears like moonlight; in the heat of the noon she appears like sunlight. After the storehouses of the Land have been filled with fine food, and all the lands and the black-headed people have assembled, {(1 ms. adds:) and the storehouses of the Land have been made full (?),} those who sleep on the roofs and those who sleep by the walls step up before her with …… and bring her their cases. Then she makes her orders known, and identifies the evil. She judges the evil as evil and destroys the wicked. She looks with favour on the just and determines a good fate for them."
+    },
+    {
+     "ref": "122–126",
+     "orig": "nin-ĝu₁₀ an-šag₄-ta u₆ dug₃-ge-eš im-me\nkug {d}inana-ra igi-ni-še₃ i₃-dib-be₂\nnin an-še₃ la₂-a {d}inana maḫ-am₃\nki-sikil {d}inana me-teš₂ mu-e-i-i\nnin an-še₃ lu-a an-zag-še₃ maḫ-am₃",
+     "orig_lines": [
+      "122",
+      "123",
+      "124",
+      "125",
+      "126"
+     ],
+     "en": "From the midst of heaven my lady looks down with joy. They parade before her, holy Inana. The lady exalted as high as the heaven, Inana, is august! I praise the young woman, Inana. The lady exalted as high as the heaven, her grandeur reaches the borders of heaven."
+    },
+    {
+     "ref": "127",
+     "orig": "ki-ru-gu₂ 8-kam-ma-am₃",
+     "orig_lines": [
+      "127"
+     ],
+     "en": "8th kirugu."
+    },
+    {
+     "ref": "128–131",
+     "orig": "nin sag₉ ḫi-li an-na ur-saĝ-am₃ an-ta nam-ta-an-e₃\nzag-si an-na-ka ḫe-du₇ am₃-mi-in-gur₃-ru\nan-da ki maḫ-a-na šag₄ mu-un-di-ni-ib-kuš₂-u₃\n{šul-la ur-saĝ-ĝa₂} {(some mss. ḫave instead:) šul nam-ur-saĝ-ĝa₂} dili-ni ḫe₂-pad₃-de₃",
+     "orig_lines": [
+      "128",
+      "129",
+      "130",
+      "131"
+     ],
+     "en": "The beautiful lady, the joy of An, has ascended above like a warrior. She carries there what befits the …… of heaven. She takes counsel with An in his lofty place. Among {youths and heroes} {(some mss. have instead:) heroic youths}, may she be alone chosen!"
+    },
+    {
+     "ref": "132",
+     "orig": "ĝiš-gi₄-ĝal₂-bi-im",
+     "orig_lines": [
+      "132"
+     ],
+     "en": "Ĝišgiĝal."
+    },
+    {
+     "ref": "133",
+     "orig": "kalag-ga-am₃ nir-ĝal₂-am₃ buluĝ₃-ĝa₂-am₃ maḫ gal-la-am₃ nam-šul-am₃ dirig-ga-am₃",
+     "orig_lines": [
+      "133"
+     ],
+     "en": "She is mighty, she is respected, she exalted, she is august and great, she is surpassing in youthfulness."
+    },
+    {
+     "ref": "134",
+     "orig": "šag₄-ba-tuku-am₃",
+     "orig_lines": [
+      "134"
+     ],
+     "en": "Šagbatuku."
+    },
+    {
+     "ref": "135–141",
+     "orig": "nin u₆ di kalam-ma mul dili {mul}dili-bad\nnin an-še₃ la₂-a ur-saĝ-ĝa₂ an-ta nam-ta-an-e₃\nkur-kur-re mu-un-ši-ḫu-luḫ-e X X\nuĝ₃ saĝ gig₂-ga zid gu₂ mu-un-na-an-ĝar\nšul kaskal-la du ḫar-ra-an mu-un-na-ĝa₂-ĝa₂\ngud-de₃ {ĝiš}šudul-bi-a saĝ mu-ni-ib-il₂\ni-lu šir₃ gud sub₂-sub₂-ba edin-na [... dug₄]\nengar an im-du u₃-a mu-un-[...]\ngud-de₃ {ĝiš}šudul-bi-še₃ kalam-ma X [...]\nama₅ kalam-ma-ka niĝ₂ mu-un-da-lu-lu",
+     "orig_lines": [
+      "135",
+      "136",
+      "137",
+      "138",
+      "139",
+      "140",
+      "140A",
+      "140B",
+      "140C",
+      "141"
+     ],
+     "en": "As the lady, admired by the Land, the lone star, the Venus star, the lady elevated as high as the heaven, ascends above like a warrior, all the lands tremble before her ……. The faithful black-headed people bow to her. The young man travelling on the road directs himself by her. The oxen raise their heads in their yoke to her. {(2 mss. add:) The melody of the song of those tending the cattle resounds …… on the plain. The farmer …… the cattle …… their yoke in the Land.} With her the storehouses of the Land prosper."
+    },
+    {
+     "ref": "142–149",
+     "orig": "kug {d}inana-ra ĝiri₃ mu-un-ši-ib-ul₄-e\nnin-ĝu₁₀ an-šag₄-ta dug₃-ge-eš ḫu-mu-un-ĝa₂-ĝa₂\nedin-na ki sikil-ba ki sag₉-ga-bi\nur₃-re ur₃-bad₃-da ur₃-bad₃ dur₂-ra-ka\nki-šu-tag nam-lu₂-ulu₃-ka\nna-izi sig₉ tir šim {ĝiš}erin-na-gin₇ mu-na-ab-us₂\n{udu}a-lum udu zulumḫi udu niga ĝiš mu-ni-ib-tag-ge\nnu-u₈-gig-ra ki mu-na-an-sikil-e {šu-luḫ mu-na-an-ĝa₂-ĝa₂} {(some mss. ḫave instead:) šir₃-ra mu-un-na-ĝal₂}",
+     "orig_lines": [
+      "142",
+      "143",
+      "144",
+      "145",
+      "146",
+      "147",
+      "148",
+      "149"
+     ],
+     "en": "Everybody hastens to holy Inana. For my lady in the midst of heaven the best of everything is prepared (?). In the pure places of the plain, at its good places, on the roofs, on the rooftops, the rooftops of the dwellings (?), in the sanctuaries (?) of mankind, incense offerings like a forest of aromatic cedars are transmitted to her. They sacrifice alum sheep, long-haired sheep, and fattened sheep for her. They purify the earth for the Mistress, they {carry out purification rites for her} {(some mss. have instead:) celebrate her in songs}."
+    },
+    {
+     "ref": "150–162",
+     "orig": "i₃-nun zu₂-lum ga-ar₃ niĝ₂-sa-ḫa 7-bi\n{ĝiš}banšur kalam-ma-ka nesaĝ mu-na-ab-si\nkurun gig₂ mu-na-ra-de₂\nkurun babbar mu-na-ra-de₂\nkurun gig₂ &kaš;ulušin\nnin-ĝu₁₀-ra &kaš;ulušin\n{dug}šag₄-gub {dug}lam-sa₂-ri du-bu-ul-da-ba-al mu-un-da-ab-za\nšu-tu-bu-ur lal₃ i₃-nun-ta šar₂-ra\nku-bu-ul-lum i₃-nun-[ta šar₂-ra]\n{ninda}gug₂-e lal₃ zu₂-lum-ma ninda mu-na-ab-ak-e\nkurun ud zal-la eša zid₂ lal₃-a\nlal₃ ĝeštin ud e₃-a mu-na-ab-bal-bal-e\ndiĝir lu-u₁₈-lu gu₇-a naĝ-a-da ša-mu-un-na-an-sug₂-sug₂-ge-eš\nnu-u₈-gig-ra ki {kug ki sikil-la ninda mu-gu₇-e} {(some mss. ḫave instead:) mu-un-na-sikil-e šir₃-ra mu-un-na-an-ĝal₂}",
+     "orig_lines": [
+      "150",
+      "151",
+      "152",
+      "153",
+      "154",
+      "155",
+      "156",
+      "157",
+      "157A",
+      "158",
+      "159",
+      "160",
+      "161",
+      "162"
+     ],
+     "en": "They fill the tables of the Land with ghee, dates, cheese, and seven sorts of fruits as first-fruit offerings for her. They pour dark beer for her, they pour light beer for her. Dark beer, emmer beer, and emmer beer for my lady bubble in the šagub jar and the lamsari vat for her. From pastes of honey mixed with ghee {(some mss. add the line:) From …… mixed with ghee}, they bake date-syrup cakes for her. They pour out early-morning beer, flour, flour in honey, honey, and wine of sunrise for her. The personal gods of the people also attend upon her with food and drink. {They provide the Mistress with food in the holy place, the pure place.} {(some mss. have instead:) They purify the earth for the Mistress, they celebrate her in songs.}"
+    },
+    {
+     "ref": "163–167",
+     "orig": "nin-ĝu₁₀ an-šag₄-ta u₆ dug₃-ge-eš im-me\nkug {d}inana-ra igi-ni-še₃ i₃-dib-be₂\nnin an-še₃ la₂-a {d}inana maḫ-am₃\nki-sikil {d}inana me-teš₂ mu-e-i-i\nnin an-še₃ la₂-a an-zag-še₃ maḫ-am₃",
+     "orig_lines": [
+      "163",
+      "164",
+      "165",
+      "166",
+      "167"
+     ],
+     "en": "From the midst of heaven my lady looks down with joy. They parade before her, holy Inana. Inana, the lady exalted as high as the heaven is august! I praise the young lady, Inana. The lady exalted as high as the heaven, her grandeur reaches the borders of heaven!"
+    },
+    {
+     "ref": "168",
+     "orig": "ki-ru-gu₂ 9-kam-ma-am₃",
+     "orig_lines": [
+      "168"
+     ],
+     "en": "9th kirugu."
+    },
+    {
+     "ref": "169–180",
+     "orig": "e₂-gal e₂ na de₅ kalam-ma-ka {ĝiš}rab₃ kur-kur-ra-kam\ne₂ {d}id₂-lu₂-ru-gu₂ saĝ gig₂-ga uĝ₃ gu₂ si-a-ba\n{d}nin-e₂-gal-la-ra barag mu-na-an-ri\nlugal diĝir-am₃ šag₄-bi-a mu-un-da-an-til₃\n{nam kur-kur-ra tar-re-da-ni} {(1 ms. ḫas instead tḫe line:) zi kur-kur-ra en₃ tar-re-de₃ }\nud saĝ zid-de₃ igi kar₂-kar₂-de₃\nud nu₂-a me šu du₇-du₇-de₃\nzag-mu ud ĝarza-ka\nnin-ĝu₁₀-ra ki-nu₂ ba-da-an-ĝar\n{u₂}numun₂-bur₂{sar} šim {ĝiš}erin-na-da mu-un-sikil-e-ne\nnin-ĝu₁₀ ki-nu₂-bi-še₃ mu-na-ab-ĝa₂-ĝa₂-ne\nbar-ba {tug₂}niĝ₂-barag₂-ge si mu-di-ni-ib-sa₂",
+     "orig_lines": [
+      "169",
+      "170",
+      "171",
+      "172",
+      "173",
+      "174",
+      "175",
+      "176",
+      "177",
+      "178",
+      "179",
+      "180"
+     ],
+     "en": "When the black-headed people have assembled in the palace, the house that advises the Land, the neck-stock of all the foreign countries, the house of the river of ordeal, a dais is set up for Ninegala. The divine king stays there with her. At the New Year, on the day of the rites, {in order for her to determine the fate of all the countries} {(1 ms. has instead:) in order for the life of all the countries to be attended to}, so that during the day (?) the faithful servants can be inspected, so that on the day of the disappearance of the moon the divine powers can be perfected, a bed is set up for my lady. Esparto grass is purified with cedar perfume and arranged on that bed for my lady, and a coverlet is smoothed out on the top (?) of it."
+    },
+    {
+     "ref": "181–186",
+     "orig": "{tug₂}niĝ₂-barag₂ šag₄ ḫul₂-la ki-nu₂ dug₃-dug₃-ge-da\nnin-ĝu₁₀ ur₂ kug-ge a mi-ni-in-tu₅-tu₅\nur₂ lugal-la-še₃ a im-ma-tu₅-tu₅\nur₂ {d}i-din-{d}da-gan-še₃ {a im-ma-tu₅-tu₅} {(some mss. ḫave instead:) saĝ il₂-la mu-un-ĝen}\nkug {d}inana-ke₄ naĝa im-ma-an-su-ub-be₂\ni₃ šim {ĝiš}erin-na ki am₃-sud-e",
+     "orig_lines": [
+      "181",
+      "182",
+      "183",
+      "184",
+      "185",
+      "186"
+     ],
+     "en": "In order to find sweetness in the bed on the joyous coverlet, my lady bathes her holy thighs. She bathes them for the thighs of the king; {she bathes them for} {(some mss. have instead:) with head held high she goes to} the thighs of Iddin-Dagan. Holy Inana rubs herself with soap; she sprinkles oil and cedar essence on the ground."
+    },
+    {
+     "ref": "187–194",
+     "orig": "lugal ur₂ kug-še₃ saĝ il₂-la mu-un-ĝen\nur₂ {d}i-din-{d}da-gan-še₃ saĝ il₂-la mu-un-ĝen\nur₂ {d}inana-ka-še₃ saĝ il₂-la mu-un-ĝen\n{d}ama-ušumgal-an-na ki-nu₂ mu-un-da-ab-ak-e\n{ur₂ kug-ga-ni-a mi₂ zid am₃-i-i-de₃} {(some mss. ḫave instead:) [ur₂] kug-ga-ĝu₁₀ kug {d}[inana]-ĝu₁₀}\nnin-e ur₂ kug-ga ki-nu₂ mi-ni-in-sug₄-ga-ta\nkug {d}inana-ke₄ ur₂ kug-ga ki-nu₂ mi-ni-in-sug₄-ga-ta\nki-nu₂-a-na šag₄ ša-mu-un-di-ni-ib-kuš₂-u₃\n{d}i-din-{d}da-gan-na ki aĝ₂-ĝu₁₀ ḫe₂-me-en",
+     "orig_lines": [
+      "187",
+      "187A",
+      "188",
+      "189",
+      "190",
+      "191",
+      "192",
+      "193",
+      "194"
+     ],
+     "en": "The king goes to her holy thighs with head held high, {(some mss. add:) she goes to the thighs of Iddin-Dagan,} he goes to the thighs of Inana with head held high. Ama-ušumgal-ana lies down beside her and {caresses her holy thighs} {(some mss. have instead:) (says:) \"O my holy thighs! O my holy Inana!\"}. After the lady has made him rejoice with her holy thighs on the bed, after holy Inana has made him rejoice with her holy thighs on the bed, she relaxes (?) with him on her bed: \"Iddin-Dagan, you are indeed my beloved!\""
+    },
+    {
+     "ref": "195–202",
+     "orig": "ne-saĝ sig₁₀-ga-še₃ šu-luḫ ĝar-ĝar-ra-še₃\nna-izi sig₉-ga-še₃ na li mu₂-a-še₃\nnidba sug₂-ga-še₃ bur sug₂-sug₂-ga-še₃\ne₂-gal-maḫ-a-ni-a im-ma-da-an-ku₄-ku₄\nnitalam ki aĝ₂-ĝa₂-ni gu₂-da mu-ni-in-la₂\nkug {d}inana-ke₄ gu₂-da mu-ni-in-la₂\n{ĝiš}gu-za {barag gal-la} {(1 ms. ḫas instead:) zag-bi-ta} ud-de₃-eš₂ am₃-e₃\nlugal {d}utu-gin₇ zag-ge₄ mu-di-ni-ib-sig₉",
+     "orig_lines": [
+      "195",
+      "196",
+      "197",
+      "198",
+      "199",
+      "200",
+      "201",
+      "202"
+     ],
+     "en": "To pour libations, to carry out purification rites, to heap up incense offerings, to burn juniper, to set out food offerings, to set out offering-bowls, he goes into her Egal-maḫ. She embraces her beloved spouse, holy Inana embraces him. She shines like daylight on {the great throne dais} {(1 ms. has instead:) the throne at one side (?)} and makes the king position himself next (?) to her like the sun."
+    },
+    {
+     "ref": "203–216",
+     "orig": "ḫe₂-ĝal₂ giri₁₇-zal-e nam-ḫe₂-a igi-ni-še₃ si im-sa₂\nĝišbun niĝ₂ dug₃-ga mu-un-na-an-ni-ĝal₂\nsaĝ gig₂-ga igi-ni-še₃ si im-sa₂\nĝiš-gu₃-di ulu₃-ta eme ĝar-ra\n{ĝiš}al-ĝar gu₃ dug₃-ga e₂-gal me-te-bi\n{ĝiš}za₃-mi₂ ki ur₅ sag₉-ge nam-lu₂-ulu₃-ke₄\nnar-e šir₃ šag₄ ḫul₂-la-ka-ni mu-ni-in-pad₃-pad₃-de₃\nlugal-e gu₇-a naĝ-a-da šu si ba-an-sa₂\n{d}ama-ušumgal-an-na gu₇-a naĝ-da šu si ba-an-sa₂\ne₂-gal ezem-ma-am₃ lugal ḫul₂-la-am₃\nuĝ₃-e nam-ḫe₂-a ud i₃-zal-e-de₃\n{d}ama-ušumgal-an-na ḫul₂-ḫul₂-e am₃-gub\n{ĝiš}gu-za gi-rin-na ud ḫa-ba-ni-ib-sud-de₃\nbarag nam-lugal-la-ka saĝ gu₂ mu-ni-in-ĝal₂",
+     "orig_lines": [
+      "203",
+      "204",
+      "205",
+      "206",
+      "207",
+      "208",
+      "209",
+      "210",
+      "211",
+      "212",
+      "213",
+      "214",
+      "215",
+      "216"
+     ],
+     "en": "Abundance and celebration are prepared before her in plenty. He arranges a rich banquet for her. The black-headed people line up before her. With instruments loud enough to drown out the south wind-storm, with sweet sounding alĝar instruments, the glory of the palace, and with harps, the source of joy for mankind, musicians perform songs which delight her heart. The king sees to what is eaten and drunk, Ama-ušumgal-ana sees to what is eaten and drunk. The palace is in festive mood, the king is joyous. The people spend the day amid plenteousness. Ama-ušumgal-ana stands in great joy. May his days be long on the splendid throne! He proudly (?) occupies the royal dais."
+    },
+    {
+     "ref": "217–222",
+     "orig": "nin-ĝu₁₀ za₃-mi₂ an ki-ke₄-ne za₃-mi₂ ma-ni-in-dug₄\nnu-u₈-gig an ki-da tud-da-me-en\nnu-u₈-gig-e ki kug ki sikil-la šir₃-ra mu-na-an-ĝal₂\nḫi-li saĝ gig₂ me-te unken-na\n{d}inana dumu gal {d}suen-na\nnin an-usan{an}-na za₃-mi₂-zu dug₃-ga-am₃",
+     "orig_lines": [
+      "217",
+      "218",
+      "219",
+      "220",
+      "221",
+      "222"
+     ],
+     "en": "They praise my lady on my behalf (?) with the hymns of heaven and earth. \"You are the Mistress born together with heaven and earth.\" In the holy place, the pure place, they celebrate the Mistress in songs: \"Joy of the black-headed people, ornament of the assembly, Inana, eldest daughter of Suen, lady of the evening, your praise is good.\""
+    },
+    {
+     "ref": "223–225",
+     "orig": "nin-ĝu₁₀ an-šag₄-ta u₆ dug₃-ge-eš im-me\nkug {d}inana-ra igi-ni-še₃ i₃-dib-be₂\n{nin an-še₃ [la₂-a] {d}inana maḫ-am₃} {(some mss. ḫave instead:) nin an-usan an-zag-še₃ maḫ-am₃}",
+     "orig_lines": [
+      "223",
+      "224",
+      "225"
+     ],
+     "en": "From the midst of heaven my lady looks down with joy. They parade before her, holy Inana. {Inana, the lady elevated as high as the heavens, is august!} {(some mss. have instead:) The lady of the evening, her grandeur reaches the borders of heaven!}"
+    },
+    {
+     "ref": "226",
+     "orig": "<ki-ru-gu₂ 10-kam-ma-am₃>",
+     "orig_lines": [
+      "226"
+     ],
+     "en": "10th kirugu."
+    },
+    {
+     "ref": "227–228",
+     "orig": "kalag-ga-am₃ nir-ĝal₂-am₃ buluĝ₃-ĝa₂-am₃ maḫ gal-am₃\nnam-šul-la dirig-ga-am₃",
+     "orig_lines": [
+      "227",
+      "228"
+     ],
+     "en": "She is mighty, she is respected, she is exalted, she is august and great, she is surpassing in youthfulness!"
+    },
+    {
+     "ref": "229",
+     "orig": "ĝiš-gi₄-ĝal₂-bi-im",
+     "orig_lines": [
+      "229"
+     ],
+     "en": "Ĝišgiĝal."
+    },
+    {
+     "ref": "230",
+     "orig": "šir₃-nam-ur-saĝ-ĝa₂ {d}[nin]-si-an-na-ka",
+     "orig_lines": [
+      "230"
+     ],
+     "en": "A šir-namursaĝa of Ninsiana."
+    }
+   ]
+  }
+ ]
+}

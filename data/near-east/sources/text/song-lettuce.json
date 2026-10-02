@@ -1,0 +1,54 @@
+{
+ "slug": "song-lettuce",
+ "source": "ETCSL",
+ "siglum": "ETCSL 4.08.05",
+ "source_url": "https://etcsl.orinst.ox.ac.uk/cgi-bin/etcsl.cgi?text=t.4.08.05",
+ "license": "ETCSL（Oxford）轉寫與英譯，非商業學術使用",
+ "compositions": [
+  {
+   "num": "4.08.05",
+   "title_en": "The song of the lettuce: a balbale to Inana (Dumuzid-Inana E)",
+   "segments": [
+    {
+     "ref": "1–4",
+     "orig": "ba-lam ba-lam-lam ḫi-iz{sar}-am₃ a ba-an-dug₄\n{ĝiš}kiri₆ ĝi₆-edin-na gu₂ ĝar-ĝar-ra-na {sag₉-ga ama-na-ĝu₁₀} {(1 ms. ḫas instead:) ḫi-iz{sar} a ba-an-de₂}\nše ab-sin₂-ba ḫi-li-a sag₉-ĝu₁₀ ḫi-iz{sar}-am₃ a ba-an-dug₄\n{ĝiš}ḫašḫur aĝ₂ saĝ-ĝa₂ gurun il₂-la-ĝu₁₀ ḫi-iz{sar}-am₃ a ba-an-dug₄",
+     "orig_lines": [
+      "1",
+      "2",
+      "3",
+      "4"
+     ],
+     "en": "He has sprouted, he has burgeoned, he is well-watered lettuce, my shaded garden of the desert, richly flourishing, {his mother's favourite} {(1 ms. has instead:) he is well-watered lettuce}; my grain lovely in beauty in its furrows, he is well-watered lettuce; my first-class fruitful apple tree, he is well-watered lettuce."
+    },
+    {
+     "ref": "5–8",
+     "orig": "lu₂-lal₃-e lu₂-lal₃-e me-e mu-ku₇-ku₇-de₃-en\nen-ĝu₁₀ lu₂-lal₃-e dim₃-me-er-ra sag₉-ga ama-na-ĝu₁₀\nšu-ni lal₃-e /me\\-ri-ni lal₃-e ĝe₂₆-e mu-un-ku₇-ku₇-de₃-[en]\na₂-šu-ĝiri₃-ni lal₃ ku₇-ku₇-dam ĝe₂₆-e mu-un-ku₇-ku₇-[de₃-en]",
+     "orig_lines": [
+      "5",
+      "6",
+      "7",
+      "8"
+     ],
+     "en": "The honey man, the honey man will make me sweet; my lord, the honey man of a goddess, his mother's favourite, whose hands are honey, whose feet are honey, will make me sweet, whose limbs are honey-sweet, will make me sweet."
+    },
+    {
+     "ref": "9–10",
+     "orig": "en₃-dur šu-niĝin₂ tukum ku₇-ku₇-ĝu₁₀ /sag₉\\-[ga ama-na-ĝu₁₀]\n/ḫaš₄\\ sag₉-sag₉ a₂ buluĝ₅ e-ru-ĝu₁₀ ḫi-iz{sar}-am₃ [a ba-an-dug₄]",
+     "orig_lines": [
+      "9",
+      "10"
+     ],
+     "en": "Navel! My altogether immediately sweet, my favourite of his mother! Beautiful thighs, raised arms! My ……, he is well-watered lettuce."
+    },
+    {
+     "ref": "11",
+     "orig": "bal-bal-e {d}inana-[kam]",
+     "orig_lines": [
+      "11"
+     ],
+     "en": "A balbale of Inana."
+    }
+   ]
+  }
+ ]
+}

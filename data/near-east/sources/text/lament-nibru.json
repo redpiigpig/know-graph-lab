@@ -1,0 +1,775 @@
+{
+ "slug": "lament-nibru",
+ "source": "ETCSL",
+ "siglum": "ETCSL 2.2.4",
+ "source_url": "https://etcsl.orinst.ox.ac.uk/cgi-bin/etcsl.cgi?text=t.2.2.4",
+ "license": "ETCSL（Oxford）轉寫與英譯，非商業學術使用",
+ "compositions": [
+  {
+   "num": "2.2.4",
+   "title_en": "The lament for Nibru",
+   "segments": [
+    {
+     "ref": "1–11",
+     "orig": "tur₃ me nun-e ba-du₃-a-bi (Šited in OB šatalogue from Nibru, at Pḫiladelpḫia, 0.2.01, line 33; OB šatalogue in tḫe Louvre, 0.2.02, line 27)\nlil₂-e a-gin₇ ib₂-sag₃ ki-bi me-na gi₄-gi₄\nše-eb na-aĝ₂-tar-ra ba-mar-ra re\nme-bi a-ba-a in-bir-re a-še-er ba-da-tab\nšudum nibru{ki} eš₃ dur-an-ki-a\nlil₂-e a-gin₇ ib₂-sag₃ ki-bi me-na gi₄-gi₄\nki-ur₃ ki gal ba-du₃-a-bi\nše-eb e₂-kur-ra ba-du₃-a-bi\nub-šu-unken-na ba-du₃-a-bi\neš₃ e₂-gal-maḫ ba-du₃-a-bi\nlil₂-e a-gin₇ ib₂-sag₃ ki-bi me-na gi₄-gi₄",
+     "orig_lines": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10",
+      "11"
+     ],
+     "en": "After the cattle pen had been built for the foremost divine powers -- how did it become a haunted place? When will it be restored? Where once the brick of fate had been laid -- who scattered its divine powers? The lamentation is reprised: how did the storeroom of Nibru, the shrine Dur-an-ki, become a haunted place? When will it be restored? After Ki-ur, the great place, had been built, after the brickwork of E-kur had been built, after Ubšu-unkena had been built, after the shrine Egal-maḫ had been built -- how did they become haunted? When will they be restored?"
+    },
+    {
+     "ref": "12–21",
+     "orig": "uru₂ zid šag₄-sug₄-ga a-gin₇ ba-an-[du₃]\nĝiš-ḫur kal-la-bi šu pe-el-la ba-/ab\\-[dug₄]\nuru₂-a i₃-zi-iĝ₃-bi a-gin₇ ba-an-[šub]\nĝarza maḫ-bi šu suḫ₃-a ba-ab-[dug₄]\n/nibru\\{ki} šag₄-ba me ḫal-ḫal-a\nuĝ₃ saĝ gig₂-ga numun zid ib₂-i-i-a\nuru₂ šag₄-bi umuš ba-ra-pad₃-da\n{d}a-nun-na-ke₄-ne na ba-an-de₅-ge-eš-am₃\nub-šu-unken-na ki di gal ku₅-ru\neš-bar-e si sa₂ ba-ra-an-zu-uš-am₃",
+     "orig_lines": [
+      "12",
+      "13",
+      "14",
+      "15",
+      "16",
+      "17",
+      "18",
+      "19",
+      "20",
+      "21"
+     ],
+     "en": "How did the true city become empty? Its precious designs have been defiled! How were the city's festivals neglected? Its magnificent rites have been thrown into disorder! In the heart of Nibru, where the divine powers were allotted and the black-headed people prolificly multiplied, the city's heart no longer revealed any sign of intelligence -- there where the Anuna used to give advice! In Ubšu-unkena, the place for making great judgments, they no longer impart decisions or justice!"
+    },
+    {
+     "ref": "22–31",
+     "orig": "diĝir-be₂-ne ki-tuš ba-ab-ĝar-ra\nšukur₂-ud-bi im-šub-ba barag-bi im-ri-a\nKI.LUGAL.GUB kug kiĝ₂-sig₇ unu₂ gal-ba\nkurun₂ lal₃ bal-bal-e nam-še₃ bi₂-ib₂-tar-ra\nnibru{ki} uru₂ ĝissu daĝal-la-bi-še₃\nuĝ₃ saĝ gig₂-ga ni₂ im-ši-ib₂-te-en-na\nki-tuš-ba gu₂-zal-a-gin₇ ba-ra-an-šub\nab₂ sag₂ dug₄-ga-gin₇ e-ne sag₂ ba-ra-an-dug₄\nuru₂ šag₄-bi er₂ gig dirig-ga\nen-na-me-še₃ diĝir ga-ša-an-bi en₃-bi nu-tar-re",
+     "orig_lines": [
+      "22",
+      "23",
+      "24",
+      "25",
+      "26",
+      "27",
+      "28",
+      "29",
+      "30",
+      "31"
+     ],
+     "en": "Where its gods had established their dwellings, where their daily rations were offered, their daises erected, where the sacred royal offering (?) and the evening meal in their great banquet hall were destined for the pouring out of choice beer and syrup -- Nibru, the city where the black-headed people used to cool themselves in its spreading shade -- in their dwellings Enlil fell upon them as if they were criminals. It was he who sent them scattering, like a scattered herd of cattle. How long until its lady, the goddess Ninlil, would ask after the inner city, whose bitter tears were overwhelming?"
+    },
+    {
+     "ref": "32–41",
+     "orig": "e₂ gu-la za-pa-aĝ₂ ib₂-zu-a-bi\ne₂-ri-a sug₄-gin₇ lu₂ nu-un-ku₄-ku₄\nnibru{ki} iri{ki} barag-barag gal-gal-e-ne šu im-ma-an-peš₁₁-eš-a-aš a-na-aš u₂-gu i₃-ni-in-de₂-eš\n{uĝ₃} {(1 ms. ḫas instead:) ka-na-aĝ₂ } {(anotḫer ms. ḫas instead:) uru₂ } saĝ gig₂-ga u₂ ḫi-a udu-gin₇ bi₂-ib₂-gu₇-a\nud en-še₃ i₃-šub er₂ a-nir šag₄ sag₃ ur₅ uš₂-a\nen-še₃ bar bi₂-ib-tab₂ šag₄ nu-ub-ši-ḫuĝ-e\n{kuš}šem₅ {kuš}a₂-la₂ mu-un-du₁₂-a re\ni-lu gig-ga-a a-na-še₃ ud mi-ni-ib₂-zal\nbalaĝ di šeg₁₂-ba e-ne ba-dur₂-ru-ne-eš\nkuš₂-a ĝar-ra-bi er₂-še₃ ba-ab-be₂-ne",
+     "orig_lines": [
+      "32",
+      "33",
+      "34",
+      "35",
+      "36",
+      "37",
+      "38",
+      "39",
+      "40",
+      "41"
+     ],
+     "en": "As though it were empty wasteland, no one enters that great temple whose bustle of activity was famous. As for all the great rulers who increased the wealth of the city of Nibru -- why did they disappear? For how long would Enlil neglect the Land, where the black-headed {people} {(1 ms. has instead:) Land} {(another ms. has instead:) city} ate rich grass like sheep? Tears, lamentation, depression and despair! How long would his spirit burn and his heart not be placated? Why were those who once played the šem and ala drums spending their time in bitter lamenting? Why were the lamenters sitting in its brick buildings? They were bewailing the hardship which beset them."
+    },
+    {
+     "ref": "42–49",
+     "orig": "lu₂ dam šub-ba dumu šub-ba-ne\na uru₂ ḫul-a-me šir₃-re-eš ba-ab-be₂-ne\nuru₂-bi e₃-a ki-tuš-bi kar-ra\nšeg₁₂ uru₂ ze₂-ba-še₃ im-ši-šir₃-šir₃-e-ne-eš\ner₂ dug₄-ga balaĝ di-ne-ne-eš₂\na₂-e₃ lu₂-ed₃-da umuš-bi nu-zu-gin₇\n[uĝ₃] /ba\\-sag₃ dim₂-ma-bi ba-suḫ₃\n[e₂ zid]-/de₃\\ er₂ gig-ga-bi im-me",
+     "orig_lines": [
+      "42",
+      "43",
+      "44",
+      "45",
+      "46",
+      "47",
+      "48",
+      "49"
+     ],
+     "en": "The men whose wives had fallen, whose children had fallen, were singing \"Oh our destroyed city!\". Their city gone, their homes abandoned -- as those who were singing for the brick buildings of the good city, as the lamenters of wailing, like the foster-children of an ecstatic no longer knowing their own intelligence, the people were smitten, their minds thrown into disorder. The true temple wails bitterly."
+    },
+    {
+     "ref": "50",
+     "orig": "/ki\\-ru-gu₂ 1-a-kam",
+     "orig_lines": [
+      "50"
+     ],
+     "en": "1st kirugu"
+    },
+    {
+     "ref": "51",
+     "orig": "[...] X e₂{?} mu-un-du₃ {d}nin-lil₂ NA",
+     "orig_lines": [
+      "51"
+     ],
+     "en": "…… built the temple, Ninlil ……."
+    },
+    {
+     "ref": "52",
+     "orig": "/ĝiš\\-gi₄-ĝal₂-bi-im",
+     "orig_lines": [
+      "52"
+     ],
+     "en": "Its ĝišgiĝal"
+    },
+    {
+     "ref": "53–61",
+     "orig": "e₂ zid-de₃ er₂ a-še-er ma-ra-ba\nšir₃ gig-ga im-me šu-luḫ zid ḫa-lam-[ma-še₃]\nše-eb e₂-kur-ra-ke₄ er₂ a-še-er ma-ra-ba\nšir₃ gig-ga im-me šu-luḫ zid ḫa-[lam-ma]-še₃\nĝarza maḫ ĝiš-ḫur kal-kal šu ḫul dug₄-ga er₂ gig i₃-še₂₂-še₂₂\nšukur₂ šub-šub-ba kug-kug-ga-bi ki-sig₁₀-ga X-ba muš₂-am₃-bi im-me\nme luḫ-luḫ-ḫa sikil šen-na-bi šu pel-la₂-ke₄-eš e₂-e ur₅ ib₂-uš₂\ne₂ zid-de₃ ni₂-bi sun₅-sun₅ gig-ga-a\nud mi-ni-ib₂-zal-zal-e er₂ im-gibil-[gibil]",
+     "orig_lines": [
+      "53",
+      "54",
+      "55",
+      "56",
+      "57",
+      "58",
+      "59",
+      "60",
+      "61"
+     ],
+     "en": "The true temple gave you only tears and lamentation -- it sings a bitter song of the proper cleansing-rites that are forgotten! The brickwork of E-kur gave you only tears and lamentation -- it sings a bitter song of the proper cleansing-rites that are forgotten! It weeps bitter tears over the splendid rites and most precious plans which are desecrated -- its most sacred food rations neglected and …… into funeral offerings, it cries \"Alas!\". The temple despairs of its divine powers, utterly cleansed, pure, hallowed, which are now defiled! The true temple, which it is bitter to enter on one's own, passes the time renewing its tears."
+    },
+    {
+     "ref": "62–67",
+     "orig": "e₂-a niĝ₂ ĝar-ra niĝ₂ dirig-bi kišib-bi ib₂-du₈-a-aš gun₂ ki mu-ni-ib₂-ĝal₂\nniĝ₂-gur₁₁ erim₃ saĝ sig₁₀-ga-ba šu gi₄ ba-ab-dug₄-a-aš a-na ma-la₂ im-me\nlu₂-kur₂-ra sag₉ ḫul nu-zu-ne niĝ₂ dug₃ bi₂-ib-ku₅-ru-uš-a-aš i-lu gig im-me\nnam-lu₂-ulu₃-bi maš₂-anše-gin₇ šag₄-ba mi-ni-ib-til-la-aš a ka-na-aĝ₂-ĝu₁₀ im-me\nki-sikil ĝuruš di₄-di₄-la₂-be₂-ne zar-re-eš mi-ni-ib-sal-la-aš u₈-a-bi im-me\nurin-bi muru₉ šeĝ₃-ĝa₂-gin₇ ki-e bi₂-ib-su₃-a-aš er₂-še₃ nu-gul-e",
+     "orig_lines": [
+      "62",
+      "63",
+      "64",
+      "65",
+      "66",
+      "67"
+     ],
+     "en": "Because the sealings of the abundant materials stored in the temple have been broken open, they have placed the loads on the ground. Because the property in its well-tended storehouses has been sent back, it says \"What will they weigh out for me now?\"; because the enemies who do not know good from evil have cut off all good things, it sings a bitter dirge; because they have finished off its populace there like animals, it cries \"Oh my Land!\". Because they have piled up the young women, young men and their little children like heaps of grain, it cries \"Woe!\" for them. Because they have splashed their blood on the ground like a rain-storm, there is no restraint to its crying."
+    },
+    {
+     "ref": "68–75",
+     "orig": "e₂-e ab₂ amar-bi ku₅-ra₂-gin₇ ni₂-bi-še₃ mur gig-ga im-ša₄ šeₓ(SIG₇)-šeₓ(SIG₇) i₃-ĝa₂-ĝa₂\nbalaĝ di lu₂ ad dug₃-ga-ke₄-ne emeda(UM.ME){da} u₅-a di-gin₇ mu-bi er₂-ra mi-ni-ib-bal-bal-e-ne\nuru₂ u₃-mu-un-bi saĝ ib₂-ta-an-dub₂-ba-aš\ni-bi₂-ni ki kur₂-ra ib₂-ta-an-ĝar-ra ad-e-eš ba-an-ša₄-aš\ne₂ zid kur-kur-ra i-bi₂-še₃ ba-ĝen-na\nuĝ₃ saĝ gig₂-ga us₂ zid bi₂-ib-dab₅-ba\na-na ib₂-ak a-na im-ḫa-lam-ma-bi-še₃\nu₃-mu-un-bi ib₂-ta-ib₂ saĝ-ki-a mu-un-DU",
+     "orig_lines": [
+      "68",
+      "69",
+      "70",
+      "71",
+      "72",
+      "73",
+      "74",
+      "75"
+     ],
+     "en": "The temple, like a cow whose calf is cut off, groans bitterly to itself; it is grief-stricken, and the sweet-voiced lamenters, like nursemaids singing a lullaby, respond tearfully with its name. In anguish they bewail the fact that the city's lord has smashed heads there, that he has looked away from it and toward a foreign land instead. The true temple of all the countries, which had come before him -- what have the black-headed people, who had taken a true path, done regarding what have they forsaken, that their lord has become enraged with them and walks in anger?"
+    },
+    {
+     "ref": "76",
+     "orig": "ki-ru-gu₂ 2-kam-ma-am₃",
+     "orig_lines": [
+      "76"
+     ],
+     "en": "2nd kirugu"
+    },
+    {
+     "ref": "77",
+     "orig": "me gal šag₄-bi ba-ra-an-e₃-a-aš gu₃ gig-ga im-me",
+     "orig_lines": [
+      "77"
+     ],
+     "en": "It voices bitter cries because he has removed the great divine powers from within it."
+    },
+    {
+     "ref": "78",
+     "orig": "ĝiš-gi₄-ĝal₂-bi-im",
+     "orig_lines": [
+      "78"
+     ],
+     "en": "Its ĝišgiĝal"
+    },
+    {
+     "ref": "79–85",
+     "orig": "uru₂ u₃-mu-un-bi šag₄ ba-da-an-dab-ba\nen-še₃ la-ba-ši-gur-ru muš₃-am₃-bi nu-um-me\nšeg₁₂-bi a-na-še₃ ĝiri₃ ib₂-ta-an-ĝar\ntum₁₂{mušen} za-pa-aĝ₂ ĝa₂-ĝa₂-bi ab-ta ib₂-ta-an-dal\ne₂ ad zu šeg₁₂ tigi aĝ₂ ze₂-ba ud mi-ni-ib-zal-zal-la ta-aš igi bi₂-in-gi₄\ne₂ sun₅-na giri₁₇ šu ĝal₂-la re\ne₂ ni₂ nu-tuku-gin₇ sig₉-ga-bi ba-du₃",
+     "orig_lines": [
+      "79",
+      "80",
+      "81",
+      "82",
+      "83",
+      "84",
+      "85"
+     ],
+     "en": "How long will the city's lord who became angry with it not turn to it, not say \"Alas!\" for it? Why did he cut off the road to its brickwork? He made the noisy pigeons fly away from their windows. Why did he transform the appearance of the temple which knew voices, where they used to while away the days in sweet playing of tigi drums in the brick buildings? The temple, once a place to offer salutations in humility, is now as deathly silent as a temple which no one reveres!"
+    },
+    {
+     "ref": "86–94",
+     "orig": "aĝ₂ išib-bi nu-kug-kug-ga-gin₇\nšu-luḫ-bi kur-kur-ra nu-ub-ta-sed₆-a-gin₇\nšu bi₂-in-dag gaba-ni ib₂-ta-an-zig₃\naĝ₂-gig ur₅-ra-a a-še-er-ra mu-un-du₃\nta-še eĝer na-aĝ₂-bi i-bi₂-ni-a la-ba-an-barag₂\naĝ₂ sikil du₃-a-gin₇ ur₅-re zag bi₂-in-tag\nšeg₁₂-bi ḫul₂-e a-na-aš ib₂-ta-an-e₃\nĝi₆ an-bar₇-ba šag₄-ba er₂ bi₂-in-si\na₂-še kur₂ aĝ₂-gig bi₂-ib-ak-a",
+     "orig_lines": [
+      "86",
+      "87",
+      "88",
+      "89",
+      "90",
+      "91",
+      "92",
+      "93",
+      "94"
+     ],
+     "en": "As though its purification priest's equipment were not utterly sacred, as though its cleansing-rites did not bring calm in all countries, he has abandoned it, turned his breast away from it, among dejection and lamentation he has made it a sacrilege. After its fate, how long till his face would be streaked with teardrops? He rejected it thus as though it were a blasphemy! Why has joy left its brickwork? Night and day he has filled its heart with tears! Even now, he has made it foreign and a sacrilege!"
+    },
+    {
+     "ref": "95–102",
+     "orig": "u₃-mu-un-bi im-ḫul-am₃ šu-bi bi₂-in-gi₄-am₃\nuru₂-bi e₂-bi in-gul-gul-am₃\nur₂-bi in-bur₁₂-ra-am₃ al-e bi₂-in-ra-am₃\ndam dumu-bi šag₄-ba mi-ni-in-ug₅-ga-am₃\nuru₂-bi uru₂ šub-ba im-ma-ni-in-kur₉-ra-am₃\naĝ₂ ul-bi ki-bi bi₂-in-[gi₄-am₃]\nmu-un-gur₁₁-bi tum₉-e ba-ab-ir-ra-am₃\nuru₂ ĝal₂-la-bi nu-ĝal₂-la mi-ni-in-kur₉-ra-am₃",
+     "orig_lines": [
+      "95",
+      "96",
+      "97",
+      "98",
+      "99",
+      "100",
+      "101",
+      "102"
+     ],
+     "en": "Its lord, who has despoiled it like an evil wind, has destroyed that city and its temples! He has ripped out their foundations, struck them with the adze, killed wives and their children within it, he has turned that city into a deserted city -- when would he restore its ancient property? Its possessions have been carried off by the wind! Enlil turned the city which used to be there into a city no longer!"
+    },
+    {
+     "ref": "103–112",
+     "orig": "dim₂-ma-bi ĝiri₃ ib₂-ta-an-kur₂-ra-am₃\numuš-bi in-suḫ₃-am₃ lil₂-e bi₂-in-sag₃-ga-am₃\nu₂-bi a-bi ib₂-ta-an-kar-ra-am₃\nga zu kaš zu-a ud-bi mi-ni-ib-til-la-am₃\ne₂-e aĝ₂-gig bi₂-ib-ak-a\na-še-er gig im-me er₂ bi₂-ib-lu₃-lu₃\nbalaĝ di lu₂ i-lu ba-ab-be₂-a\nšag₄ nu-ze₂-ba-bi mu-na-ni-ib-gi₄-gi₄\nu₃-mu-un-bi me-bi ba-ra-an-e₃-a\na₂-bi nu-mu-un-tag-ga-am₃ en₃-bi nu-tar-ra-am₃",
+     "orig_lines": [
+      "103",
+      "104",
+      "105",
+      "106",
+      "107",
+      "108",
+      "109",
+      "110",
+      "111",
+      "112"
+     ],
+     "en": "He made its mind wander! He threw its intelligence into disorder and made it haunted! He took away its food and its water! He brought to an end its days of familiarity with milk and with beer! The temple which he has made a sacrilege utters bitter lamentations; he has made its eyes blurred with tears. The lamenters who perform the dirges respond to it sorrowfully. No one touches the arm of the city's lord who has removed its divine powers! No one intercedes!"
+    },
+    {
+     "ref": "113",
+     "orig": "ki-ru-gu₂ 3-kam-ma-am₃",
+     "orig_lines": [
+      "113"
+     ],
+     "en": "3rd kirugu"
+    },
+    {
+     "ref": "114–115",
+     "orig": "me gal-gal-la-ni a-gin₇ ba-ra-an-dal\na₂-bi la-ba-an-tag-ga-am₃ en₃-bi nu-tar-ra-am₃",
+     "orig_lines": [
+      "114",
+      "115"
+     ],
+     "en": "How did Enlil make all his greatest divine powers fly away! No one ever touches his arm! No one ever intercedes!"
+    },
+    {
+     "ref": "116",
+     "orig": "ĝiš-gi₄-ĝal₂-bi-im",
+     "orig_lines": [
+      "116"
+     ],
+     "en": "Its ĝišgiĝal"
+    },
+    {
+     "ref": "117–126",
+     "orig": "mu-lu šir₃-ra na-aĝ₂-tar gig-ga-ĝu₁₀-uš\nme-e ib₂-ši-ed₃-de₃-en er₂ im-ši-še₂₂-še₂₂-en\na₂-še balaĝ di šir₃ zu-ne\nmur-ma-ra-ĝu₁₀ ma-a-ar ma-ab-be₂-ne-am₃\ni₃-ne-eš₂ kuš₂-a im-ma-dirig-ga-ĝu₁₀\ndili-dili-bi er₂-ra ma-an-ĝa₂-ĝa₂-ne-am₃\na₂-še šag₄ su-mu-ug tab₂-tab₂-ba-ĝu₁₀\nki kur₉-ra-bi ma-a-ar lu₂ mu-da-an-zu-am₃\na-ra₂ gig-ga šag₄ bur₁₂-ra-ĝu₁₀\nu₅-a tur-ra-ĝu₁₀ er₂-ra ma-an-du₁₂-am₃",
+     "orig_lines": [
+      "117",
+      "118",
+      "119",
+      "120",
+      "121",
+      "122",
+      "123",
+      "124",
+      "125",
+      "126"
+     ],
+     "en": "I am going down to my dirge singer of bitter fates and I shall weep tearfully to him. Even now the lamenters who are expert in song make ululating wails over me! Now my people who are overcome by hardship voice laments for me one by one! Even now the places of refuge of my people whose hearts are burning in dark distress have been made known to me! My people whose hearts have been broken on the bitter way perform the lullabies of my young ones for me in tears!"
+    },
+    {
+     "ref": "127–135",
+     "orig": "nin e₂ du₃-a ki-tuš-a-ne-ne\nlul-e-eš ba-ab-ĝar-ra tum₉-e ba-ab-tur-ra-am₃\nlu₂-erim₂-e ka-na-aĝ₂-ĝu₁₀ ib₂-til-la\ner₂-ra ma-a-ar ma-an-ĝa₂-ĝa₂-ne-am₃\nšag₄ aĝ₂-gig-ga ib₂-dirig-ĝu₁₀ ad-bi-še₃ ba-ab-be₂-ne ib₂-sed₄-de₃-ne-am₃\ner₂-bi u₃-mu-un-ĝa₂ mu-un-ĝa₂-ĝa₂-dam\narḫuš šag₄-ne-ša₄ ma-ar ma-an-tuku-tuku-am₃\n{d}mu-ul-lil₂ a-a saĝ gig₂-ga-ke₄\nki-ĝu₁₀ gi₄-gi₄-ĝu₁₀ a₂-bi i₃-aĝ₂-ĝa₂-a-ke₄",
+     "orig_lines": [
+      "127",
+      "128",
+      "129",
+      "130",
+      "131",
+      "132",
+      "133",
+      "134",
+      "135"
+     ],
+     "en": "The well-built houses, ladies' dwellings, were falsely founded, and they have been eroded by the winds! They are making a lament for me of how the foe has finished off my Land! They are addressing the cries of my heart, overwhelmed with bitterness, in order to soothe it! They are beginning their laments about my lord Enlil! He will have mercy and compassion on me -- Enlil, father of the black-headed people, he who will give the order to restore me!"
+    },
+    {
+     "ref": "136",
+     "orig": "ki-ru-gu₂ 4-kam-ma-am₃",
+     "orig_lines": [
+      "136"
+     ],
+     "en": "4th kirugu"
+    },
+    {
+     "ref": "137",
+     "orig": "šag₄-ĝu₁₀ mud-a ba-ni-gel-le-eĝ₃-ĝen ba-bir-bir-en sug-ge₄ ba-ab-gu₇",
+     "orig_lines": [
+      "137"
+     ],
+     "en": "My heart is dark, I am destroyed, I am in chaos, I have been devastated!"
+    },
+    {
+     "ref": "138",
+     "orig": "ĝiš-gi₄-ĝal₂-bi-im",
+     "orig_lines": [
+      "138"
+     ],
+     "en": "Its ĝišgiĝal"
+    },
+    {
+     "ref": "139–149",
+     "orig": "še-eb saĝ-a na-aĝ₂-tar-zu gig-ga-am₃ ib-ši-šir₃-šir₃-[am₃]\na₂-še {d}mu-ul-lil₂ a i-bi₂-za šu ba-e-ši-in-ti-a\nza-e ni₂-za er₂ gig-ga šeš₄-a ba-i-ri-ib{?}-ak{?}-eš\nna-aĝ₂-bi-še₃ u₃-mu-un-zu-ur₂ sizkur e-ne dug₄-mu-na-ab\nu₃-mu-un-ĝu₁₀ en₃-še₃ i-bi₂ bar-/mu\\-[ši-ib] u₃-mu-un-[ĝu₁₀] e-ne dug₄-mu-na-[ab]\nta-aš aĝ₂ [pe]-el-/la{?}\\ [(X) nu]-mu-un-zi-zi-i nu-mu-un-/da{?}\\-[X (X) dug₄]-mu-na-ab\nšag₄-zu ḫa-ma-sed₄-de₃ aĝ₂-/gig\\ gi-mu-ra-ab ud X-ra dug₄-mu-na-ab\neš₃-eš₃-a ku₁₀-ku₁₀-ga-ĝu₁₀ ki-tuš kur₉-ma-ni-ib dug₄-mu-na-ab\nud babbar-ra su-ub-ba dadag-ga-gin₇ X X šum₂-mu-ra-ab dug₄-mu-na-ab\nUD nu-X X X X X A X X ak-a-ĝu₁₀ X X X [(X)] X X dug₄-mu-na-ab\naĝ₂ nu-sag₉{?}-ge{?}-zu{?} X X-ma /IGI\\ [X X]-zal-la bi₂{?}-ib-du₃-e dug₄-mu-na-ab",
+     "orig_lines": [
+      "139",
+      "140",
+      "141",
+      "142",
+      "143",
+      "144",
+      "145",
+      "146",
+      "147",
+      "148",
+      "149"
+     ],
+     "en": "In the foremost brick buildings they sing that your fate is bitter! Even now, to Enlil who will accept your tears for you, weeping bitter tears of your own accord, speak supplications to your lord himself concerning what he did to you, concerning that fate! Say to him \"My lord, how long? Look upon me with favour, my lord!\" Say \"Why ……?\" Say \"May your heart be soothed for me -- overturn this sacrilege for your own good! The day is ……!\" Say \"Re-enter for me your dwelling in my darkened shrines!\" Say \"Like a bright, cleansed, sacred day, give …… for your own good!\" Say \"……!\" Say \"Your misfortunes …… will rebuild it!\""
+    },
+    {
+     "ref": "150–153",
+     "orig": "i-gi₄-in-zu ur₅-ra-ke₄-eš ša-ne-ša₄ arḫuš ma-ra-tuku-tuku\nšag₄-zu šag₄ sag₃ ib₂-ta-be₄-e šag₄ zalag ma-ra-an-ĝar-ra-me\nsaĝ-zu zi-zi-i ĝiš-šub-ba-za ul-še₃ ma-ra-an-ĝa₂-ĝa₂\naĝ₂ kur₂-re za-a-ar i-ri-ib-ak-e šu-bi bi₂-ib-gi₄-gi₄-e",
+     "orig_lines": [
+      "150",
+      "151",
+      "152",
+      "153"
+     ],
+     "en": "Perhaps by this means I can make him have compassion and mercy for you. Depression has weakened your heart, but I am the one who has established good cheer for you. He will fix it forever as your lot that you shall lift your head high, he will make good again the hostilities he is directing against you."
+    },
+    {
+     "ref": "154",
+     "orig": "ki-ru-gu₂ 5-kam-ma-am₃",
+     "orig_lines": [
+      "154"
+     ],
+     "en": "5th kirugu"
+    },
+    {
+     "ref": "155",
+     "orig": "iri{ki}-a šu bar-re nu-zu-a ur₅-re bi₂-ib-sig₁₀-ge",
+     "orig_lines": [
+      "155"
+     ],
+     "en": "In the city which does not know freedom he struck them down thus."
+    },
+    {
+     "ref": "156",
+     "orig": "ĝiš-gi₄-ĝal₂-bi-[im]",
+     "orig_lines": [
+      "156"
+     ],
+     "en": "Its ĝišgiĝal"
+    },
+    {
+     "ref": "157–166",
+     "orig": "a₂-še u₃-mu-un-zu gu₂ šub-ba kur₂ me-e-ši-in-ra-am₃\narḫuš ma-ra-an-tuku-am₃ na-aĝ₂-zu in-tar-ra-am₃\nšeg₁₂-zu a-še-er ib₂-ta-an-e₃-a ib₂-si bi₂-in-dug₄-ga-am₃\nur₅ sag₉-ge šag₄ ḫul₂-la ma-ra-ni-in-kur₉-ra-am₃\n{d}nin-urta maškim kalag-ga saĝ-ba bi₂-in-tuku-am₃\nšul u₂-a-ni-še₃ ib₂-ši-in-gub-ba-am₃\ne₂-kur eš₃ kalag-kalag du₃-du₃-u₃-dam a₂ mu-un-da-aĝ₂-am₃\naĝ₂ ul-bi ki-bi bi₂-in-gi₄-am₃\ngi-gun₄-na-bi ki-bi gi₄-gi₄-bi ud-gin₇ kar₂-kar₂-bi\nmuš₃-ba barag tum₂-tum₂-mu in-na-an-dug₄-ga-am₃",
+     "orig_lines": [
+      "157",
+      "158",
+      "159",
+      "160",
+      "161",
+      "162",
+      "163",
+      "164",
+      "165",
+      "166"
+     ],
+     "en": "Even now your lord has smitten the enemy fury for you! He has had mercy on you and decreed your fate! He has said \"Enough\", so that he has removed lamentation from your brick buildings! In good mood and with a joyful heart he has entered in there again for you! Ninurta, the mighty commissioner, has looked after things! He stood there before the hero, his provider Išme-Dagan, and issued the command to him to completely rebuild the E-kur, the most precious shrine! He has restored its ancient property! Enlil has ordered Išme-Dagan to restore its ziggurat temple, to make it shine like the day, to make fitting the dais upon its platform!"
+    },
+    {
+     "ref": "167–177",
+     "orig": "ĝarza kur₂-re ib₂-suḫ₃-a šu ḫul /bi₂\\-[ib₂-dug₄-ga-am₃]\nme ib₂-bir-a-bi ki-bi-še₃ in-ĝar-ra-am₃\nšu-luḫ erim₂-e šu bi₂-in-la₂-a-ba\nkug-ge sikil-e-bi\ninim kug nu-kur₂-ru-da-ni in-na-an-dug₄-ga-am₃\n{d}iš-me-{d}da-gan sipad ki aĝ₂-ĝa₂-ni-ir\ngud du₇ maš₂ du₇ šar₂-šar₂-re-da in-na-an-dug₄-ga-am₃\nKI./LUGAL\\.GUB kug nam tar-re-da-ni giri₁₇ šu mu-[ni]-/ĝal₂\\-la-am₃\nsizkur a-ra-zu-a ud bi₂-in-gub-ba-am₃\n[X X]-le{?}-da aĝ₂ ze₂-ba X [X X (X)] šag₄-zu{?} [a-še]-er bi₂-in-[dug₄]\ner₂{?} gig-zu X maḫ X X X [...]",
+     "orig_lines": [
+      "167",
+      "168",
+      "169",
+      "170",
+      "171",
+      "172",
+      "173",
+      "174",
+      "175",
+      "176",
+      "177"
+     ],
+     "en": "He has put back in their place the rites which the enemy disordered and desecrated, along with the scattered divine powers! He has given him his sacred unchangeable decision that they should sanctify and purify again the cleansing-rites which the enemy had put a stop to! He has told Išme-Dagan, his beloved shepherd, that faultless bulls and faultless bucks should be slaughtered! When decrees the fate of the sacred royal offering place (?), he will offer salutations and stand there daily in supplication and prayer. 2 lines fragmentary"
+    },
+    {
+     "ref": "178",
+     "orig": "ki-ru-gu₂ 6-kam-ma-am₃",
+     "orig_lines": [
+      "178"
+     ],
+     "en": "6th kirugu"
+    },
+    {
+     "ref": "179",
+     "orig": "ud{?} en₃-še₃ i₃-kuš₂-u₃-de₃-en",
+     "orig_lines": [
+      "179"
+     ],
+     "en": "How long before you will rest at ease?"
+    },
+    {
+     "ref": "180",
+     "orig": "ĝiš-gi₄-ĝal₂-bi-im",
+     "orig_lines": [
+      "180"
+     ],
+     "en": "Its ĝišgiĝal"
+    },
+    {
+     "ref": "181–183",
+     "orig": "še-eb en₃-še₃ er₂-ra a-še-er-ra i-bi₂ mi-ni-ib-zi-zi-zi\na₂-še u₃-mu-un-zu kur gal {d}mu-ul-lil₂-le an ki-a dirig-ga\nše-eb-zu a-še-er ib₂-ta-an-e₃ ur₅-zu in-sag₉-ga",
+     "orig_lines": [
+      "181",
+      "182",
+      "183"
+     ],
+     "en": "How long will the brickwork strain its eyes upwards in tears and lamentations? Even now your lord, the Great Mountain Enlil, supreme in the universe, has removed lamentation from your brick buildings and made favourable your humour!"
+    },
+    {
+     "ref": "184–192",
+     "orig": "i₃-ne-eš₂ uru₂ u₃-mu-un-zu šag₄-ne-ša₄ arḫuš ma-ra-an-tuku-a\na-a {d}mu-ul-lil₂ u₃-mu-un kur-kur-ra-ke₄ gur-ru-za bi₂-in-dug₄-ga\nama gal {d}nin-lil₂-le a-ra-zu-a u₃-gul mu-ni-in-ĝar-ra\nnibru{ki} saĝ sag₃-ge-bi ĝar-ra-ab še-eb in-na-an-dug₄-ga-am₃\nama₅-ĝu₁₀ du₃-ma-ab e₂-ĝu₁₀ sig₉-ma-ab in-na-an-dug₄-ga-am₃\nša₃-ba-ni-a ad i-ni-in-gi₄-eš-am₃ e-ne-eĝ₃-bi bi₂-in-dug₄-ga\n{d}mu-ul-lil₂ e-ne-eĝ₃ zid dug₄-ga-ni in-de₃-a-ĝen-na\ne₂ zid aĝ₂ ḫa-lam-ma ba-ab-ak sag₉-ga-aš i-ni-in-kur₉-ra\naĝ₂ ur₅-ra-ra e-ra-ni-ib-gi₄-a e-ne ib₂-ta-an-ed₃-de₃",
+     "orig_lines": [
+      "184",
+      "185",
+      "186",
+      "187",
+      "188",
+      "189",
+      "190",
+      "191",
+      "192"
+     ],
+     "en": "Now, city, your lord who has had compassion and mercy for you, Father Enlil, lord of all countries, who has commanded that you be restored, and the great mother Ninlil, who entreated him in prayer there, and the brickwork itself which said to him \"Steady the trembling of Nibru!\" and said to him \"Rebuild my women's quarters for me! Re-establish my temples for me!\" -- he who mulled things over so that he came to a decision about them, Enlil, who found agreeable his command of true words, who beneficently entered the true temple which had suffered destruction -- he himself is removing what he turned upon you in distress."
+    },
+    {
+     "ref": "193–200",
+     "orig": "sig₉-ga-bi mu-un-du₃-un-na-gin₇ ḫul₂ ud mi-ni-in-kur₉-ra\nza-pa-aĝ₂ kurun₂ lal₃ dirig-še₃ bal-bal-e na-aĝ₂-še₃ bi₂-ib-tar-re\nib₂-si ud en₃-še₃ er₂ gul-la e-ne e-ra-an-dug₄-ga\naĝ₂ mu nu-tuku-gin₇ ba-til₃-le-na-aš na-aĝ₂-zu in-tar-ra\nuru₂-ĝu₁₀ šag₄ kug-ĝu₁₀ mu-e-ši-ḫuĝ za-a-ar ma-ra-an-gur-ra-am₃\nnibru{ki} šag₄ kug-ĝu₁₀ mu-e-ši-ḫuĝ za-a-ar ma-ra-an-gur-ra-am₃\nuru₂ zid na-aĝ₂ gal-zu in-tar-ra-am₃ bal-zu in-su₃-ud-dam\nnibru{ki} na-aĝ₂ gal-zu in-tar-ra-am₃ bal-zu in-su₃-ud-dam",
+     "orig_lines": [
+      "193",
+      "194",
+      "195",
+      "196",
+      "197",
+      "198",
+      "199",
+      "200"
+     ],
+     "en": "Just as he silenced you, when he made joy enter again he decreed as your fate the sound of choice beer and syrup being poured out to overflowing. \"Enough! It is time to stifle the lament\" he said to you himself. Because you have been living in a state of neglect, Enlil who has decreed your fate has said \"My city, you have placated my sacred heart towards you.\" He has returned to you! \"Nibru, you have placated my sacred heart towards you.\" He has returned to you! True city, he has decreed your great fate and made your reign long! Nibru, he has decreed your great fate and made your reign long!"
+    },
+    {
+     "ref": "201–210",
+     "orig": "e₂-kur-ra ud-gin₇ kar₂-kar₂-ka e-ne in-na-an-dug₄-ga-am₃\nki-ur₃-ra ud zid ba-an-e₃-am₃ ud ma-ra-ni-in-kur₉-ra-am₃\n{d}nin-lil₂-le ĝa₂-ĝiš-šu₂-a-ka na-aĝ₂-zu in-tar-ra-am₃\n{d}en-lil₂ {d}nin-lil₂-bi e₂-kur-ra barag mu-ni-in-ri-eš-am₃\nšag₄-bi-a u₂ mi-ni-in-sug₄-sug₄-ge-eš-am₃ kurun₂ mi-ni-in-dug₃-ge-eš-am₃\nsaĝ gig₂ ki-tuš-ba gen₆-ne₂-de₃ ad-bi mu-un-gi₄-eš-am₃\nuĝ₃ sug-zag-ge ba-ab-gu₇-a-aš za-a-ar ma-ra-an-laḫ₄-e-eš-am₃\ndumu ama-ni ba-da-an-gur-re-eš-am₃ gu₂ mu-un-ĝar-re-eš-am₃\nnam-lu₂-ulu₃ ki-saĝ-ĝal₂-la-ba mu-e-de₃-re₇-eš-am₃\neš₃ nibru{ki} kur gal {d}mu-ul-lil₂-le za-a-ar ma-ra-an-gur-ra-am₃{!}",
+     "orig_lines": [
+      "201",
+      "202",
+      "203",
+      "204",
+      "205",
+      "206",
+      "207",
+      "208",
+      "209",
+      "210"
+     ],
+     "en": "Enlil himself has commanded Išme-Dagan that the E-kur should shine like the day! Steady sunlight shines into the Ki-ur; he has brought daylight in there again for you! Ninlil has decreed your fate in the Ĝaĝiššua! Enlil and Ninlil together founded daises in the E-kur! They dined there and enjoyed choice beer! They deliberated how to make the black-headed people secure in their dwellings! They have brought back to you the people who had been completely devastated! They have gathered back together the children whom they turned away from their mothers! The populace goes with you in their strongholds! Shrine Nibru, the Great Mountain Enlil has returned to you!"
+    },
+    {
+     "ref": "211",
+     "orig": "ki-ru-gu₂ 7-kam-ma-am₃",
+     "orig_lines": [
+      "211"
+     ],
+     "en": "7th kirugu"
+    },
+    {
+     "ref": "212",
+     "orig": "ur₅-zu a-gin₇ i₃-tab šag₄ sag₃ a-gin₇ i₃-kuš₂-u₃-de₃",
+     "orig_lines": [
+      "212"
+     ],
+     "en": "How you suffer! How depression exhausts you!"
+    },
+    {
+     "ref": "213",
+     "orig": "ĝiš-gi₄-ĝal₂-bi-im",
+     "orig_lines": [
+      "213"
+     ],
+     "en": "Its ĝišgiĝal"
+    },
+    {
+     "ref": "214–219",
+     "orig": "a₂-še me-ri-zu-a ki-en-gi ki-uri ki-bi gi₄-gi₄-da\nuĝ₃ bir-a-bi gud₃-bi-še₃ gur-ru-dam e-ne-eš im-mi-in-eš-am₃\neridug{ki} šag₄-bi ĝeštug₂ i-i umuš zid ḫal-ḫa-la-da\nĝarza maḫ-bi nu-ḫa-lam-me-da inim-bi im-de₆-am₃\nadab{bu}{ ki} iri nin-bi niĝ₂-zi-ĝal₂ dim₂-e u₃-tud mu₂-mu₂-da\n{d}a-nun-na en nam tar-re-da du₃-u₃-bi bi₂-in-ne-/eš\\-am₃",
+     "orig_lines": [
+      "214",
+      "215",
+      "216",
+      "217",
+      "218",
+      "219"
+     ],
+     "en": "Even now, they command Išme-Dagan that Sumer and Akkad should be restored at your feet, that their scattered people should be returned to their nests! They have brought the news that the magnificent rites of Eridug would not be forgotten, its heart sending forth wisdom, so that good sense should be allotted! The Anuna, the lords who decree fates, order that Adab should be rebuilt, the city whose lady fashions living things, who promotes birthing!"
+    },
+    {
+     "ref": "220–227",
+     "orig": "urim₂{ki} šag₄-tum₂-ma ki ĝar-ra me-bi me-ta suḫ\nan-ne₂ {d}en-lil₂-le ki-bi gi₄-gi₄-da ad-bi bi₂-[in-gi₄-eš]-/am₃\\\nlarsam{ki} iri nun-bi niĝir an ki di-kud uĝ₃ šar₂-ra-ke₄\nsuḫuš-bi gen₆-ne₂-de₃ us₂ zid dab₅-be₂-da e-ne bi₂-in-eš-am₃\nunug{ki} kul-aba₄{ki} iri kug ĝiš-kiĝ₂-ti diĝir-re-e-ne-ke₄\neš-bar kiĝ₂-bi im-mi-in-eš-am₃ ki-bi bi₂-in-gi₄-eš-am₃\nki zabalam{ki} iri nu-gig an-na-ke₄ usu-ni mu-un-til-la\nlu₂-erim₂ lu₂-kur₂-ra-da kar-re-bi inim-bi im-de₆-a",
+     "orig_lines": [
+      "220",
+      "221",
+      "222",
+      "223",
+      "224",
+      "225",
+      "226",
+      "227"
+     ],
+     "en": "An and Enlil have advised that Urim should be restored, founded in a pasture, its divine powers distinct from the rest! They command the prince of the city Larsam, the herald of the universe, the judge of the numerous people, to secure its foundations, to follow the proper path! They have taken a decision concerning Unug-Kulaba, the sacred city, the handiwork of the gods, and restored it. They have brought news of the removal of all foes and enemies from the region of Zabalam, the city where the mistress of heaven concentrated her forces."
+    },
+    {
+     "ref": "228–235",
+     "orig": "lagaš{ki} dim gal an-na eš₃ ĝir₂-su{ki} ul-ta ĝar-ra-ba\nan-ne₂ {d}en-lil₂-le igi sag₉-ga-ne-ne im-ši-in-bar-re-eš-am₃\ne₂-bi umma{ki}-a šeg₁₂-kur-šag₄-ga ḫul-bi ba-ab-ak-a\nugu-bi-ta ti-id-nu-um nu-ĝar-ra ib₂-ta-an-zig₃-ge₄-eš-am₃\nkiš{ki} zag dab₅ ki-en-gi ki-uri nam-nun-bi dirig-ga\nsuḫuš-bi gen₆-ne₂-de₃ bi₂-in-eš-am₃ diĝir gal-gal-e-ne\nmar₂-da{ki} iri id₂-bi a zal-le a-šag₄-ga še gu-nu\n{d}a-nun-na-ke₄-ne ib₂-ta-an-kar-re-eš-a ib₂-ši-in-gur-re-eš-am₃",
+     "orig_lines": [
+      "228",
+      "229",
+      "230",
+      "231",
+      "232",
+      "233",
+      "234",
+      "235"
+     ],
+     "en": "An and Enlil have looked with their beneficent gaze on Lagaš, the mooring-pole of heaven, and the shrine Ĝirsu, established long ago. They have removed the treacherous Tidnum from that temple in Umma, Šeg-kuršaga, which had been ill treated! It is the great gods who have commanded that the foundations of Kiš should be secured, at the edge of Sumer and Akkad, its dominion superlative! Marda, the city in whose river water flows, in whose fields is fine grain -- the Anuna who took those things away from it returned them to it again!"
+    },
+    {
+     "ref": "236–243",
+     "orig": "i₃-si-in{ki} u₂-a {d}a-nun-na-ke₄-ne ul-ta ni₂ il₂-la-a\nan {d}en-lil₂ {d}en-ki {d}nin-maḫ-a bal-bi in-su₃-ud-da-am₃\ndug₄-ga-ba šu zid bi₂-in-ĝar-re-eš-am₃ ḫe₂-am₃-bi bi₂-in-eš-am₃\n{d}nin-urta šul ur-saĝ kalag-ga šu-ni ba-an-šum₂-mu-uš-am₃\n{d}nin-isin₂{si}-na dumu maḫ an-na šim-mu₂ kalam-ma-ka\nki-tuš kug e₂-gal-maḫ-ni-a ni₂ dub₂-bu in-na-an-ne-eš-am₃\n{d}da-mu kindagal₂ {d}nu-nam-nir-ra a-zu zi-ĝal₂-la-ka\nĝiri₃ ama-na-še₃ a-a-na-še₃ kur gam-gam-e in-na-an-ne-eš-am₃",
+     "orig_lines": [
+      "236",
+      "237",
+      "238",
+      "239",
+      "240",
+      "241",
+      "242",
+      "243"
+     ],
+     "en": "Isin, the provisioner of the Anuna, rising high since times of old -- An, Enlil, Enki and Ninmaḫ have made its reign long! By their command they have handed it over and expressed their approval! They have entrusted it to Ninurta, the champion, the strong hero! They have told Ninisina, the exalted child of An, the incantation priest of the Land, to rest calmly in her sacred dwelling, Egal-maḫ! They have told Damu, the chief barber of Nunamnir, healer of the living, to make the foreign countries bow at the feet of his father and mother!"
+    },
+    {
+     "ref": "244",
+     "orig": "ki-ru-gu₂ 8-kam-ma-am₃",
+     "orig_lines": [
+      "244"
+     ],
+     "en": "8th kirugu"
+    },
+    {
+     "ref": "245",
+     "orig": "an {d}en-lil₂ {d}en-ki {d}nin-maḫ-bi a₂-bi ḫa-ba-an-aĝ₂-eš-am₃",
+     "orig_lines": [
+      "245"
+     ],
+     "en": "An, Enlil, Enki and Ninmaḫ have given their orders!"
+    },
+    {
+     "ref": "246",
+     "orig": "ĝiš-gi₄-ĝal₂-bi-im",
+     "orig_lines": [
+      "246"
+     ],
+     "en": "Its ĝišgiĝal"
+    },
+    {
+     "ref": "247–254",
+     "orig": "i₃-ne-eš₂ a₂-še {d}en-lil₂-le ud zid kalam-ma bi₂-in-gub-ba-am₃\nud nibru{ki} gu₂ an-še₃ zi-zi i₃-ne-eš₂ im-mi-in-dug₄-ga\nud zid e₂-kur-ra saĝ mu₂-mu₂ e-ne im-mi-in-tuku-a\nud ki-ur₃-ra dalla maḫ e₃-a e-ne im-mi-in-zig₃-ga\nud ki-en-gi ki-uri daĝal-e e-ne im-mi-in-gi₄-a\nud e₂ du₃-du₃ ĝa₂-nun niĝin₂-e e-ne ib₂-ta-an-mar-ra\nud numun i-i niĝ₂-zi-ĝal₂ u₃-tud e-ne ib₂-ta-an-e₃-a\nud tur₃ du₃-du₃ amaš ki ĝa₂-ĝa₂ e-ne ib₂-ta-an-e₃-a",
+     "orig_lines": [
+      "247",
+      "248",
+      "249",
+      "250",
+      "251",
+      "252",
+      "253",
+      "254"
+     ],
+     "en": "Now see! Enlil has fixed a good day in the land! He has even now ordered the day for Nibru to raise its neck to heaven! He himself has provided a good day for the E-kur to shine! He himself has raised up the day for the Ki-ur's magnificent manifestation! He himself has restored the day for Sumer and Akkad to expand! He himself has set aside the day for houses to be built and storerooms to be enclosed! He himself has brought out the day for seeds to sprout and living things to be born! He has brought out the day for building cattle pens and founding sheepfolds!"
+    },
+    {
+     "ref": "255–261",
+     "orig": "u₈-e sila₄-a im-mi-ib-tu-ud-da tur₃-e bi₂-ib-si-a\nu₈ amaš-bi im-mi-ib₂-u₃-tud sila₄-bi tur₃-e bi₂-ib-si-si\nud₅-de₃ maš₂-bi im-mi-ib-tu-ud-da amaš-a bi₂-ib-si-a\nu₈ sila₄-bi im-da-ab-lu-a {e₂}tur₃ im-peš₁₁-am₃\nud₅-e maš₂-bi im-da-ab-lu-a amaš daĝal bi₂-ib-tag-ga\nud niĝ₂ ḫa-lam-ma sag₉-ga ku₄-ku₄ e-ne ib₂-ta-an-ĝar-ra\nud niĝ₂-erim₂ [...]\nud niĝ₂-si-sa₂ kalam-ma ĝa₂-ĝa₂ a₂-taḫ-a mi-ni-in-kur₉-ra",
+     "orig_lines": [
+      "255",
+      "255A",
+      "256",
+      "257",
+      "258",
+      "259",
+      "260",
+      "261"
+     ],
+     "en": "{The ewes which bore lambs have filled the pens!} {(1 ms. has instead the line:) Ewes have given birth in the folds, their lambs have filled the pens!} The goats which bore kids have filled the folds! The ewes which flocked with their lambs have swelled the sheepfold! The goats which flocked with their kids have caused the pens to be widened! He himself has set the day for turning destruction to the good! He has …… the day …… evil! He has brought in Išme-Dagan as assistance for the day for establishing justice in the land!"
+    },
+    {
+     "ref": "262",
+     "orig": "ki-ru-gu₂ 9-kam-ma-am₃",
+     "orig_lines": [
+      "262"
+     ],
+     "en": "9th kirugu"
+    },
+    {
+     "ref": "263–274",
+     "orig": "ud ki-en-gi ki-uri lu₂-erim₂-e šu ḫul bi₂-in-dug₄-ga\nud-da-ta šag₄ ba-ši-ḫuĝ-ĝa₂-am₃ bar ba-ši-im-sed₄-da-am₃\ndiĝir gal-gal-e-ne šag₄-ne-ša₄ ur₅-re ba-an-tuku-uš-am₃\na₂ kuš₂-a igi bi₂-in-du₈-uš-am₃ ib₂-ta-an-ed₃-de₃-eš-am₃\niri du₆-du₆-da ba-ĝar-ra-za ki-bi-še₃ in-ĝar-re-eš-am₃\nniĝ₂ babbar-bi sag₂ ba-ab-dug₄-ga-ba sug-ge₄ ba-ab-gu₇-a\n{d}en-lil₂ lugal kur-kur-ra-ke₄ ki-bi-še₃ in-ĝar-ra-am₃\nnam-lu₂-ulu₃ gud₃ us₂-sa-ta{?} ni₂ im-ši-ib-ten-na\nnibru{ki} kur me gal-gal-la-ka ĝiri₃ /kur₂{?}\\ [ba-ra-an]-/dab₅{?}\\-be₂-eš-a\n{d}a-nun-na inim {d}en-lil₂-la₂-ta e₂ /bi₂\\-[in]-šub-bu-uš-a\ngi₁₆-sa ul-ta ĝar-ĝar-ra-ba tum₉-e ba-ab-de₆-a\nki-bi-še₃ ku₄-ku₄-da bi₂-in-eš-am₃ en nam tar-re-ne",
+     "orig_lines": [
+      "263",
+      "264",
+      "265",
+      "266",
+      "267",
+      "268",
+      "269",
+      "270",
+      "271",
+      "272",
+      "273",
+      "274"
+     ],
+     "en": "Although Sumer and Akkad had been desecrated by the foe, afterwards hearts were appeased, spirits soothed! All the great gods thus had compassion! They looked upon those sunk in exhaustion and brought them up out of it! They restored your city which had been razed to ruins! Enlil, king of all countries, restored its shining property which had been scattered, which had been devastated! There where the populace rested in the cool after building their nests, in Nibru, the mountain of the greatest divine powers, from where they had taken an unfamiliar path -- at Enlil's word the Anuna, those very lords who determine the fates, ordered that the temples which they had forsaken and the jewels, put there long ago, which had been carried off by the wind, should all be restored!"
+    },
+    {
+     "ref": "275–282",
+     "orig": "šag₄-bi-a u₂ sug₄-sug₄ šag₄ ḫul₂-la šag₄-ba mi-ni-in-ĝar-ra-am₃\n{d}iš-me-{d}da-gan šita ud-da gub ḫul₂ ni₂-tuku-ni-ra\nu₂-[bi] kug-ge a-bi sikil-e in-na-an-dug₄-ga-am₃\nme [šu] pel₂-la₂-bi sikil-e in-na-an-dug₄-ga-am₃\nĝarza suḫ₃-a bir-a-bi si bi₂-in-sa₂\nkug-kug-ga šub-ba šu pel₂-la₂-a-ke₄ ki-bi-še₃ in-ĝar-ra\nšukur₂-ud šub-ba eša zid₂ dub-dub-bu na-aĝ₂-še₃ bi₂-ib-tar-re\n{ĝiš}banšur ninda lu ninda šar₂-re-da šag₄-ga-ni im-de₆-a",
+     "orig_lines": [
+      "275",
+      "276",
+      "277",
+      "278",
+      "279",
+      "280",
+      "281",
+      "282"
+     ],
+     "en": "He has established there dining in joy within! Enlil has given the command to Išme-Dagan, his joyous, reverent sacral officiant, who daily serves, to sanctify its food, to purify its water! He has commanded him to purify its defiled divine powers! He has put in order its disordered and scattered rites, he has put back in their place the most sacred things, neglected and defiled. He decrees as a fate the offering of daily rations and the grinding up of fine meal and flour. He has decided to make bread plentiful on the table, to make loaves numerous!"
+    },
+    {
+     "ref": "283",
+     "orig": "ki-ru-gu₂ 10-kam-ma-am₃",
+     "orig_lines": [
+      "283"
+     ],
+     "en": "10th kirugu"
+    },
+    {
+     "ref": "284–295",
+     "orig": "ud lu₂-u₃ lu₂-ra inim kur₂ nu-di dumu a-a-ni-ir ni₂ teĝ₃-ĝe₂₆-e\nud niĝ₂-sun₅-na kalam-ma ĝa₂-ĝa₂ tur-re maḫ dugud-da\nud šeš-ban₃-da šeš-gal-la-ni /ḫu\\-luḫ-ḫa ni₂ sun₅-e\n[ud] /dumu\\ gal-la dumu ban₃-da umun₂ ak inim-ma-ni-še₃ tuš-u₃\n[ud] sig₉-ga kalag-ga še₂₉-eš₂ nu-di niĝ₂ sag₉-ga gal gub-bu\n[ud] /kaskal\\ suḫ₃-a ĝiri₃ ĝa₂-ĝa₂ ḫul mu₂-a bur₁₂-re\n[ud lu₂]-u₃ ki šag₄-ga-ni-še₃ du-u₃ gaba-ri-ni-še₃ in nu-dub₂\n[ud lu₂]-u₃ ki šag₄-ga-ni-še₃ du-u₃ /edin\\-na ni₂ sun₅-ni niĝ₂-gig-ga nu-ak\nud lu₂-u₈ lu₂-ra inim kur₂ nu-di niĝ₂-gig-ga nu-ak\n[ud] /iri\\-ta iri kur₂-še₃ du-u₃ [edin]-na ni₂ nu-teĝ₃-ĝe₂₆-e niĝ₂-gig nu-ak\nud kalam-ma niĝ₂-gig-ga e₃-a šag₄-ba ud ĝa₂-ĝa₂\nud niĝ₂ ku₁₀-ku₁₀ kalam-ma zi-zi niĝ₂-zi-ĝal₂ ḫul₂-le\na-a {d}en-lil₂ en dug₄-ga-ni nu-kur₂-ru nun kur-kur-ra-ke₄\nuĝ₃ saĝ gig₂-ga bi₂-in-gub-ba-am₃ sag₉-ge-ba bi₂-in-dug₄-ga",
+     "orig_lines": [
+      "284",
+      "285",
+      "286",
+      "287",
+      "288",
+      "289",
+      "290",
+      "290A",
+      "291",
+      "291A",
+      "292",
+      "293",
+      "294",
+      "295"
+     ],
+     "en": "Father Enlil, the lord whose command cannot be altered, prince of all countries, has fixed among the black-headed people, and commanded for their benefit, a time when no one is to speak hostile words to another, when a son is to respect his father, a time to establish humility in the Land, for the inferior to be as important as the mighty, a time when the younger brother, fearing his big brother, is to show humility, a time when the elder child is to treat the younger child reasonably and to pay heed to his words, a time to take neither weak nor strong away into captivity, but to serve with great acts of good, a time to travel the disordered roadways, to extirpate evil growths, {a time when anyone is to go where they will, to hurl no insults at one's fellow,} {(1 ms. has instead the line:) a time when anyone is to go where they will, to carry oneself humbly in the plain, to perform no sacrilege,} {a time no one is to speak hostile words to another, to perform no sacrilege,} {(1 ms. has instead the line:) a time to go from one's own city to a foreign city, to have no fear on the plain, to perform no sacrilege,} a time to remove bitterness from the Land, to establish light therein, a time when darkness is to be lifted in the Land, so that living things should rejoice."
+    },
+    {
+     "ref": "296",
+     "orig": "ki-ru-gu₂ 11-kam-ma-am₃",
+     "orig_lines": [
+      "296"
+     ],
+     "en": "11th kirugu"
+    },
+    {
+     "ref": "297–303",
+     "orig": "i₃-ne-eš₂ a₂-še ud-da-ta {d}en-lil₂ nun šag₄-la₂ sug₄-ga-am₃\nšul šeg₁₂ TU-ra ĝar-ra-ni-ir in-na-an-sag₉-am₃\nme erim₂-e šu ḫul bi₂-in-dug₄-ga si in-na-an-sa₂-am₃\nĝarza šu /pel₂\\-la₂ mu-un-na-an-kug-kug-ga-am₃\ngi-gun₄-bi mu-na-an-sikil-am₃ dalla mu-un-na-an-e₃-am₃\nšag₄-ba ḫe₂-ĝal₂ mi-ni-in-šar₂-šar₂-ra-am₃ kurun lal₃ bi₂-ib-si-am₃\nud ne šag₄ dug₃-ge bar ḫuĝ-e ur₅ sag₉-ge mi-ni-in-ĝar-ra-am₃",
+     "orig_lines": [
+      "297",
+      "298",
+      "299",
+      "300",
+      "301",
+      "302",
+      "303"
+     ],
+     "en": "Now, see! After that time, Enlil, the prince who is full of pity, has been beneficent to his hero who had laid the …… brick! He put in order again for him the divine powers which had been desecrated by the enemy! He sanctified again the defiled rites for him! He purified its ziggurat temple and made it resplendent for him! Within he made abundance plentiful, he filled it with choice beer and syrup! He established there at that time the pleasing of hearts, the appeasing of spirits, the ameliorating of moods!"
+    },
+    {
+     "ref": "304–314",
+     "orig": "e-ne a-ra-zu-a mu-na-an-gub-ba-am₃ giri₁₇ šu mi-ni-ĝal₂-la-am₃\ner₂ ĝar-ra nam-šita dug₄-ga-ni nun kur-kur-ra-ke₄\ni₃-ḫe-nun-na lal₃ ku₇-ku₇-da-gin₇ su-ni bi₂-ib₂-ak-am₃\nšudu₃-da-ni ĝiš ba-an-tuku-am₃ igi in-ši-in-bar-ra-am₃\n{d}iš-me-{d}da-gan-na inim-ma-ni su-a-na ba-dug₃-ga-am₃\nsaĝ us₂-a-ni šag₄-ga dug₄-ga-ni in-de₃-ĝen-na-am₃\nsun₅-na šita-ba ki la₂-a-ne₂-eš₂ ĝiri₃-ba sig₁₀-ga-ne₂-eš₂\nsizkur-ra u₃-gul ĝa₂-ĝa₂-da-ne₂-eš₂ giri₁₇ ki su-bu-da-ne₂-eš₂\nKI.LUGAL.GUB til₃-le-da ni₂ teĝ₃-ĝe₂₆-da-ne₂-eš₂ gur-gur-re-da-ne₂-eš₂\nniĝ₂-nam-ma-ni en-nu-uĝ₃ ak-da-ne₂-eš₂ ĝa₂-la nu-dag-ge-da-ne₂-eš₂\nnam-nun-na mu sud-su₃-ra₂-ni e-ne-er in-na-an-dug₄-ga-am₃",
+     "orig_lines": [
+      "304",
+      "305",
+      "306",
+      "307",
+      "308",
+      "309",
+      "310",
+      "311",
+      "312",
+      "313",
+      "314"
+     ],
+     "en": "Išme-Dagan himself stood in prayer to Enlil and offered salutations! When he had begun the lament and spoken the supplication, the prince of all countries treated his body with oil of abundance as if it were the sweetest syrup! And his prayer was heard -- Enlil looked upon him with favour, Išme-Dagan whose words bring Enlil pleasure! Enlil's constant attendant, with whose thoughts he agrees! Because the humble one prostrated himself in his devotions and served there, because he will entreat him in supplication and will do obeisance, because he will complete and honour the royal offering and will return, because he will keep watch over everything and will not be negligent, Enlil has promised to Išme-Dagan his dominion of extended years!"
+    },
+    {
+     "ref": "315–322",
+     "orig": "lu₂ nam-lugal{?}-la saĝ-bi-še₃ e₃-a e-ne-er in-na-an-dug₄-ga-am₃\nlugal bal sag₉-ga-ke₄ e-ne-er in-na-an-dug₄-ga-am₃\nuĝ₃ ki-tuš ne-ḫa bi₂-in-dur₂-ru-na e-ne-er in-na-an-dug₄-ga-am₃\nuĝ₃ šar₂-ra niĝ₂ bi₂-in-dug₄-ga-a in-de₃-a-ĝen-na-am₃\nki-en-gi ki-uri a-na me-a ud nam tar-ra-še₃\nuĝ₃ saĝ gig₂-ga u₈-gin₇ lu-a uĝ₃ saĝ sig₁₀-ga-ba\nnam-maḫ kur gal {d}nu-nam-nir-ra enkar an ki-ke₄\ndu-ri₂-še₃ me-teš₂ am₃-i-i-ne a-ra₂ ni₂-ĝal₂-la-ni-im",
+     "orig_lines": [
+      "315",
+      "316",
+      "317",
+      "318",
+      "319",
+      "320",
+      "321",
+      "322"
+     ],
+     "en": "He promised him that he will be a man of pre-eminent kingship! He promised him that he will be a king whose reign is good! He promised him that he shall have the people inhabit safe dwellings! Enlil found agreement in what he had said to the numerous people! On the day for decreeing fates, every part of Sumer and Akkad, among the black-headed people flocking like sheep, among their well-tended people, will praise forever the majesty of the Great Mountain Nunamnir, enkar weapon of the universe! It is his awe-inspiring way!"
+    },
+    {
+     "ref": "323",
+     "orig": "ki-ru-gu₂ 12-kam-ma-am₃",
+     "orig_lines": [
+      "323"
+     ],
+     "en": "12th kirugu"
+    }
+   ]
+  }
+ ]
+}

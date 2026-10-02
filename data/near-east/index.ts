@@ -8,6 +8,7 @@ import { LEVANT_CANON } from './levant'
 import { ARABIA_CANON } from './arabia'
 import { HIGHLANDS_CANON } from './highlands'
 import { TESTIMONIA_CANON } from './testimonia'
+import { MANIFEST } from './sources'
 
 export * from './types'
 
@@ -91,10 +92,21 @@ export interface ColumnTally {
   zh: Record<string, number>
 }
 
+/** 實際三欄現況：取源腳本寫進 manifest 的優先，否則用書目裡的預設（「可取得」之類的估計）。 */
+export function effectiveColumns(text: NeText, division: NeDivision, canon: NeCanon): ColumnStatus {
+  const m = MANIFEST[text.slug]
+  if (m) return { orig: m.orig, en: m.en, zh: m.zh }
+  return text.columns ?? division.columns ?? canon.columns
+}
+
+export function hasText(slug: string): boolean {
+  return slug in MANIFEST
+}
+
 export function tallyColumns(locs: TextLocation[] = allTexts()): ColumnTally {
   const t: ColumnTally = { total: locs.length, orig: {}, en: {}, zh: {} }
   for (const { text, division, canon } of locs) {
-    const c: ColumnStatus = text.columns ?? division.columns ?? canon.columns
+    const c: ColumnStatus = effectiveColumns(text, division, canon)
     t.orig[c.orig] = (t.orig[c.orig] ?? 0) + 1
     t.en[c.en] = (t.en[c.en] ?? 0) + 1
     t.zh[c.zh] = (t.zh[c.zh] ?? 0) + 1

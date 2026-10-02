@@ -1,0 +1,996 @@
+{
+ "slug": "lament-urim",
+ "source": "ETCSL",
+ "siglum": "ETCSL 2.2.2",
+ "source_url": "https://etcsl.orinst.ox.ac.uk/cgi-bin/etcsl.cgi?text=t.2.2.2",
+ "license": "ETCSL（Oxford）轉寫與英譯，非商業學術使用",
+ "compositions": [
+  {
+   "num": "2.2.2",
+   "title_en": "The lament for Urim",
+   "segments": [
+    {
+     "ref": "1–8",
+     "orig": "tur₃-ra-na muš₃ mi-ni-in-ga amaš-a-na lil₂-e (Šited in OB šatalogue from Nibru, at Pḫiladelpḫia, 0.2.01, line 32; OB šatalogue in tḫe Louvre, 0.2.02, line 26; OB šatalogue from Urim (U2), 0.2.04, line 44)\nam-e tur₃-ra-na muš₃ mi-ni-in-ga amaš-a-na lil₂-e\nu₃-mu-un kur-kur-ra-ke₄ muš₃ mi-ni-in-ga amaš-a-na lil₂-e\n{d}mu-ul-lil₂-le eš₃-e nibru{ki}-a muš₃ mi-ni-in-ga amaš-a-na lil₂-e\ndam-a-ni {d}nin-lil₂-le muš₃ mi-ni-in-ga amaš-a-na lil₂-e\n{d}nin-lil₂-le e₂-bi ki-ur₃-ra muš₃ mi-ni-in-ga amaš-a-na lil₂-e\nnin keš₃{ki}-a-ke₄ muš₃ mi-ni-in-ga amaš-a-na lil₂-e\nga-ša-an-maḫ-e e₂-bi keš₃{ki}-a muš₃ mi-ni-in-ga amaš-a-na lil₂-e",
+     "orig_lines": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8"
+     ],
+     "en": "He has abandoned his cow-pen and has let the breezes haunt his sheepfold. The wild bull has abandoned his cow-pen and has let the breezes haunt his sheepfold. The lord of all the lands has abandoned it and has let the breezes haunt his sheepfold. Enlil has abandoned the shrine Nibru and has let the breezes haunt his sheepfold. His wife Ninlil has abandoned it and has let the breezes haunt her sheepfold. Ninlil has abandoned that house, the Ki-ur, and has let the breezes haunt her sheepfold. The queen of Keš has abandoned it and has let the breezes haunt her sheepfold. Ninmaḫ has abandoned that house Keš and has let the breezes haunt her sheepfold."
+    },
+    {
+     "ref": "9–18",
+     "orig": "mu-lu i₃-si-in{ki}-na-ke₄ muš₃ mi-ni-in-ga amaš-a-na lil₂-e\nga-ša-an-i₃-si-in{ki}-na-ke₄ eš₃ e₂-gal-maḫ-a muš₃ mi-ni-in-ga /amaš\\-a-na lil₂-e\nnin ki unug{ki}-ga-ke₄ muš₃ mi-ni-in-ga [amaš]-a-na lil₂-e\nga-ša-an-an-na-ke₄ e₂-bi ki unug{ki}-ga muš₃ mi-ni-in-ga amaš-a-na [lil₂]-e\n{d}nanna urim₂{ki}-ma muš₃ mi-ni-in-ga amaš-a-na [lil₂]-e\n{d}suen-e e₂-kiš-nu-ĝal₂-la muš₃ mi-ni-in-ga amaš-a-na lil₂-e\ndam-a-ni ga-ša-an-gal-e muš₃ mi-ni-in-ga amaš-a-na lil₂-e\nga-ša-an-gal-e agrun-kug-ga-na muš₃ mi-ni-in-ga amaš-a-na lil₂-e\nam uru₂-ze₂-ba{ki}-ke₄ muš₃ mi-ni-in-ga amaš-a-na lil₂-e\n{d}am-an-ki-ke₄ e₂-bi uru₂-ze₂-ba{ki}-ke₄ muš₃ mi-ni-in-ga amaš-a-na lil₂-e",
+     "orig_lines": [
+      "9",
+      "10",
+      "11",
+      "12",
+      "13",
+      "14",
+      "15",
+      "16",
+      "17",
+      "18"
+     ],
+     "en": "She of Isin has abandoned it and has let the breezes haunt her sheepfold. Ninisina has abandoned the shrine Egal-maḫ and has let the breezes haunt her sheepfold. The queen of Unug has abandoned it and has let the breezes haunt her sheepfold. Inana has abandoned that house Unug and has let the breezes haunt her sheepfold. Nanna has abandoned Urim and has let the breezes haunt his sheepfold. Suen has abandoned E-kiš-nu-ĝal and has let the breezes haunt his sheepfold. His wife Ningal has abandoned it and has let the breezes haunt her sheepfold. Ningal has abandoned her Agrun-kug and has let the breezes haunt her sheepfold. The wild bull of Eridug has abandoned it and has let the breezes haunt his sheepfold. Enki has abandoned that house Eridug and has let the breezes haunt his sheepfold."
+    },
+    {
+     "ref": "18A–26",
+     "orig": "ga-ša-an-X-[...] e₂-ba la-ra-ag{ki}-a muš₃ mi-ni-in-ga amaš-a-na lil₂-e\n{d}šara e₂-maḫ-a muš₃ mi-ni-in-ga amaš-a-na lil₂-e\n{d}ud-saḫar-ra e₂-bi umma{ki}-a muš₃ mi-ni-in-ga amaš-a-na lil₂-e\n{d}ba-u₂ uru₂-kug-ga muš₃ mi-ni-in-ga amaš-a-na lil₂-e\na dug₄-ga ama₅-na muš₃ mi-ni-in-ga amaš-a-na lil₂-e\ndumu-a-ni {d}ab-ba-u₂ muš₃ mi-ni-in-ga amaš-a-na lil₂-e\n{d}ab-ba-u₂ ma-gu₂-en-na-ke₄ muš₃ mi-ni-in-ga amaš-a-na lil₂-e\n{d}lamma e₂ kug-ke₄ muš₃ mi-ni-in-ga amaš-a-na lil₂-e",
+     "orig_lines": [
+      "18A",
+      "19",
+      "20",
+      "21",
+      "22",
+      "23",
+      "24",
+      "25"
+     ],
+     "en": "{(1 ms. adds 1 line:) …… (partially preserved name of a goddess) has abandoned that house Larag and has let the breezes haunt her sheepfold.} Šara has abandoned E-maḫ and has let the breezes haunt his sheepfold. Ud-saḫara has abandoned that house Umma and has let the breezes haunt her sheepfold. Bau has abandoned Iri-kug and has let the breezes haunt her sheepfold. She has abandoned her flooded chamber and has let the breezes haunt her sheepfold. Her son Ab-Bau has abandoned it and has let the breezes haunt his sheepfold. Ab-Bau has abandoned Ma-gu-ena and has let the breezes haunt his sheepfold. The protective goddess of the holy house has abandoned it and has let the breezes haunt her sheepfold."
+    },
+    {
+     "ref": "26–34",
+     "orig": "{d}lamma-e e₂-tar-sir₂-sir₂-ra muš₃ mi-ni-in-ga amaš-a-na lil₂-e\num-ma lagaš{ki}-ke₄ muš₃ mi-ni-in-ga amaš-a-na lil₂-e\n{d}ma-ze₂-ze₂-be₂ e₂-bi lagaš{ki}-ke₄ muš₃ mi-ni-in-ga amaš-a-na lil₂-e\nmu-lu niĝin₆{ki}-ke₄ muš₃ mi-ni-in-ga amaš-a-na lil₂-e\nga-ša-an gu-la e₂-bi sirara₃{ki} muš₃ mi-ni-in-ga amaš-a-na lil₂-e\nmu-lu ki-nir-ša-ba{ki}-ke₄ muš₃ mi-ni-in-ga amaš-a-na lil₂-e\n{d}dumu-zid-abzu e₂-bi ki-nir-ša-ba{ki}-ke₄ muš₃ mi-ni-in-ga amaš-a-na lil₂-e\nmu-lu gu₂-ab-ba{ki}-ke₄ muš₃ mi-ni-in-ga amaš-a-na lil₂-e\nga-ša-an-mar-ki-ke₄ eš₃ gu₂-ab-ba{ki}-ke₄ muš₃ mi-ni-in-ga amaš-a-na lil₂-e",
+     "orig_lines": [
+      "26",
+      "27",
+      "28",
+      "29",
+      "30",
+      "31",
+      "32",
+      "33",
+      "34"
+     ],
+     "en": "The protective goddess has abandoned E-tar-sirsir and has let the breezes haunt her sheepfold. The mother of Lagaš has abandoned it and has let the breezes haunt her sheepfold. Ĝatumdug has abandoned that house Lagaš and has let the breezes haunt her sheepfold. She of Niĝin has abandoned it and has let the breezes haunt her sheepfold. The great queen has abandoned that house Sirara and has let the breezes haunt her sheepfold. She of Kinirša has abandoned it and has let the breezes haunt her sheepfold. Dumuzid-abzu has abandoned that house Kinirša and has let the breezes haunt her sheepfold. She of Gu-aba has abandoned it and has let the breezes haunt her sheepfold. Ninmarki has abandoned the shrine Gu-aba and has let the breezes haunt her sheepfold."
+    },
+    {
+     "ref": "35",
+     "orig": "ki-ru-gu₂ 1-kam-ma-am₃",
+     "orig_lines": [
+      "35"
+     ],
+     "en": "1st kirugu."
+    },
+    {
+     "ref": "36–37",
+     "orig": "amaš-a-na lil₂-e ba-ni-in-ĝar i-si-iš-bi mu-un-kuš₂-u₃\nab₂ gu₃-zu {e₂}tur₃-ra nu-mu-un-ĝal₂ tur₃ nun nu-ul",
+     "orig_lines": [
+      "36",
+      "37"
+     ],
+     "en": "She has let the breeze haunt her sheepfold, she groans grievously over it. O cow, your lowing no longer fills the byre, the cow-pen no longer brings joy (?) to the prince."
+    },
+    {
+     "ref": "38",
+     "orig": "ĝiš-gi₄-ĝal₂-bi-im",
+     "orig_lines": [
+      "38"
+     ],
+     "en": "Its ĝišgiĝal."
+    },
+    {
+     "ref": "39–46",
+     "orig": "uru₂ a-še-er gig-ga a-še-er-zu ĝar-ra\na-še-er-zu gig-ga-am₃ uru₂ a-še-er-zu ĝar-ra\nuru₂ zid gul-la-na a-še-er-bi gig-ga-am₃\nurim₂ zid gul-la-na a-še-er gig-ga a-še-er-zu ĝar-ra\na-še-er-zu gig-ga-am₃ uru₂ a-še-er-zu ĝar-ra\nurim₂{ki} gul-la-na a-še-er-bi gig-ga\na-še-er-zu gig-ga ga-ša-an-zu mu-lu er₂-re en₃-še₃ mu-un-kuš₂-u₃\na-še-er-zu gig-ga {d}nanna mu-lu er₂-re en₃-še₃ mu-un-kuš₂-u₃",
+     "orig_lines": [
+      "39",
+      "40",
+      "41",
+      "42",
+      "43",
+      "44",
+      "45",
+      "46"
+     ],
+     "en": "O city, the lament is bitter, the lament made for you. Your lament is bitter, O city, the lament made for you. In his righteous destroyed city its lament is bitter. In his righteous destroyed Urim, the lament is bitter, the lament made for you. Your lament is bitter, O city, the lament made for you. In his destroyed Urim its lament is bitter. How long will your bitter lament grieve your lord who weeps? How long will your bitter lament grieve Nanna who weeps?"
+    },
+    {
+     "ref": "47–55",
+     "orig": "še-eb urim₂{ki}-ma a-še-er gig-ga-am₃ a-še-er-zu ĝar-ra\ne₂-kiš-nu-ĝal₂ a-še-er-zu gig-ga-am₃ a-še-er-zu ĝar-ra\neš₃ agrun-kug a-še-er gig-ga-am₃ a-še-er-zu ĝar-ra\nki-ur₃ ki gal a-še-er gig-ga-am₃ a-še-er-zu ĝar-ra\neš₃ nibru{ki} uru₂ a-še-er gig-ga-am₃ a-še-er-zu ĝar-ra\nše-eb e₂-kur-ra a-še-er gig-ga-am₃ a-še-er-zu ĝar-ra\nĝa₂-ĝiš-šu₂-a a-še-er gig-ga-am₃ a-še-er-zu ĝar-ra\nub-šu-unken-na a-še-er gig-ga-am₃ a-še-er-zu ĝar-ra\nše-eb uru₂-kug-ga a-še-er gig-ga-am₃ a-še-er-zu ĝar-ra",
+     "orig_lines": [
+      "47",
+      "48",
+      "49",
+      "50",
+      "51",
+      "52",
+      "53",
+      "54",
+      "55"
+     ],
+     "en": "O brick-built Urim, the lament is bitter, the lament made for you. O E-kiš-nu-ĝal, your lament is bitter, the lament made for you. O shrine Agrun-kug, the lament is bitter, the lament made for you. O great place Ki-ur, the lament is bitter, the lament made for you. O shrine Nibru, city, the lament is bitter, the lament made for you. O brick-built E-kur, the lament is bitter, the lament made for you. O Ĝa-ĝiš-šua, the lament is bitter, the lament made for you. O Ubšu-unkena, the lament is bitter, the lament made for you. O brick-built Iri-kug, the lament is bitter, the lament made for you."
+    },
+    {
+     "ref": "56–63",
+     "orig": "e₂-tar-sir₂-sir₂ a-še-er gig-ga-am₃ a-še-er-zu ĝar-ra\nma-gu₂-en-na a-še-er gig-ga-am₃ a-še-er-zu ĝar-ra\nše-eb i₃-si-in{ki}-na a-še-er gig-ga-am₃ a-še-er-zu ĝar-ra\neš₃ e₂-gal-maḫ a-še-er gig-ga-am₃ a-še-er-zu ĝar-ra\nše-eb ki unug{ki}-ga a-še-er gig-ga-am₃ a-še-er-zu ĝar-ra\nše-eb uru₂-ze₂-ba{ki}-ke₄ a-še-er gig-ga-am₃ a-še-er-zu ĝar-ra\na-še-er-zu gig-ga-am₃ ga-ša-an-zu mu-lu er₂-re en₃-še₃ mu-un-kuš₂-u₃\na-še-er-zu gig-ga-am₃ {d}nanna mu-lu er₂-re en₃-še₃ mu-un-kuš₂-u₃",
+     "orig_lines": [
+      "56",
+      "57",
+      "58",
+      "59",
+      "60",
+      "61",
+      "62",
+      "63"
+     ],
+     "en": "O E-tar-sirsir, the lament is bitter, the lament made for you. O Ma-gu-ena, the lament is bitter, the lament made for you. O brick-built Isin, the lament is bitter, the lament made for you. O shrine Egal-maḫ, the lament is bitter, the lament made for you. O brick-built Unug, the lament is bitter, the lament made for you. O brick-built Eridug, the lament is bitter, the lament made for you. How long will your bitter lament grieve your lord who weeps? How long will your bitter lament grieve Nanna who weeps?"
+    },
+    {
+     "ref": "64–71",
+     "orig": "uru₂ mu-zu i₃-ĝal₂ za-e ba-e-da-gul-e\nuru₂ bad₃-zu i₃-il₂ kalam-zu ba-e-da-til\nuru₂-ĝu₁₀ u₈ zid-gin₇ sila₄-zu ba-e-da-tar\nurim₂{ki} ud₅ zid-gin₇ maš₂-zu ba-e-da-til\nuru₂ ĝarza-zu im-me-de₃-kur₂-ra\nme-zu me kur₂-ra šu bal ba-ni-ib-ak\na-še-er-zu gig-ga-am₃ ga-ša-an-zu mu-lu er₂-re en₃-še₃ mu-un-kuš₂-u₃\na-še-er-zu gig-ga-am₃ {d}nanna mu-lu er₂-re en₃-še₃ mu-un-kuš₂-u₃",
+     "orig_lines": [
+      "64",
+      "65",
+      "66",
+      "67",
+      "68",
+      "69",
+      "70",
+      "71"
+     ],
+     "en": "O city, your name exists but you have been destroyed. O city, your wall rises high but your Land has perished. O my city, like an innocent ewe your lamb has been torn from you. O Urim, like an innocent goat your kid has perished. O city, your rites have been alienated from you, your powers have been changed into alien powers. How long will your bitter lament grieve your lord who weeps? How long will your bitter lament grieve Nanna who weeps?"
+    },
+    {
+     "ref": "72",
+     "orig": "ki-ru-gu₂ 2-kam-ma-am₃",
+     "orig_lines": [
+      "72"
+     ],
+     "en": "2nd kirugu."
+    },
+    {
+     "ref": "73–74",
+     "orig": "uru₂ zid gul-la-na a-še-er-bi gig-ga-am₃\nurim₂{ki} gul-la-na a-še-er-bi gig-ga-am₃",
+     "orig_lines": [
+      "73",
+      "74"
+     ],
+     "en": "In his righteous destroyed city its lament is bitter. In his destroyed Urim its lament is bitter."
+    },
+    {
+     "ref": "75",
+     "orig": "ĝiš-gi₄-ĝal₂-bi-im",
+     "orig_lines": [
+      "75"
+     ],
+     "en": "Its ĝišgiĝal."
+    },
+    {
+     "ref": "76–84",
+     "orig": "nin lu₂ e₂ ḫul-a-ta uru₂-ni er₂-re ba-an-di-ni-ib-ĝar\n{d}nanna lu₂ kalam ba-an-da-til-la\nurim₂{ki}-e a-nir-ra bar ba-da-an-tab\nmunus zid nin uru₂{ki}-ni-še₃ kuš₂-u₃-de₃\n{d}nin-gal kalam-ma-ni-še₃ u₃ nu-ku-ku-de₃\ne-ne-ra nam uru₂-na mu-na-te er₂ gig i₃-še₈-še₈\nnin-ra nam e₂-a-na mu-na-te er₂ gig i₃-še₈-še₈\nnam uru₂ ḫul-a-na mu-na-te er₂ gig i₃-še₈-še₈\nnam e₂ ḫul-a-na mu-na-te a-nir gig-ga-bi im-da-ra-da-ĝa₂-ĝa₂",
+     "orig_lines": [
+      "76",
+      "77",
+      "78",
+      "79",
+      "80",
+      "81",
+      "82",
+      "83",
+      "84"
+     ],
+     "en": "Together with the lord whose house had been devastated, his city was given over to tears. Together with Nanna whose Land had perished, Urim joined the lament. The good woman, to disquiet the lord concerning his city, Ningal, to give him no rest concerning his Land, approached him for the sake of his city -- bitterly she weeps. She approached the lord for the sake of his house -- bitterly she weeps. She approached him for the sake of his devastated city -- bitterly she weeps. She approached him for the sake of his devastated house -- before him she makes its bitter lament."
+    },
+    {
+     "ref": "85–94",
+     "orig": "munus-e ad-a-ni balaĝ er₂-ra ki al-ĝar-ra-ba\ni-lu ma sig₉-ga tur-tur-bi ni₂-te-na mi-ni-ib-be₂\nud-da ma-al-ma-al-la i-si-iš-bi ma-la₂-la₂\nud-da na-aĝ₂-bi-še₃ sumur-sumur-a-ĝu₁₀-ne\nlu₂ nu-nus-ĝen ud-da ma-al-ma-al-la\nud-da ma-al-ma-al-la i-si-iš-bi ma-la₂-la₂\nud-da ud gig-ga ma-ra-ma-al-ma-al-la\nme-e ud-bi-še₃ zaraḫ ḫe₂-em-ši-ak\nud-da a₂-bi-še₃ ba-ra-ba-ra-e₃-en\nud tur-bi-še₃ bal-ĝu₁₀ ud sag₉-ga bal-ĝu₁₀ ud sag₉-ga i-bi₂ ba-ra-bi₂-in-du₈-a",
+     "orig_lines": [
+      "85",
+      "86",
+      "87",
+      "88",
+      "89",
+      "90",
+      "91",
+      "92",
+      "93",
+      "94"
+     ],
+     "en": "The woman, after she had composed her song (?) for the tearful balaĝ instrument, herself utters softly a lamentation for the silent house: \"The storm that came to be -- its lamentation hangs heavy on me. Raging about because of the storm, I am the woman for whom the storm came to be. The storm that came to be -- its lamentation hangs heavy on me. The bitter storm having come to be for me during the day, I trembled on account of that day but I did not flee before the day's violence. Because of this debilitating storm I could not see a good day for my rule, not one good day for my rule.\""
+    },
+    {
+     "ref": "95–100A",
+     "orig": "ĝi₆-še₃ a-še-er gig ma-ra-ma-al-ma-al-la\nme-e ĝi₆-bi-še₃ zaraḫ ḫe₂-em-ši-ak\nĝi₆ a₂-bi ba-ra-ba-ra-e₃-en\nud uru₂-gin₇ gul-lu-ba ni₂-bi ḫa-ma-la₂-la₂\nna-aĝ₂-bi-še₃ ki-nu₂ ĝi₆ u₃-na-ĝa₂ ki-nu₂ ĝi₆ u₃-na-ĝa₂ lib ba-ra-an-mar\nud tur-bi-še₃ ki-nu₂-ĝa₂ mu-uš-la₂-a-bi ki-nu₂-ĝa₂ ĝiš-la₂-a-bi nu-ši-in-ga-mu-ni-ib-DU\nka-na-aĝ₂-ĝu₁₀-ta ni₂ šub me-e ba-ra-ba-da-ak",
+     "orig_lines": [
+      "95",
+      "96",
+      "97",
+      "98",
+      "99",
+      "100",
+      "100A"
+     ],
+     "en": "\"The bitter lament having come to be for me during the night, I trembled on account of that night but I did not flee before the night's violence. The awesomeness of this storm, destructive as the flood, truly hangs heavy on me. Because of its existence, in my nightly sleeping place, even in my nightly sleeping place truly there was no peace for me. Nor, because of this debilitating storm, was the quiet of my sleeping place, not even the quiet of my sleeping place, allowed to me. {(2 mss. add 1 line:) Truly I did not forsake my Land.}\""
+    },
+    {
+     "ref": "101–111",
+     "orig": "ka-na-aĝ₂-ĝu₁₀ aĝ₂-gig-ga ba-ĝal₂-la-ke₄-eš\nab₂ amar-ra-gin₇-nam ki šu ḫe₂-em-mi-ib-ak\nka-na-aĝ₂-ĝu₁₀ ni₂ šu-a ba-ra-mu-da-ab-gi₄\nuru₂-ĝu₁₀ du-lum gig ba-ĝal₂-la-ke₄-eš\nmušen an-na-gin₇ a₂ dub₂ ḫe₂-em-ši-ak\nme-e uru₂-ĝu₁₀-še₃ ḫe₂-em-ši-dal-dal-en\nuru₂-ĝu₁₀ ki-ĝal₂-ba ḫe₂-en-ga-mu-de₃-gul\nurim₂{ki} ki-nu₂-bi-a ḫe₂-en-ga-mu-de₃-til\nšu ud-da an-ta ba-ĝal₂-la-ke₄-eš\ngu₃ ḫu-mu-dub₂ edin-na ud gi₄-a me-e ḫe₂-em-ma-dug₄\nud-da gaba-bi ba-ra-mu-da-zig₃",
+     "orig_lines": [
+      "101",
+      "102",
+      "103",
+      "104",
+      "105",
+      "106",
+      "107",
+      "108",
+      "109",
+      "110",
+      "111"
+     ],
+     "en": "\"Because there was bitterness in my Land, I trudged the earth like a cow for its calf. My Land was not granted succcess. Because there was bitter distress in my city, I beat my wings like a bird of heaven and flew to my city; and my city was destroyed in its foundations; and Urim perished where it lay. Because the hand of the storm appeared above, I screamed and cried to it \"Return, O storm, to the plain\". The storm's breast did not rise.\""
+    },
+    {
+     "ref": "112–122",
+     "orig": "nu-nus-ĝen agrun-kug e₂ na-aĝ₂-{d}ga-ša-an-na-ĝu₁₀\nbal-ba ud su₃-ra₂ na-ma-ni-in-ĝar-re-eš-am₃\ner₂ a-še-er-ra ki ḫa-ma-ab-us₂-am₃\ne₂ ki ur₅ sag₉-ge saĝ gig₂-ga i₃-me-a-ke₄-eš\nezen-bi-ta ib₂-ba su-mu-ug-ga ḫe₂-en-ga-mu-da-tab-tab-be₂-eš\nud tur-bi-še₃ e₂-ĝu₁₀ ki sag₉-ga\ne₂ zid ḫul-a-ĝu₁₀ i-bi₂ ba-ra-bi₂-in-du₈-am₃\nur₅ uš₂-a a-še-er aĝ₂-gig-ga\na-še-er aĝ₂-gig-ga ḫu-mu-ni-tum₂-tum₂-mu-uš\ne₂ lu₂ zid-de₃ ba-ab-ĝar-ra-ĝu₁₀\ngi-sig kiri₆-gin₇ bar-ba ḫe₂-bi₂-in-dub₂",
+     "orig_lines": [
+      "112",
+      "113",
+      "114",
+      "115",
+      "116",
+      "117",
+      "118",
+      "119",
+      "120",
+      "121",
+      "122"
+     ],
+     "en": "\"To me, the woman, in the Agrun-kug, my house of queenship, they did not grant a reign of distant days. Indeed they established weeping and lamentation for me. As for the house which used to be where the spirit of the black-headed people was soothed, instead of its festivals wrath and terror indeed multiply. Because of this debilitating storm, depression, and lament and bitterness, lament and bitterness have been brought into my house, the favourable place, my devastated righteous house upon which no eye had been cast. My house founded by the righteous was pushed over on its side like a garden fence.\""
+    },
+    {
+     "ref": "123–132",
+     "orig": "e₂-kiš-nu-ĝal₂ e₂ nam-lugal-la-ĝu₁₀\ne₂ zid e₂ er₂-ra ba-an-di-ni-ib-ĝar-ra-ĝu₁₀\nlul-e-eš du₃-u₃-ba zid-de₃-eš gul-lu-ba\nḫa-la ba-bi-a ḫa-ma-ni-in-ĝar-re-eš-am₃\nza-lam-ĝar e₂ ki-buru₁₄ bur₁₂-ra-gin₇\ne₂ ki-buru₁₄ bur₁₂-ra-gin₇ tum₉ šeĝ₃-ĝa₂ ḫa-ba-an-ĝar\nurim₂{ki} ama₅ niĝ₂ dirig-ĝu₁₀\ne₂ uru₂ sig₉-ga mu-un-bur₁₂-bur₁₂-bur₁₂\namaš {lu₂}sipad-da-gin₇ ḫa-ba-bur₁₂-bur₁₂\nniĝ₂-gur₁₁ uru₂ ĝal₂-ĝal₂-la-ĝu₁₀ sug-ge ḫu-mu-da-ab-gu₇",
+     "orig_lines": [
+      "123",
+      "124",
+      "125",
+      "126",
+      "127",
+      "128",
+      "129",
+      "130",
+      "131",
+      "132"
+     ],
+     "en": "\"For E-kiš-nu-ĝal, my house of royalty, the good house, my house which has been given over to tears, they granted to me as its lot and share: its building, falsely, and its perishing, truly. Wind and rain have been made to fall on it, as onto a tent, a shelter on the denuded harvest ground, as onto a shelter on the denuded harvest ground. Urim, my all-surpassing chamber, the house and the smitten city, all have been uprooted. Like a shepherd's sheepfold it has been uprooted. The swamp has swallowed my possessions accumulated in the city.\""
+    },
+    {
+     "ref": "133",
+     "orig": "ki-ru-gu₂ 3-kam-ma-am₃",
+     "orig_lines": [
+      "133"
+     ],
+     "en": "3rd kirugu."
+    },
+    {
+     "ref": "134",
+     "orig": "urim₂{ki} er₂-re ba-an-di-ni-ib-ĝar",
+     "orig_lines": [
+      "134"
+     ],
+     "en": "Urim has been given over to tears."
+    },
+    {
+     "ref": "135",
+     "orig": "ĝiš-gi₄-ĝal₂-bi-im",
+     "orig_lines": [
+      "135"
+     ],
+     "en": "Its ĝišgiĝal."
+    },
+    {
+     "ref": "136–143",
+     "orig": "ud-ba ud ne-en ba-sag₃-sag₃-ga-ba\nnin-da uru₂-ni ba-an-da-gul-la-ba\nud-ba ud ne-en ba-dim₂-dim₂-ma-ba\nuru₂-ĝu₁₀ gul-gul-da im-me-ne-eš-a-ba\nurim₂{ki} gul-gul-da im-me-ne-eš-a-ba\nuĝ₃-bi ug₅-ge-de₃ a₂ mu-un-aĝ₂-eš-a-ba\nud-ba me-e uru₂-ĝu₁₀-še₃ ĝa₂-la ba-ra-ba-ra-dag\nka-na-aĝ₂-ĝu₁₀-ta ni₂ šub me ba-ra-ba-da-ak",
+     "orig_lines": [
+      "136",
+      "137",
+      "138",
+      "139",
+      "140",
+      "141",
+      "142",
+      "143"
+     ],
+     "en": "\"On that day, when such a storm had pounded, when in the presence of the queen her city had been destroyed, on that day, when such a storm had been created, when they had pronounced the utter destruction of my city, when they had pronounced the utter destruction of Urim, when they had directed that its people be killed, on that day I did not abandon my city, I did not forsake my land.\""
+    },
+    {
+     "ref": "144–150",
+     "orig": "an-ra a i-bi₂-ĝa₂ me-e ḫe₂-em-ma-na-de₂\n{d}mu-ul-lil₂-ra ni₂-ĝu₁₀ šag₄-ne-ša₄ ḫe₂-em-ma-na-ak\nuru₂-ĝu₁₀ nam-ba-gul-lu ḫe₂-em-me-ne-dug₄\nurim₂{ki} nam-ba-gul-lu ḫe₂-em-me-ne-dug₄\nuĝ₃-bi nam-ba-til-le ḫe₂-em-me-ne-dug₄\nan-ne₂ e-ne-eĝ₃-bi ba-ra-mu-un-gur\n{d}mu-ul-lil₂-le i₃-sag₉ ḫe₂-am₃-bi šag₄-ĝu₁₀ ba-ra-bi₂-in-sed₄",
+     "orig_lines": [
+      "144",
+      "145",
+      "146",
+      "147",
+      "148",
+      "149",
+      "150"
+     ],
+     "en": "\"Truly I shed my tears before An. Truly I myself made supplication to Enlil. \"Let not my city be destroyed,\" I implored them. \"Let not Urim be destroyed,\" I implored them. \"Let not its people perish,\" I implored them. But An did not change that word. Enlil did not soothe my heart with an \"It is good -- so be it\".\""
+    },
+    {
+     "ref": "151–160",
+     "orig": "2-kam-ma-še₃ pu-uḫ₂-rum ki saĝ-ki ba-da-ab-ĝal₂-la\n{d}a-nun-na e-ne-eĝ₃ zu₂ keše₂-da-bi ba-da-an-dur₂-ru-ne-eš-a\nur₂ ḫe₂-em-ma-sud-sud a₂ ḫe₂-em-ma-la₂-la₂\nan-ra a i-bi₂-ĝa₂ me-e ḫe₂-em-ma-na-dug₄\n{d}mu-ul-lil₂-ra ni₂-ĝu₁₀ šag₄-ne-ša₄ ḫe₂-em-ma-ak\nuru₂-ĝu₁₀ nam-ba-gul-lu ḫe₂-em-me-ne-dug₄\nurim₂{ki} nam-ba-gul-lu ḫe₂-em-me-ne-dug₄\nuĝ₃-bi nam-ba-til-le ḫe₂-em-me-ne-dug₄\nan-ne₂ e-ne-eĝ₃-bi ba-ra-mu-un-gur\n{d}mu-ul-lil₂-le i₃-sag₉ ḫe₂-am₃-bi šag₄-ĝu₁₀ ba-ra-bi₂-in-sed₄",
+     "orig_lines": [
+      "151",
+      "152",
+      "153",
+      "154",
+      "155",
+      "156",
+      "157",
+      "158",
+      "159",
+      "160"
+     ],
+     "en": "\"A second time, when the council had settled itself in the pre-eminent place, and the Anuna had seated themselves to ratify decisions, I prostrated (?) myself and stretched out my arms. Truly I shed my tears before An. Truly I myself made supplication to Enlil. \"Let not my city be destroyed,\" I implored them. \"Let not Urim be destroyed,\" I implored them. \"Let not its people perish,\" I implored them. But An did not change that word. Enlil did not soothe my heart with an \"It is good -- so be it\".\""
+    },
+    {
+     "ref": "161–168",
+     "orig": "uru₂-ĝu₁₀ gul-gul-lu-ba a₂-bi ḫe₂-em-ma-an-aĝ₂-eš\nurim₂{ki} gul-gul-lu-ba a₂-bi ḫe₂-em-ma-an-aĝ₂-eš\nuĝ₃-bi ug₅-ge-de₃ na-aĝ₂-bi ḫa-ba-an-tar-re-eš\nme-e niĝ₂-dug₄-ĝu₁₀ mu-ne-šum₂-ma-gin₇\nme-e uru₂-ĝu₁₀-da ḫe₂-en-ga-mu-un-da-la₂-eš\nurim₂{ki}-ĝu₁₀ ma-da ḫe₂-en-ga-mu-da-la₂-e-eš\nan-ne₂ dug₄-ga-ni ḫur nu-kur₂-ru-dam\n{d}mu-ul-lil₂-le ka-ta e₃-a-ni šu nu-bal-e-de₃",
+     "orig_lines": [
+      "161",
+      "162",
+      "163",
+      "164",
+      "165",
+      "166",
+      "167",
+      "168"
+     ],
+     "en": "\"They gave instructions that my city should be utterly destroyed. They gave instructions that Urim should be utterly destroyed. They decreed its destiny that its people should be killed. In return for the speech (?) which I had given them, they both bound me together with my city and also bound my Urim together with me. An is not one to change his command, and Enlil does not alter what he has uttered.\""
+    },
+    {
+     "ref": "169",
+     "orig": "ki-ru-gu₂ 4-kam-ma-am₃",
+     "orig_lines": [
+      "169"
+     ],
+     "en": "4th kirugu."
+    },
+    {
+     "ref": "170",
+     "orig": "uru₂-ni ba-an-da-gul-la me-ni ba-an-da-kur₂-ra",
+     "orig_lines": [
+      "170"
+     ],
+     "en": "Her city has been destroyed in her presence, her powers have been alienated from her."
+    },
+    {
+     "ref": "171",
+     "orig": "ĝiš-gi₄-ĝal₂-bi-im",
+     "orig_lines": [
+      "171"
+     ],
+     "en": "Its ĝišgiĝal."
+    },
+    {
+     "ref": "172–178",
+     "orig": "{d}en-lil₂-le ud-de₃ gu₃ ba-an-de₂ uĝ₃-e še am₃-ša₄\nud ḫe₂-ĝal₂-la kalam-da ba-da-an-kar uĝ₃-e še am₃-ša₄\nud dug₃ ki-en-gi-da ba-da-an-kar uĝ₃-e še am₃-ša₄\nud ḫul-ĝal₂-e a₂ ba-da-an-aĝ₂ uĝ₃-e še am₃-ša₄\nkin-gal-ud-da ud-da gub-ba šu-na im-ma-an-šum₂\nud kalam til-til-e gu₃ ba-an-de₂ uĝ₃-e še am₃-ša₄\nim-ḫul-im-ḫul-e gu₃ ba-an-de₂ uĝ₃-e še am₃-ša₄",
+     "orig_lines": [
+      "172",
+      "173",
+      "174",
+      "175",
+      "176",
+      "177",
+      "178"
+     ],
+     "en": "Enlil called the storm -- the people groan. He brought the storm of abundance away from the Land -- the people groan. He brought the good storm away from Sumer -- the people groan. He issued directions to the evil storm -- the people groan. He entrusted it to Kin-gal-uda, the keeper of the storm. He called upon the storm that annihilates the Land -- the people groan. He called upon the evil gales -- the people groan."
+    },
+    {
+     "ref": "179–187",
+     "orig": "{d}en-lil₂-le {d}gibil a₂-taḫ-a-ni mu-na-ni-in-kur₉-re\nud gal an-na-ke₄ gu₃ ba-an-de₂ uĝ₃-e še am₃-ša₄\nud gal-e an-ta gu₃ im-me uĝ₃-e še am₃-ša₄\nud kalam til-til-e ki-a mur im-ša₄ uĝ₃-e še am₃-ša₄\nim-ḫul-e a maḫ e₃-a-gin₇ gu₂-bi nu-ĝa₂-ĝa₂\n{ĝiš}tukul uru₂-ke₄ saĝ gaz i₃-ak-e teš₂-bi i₃-gu₇-e\nan-na ur₂-ba kana₆{?} mu-un-ni₁₀-ni₁₀ uĝ₃-e še am₃-ša₄\nud-da igi-ba izi mu-un-bar₇-bar₇-e uĝ₃-e še am₃-ša₄\nud mir-mir-da izi-ĝi₆-edin-na bar ba-da-an-tab",
+     "orig_lines": [
+      "179",
+      "180",
+      "181",
+      "182",
+      "183",
+      "184",
+      "185",
+      "186",
+      "187"
+     ],
+     "en": "Enlil brought Gibil as his aid. He called the great storm of heaven -- the people groan. The great storm howls above -- the people groan. The storm that annihilates the Land roars below -- the people groan. The evil wind, like a rushing torrent, cannot be restrained. The weapons in the city smash heads and consume indiscriminately. The storm whirled gloom around the base of the horizon -- the people groan. In front of the storm, heat blazes -- the people groan. A fiery glow burns with the raging storm."
+    },
+    {
+     "ref": "188–191",
+     "orig": "an-bar₇ bar-šeĝ₃ il₂-il₂-la-gin₇ izi im-ma-an-bar₇-bar₇\nan-bar₇-gana₂ ud zalag e₃-a ud dug₃-da ba-da-an-tab\nkalam-ma ud zalag-ga la-ba-an-e₃ mul an-usanₓ(DUR)-gin₇ ba-zal\nĝi₆ giri₁₇-zal a₂ sed ĝar-ra-ba {tum₉}u₁₈-lu ba-da-an-tab",
+     "orig_lines": [
+      "188",
+      "189",
+      "190",
+      "191"
+     ],
+     "en": "After the haze had lifted at noon, he made fires blaze. He locked up the day and the rising of the bright sun together with the good storm. In the Land he did not let the bright sun rise; it shone like the evening star. In the delightful night, the time when coolness sets in, he redoubled the south wind."
+    },
+    {
+     "ref": "192–196",
+     "orig": "šika bar₇-bar₇-re-da saḫar im-da-tab-tab uĝ₃-e še am₃-ša₄\nsaĝ gig₂-ga tum₉-tum₉ ba-an-dal uĝ₃-e še am₃-ša₄\nki-en-gi ĝiš-bur₂-ra i₃-bal-e uĝ₃-e še am₃-ša₄\nkalam-e saĝ e₂-ĝar₈ du₃ i₃-ak-e teš₂-bi i₃-gu₇-e\nud gig er₂-re nam nu-tar-re uĝ₃-e še am₃-ša₄",
+     "orig_lines": [
+      "192",
+      "193",
+      "194",
+      "195",
+      "196"
+     ],
+     "en": "The scorching potsherds made the dust glow (?) -- the people groan. He swept the winds over the black-headed people -- the people groan. Sumer was overturned by a snare -- the people groan. It attacked (?) the Land and devoured it completely. Tears cannot influence the bitter storm -- the people groan."
+    },
+    {
+     "ref": "197–203",
+     "orig": "ud šu ur₄-ur₄-re kalam i₃-ur₃-ur₃-re\nud a-ma-ru-gin₇ uru₂ i₃-gul-gul-e\nud kalam til-til-e uru₂-a me bi₂-ib-ĝar\nud niĝ₂ u₂-gu de₂-de₂ ḫul-ĝal₂-eš ba-e-DU\nud izi-gin₇ bar₇-a uĝ₃-e šu bi₂-ib-ĝar\nud ḫul gig dug₄-ga {d}en-lil₂-la₂ ud kalam-ta be₄-be₄\nurim₂{ki}-ma tug₂-gin₇ ba-e-dul gada-gin₇ ba-e-bur₂",
+     "orig_lines": [
+      "197",
+      "198",
+      "199",
+      "200",
+      "201",
+      "202",
+      "203"
+     ],
+     "en": "The reaping storm dragged across the Land. Like a flood storm it completely destroyed the city. The storm that annihilates the Land silenced the city. The storm that will make anything vanish came doing evil. The storm blazing like fire performed its task upon the people. The storm ordered by Enlil in hate, the storm which wears away the Land, covered Urim like a garment, was spread out over it like linen."
+    },
+    {
+     "ref": "204",
+     "orig": "ki-ru-gu₂ 5-kam-ma-am₃",
+     "orig_lines": [
+      "204"
+     ],
+     "en": "5th kirugu."
+    },
+    {
+     "ref": "205",
+     "orig": "ud ug-am₃ al-du₇-du₇ uĝ₃-e še am₃-ša₄",
+     "orig_lines": [
+      "205"
+     ],
+     "en": "The storm, like a lion, has attacked unceasingly -- the people groan."
+    },
+    {
+     "ref": "206",
+     "orig": "ĝiš-gi₄-ĝal₂-bi-im",
+     "orig_lines": [
+      "206"
+     ],
+     "en": "Its ĝišgiĝal."
+    },
+    {
+     "ref": "207–217",
+     "orig": "ud-ba ud uru₂-da ba-da-an-ĝar uru₂-bi du₆-du₆-da\na-a {d}nanna uru₂-ni du₆-du₆-da ba-da-an-ĝar uĝ₃-e še am₃-ša₄\nud-ba ud kalam-ta ba-da-an-kar uĝ₃-e še am₃-ša₄\nud dug₃ ki-en-gi-da ba-da-an-kar uĝ₃-e še am₃-ša₄\nuĝ₃-bi šika kud-da nu-me-a bar-ba ba-e-si\nbad₃-bi gu₂-ĝiri₃ im-ma-an-ĝar-ĝar uĝ₃-e še am₃-ša₄\nabula maḫ ĝiri₃ ĝal₂-la-ba ad₆ im-ma-an-ĝar-ĝar\nsila daĝal ezem-ma du₃-a-ba saĝ bal-e-eš ba-ab-ĝar\ne-sir₂-e-sir₂ ĝiri₃ ĝal₂-la-ba ad₆ im-ma-an-ĝar-ĝar\nešemen kalam-ma ĝal₂-la-ba uĝ₃ zar-re-eš ba-an-du₈\nu₃-mun kalam-ma-ke₄ urud nagga-gin₇ sur₃-sur₃ ba-ni-in-de₆-eš\nad₆-bi {uzu}i₃-udu ud-de₃ ĝal₂-la-gin₇ ni₂-bi-a mu-un-zal-eš",
+     "orig_lines": [
+      "207",
+      "208",
+      "209",
+      "209A",
+      "210",
+      "211",
+      "212",
+      "213",
+      "214",
+      "215",
+      "216",
+      "217"
+     ],
+     "en": "Then the storm was removed from the city, that city reduced to ruin mounds. It was removed from Father Nanna's city reduced to ruin mounds -- the people groan. Then, the storm was taken from the Land -- the people groan. {(2 mss. add 1 line:) The good storm was taken from Sumer -- the people groan.} Its people littered its outskirts just as if they might have been broken potsherds. Breaches had been made in its walls -- the people groan. On its lofty city-gates where walks had been taken, corpses were piled. On its boulevards where festivals had been held, heads lay scattered (?). In all its streets where walks had been taken, corpses were piled. In its places where the dances of the Land had taken place, people were stacked in heaps. They made the blood of the Land flow down the wadis like copper or tin. Its corpses, like fat left in the sun, melted away of themselves."
+    },
+    {
+     "ref": "218–229",
+     "orig": "lu₂ {urud}ḫa-zi-in-e im-til-la-gin₇ saĝ tug₂ la-ba-ab-dul-eš\nmaš-da₃ ĝiš-bur₂-ra dab₅-ba-gin₇ ka saḫar-ra bi₂-in-us₂\nlu₂ ĝiš-gid₂-da mu-un-ra-bi niĝ₂-la₂ ba-ra-bi₂-in-la₂-eš\ni-gi₄-in-zu ki ḫa-ri-iš-ta ama-ba-ka uš₂-bi-a mu-un-nu₂(sourše: sa₄)-eš\nlu₂ {ĝiš}mitum-e im-til-la-gin₇ tug₂ gibil ba-ra-bi₂-in-la₂-eš\nlu₂ kurun naĝ-a nu-me-eš-a gu₃ zag-ga bi₂-in-ĝal₂-eš\n{ĝiš}tukul-e gub-ba {ĝiš}tukul-e in-gaz uĝ₃-e še am₃-ša₄\nlu₂-kar-ra-bi ud im-ma-du-bu-ul uĝ₃-e še am₃-ša₄\nurim₂{ki}-ma sig₉-ga kalag-ga-bi šag₄-ĝar-ra im-til\num-ma ab-ba e₂-ta nu-e₃ izi mu-ni-in-sig₁₀-sig₁₀-ge₅-eš\ndi₄-di₄-la₂ ur₂ ama-ba-ka nu₂-a ku₆-gin₇ a ba-an-de₆\nemeda(UM.ME){da} lirum kalag-ga-bi lirum ba-an-da-du₈",
+     "orig_lines": [
+      "218",
+      "219",
+      "220",
+      "221",
+      "222",
+      "223",
+      "224",
+      "225",
+      "226",
+      "227",
+      "228",
+      "229"
+     ],
+     "en": "The heads of its men slain by the axe were not covered with a cloth. Like a gazelle caught in a trap, their mouths bit the dust. Men struck down by the spear were not bound with bandages. As if in the place where their mothers had laboured, they lay in their own blood. Its men who were finished off by the battle-mace were not bandaged with new (?) cloth. Although they were not drunk with strong drink, their necks drooped on their shoulders. He who stood up to the weapon was crushed by the weapon -- the people groan. He who ran away from it was overwhelmed (?) by the storm -- the people groan. The weak and the strong of Urim perished from hunger. Mothers and fathers who did not leave their houses were consumed by fire. The little ones lying in their mothers' arms were carried off like fish by the waters. Among the nursemaids with their strong embrace, the embrace was pried open."
+    },
+    {
+     "ref": "230–240",
+     "orig": "dim₂-ma kalam-ma u₂-gu im-ta-an-de₂ uĝ₃-e še am₃-ša₄\nĝalga kalam-ma sug-ge₄ ba-ab-gu₇ uĝ₃-e še am₃-ša₄\nama dumu-ni igi-ni ba-ra-e₃ uĝ₃-e še am₃-ša₄\nad-da dumu-ni-ta ba-da-an-kur₂ uĝ₃-e še am₃-ša₄\nuru₂-a dam ba-šub dumu ba-šub niĝ₂-gur₁₁ ba-bir-bir-re\nsaĝ gig₂ ki-saĝ-ĝal₂-la-ba im-me-de₃-re₇-eš\nnin-bi mušen ni₂ te-a-gin₇ uru₂-ni ba-ra-e₃\nnin-gal-e mušen ni₂ te-a-gin₇ uru₂-ni ba-ra-e₃\nniĝ₂-gur₁₁ kalam-ma ĝar-ĝar-ra-ba šu pe-el-la₂ ba-ab-dug₄\nama₅ kalam-ma šar₂-šar₂-ra-ba izi im-ma-an-bar₇-bar₇\na-niĝin₂-ba {d}gibil lu₂ sikil-la kiĝ₂ mu-un-tuku-tuku",
+     "orig_lines": [
+      "230",
+      "231",
+      "232",
+      "233",
+      "234",
+      "235",
+      "236",
+      "237",
+      "238",
+      "239",
+      "240"
+     ],
+     "en": "The Land's judgment disappeared -- the people groan. The Land's counsel was swallowed by a swamp -- the people groan. The mother absconded before her child's eyes -- the people groan. The father turned away from his child -- the people groan. In the city the wife was abandoned, the child was abandoned, possessions were scattered about. The black-headed people were carried off from their strongholds. Its queen like a bird in fright departed from her city. Ningal like a bird in fright departed from her city. All the treasures accumulated in the Land were defiled. In all the storehouses abounding in the Land fires were kindled. In its ponds Gibil, the purifier, relentlessly did his work."
+    },
+    {
+     "ref": "241–249",
+     "orig": "ḫur-saĝ sukuₓ(SUKUD)-ra₂ šu nu-teĝ₃-ĝe₂₆ e₂-kiš-nu-ĝal₂-la\ne₂ zid-ba {urud}ḫa-zi-in gal-gal-e teš₂-bi i₃-gu₇-e\nšimaški{ki} elam{ki} lu₂ ḫa-lam-ma 30 giĝ₄ ba-an-ak-e-eš\ne₂ zid {ĝiš}al-a mi-ni-ib-bal-e-ne\nuru₂ du₆-du₆-dam mu-un-ĝa₂-ĝa₂-ne\nnin-bi a uru₂-ĝu₁₀ im-me a e₂-ĝu₁₀ im-me\n{d}nin-gal-e a uru₂-ĝu₁₀ im-me a e₂-ĝu₁₀ im-me\nlu₂ nu-nus-e u₃ uru₂-ĝu₁₀ mu-da-gul u₃ e₂-ĝu₁₀ mu-da-gul\n{d}nanna eš₃ urim₂{ki} mu-da-gul mu-lu-bi ba-ug₅-ga-eš",
+     "orig_lines": [
+      "241",
+      "242",
+      "243",
+      "244",
+      "245",
+      "246",
+      "247",
+      "248",
+      "249"
+     ],
+     "en": "The good house of the lofty untouchable mountain, E-kiš-nu-ĝal, was entirely devoured by large axes. The people of Šimaški and Elam, the destroyers, counted its worth as only thirty shekels. They broke up the good house with pickaxes. They reduced the city to ruin mounds. Its queen cried, \"Alas, my city\", cried, \"Alas, my house\". Ningal cried, \"Alas, my city,\" cried, \"Alas, my house. As for me, the woman, both my city has been destroyed and my house has been destroyed. O Nanna, the shrine Urim has been destroyed and its people have been killed.\""
+    },
+    {
+     "ref": "250",
+     "orig": "ki-ru-gu₂ 6-kam-ma-am₃",
+     "orig_lines": [
+      "250"
+     ],
+     "en": "6th kirugu."
+    },
+    {
+     "ref": "251–252",
+     "orig": "tur₃-ra-na amaš-a-na nu-nus-e inim gig mu-ni-ib-be₂\nuru₂ ud-de₃ am₃-gul-e",
+     "orig_lines": [
+      "251",
+      "252"
+     ],
+     "en": "In her cow-pen, in her sheepfold the woman utters bitter words: \"The city has been destroyed by the storm.\""
+    },
+    {
+     "ref": "253",
+     "orig": "ĝiš-gi₄-ĝal₂-bi-im",
+     "orig_lines": [
+      "253"
+     ],
+     "en": "Its ĝišgiĝal."
+    },
+    {
+     "ref": "254–264",
+     "orig": "ama {d}nin-gal uru₂-ni lu₂-erim₂-gin₇ bar-ta ba-da-gub\nlu₂ nu-nus-e er₂ e₂ ḫul-a-na gig-ga-bi im-me\negir₃-re eš₃ urim₂{ki} ḫul-a-na gig-ga-bi im-me\nan-ne₂ uru₂-ĝu₁₀ na-aĝ₂ ḫa-ba-da-an-kud uru₂-ĝu₁₀ ḫu-mu-da-gul\n{d}mu-ul-lil₂-le e₂-ĝu₁₀ šu ḫe₂-bi₂-in-bal {ĝiš}al-e ḫa-ba-ra\nsig-ta di-ĝa₂ izi ḫa-ba-ni-in-šub a uru₂-ĝu₁₀ ḫu-mu-da-gul\n{d}mu-ul-lil₂-e i-bi₂ nim-ta di-ĝa₂ u₃-bu-bu-ul ḫa-ba-ni-in-šub\nuru₂ bar-ra uru₂ bar ḫu-mu-da-an-gul a uru₂-ĝu₁₀ ga-am₃-dug₄\nuru₂ šag₄-ba uru₂ ša₃-ab ḫu-mu-da-an-gul a uru₂-ĝu₁₀ ga-am₃-dug₄\ne₂ uru₂ bar-ra-ĝu₁₀ ḫa-ba-gul-gul a e₂-ĝu₁₀ ga-am₃-dug₄\ne₂ uru₂ ša₃-ba-ĝu₁₀ ḫa-ba-gul-gul a e₂-ĝu₁₀ ga-am₃-dug₄",
+     "orig_lines": [
+      "254",
+      "255",
+      "256",
+      "257",
+      "258",
+      "259",
+      "260",
+      "261",
+      "262",
+      "263",
+      "264"
+     ],
+     "en": "Mother Ningal, like an enemy, stands outside her city. The woman laments bitterly over her devastated house. Over her devastated shrine Urim, the princess bitterly declares: \"An has indeed cursed my city, my city has been destroyed before me. Enlil has indeed transformed my house, it has been smitten by pickaxes. On my ones coming from the south he hurled fire. Alas, my city has indeed been destroyed before me. On my ones coming from the highlands Enlil hurled flames. Outside the city, the outer city was destroyed before me -- I shall cry \"Alas, my city\". Inside the city, the inner city was destroyed before me -- I shall cry \"Alas, my city\". My houses of the outer city were destroyed -- I shall cry \"Alas, my houses\". My houses of the inner city were destroyed -- I shall cry \"Alas, my houses\".\""
+    },
+    {
+     "ref": "265–274",
+     "orig": "uru₂-ĝu₁₀ u₈ zid-gin₇ ba-ra-ma-lu sipad zid-bi ba-ra-ĝen\nurim₂{ki} u₈ zid-gin₇ ba-ra-ma-lu kab-bar-bi ba-ra-ĝen\ngud-ĝu₁₀ tur₃-bi-a ba-ra-mu-un-šub mu-lu-bi ba-ra-ĝen\ne-ze₂-ĝu₁₀ amaš-bi-a ba-ra-mu-un-šub na-gada-bi ba-ra-ĝen\nid₂ uru₂-ĝa₂-ke₄ saḫar ḫa-ba-niĝin₂ e₂ ka₅-a ḫa-ba-an-du₃\nšag₄-ba a zal-le ba-ra-mu-un-de₆ mu-un-kud-bi ba-ra-ĝen\ngana₂ uru₂-ĝa₂-ke₄ še ba-ra-ma-al mu-un-gar₃-bi ba-ra-ĝen\ngana₂-ĝu₁₀ gana₂ {ĝiš}al-e ri-a-gin₇ mul-gana₂ bil₂ ḫa-ba-mu₂\npu₂-kiri₆ lal₃ gurun dirig-ĝu₁₀ {ĝiš}kiši₁₆ kur-ra ḫa-ba-mu₂\nedin giri₁₇-zal-bi du₃-du₃-a-ĝu₁₀ gir₄-gin₇ ḫa-ba-ḫur-ḫur",
+     "orig_lines": [
+      "265",
+      "266",
+      "267",
+      "268",
+      "269",
+      "270",
+      "271",
+      "272",
+      "273",
+      "274"
+     ],
+     "en": "\"My city no longer multiplies for me like good ewes, its good shepherd is gone. Urim no longer multiplies for me like good ewes, its shepherd boy is gone. My bull no longer crouches in its cow-pen, its herdsman is gone. My sheep no longer crouch in their fold, their herdsman is gone. In the river of my city dust has gathered, and the holes of foxes have been dug there. In its midst no flowing water is carried, its tax-collector is gone. In the fields of my city there is no grain, their farmer is gone. My fields, like fields from which the hoe has been kept away (?), have grown tangled (?) weeds. My orchards and gardens that produced abundant syrup and wine have grown mountain thornbushes. My plain that used to be covered in its luxurious verdure has become cracked (?) like a kiln.\""
+    },
+    {
+     "ref": "275–285",
+     "orig": "mu-un-gur₁₁-ĝu₁₀ buru₄{mušen}-dugud zig₃-ga-gin₇ dal-dal-bi ḫa-ba-ab-in-zig₃ mu-un-gur₁₁-ĝu₁₀ ga-am₃-dug₄\nmu-un-gur₁₁-ĝu₁₀ sig-ta di-ĝa₂ sig-še₃ ḫa-ba-ab-ir mu-un-gur₁₁-ĝu₁₀ ga-am₃-dug₄\nmu-un-gur₁₁-ĝu₁₀ i-bi₂ nim-ta di-ĝa₂ i-bi₂ nim-še₃ ḫa-ba-ab-ir mu-un-gur₁₁-ĝu₁₀ ga-am₃-dug₄\nkug za {na₄}za-gin₃-ĝu₁₀ ḫu-mu-da-an-bir-bir-re mu-un-gur₁₁-ĝu₁₀ ga-am₃-dug₄\ngi₁₆-sa-ĝu₁₀ sug-ge₄ ḫu-mu-da-ab-gu₇ mu-un-gur₁₁-ĝu₁₀ ga-am₃-dug₄\nkug-ĝu₁₀ lu₂ kug nu-zu-u₃-ne šu-bi ḫa-ba-da-ab-si\nza-ĝu₁₀ lu₂ za nu-zu-u₃-ne gu₂-bi ḫa-ba-da-ab-si\nburu₅{mušen} mušen-ĝu₁₀ ḫu-mu-dal-dal a uru₂-ĝu₁₀ ga-am₃-dug₄\ngi₄-in du₅-mu-ĝu₁₀ ma₂-e ḫa-ba-ab-laḫ₄-e-eš a uru₂-ĝu₁₀ ga-am₃-dug₄\nme-li-e-a gi₄-in-ĝu₁₀ uru₂ kur₂-ra šu-še-er kur₂ ḫa-ba-an-dab₅\nšul-ĝu₁₀ edin ki nu-zu-na tug₂-mu-un-dur₇ ḫa-ba-an-ak",
+     "orig_lines": [
+      "275",
+      "276",
+      "277",
+      "278",
+      "279",
+      "280",
+      "281",
+      "282",
+      "283",
+      "284",
+      "285"
+     ],
+     "en": "\"My possessions, like a flock of rooks rising up, have risen in flight -- I shall cry \"O my possessions\". He who came from the south has carried my possessions off to the south -- I shall cry \"O my possessions\". He who came from the highlands has carried my possessions off to the highlands -- I shall cry \"O my possessions\". My silver, gems and lapis lazuli have been scattered about -- I shall cry \"O my possessions\". The swamp has swallowed my treasures -- I shall cry \"O my possessions\". Men ignorant of silver have filled their hands with my silver. Men ignorant of gems have fastened my gems around their necks. My small birds and fowl have flown away -- I shall say \"Alas, my city\". My slave-girls and children have been carried off by boat -- I shall say \"Alas, my city\". Woe is me, my slave-girls bear strange emblems in a strange city. My young men mourn in a desert they do not know.\""
+    },
+    {
+     "ref": "286–291",
+     "orig": "[me-li-e-a uru₂-ĝu₁₀] nu-me-a me-e ga-ša-an-bi nu-ĝen\n[{d}nanna] urim₂{ki} nu-me-a me-e lu₂-bi nu-ĝen\nar₂-mur-ra e₂-ĝu₁₀ ḫa-ba-du₃-a uru₂-ĝu₁₀ ḫa-ba-gul-la\nnu-nus zid-ĝen uru₂-ĝu₁₀-ta uru₂ kur₂ ḫa-ba-ra-du₃-du₃-a\nar₂-mur-ra uru₂-ĝu₁₀ ḫa-ba-du₃-a e₂-ĝu₁₀ ḫa-ba-gul-la\nga-ša-an-gal-ĝen uru₂-ĝu₁₀-ta e₂ kur₂ ḫa-ba-ra-du₃-du₃-a",
+     "orig_lines": [
+      "286",
+      "287",
+      "288",
+      "289",
+      "290",
+      "291"
+     ],
+     "en": "\"Woe is me, my city which no longer exists -- I am not its queen. Nanna, Urim which no longer exists -- I am not its owner. I am the good woman whose house has been made into ruins, whose city has been destroyed, in place of whose city a strange city has been built. I am Ningal whose city has been made into ruins, whose house has been destroyed, in place of whose house a strange house has been built.\""
+    },
+    {
+     "ref": "292–298",
+     "orig": "me-li-e-a uru₂ mu-da-gul u₃ e₂-ĝu₁₀ mu-da-gul\n{d}nanna eš₃ urim₂{ki} mu-da-gul mu-lu-bi ba-ug₅-ga-eš\nme-li-e-a me-a tuš-u₃-de₃ me-a gub-bu-de₃\nme-li-e-a uru₂-ĝu₁₀-ta e₂ kur₂ ma-ra-an-du₃-u₃-de₃\nnu-nus zid-ĝen e₂-ĝu₁₀-ta uru₂ kur₂ ma-ra-an-ĝa₂-ĝa₂-de₃\nki-bi-ta edin-ta ba₉-ra₂-a-bi a mu-lu-ĝu₁₀ ga-am₃-dug₄\nuru₂-ĝu₁₀ urim₂{ki}-ta ba₉-ra₂-a-bi a uru₂-ĝu₁₀ ga-am₃-dug₄",
+     "orig_lines": [
+      "292",
+      "293",
+      "294",
+      "295",
+      "296",
+      "297",
+      "298"
+     ],
+     "en": "\"Woe is me, the city has been destroyed, my house too has been destroyed. Nanna, the shrine Urim has been destroyed, its people killed. Woe is me, where can I sit, where can I stand? Woe is me, in place of my city a strange house is being erected. I am the good woman in place of whose house a strange city is being built. Upon its removal from its place, from the plain, I shall say \"Alas, my people\". Upon my city's removal from Urim, I shall say \"Alas, my house\".\""
+    },
+    {
+     "ref": "299–309",
+     "orig": "lu₂ siki-ni numun₂-bur-gin₇ šu mu-ni-in-dub₂-dub₂\ngaba-ni ub₃ kug-ga-am₃ i₃-sag₃-ge a uru₂-ĝu₁₀ im-me\nigi-ni er₂-ra mi-ni-ib-zi-zi-i-zi er₂ gig i₃-še₈-še₈\nme-li-e-a uru₂-ĝu₁₀ nu-me-a me-e ga-ša-an-bi nu-ĝen\n{d}nanna eš₃ urim₂{ki} nu-me-a me-e mu-lu-bi nu-ĝen\nme-li-e-a {e₂}tur₃ bur₁₂-ra-ĝen ab₂ sag₂ dug₄-ga-ĝen\n{d}ga-ša-an-gal-ĝen na-gada pe-el-la₂-gin₇ {ĝiš}tukul ganam₄-ma bi₂-in-šub\nme-li-e-a uru₂-ta e₃-a-ĝen ni₂ nu-dub₂-bu-ĝen\n{d}ga-ša-an-gal-ĝen e₂-ta e₃-a-ĝen ki-tuš nu-pad₃-de₃-ĝen\ni-gi₄-in-zu gir₅ uru₂ kur₂-ra saĝ il₂ tuš-a-ĝen\ne₂ ur₅-ur₅-ra aĝ₂-gig-ga-am₃ saĝ-a tuš ma-ab-us₂-e",
+     "orig_lines": [
+      "299",
+      "300",
+      "301",
+      "302",
+      "303",
+      "304",
+      "305",
+      "306",
+      "307",
+      "308",
+      "309"
+     ],
+     "en": "The woman tears at her hair as if it were rushes. She beats the holy ub drum at her chest, she cries \"Alas, my city\". Her eyes well with tears, she weeps bitterly: \"Woe is me, my city which no longer exists -- I am not its queen. Nanna, the shrine Urim which no longer exists -- I am not its owner. Woe is me, I am one whose cow-pen has been torn down, I am one whose cows have been scattered. I am Ningal on whose ewes the weapon has fallen, as in the case of an unworthy herdsman. Woe is me, I have been exiled from the city, I can find no rest. I am Ningal, I have been exiled from the house, I can find no dwelling place. I am sitting as if a stranger with head high in a strange city. Debt-slaves …… bitterness …….\""
+    },
+    {
+     "ref": "310–320",
+     "orig": "e₂ ur₅-ra mu-lu tuš-bi tuš-tuš-a gu₃ e-ne-eĝ₃ nu-dirig-ĝen\nki-ba nam uru₂-na mu-un-na-te er₂ gig i₃-še₈-še₈\nnin-ra nam e₂-a-na mu-un-na-te er₂ gig i₃-še₈-še₈\nnam e₂ ḫul-a-na mu-un-na-te er₂ gig i₃-še₈-še₈\nnam uru₂ ḫul-a-na mu-un-na-te er₂ gig i₃-še₈-še₈\nme-li-e-a na-aĝ₂ uru₂-ĝu₁₀ ga-am₃-dug₄ na-aĝ₂ uru₂-ĝu₁₀ gig-ga-am₃\nnin-ĝen e₂ gul-la-ĝu₁₀ ga-am₃-dug₄ na-aĝ₂ e₂-ĝu₁₀ gig-ga-am₃\nše-eb urim₂{ki}-ma a dug₄-ga-am₃ a bi₂-gi₄-a-ĝu₁₀\ne₂ zid-ĝu₁₀ uru₂-ĝu₁₀ du₆-du₆-da ba-mar-re-en-na-ĝu₁₀\nbur₂-ra e₂ zid gul-la-za-ka ba-e₃-de₃-nu₂-u₃-nam\ngud šub-ba-gin₇ in-ĝar-zu-ta ba-ra-mu-e-da-zig₃-ga",
+     "orig_lines": [
+      "310",
+      "311",
+      "312",
+      "313",
+      "314",
+      "315",
+      "316",
+      "317",
+      "318",
+      "319",
+      "320"
+     ],
+     "en": "\"I am one who, sitting in a debtors prison among its inmates, can make no extravagant claims. In that place I approached him for the sake of his city -- I weep bitterly. I approached the lord for the sake of his house -- I weep bitterly. I approached him for the sake of his destroyed house -- I weep bitterly. I approached him for the sake of his destroyed city -- I weep bitterly. Woe is me, I shall say \"Fate of my city, bitter is the fate of my city\". I the queen shall say \"O my destroyed house, bitter is the fate of my house\". O my brick-built Urim which has been flooded, which has been washed away, O my good house, my city which has been reduced to ruin mounds, in the debris of your destroyed righteous house, I shall lie down alongside you. Like a fallen bull, I will never rise up from your wall (?).\""
+    },
+    {
+     "ref": "321–327",
+     "orig": "me-li-e-a du₃-a-zu lul-la-am₃ gul-la-zu gig-ga-am₃\nnu-nus-ĝen eš₃ urim₂{ki} nidba-bi i₃-ba-kur₂-ra-am₃\nagrun-kug e₂ gibil-gibil-la-ĝu₁₀ la-la-bi nu-gi₄-a-ĝu₁₀\nuru₂-ĝu₁₀ du₃-a la-ba-mar-ra-ĝu₁₀ ta-a-aš ḫul-a-ĝu₁₀\nba-gul in-ga-ba-ḫul-a-ĝu₁₀ ta-a-aš ḫul-a-ĝu₁₀\na-da-al ud ḫul gig dug₄-ga a₂-bi la-ba-ra-e₃\nurim₂{ki}-ma e₂ {d}suen-na-ĝu₁₀ gul-la-bi gig-ga-am₃",
+     "orig_lines": [
+      "321",
+      "322",
+      "323",
+      "324",
+      "325",
+      "326",
+      "327"
+     ],
+     "en": "\"Woe is me, untrustworthy was your building, and bitter your destruction. I am the woman at whose shrine Urim the food offerings have been terminated. O my Agrun-kug, the all-new house whose charms never sated me, O my city no longer regarded as having been built -- devastated for what reason? O my house both destroyed and devastated -- devastated for what reason? Nobody at all escaped the force of the storm ordered in hate. O my house of Suen in Urim, bitter was its destruction.\""
+    },
+    {
+     "ref": "328",
+     "orig": "ki-ru-gu₂ 7-kam-ma-am₃",
+     "orig_lines": [
+      "328"
+     ],
+     "en": "7th kirugu."
+    },
+    {
+     "ref": "329",
+     "orig": "a uru₂-ĝu₁₀ a e₂-ĝu₁₀",
+     "orig_lines": [
+      "329"
+     ],
+     "en": "\"Alas, my city, alas, my house.\""
+    },
+    {
+     "ref": "330",
+     "orig": "ĝiš-gi-ĝal₂-bi-im",
+     "orig_lines": [
+      "330"
+     ],
+     "en": "Its ĝišgiĝal."
+    },
+    {
+     "ref": "331–341",
+     "orig": "nin šag₄-zu a-gin₇ du₃-mu-un za-e a-gin₇ i₃-til₃-le-en\n{d}nin-gal šag₄-zu a-gin₇ du₃-mu-un za-e a-gin₇ i₃-til₃-le-en\nmunus zid lu₂ uru₂ ba-e-da-gul-la i₃-ne-eš₂-gin₇ i₃-e-am₃-mu₂\n{d}nin-gal lu₂ kalam ba-e-da-til-la šag₄-zu a-gin₇ du₃-mu-un\nud uru₂-zu im-ma-gul-la-ba i₃-ne-eš₂-gin₇ i₃-e-am₃-mu₂\nud e₂-zu im-ma-gul-la-ba šag₄-zu a-gin₇ du₃-mu-un\nuru₂-zu uru₂ kur₂-ra ba-ab-ĝar i₃-ne-eš₂-gin₇ i₃-e-am₃-mu₂\ne₂-zu er₂-re ba-an-di-ni-ib-ĝar šag₄-zu a-gin₇ du₃-mu-un\nuru₂ du₆-du₆-da ba-ĝar-ra-zu mušen-bi nu-ĝen\ne₂ zid {ĝiš}al-e ba-ĝar-ra-za tuš-bi-še₃ la-ba-tuš-en\nuĝ₃ ki-lul-la ba-ab-re₇-a-za nin-bi-še₃ la-ba-kur₉-re-en",
+     "orig_lines": [
+      "331",
+      "332",
+      "333",
+      "334",
+      "335",
+      "336",
+      "337",
+      "338",
+      "339",
+      "340",
+      "341"
+     ],
+     "en": "O queen, how is your heart ……! How you have become! O Ningal, how is your heart ……! How you have become! O good woman whose city has been destroyed, now how do you exist? O Ningal whose Land has perished, how is your heart ……! After your city has been destroyed, now how do you exist? After your house has been destroyed, how is your heart ……! Your city has become a strange city, now how do you exist? Your house has turned to tears, how is your heart ……! You are not a bird of your city which has been reduced to ruin mounds. You cannot live there as a resident in your good house given over to the pickaxe. You cannot act as queen of a people led off to slaughter."
+    },
+    {
+     "ref": "342–347",
+     "orig": "er₂-zu er₂ kur₂-ra ba-ab-ĝar ka-na-aĝ₂-zu nu-še₈-še₈\ner₂-šag₄-ne-ša₄ nu-tuku-am₃ kur-kur im-ma-an-tuš\nkalam-zu niĝ₂ KA dirig-gin₇ gu₃ šu ba-ni-ib-dab₅\nuru₂-zu du₆-du₆-da im-ma-an-ĝar i₃-ne-eš₂-gin₇ i₃-e-am₃-mu₂\ne₂-zu šag₄-sug₄-ga ba-an-du₃ šag₄-zu a-gin₇ du₃-mu-un\nurim₂{ki} eš₃ lil₂-e im-ma-an-ĝar i₃-ne-eš₂-gin₇ i₃-e-am₃-mu₂",
+     "orig_lines": [
+      "342",
+      "343",
+      "344",
+      "345",
+      "346",
+      "347"
+     ],
+     "en": "Your tears have become strange tears, your Land no longer weeps. With no lamentation prayers, it dwells in foreign lands. Your Land like ……. Your city has been made into ruins; now how do you exist? Your house has been laid bare, how is your heart ……! Urim, the shrine, is haunted by the breezes, now how do you exist?"
+    },
+    {
+     "ref": "348–358",
+     "orig": "gudug-bi ḫi-li-a ba-ra-mu-un-ĝen šag₄-zu a-gin₇ du₃-mu-un\nen-bi ĝi₆-par₃-ra ba-ra-mu-un-til i₃-ne-eš₂-gin₇ i₃-e-am₃-mu₂\nuz₃-ga lu₂ šu-luḫ-e ki aĝ₂-e šu-luḫ nu-mu-ra-an-ĝa₂-ĝa₂\na-a {d}nanna išib-zu šita kug-ga šu nu-mu-ra-ni-in-du₇\nlu₂-maḫ-zu gi-gun₄-na kug-zu šag₄ gada la-ba-an-la₂\nen zid šag₄ ḫi-li-a pad₃-da-zu e₂-kiš-nu-ĝal₂-la-am₃\n/eš₃{?}\\-da ĝi₆-par₃-še₃ ḫul₂-la-na nu-mu-ni-in-dib-dib-be₂\na-u₃-a e₂ ezem-ma-za ezen nu-mu-ni-in-dug₃-ge-eš\nšem₃ {kuš}a₂-la₂-e niĝ₂ šag₄ ḫul₂-le-da tigi-a nu-mu-ra-an-du₁₂-uš\nuĝ₃ saĝ gig₂-ga ezen-zu-še₃ a la-ba-an-tu₅-tu₅-ne\ngu-gin₇ mu-dur₇-ra nam ḫa-ba-ni-in-tar ulutim₂-bi ḫa-ba-an-kur₂",
+     "orig_lines": [
+      "348",
+      "349",
+      "350",
+      "351",
+      "352",
+      "353",
+      "354",
+      "355",
+      "356",
+      "357",
+      "358"
+     ],
+     "en": "Its gudug priest no longer walks in his wig, how is your heart ……! Its en priestess no longer lives in the ĝipar, now how do you exist? In the uzga shrine the priest who cherishes purification rites makes no purification rites for you. Father Nanna, your išib priest does not make perfect holy supplications to you. Your lumaḫ priest does not dress in linen in your holy giguna shrine. Your righteous en priestess chosen in your ardent heart, she of the E-kiš-nu-ĝal, does not proceed joyously from the shrine to the ĝipar. The aua priests do not celebrate the festivals in your house of festivals. They do not play for you the šem and ala instruments which gladden the heart, nor the tigi. The black-headed people do not bathe during your festivals. Like …… mourning has been decreed for them; their appearance has indeed changed."
+    },
+    {
+     "ref": "359–368",
+     "orig": "en₃-du-zu er₂-ra ba-e-da-an-kur₉ en₃-tukum-še₃ mu₂\ntigi-zu a-nir-ra ba-e-da-an-kur₉ en₃-tukum-še₃ mu₂\ngud-zu tur₃-bi-a ba-ra-mu-un-de₆ i₃-bi nu-mu-ra-ak-e\nudu-zu amaš-bi-a ba-ra-mu-un-dur₂-ru ga-bi nu-mu-ra-dulu-e\ni₃ gur₃-ru-zu tur₃-ta nu-mu-ra-de₆ en₃-tukum-še₃ mu₂\nga gur₃-ru-zu amaš-ta nu-mu-ra-de₆ en₃-tukum-še₃ mu₂\nšu-peš ku₆ gur₃-ru-zu ḫul-ĝal₂-e ba-an-dab₅ en₃-tukum-še₃ mu₂\nmušen-du₃ mušen gur₃-ru-zu ĝir₂-ĝir₂-re im-DU\nid₂ ma₂-gur₈-ra ba-ab-du₇-a-zu šag₄-ba teme{sar} ba-mu₂\nḫar-ra-an {ĝiš}gigir-ra ba-ab-ĝar-ra-za {ĝiš}kiši₁₆(sourše: U₂.ĜIŠ.ĜIR₂) kur-ra ba-mu₂",
+     "orig_lines": [
+      "359",
+      "360",
+      "361",
+      "362",
+      "363",
+      "364",
+      "365",
+      "366",
+      "367",
+      "368"
+     ],
+     "en": "Your song has been turned into weeping before you -- how long will this last? Your tigi music has been turned into lamentation before you -- how long will this last? Your bull is not brought into its pen, its fat is not prepared for you. Your sheep does not live in its fold, its milk is not made abundant for you. Your fat carrier does not come to you from the cow-pen -- how long will this last? Your milk carrier does not come to you from the sheepfold -- how long will this last? An evildoer has seized your fisherman who was carrying fish -- how long will this last? Lightning carried off your fowler who was carrying birds -- how long will this last? The teme plants grow in the middle of your watercourses which were once suitable for barges, and mountain thornbushes grow on your roads which had been constructed for waggons."
+    },
+    {
+     "ref": "369–377",
+     "orig": "nin-ĝu₁₀ uru₂-zu ama-bi-gin₇-nam er₂ mu-e-ši-še₈-še₈\nurim₂{ki}-ma dumu sila ḫa-lam-ma-gin₇ ki mu-e-ši-kiĝ₂-kiĝ₂\ne₂-zu lu₂ niĝ₂ u₂-gu de₂-a-gin₇ šu mu-e-ši-ša-an-ša\nšeg₁₂ e₂ zid-da-zu lu₂-ulu₃-gin₇ me-a-zu im-me\nnin-ĝu₁₀ e₂-ta e₃-a ḫe₂-me-en uru₂-ta ba-ra-e₃-me-en\nen₃-še₃-am₃ uru₂-za lu₂-erim₂-gin₇ bar-ta ba-e-da-gub\nama {d}nin-gal uru₂-zu lu₂-erim₂-gin₇ gaba-za ba-e-de₃-sa₂\nnin uru₂-ni ki aĝ₂ ḫe₂-me-en-na amaš-zu-ta ba-e-ni-tag\nkalam-ma-ni-še₃ kuš₂-u₃ ḫe₂-me-en-na za-e izi-ba mu-un-tag",
+     "orig_lines": [
+      "369",
+      "370",
+      "371",
+      "372",
+      "373",
+      "374",
+      "375",
+      "376",
+      "377"
+     ],
+     "en": "My queen, your city weeps before you as its mother. Urim, like a child lost in a street, seeks a place before you. Your house, like a man who has lost everything, stretches out (?) its hands to you. Your brick-built righteous house, like a human being, cries \"Where are you?\". My queen, you have indeed left the house, you have left the city. How long will you stand aside from your city like an enemy? Mother Ningal, you confronted your city like an enemy. Although you are a queen who loves her city, you abandoned your sheepfold. Although you are one who cares for her Land, you set it on fire."
+    },
+    {
+     "ref": "378–386",
+     "orig": "ama {d}nin-gal gud-gin₇ tur₃-zu-še₃ udu-gin₇ amaš-zu-še₃\ngud-gin₇ tur₃ ud-bi-ta-še₃ udu-gin₇ amaš-zu-še₃\ndumu ban₃-da-gin₇ ama₅-zu-še₃ nin-ĝu₁₀ e₂-zu-še₃\nan lugal diĝir-re-e-ne-ke₄ muš₃-am₃-zu ḫe₂-em-me\n{d}en-lil₂ lugal kur-kur-ra-ke₄ nam-zu ḫe₂-eb-tar-re\nuru₂-zu ki-bi ḫa-ra-ab-gi₄-gi₄ nam-nin-bi ak-a\nnibru{ki} ki-bi ḫa-ra-ab-gi₄-gi₄ nam-nin-bi ak-a\nurim₂{ki} ki-bi ḫa-ra-ab-gi₄-gi₄ nam-nin-bi ak-a\ni₃-si-in{ki} ki-bi ḫa-ra-ab-gi₄-gi₄ nam-nin-bi ak-a",
+     "orig_lines": [
+      "378",
+      "379",
+      "380",
+      "381",
+      "382",
+      "383",
+      "384",
+      "385",
+      "386"
+     ],
+     "en": "Mother Ningal, return like a bull to your cattle-pen, like a sheep to your fold, like a bull to your cattle-pen of former days, like a sheep to your fold. My queen, like a young child to your room, return to your house. May An, king of the gods, declare \"Enough!\" to you. May Enlil, king of all the lands, decree your fate. May he restore your city for you -- exercise its queenship! May he restore Nibru for you -- exercise its queenship! May he restore Urim for you -- exercise its queenship! May he restore Isin for you -- exercise its queenship!"
+    },
+    {
+     "ref": "387",
+     "orig": "ki-ru-gu₂ 8-kam-ma-am₃",
+     "orig_lines": [
+      "387"
+     ],
+     "en": "8th kirugu."
+    },
+    {
+     "ref": "388",
+     "orig": "me-ĝu₁₀ mu-da-kur₂-ra-am₃",
+     "orig_lines": [
+      "388"
+     ],
+     "en": "\"My powers have been alienated from me.\""
+    },
+    {
+     "ref": "389",
+     "orig": "ĝiš-gi₄-ĝal₂-bi-im",
+     "orig_lines": [
+      "389"
+     ],
+     "en": "Its ĝišgiĝal."
+    },
+    {
+     "ref": "390–398",
+     "orig": "e ud-de₃ ud-de₃ kalam teš₂-a mi-ni-ib-ra\nud gal an-na-ke₄ ud gu₃ dub₂-dub₂-be₂\nud gig-ga kalam-ma ba-e-zal-la re\nud uru₂ gul-gul-e ud e₂ gul-gul-e\nud tur₃ gul-gul-e ud amaš tab-tab-be₂\nĝarza kug-ga šu bi₂-ib₂-la₂-a re\nĝalga niĝ₂ aratta{ki}-ka šu pe-el-la₂ im-mi-ib-dug₄-ga re\nud kalam-ma niĝ₂ dug₃ im-mi-ib-kud-da re\nud saĝ gig₂-ga a₂ bi₂-ib-la₂-a re",
+     "orig_lines": [
+      "390",
+      "391",
+      "392",
+      "393",
+      "394",
+      "395",
+      "396",
+      "397",
+      "398"
+     ],
+     "en": "Alas, storm after storm swept the Land together: the great storm of heaven, the ever-roaring storm, the malicious storm which swept over the Land, the storm which destroyed cities, the storm which destroyed houses, the storm which destroyed cow-pens, the storm which burned sheepfolds, which laid hands on the holy rites, which defiled the weighty counsel, the storm which cut off all that is good from the Land, the storm which pinioned the arms of the black-headed people."
+    },
+    {
+     "ref": "399",
+     "orig": "ki-ru-gu₂ 9-kam-ma-am₃",
+     "orig_lines": [
+      "399"
+     ],
+     "en": "9th kirugu."
+    },
+    {
+     "ref": "400",
+     "orig": "ud re ud igi-ba teš₂ nu-ĝal₂-la re",
+     "orig_lines": [
+      "400"
+     ],
+     "en": "The storm which does not respect ……."
+    },
+    {
+     "ref": "401",
+     "orig": "ĝiš-gi₄-ĝal₂-bi-im",
+     "orig_lines": [
+      "401"
+     ],
+     "en": "Its ĝišgiĝal."
+    },
+    {
+     "ref": "402–410",
+     "orig": "ud ama nu-zu re ud a-a nu-zu re\nud dam nu-zu re ud dumu nu-zu re\nud nin₉ nu-zu re ud šeš nu-zu re\nud ušur nu-zu re ud ma-la nu-zu re\nud dam im-šub-ba ud dumu im-šub-ba re\nud-de₃ ud kalam-ma u₂-gu bi₂-ib-de₂-a re\nud ḫul gig dug₄-ga {d}en-lil₂-la₂-ta im-mi-in-zal-la re\na-a {d}nanna ud-bi uru₂-zu-ta ki nam-ba-ĝa₂-ĝa₂\nuĝ₃ saĝ gig₂-zu igi-«zu» nam-bi₂-ib-du₈",
+     "orig_lines": [
+      "402",
+      "403",
+      "404",
+      "405",
+      "406",
+      "407",
+      "408",
+      "409",
+      "410"
+     ],
+     "en": "The storm which knows no mother, the storm which knows no father, the storm which knows no wife, the storm which knows no child, the storm which knows no sister, the storm which knows no brother, the storm which knows no neighbour, the storm which knows no female companion, the storm which caused the wife to be abandoned, which caused the child to be abandoned, the storm which caused the light in the Land to disappear, the storm which swept through, ordered in hate by Enlil -- Father Nanna, may that storm swoop down no more on your city. May your black-headed people see it no more."
+    },
+    {
+     "ref": "411–416",
+     "orig": "ud-bi im an-ta šeĝ₃-ĝe₂₆-gin₇ ki-tuš-bi nam-ba-gur-ru\nniĝ₂-zi-ĝal₂ an ki saĝ gig₂ im-ma-an-dub₂-ba re\nud-ba du₃-a-bi ḫe₂-em-ma-gul-lu\nabula ĝi₆ u₃-na-gin₇ {ĝiš}ig ḫe₂-bi₂-in-keše₂-da\nud-ba šudum-ma na-an-ni-ĝa₂-ĝa₂\nniĝ₂-kas₇-bi e₂ {d}en-lil₂-la₂-ta {ĝiš}gag-ta ḫe₂-em-ta-si-ig",
+     "orig_lines": [
+      "411",
+      "412",
+      "413",
+      "414",
+      "415",
+      "416"
+     ],
+     "en": "May that storm, like rain pouring down from heaven, never recur. May that storm, which struck down all the black-headed living beings of heaven and earth, be entirely destroyed. May the door be closed on it, like the great city-gate at night-time. May that storm not be given a place in the reckoning, may its record be hung from a nail outside the house of Enlil."
+    },
+    {
+     "ref": "417",
+     "orig": "ki-ru-gu₂ 10-kam-ma-am₃",
+     "orig_lines": [
+      "417"
+     ],
+     "en": "10th kirugu."
+    },
+    {
+     "ref": "418",
+     "orig": "ud ul ud kur₂-ra ud-da eĝer-bi-še₃",
+     "orig_lines": [
+      "418"
+     ],
+     "en": "Until distant days, other days, future days."
+    },
+    {
+     "ref": "419",
+     "orig": "ĝiš-gi₄-ĝal₂-bi-im",
+     "orig_lines": [
+      "419"
+     ],
+     "en": "Its ĝišgiĝal."
+    },
+    {
+     "ref": "420–426",
+     "orig": "ud ul kalam ki ĝar-ra-še₃\n{d}nanna lu₂ sun₅{!}-na ĝiri₃-zu mu-un-dab₅-be₂\ner₂ e₂ sig₉-ga-bi mu-ra-an-de₆ igi-zu-še₃ du₁₂-a-bi\nsaĝ gig₂ ba-ra-šub-bu-uš-a-bi giri₁₇ šu ḫa-ra-ab-tag-ge-ne\nuru₂ du₆-du₆-da ba-an-ĝar-ra-za i-si-iš ḫu-mu-ra-an-ĝa₂-ĝa₂\n{d}nanna uru₂{ki} ki-bi gi₄-a-za pa e₃ ḫa-ra-ab-ak-e\nmul-an kug-gin₇ nam-mu-un-ḫa-lam-e igi-zu ḫe₂-bi₂-ib-dib₂-be₂",
+     "orig_lines": [
+      "420",
+      "421",
+      "422",
+      "423",
+      "424",
+      "425",
+      "426"
+     ],
+     "en": "From distant days when the Land was founded, O Nanna, the humble people who lay hold of your feet have brought to you their tears for the silent house, playing music before you. May the black-headed people, cast away from you, make obeisance to you. In your city reduced to ruin mounds may a lament be made to you. O Nanna, may your restored city be resplendent before you. Like a bright heavenly star may it not be destroyed, may it pass before you."
+    },
+    {
+     "ref": "427–437",
+     "orig": "diĝir lu₂-u₁₈-lu-ke₄ kadra mu-ra-an-de₆\nlu₂ sizkur₂-ra-ke₄ a-ra-zu mu-ra-ab-be₂\n{d}nanna arḫuš kalam-ma-me-en\nen {d}aš-im₂-babbar šag₄-zu im-mi-ib-dug₄-ga re\n{d}nanna lu₂-ulu₃-bi nam-tag-ga-ni u₃-mu-e-du₈\nlu₂ a-ra-zu im-me-a-bi šag₄ ḫa-ba-na-ḫuĝ-e\ndiĝir lu₂-ba-ke₄ kadra(sourše: ĜAR.ŠAG₄.ĜAR) mu-ra-an-de₆\nlu₂ sizkur₂-ra mu-un-gub-ba-bi-ir igi zid mu-un-ši-in-bar\n{d}nanna igi du₈-a bar-ra-zu šag₄ šu niĝin sug₄-ga-am₃\nlu₂-ulu₃-bi ud ḫul du₃-a-ba ḫe₂-em-ma-an-ši-kug-ge\nšag₄ kalam-ma ĝal₂-la-zu ḫe₂-em-ma-an-ši-kug-ge\n{d}nanna uru₂ ki-bi gi₄-a-za me-teš₂ ḫe₂-i-i",
+     "orig_lines": [
+      "427",
+      "428",
+      "429",
+      "430",
+      "431",
+      "432",
+      "432A",
+      "433",
+      "434",
+      "435",
+      "436",
+      "437"
+     ],
+     "en": "The personal deity of a man brings you a greeting gift; a supplicant utters prayers to you. Nanna, you who have mercy on the Land, Lord Ašimbabbar -- as concerns him who speaks your heart's desire, Nanna, after you have absolved that man's sin, may your heart relent towards him who utters prayers to you. {(3 mss. add 1 line:) The personal deity of this man brings you a present.} He looks favourably on the man who stands there with his offering. Nanna, you whose penetrating gaze searches hearts, may its people who suffered that evil storm be pure before you. May the hearts of your people who dwell in the Land be pure before you. Nanna, in your restored city may you be fittingly praised."
+    },
+    {
+     "ref": "438",
+     "orig": "ki-ru-gu₂ 11-kam-ma-am₃",
+     "orig_lines": [
+      "438"
+     ],
+     "en": "11th kirugu."
+    }
+   ]
+  }
+ ]
+}

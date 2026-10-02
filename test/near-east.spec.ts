@@ -1,3 +1,5 @@
+import { readFileSync } from 'node:fs'
+import { resolve } from 'node:path'
 import { describe, expect, it } from 'vitest'
 import {
   CANONS,
@@ -116,5 +118,32 @@ describe('古近東大藏經 — 統計與搜尋', () => {
     const canons = new Set(searchTexts('吉爾伽美什').map(l => l.canon.key))
     expect(canons.has('sumer')).toBe(true)
     expect(canons.has('akkad')).toBe(true)
+  })
+})
+
+describe('古近東大藏經 — 正文（三欄對照）', () => {
+  // 直接讀檔，不經過頁面的惰性載入
+  const dir = resolve(__dirname, '../data/near-east/sources')
+  const manifest = JSON.parse(readFileSync(resolve(dir, 'manifest.json'), 'utf8')) as Record<string, { segments: number }>
+
+  it('🚨 manifest 的每個 slug 都對得上書目（對不上＝正文檔名拼錯，書目頁永遠連不到）', () => {
+    for (const slug of Object.keys(manifest)) expect(findText(slug), slug).toBeTruthy()
+  })
+
+  it('manifest 的段數等於正文檔的實際段數，且沒有空段', () => {
+    for (const [slug, m] of Object.entries(manifest)) {
+      const doc = JSON.parse(readFileSync(resolve(dir, 'text', `${slug}.json`), 'utf8'))
+      const segs = doc.compositions.flatMap((c: { segments: unknown[] }) => c.segments)
+      expect(segs.length, slug).toBe(m.segments)
+      expect(segs.length, `${slug} 沒有任何段`).toBeGreaterThan(0)
+    }
+  })
+
+  it('蘇美藏的段號照抄 ETCSL 行號範圍（「11–16」或單一行號），不自編流水號', () => {
+    for (const slug of Object.keys(manifest)) {
+      const doc = JSON.parse(readFileSync(resolve(dir, 'text', `${slug}.json`), 'utf8'))
+      if (doc.source !== 'ETCSL') continue
+      for (const c of doc.compositions) for (const s of c.segments) expect(s.ref, `${slug} ${s.ref}`).toMatch(/^[A-Za-z0-9.]+(–[A-Za-z0-9.]+)?$/)
+    }
   })
 })

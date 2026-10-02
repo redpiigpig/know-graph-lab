@@ -1,0 +1,726 @@
+{
+ "slug": "urnamma-a",
+ "source": "ETCSL",
+ "siglum": "ETCSL 2.4.1.1",
+ "source_url": "https://etcsl.orinst.ox.ac.uk/cgi-bin/etcsl.cgi?text=t.2.4.1.1",
+ "license": "ETCSL（Oxford）轉寫與英譯，非商業學術使用",
+ "compositions": [
+  {
+   "num": "2.4.1.1",
+   "title_en": "The death of Ur-Namma (Ur-Namma A)",
+   "segments": [
+    {
+     "ref": "1–7",
+     "orig": "[...]-ta kalam teš₂-a mi-ni-/ib\\-X\n[...]-/in{?}\\-sag₃ e₂-gal im-sig₁₀-sig₁₀\n[...] /saĝ\\ gig₂ tuš-a-ba ni₂ ul₄-la bi₂-/ib₂\\-te\n[(X)] X X X X ki-šub-ba-bi ki-en-gi-ra bi₂-ib-ĝar\n[(X)] /niĝ₂\\-daĝal-ba iri /ba\\-an-gul uĝ₃-e ni₂ bi₂-in-te\n/urim₅\\{ki}-ma ḫul-ĝal₂ im-ši-DU sipad zid ba-ra-ab-e₃\n/sipad zid\\ ur-{d}/namma\\ /ba\\-ra-ab-e₃ sipad zid ba-ra-ab-e₃",
+     "orig_lines": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7"
+     ],
+     "en": "…… entire land ……, …… struck, the palace was devastated. …… panic spread rapidly among the dwellings of the black-headed people. …… abandoned places …… in Sumer. …… the cities were destroyed in their entirety; the people were seized with panic. Evil came upon Urim and made the trustworthy shepherd pass away. It made Ur-Namma, the trustworthy shepherd, pass away; it made the trustworthy shepherd pass away."
+    },
+    {
+     "ref": "8–14",
+     "orig": "/an\\-ne₂ inim kug-ga du₃-a mu-un-kur₂ šag₄ AN X sug₄-ga-am₃\n/{d}en\\-lil₂-le nam tar-ra du₃-a /šu\\ lul [mi]-ni-ib-bal\n{d}/nin-maḫ\\-e X [X] X LA₂.A.BA-na a-nir mu-un-ĝa₂-ĝa₂\n{d}en-/ki-ke₄\\ {ĝiš}/ig\\ gal eridug{ki}-ga gu₂-bi ba-an-gi₄\n{d}nu-/dim₂-mud\\ /itima\\{ma}-a-ka ba-an-kur₉ šag₄-ka-tab-ba ba-an-nu₂\ninim X an-na-/ka{?}\\ {d}nanna si-un₃-na saĝ-ki ba-da-ni-in-gid₂\n{d}utu an-/na{?}\\ nu-um-ed₂-e ud-de₃ i-si-iš im-la₂",
+     "orig_lines": [
+      "8",
+      "9",
+      "10",
+      "11",
+      "12",
+      "13",
+      "14"
+     ],
+     "en": "Because An had altered his holy words completely, …… became empty, and because, deceitfully, Enlil had completely changed the fate he decreed, Ninmaḫ began a lament in her ……. Enki shut (?) the great door of Eridug. Nudimmud withdrew into his bedchamber and lay down fasting. At his zenith, Nanna frowned at the …… words of An. Utu did not come forth in the sky, and the day was full of sorrow."
+    },
+    {
+     "ref": "15–21",
+     "orig": "ama dumu-ni-še₃ ḫul til₃-la-e\n/ama lugal\\-la /kug\\ {d}nin-sumun₂-na a šag₄-ĝu₁₀ im-me\n/nam{?}\\ ur-{d}namma mu-un-tar-ra-še₃\n/mu\\ sipad zid ba-ra-ab-e₃-a-še₃\n/sila\\ daĝal ki-a-ne-di ĝal₂-la-ba /er₂ gig\\ i₃-še₈-še₈\nnam-lu₂-ulu₃ X li-bi [...] X X u₃ dug₃ nu-mu-un-ku-ku\ni-/lu sipad\\ zid ba-dab₅-ba-na ud mi-ni-ib-zal-e",
+     "orig_lines": [
+      "15",
+      "16",
+      "17",
+      "18",
+      "19",
+      "20",
+      "21"
+     ],
+     "en": "The mother, miserable because of her son, the mother of the king, holy Ninsumun, was crying: \"Oh my heart!\". Because of the fate decreed for Ur-Namma, because it made the trustworthy shepherd pass away, she was weeping bitterly in the broad square, which is otherwise a place of entertainment. Sweet sleep did not come to the people whose happiness ……; they passed their time in lamentation over the trustworthy shepherd who had been snatched away."
+    },
+    {
+     "ref": "22–30",
+     "orig": "/a-eštub id₂\\-da de₂-a-bi ku₃-ĝal₂-bi ba-sig₉\n[še gu]-nu a-gar₃-re mu₂-a-/bi\\ zi kalam-ma ba-su\n[engar] /gana₂\\ zid-/de₃\\ gub-X-ni mu-na-ab-tur-re\n[{d}en-ki-im-du lugal eg₂ pa₅-ra-ke₄] /urim₂\\{ki}-/ta{?}\\ /eg₂\\ pa₅ ba-da-an-kar\nNA{?} [...] X X X PI X [...] X ki bi₂-in-tag\numuš [(...)] kalam-ma [ u₂]-/gu\\ im-ma-an-/de₂{?} \\ u₂ nir-ĝal₂ ba-sug₄\nedin-edin-e u₂ /sag₉{?}\\-[ga] nu-mu-/un-mu₂\\ u₂-a-nir ba-an-mu₂\nab₂-/e{?}\\ X [...] mu-un-X tur₃ X-bi ba-gul\namar ab₂-/šilam\\-[...] /mur gig-ga\\-bi im-ša₄",
+     "orig_lines": [
+      "22",
+      "23",
+      "24",
+      "25",
+      "26",
+      "27",
+      "28",
+      "29",
+      "30"
+     ],
+     "en": "As the early flood was filling the canals, their canal-inspector was already silenced (?); the mottled barley grown on the arable lands, the life of the land, was inundated. To the farmer, the fertile fields planted (?) by him yielded little. Enkimdu, the lord of levees and ditches, took away the levees and ditches from Urim. 1 line fragmentary As the intelligence and …… of the Land were lost, fine food became scarce. The plains did not grow lush grass any more, they grew the grass of mourning. The cows ……, their …… cattle-pen has been destroyed. The calves …… their cows bleated bitterly."
+    },
+    {
+     "ref": "31–51",
+     "orig": "sipad kug-zu [...] X A [...] X a₂{?} /nu\\-[mu]-da-an-aĝ₂-e\nme₃ /šen\\-[šen-na ...] A SI /A ba\\-da-/ab-tab{?}-e{?}\\\nlugal ka-mud-ĝal₂ /ki-en\\-gi-/ra\\ [me-te unken-na]\nur-{d}namma ka-/mud-ĝal₂\\ ki-en-[gi-ra me]-/te{?}\\ unken-na\nmas-su /ki-en-gi-ra-ke₄{?}\\ [(...) i₃]-nu₂ tur₅-ra-am₃\nšu-ni /dab₅-ba\\ nu-mu-/un-dab₅{?}\\ in-nu₂ tur₅-ra-am₃\n/ĝiri₃\\-[ni] X (X) nu-um-un-da-/dib{?}\\ i₃-nu₂ tur₅-ra-am₃\n[...] X X IM X UŠ [...] /saĝ{?}\\ ME ba-BU\nsipad zid /lugal\\ ĝiri₂ gal ki-en-gi-ra-ke₄\n[ur-{d}namma] lugal kalam-ma-ke₄ e₂-sumur-ra ba-an-te\n/urim₂\\[{ki}]-/ma\\ im-te ur-{d}namma e₂-zu₂-ra-aḫ-/a\\ X-kur₉\nsaĝ-kug-/ĝal₂\\ e₂-gal-a-na i₃-nu₂\nur-{d}namma lu₂ erin₂-e ki aĝ₂-ĝa₂ gu₂ nu-mu-un-da-zig₃-ge\nigi-ĝal₂ [X X]-ra i₃-nu₂ ĝiš-la₂-bi im-DU\nteš₂ kalam-ma-ka ba-šub{ub} ḫur-saĝ-gin₇ ba-gul\n/tir\\ [ḫa-šu]-/ur₂\\-ra-gin₇ im-ma-sug₄ me-dim₂-bi ba-kur₂\n{ĝiš}taškarin(sourše: ŠE₃)-gin₇ ki-[tuš giri₁₇-zal]-/la\\-na giĝ₄ mu-ni-in-ĝar-re-eš\n{ĝiš}erin duru₅-gin₇ /e₂-gal\\-[la] /nu₂\\-a mu-ni-in-bal-bal-e-ne\nki-nu₂ nitalam-a-/ni ba\\-[X (X)] X X u₁₈-lu-da ba-da-dul\n/šeš-a\\-ni-da dam-a-ni-/gin₇\\ gu₂-/da{?}\\ am₃-mi-ib-la₂\nud /dug₄\\-ga-ni sa₂ mu-ni-/ib{?}\\-dug₄ a-la-na ba-ra-/e₃\\",
+     "orig_lines": [
+      "31",
+      "32",
+      "33",
+      "34",
+      "35",
+      "36",
+      "37",
+      "38",
+      "39",
+      "40",
+      "41",
+      "42",
+      "43",
+      "44",
+      "45",
+      "46",
+      "47",
+      "48",
+      "49",
+      "50",
+      "51"
+     ],
+     "en": "The wise shepherd …… does not give orders any more. …… in battle and combat. The king, the advocate of Sumer, the ornament of the assembly, Ur-Namma, the advocate of Sumer, the ornament of the assembly, the leader of Sumer, …… lies sick. His hands which used to grasp cannot grasp any more, he lies sick. His feet …… cannot step any more, he lies sick. 1 line fragmentary The trustworthy shepherd, king, the sword of Sumer, Ur-Namma, the king of the Land, was taken to the …… house. He was taken to Urim; the king of the Land was brought into the …… house. The proud one lay in his palace. Ur-Namma, he who was beloved by the troops, could not raise his neck any more. The wise one …… lay down; silence descended. As he, who was the vigour of the Land, had fallen, the Land became demolished like a mountain; like a cypress forest it was stripped, its appearance changed. As if he were a boxwood tree, they put axes against him in his joyous dwelling place. As if he were a sappy cedar tree, he was uprooted in the palace where he used to sleep (?). His spouse …… resting place; …… was covered by a storm; it embraced it like a wife her sweetheart (?). His appointed time had arrived, and he passed away in his prime."
+    },
+    {
+     "ref": "52–75",
+     "orig": "/sizkur₂\\ niĝ₂ dug₃-ga la-ba-an-tag-ge šu gig ba-ni-X-[gid₂]\nkadra-ni {d}a-nun-na-ke₄-ne inim im-ma-an-/gi₄\\-[X]\nan /muš₃{?}-am₃\\ X /la-ba-e-gub\\ ud-bi la-ba-ni-ib-si\ninim {d}/en\\-lil₂-la₂ dug₄-ga-še₃ ur₅ /zi-zi\\ la-ba-ĝal₂\n/nam{?}\\-[lu₂]-/ulu₃{?}\\-ni ki ba-aĝ₂-ĝa₂-bi igi-ĝal₂-bi ba-kur₂\nX [(X)]-la lu₂ nu-zu-u₃-e-ne i-im-bal-bal-e-ne\na-/gin₇ ki-lul\\-la ur-{d}namma dug gaz-gin₇ a-ba-ni-in-taka₄-aš\nX [(X)]-a-ni IM.UD sir₂-da-gin₇ gal-bi im-ši-DU\nX [X X (X)] nu-ĝa₂-ĝa₂-a niĝ₂ šag₄-ge šu nu-gid₂-i im-me\nX X X /ur\\-{d}namma me-li-e-a nam-ĝu₁₀\na-ra-li ki saĝ-ki kalam-ma-še₃\nur-{d}namma dumu /{d}\\nin-sumun₂-ka ḫi-li-na ba-da-de₆\nerin₂ lugal-da /i₃\\-re₇-eš-a er₂ mu-da-ab-us₂-e\ndilmun{ki}-gin₇ /kur\\ ki nu-zu-na {ĝiš}ma₂-bi ba-da-ab-su\n/ŠU\\ MIN GAG E-E ŠE₃ ba-da-ab-kud\n{ĝiš}ĝisal {ĝiš}gi-muš {ĝiš}zi-gan ĝal₂-la-bi gu₂-guru₅ ba-ab-dug₄\n{ĝiš}X [X (X)]-na DUB ba-da-tab {ĝiš}saĝ-kul-bi ba-kud\n{ĝiš}X [X (X)] /A\\ IGI MIN{?} SU ba-da-ĝar saḫar sis-a ba-gub\nlugal X [anše]-ni ba-da-dur₂-ru anše ki mu-un-di-ni-ib-tum₂\nur-{d}/namma\\ (X) anše-ni ba-<da-dur₂-ru anše ki mu-un-di-ni-ib-tum₂>\n/ĝiš{?}\\ X kalam-ma-ke₄ ba-da-bal teš₂ kalam-ma ba-kur₂\n/kaskal\\ [kur]-ra in-di₃ sug₄-ga-am₃\n/lugal\\-[da] {ĝiš}gigir ba-da-šu₂ ḫar-ra-an im-ma-da-suḫ₃ šu nu-um-ma-ni₁₀-ni₁₀\n[ur-{d}namma-da] {ĝiš}gigir ba-da-šu₂ ḫar-ra-an im-ma-da-suḫ₃ šu nu-um-ma-ni₁₀-ni₁₀",
+     "orig_lines": [
+      "52",
+      "53",
+      "54",
+      "55",
+      "56",
+      "57",
+      "58",
+      "59",
+      "60",
+      "61",
+      "62",
+      "63",
+      "64",
+      "65",
+      "66",
+      "67",
+      "68",
+      "69",
+      "70",
+      "71",
+      "72",
+      "73",
+      "74",
+      "75"
+     ],
+     "en": "His (?) pleasing sacrifices were no longer accepted; they were treated as dirty (?). The Anuna gods refused his gifts. An did not stand by an \"It is enough\", and he could not complete his (?) days. Because of what Enlil ordered, there was no more rising up; his beloved men lost their wise one. Strangers turned into (?) ……. How iniquitously Ur-Namma was abandoned, like a broken jar! His …… with grandeur like (?) thick clouds (?). He does not …… any more, and he does not reach out for ……. \"…… Ur-Namma, alas, what is it to me?\" Ur-Namma, the son of Ninsumun, was brought to Arali, the pre-eminent place of the Land, in his prime. The soldiers accompanying the king shed tears: their boat (i.e. Ur-Namma) was sunk in a land as foreign to them as Dilmun. …… was cut. It was stripped of the oars, punting poles and rudder which it had. ……; its bolt was broken off. …… was put aside; it stood (?) in saltpetre. His donkeys were to be found with the king; they were buried with him. His donkeys were to be found with Ur-Namma; they were buried with him. As he crossed over the …… of the Land, the Land was deprived of its ornament. The journey to the nether world is a desolate route. Because of the king, the chariots were covered over, the roads were thrown into disorder, no one could go up and down on them. Because of Ur-Namma, the chariots were covered over, the roads were thrown into disorder, no one could go up and down on them."
+    },
+    {
+     "ref": "76–87",
+     "orig": "/i₃-du₈ gal kur\\-ra 7-bi niĝ₂-ba ba-ab-šum₂-mu\nlugal mu tuku ba-ug₅-ge-eš-a\nišib lu₂-/maḫ\\ nin-diĝir ug₅-ga maš₂-e ba-dab₅-ba\nlugal ĝen-na-ni uĝ₃ mu-un-zu-uš kur-ra za-pa-aĝ₂ mu-un-ĝar\nur-{d}namma ĝen-na-ni <uĝ₃ mu-un-zu-uš kur-ra za-pa-aĝ₂ mu-un-ĝar>\nlugal-e gud im-ma-ab-gaz-e udu im-ma-ab-šar₂-re\nur-{d}namma ĝišbun gal-gal-la ba-ši-in-dur₂-ru-ne-eš\nu₂ kur-ra sis-am₃ a kur-ra mun₄-na-am₃\nsipad zid ĝarza kur-ra-ke₄ šag₄-ga-ni mu-un-zu\nlugal-e nidba kur-ra-ke₄ ĝiš im-ma-ab-/tag-ge\\\nur-{d}namma nidba kur-ra-ke₄ ĝiš im-ma-ab-tag-ge\ngud du₇ maš₂ du₇ udu niga en-na ab-laḫ₄-a",
+     "orig_lines": [
+      "76",
+      "77",
+      "78",
+      "79",
+      "80",
+      "81",
+      "82",
+      "83",
+      "84",
+      "85",
+      "86",
+      "87"
+     ],
+     "en": "He presented gifts to the seven chief porters of the nether world. As the famous kings who had died and the dead išib priests, lumaḫ priests, and nindiĝir priestesses, all chosen by extispicy, announced the king's coming to the people, a tumult arose in the nether world. As they announced Ur-Namma's coming to the people, a tumult arose in the nether world. The king slaughtered numerous bulls and sheep, Ur-Namma seated the people at a huge banquet. The food of the nether world is bitter, the water of the nether world is brackish. The trustworthy shepherd knew well the rites of the nether world, so the king presented the offerings of the nether world, Ur-Namma presented the offerings of the nether world: as many faultless bulls, faultless kids, and fattened sheep as could be brought."
+    },
+    {
+     "ref": "88–91",
+     "orig": "{ĝiš}mitum₂ {ĝiš}pan gal e₂-mar-uru₅ {ĝiš}gag-pan ĝiri₂ zu₂ galam\n{kuš}lu-ub₂ gun₃-a ib₂-ba ĝal₂-la-ba\n{d}nergal {d}en-lil₂ kur-ra-ra\nsipad ur-{d}namma-ke₄ e₂-gal-a-na ĝiš im-ma-ab-tag-ge",
+     "orig_lines": [
+      "88",
+      "89",
+      "90",
+      "91"
+     ],
+     "en": "To Nergal, the Enlil of the nether world, in his palace, the shepherd Ur-Namma offered a mace, a large bow with quiver and arrows, an artfully made barbed dagger, and a multicoloured leather bag for wearing at the hip."
+    },
+    {
+     "ref": "92–96",
+     "orig": "ĝiš-gid₂-da {kuš}lu-ub₂ dag-si ak-a i-mi-tum piriĝ an-na\n{kuš}gur₂₁{ur₃} ki us₂-sa a₂ nam-ur-saĝ-ĝa₂\n/za\\-ḫa-da niĝ₂ ki aĝ₂ {d}ereš-ki-gal-la\n/{d}\\gilgameš₃ lugal kur-ra-ke₄\n/sipad\\ ur-{d}namma-ke₄ e₂-gal-a-na ĝiš im-ma-ab-tag-ge",
+     "orig_lines": [
+      "92",
+      "93",
+      "94",
+      "95",
+      "96"
+     ],
+     "en": "To Gilgameš, the king of the nether world, in his palace, the shepherd Ur-Namma offered a spear, a leather bag for a saddle-hook, a heavenly lion-headed imitum mace, a shield resting on the ground, a heroic weapon, and a battle-axe, an implement beloved of Ereškigala."
+    },
+    {
+     "ref": "97–101",
+     "orig": "X keše₂-da i₃ ba-ni-in-de₂-a bur šaĝan šu du₇-a\ntug₂ dugud {tug₂}zulumḫi {tug₂}pala₃ nam-nin-a\nX X (X) X X SAR dalla me kur-ra\n/{d}ereš-ki-gal\\ /ama\\ /{d}nin-a\\-zu-ra\nsipad ur-{d}namma-ke₄ e₂-gal-la-na ĝiš im-ma-ab-tag-ge",
+     "orig_lines": [
+      "97",
+      "98",
+      "99",
+      "100",
+      "101"
+     ],
+     "en": "To Ereškigala, the mother of Ninazu, in her palace, the shepherd Ur-Namma offered a …… which he filled with oil, a šaĝan bowl of perfect make, a heavy garment, a long-fleeced garment, a queenly pala robe, …… the divine powers of the nether world."
+    },
+    {
+     "ref": "102–105",
+     "orig": "udu X [X X (X)] X [X X] /gal{?} kur\\ [...]\nĝidru kug-/sig₁₇\\ nam-en-na šu za-gin₃-še₃ X X\n{d}dumu-zid dam ki aĝ₂ {d}inana-ra\nsipad ur-{d}namma-ke₄ e₂-gal-la-na ĝiš im-ma-ab-tag-ge\n[tu-di]-/tum\\ kug-sig₁₇ kug-babbar [...]\n[...] /{na₄}\\za-gin₃ ba-da-/ra\\ [...]\n[{d}]/dim₃-pi\\-kug-ge X [...]",
+     "orig_lines": [
+      "102",
+      "103",
+      "104",
+      "105",
+      "105A",
+      "105B",
+      "105C"
+     ],
+     "en": "To Dumuzid, the beloved husband of Inana, in his palace, the shepherd Ur-Namma offered a …… sheep, ……, mountain ……, a lordly golden sceptre, …… a shining hand. {(1 ms. adds:) He …… a gold and silver ……, a lapis-lazuli ……, and a …… pin to Dimpikug …….}"
+    },
+    {
+     "ref": "106–109",
+     "orig": "gi₁₆-sa šu du₇-a ḫar kug-sig₁₇ ma₂-gur₈ BI X sig₁₀{?}-ga\n{na₄}gug kug{?} /niĝ₂\\ gaba diĝir-re-e-ne\n{d}nam-tar lu₂ nam tar-tar-ra-ra\nsipad ur-/{d}namma\\-ke₄ /e₂-gal-a\\-na ĝiš im-ma-ab-tag-ge",
+     "orig_lines": [
+      "106",
+      "107",
+      "108",
+      "109"
+     ],
+     "en": "To Namtar, who decrees all the fates, in his palace, the shepherd Ur-Namma offered perfectly wrought jewellery, a golden ring cast (?) as a …… barge, pure cornelian stone fit to be worn on the breasts of the gods."
+    },
+    {
+     "ref": "110–113",
+     "orig": "dub-<šen> šu [za]-/gin₃\\ [(X)] niĝ₂-nam irigal-a-ke₄\n{ĝiš}kirid /kug {na₄}za\\-[gin₃] /šu\\ tag-ga {ĝiš}ga-rig₂ /nam\\-munus-a\n{d}ḫuš-bi-sag₉ dam {d}nam-tar-/ra-ra\\\nsipad ur-{d}namma-ke₄ /e₂\\-gal-a-na ĝiš im-ma-ab-tag-ge",
+     "orig_lines": [
+      "110",
+      "111",
+      "112",
+      "113"
+     ],
+     "en": "To Ḫušbisag, the wife of Namtar, in her palace, the shepherd Ur-Namma offered a chest (?) with a lapis-lazuli handle, containing (?) everything that is essential in the underworld, a silver hair clasp adorned with lapis-lazuli, and a comb of womanly fashion."
+    },
+    {
+     "ref": "114–122",
+     "orig": "{ĝiš}niĝ₂-šu umbin X-bi kug-sig₁₇-ta gun₃-a\nanše KI {anše}niskum(PIRIĜ) X [...] X X X X\nanše ur₂ gun₃-gun₃ [...] X\nsipad mu₆-sub₃ A [...] X /ab\\-us₂-e\nšul ur-saĝ /{d}\\nin-ĝiš-zid-da-ra\nsipad ur-{d}namma-/ke₄\\ e₂-gal-a-na ĝiš im-ma-ab-tag-ge\n{na₄}kišib za-gin₃ ba-da-ra i₃-la₂-a\ntu-di-da kug-sig₁₇ kug-babbar saĝ-bi alim-ma\n{{d}dim₃-pi-me-kug-ge} {(1 ms. ḫas instead:) [{d}]/dim₃-pi\\-kug-ge} zag-ga-na gub-bu-ne mu-/na\\-ab-šum₂-/mu\\",
+     "orig_lines": [
+      "114",
+      "115",
+      "116",
+      "117",
+      "118",
+      "119",
+      "120",
+      "121",
+      "122"
+     ],
+     "en": "To the valiant warrior Ninĝišzida, in his palace, the shepherd Ur-Namma offered a chariot with …… wheels sparkling with gold, …… donkeys, thoroughbreds, …… donkeys with dappled thighs, ……, followed …… by a shepherd and a herdsman. To {Dimpimekug} {(1 ms. has instead:) Dimpikug}, who stands by his side, he gave a lapis-lazuli seal hanging from a pin, and a gold and silver toggle-pin with a bison's head."
+    },
+    {
+     "ref": "123–128",
+     "orig": "{tug₂}saĝšu ĝeštug₂ maḫ lu₂ zu ĝiš-nu₁₁-gal\ngi-dub-ba zag-bar-ra niĝ₂ nam-dub-sar-/ra\\-ke₄\neš₂-gana₂ /za\\-gin₃ gi-1-nindan X X\n/nitalam\\-a-ni /nin-{d}a-zi-mu₂\\-[a]\ndub-[sar maḫ dumu] [a]-ra-li-[ra]\n[sipad ur-{d}namma-ke₄ e₂-gal-a-na ĝiš im-ma-ab-tag-ge]",
+     "orig_lines": [
+      "123",
+      "124",
+      "125",
+      "126",
+      "127",
+      "128"
+     ],
+     "en": "To his spouse, Ninazimua, the august scribe, denizen of Arali, in her palace, the shepherd Ur-Namma offered a headdress with the august ear-pieces (?) of a sage, made of alabaster, a …… stylus, the hallmark of the scribe, a surveyor's gleaming line, and the measuring rod ……."
+    },
+    {
+     "ref": "129–131",
+     "orig": "[...] X X [...]\n[...] X A BI [(...)] X\n[...] X X gal kur-/ra (X) mu-na\\-da-ab-/šum₂{?}-mu\\",
+     "orig_lines": [
+      "129",
+      "130",
+      "131"
+     ],
+     "en": "To ……, the great …… of the nether world, he gave 2 lines fragmentary"
+    },
+    {
+     "ref": "132–144",
+     "orig": "[lugal-e] /nidba{?}\\ kur-ra-ke₄ si bi₂-in-sa₂-a-ta\n[ur-{d}namma-ke₄] /nidba{?}\\ kur-ra-ke₄ si bi₂-in-sa₂-a-ta\n[...] irigal-la-ke₄-ne\nX [...] X šu₂-/ke₄\\-ne\nur-{d}namma barag gal kur-ra-ke₄ mu-ni-ib-tuš-u₃-ne\nkur-ra ki-/tuš\\ mu-na-ĝa₂-ĝa₂-ne\ninim dug₄-ga {d}ereš-ki-gal-la-ka-ta\nerin₂ {ĝiš}tukul X en-na ba-ug₅-ga\nlu₂ nam-tag-/ga\\ en-na ba-/zu\\-X-a\nlugal-la šu-ni-še₃ /im\\-ma-ab-šum₂-mu-ne\nur-{d}namma ki-bi-še₃ X [X (X)] X-eš /IM\\ X X X [(...)]\nšeš ki aĝ₂-ĝa₂-ni {d}/gilgameš₃\\-[da]\ne-ne di kur-ra i₃-/kud\\-de₃ ka-aš kur-ra /i₃-bar\\-re",
+     "orig_lines": [
+      "132",
+      "133",
+      "134",
+      "135",
+      "136",
+      "137",
+      "138",
+      "139",
+      "140",
+      "141",
+      "142",
+      "143",
+      "144"
+     ],
+     "en": "After the king had presented properly the offerings of the nether world, after Ur-Namma had presented properly the offerings of the nether world, the …… of the underworld, the ……, seated Ur-Namma on a great dais of the nether world and set up a dwelling place for him in the nether world. At the command of Ereškigala all the soldiers who had been killed by weapons and all the men who had been found guilty were given into the king's hands. Ur-Namma was ……, so with Gilgameš, his beloved brother, he will issue the judgments of the nether world and render the decisions of the nether world."
+    },
+    {
+     "ref": "145–154",
+     "orig": "ud 7 ud 10-am₃ ba-zal-la-ba\nlugal-ĝu₁₀ i-si-iš ki-en-gi-ra-ke₄ sa₂ nam-ga-/mu\\-ni-ib-dug₄\nur-{d}namma i-si-iš ki-en-gi-ra-ke₄ sa₂ nam-ga-/mu\\-ni-ib-dug₄\nbad₃ urim₂{ki}-ma /nu\\-mu-un-til-la-ni\ne₂-gal gibil na-mu-un-du₃-a-ni nu-mu-un-ḫul₂-ḫul₂-/la\\-ni\nsipad-de₃ e₂-a-ni saĝ li-bi₂-in-ak-ni\ndam-a-ni ur₂-ra-na a-la nu-mu-un-gi₄-a-ni\ndumu-ni dub₃-ba-na li-bi₂-in-peš-a-ni\n/nin₉ di₄\\-di₄ /nu\\-mu-un-buluĝ₃-buluĝ₃-e-ne ḫi-li /nu-mu-un-til-a-ni\\\n/lugal-ĝu₁₀ šag₄\\-ga-ni im-si er₂ /gig\\ [...]",
+     "orig_lines": [
+      "145",
+      "146",
+      "147",
+      "148",
+      "149",
+      "150",
+      "151",
+      "152",
+      "153",
+      "154"
+     ],
+     "en": "After seven days, 10 days had passed, lamenting for Sumer overwhelmed my king, lamenting for Sumer overwhelmed Ur-Namma. My king's heart was full of tears, he …… bitterly that he could not complete the wall of Urim; that he could no longer enjoy the new palace he had built; that he, the shepherd, could no longer …… his household (?); that he could no longer bring pleasure to his wife with his embrace; that he could not bring up his sons on his knees; that he would never see in their prime the beauty of their little sisters who had not yet grown up."
+    },
+    {
+     "ref": "155–165",
+     "orig": "sipad zid i-lu /niĝ₂\\-me-ĝar ni₂-te-na mi-[...]\nĝe₂₆-e niĝ₂ /ne\\-e ba-ak-a-ĝu₁₀\ndiĝir-re-/ne\\-er mu-ne-gub-bu-nam /ki\\-ur₃ mu-ne-ĝal₂\n{d}a-[nun]-/na\\-ke₄-ne ḫe₂-ĝal₂-la pa mu-ne-e₃-a\nĝiš-/nu₂\\ u₂ za-gin₃ barag₂-ga-ba gi₁₆-sa mu-ne-ĝar-/ra-ĝu₁₀\\\n/diĝir\\ ki-ĝa₂ la-ba-e-gub šag₄-ĝu₁₀ la-ba-ni-ib-sed\n[X]-me-en niĝ₂ ĝiškim sag₉-ga-ĝu₁₀ an-gin₇ mu-ne-su₃-ud\n[(X)] /ud\\-da gub-ba sa₂-a-ĝa₂ a-na šu ba-ni-ti\n/ĝi₆\\-da gub-ba u₃ nu-ku-ĝa₂-a ud im-ma-ni-til\n[i₃]-ne-eš₂ im an-ta šeĝ₃-ĝe₂₆-gin₇\n[me]-/li\\-e-a šeg₁₂ urim₂{ki}-ma-še₃ šu nu-um-ma-ni₁₀-ni₁₀",
+     "orig_lines": [
+      "155",
+      "156",
+      "157",
+      "158",
+      "159",
+      "160",
+      "161",
+      "162",
+      "163",
+      "164",
+      "165"
+     ],
+     "en": "The trustworthy shepherd …… a heart-rending lament for himself: \"I, who have been treated like this, served the gods well, set up chapels for them. I have created evident abundance for the Anuna gods. I have laid treasures on their beds strewn with fresh herbs. Yet no god stood by me and soothed my heart. Because of them, anything that could have been a favourable portent for me was as far away from me as the heavens, the ……. What is my reward for my eagerness to serve during the days? My days have been finished for serving them sleeplessly during the night! Now, just as the rain pouring down from heaven cannot turn back, alas, nor can I turn back to brick-built Urim.\""
+    },
+    {
+     "ref": "166–186",
+     "orig": "/a₂{?}\\-še nitalam-ĝu₁₀ <nu>-mu-un-/su\\-am₃\n[i]-/lu\\ a-nir niĝ₂ gig-ga-a ud mi-ni-/ib\\-zal-zal-e\nusu /ĝal₂{?}\\-la-ĝu₁₀{!} /ni₂-ba\\ til-/la\\ [...]\nur-saĝ-me-/en šu nam{?}-tar{?}-ra X a gig\\ [...]\nam-gin₇ X [...] X GI{?} šub-ba-ĝu₁₀ dug₃ la-ba-X [...]\ngud maḫ-gin₇ [...] X sis-ĝa₂ ba-[...]\n{ĝiš}isimu₃{sar}-gin₇{?} X [(...)] X X /kug{?}\\-ga ba-ši-X [...]\nanše-gin₇ IGI [(...)] X /sag₉{?}\\-ga-ĝu₁₀-/še₃\\ ba-/ug₅-ge\\-X\nnitalam X (X)-ĝu₁₀ ma-ab{?}-ḫul ši-in-TU-ra-X\ni-lu a-/nir\\ niĝ₂ gig-ga-a ud mi-ni-ib-zal-zal-e\n/udug sag₉\\-ga-ni bar-ta ba-da-gub\n{d}[lamma] /sag₉\\-ga-ni saĝ-ĝa₂-/na\\ li-bi₂-in-ḫa-za\n{d}/nin\\-sumun₂-na-ke₄ a₂ maḫ-a-ni saĝ-ĝa₂-na li-bi₂-in-ge-en\n{d}/nanna\\ en {d}aš-im₂-babbar šu-ta nu-un-ri\n{d}en-ki lugal eridug{ki}-ga X-ra ba-ra-ta-an-e₃\nGIR-GIR-a-ni im-ma-ni-in-si-ig inim šu nu-mu-un-di-ni-ib-gi₄\n{ĝiš}ma₂-gin₇ tum₉ sumur-ra ba-ra-ab-dirig {ĝiš}dimgul nu-mu-na-kalag\nanše edin-na-gin₇ pu₂ ḫul ba-an-tum₂-mu-da{?} šu dugud lu₂ mu-un-ĝar\n/piriĝ\\-gin₇ a-RU-ub-ba ba-šub-ba en-nu lu₂ mu-un-du₃\nur-gin₇ {ĝiš}az-la₂-e mu-un-dab₅ me-a lu₂ mu-un-ĝar\n{d}utu di X X ĝiš nu-um-mi-in-la₂ a /lugal\\-ĝu₁₀ mu-un-si",
+     "orig_lines": [
+      "166",
+      "167",
+      "168",
+      "169",
+      "170",
+      "171",
+      "172",
+      "173",
+      "174",
+      "175",
+      "176",
+      "177",
+      "178",
+      "179",
+      "180",
+      "181",
+      "182",
+      "183",
+      "184",
+      "185",
+      "186"
+     ],
+     "en": "\"Alas, my wife has become a widow (?)! She spends the days in tears and bitter laments. My strength has ebbed away ……. The hand of the fate demon …… bitterly me, the hero. Like a wild bull ……, I cannot ……. Like a mighty bull, ……. Like an offshoot ……. Like an ass ……, I died. …… my …… wife ……. She spends the days in tears and bitter laments. Her kind protective god has left her; her kind protective goddess does not care for her any more. Ninsumun no longer rests her august arm firmly on her head. Nanna, Lord Ašimbabbar, no longer leads (?) her by the hand. Enki, the lord of Eridug, does not ……. Her …… has been silenced (?), she can no longer answer. She is cast adrift like a boat in a raging storm; the mooring pole has not been strong enough for her. Like a wild ass lured (?) into a perilous pit she has been treated heavy-handedly. Like a lion fallen into a pitfall, a guard has been set up for her. Like a dog kept in a cage, she is silenced. Utu …… does not pay heed to the cries \"Oh my king\" overwhelming her.\""
+    },
+    {
+     "ref": "187–197",
+     "orig": "tigi a-/da\\-ab gi-gid₂ za-am-za-am-ĝu₁₀ a-/nir{?}\\-ra mu-da-an-kur₉\nĝiš-gu₃-di e₂ /nam-nar\\-ra-ka zag e₂-ĝar₈-e i-ni-in-us₂\n{ĝiš}gu-za ḫi-li-bi nu-/mu-til-la\\-ĝu₁₀\nsaḫar pu₂-saĝ-ĝa₂-/ka\\ lu₂ im-/mi\\-[X X] X\n/ĝiš-nu₂ ki-nu₂\\ TUR-bi nu-mu-un-[til]-/la-ĝu₁₀\\\nedin bar sug₄-ga-ka lu₂ im-mi-in-nu₂-u₃-da\nme-li-e-a dam-ĝu₁₀ er₂-ra dumu-ĝu₁₀ a-nir-ra\nlu₂ niĝ₂ dug₄-ga-ĝa₂ i-lu balaĝ di-gin₇ ḫe₂-na-du₁₂-uš\nud ur₅-gin₇ im-ma-ab-ak-a-ĝu₁₀\nsaĝ-kal {d}inana nin me₃-a di-ĝa₂ nu-mu-un-til₃\n{d}en-lil₂-le kur-kur-ra inim gal-gal-še₃ /kiĝ₂-gi₄-a bi₂\\-in-gi₄",
+     "orig_lines": [
+      "187",
+      "188",
+      "189",
+      "190",
+      "191",
+      "192",
+      "193",
+      "194",
+      "195",
+      "196",
+      "197"
+     ],
+     "en": "\"My tigi, adab, flute and zamzam songs have been turned into laments because of me. The instruments of the house of music have been propped against the wall. Because I have been made to …… in a soil-filled pit instead of my throne whose beauty was endless; because I have been made to lie down in the open, desolate steppe instead of my bed, the sleeping place whose …… was endless, alas, my wife and my children are in tears and wailing. My people whom I used to command (?) sing like lamentation and dirge singers because of her (?). While I was so treated, foremost Inana, the warlike lady, was not present at my verdict. Enlil had sent her as a messenger to all the foreign lands concerning very important matters.\""
+    },
+    {
+     "ref": "198–216",
+     "orig": "/ki-bi-ta\\ igi-ni ĝar-/ra-ni\\\n{d}inana e₂-kur za-gin₃-še₃ sun₅-na-bi mu-un-[kur₉]\nsaĝ-ki ḫuš {d}en-lil₂-la₂-ka igi dub₂-dub₂-bu X [(X)]\nnin gal e₂-an-na /gam\\-ma-ni nam-ma-da-ra-/ta\\-[X]\nsipad zid e₂-an-na-ta mu-un-e₃ igi nu-mu-ni-/in\\-[du₈]\nnin-ĝu₁₀ A {[X] X A BA} {(1 ms. ḫas instead:) gub-ba-gin₇} uĝ₃-ĝa₂ mu-un-[...]\n{d}inana ud ḫuš dumu gal {d}suen-na A X X X (X)-ga\nan i₃-dub₂-be₂ /ki i₃\\-sag₃-ge\n{d}inana-ke₄ tur₃ im-gul-e amaš im-tab-e\nan lugal diĝir-re-e-ne-ke₄ in-še₃ ga-mu-un-/dub₂\\\n{d}en-lil₂-le saĝ mu-da-an-zig₃-/ga{?}\\ inim-bi a-ba mu-un-kur₂\nan lugal inim maḫ dug₄-ga-ni inim-/bi a\\-ba mu-un-kur₂\nĝiš-ḫur kalam-ma ḫe₂-me-a-gub-ba saĝ ba-/ra-ba-an\\-us₂-sa\nki ud e₃ diĝir-re-e-ne-še₃ nam-ḫe₂-ĝal₂{?}-/bi\\ nu-ĝal₂\nĝi₆-par₃ kug eš₃ e₂-an-na-ĝu₁₀ {ḫur-saĝ-[gin₇]} {(some mss. ḫave instead:) an-gin₇} mu-un-/gi₄{?}\\-eš\nsipad-ĝu₁₀ ḫi-li-a-ni nu-uš-ma-an-/ku₄\\-ku₄ ĝe₂₆-e {ba-ra-ku₄-ku₄-de₃-en} {(some mss. ḫave instead:) a-na-aš mu-ku₄-/ku₄{?}\\}\nkalag-ga-ĝu₁₀ u₂-šim-gin₇ edin-/na\\ nu-uš-ma-da-mu₂-am₃\nma₂ id₂-da-gin₇ kar {sig₉-ga-na} {(1 ms. ḫas instead:) sig₉-ga-/ba\\} nu-uš-ma-da-gen₆-na\n{d}inana-ke₄ {/i\\-lu-ni ḫe₂-kur-ku-ku} {(1 ms. ḫas instead:) ur-{d}namma [...]}",
+     "orig_lines": [
+      "198",
+      "199",
+      "200",
+      "201",
+      "202",
+      "203",
+      "204",
+      "205",
+      "206",
+      "207",
+      "208",
+      "209",
+      "210",
+      "211",
+      "212",
+      "213",
+      "214",
+      "215",
+      "216"
+     ],
+     "en": "When she had turned her gaze away from there, Inana humbly entered the shining E-kur, she …… at Enlil's fierce brow. (Then Enlil said:) \"Great lady of the E-ana, once someone has bowed down, he cannot …… (?) any more; the trustworthy shepherd left E-ana, you cannot see him any more.\" My lady …… among the people {……} {(1 ms. has instead:) like ……}. Then Inana, the fierce storm, the eldest child of Suen, ……, made the heavens tremble, made the earth shake. Inana destroyed cattle-pens, devastated sheepfolds, saying: \"I want to hurl insults at An, the king of the gods: Who can change the matter, if Enlil elevates someone? Who can change the import of the august words uttered by An, the king? If there are divine ordinances imposed on the Land, but they are not observed, there will be no abundance at the gods's place of sunrise. My holy ĝipar, the shrine E-ana, has been barred up {like (?) a mountain} {(some mss. have instead:) like the heavens}. If only my shepherd could enter before me in it in his prime -- {I will not enter it otherwise!} {(some mss. have instead:) Why should I enter it otherwise?} If only my strong one could grow for me like greenery in the desert. If only he could hold steady for me like a river boat at its calm mooring.\" This is how Inana {gave vent (?) to a lament over him} {(1 ms. has instead:) …… Ur-Namma ……}"
+    },
+    {
+     "ref": "217–233",
+     "orig": "[en] [{d}nin-ĝiš]-/zid{?}-da{?}-ke₄\\ [...] X-na{?} ḫe₂-em-mi-in-kalag-ge\nur-{d}namma X (X) [...] ba-ug₅-ga-ĝu₁₀\n[...] a-na [...]-an-la₂\n[er₂ 1(DIŠ)]-/e\\ a-nir 1(DIŠ)-e\n[...] [ur-{d}namma]-/ra{?}\\ nam mu-ni-ib-tar-re\n[(X)] [ur]-/{d}namma\\ X [...]-/ge{?}\\-en mu maḫ-zu ḫe₂-pad₃\n/ĝidru{?}\\ kug{?} sig-ta igi-/nim\\-[še₃ ...] /mu-un\\-na-an-tuku-tuku\ne₂-gal-zu-še₃ ki-en-gi [...]-pad₃-de₃-eš\nid₂ ba-al-la-zu [...] X-zu\na-gar₃ gal-gal maḫ bi₂-/gi₄\\-[(...)]-a-zu\nĝiš-gi a-ta /im\\-[ta-ab]-/ed₃\\-a-zu\nše daĝal še daĝal-e [...]-/a{?}-zu{?}\\\nan-za-gar₃ a₂-[dam ...]-a-zu\nnam-lu₂-ulu₃ u₆ [...] X-/e-eš\\\nur-{d}namma mu-zu X [...]-pad₃{?}-/pad₃{?}-de₃{?}-eš{?}\\\nen {d}nu-nam-/nir\\ [...] X rib-ba\n{d}udug ḫul X [...] /bi₂\\-in-sar-re",
+     "orig_lines": [
+      "217",
+      "218",
+      "219",
+      "220",
+      "221",
+      "222",
+      "223",
+      "224",
+      "225",
+      "226",
+      "227",
+      "228",
+      "229",
+      "230",
+      "231",
+      "232",
+      "233"
+     ],
+     "en": "Lord Ninĝišzida ……. Ur-Namma, my …… who was killed, 1 line fragmentary Among tears and laments, …… decreed a fate for Ur-Namma: \"Ur-Namma ……, your august name will be called upon. From the south to the uplands, …… the holy sceptre. Sumer …… to your palace. The people will admire …… the canals which you have dug, the …… which you have ……, the large and grand arable tracts which you have ……, the reedbeds which you have drained, the wide barley fields which you ……, and the fortresses and settlements which you have ……. Ur-Namma, they will call upon …… your name. Lord Nunamnir, surpassing ……, will drive away the evil spirits ……\""
+    },
+    {
+     "ref": "234–242",
+     "orig": "sipad ur-{d}namma X [...] /ba{?}\\-ši-in-buru₃-a-ta\n{d}nanna /en\\ [{d}aš-im₂-babbar ...] X ri-a-bi\n[{d}]/en\\-ki lugal eridug{ki}-ga [...]-ta-an-ed₃-da\n[X X (X)] /{d}\\X [...]-/la{?}\\ amaš tab-tab-ba\nsaĝ-kal a-ma-ru mar-/uru₅\\ [...]\n[...] /kug{?} DU piriĝ\\ an-še₃ tud-da\ngi gam-ma KAL ĝal₂ ba-/ni\\-[...]\niri-zu-ta mi₂ /zid\\ dug₄-ga di si sa₂ kud-kud\ndumu ḪI RI X [(...)] en {d}nin-ĝiš-zid-da za₃-mi₂\n/lugal-ĝu₁₀\\ [X (X)] /er₂\\-am₃ i-lu-am₃\n[...] er₂-am₃ a-nir-am₃",
+     "orig_lines": [
+      "234",
+      "235",
+      "236",
+      "237",
+      "A",
+      "238",
+      "B",
+      "239",
+      "240",
+      "241",
+      "242"
+     ],
+     "en": "After shepherd Ur-Namma ……, Nanna, Lord Ašimbabbar, ……, Enki, the king of Eridug ……. {…… devastated sheepfolds ……} {(the other ms. has instead:) …… the foremost, the flood ……}. {…… holy ……, lion born on high} {(the other ms. has instead:) …… basket (?) ……}. …… your city; renders just judgments. ……, Lord Ninĝišzida be praised! My king …… among tears and laments; …… among tears and laments."
+    },
+    {
+     "ref": "1–4",
+     "orig": "[...] X X X [(X X)]\n[...] X X X saĝ-ki-ni mi-ni-gid₂\n[...] ud-de₃ i-si-iš im-la₂\n[X X (X)] X X X /itima\\{ma}-ka{!} ba-an-kur₉ šag₄-ka-tab ba-nu₂",
+     "orig_lines": [
+      "1",
+      "2",
+      "3",
+      "4"
+     ],
+     "en": "1 line fragmentary …… frowned at ……. ……, the day was full of sorrow. …… withdrew into his bedchamber and lay down fasting."
+    },
+    {
+     "ref": "5–11",
+     "orig": "[ama] X dumu-ni-še₃ ḫul-ĝal₂-la /tuš{?}\\ X\nama lugal-la kug {d}nin-sumun₂-ka a₂ šag₄-ĝu₁₀ /im\\-me\nnam ur-{d}namma /mu\\-un-bal-e-eš-am₃\nmu sipad zid ba-/ra-ab\\-e₃-a-ta\nsila daĝal ki-e-ne-de₃ ĝal₂-/la\\-ba er₂ gig /mu\\-a-ši-ši\ni-lu sipad zid ba-an-dab₅-be₂-NE-eš-a /ud\\ mi-/ni{?}-ib₂\\-zal-zal-e\nnam-lu₂-ulu₃ lib ib₂-til-la-am₃ u₃ /dug₃\\ [X (X)] X (X) [X]-ku",
+     "orig_lines": [
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10",
+      "11"
+     ],
+     "en": "The mother, wretched (?) because of her son, …… the mother of the king, holy Ninsumun, was crying: \"Oh my heart!\". She was weeping bitterly in the broad square, which is otherwise a place of entertainment, that the fate of Ur-Namma had been overturned and that the trustworthy shepherd had been made to pass away. She spent the day in lamentation over the trustworthy shepherd who had been snatched away. Sweet sleep did not (?) come to the people whose happiness had come to an end."
+    },
+    {
+     "ref": "12–19",
+     "orig": "a-eštub id₂-da de₆-/a{?}\\-ba ku₃-ĝal₂-[bi ...]\nše gu-nu a-gar₃-re X e₃-a /zi\\ [kalam-ma ...]\nengar gana₂ zid-de₃ /gub\\-bu X [...]\n{d}en-ki-im-du lugal eg₂ /pa₅\\ [...]\nX /AB{?}\\ uĝ₃ daĝal-bi /ba\\-[...]\n(X) X BU kalam-ma-kam{!} /u₂\\ [...]\n/edin\\-edin-e u₂ /sag₉{?}\\ [...]\n[(X) X] X ab₂ dugud-/da{?}\\ [...]",
+     "orig_lines": [
+      "12",
+      "13",
+      "14",
+      "15",
+      "16",
+      "17",
+      "18",
+      "19"
+     ],
+     "en": "As the early flood was filling the canals, their canal-inspector ……. The mottled barley come forth on the arable lands, the life of the land, ……. To the farmer, the fertile fields ……. Enkimdu, the lord of levees and ditches, ……. …… its numerous people ……. …… of the Land ……. The plains …… fine grass ……. …… heavy cows …… approx. 4 lines missing"
+    },
+    {
+     "ref": "1–13",
+     "orig": "[ur]-/{d}namma\\ ki [...]\n[šu]-ni dab₅-ba /NU\\ [...] X [...]\n/ĝiri₃\\-ni dab₅-ba [...] ĝa₂-ĝa₂ [...]\nza-pa-aĝ₂ /A\\ X [...] /BA\\ GAM-e UŠ [...]\nsipad zid /lugal\\ [...] [ki]-/en\\-gi-ra ur-{d}namma [...]\nurim₂{ki}-ma{?} ni₂ /ĝen{?}\\-na-ni ur-{d}namma e₂ [...]\nsaĝ-gu₂-ĝal₂ /e₂\\-gal-la i₃-nu₂-a ur-{d}namma lu₂ iri [...]\nḫur nu-un-da-an-zig₃ igi-ĝal₂ kur-kur-ra i₃-nu₂ ĝiš-/la₂{?}\\-[bi ...]\nteš₂ kalam-ma ba-da-an-šub ḫur-saĝ-gin₇ ba-/gul{?}\\ [...]\n{ĝiš}tir ḫa-šu-ur₂ /ba-da\\-an-sag₃ a-ra₂ /kalam-ma\\ ba-e-suḫ₃\n{ĝiš}erin{?} kalam-ma-/ke₄\\ ba-da-bal a-/ra₂ kalam\\-ma ba-e-kur₂\n{ĝiš}taškarin-e ki-tuš giri₁₇-zal-a-ni AGA /mu\\-un-na-an-ĝar-re-eš\nud «/sa2\\» dug₄-/ga\\-ni-a sa₂ mi-ni(sourše: RI)-ib-du alan-a-ni ba-ra-/e₃\\",
+     "orig_lines": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10",
+      "11",
+      "12",
+      "13"
+     ],
+     "en": "Ur-Namma ……. His hands which used to grasp, cannot ……. His feet which used to tread, ……. 1 line unclear The trustworthy shepherd, the king, the …… of Sumer, Ur-Namma, ……. As he himself was going to Urim, Ur-Namma …… house. The proud one lying in the palace, Ur-Namma, who …… by the troops (?), ……. He could not rise any more, the wise one of the countries lay down; silence ……. As he, who was the vigour of the Land, has fallen, the land became demolished like a mountain. As he, a cypress forest, was felled, the state of the Land became confused. As he, the cedar tree of the Land, was uprooted, the state of the Land became altered. Axes (?) were set against him, a boxwood tree, in his joyous dwelling place. His appointed time arrived, and he passed away in his prime."
+    },
+    {
+     "ref": "14–22",
+     "orig": "/sizkur₂{?}\\ niĝ₂ dug₃-ge /šu\\ la-/ba\\-an-tag šu gig ba-da-an-gid₂\n/kadra\\-bi {d}a-nun-na-ke₄-e-ne šu nu-um-ma-gid₂-e\n[(X)] /muš₃{?}\\-am₃ X [X] X la-/ba\\-ni-/in\\-gub ud-bi nu-sud-e\n[X] /{d}en{?}\\-X [X X (X)] X-am₃ /ur₅{?}\\ zi-zi la-ba-ĝal₂-la\n[X X (X)] X (X) [(X X)] [ur]-/{d}\\namma dug /gaz\\ im-mi-ni-taka₄-e\n[...]-/ne\\ mu-ni-bal-bal-e\n[...]-/gin₇\\ gal-bi im-šeĝ₃-ĝe₂₆\n[...] šu nu-dab₅-be₂ im-me\n[...] nam-ĝu₁₀",
+     "orig_lines": [
+      "14",
+      "15",
+      "16",
+      "17",
+      "18",
+      "19",
+      "20",
+      "21",
+      "22"
+     ],
+     "en": "His (?) pleasing sacrifices were no longer accepted; they were treated as dirty (?). The Anuna gods did not reach out for his gifts any more. …… did not stand by an \"It is enough\", his (?) days were not prolonged. ……, there was no more rising up. Ur-Namma, a broken jar, was abandoned at ……. 3 lines unclear \"……, what is it to me?\"approx. 5 lines missing"
+    },
+    {
+     "ref": "1–10",
+     "orig": "[...] X BI IM X [...]\n[...] X /A{?}\\ er₂ /IM\\ X [...]\n[...] /BA{?}\\ gu₂-guru₅ ba-X X [(X)]\n[...] X /AN RU{?}\\ {ĝiš}saĝ-kul{!} X [...]\n[...] /DA\\ TAR saḫar sis-a ba-da-an-/KU\\-X\n[...] /AN\\ ŠUB ḫar-ra-an im-suḫ₃ šu nu-um-ma-ni₁₀-ni₁₀\n[...] X /AN\\ ŠUB ḫar-ra-an im-suḫ₃ šu nu-um-ma-ni₁₀-ni₁₀\n[...] ki-in-/du\\ su₃-ud-da\n[...] X RU NE /ĝiri₃{?}\\ X [(X X)] /mu{?}-un\\-di-ni-ib-us₂\n[...] kaskal kur-ra-ke₄ [...]-/un\\-di-ni-ib-us₂",
+     "orig_lines": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10"
+     ],
+     "en": "3 lines unclear …… the bolt ……. …… sat (?) in saltpetre. ……, the roads were thrown into disorder, no one could go up and down on them; ……, the roads were thrown into disorder, no one could go up and down on them. …… is a long route. …… the way ……. …… the journey to the nether world ……."
+    },
+    {
+     "ref": "11–20",
+     "orig": "[...] X BI niĝ₂-ba /ab{?}\\-[...]-/mu\\\n[...] i₃-du₈ gal mu-ši-X-[...] X\n[...] ba-ug₅-/ge\\ [...] X\n[... nin]-/diĝir\\ maš₂-e dab₅-/ba\\ ba-ug₅-/ge\\ [(X)] X-ta\n[...] X X /AĜ₂\\\n[... za-pa]-/aĝ₂\\ bi₂-ĝar\n[...] X [X] X [... za]-/pa{?}\\-aĝ₂ /bi₂-ĝar\\\n/lugal ĝarza\\ kur-ra-ke₄ šag₄-ga-ni /i₃-zu\\\nur-{d}namma ĝarza kur-ra-/ke₄\\ šag₄-ga-ni i₃-zu\ngud sig₇ maš₂ du-du /udu\\ niga im-ma-ab-laḫ₄-e",
+     "orig_lines": [
+      "11",
+      "12",
+      "13",
+      "14",
+      "15",
+      "16",
+      "17",
+      "18",
+      "19",
+      "20"
+     ],
+     "en": "…… gifts ……. …… chief porters ……. …… who died ……, …… dead nindiĝir priestesses, chosen by extispicy, 1 line unclear …… raised a tumult ……; …… raised a tumult ……. The king knew well the rites of the nether world, Ur-Namma knew well the rites of the nether world: so he brought magnificent bulls, faultless kids, and fattened sheep."
+    },
+    {
+     "ref": "21–24",
+     "orig": "{ĝiš}mitum₂ {ĝiš}pan /gal a\\-ma-/ru-bi{?} {ĝiš}gag\\-ti ĝiri₂{?} zu₂ gal\n{kuš}lu-ub₂ gun₃-a [ib₂]-ba ĝal₂-la-ni(sourše: IR)\n{d}/nergal\\ {d}/en\\-lil₂ kur-ra-ke₄\nsipad ur-{d}namma-ke₄ e₂-/gal\\-la-a-ni ĝiš im-mi-in-tag-ge",
+     "orig_lines": [
+      "21",
+      "22",
+      "23",
+      "24"
+     ],
+     "en": "To Nergal, the Enlil of the nether world, in his palace, the shepherd Ur-Namma offered a mace, a large bow with quiver and arrows, a large barbed dagger, and a multicoloured leather bag for wearing at the hip."
+    },
+    {
+     "ref": "25–28",
+     "orig": "ĝiš-gid₂-da {kuš}lu-ub₂ dag-si X {ĝiš}mitum piriĝ an-na\n{kuš}gur₂₁ ki /us₂-sa\\ X /{ĝiš}{ ?}za{?}\\-[ḫa]-/da{?}\\ niĝ₂ ki aĝ₂ /{d}\\ereš-ki-gal-ke₄\n{d}/gilgameš₃\\ lugal kur-ra-ke₄\n/sipad\\ ur-{d}namma-ke₄ e₂-/gal\\-a-ni ĝiš im-mi-in-tag-ge",
+     "orig_lines": [
+      "25",
+      "26",
+      "27",
+      "28"
+     ],
+     "en": "To Gilgameš, the king of the nether world, in his palace, the shepherd Ur-Namma offered a spear, a leather bag for (?) the saddle-hook ……, a heavenly lion-headed mitum mace, a shield resting on the ground, and a battle-axe, an implement beloved of Ereškigala."
+    },
+    {
+     "ref": "29–32",
+     "orig": "/ĝiš-keše₂{?}\\-[da (X)] X i₃ ba-SAR-a /bur\\ šaĝan šu du₇-a\n[...] lugal-la sig ĜAR ŠU PI me kur-ra\n[(X)] X ereš-ki-gal ama [{d}nin]-a-zu [...]\n/sipad\\ ur-{d}namma-ke₄ e₂-gal-la-/a-ni ĝiš\\ im-mi-/in\\-[tag-ge]",
+     "orig_lines": [
+      "29",
+      "30",
+      "31",
+      "32"
+     ],
+     "en": "To Ereškigala, the mother of Ninazu ……, in her palace, the shepherd Ur-Namma offered a …… with oil, a šaĝan bowl of perfect make, a royal ……, …… the divine powers of the nether world ……."
+    },
+    {
+     "ref": "33–37",
+     "orig": "{udu}a-lum udu zulumḫi maš₂ gal kur-ra-/ke₄\\\nĜIŠ.ŠIR {ĝiš}ma-nu nam-en-na-kam šu za-gin₃-na tum₂-/ma\\\nešgiri₂ šibir {ĝiš}ma-nu nam-sipad-da nam-en-na tum₂-ma\n{d}dumu-zid dam ki aĝ₂ {d}inana-ra\nsipad ur-{d}namma-ke₄ e₂-gal-a-ni ĝiš im-mi-in-tag-ge",
+     "orig_lines": [
+      "33",
+      "34",
+      "35",
+      "36",
+      "37"
+     ],
+     "en": "To Dumuzid, the beloved husband of Inana, in his palace, the shepherd Ur-Namma offered alum sheep, long-fleeced sheep, big mountain he-goats, a lordly …… of manu wood fit for a shining hand, and shepherd's staff and crook of manu wood, fit for a lord."
+    },
+    {
+     "ref": "38–41",
+     "orig": "gi₁₆-sa šu du₇-a ḫar kug-sig₁₇ ma₂-gur₈ BI X sig₇-ga\n{na₄}gug /kug{?}\\ X [(X)] X /diĝir\\-re-e-ne-ke₄\n{d}nam-tar lu₂ nam /tar{?}\\-[...]-ke₄\nsipad ur-{d}namma-ke₄ e₂-gal-a-ni ĝiš im-mi-tag-ge",
+     "orig_lines": [
+      "38",
+      "39",
+      "40",
+      "41"
+     ],
+     "en": "To Namtar, who decrees all (?) the fates, in his palace, the shepherd Ur-Namma offered perfectly wrought jewellery, a golden ring cast (?) as a …… barge, pure cornelian stone …… of the gods."
+    },
+    {
+     "ref": "42–45",
+     "orig": "dub-šen šu za-gin₃ niĝ₂-nam iri₁₁-gal-la\n{ĝiš}kirid za-gin₃ šu tag-ga {ĝiš}ga-rig₂ 7{?} nam-munus-a\n{d}ḫuš-bi-sag₉ /dam\\ {d}nam-tar-ra-ke₄\nsipad ur-{d}namma-/ke₄\\ /e₂-gal\\-[a-ni ĝiš im]-/mi\\-in-tag-ge",
+     "orig_lines": [
+      "42",
+      "43",
+      "44",
+      "45"
+     ],
+     "en": "To Ḫušbisag, the wife of Namtar, in her palace, the shepherd Ur-Namma offered a chest with a lapis-lazuli handle, containing (?) everything that is essential in the underworld, a hair clasp adorned with lapis-lazuli, and seven (?) combs of womanly fashion."
+    },
+    {
+     "ref": "46–50",
+     "orig": "[...] X /gun₃{?}\\-a\n[...] /anše\\-nitaḫ{?} gu₂ nun{?} dug₄-dug₄\n[...]-da-ab-us₂-sa\n[...] [{d}]nin-ĝiš-zid-da-ra\n[sipad ur-{d}namma-ke₄] /e₂\\-gal-a-ni ĝiš im-mi-in-tag-ge",
+     "orig_lines": [
+      "46",
+      "47",
+      "48",
+      "49",
+      "50"
+     ],
+     "en": "To …… Ninĝišzida, in his palace, the shepherd Ur-Namma offered a …… sparkling with ……, ……. donkeys that bray loudly (?), followed by ……."
+    },
+    {
+     "ref": "51–56",
+     "orig": "[...] /RA\\ niĝ₂ nam-dub-sar{?}-kam\n[...] {ĝiš}gag gi-nindan KAD{?}-na\n[...] [nin-{d}a]-/zi{?}-mu₂{?}\\-a nin₉ lugal-la-ra\n[...] /dumu{?}\\ a-ra-li-/ta\\\n[{d}]/ĝeštin\\-an-na nin₉ lugal-la-/ra{?}\\\n/sipad\\ ur-{d}namma-ke₄ e₂-gal-la-a-ni ĝiš im-/mi\\-tag",
+     "orig_lines": [
+      "51",
+      "52",
+      "53",
+      "54",
+      "55",
+      "56"
+     ],
+     "en": "To …… Ninazimua, …… denizen of Arali, and to Ĝeštin-ana, the king's sister, in her palace, the shepherd Ur-Namma offered a ……, the hallmark of the scribe, ……, a peg and the measuring rod ……."
+    },
+    {
+     "ref": "57–60",
+     "orig": "du-di-da kug-sig₁₇ kug-babbar /saĝ\\-bi alim-ma\n/{na₄}\\kišib za-gin₃ zag-bi kug-sig₁₇ /u₃ ba-da-ra\\ kug-me-a\n[{d}]/dim₃-pi\\-me-kug a₂ zid-da /a₂ gab₂-bu gub\\-bu-na mu-un-/na-an\\-[X]-X-(X)\n[sipad] /ur\\-{d}/namma-ke₄\\ /e₂\\-gal-/la-a-ni\\ [ĝiš im-mi-in-tag-ge]",
+     "orig_lines": [
+      "57",
+      "58",
+      "59",
+      "60"
+     ],
+     "en": "To Dimpimekug, who stands at the right and the left (?), the shepherd Ur-Namma …… and offered in her (?) palace a golden and silver toggle-pin with a bison's head, and a lapis-lazuli seal with a golden edge and a pin of refined silver."
+    },
+    {
+     "ref": "61–63",
+     "orig": "[gud sig₇] maš₂ du-du udu niga im-ma-ab-tuku-a\n[...] /NA\\ ensi₂ gal kur-ra-ke₄ mu-un-na-da-ab-kur₉\n[sipad] /ur\\-{d}namma-ke₄ e₂-gal-a-ni(sourše: IN) ĝiš im-mi-in-tag-ge",
+     "orig_lines": [
+      "61",
+      "62",
+      "63"
+     ],
+     "en": "To ……, the great ensi of the nether world he brought the magnificent bulls, faultless kids, and fattened sheep that he had; in his palace the shepherd Ur-Namma offered them."
+    },
+    {
+     "ref": "64–72",
+     "orig": "[...] gal iri₁₁-/gal{?}-la{?}\\-ke₄-e-ne\n[{d}a]-nun-/na\\ ninda šu tag-ga-ba\n[ur]-{d}namma barag /gal\\ kur-ra-ke₄ X /im\\-mi-in-tuš-na\n[kur]-/ra{?}\\ ki-tuš mu-un-na-ĝa₂-ĝa₂\n/inim\\ dug₄-ga {d}ereš-ki-gal-la-ke₄\nlu₂ {ĝiš}tukul-la in-na ba-/šub\\-e\nlu₂ nam-tag-ga in-na ba-mud-e\n/šeš\\ ki aĝ₂-a-ni {d}gilgameš₃-ra\n/e-ne\\-ne di kur-ra kud-de₃ ka-aš-bi IGI bar-re",
+     "orig_lines": [
+      "64",
+      "65",
+      "66",
+      "67",
+      "68",
+      "69",
+      "70",
+      "71",
+      "72"
+     ],
+     "en": "After the offerings were presented to the great …… of the underworld, the Anuna, they (?) seated Ur-Namma on a great dais of the nether world and set up a dwelling place for him in the nether world. At the command of Ereškigala, with (?) Gilgameš, his beloved brother, he will pass the judgments of the nether world and render the …… decisions concerning (?) all the men who fell by weapons and all the men who …… guilty."
+    },
+    {
+     "ref": "73–88",
+     "orig": "ud 5-am₃ ud 10-/am₃\\ ba-zal-a-ta\nlugal-e i-si-iš /ki\\-en-gi-ra si gu₇-mu-un-na-/dug₄\\\n/ur\\-{d}namma i-si-iš ki-en-gi-ra si gu₇-mu-un-/na-dug₄\\\n/bad₃\\ urim₂{ki}-ma nu-mu-un-til-le-na\n/e₂\\-gal /gibil\\ na-mu-un-du₃-a šag₄-bi nu-ḫul₂-/la{?}\\-[X (X)]\n/sipad-de₃{?}\\ e₂-a-/ni\\ šu-dul₃ li-bi-ra-a-[X (X)]\ndam /ur₂{?}\\-ra-ni la-la-bi /nu-gi₄\\-a-[(X X)]\ndumu-ni dub₃-ba-na li-bi₂-in-pešₓ(ŠA₃)-pešₓ(ŠA₃)-/na\\\nnin₉ tur X tur im-buluĝ₃-ĝe₂₆-ne ḫi-li-bi nu-mu-un-til-le-/na\\\nsipad /zid\\ i-lu niĝ₂-me-ĝar ni₂-ta-a-ni mi-ni-ib-be₂\n/ĝe₂₆-e{?}\\ im-ma-zu-a ni₂ im-ma-an-zu-a\ndiĝir-/re\\-e-ne mu-un-na-an-dim₂-me-eš ki-ur₃ la-ba-ĝa₂-ĝa₂\n{d}a-nun-na-ke₄-ne ḫe₂-ĝal₂ pa e₃ ak-NE\n{ĝiš}gu-za za-gin₃ niĝ₂ ba-ra-ga-aš gi₁₆-sa /mu{?}\\-(X)-/ni-ib₂\\-gen₆-na\nX [X]-/en\\ ĝiškim sag₉-ga-ĝu₁₀ kur an-/gin₇{?}\\ X DU\n[...] X [...] X X [...] X [...]-/ib{?}\\-TI",
+     "orig_lines": [
+      "73",
+      "74",
+      "75",
+      "76",
+      "77",
+      "78",
+      "79",
+      "80",
+      "81",
+      "82",
+      "83",
+      "84",
+      "85",
+      "86",
+      "87",
+      "88"
+     ],
+     "en": "After five days, 10 days had passed, lamenting for Sumer overwhelmed my king, lamenting for Sumer overwhelmed Ur-Namma. As he could not complete the wall of Urim; as he could no longer enjoy the new palace he had built; as he, the shepherd, could no longer protect (?) his household; as he could no longer bring pleasure to his wife with his embrace; as he could not bring up his sons on his knees; as he would never see in their prime the beauty of their little sisters, who are yet to grow up, the trustworthy shepherd uttered a heart-rending lament for himself: \"I, who have experienced, who have experienced fear, …… for the great gods, I have set up chapels for them. I have created evident abundance for the Anuna gods. I have …… treasures to their …… shining thrones. …… a favourable portent for me, was …… as the nether world or the heavens ……. 1 line fragmentary approx. 7 lines missing\""
+    },
+    {
+     "ref": "1–11",
+     "orig": "[...] X (X) BA en-nu-uĝ₃ lu₂ [...]\n[...] mu-un-DI me-a lu₂-bi nu-X (X) [...]\n[...] a-da-/ab\\ gi-gid₂{?} za₃-za₃-mi₂ er₂ ba-/ni\\-X\n[ĝiš-gu₃]-/di\\ e₂ X X /NE{?}\\ zag e₂-ĝar₈ /ba{?}\\-ni{?}-us₂\n[...] X [... ḫi]-/li{?}-bi\\ nu-mu-un-til-le-na\n[...] /im\\-mi-in-tuš-na\n[...] X X [...] nu-mu-un-til-le-na\n[...]-/in\\-šub-bu-na\n[...] X KU\nki-sikil {d}inana nin me₃-a X [X]-/a{?}\\-ba si mu-da-/ab\\-[...]\n{d}en-lil₂-le ḫur-saĝ gal-gal kiĝ₂-gi₄-/a{?}\\ bi₂-/gi\\",
+     "orig_lines": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10",
+      "11"
+     ],
+     "en": "\"…… guard ……. …… silence ……. …… adab, flute and zamzam songs …… laments. …… have been propped against the wall. Because I have been made to sit on …… whose beauty was endless; because I have been made to fall in …… was endless, 1 line fragmentary Maiden Inana, the warlike lady, ……. Enlil had sent her as a messenger to all the great mountains.\""
+    },
+    {
+     "ref": "12–20",
+     "orig": "ki-bi-ta igi-ni ĝar-ra-ni\nsipad zid e₂-an-na mi-ni-ib₂-e₃ igi nu-mu-ni-/du\\-[(X)]\nsaĝ-ki ḫuš {d}en-/lil₂\\ ni₂ igi dub₂-dub₂-be₂\nan lugal diĝir-re-e-ne in kur₂ mu-un-ak-e\nan lugal dug₄-ga-a-ni dug₄-ga-a-ni nu-/kur₂\\-X\nur-{d}namma DA{?} MU NE ib₂-la₂ /UD\\ [...]\nud e₃-a diĝir-re-e-ne [X (X)] /GA{?}\\ nu-ĝal₂-/la\\\nĝi₆-par₃ kug /eš₃ e₂{?}-an-na\\ [...]-da-an-BU\nX-li-a /e₂{?}\\ [...] /la\\-ba-ni-in-kur₉-re",
+     "orig_lines": [
+      "12",
+      "13",
+      "14",
+      "15",
+      "16",
+      "17",
+      "18",
+      "19",
+      "20"
+     ],
+     "en": "When she had turned her gaze away from there, the trustworthy shepherd had left the E-ana, and she (?) could not see him any more. She …… at Enlil's fierce brow. Antagonistically (?) she insulted An, the king of the gods: \"When An, the king speaks, his words cannot be changed! …… Ur-Namma ……. There will be no …… at the gods' place of sunrise. …… holy ĝipar, shrine E-ana ……. …… not enter …….\""
+    }
+   ]
+  }
+ ]
+}

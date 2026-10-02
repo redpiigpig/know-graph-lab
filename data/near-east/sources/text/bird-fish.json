@@ -1,0 +1,360 @@
+{
+ "slug": "bird-fish",
+ "source": "ETCSL",
+ "siglum": "ETCSL 5.3.5",
+ "source_url": "https://etcsl.orinst.ox.ac.uk/cgi-bin/etcsl.cgi?text=t.5.3.5",
+ "license": "ETCSL（Oxford）轉寫與英譯，非商業學術使用",
+ "compositions": [
+  {
+   "num": "5.3.5",
+   "title_en": "The debate between Bird and Fish",
+   "segments": [
+    {
+     "ref": "1–12",
+     "orig": "[ud ul re]-/ta\\ nam dug₃ tar-ra-a-ba (Šited in OB šatalogue from Nibru, at Pḫiladelpḫia, 0.2.01, line 27; OB šatalogue in tḫe Louvre, 0.2.02, line 20; OB šatalogue from Urim (U2), 0.2.04, line 19)\n[an {d}en-lil₂] an ki ĝiš-ḫur-bi mu-un-ĝar-re-eš-a-ba\n[...] en ĝeštug₂ daĝal-la-ke₄\n[{d}en-ki lugal nam]-/tar\\-ra 3-kam-ma-bi na-nam\n[X X] NI [X] mu-un-ur₄-ur₄ dur₂ ki ba-an-ĝar\na /zi\\-[šag₄]-ĝal₂ numun zid u₃-tud šu-še₃ im-ma-ab-la₂\n{id₂}/idigna\\ {id₂}buranun-na zag-ga ba-an-la₂ a kur-kur-ra mi-ni-in-tum₃-uš\nid₂ tur-/tur\\-ra šu luḫ ba-an-ak sur₃-sur₃ mi-ni-ĝar-ĝar\n[X X] [{d}]/en\\-ki-ke₄ tur₃ amaš šu bi₂-in-daĝal sipad unud(UNU₃) bi₂-in-tuku\n/iri\\{ki} a₂-dam ki-a bi₂-in-ĝar-ĝar saĝ gig₂ mi-ni-in-lu\nlugal-e nam-sipad-bi-še₃ mu-un-tuku nam-nun-bi-še₃ mu-un-il₂\nlugal ud-dam kur-kur-ra mu-un-e₃",
+     "orig_lines": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10",
+      "11",
+      "12"
+     ],
+     "en": "In those ancient days, when the good destinies had been decreed, and after An and Enlil had set up the divine rules of heaven and earth, then the third of them, ……, the lord of broad wisdom, Enki, the master of destinies, gathered together …… and founded dwelling places; he took in his hand waters to encourage and create good seed; he laid out side by side the Tigris and the Euphrates, and caused them to bring water from the mountains; he scoured out the smaller streams, and positioned the other watercourses. …… Enki made spacious sheepfolds and cattle-pens, and provided shepherds and herdsmen; he founded cities and settlements throughout the earth, and made the black-headed multiply. He provided them with a king as shepherd, elevating him to sovereignty over them; the king rose as the daylight over the foreign countries."
+    },
+    {
+     "ref": "13–21",
+     "orig": "[X X] [{d}]/en\\-ki-ke₄ ambar-ambar-ra zu₂ bi₂-in-keše₂ gi sumun gi ḫenbur₂ bi₂-in-mu₂\n[X] X pu₂ umaḫ{maḫ} ku₆ mušen mi-ni-lu-ug\n[X X] /ki\\ niĝ₂ zi pa-an-pa-ne-ne gu₇ naĝ-bi-še₃ ba-an-šum₂\n[X X] ḫe₂-ĝal₂-la diĝir-re-e-ne-ke₄ zag-bi-a ši-in-gub\n[{d}nu]-/dim₂\\-mud nun maḫ en ĝeštug₂ daĝal-la-ke₄\n[...]-bi-ta u₃-mu-un-dim₂-dim₂\n/ku₆ mušen-bi\\ ĝiš-gi ambar-ra im-mi-in-si\nki-gub-bi in-ne-en-pad₃\nĝiš-ḫur-bi igi-bi im-mi-in-zu",
+     "orig_lines": [
+      "13",
+      "14",
+      "15",
+      "16",
+      "17",
+      "18",
+      "19",
+      "20",
+      "21"
+     ],
+     "en": "…… Enki knit together the marshlands, making young and old reeds grow there; he made birds and fish live in the pools and lagoons ……; he gave …… all kinds of living creatures as their sustenance, …… placed them in charge of this abundance of the gods. When Nudimmud, august prince, the lord of broad wisdom, had fashioned ……, he filled the reedbeds and marshes with fish and birds, indicated to them their positions and instructed them in their divine rules."
+    },
+    {
+     "ref": "22–28",
+     "orig": "ud-bi-a ku₆-e /ambar-ra\\ nunuz ki ba-ni-in-tag\nmušen-e ka ĝiš-gi-a-/ka\\ gud₃ im-ma-ni-ib-us₂\nmušen-e ku₆ engur-ra-ke₄ [...]-bi-ta mi-ni-ib-ḫu-luḫ\nku₆-e im-ma-gub gu₃ im-ma-de₂-e\nni₂ i₃-buluĝ₅ ga-ba-al mu-ni-in-du₃\ndu₁₄-še₃ sila ba-/zig₃\\ u₃-na-bi ba-an-gub\nku₆-e mušen-ra bir-ra-bi inim mu-na-ni-ib₂-be₂",
+     "orig_lines": [
+      "22",
+      "23",
+      "24",
+      "25",
+      "26",
+      "27",
+      "28"
+     ],
+     "en": "Then Fish laid its eggs in the lagoons; Bird built its nest in a gap in the reedbeds. But Bird frightened the Fish of the lagoons in its ……. Fish took up a stand and cried out. Grandiosely it initiated hostilities. It roused the street by quarrelling in an overbearing manner. Fish addressed Bird murderously:"
+    },
+    {
+     "ref": "29–40",
+     "orig": "mušen du₈-du₈ KA [...] su-lum mar nu-ĝal₂\nze₂-za engur-ra za-pa-/aĝ₂\\ [(...)] nundum bur₂-re buluĝ₅-ĝa₂\nmaḫ-bi gu₇-gu₇ ba-zal šag₄-za ḫul-bi sur-sur\nedin gub-ba-za zu₂ mu-e-da-ra-aḫ mi-ni-ib-sar-sar-re-ne\nab-sin₂-na dumu engar-ra-ke₄-ne gu₂ sa /nam\\-mi-ri-ak\nnu-{ĝiš}kiri₆-ke₄ pu₂-{ĝiš}kiri₆-pu₂-{ĝiš}kiri₆-a sa na-mu-e-ri-gub\n{kuš}da-lu-uš₂-ta a₂-ni nu-ĝa₂-ĝa₂ dub₃ nu-mu-e-ši-ib-gam-e\nmu₂-sar-ra niĝ₂ mu-ni-ib-ḫul-ḫul su nu-mu-un-da-dug₃-ge\na-šag₄ ki duru₅ ĝal₂-ĝal₂-la-ba ĝiri₃-zu nu-zil₂-zil₂-i\nmušen teš₂ nu-zu kisal-e še₁₀ sud-sud\nkisal-luḫ tur e₂-a sa la₂-e eš₂ ḫub₂{!} mi-ni-in-sar-re\nza-pa-aĝ₂-zu-ta {/e₂-e\\} {(1 ms. ḫas instead:) e₂-gal} im-suḫ₃-suḫ₃ gu₃ mu-e{!}-ši-ib-šub-be₂",
+     "orig_lines": [
+      "29",
+      "30",
+      "31",
+      "32",
+      "33",
+      "34",
+      "35",
+      "36",
+      "37",
+      "38",
+      "39",
+      "40"
+     ],
+     "en": "\"…… Bird, …… there is no insult ……! Croaking, …… noise in the marshes …… squawking! Forever gobbling away greedily, while your heart is dripping with evil! Standing on the plain, you can keep pecking away until they chase you off! The farmer's sons lay lines and nets for you in the furrows. The gardener sets up nets against you in gardens and orchards. He cannot rest his arm from firing his sling; he cannot sit down because of you. You cause damage in the vegetable plots; you are a nuisance. In the damp parts of fields, there are your unpleasing footprints. Bird, you are shameless: you fill the courtyard with your droppings. The courtyard sweeper-boy who cleans the house chases after you with ropes. By your noise the {house} {(1 ms. has instead:) palace} is disturbed; your din drives people away.\""
+    },
+    {
+     "ref": "41–53",
+     "orig": "e₂ gurušta{!}-ka mu-ni-ib-ku₄-ku₄-ne\ngud udu-gin₇ mi-ni-ib-mu₇-e-ne\na sed₄ {dug}a-sig-ga ma-ra-de₂-e-ne\nza-e sa₂-dug₄-še₃ mu-e-da-an-gid₂-i-ne\nmušen-du₃-e a₂ la₂-ta mu-ni-ib-tum₂-tum₂-mu\nšu-KU₆-de₃ e₂-gal-am₃ mu-ni-ib-ku₄-ku₄\npa-zu igi-zu i₃-im-keše₂-keše₂-re-ne\ngu₃ de₂-de₂-zu ki-še-er nu-tuku dal-dal-zu a-na-am₃\ngu₃ ḫul-zu-ta ĝi₆ ḫu-luḫ-en u₃ dug₃ nu-mu-un-ku-ku-ne\nmušen ambar-ta e₃-ba-ra za-pa-aĝ₂-zu ugu-ĝu₁₀-ta\npu₂-saĝ saḫar-dub-ba-ka e₃-ni-ib ur₅-ra-am₃ me-te-zu-um",
+     "orig_lines": [
+      "41",
+      "42",
+      "43",
+      "44",
+      "45",
+      "45A",
+      "46",
+      "47",
+      "48",
+      "49",
+      "50"
+     ],
+     "en": "\"They bring you into the fattening shed. They let you moo like cattle, bleat like sheep. They pour out cool water in jugs for you. They drag you away for the daily sacrifice. The fowler brings you with bound wings. {(1 ms. adds:) The fisherman brings you into the palace.} They tie up your wings and beak. Your squawking is to no profit; what are you flapping about? With your ugly voice you frighten the night; no one can sleep soundly. Bird, get out of the marshes! Get this noise of yours off my back! Go out of here into a hole on the rubbish heap: that suits you!\""
+    },
+    {
+     "ref": "51–56",
+     "orig": "ud-bi-a ku₆-e mušen-ra in-še₃ mu-ni-in-dub₂\nmušen bar gun₃-gun₃ igi gun₃-gun₃ sag₉-ga-ni-še₃ mu-un-zu\nin ku₆-e a-na mu-ni-ib-dub₂-ba šag₄-še₃ nu-mu-un-gid₂-de₃\ni-gi₄-in-zu emeda(UM.ME){da} u₅-a-aš mu-ni-in-dug₄\ninim-še₃ gu₂-ni nu-mu-na-ab-šum₂-mu gu₃ ḫul mu-un-ta-an-e₃\nud-bi-a mušen-e ku₆-ra mu-na-ni-ib-gi₄-gi₄\nku₆-ra /im\\-[...] DU NE mu-un-na-dub₂-e\nX X X X [...] GA NE gu₃ mu-na-ni-ib-be₂",
+     "orig_lines": [
+      "51",
+      "52",
+      "53",
+      "54",
+      "55",
+      "56",
+      "A",
+      "B"
+     ],
+     "en": "Thus Fish insulted Bird on that day. But Bird, with multicoloured plumage and multicoloured face, was convinced of its own beauty, and did not take to heart the insults Fish had cast at it. As if it was a nursemaid singing a lullaby, it paid no attention to the speech, despite the ugly words that were being uttered. {Then Bird answered Fish:} {(1 ms. has instead:) It …… insulted Fish; …… said ……:}"
+    },
+    {
+     "ref": "57–69",
+     "orig": "a-gin₇ šag₄-zu šag₄ gur₄-ra im-de₆ ni₂-zu mu-e-sun₅-sun₅\nka-zu du₆-dam ka im-ta-ab-niĝin₂ eĝer-zu-še₃ igi nu-bar-re\ntugul kud a₂-šu-ĝiri₃ kud ĝiri₃-zu gu₂ bal-zu-še₃\nir nu-dug₃-ga a-ḫa-an ši-du₃-du₃ ugu-za giri₁₇ ur₅-ur₅\ngu₂-a-zu si sa₂-bi {gi}buniĝₓ(A.SUG) nu-ub-dab₅-be₂\nlu₂ laḫ₄-a-zu šu-ni su-ni-še₃ nu-ub-tag-ge\nengur maḫ sug daĝal-la-ba ĝe₂₆-e gal₅-la₂-zu-me-en\nu₂ dug₃-ga-bi nu-mu-e-ši-ib-gu₇-en gu₃-ĝu₁₀ mu-un-te-te\nid₂-da nir-ĝal₂-la-bi nu-mu-un-DU.DU u₁₈-lu-ĝu₁₀ mu-e-dul-dul\nigi-ĝu₁₀-ta ĝiš-gi-ĝiš-/gi\\-[a] mu-un-gir₅-gir₅-re-de₃-en\ndi₄-di₄-la₂-zu-ta sa₂-dug₄-še₃ ma-a-/an\\-ĝar šag₄-gal-ĝu₁₀-še₃ mu-e-šum₂\ngal-gal-zu ki ĝišbun-na-ka X /su-bur₂\\-ĝu₁₀ na-nam\npu₂{?} ab{?} /zu\\ X X [... mu]-e-da-BAD-en",
+     "orig_lines": [
+      "57",
+      "58",
+      "59",
+      "60",
+      "61",
+      "62",
+      "63",
+      "64",
+      "65",
+      "66",
+      "67",
+      "68",
+      "69"
+     ],
+     "en": "\"How has your heart become so arrogant, while you yourself are so lowly? Your mouth is flabby (?), but although your mouth goes all the way round, you cannot see behind you. You are bereft of hips, as also of arms, hands and feet -- try bending your neck to your feet! Your smell is awful; you make people throw up, they sneer at you! No trough would hold the kind of prepared food you eat. He who has carried you dare not let his hand touch his skin! In the great marshes and the wide lagoons, I am your persecuting demon. You cannot eat the sweet plants there, as my voice harasses you. You cannot travel with confidence in the river, as my storm-cloud covers you. As you slip through the reedbeds you are always beneath my eyes. Some of your little ones are destined to be my daily offering; you give them to me to allay my hunger. Some of your big ones are just as certainly destined for my banqueting hall …… in the mud. 1 line unclear\""
+    },
+    {
+     "ref": "70–79",
+     "orig": "ĝe₂₆-e mušen sag₉-ga gal-zu-me-en\nkiĝ₂ sag₉-ga u-gun₃ tag-ga-ĝu₁₀-še₃\nlal₃-ḫar kug-zu kiĝ₂ li-bi₂-ib-sig₁₀-ga\ne₂-gal lugal-la-ka DU.DU ḫe₂-du₇-me-en\nkisal-a mu₇-mu₇-ĝu₁₀ me-te-aš im-mi-in-ĝar\nakkil ĝar-ra-ĝa₂ niĝ₂ ku₇-ku₇-da-bi{?}\nsu-bar šul-gi dumu {d}en-lil₂-la₂-ra dug₃-ge-eš im-mi-ĝal₂\ngurun niĝ₂-du₈-ḫum {ĝiš}kiri₆-{ĝiš}kiri₆ pu₂-{ĝiš}kiri₆-a sa₂-dug₄ gal-gal-ĝu₁₀-še₃\nba-ba zid₂ munu₄ gu₂-nida imĝaĝa niĝ₂ ka dug₃-ge-ĝa₂\nur₅-ta nam-maḫ-ĝu₁₀ a-gin₇ nu-e-zu gu₂ ki-še₃ la₂-a-ni",
+     "orig_lines": [
+      "70",
+      "71",
+      "72",
+      "73",
+      "74",
+      "75",
+      "76",
+      "77",
+      "78",
+      "79"
+     ],
+     "en": "\"But I am the beautiful and clever Bird! Fine artistry went into my adornment. But no skill has been expended on your holy shaping! Strutting about in the royal palace is my glory; my warbling is considered a decoration in the courtyard. The sound I produce, in all its sweetness, is a delight for the person of Šulgi, son of Enlil. Fruits and produce of gardens and orchards are the enormous daily offerings due to me. Groats, flour, malt, hulled barley and emmer (?) are sweet things to my mouth. How do you not recognise my superiority from this? Bow your neck to the ground!\""
+    },
+    {
+     "ref": "80–85",
+     "orig": "ud-bi-a mušen-e ku₆-ra in-še₃ mu-ni-in-dub₂\nku₆ lipiš-tuku a₂ nam-ur-saĝ-ĝa₂ gur₄-ra nir-ĝal₂\nmuru₉ dugud-gin₇ ki nam-mi-in-us₂ a-da-min₃-e ba-an-gub\nin mušen-e a-na-am₃ mu-ni-in-dub₂-ba šag₄-še₃ nu-mu-un-na-an-gid₂\ngu₂ ki-še₃ <la>-ba-an-da-an-ĝar inim bur₂-bi im-me\n2-kam-ma-še₃ ku₆-e mušen-ra mu-na-ni-ib-gi₄-gi₄",
+     "orig_lines": [
+      "80",
+      "81",
+      "82",
+      "83",
+      "84",
+      "85"
+     ],
+     "en": "Thus Bird insulted Fish on that occasion. Fish became angry, and, trusting in its heroic strength and solidness, swept across the bottom like a heavy rain cloud. It took up the quarrel. It did not take to heart the insults that Bird had cast at it. It could not bring itself to submit, but spoke unrestrainedly. Again Fish replied to Bird:"
+    },
+    {
+     "ref": "86–94",
+     "orig": "ka ur₂ gu₂-guru₅ ĝiri₃ su-ul-su-ul ka ḫa-la eme sal-sal\nnam nu-zu-a-ta gu₃ e-da-ra-aḫ ni₂-zu ad li-bi₂-gi₄\nmaḫ gu₇-gu₇ saĝ šu zig₃ bi₂-ib₂-dug₄-ga kisal-e še₁₀ si-si\nkisal-luḫ tur e₂-e sa la₂-e eš₂ mu-ri-ib₂-sar-re\nmuḫaldim {lu₂}lunga₃-e i₃-du₈ e₂-a til₃-la zi mu-e-da-an-ni-re-eš\nmušen nam-maḫ-ĝu₁₀ eĝer-bi nu-e-zukum-zukum bar-ĝa₂ en₃ li-bi₂-in-tar\nsig₉-ga kalag-ga-ĝa₂ nu-mu-e-de₃-zu inim u₃-bu-bu-ul i₃-bal\nniĝ₂ ak-ĝa₂ ki-bi u₃-mu-e-kiĝ₂ dirig-še₃ ni₂ sun₅-ni-ib\ninim-zu nam-tag dugud im-ma-ab-tum₃ ni₂-zu ad li-bi₂-gi₄",
+     "orig_lines": [
+      "86",
+      "87",
+      "88",
+      "89",
+      "90",
+      "91",
+      "92",
+      "93",
+      "94"
+     ],
+     "en": "\"Chopped-off beak and legs, deformed feet, cleft mouth, thin tongue! You clatter away in your ignorance, with never any reflection! Gluttonous, malformed, filling the courtyard with droppings! The little sweeper-boy sets nets in the house and chases you with ropes. The baker, the brewer, the porter, all those who live in the house are annoyed with you. Bird, you have not examined the question of my greatness; you have not taken due account of my nature. You could not understand my weakness and my strength; yet you spoke inflammatory words. Once you have really looked into my achievements, you will be greatly humbled. Your speech contains grave errors; you have not given it due consideration.\""
+    },
+    {
+     "ref": "95–101",
+     "orig": "ĝe₂₆-e ku₆-me-en ḫe₂-ĝal₂ eš₃ sikil-la teš₂-ba ĝar-a-me-en\n{nidba gal-gal e₂-kur za-gin₃-še₃} {(1 ms. ḫas instead:) du₈ maḫ nidba gal-gal diĝir-re-e-ne-ka} saĝ il₂-la du-me-en\n{d}ezina₂-gin₇ šag₄-ĝar kalam-ma-še₃ ba-ĝal₂-le-en a₂-taḫ-ni ĝe₂₆-e-me-en\nuĝ₃-e ĝeštug₂-ga ma-an-du₃-du₃ igi-bi mu-ši-ĝal₂\nburu₁₄ ezen-gin₇ mu-da-ḫul₂-le-eš en₃ tar-ĝu₁₀ i₃-ĝal₂\nmušen niĝ₂ gal-gal a-na mu-e-dim₂-ma-zu gur₄-ra-ba ga-ri-ib-zu\nsun₇-na ka lul-la bal-e-zu šu-za ga-ba-ni-ib-si",
+     "orig_lines": [
+      "95",
+      "96",
+      "97",
+      "98",
+      "99",
+      "100",
+      "101"
+     ],
+     "en": "\"I am Fish. I am responsibly charged with providing abundance for the pure shrines. {To the great offerings at the lustrous E-kur} {(1 ms. has instead:) To the august platform of the great offerings of the gods}, I go proudly with head raised high! Just like Ezina I am here to satisfy the hunger of the Land. I am her helper. Therefore people pay attention to me, and they keep their eyes upon me. As at the harvest festival, they rejoice over me and take care of me. Bird, whatever great deeds you may have achieved, I will teach you their pretentiousness. I shall hand back to you in your turn your haughtiness and mendacious speech.\""
+    },
+    {
+     "ref": "102–115",
+     "orig": "ud-bi-a ku₆-e mušen-ra {sa₂ im-sig₁₀-sig₁₀-ge} {(1 ms. ḫas instead:) ni₂ im-sig₁₀-sig₁₀-ge (u₂-₆₃;a-mar)}\nsig₉-ga lul-ba (ša-qum-mi-iš sa-ri-<iš>) a₂-ba mu-un-DU.DU\nud mušen gud₃ ba-zig₃-ga-gin₇ amar-bi-še₃ niĝ₂-gu₇-bi tum₃-de₃\nku₆-e ki sig₉-ga (aš-ra-am ša-qum-mi-iš) a₂-ba mu-un-kiĝ₂-kiĝ₂\ngud₃ ĝar-ra u₂ sig₁₀-sig₁₀-ga-ni eš₃ lil₂-la₂ mu-un-sag₃\ne₂ du₃-du₃-a-ni mu-un-gul-gul erim₃-ma-ni mu-un-bu\nnunuz ĝar-ĝar-ra-ni bi₂-in-gaz-gaz ab-ba im-mi-in-šu₂\nku₆-e mušen-ra mu-ni-in-sig₁₀-sig₁₀ (i-še-er-ma) a-e ba-da-an-kar\nud-bi-a mušen igi piriĝ-ĝa₂ umbin ḫu-ri₂-in{mušen}-na\ngud₃-bi-še₃ a₂ dub₂ i₃-ak-e dal-le-bi saĝ im-gi₄ (a-na qi₂-ni u₂-/ur₂-ri₂\\ šar-ḫi-/iš\\ ip-pa-/ra₂\\-aš)\n{tum₉}mar-uru₅ an-šag₄-ga-še₃ bu₄-bu₄-gin₇ (i-ša-a) an-na mu-un-ni₁₀-ni₁₀ (u₂-na-ra-ṭiš{?})\nmušen-e gud₃-bi-še₃ igi tab-ba a₂-ur₂ ba-bur₂-bur₂ (uš-ta-pa-ri-ir)\ngud₃ ĝar-ra u₂ sig₁₀-sig₁₀-ga-ni edin daĝal i₃-zukum-e\nka-bi nu-gig-gin₇ an-šag₄-ga gu₃ mu-un-dub₂-dub₂-be₂ (i-ša-gu-um)",
+     "orig_lines": [
+      "102",
+      "103",
+      "104",
+      "105",
+      "106",
+      "107",
+      "108",
+      "109",
+      "110",
+      "111",
+      "112",
+      "113",
+      "114",
+      "115"
+     ],
+     "en": "Thereupon Fish conceived a plot against Bird. Silently, furtively, it slithered alongside. When Bird rose up from her nest to fetch food for her young, Fish searched for the most discreet of silent places. It turned her well-built nest of brushwood into a haunted house. It destroyed her well-built house, and tore down her storeroom. It smashed the eggs she had laid and threw them into the sea. Thus Fish struck at Bird, and then fled into the waters. Then Bird came, lion-faced and with an eagle's talons, flapping its wings towards its nest. It stopped in mid-flight. Like a hurricane whirling in the midst of heaven, it circled in the sky. Bird, looking about for its nest, spread wide its limbs. It trampled over the broad plain after its well-built nest of brushwood. Its voice shrieked into the interior of heaven like the Mistress's."
+    },
+    {
+     "ref": "116–121",
+     "orig": "mušen-e ku₆-ra mu-un-ni₁₀-ni₁₀ ambar i₃-kiĝ₂-kiĝ₂\nmušen-e ku₆-ra engur-ra igi im-ma-an-du₈ ĝeštug₂ ba-ši-in-gub\ni-gi₄-in-zu a-e ba-da-kar umbin mu-ni-in-la₂\nagargara tur-tur-bi teš₂-bi bi₂-in-ĝar-ĝar zar-re-eš mu-un-du₈-du₈\nmušen-e šu ĝar-bi im-mi-in-gi₄ šag₄-bi /mu\\-[...]\n2-kam-ma-še₃ mušen-e ku₆-ra mu-un-na-ni-/ib\\-[gi₄-gi₄]",
+     "orig_lines": [
+      "116",
+      "117",
+      "118",
+      "119",
+      "120",
+      "121"
+     ],
+     "en": "Bird sought for Fish, searching the marshes. Bird peered into the deep water for Fish, watching closely. Extending its claws, it just snatched from the water Fish's tiny fish-spawn, gathering them all together and piling them up in a heap. Thus Bird took its revenge and …… its heart. Again Bird replied to Fish:"
+    },
+    {
+     "ref": "122–124",
+     "orig": "galam-ma ḫu-ru u₂ ḫub₂ ĝalga suḫ₃ ku₆ nam-ta-e₃-[X]\nkar [(X)] ni₁₀-ni₁₀ ka-ga₁₄-bi nu-gu₇ šag₄-gal ud šu₂-uš-e\nšaḫ₂ is-ḫab₂ še₁₀ ni₂-bi gu₇-gu₇ saĝ šu bi₂-in-dug₄-ga",
+     "orig_lines": [
+      "122",
+      "123",
+      "124"
+     ],
+     "en": "\"You utter fool! Dolt, muddle-headed Fish, you are out of ……! The mouths of those who circle (?) the quay never get enough to eat, and their hunger lasts all day. Swine, rascal, gorging yourself upon your own excrement, you freak!\""
+    },
+    {
+     "ref": "125–136",
+     "orig": "lu₂ en-nu-uĝ₃ ĝa₂-ĝa₂ bad₃-da(sourše: ušbar) til₃-la ni₂-bi-ta sur-ra\nku₆ ĝa₂-ra izi-gin₇ mu-un-bar₇ ki šakir₃ mu-un-ĝar\nnu-zu-a-zu saĝ šu bal ba-ab-gid₂ šu uš₂-a i-ni-su₃\nšag₄ gur₄-ra ni₂-bi ak-a-ba ni₂-bi mu-un-gul-gul\nĝe₂₆-e mušen an-na dal-dal-me-en ki-a du-du-me-en\nDU.DU-ĝu₁₀-še₃ an mu sa₄-a-ba a-la mu-un-ši-ĝal₂-le-me-en\n[...] ku₆-e nun-gal-e-ne ba-šum₂-mu-uš\nnumun saĝ-[ĝa₂-me-en] /amar\\-ĝu₁₀ amar saĝ-ĝa₂-am₃\nX [...] [e₂]-/kur\\ /za-gin₃-še₃\\ X saĝ il₂-la mu-un-ĝen\n[...] KI X [...] ud ul-le₂-a-še₃\nX IN-bi /sig₉{?}\\-ga-gin₇ uĝ₃ šar₂-re im-me\n[ur₅]-ta{!} nam-maḫ-ĝu₁₀ eĝer-bi nu-zu gu₂ ki-še₃ la₂-a-ni",
+     "orig_lines": [
+      "125",
+      "126",
+      "127",
+      "128",
+      "129",
+      "130",
+      "131",
+      "132",
+      "133",
+      "134",
+      "135",
+      "136"
+     ],
+     "en": "\"You are like a watchman living on the walls (?), ……! Fish, you kindled fire against me, you planted henbane. In your stupidity you caused devastation; you have spattered your hands with blood! Your arrogant heart will destroy itself by its own deeds! But I am Bird, flying in the heavens and walking on the earth. Wherever I travel to, I am there for the joy of its …… named. ……, O Fish, …… bestowed by the Great Princes (a name for the Igigi) . I am of first-class seed, and my young are first-born young! …… went with uplifted head …… to the lustrous E-kur. …… until distant days. …… the numerous people say. How can you not recognise my pre-eminence? Bow your neck to the ground.\""
+    },
+    {
+     "ref": "137–140",
+     "orig": "2-kam-ma-še₃ mušen-e ku₆-e in-še₃ mu-ni-in-dub₂\nud-bi-a ku₆-e mušen-ra ka ba-ab-du₈ igi ḫuš um-mi-in-ši-il₂\nka /lul-la\\-ta ni₂ na-an-sukud-de₃ di-kud-me i₃-dab₅\ndi-kud /ka\\-aš bar-me {d}en-ki-ke₄ di-me ga-ba-an-na-gub",
+     "orig_lines": [
+      "137",
+      "138",
+      "139",
+      "140"
+     ],
+     "en": "Again Bird had hurled insults at Fish. Then Fish shouted at Bird, eyeing it angrily: \"Do not puff yourself up from your lying mouth! Our judge shall take this up. Let us take our case to Enki, our judge and adjudicator.\""
+    },
+    {
+     "ref": "141–147",
+     "orig": "2-na-/ne-ne\\ zag saga₁₁-be₂-eš du₁₄ ḫul mu₂-be₂-eš\ngur₄-ra nam-maḫ-bi zu-zu-u₃-de₃\n/murub₄\\ eridug{ki}-ga du₁₄ ki ba-ni-ib₂-us₂ {a-da-min₃ i₃-ak-e-ne} {(1 ms. ḫas instead:) a-da-<min₃>-na ba-gub}\n[X] NE E za-/pa\\-aĝ₂ gud-gin₇ lum-lum-e\n[...] X [...]-gin₇ kušum i₃-tag-tag-ge\n[lugal] [{d}]šul-gi dumu {d}en-lil₂-la₂-ra\n[...] /saĝ{?}\\ il₂{?} ni₂ mu{?}-te-en di-da-am₃ i₃-kiĝ₂-kiĝ₂",
+     "orig_lines": [
+      "141",
+      "142",
+      "143",
+      "144",
+      "145",
+      "146",
+      "147"
+     ],
+     "en": "And so with the two of them jostling and continuing the evil quarrel in order to establish, the one over the other, their grandness and pre-eminence, the litigation was registered within Eridug, and they {put forward their argumentation} {(1 ms. has instead:) stood there in dispute}. …… thrashing about (?) amid roaring like that of a bull, …… rushed forward like ……. They requested a verdict …… from King Šulgi, son of Enlil."
+    },
+    {
+     "ref": "148–157",
+     "orig": "[...] en dug₄-ga zid-da inim-ĝu₁₀-uš ĝeštug₂-zu\n[...] X mu-e-/re{?}\\-sig₁₀ nunuz ki ba-ni-in-tag\n[(X) X X saĝ]-e-eš mu-/un\\-rig₇ /gu₇ naĝ\\-bi-še₃ ba-an-šum₂\n[...] mu-e-ni-ĝar-ra\n[...] e₂-ĝu₁₀ ba-gul-gul\n[gud₃ u₂] /sig₁₀\\-sig₁₀-ga-ĝu₁₀ eš₃ lil₂-e bi₂-in-sag₃\n[e₂-ĝu₁₀ mu-un-gul]-gul erim₃-ma-ĝu₁₀ mu-un-bu\n[nunuz-ĝu₁₀ mu-ni]-in-gaz-gaz ab-e um-mi-ib{!}-šu₂\n[...] /dug₄\\-ga-ĝu₁₀ en₃ tar-re di-ĝu₁₀ gur{?}-a-ni\n[...] igi tab-ba ni₂ ki-še₃ ba-ab-la₂",
+     "orig_lines": [
+      "148",
+      "149",
+      "150",
+      "151",
+      "152",
+      "153",
+      "154",
+      "155",
+      "156",
+      "157"
+     ],
+     "en": "(Bird speaks:) \"You ……, lord of true speech, pay attention to my words! I had put …… and laid eggs there. …… had bestowed …… and had given as their sustenance. After …… had started ……, …… he destroyed my house. He turned my nest of brushwood into a haunted house. He destroyed my house, and tore down my storeroom. He smashed my eggs and threw them into the sea. …… examine what I have said. Return a verdict in my favour.\" …… investigating ……, she prostrated herself to the ground."
+    },
+    {
+     "ref": "158–163",
+     "orig": "[...]-/bi\\ inim mu-un-dab₅-ba-e\n[...] maḫ-am₃ šag₄-ta im-mi-ib₂-dug₄\ninim-zu inim kug-ga-am₃ niĝ₂ šag₄ dug₃-ge-dam\n/en\\-na-me-še₃ du₁₄-da mu₂-mu₂-de₃ {ba-an-dab₅-dab₅-be₂-eš} {(1 ms. ḫas instead:) ba-an-da-dab₅-be₂-de₃-en-ze₂-en}\n[...] X dab₅-ba-gin₇ dalla mu-na-ta-e₃\n[...] /ud\\ du₇-du₇-gin₇ teš₂-bi mu-un-du₇-du₇",
+     "orig_lines": [
+      "158",
+      "159",
+      "160",
+      "161",
+      "162",
+      "163"
+     ],
+     "en": "…… announced (?) the word. …… august, spoke from the heart: \"Your words are sterling words, such as delight the heart.\" (Šulgi speaks:) \"For how long are {they} {(1 ms. has instead:) you} going to persist (?) in quarrelling?\" Like …… came out supreme. Like butting ……, they jostled each other."
+    },
+    {
+     "ref": "164–167",
+     "orig": "[...] / si sa₂ ba{?}-na{?}\\-X-am₃ dug₃-ge-eš ḫa-ma-ĝa₂-ĝa₂\nĝiš-ḫur me si sa₂ ki-ur₃-me ga-ba-e-zu (du-ru-ši-ni KI [...])\n{d}en-ki lugal abzu-[ke₄] sa₂ pad₃-de₃ inim-ma gal-zu-me-en (ka-aš-du wa-tu-u₂ mu-di)\nku₆ mušen-bi-da im-ma-ni-ib₂-/gi₄\\-[gi₄]",
+     "orig_lines": [
+      "164",
+      "165",
+      "166",
+      "167"
+     ],
+     "en": "(Fish speaks:) \"……, let it be favourable to me!\" (Šulgi speaks:) \"I shall instruct you in the divine rules and just ordinances of our dwelling-place. Like (?) Enki, king of the abzu, I am successful in finding solutions, and am wise in words.\" He answered Bird and Fish:"
+    },
+    {
+     "ref": "168–177",
+     "orig": "mušen e₂-kur-ra DU.DU-bi ḫe₂-du₇ mu₇-mu₇-bi dug₃-[ga-am₃]\n{ĝiš}banšur kug {d}en-lil₂-la₂-ta mušen palil-zu X [...]\ne₂ diĝir gal-gal-e-ne-ka za-pa-aĝ₂ mu-un-na-/ĝa₂-ĝa₂\\ [...]\nza-pa-aĝ₂-bi-še₃ diĝir {d}a-nun-na im-ši-ḫul₂-ḫul₂-[le-eš]\nkiĝ₂-sig unu₂ gal diĝir-re-e-ne-ke₄ me-te-aš im-mi-[ib-ĝal₂]\ne₂-gal {lugal-la-ke₄} {(1 ms. ḫas instead:) [{d}]šul-gi-ra} mur ša₄-bi dug₃-ga [...]\n{ĝiš}banšur šul-gi dumu {d}en-lil₂-la₂-ka saĝ an-/še₃\\ [...-il₂]\nlugal zi /su₃-ud\\-[ĝal₂ ...] X X X [...]\nX /piriĝ\\-bi /PAD{?}\\ [...]-ge-eš [...]\nku₆ /nam-nun-na\\ X [...] X X",
+     "orig_lines": [
+      "168",
+      "169",
+      "170",
+      "171",
+      "172",
+      "173",
+      "174",
+      "175",
+      "176",
+      "177"
+     ],
+     "en": "\"To strut about in the E-kur is a glory for Bird, as its singing is sweet. At Enlil's holy table, Bird …… precedence over you ……! It shall utter its cries in the temple of the great gods. The Anuna gods rejoice at its voice. It is suitable for banquets in the great dining hall of the gods. It provides good cheer in {the king's} {(1 ms. has instead:) Šulgi's} palace. …… with head high, at the table of Šulgi, son of Enlil. The king …… long life. 1 line fragmentary Fish …… in splendour …….\""
+    },
+    {
+     "ref": "178–190",
+     "orig": "ud-bi-a ku₆ mušen [...] X X [X]\n[...] /dub₂{?}\\\n[...] i-ni-in-[X]\n[...] /kalam\\-ma mu-/un\\-X X\n[...] ḫe₂-ĝal₂ ab sikil [...]\n[...]-na {d}en-/ki\\ [...] /saĝ\\-e-eš mu-/un-rig₇\\\n[...]-/dab₅{?}\\-be₂-en X [...]-ni₁₀-ni₁₀\n/abzu{?}\\ eridug{ki}-ga [...] mušen IGI X [X]\nku₆ mušen-bi-da a-da-min₃ dug₄-/ga\\\nmušen-e ku₆-e dirig-ga-a-ba\na-a {d}en-ki za₃-mi₂",
+     "orig_lines": [
+      "178",
+      "180",
+      "182",
+      "183",
+      "184",
+      "185",
+      "186",
+      "187",
+      "188",
+      "189",
+      "190"
+     ],
+     "en": "Thereupon Fish …… Bird. 6 lines missing or fragmentary …… Enki …… bestowed. 1 line fragmentary In the abzu of Eridug …… Bird ……. Because Bird was victorious over Fish in the dispute between Fish and Bird, Father Enki be praised!"
+    }
+   ]
+  }
+ ]
+}

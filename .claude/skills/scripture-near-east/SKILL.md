@@ -22,7 +22,7 @@ description: 古近東大藏經（/near-east）的體例與維護 —— 埃及�
 | `pages/scripture-canon/near-east.vue` | 宗教層入口 |
 | `test/near-east.spec.ts` | 14 條，釘住下面的規矩 |
 
-**現況（2026-10-02 建置）**：9 藏 52 卷約 380 種，**只有書目**。三欄正文尚未上架，`intro` 欄全空。
+**現況（2026-10-02）**：9 藏 52 卷約 380 種。蘇美藏 69 條已有轉寫＋英譯（ETCSL），其餘各藏只有書目；中譯全空，`intro` 欄全空。
 
 ## 1. 體例（四條，改動前先讀）
 
@@ -64,19 +64,35 @@ description: 古近東大藏經（/near-east）的體例與維護 —— 埃及�
 - **已有通行譯法者照通行**（使用者 10-02 定：吉爾伽美什、涅伽爾、尼努爾塔、庫瑪爾比、帕爾米拉……全表見 `glossary-candidates.md`，已入詞庫）。短譯只用在**沒有通行譯名**的新名上。
 - 詞庫沒有、也沒有通行譯法的新名才照短譯擬，列在 `glossary-candidates.md` 標【提】，**不自行寫進詞庫**（見 [[feedback_glossary_ancient_name_priority]]）。
 
-## 3. 三欄取源（未實作，按可行度）
+## 3. 三欄取源
 
-| 藏 | 原文 | 英譯 | 備註 |
-|---|---|---|---|
-| 蘇美 | ETCSL 轉寫 | ETCSL 散文譯本 | 最好做：同一站、同一編號、已對齊到行。非商業學術使用 |
-| 阿卡德 | eBL、ORACC（CC BY-SA；SAAo 有新亞述全部） | ORACC 英譯；King 1902《創世七泥板》、Thompson 1928 吉爾伽美什等公有領域 | |
-| 埃及 | TLA《埃及語辭典》（CC BY-SA，轉寫＋德譯） | Budge（公有領域，但譯法過時須標註） | |
-| 赫梯 | Hethitologie-Portal 轉寫 | 現代英譯全在版權內 | 英欄多半只能空 |
-| 烏加里特 | 轉寫可得 | Smith、Wyatt 等在版權內 | 英欄多半只能空 |
-| 迦南／亞蘭 | 轉寫可得 | Cooke 1903《北閃族銘文教本》公有領域 | |
+### 現況（2026-10-02）
 
-中譯走站上引擎鏈（Gemini → NVIDIA → Haiku 救急，見 [[feedback_engine_nvidia_no_haiku]]）。動手前照 [[feedback_collected_works_reference_first]] 先查有無既有中譯本。
-做完任何一篇正文，**回頭把該條的 `columns` 改成 `ready` 並在卷頁接上 reader 連結**——希臘羅馬大藏經曾經做完全文卻沒接書目，讀者走不到。
+| 路 | 涵蓋 | 狀態 |
+|---|---|---|
+| ① 線上開放語料 | 蘇美藏 69 條（ETCSL 轉寫＋英譯） | ✅ **已上架**，5,429 段，`/near-east/text/<slug>` |
+| ① 線上開放語料 | 新亞述先知、王子冥府夢、以撒哈頓銘文（ORACC：SAAo／RINAP，CC BY-SA） | 未做。🚨 ORACC 的 json 下載包**只有轉寫**，英譯要逐篇抓 `oracc.museum.upenn.edu/<project>/<P號>/html` |
+| ② 公有領域舊譯 | 古騰堡九部（Thompson 吉爾伽美什 1928、Budge 亡靈書／創世傳說／諸神傳說、King 1918、Smith 1876、Erman 1927 英譯、Harper 1901、Wilson 1901） | ✅ 已下載到 Drive `經典對照與註釋\古近東大藏經－公有領域英譯底本\`（txt＋epub），**尚未切段對齊** |
+| ③ 現代標準譯本 | 赫梯、烏加里特、現代埃及譯本、阿卡德選集、ANET、COS 共 36 部 | ⏳ z-lib 獵表 `data/zlib-wanted/near-east-translations.jsonl`，source `near-east-translations` 第 2 層 |
+
+🚨 sacred-texts.com 對腳本一律回 403，公有領域舊譯改走古騰堡。赫梯與烏加里特**沒有**公有領域英譯，只能靠第③路。
+
+### 正文資料形狀
+
+- `data/near-east/sources/text/<slug>.json`：`{slug, source, siglum, source_url, license, compositions:[{num, title_en, segments:[{ref, orig, orig_lines, en, zh?}]}]}`
+- 合集條目（戀歌集、諺語集、王頌集）一條含多篇 composition，reader 以篇名分節。
+- `data/near-east/sources/manifest.json` 由取源腳本寫；書目頁的三欄色塊與「可點進 reader」都以它為準（`effectiveColumns()`／`hasText()`），**不要手改書目的 columns 欄來標「已上架」**。
+- `data/near-east/sources/index.ts` 用 `import.meta.glob` **非 eager** 惰性載入。
+
+### ETCSL 取源（`scripts/near_east_etcsl.py`，不用 LLM）
+
+對齊鍵是 ETCSL 自己的：英譯頁每段 `<a name='t111.p3'>`，轉寫頁每行帶 `lineid=t111.p3` 指回所屬段。段號照抄英譯段的行號範圍（「11–16」）。快取 `output/near-east/etcsl/`，重跑只補沒抓過的。
+每條印「轉寫 X/Y 行（Y＝頁上實際行數）、無轉寫段、無歸屬行」，**任何一個不是 0 都要查**。踩過的四個坑：
+
+1. **ETCSL 不論 `charenc` 參數，轉寫一律輸出 ASCII**：c＝š、j＝ĝ、h＝ḫ。腳本整欄轉回；英譯欄不可套用。
+2. **哀歌的段落標記（「第一 kirugu」）在 `<p>` 與 `<a>` 之間夾 `&nbsp;`**：第一版沒認到，烏爾哀歌 21 行轉寫無歸屬，十四條出現「無歸屬行」。
+3. **合集範圍展開成 0 篇卻不報錯**：分類頁的 regex 寫錯，五個合集默默沒有正文。另外範圍要取兩端編號的**共同前綴**去抓分類頁（6.1.01–6.2.5 → `c.6*`），只取前兩節會漏掉跨節的那一半。
+4. **古代書目（0.x）只有轉寫頁，行號沒有連結**：第一版用 enumerate 自編流水號，還把網頁其他表格的格子算進去（537 段，實為 508）。改讀原頁行號並以頁上行數驗。
 
 ## 4. 加東西的流程
 
@@ -92,7 +108,7 @@ description: 古近東大藏經（/near-east）的體例與維護 —— 埃及�
 1. ✅ 譯名候選 2026-10-02 全部定案（照通行），已入詞庫。
 2. **補 `intro`**：100–200 字，照 [[hellenika-curate]] 的四要件。
 3. **核對未線上驗證的編號**（KTU、KAI、館藏號）。
-4. **三欄正文**：建議從蘇美藏 ETCSL 開始（原文英譯同源、編號已核）。
+4. **三欄正文**：蘇美藏 ✅；下一步 ORACC（新亞述）→ 古騰堡舊譯切段（埃努瑪‧埃利什、吉爾伽美什、亡靈書）→ 等 z-lib 到書。中譯全藏未動。
 5. ✅ 姊妹工作（2026-10-02 完成）：`/research-data/top-papers/near-east-archaeology`——研究史策展 501 筆＋OpenAlex 引用前 500 篇，
    OA 全文 15 篇與校內下載 CSV 在 Drive `電子圖書館\歷史學\中央界域史\近東考古引用前五百期刊論文\`。見 [[research-data-top-papers]]。
    策展清單的專著尚未進 z-lib 獵表、archive.org 尚未掃（照該 skill「清單之後怎麼拿到」走）。

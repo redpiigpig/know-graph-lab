@@ -1,0 +1,992 @@
+{
+ "slug": "enmerkar-aratta",
+ "source": "ETCSL",
+ "siglum": "ETCSL 1.8.2.3",
+ "source_url": "https://etcsl.orinst.ox.ac.uk/cgi-bin/etcsl.cgi?text=t.1.8.2.3",
+ "license": "ETCSL（Oxford）轉寫與英譯，非商業學術使用",
+ "compositions": [
+  {
+   "num": "1.8.2.3",
+   "title_en": "Enmerkar and the lord of Aratta",
+   "segments": [
+    {
+     "ref": "1–24",
+     "orig": "iri gud ḫuš {d}teš₂ ni₂ gal gur₃-ru (Šited in OB šatalogue from Nibru, at Pḫiladelpḫia, 0.2.01, line 48; OB šatalogue in tḫe Louvre, 0.2.02, line 24; OB šatalogue from Urim (U2), 0.2.04, line 40)\n[kul]-/aba₄\\{ki} keše₂ [...]\ngaba ud-da ki nam tar-[re-da]\nunug{ki} kur gal šag₄ [...]\nkiĝ₂-sig unu₂ gal an-/na\\ [...]\nud re-a nam ba-[tar-ra-ba]\nunug{ki} kul-aba₄{ki} e₂-/an\\-[na] [...]\nsaĝ il₂-la nun-gal-e-ne /mi\\-[ni-...]\nḫe₂-ĝal₂ a-eštub ĝal₂\nšeĝₓ(IM.A) še gu-nu ĝal₂\nunug{ki} kul-aba₄{ki}-a ib-da-an-tab\n[...]-in-zal\nkur dilmun{ki} [(...)] X in-nu\n{e₂-an-na unug{ki}-e kul-aba₄{ki}-a-ka ki us₂-sa-a} {(1 ms. ḫas instead tḫe line:) [...] galam-a-am₃}\nĝi₆-par₄ kug {d}inana-ke₄\nšeg₁₂ kul-aba₄{ki}-ke₄ kug ki-in-dar-ra-gin₇ pa e₃ ak-am₃\n[...] X X X nu-il₂ bal nu-ak-e\n[... nu]-il₂ nam-ga-raš nu-ak-e\n[kug-sig₁₇ kug]-babbar urud nagga {na₄}lagab za-gin₃-na\n[na₄ ḫur-saĝ-ĝa₂] /kur\\-bi-ta teš₂-bi nu-mu-un-ed₃-de₃\n[...] /ezem\\-ma a nu-un-tu₅{!}\n[...] nu-mu-un-dur₂-ru\n[...] ud bi₂-in-[zal]\n[...]\n[...]",
+     "orig_lines": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10",
+      "11",
+      "11A",
+      "12",
+      "13",
+      "14",
+      "15",
+      "16",
+      "17",
+      "18",
+      "19",
+      "20",
+      "21",
+      "22",
+      "23",
+      "24"
+     ],
+     "en": "City, majestic bull bearing vigour and great awesome splendour, Kulaba, ……, breast of the storm, where destiny is determined; Unug, great mountain, in the midst of ……. There the evening meal of the great abode of An was set. In those days of yore, when the destinies were determined, the great princes allowed Unug Kulaba's E-ana to lift its head high. Plenty, and carp floods, and the rain which brings forth dappled barley were then increased in Unug Kulaba. Before the land of Dilmun yet existed, the E-ana of Unug Kulaba was well founded, and the holy ĝipar of Inana in brick-built Kulaba shone forth like the silver in the lode. Before …… carried ……, before ……, before …… carried ……, before the commerce was practised; before gold, silver, copper, tin, blocks of lapis lazuli, and mountain stones were brought down together from their mountains, before …… bathed for the festival, ……, …… time passed. 2 lines missing"
+    },
+    {
+     "ref": "25–32",
+     "orig": "[... gun₃]-gun₃\n[...] ki kug X [... {na₄}za]-gin₃ duru₅-am₃\n/šag₄\\-[bi] {ĝiš}meš₃ babbar-gin₇ gurun il₂-la sig₇-ga-am₃\n{d}inana-ra en aratta{ki}-ke₄\nsaĝ-men kug-sig₁₇-ga mu-na-ni-in-ĝal₂\nen kul-aba₄{ki}-a-gin₇ nu-mu-na-sag₉\naratta{ki} eš₃ e₂-an-na ĝi₆-par₄ ki kug-gin₇\nkug {d}inana-ra šeg₁₂ kul-aba₄{ki}-gin₇ nu-mu-un-na-du₃",
+     "orig_lines": [
+      "25",
+      "26",
+      "27",
+      "28",
+      "29",
+      "30",
+      "31",
+      "32"
+     ],
+     "en": "…… was colourfully adorned, and ……, the holy place, was …… with flawless lapis lazuli, its interior beautifully formed like a white meš tree bearing fruit. The lord of Aratta placed on his head the golden crown for Inana. But he did not please her like the lord of Kulaba. Aratta did not build for holy Inana -- unlike the Shrine E-ana, the ĝipar, the holy place, unlike brick-built Kulaba."
+    },
+    {
+     "ref": "33–37",
+     "orig": "ud-ba en šag₄-ge pad₃-da {d}inana-ke₄\nkur šuba-ta šag₄ kug-ge pad₃-da {d}inana-ke₄\nen-me-er-kar₂ dumu {d}utu-ke₄\nnin₉-a-ni nin kurku₂ dug₃-ga\nkug {d}inana-ra u₃-gul mu-un-na-ĝa₂-ĝa₂",
+     "orig_lines": [
+      "33",
+      "34",
+      "35",
+      "36",
+      "37"
+     ],
+     "en": "At that time, the lord chosen by Inana in her heart, chosen by Inana in her holy heart from the bright mountain, Enmerkar, the son of Utu, made a plea to his sister, the lady who grants desires, holy Inana:"
+    },
+    {
+     "ref": "38–64",
+     "orig": "nin₉-ĝu₁₀ aratta{ki} unug{ki}-še₃\nkug-sig₁₇ kug-babbar ḫa-ma-an-galam-e\n{na₄}za-gin₃ duru₅ lagab-ta [...]\nsu₃-ra₂-aĝ₂ {na₄}za-gin₃ /duru₅\\ [...] X\nunug{ki}-ga kur kug [...] X X du₃\ne₂ an-ta [ed₃-da ki]-gub-ba-za\n[aratta{ki} eš₃] e₂-an-na ḫe₂-en-du₃\n[ĝi₆]-par₄ kug-ga [dur₂] ĝar-ra-za\nšag₄-bi aratta{ki} ḫa-ma-an-galam-e\nĝe₂₆-e šag₄-ba amar za-gin₃-na gu₂{?} ga-mu-ni-[...]-la₂\naratta{ki} /unug\\[{ki}-še₃] gu₂ ĝiš ḫa-ma-[ĝa₂-ĝa₂]\nnam-lu₂-u₁₈-lu aratta{ki}-[ke₄]\nna₄ ḫur-saĝ-ĝa₂ /kur\\-[bi] ḫa-ma-ab-ed₃\neš₃ gal ḫa-ma-du₃-e unu₂ gal ḫa-ma-ĝa₂-ĝa₂\nunu₂ gal /unu₂\\ [diĝir-re-e-ne-ke₄ pa] e₃ [ḫa]-ma-ab-ak-e\nme-ĝu₁₀ kul-aba₄{ki}-[a] si ḫa-ma-ni-ib-sa₂-e\nabzu kur kug-gin₇ ḫa-ma-ab-mu₂-mu₂\neridug{ki} ḫur-saĝ-gin₇ ḫa-ma-ab-sikil-e\neš₃ abzu kug ki-in-dar-ra-gin₇ pa e₃ ḫa-ma-ab-ak-e\nĝe₂₆-e abzu-ta za₃-mi₂ dug₄-ga-ĝu₁₀-ne\neridug{ki}-ta me de₆-a-ĝu₁₀-ne\nnam-en-na men eš₃ bar-gin₇ sig₇-ga-ĝu₁₀-ne\nunug{ki} kul-aba₄{ki}-a saĝ-men kug ĝal₂-la-ĝu₁₀-ne\n[PA.A] eš₃ gal-la-ke₄ ĝi₆-par₄-ra ḫu-mu-un-tum₂-mu\n[PA.A] ĝi₆-par₄-ra-ke₄ eš₃ gal-la ḫu-mu-un-tum₂-mu\n[nam]-/lu₂\\-ulu₃ u₆ dug₃-ge-eš ḫu-mu-un-e\n[{d}]/utu\\ igi ḫul₂-la ḫe₂-em-ši-bar-bar-re",
+     "orig_lines": [
+      "38",
+      "39",
+      "40",
+      "41",
+      "42",
+      "43",
+      "44",
+      "45",
+      "46",
+      "47",
+      "48",
+      "49",
+      "50",
+      "51",
+      "52",
+      "53",
+      "54",
+      "55",
+      "56",
+      "57",
+      "58",
+      "59",
+      "60",
+      "61",
+      "62",
+      "63",
+      "64"
+     ],
+     "en": "\"My sister, let Aratta fashion gold and silver skilfully on my behalf for Unug. Let them cut the flawless lapis lazuli from the blocks, let them …… the translucence of the flawless lapis lazuli ……. …… build a holy mountain in Unug. Let Aratta build a temple brought down from heaven -- your place of worship, the Shrine E-ana; let Aratta skilfully fashion the interior of the holy ĝipar, your abode; may I, the radiant youth, may I be embraced there by you. Let Aratta submit beneath the yoke for Unug on my behalf. Let the people of Aratta bring down for me the mountain stones from their mountain, build the great shrine for me, erect the great abode for me, make the great abode, the abode of the gods, famous for me, make my me prosper in Kulaba, make the abzu grow for me like a holy mountain, make Eridug gleam for me like the mountain range, cause the abzu shrine to shine forth for me like the silver in the lode. When in the abzu I utter praise, when I bring the me from Eridug, when, in lordship, I am adorned with the crown like a purified shrine, when I place on my head the holy crown in Unug Kulaba, then may the …… of the great shrine bring me into the ĝipar, and may the …… of the ĝipar bring me into the great shrine. May the people marvel admiringly, and may Utu witness it in joy.\""
+    },
+    {
+     "ref": "65–68",
+     "orig": "[ud-bi]-a giri₁₇-zal an kug-ga nin kur-ra igi-ĝal₂\nin-nin₉ {d}ama-ušumgal-an-na šembi₂-zid-da-ni\n{d}inana nin kur-kur-ra-ke₄\nen-me-er-kar₂ dumu {d}utu-ra gu₃ mu-na-de₂-e",
+     "orig_lines": [
+      "65",
+      "66",
+      "67",
+      "68"
+     ],
+     "en": "Thereupon the splendour of holy An, the lady of the mountains, the wise, the goddess whose kohl is for Ama-ušumgal-ana, Inana, the lady of all the lands, called to Enmerkar, the son of Utu:"
+    },
+    {
+     "ref": "69–104",
+     "orig": "en-me-er-kar₂ ĝa₂-nu na ga-e-de₅ na de₅-ĝu₁₀ ḫe₂-e-dab₅\ninim ga-ra-ab-dug₄ ĝizzal ḫe₂-ši-ak\nkiĝ₂-gi₄-a inim zu zag-še tuku erin₂-ta u₃-ba-e-re-pad₃\ninim gal {d}inana gal-zu inim-ma-ke₄ me-a ḫu-mu-na-ab-tum₃\nḫur-saĝ zubi-še₃ ḫe₂-bi₂-in-ed₃-de₃\nḫur-saĝ zubi-ta ḫe₂-em-ma-da-ra-ed₃-de₃\nšušin{ki}-e kur an-ša₄-an{ki}-a-še₃\npeš₂ tur-gin₇ giri₁₇ šu ḫu-mu-na-ab-ĝal₂\nḫur-saĝ gal-gal ni₂-ba lu-a\nsaḫar-ra ḫu-mu-na-da-gur₄-gur₄-e\naratta{ki} unug{ki}-še₃ gu₂ ĝiš <ḫa>-ma-ĝa₂-ĝa₂\nnam-lu₂-ulu₃ aratta{ki}-ke₄\nna₄ ḫur-saĝ-ĝa₂ kur-bi um-ta-ab-ed₃\neš₃ gal ḫa-ra-du₃-e unu₂ gal ḫa-ra-ĝa₂-ĝa₂\nunu₂ gal unu₂ diĝir-re-e-ne-ke₄ pa e₃ ḫa-ra-ab-ak-e\nme-zu kul-aba₄{ki}-a si ḫa-ra-ni-ib₂-sa₂-e\nabzu kur kug-gin₇ ḫa-ra-ab-mu₂-mu₂\neridug{ki} ḫur-saĝ-gin₇ ḫa-ra-ab-sikil-e\neš₃ abzu kug ki-<in>-dar-ra-gin₇ pa e₃ ḫa-ra-ab-ak-e\nza-e abzu-ta za₃-mi₂ dug₄-ga-zu-ne\neridug{ki}-ta me de₆-a-[zu-ne]\nnam-en men-na eš₃ bar-[gin₇ sig₇-ga]-zu-ne\nunug{ki}-e kul-aba₄{ki}-a saĝ-/men\\ [kug ĝal₂-la]-zu-ne\nPA.A eš₃ gal-la-ke₄ ĝi₆-par₄-ra ḫu-mu-e-tum₂-mu\n[PA.A] ĝi₆-par₄-ra-ke₄ eš₃ gal-la ḫu-mu-e-tum₂-mu\n[nam-lu₂-ulu₃] u₆ dug₃-ge-eš ḫe₂-mu-e-e\n{d}utu igi ḫul₂-la ḫe₂-mu-e-ši-bar-bar-re\n[nam]-lu₂-ulu₃ aratta{ki}-ke₄\n[X] NE ud šu₂-uš-ta um-[ta]-ab-il₂-ke₄-eš\n[X] NE ud te-en-e um-ma-[te]-e-ta\nki {d}dumu-zid-da u₈ maš₂ sila₄{?}-ni lu-a\na kalag-ga a-šag₄ {d}dumu-zid-da-ka\nudu kur-ra-gin₇ dub₃ ḫa-ra-ni-ib-ĝar\ngaba kug-ĝa₂-a ud-gin₇ e₃-i₃\nzi-pa-aĝ₂-ĝa₂ niĝ₂-suḫ₁₀-bi ḫe₂-me-en\nza-ra en-me-er-kar₂ dumu {d}utu za₃-mi₂",
+     "orig_lines": [
+      "69",
+      "70",
+      "71",
+      "72",
+      "73",
+      "74",
+      "75",
+      "76",
+      "77",
+      "78",
+      "79",
+      "80",
+      "81",
+      "82",
+      "83",
+      "84",
+      "85",
+      "86",
+      "87",
+      "88",
+      "89",
+      "90",
+      "91",
+      "92",
+      "93",
+      "94",
+      "95",
+      "96",
+      "97",
+      "98",
+      "99",
+      "100",
+      "101",
+      "102",
+      "103",
+      "104"
+     ],
+     "en": "\"Come, Enmerkar! I shall offer you advice: let my counsel be heeded. I shall speak words to you; let them be heard. Choose from the troops as a messenger one who is eloquent of speech and endowed with endurance. Where and to whom shall he carry the important message of wise Inana? Let him bring it up into the Zubi mountains, let him descend with it from the Zubi mountains. Let Susa and the land of Anšan humbly salute Inana like tiny mice. In the great mountain ranges, let the teeming multitudes grovel in the dust for her. Aratta shall submit beneath the yoke to Unug. The people of Aratta shall bring down the mountain stones from their mountains, and shall build the great shrine for you, and erect the great abode for you, will cause the great abode, the abode of the gods, to shine forth for you; will make your me flourish in Kulaba, will make the abzu grow for you like a holy mountain, will make Eridug shining for you like the mountain range, will cause the abzu shrine to shine forth for you like the glitter in the lode. When in the abzu you utter praise, when you bring the me from Eridug, when, in lordship, you are adorned with the crown like a purified shrine, when you place on your head the holy crown in Unug Kulaba, then may the …… of the great shrine bring you into the ĝipar, and may the …… of the ĝipar bring you into the great shrine. May the people marvel admiringly, and may Utu witness it in joy. Because …… shall carry daily, when …… in the evening cool ……, -- in the place of Dumuzid where the ewes, kids and lambs are numerous, the people of Aratta shall run around for you like the mountain sheep in the akalag fields, the fields of Dumuzid. Rise like the sun over my holy breast! You are the jewel of my throat! Praise be to you, Enmerkar, the son of Utu!\""
+    },
+    {
+     "ref": "105–107",
+     "orig": "en-e inim kug {d}inana-ka-še₃ saĝ keše₂ {ba-ši-in-ak} {(1 ms. ḫas instead:) ba-ši-in-ĝar}\nkiĝ₂-gi₄-a inim zu zag-še [tuku erin₂-ta] ba-ra-an-pad₃\n[...]-e kiĝ₂-gi₄-a-ni-ir [...]\ninim gal {d}inana gal-zu inim-ma-ke₄ me-a mu-na-ab-tum₃",
+     "orig_lines": [
+      "105",
+      "106",
+      "106A",
+      "107"
+     ],
+     "en": "The lord gave heed to the words of holy Inana, and chose from the troops as a messenger one who was eloquent of speech and endowed with endurance. {(1 ms. adds:) …… to his messenger …….} Where and to whom will he carry the important message of wise Inana?"
+    },
+    {
+     "ref": "108–133",
+     "orig": "ḫur-saĝ zubi-ka ḫe₂-bi₂-in-ed₃-de₃-en\nḫur-saĝ zubi-ta ḫe₂-em-ma-da-ra-an-ed₃-de₃-en\nšušin{ki}-e [kur] [an]-ša₄-an{ki}-a-ke₄\npeš₂ tur-gin₇ giri₁₇ šu ḫu-mu-na-ab-ĝal₂\nḫur-saĝ gal-gal ni₂-ba lu-a\nsaḫar-ra ḫu-mu-na-da-gur₄-gur₄-e\nkiĝ₂-gi₄-a en aratta{ki}-ra u₃-na-dug₄ u₃-na-de₃-taḫ\niri-bi ir₇-saĝ{mušen}-gin₇ ĝiš-bi-ta na-an-na-ra-ab-dal-en\nmušen-gin₇ gud₃ us₂-sa-bi-a nam-bi₂-ib-dal-en\nganba ĝal₂-la-gin₇ na-an-si-ig-en\niri gul-gul-lu-gin₇ saḫar nam-bi₂-ib-ḫa-za-en\naratta{ki} a₂-dam {d}en-ki-ke₄ nam ba-an-kud\n/ki bi₂\\-in-gul-la-gin₇ ki nam-ga-bi₂-ib-gul-en\neĝer-bi {d}inana ba-ši-in-zig₃\ngu₃ im-[mi-in-ra šeg₁₁ im]-mi-in-gi₄\nkuš₇ bi₂-[in-su-a-gin₇] kuš₇ nam-ga-bi₂-ib-su-su\nkug-sig₁₇ [u₃-tud-da]-ba {kuš}lu-ub₂/lu-ub₂-šir a-ba-ni-in-ak\nkug-me-a saḫar-ba zag u₃-ba-ni-in-us₂\nkug saĝ-PA-[še₃] u₃-mu-un-dim₂-dim₂\nanše kur-kur-ra-ke₄ barag um-mi-in-la₂-la₂\nĝe₂₆-e-še₃-am₃ {d}en-lil₂ ban₃-da ki-en-gi-ra-ke₄\nen {d}nu-dim₂-mud šag₄ kug-ge pad₃-da\nkur me sikil-la-ke₄ ḫa-ma-du₃-e\n{ĝiš}taškarin-gin₇ ḫi-li ḫa-ma-ab-ak-e\n{d}utu agrun-ta e₃-a-gin₇ si-muš₂ ḫa-ma-ab-gun₃-gun₃\nzag-du₈-zag-du₈-bi urin ḫa-ma-mul-e",
+     "orig_lines": [
+      "108",
+      "109",
+      "110",
+      "111",
+      "112",
+      "113",
+      "114",
+      "115",
+      "116",
+      "117",
+      "118",
+      "119",
+      "120",
+      "121",
+      "122",
+      "123",
+      "124",
+      "125",
+      "126",
+      "127",
+      "128",
+      "129",
+      "130",
+      "131",
+      "132",
+      "133"
+     ],
+     "en": "\"You shall bring it up into the Zubi mountains, you shall descend with it from the Zubi mountains. Let Susa and the land of Anšan humbly salute Inana like tiny mice. In the great mountain ranges, let the teeming multitudes grovel in the dust for her. Messenger, speak to the lord of Aratta and say to him: \"Lest I make the people fly off from that city like a wild dove from its tree, lest I make them fly around like a bird over its well-founded nest, lest I requite (?) them as if at a current market rate, lest I make it gather dust like an utterly destroyed city, lest like a settlement cursed by Enki and utterly destroyed, I too utterly destroy Aratta; lest like the devastation which swept destructively, and in whose wake Inana arose, shrieked and yelled aloud, I too wreak a sweeping devastation there -- let Aratta pack nuggets of gold in leather sacks, placing alongside it the kugmea ore; package up precious metals, and load the packs on the donkeys of the mountains; and then may the Junior Enlil of Sumer have them build for me, the lord whom Nudimmud has chosen in his sacred heart, a mountain of a shining me; have them make it luxuriant for me like a boxwood tree, have them make its shining horns colourful for me as when Utu comes forth from his chamber, have them make its doorposts gleam brightly for me.\"\""
+    },
+    {
+     "ref": "134–155",
+     "orig": "e₂-nun-e₂-nun-ba šir₃ kug nam-šub du₁₂-a-ba\nnam-šub {d}nu-dim₂-mud-da-ke₄ e-ne-ra dug₄-mu-na-ab\nud-ba muš nu-ĝal₂-am₃ ĝiri₂ nu-ĝal₂-am₃\nkir₄ nu-ĝal₂-am₃ ur-maḫ nu-ĝal₂-am₃\nur-gir₁₅ ur-bar-ra nu-ĝal₂-am₃\nni₂ teĝ₃-ĝe₂₆ su zi-zi-i nu-ĝal₂-am₃\nlu₂-u₁₈-lu gaba-šu-ĝar nu-tuku\nud-ba kur šubur{ki} ḫa-ma-zi{ki}\neme ḫa-mun ki-en-gi kur gal me nam-nun-na-ka\nki-uri kur me-te-ĝal₂-la\nkur mar-tu u₂-sal-la nu₂-a\nan ki niĝin₂-na uĝ₃ saĝ sig₁₀-ga\n{d}en-lil₂-ra eme 1-am₃ ḫe₂-en-na-da-ab-dug₄\nud-ba a-da en a-da nun a-da lugal-la\n{d}en-ki a-da en a-da nun a-da lugal-la\na-da en-e a-da nun-e a-da lugal-la\n{d}en-ki en ḫe₂-ĝal₂-la en dug₄-ga zid-da\nen ĝeštug₂-ga igi-ĝal₂ kalam-ma-ke₄\nmas-su diĝir-re-e-ne-ke₄\nĝeštug₂-ge pad₃-da en eridug{ki}-ga-ke₄\nka-ba eme i₃-kur₂ en-na mi-ni-in-ĝar-ra\neme nam-lu₂-ulu₃ 1 i₃-me-[a]",
+     "orig_lines": [
+      "134",
+      "135",
+      "136",
+      "137",
+      "138",
+      "139",
+      "140",
+      "141",
+      "142",
+      "143",
+      "144",
+      "145",
+      "146",
+      "147",
+      "148",
+      "149",
+      "150",
+      "151",
+      "152",
+      "153",
+      "154",
+      "155"
+     ],
+     "en": "\"Chant to him the holy song, the incantation sung in its chambers -- the incantation of Nudimmud: \"On that day when there is no snake, when there is no scorpion, when there is no hyena, when there is no lion, when there is neither dog nor wolf, when there is thus neither fear nor trembling, man has no rival! At such a time, may the lands of Šubur and Ḫamazi, the many-tongued, and Sumer, the great mountain of the me of magnificence, and Akkad, the land possessing all that is befitting, and the Martu land, resting in security -- the whole universe, the well-guarded people -- may they all address Enlil together in a single language! For at that time, for the ambitious lords, for the ambitious princes, for the ambitious kings, Enki, for the ambitious lords, for the ambitious princes, for the ambitious kings, for the ambitious lords, for the ambitious princes, for the ambitious kings -- Enki, the lord of abundance and of steadfast decisions, the wise and knowing lord of the Land, the expert of the gods, chosen for wisdom, the lord of Eridug, shall change the speech in their mouths, as many as he had placed there, and so the speech of mankind is truly one.\"\""
+    },
+    {
+     "ref": "156–157",
+     "orig": "2-kam-ma-še₃ en-e kiĝ₂-gi₄-a kur-še₃ du-ur₂\naratta{ki}-aš inim mu-na-ab-taḫ-e",
+     "orig_lines": [
+      "156",
+      "157"
+     ],
+     "en": "The lord added further instructions for the messenger going to the mountains, to Aratta:"
+    },
+    {
+     "ref": "158–159",
+     "orig": "kiĝ₂-gi₄-a ĝi₆ u₃-na-ka im 1-gin₇ šeĝ₃-ĝa₂\nan-bar₇-gana₂-ka im-du₈-gin₇ zig₃-ga",
+     "orig_lines": [
+      "158",
+      "159"
+     ],
+     "en": "\"Messenger, by night, drive on like the south wind! By day, be up like the dew!\""
+    },
+    {
+     "ref": "160–175",
+     "orig": "kiĝ₂-gi₄-a inim lugal-la-na-ke₄ saĝ keše₂ ba-ši-in-ak\nĝi₆ u₃-na-ka mul-am₃ im-ĝen\nan-bar₇-gana₂-ka {d}utu an-na-ta mu-un-de₃-ĝen\ninim gal {d}inana gi-zu₂-lum-ma DU me-a mu-na-ab-tum₃\nḫur-saĝ zubi-še₃ bi₂-in-ed₃-de₃\nḫur-saĝ zubi-ta im-ma-da-ra-ab-ed₃-de₃\nšušin{ki}-e kur an-ša₄-an{ki}-a-še₃\npeš₂ tur-/gin₇\\ giri₁₇ šu mu-na-ab-ĝal₂\nḫur-saĝ gal-gal ni₂-ba lu-a\nsaḫar-ra mu-na-da-gur₄-gur₄\nḫur-saĝ 5 ḫur-saĝ 6 ḫur-saĝ 7-e im-me-re-bal-bal\n[igi mu-un]-/il₂\\ aratta{ki}-aš ba-te\n[kisal] /aratta\\{ki}-ka ĝiri₃ ḫul₂-la mi-ni-in-gub\nnam-nir-ĝal₂ lugal-a-na mu-un-zu\nbur₂-ra-bi inim šag₄-ga-na bi₂-ib₂-be₂\nkiĝ₂-gi₄-a en aratta{ki}-ra mu-na-ab-bal-e",
+     "orig_lines": [
+      "160",
+      "161",
+      "162",
+      "163",
+      "164",
+      "165",
+      "166",
+      "167",
+      "168",
+      "169",
+      "170",
+      "171",
+      "172",
+      "173",
+      "174",
+      "175"
+     ],
+     "en": "The messenger gave heed to the words of his king. He journeyed by the starry night, and by day he travelled with Utu of heaven. Where and to whom will he carry the important message of Inana with its stinging tone? He brought it up into the Zubi mountains, he descended with it from the Zubi mountains. Susa and the land of Anšan humbly saluted Inana like tiny mice. In the great mountain ranges, the teeming multitudes grovelled in the dust for her. He traversed five mountains, six mountains, seven mountains. He lifted his eyes as he approached Aratta. He stepped joyfully into the courtyard of Aratta, he made known the authority of his king. Openly he spoke out the words in his heart. The messenger transmitted the message to the lord of Aratta:"
+    },
+    {
+     "ref": "176–178",
+     "orig": "a-a-zu lugal-ĝu₁₀ mu-e-ši-in-gi₄-in-nam\nen unug{ki}-ga en kul-aba₄{ki}-a-ke₄ mu-e-ši-in-gi₄-nam\nlugal-za dug₄-ga-ni nam-ĝu₁₀ taḫ-a-ni nam-ĝu₁₀",
+     "orig_lines": [
+      "176",
+      "177",
+      "178"
+     ],
+     "en": "\"Your father, my master, has sent me to you; the lord of Unug, the lord of Kulaba, has sent me to you.\" \"What is it to me what your master has spoken? What is it to me what he has said?\""
+    },
+    {
+     "ref": "179–207",
+     "orig": "lugal-ĝu₁₀ a-na bi₂-in-dug₄ a-na bi₂-in-taḫ-am₃\nlugal-ĝu₁₀ u₃-tud-da-ni-ta {nam-en-na} {(1 ms. ḫas instead:) men-na} tum₂-ma\nen unug{ki}-ga muš-saĝ-kal ki-en-gi-ra til₃-la {kur} {(2 mss. ḫave instead:) saĝ} zid₂-gin₇ ma₅-ma₅\ntaraḫ-maš kur-bad₃-da a₂-nun-ĝal₂\nšilam-za maš naĝa kug-ga umbin sud₂-sud₂-e\nab₂ zid-da kur-šag₄-ga tud-da\nen-me-er-kar₂ dumu {d}utu-ke₄ mu-e-ši-in-gi₄-nam\n[lugal]-zu dug₄-ga-ni nam-ĝu₁₀ taḫ-a-ni nam-ĝu₁₀\n[lugal]-ĝu₁₀ a-na bi₂-in-dug₄ [a-na] bi₂-in-taḫ-am₃\nlugal-ĝu₁₀ na-ab-be₂-a\niri-ni ir₇-saĝ{mušen}-gin₇ ĝiš-bi-ta na-na{?}-/ra-ab\\-dag-e\nmušen-gin₇ gud₃ us₂-sa-bi-a nam-bi₂-ib₂-ḫu-luḫ-e\nganba ĝal₂-la-gin₇ na-an-sig₉-ge-en\niri gul-gul-la-gin₇ saḫar na-an-bi₂-[ib-ḫa-za]-en\naratta{ki} a₂-dam {d}en-ki-ke₄ nam ba-an-kud\nki bi₂-in-gul-la-gin₇ ki nam-ga-bi₂-ib-gul-en\neĝer-bi {d}inana ba-ši-in-zig₃\ngu₃ im-mi-in-ra šeg₁₁ im-mi-in-gi₄\nkuš₇ bi₂-in-su-a-gin₇ kuš₇ na-an-ga-bi₂-ib-su-su-un\nkug-sig₁₇ u₃-tud-da-ba {kuš}lu-ub₂/lu-ub₂-šir a-ba-ni-in-ak\nkug-me-a saḫar-ba zag u₃-ba-ni-in-us₂\nkug saĝ-PA-še₃ u₃-mu-un-dim₂-dim₂\nanše kur-kur-ra-ke₄ barag um-mi-in-la₂-la₂\nĝe₂₆-e-še₃-am₃ {d}en-lil₂ ban₃-da ki-en-gi-ra-ke₄\nen {d}nu-dim₂-mud-e šag₄ kug-ge pad₃-da\nkur me sikil-la-ke₄ ḫa-ma-du₃-e\n{ĝiš}taškarin-gin₇ ḫi-li ḫa-ma-ab-ak\n{d}utu agrun-ta e₃-a-gin₇ si-muš₂ ḫa-ma-ab-gun₃-gun₃\nzag-du₈-zag-du₈-ba urin ḫa-ma-mul-e\ne₂-nun-e₂-nun-ba šir₃ kug nam-šub du₁₂-a-ba\n[nam-šub] {d}nu-dim₂-mud-ke₄ ĝa₂-ra dug₄-/mu\\-[na-ab]",
+     "orig_lines": [
+      "179",
+      "180",
+      "181",
+      "182",
+      "183",
+      "184",
+      "185",
+      "185A",
+      "185B",
+      "186",
+      "187",
+      "188",
+      "189",
+      "190",
+      "191",
+      "192",
+      "193",
+      "194",
+      "195",
+      "196",
+      "197",
+      "198",
+      "199",
+      "200",
+      "201",
+      "202",
+      "203",
+      "204",
+      "205",
+      "206",
+      "207"
+     ],
+     "en": "\"This is what my master has spoken, this is what he has said. My king who from his birth has been fitted {for lordship} {(1 ms. has instead:) for the crown}, the lord of Unug, the saĝkal snake living in Sumer, who pulverises {mountains} {(2 mss. have instead:) heads} like flour, the stag of the tall mountains, endowed with princely antlers, wild cow, kid pawing the holy soapwort with its hoof, whom the good cow had given birth to in the heart of the mountains, Enmerkar, the son of Utu, has sent me to you.\" {(2 mss. add here:) (the lord of Aratta speaks): \"What is it to me what your master has spoken? what is it to me what he has said?\"} \"This is what my master said: \"Lest I make the people fly off from that city like a wild dove from its tree, lest I make them fly around like a bird over its well-founded nest, lest I requite (?) them as if at a current market rate, lest I make it gather dust like an utterly destroyed city, lest like a settlement cursed by Enki and utterly destroyed, I too utterly destroy Aratta; lest like the devastation which swept destructively, and in whose wake Inana arose, shrieked and yelled aloud, I too wreak a sweeping devastation there -- let Aratta pack nuggets of gold in leather sacks, placing alongside it the kugmea ore; package up precious metals, and load the packs on the donkeys of the mountains; and then may the Junior Enlil of Sumer have them build for me, the lord whom Nudimmud has chosen in his sacred heart, a mountain of a shining me; have them make it luxuriant for me like a boxwood tree, have them make its shining horns colourful for me as when Utu comes forth from his chamber, have them make its doorposts gleam brightly for me. Chant to him for me the holy song, the incantation sung in its chambers -- the Incantation of Nudimmud.\"\""
+    },
+    {
+     "ref": "208–217",
+     "orig": "a-na ma-ab-be₂-en-na-bi u₃-mu-[e-dug₄]\na ru-a sun₄ {na₄}za-gin₃ [keše₂]-da-[ar]\nab₂ kal-la-ga-ni kur me sikil-la-ka [tud-da-ar]\nsaḫar aratta{ki}-ka a₂ e₃-[a-ar]\nubur ab₂ zid-da ga gu₇-[a-ar]\nkul-aba₄{ki} kur me gal-gal-la-ka nam-nun-na tum₂-ma\nen-me-er-kar₂ dumu {d}utu-ra\ninim-bi eš₃ e₂-an-na-ka inim dug₃ ga-na-ab-dug₄\nĝi₆-par₄ {ĝiš}meš₃ gibil-gin₇ gurun il₂-la-na\nlugal-ĝu₁₀ en kul-aba₄{ki}-ra šu-a ga-mu-na-ab-gi₄",
+     "orig_lines": [
+      "208",
+      "209",
+      "210",
+      "211",
+      "212",
+      "213",
+      "214",
+      "215",
+      "216",
+      "217"
+     ],
+     "en": "\"Say whatever you will say to me, and I shall announce that message in the shrine E-ana as glad tidings to the scion of him with the glistening beard, whom his stalwart cow gave birth to in the mountain of the shining me, who was reared on the soil of Aratta, who was given suck at the udder of the good cow, who is suited for office in Kulaba, the mountain of great me, to Enmerkar, the son of Utu; I shall repeat it in his ĝipar, fruitful as a flourishing meš tree, to my king, the lord of Kulaba.\""
+    },
+    {
+     "ref": "218–226",
+     "orig": "ur₅-gin₇ ḫu-mu-na-ab-be₂-a-ka\nkiĝ₂-gi₄-a lugal-zu en kul-aba₄{ki}-a-ra u₃-na-dug₄ u₃-na-de₃-taḫ\nĝe₂₆-e-me-en en šu sikil-la tum₂-ma\n{ĝiš}rab₃ maḫ an-na nin an ki-ke₄\nin-nin₉ me šar₂-ra kug {d}inana-ke₄\naratta{ki} kur me sikil-la-še₃ ḫu-mu-un-de₆-en\nkur-ra {ĝiš}ig gal-gin₇ igi-ba bi₂-in-tab-en\naratta{ki} unug{ki}-še₃ gu₂ a-gin₇ i₃-ĝa₂-ĝa₂\naratta{ki} unug{ki}-še₃ gu₂ ĝa₂-ĝa₂ nu-ĝal₂ e-ne-ra dug₄-mu-na-ab",
+     "orig_lines": [
+      "218",
+      "219",
+      "220",
+      "221",
+      "222",
+      "223",
+      "224",
+      "225",
+      "226"
+     ],
+     "en": "When he had spoken thus to him, (the lord of Aratta replied): \"Messenger, speak to your king, the lord of Kulaba, and say to him: \"It is I, the lord suited to purification, I whom the huge heavenly neck-stock, the queen of heaven and earth, the goddess of the numerous me, holy Inana, has brought to Aratta, the mountain of the shining me, I whom she has let bar the entrance of the mountains as if with a great door. How then shall Aratta submit to Unug? Aratta's submission to Unug is out of the question!\" Say this to him.\""
+    },
+    {
+     "ref": "227–235",
+     "orig": "ur₅-gin₇ ḫu-mu-na-ab-be₂-a-ka\nkiĝ₂-gi₄-a en aratta{ki}-ra mu-na-ni-ib-gi₄-gi₄\nnin gal an-na me ḫuš-a u₅-a\nḫur-saĝ kur šuba-ka dur₂ ĝar-ra\nbarag kur šuba-ka še-er-ka-an dug₄-ga\nen lugal-ĝu₁₀ šubur-a-ni-im\ndiĝir nin e₂-an-na-ka mu-un-di-ni-ib-kur₉-re-eš\nen aratta{ki} gu₂ ki-še₃ ba-ni-in-ĝal₂\nšeg₁₂ kul-aba₄{ki}-a-ka ur₅-gin₇ ḫu-mu-na-ab-be₂",
+     "orig_lines": [
+      "227",
+      "228",
+      "229",
+      "230",
+      "231",
+      "232",
+      "233",
+      "234",
+      "235"
+     ],
+     "en": "When he had spoken thus to him, the messenger replied to the lord of Aratta: \"The great queen of heaven, who rides upon the awesome me, dwelling on the peaks of the bright mountains, adorning the dais of the bright mountains -- my lord and master, who is her servant, has had them instal her as the divine queen of E-ana. Aratta shall bow, O lord, in absolute submission! She has spoken to him thus, in brick-built Kulaba.\""
+    },
+    {
+     "ref": "236–241",
+     "orig": "ud-bi-a en-e šag₄ mu-un-sag₃ zi mu-un-ir-ir\ngaba-ri nu-mu-da-ĝal₂ gaba-ri i₃-kiĝ₂-kiĝ₂\nĝiri₃ ni₂-te-a-na-ka igi lib-ba bi₂-in-du₈-ru gaba-ri i₃-pad₃-de₃\ngaba-ri in-pad₃ gu₃ im-ta-an-e₃\nkiĝ₂-gi₄-a inim-ma gaba ri-bi\ngud-gin₇ gu₃ nun mu-un-di-ni-ib-be₂",
+     "orig_lines": [
+      "236",
+      "237",
+      "238",
+      "239",
+      "240",
+      "241"
+     ],
+     "en": "Thereupon, the lord became depressed and deeply troubled. He had no answer; he was searching for an answer. He stared at his own feet, trying to find an answer. He found an answer and gave a cry. He bellowed the answer to the message like a bull to the messenger:"
+    },
+    {
+     "ref": "242–273",
+     "orig": "kiĝ₂-/gi₄-a\\ lugal-zu en kul-aba₄{ki}-a-ra u₃-na-dug₄ u₃-na-de₃-taḫ\nḫur-saĝ gal {ĝiš}meš₃ an-da mu₂-a\nur₂-bi-še₃ sa-par₄-am₃ pa-bi ĝiš-bur₂-am₃\nburu₅ umbin-bi anzud{mušen} ḫu-ri₂-in{mušen}-na\nkeše₂-da [{d}]inana-/ka\\ šar₂ dug₄-ge gib-ba\numbin ḫu-ri₂-in{mušen}-bi u₃-mun kur-ra kur šuba-da ed₃-da\naratta{ki} er₂ [še₈-še₈ ...]\na bal-bal-am₃ zid₂ dub-dub-ba-am₃\nkur-ra sizkur a-ra-zu-a giri₁₇ šu ĝal₂-la-am₃\nlu₂ 5 nu-me-a lu₂ 10 nu-me-a\nunug{ki} zig₃-ga ḫur-saĝ zubi-še₃ saĝ a-gin₇ i₃-ĝa₂-ĝa₂\nlugal-zu {ĝiš}tukul-ĝa₂ saĝ ḫa-ba-an-šum₂\nĝe₂₆-e a-da-min₃-na saĝ /ga-ba\\-an-šum₂\na-da-min₃ nu-um-zu teš₂ [nu]-/um\\-gu₇\ngud-de₃ /gud\\ a₂{!}-ĝal₂-bi [nu-um]-zu\n[a-da]-/min₃\\ um-zu teš₂ um-[gu₇]\n[gud]-/de₃\\ gud a₂{!}-ĝal₂-bi um-/zu\\\n[e]-/ne\\ a-da-min₃ mi-ni-in-taka₄-taka₄-an\n[...]-/gin₇\\ niĝ₂ lu₂ nu-sig₁₀-ge\n[e]-ne in-ga-mu-ni-in-taka₄-taka₄-an\n[2-kam]-ma-še₃ kiĝ₂-gi₄-a inim mu-ra-be₂-en\n[...] de₂-a ša-ra-ab-galam-e-en DU-a ḫe₂-mu-e-ši-dib\n[e₂]-an-na piriĝ šu-ba nu₂-a\nšag₄-bi-ta gud gu₃ nun di-dam\nĝi₆-par₄ {ĝiš}meš₃ gibil-gin₇ gurun il₂-la-na\nlugal-zu en kul-aba₄{ki}-a-ra šu-a gi₄-mu-na-ab\nḫur-saĝ ur-saĝ sukud sig₉-ga-am₃\nan-usan-na {d}utu e₂-bi-še₃ du-gin₇\nigi-bi-ta uš₂ la₂-la₂-e-gin₇\n{d}nanna si-un₃-na maḫ-a-gin₇\nsaĝ-ki-bi me-lem₄ ĝal₂-la-gin₇\nĝiš-gin₇ kur-kur-ra gib-ba-gin₇",
+     "orig_lines": [
+      "242",
+      "243",
+      "244",
+      "245",
+      "246",
+      "247",
+      "248",
+      "249",
+      "250",
+      "251",
+      "252",
+      "253",
+      "254",
+      "255",
+      "256",
+      "257",
+      "258",
+      "259",
+      "260",
+      "261",
+      "262",
+      "263",
+      "264",
+      "265",
+      "266",
+      "267",
+      "268",
+      "269",
+      "270",
+      "271",
+      "272",
+      "273"
+     ],
+     "en": "\"Messenger! Speak to your king, the lord of Kulaba, and say to him: \"This great mountain range is a meš tree grown high to the sky; its roots form a net, and its branches are a snare. It may be a sparrow but it has the talons of an Anzud bird or of an eagle. The barrier of Inana is perfectly made and is impenetrable (?). Those eagle talons make the blood of the enemy run from the bright mountain. Although in Aratta there is weeping ……, water libations are offered and flour is sprinkled; on the mountain, sacrifices and prayers are offered in obeisance. With fewer than five or 10 men, how can mobilised Unug proceed against the Zubi mountains? Your king is heading in all haste against my military might, but I am equally eager for a contest. (As the proverb goes,) he who ignores a rival, does not get to eat everything up, like the bull which ignores the bull at its side. But he who acknowledges a contest can be the outright winner, like the bull which acknowledges the bull at its side -- or does he reject me in this contest? Like ……, …… can match no one -- or does he still reject me in this contest? Again, I have words to say to you, messenger: I have an artful proposal to make to you ……, may it get across to you ……. Repeat this to your master, to the lord of Kulaba, a lion lying on its paws in E-ana, a bull bellowing within it, within his ĝipar, fruitful as a flourishing meš tree. The mountain range is a warrior, …… high, like Utu going to his abode at twilight, like one from whose face blood drips; or like Nanna, who is majestic in the high heavens, like him whose countenance shines with radiance, who …… is like the woods in the mountains.\"\""
+    },
+    {
+     "ref": "274–280",
+     "orig": "saĝ muš₃ aratta{ki}-ke₄\n{d}lamma sag₉-ga kur me sikil-la-še₃\nud-da aratta{ki} aga kug an-na-gin₇ si mu-na-an-sa₂\nĝe₂₆-e ud-ba nam-maḫ-ĝu₁₀ ga-an-zu\nše barag-ga nam-mu-un-sig₉-si-ig-ge mar-e nam-me-e\nše-bi kur-kur-ra nam-il₂-e\nerin₂-na mu-un-kud nam-mu-un-ĝa₂-ĝa₂",
+     "orig_lines": [
+      "274",
+      "275",
+      "276",
+      "277",
+      "278",
+      "279",
+      "280"
+     ],
+     "en": "\" \"Now if Enmerkar just makes straight for the …… of Aratta, for the benevolent protective spirit of the mountain of holy powers, for Aratta, which is like a bright crown of heaven, then I shall make my pre-eminence clear, and he need not pour barley into sacks, nor have it carted, nor have that barley carried into the settlements, nor place collectors over the labourers.\"\""
+    },
+    {
+     "ref": "281–293",
+     "orig": "še {sa}al-kad₅-e u₃-mu-ni-in-si-si\nanše barag la₂-e um-mi-in-la₂\nanše-bal-e da-bi-a a-ba-an-sig₁₀\ntukum-bi kisal aratta{ki}-ka guru₇-še₃ mu-dub-be₂\ni₃-ge-en am₃-dub-be₂ guru₇-a ḫi-li-bi\nkur-kur-ra izi ĝar-ra-bi a₂-dam me-te-bi\nbad₃ 7-e še-er-ka-an dug₄-ga\nnin ur-saĝ me₃-a tum₂-ma\n{d}inana ur-saĝ me₃ saḫar-ra-ke₄ saĝ ešemen {d}inana di-dam\ni₃-ge-en aratta{ki} ur ad₆ sar-gin₇ šu-ta im-ta-ri\nĝe₂₆-e ud-ba ša-ba-na-gam-e-de₃-en\ne-ne nam-maḫ-a-ni ši-im-ma-an-zu-zu-un\niri-gin₇ nam-tur-ĝa₂ gu₂ ši-im-ma-ĝa₂-ĝa₂-an e-ne-ra dug₄-mu-na-ab",
+     "orig_lines": [
+      "281",
+      "282",
+      "283",
+      "284",
+      "285",
+      "286",
+      "287",
+      "288",
+      "289",
+      "290",
+      "291",
+      "292",
+      "293"
+     ],
+     "en": "\" \"But if he were actually to have barley poured into carrying-nets, and to have it loaded on the packasses at whose sides reserve donkeys have been placed, and were to have it heaped up in a pile in the courtyard of Aratta -- were he really to heap it up in such a manner; and were Inana, the luxuriance of the grain pile, who is the 'illuminator of the lands', the 'ornament of the settlements', who adorns the seven walls, who is the heroic lady, fit for battle, who, as the heroine of the battleground, makes the troops dance the dance of Inana -- were she actually to cast off Aratta as if to a carrion-pursuing dog, then in that case I should submit to him; he would indeed have made me know his preeminence; like the city, I in my smallness would submit to him.\" So say to him.\""
+    },
+    {
+     "ref": "294–307",
+     "orig": "ur₅-gin₇ ḫu-mu-na-ab-be₂-a-ka\nkiĝ₂-gi₄-a en aratta{ki}-ke₄\nka-ni-gin₇ inim ka-na ba-an-sig₁₀\nsumun₂-gin₇ ḫaš₂-a-na mu-un-gur\nnim-saḫar-ra-gin₇ tir ud zal-le-na mu-un-ĝen\nšeg₁₂ kul-aba₄{ki}-a-ka ĝiri₃ ḫul₂-la mu-ni-in-gub\nkisal maḫ-e kisal gu₂-en-na-ka kiĝ₂-gi₄-a i-ib₂-bur₂\nlugal-a-ni-ir en kul-aba₄/{ki}\\-[ra]\nka-ni-gin₇ šu mu-na-an-gi₄\ngud-gin₇ gu₃ mu-na-an-sig₁₀\ngud ri-ri-gin₇ ĝeštug₂ mu-na-an-[ĝa₂-ĝa₂]\nlugal-e zag zid-da-ni NE im-mi-in-/tuš\\\nzag gab₂-bu-ni im-ma-ni-in-gi₄\ni₃-ge-en aratta{ki} ĝalga šum₂-ma im-ma-zu im-me",
+     "orig_lines": [
+      "294",
+      "295",
+      "296",
+      "297",
+      "298",
+      "299",
+      "300",
+      "301",
+      "302",
+      "303",
+      "304",
+      "305",
+      "306",
+      "307"
+     ],
+     "en": "After he had spoken thus to him, the lord of Aratta made the messenger repeat the message just as he himself had said it. The messenger turned on his thigh like a wild cow; like a sand fly he went on his way in the morning calm. He set foot joyfully in brick-built Kulaba. The messenger rushed to the great courtyard, the courtyard of the throne room. He repeated it word perfect to his master, the lord of Kulaba; he even bellowed at him like a bull, and Enmerkar listened to him like an ox driver. The king had him sit …… at his right side. As he turned his left side to him, he said: \"Does Aratta really understand the implications of his own stratagem?\""
+    },
+    {
+     "ref": "308–338",
+     "orig": "ud im-zal {d}utu im-ta-e₃-a-ra\n{d}utu kalam-ma-ka saĝ bi₂-ib-il₂\nlugal-e {id₂}idigna {id₂}buranuna-bi-da im-ma-da-an-tab\n{id₂}buranun-na {id₂}idigna-da im-ma-da-an-tab\nbur gal-gal an-ne₂ ba-sug₂-su₈-ug\nbur tur-tur sila₄ u₂-šim dur₂-gin₇ zag-bi-a im-ma-an-us₂\nbur i-gi₈ an-na da-bi-a ba-su₈-ug\nlugal-e eš-da kug-sig₁₇-ga-ke₄\nen-me-er-kar₂ dumu {d}utu-ke₄ dub₃ mu-un-bad-ba₉-re₆\nud-bi-a dub i-gi₈ im me-a gi-gag unken-na\nalan kug-sig₁₇-ga ud dug₃-ga tud-da\n{d}nanibgal sig₇-ga KAxLI sikil mu₂{?}-da\n{d}nisaba nin ĝeštug₂ daĝal-la-ke₄\ne₂-ĜEŠTUG₂.{d}NISABA kug-ga-ni ĝal₂ mu-na-an-taka₄\ne₂-gal an-na-ka kur₉-ra-ni ĝeštug₂ mu-un-ĝa₂-ĝa₂\nen-e e₂-nun maḫ-a-ni ĝal₂ ba-an-taka₄\n{ĝiš}li₂-id-ga maḫ-a-ni ki /ba\\-[an]-us₂\nlugal-e še-ta še libir-ra-ni šu ba-ra-an-/bal\\\nmunu₄ ki-šar₂-ra a ba-ni-in-[si]\nnundum-bi {u₂}ḫirin{ḫu-ri₂-in} AN [X]-sug₄-ge\n{sa}al-kad₅-e igi im-mi-in-tur-tur\nše guru₇ ka i-ni-in-si zu₂ buru₅{mušen}-e bi₂-in-taḫ\nanše barag la₂-e um-mi-in-la₂\nanše-bal-e da-bi-a ba-an-sig₁₀\nlugal en ĝeštug₂ daĝal-la-ke₄\nen unug{ki}-ga en kul-aba₄{ki}-ke₄\nḫar-ra-an aratta{ki}-ke₄ si bi₂-in-sa₂\nnam-lu₂-ulu₃ kiši₆ ki-in-dar-ra-gin₇\naratta{ki}-aš ni₂-ba mu-un-sub₂-be₂-eš\nen-e kiĝ₂-gi₄-a kur-še₃ du-ur₂\naratta{ki}-aš inim mu-na-ab-taḫ-e",
+     "orig_lines": [
+      "308",
+      "309",
+      "310",
+      "311",
+      "312",
+      "313",
+      "314",
+      "315",
+      "316",
+      "317",
+      "318",
+      "319",
+      "320",
+      "321",
+      "322",
+      "323",
+      "324",
+      "325",
+      "326",
+      "327",
+      "328",
+      "329",
+      "330",
+      "331",
+      "332",
+      "333",
+      "334",
+      "335",
+      "336",
+      "337",
+      "338"
+     ],
+     "en": "After day had broken and Utu had risen, the sun god of the Land lifted his head high. The king combined the Tigris with the Euphrates. He combined the Euphrates with the Tigris. Large vessels were placed in the open air, and he stood small vessels beside them, like lambs lying on the grass. …… vessels were placed in the open air adjacent to them. Then the king, Enmerkar, the son of Utu, placed wide apart the ešda vessels, which were of gold. Thereupon, the …… clay tablet, the pointed stylus of the assembly, the golden statue fashioned on a propitious day, beautiful Nanibgal, grown with a fair luxuriance, Nisaba, the lady of broad wisdom, opened for him her holy house of wisdom. He entered the palace of heaven, and became attentive. Then the lord opened his mighty storehouse, and firmly set his great lidga measure on the ground. The king removed his old barley from the other barley; he soaked the greenmalt all through with water; its lip …… the ḫirin plant. He narrowed the meshes of the carrying nets. He measured out in full (?) the barley for the granary, adding for the teeth of locusts. He had it loaded on the packasses at whose sides reserve donkeys were placed. The king, the lord of broad wisdom, the lord of Unug, the lord of Kulaba, despatched them directly to Aratta. He made the people go on to Aratta on their own, like ants out of crevices. Again the lord added instructions for the messenger going to the mountains, to Aratta:"
+    },
+    {
+     "ref": "339–346",
+     "orig": "kiĝ₂-gi₄-a en aratta{ki}-ra u₃-na-dug₄ u₃-na-de₃-taḫ\nĝidru-ĝa₂ ur₂-bi me nam-nun-na-ka\npa-bi kul-aba₄{ki}-a an-dul₃-eš i₃-ak\npa mul-mul-la-bi eš₃ e₂-an-na-ke₄\nkug {d}inana-ke₄ ni₂ im-ši-ib-te-en-ten\nĝidru um-ta-an-kid₇ ḫu-mu-un-da-ĝal₂\nna₄-gug-ĝiš-dili na₄-za-gin₃-ĝiš-dili-gin₇ šu-ni-a ḫu-mu-un-ĝal₂\nen aratta{ki}-ke₄ igi-ĝu₁₀-še₃ ḫu-mu-un-tum₂ e-ne-ra dug₄-mu-na-ab",
+     "orig_lines": [
+      "339",
+      "340",
+      "341",
+      "342",
+      "343",
+      "344",
+      "345",
+      "346"
+     ],
+     "en": "\"Messenger, speak to the lord of Aratta and say to him: \"The base of my sceptre is the divine power of magnificence. Its crown provides a protective shade over Kulaba; under its spreading branches holy Inana refreshes herself in the shrine E-ana. Let him snap off a splinter from it and hold that in his hand; let him hold it in his hand like a string of cornelian beads, a string of lapis lazuli beads. Let the lord of Aratta bring that before me.\" So say to him.\""
+    },
+    {
+     "ref": "347–365",
+     "orig": "ur₅-gin₇ ḫu-mu-na-ab-be₂-a-ka\nkiĝ₂-gi₄-a aratta{ki}-aš du-ni\nsaḫar kaskal-la ĝiri₃-ni {mu-un-si} {(1 ms. ḫas instead:) mu-un-e₃}\nna₄ tur-tur ḫur-saĝ-ĝa₂-ke₄ suḫ₃-saḫ₄ mu-un-da-ab-za\nušumgal edin-na-ba kiĝ₂-ĝe₂₆-gin₇ gaba-ri nu-mu-ni-in-tuku\nkiĝ₂-gi₄-a aratta{ki}-aš um-ma-te-a-ra\nnam-lu₂-ulu₃ aratta{ki}-ke₄\nanše barag la₂-e u₆ di-de₃ im-ma-sug₂-sug₂-ge-eš\nkiĝ₂-gi₄-a kisal aratta{ki}-ka\nše guru₇ ka bi₂-in-si zu₂ buru₅{mušen}-e bi₂-in-taḫ\nšeĝₓ(IM.A) an-na ud ĝal₂-la-gin₇\naratta{ki} ḫe₂-ĝal₂-la i₃-du₃\ndiĝir dur₂-bi-a ba-da-ab-gi₄-a-/gin₇\\\naratta{ki} šag₄-ĝar-ra-ni am₃-la₂-[la₂]\nnam-lu₂-ulu₃ aratta{ki}-[ke₄]\nmunu₄ a sig₉-ga-na a-šag₄ mu-ni-[ib-X]\n/eĝer\\-ba ra₂-gaba šag₄-tam [...]\n[X] KI A taka₄-ba [...]\nX [X] X [...]\n[...] X X NI [...] (tḫis line is possibly only a šontinuation of line 365)",
+     "orig_lines": [
+      "347",
+      "348",
+      "349",
+      "350",
+      "351",
+      "352",
+      "353",
+      "354",
+      "355",
+      "356",
+      "357",
+      "358",
+      "359",
+      "360",
+      "361",
+      "362",
+      "363",
+      "364",
+      "365",
+      "365B"
+     ],
+     "en": "After he had thus spoken to him, the messenger went on his way to Aratta; his feet raised the dust of the road, and made the little pebbles of the hills thud; like a dragon prowling the desert, he was unopposed. After the messenger reached Aratta, the people of Aratta stepped forward to admire the packasses. In the courtyard of Aratta, the messenger measured out in full (?) the barley for the granary, adding for the teeth of locusts. As if from the rains of heaven and the sunshine, Aratta was filled with abundance. As when the gods return to their seats (?), Aratta's hunger was sated. The people of Aratta covered their fields with the water-soaked greenmalt. Afterwards, couriers and šatam officials ……. 2 lines unclear"
+    },
+    {
+     "ref": "366–370",
+     "orig": "dumu-[dumu] aratta{ki} /ĝeštug₂\\ [...]\naratta{ki}-aš inim mu-un-bur₂\nur₅-da aratta{ki}-a šu-/ta\\ [...]\nen unug{ki}-ga-ra šu-ni i-im-[...]",
+     "orig_lines": [
+      "366",
+      "367",
+      "368",
+      "370"
+     ],
+     "en": "The citizens of Aratta were mindful; he revealed the matter to Aratta. Consequently, in Aratta, from the hand ……. …… his hand …… to the lord of Unug."
+    },
+    {
+     "ref": "371–372",
+     "orig": "me-en-de₃ sug₄-ga lul-la-/be₂\\-[eš₂]\nen kul-aba₄{ki}-a-ra {na₄}gug /lul\\-[la-me-a] ga-mu-na-dur₂-ru-ne-en-de₃-en",
+     "orig_lines": [
+      "371",
+      "372"
+     ],
+     "en": "\"As for us, in the direst hunger, in our direst famine, let us prostrate ourselves before the lord of Kulaba!\""
+    },
+    {
+     "ref": "373–377",
+     "orig": "ab-ba-ab-ba inim zu-ne\nšu teš₂-a bi₂-ib-ri-/eš\\ zag e₂-ĝar₈-e bi₂-ib-us₂-[eš]\nen-ra e₂ sikil-bi ḫu-mu-un-ĝa₂-ĝa₂-[e-ne]\n[(X) X] /KIĜ₂\\ ĝidru-ni DU.DU šag₄ e₂-/gal\\-[la ...]\n[bur₂-ra-bi inim šag₄-ga]-na bi₂-[ib-be₂]",
+     "orig_lines": [
+      "373",
+      "374",
+      "375",
+      "376",
+      "377"
+     ],
+     "en": "The eloquent elders wrung their hands in despair, leaning against the wall; indeed, they were even placing their treasuries (?) at the disposal of the lord. His sceptre …… in the palace ……. Openly he spoke out the words in his heart:"
+    },
+    {
+     "ref": "378–379",
+     "orig": "[a-a-zu lugal-ĝu₁₀] mu-e-ši-/in\\-[gi₄-in-nam]\n[en-me-er]-/kar₂\\ dumu {d}utu-[ke₄] mu-e-ši-in-gi₄-in-nam",
+     "orig_lines": [
+      "378",
+      "379"
+     ],
+     "en": "\"Your father, my master, sent me to you. Enmerkar, the son of Utu, sent me to you.\""
+    },
+    {
+     "ref": "380–388",
+     "orig": "lugal-zu dug₄-ga-ni nam-ĝu₁₀ taḫ-[a]-ni [nam]-ĝu₁₀\nlugal-ĝu₁₀ a-na /bi₂-in\\-dug₄ a-na [bi₂-in-taḫ]-/am₃\\\nĝidru-ĝa₂ ur₂-bi me /nam\\-nun-/na-ka\\\npa-bi kul-aba₄{ki}-a /an-dul₃\\-eš i₃-ak\npa mul-mul-[la-bi] eš₃ e₂-an-na-/ke₄\\\nkug {d}inana-ke₄ ni₂ im-ši-ib-te-en-ten\nĝidru um-ta-an-kid₇ ḫu-mu-/un-da\\-ĝal₂\nna₄-gug-ĝiš-dili na₄-za-gin₃-ĝiš-dili-gin₇ šu-ni-a ḫu-mu-un-ĝal₂\nen aratta{ki}-ke₄ igi-ĝu₁₀-še₃ ḫu-mu-un-tum₂ ĝa₂-a-ra ḫa-ma-an-dug₄",
+     "orig_lines": [
+      "380",
+      "381",
+      "382",
+      "383",
+      "384",
+      "385",
+      "386",
+      "387",
+      "388"
+     ],
+     "en": "\"What is it to me what your master has spoken? What is it to me what he has said?\" \"This is what my master has spoken, this is what he has said: \"The base of my sceptre is the divine power of magnificence. Its crown provides a protective shade over Kulaba; under its spreading branches holy Inana refreshes herself in the shrine E-ana.Let him snap off a splinter from it and hold that in his hand; let him hold it in his hand like a string of cornelian beads, a string of lapis lazuli beads. Let the lord of Aratta bring that before me. So say to him.\"\""
+    },
+    {
+     "ref": "389–393",
+     "orig": "ur₅-gin₇ ḫu-mu-na-ab-be₂-a-ka\nnam-bi-še₃ itima{!}-a KA ba-an-kur₉ šag₄-ka-tab-ba ba-an-nu₂\nud im-zal inim im-šar₂-šar₂\ninim ka-še₃ nu-ĝar-ra im-me\ninim-ma še anše gu₇-a-gin₇ ĝiri₃ mi-ni-ib-ni₁₀-ni₁₀-e",
+     "orig_lines": [
+      "389",
+      "390",
+      "391",
+      "392",
+      "393"
+     ],
+     "en": "After he had spoken thus to him, for that reason he went inside the sanctuary …… and lay himself down in a fast. Day broke. He discussed the matter at length, he spoke unspeakable words; he circulated with this matter as if it were barley eaten by a donkey."
+    },
+    {
+     "ref": "394–396",
+     "orig": "i₃-ne-eš₂ lu₂ lu₂-u₃-ra a-na na-an-dug₄\nlu₂ lu₂-ra dili a-na na-an-taḫ\nlu₂ lu₂-ra in-na-ab-be₂-a ur₅ ḫe₂-en-na-nam-ma-am₃",
+     "orig_lines": [
+      "394",
+      "395",
+      "396"
+     ],
+     "en": "And what did one speak to another? What did one say to another? What one said to another, so indeed it was."
+    },
+    {
+     "ref": "397–411",
+     "orig": "kiĝ₂-gi₄-a lugal-zu en kul-aba₄{ki}-ra [u₃]-na-a-dug₄ u₃-na-de₃-taḫ\nĝidru ĝiš nam-me mu ĝiš na-an-sa₄-sa₄\nX [X] šu-na um-ma-ni-in-ĝar igi um-ši-bar-bar\n{ĝiš}ildag₂ nam-me {ĝiš}šim-gig nam-me\n{ĝiš}erin nam-me {ĝiš}šu-ur₂-men₂ nam-me\n{ĝiš}ḫa-šu-ur₂ [nam-me {ĝiš}ĝišnimbar] /nam\\-me\n{ĝiš}esi nam-me [{ĝiš}za-ba-lum nam-me]\n{ĝiš}ildag₂ nam-me {ĝiš}šim-gig nam-me\n{ĝiš}ḫa-šu-ur₂ nam-me {ĝiš}ĝišnimbar nam-me\n{ĝiš}erin nam-me {ĝiš}za-ba-lum nam-me\n{ĝiš}šu-ur₂-men₂ nam-me [{ĝiš}esi nam-me]\n{ĝiš}asal lam {ĝiš}gigir-ra nam-me\n{ĝiš}kid-da ĝiš-{kuš}usan₃-na nam-me\nkug-sig₁₇ nam-me urud nam-me\nkug-me-a zid kug-babbar nam-me\n{na₄}gug nam-me {na₄}za-gin₃ nam-me\nĝidru um-ta-an-kid₇ ḫu-mu-un-da-ĝal₂\nna₄-gug-ĝiš-dili na₄-za-gin₃-ĝiš-dili-gin₇ šu-ni-a ḫu-mu-un-ĝal₂\nen kul-aba₄{ki}-a-ke₄ igi-ĝu₁₀-še₃ ḫu-mu-un-tum₂ e-ne-ra dug₄-mu-na-ab",
+     "orig_lines": [
+      "397",
+      "398",
+      "399",
+      "400",
+      "401",
+      "402",
+      "403",
+      "A",
+      "B",
+      "C",
+      "D",
+      "404",
+      "405",
+      "406",
+      "407",
+      "408",
+      "409",
+      "410",
+      "411"
+     ],
+     "en": "\"Messenger, speak to your king, the lord of Kulaba, and say to him: \"Let him put in his hand and contemplate a sceptre that is not of wood, nor designated as wood {-- not ildag wood, nor šim-gig wood, not cedar wood, nor cypress wood, not ḫašur cypress, nor palm wood, not hardwood, nor zabalum wood} {(1 ms. has instead:) -- not ildag wood, nor šim-gig wood, not ḫašur cypress, nor palm wood, not cedar wood, nor zabalum wood, not cypress wood, nor hardwood}, not poplar as in a chariot, not reedwork as in whip handles; not gold, nor copper, not genuine kugmea metal nor silver, not cornelian, nor lapis lazuli -- let him snap off a splinter from that and hold it in his hand; let him hold it in his hand like a string of cornelian beads, a string of lapis lazuli beads. Let the lord of Kulaba bring that before me.\" So say to him.\""
+    },
+    {
+     "ref": "412–443",
+     "orig": "ur₅-gin₇ ḫu-mu-na-ab-be₂-a-ka\nkiĝ₂-gi₄-a dur₃{ur₃} si-gigir ku₅-ra₂-gin₇ ka si-il-la mu-un-ĝen\nanše edin-na bar-rim₄-ma kaš₄ di-gin₇ kušum₄ i₃-tag-tag-ge\nka-ni tum₉-a bi₂-ib-zi-zi-zi\nudu zulumḫi udu /sumur\\-ba du₇-du₇-gin₇ dub₃-us₂ dili mu-un-dab₅\nšeg₁₂ kul-aba₄{ki}-a-ka ĝiri₃ ḫul₂ mi-ni-in-gub\nlugal-a-ni en kul-aba₄{ki}-a-ra\ninim-inim-ma mu-na-ra-si-si\nen-me-er-kar₂-ra {d}en-ki-ke₄ ĝeštug₂ mu-na-/an\\-šum₂\nen-e aĝrig maḫ-a-[ni] a₂ ba-da-/an\\-aĝ₂\ne₂-ni{?} [...]\nlugal-e /sumur₃{?}\\ [...] šu ba-ra-an-ti\nmu-un-dul-gin₇ /šu\\ bi₂-[in-gur-gur] igi bi₂-/in\\-ĝa₂{!}-ĝa₂{!}\n{na₄}na KA-KA šim-gin₇ /zu₂\\ [ba-ni]-/in\\-ra\ngi su-lim-ma-ka i₃-gin₇ mu-ni-in-de₂\nud-ta ĝissu-še₃ am₃-ed₂-e\nĝissu-ta ud-še₃ am₃-ed₂-e\nmu 5-am₃ mu 10-am₃ ba-zal-[la]-ri\ngi su-lim-ma giĝ₄-gin₇ bi₂-in-gaz\nen-e igi ḫul₂-la im-ši-in-bar\ni₃ li i₃ li₂ kur šuba-a-ka sag₃-ga i-ni-in-de₂\nen-e kiĝ₂-gi₄-a kur-še₃ du-ur₂\nĝidru šu-na mu-un-na-ĝa₂-ĝa₂\nkiĝ₂-gi₄-a aratta{ki}-aš du-a-ni\nu₅{mušen}-gin₇ ḫur-saĝ-ĝa₂ nim-gin₇ saḫar /niĝin\\-a\nḪI.SUḪURku₆-gin₇ kur ur₃-ur₃-ru-[da]-ni aratta{ki}-aš /ba\\-te\nkisal aratta{ki}-ka ĝiri₃ ḫul₂-la mi-ni-in-gub\nĝidru TE SI NA mu-un-gub\nšu kiĝ₂ si bi₂-in-sa₂ a kiĝ₂ /bi₂-ib\\-ak-e\nen aratta{ki}-ke₄ ĝidru-ta igi tab-ba\nitima-ka ki-tuš kug-ga-ni-a ni₂ im-kar₂-kar₂-ka\nen-e šag₄-tam-a-ni-ir gu₃ mu-na-de₂-e",
+     "orig_lines": [
+      "412",
+      "413",
+      "414",
+      "415",
+      "416",
+      "417",
+      "418",
+      "419",
+      "420",
+      "421",
+      "422",
+      "423",
+      "424",
+      "425",
+      "426",
+      "427",
+      "428",
+      "429",
+      "430",
+      "431",
+      "432",
+      "433",
+      "434",
+      "435",
+      "436",
+      "437",
+      "438",
+      "439",
+      "440",
+      "441",
+      "442",
+      "443"
+     ],
+     "en": "After he had spoken to him thus, the messenger went off like a young donkey, braying as it is cut off from the chariot tongue; he trotted like an onager running on dry land, he filled his mouth with wind; he ran in one track (?) like a long-woolled sheep butting other sheep in its fury. He set foot joyfully in brick-built Kulaba. He transmitted the message word for word to his master, the lord of Kulaba. Now Enki gave Enmerkar wisdom, and the lord gave instructions to his chief steward. In his house ……, the king received ……. He wrapped it up like ……, and inspected it. He pounded …… with a pestle like herbs, he poured it like oil on the …… reed. From the sunlight it emerged into the shade, and from the shade it emerged into the sunlight. After five years, 10 years had passsed, he split the …… reed with an axe. The lord looked at it, pleased, and poured on …… fine oil, fine oil of the bright mountains. The lord placed the sceptre in the hands of the messenger going to the mountains. The messenger, whose journeying to Aratta was like a pelican over the hills, like a fly over the ground, who darted through the mountains as swiftly as carp swim, reached Aratta. He set foot joyfully in the courtyard of Aratta, and put the sceptre in ……. He …… and …… it. The lord of Aratta, eying the sceptre, which was shining awesomely in the sanctuary, his holy dwelling -- he, the lord, called to his šatam official:"
+    },
+    {
+     "ref": "444–453",
+     "orig": "aratta{ki} u₈ /sag₂\\-[gin₇] ḫe₂-em kaskal-bi [kur] /ki\\-bal ḫe₂-em\nmaḫ aratta{ki} kug {d}inana-ke₄\nen kul-aba₄{ki}-ra mu-na-an-šum₂-ma-ta\nlu₂-kiĝ₂-gi₄-a mu-un-gi₄-a-ni\n{d}utu ed₂-de₃ inim dugud pa ed₂-de₃\na-da-al kug {d}inana-ke₄ igi me-ši-kar₂-kar₂\naratta{ki}-a lul-e me-a ḫe₂-en-de₃-dib-e\nal me-da-aš šu al-zil₂-zil₂-i-a\nme-en-de₃ sug₄-ga lul-la-be₂-eš₂\nen kul-aba₄{ki}-ra {na₄}gug lul-la-me-a mu-na-dur₂-ru-ne-en-de₃-en",
+     "orig_lines": [
+      "444",
+      "445",
+      "446",
+      "447",
+      "448",
+      "449",
+      "450",
+      "451",
+      "452",
+      "453"
+     ],
+     "en": "\"Aratta is indeed like a slaughtered sheep! Its roads are inded like those of the rebel lands! Since holy Inana has given the primacy of Aratta to the lord of Kulaba, now it seems that holy Inana is looking with favour on her man who has sent a messenger to make the severe message as clear as the light of Utu. So in Aratta where can one go in this crisis? How long before the yoke-rope becomes bearable? As for us, in the direst hunger, in our direst famine, are we to prostrate ourselves before the lord of Kulaba?\""
+    },
+    {
+     "ref": "454–455",
+     "orig": "en aratta{ki}-ke₄ kiĝ₂-gi₄-a-ar\ninim-ma dub maḫ-gin₇ šu mu-na-an-sig₁₀\nkiĝ₂-gi₄-a lugal-zu en kul-aba₄{ki}-a-ra u₃-na-dug₄ u₃-na-de₃-taḫ",
+     "orig_lines": [
+      "454",
+      "455",
+      "456"
+     ],
+     "en": "The lord of Aratta entrusted a message to the messenger as if it were an important tablet:"
+    },
+    {
+     "ref": "456–461",
+     "orig": "ur na-an-gig₂-ge ur na-an-babbar-re\nur na-an-su₄-e ur na-an-dara₄-e\nur na-an-sig₇-sig₇-ge ur na-an-gun₃-gun₃{gu₂} ur ḫu-mu-ra-ab-šum₂-mu\nur-ĝu₁₀ ur-ra-ni a-da-min₃ ḫe₂-em-da-e\na₂-ĝal₂ ḫe₂-zu e-ne-ra dug₄-mu-na-ab",
+     "orig_lines": [
+      "457",
+      "458",
+      "459",
+      "460",
+      "461"
+     ],
+     "en": "\"Messenger! Speak to your master, the lord of Kulaba, and say to him: \"A champion who is not black-coloured, a champion who is not white-coloured, a champion who is not brown-coloured, a champion who is not red-coloured, a champion who is not yellow-coloured, a champion who is not multicoloured -- let him give you such a champion. My champion will compete against his champion, and let the more able one prevail!\" Say this to him.\""
+    },
+    {
+     "ref": "462–469",
+     "orig": "ur₅-gin₇ ḫu-mu-na-ab-be₂-a-ka\nkiĝ₂-gi₄-a u₂-lum a-lam mu-un-ĝen\nšeg₁₂ kul-aba₄{ki}-ke₄ eĝer sig₁₀-ga-gin₇ inim /mu\\-un-gi₄\nud₅{!}-gin₇ ka gaba kur-ra-ka igi mi-ni-ib-il₂-il₂-i\nmir{!} maḫ kiši₁₇-kiši₁₇-ta zig₃-ga-gin₇ e₂ me MIN₃ mu-un-ta-la₂-la₂\n[X X X X]-ka saĝ mi-ni-in-il₂\n[...] aratta{ki}-a-ke₄ [...]\nki-tuš-a-ni-ta a maḫ [e₃-a-gin₇ mu-un-na-ab]-be₂",
+     "orig_lines": [
+      "462",
+      "463",
+      "464",
+      "465",
+      "466",
+      "467",
+      "468",
+      "469"
+     ],
+     "en": "After he had spoken to him thus, the messenger set off, ulum, alam. In brick-built Kulaba, he was speechless, like a ……. He gazed like a goat on the mountain slopes, he …… as if it were a huge mir snake coming out from the brambles. In …… he lifted his head. …… of Aratta ……. From his seat, he addressed him like a raging torrent:"
+    },
+    {
+     "ref": "470–499",
+     "orig": "kiĝ₂-gi₄-a en /aratta\\{ki}-ra u₃-na-dug₄ u₃-na-de₃-taḫ\ntug₂ na-an-gig₂-ge tug₂ na-an-babbar-re\ntug₂ na-an-su₄-e tug₂ na-an-dara₄-e\ntug₂ na-an-sig₇-sig₇-ge tug₂ na-an-gun₃-gun₃{gu₂} tug₂ ga-mu-na-ab-šum₂(sourše: ḫu-mu-ra-ab-šum₂-mu)\nur-ĝu₁₀ gu₂-da ĝal₂ {d}en-lil₂-la₂ ur šu ga-mu-na-taka₄\nur-ĝu₁₀ ur-ra-ni a-da-min₃ ḫe₂-em-di-e\na₂-ĝal₂ ḫe₂-zu-zu e-ne-ra dug₄-mu-na-ab\n2-kam-ma-še₃ u₃-na-dug₄ u₃-na-de₃-taḫ\nen₃-tukum-še₃ lul-da LI-a ḫe₂-ni-ib-dib-e\niri-na udu-gin₇ igi-ni ḫu-mu-un-su₈-ub\ne-ne sipad-bi-gin₇ eĝer-bi ḫe₂-em-us₂-e\ndu-a-ni kur kug {na₄}za-gin₃-na\ngi niĝ₂ dub-ba-gin₇ gu₂ ḫu-mu-na-ab-ĝar\nkug-sig₁₇ kug-babbar su₃-ra₂-aĝ₂-bi\n{d}inana nin e₂-an-na-ra\nkisal aratta[{ki}]-/ka\\ guru₇-še₃ ḫu-mu-un-dub-dub-bu\n3-kam-ma-[še₃] u₃-na-dug₄ u₃-na-de₃-taḫ\niri-ni ir₇-saĝ{mušen}-gin₇ ĝiš-bi-ta na-an-tar-ta-ta-an\n[...]-/gin₇\\ na-an-dub₂-be₂-en\n[ganba ĝal₂-la]-/gin₇\\ na-an-si-ig-en\n[...] lil₂-e nam-mi-ni-in-dib-be₂-en\ndu-a-ni na₄ ḫur-saĝ-ĝa₂ šu u₃-mu-ni-in-ti\neš₃ gal eridug{ki} abzu e₂-nun ḫa-ma-du₃-e\na-sal-bar-bi im-šu₂-ra-ke₄ šu /ḫa\\-[ma-ni]-ib-tag-ge\nĝissu-bi kalam-[ma ḫa-ma]-ni-ib-la₂-la₂-e\ninim dug₄-ga-ni [...]-šar₂{?}-a-ka\nĝiškim-a-ni [e-ne-ra] dug₄-mu-na-ab\nud-ba en{?} [...]-/ka\\-am₃\n[...] barag-ga dur₂ ĝar-ra numun nun-na-ke₄-ne\n[X X] 1(DIŠ)-a mu₂-a",
+     "orig_lines": [
+      "470",
+      "471",
+      "472",
+      "473",
+      "474",
+      "475",
+      "476",
+      "477",
+      "478",
+      "479",
+      "480",
+      "481",
+      "482",
+      "483",
+      "484",
+      "485",
+      "486",
+      "487",
+      "488",
+      "489",
+      "490",
+      "491",
+      "492",
+      "493",
+      "494",
+      "495",
+      "496",
+      "497",
+      "498",
+      "499"
+     ],
+     "en": "\"Messenger! Speak to the lord of Aratta and say to him: \"A garment that is not black-coloured, a garment that is not white-coloured, a garment that is not brown-coloured, a garment that is not red-coloured, a garment that is not yellow-coloured, a garment that is not multicoloured -- I shall give him such a garment. My champion is embraced by Enlil. I shall send him such a champion. My champion will compete against his champion, and let the more able one prevail!\" Say this to him. Second, speak to him and say: \"Let him immediately pass from subterfuge ……. In his city, let them go before him like sheep. Let him, like their shepherd, follow behind them. As he goes, let the mountain of bright lapis lazuli humble itself before him like a crushed reed. And let them heap up its shining gold and silver in the courtyard of Aratta for Inana the lady of E-ana.\" Third, speak to him and say: \"Lest I make the people fly off from that city like a wild dove from its tree, lest I smash them like ……, lest I requite (?) them as if at a current market rate, lest I make …… them walk in ……, when he goes, let them take the mountain stones, and rebuild for me the great shrine Eridug, the abzu, the E-nun; let them adorn its architrave for me ……. Let them make its protection spread over the Land for me.\" His speaking ……. Recite his omen to him. At that time, the lord ……, …… on the throne daises and on the chairs, the noble seed, …….\""
+    },
+    {
+     "ref": "500–514",
+     "orig": "dug₄-ga-ni [maḫ]-am₃ šag₄-bi su-su-a-am₃\nkiĝ₂-gi₄-a ka-ni dugud šu nu-mu-un-da-an-gi₄-gi₄\nbar kiĝ₂-gi₄-a ka-ni dugud šu nu-mu-un-da-an-gi₄-gi₄-da-ka\nen kul-aba₄{ki}-a-ke₄ im-e šu bi₂-in-ra inim dub-gin₇ /bi₂-in\\-gub\nud-bi-ta inim im-ma gub-bu nu-ub-ta-ĝal₂-la\ni₃-ne-eš₂ {d}utu ud ne-a ur₅ ḫe₂-en-na-nam-ma-am₃\nen kul-aba₄{ki}-a-ke₄ /inim\\ [dub-gin₇] /bi₂\\-in-gub ur₅ /ḫe₂\\-[en-na]-nam-ma\nkiĝ₂-gi₄-a mušen-gin₇ a₂ dub₂ i₃-ak-e\nur-bar-ra maš₂-e us₂-sa-gin₇ guru₅-uš i₃-bur₂-bur₂-re\nḫur-saĝ 5 ḫur-saĝ 6 ḫur-saĝ 7-e im-me-re-bal-bal\nigi mu-un-il₂ aratta{ki}-aš ba-te\nkisal aratta{ki}-ka ĝiri₃ ḫul₂-la mi-ni-in-gub\nnam-nir-ĝal₂ lugal-a-na mu-un-zu\nbur₂-ra-bi inim šag₄-ga-na bi₂-ib₂-be₂\nkiĝ₂-gi₄-a en aratta{ki}-ra mu-na-ab-bal-e",
+     "orig_lines": [
+      "500",
+      "501",
+      "502",
+      "503",
+      "504",
+      "505",
+      "506",
+      "507",
+      "508",
+      "509",
+      "510",
+      "511",
+      "512",
+      "513",
+      "514"
+     ],
+     "en": "His speech was substantial, and its contents extensive. The messenger, whose mouth was heavy, was not able to repeat it. Because the messenger, whose mouth was tired, was not able to repeat it, the lord of Kulaba patted some clay and wrote the message as if on a tablet. Formerly, the writing of messages on clay was not established. Now, under that sun and on that day, it was indeed so. The lord of Kulaba inscribed the message like a tablet. It was just like that. The messenger was like a bird, flapping its wings; he raged forth like a wolf following a kid. He traversed five mountains, six mountains, seven mountains. He lifted his eyes as he approached Aratta. He stepped joyfully into the courtyard of Aratta, he made known the authority of his king. Openly he spoke out the words in his heart. The messenger transmitted the message to the lord of Aratta:"
+    },
+    {
+     "ref": "515–517",
+     "orig": "a-a-zu lugal-[ĝu₁₀] mu-e-ši-in-gi₄-in-nam\nen unug{ki}-/ga\\ /en\\ kul-aba₄{ki}-a-ke₄ mu-[e-ši]-in-gi₄-in-nam\nlugal-zu /dug₄\\-[ga-ni] nam-ĝu₁₀ taḫ-a-ni nam-ĝu₁₀",
+     "orig_lines": [
+      "515",
+      "516",
+      "517"
+     ],
+     "en": "\"Your father, my master, has sent me to you; the lord of Unug, the lord of Kulaba, has sent me to you.\" \"What is it to me what your master has spoken? What is it to me what he has said?\""
+    },
+    {
+     "ref": "518–535",
+     "orig": "lugal-ĝu₁₀ [a-na bi₂]-/in\\-dug₄ a-na bi₂-in-taḫ-am₃\nlugal-ĝu₁₀ [{ĝiš}meš₃] gal dumu {d}en-lil₂-la₂-ke₄\nĝiš-bi [an ki]-da mu₂-a\n/pa\\-[bi an-ne₂] us₂-sa-am₃\n[ur₂-bi ki-a] gub-ba-bi\nnam-en nam-lugal-la pa e₃ ak-a\nen-me-er-kar₂ dumu {d}utu-ke₄ im ma-an-šum₂\nen aratta{ki}-ke₄ im igi u₃-ni-bar šag₄ inim-ma u₃-bi₂-zu\na-na ma-ab-be₂-en-na-bi u₃-mu-e-dug₄\na ru-a sun₄ {na₄}za-gin₃ keše₂-da-ar\nab₂ kal-la-ga-ni kur me sikil-la-ka tud-da-ar\nsaḫar aratta{ki}(sourše: unug{ki}-ga)-ka a₂ e₃-a-ar\nubur ab₂ zid-da-ka ga gu₇-a-ar\nkul-aba₄{ki} kur me gal-gal-la-ka nam-en-na tum₂-ma-ar\nen-me-er-kar₂ dumu {d}utu-ra\ninim-bi eš₃ e₂-an-na-ka inim dug₃ ga-mu-na-ab-dug₄\nĝi₆-par₄ {ĝiš}meš₃ gibil-gin₇ gurun il₂-la-na\nlugal-ĝu₁₀ en kul-aba₄{ki}-ra šu-a ga-mu-na-ab-gi₄",
+     "orig_lines": [
+      "518",
+      "519",
+      "520",
+      "521",
+      "522",
+      "523",
+      "524",
+      "525",
+      "526",
+      "527",
+      "528",
+      "529",
+      "530",
+      "531",
+      "532",
+      "533",
+      "534",
+      "535"
+     ],
+     "en": "\"This is what my master has spoken, this is what he has said. My king is like a huge meš tree, …… son of Enlil; this tree has grown high, uniting heaven and earth; its crown reaches heaven, its trunk is set upon the earth. He who is made to shine forth in lordship and kingship, Enmerkar, the son of Utu, has given me a clay tablet. O lord of Aratta, after you have examined the clay tablet, after you have learned the content of the message, say whatever you will say to me, and I shall announce that message in the shrine E-ana as glad tidings to the scion of him with the glistening beard, whom his stalwart cow gave birth to in the mountains of the shining me, who was reared on the soil of Aratta, who was given suck at the udder of the good cow, who is suited for office in Kulaba, the mountain of great me, to Enmerkar, the son of Utu; I shall repeat it in his ĝipar, fruitful as a flourishing meš tree, to my king, the lord of Kulaba.\""
+    },
+    {
+     "ref": "536–556",
+     "orig": "ur₅-gin₇ ḫu-mu-na-ab-be₂-a-ka\nen aratta{ki}-ke₄ kiĝ₂-gi₄-a-ar\nim šu-rin-na-ni šu ba-ši-in-ti\nen aratta{ki}-ke₄ im-ma igi i-ni-in-bar\ninim dug₄-ga gag-am₃ saĝ-ki mi-re₂-da-am₃\nen aratta{ki}-ke₄ im šu-rin-na-ni igi im-bar-bar-re\nud-ba en men nam-en-na tum₂-ma dumu {d}en-lil₂-la₂-ke₄\n{d}iškur an ki-a gu₃ nun-bi di-dam\nud du₇-du₇ ug gal-la ki [X X]-ka nam-mi-ni-in-gub\nkur-kur [...] /mu-un\\-tuku₄-tuku₄-e\nḫur-saĝ [... mu]-/un\\-da-peš₁₁-peš₁₁-e\nni₂ [me]-lem₄{?} [X X] gaba-na ĝal₂-la-bi\nḫur-saĝ giri₁₇-zal-la gu₃ mi-ni-in-il₂\naratta{ki} bar ud-bi šag₄ ḫur-saĝ-ĝa₂-ka\ngig ni₂-bi mu₂-a gu₂ ni₂-bi an-ga-mu₂-a\ngig ni₂-bi mu₂-a guru₇ [X (X)]-ka\nen aratta{ki}-ra mu-na-ni-in-/ku₄\\-[ku₄]\nkisal aratta{ki}-a-ka igi-ni-še₃ i-im-dub{?}\nen aratta{ki}-ke₄ gig-e igi bi₂-in-du₈\nkiĝ₂-gi₄-a igi sag₃-sag₃-a-ni mu-un-ši-ib-UR₂xKID₂-UR₂xKID₂-e\nen aratta{ki}-ke₄ kiĝ₂-gi₄-a-ar gu₃ mu-un-na-de₂-e",
+     "orig_lines": [
+      "536",
+      "537",
+      "538",
+      "539",
+      "540",
+      "541",
+      "542",
+      "543",
+      "544",
+      "545",
+      "546",
+      "547",
+      "548",
+      "549",
+      "550",
+      "551",
+      "552",
+      "553",
+      "554",
+      "555",
+      "556"
+     ],
+     "en": "After he had spoken thus to him, the lord of Aratta received his kiln-fired tablet from the messenger. The lord of Aratta looked at the tablet. The transmitted message was just nails, and his brow expressed anger. The lord of Aratta looked at his kiln-fired tablet. At that moment, the lord worthy of the crown of lordship, the son of Enlil, the god Iškur, thundering in heaven and earth, caused a raging storm, a great lion, in ……. He was making the mountains quake ……, he was convulsing the mountain range ……; the awesome radiance …… of his breast; he caused the mountain range to raise its voice in joy. On Aratta's parched flanks, in the midst of the mountains, wheat grew of its own accord, and chickpeas also grew of their own accord; they brought the wheat which grew of its own accord into the granary of …… for the lord of Aratta, and heaped it up before him in the courtyard of Aratta. The lord of Aratta looked at the wheat. The messenger's eyes looked askance ……. The lord of Aratta called to the messenger:"
+    },
+    {
+     "ref": "557–576",
+     "orig": "maḫ-bi {d}inana nin kur-kur-ra-ke₄\niri-ni aratta{ki} šu {li-bi₂-in-dag} {(tḫe otḫer ms. ḫas instead:) li-bi₂-in-kal} unug{ki}-e la-ba-an-KA\ne₂-za-gin₃-na-ka-ni šu {li-bi₂-in-dag} {(tḫe otḫer ms. ḫas instead:) li-bi₂-in-kal} eš₃ e₂-an-na-ka la-ba-an-KA\nkur me sikil-la-ka šu {li-bi₂-in-dag} {(tḫe otḫer ms. ḫas instead:) li-bi₂-in-kal} šeg₁₂ kul-aba₄{ki}-a-ke₄ la-ba-an-KA\nĝiš-nu₂ še-er-kan₂ dug₄ šu {li-bi₂-in-dag} {(tḫe otḫer ms. ḫas instead:) li-bi₂-in-kal} ĝiš-nu₂ gi-rin-na la-ba-an-KA\nen-ra šu sikil-la-ka-ni šu {li-bi₂-in-dag} {(tḫe otḫer ms. ḫas instead:) li-bi₂-in-kal} en unug{ki}-ga en kul-aba₄{ki}-a-ra la-ba-an-KA\naratta{ki} zid-da gab₂-bu-ba\n{d}inana nin kur-kur-ra-ke₄\na maḫ e₃-a-gin₇ mu-un-na-niĝin₂-niĝin₂\nlu₂-be₂-ne lu₂-lu₂-ta dar-a\nlu₂ {d}dumu-zid-de₃ lu₂-ta e₃-a-me-eš\ninim kug {d}inana ki-bi-še₃ ĝar-ĝar-me-eš\nur igi-ĝal₂-la /DA\\.A.SAR {d}dumu-zid-da ḫe₂-ši-im-niĝin₂-niĝin₂\n/ul₄ ĝa₂-nam-ma\\ dumu ur₄-[...]\n[igi] a-ma-ru-ka gub-ba-me-eš\neĝer a-ma-ru ba-ur₃-ra-ta\n{d}inana nin kur-kur-ra-ke₄\nnam gal ki aĝ₂ {d}dumu-zid-da-ke₄\na nam-til₃-la-ka mu-un-ne-sud-sud\ngu₂ kalam-ma-ka ĝiš mu-un-ne-en-ĝal₂",
+     "orig_lines": [
+      "557",
+      "558",
+      "559",
+      "560",
+      "561",
+      "562",
+      "563",
+      "564",
+      "565",
+      "566",
+      "567",
+      "568",
+      "569",
+      "570",
+      "571",
+      "572",
+      "573",
+      "574",
+      "575",
+      "576"
+     ],
+     "en": "\"Inana, the lady of all the lands, has not run away from the primacy of her city, Aratta, nor has she stolen it for Unug; she has not run away from her E-zagin, nor has she stolen it for the shrine E-ana; she has not run away from the mountain of the shining me, nor has she stolen it for brick-built Kulaba; she has not run away from the adorned bed, nor has she stolen it for the shining bed; she has not run away from the purification for the lord, nor has she stolen it for the lord of Unug, the lord of Kulaba. Inana, the lady of all the lands, has surrounded Aratta, on its right and left, for her like a rising flood. They are people whom she has separated from other people, they are people whom Dumuzid has made step forth from other people, who firmly establish the holy words of Inana. Let the clever champion and the …… of Dumuzid whirl about! Quickly, come now, ……. After the flood had swept over, Inana, the lady of all the lands, from her great love of Dumuzid, has sprinkled the water of life upon those who had stood in the face of the flood and made the Land subject to them.\""
+    },
+    {
+     "ref": "577–587",
+     "orig": "ur igi-ĝal₂-la du-a-ni\n{tug₂}saĝšu gun₃-a ugu-na i-im-šu₂\n{tug₂}piriĝ-piriĝ-/ĝa₂\\ zag mu-ni-in-keše₂\n[X] il₂-/la\\ X šu{?} mi-ni-in-du₈-[X]-/am₃\\\n[...]-te-na mi-ni-in-dug₄\n[...] nin [...] /ba\\-an-PA{di}\n[...]-a-ni\n[...] {d}inana\nen₃-du-ni {d}ama-ušumgal-an-na nitalam-a-na ba-dug₃\nud-bi-ta ĝeštug₂ kug /ĝeštug₂\\ [kug] {d}dumu-zid-da-ke₄\nšu mu-ni-in-du₇ šir₃ mu-/ni\\-[in]-dug₄ inim mu-ni-in-zu",
+     "orig_lines": [
+      "577",
+      "578",
+      "579",
+      "580",
+      "581",
+      "582",
+      "583",
+      "584",
+      "585",
+      "586",
+      "587"
+     ],
+     "en": "The clever champion, when he came, had covered his head with a colourful turban, and wrapped himself in a garment of lion skins. 4 lines unclear Inana ……. Her song was pleasing to her spouse, Ama-ušumgal-ana. Since that time, she has made it perfect in the holy ear, the holy ear of Dumuzid, has sung it and has let the words be known."
+    },
+    {
+     "ref": "588–610",
+     "orig": "um-ma kur me sikil-še₃ du-a-ni\nki-sikil ud-da-na til-la-gin₇ im-ma-na-ta-e₃\nšembi₂-zid-da igi-na mu-un-gun₃\n[tug₂] babbar-ra zag mu-ni-in-keše₂\n[aga] zid-da iti₆-gin₇ mu-un-e₃\n[X] X X saĝ si ba-ni-in-sa₂\n[nitalam]-a-ni en-me-er-kar₂ barag-ge₄ mu-un-da-ab-si\n[...] um-mi-in-zi-zi\n[ga-nam] im-da-lu-lu aratta{ki}-aš u₈-da sila₄-bi\n[ga-nam im]-da-lu-lu aratta{ki}-aš ud₅-da maš₂-bi\n[ga-nam im]-da-lu-lu aratta{ki}-aš ab₂-da amar-bi\n[ga-nam] /im\\-da-lu-lu aratta{ki}-aš eme₅ dur₃{ur₃} kaš₄ gig₂-ga-<bi>\naratta{ki}-a na-an-da-be₂-a\n[guru₇-še₃] ḫe₂-em-dub-dub gu₂ ḫe₂-em-ĝar-ĝar\n[ḫe₂]-/ĝal₂\\ za-a ḫe₂-ĝal₂-zu\n[...] en aratta{ki}-ra u₃-mu-ni-in-ak\n[...] X X X RA ḫe₂-en-[X (X)]\n[...] mu-un-di-ni-ib-X-e\n[...] mu-un-ta-e₃\n[...] si mu-un-na-ab-sa₂",
+     "orig_lines": [
+      "588",
+      "589",
+      "590",
+      "591",
+      "592",
+      "593",
+      "594",
+      "595",
+      "596",
+      "597",
+      "598",
+      "599",
+      "600",
+      "601",
+      "602",
+      "603",
+      "604",
+      "605",
+      "606",
+      "607"
+     ],
+     "en": "When the old woman came to the mountain of the shining me, she went up to him like a maiden who in her day is perfect, painted her eyes with kohl, wrapped herself in a white garment, came forth with the good crown like the moonlight. She arranged the …… on her head. She made Enmerkar, her spouse, occupy the throne-dais with her. She raised up ……, and indeed, for Aratta, the ewes and their lambs now multiply; indeed, for Aratta, the mother goats and their kids multiply; indeed, for Aratta, the cows and their calves multiply; indeed, for Aratta, the donkey mares and their black, swift-footed foals multiply. In Aratta, they say together: \"Let them heap up and pile up for the grain piles; the abundance is truly your abundance.\" After having made …… for the lord of Aratta, let him ……. He will ……. He came forth ……, he set right for her. 3 lines missing"
+    },
+    {
+     "ref": "611–625",
+     "orig": "[...] me-te-aš [...] ĝal₂\n[...] X SI i-lu šag₄-[ga ...] X\n[...]-ni-a ḫe₂-ĝal₂-zu AN [...]\n[...] {d}en-lil₂-le saĝ-eš mu-ri-in-rig₇ [X]-/la\\-la-ĝa₂ ḫe₂-zu-zu\n[...] kar₂ a-a-ni nu-lam-lam a nu-un-de₂\n{d}en-[lil₂] [lugal] /kur\\-kur-ra-ke₄ ḫu-mu-un-kar₂{?}-re ni₂-ba\neš₂-gar₃ /im\\-ma-an-du₃-a-gin₇\nnam-lu₂-u₁₈-[lu] aratta{ki}-a-ke₄\nkug-sig₁₇ kug {na₄}[za]-gin₃ bal ak-de₃ eš₂-gar₃ X (X) X\nlu₂ gurun kug-sig₁₇ gurun ĝiš gub-bu-de₃\n{ĝiš}peš₃ ĝeštin-ba niĝ₂-ta ub₄-ba-gin₇ guru₇ gal-še₃ [u₃]-mu-un-dub\n{na₄}za-gin₃ duru₅ ur₂-ba mu-un-bur₂-re-ne\n{gi}ušub pa-ba mu-un-ta-bal-e-ne\n{d}inana nin e₂-an-na-ra\nkisal e₂-an-na{ki}-ka guru₇-še₃ mu-un-dub-bu-ne",
+     "orig_lines": [
+      "611",
+      "612",
+      "613",
+      "614",
+      "615",
+      "616",
+      "617",
+      "618",
+      "619",
+      "620",
+      "621",
+      "622",
+      "623",
+      "624",
+      "625"
+     ],
+     "en": "(An unidentified person speaks:) \"…… befitting ……, …… the ilu song of the heart, …… your abundance in his ……. Enlil has granted you ……, and may …… be made known. …… his father was not luxuriantly fertile, and poured forth no semen. Enlil, king of all the lands ……. In accordance with the tasks which he has now established, the people of Aratta …… their task of plying gold, silver and lapis lazuli; the men who …… golden fruit, fruit trees, with their figs and grapes, shall heap the fruit up in great mounds ……; and shall dig out the flawless lapis lazuli from the roots of the trees, and shall remove the succulent part of the reeds from the crowns of the trees, and then shall heap them up in a pile in the courtyard of E-ana for Inana, the lady of E-ana.\""
+    },
+    {
+     "ref": "626–636",
+     "orig": "lugal-ĝu₁₀ ĝa₂-nu na ga-e-de₅ na de₅-ĝu₁₀ ḫe₂-e-dab₅\ninim ga-ra-ab-dug₄ ĝizzal ḫe₂-e-ak\nlu₂ X /BI{?} E\\ kur-kur-ra uĝ₃-e u₃-/un\\-pad₃\n[nam-lu₂]-/ulu₃\\ aratta{ki}-[ke₄]\n[X]-me-eš₂ i-im-da ḫe₂-em-me-ne\nĝe₂₆-e gu₂-e-ta du-a-ĝu₁₀-ne\n/nam-lugal\\-ĝu₁₀ nin mul-mul-e ma-an-šum₂\n{d}ĝeštin-an-na [...]\niri-ba lil₂ [...]\nezen nu-mu-[...]\nud šu₂-uš nam-[...]",
+     "orig_lines": [
+      "626",
+      "627",
+      "628",
+      "629",
+      "630",
+      "631",
+      "632",
+      "633",
+      "634",
+      "635",
+      "636"
+     ],
+     "en": "\"Come, my king, I shall offer you advice: let my counsel be heeded. I shall speak words to you; let them be heard. Let the people choose a man …… of the foreign lands, and let the people of Aratta speak ……. When I go from here, the ever-sparkling lady gives me my kingship. Ĝeštin-ana ……. In that city ……, festivals were not ……. Daily …….\" approx. 6 lines missing"
+    }
+   ]
+  }
+ ]
+}

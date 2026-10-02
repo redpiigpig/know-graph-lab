@@ -1,0 +1,299 @@
+{
+ "slug": "inana-bilulu",
+ "source": "ETCSL",
+ "siglum": "ETCSL 1.4.4",
+ "source_url": "https://etcsl.orinst.ox.ac.uk/cgi-bin/etcsl.cgi?text=t.1.4.4",
+ "license": "ETCSL（Oxford）轉寫與英譯，非商業學術使用",
+ "compositions": [
+  {
+   "num": "1.4.4",
+   "title_en": "Inana and Bilulu: an ulila to Inana",
+   "segments": [
+    {
+     "ref": "1–5",
+     "orig": "[edin-na {d}dumu-zid-ĝu₁₀ i-lu za-ra i-lu za-ra i-lu] balaĝ{?} mu-un-da-sa₂-/sa₂\\\n[e₂] [a]-/ra\\-li mu-un-<da-sa₂-sa₂>\nbad₃-tibira{ki} mu-un-<da-sa₂-sa₂>\ndu₆-šuba-a mu-un-<da-sa₂-sa₂>\nki nam-sipad-da mu-un-da-sa₂-sa₂ amaš {d}dumu-zid-da-ka [...]\nsipad lu₂ [...]\n[...] {d}dumu-[zid]\n[...]-mu-un\n[...]\n[...] giri₁₇-zal-ĝu₁₀\n[...] ĝar-ra\n[...] UG\n[...] KA{?}\n[...]-la mu-da-[...]-ba-e i-si-iš [...] MU [...]\n[...]\n[...] giri₁₇-zal-la-ke₄ [...]",
+     "orig_lines": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "8",
+      "12",
+      "13",
+      "14",
+      "15",
+      "16",
+      "17",
+      "23",
+      "24",
+      "25"
+     ],
+     "en": "She can make the lament for you, my Dumuzid, the lament for you, the lament, the lamentation, reach the desert -- she can make it reach the house Arali; she can make it reach Bad-tibira; she can make it reach Du-šuba; she can make it reach the shepherding country, the sheepfold of Dumuzid ……."
+    },
+    {
+     "ref": "26",
+     "orig": "[...] NE [...] ad-e-eš [...] gi₄",
+     "orig_lines": [
+      "26"
+     ],
+     "en": "…… she broods on it:"
+    },
+    {
+     "ref": "27–30",
+     "orig": "[{d}dumu]-/zid\\ ka kug igi sag₉-sag₉ i-si-iš-bi mu-un-kuš₂-u₃\n/ka\\ kug <igi sag₉-sag₉ i-si-iš-bi mu-un-kuš₂-u₃>\n{/ĝuruš{?}\\} {(or read:) /DAG{?}\\} nitalam u₃-/mu\\-un zu₂{?}-lum\n[...] {d}dumu-zid-de₃ mu-un-kuš₂-u₃ [i-si-iš-bi] mu-un-kuš₂-u₃",
+     "orig_lines": [
+      "27",
+      "28",
+      "29",
+      "30"
+     ],
+     "en": "\"O Dumuzid of the fair-spoken mouth, of the ever kind eyes,\" she sobs tearfully, \"O you of the fair-spoken mouth, of the ever kind eyes,\" she sobs tearfully. \"Lad, husband, lord, sweet as the date, …… O Dumuzid!\" she sobs, she sobs tearfully."
+    },
+    {
+     "ref": "31–36",
+     "orig": "kug {d}inana-ke₄ [...]\nŠID ĜAR nam MUNUS [...] NE [...] ĜAR nam-[...]\nin-nin lu₂ ĝar-ra [...] ĝar-[ra ...]\nki-sikil {d}inana lu₂ ĝar-ra <...>\nama₅ ama ugu-na-ka mu-un-DU.DU\ne a-ra-zu sun₅-sun₅ mu-un-na-su₈-ug",
+     "orig_lines": [
+      "31",
+      "32",
+      "33",
+      "34",
+      "35",
+      "36"
+     ],
+     "en": "Holy Inana …… 1 line fragmentary The goddess ……. The maiden Inana ……. She was pacing to and fro in the chamber of her mother who bore her, in prayer and supplication, while they stood in attendance on her respectfully:"
+    },
+    {
+     "ref": "37–40",
+     "orig": "a [...] ama-ĝu₁₀ da-[...]-dib amaš-še₃ {ga-ma-e-da-ĝen} {(or read:) BI X X da-DU }\nama-ĝu₁₀ ga-ša-an-gal-e da-[...-dib] <amaš-še₃ ga-ma-e-da-ĝen>\na-a-ĝu₁₀ ma-ra-bu₇ sun₅-na {ga-da-[...]-dib} {(or read:) BI da-[...]-DU }\n{d}suen ma-ra-bu₇ sun₅-na {ga-da-[...]-dib} {(or read:) BI da-[...]-DU }",
+     "orig_lines": [
+      "37",
+      "38",
+      "39",
+      "40"
+     ],
+     "en": "\"O my mother …… with your permission let me go to the sheepfold! O my mother Ningal …… with your permission let me go to the sheepfold! My father has shone forth for me in lordly fashion …… Suen has shone forth for me in lordly fashion …….\""
+    },
+    {
+     "ref": "41–45",
+     "orig": "dumu ama ugu-ni kiĝ₂-gi₄-a-gin₇ ama₅-ta im-ma-ta-e₃\nama ga-ša-an-gal-e kiĝ₂-gi₄-a-gin₇ <ama₅-ta im-ma-ta-e₃>\nnin-ĝu₁₀ gal mu-un-zu gal in-ga-an-tum₂-mu\nkug {d}inana-ke₄ gal mu-un-zu <gal in-ga-an-tum₂-mu>\nkaš ud re ud su₃-ra₂ dur₂-ru-na-bi-a",
+     "orig_lines": [
+      "41",
+      "42",
+      "43",
+      "44",
+      "45"
+     ],
+     "en": "Like a child sent on an errand by its own mother, she went out from the chamber; like one sent on an errand by Mother Ningal, she went out from the chamber. Full knowledgeable my lady was, and also she was full apt, full knowledgeable holy Inana was, and also she was full apt. Beer stored in remote days, in long past days ……."
+    },
+    {
+     "ref": "65–70",
+     "orig": "[...] amaš-ta [...]\n[e₂ um]-/ma\\ {d}bi-lu-lu(sourše: be-li-li)-še₃ [...]\nki-bi-a sipad saĝ-a ra [...]\n{d}dumu-zid saĝ-a ra\n{d}ama-ušumgal-an-na saĝ-a ra",
+     "orig_lines": [
+      "65",
+      "67",
+      "68",
+      "69",
+      "70"
+     ],
+     "en": "…… from the sheepfold. 1 line missing …… to the house of old woman Bilulu (source, erroneously: Belili) . There the shepherd, head beaten in, ……, Dumuzid, head beaten in, ……; Ama-ušumgal-ana, head beaten in, ……."
+    },
+    {
+     "ref": "71–73",
+     "orig": "udu lugal-ĝa₂ {d}dumu-zid-da-ke₄ edin-na [...]\n{d}inana {lu₂}sipad nu-me-a\nudu lugal-ĝa₂ zag-ba mu-un-gi₄-gi₄",
+     "orig_lines": [
+      "71",
+      "72",
+      "73"
+     ],
+     "en": "\"The sheep of my master, of Dumuzid, in the desert ……. O Inana, a man who was not the shepherd was returning beside my master's sheep!\""
+    },
+    {
+     "ref": "74–75",
+     "orig": "nin-e nitalam-ni-ir šir₃ mu-un-ši-ib₂-u₃-tud šir₃ mu-un-ši-ib-dim₂-e\n[kug] [{d}]/inana\\-ke₄ {d}dumu-zid-ra <šir₃ mu-un-ši-ib₂-u₃-tud šir₃ mu-un-ši-ib-dim₂-e>",
+     "orig_lines": [
+      "74",
+      "75"
+     ],
+     "en": "The lady created a song for her young husband, fashioned a song for him, holy Inana created a song for Dumuzid, fashioned a song for him:"
+    },
+    {
+     "ref": "76–80",
+     "orig": "[mu]-/lu\\ nu₂ su₈-ba mu-lu nu₂ en-nu-uĝ₃-ba me-gub\n{d}dumu-zid mu-lu nu₂ en-<nu-uĝ₃-ba me-gub>\n{d}ama-ušumgal-an-na mu-<lu> <nu₂ en-nu-uĝ₃-ba me-gub>\n{d}utu-da gub-ba DI-ĝa₂ en-<nu-uĝ₃-ba me-gub>\nĝi₆-da nu₂-nu₂ DI-ĝa₂ en-nu-uĝ₃-ba me-gub",
+     "orig_lines": [
+      "76",
+      "77",
+      "78",
+      "79",
+      "80"
+     ],
+     "en": "\"O you who lie at rest, shepherd, who lie at rest, you stood guard over them! Dumuzid, you who lie at rest, you stood guard over them! Ama-ušumgal-ana, you who lie at rest, you stood guard over them! Rising with the sun you stood guard over my sheep (?), lying down by night only, you stood guard over my sheep (?)!\""
+    },
+    {
+     "ref": "81–89",
+     "orig": "ud-bi-a um-ma {d}bi-lu-lu\nbur-šu-ma nin ni₂-te-na-ka\ndumu-ni ĝir₂-ĝir₂-e lu₂ dili-am₃\nul₄-ul₄-e am₃-tum₂ lu₂ i₃-zu-am₃\ngud dab₅-ba-ni tur₃ amaš-e am₃-si\nguru₇-du₆-ra-ni gu₂ am₃-gur-gur\nul₄-ul₄-la šita₂ tag-ga-na sag₂ mu-un-ne-dug₄\ndumu na(sourše: ni) gu₅-li na šir₃-ru edin-lil₂-la₂\nigi-ni-še₃ i₃-tuš inim mu-un-da-ab-be₂",
+     "orig_lines": [
+      "81",
+      "82",
+      "83",
+      "84",
+      "85",
+      "86",
+      "87",
+      "88",
+      "89"
+     ],
+     "en": "Then the son of old woman Bilulu, matriarch and her own mistress, -- Ĝirĝire, a man on his own, fit for prospering and a knowledgeable man -- was filling pen and fold with his captured cattle, and was stacking his stacks and piles of grain. He quickly left scattered his victims struck down with the mace. Širru of the haunted desert, no one's child and no one's friend, sat before him and held converse with him."
+    },
+    {
+     "ref": "90–97",
+     "orig": "ud-bi-a nin-e šag₄-ga-ni a-na am₃-de₆\nkug {d}inana-ke₄ šag₄-ga-ni a-na am₃-/de₆\\\num-ma(sourše: u₃-mu-un) {d}bi-lu-lu ug₅-/ge\\-[de₃] šag₄-ga-ni /am₃\\-[de₆]\nnitalam ki aĝ₂-ĝa₂-ni {d}dumu-zid-{d}ama-/ušumgal\\-[an-na-ra]\nki-nu₂ dug₃-dug₃-ge-de₃ šag₄-ga-ni nam-[de₆]\nnin-ĝu₁₀ {d}bi-lu-lu edin-lil₂-la₂ ba-an-[...]\ndumu-ni ĝir₂-ĝir₂-e lil₂-la₂-a-bi bi₂-/in\\-[...]\ndumu na gu₅-li na šir₃-ru edin-lil₂-la₂ [...]",
+     "orig_lines": [
+      "90",
+      "91",
+      "92",
+      "93",
+      "94",
+      "95",
+      "96",
+      "97"
+     ],
+     "en": "That day what was in the lady's heart? What was in holy Inana's heart? To kill old woman Bilulu was in her heart! To make good the resting place for her beloved young husband, for Dumuzid-ama-ušumgal-ana -- that was in her heart! My lady went to Bilulu in the haunted desert. Her son Ĝirĝire like the wind there did …… Širru of the haunted desert, no one's child and no one's friend, ……."
+    },
+    {
+     "ref": "98–110",
+     "orig": "kug {d}inana-ke₄ eš₂-dam-ma ba-ni-in-kur₉ [...]\nki-tuš-a ba-e-gub nam mu-ni-ib-tar-re\nĝen-na ba-ug₅-ge-en na-nam-ma-am₃ mu-zu ga-ba-da-ḫa-lam-e\n{kuš}ummud a sed niĝ₂ edin-na ḫe₂-me-en\ndumu-ni ĝir₂-ĝir₂-re e-ne-bi-da\n{d}udug edin-na {d}lamma edin-na ḫe₂-em-ma-da-me-eš-am₃\ndumu na gu₅-li na šir₃-ru /edin\\-lil₂-la₂\nedin-na ḫa-mu-ni-ib₂-du zid₂ ḫu-mu-ni-ib₂-ŠID-e\nĝuruš edin-na du a ub-ta-an-bal-bal zid₂ ub-ta-an-dub-dub\n{d}udug edin-na {d}lamma edin-na\n[...] sed-a ḫu-mu-ni-ib-be₂ dub-a ḫu-mu-ni-ib-be₂\nki sa-ḫa-a-na [edin]-/na\\ ḫu-mu-un-ĝal₂\num-ma {d}bi-lu-lu šag₄-ga-ni ḫu-mu-ḫul₂-le",
+     "orig_lines": [
+      "98",
+      "99",
+      "100",
+      "101",
+      "102",
+      "103",
+      "104",
+      "105",
+      "106",
+      "107",
+      "108",
+      "109",
+      "110"
+     ],
+     "en": "Holy Inana entered the alehouse, stepped into a seat, began to determine fate: \"Begone! I have killed you; so it is indeed, and with you I destroy also your name: May you become the waterskin for cold water that is used in the desert! May her son Ĝirĝire together with her become the protective god of the desert and the protective goddess of the desert! May Širru of the haunted desert, no one's child and no one's friend, walk in the desert and keep count of the flour, and when water is libated and flour sprinkled for the lad wandering in the desert, let the protective god of the desert and the protective goddess of the desert call out: \"Libate!\", call out: \"Sprinkle!\", and thereby cause him to be present in the place from which he vanished, in the desert! Let old woman Bilulu gladden his heart!\""
+    },
+    {
+     "ref": "111–124",
+     "orig": "i₃-ne-eš₂ {d}utu ud ne ur₅ ḫe₂-en-na-/nam\\\n{kuš}ummud [a sed niĝ₂ edin-na i₃-me]\ndumu-ni [ĝir₂]-/ĝir₂\\-re e-ne-bi-da\n[{d}]udug edin-na {d}lamma edin-na im-ma-an-da-an-me-eš-am₃\n[dumu] /na\\ gu₅-li na šir₃-ru edin-lil₂-la₂\n[edin]-/na\\ mu-ni-ib₂-ĝen zid₂ mu-ni-ib-ŠID-e\n[ĝuruš edin]-na du a ub-ta-an-bal-bal zid₂ ub-ta-<an-dub-dub>\n{d}udug edin-na [{d}]lamma edin-na\n[...] sed-a mu-ni-ib-be₂ dub-[a mu-ni-ib-be₂]\nki sa-ḫa-a-na edin-na [mu-un-ĝal₂ ...]\num-ma {d}bi-lu-lu šag₄-ga-[ni mu-ḫul₂-e]\n{d}inana-ke₄ ĝuruš ki-e šu /mu\\-[...]\n{d}dumu-zid ki-[e šu mu-...]\nšu du₃-a-[ni ...]\n[...] ŠE₃ [...] mu-na-/il₂\\",
+     "orig_lines": [
+      "111",
+      "112",
+      "113",
+      "114",
+      "115",
+      "116",
+      "117",
+      "118",
+      "119",
+      "120",
+      "121",
+      "122",
+      "123",
+      "124",
+      "136"
+     ],
+     "en": "And immediately, under the sun of that day, it truly became so. She became the waterskin for cold water that is used in the desert. Her son Ĝirĝire together with her became the protective god of the desert and the protective goddess of the desert. Širru of the haunted desert, no one's child and no one's friend, walks in the desert and keeps count of the flour, and when water is libated and flour sprinkled for the lad wandering in the desert, the protective god of the desert and the protective goddess of the desert call out: \"Libate!\", call out: \"Sprinkle!\", and thereby cause him to be present in the place from which he vanished, in the desert. Old woman Bilulu gladdens his heart. Inana put out her hand to the lad on the ground, put out her hand to Dumuzid on the ground, his death-bound hands ……"
+    },
+    {
+     "ref": "137–148",
+     "orig": "[...]-ba-še₃ buru₅-ḫabrud{mušen}-e nam /il₂\\\nki-ulutim₂ {d}dumu-zid-da-še₃ buru₅-ḫabrud{mušen}-e [...]\ntum₁₂{mušen}-gin₇ ab-lal₃-ba ni₂-bi-a ad-e-eš ba-ni-ib₂-gi₄\nburu₅-ḫabrud{mušen}-e a₂-bur₂-ba ad-e-eš ba-ni-ib-gi₄\nlugal-ĝu₁₀ ama-ni {d}dur₇-/tur\\-ra-am₃ i₃-ḫul₂-le\n{d}dumu-zid-de₃ ama-ni <{d}dur₇-tur-ra-am₃ i₃-ḫul₂-le>\nin-nin-ĝu₁₀ u₃-tud-da kuara{ki}\nki-sikil amar sig₇-ga men-bi\nu₆ di niĝ₂-me-ĝar saĝ gig₂-ga\ne-ne dug₄-dug₄ i-lu akkil dug₄-dug₄\nnam-šita dug₄-dug₄ lugal-la [...]\n{d}ĝeštin-an-na-ke₄ nin [...]\nA AN SUD KID [...]",
+     "orig_lines": [
+      "137",
+      "138",
+      "139",
+      "140",
+      "141",
+      "142",
+      "143",
+      "144",
+      "145",
+      "146",
+      "147",
+      "148",
+      "149"
+     ],
+     "en": "The francolin …… to the …… of its ……. The francolin …… to the birthplace of Dumuzid. Like a pigeon on its window ledge it took counsel with itself; the francolin in its shelter took counsel. Only his mother Durtur can gladden my master! Only his mother Durtur can gladden Dumuzid! My goddess, born in Kuara, the maiden who is the crown of all ……, the admiration and acclaim of the black-headed people, the playful one who also voices laments and the cries, who intercedes before the king -- Ĝeštin-ana, the lady, did ……."
+    },
+    {
+     "ref": "150–154",
+     "orig": "ki-sikil u₆ di [...]\n{d}ĝeštin-an-na-ke₄ [...] mi-ni-[...]\nnu-gig-e šu [...]-/ne\\-ne šu-a mi-ni-/TUR{?}\\\n[...] NI [...]-ba teš₂-bi ba-ra-ĝa₂-ĝa₂\n[...] ka NI [...] ba-an-ta-gi₄-gi₄",
+     "orig_lines": [
+      "150",
+      "151",
+      "152",
+      "153",
+      "154"
+     ],
+     "en": "The maiden …… the admiration. Ĝeštin-ana ……. The sacred one, Inana …… in her hand. …… together. …… replied:"
+    },
+    {
+     "ref": "155–161",
+     "orig": "[i]-/lu\\ za-ra i-lu za-ra [i-lu] du₅-mu-ri-ib-dug₄\n[...] šeš-e ĝe₂₆ i-lu za-ra <i-lu du₅-mu-ri-ib-dug₄ >\n[...] i-lu za-ra <i-lu du₅-mu-ri-ib-dug₄ >\n[e₂] [a-ra-li]-/a\\ i-lu za-ra <i-lu du₅-mu-ri-ib-dug₄ >\n[du₆-šuba]-/a\\ i-lu za-ra <i-lu du₅-mu-ri-ib-dug₄ >\n[bad₃]-/tibira{ki}-a\\ i-lu za-ra <i-lu du₅-mu-ri-ib-dug₄ >\n[ki nam]-sipad-da [i-lu za-ra i]-/lu\\ du₅-mu-ri-/ib\\-[dug₄]",
+     "orig_lines": [
+      "155",
+      "156",
+      "157",
+      "158",
+      "159",
+      "160",
+      "161"
+     ],
+     "en": "\"Let me utter the lament for you, the lament for you, the lament! Brother, let me utter the lament for you, the lament! …… let me utter the lament for you, the lament! Let me utter the lament for you, the lament in the house Arali! Let me utter the lament for you, the lament in Du-šuba! Let me utter the lament for you, the lament in Bad-tibira! Let me utter the lament for you, the lament in the shepherding country!\""
+    },
+    {
+     "ref": "162–165",
+     "orig": "[in]-/nin\\ mu-ud-na-ni ne-nam ib₂-/da\\-[sa₂]\n[kug] [ga]-/ša\\-an-an-na su₈-ba {d}[dumu-zid] [ne]-nam ib-<da-sa₂>\n[ki]-/nu₂\\ ze₂-ze₂-ba [in-nin]-ra\n[šu] /ĝar\\ gi₄-a ga-ša-an-an-na-ra{?} /šu\\-[a ba]-/na\\-an-si",
+     "orig_lines": [
+      "162",
+      "163",
+      "164",
+      "165"
+     ],
+     "en": "How truly the goddess proved the equal of her betrothed, how truly holy Inana proved the equal of the shepherd Dumuzid! It was granted to Inana to make good his resting place, it was granted to the goddess to avenge him!"
+    },
+    {
+     "ref": "166–173",
+     "orig": "[i-lu za]-ra i-lu za-ra i-lu du₅-/mu\\-[ri]-/ib\\-dug₄\n[i]-lu za-ra i-lu za-ra <i-lu du₅-mu-ri-ib-dug₄ >\n[ki]-ulutim₂ i-lu za-ra <i-lu du₅-mu-ri-ib-dug₄ >\nedin-na {d}dumu-zid i-lu za-ra <i-lu du₅-mu-ri-ib-dug₄ >\ne₂ a-ra-li-a i-lu za-ra <i-lu du₅-mu-ri-ib-dug₄ >\ndu₆-šuba-a [i-lu] za-ra <i-lu du₅-mu-ri-ib-dug₄ >\nbad₃-tibira{ki}-a i-[lu za-ra] <i-lu du₅-mu-ri-ib-dug₄ >\nki nam-sipad-da i-lu za-ra i-lu /du₅\\-[mu-ri-ib-dug₄]",
+     "orig_lines": [
+      "166",
+      "167",
+      "168",
+      "169",
+      "170",
+      "171",
+      "172",
+      "173"
+     ],
+     "en": "\"Let me utter the lament for you, the lament for you, the lament! Let me utter the lament for you, the lament for you, the lament! In the birthplace let me utter the lament for you, the lament! In the desert, O Dumuzid, let me utter the lament for you, the lament! In the house Arali let me utter the lament for you, the lament! In Du-šuba let me utter the lament for you, the lament! In Bad-tibira let me utter the lament for you, the lament! In the shepherding country let me utter the lament for you, the lament!\""
+    },
+    {
+     "ref": "174–176",
+     "orig": "{d}dumu-zid ne-nam ib₂-da-sa₂-e šu [ĝar gi₄-a]\n{d}bi-lu-lu ug₅-[ga]\n{d}inana ib₂-da-/sa₂\\",
+     "orig_lines": [
+      "174",
+      "175",
+      "176"
+     ],
+     "en": "How truly she proved the equal of Dumuzid, avenging him; by killing Bilulu, Inana proved equal to him!"
+    },
+    {
+     "ref": "177",
+     "orig": "u₃-lil₂-la₂ {d}inana-kam",
+     "orig_lines": [
+      "177"
+     ],
+     "en": "An ulila song of Inana."
+    }
+   ]
+  }
+ ]
+}

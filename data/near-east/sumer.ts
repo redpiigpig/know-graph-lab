@@ -217,7 +217,7 @@ export const SUMER_CANON: NeCanon = {
             { slug: 'urnamma-a', title_zh: '烏爾納姆之死', title_orig: 'The death of Ur-Namma (Ur-Namma A)', siglum: 'ETCSL 2.4.1.1', copies: OB, language: SUM, note: '烏爾第三王朝開國之王戰死，在冥府向七位冥界之神獻禮——王也會死、也要在冥府排座次。' },
             { slug: 'shulgi-a', title_zh: '舒爾吉頌', title_orig: 'A praise poem of Šulgi (Šulgi A)', siglum: 'ETCSL 2.4.2.01', copies: OB, language: SUM, note: '王一日之內從尼普爾跑到烏爾再跑回來，同一天在兩城舉行節慶。王的自我神化。' },
             { slug: 'shulgi-royal-hymns', title_zh: '舒爾吉王頌集', title_orig: 'Šulgi hymns', siglum: 'ETCSL 2.4.2.01–2.4.2.26', copies: OB, language: SUM, extent: '二十餘首', note: '書吏學校背誦最多的一組王頌。' },
-            { slug: 'ishme-dagan-hymns', title_zh: '伊什美—達干王頌集', title_orig: 'Išme-Dagan hymns', siglum: 'ETCSL 2.5.4', copies: OB, language: SUM, extent: '二十餘首', note: '伊辛王朝延續烏爾第三王朝的王頌傳統。' },
+            { slug: 'ishme-dagan-hymns', title_zh: '伊什美—達干王頌集', title_orig: 'Išme-Dagan hymns', siglum: 'ETCSL 2.5.4.01–2.5.4.29', copies: OB, language: SUM, extent: '二十餘首', note: '伊辛王朝延續烏爾第三王朝的王頌傳統。' },
           ],
         },
       ],

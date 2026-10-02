@@ -1,0 +1,1308 @@
+{
+ "slug": "temple-hymns",
+ "source": "ETCSL",
+ "siglum": "ETCSL 4.80.1",
+ "source_url": "https://etcsl.orinst.ox.ac.uk/cgi-bin/etcsl.cgi?text=t.4.80.1",
+ "license": "ETCSL（Oxford）轉寫與英譯，非商業學術使用",
+ "compositions": [
+  {
+   "num": "4.80.1",
+   "title_en": "The temple hymns",
+   "segments": [
+    {
+     "ref": "1–7",
+     "orig": "e₂-u₆-nir an ki-da mu₂-a (Šited in OB šatalogue from Nibru, at Pḫiladelpḫia, 0.2.01, line 49; OB šatalogue in tḫe Louvre, 0.2.02, line 31; OB šatalogue from Urim (U2), 0.2.04, line 21; OB šatalogue at Yale (Y2), 0.2.12, line 13)\ntemen an ki unu₆ gal eridug{ki}\nabzu eš₃ nun-bi-ir am₃-gub\ne₂{?}-du₆-kug u₂ sikil-la rig₇-ga\npa₅ sikil nun-na-ka a naĝ-ĝa₂\nkur ki sikil-la naĝa dub₂ dug₄-ga\nabzu tigi-zu me-kam",
+     "orig_lines": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7"
+     ],
+     "en": "O E-unir (House which is a ziqqurat), grown together with heaven and earth, foundation of heaven and earth, great banqueting hall of Eridug! Abzu, shrine erected for its prince, E-du-kug (House which is the holy mound) where pure food is eaten, watered by the prince's pure canal, mountain, pure place cleansed with the potash plant, Abzu, your tigi drums belong to the divine powers."
+    },
+    {
+     "ref": "8–15",
+     "orig": "bad₃ GIĜ₄ gal-zu šu si sa₂-am₃\nkilib₃-ĝal₂ ki diĝir til₃-la-za\nkiĝ₂ gal kiĝ₂ ki dug₃ ud nu-dib-be₂\ne₂ zag keše₂-zu šita sa₂ nu-di\nnun-zu nun gal-e men kug\nmuš₃-za ma-ra-ni-in-ge-en eridug{ki} saĝ-men ĝal₂\nkiši₁₇ mu₂ kiši₁₇ sikil ed₃-de₃ susbu₃\neš₃ abzu ki-zu ki gal-zu",
+     "orig_lines": [
+      "8",
+      "9",
+      "10",
+      "11",
+      "12",
+      "13",
+      "14",
+      "15"
+     ],
+     "en": "Your great …… wall is in good repair. Light does not enter your meeting-place where the god dwells, the great ……, the beautiful place. Your tightly constructed house is sacred and has no equal. Your prince, the great prince, has fixed firmly a holy crown for you in your precinct -- O Eridug with a crown placed on your head, bringing forth thriving thornbushes, pure thornbushes for the susbu priests (?), O shrine Abzu, your place, your great place!"
+    },
+    {
+     "ref": "16–23",
+     "orig": "ki {d}utu-ra gu₃ de₂-za\ngir₄ ninda il₂ u₂ sug₄-sug₄-za\nu₆-nir eš₃ maḫ an-ne₂ us₂-sa-X-za\ngir₄ gal unu₆ gal-da sa₂-a-za\nnun-zu nun an ki [X X] X nu-kur₂-ru\n[X] dug₄-ga saĝ du₃ X X-ni{?} ĝeštug₂ de₅-a\n[X X] X en {d}nu-dim₂-mud-e\n[e₂-engur-ra] muš₃-za e₂ bi₂-in-gub barag-za dur₂ bi₂-in-ĝar",
+     "orig_lines": [
+      "16",
+      "17",
+      "18",
+      "19",
+      "20",
+      "21",
+      "22",
+      "23"
+     ],
+     "en": "At your place of calling upon Utu, at your oven bringing bread to eat, on your ziqqurat, a magnificent shrine stretching toward heaven, at your great oven rivalling the great banqueting hall, your prince, the prince of heaven and earth …… can never be changed, the ……, the creator, the ……, the wise one, the ……, Lord Nudimmud, has erected a house in your precinct, O E-engura (House of the subterranean waters), and taken his seat upon your dais."
+    },
+    {
+     "ref": "24",
+     "orig": "[23] e₂ {d}en-ki eridug{ki}-ga",
+     "orig_lines": [
+      "24"
+     ],
+     "en": "23 lines: the house of Enki in Eridug."
+    },
+    {
+     "ref": "25–33",
+     "orig": "X [X] X X eš₃ nam tar-ra\nX [X] X temen u₆-nir-ra il₂-la\nX [X] X a₂-dam {d}en-lil₂-la₂\nX [X] X-bu-zu zid-da-[zu] gab₂{!}-bu-zu ki-en-gi ki-uri\ne₂ {d}en-lil₂-la₂ šag₄-zu ten-te-en bar-zu nam tar-ra\nzag-du₈ [a]-sal-bar-zu kur-bad₃\ndub-la₂ [zag] e₃-zu kur me-te-ĝal₂\nKA-zu KA [X] X X AD muš₃ nun-za\nur₂-zu an ki-da kuš₂-u₃-de₃",
+     "orig_lines": [
+      "25",
+      "26",
+      "27",
+      "28",
+      "29",
+      "30",
+      "31",
+      "32",
+      "33"
+     ],
+     "en": "O ……, shrine where destiny is determined, ……, foundation, raised with a ziqqurat, ……, settlement of Enlil, your ……, your right and your left are Sumer and Akkad. House of Enlil, your interior is cool, your exterior determines destiny. Your door-jambs and architrave are a mountain summit, your projecting pilasters a dignified mountain. Your peak is a …… peak of your princely platform. Your base serves heaven and earth."
+    },
+    {
+     "ref": "34–37",
+     "orig": "nun-zu nun gal {d}en-lil₂ en dug₃\nen zag [an]-/na\\ en nam tar-re-da\neš₃ nibru{ki} kur gal {d}en-lil₂-le\nmuš₃-za e₂ bi₂-in-gub barag-za dur₂ bi₂-in-ĝar",
+     "orig_lines": [
+      "34",
+      "35",
+      "36",
+      "37"
+     ],
+     "en": "Your prince, the great prince Enlil, the good lord, the lord of the limits of heaven, the lord who determines destiny, the Great Mountain Enlil, has erected a house in your precinct, O shrine Nibru, and taken his seat upon your dais."
+    },
+    {
+     "ref": "38",
+     "orig": "13 e₂ {d}en-lil₂ nibru{ki}-a",
+     "orig_lines": [
+      "38"
+     ],
+     "en": "13 lines: the house of Enlil in Nibru."
+    },
+    {
+     "ref": "39–46",
+     "orig": "tum-ma-al{ki} me nun-e gal pad₃-da ni₂ su zig₃ ri-a\ntemen šu-luḫ sikil-zu abzu-a la₂-a\niri{?} ul ĝiš-gi gi sumun gi ḫenbur sig₇-ga\nšag₄-zu kur ḫe₂-ĝal₂-la nam-ḫe₂-a du₃-a\nitid zag-mu ezen ĝal₂-la-za u₆ di tag-ga\nnin gal ki-ur₃-ra {d}en-lil₂-da zag ša₄-a\nnun-zu ama {d}nin-lil₂ nitalam ki aĝ₂ {d}nu-nam-nir-ra-kam\ne₂-tum-ma-al{ki} muš₃-za e₂ bi₂-in-gub barag-za dur₂ bi₂-in-ĝar",
+     "orig_lines": [
+      "39",
+      "40",
+      "41",
+      "42",
+      "43",
+      "44",
+      "45",
+      "46"
+     ],
+     "en": "O Tummal, exceedingly worthy of the princely divine powers, inspiring awe and dread! Foundation, your pure lustration extends over the abzu. Primeval city, reedbed green with old reeds and new shoots, your interior is a mountain of abundance built in plenitude. At your feast held in the month of the New Year, you are wondrously adorned as the great lady of Ki-ur rivals Enlil. Your princess, Mother Ninlil, the beloved wife of Nunamnir, has erected a house in your precinct, O E-Tummal (Tummal House), and taken a place upon your dais."
+    },
+    {
+     "ref": "47",
+     "orig": "8 e₂ {d}nin-lil₂ nibru{ki}-a",
+     "orig_lines": [
+      "47"
+     ],
+     "en": "8 lines: the house of Ninlil in Nibru."
+    },
+    {
+     "ref": "48–56",
+     "orig": "e₂-me-lem₄-ḫuš ni₂ gal gur₃-ru\neš₃-maḫ me nun an-ta bar-ra\n{e₂}šutum {d}en-lil₂-la₂ me ul-e ĝar-ra nir-ra tum₂-ma\nnam-nun-na saĝ il₂ na de₅ e₂-kur-ra\nzag-e₃ si e₂-zu muš₃ an-da X X-a\neš-bar ki di gal ku₅-ru-ba id₂-lu₂-ru-gu₂\nzid-du u₃-tud šag₄ erim₂-ĝal₂ mud-še₃{?} ni₁₀-ni₁₀\nki gal šu-luḫ sikil nam-išib-e du₇-za\nen {d}nu-nam-nir-da u₂ mu-ni-sug₄-sug₄",
+     "orig_lines": [
+      "48",
+      "49",
+      "50",
+      "51",
+      "52",
+      "53",
+      "54",
+      "55",
+      "56"
+     ],
+     "en": "O E-melem-ḫuš (House of terrifying radiance) exuding great awesomeness, Eš-maḫ (Magnificent shrine), to which princely divine powers were sent from heaven, storehouse of Enlil founded for the primeval divine powers, worthy of nobility, lifting your head in princeship, counsellor of E-kur, parapeted buttress, your house …… the platform with heaven. The decisions at its place of reaching the great judgment -- the river of the ordeal -- let the just live and consign to darkness the hearts that are evil. In your great place fit for pure lustration and the rites of išib priests, you dine with Lord Nunamnir."
+    },
+    {
+     "ref": "57–59",
+     "orig": "nun-zu nun šag₄ kuš₂-u₃ {d}en-lil₂-ke₄ eš₃-maḫ tum₂-ma\n{d}udug e₂-kur-ra kin-gal nuska-ke₄\ne₂ {d}en-lil₂-la₂ muš₃-za e₂ bi₂-in-gub barag-za dur₂ bi₂-in-ĝar",
+     "orig_lines": [
+      "57",
+      "58",
+      "59"
+     ],
+     "en": "Your prince, the prince who is the counsellor of Enlil and worthy of Eš-maḫ, the udug demon of E-kur, the leader Nuska, has erected a house in your precinct, O house of Enlil, and taken his seat upon your dais."
+    },
+    {
+     "ref": "60",
+     "orig": "12 e₂ {d}nuska nibru{ki}-a",
+     "orig_lines": [
+      "60"
+     ],
+     "en": "12 lines: the house of Nuska in Nibru."
+    },
+    {
+     "ref": "61–68",
+     "orig": "e₂-me-ur₄-an-na ki gal-la gub-ba\nme zid ur-saĝ iri{?} barag-ge X ki{?} mu₂-a\na₂ me₃ {ĝiš}mitum₂ šul mar-uru₅ gur₃-ru\nšeg₁₂ u₁₈-ru nu-silig-ge temen ud til₃-le-zu\nen ul-e ĝar-ra eš-bar me nun-na-kam\nsaḫar kug kur-ra ab-si-a saĝ il₂ nun-e-ne\ne₂ maḫ u₆ e₃-zu ud-gin₇ muš₃ barag₂-ga\ne₂-šu-me-ša₄ mu-zu {d}en-lil₂-le ni₂ ḫuš ma-ra-ni-in-ri",
+     "orig_lines": [
+      "61",
+      "62",
+      "63",
+      "64",
+      "65",
+      "66",
+      "67",
+      "68"
+     ],
+     "en": "O E-me-ur-ana (House which gathers the divine powers of heaven) standing in a great place, the just divine powers which the warrior ……, strength of battle, heroic mace, carrier of the quiver, mighty bustling brick building, your foundation is eternal. Founded by the primeval lord, with decisions which belong to the princely divine powers, holy soil filling the mountain, lifting your head among the princes, magnificent house, the wonder coming from you is like the sun whose glow spreads. E-šu-me-ša (House which …… the divine powers), Enlil has instilled your name with terrifying awesomeness."
+    },
+    {
+     "ref": "69–75",
+     "orig": "nun-zu [X (X)] gal-la ur-saĝ-e ne-ni zag dib-ba\nensi₂ gal {d}en-lil₂-la₂ nir an ki-da zag ša₄-a\nkišib-ĝal₂ si-si{?} a-a {d}en-lil₂-ka me nam-gal šu du₇\nAN EN ĝal₂ saĝ{?} ri palil a-a {d}en-lil₂-la₂\nsaĝ-kal piriĝ kur gal-e tud-da\nkur gu₂-erim₂-ĝal₂ mu-na-gul-gul en {d}nin-urta-ke₄\ne₂-šu-me-ša₄ muš₃-za e₂ bi₂-in-gub barag-za dur₂ bi₂-in-ĝar",
+     "orig_lines": [
+      "69",
+      "70",
+      "71",
+      "72",
+      "73",
+      "74",
+      "75"
+     ],
+     "en": "Your prince, the great ……, the warrior whose strength is boundless, the great ruler for Enlil, the noble who rivals heaven and earth, the provisioning (?) seal-keeper of Father Enlil who makes the great divine powers perfect, the ……, the leader for Father Enlil, the foremost, the lion engendered by the Great Mountain, who destroys the hostile lands for Enlil, Lord Ninurta, has erected a house in your precinct, O E-šu-me-ša, and taken his seat upon your dais."
+    },
+    {
+     "ref": "76",
+     "orig": "15 e₂ {d}nin-urta nibru{ki}-a",
+     "orig_lines": [
+      "76"
+     ],
+     "en": "15 lines: the house of Ninurta in Nibru."
+    },
+    {
+     "ref": "77–85",
+     "orig": "e₂-ĝa₂-du₆-da NIĜIN saĝ-ta il₂\nmen an-edin-na ki kug ki sikil\ne₂ temen-zu dim gal nun-na\nnin-zu munus dili-e ĝa₂ barag-ge si-a\ndu₆-saĝ-dili muš₃-zu nun-na ul am₃-mi-ni-ib-šar₂-re\nnun-zu šag₄ na-dab-e dirig gal-zu\ndumu nun kur gal-da gu₂ me-er-me-er-re\n{d}šu-zi-an-na dam ban₃-da a-a {d}en-lil₂-la₂-ke₄\ndu₆-saĝ-dili muš₃-za e₂ bi₂-in-gub barag-za dur₂ bi₂-in-ĝar",
+     "orig_lines": [
+      "77",
+      "78",
+      "79",
+      "80",
+      "81",
+      "82",
+      "83",
+      "84",
+      "85"
+     ],
+     "en": "O E-ĝa-duda (House, chamber of the mound), ……, crown of the high plain, holy place, pure place, house, your foundation is a great princely mooring pole. Du-saĝ-dili (Singular mound), your lady, the singular woman who keeps the chamber and the dais full, gladdens your platform in princely style. Your princess who avoids anger and is exceedingly wise, the princely daughter who prospers together with the Great Mountain, Šu-zi-ana, the junior wife of Father Enlil, has erected a house in your precinct, O Du-saĝ-dili, and taken her seat upon your dais."
+    },
+    {
+     "ref": "86",
+     "orig": "9 e₂ {d}šu-zi-an-na ĝa₂-gi-maḫ-a",
+     "orig_lines": [
+      "86"
+     ],
+     "en": "9 lines: the house of Šu-zi-ana in Ĝa-gi-maḫ."
+    },
+    {
+     "ref": "87–95",
+     "orig": "keš₃{ki} uru₁₆ ulutim₂ an ki\nmuš-šag₄-tur₃ gal-gin₇ ni₂ ri-a\ne₂ {d}nin-ḫur-saĝ-ĝa₂ ki sumur-ra du₃-a\nkeš₃{ki} aratta{ki} šag₄-zu šag₄ sig bar-zu al-il₂\nug gal an-edin-na GAN šid-da edin-na dag-ga\nḫur-saĝ gal mu₇-mu₇-ta ri-a\nšag₄ u₂-sa₁₁-an šag₄ iti₆ nu-e₃ {d}nin-tur₅-ra sig₇-ga\ne₂ keš₃{ki} šeg₁₂-zu tud-tud-zu\ngi-gu₃-na-zu suḫ₁₀ za-gin₃ bar-zu du₃-a-zu",
+     "orig_lines": [
+      "87",
+      "88",
+      "89",
+      "90",
+      "91",
+      "92",
+      "93",
+      "94",
+      "95"
+     ],
+     "en": "O mighty Keš, form of heaven and earth, arousing terror like a great horned viper, house of Ninḫursaĝa, built in a terrifying place! Respected Keš, your interior is a deep interior while your exterior is tall. Great lion …… on the high plain and roving about on the plain, great hill established by incantations, twilit interior in which moonlight does not shine, Nintur has made you beautiful -- O house Keš, your brickwork and your moulding of it! Your terrace! Your exterior, a lustrous suḫ crown, and your building of it!"
+    },
+    {
+     "ref": "96–99",
+     "orig": "nun-zu nun šeg₅-šeg₅-ga nin zid gal an-na\ndug₄-ga-ni an dub₂-bu ka ba-a-ni ud te-eš di\n{d}a-ru-ru nin₉ {d}en-lil₂-la₂-ke₄\ne₂ keš₃{ki} muš₃-za e₂ bi₂-in-gub barag-za dur₂ bi₂-in-ĝar",
+     "orig_lines": [
+      "96",
+      "97",
+      "98",
+      "99"
+     ],
+     "en": "Your princess, the silencing princess, the true and great lady of heaven -- when she talks heaven trembles, when she opens her mouth a storm thunders -- Aruru, the sister of Enlil, has erected a house in your precinct, O house Keš, and taken her seat upon your dais."
+    },
+    {
+     "ref": "100",
+     "orig": "13 e₂ {d}nin-ḫur-saĝ-ĝa₂ keš₃{ki}-a",
+     "orig_lines": [
+      "100"
+     ],
+     "en": "13 lines: the house of Ninḫursaĝa in Keš."
+    },
+    {
+     "ref": "101–108",
+     "orig": "urim₂{ki} ninda₂ gi duru₅ sug₂-ga\ne₂-kiš-nu-ĝal₂ amar ab₂ gal-la ud X KAxX an kug-ga\nšilam-za ĝiš-bur₂ gud₃-a nu₂-a\nurim₂{ki} pisaĝ₃ gu₇ kur-kur-ra\neš₃ ki sikil-la uraš an-na\ne₂ {d}suen igi-zu-še₃ nun a-ga-zu-še₃ barag\nĝišbun-zu a-da-ab unu₂ gal-zu kug šem₅ {kuš}a₂-la₂\nud e₃-zu nam-en zid-da-zu nam kal-kal",
+     "orig_lines": [
+      "101",
+      "102",
+      "103",
+      "104",
+      "105",
+      "106",
+      "107",
+      "108"
+     ],
+     "en": "O Urim, bull standing in the wet reeds, E-kiš-nu-ĝal (House sending light to the earth (?)), calf of a great cow, …… light of holy heaven, ……, trap laid in a nest, Urim, container feeding all lands, you are a shrine in a pure place, earth of An -- O house of Suen, at your front a prince, at your back a ruler, your dining hall with adab songs, your great, holy banqueting hall with šem and ala drums! The light coming from you and your true lordship is a precious destiny."
+    },
+    {
+     "ref": "109–117",
+     "orig": "ĝi₆-par₃ eš₃ nun me kug-ga ud X zal-[zal]-le\ne₂-kiš-nu-ĝal₂ /iti₆ saḫ₆\\-saḫ₆ kalam-ma e₃-a\nud MAŠ daĝal kur-kur-re si-a\ne₂ muš₃-zu muš-gal sug muš-a\ntemen-zu abzu 50 engur 7-e\neš₃ šag₄ diĝir-re-e-ne-ke₄ igi i₃-ĝal₂\nnun-zu nun ka-aš bar men an daĝal-la\nlugal an-kam {d}aš-im₂-babbar-e\neš₃ urim₂{ki} muš₃-za e₂ bi₂-in-gub barag-za dur₂ bi₂-in-ĝar",
+     "orig_lines": [
+      "109",
+      "110",
+      "111",
+      "112",
+      "113",
+      "114",
+      "115",
+      "116",
+      "117"
+     ],
+     "en": "Ĝipar, princely shrine of the holy divine powers, shining like the …… sun, E-kiš-nu-ĝal, beaming moonlight which comes forth in the Land, broad light of midday which fills all lands, house, your platform is a great snake, a marsh of snakes. Your foundation is the abzu, fifty in number, and the engur, seven in number, a shrine which looks into the heart of the gods. Your prince, the prince who makes decisions, the crown of the wide heaven, the sovereign of heaven, Ašimbabbar, has erected a house in your precinct, O shrine Urim, and taken his seat upon your dais."
+    },
+    {
+     "ref": "118",
+     "orig": "17 e₂ {d}nanna urim₂{ki}-ma",
+     "orig_lines": [
+      "118"
+     ],
+     "en": "17 lines: the house of Nanna in Urim."
+    },
+    {
+     "ref": "119–128",
+     "orig": "e₂-mu-maḫ ḫur-saĝ il₂ an-na\nuš kug temen gal-zu nam kal-kal\nšag₄ me nun si ud zalag-ga e₃-a\neš₃ bar-zu an sig₇-ga igi e₃-zu uĝ₃ šar₂-ra\nkalam-ma zu₂ keše₂ ĝal₂ dub₃-us₂ dili-am₃\nid₂ maḫ ka ĝal₂ taka₄ me DA GA-zu{?} ur₄-ur₄\nur₂-zu ni₂ gal ḫur-saĝ zid ki daĝal-e mu₂-a\nki-tuš maḫ-zu niĝ₂ maḫ me šar₂ nam-nun-na\nḪAR X AMA UD KID₂ DIR-bi šeg₁₁ gi₄-gi₄\ne₂ giri₁₇-zal muš₃-zu a₂-dam-ma ul šar₂",
+     "orig_lines": [
+      "119",
+      "120",
+      "121",
+      "122",
+      "123",
+      "124",
+      "125",
+      "126",
+      "127",
+      "128"
+     ],
+     "en": "O E-mu-maḫ (House with a magnificent name), rising mountain of heaven, your holy sides and your great foundation are a precious destiny. Interior full with princely divine powers, a beaming light which shines, shrine with your back to the blue sky and your prominent front to all people, in the Land it represents a binding agreement and a single track. Magnificent river with open mouth gathering together your …… divine powers, your base is great in awesomeness, a righteous hill grown in a broad place. Your lofty dwelling-place of magnificence with all the divine powers of princeship, ……, shouting ……; house of celebration, your platform gladdens the settlements."
+    },
+    {
+     "ref": "129–133",
+     "orig": "e₂ nun-zu šul-gi mi-ni-ib-gal nun-nun-na\nX šu du₇ maḫ-di tum₉ u₁₈-ru-un gal-la\nme še-er-ka-an di nam tar-re-da\ne₂-ḫur-saĝ šul-gi an-na-ke₄\nmuš₃-za e₂ bi₂-in-gub barag-za dur₂ bi₂-in-ĝar",
+     "orig_lines": [
+      "129",
+      "130",
+      "131",
+      "132",
+      "133"
+     ],
+     "en": "House, your prince Šulgi has made it great and most princely. The perfect and magnificent ……, the mighty and great wind, adorned with the divine powers, determining destiny, Šulgi of An, has erected a house in your precinct, O E-ḫursaĝ (House which is a hill), and taken his seat upon your dais."
+    },
+    {
+     "ref": "134",
+     "orig": "15 taḫ-ḫu-um e₂-ḫur-saĝ šul-gi urim₂{ki}-ma",
+     "orig_lines": [
+      "134"
+     ],
+     "en": "15 lines: addition: E-ḫursaĝ of Šulgi in Urim."
+    },
+    {
+     "ref": "135–139",
+     "orig": "iri abzu-ta še-gin₇ sur-ra\nedin muru₉ šag₄-ta me šu ti\nkuara{ki} temen unu₂ zid-zu\nen niĝ₂-šu nu-gi₄ u₆-e am₃-ma-gub\nabgal 7-e sig nim-ta šu mu-ra-ni-in-mu₂-uš",
+     "orig_lines": [
+      "135",
+      "136",
+      "137",
+      "138",
+      "139"
+     ],
+     "en": "O city, …… from the abzu like barley, cloudy plain, taking the divine powers from its midst, Kuara, your foundation and just banqueting hall, the lord who does not hold back his goods stands ready for admiration. The Seven Sages have enlarged it for you from the south to the uplands."
+    },
+    {
+     "ref": "140–145",
+     "orig": "nun-zu nun kal-kal {d}asar-lu₂-ḫi lu₂ kal-kal\nur-saĝ nun gir₁₅ tud-da nemurₓ(PIRIĜ.TUR) kar dib-be₂\nud du₇-du₇-gin₇ ki-bal-da du₇-du₇\nen-na nu-še-ga eme sig-ga nu₂-a\n{d}asar-alim-nun-na dumu abzu-ke₄\ne₂ kuara{ki} muš₃-za e₂ bi₂-in-gub barag-za dur₂ bi₂-in-ĝar",
+     "orig_lines": [
+      "140",
+      "141",
+      "142",
+      "143",
+      "144",
+      "145"
+     ],
+     "en": "Your prince, the most precious prince Asarluḫi, the most precious one, is a warrior, born a noble prince, a leopard who seizes prey. He is like an onrushing storm battering the rebel land. As long as it remains disobedient, he pours spittle upon it. Asar-alim-nuna, the son of the abzu, has erected a house in your precinct, O house Kuara, and taken his seat upon your dais."
+    },
+    {
+     "ref": "146",
+     "orig": "11 e₂ {d}asar-lu₂-ḫi kuara{ki}",
+     "orig_lines": [
+      "146"
+     ],
+     "en": "11 lines: the house of Asarluḫi in Kuara."
+    },
+    {
+     "ref": "147–156",
+     "orig": "e₂-gud-du₇-šar₂ {na₄}nir₂ kug-ga lugal-bi u₅-a\nĝiš-bur₂ maḫ il₂ dumu nun-na\nu₂ li dug₃-bi kug dug₃-ba ĝal₂-la\nĝa₂-bur-ra tur₃ kug ab₂ {u₂}munzer niĝin₂-na\nnun-zu am gal am-si a₂-ni-še₃ ḫul₂-la\nsumun₂ si mu₂ si-muš₃-a-ni-še₃ ḫul₂-la\nmaš-maš eme ḫa-mun dungu an-na bi₂-DU\nud an-na gu₃ mur ak ud-de₃ ki šu ra-ra šum₂-mu\n{d}nin-gublagaₓ(EZEN) dumu {d}nanna-a-ke₄\nki-abrig{ki} muš₃-za e₂ bi₂-in-gub barag-za dur₂ bi-in-ĝar",
+     "orig_lines": [
+      "147",
+      "148",
+      "149",
+      "150",
+      "151",
+      "152",
+      "153",
+      "154",
+      "155",
+      "156"
+     ],
+     "en": "O E-gud-du-šar (House with numerous perfect oxen) of holy nir stone in which its sovereign sits, raising a magnificent door decoration for the princely son, whose best fine oil is holy and well-prepared, Ĝa-bura (Chamber of bowls), holy cattle-pen pasturing cows with munzer plants, your prince is a great wild bull, an elephant rejoicing in its own strength, a wild cow growing horns and and delighting in its shining horns. The incantation priest of opposed languages who put clouds in the sky, the storm which roars in the sky, as the sunlight giving …… to the earth, Ningublaga, the son of Nanna, has erected a house in your precinct, O Ki-abrig, and taken his seat upon your dais."
+    },
+    {
+     "ref": "157",
+     "orig": "10 e₂ {d}nin-gublagaₓ(EZEN) ki-abrig{ki}",
+     "orig_lines": [
+      "157"
+     ],
+     "en": "10 lines: the house of Ningublaga in Ki-abrig."
+    },
+    {
+     "ref": "158–167",
+     "orig": "eš₃ agrun gal tur₃-e ri-a\niri ban₃-da su₃-ra₂-aĝ₂ {d}suen-na\nkar-zid-da šag₄-zu ki u₁₈-ru-na temen-zu kug šen\neš₃ ĝi₆-par₃-zu sikil-e ĝar-ra\n{ĝiš}ig-zu urud niĝ₂ kalag-ga ki gal-e ĝar-ra\n{e₂}tur₃ gu₃ nun ninda₂-gin₇ si ib₂-[il₂]\nnun-zu en an-na ul šar₂-a gub-ba\nan-bar sud-a gaba X EŠ ḪI bur₂ [X]\nkar-zid-da {d}aš-im₂-babbar₂-re\nmuš₃-za e₂ bi₂-in-gub barag-za dur₂ bi₂-in-ĝar",
+     "orig_lines": [
+      "158",
+      "159",
+      "160",
+      "161",
+      "162",
+      "163",
+      "164",
+      "165",
+      "166",
+      "167"
+     ],
+     "en": "O shrine, great sanctuary founded at a cattle-pen, small shining city of Suen, Kar-zida (Pure quay), your interior is a mighty place, your foundation is holy and clean. Shrine, your ĝipar is founded in purity. Your door is of strong copper set up at a great place. Lowing cattle-pen, you raise your horns like a bull. Your prince, the lord of heaven standing in joy, …… at midday and ……, Ašimbabbar, has erected a house in your precinct, O Kar-zida, and taken his seat upon your dais."
+    },
+    {
+     "ref": "168",
+     "orig": "10 e₂ {d}nanna ga-eš₈{ki}-a",
+     "orig_lines": [
+      "168"
+     ],
+     "en": "10 lines: the house of Nanna in Gaeš."
+    },
+    {
+     "ref": "169–177",
+     "orig": "e₂ an-ta e₃-a dalla e₃ kul-aba₄{ki}-a\neš₃ e₂-babbar₂ ninda₂{?} babbar₂\ngu₂-zu {d}utu-ra an-na NI-eš te-na-ab\nsi-muš₃-zu ma-sila₃ tu₁₁-tu₁₁ kug za-gin₃-na\nsun₄ {na₄}za-gin₃ duru₅-e la₂ ḫe₂-[X] X X\nnun-zu ud uru₁₆ en gu₃ zid [X] X X [X]\nan-ur₂ zalag-ge an-pa X zalag-ge\n{d}utu lugal e₂-babbar₂-ra-ke₄\ne₂ larsam{ki} muš₃-za e₂ bi₂-in-gub barag-za dur₂ bi₂-in-ĝar",
+     "orig_lines": [
+      "169",
+      "170",
+      "171",
+      "172",
+      "173",
+      "174",
+      "175",
+      "176",
+      "177"
+     ],
+     "en": "O house which comes forth from heaven, resplendent in Kulaba, shrine E-babbar (Shining house), shining bull, lift your neck to Utu who …… in the sky! Your shining horns are aggressive, holy and lustrous. Bearing a beard of shining lapis lazuli, ……, your prince, the mighty sunlight, the lord who …… the true word, who lightens the horizon, who lightens the sky's …… vault, Utu, the sovereign of E-babbar, has erected a house in your precinct, O house Larsam, and taken his seat upon your dais."
+    },
+    {
+     "ref": "178",
+     "orig": "9 e₂ {d}utu larsam{ki}-ma",
+     "orig_lines": [
+      "178"
+     ],
+     "en": "9 lines: the house of Utu in Larsam."
+    },
+    {
+     "ref": "179–185",
+     "orig": "enegir{ki} a-pap gal a-pap ki-a {d}ereš-ki-gal-la-ka\ngu₂-du₈-a ki-en-gi-ra gu₂ si-a nam-lu₂-ulu₃\ne₂-gid₂-da ĝissu-zu nun kur-ra-ke₄-ne kur-ra ša-mu-ni-in-la₂\nnun-zu a en gal-la šita ki gal-la {d}ereš-ki-gal-la-ke₄ tud-da\ngu₃ nun za-na-ru-ba šu tag-ga amar ad-ba sag₉-sag₉\n{d}nin-a-zu inim šudu₃-da-ke₄\ne₂ enegir{ki} muš₃-za e₂ bi₂-in-gub barag-za dur₂ bi₂-in-ĝar",
+     "orig_lines": [
+      "179",
+      "180",
+      "181",
+      "182",
+      "183",
+      "184",
+      "185"
+     ],
+     "en": "O Enegir, great libation pipe, libation pipe to the underworld of Ereškigala, Gudua (Entrance to the nether world) of Sumer where mankind is gathered, E-gida (Long house), in the land your shadow has stretched over the princes of the land. Your prince, the seed of the great lord, the sacred one of the great underworld, given birth by Ereškigala, playing loudly on the zanaru instrument, sweet as the voice of a calf, Ninazu of the words of prayer, has erected a house in your precinct, O house Enegir, and taken his seat upon your dais."
+    },
+    {
+     "ref": "186",
+     "orig": "7 e₂ {d}nin-a-zu enegir{ki}-ra",
+     "orig_lines": [
+      "186"
+     ],
+     "en": "7 lines: the house of Ninazu in Enegir."
+    },
+    {
+     "ref": "187–196",
+     "orig": "ki ul kur sig galam-e ĝar-ra\nitima ki ḫuš šag₄-tum₂-ma ri-a\nsu zig₃ a-ra₂ maḫ lu₂ nu-pad₃-de₃\nĝiš-ban₃-da{ki} si-ĝar igi-te-en gana₂ ki gal ĝiri₃ nu-ed₃\nbar gi₄-a nim-ma {ĝiš}es₂-ad-gin₇ rib-ba\nšag₄-zu ki ud e₃ nam-ḫe₂ daĝal šum₂-mu\nnun-zu nun šu sikil gid₂ kug an-na-ke₄\nsiki ul ḫe-nun bar-ra ĝal₂-la en {d}nin-ĝiš-zid-da\n{d}nin-ĝiš-zid-da-ke₄ ĝiš-ban₃-da{ki}\nmuš₃-za e₂ bi₂-in-gub barag-za dur₂ bi₂-in-ĝar",
+     "orig_lines": [
+      "187",
+      "188",
+      "189",
+      "190",
+      "191",
+      "192",
+      "193",
+      "194",
+      "195",
+      "196"
+     ],
+     "en": "O primeval place, deep mountain founded in an artful fashion, shrine, terrifying place lying in a pasture, a dread whose lofty ways none can fathom, Ĝišbanda, neck-stock, meshed net, shackles of the great underworld from which none can escape, your exterior is raised up, prominent like a snare, your interior is where the sun rises, endowed with wide-spreading plenty. Your prince is the prince who stretches out his pure hand, the holy one of heaven, with luxuriant and abundant hair hanging at his back, Lord Ninĝišzida. Ninĝišzida has erected a house in your precinct, O Ĝišbanda, and taken his seat upon your dais."
+    },
+    {
+     "ref": "197",
+     "orig": "10 e₂ {d}nin-ĝiš-zid-da ĝiš-ban₃-da{ki}-a",
+     "orig_lines": [
+      "197"
+     ],
+     "en": "10 lines: the house of Ninĝišzida in Ĝišbanda."
+    },
+    {
+     "ref": "198–203",
+     "orig": "e₂ me gal kul-aba₄{ki}-a BAD muš₃-e eš₃ gal mu₂-a\ngibil gurun-na sig₇-ga u₆ di ḫi-li gur₃-ru\nan-šag₄-ta ed₃-de₃ eš₃ gud-de₃ du₃-a\ne₂-an-na e₂ ub 7 izi 7 ĝi₆ u₃-na il₂-la\nkurku₂ 7-e igi ĝal₂\nnun-zu an-ur₂-ra-am₃ sikil",
+     "orig_lines": [
+      "198",
+      "199",
+      "200",
+      "201",
+      "202",
+      "203"
+     ],
+     "en": "O house with the great divine powers of Kulaba, ……, its platform has made the great shrine flourish. Green fresh fruit, marvellous, filled with ripeness, descending from the centre of heaven, shrine built for the bull, E-ana (House of heaven), house with seven corners, with seven fires lifted at night-time, surveying seven pleasures (?), your princess is on the pure horizon."
+    },
+    {
+     "ref": "204–208",
+     "orig": "nin-zu {d}inana niĝ₂ bur-ra-am₃ BUL{?}-BUL{?}\nmunus-ra še-er-ka-an di nitaḫ-ra saĝ tug₂ dul-lu\nsuḫ₁₀ kurku₂ za-gin₃-na ušumgal niĝin₃-ĝar-ra\nUN-gal an ki-a {d}inana-ke₄\ne₂-an-na muš₃-za e₂ bi₂-in-gub barag-za dur₂ bi₂-in-ĝar",
+     "orig_lines": [
+      "204",
+      "205",
+      "206",
+      "207",
+      "208"
+     ],
+     "en": "Your lady Inana who ……, who adorns the woman and covers the man's head with a cloth, the one with a lustrous …… suḫ crown, the dragon of Niĝin-ĝar, the queen of heaven and earth, Inana, has erected a house in your precinct, O E-ana, and taken her seat upon your dais."
+    },
+    {
+     "ref": "209",
+     "orig": "11 e₂ {d}inana unug{ki}-ga",
+     "orig_lines": [
+      "209"
+     ],
+     "en": "11 lines: the house of Inana in Unug."
+    },
+    {
+     "ref": "210–219",
+     "orig": "e₂ u₂ za-gin₃ ĝiš-nu₂ gi-rin-na barag₂-ga\na₂-nu₂-da kug {d}inana-ke₄\nki šag₄ kuš₂-u₃ in-nin₉ edin-ka\nšeg₁₂ e₂-muš₃-a gi-rin kug im BU-bi ĝar-ra\nan-edin-na u₈ lu-a-ra\nan-BAD₃-zu e₂ a-ra-li-ka sipad-ra ša-mu-ni-in-la₂\nnun-zu piriĝ dib edin-na šuba nu-gig-ga\ngaba kug-ga u₆ di en dam kug {d}inana\n{d}dumu-zid lugal e₂-muš₃-a-ke₄\nbad₃-tibira{ki} muš₃-za e₂ bi₂-in-gub barag-za dur₂ bi₂-in-ĝar",
+     "orig_lines": [
+      "210",
+      "211",
+      "212",
+      "213",
+      "214",
+      "215",
+      "216",
+      "217",
+      "218",
+      "219"
+     ],
+     "en": "O house where lustrous herbs are strewn upon the flowery bed, the bed-chamber of holy Inana, where the lady of the plain refreshes herself! Brick-built E-muš (House which is the precinct) is flowery and holy, its …… clay established for him who tends the ewes on the high plain. Your …… house of Arali (House which is the nether world) gives shade (?) to the shepherd. Your prince, a raging lion on the plain, the šuba jewel of the Mistress whose breast is holy and marvellous, the lord who is holy Inana's husband, Dumuzid, the sovereign of E-muš, has erected a house in your precinct, O Bad-tibira, and taken his seat upon your dais."
+    },
+    {
+     "ref": "220",
+     "orig": "10 e₂ {d}dumu-zid bad₃-tibira{ki}-a",
+     "orig_lines": [
+      "220"
+     ],
+     "en": "10 lines: the house of Dumuzid in Bad-tibira."
+    },
+    {
+     "ref": "221–228",
+     "orig": "e₂-igi-zu-u₁₈-ru šag₄-zu-ta nam-ḫe₂\ne₂ niĝ₂ ĝar-ra-zu kur ḫe₂-gal-la\ne₂ šim-zu kur ĝeštin-na\nsukkal zid-zu kin-gal an-[na]\ne₂ nun-zu palil diĝir-[re-e-ne]\nsukkal zid e₂-an-na ĝidru [kug šu] du₇-e\n{d}nin-šubur sukkal zid e₂-an-na-ke₄\n[e₂]-{a}akkil muš₃-za e₂ bi₂-in-gub barag-za dur₂ bi₂-in-ĝar",
+     "orig_lines": [
+      "221",
+      "222",
+      "223",
+      "224",
+      "225",
+      "226",
+      "227",
+      "228"
+     ],
+     "en": "O E-igizu-uru (House, your face is mighty), with plenty coming from within, your well-stocked chamber is a mountain of abundance. House, your fragrance is a mound of vines. Your true minister is a leader in heaven. House, your princess is prominent among the gods, the true minister of E-ana who holds a holy sceptre in her hand. Ninšubur, the true minister of E-ana, has erected a house in your precinct, O E-akkil (House of lamentation), and taken her seat upon your dais."
+    },
+    {
+     "ref": "229",
+     "orig": "8 e₂ {d}nin-šubur {a}akkilₓ(GADA.KID₂.SI.A){ki}",
+     "orig_lines": [
+      "229"
+     ],
+     "en": "8 lines: the house of Ninšubur in Akkil."
+    },
+    {
+     "ref": "230–235",
+     "orig": "iri abzu-ta barag-ga ri-a nam-išib-e ĝar-ra\ne₂ mu₇-mu₇ an ki-a šid-da\n[X] X X UM{?} X X (X) sud-sud\n[X X] X-e gal [X (X)] dam{?}-zu{?}\n[X X] X a₂-ĝal₂ [X] X X X\n[...] DU [...]",
+     "orig_lines": [
+      "230",
+      "231",
+      "232",
+      "233",
+      "234",
+      "235"
+     ],
+     "en": "O city, founded upon a dais in the abzu, established for the rites of išib priests, house where incantations of heaven and earth are recited, 4 lines fragmentary"
+    },
+    {
+     "ref": "236–238",
+     "orig": "an kug ki [sikil-la a] gub₂-ba X (X) TE NE [X]\n{d}nin-girim₃ nin a gub₂-ba /dadag\\-[ga]\ne₂ mu-ru-um{ki} muš₃-za e₂ bi₂-in-[gub] barag-za dur₂ bi₂-in-/ĝar\\",
+     "orig_lines": [
+      "236",
+      "237",
+      "238"
+     ],
+     "en": "…… lustration water in the holy heaven and on the pure earth. Ningirim, the lady of the shining lustration water, has erected a house in your precinct, O house Murum, and taken her seat upon your dais."
+    },
+    {
+     "ref": "239",
+     "orig": "9 e₂ {d}nin-girim₃ [mu-ru]-um{ki}",
+     "orig_lines": [
+      "239"
+     ],
+     "en": "9 lines: the house of Ningirim in Murum."
+    },
+    {
+     "ref": "240–248",
+     "orig": "e₂-ninnu a₂ zid-/da\\ [lagaš{ki} gu₂]-/gal\\ ki-en-gi-ra\nanzud{mušen} kur-/še₃\\ [igi il₂-la]\nšar₂-ur₃ {d}nin-/ĝir₂\\-[su] [...] kur-kur-ta X X X [(X)]\na₂ me₃ ud ḫuš lu₂-ra su₃-su₃\n{d}a-nun-na diĝir gal-gal-e-ne a₂ me₃ šum₂-mu\nšeg₁₂ du₆ kug-ta nam tar-re-da ḫur-saĝ-gin₇ sig₇-ga\nid₂-zu a lu{?} mun kug X-zu [X (X)] ḫa-mun-na dal-a\nkan₄ iri-kug{ki}-še₃ ĝal₂-la-za\nbur sig₇ an kug-ga kurun₂ de₂-a an-na sug₂-ga-bi",
+     "orig_lines": [
+      "240",
+      "241",
+      "242",
+      "243",
+      "244",
+      "245",
+      "246",
+      "247",
+      "248"
+     ],
+     "en": "O E-ninnu (House of 50), right hand of Lagaš, foremost in Sumer, the Anzud bird which gazes upon the mountain, the šar-ur weapon of …… Ninĝirsu, …… in all lands, the strength of battle, a terrifying storm which envelops men, giving the strength of battle to the Anuna, the great gods, brick building on whose holy mound destiny is determined, beautiful as the hills, your canal ……, your …… blowing in opposition (?) at your gate facing towards Iri-kug, wine is poured into holy An's beautiful bowls set out in the open air."
+    },
+    {
+     "ref": "249–254",
+     "orig": "niĝ₂ ku₄-ku₄ niĝ₂ sa₂ nu-di-dam\nniĝ₂ e₃ niĝ₂ nu-silig-ge-dam\nšu-gar₃ igi ḫuš e₂ me-lem₄-ma\nki di ku₅-ru en {d}nin-ĝir₂-su-ke₄\nni₂ gal-la su zig₃ du₈-du₈-am₃\nkurun₂ gal-zu-še₃ diĝir {d}a-nun-na ši-im-ma-sug₂-sug₂-ge-eš",
+     "orig_lines": [
+      "249",
+      "250",
+      "251",
+      "252",
+      "253",
+      "254"
+     ],
+     "en": "Whatever enters you is unequalled, whatever leaves endures. ……, terrifying facade, house of radiance, a place of reaching judgment which Lord Ninĝirsu has filled with great awesomeness and dread! All the Anuna gods attend your great drinking-bouts."
+    },
+    {
+     "ref": "255–261",
+     "orig": "nun-zu u₁₈-lu sumur ki-bal uru₂ gul-lu\nlugal-zu am ḫuš a₂ pad₃-da piriĝ ḫuš saĝ dub₂-dub₂-bu\nur-saĝ nam-en-na sa₂ sig₁₀-sig₁₀-ge₅\nnam-lugal-la u₃-ma gub-gub-bu\nkalag-ga ur-saĝ gal me₃-a en gaba gi₄ nu-[tuku]\ndumu {d}en-lil₂-la₂ en {d}nin-ĝir₂-su{ki}-ke₄\ne₂-ninnu muš₃-za e₂ bi₂-in-gub barag-za dur₂ bi₂-in-ĝar",
+     "orig_lines": [
+      "255",
+      "256",
+      "257",
+      "258",
+      "259",
+      "260",
+      "261"
+     ],
+     "en": "Your prince, a raging storm which destroys cities in hostile lands, your sovereign, a terrifying wild ox which will manifest its strength, a terrifying lion which smashes heads, the warrior who devises strategies in lordship and attains victory in kingship, the mighty one, the great warrior in battle, the lord without rival, the son of Enlil, Lord Ninĝirsu, has erected a house in your precinct, O E-ninnu, and taken his seat upon your dais."
+    },
+    {
+     "ref": "262",
+     "orig": "22 e₂ {d}nin-ĝir₂-su lagaš{ki}-a",
+     "orig_lines": [
+      "262"
+     ],
+     "en": "22 lines: the house of Ninĝirsu in Lagaš."
+    },
+    {
+     "ref": "263–270",
+     "orig": "iri-kug eš₃ numun i-i an kug-ga mu dug₃-ga sa₄-a\nšag₄-zu id₂-lu₂-ru-gu₂ lu₂ zid dadag-ge\ne₂-ĝalga-sud erim₃ kug {na₄}za-gin₃-na gi₁₆-sa-še₃ ak-a\ne₂-tar-sir₂-sir₂ eš-bar me i-i meš₃-e giri₁₇ šu ĝal₂\nnun-zu nun šag₄-la₂ sug₄ kalam-ma ama kur-kur-ra\nnin a-zu gal saĝ gig₂-ga nam iri-na tar-re\ndumu-saĝ an kug-ga ki-sikil ama {d}ba-u₂\ne₂ iri-kug muš₃-za e₂ bi₂-in-gub barag-za dur₂ bi₂-in-ĝar",
+     "orig_lines": [
+      "263",
+      "264",
+      "265",
+      "266",
+      "267",
+      "268",
+      "269",
+      "270"
+     ],
+     "en": "O Iri-kug (Holy city), shrine of holy An, which caused the human seed to come forth, called by a good name, within you is the river of ordeal which vindicates the just man. E-ĝalga-sud (House which spreads counsel far and wide), storehouse which eternally possesses silver and lapis lazuli, E-tar-sirsir, from which decisions and the divine powers come forth, where the hero performs obeisance, your princess, the merciful princess of the Land, is the mother of all lands. The lady, the great healer of the black-headed who determines the destiny of her city, the first-born daughter of holy An, the maiden, Mother Bau, has erected a house in your precinct, O house Iri-kug, and taken her seat upon your dais."
+    },
+    {
+     "ref": "271",
+     "orig": "8 e₂ {d}ba-u₂ iri-kug-ga",
+     "orig_lines": [
+      "271"
+     ],
+     "en": "8 lines: the house of Bau in Iri-kug."
+    },
+    {
+     "ref": "272–281",
+     "orig": "e₂ šilam AĜRIG X [X X]\niri dalla e₃ nun-ra gun₃-a\nsirara₃{ki} ki gal nun-e\nBAD eš₃-e GAN šid-da-zu\nnin-zu {d}nanše ud gal-la a-ĝi₆ uru₁₆-na\npeš₁₀ a-ab-ba-ka tud-da-a\nuḫ₂-pu₂ ab-ba-ka zu₂ li-li\n[a] i-zi-ba e-ne dug₄-dug₄\nX X X-a {d}nanše nin EN-e\ne₂ sirara₃{ki} muš₃-za e₂ bi₂-in-gub barag-za dur₂ bi₂-in-ĝar",
+     "orig_lines": [
+      "272",
+      "273",
+      "274",
+      "275",
+      "276",
+      "277",
+      "278",
+      "279",
+      "280",
+      "281"
+     ],
+     "en": "O house, wild cow ……, city which appears in splendour adorned for the princess, Sirara, great and princely place, your …… by the shrine, your lady Nanše, a great storm, a mighty flood, born on the shore of the sea, who laughs on the foam of the sea, who plays on the water of the flood, who ……, Nanše, the …… lady, has erected a house in your precinct, O house Sirara, and taken her seat upon your dais."
+    },
+    {
+     "ref": "282",
+     "orig": "10 e₂ {d}nanše sirara₃{ki}",
+     "orig_lines": [
+      "282"
+     ],
+     "en": "10 lines: the house of Nanše in Sirara."
+    },
+    {
+     "ref": "283–292",
+     "orig": "e₂-ab-šag₄-ga-la₂-a ki kug-ga du₃-a\ngu₂-ab-ba{ki} šag₄-zu niĝ₂ u₃-tud erim₃ ĝar-ĝar-a\neš₃ kug šilam niĝ₂ nu-silig-ge\nnun-zu {d}nin-ĝa₂-gi₄-a aĝrig maḫ X\n[...] kalag-ga a-a {d}en-lil₂-la₂\n[en] [{d}nu]-/nam\\-nir-da šag₄ kuš₂-u₃ X [X]\n[...] X-a tud-da a-ĝi₆ a-ab-ba-ka [...]\n[X X a]-a-ni-gin₇ enkud ab sikil-sikil-[la]\n[e₂ gu₂-ab-ba{ki}] kug {d}nin-mar-ki-ke₄\n[muš₃]-za e₂ bi₂-in-gub barag-za dur₂ bi₂-in-ĝar",
+     "orig_lines": [
+      "283",
+      "284",
+      "285",
+      "286",
+      "287",
+      "288",
+      "289",
+      "290",
+      "291",
+      "292"
+     ],
+     "en": "O E-ab-šaga-la (House which stretches over the midst of the sea) built in a holy place, Gu-aba, your interior produces everything and is a well-established storehouse. Holy shrine, wild cow for which everything endures, your princess is Ninĝagia, the magnificent …… stewardess, the mighty …… of Father Enlil, who takes counsel with Lord Nunamnir. Born in ……, …… in the flood of the sea, like her …… father a controller of the pure sea, holy Ninmarki has erected a house in your precinct, O house Gu-aba, and taken her seat upon your dais."
+    },
+    {
+     "ref": "293",
+     "orig": "[10] e₂ {d}nin-mar-ki gu₂-ab-ba{ki}",
+     "orig_lines": [
+      "293"
+     ],
+     "en": "10 lines: the house of Ninmarki in Gu-aba."
+    },
+    {
+     "ref": "294–301",
+     "orig": "[e₂ ki-nir-ša{ki}] nin-bi-ra tum₂-ma\n[X X X ḫur]-/saĝ\\-gin₇ sig₇-ga u₆-nir-ra il₂-la\ne₂ [X X]-/da\\ ki šag₄ ḫul₂-la-da gu₃ nun-bi di-e\ne₂ nun-zu ud piriĝ-ĝa₂ u₅-a GI [X X X X]\nšir₃ kug šir₃ ḫa-mun-na il₂-la e-ne ad gal dug₄-dug₄\ndumu u₃-sumun₂ zid ama ugu-na gaba kug-ga mi₂ dug₄-ga\neš₃ ki-nir-ša{ki} {d}dumu-zid-abzu-ke₄\nmuš₃-za e₂ bi₂-in-gub barag-za dur₂ bi₂-in-ĝar",
+     "orig_lines": [
+      "294",
+      "295",
+      "296",
+      "297",
+      "298",
+      "299",
+      "300",
+      "301"
+     ],
+     "en": "O house Kinirša, suited for its lady, ……, beautiful as a hill, standing by the ziqqurat, house, ……, place resounding loudly with happiness, house, your princess is a storm, riding on a lion, ……. Exalted in holy song and antiphony, singing with a loud voice, the child, the true wild cow, taken care of at the holy breast of the mother who begot her, Dumuzid-abzu, has erected a house in your precinct, O shrine Kinirša, and taken her seat upon your dais."
+    },
+    {
+     "ref": "302",
+     "orig": "7 e₂ {d}dumu-zid-<abzu> [ki-nir-ša]{ki}-a",
+     "orig_lines": [
+      "302"
+     ],
+     "en": "7 lines: the house of Dumuzid-abzu in Kinirša."
+    },
+    {
+     "ref": "303–310",
+     "orig": "e₂-bur-sig₇-sig₇ an-ne₂ sug₂-ga\nunu₂ uru₁₆ dug₄-ge sa₂ dug₄\nḫe-nun ab-šag₄-ga unu₂-RI-/ban₃\\-[da]\nX kug-ge u₃-gul ĝa₂-ra asila la₂-a\ne₂-maḫ e₂ {d}šara₂ lu₂ zid-de₃\nnam-ḫe₂-a šu mu-ra-ni-in-mu₂\ne₂-zu e₂-maḫ nun-zu dumu nun nu-gig-ga\nsigₓ(KAxŠID) sal-sal muš₂ ḫe-nun silim",
+     "orig_lines": [
+      "303",
+      "304",
+      "305",
+      "306",
+      "307",
+      "308",
+      "309",
+      "310"
+     ],
+     "en": "O E-bur-sigsig (House with beautiful bowls) set up under heaven, mighty banqueting hall, fulfilling (?) the commands, abundance of the midst of the sea in ……, at whose holy …… there is entreaty and joy. The faithful man has enlarged E-maḫ (Magnificent house), the house of Šara, for you in plenty. Your house E-maḫ -- whose prince is the princely son of the Mistress -- continues (?) in good fortune, an area of abundance and well-being."
+    },
+    {
+     "ref": "311–313",
+     "orig": "gu₂-tar la₂-la₂ igi bar šilam-ma\n{d}šara₂ niĝ₂ dug₃ KAxX dumu ama-ni-ir me ba-a\ne₂ umma{ki} muš₃-za e₂ bi₂-in-gub barag-za dur₂ bi₂-in-ĝar",
+     "orig_lines": [
+      "311",
+      "312",
+      "313"
+     ],
+     "en": "The one who arranges the hair at the nape of the neck, with the gaze of a wild cow, Šara, who …… good things, the son who allots the divine powers to his mother, has erected a house in your precinct, O house Umma, and taken his seat upon your dais."
+    },
+    {
+     "ref": "314",
+     "orig": "11 e₂ {d}šara₂ umma{ki}-a",
+     "orig_lines": [
+      "314"
+     ],
+     "en": "11 lines: the house of Šara in Umma."
+    },
+    {
+     "ref": "315–320",
+     "orig": "e₂-še-er-zid-gur₃-ru unu₂ šuba la₂\nni₂ gal niĝin₃-ĝar kug {d}inana-ke₄\nme zid me-a šu daĝal tag-ga\nzabalam{ki} eš₃ kur šuba eš₃ KA ud zal-le\nkurku₂-a ad mi-ni-in-pad₃\nunu₂ zid-zu nu-gig-ge kurku₂-a ma-ra-ni-in-ri",
+     "orig_lines": [
+      "315",
+      "316",
+      "317",
+      "318",
+      "319",
+      "320"
+     ],
+     "en": "O E-šerzi-guru (House clad in splendour) dressed with ornaments of šuba stone, great awesomeness, Niĝin-ĝar of holy Inana, adorned throughout with the divine powers which are true, Zabalam, shrine of the shining mountain, shrine of …… dawn, which has resounded with pleasure (?), the Mistress has founded your good banqueting hall for you in pleasure (?)."
+    },
+    {
+     "ref": "321–326",
+     "orig": "nin-zu {d}inana DAG.KISIM₅xX munus dili-e\nušumgal lu₂ [X X]-še₃ inim kur₂ di\nniĝ₂ babbar₂-ra saĝ mu₂-mu₂-mu₂ ki-bal-še₃ saĝ ĝa₂-ĝa₂\nĝiš-ḫe₂ u₂-sa₁₁-an-na ni₂-te-a-ni-še₃ sig₇-ga\ndumu gal {d}suen-na kug {d}inana-ke₄\ne₂ ki zabalam{ki} muš₃-za e₂ bi₂-in-gub barag-za dur₂ bi₂-in-ĝar",
+     "orig_lines": [
+      "321",
+      "322",
+      "323",
+      "324",
+      "325",
+      "326"
+     ],
+     "en": "Your lady Inana, the ……, the singular woman, the dragon who speaks hostile words to ……, who shines in brightness, who goes against the rebel land, through whom the firmament is made beautiful in the evening, the great daughter of Suen, holy Inana, has erected a house in your precinct, O house Zabalam, and taken her seat upon your dais."
+    },
+    {
+     "ref": "327",
+     "orig": "12 e₂ {d}inana zabalam{ki}-a",
+     "orig_lines": [
+      "327"
+     ],
+     "en": "12 lines: the house of Inana in Zabalam."
+    },
+    {
+     "ref": "328–345",
+     "orig": "e₂ piriĝ gal-gin₇ su-lim gur₃-ru\neš-bar an-edin-na ud-de₃ galam e₃\ne₂ {d}iškur-ra igi-zu-še₃ ḫe₂-ĝal₂ a-ga-zu-še₃ giri₁₇-zal\ntemen ĝal₂-zu ninda₂{?} si piriĝ\n/šibir{?}\\ kug ubur(sourše: utul₅) an-na šeĝₓ(IM.A.A) še gu-nu\ndub-la₂-za e₂-za am si bad\nX ZI temen e₂-ĝar₈ ni₂ il₂-i-zu\nX X X X dungu sir₂-ra\n[...] muš-ĝiri₂\n[...] iti₆\n[X (X)] X nam-gu₇ {d}iškur a-ma-ru /ur₃{?}\\-ra\n[...] X u₁₈-lu {tum₉}mir 7\n[...] /{tum₉}\\mir dal-dal\n[X] X X ur₂-ta im₂-ma\n[X (X)] X DI ḫur-saĝ {na₄}esi na₄-a na muš₃ ba-dar-dar-e\n[...] NI{?} [X] X X X X [...]",
+     "orig_lines": [
+      "328",
+      "329",
+      "330",
+      "331",
+      "332",
+      "333",
+      "334",
+      "335",
+      "336",
+      "337",
+      "338",
+      "339",
+      "340",
+      "341",
+      "342",
+      "345"
+     ],
+     "en": "O house inspiring terror like a great lion, making as clear as day the decisions for those on the high plain, house of Iškur, at your front is abundance, at your rear is celebration. Your foundation is a horned bull, a lion. Holy staff, teat of heaven with rain for fine barley, the pilasters of your house are a wild bull with outspread horns, your ……, foundation and wall rising high, ……, thick cloud, …… snake, …… moonlight, …… Iškur, a sweeping flood, …… a storm and seven raging winds, ……, blowing raging winds, …… running from the ……, splits the …… hillside, diorite, stones and ……. 2 lines missing1 line fragmentary"
+    },
+    {
+     "ref": "346–350",
+     "orig": "[...] numun kalam X [X]\n[X] X [...] nun{?} [X] ku₃-ĝal₂ /an\\ [ki-a]\nX (X) [X] E [X] zi-ĝal₂ uĝ₃ [lu-a]\n[...] X X X X {d}iškur-[re]\ne₂ karkara{ki} muš₃-za e₂ bi₂-in-[gub] /barag\\-za dur₂ bi₂-in-[ĝar]",
+     "orig_lines": [
+      "346",
+      "347",
+      "348",
+      "349",
+      "350"
+     ],
+     "en": "The ……, the seed of the Land, the ……, the …… prince, the canal inspector of heaven and earth, the …… living, the numerous people, the ……, Iškur, has erected a house in your precinct, O house Karkara, and taken his seat upon your dais."
+    },
+    {
+     "ref": "351",
+     "orig": "23 e₂ {d}iškur karkara{ki}-[(X)]",
+     "orig_lines": [
+      "351"
+     ],
+     "en": "23 lines: the house of Iškur in Karkara."
+    },
+    {
+     "ref": "352–361",
+     "orig": "[X X] saĝ-kul an-ne₂ [ki ĝar-ra]\n[...] DA A X [...]\n[X X] an ki-da [...]\n[X (X)] {d}en-/ki{?}\\-ke₄{?} ki [X X (X)]\n[X X] X [X] /NAM\\ [...]\n[...] ŠE₃{?} [...]\n[... muš₃-za e₂ bi₂-in-gub barag-za dur₂ bi₂-in-ĝar]",
+     "orig_lines": [
+      "352",
+      "353",
+      "354",
+      "355",
+      "356",
+      "358",
+      "361"
+     ],
+     "en": "O ……, bolt founded by An, 4 lines fragmentary 1 line missing1 line fragmentary approx. 2 lines missing …… has erected a house in your precinct, O ……, and taken a seat upon your dais."
+    },
+    {
+     "ref": "362",
+     "orig": "[10 e₂ {d}... X{ki}-a]",
+     "orig_lines": [
+      "362"
+     ],
+     "en": "10 (?) lines: the house of …… in ……."
+    },
+    {
+     "ref": "363–377",
+     "orig": "[X]-zu {d}en-[...]\nmuš₃-zu an-ne₂ nam X X LUL{?} a [X]\ne₂-maḫ e₂ šar₂-ra nin-bi-ra tum₂-ma\nigi-zu ni₂ gal gur₃-ru šag₄-zu me-lem₄ sud\nama {d}nin-tur₅ {d}en-lil₂ {d}en-ki-ke₄ nam tar-ra\ne₂-sug₄-ga-a ĝiri₃ mu₂-mu₂ zi saĝ gig₂-ga\nme maḫ-a an-ne₂ an-šag₄-ta mu-ra-an-šum₂\nuz-ga kug-ga eš₃ ĝa₂-ĝa₂-zu\n{d}nin-ḫur-saĝ-ĝa₂-ke₄ keš₃{ki}-a dug₃-bi mu-un-ĝa₂-ĝa₂\ne₂ me gal-la du₈ sikil-la šu-luḫ dadag-ga\n{d}{ aš}aš₇-gi₄ diĝir adab{ki}-a-ke₄\nadab{ki} e₂ id₂-de₃ la₂-a re\ne₂ adab{ki} muš₃-za e₂ bi₂-in-gub barag-za dur₂ bi₂-in-ĝar",
+     "orig_lines": [
+      "365",
+      "366",
+      "367",
+      "368",
+      "369",
+      "370",
+      "371",
+      "372",
+      "373",
+      "374",
+      "375",
+      "376",
+      "377"
+     ],
+     "en": "2 lines missing1 line fragmentary An has …… your platform. E-maḫ (Exalted house), house of the universe, suited for its lady, your front inspires great awesomeness, your interior is filled with radiance. Mother Nintur, Enlil and Enki have determined your destiny. E-suga (Joyous (?) house) which ……, life of the black-headed, An has given you the magnificent divine powers from the interior of heaven. As in Keš, Ninḫursaĝa has blessed your priests maintaining the shrine in the holy uzga precinct. House with great divine powers, a pure platform and cleansing lustration, Ašgi, the god of Adab, has erected a house in your precinct, O Adab, O house situated at a canal, O house Adab, and taken his seat upon your dais."
+    },
+    {
+     "ref": "378",
+     "orig": "15 e₂ {d}nin-ḫur-saĝ-ĝa₂ adab{ki}-a",
+     "orig_lines": [
+      "378"
+     ],
+     "en": "15 lines: the house of Ninḫursaĝa in Adab."
+    },
+    {
+     "ref": "379–391",
+     "orig": "i₃-si-in{ki} iri an-ne₂ ki ĝar-ra šag₄-sig-ga ša-mu-un-du₃\nigi-bi u₁₈-ru-am₃ šag₄-bi galam kad₅-am₃\nme-bi me an-ne₂ nam tar-ra\nbarag-sig₉-ga {d}en-lil₂-le ki aĝ₂\nki nam tar-re an {d}en-lil₂-la₂\nki ninda gu₇ diĝir gal-gal-e-ne\nni₂ gal-la su zig₃ du₈-du₈-am₃\nkurun₂ gal-zu-še₃ diĝir {d}a-nun-na ši-im-ma-sug₂-sug₂-ge-eš\nnun-zu ama nu-gig unu₂ šuba-a sud-sud\nniĝin₃-ĝar ki kug-ga-kam-ma ĝa₂-ĝa₂\nnu-u₈-gig-ra suḫ₁₀ keše₂ di\nnu-bar-ra ubur 7 si sa₂-sa₂-e\nkurku₂-a 7-e ad [mi-ni-in-pad₃]",
+     "orig_lines": [
+      "379",
+      "380",
+      "381",
+      "382",
+      "383",
+      "384",
+      "385",
+      "386",
+      "387",
+      "388",
+      "389",
+      "390",
+      "391"
+     ],
+     "en": "O Isin, city founded by An which he has built on an empty plain! Its front is mighty, its interior is artfully built, its divine powers are divine powers which An has determined. Shrine which Enlil loves, place where An and Enlil determine destinies, place where the great gods dine, filled with great awesomeness and terror: all the Anuna gods attend your great drinking-bouts. Your princess, the mother, the Mistress adorned with jewels of šuba stone, who maintains the holy place's Niĝin-ĝar, who binds the suḫ crown on the nugig priestess, who causes the seven teats to flow for the nubar priestess, has resounded with seven pleasures (?)."
+    },
+    {
+     "ref": "392–394",
+     "orig": "nin-zu a-zu gal kalam-ma\nnin-{i₃}isin₂{si}-na dumu an-na-ke₄\ne₂ i₃-si-in{ki} muš₃-za e₂ bi₂-in-gub barag dur₂ bi₂-in-ĝar",
+     "orig_lines": [
+      "392",
+      "393",
+      "394"
+     ],
+     "en": "Your lady, the great healer of the Land, Ninisina, the daughter of An, has erected a house in your precinct, O house Isin, and taken her seat upon your dais."
+    },
+    {
+     "ref": "395",
+     "orig": "16 e₂ {d}nin-isin₂{si}-na i₃-si-in{ki}-na",
+     "orig_lines": [
+      "395"
+     ],
+     "en": "16 lines: the house of Ninisina in Isin."
+    },
+    {
+     "ref": "396–405",
+     "orig": "ka-zal-lu{ki} suḫ₁₀-zu an-šag₄-ga\nsu₃-ra₂-aĝ₂ X X u₆-e gub-ba\nnun-[zu] a ninda₂ X [(X)] X-a am-e tud-da\n[X] /maḫ\\ igi gun₃ en zu₂ piriĝ-ĝa₂\n[umbin]-še-ba amar šu ti-a\n[...] šu ti-a\n[...] šu ti-a\nX [...] /gi₄\\-gi₄ X ĝal₂-la a₂ šum₂-mu\nkun₄-sa-tu en gal {d}nu-muš-da-ke₄\nka-zal-lu{ki} muš₃-za e₂ bi₂-in-gub barag-za dur₂ bi₂-in-ĝar",
+     "orig_lines": [
+      "396",
+      "397",
+      "398",
+      "399",
+      "400",
+      "401",
+      "402",
+      "403",
+      "404",
+      "405"
+     ],
+     "en": "O Kazallu, your crown reaches to the centre of heaven, shining, …… an object of admiration. Your prince is the seed of a bull, engendered by a wild bull in ……, a magnificent …… with sparkling eyes, a lord with the teeth of a lion, who snatches the calf with his claws, who snatches ……. …… who snatches ……, the …… who gives strength to the ……, the great lord Numušda, has erected a house in your precinct, O Kun-satu (Threshold of the mountain), O Kazallu, and taken his seat upon your dais."
+    },
+    {
+     "ref": "406",
+     "orig": "10 e₂ {d}nu-muš-da ka-zal-lu{ki}",
+     "orig_lines": [
+      "406"
+     ],
+     "en": "10 lines: the house of Numušda in Kazallu."
+    },
+    {
+     "ref": "407–414",
+     "orig": "e₂-igi-kalam-ma uš ki ĝar-ra\nḫur-saĝ mu₂-a daĝal ki us₂-sa\nkur gu₂-erim₂-ĝal₂-e (X) X DU\n[X X X] /an{?}\\ ki{?} {d}nin-X X [...]\nX [...]\n...\n[... muš₃-za e₂ bi₂-in-gub barag dur₂ bi₂-in-ĝar]",
+     "orig_lines": [
+      "407",
+      "408",
+      "409",
+      "410",
+      "411",
+      "412",
+      "414"
+     ],
+     "en": "O E-igi-kalama (House which is the eye of the Land), your foundation is firmly laid, growing hill which stands broadly on the earth, …… the enemies' land, 3 lines fragmentary approx. 1 line missing …… has erected a house in your precinct, O ……, and taken a seat upon your dais."
+    },
+    {
+     "ref": "415",
+     "orig": "[8 e₂ {d}lugal-mar₂-da mar₂-da{ki}]",
+     "orig_lines": [
+      "415"
+     ],
+     "en": "8 (?) lines: the house of Lugal-Marda in Marda."
+    },
+    {
+     "ref": "416–423",
+     "orig": "BAD₃.AN{ki} eš-bar-re gal kiĝ₂-ĝa₂ šar₂ dug₄-ge gib-ba\nkan₄ ni₂ me-/lem₄\\ ĝal₂-la-za\nĝiš-bur₂-de₃ muš-šag₄-tur₃ muš-ḫuš-e gu₂-da am₃-mi-ib-la₂\nnun-zu mas-su diĝir-re-e-ne\nsa₂ pad₃-de₃ maḫ di-de₃ ḫe₂-du₇\ndumu {d}uraš-a me zid nam-nun-na gal-zu\n{d}ištaran lugal BIR an-na-ke₄\ne₂-dim-gal-kalam-ma muš₃-za e₂ bi₂-in-gub barag-za dur₂ bi₂-in-ĝar",
+     "orig_lines": [
+      "416",
+      "417",
+      "418",
+      "419",
+      "420",
+      "421",
+      "422",
+      "423"
+     ],
+     "en": "O Dēr (Akkadian name; a Sumerian name is unknown) , taking extreme care of decisions, ……, on your awesome and radiant gate a decoration displays a horned viper and a mušḫuš embracing. Your prince, a leader of the gods, fit for giving counsel and grand speech, the son of Uraš who knows thoroughly the true divine powers of princeship, Ištaran, the …… sovereign of heaven, has erected a house in your precinct, O E-dim-gal-kalama (House which is the great pole of the Land), and taken his seat upon your dais."
+    },
+    {
+     "ref": "424",
+     "orig": "8 e₂ {d}ištaran BAD₃.AN{ki}-a",
+     "orig_lines": [
+      "424"
+     ],
+     "en": "8 lines: the house of Ištaran in Dēr."
+    },
+    {
+     "ref": "425–435",
+     "orig": "e₂-sikil me sikil-bi kur-kur-ra dirig-ga\nmu-bi sukud u₁₈-ru ki-tuš maḫ ur-saĝ-ĝa₂\ne₂ kug {d}nin-a-zu e₂ me kug-kug-ga\ne₂ me-zu me sikil šu-luḫ-zu šu-luḫ dadag\nki-tuš-za ur-saĝ-e ni₂ mu-ni-ib-te-en-ten\ndu₈-za {d}nin-a-zu u₂ mu-ni-ib-sug₄-sug₄\nlugal-zu en gal dumu {d}en-lil₂-la₂-kam\nur-maḫ galam e₃ kur-re uš₁₁ šum₂-mu\nkur gu₂-erim₂-ĝal₂-la-še₃ {tum₉}u₁₈-lu-gin₇ zi-zi\nbad₃ ki-bal-a-še₃ ušumgal-gin₇ guru₅-uš bur₂-ru\nnu-še-ga u₁₈-lu dul-u₃ erim₂-e ĝiri₃ saga₁₁{!} di",
+     "orig_lines": [
+      "425",
+      "426",
+      "427",
+      "428",
+      "429",
+      "430",
+      "431",
+      "432",
+      "433",
+      "434",
+      "435"
+     ],
+     "en": "O E-sikil (Pure house) whose pure divine powers are supreme in all lands, whose name is high and mighty, magnificent dwelling of the warrior, holy house of Ninazu, house of the holy divine powers! House, your divine powers are pure divine powers, your lustration is a cleansing lustration. The warrior refreshes himself in your dwelling. Ninazu dines on your platform. Your sovereign, the great lord, the son of Enlil, is a towering lion spitting venom over hostile lands, rising like the south wind against enemy lands, snarling like a dragon against the walls of rebel lands, a storm enveloping the disobedient and trampling on the enemy."
+    },
+    {
+     "ref": "436–446",
+     "orig": "dub₃ ba₉-ra₂-ni ḫul-ĝal₂ nu-e₃\nu₃-ma gub-ba-ni ki-bal uru₂ gul-gul-lu\nsaĝ-ki gid₂-da-ni uĝ₃-bi saḫar-e-eš de₅-ga\ne₂ nun-zu piriĝ gal erim₂ šu-bi-še₃ la₂-a\nlugal-zu ud ḫuš u₁₈-ru lipiš me₃-a\nšen-šen-na SA₄-gin₇ DU a₂ maḫ-bi {kuš}gur₂₁-ra\nsa-par₃ uĝ₃ daĝal-la erim₂ šu-na nu-e₃\nen gal pa e₃-a maḫ-a-ni zag nu-sa₂\na zid kur gal-e {d}nin-lil₂-le tud-da\ne₂-sikil lugal-zu ur-saĝ {d}nin-a-zu\neš₃-nun-na{ki} muš₃-za e₂ bi₂-in-gub barag-za dur₂ bi₂-in-ĝar",
+     "orig_lines": [
+      "436",
+      "437",
+      "438",
+      "439",
+      "440",
+      "441",
+      "442",
+      "443",
+      "444",
+      "445",
+      "446"
+     ],
+     "en": "When he strides forth, no evil-doer can escape. When he establishes his triumph, the cities of the rebel lands are destroyed. When he frowns, their people are cast into the dust. House, your prince is a great lion from whose claws the enemy hangs. Your sovereign is a terrifying, mighty storm, the vigour of the battle, in combat …… like a …… with a shield on his lofty arm, a net over the widespread people from whose reach the foe cannot escape. When the great lord is resplendent, his magnificence has no equal. The true seed born of the Great Mountain and Ninlil, your sovereign, the warrior Ninazu, has erected a house in your precinct, O E-sikil, O Ešnunna, and taken his seat upon your dais."
+    },
+    {
+     "ref": "447",
+     "orig": "22 e₂ {d}nin-a-zu eš₃-nun-na{ki}",
+     "orig_lines": [
+      "447"
+     ],
+     "en": "22 lines: the house of Ninazu in Ešnunna."
+    },
+    {
+     "ref": "448–455",
+     "orig": "e₂ nam-ḫe₂-a du₃-a kiš{ki} me nam-nun-na saĝ il₂\na₂-dam ki ĝar-ra temen gal-zu sag₂ nu-di\nki-sa₂-a-zu muru₉ daĝal tag-ga an-šag₄-ge dirig\nšag₄-zu {ĝiš}tukul {ĝiš}mitum₂ a₂ X IM{?} še-er-ka-an ba-ni-in-dug₄\nzid-da-zu kur dub₂-bu gab₂-bu-zu erim₂ sal-e\nnun-zu u₁₈-ru maḫ ud gal ki us₂-sa ni₂ ḫuš gal ri-a\ne₂-dub lugal-zu ur-saĝ {d}za-ba₄-ba₄\ne₂ kiš{ki} muš₃-za e₂ bi₂-in-gub barag-za dur₂ bi₂-in-ĝar",
+     "orig_lines": [
+      "448",
+      "449",
+      "450",
+      "451",
+      "452",
+      "453",
+      "454",
+      "455"
+     ],
+     "en": "O house built in plenitude, Kiš, raising its head among the princely divine powers, established settlement, your great foundation cannot be scattered. Your plinth is a vast oppressive cloud floating in the midst of the sky. Your interior is a weapon, a mace decorated with ……. Your right hand makes mountains tremble, your left thins out the enemy. Your prince, mighty and magnificent, a great storm overpowering the earth, inspiring great and terrifying awe, your sovereign, the warrior Zababa, has erected a house in your precinct, O E-dub (Storage house), O house Kiš, and taken his seat upon your dais."
+    },
+    {
+     "ref": "456",
+     "orig": "8 e₂ {d}za-ba₄-ba₄ kiš{ki}-a",
+     "orig_lines": [
+      "456"
+     ],
+     "en": "8 lines: the house of Zababa in Kiš."
+    },
+    {
+     "ref": "457–466",
+     "orig": "e₂-ĝiš-keše₂-da-kalam-ma\ngud a₂ nun gi₄-a diĝir-re-e-ne\nimmal₂ ni₂ te-en-te-en gud-am a-nir ĝa₂-ĝa₂\ngu₂-du₈-a kar-zu kar sig-ga a naĝ-ĝe₂₆\nšag₄-zu galam kad₅ šita₂-zu šita₂ X an-ta šu bar-ra\nmuš₃-zu muš₃ za-gin₃ meš₃-lam-ma la₂-a\nnun-zu diĝir er₉-ra lugal meš₃-lam-ma\ndiĝir ḫuš ki-a lugal ud-šu₂-[uš]\n{d}nergal {d}meš₃-lam-ta-e₃-[a]\nmuš₃-za e₂ bi₂-in-gub barag-za dur₂ bi₂-in-ĝar",
+     "orig_lines": [
+      "457",
+      "458",
+      "459",
+      "460",
+      "461",
+      "462",
+      "463",
+      "464",
+      "465",
+      "466"
+     ],
+     "en": "O E-ĝiškešda-kalama (House which is the bond of the Land), bull …… great strength among the gods, terrifying wild cow, wild bull which causes lament, Gudua, your quay is a low quay which bestows water, your interior is artfully built, your mace is a …… mace released from heaven, your platform is a lustrous platform spreading over Mešlam. Your prince, the mighty god, the sovereign of Mešlam, the fierce god of the underworld, the sovereign of Ud-šuš (Sunset), Nergal, Mešlamta-ea, has erected a house in your precinct, and taken his seat upon your dais."
+    },
+    {
+     "ref": "467",
+     "orig": "10 e₂ {d}nergal gu₂-du₈-a{ki}",
+     "orig_lines": [
+      "467"
+     ],
+     "en": "10 lines: the house of Nergal in Gudua."
+    },
+    {
+     "ref": "468–477",
+     "orig": "u₂-ru-um{ki} u₁₈-ru-na ki di ku₅-ru {d}suen-na\ne₂-ab₂-lu-a tur₃ daĝal-la\n{d}aš-im₂-babbar-e nam-sipad-zu ša-mu-un-ak\ne₂ lugal-ĝu₁₀ ĝidru-zu an-na /ši-bi₂\\-[bad]-ba₉-re₆\nE₂xX X ki{?}-še₃ [X] X iti₆ [X (X)] giri₁₇-zal\nTE [X]-zu ud ḫe₂-ni{?}-X-[...]\nnun-zu nun giri₁₇-zal kug X X [X X]\nan za-gin₃-ta e₃ giri₁₇-zal šag₄{?} [X] meš₃-e giri₁₇(sourše: NE) šu ĝal₂ [X]\nkalam-e dadag-ge {d}suen /NA{?}\\ [X]\ne₂ u₂-ru-um muš₃-za e₂ bi₂-in-[gub] barag-za dur₂ bi₂-in-[ĝar]",
+     "orig_lines": [
+      "468",
+      "469",
+      "470",
+      "471",
+      "472",
+      "473",
+      "474",
+      "475",
+      "476",
+      "477"
+     ],
+     "en": "O mighty Urum where Suen pronounces judgment, E-ab-lua (House with teeming cattle), wide cattle-yard, Ašimbabbar acts as your shepherd. House, my sovereign, your sceptre reaches to heaven, …… to the earth, moonlight ……, celebration, your …… may …… the light. Your prince, the prince of holy celebration, ……, who appears in the lapis lazuli coloured sky, a celebration, to whom the hero pays homage ……, who brightens the Land, …… Suen, has erected a house in your precinct, O house Urum, and taken his seat upon your dais."
+    },
+    {
+     "ref": "478",
+     "orig": "10 e₂ {d}suen-/na\\ u₂-ru-um{ki}",
+     "orig_lines": [
+      "478"
+     ],
+     "en": "10 lines: the house of Suen in Urum."
+    },
+    {
+     "ref": "479–488",
+     "orig": "zimbir{ki} barag {d}utu ud-de₃ dur₂ ĝar-ra\ne₂-nun-an-na mul-an men{?} {d}nin-gal-e tud-da\ne₂ {d}utu nun-zu X X (X) /ki{?}\\-šar₂-ra an ki-e am₃-si\nen nu₂-a-ni uĝ₃ nu₂-de₃\nzi-zi-da-ni uĝ₃ zi-zi-de₃\ngud-de₃ ur₄ X X uĝ₃-e giri₁₇ du₃-de₃\n{d}utu-ur₂ maš₂-anše u₂-a X mu-ni-in-su₈-ug\nsaĝ gig₂-ge a mu-un-ši-ib-tu₅\nkalam-e zag-še mu-na-ra-si-ig\nme ḫe₂-aĝ₂-e eš₃-zu uru₂",
+     "orig_lines": [
+      "479",
+      "480",
+      "481",
+      "482",
+      "483",
+      "484",
+      "485",
+      "486",
+      "487",
+      "488"
+     ],
+     "en": "O Zimbir, dais upon which Utu sits daily, E-nun-ana (House of the prince of heaven), star of heaven, crown given birth by Ningal, house of Utu, your prince, the …… of the universe, fills heaven and earth. When the lord sleeps, the people sleep; when he rises, the people rise. The bull …… and the people prostrate themselves. Before Utu the herds pasture ……. The black-headed have bathed before him, the Land has …… before him. He measures out the divine powers -- your shrine is a flood."
+    },
+    {
+     "ref": "489–492",
+     "orig": "di ku₅-ru ki ud e₃ ud uru₁₆-na sun₄ la₂-e\nĝi₆ u₃-na suḫ₁₀ keše₂-de₃\n{d}utu lugal e₂-babbar₂-ra-ke₄\ne₂ zimbir{ki} muš₃-za e₂ bi₂-in-gub barag-za dur₂ bi₂-in-ĝar",
+     "orig_lines": [
+      "489",
+      "490",
+      "491",
+      "492"
+     ],
+     "en": "Pronouncing judgment where the sun rises, mighty sunlight, wearing a beard, tying on the suḫ crown at night, Utu, the sovereign of E-babbar (Shining house), has erected a house in your precinct, O house Zimbir, and taken his seat upon your dais."
+    },
+    {
+     "ref": "493",
+     "orig": "14 e₂ {d}utu zimbir{ki}-a",
+     "orig_lines": [
+      "493"
+     ],
+     "en": "14 lines: the house of Utu in Zimbir."
+    },
+    {
+     "ref": "494–499",
+     "orig": "e₂-ḫur-saĝ u₂-šim-gin₇ gurun-na sig₇-ga\nḪI.ZA{ki} šag₄-zu nam-ḫe₂-a\nki nam tar-re-da nam ši-im-da-ab-tar-re-en\nmuš₃-za men-e ul ḫe₂-em-mi-ib-tum₂-mu\n{ĝiš}i-ri₉-na-zu muš-saĝ-kal u₃-zu-zu-gin₇\ntemen kug-za ud ḫe₂-ni-ib-kar₂-kar₂",
+     "orig_lines": [
+      "494",
+      "495",
+      "496",
+      "497",
+      "498",
+      "499"
+     ],
+     "en": "O E-ḫursaĝ (House which is a mountain) beautiful as greenery, …… (The Sumerian name of this city is unknown) , your interior is plenitude. At the place where destiny is determined you determine destiny. May the crown bring joy to your platform. May your roots glisten like an immense saĝkal snake in your holy foundations."
+    },
+    {
+     "ref": "500–505",
+     "orig": "ama {d}nin-tur₅ nin ulutim₂-ma\nšag₄ ki ku₁₀-ku₁₀-ga kiĝ₂ ak-e\nlugal u₃-tud suḫ₁₀ zid keše₂ di\nen u₃-tud saĝ-men ĝa₂-ĝa₂ šu-na i₃-ĝal₂\nšag₄-zu an ki {d}nin-ḫur-saĝ-ĝa₂-ke₄\ne₂ ḪI.ZA{ki} muš₃-za e₂ bi₂-in-gub barag-za dur₂ bi₂-in-ĝar",
+     "orig_lines": [
+      "500",
+      "501",
+      "502",
+      "503",
+      "504",
+      "505"
+     ],
+     "en": "Mother Nintur, the lady of creation, performs her task within your dark place, binding the true suḫ crown on the new-born king, setting the crown on the new-born lord who is secure in her hand. The midwife of heaven and earth, Ninḫursaĝa, has erected a house in your precinct, O house ……, and taken her seat upon your dais."
+    },
+    {
+     "ref": "506",
+     "orig": "12 e₂ {d}nin-ḫur-saĝ-ĝa₂ ḪI.ZA{ki}",
+     "orig_lines": [
+      "506"
+     ],
+     "en": "12 lines: the house of Ninḫursaĝa in ……."
+    },
+    {
+     "ref": "507–513",
+     "orig": "ul-maš{ki} igi-nim KAB.LAḪ₄ kalam-ma\nug ḫuš am-še₃ du₇-du₇\ngu₂-erim₂-ĝal₂-še₃ sa barag₂-ga\nniĝ₂-me-ĝar ki-bal-a du₇-du₇\nen-na nu-še-ga eme sig-ga nu₂-a\ne₂ {d}inana kug {na₄}za-gin₃-na {e₂}šutum kug-sig₁₇ du₃-a\nnun-zu a₁₂-ra₂-bu{mušen} nu-u₈-gig niĝin₃-ĝar-ra",
+     "orig_lines": [
+      "507",
+      "508",
+      "509",
+      "510",
+      "511",
+      "512",
+      "513"
+     ],
+     "en": "O Ulmaš, upper land, …… of the Land, terrifying lion battering a wild bull, net spreading over an enemy, making silence fall upon a rebel land on which, as long as it remains insubmissive, spittle is poured! House of Inana of silver and lapis lazuli, a storehouse built of gold, your princess is an arabu bird, the Mistress of the Niĝin-ĝar."
+    },
+    {
+     "ref": "514–518",
+     "orig": "me₃ gu₂ e₃ ḫu-ul-ḫu-ul-le-eš sig₇-ga šita₂ 7-e si sa₂-e\na₂-kar₂ a me₃ tu₅-tu₅\nkan₄ me₃ X ĝal₂ da₁₃-da₁₃ X X X X\ngal-zu an-na {d}inana-ke₄\ne₂ ul-maš muš₃-za e₂ bi₂-<in>-gub barag-za dur₂ bi₂-in-ĝar",
+     "orig_lines": [
+      "514",
+      "515",
+      "516",
+      "517",
+      "518"
+     ],
+     "en": "Arrayed in battle, jubilantly (?) beautiful, ready with the seven maces, washing her tools for battle, opening the door of battle and ……, the extremely wise one of heaven, Inana, has erected a house in your precinct, O house Ulmaš, and taken her seat upon your dais."
+    },
+    {
+     "ref": "519",
+     "orig": "12{!} e₂ {d}inana ul-maš{ki}",
+     "orig_lines": [
+      "519"
+     ],
+     "en": "12 lines: the house of Inana in Ulmaš."
+    },
+    {
+     "ref": "520–523",
+     "orig": "e₂ a₂ zid-da {urud}lub me₃ kud-kud ki-bal-še₃\na-gar₃ sig₇-sig₇-ga-bi ib₂{?}-dun-dun\nX X X X [X] X X [...]\n[...] AN [...] X X X",
+     "orig_lines": [
+      "520",
+      "521",
+      "522",
+      "523"
+     ],
+     "en": "O house, right arm, battle-axe cutting down the rebel lands, digging up their green fields, 2 lines fragmentary"
+    },
+    {
+     "ref": "524–527",
+     "orig": "nun-zu ur-saĝ [X X X] ra-ra\nme₃ šar₂-ra aga-kar₂ [(X)] X e-ne di\n{d}a-ba₄ diĝir a-ga-de₃{ki}-ke₄\ne₂ a-ga-de₃{ki} muš₃-za e₂ [bi₂]-in-gub barag-za dur₂ bi₂-in-ĝar",
+     "orig_lines": [
+      "524",
+      "525",
+      "526",
+      "527"
+     ],
+     "en": "Your prince, the warrior who ……, who defeats (?) all in battle, exulting ……, Aba, the god of Agade, has erected a house in your precinct, O house Agade, and taken his seat upon your dais."
+    },
+    {
+     "ref": "528",
+     "orig": "8 e₂ {d}a-ba₄ a-ga-de₃{ki}-a",
+     "orig_lines": [
+      "528"
+     ],
+     "en": "8 lines: the house of Aba in Agade."
+    },
+    {
+     "ref": "529–534",
+     "orig": "e₂ mul-mul e₂-za-gin₃ gun₃-a kur-kur-ra šu-mu-un-bad\nḫa-mun du₆-du₆-da eš₃-a ĝa₂-ĝa₂\nereš₂{ki} en ul-e-ne itid-de₃ saĝ ma-ra-ni-in-il₂-eš\ndu₆-da naĝa-e naĝa di₄-di₄-la₂\n{d}nanibgal₂ gal-e {d}nisaba-ke₄\nme an-ta ba-an-e₃ me-zu ba-an-taḫ",
+     "orig_lines": [
+      "529",
+      "530",
+      "531",
+      "532",
+      "533",
+      "534"
+     ],
+     "en": "O house of stars, bright E-zagin (Lapis lazuli house), reaching into all lands, establishing …… in the shrine, Ereš! The primeval lords raise their heads to you every month. …… the potash plant, great Nanibgal, Nisaba, has brought divine powers from heaven and added to your divine powers."
+    },
+    {
+     "ref": "535–542",
+     "orig": "zag sal-sal-e ĝar-ra-am₃\nmunus zid ĝeštug₂ dirig tuku-e\nIM.ĜAR sed₄-da ka du₈-u₃\ndub za-gin₃-ta ad gi₄-gi₄-gi₄\nkur-kur-ra ad ša₄ ĝa₂-ĝa₂-ĝa₂\nmunus zid naĝa kug-ga gi du₃-e tud-da\nan-ne₂ kuš₃ ra-ra ki eš₂ ra-ra\n{d}nisaba za₃-mi₂",
+     "orig_lines": [
+      "535",
+      "536",
+      "537",
+      "538",
+      "539",
+      "540",
+      "541",
+      "542"
+     ],
+     "en": "Sanctuary established for ……! To the true woman who possesses exceeding wisdom, soothing …… and opening the mouth, always consulting a tablet of lapis lazuli, giving advice to all lands, the true woman, the holy potash plant, born of the stylus reed, applies the measure to heaven and places the measuring-rope on the earth -- to Nisaba be praise!"
+    },
+    {
+     "ref": "543–544",
+     "orig": "lu₂ dub zu₂ keše₂-da en-ḫe₂-du₇-an-na\nlugal-ĝu₁₀ niĝ₂ u₃-tud na-me lu₂ nam-mu-un-u₃-tud",
+     "orig_lines": [
+      "543",
+      "544"
+     ],
+     "en": "The compiler of the tablets was En-ḫedu-ana. My king, something has been created that no one has created before."
+    },
+    {
+     "ref": "545",
+     "orig": "14 e₂ {d}nisaba ereš₂{ki}-a",
+     "orig_lines": [
+      "545"
+     ],
+     "en": "14 lines: the house of Nisaba in Ereš."
+    }
+   ]
+  }
+ ]
+}

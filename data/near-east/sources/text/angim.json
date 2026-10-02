@@ -1,0 +1,510 @@
+{
+ "slug": "angim",
+ "source": "ETCSL",
+ "siglum": "ETCSL 1.6.1",
+ "source_url": "https://etcsl.orinst.ox.ac.uk/cgi-bin/etcsl.cgi?text=t.1.6.1",
+ "license": "ETCSL（Oxford）轉寫與英譯，非商業學術使用",
+ "compositions": [
+  {
+   "num": "1.6.1",
+   "title_en": "Ninurta's return to Nibru: a šir-gida to Ninurta",
+   "segments": [
+    {
+     "ref": "1–6",
+     "orig": "an-<gin₇> dim₂-ma dumu {d}en-lil₂-la₂ (Šited in OB šatalogue in tḫe Louvre, 0.2.02, line 43; OB šatalogue from Urim (U2), 0.2.04, line 42)\n{d}nin-urta {d}en-lil₂-gin₇ /dim₂\\-ma {d}nin-tur₅-/e\\ tud-da\na₂-ĝal₂ diĝir {d}a-nun-na-ke₄-ne ḫur-saĝ-ta e₃-a\nni₂ ḫuš ri-a dumu {d}en-lil₂-la₂ ne₃-ni-ta nir-ĝal₂\nlugal-ĝu₁₀ ši-maḫ-e-en /nam\\-maḫ-zu me-teš₂ ḫe₂-i-i\n/{d}nin-urta\\ ši-maḫ-e-en nam-maḫ-zu me-/teš₂ ḫe₂\\-i-i",
+     "orig_lines": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6"
+     ],
+     "en": "Created like An, O son of Enlil, Ninurta, created like Enlil, born by Nintur, mightiest of the Anuna gods, who came forth from the mountain range, imbued with terrible awesomeness, son of Enlil, confident in his strength, my sovereign, you are magnificent -- let your magnificence therefore be praised. Ninurta, you are magnificent -- let your magnificence therefore be praised."
+    },
+    {
+     "ref": "7–12",
+     "orig": "lugal kur-kur-ra nam a₂ gur-ra-zu-še₃\nur-saĝ {d}en-lil₂-la₂ nam a₂ kalag-ga-zu-še₃\nur-saĝ ḫuš-a me an-gin₇ mu-e-il₂\ndumu {d}en-lil₂-la₂ me ki-gin₇ mu-e-il₂\nme kur-ra an-gin₇ dugud-da-am₃ mu-e-il₂\nme eridug{ki}-ga ki-gin₇ maḫ-am₃ mu-e-/il₂\\",
+     "orig_lines": [
+      "7",
+      "8",
+      "9",
+      "10",
+      "11",
+      "12"
+     ],
+     "en": "Sovereign of all the lands, in your massive might, warrior of Enlil, in your great might, fierce warrior, you have taken up the divine powers which are like heaven, son of Enlil, you have taken up the divine powers which are like the earth, you have taken up the divine powers of the mountains, which are heavy as heaven, you have taken up the divine powers of Eridug, which are huge as the earth."
+    },
+    {
+     "ref": "13–15",
+     "orig": "diĝir-re-e-ne ki-a mu-e-[su-ub-be₂-eš]\n{d}a-nun-na-ke₄-ne šu ĝar-ĝar-ra-am₃ mu-e-[...]\n{d}nin-urta a₂ nam-ur-saĝ-ĝa₂ šu du₇-a-[me-en]",
+     "orig_lines": [
+      "13",
+      "14",
+      "15"
+     ],
+     "en": "You have made the gods prostrate (?) themselves before you. You have made the Anuna salute (?) you. Ninurta, you are made complete by heroic strength."
+    },
+    {
+     "ref": "16–17",
+     "orig": "lugal-la dug₄-/ga\\-ni ud-dam [...]\nen {d}nin-urta-ke₄ inim-/ma\\-ni ud-dam X [...]",
+     "orig_lines": [
+      "16",
+      "17"
+     ],
+     "en": "The utterance of the sovereign is a storm ……. The word of Lord Ninurta is a storm ……."
+    },
+    {
+     "ref": "18–23",
+     "orig": "kur gu₂-erim₂-/ĝal₂-še₃\\ X-am₃ al-[...]\nbad₃ ki-bal-a-še₃ X X-am₃ al-X-[...]\nU₃ BU ḪU men{?}-/na\\ ĜIŠ /ḫur{?}-saĝ{?}\\ al-[...]\nen su-lim-e /ḫuš{?}\\-am₃ /ḫe₂{?}\\-X [...]\nan ki-bi-da ḫuš-/am₃\\ [...]\nTI dug₄ X X ḪI X [...]",
+     "orig_lines": [
+      "18",
+      "19",
+      "20",
+      "21",
+      "22",
+      "23"
+     ],
+     "en": "To the hostile mountains ……. To the fortress of the rebellious land ……. 1 line unclear Lord, frighteningly fierce, ……. Fierce in heaven and earth, ……. 1 line unclear"
+    },
+    {
+     "ref": "24–25",
+     "orig": "ib₂ dug₄-ga-ni kur ad₆ X [...]\nigi ḫuš-a-ni X [...]",
+     "orig_lines": [
+      "24",
+      "25"
+     ],
+     "en": "His angry utterance made a corpse of the mountains. His fierce countenance ……."
+    },
+    {
+     "ref": "26–29",
+     "orig": "am si mu₂{?}-e DUB /A{?}\\ X [...]\nšeg₉ lu-lim X X X [...]\nam gal kur-[ra ...] X-bi-ta X [...]\nLU BU-ni [(X)] a₂ /me₃ eš₂ da\\-da-ra ba-an-du₈",
+     "orig_lines": [
+      "26",
+      "27",
+      "28",
+      "29"
+     ],
+     "en": "Horned wild bull ……. Wild ram and stag ……. The great wild bull of the mountains …… from its ……. He put his ……, the strength in battle, in his belt."
+    },
+    {
+     "ref": "30–40",
+     "orig": "lugal-/e\\ [a₂] nam-/ur\\-saĝ-ĝa₂-/ni\\-še₃\n{d}nin-[urta] /dumu\\ /{d}en-lil₂-la₂\\-ke₄ nam a₂ kalag-ga-še₃\n/šeg₉\\-[saĝ-6] /e₂{?}\\ za-gin₃ uru₁₆-na-ta /nam-ta\\-an-e₃\n[ušum ur]-/saĝ\\ bad₃ gal kur-ra-ta /nam-ta\\-an-e₃\n[ma₂-gi₄-lum] X abzu-ka-ni /nam-ta\\-an-e₃\n/gud-alim saḫar\\ me₃-ka-ni nam-ta-an-e₃\nku-li-an-na an-šar₂ ki-šar₂-ta nam-ta-an-e₃\n[niĝ₂-babbar₂-ra] saḫar ḫur-saĝ-/ĝa₂\\-[ta nam-ta]-/an-e₃\\\n[urud niĝ₂ kalag-ga] ḫur-saĝ dar-/ra\\-[ta nam]-/ta\\-an-e₃\n[mušen] [anzud]/{mušen}\\ {ĝiš}ḫa-lu-ub₂-/ḫar\\-[ra]-an-ta nam-ta-/e₃\\\n[muš-saĝ-7] X X kur-/ra\\-[ta] /nam\\-ta-an-e₃",
+     "orig_lines": [
+      "30",
+      "31",
+      "32",
+      "33",
+      "34",
+      "35",
+      "36",
+      "37",
+      "38",
+      "39",
+      "40"
+     ],
+     "en": "The sovereign, with his heroic arms, Ninurta, the son of Enlil, in his great might, brought forth the Six-headed wild ram from the shining, lofty house. He brought forth the Warrior dragon from the great fortress of the mountains. He brought forth the Magilum boat from …… his abzu. He brought forth the Bison from his battle dust. He brought forth the Mermaid from the limits of heaven and earth. He brought forth the Gypsum from the soil of the mountain range. He brought forth the Strong copper from the shattered mountain range. He brought forth the Anzud bird from the ḫalub-ḫaran tree. He brought forth the Seven-headed serpent from the …… of the mountains."
+    },
+    {
+     "ref": "41–46",
+     "orig": "[... mu]-/un\\-na-an-zi-zi\n[...]-an-dug₄\n[...] X šag₄{?} mu-un-ḫul [...]-/da{?}\\\n[...] X-an-dug₄\n[...] X X tun₃{?} mu-un-dab₅\n[...]-/na{?} šu\\ ba-ni-ti",
+     "orig_lines": [
+      "41",
+      "42",
+      "43",
+      "44",
+      "45",
+      "46"
+     ],
+     "en": "He mustered them all before him ……. He spoke ……. He was unhappy ……. He spoke ……. He seized the axe ……. He took his ……."
+    },
+    {
+     "ref": "47–51",
+     "orig": "[ur-saĝ ...] kur ad₆-e-eš mu-un-ak\n[en {d}nin-urta] X gul{?} kur ad₆-eš mu-un-ak\n[... zar-re]-eš mu-un-du₈-du₈\n[lugal-e] /a₂ nam-ur-saĝ\\-[ĝa₂-ni]-/še₃ šu na-mi-ni-in-gi₄{?}\\\n[ur-saĝ] [{d}nin]-urta a₂ nam-ur-saĝ-ĝa₂-/ni\\-[še₃] /šu{?} na{?}-mi{?}-ni-in-gi₄{?}\\",
+     "orig_lines": [
+      "47",
+      "48",
+      "49",
+      "50",
+      "51"
+     ],
+     "en": "The warrior …… made a corpse of the mountains. Lord Ninurta, who destroys (?) ……, made a corpse of the mountains. He piled up ……. The sovereign, with his heroic strength, wreaked his vengeance (?). The warrior Ninurta, with his heroic strength, wreaked his vengeance (?)."
+    },
+    {
+     "ref": "52–54",
+     "orig": "[{ĝiš}gigir] /za\\-gin₃-na ni₂ ḫuš gur₃-/ru\\-[na]\nam dab₅-dab₅-ba-ni {ĝiš}gag-a bi₂-in-la₂\nab₂ dab₅-ba-ni a₂ {ĝiš}šudul bi₂-in-la₂",
+     "orig_lines": [
+      "52",
+      "53",
+      "54"
+     ],
+     "en": "On his shining chariot, which inspires terrible awe, he hung his captured wild bulls on the axle and hung his captured cows on the cross-piece of the yoke."
+    },
+    {
+     "ref": "55–63",
+     "orig": "šeg₉-saĝ-6 saḫar-gi₄-a bi₂-in-la₂\nušum ur-saĝ saĝ dur₂-ra-ka bi₂-in-la₂\nma₂-gi₄-lum še-er-du₈-na-ka bi₂-in-la₂\ngud-alim ad-us₂-a bi₂-in-la₂\nku-li-an-na {ĝiš}ki-ĝiri₃-a bi₂-in-la₂\nniĝ₂-babbar₂-ra erin₂-saĝ-ĝa₂ bi₂-in-la₂\nurud niĝ₂ kalag-ga kiš-gag šag₄-ga-ka bi₂-in-la₂\nmušen anzud{mušen} gaba-ĝal₂-la bi₂-in-la₂\n/muš-saĝ\\-7 tum za-gin₃-na-ka bi₂-in-la₂",
+     "orig_lines": [
+      "55",
+      "56",
+      "57",
+      "58",
+      "59",
+      "60",
+      "61",
+      "62",
+      "63"
+     ],
+     "en": "He hung the Six-headed wild ram on the dust-guard. He hung the Warrior dragon on the seat. He hung the Magilum boat on the ……. He hung the Bison on the beam. He hung the Mermaid on the foot-board. He hung the Gypsum on the forward part of the yoke. He hung the Strong copper on the inside pole pin (?). He hung the Anzud bird on the front guard. He hung the Seven-headed serpent on the shining cross-beam."
+    },
+    {
+     "ref": "64–69",
+     "orig": "{ĝiš}[gigir] me₃-a tum₂-ma-na\nen {d}nin-urta-ke₄ ĝiri₃-ni nam-mi-in-gub\nud-an-ne₂ diĝir igi tab-tab\nlugal-an-ba₉-ra₂ en sun₄(sourše: KAxNUN) igi-še₃ mu-na-ĝen\nni₂ kur-kur-/ra\\ [{d}]lugal-kur-dub₂\nen {d}nin-urta-/ke₄{?}\\ X (X) X /eĝer{?}-ra\\-[ni nam-mi-in-us₂]",
+     "orig_lines": [
+      "64",
+      "65",
+      "66",
+      "67",
+      "68",
+      "69"
+     ],
+     "en": "Lord Ninurta stepped into his battle-worthy chariot. Ud-ane, the all-seeing god, and Lugal-anbara, the bearded (?) lord, went before him, and the awesome one of the mountains, Lugal-kur-dub, the …… of Lord Ninurta, followed behind him."
+    },
+    {
+     "ref": "70–72",
+     "orig": "piriĝ abzu-ta [...]\nni₂ me-lem₄ an-/na\\ [...]\n{d}a-nun-na diĝir gal-/gal-e-ne\\ [...]",
+     "orig_lines": [
+      "70",
+      "71",
+      "72"
+     ],
+     "en": "The lion who …… from the abzu, who …… An's awesomeness and radiance -- the Anuna, the great gods ……."
+    },
+    {
+     "ref": "73–75",
+     "orig": "lugal a-ma-ru /ba{?}\\-[ur₃-ta]\n{d}nin-urta ud ki-bal-[a] a-/ma\\-[ru ba-ur₃-ta]\nud-dam an-ur₂-ra [dum]-/dam\\ mu-/ni\\-[ib₂-za]",
+     "orig_lines": [
+      "73",
+      "74",
+      "75"
+     ],
+     "en": "As the sovereign swept on like the deluge, as Ninurta, storm of the rebellious land, swept on like the deluge, he rumbled like a storm on the horizon."
+    },
+    {
+     "ref": "76–79",
+     "orig": "du-ni inim {d}en-lil₂-la₂ e₂-kur-še₃ /ĝa₂\\-[ĝa₂-da]\nur-saĝ diĝir-re-e-ne kuš₇ kalam-ma su-su-[da]\nnibru{ki}-še₃ an ba₉-ra₂ la-ba-da-te-/a\\-[da]\n{d}nuska sukkal-maḫ {d}en-lil₂-la₂ e₂-kur-ta /gaba\\ [...]",
+     "orig_lines": [
+      "76",
+      "77",
+      "78",
+      "79"
+     ],
+     "en": "When, at Enlil's command, he was making his way towards E-kur, the warrior of the gods was levelling the Land; and before he had yet approached Nibru from afar, Nuska, the chancellor of Enlil, came forth from the E-kur to meet him."
+    },
+    {
+     "ref": "80–82",
+     "orig": "en {d}nin-urta-ra silim-ma mu-un-na-[ab-be₂]\nlugal-ĝu₁₀ ur-saĝ šu du₇-a ni₂-zu-še₃ ĝeštug₂-/zu\\\n{d}nin-urta ur-saĝ šu du₇-a ni₂-zu-še₃ ĝeštug₂-zu",
+     "orig_lines": [
+      "80",
+      "81",
+      "82"
+     ],
+     "en": "He greeted Lord Ninurta: \"My sovereign, perfect warrior, heed yourself. Ninurta, perfect warrior, heed yourself.\""
+    },
+    {
+     "ref": "83–86",
+     "orig": "me-lem₄-zu e₂ {d}en-lil₂-la₂-ka tug₂-gin₇ im-dul\n{ĝiš}gigir-za gu₃ dug₃ mur ša₄-bi\nĝiri₃ gub-ba-zu an ki tuku₄-e-bi\na₂ il₂-a-[zu ...] /ĝissu\\ [...]",
+     "orig_lines": [
+      "83",
+      "84",
+      "85",
+      "86"
+     ],
+     "en": "\"Your radiance has covered Enlil's temple like a cloak. When you step into your chariot, whose creaking is a pleasant sound, heaven and earth tremble. When you raise your arm …….\""
+    },
+    {
+     "ref": "87–91",
+     "orig": "[{d}]a-nun-na diĝir gal-gal-e-ne niĝ₂ [...]\na-a-zu ki-tuš-a-ni nam-mi-ib-ḫu-luḫ-[...]\n{d}en-lil₂-la₂ ki-tuš-a-ni nam-mi-ib-ḫu-luḫ-[...]\na-a-zu a₂ nam-ur-saĝ-ĝa₂-zu niĝ₂ ḫa-ra-ba-ba-e\n{d}en-lil₂ a₂ nam-ur-saĝ-ĝa₂-zu niĝ₂ ḫa-ra-ba-ba-e",
+     "orig_lines": [
+      "87",
+      "88",
+      "89",
+      "90",
+      "91"
+     ],
+     "en": "\"The Anuna, the great gods ……. Do not frighten your father in his residence. Do not frighten Enlil in his residence. May your father give you gifts because of your heroic strength. May Enlil give you gifts because of your heroic strength.\""
+    },
+    {
+     "ref": "92–97",
+     "orig": "lugal {ĝiš}rab₃ an-na gu₂-gal diĝir-re-e-ne\nkišib-la₂ {d}en-lil₂-la₂ zi-šag₄-ĝal₂ e₂-kur-ra\nur-saĝ kur saĝ um-ma-ab-gi₄-a-aš\nzag-zu a-a-zu diĝir 1 nu-um-ma-ši-in-gi₄-gi₄\n{d}nin-urta kur saĝ um-ma-ab-gi₄-a-aš\nzag-zu {d}en-lil₂-le diĝir 1 nu-um-ma-ši-in-gi₄-gi₄",
+     "orig_lines": [
+      "92",
+      "93",
+      "94",
+      "95",
+      "96",
+      "97"
+     ],
+     "en": "\"O sovereign, shackle of An, first among the gods, seal-bearer of Enlil, life-source of E-kur, O warrior, because you have toppled the mountains your father need send out no other god beside you. Ninurta, because you have toppled the mountains Enlil need send out no other god beside you.\""
+    },
+    {
+     "ref": "98–101",
+     "orig": "inim-bi ka-ga₁₄-na um-ma-da-ĝal₂-la\n{kuš}usan₃ bar-us₂ e₂-su-lum-ma-ka bi₂-in-sud\nmi-tum a₂ me₃ zag {kuš}e₂-a-ka bi₂-in-us₂\ne₂ {d}en-lil₂-la₂-še₃ am₃-ma-da-an-ku₄-ku₄",
+     "orig_lines": [
+      "98",
+      "99",
+      "100",
+      "101"
+     ],
+     "en": "While these words were yet in Nuska's mouth, Ninurta put the whip and goad away in the rope-box. He leaned his mace, the strength in battle, against the box and entered into the temple of Enlil."
+    },
+    {
+     "ref": "102–107",
+     "orig": "am dab₅-dab₅-ba-ni e₂-e si bi₂-in-sa₂\nimmal₂ dab₅-ba-ni am-gin₇ X X [...]\niri laḫ₆-laḫ₆-a-ni al-ĝa₂-[ĝa₂]\n{d}a-nun-na-ke₄-ne me ĝar di [...]\nkur /gal\\ {d}en-lil₂-le giri₁₇ šu /am₃-ĝal₂\\\n{d}aš-im₂-babbar-re u₃-gul mu-/un-na\\-[ĝa₂]-/ĝa₂\\",
+     "orig_lines": [
+      "102",
+      "103",
+      "104",
+      "105",
+      "106",
+      "107"
+     ],
+     "en": "He directed his captive wild bulls into the temple. He directed his captive cows, like the wild bulls, into the temple. He laid out the booty of his plundered cities. The Anuna were amazed ……. Enlil, the Great Mountain, made obeisance to him, and Ašimbabbar prayed to him."
+    },
+    {
+     "ref": "108–112",
+     "orig": "ama gal {d}nin-lil₂-le šag₄ ki-ur₃-a-ni-ta\nen {d}nin-urta-ra /mi₂\\ zid na-/mu\\-un-/ne\\\nam a₂ ḫuš il₂-/il₂\\ dumu /{d}mu\\-ul-lil₂ kur-ba mu-e-tu₁₁-tu₁₁\nur-saĝ /u₃-mu-un {d}nin-urta{?}\\ X-/bi\\-a ba-e-X\nki-bal [...] /ba-e\\-X-X",
+     "orig_lines": [
+      "108",
+      "109",
+      "110",
+      "111",
+      "112"
+     ],
+     "en": "The great mother Ninlil, from within her Ki-ur, spoke admiringly to Lord Ninurta: \"O wild bull, with fierce horns raised, son of Enlil, you have struck blows in the mountains. Warrior, Lord Ninurta, you have ……. You have …… the rebellious land.\""
+    },
+    {
+     "ref": "113–118",
+     "orig": "en {d}/nin-urta\\-ke₄ mu-na-ni-/ib₂-gi₄-gi₄\\\n/ama-ĝu₁₀ dili-ĝu₁₀\\ nu-mu-e-da-X X (X) /i₃\\-X-X-/en\\\n{d}nin-lil₂ dili-ĝu₁₀ nu-mu-e-da-X-/en{?}\\ dili-ĝu₁₀-še₃{?} ma{?}-an-X-X\nme₃ an-gin₇ /keše₂{?}-am₃{?}\\ [...]-ab-sa₂-e\na-ma-ru-gin₇ [...]\nkur gi-sig-gin₇ /dub₂-bu\\ [...]",
+     "orig_lines": [
+      "113",
+      "114",
+      "115",
+      "116",
+      "117",
+      "118"
+     ],
+     "en": "Lord Ninurta answered her: \"My mother, I alone cannot …… with you ……. Ninlil, I alone cannot …… with you, for me alone ……. Battle arrayed like heaven -- no one can rival me (?). Like the deluge ……. Smashing the mountains like reed huts …….\""
+    },
+    {
+     "ref": "119–124",
+     "orig": "me₃-ĝu₁₀ a maḫ e₃-a-gin₇ kur-re ba-ra-ab-[e₃]\nsu piriĝ sa piriĝ-ĝa₂ ki-bal-a zi-zi-i\ndiĝir am₃-gig ḫur-saĝ-ĝa₂ [...]\nburu₅{mušen}-gin₇ a₂-ba mu-un-da-/dub₂\\-[dub₂]\nam ba₉-ra₂ u₂-a mu-un-sug₂-ge-/eš\\\nme-lem₄ an-gin₇ dugud-da-a saĝ nu-mu-/un\\-[ĝa₂-ĝa₂]",
+     "orig_lines": [
+      "119",
+      "120",
+      "121",
+      "122",
+      "123",
+      "124"
+     ],
+     "en": "\"My battle, like an onrushing flood, overflowed in the mountains. With a lion's body and lion's muscles, it rose up in the rebellious land. The gods have become worried and flee (?) to the mountain ranges. They beat their wings like a flock of small birds. They stand hiding in the grass like wild bulls ……. No one can confront my radiance, heavy as heaven.\""
+    },
+    {
+     "ref": "125–127",
+     "orig": "ḫur-saĝ galam-ma en-me-en ki-šar₂-ra saĝ [...]\nḫur-saĝ-bi {na₄}ĝiš-nu₁₁-gal {na₄}za-gin₃ šu-ĝu₁₀-/še₃\\ [...]\n{d}a-nun-na-ke₄-e-ne peš₂-gin₇ a₂-ur₂-bi im-/dab₅\\-[be₂-ne]",
+     "orig_lines": [
+      "125",
+      "126",
+      "127"
+     ],
+     "en": "\"Because I am the lord of the terraced mountain ranges, in every direction ……. Because I have subjugated these mountain ranges of alabaster and lapis lazuli, the Anuna hide like mice.\""
+    },
+    {
+     "ref": "128–134",
+     "orig": "kur-re a₂ nam-ur-saĝ-ĝa₂-ĝu₁₀ ki-bi u₃-mu-[...-gi₄]\na₂ zid-da-ĝu₁₀ šar₂-ur₃-ĝu₁₀ mu-da-an-ĝal₂-[la-am₃]\na₂ gab₂-bu-ĝu₁₀ šar₂-gaz-ĝu₁₀ mu-da-an-ĝal₂-/la\\-[am₃]\nud zu₂ 50-ĝu₁₀ mi-tum /an\\-[na]-ĝu₁₀ mu-da-an-ĝal₂-la-[am₃]\nmeš₃ kur gal ed₃-de₃ ud-ba-[nu-il₂]-/la\\-ĝu₁₀ mu-da-an-ĝal₂-la-/am₃\\\n{ĝiš}tukul /ušumgal-gin₇ ad₆ gu₇\\-[a] aga{!}-silig{!}-ĝu₁₀ mu-da-an-ĝal₂-la-/am₃\\\n/niĝ₂\\ [...]-/na\\-ĝu₁₀ mu-da-an-ĝal₂-la-/am₃\\",
+     "orig_lines": [
+      "128",
+      "129",
+      "130",
+      "131",
+      "132",
+      "133",
+      "134"
+     ],
+     "en": "\"Now I have reestablished my heroic strength in the mountains. On my right, I bear my Mows-down-a-myriad. On my left, I bear my Crushes-a-myriad. I bear my Fifty-toothed-storm, my heavenly mace. I bear the hero who comes down from the great mountains, my No-resisting-this-storm. I bear the weapon which devours corpses like a dragon, my agasilig axe. I bear my …….\""
+    },
+    {
+     "ref": "135–139",
+     "orig": "[...]-ĝu₁₀ mu-da-an-ĝal₂-la-am₃\n{sa}al-kad₄ ki-bal-a {sa}<al>-kad₄-ĝu₁₀ mu-da-an-ĝal₂-la-am₃\nkur /šu\\-bi nu-šub-bu {sa}šu₂-uš-gal-ĝu₁₀ mu-da-an-ĝal₂-la-/am₃\\\nmuš-maḫ ka 7 saĝ ĝiš ra-ra DUB.GAG-ĝu₁₀ mu-da-an-/ĝal₂\\-[la-am₃]\nkur gu₂-guru₅ dug₄-dug₄ ĝiri₂ gal ĝiri₂ an-na-ĝu₁₀ mu-/da-an-ĝal₂\\-[la-am₃]",
+     "orig_lines": [
+      "135",
+      "136",
+      "137",
+      "138",
+      "139"
+     ],
+     "en": "\"I bear my ……. I bear the alkad net of the rebellious land, my alkad net. I bear that from which the mountains cannot escape, my šušgal net. I bear the seven-mouthed mušmaḫ serpent, the slayer, my spike (?). I bear that which strips away the mountains, the sword, my heavenly dagger.\""
+    },
+    {
+     "ref": "140–145",
+     "orig": "a-ma-ru me₃-a šita₂ saĝ 50-ĝu₁₀ mu-da-an-ĝal₂-la-/am₃\\\nmir lu₂-ra te-a {ĝiš}pan mar-uru₅-ĝu₁₀ mu-da-an-ĝal₂-la-/am₃\\\ne₂ ki-bal tum₄-tum₄ {ĝiš}ilar {kuš}gur₂₁{ur₃}-ĝu₁₀ mu-da-an-ĝal₂-[la-am₃]\na₂-taḫ ĝuruš-a ĝiš-gid₂-da-ĝu₁₀ mu-/da\\-[an-ĝal₂-la-am₃]\nud-gin₇ zalag mu-un-e₃ kur-ra-šu-ur₃-ur₃-ĝu₁₀ mu-[da-an-ĝal₂-la-am₃]\nan ki uĝ₃ gen₆-ne₂ erim₂-a₂-bi-nu-šub-/bu\\-[ĝu₁₀] /mu\\-[da-an-ĝal₂-la-am₃]",
+     "orig_lines": [
+      "140",
+      "141",
+      "142",
+      "143",
+      "144",
+      "145"
+     ],
+     "en": "\"I bear the deluge of battle, my fifty-headed mace. I bear the storm that attacks humans, my bow and quiver. I bear those which carry off the temples of the rebellious land, my throw-stick and shield. I bear the helper of men, my spear. I bear that which brings forth light like the day, my Obliterator-of-the-mountains. I bear the maintainer of the people in heaven and earth, my The-enemy-cannot-escape.\""
+    },
+    {
+     "ref": "146–151",
+     "orig": "ni₂ me-lem₄-ma-ni kalam-ma dul-la\na₂ zid-da-ĝu₁₀ gal-bi tum₂-ma\nkug-sig₁₇ za-gin₃-na šu du₇-a u₆ di-de₃ gub ĝiškim-til₃-ĝu₁₀ mu-da-ĝal₂-la-/am₃\\\n{ĝiš}tukul galam-ma maḫ gal dirig-ga me₃ nir-ĝal₂ gaba-ri nu-tuku\nki šen-šen me-te kišib-la₂-ĝu₁₀ {ĝiš}šita₂ saĝ 50-ĝu₁₀ mu-da-ĝal₂-/la\\-[am₃]\n{ĝiš}tukul {d}gira₂-gin₇ ki-bal-a ma₅-ma₅ {ĝiš}mi-tum saĝ 50-ĝu₁₀ mu-da-ĝal₂-la-am₃",
+     "orig_lines": [
+      "146",
+      "147",
+      "148",
+      "149",
+      "150",
+      "151"
+     ],
+     "en": "\"I bear that whose awesome radiance covers the Land, which is grandly suited for my right hand, finished in gold and lapis lazuli, whose presence is amazing, my Object-of-trust. I bear the perfect weapon, exceedingly magnificent, trustworthy in battle, having no equal, well-suited for my wrist on the battlefield, my fifty-headed mace, I bear the weapon which consumes the rebellious land like fire, my fifty-headed club.\""
+    },
+    {
+     "ref": "152–158",
+     "orig": "a-a-ĝu₁₀ me₃-ĝu₁₀ ḫa-ma-ni-ib₂-ku₄-ku₄-de₃\n{d}en-lil₂ a₂ nam-ur-saĝ-ĝa₂-ĝu₁₀ a ḫe₂-em-/tu₅-tu₅\\-[de₃]\na₂ ḫuš {ĝiš}tukul-ĝa₂ a gub₂-ba ḫa-ma-ni-ib₂-be₂-de₃\nĝišgal gi-rin-na gu₂-en-na si ḫa-ma-ab-sa₂-e-de₃\n{ĝiš}gigir an-na-ĝu₁₀ ki-gal-la ḫe₂-em-mi-in-gub-bu-de₃\nur-saĝ dab₅-ba-ĝu₁₀ am du₇-du₇-gin₇ saman ḫe₂-me-šub\nlugal dab₅-ba-ĝu₁₀ ud an-na-gin₇ giri₁₇ šu ḫa-ma-an-ĝal₂",
+     "orig_lines": [
+      "152",
+      "153",
+      "154",
+      "155",
+      "156",
+      "157",
+      "158"
+     ],
+     "en": "\"Let my father therefore bring in my battle trophies and weapons for me. Let Enlil bathe my heroic arms. Let him pour holy water on the fierce arms which bore my weapons. Let him set up a holy dais in the throne room for me. Let him set my heavenly chariot upon a pedestal. Let him tether my captured warriors there like butting bulls. Let him have my captured kings make obeisance to me there, as to the light of heaven.\""
+    },
+    {
+     "ref": "159–163",
+     "orig": "kalag-ga kur gaba nu-gi₄-me-en\n{d}nin-urta-me-en mu-ĝu₁₀-še₃ giri₁₇ ki su-ub ḫa-ma-ak-ne\nšu maḫ saĝ piriĝ-ĝa₂ {d}en-lil₂-la₂ ne₃-ni-še₃ tud-da-me-/en\\\nud an-na {ĝiš}rab₃ diĝir-re-/e\\-ne\n[an-ne₂] a₂ gal-/la\\-[ni]-/še₃ pad₃\\-[da-me-en]",
+     "orig_lines": [
+      "159",
+      "160",
+      "161",
+      "162",
+      "163"
+     ],
+     "en": "\"I am the strong one, unopposed in the mountains, I am Ninurta -- let them prostrate themselves at my name. I am the exceedingly mighty lion-headed one of Enlil, whom he engendered in his strength. The storm of heaven, shackle of the gods, I am the one whom An in his great might has chosen.\""
+    },
+    {
+     "ref": "164–167",
+     "orig": "[...] /zi-šag₄-ĝal₂\\ {d}/inana-me-en\\\n/ur\\-[saĝ] /nam tar\\-ra {d}en-ki-da me ḫuš tum₂-[a-me]-/en\\\nnam-lugal-ĝu₁₀ zag an ki-še₃ pa ḫe₂-em-ma-ni-[ib₂]-/e₃\\\n[a₂]-/ĝal₂\\ diĝir-re-e-ne-me-en ni₂ gal ḫe₂-[...]-/ab-ri\\",
+     "orig_lines": [
+      "164",
+      "165",
+      "166",
+      "167"
+     ],
+     "en": "\"I am the ……, the life-source of Inana. I am the warrior, destined with Enki to be suited for the fearsome divine powers. Let my kingship be manifest unto the ends of heaven and earth. I am most able among the gods -- let me be imbued with great awesomeness.\""
+    },
+    {
+     "ref": "168–174",
+     "orig": "iri ki aĝ₂-ĝu₁₀ eš₃ nibru{ki} an-gin₇ /gu₂ ḫe₂-eb₂-us₂\\\niri-ĝu₁₀ iri šeš-ĝu₁₀-ne-ka gu₂-/gal\\-[bi] ḫe₂-a\ne₂-ĝu₁₀ e₂ šeš-ĝu₁₀-ne-ka a-/MIR zi-bi\\ ḫe₂-a\nki-sur-ra uru₂-ĝa₂ pu₂ a dug₃-ga ki-en-gi-ra ḫe₂-a\n[{d}a]-/nun\\-na diĝir /šeš\\-ĝu₁₀-/ne\\ ḫe₂-em-ši-gam-e-de₃-eš\nmušen dal-a-bi uru₂-ĝa₂ gud₃ ḫe₂-em-ma-an-us₂\nlu₂-kar-ra-bi ĝissu-ĝu₁₀-še₃ ni₂ ḫe₂-em-ši-ib-te-en-te-en",
+     "orig_lines": [
+      "168",
+      "169",
+      "170",
+      "171",
+      "172",
+      "173",
+      "174"
+     ],
+     "en": "\"Let my beloved city, the sanctuary Nibru, raise its head as high as heaven. Let my city be pre-eminent among the cities of my brothers. Let my temple rise (?) the highest …… among the temples of my brothers. Let the territory of my city be the freshwater well of Sumer. Let the Anuna, my brother gods, bow down there. Let their flying birds establish nests in my city. Let their refugees refresh themselves in my shade.\""
+    },
+    {
+     "ref": "175–179",
+     "orig": "e₂ {d}en-lil₂-la₂-ta e₃-a-ni\nsaĝ-ki zalag-ga ur-saĝ-e-ne\ninim sag₉-ga {d}nin-urta-ka-ke₄\n{d}nin-kar-nun-na-ke₄ ĝiš ba-an-/tuku{!}\\-ta\nen {d}nin-urta-ra mu-na-gub sizkur₂ /mu-na-ab\\-be₂",
+     "orig_lines": [
+      "175",
+      "176",
+      "177",
+      "178",
+      "179"
+     ],
+     "en": "As Ninurta went out from Enlil's temple, the most bright-faced of warriors, Ninkarnuna, having heard the favourable pronouncement of Ninurta, stepped before Lord Ninurta and prayed to him:"
+    },
+    {
+     "ref": "180–186",
+     "orig": "/lugal\\-ĝu₁₀ iri ki aĝ₂-ĝa₂-zu šag₄-zu ḫe₂-/em\\-[ma]-/ḫuĝ\\\n/en\\ [{d}nin]-/urta\\ iri ki aĝ₂-/ĝa₂\\-zu šag₄-zu /ḫe₂\\-[em-ma]-/ḫuĝ\\\neš₃ nibru/{ki}\\ iri ki aĝ₂-ĝa₂-zu šag₄-zu /ḫe₂\\-[em-ma]-/ḫuĝ\\\ne₂-šu-me-ša₄ e₂ ki aĝ₂-zu dili /ku₄\\-[ku₄-da-zu]-/ne\\\nnitalam-zu-ur₂ ki-sikil {d}[nin]-[nibru]/{ki}\\\nšag₄-ga dug₄-mu-un-na-ab bar-ra dug₄-[mu-un-na]-/ab\\\ninim dug₃ lugal-la su₃-ra₂-še₃ /dug₄\\-[mu-un-na-ab]",
+     "orig_lines": [
+      "180",
+      "181",
+      "182",
+      "183",
+      "184",
+      "185",
+      "186"
+     ],
+     "en": "\"My sovereign, may you be well-disposed towards your beloved city. Lord Ninurta, may you be well-disposed towards your beloved city. May you be well-disposed towards the sanctuary Nibru, your beloved city. When you enter E-šu-me-ša, your beloved temple, alone, tell your wife, young lady Ninnibru, what is in your heart, tell her what is on your mind. Make an enduring favourable pronouncement to her for the king.\""
+    },
+    {
+     "ref": "187–194",
+     "orig": "a nun-e ri-a {d}nin-kar-nun-na-ke₄\nud-ba KA sizkur₂ ba-ni\nšag₄ kadra a sed su₃-a-ni\nniĝ₂ nam-ḫe₂-a bi₂-in-dug₄-ga-ni\nme niĝ₂ ud ul-e pa e₃ ak-e\ne₂-šu-me-ša₄ pa e₃ dib-dib-be₂-da-ni\nšag₄ {d}nin-/urta\\-ke₄ ba-/sag₉\\\nen {d}nin-/urta\\-ke₄ igi zid /mu-un\\-[...-bar]",
+     "orig_lines": [
+      "187",
+      "188",
+      "189",
+      "190",
+      "191",
+      "192",
+      "193",
+      "194"
+     ],
+     "en": "The content of that prayer of the offspring of a prince, Ninkarnuna, his sprinkling Ninurta's heart with an offering of cool water, and the matter of prosperity about which he spoke were pleasing to Ninurta's heart as he went in procession to E-šu-me-ša to manifest the eternal divine powers. Lord Ninurta gazed approvingly at Ninkarnuna."
+    },
+    {
+     "ref": "195–198",
+     "orig": "e₂-šu-me-[ša₄] [e₂ ki] aĝ₂-ĝa₂-ni dili-ni /ku₄\\-[ku₄-da-ni]\n/nitalam\\-ni-ir ki-sikil {d}nin-nibru{ki}\nšag₄-ga mu-un-na-ab-be₂ bar-ra mu-un-/na\\-ab-be₂\ninim dug₃ lugal-la su₃-ra₂-še₃ mu-un-na-ab-be₂",
+     "orig_lines": [
+      "195",
+      "196",
+      "197",
+      "198"
+     ],
+     "en": "When Ninurta entered E-šu-me-ša, his beloved temple, alone, he told his wife, young lady Ninnibru, what was in his heart, he told her what was on his mind and he made an enduring favourable pronouncement to her for the king."
+    },
+    {
+     "ref": "199–201",
+     "orig": "ur-saĝ nam-ur-saĝ-ĝa₂-ni pa e₃ bi₂-in-ak-a\n{d}nin-urta dumu {d}en-lil₂-la₂-ke₄\nnam-[maḫ]-a-ni e₂ {d}en-lil₂-la₂-ke₄ ki ba-ni-ib-us₂",
+     "orig_lines": [
+      "199",
+      "200",
+      "201"
+     ],
+     "en": "The warrior, whose heroism is manifest, Ninurta, the son of Enlil, has firmly grounded his greatness in Enlil's sanctuary."
+    },
+    {
+     "ref": "202–207",
+     "orig": "en kur gul-gul gaba-ri nu-tuku-a\nme₃ /maḫ\\-bi sumur-bi du₇-du₇\nur-saĝ gal a₂ X [...] e₃-a\nkalag-ga a-ma-ru {d}en-lil₂-la₂\n{d}nin-urta dumu maḫ e₂-kur-ra\nnir-/ĝal₂\\ [a]-a ugu-na za₃-mi₂-zu dug₃-/ga\\-am₃",
+     "orig_lines": [
+      "202",
+      "203",
+      "204",
+      "205",
+      "206",
+      "207"
+     ],
+     "en": "Lord who has destroyed the mountains, who has no rival, who butts angrily in that magnificent battle, great warrior who goes forth in his …… might, strong one, deluge of Enlil, Ninurta, magnificent child of E-kur, pride of the father who engendered him, it is sweet to praise you."
+    },
+    {
+     "ref": "208",
+     "orig": "šir₃-gid₂-da {d}nin-urta-ka",
+     "orig_lines": [
+      "208"
+     ],
+     "en": "Šir-gida of Ninurta."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,966 @@
+{
+ "slug": "gilgamesh-huwawa",
+ "source": "ETCSL",
+ "siglum": "ETCSL 1.8.1.5；1.8.1.5.1",
+ "source_url": "https://etcsl.orinst.ox.ac.uk/cgi-bin/etcsl.cgi?text=t.1.8.1.5",
+ "license": "ETCSL（Oxford）轉寫與英譯，非商業學術使用",
+ "compositions": [
+  {
+   "num": "1.8.1.5",
+   "title_en": "Gilgameš and Ḫuwawa (Version A)",
+   "segments": [
+    {
+     "ref": "1–3",
+     "orig": "en-e kur lu₂ til₃-la-še₃ ĝeštug₂-ga-ni na-an-gub (Šited in OB šatalogue from Nibru, at Pḫiladelpḫia, 0.2.01, line 10; OB šatalogue in tḫe Louvre, 0.2.02, line 10; OB šatalogue from Urim (U1), 0.2.03, line 14; OB šatalogue from Urim (U2), 0.2.04, line 9)\nen {d}gilgameš₂-e kur lu₂ til₃-la-še₃ ĝeštug₂-ga-ni na-an-gub\narad-da-ni en-ki-du₁₀-ra gu₃ mu-un-na-de₂-e",
+     "orig_lines": [
+      "1",
+      "2",
+      "3"
+     ],
+     "en": "Now the lord once decided to set off for the mountain where the man lives; Lord Gilgameš decided to set off for the mountain where the man lives. He spoke to his slave Enkidu:"
+    },
+    {
+     "ref": "4–7",
+     "orig": "en-ki-du₁₀ murgu ĝuruš-e til₃-la saĝ til₃-le-bi-še₃ la-ba-ra-an-e₃-a\nkur-ra ga-an-kur₉ mu-ĝu₁₀ ga-am₃-ĝar\nki mu gub-bu-ba-am₃ mu-ĝu₁₀ ga-bi₂-ib-gub\nki mu nu-gub-bu-ba-am₃ mu diĝir-re-e-ne ga-bi₂-ib-gub",
+     "orig_lines": [
+      "4",
+      "5",
+      "6",
+      "7"
+     ],
+     "en": "\"Enkidu, since a man cannot pass beyond the final end of life, I want to set off into the mountains, to establish my renown there. Where renown can be established there, I will establish my renown; and where no renown can be established there, I shall establish the renown of the gods.\""
+    },
+    {
+     "ref": "8–12",
+     "orig": "arad-da-ni en-ki-du₁₀-e inim mu-un-ni-ib-gi₄-gi₄\nlugal-ĝu₁₀ tukum-bi ud-da kur-ra i-ni-in-ku₄-ku₄-de₃ {d}utu ḫe₂-me-da-an-zu\nkur-/{ĝiš}erin\\-kud-še₃ i-ni-in-ku₄-ku₄-de₃-en\n{d}utu šul {d}utu ḫe₂-me-da-an-zu\nkur-ra dim₂-ma-bi {d}utu-kam\nkur-{ĝiš}erin-kud dim₂-ma-bi šul {d}utu-kam {d}utu ḫe₂-me-da-an-zu",
+     "orig_lines": [
+      "8",
+      "9",
+      "9A",
+      "10",
+      "11",
+      "12"
+     ],
+     "en": "His slave Enkidu answered him: \"My lord, if today you are going to set off into the mountains, Utu should know about it from us. {(1 ms. adds:) If you are going to to set off into the Mountains of Cedar-felling, Utu should know about it from us.} Utu, youthful Utu, should know about it from us. A decision that concerns the mountains is Utu's business. A decision that concerns the Mountains of Cedar-felling is the business of youthful Utu. Utu should know about it from us.\""
+    },
+    {
+     "ref": "13–16",
+     "orig": "{d}gilgameš₂-e maš₂ babbar₂-ra {šu im-mi-in-tag} {(1 ms. ḫas instead:) šu im-ma-an-ti} {(1 otḫer ms. ḫas instead:) [šu]-ni im-mi-in-ti}\nmaš₂ su₄ maš₂-da-ri-a gaba-na i-im-tab\nmaš₂ su₄-a maš₂ /babbar\\ [...] maš₂ šag₄{!} tam{?} MA-an-DIB\nšu-ni ĝidru kug giri₁₇-na ba-da-an-ĝal₂\n{d}utu an-na-ra gu₃ mu-un-na-de₂-e",
+     "orig_lines": [
+      "13",
+      "14",
+      "A",
+      "15",
+      "16"
+     ],
+     "en": "Gilgameš {prepared} {(2 mss. have instead:) took hold of} a white kid. {He clasped a brown kid, a sacrificial animal, close to his breast.} {(1 ms. has instead:) He …… a brown kid.} In his hand he held a holy staff before his nose, as he addressed Utu of heaven:"
+    },
+    {
+     "ref": "17–18",
+     "orig": "{d}utu kur-še₃ i-in-ku₄-ku₄-de₃-en a₂-taḫ-ĝu₁₀ ḫe₂-me-en\nkur-{ĝiš}erin-kud-še₃ i-in-ku₄-ku₄-de₃-en a₂-taḫ-ĝu₁₀ ḫe₂-me-en",
+     "orig_lines": [
+      "17",
+      "18"
+     ],
+     "en": "\"Utu, I am going to set off into the mountains! May you be my helper! I am going to set off into the Mountains of Cedar-felling! May you be my helper!\""
+    },
+    {
+     "ref": "19–20",
+     "orig": "{d}utu an-na-ta inim mu-ni-ib-gi₄-gi₄\nĝuruš dumu-gir₁₅ ni₂-zu-a ḫe₂-me-en kur-ra a-na-bi-me-en",
+     "orig_lines": [
+      "19",
+      "20"
+     ],
+     "en": "From heaven Utu replied to him: \"Young man, you are noble already in your own right -- but what would you want with the mountains?\""
+    },
+    {
+     "ref": "21–33",
+     "orig": "{d}utu inim ga-ra-ab-dug₄ inim-ĝu₁₀-uš ĝeštug₂-zu\nsilim ga-ra-ab-dug₄ ĝizzal ḫe₂-em-ši-ak\niri{ki}-ĝa₂ lu₂ ba-uš₂ šag₄ ba-sag₃\nlu₂ u₂-gu ba-an-de₂ {šag₄-ĝu₁₀} {(2 mss. ḫave instead:) šag₄ ḫul} ba-an-gig\nbad₃-da gu₂-ĝa₂ im-ma-an-la₂\nad₆ a-a ib₂-dirig-ge igi im-ma-an-sig₁₀\nu₃ ĝe₂₆-e ur₅-gin₇ nam-ba-ak-e ur₅-še₃ ḫe₂-me-a\nlu₂ sukuₓ(SUKUD)-ra₂ an-še₃ nu-mu-un-da-la₂\nlu₂ daĝal-la kur-ra la-ba-an-šu₂-šu₂\nmurgu ĝuruš-e til₃-la saĝ til₃-le-bi-še₃ la-ba-ra-an-e₃-a\nkur-ra ga-an-kur₉ mu-ĝu₁₀ ga-am₃-ĝar\nki mu gub-bu-ba-am₃ mu-ĝu₁₀ ga-bi₂-ib-gub\nki mu nu-gub-bu-ba-am₃ mu diĝir-re-e-ne ga-bi₂-ib-gub",
+     "orig_lines": [
+      "21",
+      "22",
+      "23",
+      "24",
+      "25",
+      "26",
+      "27",
+      "28",
+      "29",
+      "30",
+      "31",
+      "32",
+      "33"
+     ],
+     "en": "\"Utu, I have something to say to you -- a word in your ear! I greet you -- please pay attention! In my city people are dying, and hearts are full of distress. People are lost -- that fills me with {(1 ms. adds:) wretched} dismay. I craned my neck over the city wall: corpses in the water make the river almost overflow. That is what I see. That will happen to me too -- that is the way things go. No one is tall enough to reach heaven; no one can reach wide enough to stretch over the mountains. Since a man cannot pass beyond the final end of life, I want to set off into the mountains, to establish my renown there. Where renown can be established there, I will establish my renown; and where no renown can be established there, I shall establish the renown of the gods.\""
+    },
+    {
+     "ref": "34–47",
+     "orig": "{d}utu er₂-na kadra-gin₇ šu ba-an-ši-in-ti\nlu₂ arḫuš-a-gin₇ arḫuš ba-ni-in-ak\nur-saĝ dumu ama dili-me-eš 7-me-eš\n1-am₃ šeš-gal-bi šu piriĝ-ĝa₂ umbin ḫu-ri₂-in-na\n2-kam-/ma\\ muš-šag₄-tur₃ ka [X X] KU šu /UŠ\\\n3-kam-ma muš ušum-gal /muš\\ [...] X RU\n4-kam-ma izi šeĝ₆-šeĝ₆ [X X] /kur₉\\-ra\n5-kam-ma muš-saĝ-kal šag₄ gi₄-a /UB\\ KA X\n6-kam-ma {(1 ms. adds:) {ĝiš}rab₃ ki-bal ḫur-saĝ /IM\\ [...]} a-ĝi₆ {du₇-du₇-gin₇} {(1 ms. ḫas instead:) a gul-gul-dam} kur-ra gaba ra-ra\n7-/kam\\-[ma ...] /nim\\-gin₇ i₃-ĝir₂-ĝir₂-re {(1 ms. adds:) a₂-bi} lu₂ nu-/da-gur\\-de₃\nX X [...]\nX X [X] X [...]\n7 dili-dili [...] KI X X /MU{?}\\ [...]\nX X E ki X X X X X [...]\n[...]\n[...] X ḫu-mu-ni-in-X-[X]\n[...] X X X nam-lugal X UD E ed₃-de₃\n[...] /{d}{ ?}\\nisaba-ke₄ im-ma-ra-an-taḫ\n[...]-/la{!}\\-me-eš(sourše: EN) ki-a ḫar-ra-an-na zu-me-eš\n[...] /ḫar\\-ra-an-na ḫu-mu-ni-in-pad₃-de₃\nma₂-ur₃-ma₂-ur₃ ḫur-saĝ-ĝa₂-ke₄ ḫu-mu-ni-in-tum₂-tum₂-mu\n7-/bi-e\\-ne /ur\\-saĝ šul {d}utu {d}gilgameš₂-ra mu-/un-na-ra-an\\-šum₂\nur-saĝ šul {d}utu en {d}gilgameš₂ 7-be₂-e-ne mu-na-ra-an-šum₂\n{ĝiš}erin sag₃-ge ḫul₂-la-gin₇ im-ma-na-ni-ib₂-ĝar\nen {d}gilgameš₂-e ḫul₂-la-gin₇ im-ma-na-ni-ib₂-ĝar",
+     "orig_lines": [
+      "34",
+      "35",
+      "36",
+      "37",
+      "38",
+      "39",
+      "40",
+      "41",
+      "42",
+      "43",
+      "43A",
+      "43B",
+      "43C",
+      "43D",
+      "43a",
+      "43b",
+      "43c",
+      "43d",
+      "43e",
+      "43f",
+      "44",
+      "45",
+      "B",
+      "46",
+      "47"
+     ],
+     "en": "Utu accepted his tears as a fitting gift. As befits a compassionate person, he turned to him full of compassion: \"Now there are seven warriors, sons of a single mother. The first, their eldest brother, has lion's paws and eagle's talons. The second is a …… snake, ……. The third is a dragon snake, ……. The fourth blazes with fire ……. The fifth is a …… snake, ……. The sixth {(1 ms. adds:) , a shackle that …… the rebel lands in the hills,} beats at the flanks of the mountains {like a battering flood} {(1 ms. has instead:) , floodwater that destroys all}. The seventh …… flashes like lightning, and no one can deflect {it} {(1 ms. has instead:) its power}. {(1 ms. adds 4 lines:) 4 lines fragmentary} {(another ms. adds instead 6 lines:) 2 lines fragmentary …… kingship ……. Nisaba has bestowed …… on you in addition. They ……, and know the routes on earth. They will help you find the …… of the way.} They should guide you to the place in the mountains where the boats have to be pulled from the water! {The warrior, youthful Utu, gave these seven to Gilgameš.} {(3 mss. have instead the line, placed after line 43:) These seven the warrior, youthful Utu, gave to Lord Gilgameš.} The feller of cedars was filled with joy; Lord Gilgameš was filled with joy.\""
+    },
+    {
+     "ref": "48–51",
+     "orig": "iri{ki}-na lu₂ dili-gin₇ si gu₃ ba-ni-in-ra\nlu₂ 2 tab-ba-gin₇ ka teš₂ ba-ni-in-ra\ne₂ tuku e₂-a-ni-še₃ ama tuku ama-a-ni-še₃\nnitaḫ saĝ-dili (NITAḪ.ME.EŠ sag-di-lu-u₂) ĝe₂₆-e-gin₇ ak {(4 mss. add:) 50-am₃} a₂-ĝu₁₀-še₃ ḫu-mu-un-ak",
+     "orig_lines": [
+      "48",
+      "49",
+      "50",
+      "51"
+     ],
+     "en": "In his city he had the horn sounded for single men; similarly for two together he made them call out. \"Let him who has a household go to his household! Let him who has a mother go to his mother! Let bachelor males, types like me, {(4 mss. add:) -- fifty of them --} join me at my side!\""
+    },
+    {
+     "ref": "52–60",
+     "orig": "e₂ tuku e₂-a-ni-še₃ ama tuku ama-a-ni-še₃\nnitaḫ saĝ-dili e-ne-gin₇ ak 50-am₃ a₂-ni-še₃ ba-an-ak-eš\ne₂ simug-še₃ ĝiri₃-ni bi₂-in-gub (uš-ta-ka-AŠ-[...])\n{urud}a₂-aš-ĝar {urud}aga-silig a₂ nam-ur-saĝ-ni im-ma-ni-de₂-de₂\n{ĝiš}kiri₆ ĝi₆-edin-na ĝiri₃-ni bi₂-in-gub\n{ĝiš}esi {ĝiš}ḫa-lu-ub₂ {ĝiš}ḫašḫur {ĝiš}taškarin-na-ka im-ma-ni-sag₃-sag₃\ndumu iri-na mu-un-de₃-re₇-eš-am₃ [...]\nur-saĝ dumu /ama\\ [dili ...]\n1-am₃ šeš-gal-bi šu piriĝ-ĝa₂ umbin ḫu-ri₂-in{mušen}-na\nma₂-ur₃-ma₂-ur₃ ḫur-saĝ-ĝa₂-ke₄ ḫu-mu-ni-in-tum₂-tum₂-mu",
+     "orig_lines": [
+      "52",
+      "53",
+      "54",
+      "55",
+      "56",
+      "57",
+      "58",
+      "58A",
+      "59",
+      "60"
+     ],
+     "en": "Whoever had a household went to his household. Whoever had a mother went to his mother. Bachelor males, types like him -- there were fifty -- joined him at his side. He made his way to the blacksmith's, and had them cast …… weapons and axes, the strength of warriors. Then he made his way to the deeply shaded plantations, where he had ebony trees felled, and ḫalub trees, apricot trees, and box trees. He …… to his fellow-citizens who were going with him. {(1 ms. adds:) Warriors, sons of a single mother …….} The first, their eldest brother, has lion's paws and eagle's claws. They will guide him to the place in the mountains where the boats have to be pulled from the water."
+    },
+    {
+     "ref": "61",
+     "orig": "ḫur-saĝ 1-kam-ma in-di₃-bal-lam {ĝiš}erin šag₄-ga-ni {nu-mu-ni-in-pad₃} {(1 ms. ḫas instead:) nu-mu-[un-na]-šub}\nḫur-saĝ [2-kam bi]-/ri\\-bal /{ĝiš}\\erin [šag₄-ga-a]-ni /nu-mu\\-[un-na]-šub\n/ḫur\\-[saĝ 3-kam bi-ri]-/bal\\ [{ĝiš}erin šag₄-ga-a-ni nu-mu-un-na-šub]\n[ḫur-saĝ 4-kam bi-ri-bal {ĝiš}erin šag₄-ga-a-ni nu-mu-un-na-šub]\nḫur-saĝ 5-[kam bi-ri-bal] {ĝiš}erin šag₄-/ga\\-[a-ni] nu-mu-un-/na\\-[šub]\nḫur-saĝ 6-kam bi-ri-/bal\\ {ĝiš}erin šag₄-ga-a-ni nu-mu-un-na-šub\nḫur-saĝ 3-kam-ma im-te-bal {ĝiš}erin šag₄-ga-ni <nu-mu-ni-in-pad₃>\nḫur-saĝ 4-kam-ma im-te-bal {ĝiš}erin šag₄-ga-ni <nu-mu-ni-in-pad₃>\nḫur-saĝ 5-kam-ma im-te-bal {ĝiš}erin šag₄-ga-ni <nu-mu-ni-in-pad₃>\nḫur-saĝ 6-kam-ma im-te-bal {ĝiš}erin šag₄-ga-ni <nu-mu-ni-in-pad₃>",
+     "orig_lines": [
+      "61",
+      "61A",
+      "61B",
+      "61C",
+      "61D",
+      "61E",
+      "61a",
+      "61b",
+      "61c",
+      "61d"
+     ],
+     "en": "He crossed the first mountain range, {but his intuition did not lead him to find the cedars there} {(1 ms. has instead:) the cedars did not catch his attention}. {(the same ms. adds:) He crossed the second mountain range, but the cedars did not catch his attention. He crossed the third mountain range, but the cedars did not catch his attention. He crossed the fourth mountain range, but the cedars did not catch his attention. He crossed the fifth mountain range, but the cedars did not catch his attention. He crossed the sixth mountain range, but the cedars did not catch his attention.} {(another ms. adds instead:) unknown no. of lines missing He crossed the third mountain range, but his intuition did not lead him to find the cedars there. He crossed the fourth mountain range, but his intuition did not lead him to find the cedars there. He crossed the fifth mountain range, but his intuition did not lead him to find the cedars there. He crossed the sixth mountain range, but his intuition did not lead him to find the cedars there.}"
+    },
+    {
+     "ref": "62–67",
+     "orig": "ḫur-saĝ 7-kam-ma bal-e-da-bi {ĝiš}erin šag₄-ga-ni mu-ni-in-pad₃\nen₃ nu-un-tar ki nu-un-kiĝ₂\n{d}gilgameš₂ {ĝiš}erin-na al-sag₃-ge\nen-ki-du₁₀ pa-bi i₃-ku₅-ru /NE\\ [(...)] KI TUM [X] X {d}gilgameš₂-še₃ [...]\nen-ki-du₁₀ {ĝiš}pa-/bi\\ [...] dumu iri-na /mu\\-[...]\n[...]-ra en-ki-du₁₀ [...]\ngu-ru-/ma\\ [...] X X-/ma\\ im-ma-gub\nḫu-/wa\\-[wa ...]\nni₂ /te\\-[...] /mu-na\\-ra-an-la₂\nen-ki-du₁₀ /ĝiš\\ mu-na-an-kud dumu nu-mu-su-e mu-un-de₃-re-eš₂\ngu₂-ru-[ma] /im\\-ma-ĝa₂-ĝa₂-ne\nKA [...] X KA [...]-bi-a {d}gilgamešₓ(BIL₄.MEŠ₃:GA) {d}ḫu-wa-wa ki-nu₂-a-ni im-ma-ḫu{!}-luḫ-ḫa\n/ni₂\\ ta-ni [X]-/mu\\-ra-e₃-a",
+     "orig_lines": [
+      "62",
+      "63",
+      "64",
+      "65",
+      "65a",
+      "65A",
+      "66",
+      "66A",
+      "67",
+      "D",
+      "E",
+      "F",
+      "G"
+     ],
+     "en": "When he had crossed the seventh mountain range, there his intuition led him to find the cedars. He did not need to ask, nor did he have to search any further. Lord Gilgameš began to chop at the cedars, {{while Enkidu lopped off their branches, …… to Gilgameš.} {(1 ms. has instead:) while Enkidu …… their branches, and his fellow-citizens …….} {(1 ms. adds:) to ……, Enkidu …….} …… stacked them in piles. {(1 ms. adds:) Ḫuwawa …….} He loosed his terrrors against …….} {(instead of lines 65-67, 1 ms. has:) while Enkidu cut up the timbers, and the widows' sons who had come with him heaped them up in piles. Since, because of the ……, Ḫuwawa had been scared in his lair by Gilgameš, he began to radiate his terrors …….}"
+    },
+    {
+     "ref": "68–75",
+     "orig": "{d}[gilgameš₂] [...] X /u₃\\-sa₂-gin₇ ba-an-dab₅\n[...] kur-ku-gin₇ ba-an-ĝar\ndumu /iri{ki}\\-na mu-un-de₃-re₇-eš-am₃\nur-gir₁₅ tur-tur-gin₇ ĝiri₃-ni-še₃ šu ba-an-dub₂-dub₂-me-eš\nen-ki-du₁₀ im-zig₃ ma₂-mu₂-da in-bu-luḫ u₃-sa₂-ga-am₃\nigi-ni šu bi₂-in-gur₁₀ niĝ₂-me-ĝar sug₄-ga-am₃\nšu mu-un-tag-ge nu-mu-un-na-an-zi-zi-i\ngu₃ mu-un-na-de₂-e inim nu-mu-ni-ib-gi₄-gi₄",
+     "orig_lines": [
+      "68",
+      "69",
+      "70",
+      "71",
+      "72",
+      "73",
+      "74",
+      "75"
+     ],
+     "en": "Gilgameš …… was overcome by sleep, and it affected Enkidu …… as a powerful longing. His fellow-citizens who had come with him flailed around at his feet like puppies. Enkidu awoke from his dream, shuddering from his sleep. He rubbed his eyes; there was eery silence everywhere. He touched Gilgameš, but could not rouse him. He spoke to him, but he did not reply."
+    },
+    {
+     "ref": "76–84",
+     "orig": "i₃-nu₂-na i₃-nu₂-na\n{d}gilgameš₂ en TUR kul-aba{ki}-a en₃-še₃ i₃-nu₂-de₃-en\nkur ba-an-suḫ₃-suḫ₃ ĝissu ba-an-la₂\nan-usan še-er-še-er-bi im-ma-DU\n{d}utu ur₂ ama-ni {d}nin-gal-še₃ saĝ il₂-la mu-un-ĝen\n{d}gilgameš₂ en-še₃ i₃-nu₂-de₃-en\ndumu iri{ki}-za mu-un-de₃-re₇-eš-am₃\nur₂ ḫur-saĝ-ĝa₂-ka nam-ba-e-de₃-gub-bu-ne\nama ugu-bi tilla₂ iri{ki}-za-ka eš₂ nam-bi₂-ib-sar-re",
+     "orig_lines": [
+      "76",
+      "77",
+      "78",
+      "79",
+      "80",
+      "81",
+      "82",
+      "83",
+      "84"
+     ],
+     "en": "\"You who have gone to sleep, you who have gone to sleep! Gilgameš, young lord of Kulaba, how long will you sleep for? The mountains are becoming indistinct as the shadows fall across them; the evening twilight lies over them. Proud Utu has already gone to the bosom of his mother Ningal. Gilgameš, how long will you sleep for? The sons of your city who came with you should not have to wait at the foot of the hills. Their own mothers should not have to twine string in the square of your city.\""
+    },
+    {
+     "ref": "85–89",
+     "orig": "ĝeštug₂ zid-da-na ba-e-sig₁₀\ninim nam-ur-saĝ-ĝa₂-ka-ni tug₂-gin₇ mu-ni-in-dul {(1 ms. adds:) ga-da-gin₇ im-in-ĝar}\ntug₂ 30 giĝ₄ i₃-a šu {mu-un-niĝin₂-niĝin₂} {(some otḫer mss. ḫave instead:) mu-ni-il₂} gaba-na {im-ma-da-dul} {(1 ms. ḫas instead:) ba-an-bur}\ngud-gin₇ ki gal-la ba-e-gub\ngu₂ ki-še₃ bi₂-in-ĝar KA ba-an-da-sig₁₀",
+     "orig_lines": [
+      "85",
+      "86",
+      "87",
+      "88",
+      "89"
+     ],
+     "en": "He thrust that into his right ear; he covered him with his aggressive words as if with a cloth {(1 ms. adds:) , laid them out like linen}. He {gathered} {(3 mss. have instead:) picked up} in his hand a cloth with thirty shekels of oil on it and {smothered} {(1 ms. has instead:) rubbed} it over Gilgameš's chest. Then Gilgameš stood up like a bull on the great earth. Bending his neck downwards, he yelled at him:"
+    },
+    {
+     "ref": "90–91",
+     "orig": "zi ama ugu-ĝu₁₀ {d}nin-sumun₂-ka a-a-ĝu₁₀ kug {d}lugal-ban₃-da\ndu₁₀-ub ama ugu-ĝu₁₀ {d}nin-sumun₂-ka u₃-sa₂ dug₄-ga-gin₇ ḫa-ma-dim₂-ma",
+     "orig_lines": [
+      "90",
+      "91"
+     ],
+     "en": "\"By the life of my own mother Ninsumun and of my father, holy Lugalbanda! Am I to become again as if I were slumbering still on the lap of my own mother Ninsumun?\""
+    },
+    {
+     "ref": "92–95",
+     "orig": "2-kam-ma-še₃ in-ga-nam-mu-na-ab-be₂\nzi ama ugu-ĝu₁₀ {d}nin-sumun₂-ka a-a-ĝu₁₀ kug {d}lugal-ban₃-da\nen-na lu₂-bi lu₂-u₁₈-lu ḫe₂-a im-ma-zu-a-a-aš diĝir ḫe₂-a im-ma-zu-a-aš\nĝiri₃ kur-še₃ gub-ba-ĝu₁₀ iri{ki}-še₃ ba-ra-gub-be₂-en",
+     "orig_lines": [
+      "92",
+      "93",
+      "94",
+      "95"
+     ],
+     "en": "A second time he spoke to him: \"By the life of my own mother Ninsumun and of my father, holy Lugalbanda! Until I discover whether that person was a human or a god, I shall not direct back to the city my steps which I have directed to the mountains.\""
+    },
+    {
+     "ref": "96–97",
+     "orig": "arad zi ba-an-dug₃ nam-til₃ ba-an-ku₇-ku₇\nlugal-a-ni-ir inim mu-ni-ib-gi₄-gi₄",
+     "orig_lines": [
+      "96",
+      "97"
+     ],
+     "en": "The slave, trying to ameliorate the situation, trying to make life appear more attractive, answered his master:"
+    },
+    {
+     "ref": "98–106",
+     "orig": "lugal-ĝu₁₀ za-e lu₂-ba igi nu-mu-ni-in-du₈-a šag₄ nu-mu-ni-dab₅-be₂-en\nĝe₂₆-e lu₂-ba igi mu-ni-du₈-a šag₄ mu-ni-dab₅-be₂-en\nur-saĝ ka-ga₁₄-ni ka ušumgal-la-kam\nigi-ni igi piriĝ-ĝa₂-kam\nĜIŠ.GABA-a-ni a-ĝi₆ du₇-du₇-dam\nsaĝ-ki-ni ĝiš-gi bi₂-gu₇-a lu₂ {nu-mu-da-teĝ₃-ĝe₂₆-e-dam} {(1 ms. ḫas instead:) nu-mu-un-da-kar-re-de₃}\nuš₁₁-da-a ur-maḫ lu₂ gu₇-a uš₂ nu-ra-gid₂-de₃\n[...] MAŠ UŠ-am₃\n[...] /ur\\-maḫ ad₆ gu₇{!} uš₂-am₃ nu-ra-gid₂-de₃\n[...] gu₇ [...]\n[...] lugal KA NA [...]\n[...] X X /KA\\ [...]\nlugal-ĝu₁₀ za-e kur-še₃ u₅-a ĝe₂₆-e iri{ki}-še₃ ga-u₅\nama-zu-ur₂ i₃-til₃-zu ga-na-ab-dug₄ zu₂-zu₂ ḫe₂-li₉-li₉\neĝer-ra ba-uš₂-zu ga-na-ab-dug₄ {er₂-zu} {(1 ms. ḫas instead:) er₂ gig} ḫe₂-še₈-še₈\n[...] mu-na-ni-ib-gi₄-gi₄",
+     "orig_lines": [
+      "98",
+      "99",
+      "100",
+      "101",
+      "102",
+      "103",
+      "103A",
+      "103a",
+      "103b",
+      "103c",
+      "103d",
+      "103e",
+      "104",
+      "105",
+      "106",
+      "106A"
+     ],
+     "en": "\"My master, you have not yet really seen that person, he should not vex you. -- But he vexes me -- me, who have seen him before. His pugnacious mouth is a dragon's maw; his face is a lion's grimace. His chest is like a raging flood; no one {dare approach} {(1 ms. has instead:) can escape from} his brow, which devours the reedbeds. {(2 mss. adds 1 line:) A man-eating lion, he never wipes away the blood from his slaver.} {(1 ms. adds instead 5 lines:) 1 line fragmentary …… a lion eating a corpse, he never wipes away the blood 3 lines fragmentary} Travel on, my master, up into the mountains! -- but I shall travel back to the city. If I say to your mother about you \"He is alive!\", she will laugh. But afterwards I shall say to her about you \"He is dead!\", and she will certainly weep {over you} {(1 ms. has instead:) bitterly}.\" {(1 ms. adds:) …… replied to ……:}"
+    },
+    {
+     "ref": "107–116",
+     "orig": "ĝar-ra en-ki-du₁₀ lu₂ 2-e nu-uš₂-e {ĝiš}ma₂-da-la₂ nu-su-su\ntug₂ 3 tab-ba lu₂ nu-kud-de₃\nbad₃-da a lu₂ nu-šu₂-šu₂\ne₂ gi-sig-ga izi nu-te-en-te-en\nza-e ĝe₂₆-e taḫ-ma-ab ĝe₂₆-e za-e ga-ra-ab-taḫ a-na-me lu₂ ba-an-tum₃\nba-su-a-ba ba-su-a-ba\nud {ĝiš}ma₂ ma₂-gan{ki} ba-su-a-ba\n{ĝiš}ma₂-gur₈ {ĝiš}ma₂-gi₄-lum ba-su-a-ba\n{ĝiš}ma₂-da-la₂ {ĝiš}ma₂ zi-šag₄-ĝal₂-la-ka {šag₄ ĝal₂-la i₃-in-dab₅} {(1 ms. ḫas instead:) la-ba-ni-ib-su}\nĝa₂-nam-ma ga-an-ši-re₇-en-de₃-en igi ḫu-mu-ni-ib-du₈-ru-en-de₃-en",
+     "orig_lines": [
+      "107",
+      "108",
+      "109",
+      "110",
+      "111",
+      "112",
+      "113",
+      "114",
+      "115",
+      "116"
+     ],
+     "en": "\"Look, Enkidu, two people together will not perish! A grappling-pole does not sink! No one can cut through a three-ply cloth! Water cannot wash someone away from a wall! Fire in a reed house cannot be extinguished! You help me, and I will help you -- what can anyone do against us then? When it sank, when it sank, when the Magan boat sank, when the magilum barge sank, then at least the life-saving grappling-pole of the boat {was rescued} {(1 ms. has instead:) was not allowed to sink}! Come on, let's get after him and get a sight of him!\""
+    },
+    {
+     "ref": "117–119",
+     "orig": "tukum-bi in-ši-re₇-en-de₃-en\nni₂ i₃-ĝal₂ ni₂ i₃-ĝal₂ gi₄-a\numun₂ i₃-ĝal₂ umun₂ i₃-ĝal₂ gi₄-a",
+     "orig_lines": [
+      "117",
+      "118",
+      "119"
+     ],
+     "en": "\"If we go after him, there will be terror! There will be terror. Turn back! There will be blood! There wil be blood! Turn back!\""
+    },
+    {
+     "ref": "120",
+     "orig": "niĝ₂ šag₄-zu ĝa₂-nam-ma ga-an-ši-re₇-en-de₃-en",
+     "orig_lines": [
+      "120"
+     ],
+     "en": "\"Whatever you may think -- come on, let's get after him!\""
+    },
+    {
+     "ref": "121–125",
+     "orig": "nitaḫ 60 nindan la-ba-teĝ₃-ĝe₂₆-e-da-aš\nḫu-wa-wa e₂ {ĝiš}erin-na-ka-ni in-ga-an-dab₅\nigi mu-ši-in-bar igi uš₂-a-kam\nsaĝ mu-un-na-an-bul-bul saĝ nam-tag-/ga\\ sug₄-ga-am₃\ngu₃ mu-un-na-de₂-a inim nam-ma-sud-[su₃]-ud\nĝuruš ba-da-me-en-na iri{ki} ama tud-da-zu nu-ub-ši-in-gur-ru-de₃{?}",
+     "orig_lines": [
+      "121",
+      "122",
+      "123",
+      "124",
+      "124A",
+      "125"
+     ],
+     "en": "Before a man can approach within even sixty times six yards, Ḫuwawa has already reached his house among the cedars. When he looks at someone, it is the look of death. When he shakes his head at someone, it is a gesture full of reproach. {(1 ms. adds:) When he speaks to someone, he should not prolong his words:} \"You may still be a young man, but you will never again return to the city of your mother who bore you!\""
+    },
+    {
+     "ref": "126–129",
+     "orig": "{(1 ms. adds:) {d}gilgameš₂} sa-na ĝiri₃-na ni₂ ba-an-ri ni₂ te-a-ni ba-an-ri\nĝiri₃-ni ki-a li-bi₂-in-/de₃\\-gi₄\nĝiri₃ umbin gal-a-ni /ĝiri₃\\ [(X)] ba-an-us₂\nzag-na NU₁₁-na ba-ni-ri{?}",
+     "orig_lines": [
+      "126",
+      "127",
+      "128",
+      "129"
+     ],
+     "en": "Fear and terror spread through {his} {(1 ms. has instead:) Gilgameš's} sinews and his feet. He could not move (?) his feet on the ground; the big toenails of his feet stuck …… to the path (?). At his side ……."
+    },
+    {
+     "ref": "130–135",
+     "orig": "i₃-a lum-lum u₃-luḫ-ḫa sud-sud\ndumu-gir₁₅ giri₁₇-zal diĝir-re-e-ne\ngud lipiš-tuku me₃-a gub-ba\nama-zu dumu tud-da maḫ-bi in-ga-an-zu\nemeda(UM.ME)-ga-la₂-zu dumu ur₂-ra ga gu₇ maḫ-bi in-ga-an-zu\nni₂ na-an-teĝ₃-ĝe₂₆-e-en šu ki-a sig₁₀-bi₂-ib",
+     "orig_lines": [
+      "130",
+      "131",
+      "132",
+      "133",
+      "134",
+      "135"
+     ],
+     "en": "(Ḫuwawa addressed Gilgameš:) \"So come on now, you heroic bearer of a sceptre of wide-ranging power! Noble glory of the gods, angry bull standing ready for a fight! Your mother knew well how to bear sons, and your nurse knew well how to nourish children on the breast! Don't be afraid, rest your hand on the ground!\""
+    },
+    {
+     "ref": "136–139",
+     "orig": "šu ki-a bi₂-in-sig₁₀ inim mu-na-ab-be₂\nzi ama ugu-ĝu₁₀ {d}nin-sumun₂-ka a-a-ĝu₁₀ kug {d}lugal-ban₃-da\nkur-ra tuš-a-zu ba-ra-zu kur-ra tuš-a-zu ḫe₂-zu-am₃\nen-me-barag₂-ge₄-e-si nin₉ gal-ĝu₁₀ nam-dam-še₃ kur-ra ḫu-mu-ra-ni-kur₉-ra",
+     "orig_lines": [
+      "136",
+      "137",
+      "138",
+      "139"
+     ],
+     "en": "Gilgameš rested his hand on the ground, and addressed Ḫuwawa: \"By the life of my own mother Ninsumun and of my father, holy Lugalbanda! No one really knows where in the mountains you live; they would like to know where in the mountains you live. Here, I have brought you En-me-barage-si, my big sister, to be your wife in the mountains.\""
+    },
+    {
+     "ref": "140–144",
+     "orig": "2-kam-ma-še₃ in-ga-na-mu-na-ab-be₂\nzi ama ugu-ĝu₁₀ {d}nin-sumun₂-ka a-a-ĝu₁₀ kug {d}lugal-ban₃-da\nkur-ra tuš-a-zu ba-ra-zu kur-ra tuš-a-zu ḫe₂-zu-am₃\nMA-tur nin₉ ban₃-da-ĝu₁₀ nam-lukur-še₃ kur-ra ḫu-mu-ra-ni-kur₉-ra-am₃\nni₂-zu ba-am₃-ma-ra su-za ga-an-kur₉",
+     "orig_lines": [
+      "140",
+      "141",
+      "142",
+      "143",
+      "144"
+     ],
+     "en": "And again he addressed him: \"By the life of my mother Ninsumun and of my father, holy Lugalbanda! No one really knows where in the mountains you live; they would like to know where in the mountains you live. Here, I have brought you Ma-tur, my little sister, to be your concubine in the mountains. Just hand over your terrors to me! I want to become your kinsman!\""
+    },
+    {
+     "ref": "145–148",
+     "orig": "ni₂ te-a-ni 1-am₃ mu-na-ra-an-ba\ndumu iri{ki} mu-un-de₃-re₇-eš-a\npa-bi i₃-ku₅-ru-ne zu₂ ba-an-keše₂-re-ne\nur₂ ḫur-saĝ-ĝa₂-ka mu-ni-ib-nu₂-u₃-ne",
+     "orig_lines": [
+      "145",
+      "146",
+      "147",
+      "148"
+     ],
+     "en": "Then Ḫuwawa handed over to him his first terror. Gilgameš's fellow-citizens who had come with him began to lop off the branches and bundle them together, so as to lay them down at the foot of the hills."
+    },
+    {
+     "ref": "148A–148K",
+     "orig": "[2-kam-ma-še₃ in-ga-nam-mu-na-ab-be₂]\n[zi ama ugu-ĝu₁₀ {d}nin-sumun₂-ka a-a-ĝu₁₀ kug {d}lugal-ban₃-da]\n[kur-ra tuš-a-zu ba-ra-zu kur-ra tuš-a-zu ḫe₂-zu-am₃]\n[...]\n[kur-ra ḫu-mu-ra-ni-DU-en]\n[su-zu-a nu-mu-ra-teĝ₃-ĝe₂₆-de₃-en]\n[ni₂-zu ba-am₃-ma-ra su-zu-am₃ ga-an-kur₉]\n[ni₂ te-a-ni 2-kam-ma mu-na-ra-an-ba]\n/dumu iri\\-na mu-un-de₃-[re₇-eš]-/am₃\\\npa-bi i₃-ku₅-ru-ne zu₂ bi-keše₂-re-/ne ur₂ ḫur-saĝ-ĝa₂-ke₄\\\nmu-ni-ib-nu₂-nu₂-e",
+     "orig_lines": [
+      "148A",
+      "148B",
+      "148C",
+      "148D",
+      "148E",
+      "148F",
+      "148G",
+      "148H",
+      "148I",
+      "148J",
+      "148K"
+     ],
+     "en": "{(Several mss. preserve a more elaborate, but repetitive, narrative built on the pattern of lines 145-148. Some preserve the repetitions in an extremely abbreviated form. No ms. known to be from Nibru preserves the additional lines. One ms. of unknown origin adds at least 53 lines (and another fragmentary ms. of unknown origin gives an abbreviated version of these, always replacing 'terror' by 'aura'):) And again he addressed him: \"By the life of my mother Ninsumun and of my father, holy Lugalbanda! No one really knows where in the mountains you live; they would like to know where in the mountains you live. Here, I have brought to the mountains for you ……. Couldn't I get close to you and your family? Just hand over your terrors to me! I want to become your kinsman!\" Then Ḫuwawa handed over to him his second terror. Gilgameš's fellow-citizens who had come with him began to lop off the branches and bundle them together, so as to lay them down at the foot of the hills.}"
+    },
+    {
+     "ref": "148L–148V",
+     "orig": "/3\\-kam-ma-še₃ in-ga-/nam\\-[mu-na]-/ab\\-be₂\n/zi ama ugu\\-ĝu₁₀ {d}nin-sumun₂-ka a-/a-ĝu₁₀\\ kug {d}[lugal-ban₃]-/da\\\nkur-ra tuš{!}-a-zu ba-ra-zu kur-ra tuš{!}-/e\\ ZA [ḫe₂]-/zu\\-am₃\nzid₂-eša niĝ₂-gu₇ diĝir gal-gal-e-ne {kuš}ummud a sed₄\nkur-ra ḫu-mu-ra-ni-DU{!}-en\n/su-zu\\-a nu-mu-ra-teĝ₃-ĝe₂₆-de₃-en\nni₂-zu ba-am₃-ma-ra su-zu-am₃ ga-an-kur₉\nni₂ te-a-ni /3\\-kam-ma mu-na-ra-an-ba\ndumu iri-na mu-un-de₃-re₇-eš-am₃\npa-bi i₃-ku₅-ru-ne zu₂ bi-keše₂-re-ne\nur₂ ḫur-saĝ-ĝa₂-ke₄ mu-ni-ib-nu₂-nu₂-e",
+     "orig_lines": [
+      "148L",
+      "148M",
+      "148N",
+      "148O",
+      "148P",
+      "148Q",
+      "148R",
+      "148S",
+      "148T",
+      "148U",
+      "148V"
+     ],
+     "en": "{And a third time he addressed him: \"By the life of my mother Ninsumun and of my father, holy Lugalbanda! No one really knows where in the mountains you live; they would like to know where in the mountains you live. Here, I have brought to the mountains for you some eša flour -- the food of the gods! -- and a waterskin of cool water. Couldn't I get close to you and your family? Just hand over your terrors to me! I want to become your kinsman!\" Then Ḫuwawa handed over to him his third terror. Gilgameš's fellow-citizens who had come with him began to lop off the branches and bundle them together, so as to lay them down at the foot of the hills.}"
+    },
+    {
+     "ref": "148W–148FF",
+     "orig": "4-kam-ma-[še₃] in-ga-nam-mu-na-ab-be₂\nzi ama ugu-ĝu₁₀ {d}nin-sumun₂-ka a-a-ĝu₁₀ kug {d}lugal-ban₃-da\nkur-ra tuš{!}-a-zu ba-ra-zu kur-ra tuš{!}-a-zu ḫe₂-zu-am₃\nĝiri₃ gal-gal-la {kuš}e-sir₂ gal-gal-la ḫu-mu-ra-ni-in-DU{!}-en\nsu-zu-am₃ nu-mu-ra-teĝ₃-ĝe₂₆-de₃-en\nni₂-zu ba-am₃-ma-ra su-zu-am₃ ga-an-kur₉\nni₂ te-a-ni 4-kam-ma mu-na-ra-/an-ba\\\ndumu iri-na mu-un-de₃-re₇-eš-/am₃\\\npa-bi i₃-ku₅-ru-ne zu₂ bi-keše₂-re-[ne]\nur₂ ḫur-saĝ-ĝa₂-ke₄ mu-ni-nu₂-nu₂-e",
+     "orig_lines": [
+      "148W",
+      "148X",
+      "148Y",
+      "148Z",
+      "148AA",
+      "148BB",
+      "148CC",
+      "148DD",
+      "148EE",
+      "148FF"
+     ],
+     "en": "{And a fourth time he addressed him: \"By the life of my mother Ninsumun and of my father, holy Lugalbanda! No one really knows where in the mountains you live; they would like to know where in the mountains you live. Here, I have brought to for you some big shoes for big feet. Couldn't I get close to you and your family? Just hand over your terrors to me! I want to become your kinsman!\" Then Ḫuwawa handed over to him his fourth terror. Gilgameš's fellow-citizens who had come with him began to lop off the branches and bundle them together, so as to lay them down at the foot of the hills.}"
+    },
+    {
+     "ref": "148GG–148PP",
+     "orig": "5-kam-ma in-ga-nam-mu-na-ab-be₂\nzi ama ugu-ĝu₁₀ {d}nin-sumun₂-ka a-a-ĝu₁₀ kug {d}lugal-ban₃-da(sourše: RA)\nkur-ra tuš-a-zu ba-ra-zu kur-ra tuš{!}-a-zu ḫe₂-zu-am₃\nĝiri₃ tur-tur-zu-uš{!} {kuš}e-sir₂ tur-tur-e kur-ra ḫu-mu-<ra>-ni-in-DU-en\nsu-zu-am₃ nu-mu-ra-teĝ₃-ĝe₂₆-de₃-en\nni₂-zu ba-am₃-ma-ra su-zu-am₃ ga-an-kur₉\nni₂ te-a-ni 5-kam-ma mu-na-ra-an-ba\ndumu iri-na mu-un-de₃-re₇-eš-a\npa-bi i-ku₅-ru-ne zu₂ bi-keše₂-re-ne\nur₂ ḫur-saĝ-ĝa₂-ke₄ mu-ni-ib-nu₂-nu₂-e",
+     "orig_lines": [
+      "148GG",
+      "148HH",
+      "148II",
+      "148JJ",
+      "148KK",
+      "148LL",
+      "148MM",
+      "148NN",
+      "148OO",
+      "148PP"
+     ],
+     "en": "{And a fifth time he addressed him: \"By the life of my mother Ninsumun and of my father, holy Lugalbanda! No one really knows where in the mountains you live; they would like to know where in the mountains you live. Here, I have brought to the mountains for you some tiny shoes for your tiny feet. Couldn't I get close to you and your family? Just hand over your terrors to me! I want to become your kinsman!\" Then Ḫuwawa handed over to him his fifth terror. Gilgameš's fellow-citizens who had come with him began to lop off the branches and bundle them together, so as to lay them down at the foot of the hills.}"
+    },
+    {
+     "ref": "148QQ–148AAA",
+     "orig": "6-kam-ma-še₃ in-ga-nam-mu-na-ab-be₂ «EN»\nzi /ama\\ ugu-ĝu₁₀ {d}nin-sumun₂-«MU»-ka a-a-ĝu₁₀ kug {d}lugal-ban₃-da\nkur-/ra tuš\\-a-zu ba-ra-zu kur-ra tuš-a-zu ḫe₂-zu-am₃\n{na₄}du₈-ši-a {na₄}nir₇ {na₄}za-gin₃-na\nnam kur-ra-še₃ ḫu-mu-ra-ni-in-DU-/en{!}\\\nsu-zu-am₃ nu-mu-ra-teĝ₃-ĝe₂₆-de₃-en\nni₂-zu ba-am₃-ma-ra su-<zu>-am₃ ga-an-kur₉\nni₂ te-a-ni 6-kam-ma mu-na-ra-an-ba\n[dumu iri-na mu-un-de₃-re₇-eš-a]\n[pa-bi i-ku₅-ru-ne zu₂ bi-keše₂-re-ne]\n[ur₂ ḫur-saĝ-ĝa₂-ke₄ mu-ni-ib-nu₂-nu₂-e]",
+     "orig_lines": [
+      "148QQ",
+      "148RR",
+      "148SS",
+      "148TT",
+      "148UU",
+      "148VV",
+      "148WW",
+      "148XX",
+      "148YY",
+      "148ZZ",
+      "148AAA"
+     ],
+     "en": "{And a sixth time he addressed him: \"By the life of my mother Ninsumun and of my father, holy Lugalbanda! No one really knows where in the mountains you live; they would like to know where in the mountains you live. Here, I have brought you rock-crystal, nir stone and lapis lazuli -- from the mountains. Couldn't I get close to you and your family? Just hand over your terrors to me! I want to become your kinsman!\" Then Ḫuwawa handed over to him his sixth terror. Gilgameš's fellow-citizens who had come with him began to lop off the branches and bundle them together, so as to lay them down at the foot of the hills.}"
+    },
+    {
+     "ref": "149–151",
+     "orig": "ni₂ te-a-ni 7-kam-ma mu-un-na-til-la-ta da-ga-na ba-te\nmuš gar₃ ĝeštin-na-gin₇ murgu-na {im-ta-du-du} {(1 ms. ḫas instead:) šu im-ta-du₇-du₇}\nne mu-un-su-ub-ba-gin₇ te-na tibir-ra ba-ni-in-ra",
+     "orig_lines": [
+      "149",
+      "150",
+      "151"
+     ],
+     "en": "When Ḫuwawa had finally handed over to him his seventh terror, Gilgameš found himself beside Ḫuwawa. He {went up to him gradually} {(1 ms. has instead:) ……} from behind, as one does with a …… snake. He made as if to kiss him, but then punched him on the cheek with his fist."
+    },
+    {
+     "ref": "152",
+     "orig": "ḫu-wa-wa zu₂ ba-an-da-zalag {(1 ms. adds:) saĝ-ki /ba-da\\-guru₅-/uš\\}\nḫu-wa-wa {d}gilgameš₂-ra /gu₃\\ [...]-e\nur-saĝ lul sig₁₀-sig₁₀-ge [...]\n2-na-ne-ne-bi maḫ /KA\\ [...] ugu-na [...]\nur-saĝ da-gan₂-ni-ta [...] tuš-a mu-na-/ab\\-[be₂]\nḫu-wa-wa da-gan₂-ni-ta /mu{?}\\-[...] tuš-a mu-na-/ab\\-[be₂]\nur-/saĝ\\-e dur₂ im-ma-ĝar [er₂ im-ma]-/an\\-pad₃ šeₓ(SIG₇)-šeₓ(SIG₇) i₃-ĝa₂-[ĝa₂]\nḫu-wa-wa <dur₂> im-ma-ĝar er₂ im-/ma\\-an-pad₃ šeₓ(SIG₇)-šeₓ(SIG₇) i₃-ĝa₂-[ĝa₂]\nḫu-wa-wa {d}gilgameš₂-ra šag₄-ne-ša₄ KA [...]\nam dab₅-ba-gin₇ saman bi₂-in-šub\nĝuruš dab₅-ba-gin₇ a₂-ni mu-un-la₂-la₂\n[{d}]/ḫu\\-wa-wa er₂ im-ma-pad₃ X [...] A GUR",
+     "orig_lines": [
+      "152",
+      "152A",
+      "152B",
+      "152C",
+      "152D",
+      "152E",
+      "152F",
+      "152G",
+      "152H",
+      "152a",
+      "152b",
+      "152c"
+     ],
+     "en": "Ḫuwawa bared his teeth at him {(1 ms. adds:) , furrowing his brows at him}. {(2 mss. from Urim add 8 lines:) Ḫuwawa addressed Gilgameš: \"Hero, …… to act falsely!\" The two of them …… on him ……. …… the warrior from his dwelling. …… said to him, \"Sit down!\" …… Ḫuwawa from his dwelling. …… said to him, \"Sit down!\" The warrior sat down and began to weep, shedding tears. Ḫuwawa sat down and began to weep, shedding tears. Ḫuwawa …… plea …… to Gilgameš.} {(instead of lines 152A-152H, 2 other mss. add 2 lines:) He threw a halter over him as over a captured wild bull. He tied up his arms like a captured man. {(1 of the mss. adds 1 further line:) Ḫuwawa wept, …….}}"
+    },
+    {
+     "ref": "153–157",
+     "orig": "{d}gilgameš₂ {šu ba-am₃-tuku₄} {(4 mss. ḫave instead:) šu ba-am₃-mu-u₈}\n{d}utu-ra inim ga-mu-na-ab-dug₄\n{d}utu ama tud-da-ĝu₁₀ nu-um-zu a-a buluĝ₃-ĝa₂-ĝu₁₀ nu-um-zu\nkur-ra mu-un-tud-de₃-en za-e mu-un-buluĝ₃-e\n{d}gilgameš₂ zi an-na ma-an-pad₃ zi ki-a ma-an-pad₃ zi kur-ra ma-an-pad₃",
+     "orig_lines": [
+      "153",
+      "154",
+      "155",
+      "156",
+      "157"
+     ],
+     "en": "{He tugged at Gilgameš's hand.} {(4 mss. have instead:) \"Gilgameš, let me go!\"} \"I want to talk to Utu!\" \"Utu, I never knew a mother who bore me, nor a father who brought me up! I was born in the mountains -- you brought me up! Yet Gilgameš swore to me by heaven, by earth, and by the mountains.\""
+    },
+    {
+     "ref": "158–160",
+     "orig": "{(1 ms. adds:) [{d}ḫu-wa]-/wa{?}\\} šu-še₃ mu-un-dab₅ ki za nam-ba-an-tum₃\nud-ba {d}gilgameš₂ dumu-gir₁₅-ra šag₄-ga-ni arḫuš ba-ni-in-tuku\n{arad-da-ni} {(3 mss. ḫave instead:) {d}gilgameš₂} en-ki-du₁₀-ra gu₃ mu-un-na-de₂-e",
+     "orig_lines": [
+      "158",
+      "159",
+      "160"
+     ],
+     "en": "Ḫuwawa clutched at Gilgameš's hand, and prostrated himself before him. Then Gilgameš's noble heart took pity on him. {Gilgameš addressed Enkidu} {(3 mss. have instead:) He addressed his slave Enkidu}:"
+    },
+    {
+     "ref": "161–162",
+     "orig": "en-ki-du₁₀ mušen dab₅-ba ki-bi-še₃ ḫa-ba-du\nĝuruš dab₅-ba ur₂ ama-na-še₃ ḫe₂-gi₄-gi₄",
+     "orig_lines": [
+      "161",
+      "162"
+     ],
+     "en": "\"Enkidu, let the captured bird run away home! Let the captured man return to his mother's embrace!\""
+    },
+    {
+     "ref": "163–174",
+     "orig": "{en-ki-du₁₀-e {d}gilgameš₂-ra} {(2 mss. ḫave instead:) arad-da-a-ni en-ki-du₁₀-e} inim mu-un-ni-ib-gi₄-gi₄\ni₃-a lum-lum u₃-luḫ-ḫa sud-sud\n/dumu\\-gir₁₅ giri₁₇-zal diĝir-re-e-/ne\\\ngud lipiš-tuku me₃-a gub-be₂\nen TUR {d}gilgameš₂ unug{ki} mi₂ dug₄-ga\nama-zu dumu u₃-tud maḫ-bi in-ga-an-zu\nemeda(UM.ME)-ga-<la₂>-zu(sourše: ĝu₁₀) dumu ga gu₇ «zu» maḫ-bi in-ga-an-zu\nsukuₓ(SUKUD)-ra₂ {dim₂-ma} {(1 ms. ḫas instead:) ĝalga} nu-tuku\nnam-tar i₃-gu₇-e nam-tar nu-ub-zu-zu\nmušen dab₅-ba ki-bi-še₃ du-a-bi\nĝuruš dab₅-ba ur₂ ama-na-še₃ gi₄-gi₄-dam\nza-e iri ama tud-da-zu nu-ub-ši-gur-ru-de₃-en\n/ur\\-saĝ dab₅{!}-ba šu bar-ra /en\\ dab₅-/ba\\ ĝi₆-par₃-ra [...]\ngudug dab₅{!}-ba ḫi-li-še₃ gur-ra /ud ul\\-le₂-a-ta [...]\nX GAL{!} mu{?}-/un\\-[...]\n[...] mu-/un\\-[...]\n[...] dug₄-ga-ni-še₃ ĝeštug₂-ga-/ni\\ [...]",
+     "orig_lines": [
+      "163",
+      "164",
+      "165",
+      "166",
+      "167",
+      "168",
+      "169",
+      "170",
+      "171",
+      "172",
+      "173",
+      "174",
+      "174A",
+      "174B",
+      "174C",
+      "174D",
+      "174E"
+     ],
+     "en": "{Enkidu replied to Gilgameš} {(2 mss. have instead:) His slave Enkidu replied}: \"Come on now, you heroic bearer of a sceptre of wide-ranging power! Noble glory of the gods, angry bull standing ready for a fight! Young Lord Gilgameš, cherished in Unug, your mother knew well how to bear sons, and your nurse knew well how to nourish children! -- One so exalted and yet so lacking in {understanding} {(1 ms. has instead:) judgment} will be devoured by fate without him ever understanding that fate. The very idea that a captured bird should run away home, or a captured man should return to his mother's embrace! -- Then you yourself would never get back to the mother-city that bore you! {(1 ms. adds:) A captured warrior set free! A captured high priestess …… to the ĝipar! A captured gudug priest restored to his wig of hair! …… ever, ever ……? 2 lines fragmentary …… his attention to his words …….}\""
+    },
+    {
+     "ref": "175–177",
+     "orig": "ḫu-wa-wa en-ki-du₁₀-ra gu₃ mu-un-na-de₂-e\nĝa₂-ra en-ki-du₁₀ inim {(1 ms. adds:) kur₂} mu-na-ab-ḫul-ḫul\nlu₂ ḫuĝ-ĝa₂ šag₄-gal im-ma-ḫuĝ eĝer gaba-ri us₂-sa {inim mu-na-ab-ḫul-ḫul} {(2 mss. ḫave instead:) a-na-aš-am₃ inim mu-/na-ḫul\\-[ḫul]}\n[...] KA mu-na-[...]\n[...] ni₂-zu ba-ši-[...]",
+     "orig_lines": [
+      "175",
+      "176",
+      "177",
+      "177A",
+      "177B"
+     ],
+     "en": "Ḫuwawa addressed Enkidu: \"Enkidu, you speak such hateful {(1 ms. adds:) hostile} words against me to him! You hireling, who are hired for your keep! You who follow along after him -- {you speak such hateful words to him.} {(2 mss. have instead:) why do you speak such hateful words to him?}\" {(1 ms. adds:) 2 lines fragmentary}"
+    },
+    {
+     "ref": "178–180",
+     "orig": "ur₅-gin₇ ḫu-mu-na-ab-be₂-a-ka\n{d}en-ki-du₁₀ ib₂-ba lipiš bal-a-ni gu₂-ni im-ma-an-kud\ngu₂-ni im-ma-an-ku₅-re-eš\nšag₄ {kuš}a-ĝa₂-la₂-še₃ {mu-un-da-ĝar} {(1 ms. ḫas instead:) im-da-šub} {(tḫe same 2 mss. as in line 179 ḫave instead:) im-ma-ni-in-ĝar-re-eš}",
+     "orig_lines": [
+      "178",
+      "179",
+      "H",
+      "180"
+     ],
+     "en": "As Ḫuwawa spoke thus to him, {Enkidu, full of rage and anger, cut his throat} {(2 mss. from Nibru have instead:) they cut his throat}. {He put} {(1 ms. has instead:) He chucked} {(the same 2 mss. from Nibru have instead:) They put} his head in a leather bag."
+    },
+    {
+     "ref": "181–186",
+     "orig": "igi {d}en-lil₂-la₂-še₃ i-ni-in-kur₉-re-eš\n/igi\\ {d}en-/lil₂-la₂-še₃\\ giri₁₇ ki su-ub-ba(sourše: DA)-ni-ta\n{tug₂}a-/ĝa₂\\-la₂ bi₂-in-šub saĝ-du-ni bi₂-in-ed₂-de₃\nigi {d}en-lil₂-la₂-še₃{!} im-ma-ni-in-ĝar-re-eš\n{d}en-lil₂-le saĝ-du {d}ḫu-wa-wa igi ba-ni-in-du₈-a\ninim {d}gilgameš₂ šag₄ bi₂-in-/dab₅\\\nigi {d}en-lil₂ u₃ {d}nin-lil₂-le im-ma-an-tum₂-me-eš\n{d}en-lil₂ ba-te-a-ni a-ab-ta ba-ra-e₃\nu₃ {d}nin-lil₂ DI KA BA{?} ba-ra-e₃\nud {d}en-lil₂ u₃ {d}nin-lil₂ im-ma-an-gur-ru-da-ni",
+     "orig_lines": [
+      "181",
+      "182",
+      "183",
+      "184",
+      "185",
+      "186",
+      "I",
+      "J",
+      "K",
+      "L"
+     ],
+     "en": "{They entered before Enlil. After they had kissed the ground before Enlil, they threw the leather bag down, tipped out his head, and placed it before Enlil. When Enlil saw the head of Ḫuwawa, he spoke angrily to Gilgameš:} {(instead of lines 181-186, 1 ms. has:) They brought it before Enlil and Ninlil. When Enlil approached (?), …… went out the window (?), and Ninlil went out ……. When Enlil with Ninlil had returned (?),}"
+    },
+    {
+     "ref": "187–192",
+     "orig": "a-na-aš-am₃ ur₅-gin₇ i₃-ak-en-ze₂-en\n[X X] X-am₃ i₃-ak-en-ze₂(sourše: de₃)-en [X (X)]\nba-dug₄-ga-ke₄-eš mu-ni ki-ta ḫa-lam-ke₄-eš\nigi-zu-ne-ne-a ḫe₂-en-tuš\n[X (X)] X ḫa-ba-e₃ ḫe₂-en-tuš\n[...] X X IGI X [...]\n/ninda\\ gu₇-zu-ne-ne-a ḫe₂-gu₇-e\na naĝ-zu-ne-ne-a ḫe₂-na₈-na₈\n[X]-/zu\\-e-ne-ka me-te-aš ḫe₂-im-mi-/ĝal₂\\\n[{d}ḫu]-wa-wa e-ne me-/te\\ [...]\n{d}en-lil₂ ki-tuš-a-ni-ta me-lem₄ an-na-ni mu-na-[X X]-ba",
+     "orig_lines": [
+      "187",
+      "188",
+      "M",
+      "189",
+      "N",
+      "O",
+      "190",
+      "191",
+      "192",
+      "P",
+      "p"
+     ],
+     "en": "\"Why did you act in this way? {…… did you act ……?} {(1 ms. has instead:) Was it commanded that his name should be wiped from the earth?} {He should have sat before you!} {(1 ms. has instead:) He should have sat ……, …….} He should have eaten the bread that you eat, and should have drunk the water that you drink! {He should have been honoured …… you!} {(1 ms. has instead:) Ḫuwawa -- he …… honoured!}\" {(1 other ms. has instead:) From his seat, Enlil assigned Ḫuwawa's heavenly auras to …….}"
+    },
+    {
+     "ref": "193–199",
+     "orig": "(tḫe ms. tradition for lines 193-199 is extremely šonfused about tḫe order in wḫišḫ tḫe various auras are assigned; tḫe following sequenše is a šompromise:) me-lem₄-a-ni 1-am₃ a-šag₄-še₃ ba-an-šum₂\nme-lem₄-a-ni 2-kam-ma id₂-da-še₃ ba-an-šum₂\nme-lem₄-a-ni 3-kam-ma ĝiš-gi-še₃ ba-an-šum₂\nme-lem₄-a-ni 4-kam-ma ur-maḫ-še₃ ba-an-šum₂\nme-lem₄-a-ni 5-kam-ma {e₂-gal-še₃} {(1 ms. ḫas instead:) za-aš₂-da-še₃} ba-an-šum₂\nme-lem₄-a-ni 6-kam-ma {tir-tir-še₃} {(1 ms. ḫas instead:) ḫur-saĝ-še₃} ba-an-šum₂\nme-lem₄-a-ni 7-kam-ma {d}nun-gal-še₃ ba-an-šum₂",
+     "orig_lines": [
+      "193",
+      "194",
+      "195",
+      "196",
+      "197",
+      "198",
+      "199"
+     ],
+     "en": "(The ms. tradition for lines 193-199 is extremely confused about the order in which the various auras are assigned; the following sequence is a compromise:) He gave Ḫuwawa's first aura to the fields. He gave his second aura to the rivers. He gave his third aura to the reedbeds. He gave his fourth aura to the lions. He gave his fifth aura to the {palace} {(1 ms. has instead:) debt slaves}. He gave his sixth aura to the {forests} {(1 ms. has instead:) the hills}. He gave his seventh aura to Nungal(the goddess of prisoners) ."
+    },
+    {
+     "ref": "200",
+     "orig": "[...]-/ma\\ ni₂ te-a-ni ba-an-TI\nib₂-taka₄ me-lem₄-/ma\\ X [{d}]gilgameš₂ X X DU AB DA DU X X",
+     "orig_lines": [
+      "200",
+      "Q"
+     ],
+     "en": "{…… his terror ……} {(1 ms. or possibly 2 mss. have instead:) …… the rest of the auras …… Gilgameš …….}"
+    },
+    {
+     "ref": "201–202",
+     "orig": "kalag-ga {d}gilgameš₂ {mi₂ dug₄-ga} {(1 ms. ḫas instead:) za₃-mi₂ {d}en-ki-du₁₀ [za₃-mi₂]}\n{d}nisaba za₃-mi₂\n{d}ḫu-wa-wa [...]\nmi₂ dug₄-ga en-ki-du₁₀ za₃-/mi₂\\ [...]",
+     "orig_lines": [
+      "201",
+      "202",
+      "R",
+      "S"
+     ],
+     "en": "{Mighty one, Gilgameš, {who is cherished!} {(1 ms. has instead:) be praised! Enkidu, be praised}! Nisaba, be praised!} {(instead of lines 201-202, 1 ms. has:) Ḫuwawa, ……! …… cherished, ……! Enkidu, be praised ……!}"
+    }
+   ]
+  },
+  {
+   "num": "1.8.1.5.1",
+   "title_en": "Gilgameš and Ḫuwawa (Version B)",
+   "segments": [
+    {
+     "ref": "1–4",
+     "orig": "i₃-a lum-lum u₃-luḫ-ḫa sud-sud (Šited in OB šatalogue from Nibru, at Pḫiladelpḫia, 0.2.01, line 14; OB šatalogue in tḫe Louvre, 0.2.02, line 38; OB šatalogue from Urim, 0.2.03 (U1), line 16; OB šatalogue from Urim (U2), 0.2.04, line 10)\ndumu-gir₁₅ giri₁₇{!}-zal diĝir-re-e-/ne\\\ngud lipiš-tuku me₃-a gub-ba\nen TUR {d}gilgameš₂ unug{ki}-ta mi₂ dug₄-/ga\\",
+     "orig_lines": [
+      "1",
+      "2",
+      "3",
+      "4"
+     ],
+     "en": "\"So come on now, you heroic bearer of a sceptre of wide-ranging power! Noble glory of the gods, angry bull standing ready for a fight! Young Lord Gilgameš, cherished in Unug!\""
+    },
+    {
+     "ref": "5–21",
+     "orig": "unug{ki}-ga lu₂ ba-uš₂ ur₅ ba-/sag₃\\\nlu₂ u₂-gu ba-an-de₂ šag₄ /ḫul\\ [i₃-ĝa₂]-/ĝa₂{?}\\\n/bad₃-da\\ su{?}-ĝu₁₀ im-ma-an-[la₂]\nlu₂ a-a ib₂-dirig-ge₄ igi im-mi-[in-sig₁₀]-/ga\\-am₃\nur₅ im-ma-uš₂ šag₄ im-/ma\\-sag₃\nzag nam-til-la saĝ im-gi₄-a\nirigal kur nam-gu₂-ka{?}-ke₄{!} lu₂ la-ba-an-da₁₃-da₁₃-a\nsud-da kur-ra la-ba-an-/gib\\-be₂-a\ndaĝal-la kur-ra la-ba-an-šu₂-šu₂-a\nzag ĝuruš til-la saĝ til-la-bi-še₃ la-ba-ra-ab-ed₃-/de₃\\-a\nzi ama ugu-ĝu₁₀ {d}nin-sumun₂-ka a-a-/ĝu₁₀\\ [kug] [{d}]/lugal\\-ban₃-da\ndiĝir-ĝu₁₀ {d}{ !}en{!}-ki{!} en {d}{ !}/nu\\-[dim₂]-mud-e\n[...] X [(X)] me X [...] X-ta\n[...] X X [...]\n[...] X [...] /šub{?}\\\n[...] du₃{?}-du₃ PA-bi-še₃ ga-am₃-til\n[...] /šub\\-ba [ga]-am₃-mi-ib-kur₉",
+     "orig_lines": [
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10",
+      "11",
+      "12",
+      "13",
+      "14",
+      "15",
+      "16",
+      "17",
+      "18",
+      "19",
+      "20",
+      "21"
+     ],
+     "en": "\"In Unug people are dying, and souls are full of distress. People are lost -- that fills me with dismay. I lean out over the city wall: bodies in the water make the river almost overflow. That is what I see: that people die thus, which fills me with despair; that the end of life is unavoidable; that the grave, the all-powerful underworld, will spare no one; that no one is tall enough to block off the underworld; that no one is broad enough to cover over the underworld -- the boundary that a man cannot cross at the final end of life. By the life of my own mother Ninsumun, and of my father, holy Lugalbanda! My personal god Enki, Lord Nudimmud, 3 lines fragmentary I will complete …… there. I will bring …… there.\""
+    },
+    {
+     "ref": "22–28",
+     "orig": "[arad-da-ni en-ki-du₁₀-e] /gu₃\\ mu-na-de₂-e\n[... tukum-bi kur]-/še₃\\ i-in-ku₄-ku₄-de₃-en\n[{d}utu] /ḫe₂-da\\-an-zu\n[kur]-{ĝiš}erin{!}-kud{!}-še₃ i-in-ku₄-ku₄-de₃-en\n{d}utu ḫe₂-da-an-zu\nkur-ra dim₂-ma-bi {d}utu-kam\n/kur\\-[{ĝiš}]erin-kud dim₂-ma-bi šul {d}utu-kam",
+     "orig_lines": [
+      "22",
+      "23",
+      "24",
+      "25",
+      "26",
+      "27",
+      "28"
+     ],
+     "en": "His slave Enkidu answered him: \"…… if you want to set off into the mountains, Utu should know about it from you. If you want to set off into the Mountains of Cedar-felling, Utu should know about it from you. A decision that concerns the mountains is Utu's business. A decision that concerns the Mountains of Cedar-felling is the business of youthful Utu.\""
+    },
+    {
+     "ref": "29–33",
+     "orig": "{d}utu an-na-ke₄ suḫ₁₀ za-gin₃ mu-un-keše₂\nsaĝ il₂-la mu-un-ĝen\n{d}gilgameš₂ en kul-aba{ki}-ke₄ šu-ni ĝidru kug giri₁₇-na ba-ab-tab\n{d}utu kur-še₃ i-in-ku₄-ku₄-de₃-en ḫe₂-me-en a₂-taḫ-ĝu₁₀\nkur-/erin-kud\\ i-in-ku₄-ku₄-de₃-en /ḫe₂-me\\-[en] /a₂-taḫ-ĝu₁₀\\",
+     "orig_lines": [
+      "29",
+      "30",
+      "31",
+      "32",
+      "33"
+     ],
+     "en": "Utu of heaven put on his lapis-lazuli diadem and came forward with head high. In his hand Gilgameš, the lord of Kulaba, held a holy staff before his nose: \"Utu, I want to set off into the mountains! May you be my helper! I want to set off into the mountains of Cedar-felling! May you be my helper!\""
+    },
+    {
+     "ref": "34–50",
+     "orig": "[1-am₃ ...]\n[2-kam-ma ...]\n[3-kam-ma ...]\n[4-kam-ma ...]\n[5-kam-ma] X X [... mu]-/un\\-tab-tab-e\n[6-kam-ma] a-ĝi₆ du₇-du₇-gin₇ [kur]-/ra\\ gaba ra-ra\n/7-kam\\-ma nim-gin₇ i₃-ĝir₂-ĝir₂-re /a₂\\-bi-/še₃\\ lu₂ nu-ub-gur-e\ne-ne-ne an-na mul-la-me-eš /ki\\-a ḫar-ra-an zu-me-eš\n/an\\-na mul X X X il₂-la-me-[eš]\nki-a kaskal aratta/{ki}\\ [zu-me-eš]\ndam-gar₃-ra-[gin₇] ĝiri₃-bal zu-me-eš\ntum₁₂{mušen}-gin₇ ab-/lal\\ kur-ra zu-me-eš\nma₂-ur₃-ma₂-ur₃ ḫur-saĝ-ĝa₂-ka ḫe₂-mu-e-ni-tum₂-tum₂-mu-ne",
+     "orig_lines": [
+      "38",
+      "39",
+      "40",
+      "41",
+      "42",
+      "43",
+      "44",
+      "45",
+      "46",
+      "47",
+      "48",
+      "49",
+      "50"
+     ],
+     "en": "4 lines missing \"The first ……. The second ……. The third ……. The fourth ……. The fifth ……. The sixth beats at the flanks of the mountains like a battering flood. The seventh flashes like lightning, and no one can deflect its power. These shine in the heavens, but they know the routes on earth. In heaven they shine ……, raising ……; on earth they know the way even to Aratta. They know the destructive weather like the merchants. They know the mountain crannies like the pigeons. They will guide you to the place in the mountains where the boats have to be pulled from the water.\""
+    },
+    {
+     "ref": "51–56",
+     "orig": "[{d}]/gilgameš₂\\ iri-ni-a zig₃-ga /ba\\-ni-ib-ĝar\n[(X)] X kul-aba{ki}-a si gu₃ ba-ni-in-ra\n/iri dam\\ tuku dam zu{!}-še₃ dumu tuku <dumu>-zu-še₃\nur-/saĝ\\ zu ur-/saĝ\\ nu-zu\ndam nu-/tuku\\ dumu nu-tuku\nlu₂ /ur₅{?}-a\\ lu₂ {d}gilgameš₂-da a₂-ĝu₁₀-še₃ ḫu-mu-un-ak-eš",
+     "orig_lines": [
+      "51",
+      "52",
+      "53",
+      "54",
+      "55",
+      "56"
+     ],
+     "en": "Gilgameš organised a levy in his city. In …… Kulaba he had the horn sounded. \"Citizens! You who have a wife, go to your wife! You who have children, go to your children! Warriors, whether experienced or inexperienced, who have no wife, who have no children -- let such people join me at my side as the companions of Gilgameš.\""
+    },
+    {
+     "ref": "57–66",
+     "orig": "lugal /iri\\-ta ba-ra-e₃\n{d}gilgameš₂ kul-aba{ki}-ta ba-ra-e₃\nkur-{ĝiš}erin-kud-/da\\ ĝiri₃ im-ma-ab-dab₅-be₂\nḫur-saĝ 1-e in-di₃-in-bal {ĝiš}erin šag₄-ga-ni nu-[mu-ni]-/in\\-pad₃\nḫur-[saĝ] 2-kam-ma <in-di₃-in-bal {ĝiš}erin šag₄-ga-ni nu-mu-ni-in-pad₃>\nḫur-[saĝ] 3-kam-ma <in-di₃-in-bal {ĝiš}erin šag₄-ga-ni nu-mu-ni-in-pad₃>\nḫur-[saĝ] 4-/kam-ma\\ <in-di₃-in-bal {ĝiš}erin šag₄-ga-ni nu-mu-ni-in-pad₃>\nḫur-[saĝ 5]-/kam-ma\\ <in-di₃-in-bal {ĝiš}erin šag₄-ga-ni nu-mu-ni-in-pad₃>\n[ḫur-saĝ 6-kam]-ma <in-di₃-in-bal {ĝiš}erin šag₄-ga-ni nu-mu-ni-in-pad₃>\nḫur-saĝ 7-kam-ma bal-e-da-ni {ĝiš}erin šag₄-ga-ni im-ma-ni-in-pad₃",
+     "orig_lines": [
+      "57",
+      "58",
+      "59",
+      "60",
+      "61",
+      "62",
+      "63",
+      "64",
+      "65",
+      "66"
+     ],
+     "en": "The king left the city. Gilgameš left Kulaba, to follow the route to the Mountains of Cedar-felling. He crossed the first mountain range, but his intuition did not lead him to find the cedars there. He crossed the second mountain range, but his intuition did not lead him to find the cedars there. He crossed the third mountain range, but his intuition did not lead him to find the cedars there. He crossed the fourth mountain range, but his intuition did not lead him to find the cedars there. He crossed the fifth mountain range, but his intuition did not lead him to find the cedars there. He crossed the sixth mountain range, but his intuition did not lead him to find the cedars there. When he had crossed the seventh mountain range, there his intuition led him to find the cedars."
+    },
+    {
+     "ref": "67–70",
+     "orig": "{d}gilgameš₂ {ĝiš}erin-na al-sag₃-ge\narad-da-ni en-ki-du₁₀-e pa mu-un-ši-ak-e\ndumu iri-na mu-un-de₃-re₇-eš-a\ngu-ru-ma mu-ni-ib-gub-bu-ne",
+     "orig_lines": [
+      "67",
+      "68",
+      "69",
+      "70"
+     ],
+     "en": "Gilgameš began to chop at the cedars. His slave Enkidu worked on the branches for him. His fellow-citizens who had come with him stacked them in piles."
+    },
+    {
+     "ref": "71–77",
+     "orig": "/ud\\-bi-a ur-saĝ ur-saĝ-ra u₃-mu-un-na-te\nme-/lem₄\\ [...] šu-gur-gin₇ i-im-/te{?}\\\n/nu₂{?}\\ [...]-še₃ silim-ma i₃-/nu₂{?}\\\nu₃ [...-ku-ku ...]",
+     "orig_lines": [
+      "71",
+      "72",
+      "73",
+      "74"
+     ],
+     "en": "Then, as one warrior got closer to the other, the aura of Ḫuwawa …… sped towards them like a spear (?). …… he rested there peacefully. He was asleep (?) ……. 3 lines missing"
+    },
+    {
+     "ref": "78–82",
+     "orig": "[...] /gu₃\\ [...]\ni₃-/nu₂\\-[X] i₃-nu₂-X [...]\nen /TUR\\ {d}/gilgameš₂\\ en-še₃ nu₂-/de₃\\-[en]\nkur ba-/suḫ₃\\-[suḫ₃] /ĝissu\\ [ba-an-la₂]\n/AN{?}\\ [...]",
+     "orig_lines": [
+      "78",
+      "79",
+      "80",
+      "81",
+      "82"
+     ],
+     "en": "…… addressed (?) ……: \"You who have gone to sleep, you who have gone to sleep ……! Young Lord Gilgameš, how long will you sleep for? The mountains are becoming indistinct as the shadows fall across them; the evening …….\""
+    },
+    {
+     "ref": "83–89",
+     "orig": "{d}gilgameš₂(sourše: /en-ki\\-[du₁₀]) /i-im\\-zig₃ /ma-mu₂\\-da\n/i-im\\-bu-luḫ /u₃\\-sa₂-ga-am₃\n/igi\\-ni šu bi₂-in-gur₁₀ niĝ₂-me-ĝar sug₄-ga-am₃\nzi ama ugu-ĝa₂ {d}nin-sumun₂-ka a-a ugu-/ĝa₂\\ kug {d}lugal-ban₃-[da]\n/diĝir-ĝu₁₀\\ [{d}en-ki en {d}nu-dim₂-mud-e ...]",
+     "orig_lines": [
+      "83",
+      "84",
+      "85",
+      "86",
+      "87"
+     ],
+     "en": "Gilgameš awoke from his dream, shuddering from his sleep. He rubbed his eyes; there was eery silence everywhere. \"By the life of my own mother Ninsumun and of my father, holy Lugalbanda! My personal god Enki, Lord Nudimmud ……! 2 lines missing\""
+    },
+    {
+     "ref": "90–95",
+     "orig": "/ĝe₂₆\\-[e ...] /šag₄\\ mu-ni-[...-dab₅]-/be₂\\\nur-saĝ-/e\\ igi-ni igi /piriĝ\\-ĝa₂-kam\nĜIŠ.GABA-a-ni a-ĝi₆ du₇-du₇-dam\nsaĝ-ki-ni ĝiš-gi bi₂-gu₇-e lu₂ nu-teĝ₃{!}-ĝe₂₆{!}-dam\neme-a-ni ur-maḫ lu₂ gu₇-gin₇ uš₂ nu-šar₂-ra-ge-dam\nur-saĝ-e usu nu-mu-e-da-ĝal₂ ne-am₃ mu-un-da-ĝal₂",
+     "orig_lines": [
+      "90",
+      "91",
+      "92",
+      "93",
+      "94",
+      "95"
+     ],
+     "en": "\"I ……, he vexes (?) me -- the warrior whose face is a lion's grimace, and whose breast is like a raging flood. No one dare approach his brow, which devours the reedbeds. On his tongue, like that of a man-eating lion, the blood never dries. You do not have enough strength for the warrior, such is his might.\""
+    },
+    {
+     "ref": "96–98",
+     "orig": "arad-da-ni en-ki-du₁₀-e /gu₃ mu-na\\-de₂-/e\\\n[...] X [...]\nX [...]",
+     "orig_lines": [
+      "96",
+      "97",
+      "98"
+     ],
+     "en": "His slave Enkidu addressed him: \"2 lines fragmentary\""
+    },
+    {
+     "ref": "99–108",
+     "orig": "zi /ama\\ [ugu-ĝa₂ {d}nin-sumun₂-ka] a-a-ĝa₂ [kug {d}lugal-ban₃-da]\ndiĝir-ĝu₁₀(sourše: za) {d}[en]-/ki\\ [en {d}nu-dim₂-mud-e] KA-za [...-e₃]\nur-saĝ /kur\\-[ra tuš-a-zu] ḫe₂-zu-[am₃]\nĝiri₃ tur-tur-zu-[uš] {kuš}e-sir₂ [tur-tur] ḫe₂-ma-/dim₂\\-[dim₂-ma-am₃]\nĝiri₃ gal-gal-[zu-uš] {kuš}e-sir₂ [gal-gal ḫe₂-ma-dim₂-dim₂-ma-am₃]\n[...] X [...] u₃-mu-ni-in-kur₉",
+     "orig_lines": [
+      "99",
+      "100",
+      "101",
+      "102",
+      "103",
+      "108"
+     ],
+     "en": "\"By the life of my own mother Ninsumun and of my father, holy Lugalbanda! My personal god Enki, Lord Nudimmud ……! Warrior, one would like to know where in the mountains you live. Here, they have made some tiny shoes for your tiny feet. Here, they have made some big shoes for your big feet. 4 lines missing If you bring …….\""
+    },
+    {
+     "ref": "109–115",
+     "orig": "[zi] /ama\\ ugu-ĝa₂(sourše: na) [{d}]/nin\\-sumun₂-ka /a\\-a ugu-ĝa₂ /kug\\ {d}lugal-ban₃-da\n[diĝir]-ĝu₁₀(sourše: /za\\) {d}en-ki [en] [{d}]/nu\\-dim₂-mud-e [KA-za] /mu\\-ni-in-/e₃\\\n/ur\\-saĝ kur-ra tuš-a-/zu\\ ḫe₂-zu-am₃\n/ĝiri₃\\ tur-tur-zu-uš /{kuš}\\e-sir₂ tur-tur [ḫe₂]-/ma\\-dim₂-dim₂-ma-am₃\n[ĝiri₃ gal]-gal-zu-uš [{kuš}e]-/sir₂\\ gal-gal [ḫe₂-ma]-dim₂-dim₂-ma-am₃\n[X] X X [X (X)] kur [...]-kur₉-ra\n[...] X [...]",
+     "orig_lines": [
+      "109",
+      "110",
+      "111",
+      "112",
+      "113",
+      "114",
+      "115"
+     ],
+     "en": "\"By the life of my mother Ninsumun and of my father, holy Lugalbanda! My personal god Enki, Lord Nudimmud ……! Warrior, one would like to know where in the mountains you live. Here, they have made some tiny shoes for your tiny feet. Here, they have made some big shoes for your big feet. 2 lines fragmentary\""
+    },
+    {
+     "ref": "116–129",
+     "orig": "[gu]-/ru\\-um-gu-ru-um ḫur-saĝ-ĝa₂ /mu{?}\\-[...]-/ne{?}\\",
+     "orig_lines": [
+      "129"
+     ],
+     "en": "13 lines missing They …… many piles on the hillside."
+    },
+    {
+     "ref": "130–134",
+     "orig": "[me]-/lem₄\\ 7-kam-ma mu-na-/til\\-[la]-/ta\\\nda-ga-na ba-te ĝeštug-a-ni /tibir bi₂\\-in-ra\nsaĝ-ki mu-un-da-an-guru₅-uš zu₂ mu-un-da-zalag-zalag\nam dab₅-ba-gin₇ samanₓ(EŠ₂.SUD₄.EŠ₂.NUN.EŠ₂.TU) mu-ni-in-šub\nur-saĝ dab₅-ba-gin₇ aškud₂ mu-ni-in-la₂",
+     "orig_lines": [
+      "130",
+      "131",
+      "132",
+      "133",
+      "134"
+     ],
+     "en": "When Ḫuwawa had finally handed over to him his seventh aura, Gilgameš found himself beside Ḫuwawa. He punched him on the ear with his fist. Ḫuwawa furrowed his brows at him, baring his teeth at him. Gilgameš threw a halter over him, as over a captured wild bull. He tied him up by the elbows like a captured warrior."
+    },
+    {
+     "ref": "135–136",
+     "orig": "ur-saĝ-e er₂ im-ma-an-pad₃ šeₓ(SIG₇)-šeₓ(SIG₇) i₃-ĝa₂-ĝa₂\nḫu-wa-wa er₂ im-ma-an-pad₃ šeₓ(SIG₇)-šeₓ(SIG₇) i₃-ĝa₂-ĝa₂",
+     "orig_lines": [
+      "135",
+      "136"
+     ],
+     "en": "The warrior began to weep, shedding tears. Ḫuwawa began to weep, shedding tears."
+    },
+    {
+     "ref": "137–141",
+     "orig": "ur-saĝ-e lul mu-e-sig₁₀ šu si mu-e-sa₂ nam-erim₂ mu-e-kud\nzi ama [ugu-zu] {d}nin-sumun₂-ka a-a-zu kug {d}lugal-ban₃-da\ndiĝir-[zu {d}en-ki en] [{d}nu]-/dim₂\\-mud KA-za mu-e-ni-e₃\n[am dab₅-ba-gin₇] saman₂ mu-ni-šub\n[ur-saĝ dab₅-ba-gin₇] aškud₂ ba-ni-[la₂-la₂]",
+     "orig_lines": [
+      "137",
+      "138",
+      "139",
+      "140",
+      "141"
+     ],
+     "en": "\"Warrior, you lied! You have manhandled me; yet you had sworn an oath, by the life of your own mother Ninsumun and of your father, holy Lugalbanda. Your personal god Enki, Lord Nudimmud ……! And now you have thrown a halter over me as if over a captured wild bull, and have tied me up by the elbows like a captured warrior!\""
+    },
+    {
+     "ref": "142–147",
+     "orig": "[X X] [{d}]/gilgameš₂\\ dumu-gir₁₅-ra šag₄-ga-ni arḫuš /ba\\-[...]\n/arad-da-na\\ /en\\-ki-du₁₀-ra gu₃ mu-un-na-de₂-/e\\\nĝa₂-nam-ma ur-saĝ-ra šu ga-am₃-bar-re-en-de₃-en\nlu₂ zu-me ḫe₂-a dur₂ kaskal-la igi me-eb-du₈-de₃-a lu₂ zu-me ḫe₂-a\n[...]-X-ba-ĝu₁₀ ḫe₂-a kilib₃-ĝu₁₀ ḫe₂-em-mi-il₂-/le\\\n[...] X [...] X (X)",
+     "orig_lines": [
+      "142",
+      "143",
+      "144",
+      "145",
+      "146",
+      "147"
+     ],
+     "en": "…… Gilgameš's noble heart took pity on him. He addressed his slave Enkidu: \"Come on, let us set the warrior free! He could be our guide! He could be our guide who would spy out the pitfalls of the route for us! He could be my ……! He could carry all my things! 1 line fragmentary\""
+    },
+    {
+     "ref": "148–162",
+     "orig": "{arad-da-a-ni en-ki-du₁₀-e} {(1 ms. ḫas instead:) [...] [{d}]/gilgameš₂\\-e} mu-un-na-ni-ib-gi₄-gi₄\n[X X] dim₂-ma nu-tuku\n[...] X nu-tuku\n[...] nu-tuku\nur-saĝ dab₅-ba šu bar-ra-am₃\nen dab₅-ba ĝi₆-par₄-še₃ gur-ra-am₃\ngudug dab₅-ba ḫi-li-še₃ gur-ra-am₃\nud ul-le₂-a-ta a-ba-a igi im-mi-in-du₈\nkaskal kur-ra mu-e-de₃-eb-X LA X E\nĝiri₃ kur-ra mu-e-de₃-eb-suḫ₃-suḫ₃-e\n[iri] ama /u₃\\-tud-da [nu]-/ub\\-ši{!}-[X-(X)]-de₃-en-de₃-en",
+     "orig_lines": [
+      "148",
+      "149",
+      "150",
+      "151",
+      "152",
+      "153",
+      "154",
+      "155",
+      "156",
+      "157",
+      "158"
+     ],
+     "en": "{His slave Enkidu replied to him} {(1 ms. has instead:) …… replied to Gilgameš}: \"…… so lacking in understanding! …… with no ……! …… with not ……! A captured warrior set free! A captured high priestess returned to the ĝipar! A captured gudug priest restored to his wig of hair! Who has ever, ever seen such a thing? He would be able to …… the mountain routes. He would be able to mix up the mountain paths. Then we would never get back to the mother-city that bore us! 4 lines missing\""
+    },
+    {
+     "ref": "163–166",
+     "orig": "[ḫu-wa-wa ...]-ra [mu]-/un\\-na-ni-/ib\\-[gi₄]-/gi₄\\\nama tud-da-ĝu₁₀ ḫur-ru-um kur-ra\na-a tud-da-ĝu₁₀ ḫur-ru-um ḫur-saĝ-ĝa₂\n{d}utu dili-ĝu₁₀-ne kur-ra mu-un-de₃-en-tuš-en",
+     "orig_lines": [
+      "163",
+      "164",
+      "165",
+      "166"
+     ],
+     "en": "Ḫuwawa replied to him: \"The mother who bore me was a cave in the mountains. The father who engendered me was a cave in the hills. Utu left me to live all alone in the mountains!\""
+    },
+    {
+     "ref": "167–168",
+     "orig": "{d}gilgameš₂ ḫu-wa-wa-ra gu₃ mu-un-na-de₂-e\n[ĝa₂]-/nam\\-ma [X (X)] ĜA₂ [...] X",
+     "orig_lines": [
+      "167",
+      "168"
+     ],
+     "en": "Gilgameš addressed Ḫuwawa: \"Come on, …….\" unknown no. of lines missing"
+    }
+   ]
+  }
+ ]
+}

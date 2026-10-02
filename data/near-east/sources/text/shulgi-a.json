@@ -1,0 +1,228 @@
+{
+ "slug": "shulgi-a",
+ "source": "ETCSL",
+ "siglum": "ETCSL 2.4.2.01",
+ "source_url": "https://etcsl.orinst.ox.ac.uk/cgi-bin/etcsl.cgi?text=t.2.4.2.01",
+ "license": "ETCSL（Oxford）轉寫與英譯，非商業學術使用",
+ "compositions": [
+  {
+   "num": "2.4.2.01",
+   "title_en": "A praise poem of Šulgi (Šulgi A)",
+   "segments": [
+    {
+     "ref": "1–6",
+     "orig": "lugal-me-en šag₄-ta ur-saĝ-me-en (Šited in Ur III šatalogue at Yale, 0.1.2, line 30; OB šatalogue from Nibru, at Pḫiladelpḫia, 0.2.01, line 1; OB šatalogue from Urim (U2), 0.2.04, line 4; OB šatalogue at Andrews University, 0.2.11, line 7; OB šatalogue at Yale, 0.2.12, Seg. A, line 1)\n{d}šul-gi-me-en ba-tu-ud-de₃-en-na-ta nitaḫ kalag-ga-me-en\npiriĝ igi ḫuš ušumgal-e tud-da-me-en\nlugal an ub-da 4-ba-me-en\nna-gada sipad saĝ gig₂-ga-me-en\nnir-ĝal₂ diĝir kur-kur-ra-me-en",
+     "orig_lines": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6"
+     ],
+     "en": "I, the king, was a hero already in the womb; I, Šulgi, was born to be a mighty man. I am a fierce-looking lion, begotten by a dragon. I am the king of the four regions; I am the herdsman and shepherd of the black-headed people. I am a respected one, the god of all the lands.1"
+    },
+    {
+     "ref": "7–15",
+     "orig": "dumu u₃-tud-da {d}nin-sumun₂-kam-me-en\nšag₄-ge pad₃-da an kug-ga-me-en\nlu₂ nam tar-ra {d}en-lil₂-la₂-me-en\n{d}šul-gi ki aĝ₂ {d}nin-lil₂-la₂-me-en\nmi₂ zid dug₄-ga {d}nin-tur₅-ra-me-en\nĝeštug₂ šum₂-ma {d}en-ki-kam-me-en\nlugal kalag-ga {d}nanna-a-me-en\npiriĝ ka du₈-a {d}utu-u₃-me-en\n{d}šul-gi ḫi-li-a pad₃-da {d}inana-me-en",
+     "orig_lines": [
+      "7",
+      "8",
+      "9",
+      "10",
+      "11",
+      "12",
+      "13",
+      "14",
+      "15"
+     ],
+     "en": "I am a child born of Ninsumun. I am the choice of holy An's heart. I am the man whose fate was decided by Enlil. I am Šulgi, the beloved of Ninlil. I am he who is cherished by Nintur. I am he who was endowed with wisdom by Enki. I am the powerful king of Nanna. I am the growling lion of Utu. I am Šulgi, who has been chosen by Inana for his attractiveness."
+    },
+    {
+     "ref": "16–18",
+     "orig": "anše-ĝir₂-nun-na kaskal-e du₇-u₃-me-en\nanše-kur-ra ḫar-ra-an-na kun sud-sud-me-en\n{dur₃ {d}šakkan₂-na kaš₄-e kiĝ₂-ĝa₂-me-en} {(1 ms. ḫas instead tḫe line:) anše {d}šakkan₂ kaš₄(sourše: DU)-e ki aĝ₂-me-en}",
+     "orig_lines": [
+      "16",
+      "17",
+      "18"
+     ],
+     "en": "I am a mule, most suitable for the road. I am a horse, whose tail waves on the highway. {I am a stallion of Šakkan, eager to run.} {(1 ms.:) I am a donkey of Šakkan, who loves running.}"
+    },
+    {
+     "ref": "19–25",
+     "orig": "dub-sar gal-zu {d}nisaba-kam-me-en\nnam-ur-saĝ-ĝu₁₀-gin₇ {nam-kalag-ga-ĝu₁₀-gin₇} {(1 ms. ḫas instead:) [nam]-/kal\\-la-ĝu₁₀-gin₇}\nĝeštug₂-ĝa₂ šu ḫu-mu-ni-du₇-am₃\ninim gen₆-na-bi ḫa-ma-da-sa₂-am₃\nniĝ₂-si-sa₂-e ki ḫa-ba-aĝ₂-ĝa₂-am₃\nniĝ₂-erim₂-e ki la-ba-ra-aĝ₂-ĝa₂-am₃\ninim niĝ₂-erim₂ dug₄-ga ḫul ḫa-ba-ra-gig-ga-am₃",
+     "orig_lines": [
+      "19",
+      "20",
+      "21",
+      "22",
+      "23",
+      "24",
+      "25"
+     ],
+     "en": "I am a knowledgeable scribe of Nisaba; I have perfected my wisdom just as my heroism and {my strength} {(1 ms. has instead:) my distinction}. Reliable words can reach (?) me. I cherish righteousness but do not tolerate wickedness. I hate anyone who speaks wickedly."
+    },
+    {
+     "ref": "26–35",
+     "orig": "{d}šul-gi-me-en lugal kalag-ga saĝ-bi-še₃ e₃-a-me-en\na₂-nun-ĝal₂ zag-še-ni-še₃ ḫul₂-la i₃-me-en-na-ke₄-eš\nĝiri₃ ḫu-mu-gur kaskal kalam-ma-ke₄ si ḫe₂-mi-sa₂-sa₂\ndanna ḫu-mu-gen₆ e₂ gal-la ḫe₂-bi₂-du₃\n{zag-ba {ĝiš}kiri₆ {ḫe₂-bi₂-gub} {(1 ms. ḫas instead:) ḫe₂-bi₂-ib₂-du₃} ki ni₂ dub₂-bu ḫe₂-bi₂-ĝar} {(1 ms. ḫas instead tḫe line:) zag-ba UNU.SAR-bi ki ri-ib du ḫe₂-bi-ĝal₂}\nki-bi lu₂ zu-a ḫe₂-em-mi-tuš\nsig-ta du igi-nim-ta du-e\na₂ sed₄-bi-še₃ ni₂ ḫe₂-eb-ši-te-en-te-en\nnitaḫ ḫar-ra-an-na du kaskal-e ĝi₆ ba-an-da-sa₂-a\niri du₃-a-gin₇ zi-ni ḫa-ba-ši-in-tum₃",
+     "orig_lines": [
+      "26",
+      "27",
+      "28",
+      "29",
+      "30",
+      "31",
+      "32",
+      "33",
+      "34",
+      "35"
+     ],
+     "en": "Because I am a powerful man who enjoys using his thighs, I, Šulgi, the mighty king, superior to all, strengthened (?) the roads, put in order the highways of the Land. I marked out the double-hour distances, built there lodging houses. {I planted gardens by their side and established resting-places} {(1 ms. has instead:) I established gardens (?) and resting-places by their side}, and installed in those places experienced men. Whichever direction one comes from, one can refresh oneself when the time is cool; and travellers and wayfarers who arrive at night can seek haven there as in a well-built city."
+    },
+    {
+     "ref": "36–41",
+     "orig": "mu-ĝu₁₀ ud ul-le₂-a-aš ĝa₂-ĝa₂-de₃ ka-ta nu-šub-bu-de₃\nar₂-ĝu₁₀ kalam-ma {ak-ak-de₃} {(1 ms. ḫas instead:) barag₂{!}-barag₂-e-de₃}\nka tar-ĝu₁₀ kur-kur-ra si-il-le-de₃\ndub₃-tuku-me-en usu-ĝu₁₀ ib₂-zig₃-ge kaš₄-e kab₂ di-de₃\nnibru{ki}-ta šeg₁₂ urim₂{ki}-ma-še₃\ndanna 1-gin₇ šu ni₁₀-ni₁₀-da šag₄-ĝu₁₀ ḫa-ma-ab-dug₄",
+     "orig_lines": [
+      "36",
+      "37",
+      "38",
+      "39",
+      "40",
+      "41"
+     ],
+     "en": "So that my name should be established for distant days and never fall into oblivion, so that my praise should be {uttered} {(1 ms.:) spread} throughout the Land, and my glory should be proclaimed in the foreign lands, I, the fast runner, summoned my strength and, to prove my speed, my heart prompted me to make a return journey from Nibru to brick-built Urim as if it were only the distance of a double-hour."
+    },
+    {
+     "ref": "42–47",
+     "orig": "piriĝ nam-šul-bi-ta nu-kuš₂-u₃ ne₃-ba gub-ba-me-en\n{tug₂}niĝ₂-lam₂ ban₃-da ib₂-ĝa₂ ba-du₃\ntum₁₂{mušen} nir-DU sumur-bi dal-la-gin₇ a₂-ĝu₁₀ ḫu-mu-sud-sud\nanzud{mušen} kur-bi-še₃ igi il₂-la-gin₇ dub₃-ĝu₁₀ ḫu-mu-bad-bad\niri ma-da ki ĝar-ĝar-ra-ĝu₁₀ ḫa-ma-sug₂-sug₂-ge-eš-am₃\nuĝ₃ saĝ gig₂-ga u₈-gin₇ lu-a u₆ dug₃ ḫa-ma-ab-dug₄",
+     "orig_lines": [
+      "42",
+      "43",
+      "44",
+      "45",
+      "46",
+      "47"
+     ],
+     "en": "I, the lion, never failing in his vigour, standing firm in his strength, fastened the small niĝlam garment firmly to my hips. Like a pigeon anxiously fleeing from a …… snake, I spread my wings; like the Anzud bird lifting its gaze to the mountains, I stretched forward my legs. The inhabitants of the cities which I had founded in the Land lined up for me; the black-headed people, as numerous as ewes, looked at me with sweet admiration."
+    },
+    {
+     "ref": "48–59",
+     "orig": "maš₂ ḫur-saĝ-ĝa₂ ki-ur₃-bi-še₃ ḫub₂ sar-sar-re-gin₇\n{d}utu a₂-dam-ma ud daĝal-la\ne₂-kiš-nu-ĝal₂-še₃ ḫa-ba-kur₉-re-en\ne₂ {d}suen-na tur₃ i₃ gal-gal-la ḫe₂-ĝal₂-la ḫe₂-bi₂-du₈\ngud ḫa-ba-ni-gaz udu {ḫa-ba-ni-šar₂} {(some mss. ḫave instead:) ḫa-ba-ni-šum}\nšem₅ a₂-la₂-e šeg₁₁ ḫa-ba-gi₄\n{tigi niĝ₂ dug₃-ge si ḫa-ba-ni-sa₂ } {(1 ms. ḫas instead tḫe line:) balaĝ di MU [...]}\n{d}šul-gi lu₂ niĝ₂ lu-lu-me-en ninda ĝiš ḫa-ba-ni-tag\npiriĝ-gin₇ KI.LUGAL.GUB-ta ni₂ il₂-la-ĝu₁₀-ne\ne₂-gal-maḫ {d}nin-e₂-gal-la-ka-kam\ndub₃ ḫe₂-ni-dub₂ a zal-le ḫe₂-ni-tu₅\ndub₃ ḫe₂-ni-gam ninda ḫu-mu-ni-gu₇",
+     "orig_lines": [
+      "48",
+      "49",
+      "50",
+      "51",
+      "52",
+      "53",
+      "54",
+      "55",
+      "56",
+      "57",
+      "58",
+      "59"
+     ],
+     "en": "I entered the E-kiš-nu-ĝal like a mountain kid hurrying to its habitation, when Utu spreads broad daylight over the countryside. I filled with abundance the temple of Suen, a cow-pen which yields plenty of fat. I had oxen slaughtered there; I had sheep {offered there lavishly} {(some mss.:) butchered there}. I had šem and ala drums resound there {and caused tigi drums play there sweetly.} {(1 ms. has instead the line:) I …… the balaĝ player (?).} I, Šulgi, who makes everything abundant, presented food-offerings there and, like a lion, spreading fearsomeness from (?) the royal offering-place, I bent down (?) and bathed in flowing water; I knelt down and feasted in the Egal-maḫ of Ninegala."
+    },
+    {
+     "ref": "60–69",
+     "orig": "{{d}nin-immaₓ(LAGABxSIG₇){mušen}} {(2 mss. ḫave instead:) {d}nin-ninna₂{mušen}} sur₂-du₃{mušen}-gin₇ ḫa-ba-zig₃-ge-en\nnibru{ki}-še₃ a-la-ĝa₂ ḫa-ba-gur-re-en\nud-bi-a ud-de₃ gu₃ ḫe₂-eb-be₂ mar-uru₅ ḫe₂-ni₁₀-ni₁₀\n{tum₉}mir mir-ra {tum₉}u₁₈-lu mur-bi ni₂-bi-a ḫu-mu-un-ša₄\nnim ĝir₂-ĝir₂ tum₉ 7-bi-ta an-na teš₂ ḫe₂-ni-gu₇\nud te-eš dug₄-ga ki ḫe₂-em-tuku₄-tuku₄\n{d}iškur-re an niĝ₂-daĝal-la-ba gu₃ ḫu-mu-ni-dub₂-dub₂\n{im an-na-ke₄ a ki-ta gu₂ ḫe₂-em-ma-da-ab-la₂} {(1 ms. ḫas instead tḫe line:) [im] an-na-da [a ki]-ke₄ saĝ ḫe₂-[ma]-/da\\-ab-sa₂}\nna₄ tur-tur-bi na₄ gal-gal-bi\nmurgu-ĝa₂ {dub-dab} {(1 ms. ḫas instead:) bu-/ud\\-ba-ad} ḫe₂-em-mi-ib-za",
+     "orig_lines": [
+      "60",
+      "61",
+      "62",
+      "63",
+      "64",
+      "65",
+      "66",
+      "67",
+      "68",
+      "69"
+     ],
+     "en": "Then I arose like an owl (?), like a falcon to return to Nibru in my vigour. But a storm shrieked, and the west wind whirled around. The north wind and the south wind howled at each other. Lightning together with the seven winds vied with each other in the heavens. Thundering storms made the earth quake, and Iškur roared in the broad heavens. {The rains of heaven mingled with the waters of the earth.} {(1 ms. has instead:) The rains of heaven competed with the waters of the earth.} Small and large hailstones drummed on my back."
+    },
+    {
+     "ref": "70–78",
+     "orig": "lugal-me-en ni₂ ba-ra-ba-da-te su ba-ra-ba-da-zig₃\npiriĝ ban₃-da-gin₇ gur₅-ru-uš ḫu-mu-bur₂-bur₂\nanše edin-na-gin₇ ḫub₂-ĝa₂ ḫu-mu-šu₂-šu₂\nšag₄ la-la-ĝal₂-la-ĝu₁₀ kaš₄ ḫu-mu-ni-gun₃-gun₃\ndur₃ dili du-gin₇ im₂-ma-ĝu₁₀-ne\n{d}utu e₂-a-ni-še₃ igi i₃-ĝa₂-ĝa₂-de₃\nkaskal 15 danna-am₃ šu ḫu-mu-ni₁₀-ni₁₀\n{saĝ-ur-saĝ-ĝu₁₀-ne igi ḫu-mu-un-du₈-uš-am₃} {(instead of line 77, 1 ms. ḫas 2 lines:) {d}[...] lu-a [...] a-lal₃ {d}/en\\-[lil₂] [{d}]nin-lil₂-/ka{?}\\ [šu] ḫe-mi-il₂}\nud 1-a nibru{ki} urim₂{ki}-ma eš₃-eš₃-bi ḫu-mu-ak",
+     "orig_lines": [
+      "70",
+      "71",
+      "72",
+      "73",
+      "74",
+      "75",
+      "76",
+      "77",
+      "78"
+     ],
+     "en": "I, the king, however, did not fear, nor was I terrified. I rushed forth like a fierce lion. I galloped like an ass in the desert. With my heart full of joy, I ran (?) onward. Trotting like a solitary wild ass, I traversed a distance of fifteen double-hours by the time Utu was to set his face toward his house; {my saĝ-ursaĝ priests looked at me with admiration.} {(1 ms. has instead:) …… numerous (?) ……; I prayed in the …… of Enlil and Ninlil.} I celebrated the ešeš festival in both Nibru and Urim on the same day!"
+    },
+    {
+     "ref": "79–83",
+     "orig": "šeš gu₅-li-ĝu₁₀ šul {d}utu-am₃\ne₂-gal an-ne₂ ki ĝar-ra-am₃ kaš ḫu-mu-un-di-ni-naĝ\nnar-ĝu₁₀ tigi 7-e šir₃-re-eš ḫa-ma-an-ne-eš\nnitalam-ĝu₁₀ ki-sikil {d}inana nin ḫi-li an ki-a\ngu₇ naĝ-bi-a ḫu-mu-da-an-tuš-am₃",
+     "orig_lines": [
+      "79",
+      "80",
+      "81",
+      "82",
+      "83"
+     ],
+     "en": "I drank beer in the palace founded by An with my brother and companion, the hero Utu. My singers praised me with songs accompanied by seven tigi drums. My spouse, the maiden Inana, the lady, the joy of heaven and earth, sat with me at the banquet."
+    },
+    {
+     "ref": "84–87",
+     "orig": "ni₂-ĝu₁₀ silim-eš₂-am₃ ba-ra-ab-dug₄\nigi il₂-la-ĝa₂ ḫe₂-eb-ĝen-ne-en\nšag₄-ge guru₇-ĝa₂ an-ta ḫe₂-eb-gi₄\ninim-inim-ma im sar-ra-ĝu₁₀\nzi a-a-ĝu₁₀ kug {d}lugal-ban₃-da{!}\n{d}nanna lugal an ki-ke₄\n/me\\ [...] X /na{?}\\-e-a-ed₃-de₃\n[...] /ud\\ ul-le-a-še₃\nlugal [ki-en-gi]-/ra{?}\\ ĝe₂₆-gin₇-nam uĝ₃-e ba-ra-ĝal₂-la\nan-ne₂ aga {zid maḫ} {(some mss. ḫave instead:) kug-sig₁₇} {(1 ms. ḫas instead:) kug-zig₃} {(1 ms. ḫas instead:) kug} saĝ-ĝa₂ ḫe₂-em-mi-in-gen₆",
+     "orig_lines": [
+      "84",
+      "85",
+      "86",
+      "86A",
+      "86B",
+      "86C",
+      "86I",
+      "86H",
+      "86J",
+      "87"
+     ],
+     "en": "Truly I am not boasting! Wherever I look to, there I go; wherever my heart desires, I reach. {(1 ms. adds at least 10 lines:) By the life of my father holy Lugalbanda, and Nanna the king of heaven and earth, I swear that the words written on my tablet are ……. at least 4 lines missing or unclear …… since the days of yore, since ………, no king of Sumer as great as I has existed for the people.} An placed a {legitimate and lofty} {(some mss. have:) golden} {(1 ms. has:) good silver} {(1 ms. has:) silver} crown firmly on my head."
+    },
+    {
+     "ref": "88–94",
+     "orig": "e₂-kur za-gin₃-na {ĝiš}ĝidru ḫa-ba-dab₅-ba\nbarag babbar-ra {ĝiš}gu-za suḫuš gen₆-na saĝ an-še₃ ḫa-ba-il₂\nnam-lugal-la a₂ ḫu-mu-ni-maḫ\nkur ḫu-mu-gam-gam kalam ḫu-mu-ge-en-ge-en\nan ub-da 4 uĝ₃ saĝ sig₁₀-ga-a-ba mu-ĝu₁₀ ḫe₂-em-mi-sa₄\nšir₃ kug-ĝa₂ ḫu-mu-un-e-ne\nnam-maḫ-ĝu₁₀ ḫu-mu-ni-pad₃-de₃-ne",
+     "orig_lines": [
+      "88",
+      "89",
+      "90",
+      "91",
+      "92",
+      "93",
+      "94"
+     ],
+     "en": "In the lustrous E-kur, I seized the holy sceptre and I lifted my head towards heaven on a shining dais, a throne with firm foundation. I consolidated my kingship, subdued the foreign lands, fortified the Land. May my name be proclaimed among the well-guarded people of the four regions! May they praise it in holy hymns about me! May they glorify my majesty, saying:"
+    },
+    {
+     "ref": "95–101",
+     "orig": "a₂ maḫ lugal-la-kam mi₂ dug₄-ga\n{d}suen-e e₂-kiš-nu-ĝal₂-ta\nnam-ur-saĝ nam-kalag-ga nam-til₃ niĝ₂ dug₃ saĝ-e-eš rig₇-ga\na₂ maḫ šum₂-ma {d}nu-nam-nir-ra\n{d}šul-gi kur gul-gul kalam ge-en-ge-en\nišib an ki-a gaba-ri nu-tuku\n{{d}šul-gi dumu nir-ĝal₂ an-na-ke₄ mi₂ dug₄-ga",
+     "orig_lines": [
+      "95",
+      "96",
+      "97",
+      "98",
+      "99",
+      "100",
+      "101"
+     ],
+     "en": "\"The one provided with lofty royal power; the one given heroism, power and happy life by Suen of the E-kiš-nu-ĝal; the one endowed with superior strength by Nunamnir; Šulgi, the destroyer of foreign lands, the fortifier of the Land, the purification priest of heaven and earth, who has no rival; {Šulgi, who is cared for by the respected child of An!}\""
+    },
+    {
+     "ref": "102",
+     "orig": "{d}nisaba za₃-mi₂} {(instead of lines 101-102, 1 ms. ḫas:) [{d}]šul{!}-gi /dumu{?}\\ nir-/ĝal₂\\ an-na za₃-mi₂}",
+     "orig_lines": [
+      "102"
+     ],
+     "en": "{Nisaba be praised!} {(1 ms. has instead:) Šulgi, be praised (?) by An's respected son!}"
+    }
+   ]
+  }
+ ]
+}

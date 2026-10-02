@@ -1,0 +1,237 @@
+{
+ "slug": "gilgamesh-aga",
+ "source": "ETCSL",
+ "siglum": "ETCSL 1.8.1.1",
+ "source_url": "https://etcsl.orinst.ox.ac.uk/cgi-bin/etcsl.cgi?text=t.1.8.1.1",
+ "license": "ETCSL（Oxford）轉寫與英譯，非商業學術使用",
+ "compositions": [
+  {
+   "num": "1.8.1.1",
+   "title_en": "Gilgameš and Aga",
+   "segments": [
+    {
+     "ref": "1–8",
+     "orig": "lu₂-kiĝ₂-gi₄-a ag-ga dumu en-me-barag-ge₄-si-ke₄ (Šited in OB šatalogue from Nibru, at Pḫiladelpḫia, 0.2.01, line 12; OB šatalogue from Urim (U2), 0.2.04, line 12)\nkiš{ki}-ta {d}gilgameš₂ unug{ki}-še₃ mu-un-ši-re₇-eš\n{d}gilgameš₂ igi ab-ba iri{ki}-na-še₃\ninim ba-an-ĝar inim i₃-kiĝ₂-kiĝ₂-e\ntul₂ til-le-da tul₂ kalam til-til-le-da\ntul₂ niĝ₂ ban₃-da kalam til-til-le-da\ntul₂ buru₃-da eš₂ la₂ til-til-le-da\ne₂ kiš{ki}-še₃ gu₂ nam-ba-an-ĝa₂-ĝa₂-an-de₃-en {ĝiš}tukul {nam-ba-an-sag₃-ge-en-de₃-en} {(2 mss. ḫave instead:) ga-am₃-ma-sag₃-ge-en-de₃-en}",
+     "orig_lines": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8"
+     ],
+     "en": "Envoys of Aga, the son of En-me-barage-si, came from Kiš to Gilgameš in Unug. Gilgameš presented the issue before the elders of his city, carefully choosing his words: \"There are wells to be finished, many wells of the Land yet to be finished; there are shallow wells of the Land yet to be finished, there are wells to deepen and hoisting gear to be completed. We should not submit to the house of Kiš! {Should we not smite it with weapons?} {(2 mss. have instead:) Let us smite it with weapons!}\""
+    },
+    {
+     "ref": "9–14",
+     "orig": "unken ĝar-ra ab-ba iri-na-ka\n{d}gilgameš₂ mu-na-ni-ib-gi₄-gi₄\ntul₂ til-le-da tul₂ kalam til-til-le-da\ntul₂ niĝ₂ ban₃-da kalam til-til-le-da\ntul₂ buru₃-da eš₂ la₂ til-til-le-da\ne₂ kiš{ki}-še₃ {gu₂ ga-am₃-ĝa₂-ĝa₂-an-de₃-en {ĝiš}tukul nam-ba-sag₃-ge-en-de₃-en} {(1 ms. ḫas instead:) gu₂ nam-ba-ĝa₂-ĝa₂-an-de₃-en [{ĝiš}tukul] ga-am₃-ma-sag₃-ge-en-de₃-en}",
+     "orig_lines": [
+      "9",
+      "10",
+      "11",
+      "12",
+      "13",
+      "14"
+     ],
+     "en": "In the convened assembly, his city's elders answered Gilgameš: \"There are indeed wells to be finished, many wells of the Land yet to be finished; there are shallow wells of the Land yet to be finished, there are wells to deepen and hoisting gear to be completed. {So we should submit to the house of Kiš. We should not smite it with weapons!} {(1 ms. has instead:) So should we not submit to the house of Kiš? Should we smite it with weapons?}\""
+    },
+    {
+     "ref": "15–23",
+     "orig": "{d}gilgameš₂ en kul-aba₄{ki}-a-ke₄\n{d}inana-ra nir-ĝal₂-la-e\ninim ab-ba iri-na-ke₄ šag₄-še₃ nu-mu-na-gid₂\n2-kam-ma-še₃ {d}gilgameš₂ {(1 ms. adds:) en kul-aba{ki}-a-ke₄} igi ĝuruš iri{ki}-na-še₃\ninim ba-an-ĝar inim i₃-kiĝ₂-kiĝ₂-e\ntul₂ til-le-da tul₂ kalam til-til-le-da\ntul₂ niĝ₂ ban₃-da kalam til-til-le-da\ntul₂ buru₃-da eš₂ la₂ til-til-le-da\ne₂ kiš{ki}-še₃ {gu₂ nam-ba-an-ĝar-re-en-ze₂-en {ĝiš}tukul nam-ba-an-sag₃-ge-en-ze₂-en} {(1 ms. ḫas instead:) gu₂ /nam-ba-ĝa₂-ĝa₂-an-de₃\\-[en] /{ĝiš}\\tukul ga-am₃-ma-sag₃-/ge-en-de₃-en\\}",
+     "orig_lines": [
+      "15",
+      "16",
+      "17",
+      "18",
+      "19",
+      "20",
+      "21",
+      "22",
+      "23"
+     ],
+     "en": "Gilgameš, the lord of Kulaba, placing his trust in Inana, did not take seriously the advice of his city's elders. Gilgameš {(1 ms. adds:) , the lord of Kulaba,} presented the issue again, this time before the able-bodied men of his city, carefully choosing his words: \"There are wells to be finished, many wells of the Land yet to be finished; there are shallow wells of the Land yet to be finished, there are wells to deepen and hoisting gear to be completed. {Never before have you submitted to the house of Kiš. Should you not smite it with weapons?} {(1 ms. has instead:) We should not submit to the house of Kiš. We should smite it with weapons!}\""
+    },
+    {
+     "ref": "24–29",
+     "orig": "unken ĝar-ra ĝuruš iri{ki}-na-ka {d}gilgameš₂ mu-na-ni-ib-gi₄-gi₄\ngub-gub-bu-de₃ tuš-tuš-u₃-de₃\ndumu lugal-la da ri-e-de₃\nzib₂ anše dab₅-dab₅-be₂-e-de₃\na-ba zi-bi mu-un-tuku-e-še\ne₂ kiš{ki}-še₃ gu₂ nam-ba-an-ĝar-re-en-ze₂-en {ĝiš}tukul nam-ba-an-sag₃-ge-en-de₃-en",
+     "orig_lines": [
+      "24",
+      "25",
+      "26",
+      "27",
+      "28",
+      "29"
+     ],
+     "en": "In the convened assembly, his city's able-bodied men answered Gilgameš: \" \"Standing on duty and sitting in attendance, escorting the king's son, and forever grasping the donkey's reins -- who has that much breath?\", as the saying goes. You old men should not submit to the house of Kiš! Should we young men not smite it with weapons?\""
+    },
+    {
+     "ref": "30–39",
+     "orig": "unug{ki} ĝiš-kiĝ₂-ti diĝir-re-e-ne-ke₄\ne₂-an-na e₂ an-ta ed₃-de₃\ndiĝir gal-gal-e-ne me-dim₂-bi ba-an-ak-eš-am₃\nbad₃ gal {bad₃ an-ne₂ ki us₂-sa} {(1 ms. ḫas instead:) muru₉ ki us₂-sa-a-ba}\nki-tuš maḫ an-ne₂ {ĝar-ra-ni} {(1 ms. ḫas instead:) ĝar-ra-a-ba}\nsaĝ mu-e-sig₁₀ za-e lugal ur-saĝ-bi\nsaĝ lum-lum nun an-ne₂ ki aĝ₂\ndu-a-ni-ta a-gin₇ ni₂ ba-an-te\nerin₂-bi al-tur a-ga-bi-ta al-bir-re\nlu₂-be₂-ne igi nu-mu-un-da-ru-gu₂-uš",
+     "orig_lines": [
+      "30",
+      "31",
+      "32",
+      "33",
+      "34",
+      "35",
+      "36",
+      "37",
+      "38",
+      "39"
+     ],
+     "en": "\"The great gods created the structure of Unug, the handiwork of the gods, and of E-ana, the house lowered down from heaven. You watch over {the great rampart, the rampart which An founded} {(1 ms. has instead:) its great rampart, a cloudbank resting on the earth}, the majestic residence which An established. You are its king and warrior, an exuberant person, a prince beloved of An. When Aga comes, what terror he will experience! That army is small, and scattered at the rear. Its men will be incapable of confronting us.\""
+    },
+    {
+     "ref": "40–47",
+     "orig": "ud-bi-a {d}gilgameš₂ en kul-aba₄{ki}-ke₄\ninim ĝuruš iri-na-še₃ šag₄-ga-ni an-ḫul₂ ur₅-ra-ni ba-an-zalag\nšubur-a-ni en-ki-du₁₀-ra gu₃ mu-na-de₂-e\nne-eš₂ {ĝiš}šu-kar₂ a₂ me₃ sa ḫe₂-em-mi-gi₄\n{ĝiš}tukul me₃ a₂-zu-še₃ ḫe₂-em-mi-gi₄\nni₂ gal me-lem₄-ma ḫe₂-em-dim₂-dim₂-e\ne-ne du-a-ni-ta ni₂ gal-ĝu₁₀ ḫe₂-eb-šu₂\ndim₂-ma-ni ḫe₂-suḫ₃ ĝalga-a-ni ḫe₂-bir-re",
+     "orig_lines": [
+      "40",
+      "41",
+      "42",
+      "43",
+      "44",
+      "45",
+      "46",
+      "47"
+     ],
+     "en": "Then Gilgameš, the lord of Kulaba, rejoiced at the advice of his city's able-bodied men and his spirit brightened. He addressed his servant Enkidu: \"On this account let the weaponry and arms of battle be made ready. Let the battle mace return to your side. May they create a great terror and radiance. When he comes, my great fearsomeness will overwhelm him. His reasoning will become confused and his judgment disarrayed.\""
+    },
+    {
+     "ref": "48–54",
+     "orig": "ud nu-5-am₃ ud nu-10-am₃\nag-ga dumu en-me-barag-ge₄-si-ke₄ unug{ki} zag-ga ba-an-dab₅-be₂-eš\nunug{ki}-ga dim₂-ma-bi ba-an-suḫ₃\n{d}gilgameš₂ en kul-aba{ki}-ke₄\nur-saĝ-be₂-ne-er gu₃ mu-ne-de₂-e\nur-saĝ-ĝu₁₀-ne igi {mu-un-suḫ-suḫ-u₃-ne} {(2 mss. ḫave instead:) saĝ₅-saĝ₅-en-ze₂-en}\nšag₄ tuku ḫe₂-en-zi-zi-i ag-ga-še₃ {ga-an-ši-ĝen} {(1 ms. ḫas instead:) ga-an-gi₄}",
+     "orig_lines": [
+      "48",
+      "49",
+      "50",
+      "51",
+      "52",
+      "53",
+      "54"
+     ],
+     "en": "Not five, not 10 days had passed when Aga, the son of En-me-barage-si, laid siege to Unug with his men. Unug's reasoning became confused. Gilgameš, the lord of Kulaba, addressed its warriors: \" {My warriors shall have the choice.} {(2 mss. have instead:) My warriors, choose!} Let someone with courage volunteer {\"I shall go to Aga\"} {(1 ms. has instead:) , and I will send him to Aga}.\""
+    },
+    {
+     "ref": "55–58",
+     "orig": "BIR-ḪAR-tur-ra lu₂-saĝ-lugal-a-ni\nlugal-a-ni-ir za₃-mi₂ mu-un-na-ab-be₂\n{(2 mss. add:) lugal-ĝu₁₀} ĝe₂₆-e ag-ga-še₃ {ga-an-ši-ĝen} {(1 ms. ḫas instead:) /ga\\-na-gud-gu₄-ud}\ndim₂-ma-ni ḫe₂-suḫ₃ ĝalga-a-ni ḫe₂-bir-re",
+     "orig_lines": [
+      "55",
+      "56",
+      "57",
+      "58"
+     ],
+     "en": "Birḫar-tura, his royal guard, spoke in admiration to his king: \" {(2 mss. add:) My king,} I shall {go} {(1 ms. has instead:) go prancing (?)} to Aga so that his reasoning will become confused and his judgment disarrayed.\""
+    },
+    {
+     "ref": "59–69",
+     "orig": "BIR-ḪAR-tur-ra abul-la ba-ra-e₃\nBIR-ḪAR-tur-ra abul-la ed₂-da-ni\nkan₄ abul-la-ka mu-ni-in-dab₅-be₂-eš\nBIR-ḪAR-tur-ra sukuₓ(SUKUD)-ra₂-ni mu-ni-in-gum-gum-ne\nigi ag-ga-še₃ mu-ni-in-te{?}\nag-ga-še₃ gu₃ mu-na-de₂-e\ninim-ma-ni nu-un-til zabar-dab₅ unug{ki}-ga-ke₄ bad₃-še₃ im-me-ed₃-de₃\nbad₃-da gu₂-na im-ma-an-la₂\nag-ga igi im-ma-ni-in-du₈\nBIR-ḪAR-tur-re gu₃ mu-na-de₂-e\narad₂ lu₂ še lugal-zu-u₃",
+     "orig_lines": [
+      "59",
+      "60",
+      "61",
+      "62",
+      "63",
+      "64",
+      "65",
+      "66",
+      "67",
+      "68",
+      "69"
+     ],
+     "en": "Birḫar-tura went out through the city gate. As soon as Birḫar-tura went out through the city gate, they captured him at the gate's entrance, and then beat Birḫar-tura's entire length. He came into the presence of Aga and then spoke to Aga. Before he had finished speaking, an officer of Unug climbed up on the rampart and leaned out over the rampart. Aga saw him and then spoke to Birḫar-tura: \"Slave, is that man your king?\""
+    },
+    {
+     "ref": "70–81",
+     "orig": "lu₂ še lugal-ĝu₁₀ in-nu\n/lu₂\\ še lugal-ĝu₁₀ ḫe₂-me-a\nsaĝ-ki ḫuš-a-ni ḫe₂-me-a\nigi alim-ma-ka-ni ḫe₂-me-a\nsun₄{!} {na₄}za-gin₃-na-ka-a-ni ḫe₂-me-a\nšu-si sag₉-ga-ni ḫe₂-me-a\nšar₂-ra la-ba-an-šub-bu-uš šar₂-ra la-ba-an-zig₃-ge-eš\nšar₂-ra saḫar-ra la-ba-an-da-šar₂-re-eš\nkur-kur du₃-a-bi la-ba-an-da-šu₂-a\nka ma-da-ka saḫar-ra la-ba-da-an-si\nsi {ĝiš}ma₂-gur₈-ra-ka la-ba-ra-an-kud\nag-ga lugal kiš{ki}-a šag₄ erin₂-na-ka-ni šaĝa-a la-ba-ni-in-ak",
+     "orig_lines": [
+      "70",
+      "71",
+      "72",
+      "73",
+      "74",
+      "75",
+      "76",
+      "77",
+      "78",
+      "79",
+      "80",
+      "81"
+     ],
+     "en": "\"That man is not my king! Were that man my king, were that his angry brow, were those his bison eyes, were that his lapis lazuli beard, were those his elegant fingers, would he not cast down multitudes, would he not raise up multitudes, would multitudes not be smeared with dust, would not all the nations be overwhelmed, would not the land's canal-mouths be filled with silt, would not the barges' prows be broken, and would he not take Aga, the king of Kiš, captive in the midst of his army?\""
+    },
+    {
+     "ref": "82–89",
+     "orig": "mu-ni-ib-ra-ra-ne mu-ni-ib-sag₃-sag₃-ge-ne\nBIR-ḪAR-tur-re sukuₓ(SUKUD)-ra₂-ni mu-ni-in-gum-gum-ne\neĝer zabar-dab₅ unug{ki}-ga-ke₄ {d}gilgameš₂ bad₃-še₃ im-me-ed₃-de₃\nab-ba di₄-di₄-la₂ kul-aba₄{ki}-a-ke₄ me-lem₄ bi₂-ib-šu₂-šu₂\nĝuruš unug{ki}-ga-ke₄ {ĝiš}tukul me₃ a₂-ne-ne bi₂-in-si\n{ĝiš}ig abul-la-ka sila-ba bi₂-in-gub\nen-ki-du₁₀ abul-la dili ba-ra-e₃\n{d}gilgameš₂ bad₃-da gu₂-na im-ma-an-la₂\nigi bar-re-da-ni ag-ga igi ba-ni-in-du₈\narad₂ lu₂ še lugal-zu-u₃",
+     "orig_lines": [
+      "82",
+      "83",
+      "84",
+      "85",
+      "86",
+      "87",
+      "88",
+      "89",
+      "90",
+      "91"
+     ],
+     "en": "They hit him, they struck him. They beat Birḫar-tura's entire length. Gilgameš climbed up on the rampart after the officer of Unug. His radiance overwhelmed Kulaba's young and old. He armed Unug's able-bodied men with battle maces and stationed them on the causeway at the city gate's door. Only Enkidu went out through the city gate. Gilgameš leaned out over the rampart. Looking up, Aga saw him: \"Slave, is that man your king?\""
+    },
+    {
+     "ref": "92–99",
+     "orig": "lu₂ še lugal-ĝu₁₀ i₃-me-a\nbi₂-in-dug₄-ga-gin₇-nam\nšar₂-ra ba-an-šub-bu-uš šar₂-ra ba-an-zig₃-ge-eš\nšar₂-ra saḫar-ra ba-an-da-šar₂-re-eš\nkur-kur du₃-a-bi ba-an-da-šu₂-am₃\nka ma-da-ka saḫar-ra ba-da-an-si\nsi {ĝiš}ma₂-gur₈-ra-ke₄ ba-/ra-an-kud\\\nag-ga lugal kiš{ki}-a šag₄ erin₂-na-ka-ni šaĝa-a ba-ni-in-ak\n/ĝuruš\\ unug{ki}-ga-ke₄ erin₂-bi X /A\\ X /BA{?}\\ X",
+     "orig_lines": [
+      "92",
+      "93",
+      "94",
+      "95",
+      "96",
+      "97",
+      "98",
+      "99",
+      "99A"
+     ],
+     "en": "\"That man is indeed my king.\" It was just as he had said: Gilgameš cast down multitudes, he raised up multitudes, multitudes were smeared with dust, all the nations were overwhelmed, the land's canal-mouths were filled with silt, the barges' prows were broken, and he took Aga, the king of Kiš, captive in the midst of his army. {(1 ms. adds 1 line:) Unug's able-bodied men …… that army.}"
+    },
+    {
+     "ref": "100–106",
+     "orig": "{d}gilgameš₂ en kul-aba₄{ki}-ke₄\n{ag-ga-a gu₃ mu-na-de₂-e} {(1 ms. ḫas instead:) [ag]-ga-aš sa₂ mu-na-ni{!}-/ib-be₂\\}\nag-ga ugula-ĝu₁₀ ag-ga nu-banda₃-ĝu₁₀\n[ag]-ga ensi₂-ĝu₁₀ ag-ga /šagina-ĝu₁₀\\\nag-ga šagina erin₂-na-ĝu₁₀\nag-ga zi ma-/an-šum₂\\ ag-ga nam-til₃ ma-an-šum₂\nag-ga lu₂-kar-ra ur₂-ra bi₂-in-tum₂-mu\nag-ga mušen kar-ra še bi₂-ib-si-si",
+     "orig_lines": [
+      "100",
+      "101",
+      "102",
+      "102A",
+      "103",
+      "104",
+      "105",
+      "106"
+     ],
+     "en": "Gilgameš, the lord of Kulaba, {spoke to} {(1 ms. has instead:) approached close to} Aga: \"Aga my overseer, Aga my lieutenant, {(1 ms. adds 1 line:) Aga my governor, Aga my commander,} Aga my military commander! Aga gave me breath, Aga gave me life: Aga took a fugitive into his embrace, Aga provided the fleeing bird with grain.\""
+    },
+    {
+     "ref": "107–113",
+     "orig": "unug{ki} ĝiš-kiĝ₂-ti diĝir-re-e-ne-ke₄\nbad₃ gal {bad₃ an-ne₂ ki us₂-sa} {(tḫe otḫer ms. ḫas instead:) muru₉ ki us₂-/sa-a-ba\\}\nki-tuš maḫ an-ne₂ {ĝar-ra-ni} {(tḫe otḫer ms. ḫas instead:) /ĝar-ra\\-[a]-/ba\\}\nsaĝ mu-sig₁₀ {za-e lugal ur-saĝ-bi} {(tḫe otḫer ms. ḫas instead:) šu-ĝu₁₀ /im-mi-ib-gi₄\\}\nsaĝ lum-lum nun an-ne₂ ki aĝ₂ (tḫe otḫer ms. omits tḫis line)\nigi {d}utu-še₃ šu ud-bi-ta e-ra-an-gi₄\nag-ga kiš{ki}-še₃ šu {ba-ni-in-ba} {(1 ms. ḫas instead:) ba-ni-in-bar}",
+     "orig_lines": [
+      "107",
+      "108",
+      "109",
+      "110",
+      "111",
+      "112",
+      "113"
+     ],
+     "en": "{(The able-bodied men acclaim Gilgameš:) \"You watch over Unug, the handiwork of the gods, the great rampart, the rampart which An founded, the majestic residence which An established. You are its king and warrior, an exuberant person, a prince beloved of An.\" (Gilgameš addresses Aga:) \"Before Utu, your former kindness is hereby repaid to you.\"} {(the other ms. has instead:) \"I watch over Unug, the handiwork of the gods, its great rampart, a cloudbank resting on the earth, its majestic residence which An established. The city will repay the kindness shown to me. Before Utu, your former kindness is hereby repaid to you.\"} He set Aga free to go to Kiš."
+    },
+    {
+     "ref": "114–115",
+     "orig": "{d}gilgameš₂ en kul-aba₄{ki}-a-ke₄\nza₃-mi₂-zu dug₃-ga-am₃",
+     "orig_lines": [
+      "114",
+      "115"
+     ],
+     "en": "O Gilgameš, lord of Kulaba, praising you is sweet."
+    }
+   ]
+  }
+ ]
+}

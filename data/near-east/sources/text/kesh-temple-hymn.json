@@ -1,0 +1,341 @@
+{
+ "slug": "kesh-temple-hymn",
+ "source": "ETCSL",
+ "siglum": "ETCSL 4.80.2",
+ "source_url": "https://etcsl.orinst.ox.ac.uk/cgi-bin/etcsl.cgi?text=t.4.80.2",
+ "license": "ETCSL（Oxford）轉寫與英譯，非商業學術使用",
+ "compositions": [
+  {
+   "num": "4.80.2",
+   "title_en": "The Keš temple hymn",
+   "segments": [
+    {
+     "ref": "1–9",
+     "orig": "nam₂ nun-e nam₂ nun-e e₂-ta nam-ta-ab-e₃ (Šited in OB šatalogue from Nibru, at Pḫiladelpḫia, 0.2.01, line 6, line 47; OB šatalogue in tḫe Louvre, 0.2.02, line 6; OB šatalogue from Urim (U2), 0.2.04, line 23)\n{d}en-lil₂ nam₂ nun-e e₂-ta nam-ta-ab-e₃\nnam₂ nun-e nam-lugal-la e₂-ta nam-ta-ab-e₃\n{d}en-lil₂ kur-kur-ra igi mi-ni-in-il₂-il₂-i\n{d}en-lil₂-ra kur ni₂-ba mu-na-il₂-il₂-i\nan ub-da 4 {d}en-lil₂-ra {ĝiš}kiri₆-gin₇ mu-na-sig₇\nkeš₃{ki} saĝ il₂ mu-na-ni-in-ĝal₂\nkeš₃{ki} kur-kur-ra saĝ il₂-bi\n{d}en-lil₂-le keš₃{ki} za₃-mi₂ am₃-ma-ab-be₂",
+     "orig_lines": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9"
+     ],
+     "en": "The princely lord, the princely lord came forth from the house. Enlil, the princely lord, came forth from the house. The princely lord came forth royally from the house. Enlil lifted his glance over all the lands, and the lands raised themselves to Enlil. The four corners of heaven became green for Enlil like a garden. Keš was positioned there for him with head uplifted, and as Keš lifted its head among all the lands, Enlil spoke in praise of Keš."
+    },
+    {
+     "ref": "10–20",
+     "orig": "{d}nisaba nu-ka-aš-bi-im\ninim-bi-ta sa-gin₇ im-da-an-sur\ndub-ba sar-sar šu-še₃ al-ĝa₂-ĝa₂\ne₂ muš₃ kalam-ma gud ḫuš aratta\ne₂ keš₃{ki} muš₃ kalam-ma gud ḫuš aratta\nḫur-saĝ-da mu₂-a an-da gu₂ la₂-a\ne₂-kur-da mu₂-a kur-ra saĝ il₂-bi\nabzu-gin₇ {ri-a} {(2 mss. ḫave instead:) gun₃-a} ḫur-saĝ-gin₇ sig₇-sig₇-ga\nkeš₃{ki}-gin₇ rib-ba lu₂ ši-in-ga-tum₂-mu\nur-saĝ-bi {d}{ aš}aš₇-gi₄-gin₇ rib-ba ama ši-in-ga-u₃-tud\nnin-bi {d}nin-tur₅-gin₇ rib-ba-ra a-ba-a igi mu-ni-in-du₈",
+     "orig_lines": [
+      "10",
+      "11",
+      "12",
+      "13",
+      "14",
+      "15",
+      "16",
+      "17",
+      "18",
+      "19",
+      "20"
+     ],
+     "en": "Nisaba was its decision-maker (?); with its words she wove it intricately like a net. Written on tablets it was held in her hands: House, platform of the Land, important fierce bull! House Keš, platform of the Land, important fierce bull! Growing as high as the hills, embracing the heavens, growing as high as E-kur, lifting its head among the mountains! {Rooted in the abzu} {(2 mss. have instead:) Colourful as the abzu}, verdant like the mountains! Will anyone else bring forth something as great as Keš? Will any other mother ever give birth to someone as great as its hero Ašgi? Who has ever seen anyone as great as its lady Nintur?"
+    },
+    {
+     "ref": "21",
+     "orig": "e₂ 1-kam-ma",
+     "orig_lines": [
+      "21"
+     ],
+     "en": "The first house."
+    },
+    {
+     "ref": "22–30",
+     "orig": "e₂ dug₃ ki dug₃-ga du₃-a\ne₂ keš₃{ki} {(some mss. add:) e₂ dug₃} ki dug₃-ga du₃-a\nma₂-gur₈ nun-gin₇ an-na dirig-ga\nma₂-gur₈ kug-gin₇ kan₄ si ri-a\nma₂ an-na-gin₇ muš₃ kur-kur-ra\nu₅ ma₂ ban₃-da-gin₇ peš₁₀-ta sur-sur-ra\ne₂ gud-gin₇ mur ša₄ ninda₂-gin₇ gu₃ nun di\ne₂ šag₄-bi-ta lipiš kalam-ma\na-ga-bi-ta zi ki-en-gi-ra",
+     "orig_lines": [
+      "22",
+      "23",
+      "24",
+      "25",
+      "26",
+      "27",
+      "28",
+      "29",
+      "30"
+     ],
+     "en": "Good house, built in a good location, house Keš, {(some mss. add here:) good house,} built in a good location, floating in the heavens like a princely barge, like a holy barge furnished with a …… gate, like the boat of heaven, the platform of all the lands! …… from the riverbank like a …… boat cabin! House roaring like an ox, bellowing loudly like a breed-bull! House in whose interior is the power of the Land, and behind which is the life of Sumer!"
+    },
+    {
+     "ref": "31–43",
+     "orig": "e₂ ib-gal an-ne₂ us₂-sa\ne₂ zid-da gal an-ne₂ us₂-sa\ne₂ men gal an-ne₂ us₂-sa\ne₂ {d}tir-an-na an-ne₂ us₂-sa\ne₂ suḫ₁₀-bi an-šag₄-ga la₂-a\nte-me-bi abzu-a sig₉-ga\nĝissu-bi kur-kur-ra dul-la\ne₂ an-ne₂ ki ĝar-ra {d}en-lil₂-le za₃-mi₂ dug₄-ga\nama {d}nin-tur₅-ra eš-bar kiĝ₂ dug₄-ga\ne₂ keš₃{ki} gurun-na sig₇-ga\nkeš₃{ki}-gin₇ rib-ba lu₂ ši-in-ga-tum₂-mu\nur-saĝ-bi {d}{ aš}aš₇-gi₄-gin₇ rib-ba ama ši-in-ga-u₃-tud\nnin-bi {d}nin-tur₅-gin₇ rib-ba-ra a-ba-a igi mu-ni-in-du₈",
+     "orig_lines": [
+      "31",
+      "32",
+      "33",
+      "34",
+      "35",
+      "36",
+      "37",
+      "38",
+      "39",
+      "40",
+      "41",
+      "42",
+      "43"
+     ],
+     "en": "House, great enclosure, reaching to the heavens, great, true house, reaching to the heavens! House, great crown reaching to the heavens, house, rainbow reaching to the heavens! House whose diadem extends into the midst of the heavens, whose foundations are fixed in the abzu, whose shade covers all lands! House founded by An, praised by Enlil, given an oracle by Mother Nintur! House Keš, green in its fruit! Will anyone else bring forth something as great as Keš? Will any other mother ever give birth to someone as great as its hero Ašgi? Who has ever seen anyone as great as its lady Nintur?"
+    },
+    {
+     "ref": "44",
+     "orig": "e₂ 2-kam-ma",
+     "orig_lines": [
+      "44"
+     ],
+     "en": "The second house."
+    },
+    {
+     "ref": "45–57",
+     "orig": "e₂ an-še₃ 10 šar₂{iku} ki-še₃ 5 šar₂{iku}\ne₂ an-še₃ 10 bur₃{iku} ki-še₃ 5 bur₃{iku}\ne₂ an-še₃ alim ki-še₃ lu-lim\ne₂ an-še₃ šeg₉-bar ki-še₃ taraḫ-maš\ne₂ an-še₃ šeg₉-bar gun₃-a ki-še₃ taraḫ-maš sig₇-ga\ne₂ an-še₃ muš-gu₇{mušen}-gin₇ sig₇-ga ki-še₃ u₅{mušen}-gin₇ a-e šu₂-a\ne₂ an-še₃ ud-gin₇ e₃-a ki-še₃ iti₆-gin₇ barag₂-ga\ne₂ an-še₃ šita₂ šul ki-še₃ {ĝiš}tun₃-am₃\ne₂ an-še₃ kur-ra-am₃ ki-še₃ idim-ma-am₃\ne₂ an-še₃ 3-kam-bi na-nam\nkeš₃{ki}-gin₇ rib-ba lu₂ ši-in-ga-an-tum₂-mu\nur-saĝ-bi {d}{ aš}aš₇-gi₄-gin₇ rib-ba ama ši-in-ga-u₃-tud\nnin-bi {d}nin-tur₅-gin₇ rib-ba-ra a-ba-a igi mu-ni-in-du₈",
+     "orig_lines": [
+      "45",
+      "46",
+      "47",
+      "48",
+      "49",
+      "50",
+      "51",
+      "52",
+      "53",
+      "54",
+      "55",
+      "56",
+      "57"
+     ],
+     "en": "House, 10 šar at its upper end, five šar at its lower end; house, 10 bur at its upper end, five bur at its lower end! House, at its upper end a bison, at its lower end a stag; house, at its upper end a wild sheep, at its lower end a deer; house, at its upper end a dappled wild sheep, at its lower end a beautiful deer! House, at its upper end green as a snake-eater bird, at its lower end floating on the water like a pelican! House, at its upper end rising like the sun, at its lower end spreading like the moonlight; house, at its upper end a warrior mace, at its lower end a battle-axe; house, at its upper end a mountain, at its lower end a spring! House, at its upper end threefold indeed! Will anyone else bring forth something as great as Keš? Will any other mother ever give birth to someone as great as its hero Ašgi? Who has ever seen anyone as great as its lady Nintur?"
+    },
+    {
+     "ref": "58",
+     "orig": "e₂ 3-kam-ma",
+     "orig_lines": [
+      "58"
+     ],
+     "en": "The third house."
+    },
+    {
+     "ref": "58A–58Q",
+     "orig": "[e₂ ...] ni₂ gal ši-ri an-ne₂ mu maḫ sa₄\n[e₂ ...] /kur\\ gal {d}en-lil₂-le nam-ma-ni gal tar-re\n[e₂] a₂-nun-ĝal₂ {d}a-nun-ke₄-ne uĝ₃ ĝalga šum₂-mu\ne₂ ki-tuš ni₂ dub₂-bu diĝir gal-e-ne\ne₂ an ki-bi-da ĝiš-ḫur-bi i₃-ḫur me sikil šu ba-e-X\ne₂ kalam ki ĝar-ra zag-ĝar-ra us₂-sa\ne₂ kur ḫe₂-ĝal₂ giri₁₇-zal ud zal-zal-le\ne₂ {d}nin-ḫur-saĝ-ĝa₂ zi kalam-ma ki-bi-še₃ ĝar\ne₂ ḫur-saĝ gal šu-luḫ-ḫa tum₂-ma niĝ₂-nam-ma-ni i₃-kur₂\ne₂ e-ne-da nu ka-aš bar nu-ĝa₂-ĝa₂\ne₂ [...] /dug₃\\ kalam daĝal šu la₂-a\n[e₂] uĝ₃ šar₂ u₃-tud numun {ĝiš}isimu₂{sar} tuku-tuku\n[e₂] lugal u₃-tud nam kalam-ma tar-re\n[e₂] barag-barag-bi šu-kin dab₅-be₂ ak-de₃\n[keš₃]/{ki}\\-gin₇ rib-ba lu₂ ši-in-ga-an-tum₂-mu\n[ur-saĝ]-bi {d}{ aš}aš₇-gi₄-gin₇ rib-ba ama ši-in-ga-a-an-u₃-tud\n[nin-bi] [{d}]nin-tur₅-gin₇ rib-ba-ra a-ba-a igi mu-ni-in-du₈",
+     "orig_lines": [
+      "58A",
+      "58B",
+      "58C",
+      "58D",
+      "58E",
+      "58F",
+      "58G",
+      "58H",
+      "58I",
+      "58J",
+      "58K",
+      "58L",
+      "58M",
+      "58N",
+      "58O",
+      "58P",
+      "58Q"
+     ],
+     "en": "{(1 ms. adds here the following lines:) House …… inspiring great awe, called with a mighty name by An; house …… whose fate is grandly determined by the Great Mountain Enlil! House of the Anuna gods possessing great power, which gives wisdom to the people; house, reposeful dwelling of the great gods! House, which was planned together with the plans of heaven and earth, …… with the pure divine powers; house which underpins the Land and supports the shrines! House, mountain of abundance which passes the days in glory; house of Ninḫursaĝa which establishes the life of the Land! House, great hillside worthy of the purification rites, altering (?) all things; house without whom no decisions are made! House, good …… carrying in its hands the broad Land; house which gives birth to countless peoples, seed which has sprouts! House which gives birth to kings, which determines the destinies of the Land; house whose royal personages are to be revered! Will anyone else bring forth something as great as Keš? Will any other mother ever give birth to someone as great as its hero Ašgi? Who has ever seen anyone as great as its lady Nintur?}"
+    },
+    {
+     "ref": "58R",
+     "orig": "[...]-kam-ma-am₃",
+     "orig_lines": [
+      "58R"
+     ],
+     "en": "The …… house."
+    },
+    {
+     "ref": "59–73",
+     "orig": "iri{ki} ga-am₃ iri{ki} ga-am₃ šag₄-bi a-ba mu-zu\ne₂ keš₃{ki} iri{ki} ga-am₃ šag₄-bi a-ba mu-zu\nšag₄-bi ur-saĝ-ur-saĝ-e-ne si mu-un-si-sa₂-e-ne\neš-bar kiĝ₂ dug₄-ga šu gal mu-un-du₇-du₇\ne₂ gud du₇-du₇-dam gu₂ am₃-ma-gur-re\ne₂ gud šar₂-a al-gu₇-e\ne₂ udu šar₂-a-am₃ al-gu₇-e\n{X X-ma-am₃ gu₂-bi luḫ-luḫ-ḫa} {(1 ms. ḫas instead:) udu šeg₁₁-e ib₂ am₃-luḫ-luḫ-e}\nbarag-barag-e-ne gu₂-ne am₃-ma-ĝal₂-le-ne\n{ĝiš}taškarin-da men an-da-gur₃-ru\n{ĝiš}asal₂-gin₇ an-da-tal₂-tal₂ sal-la\nḫur-saĝ-da {(1 ms. adds:) mu₂-a} an-da-sig₇-sig₇-ga\nkeš₃{ki}-gin₇ rib-ba lu₂ ši-in-ga-an-tum₂-mu\nur-saĝ-bi {d}{ aš}aš₇-gi₄-gin₇ rib-ba ama ši-in-ga-u₃-tud\nnin-bi {d}nin-tur₅-gin₇ rib-ba-ra a-ba-a igi mu-ni-in-du₈",
+     "orig_lines": [
+      "59",
+      "60",
+      "61",
+      "62",
+      "63",
+      "64",
+      "65",
+      "66",
+      "67",
+      "68",
+      "69",
+      "70",
+      "71",
+      "72",
+      "73"
+     ],
+     "en": "It is indeed a city, it is indeed a city! Who knows its interior? The house Keš is indeed a city! Who knows its interior? The heroes make their way straight into its interior and perform its oracle rites perfectly. Frisking cattle are gathered at the house in herds. The house consumes many cattle; the house consumes many sheep. 1 line unclear Those who sit on daises bow their necks before it. It wears a crown to vie with the boxwood tree, it spreads out to vie with the poplar ……; it is {(1 ms. adds here:) growing} as green as the hills! Will anyone else bring forth something as great as Keš? Will any other mother ever give birth to someone as great as its hero Ašgi? Who has ever seen anyone as great as its lady Nintur?"
+    },
+    {
+     "ref": "74",
+     "orig": "e₂ 4-kam-ma",
+     "orig_lines": [
+      "74"
+     ],
+     "en": "The fourth house."
+    },
+    {
+     "ref": "75–86",
+     "orig": "e₂ piriĝ u₃-tud šag₄-bi ur-saĝ su₃-ud\ne₂ keš₃{ki} piriĝ u₃-tud šag₄-bi ur-saĝ su₃-ud\nšag₄-bi ur-saĝ-ur-saĝ-e-ne si mu-un-si-sa₂\n{d}nin-ḫur-saĝ-ĝa₂ ušumgal-am₃ šag₄ im-mi-in-tuš\n{d}nin-tur₅ ama gal-la tud-tud mu-un-ĝa₂-ĝa₂\n{d}šul-pa-e₃ ensi₂-ke₄ nam-en mu-un-na-ak\n{d}{ aš}aš₇-gi₄ ur-saĝ pisaĝ₃ mu-un-gu₇-e\n{d}uru₃-maš niĝir gal edin-na mu-un-da-an-til₃\ne₂ lulim gu₂ am₃-ma-gur-re\nkeš₃{ki}-gin₇ rib-ba lu₂ ši-in-ga-tum₂-mu\nur-saĝ-bi {d}{ aš}aš₇-gi₄-gin₇ rib-ba ama ši-in-ga-u₃-tud\nnin-bi {d}nin-tur₅-gin₇ rib-ba-ra a-ba-a igi mu-ni-in-du₈",
+     "orig_lines": [
+      "75",
+      "76",
+      "77",
+      "78",
+      "79",
+      "80",
+      "81",
+      "82",
+      "83",
+      "84",
+      "85",
+      "86"
+     ],
+     "en": "House given birth by a lion, whose interior the hero has embellished (?)! House Keš, given birth by a lion, whose interior the hero has embellished (?)! The heroes make their way straight into its interior. Ninḫursaĝa sits within like a great dragon. Nintur the great mother assists at births there. Šul-pa-e the ruler acts as lord. Ašgi the hero consumes the contents of the vessels (?). Urumaš, the great herald of the plains, dwells there too. Stags are gathered at the house in herds. Will anyone else bring forth something as great as Keš? Will any other mother ever give birth to someone as great as its hero Ašgi? Who has ever seen anyone as great as its lady Nintur?"
+    },
+    {
+     "ref": "87",
+     "orig": "e₂ 5-kam-ma",
+     "orig_lines": [
+      "87"
+     ],
+     "en": "The fifth house."
+    },
+    {
+     "ref": "88–102",
+     "orig": "e₂ ud-gin₇ ki-gal-la gub-ba (Šited in OB šatalogue from Nibru (N6), 0.2.13, line 16)\nam babbar-gin₇ edin sug₂-da\ne₂ nun-e ki ĝar-ra tigi-da ar₂-ra\ne₂ šag₄-bi-ta lipiš kalam-ma\na-ga-bi-ta zi {ki-en-gi-ra} {(some mss. ḫave instead:) šag₄-ge si-a}\nkan₄-bi-ta piriĝ šu-ba nu₂-a\nkan₄-bi-ta UN-gal inim ĝar-ra\ne₂ ig-bi-ta kur gal gaba nu-gi₄-gi₄\n{{ĝiš}saĝ-kul-ta} {(some mss. ḫave instead:) {ĝiš}suḫub₄-bi-ta} am gal-la du₇-a\n{{ĝiš}saĝ-kul-bi ur-ra lu₂ X X X} {(1 ms. adds instead tḫe line:) {ĝiš}[X (X)] /ur\\-maḫ ni₂ gur₃-ru}\n{ĝa₂-nun ĝar-ra-bi an-ub ki-ub} {(1 ms. ḫas instead tḫe line:) ĝa₂-nun e₂{?} ĝar-ra šukur}\ngi-gun₄{ki}-na-bi la-ḫa-ma ki us₂-sa\nbad₃ {(1 ms. adds:) gal} nun-na-bi eš₃ urim₂{ki} zu₂ keše₂-da\nkeš₃{ki}-gin₇ rib-ba lu₂ ši-in-ga-an-tum₂-mu\nur-saĝ-bi {d}{ aš}aš₇-gi₄-gin₇ rib-ba ama ši-in-ga-u₃-tud\nnin-bi {d}nin-tur₅-ra-gin₇ rib-ba-ra a-ba-a igi mu-ni-in-du₈",
+     "orig_lines": [
+      "88",
+      "89",
+      "90",
+      "91",
+      "92",
+      "93",
+      "94",
+      "95",
+      "96",
+      "96A",
+      "97",
+      "98",
+      "99",
+      "100",
+      "101",
+      "102"
+     ],
+     "en": "House positioned over its foundations like a storm, like white bulls standing about on the plain; house founded by the prince, in praise on the tigi instrument! House in whose interior is the power of the Land, and behind which {is the life of Sumer} {(some mss. have instead:) it is filled with life}; at whose gate is a lion reclining on its paws, at whose gate is the ruler who decides cases (?)! House at whose door is the Great Mountain without adversary; {at whose bolt} {(some mss. have here instead:) at whose bar} is a great frisking wild bull {(some mss. add here the line:) , at whose bolt is a beast …… a man} {(1 ms. adds here instead the line:) , at whose …… is an awe-inspiring lion} ! {Whose well-founded storehouse is a corner of heaven, a corner of earth} {(1 ms. has here instead:) Whose storehouse established as a household is a lance (?)}; whose terrace is supported by laḫama deities; whose princely {(1 ms. adds:) great} wall …… the shrine of Urim! Will anyone else bring forth something as great as Keš? Will any other mother ever give birth to someone as great as its hero Ašgi? Who has ever seen anyone as great as its lady Nintur?"
+    },
+    {
+     "ref": "103",
+     "orig": "e₂ 6-kam-ma",
+     "orig_lines": [
+      "103"
+     ],
+     "en": "The sixth house."
+    },
+    {
+     "ref": "103A–103K",
+     "orig": "e₂ su-lim guru₃ zag dib-ba{?} šu{?}\ne₂ igi tab an-ne₂ BAR šag₄ AB\nen {d}nu-dim₂-mud-e an{?} ki-a\nan{?} nin{?} lu₂{?} šeg₁₂ kalam-ma dug₃{?}\nšeg₁₂ abzu-ta kiĝ₂ gal-le-eš\ngi-gun₄-na ki-tuš ni₂ dub₂-bu\nsi{?}-muš₃ kug šag₄ uĝ₃-ĝa₂ saĝ zig₃\ne₂ kur-kur-ra me-te-ĝal₂-la₂\n/keš₃\\{ki}-gin₇ rib-ba <lu₂ ši-in-ga-an-tum₂-mu>\n<ur-saĝ-bi {d}{ aš}aš₇-gi₄-gin₇ rib-ba ama ši-in-ga-u₃-tud>\n<nin-bi {d}nin-tur₅-ra-gin₇ rib-ba-ra a-ba-a igi mu-ni-in-du₈>",
+     "orig_lines": [
+      "103A",
+      "103B",
+      "103C",
+      "103D",
+      "103E",
+      "103F",
+      "103G",
+      "103H",
+      "103I",
+      "103J",
+      "103K"
+     ],
+     "en": "{(1 ms. (which uses a different numbering of the sections) adds here the following lines:) House imbued with radiance, …… excellence! House ……! Lord Nudimmud in heaven and earth …… brickwork of the Land, brickwork …… grandly in the abzu. Terrace, relaxing abode, …… holy splendour rising over the people! House which is seemly for the foreign lands! Will anyone else bring forth something as great as Keš? Will any other mother ever give birth to someone as great as its hero Ašgi? Who has ever seen anyone as great as its lady Nintur?}"
+    },
+    {
+     "ref": "103L",
+     "orig": "e₂ 8-kam-ma",
+     "orig_lines": [
+      "103L"
+     ],
+     "en": "The eighth house."
+    },
+    {
+     "ref": "104–115",
+     "orig": "e₂ kug KU-bi agrun\ne₂ keš₃{ki} kug KU-bi agrun\ne₂ en-bi {d}a-nun-na-me-eš\nnu-eš₃-bi ĝiri₂ la₂ e₂-an-na-me-eš\ne₂-e lugal bur-ra am₃-mi-gub\nen dug₃ šag₄ eš₂ la₂ am₃-mi-in-la₂\na-tu-e ešgiri₂ šu bi₂-in-du₈\nTU-e a ur₄-a am₃-mu-e-de₆\nlal₃-e ki kug-ga am₃-mi-in-tuš\nenkum-e-ne šeg₁₁ ki am₃-ma-ĝal₂-le-eš\npa₄-šeš-e-ne kuš mu-un-sag₃-ge-ne\nu₁₈-ru u₁₈-ru mu-ni-ib-be₂-e-ne",
+     "orig_lines": [
+      "104",
+      "105",
+      "106",
+      "107",
+      "108",
+      "109",
+      "110",
+      "111",
+      "112",
+      "113",
+      "114",
+      "115"
+     ],
+     "en": "The holy house whose …… is the shrine, the holy house Keš, whose …… is the shrine; the house whose lords are the Anuna gods, whose nueš priests are the sacrificers of E-ana! In the house the king places stone bowls in position; the good en priest …… holds the lead-rope dangling. The a-tu priest holds the staff; the …… brings the gathered (?) waters. The …… takes his seat in the holy place; the enkum priests bow down ……. The pašeš priests beat the drumskins; they recite powerfully, powerfully."
+    },
+    {
+     "ref": "116–126",
+     "orig": "si am-ma-ke₄ gum₂-ga mi-ni-ib-za\n{ĝiš}al-ĝar-sur₉-ra suḫ₃-saḫ₄ mi-ni-ib-za\nnar {kuš}a₂-la₂-e {šeg₁₁ mu-ni-ib-gi₄} {(1 ms. ḫas instead:) ḫu-mu-ni-ib-be₂}\ntigi {nun dug₃-ge mu-na-du₁₂-a} {(some mss. ḫave instead:) niĝ₂ dug₃-ge si ba-ni-in-sa₂ }\ne₂ al-du₃ giri₁₇-zal-bi al-dug₃\ne₂ keš₃{ki} al-du₃ giri₁₇-zal-bi al-dug₃\nnin-bi DIN-bi-a mu-un-tuš\n{d}nin-ḫur-saĝ-ĝa₂ nin-bi DIN-bi-a mu-un-tuš\nkeš₃{ki}-gin₇ rib-ba lu₂ ši-in-ga-an-tum₂-mu\nur-saĝ-bi {d}{ aš}aš₇-gi₄-gin₇ rib-ba ama ši-in-ga-u₃-tud\nnin-bi {d}nin-tur₅-ra-gin₇ rib-ba-ra a-ba-a igi mu-ni-in-du₈",
+     "orig_lines": [
+      "116",
+      "117",
+      "118",
+      "119",
+      "120",
+      "121",
+      "122",
+      "123",
+      "124",
+      "125",
+      "126"
+     ],
+     "en": "The bull's horn is made to growl; the drumsticks are made to thud. The singer {cries out} {(1 ms. has instead:) declaims} to the ala drum; {the grand sweet tigi is played for him} {(some mss. have instead:) the sweet tigi is well tuned}. The house is built; its nobility is good! The house Keš is built; its nobility is good! Its lady has taken a seat in its ……. Ninḫursaĝa, its lady, has taken her seat in its ……. Will anyone else bring forth something as great as Keš? Will any other mother ever give birth to someone as great as its hero Ašgi? Who has ever seen anyone as great as its lady Nintur?"
+    },
+    {
+     "ref": "127",
+     "orig": "e₂ 7-kam-ma",
+     "orig_lines": [
+      "127"
+     ],
+     "en": "The seventh house."
+    },
+    {
+     "ref": "128–133",
+     "orig": "iri-še₃ iri-še₃ lu₂ te-a na-te\ne₂ keš₃{ki} iri-še₃ lu₂ te-a na-te\nur-saĝ-bi {d}{ aš}aš₇-gi₄-še₃ lu₂ te-a na-te\nnin-bi {d}nin-tur₅-še₃ lu₂ te-a na-te\nkeš₃{ki} du₃-a {d}{ aš}aš₇-gi₄ za₃-mi₂\nkeš₃{ki} mi₂ dug₄-ga {d}nin-tur₅-ra za₃-mi₂",
+     "orig_lines": [
+      "128",
+      "129",
+      "130",
+      "131",
+      "132",
+      "133"
+     ],
+     "en": "Draw near, man, to the city, to the city -- but do not draw near! Draw near, man, to the house Keš, to the city -- but do not draw near! Draw near, man, to its hero Ašgi -- but do not draw near! Draw near, man, to its lady Nintur -- but do not draw near! Praise be to well-built Keš, O Ašgi! Praise be to cherished Keš and Nintur!"
+    },
+    {
+     "ref": "134",
+     "orig": "e₂ 8-kam-ma",
+     "orig_lines": [
+      "134"
+     ],
+     "en": "The eighth house."
+    }
+   ]
+  }
+ ]
+}

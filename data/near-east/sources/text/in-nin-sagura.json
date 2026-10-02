@@ -1,0 +1,437 @@
+{
+ "slug": "in-nin-sagura",
+ "source": "ETCSL",
+ "siglum": "ETCSL 4.07.3",
+ "source_url": "https://etcsl.orinst.ox.ac.uk/cgi-bin/etcsl.cgi?text=t.4.07.3",
+ "license": "ETCSL（Oxford）轉寫與英譯，非商業學術使用",
+ "compositions": [
+  {
+   "num": "4.07.3",
+   "title_en": "A hymn to Inana (Inana C)",
+   "segments": [
+    {
+     "ref": "1–10",
+     "orig": "in-nin šag₄ gur₄-ra ereš u₃-na giri₁₇-zal {d}a-nun-na-[ke₄-ne] (Šited in OB šatalogue in tḫe Louvre, 0.2.02, line 40; OB šatalogue at Andrews University, 0.2.11, line 1)\nzag dib kur-kur-ra dumu gal {d}suen-na maḫ-[di nun-gal-e-ne]\nereš nam-maḫ me an ki ur₄-ur₄ an gal-da zag ša₄\ndiĝir gal-gal-e-ne a₂-ĝal₂-bi-im e-ne [gi] til-le-be₂-ne\ninim maḫ-a-ni-še₃ {d}a-nun-na-ke₄-ne kušum₄ ki mu-un-tag-ge-ne\nin-di₃-bi an nu-zu-zu a₂ aĝ₂-ĝa₂-ni-še₃ nu-la₂\nniĝ₂ ak-ak-da-ni ab-ši-kur₂-ru ĝar-bi niĝ₂ nu-zu\nme gal-gal šu du₇ šibir ba-e-dab₅-be₂ saĝ-kal maḫ-be₂-ne\ndiĝir kalam-ma-ke₄ {ĝiš}rab₃ gal-bi šu im-ri-[...]\nni₂ gal-a-ni ḫur-saĝ gal dul-lu kaskal mu-un-sig₉-sig₉-ge",
+     "orig_lines": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10"
+     ],
+     "en": "The great-hearted mistress, the impetuous lady, proud among the Anuna gods and pre-eminent in all lands, the great daughter of Suen, exalted among the Great Princes (a name of the Igigi gods) , the magnificent lady who gathers up the divine powers of heaven and earth and rivals great An, is mightiest among the great gods -- she makes their verdicts final. The Anuna gods crawl before her august word whose course she does not let An know; he dare not proceed against her command. She changes her own action, and no one knows how it will occur. She makes perfect the great divine powers, she holds a shepherd's crook, and she is their magnificent pre-eminent one. She is a huge shackle clamping down upon the gods of the Land. Her great awesomeness covers the great mountain and levels the roads."
+    },
+    {
+     "ref": "11–17",
+     "orig": "za-pa-aĝ₂ dugud-da-ni-še₃ diĝir kalam-ma-ke₄ ni₂ am₃-ma-ur₄-ru-ne\nmur ša₄-a-ni {d}a-nun-na gi dili-gin₇ saĝ mu-da-ab-sag₃-sag₃-ge-ne\ndum-dam za-ni-še₃ kilib₃-ba-bi a₂-ur₂ mu-un-dab₅-be₂-e-ne\n{d}inana e-ne-da nu-me-a an gal ka-aš nu-um-bar {d}en-lil₂ nam nu-un-tar\nin-nin saĝ il₂ kur-ra ab-dirig a-ba saĝ mu-un-ĝa₂-ĝa₂\nki ib₂-[...]-ni-še₃ iri{ki} du₆-du₆-da e₂ lil₂-la₂-[še₃] uzug e₂-ri-a-še₃ i₃-ĝal₂\nurgu₂-ni u₃-dub₂ su tab₂-e su-mu-ug-ga-[ni] u₁₈-lu lu₂-ra eš₂ la₂",
+     "orig_lines": [
+      "11",
+      "12",
+      "13",
+      "14",
+      "15",
+      "16",
+      "17"
+     ],
+     "en": "At her loud cries, the gods of the Land become scared. Her roaring makes the Anuna gods tremble like a solitary reed. At her rumbling, they hide all together. Without Inana great An makes no decisions, and Enlil determines no destinies. Who opposes the mistress who raises her head and is supreme over the mountains? Wherever she ……, cities become ruin mounds and haunted places, and shrines become waste land. When her wrath makes people tremble, the burning sensation and the distress she causes are like an ulu demon ensnaring a man."
+    },
+    {
+     "ref": "18–28",
+     "orig": "suḫ₃ igi suḫ₃-suḫ₃-suḫ₃ mu-un-sar-re uĝ₃ lu₂ nu-še-ga-ni-ir\nĝiš-ĝiš-la₂ sul-sul mar-uru₅ ḫub₂ sar-sar-re su-lim ḫuš gu₂ e₃\ne-ne di-bi šen-šen me₃ ḫub₂ sar ak-de₃ nu-kuš₂-u₃ ĝiri₃-ni {kuš}e-sir₂ si-ni\n/ud\\ ḫuš da-da-eš UR {tum₉}dalḫamun₅ {tug₂}pala₃ i₃-dar-dar-/re\\\n/niĝ₂{?}\\ tag-ga-ni ga-ba-ra-ḫum {tum₉}u₁₈-lu X saĝ keše₂ NI X sud{?}-sud\n{d}inana piriĝ gi-il-gi-il-la dur₂-ru ni₂ nu-zu TAR-TAR\nnemurₓ(PIRIĜ.TUR) ḫur-saĝ-ĝa₂ ḫar-ra-an ku₄-ku₄ guruš₃ bur₂ A X X X\nin-nin am gal ne₃ nir-ĝal₂-ni na-me gaba nu-[X]-/tu\\-lu\n[X] saĝ-kal nun-gal-e-ne pu₂ niĝ₂-/ḫuš\\ nu-še-ga\n{ĝiš}es₂-ad lu₂ erim₂-ĝal₂ X X lu₂-kur₂-ra\nki uš₁₁ šub-ba-ni ud-da-am₃ u₃ ba{?}-ra-aḫ{?} ki-in-/du\\ bi₂-in-UD",
+     "orig_lines": [
+      "18",
+      "19",
+      "20",
+      "21",
+      "22",
+      "23",
+      "24",
+      "25",
+      "26",
+      "27",
+      "28"
+     ],
+     "en": "She stirs confusion and chaos against those who are disobedient to her, speeding carnage and inciting the devastating flood, clothed in terrifying radiance. It is her game to speed conflict and battle, untiring, strapping on her sandals. Clothed (?) in a furious storm, a whirlwind, she …… the garment of ladyship. When she touches …… there is despair, a south wind which has covered ……. Inana sits on harnessed (?) lions, she cuts to pieces him who shows no respect. A leopard of the hills, entering (?) the roads, raging (?), ……, the mistress is a great bull trusting in its strength; no one dare turn against her. ……, the foremost among the Great Princes, a pitfall for the disobedient, a trap for the evil, a …… for the hostile, wherever she casts her venom ……."
+    },
+    {
+     "ref": "29–38",
+     "orig": "lipiš bal-a-ni niĝ₂ LAGAR-e mar-uru₅ šu nu-ru-gu₂\nšita₃ maḫ niĝ₂ kur₂ SI lu₂ DI [X] lu₂ gu₂ du₃-a gam-gam\nin-nin ḫu-ri₂-in{mušen} lu₂ šu nu-bar-re PA BI kur X-dam\n{d}inana sur₂-du₃{mušen} diĝir-re-e-ne tur₃ daĝal {d}inana TAR-TAR\niri {d}inana saĝ-ki ba-gid₂-i a-šag₄-bi /in\\-[...]\na-šag₄ in-nin-e X NE [...] ab-sin₂-bi u₂ [...]\nan e-ne-ra saĝ mu-un-ĝa₂-[ĝa₂ ...] niĝ₂-na nu-mu-un-[...]\nizi ra an-edin-na in-nin UŠ X [...]\n{d}inana X [...]\nin-nin AN [...] X GU{?} erin₂-ḫuš X sul-sul šen-šen X X X",
+     "orig_lines": [
+      "29",
+      "30",
+      "31",
+      "32",
+      "33",
+      "34",
+      "35",
+      "36",
+      "37",
+      "38"
+     ],
+     "en": "Her wrath is ……, a devastating flood which no one can withstand. A great watercourse, ……, she abases those whom she despises. The mistress, an eagle that lets no one escape, ……, Inana, a falcon preying on the gods, Inana rips to pieces the spacious cattle-pens. The fields of the city which Inana has looked at in anger ……. The furrows of the field which the mistress …… grass. An opposes her, ……. Setting on fire, in the high plain the mistress ……. Inana ……. The mistress …… speeding …… fighting, …… conflict."
+    },
+    {
+     "ref": "39–48",
+     "orig": "MURUB₂-ta [...] X X KA{?} RA{?} šir₃ mu-un-ĝa₂-ĝa₂\n[šir₃-bi] ĝiš-ḫur ĝar-bi-a MUNUS{?} A BI A NI er₂ u₂ ga nam-uš₂-a\n{d}inana [IM X] u₂ ga nam-uš₂-a lu₂ gu₇-bi nu-til-le\nlu₂ niĝ₂ gu₇-gu₇-da-ni ze₂ mu-un-tab₂-tab₂-be₂ in ĜAR ka-bi-a mu-un-X X X\nšag₄ ḫul₂-la-ka-ni šir₃ nam-uš₂-a edin-na mu-un-ĝa₂-ĝa₂\nšir₃ šag₄-ga-ni ĝa₂-ĝa₂-da-ni\n{ĝiš}tukul-bi uš₂ lugud mu-un-tu₅-tu₅ šag₄ DU{?} ḪI{?} IM{?} X-aš\n{urud}dur₁₀-al-lub saĝ mu-un-da-sag₃-ge-/ne\\ {ĝiš}šukur gu₇-gu₇ {ĝiš}/tukul\\ za-ḫa-da uš₂{?} im-/me-re-dul₉-dul₉-lu\\\nka ḫul-bi NE-NE ur-saĝ X X [X X] X X X\nnesaĝ-bi-a uš₂ in-ga-an-de₂-de₂ nam-uš₂-a su₃-/su₃\\",
+     "orig_lines": [
+      "39",
+      "40",
+      "41",
+      "42",
+      "43",
+      "44",
+      "45",
+      "46",
+      "47",
+      "48"
+     ],
+     "en": "…… she performs a song. This song …… its established plan, weeping, the food and milk of death. Whoever eats …… Inana's food and milk of death will not last. Gall will give a burning pain to those she gives it to eat, …… in their mouth ……. In her joyful heart she performs the song of death on the plain. She performs the song of her heart. She washes their weapons with blood and gore, ……. Axes smash heads, spears penetrate and maces are covered in blood. Their evil mouths …… the warriors ……. On their first offerings she pours blood, filling them with death."
+    },
+    {
+     "ref": "49–59",
+     "orig": "edin daĝal sig-ga ud zalag ku₁₀-ku₁₀ an-bar₇ mul-sig₇-še₃ mu-un-du₃-X\nlu₂-u₃ lu₂-ra igi mu-un-suḫ-re inbir igi bi₂-in-du₈-ru\ngu₃ ri-a-ta edin-ta lu₃-lu₃ šag₄-tum₂ šag₄-sig-ga ĝa₂-ĝa₂\nšeg₁₁ gi₄-a-ni {d}iškur-gin₇ su kur-kur dub₂-dub₂-bu\nme₃ er₉ ra-a-ni šu nu-ru-gu₂-da a-ba-a mu-na-ab-sig₁₀-ge\nšen-šen er₉-a-ni igi nu-bar-re ĝiš-ĝiš-la₂ /sul-sul\\\na ur₄-ra sumur DU ki-a ur₄-ur₄ niĝ₂-nam nu-da₁₃-da₁₃\nin-nin₉ {ĝiš}tug₂-saga₁₁ KI.KAL ĝal₂ da₁₃-da₁₃ bar-re /KA\\ X TAR\nlu₂ ka tar-ra-bi gu₂-bi nu-zi-zi ĝiri₃{?} X X\nšag₄ gur₄-ra-ni dim₂-dim₂-ma-ni ab-ak in-nin 1(AŠ)-a-ni [X] /dim₂{?}\\\nmaḫ-di unken-/na\\ zag gal ba-e-dur₂-ru zid-da gab₂-bu BAD",
+     "orig_lines": [
+      "49",
+      "50",
+      "51",
+      "52",
+      "53",
+      "54",
+      "55",
+      "56",
+      "57",
+      "58",
+      "59"
+     ],
+     "en": "On the wide and silent plain, darkening the bright daylight, she turns midday into darkness. People look upon each other in anger, they look for combat. Their shouting disturbs the plain, it weighs on the pasture and the waste land. Her howling is like Iškur's and makes the flesh of all the lands tremble. No one can oppose her murderous battle -- who rivals her? No one can look at her fierce fighting, the speeding carnage. Engulfing (?) water, raging, sweeping over the earth, she leaves nothing behind. The mistress, a breaking plough opening hard ground, ……. The braggarts do not lift their necks, ……. Her great heart performs her bidding, the mistress who alone fashions (?) ……. Exalted in the assembly, she occupies the seat of honour, …… to the right and left."
+    },
+    {
+     "ref": "60–72",
+     "orig": "ḫur-saĝ gal an-ba-gin₇ pe-el-la₂ šu X X mu-la₂\nbir kur-ra ud e₃-ta ud /šu₂\\-uš [...] X X tum₂-tum₂-mu\n{d}inana bad₃ {na₄}gul-/gul\\ [...] X u₃-ma sa₂ di\n{na₄}kalag-ga utul₂-gin₇ /MU{?}\\ [X] X RA i₃-udu-gin₇ mu-ni-in-du₃-e\nin-nin giri₁₇-zal ĝiri₂-ur₃-ra šu ĝal₂-le su-lim kalam-ma dul-lu\nsa la₂-a-ni engur-ra ku₆ ab-dab₅-dab₅-be₂ a-sur-ra-kam a-ḫa-an nu-da₁₃-da₁₃\nmušen-du₃ kug-zu-gin₇ igi-te-en sa la₂-a-ni mušen nu-e₃\nki ḪAR-ra-ni sukud nu-X [X] X inim si nu-sa₂\nIR IM RI-RI TUG₂ ĝiš-ḫur an ki\nsig₁₀-ge₅ /ak\\ inim-ma-ni an nu-mu-na-ḪAR\nĝalga /suḫ₃ pu\\-uḫ₃-ru-um diĝir gal-gal-e-ne ĝar-bi niĝ₂ nu-zu\nšu dili ZI{?} an-na /šu\\ [...]-a ḫa-za\nMUŠ₃ AN /AB{?}\\ X NAM X SUM [X X] X LA AN nu-X [X]",
+     "orig_lines": [
+      "60",
+      "61",
+      "62",
+      "63",
+      "64",
+      "65",
+      "66",
+      "67",
+      "68",
+      "69",
+      "70",
+      "71",
+      "72"
+     ],
+     "en": "Humbling huge mountains as if they were piles of litter, she immobilises ……. She brings about the destruction of the mountain lands from east to west. Inana …… wall …… gulgul stones, she obtains victory. She …… the kalaga stone …… as if it were an earthenware bowl, she makes it like sheep's fat. The proud mistress holds a dagger in her hand, a radiance which covers the Land; her suspended net catches fish in the deep, not even leaving the ahan in the subterranean waters. As if she were a clever fowler no bird escapes the mesh of her suspended net. The place ……, …… the divine plans of heaven and earth. The intention of her word does not …… to An. The context of her confusing advice in the great gods' assembly is not known. 2 lines fragmentary"
+    },
+    {
+     "ref": "73–79",
+     "orig": "in-nin nemurₓ(PIRIĜ.TUR) {d}a-nun-<na>-ke₄-ne gaba til nir šum₂-ma\nBIL₂ TAB inbir X-ĝa₂ nu-tuku {d}inana mu-ĝa₂-ĝa₂ lu₂ mu-X\nki-sikil tur ama₅-na ḪA X [X] X X šu teĝ₃-ĝe₂₆ šag₄ la-la [X X]\nmunus zag tag-ga-ni ḫul-bi bi₂-in-/KA{?}\\ [...]\nNIĜIN kalam-ma-ka TUM gal mu-na-RU{?}-/uš\\ [...]\ntilla₂-a šu al-dag-dag-ge X [...]\nzi-in-BU e₂-a dam dumu-ni igi bi₂-in-/du₈\\",
+     "orig_lines": [
+      "73",
+      "74",
+      "75",
+      "76",
+      "77",
+      "78",
+      "79"
+     ],
+     "en": "The mistress, a leopard among the Anuna gods, full of pride, has been given authority. Not having …… struggle ……, Inana ……. She …… the adolescent girl in her chamber, receiving her, …… heart …… charms. She evilly …… the woman she rejects. In the entire (?) country she ……. She lets her run around in the town square ……. …… of a house the wife sees her child."
+    },
+    {
+     "ref": "80–90",
+     "orig": "šer₇-da gu-la-ni su-ni-ta u₃-mu-e-ni-in-ĝar\nugu-ba giri₁₇ šu ĝal₂-la mu-ni-in-ak pi-li-pi-li mu-ni-in-sa₄\n{ĝiš}šukur i-ni-kud nitaḫ-gin₇ šag₄-ga-ni {ĝiš}tukul an-na-ab-šum₂-mu\nKAL šul-a-lum u₃-mu-ni-in-ak teš₂-bi NI TE A me-bi{?} la-ba-ĝal₂-la\ne₂ nam-kug-zu {ĝiš}ig-bi TAR mi-ni-in-ak šag₄-bi mu-un-zu-zu\nsa la₂-ni-ir ni₂ nu-zu-ni-ir igi-te-en sa la₂-a-ni [X X] X-ba nu-e₃\nlu₂ mu pad₃-da-ni nu-mu-na-kal-la munus-ra u₃-mu-na-te {ĝiš}tukul i-ni-in-kud {ĝiš}šukur an-na-ab-šum₂-mu\nlu₂-ĝiš-gi-saĝ-keše₂ ni₂-su-ub munus-ĝiš-gi šul-a-lum u₃-mu-ni-in-ak še ša₄ UD [...]\nlu₂-al-ed₂-de₃ pi-li-pi-li bal kur-ĝar-ra /saĝ\\-ur-saĝ-e-ne [...]\ni-lu šir₃-ra-am₃ RI{?} A zu{?} bar NE [...]\ner₂ er₂-ra bi₂-ib₂-kuš₂-u₃-ne a-nir mu-X [...]",
+     "orig_lines": [
+      "80",
+      "81",
+      "82",
+      "83",
+      "84",
+      "85",
+      "86",
+      "87",
+      "88",
+      "89",
+      "90"
+     ],
+     "en": "When she had removed the great punishment from her body, she invoked blessings upon it; she caused it to be named the pilipili. She broke the spear and as if she were a man …… gave her a weapon. When she had …… punishment, it is not ……. She …… the door of the house of wisdom, she makes known its interior. Those who do not respect her suspended net do not escape …… when she suspends the meshes of her net. The man she has called by name she does not hold in esteem. Having approached the woman, she breaks the weapon and gives her a spear. The male ĝišgisaĝkeš, the nisub and the female ĝišgi ritual officiants, after having …… punishment, moaning ……. The ecstatic, the transformed pilipili, the kurĝara and the saĝursaĝ ……. Lament and song ……. They exhaust themselves with weeping and grief, they …… laments."
+    },
+    {
+     "ref": "91–98",
+     "orig": "er₂ ud-da šag₄-zu nu-X X X X AN-da nu-DI\nmuš₃-am₃ e₂{?} šag₄ NE bur₂ X /ni₂\\ dub₂-bu nu-zu\nnin ki aĝ₂ an kug-ga ḪAR-zu igi mu-e-ni-X [(X)] X-za er₂-ra X E\nan-na me DI X [...]\ngaba-za ki mu-[...]-za nu-mu-e-da-sa₂\ndili-zu-ne maḫ X mu e-da{!}-tuku an ki niĝ₂-za nu-sig₉-ge\nan-da {d}en-lil₂-da mu-e-da{!}-sa₂ zag gal-bi mu-e-dur₂-ru-e{?}\nki-šu ki-šu-peš dirig-ga-me-en in-di-za maḫ-me-/en\\",
+     "orig_lines": [
+      "91",
+      "92",
+      "93",
+      "94",
+      "95",
+      "96",
+      "97",
+      "98"
+     ],
+     "en": "Weeping daily your heart does not ……. 'Alas' …… heart …… knows no relaxation. Beloved lady of holy An, your …… in weeping ……. In heaven ……. On your breast ……. You alone are majestic, you have renown, heaven and earth …… not ……. You rival An and Enlil, you occupy their seat of honour. You are pre-eminent in the cult places, you are magnificent in your course."
+    },
+    {
+     "ref": "99–108",
+     "orig": "{d}ezina₂ AN X barag maḫ il₂ X [...]\n{d}iškur-re lu₂ an-ta gu₃ X [...]\ndungu sir₂-sir₂-ra-ni mu-e-/da\\-[...]\nud me gal-gal an ki-bi-da šu mu-/un\\-[...]\n{d}inana u₃-ma-zu ḫuš-am₃ šag₄ X X X [...] X\n{d}a-nun-na giri₁₇-bi gam-e-eš giri₁₇ ba-e-dur₂-ru-ne-eš\nur gal-gal 7(IMIN)-bi ba-e-u₅ an-na ba-e-ed₂-de₃\nan gal-e muš₃-za ni₂ bi₂-te ki-tuš-zu im-mi-ḫu-luḫ\nki-tuš an gal-la-ke₄ dur₂ ba{?}-e{?}-ĝar su nu-mu-e-da-zi-zi\nĝarza₂ maḫ ĝarza gal-/gal\\ šu-zu ga-mu-un-si",
+     "orig_lines": [
+      "99",
+      "100",
+      "101",
+      "102",
+      "103",
+      "104",
+      "105",
+      "106",
+      "107",
+      "108"
+     ],
+     "en": "Ezina …… august dais ……. Iškur who roars from the sky ……. His thick clouds ……. When …… the great divine powers of heaven and earth, Inana, your victory is terrifying ……. The Anuna gods bow down in prostration, they abase themselves. You ride on seven great beasts as you come forth from heaven. Great An feared your precinct and was frightened of your dwelling-place. He let you take a seat in the dwelling-place of great An and then feared you no more, saying: \"I will hand over to you the august royal rites and the great divine rites.\""
+    },
+    {
+     "ref": "109–114",
+     "orig": "diĝir gal-e-ne giri₁₇ ki-a bi₂-in-su-ub-bu-uš šu-kin mu-un-dab₅-be₂-eš\nkur un₃-na kur {na₄}/gug\\ {na₄}za-gin₃-na giri₁₇ ki-še₃ mu-ra-an-te\nebiḫ{ki} giri₁₇ ki-še₃ nu-mu-ra-an-te šu nu-mu-ra-mu₂-mu₂\ngu₃-an-ne₂-si-gin₇ ib₂-ba si-il-la-za ud-gin₇ ib₂-ra-ra\nnin an {d}en-lil₂-da dirig-ga ĝiri₃ X X X i-i\nza-e-da nu-me-a nam-nam-ma nu-un-tar sa₂ galam nu-še",
+     "orig_lines": [
+      "109",
+      "110",
+      "111",
+      "112",
+      "113",
+      "114"
+     ],
+     "en": "The great gods kissed the earth and prostrated themselves. The high mountain land, the land of cornelian and lapis lazuli, bowed down before you, but Ebiḫ did not bow down before you and did not greet you. Shattering it in your anger, as desired, you smashed it like a storm. Lady, pre-eminent through the power of An and Enlil, ……. Without you no destiny at all is determined, no clever counsel is granted favour."
+    },
+    {
+     "ref": "115–131",
+     "orig": "kaš₄ kar-re te-en-te-en ni₂ dub₂-bu-de₃ {d}inana za-a-kam\n{[X] X ul₄-ul₄ zi-zi LAGABxX an-ta sa₂-sa₂-de₃} {(1 ms. ḫas, in syllabiš spelling:) ur-ru-ur ul-lu-ul zi-iz-zi gu-ru-da₁₀ an-ta si-si-te} {d}inana za-a-kam\n[ḫar]-/ra\\-an ḫe₂-en-<du> taka₄ ĝiri₃ dab ki silim-ma dili-us₂ dim₃-ma (pe₂-te ur-ḫi-im u₃ ṭu₂-di-im i-me₂-te-qi₂-im a-šar šu-ul-mi-im ta-pu-ut u₂-la-li a-la-kum) {d}inana za-a-kam\nĝiri₃-us₂ ka-ĝiri₃ si sa₂-sa₂-de₃ ki dar ge-en-ge-en {d}inana za-a-kam\ngul-lu dim₂-me zi-zi ĝa₂-ĝa₂ {d}inana za-a-kam\n[nitaḫ] munus-ra munus nitaḫ-ra ku₄-ku₄-de₃ {d}inana za-kam\nla-la šag₄-zig₃-ga niĝ₂-šu ĝal₂ e₂{?} niĝ₂-gun₂ ĝa₂-ĝa₂ {d}inana za-a-kam\ndun sa₅-bu₈ kug bal kug dirig {d}inana za-a-[kam]\nkug-dun kug a₂-tuku i-bi₂-za kug im-ba {d}inana za-a-kam\n{igi KAR₂ igi KAR₂ igi kar₂-kar₂ igi <bar zil₂>-zil₂-bi} {(1 ms. ḫas instead:) niĝ₂-nam igi KAR₂ igi kar₂-kar₂ igi bar ZALAG-ZALAG-bi{za-al-za-le-bi} (ta-ak-li-im-tum ta-ki-ir-tum ta-še-er-tum na-ap-lu-su-um u₃ du-um-mu-qu₂-um)} {d}inana za-a-kam\nme teš₂ {d}alad {d}lamma ki-šu-peš₁₁ zu {d}/inana\\ [za-a-kam]\nšu bal ab-ak an-ta X X [...]\nze₂-mu-ug X X BA X [...]\nKA X X zag tag-/ga\\ [...]\nDI{?} X [...]\nX [...]\n[... {d}inana] za-a-[kam]",
+     "orig_lines": [
+      "115",
+      "116",
+      "117",
+      "118",
+      "119",
+      "120",
+      "121",
+      "122",
+      "123",
+      "124",
+      "125",
+      "126",
+      "127",
+      "128",
+      "129",
+      "130",
+      "131"
+     ],
+     "en": "To run, to escape, to quiet and to pacify are yours, Inana. To rove around, to rush, to rise up, to fall down and to …… a companion are yours, Inana. To open up roads and paths, a place of peace for the journey, a companion for the weak, are yours, Inana. To keep paths and ways in good order, to shatter earth and to make it firm are yours, Inana. To destroy, to build up, to tear out and to settle are yours, Inana. To turn a man into a woman and a woman into a man are yours, Inana. Desirability and arousal, bringing goods into existence and establishing properties and equipment are yours, Inana. Profit, gain, great wealth and greater wealth are yours, Inana. Profit and having success in wealth, financial loss and reduced wealth are yours, Inana. {Observation} {(1 ms. has instead:) Everything}, choice, offering, inspection and embellishment are yours, Inana. Assigning virility, dignity, guardian angels, protective deities and cult centres are yours, Inana. 6 lines fragmentary"
+    },
+    {
+     "ref": "132–154",
+     "orig": "[...] X X X šag₄ gur šag₄ šu niĝin {d}[inana] [za-a-kam]\n[...] X GUD-bi nam{?}-bi GABA X X X [...] {d}inana za-a-kam\nšag₄{?} X tuku₄-e im-ba-X im-ba-sur /im\\-ba-X-X X {d}inana za-a-kam\ndam dam tuku UR-bi LU niĝ₂ dug₃ ki aĝ₂-ĝa₂ dug₃{?} {d}inana za-a-kam\nḫi-li-ḫi-li-a sun₇-na DI-DI {d}inana za-a-kam\ngum₂-gum₂{gu-um-gu-um} ĝar-ĝar-ĝar (te-em-ku-u₂ te-ek-nu-u₂) il₂ gu₂ zig₃ gam-gam {d}inana za-a-kam\ne₂ du₃-a ama₅ dim₂-me niĝ₂-gun₂-na tuku-tuku nundum dim₃ sag₉ (na-ša-qum) {d}inana za-kam\ndub₃ bad dub₃ kaš₄ [X] / ni₂\\ sig₁₀-sig₁₀-ge sa₂ did-de₃ {d}inana za-kam\nḫu-ru kalag-ga lu₂-gam-ma lu₂-sig-ga ḫi-ḫi {d}inana za-kam\nil₂-la₂ du₅-la₂ saĝ il₂-la₂ ib₂-ba-lal ḫi-ḫi {d}inana za-kam\naga {ĝiš}gu-za {ĝiš}ĝidru nam-lugal šum₂-mu {d}inana za-kam",
+     "orig_lines": [
+      "132",
+      "133",
+      "134",
+      "135",
+      "136",
+      "137",
+      "138",
+      "139",
+      "140",
+      "141",
+      "142"
+     ],
+     "en": "…… mercy and pity are yours, Inana. …… are yours, Inana. To cause the …… heart to tremble, …… illnesses are yours, Inana. To have a favourite wife, ……, to love …… are yours, Inana. Rejoicing, being haughty, …… are yours, Inana. Neglect and care, raising and bowing down are yours, Inana. To build a house, to create a woman's chamber, to possess implements, to kiss a child's lips are yours, Inana. To run, to race, to plot and to succeed are yours, Inana. To interchange the brute and the strong and the weak and the powerless is yours, Inana. To interchange the heights and valleys, and raising up and reducing, is yours, Inana. To give the crown, the throne and the royal sceptre is yours, Inana. 12 lines missing"
+    },
+    {
+     "ref": "155–157",
+     "orig": "tur maḫ sig daĝal gu₂ šu daĝal tag-ga {d}inana za-a-kam\nĝarza(sourše: PA) ĝarza₂ šum₂-mu a₂-bi aĝ₂-ĝa₂ tum₂-tum₂-mu\neme sig inim a-ša-an-ga-ra KA-e₂-gal kur₂ dug₄-ga taḫ dug₄-dug₄ {d}inana za-a-kam",
+     "orig_lines": [
+      "155",
+      "156",
+      "157"
+     ],
+     "en": "To diminish, to make great, to make low, to make broad, to …… and to give a lavish supply are yours, Inana. To bestow the divine and royal rites, to carry out the appropriate instructions, slander, untruthful words, abuse, to speak inimically and to overstate are yours, Inana."
+    },
+    {
+     "ref": "158–168",
+     "orig": "ba-an-gi₄ lul zid bi-ri-ig niĝ₂-a₂-zig₃ dug₄-dug₄\na-tar la₂-la₂ niĝ₂ kur₂ dug₄-dug₄ zu₂ li₂ pe-el dugud\nkana₆ niĝ₂-gig-ga šag₄ ḫul gig ḫul (ḫu-du-um) zalag-ga ku₁₀-ku₁₀\nni₂-am₃ ur₄{?}-re ni₂ /ul₄\\ ni₂ /ri til₃\\-la ni₂ gal me-lem₄-ma\nu₃-ma niĝ₂ X X (re-du-um) im-ba-sur igi lib u₃ nu-ku\ngu₂ ĝar saĝ ĝar ĜAR BIR DA{?} NI ni₂{?} ul₄{?} gu₃ til₄-a\ndu₁₄ igi suḫ₃-[suḫ₃] /gaba{?}\\-ri erin₂-ḫuš ĝiš-ĝiš-la₂ sul-sul\nNI KAB naĝ X X X X niĝ₂-nam-ma zu-zu\ngud₃ X RI us₂-sa X ul-le₂-a-aš gen₆-ne₂\na-ri-a X šag₄-tur₃-gin₇ X ni₂ ri-a-X /gu₂\\-bar /gu₂\\ ĝa₂-ĝa₂\nDI X X [X] ḫul gig X X X X-am₃{?} keše₂ X X X (X) [{d}]inana za-a-kam",
+     "orig_lines": [
+      "158",
+      "159",
+      "160",
+      "161",
+      "162",
+      "163",
+      "164",
+      "165",
+      "166",
+      "167",
+      "168"
+     ],
+     "en": "The false or true response, the sneer, to commit violence, to extend derision, to speak with hostility, to cause smiling and to be humbled or important, misfortune, hardship, grief, to make happy, to clarify and to darken, agitation, terror, panic, awesome brilliance and radiance, triumph, pursuit, imbasur illness, sleeplessness and restlessness, submission, gift, …… and howling, strife, chaos, opposition, fighting and speeding carnage, ……, to know everything, to strengthen for the distant future a nest built ……, to instill fear in the …… desert like a …… poisonous snake, to subdue the hostile enemy, …… and to hate …… are yours, Inana."
+    },
+    {
+     "ref": "169–173",
+     "orig": "ĝiš-šub X X X X [X X] X UB{?} [X] X\nuĝ₃ [sag₂ dug₄-ga] gu₂ ĝar-ĝar ki-bi-še₃ gi₄-gi₄\n[...] X šu tiĝ₄-ĝe₂₆ X X NE X\n[...]-du₈-u₃ {d}inana za-a-[kam]\n[...] X X AN [...]",
+     "orig_lines": [
+      "169",
+      "170",
+      "171",
+      "172",
+      "173"
+     ],
+     "en": "To …… the lots ……, to gather the dispersed people and restore them to their homes, to receive ……, to …… are yours, Inana. 1 line fragmentary"
+    },
+    {
+     "ref": "174–181",
+     "orig": "X X [...] lu₂-kaš₄-e-ne\nka ba-zu šu X X [X]-ra ba-an-kur₉\nigi bar-ra-zu ĝeštug₂ la₂ ĝiš tuku-uš nu-ši-bad-ba₉-re₆\nigi suḫ-a-zu dadag-ga ku₁₀-ku₁₀ an-bar₇ mul-sig₇-še₃ mu-un-ĝa₂-ĝa₂\nki šag₄-zu ud mi-[ni]-ib-dug₄-ga-aš mu-un-gul ki mu-/un\\-dub₂-bu niĝ₂-zu niĝ₂ nu-sag₂\nniĝ₂ gal-gal-zu a-ba saĝ mu-un-ĝa₂-ĝa₂ za-e nin an ki-me-en\n{d}inana e₂-gal kadra nu-di-kud uĝ₃ šar₂-ra ka eš-bar X X X\nmu pad₃-da-zu kur-ra ab-dirig an X-za nu-mu-un-da-sa₂",
+     "orig_lines": [
+      "174",
+      "175",
+      "176",
+      "177",
+      "178",
+      "179",
+      "180",
+      "181"
+     ],
+     "en": "…… the runners, when you open your mouth, …… turns into ……. At your glance a deaf man does not …… to one who can hear. At your anger what is bright darkens; you turn midday into darkness. When the time had come you destroyed the place you had in your thoughts, you made the place tremble. Nothing can be compared to your purposes (?); who can oppose your great deeds? You are the lady of heaven and earth! Inana, in (?) the palace the unbribable judge, among the numerous people …… decisions. The invocation of your name fills the mountains, An (?) cannot compete with your ……."
+    },
+    {
+     "ref": "182–196",
+     "orig": "ĝeštug₂-ga de₅-a-zu niĝin diĝir-re-e-ne igi šub-ba MI X dili-zu-u₃-de₃ maḫ-me-en\ndiĝir an ki-a a-na me-a-bi immal₂ gal-bi-me-en\nigi il₂-la-zu lib bar mu-un-ak-e-ne inim-zu-še₃ i₃-dur₂-ru-ne-eš\nki za til₃-la-za {d}a-nun-na al-sug₂-ge-eš inim mu-un-da-sag₉-sag₉-ge-ne\nni₂ gal KA ka tar X X X X ŠE₃ TUG₂ GABA NIR mu-un-til₃-le-ne\nka tar si-il-la-zu ba-ra-mu-un-til-le me-a mu-zu X maḫ nu",
+     "orig_lines": [
+      "182",
+      "183",
+      "184",
+      "185",
+      "186",
+      "187"
+     ],
+     "en": "Your understanding …… all the gods ……. You alone are magnificent. You are the great cow among the gods of heaven and earth, as many as there are. When you raise your eyes they pay heed to you, they wait for your word. The Anuna gods stand praying in the place where you dwell. Great awesomeness, glory ……. May your praise not cease! Where is your name not magnificent? 9 lines missing"
+    },
+    {
+     "ref": "197–202",
+     "orig": "en₃-du-zu zaraḫ a-nir X X DA šag₄ X X IGI X [...]\nDI-DI-zu šu bal-a nu-ub-zu ib₂-ba-zu zukum-ma\nšu dug₄-ga-zu niĝ₂ šu nu-GAN-X a₂ aĝ₂-ĝa₂ du₃-du₃-a-zu an nu-mu-un-na-an-la₂\nan-da {d}en-lil₂-da lu₂ zu-a unken-na gal-gal X munus saĝ-e-eš mu-e-rig₇\nka teš₂ an {d}en-lil₂ mu-e-X X GI kalam šu-zu-uš dab₅ X\ninim bi₂-in-dug₄-ga-zu an nu-mu-un-na-an-gi₄",
+     "orig_lines": [
+      "197",
+      "198",
+      "199",
+      "200",
+      "201",
+      "202"
+     ],
+     "en": "Your song is grief, lament ……. Your …… cannot be changed, your anger is crushing. Your creation cannot be ……, An has not diminished your …… orders. Woman, with the help of An and Enlil you (?) have granted …… as a gift in the assembly. Unison …… An and Enlil ……, giving the Land into your hand. An does not answer the word you have uttered to him."
+    },
+    {
+     "ref": "203–208",
+     "orig": "ḫe₂-am₃ dug₄-ga-zu an gal nu-[mu]-/un\\-na-an-bur₂\nḫe₂-am₃-zu ḫe₂-am₃ gul-lu [X (X X)] gul-lu\ngi₄ unken-na bi₂-in-dug₄-ga-/zu\\ an {d}en-lil₂ nu-sag₂\neš-bar ab-bi bi₂-in-dug₄-ga-/zu\\ an ki-ta nu-kur₂-ru\nki ḫe₂-am₃ bi₂-in-dug₄ gul-lu nu-DI\nki gul-la bi₂-in-dug₄ ḫe₂-am₃ nu-DI",
+     "orig_lines": [
+      "203",
+      "204",
+      "205",
+      "206",
+      "207",
+      "208"
+     ],
+     "en": "Once you have said 'So be it', great An does not …… for him. Your 'So be it' is a 'So be it' of destruction, to destroy ……. Once you have said your …… in the assembly, An and Enlil will not disperse it. Once you have made a decision ……, it cannot be changed in heaven and earth. Once you have specified approval of a place, it experiences no destruction. Once you have specified destruction for a place, it experiences no approval."
+    },
+    {
+     "ref": "209–218",
+     "orig": "nam-diĝir-zu {d}nanna {d}utu-gin₇ an kug-ge dalla e₃\nizi-ĝar-zu ub an-na zalag-ge ku₁₀-ku₁₀ zalag-ge-eš₂ ĝar\nnitaḫ munus-bi gu dili-/a\\ mi-ri-ed₂-de₃ niĝ₂ ud-da-ka-ni /igi\\-zu-še₃ bi₂-ib₂-ta-la₂\n/uĝ₃\\ šar₂-ra-zu kurum₇ ak-da-bi {d}utu-gin₇ igi-zu-še₃ i₃-dib-be₂\nme kal-kal-la-za šu nu-tu-tu me kilib₃ X X-še₃ i₃-dib-be₂\nan ki til-bi-še₃ nam-nin-bi mu-e-ak niĝ₂-nam šu mu-e-du₈\nin-nin za-e maḫ-me-en igi-zu-še₃ na-me nu-dib-be₂\nan gal-da [ki]-nu₂ kug-ga mu-e-til\ndiĝir a-ba za-gin₇ ur₄ an ki ur₄-ur₄\nza-e maḫ-me-en mu-zu ar₂-re-eš e dili-zu-ne maḫ-me-en",
+     "orig_lines": [
+      "209",
+      "210",
+      "211",
+      "212",
+      "213",
+      "214",
+      "215",
+      "216",
+      "217",
+      "218"
+     ],
+     "en": "Your divinity shines in the pure heavens like Nanna or Utu. Your torch lights up the corners of heaven, turning darkness into light. The men and women form a row for you and each one's daily status hangs down before you. Your numerous people pass before you, as before Utu, for their inspection. No one can lay a hand on your precious divine powers; all your divine powers ……. You exercise full ladyship over heaven and earth; you hold everything in your hand. Mistress, you are magnificent, no one can walk before you. You dwell with great An in the holy resting-place. Which god is like you in gathering together …… in heaven and earth? You are magnificent, your name is praised, you alone are magnificent!"
+    },
+    {
+     "ref": "219–242",
+     "orig": "en-ḫe₂-du₇-an-na-me-<en> zirru\nDIŠ X [...] X {d}nanna-me-en\nX X [...]\nX [...]",
+     "orig_lines": [
+      "219",
+      "220",
+      "221",
+      "242"
+     ],
+     "en": "I am En-ḫedu-ana, the high priestess of the moon god. ……; I am the …… of Nanna. 1 line fragmentary 20 lines missing1 line fragmentary"
+    },
+    {
+     "ref": "243–253",
+     "orig": "ĝalga [...]\nšag₄ ḫul gig niĝ₂-gig-ga X [...] muš₃-am₃ mu-[...]\nnin-ĝu₁₀ ud en-nam arḫuš ĜA₂ [...] šag₄-ne-ša₄ X X X X\nĝe₂₆-e za-kam ne-e a-na-am₃ i₃-til-le šag₄-zu ḫa-ma-sed-de₃\nĝeštug₂-ga de₅-a-zu šag₄-ne-ša₄ mu-[...]\nigi-zu-še₃ ḫe₂-bi₂-ib-X X igi kar₂-kar₂-ĝu₁₀ ḫe₂-ĝal₂\nnam-diĝir-zu kalam-e pa bi₂-a-e₃\nšer₇-da gu-la-zu su-ĝu₁₀ ba-e-zu-zu\na-nir niĝ₂ gig-ga igi ma-lib la-ra-aḫ si-il-am₃-ta\narḫuš šag₄-ne-ša₄ igi bar-bar šag₄ gur-ru giri₁₇ šu ĝal₂ za-a-kam\nud a ra-aḫ KI.KAL ĝal₂ da₁₃-da₁₃ ku₁₀-ku₁₀ zalag-ge-eš ĝar",
+     "orig_lines": [
+      "243",
+      "244",
+      "245",
+      "246",
+      "247",
+      "248",
+      "249",
+      "250",
+      "251",
+      "252",
+      "253"
+     ],
+     "en": "Advice ……, grief, bitterness ……, 'alas' ……. My lady, …… mercy …… compassion …… I am yours! This will always be so! May your heart be soothed towards me! May your understanding …… compassion. May …… in front of you, may it be my offering. Your divinity is resplendent in the Land! My body has experienced your great punishment. Bitter lament keeps me awake with …… anxiety. Mercy, compassion, care, lenience and homage are yours, and to cause flood storms, to open hard ground and to turn darkness into light."
+    },
+    {
+     "ref": "254–263",
+     "orig": "nin-ĝu₁₀ nam-maḫ-zu kur-kur-ra ka tar-zu ga-si-il\na-ra₂ nam-gur₄-ra-zu me-teš₂ ḫu-mu-i-i\nza-e nam-diĝir-zu a-ba e-da-sa₂\nĝarza-zu-še₃ a-ba-a mu-un-na-sig₁₀-ge\nan gal ki aĝ₂-zu muš₃-am₃-zu ḫe₂-eb-be₂\ndiĝir gal-gal-e-ne ur₅-zu ḫe₂-bi₂-ib₂-ḫuĝ-[ĝe₂₆-ne]\nbarag za-gin₃ nam-nin-a tum₂-ma TU-TU-zu X ḫe₂-X X X X\nki-tuš nam-maḫ-zu tuš-a ḫu-mu-ra-ab-be₂\nki-nu₂ kug-ga-zu ni₂ /dub₂-bu\\ ḫu-mu-ra-ab-be₂\nnam-X-zu ki {d}utu e₃-a UN{?} šag₄{?} [X] X si-il-[i]",
+     "orig_lines": [
+      "254",
+      "255",
+      "256",
+      "257",
+      "258",
+      "259",
+      "260",
+      "261",
+      "262",
+      "263"
+     ],
+     "en": "My lady, let me proclaim your magnificence in all lands, and your glory! Let me praise your ways and greatness! Who rivals you in divinity? Who can compare with your divine rites? May great An, whom you love, say for you \"It is enough!\". May the great gods calm your mood. May the lapis lazuli dais, fit for ladyship, ……. May your magnificent dwelling place say to you: \"Be seated\". May your pure bed say to you: \"Relax\". Your ……, where Utu rises, ……."
+    },
+    {
+     "ref": "264–271",
+     "orig": "nam-maḫ-zu ši-im-pad₃-pad₃-de₃-ne za-e nin ab-bi-me-en\nan {d}en-lil₂ an kilib₃-ba-bi nam gal mu-ri-in-tar-re-eš\nnam-nin gu₂-en-na ma-ra-an-šum₂-mu-uš\nnin₉ nin-e-ne nam nam-ma-tar-re nam-nin-a tum₂-ma\nin-nin za-e maḫ-me-en za-e gur₄-ra-me-en\n{d}inana za-e maḫ-me-en za-e gur₄-ra-me-en\nnin-ĝu₁₀ nam-maḫ-zu pa bi₂-a-e₃\nšag₄-zu ki-bi ḫa-ma-gi₄-gi₄",
+     "orig_lines": [
+      "264",
+      "265",
+      "266",
+      "267",
+      "268",
+      "269",
+      "270",
+      "271"
+     ],
+     "en": "They proclaim your magnificence; you are the lady ……. An and Enlil have determined a great destiny for you throughout the entire universe. They have bestowed upon you ladyship in the assembly chamber. Being fitted for ladyship, you determine the destiny of noble ladies. Mistress, you are magnificent, you are great! Inana, you are magnificent, you are great! My lady, your magnificence is resplendent. May your heart be restored for my sake!"
+    },
+    {
+     "ref": "272–274",
+     "orig": "niĝ₂ gal-gal-zu niĝ₂ zag nu-sa₂\nnam-maḫ-zu me-teš₂ ḫu-mu-i-i\nki-sikil {d}inana za₃-mi₂-zu dug₃-ga-am₃",
+     "orig_lines": [
+      "272",
+      "273",
+      "274"
+     ],
+     "en": "Your great deeds are unparallelled, your magnificence is praised! Young woman, Inana, your praise is sweet!"
+    }
+   ]
+  }
+ ]
+}

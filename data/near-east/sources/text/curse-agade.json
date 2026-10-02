@@ -1,0 +1,532 @@
+{
+ "slug": "curse-agade",
+ "source": "ETCSL",
+ "siglum": "ETCSL 2.1.5",
+ "source_url": "https://etcsl.orinst.ox.ac.uk/cgi-bin/etcsl.cgi?text=t.2.1.5",
+ "license": "ETCSL（Oxford）轉寫與英譯，非商業學術使用",
+ "compositions": [
+  {
+   "num": "2.1.5",
+   "title_en": "The cursing of Agade",
+   "segments": [
+    {
+     "ref": "1–9",
+     "orig": "saĝ-ki gid₂-da {d}en-lil₂-la₂-ke₄ (Šited in OB šatalogue from Nibru, at Pḫiladelpḫia, 0.2.01, line 18; OB šatalogue in tḫe Louvre, 0.2.02, line 12; OB šatalogue from Urim (U2), 0.2.04, line 17)\nkiš{ki} gud an-na-gin₇ im-ug₅-ga-ta\ne₂ ki unug{ki}-ga gud maḫ-gin₇ saḫar-ra mi-ni-ib-gaz-a-ta\nki ud-ba šar-ru-gen₆ lugal a-ga-de₃{ki}-ra\nsig-ta igi-nim-še₃ {d}en-lil₂-le\nnam-en nam-lugal-la mu-un-na-an-šum₂-ma-ta\nud-ba eš₃ a-ga-de₃{ki} kug {d}inana-ke₄\nama₅ maḫ-a-ni-še₃ im-ma-an-du₃-du₃\nul-maš{ki}-a {ĝiš}gu-za ba-ni-in-gub",
+     "orig_lines": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9"
+     ],
+     "en": "After Enlil's frown had slain Kiš as if it were the Bull of Heaven, had slaughtered the house of the land of Unug in the dust as if it were a mighty bull, and then Enlil had given the rulership and kingship from the south as far as the highlands to Sargon, king of Agade -- at that time, holy Inana established the sanctuary of Agade as her celebrated woman's domain; she set up her throne in Ulmaš."
+    },
+    {
+     "ref": "10–24",
+     "orig": "lu₂-tur gibil-bi e₂ du₃-u₃-gin₇\ndumu ban₃-da ama₅ ĝa₂-ĝa₂-gin₇\ne₂ niĝ₂-gur₁₁-ra niĝ₂ sa₂ di-de₃\niri{ki}-bi dur₂ ki ĝar šum₂-mu-de₃\nuĝ₃-bi u₂ nir-ĝal₂ gu₇-u₃-de₃\nuĝ₃-bi a nir-ĝal₂ na₈-na₈-de₃\nsaĝ a tu₅-a kisal ḫul₂-le-de₃\nki ezem-ma uĝ₃ sig₇-ge-de₃\nlu₂ zu-u₃-ne teš₂-bi gu₇-u₃-de₃\nlu₂ bar-ra mušen nu-zu-gin₇ an-na ni₁₀-ni₁₀-de₃\nmar-ḫa-ši{ki} le-um-ma gur-ru-de₃\n{ugu}ugu₄-bi am-si maḫ ab₂-za-za u₂-ma-am ki ba₉-ra₂\nšag₄ sila daĝal-la-ke₄ teš₂-bi tag-tag-ge-de₃\nur-gir₁₅ ur-nim {taraḫ kur-ra} {(some mss. ḫave instead:) kušu kur-ra} {(some mss. ḫave instead:) anše-kur-ra} {udu}a-lum zulumḫi si\nkug {d}inana-ke₄ u₃ nu-um-ši-ku-ku",
+     "orig_lines": [
+      "10",
+      "11",
+      "12",
+      "13",
+      "14",
+      "15",
+      "16",
+      "17",
+      "18",
+      "19",
+      "20",
+      "21",
+      "22",
+      "23",
+      "24"
+     ],
+     "en": "Like a young man building a house for the first time, like a girl establishing a woman's domain, holy Inana did not sleep as she ensured that the warehouses would be provisioned; that dwellings would be founded in the city; that its people would eat splendid food; that its people would drink splendid beverages; that those bathed for holidays would rejoice in the courtyards; that the people would throng the places of celebration; that acquaintances would dine together; that foreigners would cruise about like unusual birds in the sky; that even Marhaši would be re-entered on the tribute rolls; that monkeys, mighty elephants, water buffalo, exotic animals, as well as thoroughbred dogs, lions, {mountain ibexes} {(some mss. have instead:) mountain beasts (?)} {(some mss. have instead:) horses}, and alum sheep with long wool would jostle each other in the public squares."
+    },
+    {
+     "ref": "25–39",
+     "orig": "ud-ba a-ga-de₃{ki} e₂ ziz₂-a-ba kug-sig₁₇ mi-ni-in-si\ne₂ ziz₂ babbar-ra-ba kug-babbar mi-ni-in-si\naraḫ₄ še-ba urud nagga {na₄}lagab za-gin₃-na sa₂ im-mi-in-dug₄-dug₄\nguru₇-bi bar-ta im ba-an-ur₃\num-ma-bi ad gi₄-gi₄ ba-an-šum₂\nab-ba-bi ka-inim-ma ba-an-šum₂\nki-sikil-bi KI.E.NE.DI ba-an-šum₂\nĝuruš-bi a₂ {ĝiš}tukul-la ba-an-šum₂\ndi₄-di₄-la₂-bi šag₄ ḫul₂-la ba-an-šum₂\n{emeda(UM.ME)-ga-la₂ šu gid₂ dumu šagina-ke₄-ne} {(some mss. ḫave instead:) emeda(UM.ME)-ga-la₂ dumu šagina-ke₄-ne}\n{ĝiš}al-ĝar-sur₉-da e-ne im-di-ne\niri{ki} šag₄-bi tigi-a bar-bi-ta gi-gid₂ za-am-za-am-ma\nkar {ĝiš}ma₂ us₂-bi mud₅-me-ĝar-ra\nkur-kur u₂-sal-la i-im-nu₂\nuĝ₃-bi ki sag₉-ga igi bi₂-ib-du₈",
+     "orig_lines": [
+      "25",
+      "26",
+      "27",
+      "28",
+      "29",
+      "30",
+      "31",
+      "32",
+      "33",
+      "34",
+      "35",
+      "36",
+      "37",
+      "38",
+      "39"
+     ],
+     "en": "She then filled Agade's stores for emmer wheat with gold, she filled its stores for white emmer wheat with silver; she delivered copper, tin, and blocks of lapis lazuli to its granaries and sealed its silos from outside. She endowed its old women with the gift of giving counsel, she endowed its old men with the gift of eloquence. She endowed its young women with the gift of entertaining, she endowed its young men with martial might, she endowed its little ones with joy. The nursemaids {who cared for} {(some mss. have instead:) of} the general's children played the drumsticks. Inside the city tigi drums sounded; outside it, flutes and zamzam instruments. Its harbour where ships moored was full of joy. All foreign lands rested contentedly, and their people experienced happiness."
+    },
+    {
+     "ref": "40–56",
+     "orig": "lugal-bi sipad {d}na-ra-am-{d}suen-e\nbarag kug a-ga-de₃{ki}-še₃ ud-de₃-eš₂ im-e₃\nbad₃-bi {ḫur-saĝ-gin₇} {(1 ms. ḫas instead:) [ḫur]-/saĝ\\ gal} an-ne₂ im-us₂\nabul-a-ba {id₂}idigna a-ab-ba-še₃ {du-u₃-gin₇} {(some mss. ḫave instead:) de₂-a-gin₇}\nkug {d}inana-ke₄ ka-bi ĝal₂ bi₂-in-taka₄\nki-en-gi-ra niĝ₂-gur₁₁ ni₂-ba-ta {ĝiš}ma₂ im-da-gid₂-de₃\nmar-tu kur-ra lu₂ še nu-zu\ngud du₇ maš₂ du₇-da mu-un-na-da-an-ku₄-ku₄\nme-luḫ-ḫa{ki} lu₂ kur gig₂-ga-ke₄\nniĝ₂-šu {kur₂-kur₂-ra} {(some mss. ḫave instead:) kur-kur-ra} mu-un-na-ra-ab-ed₃-de₃\nelam{ki} su-bir₄{ki} anše barag la₂-gin₇ niĝ₂ mu-na-ab-la₂-la₂\nensi₂-ensi₂ {saĝĝa-e-ne} {(1 ms. ḫas instead:) šagina-/e\\-[ne]}\nsaĝ-tun₃ gu₂-edin-na-ke₄-ne\nnidba itid-da zag-mu-bi si am₃-sa₂-e-ne\nabula a-ga-de₃{ki}-ka a-gin₇ kuš₂ mi-ni-ib-ĝal₂\nnidba-bi kug {d}inana-ke₄ šu teĝ₃-ĝe₂₆ nu-zu\ndumu-gir₁₅-gin₇ e₂ ki ĝar {di-da} {(some mss. ḫave instead:) du₃-u₃-de₃} la-la-bi nu-um-gi₄",
+     "orig_lines": [
+      "40",
+      "41",
+      "42",
+      "43",
+      "44",
+      "45",
+      "46",
+      "47",
+      "48",
+      "49",
+      "50",
+      "51",
+      "52",
+      "53",
+      "54",
+      "55",
+      "56"
+     ],
+     "en": "Its king, the shepherd Naram-Suen, rose as the daylight on the holy throne of Agade. Its city wall {, like a mountain,} {(1 ms. has instead:) , a great mountain,} reached the heavens. It was like the Tigris {going to} {(some mss. have instead:) flowing into} the sea as holy Inana opened the portals of its city-gates and made Sumer bring its own possessions upstream by boats. The highland Martu, people ignorant of agriculture, brought spirited cattle and kids for her. The Meluḫans, the people of the black land, brought {exotic wares} {(some mss. have instead:) wares of foreign countries} up to her. Elam and Subir loaded themselves with goods for her as if they were packasses. All the governors, the {temple administrators} {(1 ms. has instead:) generals}, and the accountants of the Gu-edina regularly supplied the monthly and New Year offerings. What a weariness all these caused at Agade's city gates! Holy Inana could hardly receive all these offerings. As if she were a citizen there, she could not restrain (?) the desire (?) to prepare the ground for a temple."
+    },
+    {
+     "ref": "57–65",
+     "orig": "inim e₂-kur-ra me-gin₇ ba-an-ĝar\na-ga-de₃{ki} tuku₄-e mu-un-na-la₂-la₂\nul-maš{ki}-a ni₂ im-ma-ni-in-te\niri{ki}-ta dur₂-ra-ni ba-ra-ĝen\nki-sikil ama₅-na šub-bu-gin₇\nkug {d}inana-ke₄ eš₃ a-ga-de₃{ki} mu-un-šub\nur-saĝ {ĝiš}tukul-a saĝ ĝa₂-ĝa₂-gin₇\niri{ki}-ta me₃ šen-šen {im-ma-ra-e₃} {(some mss. ḫave instead:) im-ma-ra-an-ri}\nlu₂-kur₂-ra-ra gaba ba-ni-in-ri",
+     "orig_lines": [
+      "57",
+      "58",
+      "59",
+      "60",
+      "61",
+      "62",
+      "63",
+      "64",
+      "65"
+     ],
+     "en": "But the statement coming from the E-kur was disquieting. Because of Enlil (?) all Agade was reduced (?) to trembling, and terror befell Inana in Ulmaš. She left the city, returning to her home. Holy Inana abandoned the sanctuary of Agade like someone abandoning the young women of her woman's domain. Like a warrior hurrying to arms, she {removed} {(some mss. have instead:) tore away} the gift of battle and fight from the city and handed them over to the enemy."
+    },
+    {
+     "ref": "66–76",
+     "orig": "ud nu-5-am₃ ud nu-10-am₃\nsa nam-en-na aga nam-lugal-la\nma-an-si-um {ĝiš}gu-za nam-lugal-la šum₂-ma\n{d}nin-urta-ke₄ e₂-šu-me-ša₄-na ba-ni-in-kur₉\niri{ki} ka-inim-ma-bi {d}utu ba-an-de₆\nĝeštug₂-bi {d}en-ki-ke₄ ba-an-de₆\nme-lem₄ an-ne₂ im-us₂-sa-a-bi\nan-ne₂ an-šag₄-ga {ba-e-ed₃} {(some mss. ḫave instead:) ba-an-e₃} {(1 ms. ḫas instead:) ba-an-de₆}\n{ĝiš}dimgul kug im-du₃-du₃-a-bi\n{d}en-ki-ke₄ abzu-a mi-ni-in-bu\n{ĝiš}tukul-bi {d}inana-ke₄ ba-an-de₆",
+     "orig_lines": [
+      "66",
+      "67",
+      "68",
+      "69",
+      "70",
+      "71",
+      "72",
+      "73",
+      "74",
+      "75",
+      "76"
+     ],
+     "en": "Not even five or 10 days had passed and Ninurta brought the jewels of rulership, the royal crown, the emblem and the royal throne bestowed on Agade, back into his E-šu-me-ša. Utu took away the eloquence of the city. Enki took away its wisdom. An took {up} {(some mss. have instead:) out} {(1 ms. has instead:) away} into the midst of heaven its fearsomeness that reaches heaven. Enki tore out its well-anchored holy mooring pole from the abzu. Inana took away its weapons."
+    },
+    {
+     "ref": "77–82",
+     "orig": "eš₃ a-ga-de₃{ki} zi-bi suḫurku₆ tur-ra-gin₇ engur-ra ba-an-til\niri{ki} teš₂-bi igi-bi am₃-da-ĝal₂\nam-si maḫ-gin₇ gu₂ ki-še₃ mi-ni-ib-ĝar\ngud maḫ-gin₇ si am₃-da-il₂-il₂\nušumgal uš₂-a-gin₇ saĝ am₃-ma-ze₂-re\nme₃-gin₇ nam-dugud-ba am₃-da-ab-laḫ₄-laḫ₄-e",
+     "orig_lines": [
+      "77",
+      "78",
+      "79",
+      "80",
+      "81",
+      "82"
+     ],
+     "en": "The life of Agade's sanctuary was brought to an end as if it had been only the life of a tiny carp in the deep waters, and all the cities were watching it. Like a mighty elephant, it bent its neck to the ground while they all raised their horns like mighty bulls. Like a dying dragon, it dragged its head on the earth and they jointly deprived it of honour as in a battle."
+    },
+    {
+     "ref": "83–93",
+     "orig": "nam-lugal a-ga-de₃{ki} ki-tuš gen₆-na dug₃ nu-tuš-u₃-de₃\neĝer-bi niĝ₂ na-me nu-sag₉-ge-de₃\ne₂ tuku₄-e erim₃ {sag₂ di-de₃} {(1 ms. ḫas instead:) sig₁₀-sig₁₀-ge-/dam\\}\n{d}na-ra-am-{d}suen maš₂-ĝi₆-ka igi ba-ni-in-du₈-a\nšag₄-ga-ni-še₃ mu-un-zu eme-na nu-um-ĝa₂-ĝa₂ lu₂-da nu-mu-un-da-ab-be₂\n/e₂ tuku₄\\ [...]\ne₂-ni maš₂ [...]\nnam e₂-kur-ra-še₃ tug₂-mu-dur₇-ra ba-an-mur₁₀\n{ĝiš}gigir-ra-ni {{gi}kid-ma₂-šag₄-ga ba-an-šu₂} {(1 ms. ḫas instead:) {ĝiš}gag bar-ra an-sig₉}\n{{ĝiš}ma₂-gur₈-ra-ni} {(1 ms. ḫas instead:) si {ĝiš}ma₂-gur₈-ra-na} {(1 ms. ḫas instead:) u₅ {ĝiš}ma₂-/gur₈\\-[ra-na]} sumur₃ ba-ra-an-si-ig\n{a₂-šita₄-a} {(some mss. ḫave instead:) a₂-šu-du₇-a} nam-lugal-la-ka-ni im-ma-ra-an-ba-ba\n{d}na-ra-am-{d}suen mu 7-am₃ mu-un-ge-en\nlugal mu 7-am₃ šu saĝ-ĝa₂ dug₄-ga a-ba igi im-mi-in-du₈-a\nšag₄-ga-ni-še₃ mu-un-zu eme-na nu-ĝa₂-ĝa₂ lu₂-da nu-mu-un-da-[ab-be₂]",
+     "orig_lines": [
+      "83",
+      "84",
+      "85",
+      "86",
+      "87",
+      "87A",
+      "87B",
+      "88",
+      "89",
+      "90",
+      "91",
+      "92",
+      "93",
+      "93A"
+     ],
+     "en": "Naram-Suen saw in a nocturnal vision that Enlil would not let the kingdom of Agade occupy a pleasant, lasting residence, that he would make its future altogether unfavourable, that he would make its temples shake and would {scatter its treasures} {(1 ms. has instead:) destroy its treasuries}. He realised what the dream was about, but did not put into words, and did not discuss it with anyone. {(1 ms. adds 2 lines:) …… temples shake ……, …… perform (?) extispicy regarding (?) his temple …….} Because of the E-kur, he put on mourning clothes, {covered his chariot with a reed mat} {(1 ms. has instead:) pulled out the outside pin of his chariot}, tore the reed canopy off {his ceremonial barge} {(1 ms. has instead:) the prow of his ceremonial barge} {(1 ms. has instead:) the cabin of his ceremonial barge}, and gave away his royal paraphernalia. Naram-Suen persisted for seven years! Who has ever seen a king burying his head in his hands for seven years? {(some mss. add the line:) He realised what the dream was about, but did not put into words, and did not discuss it with anyone.}"
+    },
+    {
+     "ref": "94–99",
+     "orig": "e₂-še₃ maš₂-am₃ ši-gid₂-de₃\ne₂ du₃-a maš₂-a nu-mu-un-de₃-ĝal₂\n2-kam-ma-še₃ e₂-še₃ maš₂-am₃ ši-gid₂-de₃\ne₂ du₃-a maš₂-a nu-mu-un-de₃-ĝal₂\ni₃-sig₁₀-ga-na šu-a bal-e-de₃\n{d}en-lil₂ niĝ₂-dug₄-ga-ni ba-en-de₃-kur₂",
+     "orig_lines": [
+      "94",
+      "95",
+      "96",
+      "97",
+      "98",
+      "99"
+     ],
+     "en": "Then he went to perform extispicy on a kid regarding the temple, but the omen had nothing to say about the building of the temple. For a second time he went to perform extispicy on a kid regarding the temple, but the omen again had nothing to say about the building of the temple. In order to change what had been inflicted (?) upon him, he tried to to alter Enlil's pronouncement."
+    },
+    {
+     "ref": "100–119",
+     "orig": "gu₂ ĝar-ra-ni sag₂ ba-an-da-ab-dug₄\nerin₂-na-ni zig₃-ga ba-ni-in-ĝar\na₂-tuku kisal maḫ-še₃ ku₄-ku₄-gin₇\ne₂-kur-še₃ šu keše₂ ba-ši-in-ak\ndub₃-tuku lirum-še₃ gam-e-gin₇\ngi-gun₄-na-aš 30 giĝ₄ ba-ši-in-ak\nnitaḫ lu₂ la-ga iri{ki} laḫ₅-gin₇\ne₂-še₃ {ĝiš}kun₅ gal-gal ba-ši-in-ri-ri\ne₂-kur {ĝiš}ma₂ maḫ-gin₇ gul-gul-lu-de₃\nkur kug ba-al-gin₇ saḫar du₈-u₃-de₃\nḫur-saĝ {na₄}za-gin₃-na-gin₇ ku₅-re-de₃\niri{ki} {d}iškur-re ba-an-de₂-a-gin₇ gu₂ ki-še₃ ĝa₂-ĝa₂-de₃\ne₂-e kur-{ĝiš}erin-kud nu-me-a\n{urud}ḫa-zi-in gal-gal ba-ši-in-de₂-de₂\n{urud}aga-silig-ga a₂ 2-na-bi-da u₄-sar ba-an-ak\nur₂-bi-a {urud}gi₂-dim ba-an-ĝar\nsuḫuš kalam-ma-ka ki ba-e-la₂\npa-bi-a {urud}ḫa-zi-in ba-an-ĝar\ne₂-e ĝuruš ug₅-ga-gin₇ gu₂ ki-še₃ ba-an-da-ab-la₂\ngu₂ kur-kur-ra ki-še₃ ba-an-da-ab-la₂",
+     "orig_lines": [
+      "100",
+      "101",
+      "102",
+      "103",
+      "104",
+      "105",
+      "106",
+      "107",
+      "108",
+      "109",
+      "110",
+      "111",
+      "112",
+      "113",
+      "114",
+      "115",
+      "116",
+      "117",
+      "118",
+      "119"
+     ],
+     "en": "Because his subjects were dispersed, he now began a mobilization of his troops. Like a wrestler who is about to enter the great courtyard, he …… his hands towards (?) the E-kur. Like an athlete bent to start a contest, he treated the giguna as if it were worth only thirty shekels. Like a robber plundering the city, he set tall ladders against the temple. To demolish E-kur as if it were a huge ship, to break up its soil like the soil of mountains where precious metals are mined, to splinter it like the lapis lazuli mountain, to prostrate it like a city inundated by Iškur -- alhough the temple was not the Mountains of Cedar-felling, he had large axes cast, he had double-edged agasilig axes sharpened to be used against it. He set spades against its roots and it sank as low as the foundation of the Land. He put axes against its top, and the temple, like a dead soldier, bowed its neck before him, and all the foreign lands bowed their necks before him."
+    },
+    {
+     "ref": "120–148",
+     "orig": "{ĝiš}alal-bi im-ma-ra-an-zil-zil\nim šeĝ₃-šeĝ₃ an-na ba-e-ed₃\nĝiš-kan₄-na-ke₄ ba-ra-an-si-ig teš₂ kalam-ma {ba-kur₂} {(1 ms. ḫas instead:) ba-til}\nkan₄ še nu-kud-da še i-ni-in-kud\nšu kalam-ma-ta še ba-da-an-kud\nkan₄ silim-ma-bi {ĝiš}al-e bi₂-in-ra\nkur-kur-re silim-silim-bi ba-kur₂\n{(some mss. add:) a-šag₄} a-gar₃ maḫ a-eštubku₆ daĝal-la-gin₇\ne₂-kur-ra {{urud}gi₂-dim} {(1 ms. ḫas instead:) {urud}ḫa-zi-in} gal-gal-bi kuš₃-kuš₃-a bi₂-in-sig₁₀-sig₁₀\nitima e₂ ud nu-zu-ba uĝ₃-e igi i-ni-in-bar\ndub-šen kug diĝir-re-e-ne-ke₄ uri{ki} igi i-ni-in-bar\nla-ḫa-ma dub-la₂ gal e₂-e sug₂-ga-bi\nlu₂ an-zil gu₇-a nu-me-eš-a\n{d}na-ra-am-{d}suen šag₄ izi-ka ba-an-sag₃\n{ĝiš}erin {ĝiš}šu-ur₂-men₅ {ĝiš}za-ba-lum {ĝiš}taškarin\nĝiš gi-gun₄-na-be₂-eš KUM ba-an-sur-sur\nkug-sig₁₇-bi mi-si-IŠ-ra bi₂-in-ak\nkug-babbar-bi {kuš}lu-ub₂/{kuš}lu-ub₂-šir-ra bi₂-in-ak\nurud-bi še maḫ de₆-a-gin₇ kar-ra bi₂-in-si-si\nkug-bi kug-dim₂-e im-dim₂-e\nza-bi za-dim₂-e im-dim₂-e\nurud-bi simug im-tu₁₁-be₂\nniĝ₂-gur₁₁ iri{ki} ḫul-a nu-me-a\ne₂-e {ĝiš}ma₂ gal-gal kar-ra ba-an-us₂\ne₂ {d}en-lil₂-la₂-še₃ {ĝiš}ma₂ gal-gal kar-ra ba-an-us₂\nniĝ₂-gur₁₁ iri{ki}-ta ba-ra-e₃\nniĝ₂-gur₁₁ iri{ki}-ta ed₂-da-ni\na-ga-de₃{ki} dim₂-ma-bi ba-ra-e₃\n{ĝiš}ma₂-e kar {ib₂-kur₂} {(some mss. ḫave instead:) ib₂-tuku₄-e} {umuš} {(1 ms. ḫas instead:) eš₃} a-ga-de₃{ki} ba-kur₂",
+     "orig_lines": [
+      "120",
+      "121",
+      "122",
+      "123",
+      "124",
+      "125",
+      "126",
+      "127",
+      "128",
+      "129",
+      "130",
+      "131",
+      "132",
+      "133",
+      "134",
+      "135",
+      "136",
+      "137",
+      "138",
+      "139",
+      "140",
+      "141",
+      "142",
+      "143",
+      "144",
+      "145",
+      "146",
+      "147",
+      "148"
+     ],
+     "en": "He ripped out its drain pipes, and all the rain went back to the heavens. He tore off its upper lintel and {the Land was deprived of its ornament} {(1 ms. has instead:) the ornament of the Land disappeared}. From its Gate from which Grain is never Diverted, he diverted grain, and the Land was deprived of grain. He struck the Gate of Well-Being with the pickaxe, and well-being was subverted in all the foreign lands. As if they were for great tracts of land with wide carp-filled waters, he cast large {spades} {(1 ms. has instead:) axes} to be used against the E-kur. The people could see the bedchamber, its room which knows no daylight. The Akkadians could look into the holy treasure chest of the gods. Though they had committed no sacrilege, its laḫama deities of the great pilasters standing at the temple were thrown into the fire by Naram-Suen. The cedar, cypress, juniper and boxwood, the woods of its giguna, were …… by him. He put its gold in containers and put its silver in leather bags. He filled the docks with its copper, as if it were a huge transport of grain. The silversmiths were re-shaping its silver, jewellers were re-shaping its precious stones, smiths were beating its copper. Large ships were moored at the temple, large ships were moored at Enlil's temple and its possessions were taken away from the city, though they were not the goods of a plundered city. With the possessions being taken away from the city, good sense left Agade. As the ships {moved away from} {(some mss. have instead:) juddered} the docks, Agade's {intelligence} {(1 ms. has instead:) sanctuary} was removed."
+    },
+    {
+     "ref": "149–175",
+     "orig": "ud te-eš dug₄-ga kalam teš₂-a ĝar-ra\na-ma-ru zig₃-ga gaba-šu-ĝar nu-tuku\n{d}en-lil₂-le nam e₂-kur ki aĝ₂-ĝa₂-ni ba-ḫul-a-še₃ a-na-am₃ im-gu-lu-a-ba\nkur gu₂-bi₂-na-še₃ igi na-an-il₂\nḫur-saĝ daĝal teš₂-bi nam-ta-an-si-ig\nuĝ₃-ĝa₂ nu-sig₁₀-ga kalam-ma nu-šid-da\ngu-ti-um{ki} uĝ₃ keše₂-da nu-zu\ndim₂-ma lu₂-u₁₈-lu {ĝalga} {(some mss. ḫave instead:) arḫuš} ur-ra ulutim₂ {ugu}ugu₄-bi\n{d}en-lil₂-le kur-ta nam-ta-an-e₃\nŠID-ŠID buru₅{mušen}-gin₇ ki am₃-u₂-us₂\na₂-bi gu maš₂-anše-gin₇ edin-na mu-un-na-an-la₂\nniĝ₂ na-me a₂-bi la-ba-ra-e₃\nlu₂ na-me a₂-bi la-ba-an-da₁₃-da₁₃\nlu₂-kiĝ₂-gi₄-a ḫar-ra-an-na nu-mu-un-ĝen\n{ĝiš}ma₂ ra-gaba id₂-da nu-mu-un-dib-be₂\nud₅ gen₆ {d}en-lil₂-la₂ amaš-ta ba-ra-ra-aš na-gada-bi bi₂-in-us₂-u₂-us₂\nšilam tur₃-bi-ta ba-ra-ra-aš unud(UNU₃)-bi bi₂-in-us₂-u₂-us₂\nĝiš-gu₂-ka en-nu-uĝ₃ ba-e-du₃\nḫar-ra-an-na lu₂-sa-gaz {ba-e-tuš} {(1 ms. ḫas instead:) ba-e-sag₃}\nabula kalam-ma-ka {ĝiš}ig im-ma {ba-e-gub} {(1 ms. ḫas instead:) ba-e-dul}\nkur-kur-ra bad₃ iri{ki}-ne-ne-ka gu₃ gig mi-ni-ib-be₂-ne\niri{ki} šag₄ edin bar daĝal nu-me-a mu₂-sar {mu-un-de₃-ĝal₂} {(1 ms. ḫas instead:) /bi\\-in-mu₂}\nud iri{ki} ba-dim₂-dim₂-ma-ba ba-sig₁₀-sig₁₀-ga-ba\n{(some mss. add:) a-šag₄} a-gar₃ gal-gal-e še nu-um-de₆\n{(some mss. add:) a-šag₄} a-gar₃ sug₄-sug₄-ge ku₆ nu-um-de₆\npu₂-{ĝiš}kiri₆ lal₃ ĝeštin nu-um-de₆\nIM.UD sir₂-da la-ba-šeĝ₃ {ĝiš}maš-gurum la-ba-mu₂",
+     "orig_lines": [
+      "149",
+      "150",
+      "151",
+      "152",
+      "153",
+      "154",
+      "155",
+      "156",
+      "157",
+      "158",
+      "159",
+      "160",
+      "161",
+      "162",
+      "163",
+      "164",
+      "165",
+      "166",
+      "167",
+      "168",
+      "169",
+      "170",
+      "171",
+      "172",
+      "173",
+      "174",
+      "175"
+     ],
+     "en": "Enlil, the roaring storm that subjugates the entire land, the rising deluge that cannot be confronted, was considering what should be destroyed in return for the wrecking of his beloved E-kur. He lifted his gaze towards the Gubin mountains, and made all the inhabitants of the broad mountain ranges descend (?). Enlil brought out of the mountains those who do not resemble other people, who are not reckoned as part of the Land, the Gutians, an unbridled people, with human intelligence but canine {instincts} {(some mss. have instead:) feelings} and monkeys' features. Like small birds they swooped on the ground in great flocks. Because of Enlil, they stretched their arms out across the plain like a net for animals. Nothing escaped their clutches, no one left their grasp. Messengers no longer travelled the highways, the courier's boat no longer passed along the rivers. The Gutians drove the trusty (?) goats of Enlil out of their folds and compelled their herdsmen to follow them, they drove the cows out of their pens and compelled their cowherds to follow them. Prisoners manned the watch. Brigands {occupied} {(1 ms. has instead:) attacked} the highways. The doors of the city gates of the Land {lay dislodged in} {(1 ms. has instead:) were covered with} mud, and all the foreign lands uttered bitter cries from the walls of their cities. They {established gardens for themselves} {(1 ms. has instead:) made gardens grow} within the cities, and not as usual on the wide plain outside. As if it had been before the time when cities were built and founded, the large {(some mss. add:) fields and} arable tracts yielded no grain, the inundated {(some mss. add:) fields and} tracts yielded no fish, the irrigated orchards yielded no syrup or wine, the thick clouds (?) did not rain, the mašgurum plant did not grow."
+    },
+    {
+     "ref": "176–192",
+     "orig": "ud-ba i₃ 1 giĝ₄-e 1/2 sila₃-am₃\nše 1 giĝ₄-e 1/2 sila₃-am₃\nsiki 1 giĝ₄-e 1/2 ma-na-am₃\nku₆ 1 giĝ₄-e {ĝiš}ba-an-e ib₂-si\nganba iri{ki}-ba-ka ur₅{?}-gin₇ ib₂-sa₁₀-sa₁₀\nur₃-ra nu₂-a ur₃-ra ba-ug₇\ne₂-a nu₂-a ki nu-um-tum₂\nuĝ₃ šag₄-ĝar-bi-ta ni₂-bi-a šu im-dub₂-dub₂-ne\nki-ur₃ ki gal {d}en-lil₂-la₂-ke₄\nur sila sig₉-ga zu₂ ba-ni-ib-keše₂\nšag₄-ba lu₂ 2 du teš₂-e ba-ni-ib-gu₇\nlu₂ 3 du teš₂-e ba-ni-ib-gu₇\ngiri₁₇ ba-dub-dub saĝ ba-dab₅-dab₅\ngiri₁₇ ba-dub saĝ numun-e-eš ba-ab-ĝar\nsaĝ zid saĝ lul-la šu bal ba-ni-ib-ak\nmeš₃ meš₃-e an-ta i-im-nu₂\nuš₂ lu₂-lul-e uš₂ lu₂ zid-da-ke₄ an-ta na-mu-un-DU",
+     "orig_lines": [
+      "176",
+      "177",
+      "178",
+      "179",
+      "180",
+      "181",
+      "182",
+      "183",
+      "184",
+      "185",
+      "186",
+      "187",
+      "188",
+      "189",
+      "190",
+      "191",
+      "192"
+     ],
+     "en": "In those days, oil for one shekel was only half a litre, grain for one shekel was only half a litre, wool for one shekel was only one mina, fish for one shekel filled only one ban measure -- these sold at such prices in the markets of the cities! Those who lay down on the roof, died on the roof; those who lay down in the house were not buried. People were flailing at themselves from hunger. By the Ki-ur, Enlil's great place, dogs were packed together in the silent streets; if two men walked there they would be devoured by them, and if three men walked there they would be devoured by them. Noses were punched (?), heads were smashed (?), noses (?) were piled up, heads were sown like seeds. Honest people were confounded with traitors, heroes lay dead on top of heroes, the blood of traitors ran upon the blood of honest men."
+    },
+    {
+     "ref": "193–209",
+     "orig": "ud-ba {d}en-lil₂-le eš₃ gal-gal-la-ni-ta\neš₃ gi tur-tur im-ma-ra-an-du₃\nud e₃-ta ud šu₂-uš erim₃-bi ba-tur\num-ma ud-ta ba-ra-ab-taka₄-a\nab-ba ud-ta ba-ra-ab-taka₄-a\ngala-maḫ mu-ta ba-ra-ab-taka₄-a\nud 7 ĝi₆ 7-še₃\nbalaĝ 7-e an-ur₂ gub-ba-gin₇ ki mu-un-ši-ib-us₂\nub₃ {me-ze₂ li-li-is₃} {(some mss. ḫave instead:) šem₃ li-li-is₃} {(1 ms. ḫas instead:) šem₃ zabar} {d}iškur-gin₇ šag₄-ba mu-na-an-du₁₂\num-ma a uru₂-ĝu₁₀ nu-ĝa₂-ĝa₂\nab-ba a lu₂-bi nu-ĝa₂-ĝa₂\ngala-e a e₂-kur nu-ĝa₂-ĝa₂\nki-sikil-bi siki šab-bi nu-ĝa₂-ĝa₂\nĝuruš-bi ĝiri₂ saga₁₁ nu-ĝa₂-ĝa₂\ner₂-bi er₂ ama a-a {d}en-lil₂-la₂-ke₄\ndu₆ kug su zig₃ gur₃-ru dub₃ kug {d}en-lil₂-la₂-ke₄ i-im-ĝa₂-ĝa₂-ne\nnam-bi-še₃ {d}en-lil₂ itima kug ba-an-kur₉ šag₄-ka-tab-ba ba-an-nu₂",
+     "orig_lines": [
+      "193",
+      "194",
+      "195",
+      "196",
+      "197",
+      "198",
+      "199",
+      "200",
+      "201",
+      "202",
+      "203",
+      "204",
+      "205",
+      "206",
+      "207",
+      "208",
+      "209"
+     ],
+     "en": "At that time, Enlil rebuilt his great sanctuaries into small reed (?) sanctuaries and from east to west he reduced their storehouses. The old women who survived those days, the old men who survived those days and the chief lamentation singer who survived those years set up seven balaĝ drums, as if they stood at the horizon, and together with ub {, meze, and lilis} {(some mss. have instead:) , šem, and lilis} {(1 ms. has instead:) and bronze šem} drums made them resound to Enlil like Iškur for seven days and seven nights. The old women did not restrain the cry \"Alas for my city!\". The old men did not restrain the cry \"Alas for its people!\". The lamentation singer did not restrain the cry \"Alas for the E-kur!\". Its young women did not restrain from tearing their hair. Its young men did not restrain from sharpening their knives. Their laments were as if Enlil's ancestors were performing a lament in the awe-inspiring Holy Mound by the holy knees of Enlil. Because of this, Enlil entered his holy bedchamber and lay down fasting."
+    },
+    {
+     "ref": "210–221",
+     "orig": "ud-ba {d}suen {d}en-ki {d}inana {d}nin-urta {d}iškur {d}utu {d}nuska {d}nisaba {diĝir gal-gal-e-ne} {(1 ms. ḫas instead:) diĝir /ḫe₂{?}-em{?}\\-me-eš}\nšag₄ {d}en-lil₂-la₂-ke₄ a sed₄ {im-sed₄-e-ne} {(1 ms. ḫas instead:) im-su₁₃-/ne\\} a-ra-zu-ta ba-ab-be₂-ne\n{d}en-lil₂ iri iri-zu im-ḫul-a iri-zu-gin₇ ḫe₂-du₃\ngi-gun₄-na-zu šu bi₂-in-la₂-la₂ nibru{ki}-gin₇ ḫe₂-du₃\niri-ba saĝ tul₂-ba ḫe₂-ni-ib-si-si\nlu₂ lu₂-u₃ zu-ne na-an-ni-in-pad₃-de₃\nšeš-e šeš-a-ni ĝiškim na-an-ni-in-e₃\nki-sikil-bi ama₅-na ĝiš ḫul ḫe₂-en-da-ab-ra\nad-da-bi e₂ dam ug₇-a-na gu₃ gig-bi ḫe₂-em-me\ntum₁₂{mušen}-bi ab-lal₃-ba še ḫe₂-ni-in-ša₄\nburu₅{mušen}-bi a₂-bur₂-ba niĝ₂ ḫe₂-ni-ib-ra\ntum₁₂{mušen} ni₂ te-a-gin₇ ur₅-da ḫe₂-ak-e",
+     "orig_lines": [
+      "210",
+      "211",
+      "212",
+      "213",
+      "214",
+      "215",
+      "216",
+      "217",
+      "218",
+      "219",
+      "220",
+      "221"
+     ],
+     "en": "At that time, Suen, Enki, Inana, Ninurta, Iškur, Utu, Nuska, and Nisaba, {the great gods} {(1 ms. has instead:) all the gods whosoever}, {cooled} {(1 ms. has instead:) sprinkled} Enlil's heart with cool water and prayed to him: \"Enlil, may the city that destroyed your city be treated as your city has been treated! May the one that defiled your giguna be treated as Nibru! In this city, may heads fill the wells! May no one find his acquaintances there, may brother not recognise brother! May its young woman be cruelly killed in her woman's domain, may its old man cry in distress for his slain wife! May its pigeons moan on their window ledges, may its small birds be smitten in their nooks, may it live in constant anxiety like a timid pigeon!\""
+    },
+    {
+     "ref": "222–244",
+     "orig": "2-kam-ma-še₃ {d}suen {d}en-ki {d}inana {d}nin-urta {d}iškur {d}utu {d}nuska {d}nisaba diĝir ḫe₂-em-me-eš\niri{ki}-še₃ igi-ne-ne i-im-ĝa₂-ĝa₂-ne\na-ga-de₃{ki} aš₂ ḫul-a im-ma-ab-bal-e-ne\niri{ki} e₂-kur-še₃ ba-e-a-ul₄-en {d}en-lil₂ ḫe₂-am₃\na-ga-de₃{ki} e₂-kur-še₃ ba-e-a-ul₄-en {d}en-lil₂ ḫe₂-am₃\nbad₃ kug-zu en-na sukuₓ(SUKUD)-ra₂-bi a-nir ḫe₂-em-da-sa₂\ngi-gun₄-na-zu saḫar-gin₇ ḫe₂-dub\ndub-la₂ la-ḫa-ma sug₂-sug₂-ga-bi\nĝuruš maḫ ĝeštin naĝ-a-gin₇ ki-še₃ ḫe₂-em-ta-ĝa₂-ĝa₂\nim-zu abzu-ba ḫe₂-eb-gi₄\nim {d}en-ki-ke₄ nam ku₅-ra₂ ḫe₂-a\nše-zu ab-sin₂-ba ḫe₂-eb-gi₄\nše {d}ezina₂-e nam ku₅-ra₂ ḫe₂-a\nĝiš-zu tir-bi-a ḫe₂-eb-gi₄\nĝiš {d}nin-ildum₂-ma-ke₄ nam ku₅-ra₂ ḫe₂-a\ngud {gaz-gaz-e} {(1 ms. ḫas instead:) gaz-gaz-zu} {dam} {(1 ms. ḫas instead:) dam-ni} ḫe₂-en-gaz-e\nudu {šum-šum-zu} {(some mss. ḫave instead:) šum-šum-e} {dumu} {(some mss. ḫave instead:) dumu-ni} ḫe₂-en-šum-e\nukur₃-zu dumu kug-ge-eš pad₃-da-na a ḫe₂-em-ta-ab-ra-ra\nkar-ke₄-zu kan₄ eš₂-dam-ma-na-ka ni₂ ḫa-ba-ni-ib-la₂-e\nama nu-gig-zu ama nu-bar-zu {dumu} {(some mss. ḫave instead:) dumu-ni} ḫe₂-en-gi₄-gi₄\nkug-sig₁₇-zu kug-še₃ ḫe₂-sa₁₀-sa₁₀\nkug-babbar-zu niĝ₂ za-ḫa-am-še₃ ḫe₂-sa₁₀-sa₁₀\nurud-zu a-gar₅-še₃ ḫe₂-sa₁₀-sa₁₀",
+     "orig_lines": [
+      "222",
+      "223",
+      "224",
+      "225",
+      "226",
+      "227",
+      "228",
+      "229",
+      "230",
+      "231",
+      "232",
+      "233",
+      "234",
+      "235",
+      "236",
+      "237",
+      "238",
+      "239",
+      "240",
+      "241",
+      "242",
+      "243",
+      "244"
+     ],
+     "en": "Again, Suen, Enki, Inana, Ninurta, Iškur, Utu, Nuska and Nisaba, all the gods whosoever, turned their attention to the city, and cursed Agade severely: \"City, you pounced on E-kur: it is as if you had pounced on Enlil! Agade, you pounced on E-kur: it is as if you had pounced on Enlil! May your holy walls, to their highest point, resound with mourning! May your giguna be reduced to a pile of dust! May your pilasters with the standing lahama deities fall to the ground like tall young men drunk on wine! May your clay be returned to its abzu, may it be clay cursed by Enki! May your grain be returned to its furrow, may it be grain cursed by Ezina! May your timber be returned to its forest, may it be timber cursed by Ninilduma! May {the} {(1 ms. has instead:) your} cattle slaughterer slaughter his wife, may {your} {(some mss. have instead:) the} sheep butcher butcher his child! May water wash away your pauper as he is looking for ……! May your prostitute hang herself at the entrance to her brothel! May your pregnant (?) priestesses and cult prostitutes abort (?) their children! May your gold be bought for the price of silver, may your silver be bought for the price of pyrite (?), and may your copper be bought for the price of lead!\""
+    },
+    {
+     "ref": "245–255",
+     "orig": "a-ga-de₃{ki} a₂-tuku-zu a₂-ni ḫe₂-eb-ta-kud\n{kuš}lu-ub₂ dag-si-ni na-an-il₂-il₂-e\n{anše}ni-is-kum-zu a₂-ni na-an-ḫul₂-e ud šu₂-a ḫe₂-nu₂\niri{ki}-bi šag₄-ĝar-ra ḫe₂-ni-ib-ug₇-e\ndumu-gir₁₅ ninda sag₉-ga gu₇-gu₇-zu u₂-šim-e ḫa-ba-nu₂\nlu₂ saĝ₅-e ba-zig₃-ga-zu\nTAG-TAG ĝiš-ur₃-ra-na ḫe₂-gu₇-e\n{ĝiš}ig gal {kuš}gur₂₁ e₂ ad-da-na-ka\n{kuš}gur₂₁-bi zu₂-ni-ta ḫe₂-ur₅-re\ne₂-gal šag₄ ḫul₂-la {du₃-a-za} {(1 ms. ḫas instead:) ĝal₂-la-za} šag₄ sag₃ ḫe₂-en-šub\nlu₂ ḫul edin ki sig₉-ga-ke₄ gu₃ ḫu-mu-ra-ra-ra",
+     "orig_lines": [
+      "245",
+      "246",
+      "247",
+      "248",
+      "249",
+      "250",
+      "251",
+      "252",
+      "253",
+      "254",
+      "255"
+     ],
+     "en": "\"Agade, may your strong man be deprived of his strength, so that he will be unable to lift his sack of provisions and ……, and will not have the joy of controlling your superior asses; may he lie idle all day! May this make the city die of hunger! May your citizens, who used to eat fine food, lie hungry, may your …… man eat the coating on his roof, may he chew (?) the leather hinges on the main door of his father's house! May depression descend upon your {palace, built for joy} {(1 ms. has instead:) joyous palace}! May the evils of the desert, the silent place, howl continuously!\""
+    },
+    {
+     "ref": "256–271",
+     "orig": "ki uz-ga šu-luḫ-ḫa ĝar-ra-zu\n{ka₅} {(1 ms. ḫas instead:) ka₅-zu} du₆ gul-gul-la-ke₄ kun ḫe₂-ni-ib-ur₃-ur₃-re\nabula kalam-ma ĝar-ra-zu\nu₃-ku-ku{mušen} mušen šag₄ sag₃-ga-ke₄ gud₃ ḫe₂-em-ma-an-us₂\niri{ki} tigi-da u₃ nu-ku-ku-za\nšag₄ ḫul₂-la-da nu-nu₂-za\ntur₃-e si gud {d}nanna-ke₄\nedin ki sig₉-ga-ke₄ ni₁₀-ni₁₀-na-gin₇ šeg₁₁ ḫu-mu-un-gi₄-gi₄-gi₄\ngu₂ {ĝiš}ma₂ gid₂-da id₂-da-zu u₂ gid₂-da ḫe₂-em-mu₂\nḫar-ra-an {ĝiš}gigir-ra ba-ĝar-ra-zu u₂-a-nir ḫe₂-em-mu₂\n2-kam-ma-še₃ gu₂ ma₂ gid₂-da ki a-la₂ id₂-da-zu\nšeg₉-bar mul muš ul₄ kur-ra-ke₄ lu₂ na-an-ni-ib-dib-be₂\nedin šag₄ u₂ sag₉-ga mu₂-a-zu gi er₂-ra ḫe₂-em-mu₂\n{a-ga-de₃{ki}} {(1 ms. ḫas instead:) id₂-da} a dug₃-ga de₂-a-zu a mun-na ḫe₂-em-de₂\niri{ki}-bi-a ga-tuš bi₂-in-dug₄-ga ki-tuš na-an-ni-dug₃-ge\na-ga-de₃{ki}-a ga-nu₂ bi₂-in-dug₄-ga ki-nu₂ na-an-ni-dug₃-ge",
+     "orig_lines": [
+      "256",
+      "257",
+      "258",
+      "259",
+      "260",
+      "261",
+      "262",
+      "263",
+      "264",
+      "265",
+      "266",
+      "267",
+      "268",
+      "269",
+      "270",
+      "271"
+     ],
+     "en": "\"May foxes that frequent ruin mounds brush with their tails your uzga precinct, established for purification ceremonies! May the ukuku, the bird of depression, make its nest in your gateways, established for the Land! In your city that could not sleep because of the tigi drums, that could not rest from its joy, may the bulls of Nanna that fill the pens bellow like those who wander in the desert, the silent place! May the grass grow long on your canal-bank tow-paths, may the grass of mourning grow on your highways laid for waggons! Moreover, may …… wild rams (?) and alert snakes of the mountains allow no one to pass on your tow-paths built up with canal sediment! In your plains where fine grass grows, may the reed of lamentation grow! {Agade, may brackish water flow} {(1 ms. has instead:) May brackish water flow in the river,} where fresh water flowed for you! If someone decides, \"I will dwell in this city!\", may he not enjoy the pleasures of a dwelling place! If someone decides, \"I will rest in Agade!\", may he not enjoy the pleasures of a resting place!\""
+    },
+    {
+     "ref": "272–280",
+     "orig": "i-ne-eš₂ {d}utu ud ne-e-a ur₅ ḫe₂-en-na-nam-ma-am₃\ngu₂ {ĝiš}ma₂ gid₂-da id₂-da-ba u₂ gid₂-da ba-an-mu₂\nḫar-ra-an {ĝiš}gigir-ra ba-ĝar-ra-ba u₂-a-nir ba-an-mu₂\n2-kam-ma-še₃ gu₂ {ĝiš}ma₂ gid₂-da ki a-la₂ id₂-da-ba\nšeg₉-bar mul muš ul₄ kur-ra-ke₄ lu₂ nu-mu-ni-in-dib-be₂\nedin šag₄ u₂ sag₉-ga mu₂-a-bi gi er₂-ra ba-an-mu₂\na-ga-de₃{ki} a dug₃-ga de₂-a-bi a mun-na ba-an-de₂\niri{ki}-bi-a ga-tuš bi₂-in-dug₄-ga ki-tuš nu-um-ma-an-da-dug₃\na-ga-de₃{ki}-a ga-nu₂ bi-in-dug₄-ga ki-nu₂ nu-um-ma-an-na-dug₃",
+     "orig_lines": [
+      "272",
+      "273",
+      "274",
+      "275",
+      "276",
+      "277",
+      "278",
+      "279",
+      "280"
+     ],
+     "en": "And before Utu on that very day, so it was! On its canal bank tow-paths, the grass grew long. On its highways laid for waggons, the grass of mourning grew. Moreover, on its tow-paths built up with canal sediment, …… wild rams (?) and alert snakes of the mountains allowed no one to pass. On its plains, where fine grass grew, now the reeds of lamentation grew. Agade's flowing fresh water flowed as brackish water. When someone decided, \"I will dwell in that city!\", he could not enjoy the pleasures of a dwelling place. When someone decided, \"I will rest in Agade!\", he could not enjoy the pleasures of a resting place!"
+    },
+    {
+     "ref": "281",
+     "orig": "a-ga-de₃{ki} ḫul-a {d}inana za₃-mi₂",
+     "orig_lines": [
+      "281"
+     ],
+     "en": "Inana be praised for the destruction of Agade!"
+    },
+    {
+     "ref": "1–5",
+     "orig": "(= š215.1.71) [ĝeštug₂-bi] [{d}en-ki]-/ke₄\\ ba-/de₆\\\n(= š215.1.72) [me]-lem₄ /an\\-ne₂ im-/us₂\\-bi\n(= š215.1.73) /an-ne₂\\ [an]-šag₄-ga ba-ed₃\n(= š215.1.74) [{ĝiš}]tar₂-GAG /kug\\ im-da-/du₃\\-a-bi\n(= š215.1.75) [{d}en-ki-ke₄] /abzu\\-[a mi-ni-bu]",
+     "orig_lines": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+     ],
+     "en": "Enki took away its wisdom. An took up into the midst of heaven its fearsomeness that reaches heaven. Enki tore out its well-anchored holy mooring pole from the abzu. unknown no. of lines missing"
+    },
+    {
+     "ref": "1–3",
+     "orig": "(= š215.1.84) /eĝer-še₃ niĝ₂\\ na-me nu-sag₉-de₃\n(= š215.1.85) e₂ /tuku₄\\-e /erim₃\\ sag₃ di-de₃\n(= š215.1.86) na-ra-am-{d}suen-e maš₂-ĝi₆-ka igi ba-[ni-in-du₈-a]",
+     "orig_lines": [
+      "1",
+      "2",
+      "3"
+     ],
+     "en": "Naram-Suen saw in a nocturnal vision that he would make its future altogether unfavourable, that he would make its temples shake and would scatter its treasures! unknown no. of lines missing"
+    },
+    {
+     "ref": "1",
+     "orig": "(= š215.1.98) [i₃-sig₁₀]-ga-na šu bal-e-/gin₇\\",
+     "orig_lines": [
+      "1"
+     ],
+     "en": "as if he were to change what had been inflicted (?) upon him."
+    },
+    {
+     "ref": "2–14",
+     "orig": "(= š215.1.100) gu₂ ĝar-ra-ni sag₂ mu-na-ab-dug₄\n(= š215.1.101) /erin₂\\-na-na zig₃-ga₁₄ ba-ni-ĝar\n(= š215.1.102) a₂-tuku kisal maḫ-a ku₄-ku₄-gin₇\n(= š215.1.103) e₂-kur-še₃ šu /keše₂ ba-ši\\-ak\n(= š215.1.104) dub₃-tuku lirum₃-še₃ gam-e-gin₇\n(= š215.1.105) gi-gun₄-še₃ 30 giĝ₄ ba-ši-ak\n(= š215.1.106) nitaḫ lu₂-KID₂ iri ri-ri\n(= š215.1.107) [e₂-še₃ {ĝiš}]kun₅ gal-gal ba-ši-/laḫ₄\\\n(= š215.1.112) /e₂\\-e kur erin-na nu-me-a\n(= š215.1.113) ḫa-zi-in{urud} gal-gal i₃-ma-ta-de₂\n(= š215.1.114) [{urud}aga-silig] X a₂ 2(MAN)-na-bi-da u₃-sa-ar ba-ak\n(= š215.1.127) ugur₂ maḫ a-eštub {dugud-a-gin₇} {(1 ms. ḫas instead:) daĝal-gin₇}\n(= š215.1.128) {gi₂-dim} {(1 ms. ḫas instead:) e₂-kur-ra-a EDIN{urud}} gal-gal-bi kuš₃-a bi₂-sig₁₀-sig₁₀\n(= š215.1.115) ur₂-bi-a gi₂-dim ba-ĝar",
+     "orig_lines": [
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10",
+      "11",
+      "11A",
+      "12",
+      "13",
+      "14"
+     ],
+     "en": "His subjects were dispersed, so he began a mobilization of his troops. Like a wrestler who is about to enter the great courtyard, he …… his hands towards (?) the E-kur. Like an athlete bent to start a contest, he treated the giguna as if it were worth only thirty shekels. Like a robber plundering the city, he set tall ladders against the temple. Though the temple was not a mountain of cedars, he had large axes cast to be used against it. {(1 ms. adds 1 line:) He had double-edged agasilig axes sharpened to be used against it.} As if they were for great tracts of land with {huge} {(1 ms. has instead:) wide} carp-filled waters, he cast large {spades} {(1 ms. has instead:) …… to be used against the E-kur}. He put spades against its roots. unknown no. of lines missing"
+    },
+    {
+     "ref": "1–3",
+     "orig": "(= š215.1.124) [šu kalam-ma-ta še] ba-da-kud\n(= š215.1.125) [kan₄] /silim\\-ma-bi al-e /bi₂{?}\\-in-šub\n(= š215.1.126) [kur-kur] X silim-silim-bi [ba]-gul",
+     "orig_lines": [
+      "1",
+      "2",
+      "3"
+     ],
+     "en": "and the Land was deprived of grain. He struck the Gate of Well-Being with the pickaxe and well-being was destroyed in all the foreign lands. unknown no. of lines missing"
+    },
+    {
+     "ref": "1–4",
+     "orig": "[...] UD{?} /IM{?}\\ [...] DU\n[...] MA [...] DU\n[...] IM [...] X\n[...] X",
+     "orig_lines": [
+      "1",
+      "2",
+      "3",
+      "4"
+     ],
+     "en": "4 lines unclearunknown no. of lines missing"
+    },
+    {
+     "ref": "1–4",
+     "orig": "(= š215.1.188) [giri₁₇ ba]-/an\\-dub-/dub\\ [saĝ ba]-/an\\-tu-tu\n(= š215.1.189) giri₁₇ ba-an-dub saĝ /numun\\-[e-eš ba-ab-ĝar]\n(= š215.1.191) meš₃ meš₃-a an-ta ba-[...]\n(= š215.1.192) u₃-ri₂-in lu₂-/lul\\ [...] lu₂ zid-ra an-/ta\\ [...] MA [...]",
+     "orig_lines": [
+      "1",
+      "2",
+      "3",
+      "4"
+     ],
+     "en": "Noses were punched, heads were smashed (?), noses (?) were piled up, heads were sown like seeds. Heroes lay (?) dead on top of heroes, the blood of traitors ran (?) upon honest men."
+    },
+    {
+     "ref": "5–7",
+     "orig": "(= š215.1.193) {d}en-lil₂-le e₂ [gal-gal-la-ni]\n(= š215.1.194) eš₃ gi tur-tur ba-[ra-du₃]\n(= š215.1.195) [sig]-ta igi-nim(sourše: TUM₃)-še₃ [...]",
+     "orig_lines": [
+      "5",
+      "6",
+      "7"
+     ],
+     "en": "Enlil rebuilt his great sanctuaries into small reed (?) sanctuaries and from the south to the uplands ……."
+    }
+   ]
+  }
+ ]
+}

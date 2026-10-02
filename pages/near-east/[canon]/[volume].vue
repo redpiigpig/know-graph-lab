@@ -72,7 +72,8 @@
               <span class="shrink-0 inline-block w-2 h-2 rounded-full mt-1.5" :class="statusOf(text).dotCls" :title="statusOf(text).zh" />
               <div class="min-w-0 flex-1">
                 <div class="flex items-baseline gap-2 flex-wrap">
-                  <span class="text-sm font-semibold break-words" :class="statusOf(text).titleCls">{{ text.title_zh }}</span>
+                  <NuxtLink v-if="hasText(text.slug)" :to="`/near-east/text/${text.slug}`" class="text-sm font-semibold break-words underline decoration-teal-300 underline-offset-2 hover:decoration-teal-600" :class="statusOf(text).titleCls">{{ text.title_zh }}</NuxtLink>
+                  <span v-else class="text-sm font-semibold break-words" :class="statusOf(text).titleCls">{{ text.title_zh }}</span>
                   <span v-if="text.title_orig" class="text-[11px] text-gray-400 italic break-words">{{ text.title_orig }}</span>
                 </div>
                 <div class="flex flex-wrap items-center gap-1.5 mt-1">
@@ -82,8 +83,8 @@
                     v-for="c in COL_KEYS"
                     :key="c"
                     class="text-[10px] px-1 py-0.5 rounded font-mono"
-                    :class="COLUMN_META[columnsOf(text, division, canon)[c]].cls"
-                    :title="`${COL_LABEL[c]}：${COLUMN_META[columnsOf(text, division, canon)[c]].zh}`"
+                    :class="COLUMN_META[effectiveColumns(text, division, canon)[c]].cls"
+                    :title="`${COL_LABEL[c]}：${COLUMN_META[effectiveColumns(text, division, canon)[c]].zh}`"
                   >{{ COL_SHORT[c] }}</span>
                 </div>
                 <p v-if="text.note" class="text-xs text-gray-600 leading-relaxed mt-1.5 break-words">{{ text.note }}</p>
@@ -126,7 +127,7 @@
 </template>
 
 <script setup lang="ts">
-import { COLUMN_META, STATUS_META, columnsOf, findCanon, findVolume, relatedOf, volumeTextCount } from '~/data/near-east'
+import { COLUMN_META, STATUS_META, effectiveColumns, findCanon, findVolume, hasText, relatedOf, volumeTextCount } from '~/data/near-east'
 import type { NeDivision, NeText } from '~/data/near-east'
 
 definePageMeta({ middleware: 'auth' })

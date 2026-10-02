@@ -1,0 +1,554 @@
+{
+ "slug": "lament-unug",
+ "source": "ETCSL",
+ "siglum": "ETCSL 2.2.5",
+ "source_url": "https://etcsl.orinst.ox.ac.uk/cgi-bin/etcsl.cgi?text=t.2.2.5",
+ "license": "ETCSL（Oxford）轉寫與英譯，非商業學術使用",
+ "compositions": [
+  {
+   "num": "2.2.5",
+   "title_en": "The lament for Unug",
+   "segments": [
+    {
+     "ref": "1–3",
+     "orig": "[...] X ĝar-ra re šu gur-bi [X] X-/dam\\\n[...] /(X) an{?} ki\\-ke₄ me-bi [X] X /nu₂\\\n[...] X E NE ba-ab-ra",
+     "orig_lines": [
+      "1",
+      "2",
+      "3"
+     ],
+     "en": "The …… which had developed -- its wiping clean (?) was to be accomplished (?). The …… of heaven and earth put their divine powers …… to sleep (?). 1 line fragmentary"
+    },
+    {
+     "ref": "4–8",
+     "orig": "[...] lu₂ til₃ diĝir-re-e-[ne-gin₇] a-na me bi₂-ib₂-tab\n[...]-bi-ta ĝalga sud-e [mi-ni-in]-sig₁₀-ge₅-eš-a\n[...] diĝir-re-e-ne-ke₄ šag₄ X [(...)] mu-un-gu₇\n[{d}en-ki] {d}nin-ki umuš mi-ni-in-ĝal₂-/e\\-eš 30-a-kam\n[{d}]en-ul {d}nin-ul-e nam bi₂-/in\\-[tar-re-eš ...]-/dug₄\\",
+     "orig_lines": [
+      "4",
+      "5",
+      "6",
+      "7",
+      "8"
+     ],
+     "en": "…… mortal man multiplied to become as numerous as the gods. When together …… had achieved a momentous decision, the …… of the gods ……. Enki and Ninki determined the consensus -- deemed worthless. Enul and Ninul assigned the fate, ……."
+    },
+    {
+     "ref": "9–14",
+     "orig": "an {d}en-lil₂-bi ba-an-u₃-tud-uš-[a ...]-gin₇ e-ne ba-sig₁₀\n{d}nin-lil₂-le muš₃-me mi-ni-in-šum₂-ma [X X] e-ne ba-ab-tum₃\n{d}a-ru-ru {d}suen {d}en-ki-bi me-dim₂-bi ba-an-ak-eš-a\ne-ne ba-ḫe₂-ši ĝi₆ en-nu-uĝ₃ MAŠ-a-gin₇ [...] X-aš ba-ab-ĝar\ndiĝir gal-gal-e-ne kuš₃-kuš₃-ta ba-an-sig₇-ge-eš [...] mi-ni-ib-ĝal₂\nam gal-gin₇ gu₃ maḫ im-mi-ib-dug₄ šeg₁₁-bi e-ne ba-e-si",
+     "orig_lines": [
+      "9",
+      "10",
+      "11",
+      "12",
+      "13",
+      "14"
+     ],
+     "en": "When together An and Enlil had created it, that one resembled ……. When Ninlil had given it features, that one was fit for ……. When together Aruru, Suen and Enki had fashioned its limbs, that one turned pitch black, as at night, halfway through the watch, ……. All the great gods paled at its immensity and …… was brought about. Like a great wild bull which bellows mightily, that one filled the world with its roar."
+    },
+    {
+     "ref": "15–20",
+     "orig": "si gal-bi an-/ne₂\\ ḫe₂-em-us₂-sa ni₂-bi a-ba-a in-dub₂\nsa-par₄-gin₇ kur-re ḫe₂-em-dub-ba a-ba-a /ba-ni-in\\-gur\nsila-ba er₂ a-nir a-ba-a i-ni-in-/ĝar\\ X [...]\nunug{ki}-ge lu₂ zid ni₂ te-a-gin₇ X X [...]\nzig₃-ga šu-ba a-na-aš ba-ni-ib-dab₅ igi /zid{?}\\ a-na-[aš ...]\nšag₄ sag₃ a-nir-ra a-ba-a i-ni-in-ĝar X X [(X)] IM [...] X",
+     "orig_lines": [
+      "15",
+      "16",
+      "17",
+      "18",
+      "19",
+      "20"
+     ],
+     "en": "As its gigantic horns reached up to heaven, who trembled in his very core? As it was piled up over the mountains like a battle-net, who turned away? Who caused wailing and lamenting in those streets and ……? Unug, like a loyal citizen in terror, set up an alarm (and exclaimed) \"Rise up!\" Why did its hand seize Unug? Why did the benevolent eye look away? Who brought about such worry and lamenting and ……?"
+    },
+    {
+     "ref": "21–27",
+     "orig": "e-ne ba-ab-te saḫar-ra e-ne ba-an-/tuš{?}\\ ĝiri₃ a-na-aš ba-da-ze₂-er\ndim₂-ma-bi šu bal a-ba-a bi₂-in-ak umuš-bi a-/ba\\-[a bi₂-in]-/kur₂\\\n{d}udug sag₉-ga-bi a-ba-a ib₂-ta-an-dub₂ {d}lamma-bi a-ba-a in-/ga\\-[an]-/ra\\\nni₂ me-lem₄ saĝ-ĝa₂ ĝal₂-la-bi šu ḫul a-ba-a [bi₂-in-dug₄]\nunug{ki}-ga teš₂-bi a-ba-a ib₂-ta-an-/gu₇{?}\\-[(X) X] gig a-ba-a in-[ga-X (X)]\niri-da kur-kur [(...)] /unug\\{ki}-ga e₂-ba a-[ba-a ...]\ne-ne [...]",
+     "orig_lines": [
+      "21",
+      "22",
+      "23",
+      "24",
+      "25",
+      "26",
+      "27"
+     ],
+     "en": "That one drew nearer. That one settled upon the ground. Why would he withdraw? Who distorted Unug's good sense and deranged its good counsel? Who smashed its good udug deity? Who struck its good lamma deity too? Who desecrated the fearsome radiance which crowned it? Who brought about mob panic in Unug? Who …… sickness too? Along with the city, the foreign lands ……, who …… in the temple of Unug? That one ……. small no. of lines missing"
+    },
+    {
+     "ref": "1–8",
+     "orig": "[...] X X\n[...] X SA RA [...] X a-ba-a in-ak\n[...]-ni saĝ a-na-aš ba-ab-sud [uĝ₃ saĝ gig₂-ga] a-ba-a in-lu-lu-un\n[... a]-/ba\\-a zag im-mi-in-tag\n[...]-bi ĝiš im-mi-gul [...] a-ba-a dur₂-bi-še₃ mu-un-gi₄\n[...] X a-ba-a saĝ im-mi-tu-lu\n[...] X-ba e-ne ba-ze₂-er\n[...] X NI X [X] /E NE\\ [(...)]",
+     "orig_lines": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8"
+     ],
+     "en": "1 line fragmentary Who made ……? Why was …… expanded? Who made the black-headed people become so numerous? Who overthrew ……? …… was destroyed -- who restored ……? Who confronted ……? That one crushed ……. That one ……. small no. of lines missing"
+    },
+    {
+     "ref": "1–9",
+     "orig": "[...]-/gin₇{?} saĝ\\ [X] X X [X X]\n[...] X DU {d}utu lu₂ ki di an-na-ta [...]-/a\\ šu₂ ša-ra-us₂ gu₂-bi nu-mu-ši-ib₂-zig₃\n[...] X-in-di-be₂-eš nam-tag dugud ba-ab-il₂\n[...] di kur₂-kur₂ en {d}nu-nam-nir-ra\n[...] X-ga-ke₄ a-na bi₂-in-tu₁₁-be₂\n[...]-ni-in-šub da mu-un-ši-ib-ak-ne\n[...] /ĝal₂\\ igi šum₂-ma im-mi-in-e₃\n[...] [{d}en]-/lil₂\\-la-ka [...] X-kuš₂-u₃\n[...] X-bi bi₂-ib₂-til-e",
+     "orig_lines": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9"
+     ],
+     "en": "1 line fragmentary …… and Utu, who in human form renders judgment at the law court of heaven, set and did not rise again. …… bore a heavy burden of sin. …… the altered verdicts of Lord Nunamnir. …… who can smite ……? …… and they approach (?). …… he brings …… forth. …… of Enlil ……. He …… and puts an end to ……. small no. of lines missing"
+    },
+    {
+     "ref": "1–9",
+     "orig": "[...] X [...]\n[...] X-še₃ teš₂-e ni₂-ba [...]\n[...] X-la-ba a-ra₂-bi ba-[...]\n[...]-gul-lu sig₁₀-sig₁₀-ge₄-bi /a₂\\-bi [...]\n[... diĝir]-/re\\-e-ne-ke₄ ĝeštug₂ ba-ši-in-[X]\n[...] X-ke₄ gu₂ ba-an-da-šub-ba\n[...] X gidim ḫul bi₂-in-te-a iri igi-ba ba-/du₈\\\n[...] zi ḫul i₃-pa-an-pa er₂ gig i₃-še₈-še₈\n[...] KA mu-un-ak-e saĝ sag₃-ge nu-ĝa₂-ĝa₂",
+     "orig_lines": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9"
+     ],
+     "en": "1 line fragmentary …… each and every one ……. …… its ways were ……. …… its destruction and demolition, ……. The …… of the gods …… attention. ……, who neglected ……, …… the city watched as the evil ghost approached. …… breathed painfully, he wept bitterly. …… there was no nodding of the head."
+    },
+    {
+     "ref": "10–20",
+     "orig": "/er₂-re a-nir-ra\\ šag₄ mu-ni-ib-kuš₂-u₃ iri ni₂-ba mu-da-dub₂\nšu(sourše: BA) pe-el šu ba-ab-ra saĝ ba-ab-tal₂ iri ni₂-ba ba-an-ta-ra\nni₂ me-lem₄ i-bi₂ du₃-a-gin₇ ni₂-bi-a ba-an-te\niri saĝ-kug-ĝal₂ kur-kur-ra re ḫa-lam ĝar-gin₇ ba-du₃\namaš {lu₂}sipad zid-de₃ du₃-du₃-a re ni₂-bi-a ba-an-bur₁₂-bur₁₂\ntur₃ unud(UNU₃) gal-e du₃-a re ni₂-bi-a ba-an-tab-tab\nzar-gin₇ ba-du₃ zar-gin₇ ba-sal ni₂-bi-a ba-an-ur₄\nḪAR SUḪ₃ a-šag₄-ga a ba-ab-ĝar iri sug-ge₄ ba-ab-/gu₇\\\ni₃-ak-ak gi ki sumun-na-gin₇ u₃-tud-da nu-ĝa₂-ĝa₂\nsag₂ ba-ab-dug₄ iri-a niĝ₂-ḫul-a KAxLUM mu-un-da-an-X [(X)]\nšag₄ ni₂ te uĝ₃-ba niĝ₂-me-ĝar tug₂-gin₇ i-im-[dul (X X)]",
+     "orig_lines": [
+      "10",
+      "11",
+      "12",
+      "13",
+      "14",
+      "15",
+      "16",
+      "17",
+      "18",
+      "19",
+      "20"
+     ],
+     "en": "He consoled himself with tears and laments -- the city trembled. A defiled hand smote him and flattened his skull -- the city collapsed. The fearsome radiance overwhelmed like ……. The proud city of all the lands became like one who spreads havoc. The faithful cowherds themselves overturned every single cattlepen. The chief shepherds themselves burned (?) every sheepfold. They built them up like grain heaps, they spread them out like grain piles, they were convulsed. …… they drenched the fields with water, they turned the city into a swamp. They did all that. Like reeds in a wasteland, life could not be revived. They brought ruination. Evil things menaced (?) the city. A hush settled over the awed hearts of its people like a cloak."
+    },
+    {
+     "ref": "21–33",
+     "orig": "{d}udug sag₉-ga-bi im-ta-an-e₃-[e-eš] {d}lamma-bi ba-da-an-/kar\\-[re-eš]\n{d}lamma-bi edin-na bar-bi₂-ib-da ĝiri₃ kur₂ ba-ra-an-dab₅-be₂-[eš]\niri diĝir-bi ba-da-gur sipad-bi ba-da-/an\\-[taka₄]\nmaškim-bi lu₂-erim₂ nu-me-a ki kur₂ im-ma-/an\\-[X]\ndiĝir gal-gal-bi ur₅ in-ze₂-eš bar-ta ba-sug₂-/ge\\-[eš]\nḫur-saĝ-ĝa₂ bar im-ma-an-dab₅-be₂-eš edin-lil₂-e ba-ab-[...]\niri silim du₃-a gu₇ naĝ-a {dug}/saman\\-[gin₇] im-mi-in-šub\nšag₄-/tum₃{?}\\-ma dum-dam mu-ni-in-za anše udu im-mi-in-e₃\nab-ba lu₂-ban₃-da šag₄ kuš₂-u₃-bi [X] igi-še₃ KA BA bi-[X X]\n[X X]-/ne\\ igi mu-un-bar-bar [X X] /bi₂\\-ib₂-šar₂-šar₂ X [X X]\n[...] X-bi ba-BU-/BU\\ [X (X)]\n[... ba]-ni-ib₂-dug₄-/ge\\-[...]\n[...] X-a me-a [...]",
+     "orig_lines": [
+      "21",
+      "22",
+      "23",
+      "24",
+      "25",
+      "26",
+      "27",
+      "28",
+      "29",
+      "30",
+      "31",
+      "32",
+      "33"
+     ],
+     "en": "Its good udug deities went away, its lamma deities ran off. Its lamma deity (said) \"Hide in the open country\" and they took foreign paths. The city's patron god turned against it and its shepherd abandoned it. Its guardian spirit, though not an enemy, was exiled (?) to a foreign place. Thus all its most important gods evacuated Unug, they kept away from it. They hid out in the hills and wandered (?) about in the haunted plains. In the city built upon peace, food and drink were overturned like a saman vessel. In the pasture lands a tumultuous noise arose, the asses and sheep were driven away. Elderly people and babies, taking their rest, …… in front ……. They saw …… and slaughtered (?) ……. 3 lines fragmentary small no. of lines missing"
+    },
+    {
+     "ref": "1–7",
+     "orig": "[...] ki šu sag₃ mi-ni-in-/du₈{?}\\\n[...] /mu\\-na-kal{?}-la{?} šu mu-na-gid₂\n[...] [ki-en]-/gi\\-ra iri lugal ki-bal-a-še₃\n[...]-še₃ ba-ra-ab-bal a₂ {ĝiš}tukul-la [(...)] mu-un-dub₂\n[...] RI ki saḫar-da im-ma-an-gi₄\n[...] /uĝ₃\\ zar-re-eš mi-ni-in-du₈-du₈\n[...] /la\\-la-a-ni en-na bi₂-ib₂-gi₄-gi₄",
+     "orig_lines": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7"
+     ],
+     "en": "He …… and opened his clenched fist. He …… and reached out his hand. The …… of Sumer, the city whose king crossed over to an enemy land, to ……. -- he smote it with the might of his weapon. He …… and turned the place into dust. He …… and piled the people up in heaps. ……, how long until its charms are restored?"
+    },
+    {
+     "ref": "8",
+     "orig": "[ki]-ru-/gu₂\\ 2-kam-ma-am₃",
+     "orig_lines": [
+      "8"
+     ],
+     "en": "2nd kirugu."
+    },
+    {
+     "ref": "9",
+     "orig": "[(X) X] X an NA X X X kur zag an-še₃ uĝ₃-/e\\ [...] X [(X)]",
+     "orig_lines": [
+      "9"
+     ],
+     "en": "The …… of heaven …… and the people …… to the limits of heaven."
+    },
+    {
+     "ref": "10",
+     "orig": "ĝiš-gi₄-ĝal₂-bi-im",
+     "orig_lines": [
+      "10"
+     ],
+     "en": "Its ĝišgiĝal."
+    },
+    {
+     "ref": "11–20",
+     "orig": "[X X] X-e im-la₂ šu mi-ni-in-/gid₂\\-gid₂ kur-re ni₂ bi₂-in-te\n{d}en-lil₂-le ḫuš gal-bi mu-un-tag [gu₃ ba]-an-de₂\na-ma-ru ki(sourše: DU₆) al ak-e gu₃ im-ma-ab-zig₃\nme₃ /ugu\\-bi-še₃ {urud}dur₁₀-gag-am₃ eĝer-bi-še₃ PA.ḪAR 1(DIŠ)-am₃\nsiki lum-ma-bi {ĝiš}gana₂-ur₃-ra-am₃ {mu}/murgu\\-bi-še₃ izi-am₃\nsaĝ-ki-bi ud ḫul-du₃-am₃ ki an-na dul-lu-dam\nĝiš-nu₁₁-bi nim ĝir₂-re anzud{mušen}-gin₇ igi /su₃\\-ud-bi bar-re-dam\ngu₃-bi mir-mir-ra-am₃ izi bar₇-a kur-re sud-sud-u₃-dam\neme-bi ga-an-ze₂-er-ra-am₃ u₃-dub₂ šeĝ₃-ĝe₂₆ kalam-ma dar-re-dam\na₂-bi anzud{mušen} maḫ dub₃ ba₉-re₆ niĝ₂-nam nu-e₃-am₃",
+     "orig_lines": [
+      "11",
+      "12",
+      "13",
+      "14",
+      "15",
+      "16",
+      "17",
+      "18",
+      "19",
+      "20"
+     ],
+     "en": "He ……, stretched forth his hand and induced terror in the land. Enlil struck out with great ferocity. He announced: \"A deluge dashing the hoe on the ground shall be invoked. At its front war shall be a …… axe, at its rear it shall be a ……. Its overgrown hair shall be a harrow, its back shall be flames. Its countenance shall be a malevolent storm that enshrouds heaven and earth. The glint of its eyes shall be lightning that flashes far like the Anzud bird. Its mouth shall rage -- a blazing fire that extends as far as the nether world. Its tongue shall be an inferno, raining embers, that sunders the Land. Its arms shall be the majestic Anzud bird that nothing can escape when it spreads wide its talons.\""
+    },
+    {
+     "ref": "21–31",
+     "orig": "ti-ti-bi niĝ₂ za-ra ak-dam ud zal-gin₇ zal-le-dam\nšab-ba-bi-a a₂-sag₃ uru₂ gul-la niĝ₂-keše₂-še₃ mu-un-la₂\nḫaš₂ gal-bi ĝiri₂ sur uš₂ dul₄-dul₄-lu u₃-mun bal-bal-e-dam\nsa-sa-bi {urud}šum-me šab-dam ĝiri₃-bi ḫu-ri₂-in{mušen}-na-am₃\n{id₂}idigna {id₂}buranuna ni₂ mu-ni-ib-te kur-ra gu₃ mi-ni-ib₂-ra\nšeg₁₁ gi₄-bi-še₃ ḫur-saĝ i₃-bur₁₂-re uĝ₃ zar-re-eš i₃-sal-e\nki-en-gi ki-uri su im-sag₃-[sag₃-ge] buru₁₄-gin₇ i₃-su₃-su₃-u₃\nnu-zu-u₃-ne im-ši-ḫul₂-ḫul₂-e-eš /šeg₅{?}\\ im-ši-ib-tar-re-ne\nḫe₂-em-du me₃-a ĝiš-ĝiš-la₂-še₃ iri igi ḫe₂-bi₂-ib-du₈-un-de₃-en\nURUxKAR₂ im-gul-la-a-aš bad₃ im-sig₁₀-ge₅-«diš»-a-aš iri silim i₃-si-il-le-a-aš\nnumun zid saĝ lul-la saĝ zid-da šu bal mi-ni-ib-ak-a-a-aš",
+     "orig_lines": [
+      "21",
+      "22",
+      "23",
+      "24",
+      "25",
+      "26",
+      "27",
+      "28",
+      "29",
+      "30",
+      "31"
+     ],
+     "en": "\"Its ribs shall be crowbars that let light pass inside like the sun's rays. Knotted at both its hips shall be city-destroying slingstones. Its great haunches shall be dripping knives, covered with gore, that make blood flow. Its muscles shall be saws that slash, its feet those of an eagle. It shall make the Tigris and Euphrates quaver, it shall make the mountains rumble. At its reverberation the hills shall be uprooted, the people shall be pitched about like sheaves, Sumer and Akkad shall shiver, they shall be flooded like a harvest crop. The foolish shall rejoice, they shall exclaim (?): \"Let it come -- we shall be seeing war and battle in the city, how the sacred precinct (?) is destroyed, how the walls are battered down, how the city's peace is disrupted, how among the loyal families honest men are transformed into traitors.\"\""
+    },
+    {
+     "ref": "32–40",
+     "orig": "lu₂ zu-u₃-ne gaba sag₃ i₃-ak-ne saĝ i₃-sal-sal-e-ne\na₂ ĝi₆-ba ni₂ er₂ mu-ni-ib-te-eš igi lib i₃-ak-ne\nki-nu₂ {tug₂}niĝ₂-barag₂-bi u₃ dug₃ li-bi-ku-ku-ne iri{ki} im-ni₁₀-ni₁₀-ne\ne-ne-<ne> šu-ne-ne ba-du₃-du₃ šag₄ dar i₃-ak-ne\n[a₂]-taḫ gub me₃ silim-me-eš₂ gaba-bi ḫa-ba-ab-zi-zi-i\ninim {d}en-lil₂-la₂-ke₄ ḫe₂-bi₂-ib-gur-re murgu-bi-še₃ ḫa-ba-gub\n[X X] {d}nu-nam-nir-ra-ka uš₁₁-bi ḫe₂-bi₂-ib-til-e\nlu₂ ḫuš e₂-kur-ra X mu-un-dab₅-be₂-eš-a igi-bi ḫe₂-em-ši-tum₂\nnibru{ki}-še₃ igi-bi mu-ra-ši-ni-ib₂-ĝal₂-la kuš₇ ḫe₂-/em\\-mi-ib-su-su",
+     "orig_lines": [
+      "32",
+      "33",
+      "34",
+      "35",
+      "36",
+      "37",
+      "38",
+      "39",
+      "40"
+     ],
+     "en": "\"But the sensible shall beat their breasts and droop (?) their heads. At midnight they shall be afraid and tearful, and suffer insomnia. In bed, under the covers, they shall be unable to sleep soundly, they shall wander about the city. They shall be immobilised, their courage shall run out: \"May our allies serving in times of war raise their forces for peace. May the word of Enlil be sent back, may it turn tail. May the venom of Nunamnir's anger become exhausted. May those vicious men who have seized the E-kur be punished. May those who have set their sight upon Nibru be swept away.\"\""
+    },
+    {
+     "ref": "41",
+     "orig": "ki-ru-gu₂ 3-kam-ma-am₃",
+     "orig_lines": [
+      "41"
+     ],
+     "en": "3rd kirugu."
+    },
+    {
+     "ref": "42",
+     "orig": "šag₄-ĝu₁₀ er₂ im-si šeₓ(SIG₇)-šeₓ(SIG₇) i₃-ĝa₂-ĝa₂",
+     "orig_lines": [
+      "42"
+     ],
+     "en": "My heart is filled with sorrow, I am tear-stricken."
+    },
+    {
+     "ref": "43",
+     "orig": "ĝiš-gi₄-ĝal₂-bi-im",
+     "orig_lines": [
+      "43"
+     ],
+     "en": "Its ĝišgiĝal."
+    },
+    {
+     "ref": "44–50",
+     "orig": "ki-en-gi a šag₄-zu a bar-zu a nam-lu₂-u₁₈-/lu\\-zu\n/inim\\ an-na ki-bi-še₃ ĝa₂-/ĝa₂\\-[de₃] /URUxKAR₂\\ i₃-/gul\\ [X (X)]\ndug₄-ga {d}en-lil₂-la₂ di-di-de₃ [im-ma]-/ni\\-ši-ib-[...]\na-ma-ru ki al ak-e X [...]\nX /ḫuš gal\\ en {d}nergal [...]\nX [X X] {d}gibil-gin₇ {d}/nergal\\ [...]\n[...] X X tum₃-gin₇ /i₃\\-[...]",
+     "orig_lines": [
+      "44",
+      "45",
+      "46",
+      "47",
+      "48",
+      "49",
+      "50"
+     ],
+     "en": "Oh, Sumer! Alas -- your spirit! Alas -- your structure! Alas -- your people! The word of An, having been assigned its place, has destroyed the sacred precinct (?). The pronouncement of Enlil, having been set in motion, ……. The deluge dashing the hoe to the ground ……. The great and fierce ……, Lord Nergal ……. …… like Gibil, Nergal ……. 1 line fragmentary"
+    },
+    {
+     "ref": "51–65",
+     "orig": "me₃ /ki-bal\\ [...] X šeg₁₁ /mu\\-[...-gi₄-gi₄]\nti mar-uru₅-a-/gin₇\\ [...]-til-e [...]\nki-en-gi-ra lu₂-/erim₂\\ [...]\ngu-ti-um ur-re ba-e-/bal\\ [...]\nki-«{d}»en-gi ĝiš-bur₂-ra i₃-bal-/la\\ X [...]\nuĝ₃-bi šu suḫ₃-ḫa im-ma-ab-dug₄ X [...]\nur-saĝ kalag-ga ki-en-gi-ra-ke₄ ĝiš [...]\nšag₄ {tum₉}u₁₈-lu-da zu NE EN /ed₃{?}\\ [...]\nerin₂ saĝ-gin₇ mu-un-laḫ₅-laḫ₅-eš-am₃ AN [...]\nKASKAL X-gin₇ mu-un-gaz-uš 1-a re an-gin₇ [...]\nme₃ zu-ba šu-ba bi₂-/ib\\-šub dim₂-ma-bi [...]-ak\nsaĝ erin₂-na lu₂-ta e₃-a-me-eš gar₃ ḫul-/bi\\ [...] X\ngu-ti-um{ki} /ur-ra\\ X E NE [...] {ĝiš}tukul [...] X\nigi-bi da-bi-a nu-mu-un-bar-bar-re-eš-a ĜIR₂-ĜIR₂ [...]\nsu-bir₄{ki}-e a maḫ e₃-a-gin₇ a X [(...)] X-gin₇ ki-en-gi-ra ba-an-de₂",
+     "orig_lines": [
+      "51",
+      "52",
+      "53",
+      "54",
+      "55",
+      "56",
+      "57",
+      "58",
+      "59",
+      "60",
+      "61",
+      "62",
+      "63",
+      "64",
+      "65"
+     ],
+     "en": "War …… enemy lands …… echoed. Like arrows in a quiver ……. Evildoers in Sumer ……. Gutium, the enemy, overturned ……. Sumer, caught in a trap, ……. Its people were thrown into turmoil ……. The mighty heroes of Sumer ……. …… the heart of a hurricane ……. They advanced like the front rank of troops, ……. Like …… they were crushed, every one of them ……. Their war veterans gave up, their brains were muddled. The troop leaders, the most outstanding of the men, were viciously hewn down. Gutium, the enemy, …… weapons ……. Not looking at each other …… Like a swelling flood, like ……, Subir poured into Sumer."
+    },
+    {
+     "ref": "66–74",
+     "orig": "maš kar-ra-gin₇ ur X [...] uĝ₃ ad₆-bi mu-un-si-il-le-eš\nki-en-gi ki-uri gu₂-/gur₅{?}\\-ru-uš {ĝiš}naĝa₃-še₃ mu-un-ak-eš\nmaš-gana₂ a₂-dam-bi mu-/un-gul\\-gul-lu-uš du₆-du₆-ra mi-ni-in-si-ig-eš\nki-en-gi saĝ-e saḫar-gin₇ mu-un-dub-bu-uš X [(...) mu]-/un\\-tu₁₁-be₂-eš\nnam-lu₂-ulu₃-bi aga₃-kar₂ bi₂-in-sig₁₀-ge₅-eš tur maḫ-bi mu-un-til-le-eš\niri{ki} {d}a-nun-ke₄-ne mu-un-gul-gul-lu-uš izi /mu\\-[ni]-/in\\-ri-ri-eš\nunug{ki}-ga igi tab-bi mu-un-gul-gul-lu-uš {ĝiš}isimu₂{sar}-bi mu-un-suḫ-u₃-uš\nki-a-naĝ {d}a-nun-ke₄-ne-ke₄ ni₁₀-ni₁₀ im-mi-in-dib-be₂-eš\nkul-aba{ki} iri ul in-ga-me-a ki-lul-la bi₂-in-/sag₃\\-[sag₃-ge-eš]",
+     "orig_lines": [
+      "66",
+      "67",
+      "68",
+      "69",
+      "70",
+      "71",
+      "72",
+      "73",
+      "74"
+     ],
+     "en": "They …… like stampeding goats, they tore apart the corpses of the population. They mutilated Sumer and Akkad, they pulverised it as with a pestle. They destroyed its settlements and habitations, they razed them to ruin mounds. The best of Sumer they scattered like dust, they heaped up ……. They massacred its populace, they finished off young and old alike. They destroyed the city of the Anuna gods, they set it aflame. They put out both Unug's eyes, they uprooted its young shoots. They wandered all through the libation places of the Anuna gods. And even Kulaba, which is the primeval city, they turned into a place of murder."
+    },
+    {
+     "ref": "75",
+     "orig": "ki-ru-gu₂ 4-kam-ma-am₃",
+     "orig_lines": [
+      "75"
+     ],
+     "en": "4th kirugu."
+    },
+    {
+     "ref": "76",
+     "orig": "a ki-en-gi a nam-lu₂-ulu₃-bi",
+     "orig_lines": [
+      "76"
+     ],
+     "en": "Alas -- Sumer! Alas -- its people!"
+    },
+    {
+     "ref": "77",
+     "orig": "ĝiš-gi₄-ĝal₂-bi-[im]",
+     "orig_lines": [
+      "77"
+     ],
+     "en": "Its ĝišgiĝal."
+    },
+    {
+     "ref": "78–88",
+     "orig": "unug{ki} kar-zu zag-zu ba-ab-/dab₅\\-be₂-eš [...]\nunug{ki}-ge gu₃ im-ra šegₓ(KAxLI){?} im-gi₄ lu₂ šu dab₅-bi [...]\nsig-še₃ za-pa-aĝ₂ im-ĝar sig ba-gul a₂ nam-/ba{?}\\-[...]\nnim-še₃ šu im-zig₃ nim ba-sig₁₀ tab-ba la-ba-X [...]\nzid-da gab₂-bu uĝ₃ nu-di a₂-dam nu-du₃-/du₃\\ [(...)]\nki X [(X)]-bi-a nu-un-ĝal₂ zig₃-ga la-ba-ši-ib-X [(...)]\nan-še₃ [X (X)] il₂ an i₃-til a₂-bi DI li-/bi₂\\-[...]\nki-a X /bi₂\\-ib-DU ki i₃-barag₂ ni₂-bi nu-um-[X (...)]\nmaš-gana₂-/maš\\-gana₂ ba-bir-bir unug{ki} dili-bi ba-du₃ [(...)]\ngud-dam usu-tuku-am₃ teš₂ im-daĝal {ĝiš}tukul-e /im\\-[X (...)]\nĝi₆ an-/bar₇\\-gana₂-ba dam-<ḫa>-ra im-ak eĝer-bi-še₃ nu-[X (...)]",
+     "orig_lines": [
+      "78",
+      "79",
+      "80",
+      "81",
+      "82",
+      "83",
+      "84",
+      "85",
+      "86",
+      "87",
+      "88"
+     ],
+     "en": "Unug! They seized your wharf and your borders and ……. At Unug shouts rang out, screams reverberated, its captured men ……. The noise reached to the south. The south was destroyed and ……. The impact forced its way to the uplands. The uplands were struck and ……. To the right and left no people moved about, no habitations were built. There was no …… and the mobilisation of troops did not ……. …… rose up to heaven. Heaven perished and its strength did not ……. …… upon the earth. The earth was scattered, and it did not ……. All the settlements were dispersed -- Unug stood all alone. It was a bull, it was a champion, it was immense with pride, but it …… to the weapons. All night and even until midday battle was waged, and afterwards it did not ……."
+    },
+    {
+     "ref": "89–99",
+     "orig": "{ĝiš}gud-si-AŠ {kuš}gur₂₁{ur₃} ba-sug₂-ge-[eš] bad₃-bi mu-un-si-il-si-[il-le-eš]\nzag-e₃-ba gu₂-/ĝiri₃\\ mi-ni-in-[ĝar-re-eš] iri {ĝiš}al-e bi₂-in-[ra-ra-aš]\n/ki-gub-ba\\ izi mu-ni-in-/šum₂-mu\\-[uš] /iri\\-tuš-/ba\\ mu-/un\\-[...]\n[mu-un]-sig₁₀-ge-eš mu-un-/gul\\-[lu-uš]\n/unug\\{ki} ki dug₃ saḫar-da im-/da\\-[...]\n/am\\ gal-gin₇ ti mu-ni-in-gid₂-gid₂-i X [...]\n/sumun₂{?}\\-gin₇ {ĝiš}šukur mi-ni-in-te-te X [...]\nkalag-ga {ĝiš}tukul-e saĝ ba-an-šum₂ ĝiš me₃ [...]\nsu-bir₄{ki}-e a maḫ a e₃-a-gin₇ /zig₃\\-[ga ...]\ne-sir₂-e-sir₂-ra dub₃ mi-ni-in-MUŠ₂-/MUŠ₂\\ [...]\nu₃-mu-un nam-lu₂-ulu₃ ab₂-gin₇ /mu\\-[un-sur-sur-re-eš] niĝ₂ dim₂ mu-un-/ze\\-[(X)]-/re\\-eš",
+     "orig_lines": [
+      "89",
+      "90",
+      "91",
+      "92",
+      "93",
+      "94",
+      "95",
+      "96",
+      "97",
+      "98",
+      "99"
+     ],
+     "en": "Battering rams and shields were set up, they rent its walls. They breached its buttresses, they hewed the city with axes. They set fire to its stations, they …… the city's dwellings. They destroyed it, they demolished it. Unug, the good place, was …… with dust. Like a great wild bull wounded with an arrow, ……. Like a wild cow pierced with a spear, ……. The mighty one rushed with his weapons and …… implements of war. Subir, rising up like a swelling floodwave, ……. They trampled (?) through the streets and ……. They let the blood of the people flow like that of a sacrificial cow, they tore out everything that had been built."
+    },
+    {
+     "ref": "100–111",
+     "orig": "dumu unug{ki}-ga-/ke₄\\-[ne] [...] X-le-eš\n[X] X-bi I X [...]-/in\\-tu₁₁-uš\n[(X) X] X X [... mu]-un-til-le-eš\n[...] /mu\\-un-da-an-dab₅-be₂-eš\n[...] /bi₂\\-ib-sig₁₀-ge₅-eš\n[...] /mu\\-un-gul-gul-lu-uš\n[...]-in-ri-ri-eš\n[... mu]-/un\\-ḫa-lam-e-eš\n[...] /mu\\-un-ĝar-re-eš\n[...]-/bi\\ ĝiš{?} ba-an-tu₁₁-uš\n[...] /ba\\-an-til-/le\\-[eš ...] nu-mu-un-taka₄-a-aš\n[...] X-ḫa-e su-bir₄{ki}-e ba-an-kur₉",
+     "orig_lines": [
+      "100",
+      "101",
+      "102",
+      "103",
+      "104",
+      "105",
+      "106",
+      "107",
+      "108",
+      "109",
+      "110",
+      "111"
+     ],
+     "en": "The citizens of Unug ……. They …… and threw down ……. They …… and put an end to ……. They seized ……. They struck ……. They destroyed ……. They …… They demolished ……. They set up ……. They heaped up ……. They put an end to …… and did not leave behind ……. …… Subir entered ……."
+    },
+    {
+     "ref": "112",
+     "orig": "[ki-ru]-/gu₂\\ 5-kam-ma-am₃",
+     "orig_lines": [
+      "112"
+     ],
+     "en": "5th kirugu."
+    },
+    {
+     "ref": "113",
+     "orig": "[...] /im\\-ma-dim₂ gu₃ im-me [...] /saḫar\\ mi-ni-in-su-ub",
+     "orig_lines": [
+      "113"
+     ],
+     "en": "…… cried out \"…… has been created\" and he smeared dust ……."
+    },
+    {
+     "ref": "114",
+     "orig": "[ĝiš]-gi₄-ĝal₂-bi",
+     "orig_lines": [
+      "114"
+     ],
+     "en": "Its ĝišgiĝal."
+    },
+    {
+     "ref": "115",
+     "orig": "[...]-zu sa₂ mi-ri-ib-dug₄ [...] X gaba ḫul-bi DI-ĝa₂\n[...] sag₉-sag₉ gub-ba\n[...] /us₂\\-sa\n[...]-da\n[...]-ga{?}\n[...]-an-RI\n[...]-/ba\\-še₃\n[...] /ĝar\\\n[...] X\n[...] X\n[...] X\n[...] X-eš\n[...]-gur\n[...]-i\n[...]-aš\n[...]-/dub₂\\-uš\n[...]-eš\n[...]-/uš\\\n[...]-eš",
+     "orig_lines": [
+      "115",
+      "116",
+      "117",
+      "118",
+      "119",
+      "120",
+      "121",
+      "122",
+      "123",
+      "124",
+      "126",
+      "127",
+      "128",
+      "129",
+      "130",
+      "131",
+      "132",
+      "133",
+      "134"
+     ],
+     "en": "…… reached …… 19 fragmentary linesunknown no. of lines missing"
+    },
+    {
+     "ref": "1–5",
+     "orig": "/ki{?}-bal{?} e₂{?}\\ [...] UR [...]\nki zabalam{ki} [...] /TA\\ [...]\nurim₂{ki} e₂-/kiš\\-[nu-ĝal₂] [...] TA [...]\ntur₃ {e₂}amaš e₂ X [...] ḫul [...]\n/ki\\ su-/bir₄\\[{ki}] [",
+     "orig_lines": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+     ],
+     "en": "The enemy land ……. Zabalam ……. In Urim, the E-kiš-nu-ĝal ……. Cattlepen and sheepfold ……, evil ……. The land of Subir ……. 200-300 lines missing"
+    },
+    {
+     "ref": "1–5",
+     "orig": "diĝir gal-/gal\\ [...]\n{d}a-nun-na [...]\nDI NE X [...]\nbarag-/barag{?}\\ [...]\n/IM\\ [...]",
+     "orig_lines": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+     ],
+     "en": "All the great gods ……. The Anuna gods ……. 1 line fragmentary Sovereigns ……. 1 line fragmentary unknown no. of lines missing"
+    },
+    {
+     "ref": "1–8",
+     "orig": "nin nam-gal-la-ni kur-ra dirig-ga\nan-gin₇ dib {d}en-lil₂-gin₇ ni₂ gur₃-ru\na-a-ni-gin₇ ĝi₆ an-šeĝ₆-ĝa₂-ba ḫe₂-du₇\n{d}utu-gin₇ nam-šul-la zag dib\nub-da 4(LIMMU)-ba dili-ni maḫ\nni₂ dub₂-ba e₂-za ḫu-mu-ḫul₂-le\ne₂-za mul-ma-al ḫu-mu-ri-ib-za\ne₂-an-na-za saĝ ḫu-mu-ri-in-il₂",
+     "orig_lines": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8"
+     ],
+     "en": "Lady Inana whose greatness is vaster than the mountains, hovering like An, vested with grandeur like Enlil, like her father, perfect by night and in the heat of the day, like Utu, surpassing in vigour, singularly exalted in all the four regions -- let Išme-Dagan take pleasure in relaxing in your temple, let him murmer to you in your temple, let him raise his head to you in your E-ana."
+    },
+    {
+     "ref": "9–19",
+     "orig": "{d}iš-me-{d}da-gan u₂-a-zu ḫa-ra-da-gub\ngud gal-gal-e si ḫa-ra-ni-ib-sa₂\nnidba gal-gal-e ĝiš ḫu-mu-ra-ab-tag-ge\nkaš i₃-udu i₃ ḫu-mu-ra-ab-šar₂-e\nlal₃ ĝeštin bur-gin₇ ḫa-ra-ab-de₂-e\n{d}iš-me-{d}da-gan-e ki lugal gub-ba\ndumu {d}en-lil₂-la₂ giri₁₇ šu ḫa-ra-ab-tag-ge\nub₃ a₂-la₂-e gu₃ nun ḫu-mu-ra-ab-be₂\ntigi a-ra-dug₃ za-am-za-am ḫu-mu-ra-ab-du₁₂\n[X] X X tigi-a ḫu-mu-ra-ab-du₁₂\n[sizkur] a-ra-zu-zu saĝ-bi-še₃ ḫa-ra-e₃",
+     "orig_lines": [
+      "9",
+      "10",
+      "11",
+      "12",
+      "13",
+      "14",
+      "15",
+      "16",
+      "17",
+      "18",
+      "19"
+     ],
+     "en": "Let Išme-Dagan serve you as your steward. Let him prepare great bulls for you. Let him dedicate great offerings to you. Let him make the beer, fat and oil plentiful for you. Let him make syrup and wine flow for you as from stone jars. Let Išme-Dagan, son of Enlil on the king's pedestal, bow in homage to you. May he make the ub and ala drums resound grandly for you. May the tigi sound sweetly for you, and may the zamzam play for you. May they play …… on the tigi for you, expressing your prayers and supplications before you."
+    },
+    {
+     "ref": "20–27",
+     "orig": "[(X) X] e₃-a ĝal₂-ĝal₂-la-še₃\n/unug\\{ki} e₂-ĝi₆-par₄-ra-za\n/lu₂\\ sun₅-na ĝiri₃-zu mu-un-dab₅-ba\nni₂-tuku nam-maḫ-zu mu-un-zu-a\ner₂ sizkur-ra-ta ma-ra-an-de₆ u₃-mu-un-[X X]\nniĝ₂ ki-en-gi ki-uri a-na-ab-ak\nunug{ki}-ga ki gig-ga igi-na bi₂-du₈-am₃\nnar gal-zu šir₃-ra ḫu-mu-ni-ib-tum₂-tum₂",
+     "orig_lines": [
+      "20",
+      "21",
+      "22",
+      "23",
+      "24",
+      "25",
+      "26",
+      "27"
+     ],
+     "en": "In bringing forth ……, all that there are, at your E-ĝipar in Unug, as a humble man who has grasped your feet, as a reverent man who has experienced your exaltedness, he has brought a lament as offering to you and will ……. As for everything that happened to Sumer and Akkad, which he has witnessed in Unug, the aggrieved place, may the best singers perform songs there."
+    },
+    {
+     "ref": "28–38",
+     "orig": "u₃-mu-un-e₃-eš er₂-bi {d}a-nun-na-ke₄-ne\nud an ki-in-du-a a-na ĝal₂-la-ba\nud-bi nam-me-kur₂-ru ḫe₂-me-ne-eš\nan lu₂-ba-ra igi zid u₃-mu-un-ši-in-bar\niri{ki} du₃-a ki nam tar-re-da\nlu₂ iri-bi nam-til₃ niĝ₂ dug₃-ge\ngu₃ zig₃-mu-na-ni-ib me-teš₂ ḫe₂-i-i\nzid-da gab₂-bu-na ḫe₂-bi₂-in-dirig\n{d}lamma ĝa₂-la nu-dag-ge saĝ-ĝa₂-na tuku-bi₂-ib\nnam-tar-/ra\\-[ni] /inim{?}\\ zid dug₄-ga-a-ba\ninim an-/na{?}\\ {d}en-lil₂-la₂-še₃ sud-da-še₃ nu-kur₂-ru",
+     "orig_lines": [
+      "28",
+      "29",
+      "30",
+      "31",
+      "32",
+      "33",
+      "34",
+      "35",
+      "36",
+      "37",
+      "38"
+     ],
+     "en": "If the Anuna gods emerge tearfully, let them promise to us that as it was when heaven and earth came about, nothing of that time shall be changed. If An looks kindly upon that man and at the well-built city, the place of determining fate, proclaim \"Man and city! Life and well-being!\" for him. Let praise ring out. Let him be made surpassing above all, to his right or left. Tireless lamma deity, take hold of his head, pronounce his fate in charitable words -- by the command of An and Enlil it will remain unaltered for a long time."
+    },
+    {
+     "ref": "39",
+     "orig": "/ki\\-ru-gu₂ 12-kam-ma-am₃",
+     "orig_lines": [
+      "39"
+     ],
+     "en": "12th kirugu."
+    }
+   ]
+  }
+ ]
+}

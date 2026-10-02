@@ -1,0 +1,193 @@
+{
+ "slug": "dumuzid-enkimdu",
+ "source": "ETCSL",
+ "siglum": "ETCSL 4.08.33",
+ "source_url": "https://etcsl.orinst.ox.ac.uk/cgi-bin/etcsl.cgi?text=t.4.08.33",
+ "license": "ETCSL（Oxford）轉寫與英譯，非商業學術使用",
+ "compositions": [
+  {
+   "num": "4.08.33",
+   "title_en": "Dumuzid and Enkimdu",
+   "segments": [
+    {
+     "ref": "1–6",
+     "orig": "{lu₂}ki-sikil tur₃ [...]\nki-sikil {d}inana amaš [...]\nab-sin₂-na gam-gam-e [...]\n{d}inana /ga\\-e-re-dib-dib [...]\nziz₂ /AN{?}\\ [...]\nin-nin [...] GA [...]",
+     "orig_lines": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6"
+     ],
+     "en": "\"Maiden, the cattle-pen ……; maiden Inana, the sheepfold ……. …… bending in the furrows. Inana, let me stroll with you; …… the emmer ……. Young lady, let me …….\""
+    },
+    {
+     "ref": "7–11",
+     "orig": "[nu]-nus-ĝen nu-me-en ne nu-[me-en]\n[X X X]-ta mul-ĝen nu-[me-en]\n/nitalam\\ sipad-da nu-me-/en\\-[X]\nšeš-a-ni ur-saĝ šul {d}utu\nkug {d}inana-/ra\\ gu₃ mu-un-na-de₂-e",
+     "orig_lines": [
+      "7",
+      "8",
+      "9",
+      "10",
+      "11"
+     ],
+     "en": "\"I am a woman and I won't do that, I won't! I am a star ……, and I won't! I won't be the wife of a shepherd!\" Her brother, the warrior youth Utu, said to holy Inana:"
+    },
+    {
+     "ref": "12–19",
+     "orig": "nin₉-ĝu₁₀ ḫe₂-tuku-tuku su₈-ba-de₃\nki-sikil {d}inana za-e a-na-aš nu-ub-še-ge-en\n{i₃-ni dug₃-ga-am₃ ga-ni dug₃-ga-am₃} {(2 mss. ḫave instead:) i₃ dug₃-ga-ke₄ ga dug₃-ga-ke₄}\n{lu₂}su₈-ba niĝ₂ šu dug₄-ga-ni dadag-ga-am₃\n{d}inana ḫe₂-tuku-tuku {d}du₅-mu-zid-[de₃]\n/unu₂\\ la₂ šuba la₂ za-e a-na-[aš] nu-ub-še-ge-en\n[i₃]-ni dug₃-ga-am₃ ga-/ni\\ [dug₃-ga-am₃]\n/{lu₂}\\su₈-ba niĝ₂ šu dug₄-ga-ni dadag-[ga-am₃]\ni₃-ni dug₃-ga mu-un-da-gu₇-e\nan-dul₃-e lugal-la za-e a-na-aš nu-ub-še-ge-en",
+     "orig_lines": [
+      "12",
+      "13",
+      "14",
+      "15",
+      "16",
+      "17",
+      "17A",
+      "17B",
+      "18",
+      "19"
+     ],
+     "en": "\"My sister, let the shepherd marry you! Maiden Inana, why are you unwilling? {His butter is good, his milk is good} {(2 mss. have instead:) He of good butter, he of good milk} -- all the work of the shepherd's hands is splendid. Inana, let Dumuzid marry you. You who wear jewellery, who wear šuba jewels, why are you unwilling? {(1 ms. adds 2 lines:) His butter is good, his milk is good -- all the work of the shepherd's hands is splendid.} He will eat his good butter with you. Protector of the king, why are you unwilling?\""
+    },
+    {
+     "ref": "20–34",
+     "orig": "ĝe₂₆-e su₈-ba-de₃ ba-ra-mu-tuku-tuku-un (la{?} i-ḫa-[...])\n[tug₂] gibil-la₂-na ba-ra-mi-ni-ga-ga-an (ṣu₂-ba-ti-šu na-ap-ši-im X a la{?})\n[siki gibil]-la₂-a-ni sa₂ ba-ra-mu-e-en (re-še₂₀-et ša ši-pa-ti-šu X a la{?})\n/ki\\-sikil-ĝen me-e mu-un-gar₃-e de₃-mu-tuku-tuku-un\nmu-un-gar₃ gu gun₃-gun₃-a-da\nmu-un-gar₃ še gun₃-gun₃-a-da\n[...] X gu₂-/un\\ [...]\nme-[e] [su₈-ba-de₃] /ba\\-[ra-mu-tuku-tuku-un]",
+     "orig_lines": [
+      "20",
+      "21",
+      "22",
+      "23",
+      "24",
+      "25",
+      "26",
+      "34"
+     ],
+     "en": "\"The shepherd shall not marry me! He shall not make me carry his garments of new wool. His brand new wool will not influence me. Let the farmer marry me, the maiden. With the farmer who grows colourful flax, with the farmer who grows dappled grain …….\" 1 line fragmentary approx. 7 lines missing \"The shepherd shall not marry me!\""
+    },
+    {
+     "ref": "35–39",
+     "orig": "inim-bi [...]\nsipad-ra engar{?} [...]\nlugal-ĝu₁₀ X [...]\nsu₈-ba {d}du₅-mu-/zid-de₃\\\n[X] X X dug₄-ge-de₃ in-[X X]",
+     "orig_lines": [
+      "35",
+      "36",
+      "37",
+      "38",
+      "39"
+     ],
+     "en": "These words ……. ……the farmer to the shepherd. My king ……, the shepherd, Dumuzid ……. …… to say ……:"
+    },
+    {
+     "ref": "40–54",
+     "orig": "/engar-e\\ ĝa₂-a-ra engar-e ĝa₂-a-ra engar-e a-na mu-un-dirig-ga-am₃\n{d}en-ki-im-du lu₂ eg₂ pa₅-ra-ke₄\nĝa₂-a-ra engar-e a-na mu-un-dirig-ga-am₃\ntug₂ gig₂-ga-ni ḫa-ma-ab-šum₂-mu\nengar-ra u₈ gig₂-ĝu₁₀ ĝe₂₆-e ga-mu-na-ši-ib-šum₂\ntug₂ babbar₂-ra-ni ḫa-ma-ab-šum₂-mu\nengar-ra u₈ babbar₂-ra-ĝu₁₀ ga-mu-na-ši-ib-šum₂\ne-ne kaš saĝ-ĝa₂-ni ḫa-ma-an-de₂-e\nengar-ra ga sig₇-a-ĝu₁₀ ga-mu-na-ši-in-de₂\ne-ne kaš sig₅-ni ḫa-ma-an-de₂-e\nengar-ra ga-ki-si-im-/ma{?}\\-[ĝu₁₀] ga-mu-na-ši-in-/de₂\\\ne-ne kaš sa₂ gi₄-a-ni ḫa-ma-an-de₂-e (ḫi-iq-šu{?})\nengar-ra ga BUL-a-ĝu₁₀ ga-mu-na-ši-in-de₂\ne-ne kašbir-a-ni ḫa-ma-an-de₂-e (X X X a{?}-šu)\nengar-ra ĝe₂₆-e ga u₂-ĝu₁₀ ga-mu-na-ši-in-de₂",
+     "orig_lines": [
+      "40",
+      "41",
+      "42",
+      "43",
+      "44",
+      "45",
+      "46",
+      "47",
+      "48",
+      "49",
+      "50",
+      "51",
+      "52",
+      "53",
+      "54"
+     ],
+     "en": "\"In what is the farmer superior to me, the farmer to me, the farmer to me? Enkimdu, the man of the dykes and canals -- in what is that farmer superior to me? Let him give me his black garment, and I will give the farmer my black ewe for it. Let him give me his white garment, and I will give the farmer my white ewe for it. Let him pour me his best beer, and I will pour the farmer my yellow milk for it. Let him pour me his fine beer, and I will pour the farmer my soured (?) milk for it. Let him pour me his brewed beer, and I will pour the farmer my whipped milk for it. Let him pour me his beer shandy, and I will pour the farmer my …… milk for it.\""
+    },
+    {
+     "ref": "55–64",
+     "orig": "ḫa-ḫa-la sig₅-ni ḫa-ma-ab-šum₂-mu\nengar-ra ĝe₂₆-e ga i₃-ti-ir-da-ĝu₁₀ ga-mu-na-ši-ib-šum₂\nninda sig₅-ni ḫa-ma-ab-šum₂-mu\nengar-ra ga /nunuz-te\\-a-ĝu₁₀ ga-mu-na-ši-ib-šum₂\ngu₂ di₄-di₄-la₂-ni ḫa-ma-ab-šum₂-mu\nengar-ra ga-ar₃ tur-tur-ĝu₁₀ ga-mu-na-ši-ib-šum₂\n/gu₂\\ [gal-gal-la-ni ḫa-ma-ab-šum₂-mu]\n[engar]-ra /ga-ar₃ gal-gal-ĝu₁₀\\ [ga-mu-na-ši-ib-šum₂] (X X X [...])\nu₃-mu-ni-gu₇ u₃-mu-ni-naĝ-ĝa₂-ta (i-zu-ba)\ni₃ niĝ₂ dirig-ga ga-mu-na-ra-ab-šub ([wa-at]-ri-im)\nga niĝ₂ dirig-ga ga-mu-na-ra-ab-šub\nĝa₂-a-ra engar-e a-na mu-un-dirig-/ga\\-[am₃]",
+     "orig_lines": [
+      "55",
+      "56",
+      "57",
+      "58",
+      "59",
+      "60",
+      "60A",
+      "60B",
+      "61",
+      "62",
+      "63",
+      "64"
+     ],
+     "en": "\"Let him give me his best filtered beer, and I will give the farmer my curds (?). Let him give me his best bread, and I will give the farmer my …… milk for it. Let him give me his little beans, and I will give the farmer my small cheeses for them. {(1 ms. adds 2 lines:) Let him give me his large beans, and I will give the farmer my big cheeses for them.} After letting him eat and letting him drink, I will even leave extra butter for him, and I will leave extra milk for him. In what is the farmer superior to me?\""
+    },
+    {
+     "ref": "65–73",
+     "orig": "ul am₃-te ul am₃-te gaba peš₁₀-a ul am₃-te\npeš₁₀-am₃ sipad-de₃ peš₁₀-am₃\nsipad-de₃ peš₁₀-/am₃\\ udu na-an-ga-am₃-/mi\\-[ni-in-lu-lu]\nsipad peš₁₀-a udu lu-a-ra\n{lu₂}sipad-ra engar mu-na-ni-[in-te]\nengar {d}en-ki-im-du /mu\\-[na-ni-in-te]\n{d}dumu-zid lugal eg₂ pa₅-re [...]\nedin-a-na sipad-de₃ [edin]-a-na du₁₄ mu-/un\\-[di-ni-ib-mu₂-mu₂]\nsu₈-ba {d}dumu-zid-de₃ edin-a-na du₁₄ mu-un-di-ni-ib-mu₂-mu₂",
+     "orig_lines": [
+      "65",
+      "66",
+      "67",
+      "68",
+      "69",
+      "70",
+      "71",
+      "72",
+      "73"
+     ],
+     "en": "He was cheerful, he was cheerful, at the edge of the riverbank, he was cheerful. On the riverbank, the shepherd on the riverbank, now the shepherd was even pasturing the sheep on the riverbank. The farmer approached the shepherd there, the shepherd pasturing the sheep on the riverbank; the farmer Enkimdu approached him there. Dumuzid …… the farmer, the king of dyke and canal. From the plain where he was, the shepherd from the plain where he was provoked a quarrel with him; the shepherd Dumuzid from the plain where he was provoked a quarrel with him."
+    },
+    {
+     "ref": "74–79",
+     "orig": "ĝa₂-a za-a-da su₈-ba ĝa₂-a za-a-da su₈-ba ĝa₂-a za-a-da\na-na-aš mu-da-ab-sa₂-e-en\nudu-zu u₂ peš₁₀ ḫe₂-em-mi-gu₇\nišin-ĝa₂ udu-zu ḫe₂-em-mi-gu₇(sourše: lu?)\na-šag₄ šuba unug{ki}-ga še ḫa-ba-ni-gu₇\nmaš₂ sila₄-zu {id₂}surungal-ĝa₂ a ḫa-ba-ni-in-naĝ",
+     "orig_lines": [
+      "74",
+      "75",
+      "76",
+      "77",
+      "78",
+      "79"
+     ],
+     "en": "\"Why should I compete against you, shepherd, I against you, shepherd, I against you? Let your sheep eat the grass of the riverbank, let your sheep graze on my stubble. Let them eat grain in the jewelled (?) fields of Unug, let your kids and lambs drink water from my Surungal canal.\""
+    },
+    {
+     "ref": "80–83",
+     "orig": "{lu₂}sipad-me-en nam-nitalam-ĝu₁₀-še₃\nengar gu₅-li-ĝa₂ na-ba-ni-in-kur₉-ra\nengar {d}en-ki-im-du gu₅-li-ĝa₂ engar gu₅-li-ĝa₂\nna-ba-ni-in-kur₉-ra-am₃",
+     "orig_lines": [
+      "80",
+      "81",
+      "82",
+      "83"
+     ],
+     "en": "\"As for me, I am a shepherd: when I am married, farmer, you are going to be counted as my friend. Farmer Enkimdu, you are going to be counted as my friend, farmer, as my friend.\""
+    },
+    {
+     "ref": "84–87",
+     "orig": "gig ga-mu-ra-de₆ gu₂ ga-mu-ra-de₆\ngu₂-nida bir-un₄-na ga-mu-ra-de₆\n{lu₂}ki-sikil niĝ₂ za-a-ra sig₉-ga\nki-sikil {d}inana še giĝ₄ gu₂ MUNUS ga-mu-ra-de₆",
+     "orig_lines": [
+      "84",
+      "85",
+      "86",
+      "87"
+     ],
+     "en": "\"I will bring you wheat, and I will bring you beans; I will bring you two-row barley from the threshing-floor. And you, maiden, I will bring you whatever you please, maiden Inana, …… barley or …… beans.\""
+    },
+    {
+     "ref": "88–89",
+     "orig": "sipad engar-da a-da-min₃ dug₄-ga\nki-sikil {d}inana za₃-mi₂-zu dug₃-ga-am₃",
+     "orig_lines": [
+      "88",
+      "89"
+     ],
+     "en": "The dispute between the shepherd and the farmer: maiden Inana, your praise is sweet."
+    },
+    {
+     "ref": "90",
+     "orig": "bal-bal-e-dam",
+     "orig_lines": [
+      "90"
+     ],
+     "en": "A balbale."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,933 @@
+{
+ "slug": "shuruppag",
+ "source": "ETCSL",
+ "siglum": "ETCSL 5.6.1",
+ "source_url": "https://etcsl.orinst.ox.ac.uk/cgi-bin/etcsl.cgi?text=t.5.6.1",
+ "license": "ETCSL（Oxford）轉寫與英譯，非商業學術使用",
+ "compositions": [
+  {
+   "num": "5.6.1",
+   "title_en": "The instructions of Šuruppag",
+   "segments": [
+    {
+     "ref": "1–13",
+     "orig": "[ud] re-a ud su₃-ra₂ re-a (Šited in OB šatalogue from Nibru, at Pḫiladelpḫia, 0.2.01, line 7, line 20, line 21; OB šatalogue in tḫe Louvre, 0.2.02, line 7, line 14, line 15; OB šatalogue from Urim (U2), 0.2.04, line 29; OB šatalogue from Nibru (N3), 0.2.06, line 6; OB šatalogue at Andrews University, 0.2.11, line 19 (?))\n/ĝi₆\\ re-a ĝi₆ ba₉-ra₂ re-a\n[mu] re-a mu su₃-ra₂ re-a\nud-ba ĝeštug₂ tuku inim galam inim zu-a kalam-ma til₃-la-a\nšuruppag{ki} ĝeštug₂ tuku inim galam inim zu-a kalam-ma til₃-la-a\nšuruppag{ki}-e dumu-ni-ra na na-mu-un-de₅-de₅\nšuruppag{ki} dumu ubara-tu-tu-ke₄\nzi-ud-su₃-ra₂ dumu-ni-ra na na-mu-un-de₅-de₅\ndumu-ĝu₁₀ na ga-de₅ na de₅-ĝu₁₀ ḫe₂-dab₅\nzi-ud-su₃-ra₂ inim ga-ra-ab-/dug₄\\ ĝizzal ḫe₂-em-ši-ak\nna de₅-ga-ĝu₁₀ šu nam-bi₂-bar-re\ninim dug₄-ga-ĝu₁₀ na-ab-ta-bal-e-de₃\nna de₅ ab-ba niĝ₂ kal-la-am₃ gu₂-zu ḫe₂-em-ši-ĝal₂",
+     "orig_lines": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10",
+      "11",
+      "12",
+      "13"
+     ],
+     "en": "In those days, in those far remote days, in those nights, in those faraway nights, in those years, in those far remote years, at that time the wise one who knew how to speak in elaborate words lived in the Land; Šuruppag, the wise one, who knew how to speak with elaborate words lived in the Land. Šuruppag gave instructions to his son; Šuruppag, the son of Ubara-Tutu, gave instructions to his son Zi-ud-sura: My son, let me give you instructions: you should pay attention! Zi-ud-sura, let me speak a word to you: you should pay attention! Do not neglect my instructions! Do not transgress the words I speak! The instructions of an old man are precious; you should comply with them!"
+    },
+    {
+     "ref": "14",
+     "orig": "dur₃{ur₃} gu₃ di na-ab-sa₁₀-sa₁₀ murub₄-zu ša-ra-ab-si-il",
+     "orig_lines": [
+      "14"
+     ],
+     "en": "You should not buy a donkey which brays; it will split (?) your midriff (?)."
+    },
+    {
+     "ref": "15–18",
+     "orig": "gana₂ kaskal-[la] nam-bi₂-ib₂-ĝa₂-ĝa₂ nam-silig gu₂-ĝa₂-am₃\na-šag₄ {(1 ms. adds:) kaskal} ka-ĝiri₃-ka nam-ba-e-ur₁₁-ru zi bulug-ga-am₃\ngana₂-zu-am₃ pu₂ na-an-ni-du₃-e-en uĝ₃-e ša-ri-ib-ḫul-ḫul\ne₂ sila daĝal nam-bi₂-ib-la₂-e keše₂-da ĝal₂-la-am₃",
+     "orig_lines": [
+      "15",
+      "16",
+      "17",
+      "18"
+     ],
+     "en": "You should not locate a field on a road; ……. You should not plough a field at {(1 ms. adds:) a road or} a path; ……. You should not make a well in your field: people will cause damage on it for you. You should not place your house next to a public square: there is always a crowd (?) there."
+    },
+    {
+     "ref": "19–20",
+     "orig": "šu du₈-a nu-e-tum₃ lu₂-bi ša-ba-e-dab₅-be₂\nza-e šu du₈-a nam-mu-e-ak-[e] {(1 ms. adds:) /lu₂\\ saĝ bi₂-ib₂-sal-la-e-a}",
+     "orig_lines": [
+      "19",
+      "20"
+     ],
+     "en": "You should not vouch for someone: that man will have a hold on you; and you yourself, you should not let somebody vouch for you {(1 ms. adds:) : that man will despise (?) you}."
+    },
+    {
+     "ref": "21",
+     "orig": "lu₂-ra igi du₈ na-an-ak-e uru₂-bi ša-ri-/ib\\-su-su",
+     "orig_lines": [
+      "21"
+     ],
+     "en": "You should not make an inspection (?) on a man: the flood (?) will give it back (?) to you."
+    },
+    {
+     "ref": "22–27",
+     "orig": "ki du₁₄-da-ka nam-bi₂-du-X-de₃\ndu₁₄-de₃ lu₂-ki-inim-ma nam-ba-e-ku₄-ku₄\ndu₁₄-de₃ ni₂-zu nam-/ba\\-[...]\ndu₁₄ /nam-ak\\-de₃-en X [...]\n[X (X)] kan₄ e₂-gal-la X-am₃ ba-ra-sig₉-/ga\\\ndu₁₄-de₃ bar-bar-ta gub-gub-[ba] in-nu-uš sila kur₂-ra /nam-ma\\-ni-ib-<du>",
+     "orig_lines": [
+      "22",
+      "23",
+      "24",
+      "25",
+      "26",
+      "27"
+     ],
+     "en": "You should not loiter about where there is a quarrel; you should not let the quarrel make you a witness. You should not let (?) yourself …… in a quarrel. You should not cause a quarrel; ……. …… the gate of the palace ……. Stand aside from a quarrel, …… you should not take (?) another road."
+    },
+    {
+     "ref": "28–31",
+     "orig": "niĝ₂ nam-mu-zuḫ-/zuḫ\\ ni₂-zu nam-mu-BAD-e\ne₂ na-a-an-ni-buru₃-e-en mi-si-IŠ-ra al nam-me\nni₂-zu /piriĝ na-nam\\ ul-dab₅ saĝ na-nam\ndumu-ĝu₁₀ sa gaz nam-mu-u₃-ak-e ni₂-zu tun₃-am₃ nam-bi₂-ib-bar-/re\\-e",
+     "orig_lines": [
+      "28",
+      "29",
+      "30",
+      "31"
+     ],
+     "en": "You should not steal anything; you should not …… yourself. You should not break into a house; you should not wish for the money chest (?). A thief is a lion, but after he has been caught, he will be a slave. My son, you should not commit robbery; you should not cut yourself with an axe."
+    },
+    {
+     "ref": "32–34",
+     "orig": "nitaḫ niĝir-si na-an-ak ni₂-zu na-an-X-X\nki-sikil dam tuku-/da\\ e-/ne\\ nam-mu-un-ne{?}-e inim sig-ga /maḫ\\-[am₃]\ndumu-[ĝu₁₀] dagan-na lu₂ dam /tuku-da\\ dur₂ nam-/bi₂\\-e-ĝa₂-ĝa₂",
+     "orig_lines": [
+      "32",
+      "33",
+      "34"
+     ],
+     "en": "You should not make a young man best man. You should not …… yourself. You should not play around with a married young woman: the slander could be serious. My son, you should not sit alone in a chamber with a married woman."
+    },
+    {
+     "ref": "35–38",
+     "orig": "du₁₄ nam-[mu₂]-/mu₂\\-de₃ ni₂-zu na-an-[pe]-el-la₂\nlul /nam\\-guru₅-guru₅ saĝ gu₂ /sal-sal\\-la\nka nam-tar-tar-re-/e\\-en inim-zu ĝar-ra-am₃\n/ad{?}\\ nam-gi₄-gi₄ igi dugud nu-mu-un-da-il₂",
+     "orig_lines": [
+      "35",
+      "36",
+      "37",
+      "38"
+     ],
+     "en": "You should not pick a quarrel; you should not disgrace yourself. You should not …… lies; ……. You should not boast; then your words will be trusted. You should not deliberate for too long (?); you cannot bear …… glances."
+    },
+    {
+     "ref": "39–41",
+     "orig": "{lu₂-da} {(1 ms. ḫas instead:) lu₂-/zuḫ\\-a} ninda zuḫ-a nam-mu-da-gu₇-e\nšu-zu uš₂-am₃ na-di-ni-ib-su-su\nĝiri₃ ḫur-re gud ša-ba-ri-ib-su-su udu ša-ba-ri-ib-su-su",
+     "orig_lines": [
+      "39",
+      "40",
+      "41"
+     ],
+     "en": "You should not eat stolen food with {anyone} {(1 ms. has instead:) a thief}. You should not sink (?) your hand into blood. After you have apportioned the bones, you will be made to restore the ox, you will be made to restore the sheep."
+    },
+    {
+     "ref": "42–43",
+     "orig": "u₃-nu-ĝar-ra na-ab-be₂-/e\\\neĝer-bi-še₃ ĝiš-par₃-gin₇ ši-me-ši-ib₂-la₂-e",
+     "orig_lines": [
+      "42",
+      "43"
+     ],
+     "en": "You should not speak improperly; later it will lay a trap for you."
+    },
+    {
+     "ref": "44–46",
+     "orig": "u₂ nu-kiĝ₂-ĝa₂-še₃ udu-zu /sag₂\\ nam-me\nuš nu-sig₁₀-ga-še₃ gud lu₂ na-ḫuĝ-e\nuš sig₁₀-ga kaskal sig₁₀-ga-am₃",
+     "orig_lines": [
+      "44",
+      "45",
+      "46"
+     ],
+     "en": "You should not scatter your sheep into unknown pastures. You should not hire someone's ox for an uncertain ……. A safe …… means a safe journey."
+    },
+    {
+     "ref": "47",
+     "orig": "kaskal ĝi₆ na-an-du šag₄-bi sag₉ ḫul-a",
+     "orig_lines": [
+      "47"
+     ],
+     "en": "You should not travel during the night: it can hide both good and evil."
+    },
+    {
+     "ref": "48",
+     "orig": "anše edin-na na-ab-sa₁₀-/sa₁₀\\ ud-da-be₂-eš <...>-e-zal",
+     "orig_lines": [
+      "48"
+     ],
+     "en": "You should not buy an onager: it lasts (?) only until the end of the day."
+    },
+    {
+     "ref": "49",
+     "orig": "geme₂-zu-ur₂ ĝiš₃ na-an-du₃ zu ur₂ šu-/mu\\-ri-in-sa₄",
+     "orig_lines": [
+      "49"
+     ],
+     "en": "You should not have sex with your slave girl: she will chew you up (?)."
+    },
+    {
+     "ref": "50",
+     "orig": "aš₂ a₂ zig₃ na-ab-bal-e šu-uš /im\\-ši-ni₁₀-ni₁₀",
+     "orig_lines": [
+      "50"
+     ],
+     "en": "You should not curse strongly: it rebounds on you."
+    },
+    {
+     "ref": "51–52",
+     "orig": "a šu {nu-gid₂-i} {(1 ms. ḫas instead:) nu-du₈} na-an-ed₃-de₃ a₂ sig šu-mu-/e\\-ra-ĝal₂\nmaḫ-bi niĝ₂ gid₂-i (X) ba-an-šub-be₂ niĝ₂-e /ba{?}\\-[an]-šub-be₂",
+     "orig_lines": [
+      "51",
+      "52"
+     ],
+     "en": "You should not draw up water which you cannot {reach} {(1 ms. has instead:) grasp}: it will make you weak. 1 line unclear"
+    },
+    {
+     "ref": "53",
+     "orig": "ur₅ tuku na-an-bad-e lu₂-bi ša-ba-e-X-X-kur₂",
+     "orig_lines": [
+      "53"
+     ],
+     "en": "You should not drive away a debtor: he will be hostile towards you."
+    },
+    {
+     "ref": "54–57",
+     "orig": "sun₇-na-da e₂ na-an-da-ĝa₂-ĝa₂-/an\\\ngi₄-in-še₃ du-de₃ ši-me-ši-ib-šub-šub\n{ki-tuš} {(1 ms. ḫas instead:) e₂} {(1 ms. ḫas instead:) iri} {(1 ms. ḫas instead:) iri-tuš} lu₂-ka na-ab-ta-bal-e-de₃\nši-du-un ši-du-un ši-me-ši-ib₂-be₂-e-ne",
+     "orig_lines": [
+      "54",
+      "55",
+      "56",
+      "57"
+     ],
+     "en": "You should not establish a home with an arrogant man: he will make your life like that of a slave girl. You will not be able to travel through any human dwelling without be being shouted at: \"There you go! There you go!\""
+    },
+    {
+     "ref": "58–59",
+     "orig": "gi-sig-ga {ĝiš}kiri₆-ka da-ga nam-bi₂-du₈-e-en\nsug₆-ga-ab sug₆-ga-ab ši-me-ši-ib₂-be₂-ne",
+     "orig_lines": [
+      "58",
+      "59"
+     ],
+     "en": "You should not undo the …… of the garden's reed fence; \"Restore it! Restore it!\" they will say to you."
+    },
+    {
+     "ref": "60",
+     "orig": "ur nam-mu-un-gu₇-en du₁₄ nam-ur₃-ur₃-re-en",
+     "orig_lines": [
+      "60"
+     ],
+     "en": "You should not provide a stranger (?) with food; you should not wipe out (?) a quarrel."
+    },
+    {
+     "ref": "61–62",
+     "orig": "dumu-ĝu₁₀ nam-silig nam-mu-ak-en lu₂ ki nam-us₂-e-en\ndumu lu₂-ra ĝiš₃ a₂ zig₃ na-an-ne-en kisal-e bi₂-zu-zu",
+     "orig_lines": [
+      "61",
+      "62"
+     ],
+     "en": "My son, you should not use violence (?); ……. You should not commit rape on someone's daughter; the courtyard will learn of it."
+    },
+    {
+     "ref": "63–64",
+     "orig": "{a₂-tuku} {(1 ms. ḫas instead:) usu-tuku} na-an-bad-e-en bad₃-šul-ḫi na-an-gul-e-en\nĝuruš na-an-bad-e-en iri-še₃ na-an-gur-re-/en\\",
+     "orig_lines": [
+      "63",
+      "64"
+     ],
+     "en": "You should not drive away a {powerful} {(1 ms. has instead:) strong} man; you should not destroy the outer wall. You should not drive away a young man; you should not make him turn against the city."
+    },
+    {
+     "ref": "65–66",
+     "orig": "lu₂ {inim sig-ga-ke₄} {(1 ms. ḫas instead:) eme sig-ga-ke₄} igi {ĝiš}bal-gin₇ ši-NU-NU\nigi-a nam-ba-e-gub-gub-bu-de₃-en šag₄-ge na-mu-un-kur₂-kur₂",
+     "orig_lines": [
+      "65",
+      "66"
+     ],
+     "en": "The eyes of the slanderer always move around as shiftily as a spindle. You should never remain in his presence; his intentions (?) should not be allowed to have an effect (?) on you."
+    },
+    {
+     "ref": "67",
+     "orig": "lu₂-lul-la-gin₇ {e₂ kaš-ka} {(1 ms. ḫas instead:) e₂-lunga-ka} ka nam-tar-tar-re {(1 ms. adds:) inim-zu ĝar-ra-[am₃]}",
+     "orig_lines": [
+      "67"
+     ],
+     "en": "You should not boast in {beer halls} {(1 ms. has instead:) breweries} like a deceitful man: {(1 ms. adds:) then your words will be trusted.}"
+    },
+    {
+     "ref": "68–72",
+     "orig": "ki nam-nitaḫ-ka um-me-te šu na-an-gud-gud-de₃\nur-saĝ dili na-nam dili-ni lu₂ šar₂-ra-am₃\n{d}utu dili na-nam dili-ni lu₂ šar₂-ra-am₃\nur-saĝ-da gub-bu-/de₃\\ zi-zu ḫe₂-en-da-ĝal₂\n{d}utu-da /gub\\-bu-de₃ zi-zu /ḫe₂-en\\-da-ĝal₂",
+     "orig_lines": [
+      "68",
+      "69",
+      "70",
+      "71",
+      "72"
+     ],
+     "en": "Having reached the field of manhood, you should not jump (?) with your hand. The warrior is unique, he alone is the equal of many; Utu is unique, he alone is the equal of many. With your life you should always be on the side of the warrior; with your life you should always be on the side of Utu."
+    },
+    {
+     "ref": "73–75",
+     "orig": "šuruppag{ki}-e dumu-ni-ra na še₃-mu-un-ni-in-de₅\nšuruppag{ki} dumu ubara-tu-tu-[ke₄]\nzi-ud-su₃-ra₂ dumu-ni-ra na še₃-mu-un-ni-in-de₅",
+     "orig_lines": [
+      "73",
+      "74",
+      "75"
+     ],
+     "en": "Šuruppag gave these instructions to his son. Šuruppag, the son of Ubara-Tutu, gave these instructions to his son Zi-ud-sura."
+    },
+    {
+     "ref": "76–82",
+     "orig": "2-kam-ma-še₃ šuruppag{ki}-e dumu-ni-ra na na-mu-un-de₅-de₅\n/šuruppag\\{ki} dumu ubara-tu-tu-ke₄\nzi-ud-su₃-ra₂ dumu-ni-ra na na-mu-[un-de₅-de₅]\ndumu-ĝu₁₀ na /ga\\-de₅ na de₅-ĝu₁₀ ḫe₂-/dab₅\\\nzi-ud-su₃-ra₂ inim [ga]-/ra\\-ab-dug₄ /ĝizzal\\ ḫe₂-em-ši-ak\nna de₅-ga-ĝu₁₀ šu [nam]-bi₂-bar-re-en\ninim dug₄-ga-ĝa₂ [na]-/ab-ta\\-bal-e-/de₃\\-en\nna de₅ ab-/ba\\ [niĝ₂ kal-la-am₃ gu₂-zu ḫe₂-em-ši-ĝal₂]",
+     "orig_lines": [
+      "76",
+      "77",
+      "78",
+      "79",
+      "80",
+      "81",
+      "82",
+      "82A"
+     ],
+     "en": "A second time, Šuruppag gave instructions to his son. Šuruppag, the son of Ubara-Tutu, gave instructions to his son Zi-ud-sura: My son, let me give you instructions: you should pay attention! Zi-ud-sura, let me speak a word to you: you should pay attention! Do not neglect my instructions! Do not transgress the words I speak! {(1 ms. adds 1 line:) The instructions of an old man are precious; you should comply with them!}"
+    },
+    {
+     "ref": "83–91",
+     "orig": "ka kaš naĝ-a [...] X-kam\nlu₂-tur-ĝu₁₀ [...] lu₂ X [...]\nka kaš /naĝ\\-[a ...] X\n{d}nin-ka-/si\\ [...]\n[...] /KA\\ X UR₃ /ḫe₂\\-[X] IM\n[...]-ur₃-ur₃-re\n[...] X a mu-/un\\-ni-ib₂-[il₂]-il₂\n[...] X im-sar-re\nKA X saĝ im-ta-ab-gur₄-gur₄-re",
+     "orig_lines": [
+      "83",
+      "84",
+      "85",
+      "86",
+      "87",
+      "88",
+      "89",
+      "90",
+      "91"
+     ],
+     "en": "The beer-drinking mouth ……. My little one ……. The beer-drinking mouth ……. Ninkasi ……. 5 lines unclear"
+    },
+    {
+     "ref": "92–93",
+     "orig": "lu₂ ni₂-za-ke₄ nu-e-ši-su-su\nĝiš-gi maš₂ u₂ na-nam šag₄-bi inim sig-ga-am₃",
+     "orig_lines": [
+      "92",
+      "93"
+     ],
+     "en": "Your own man will not repay (?) it for you. The reedbeds are ……, they can hide (?) slander."
+    },
+    {
+     "ref": "94–96",
+     "orig": "e₂-gal id₂ maḫ-am₃ šag₄-bi gud du₇-du₇-dam\nniĝ₂ ku₄-ku₄ niĝ₂ sa₂ nu-di-dam\nniĝ₂ e₃ niĝ₂ nu-silig-ge-dam",
+     "orig_lines": [
+      "94",
+      "95",
+      "96"
+     ],
+     "en": "The palace is like a mighty river: its middle is goring bulls; what flows in is never enough to fill it, and what flows out can never be stopped."
+    },
+    {
+     "ref": "97–100",
+     "orig": "ninda lu₂-ka ga-ra-ab-šum₂-bi ku-nu-a\nšum₂-mu-da-bi an ba₉-ra₂-am₃\nga-ra-ab-šum₂-bi lu₂-ra ga-ni-in-us₂\nnu-ra-ab-šum₂-mu ninda igi-bi-še₃ til-la-am₃",
+     "orig_lines": [
+      "97",
+      "98",
+      "99",
+      "100"
+     ],
+     "en": "When it is about someone else's bread, it is easy to say \"I will give it to you\", but the time of actual giving can be as far away as the sky. If you go after the man who said \"I will give it to you\", he will say \"I cannot give it to you -- the bread has just been finished up.\""
+    },
+    {
+     "ref": "101–102",
+     "orig": "niĝ₂-u₂-rum niĝ₂ a₂ sig₁₀-ga-a-da\nlu₂-tur-ĝu₁₀ niĝ₂ nu-mu-un-da-sa₂",
+     "orig_lines": [
+      "101",
+      "102"
+     ],
+     "en": "Property is something to be expanded (?); but nothing can equal my little ones."
+    },
+    {
+     "ref": "103–105",
+     "orig": "ka sag₉-sag₉-ge inim i₃-šid-e\nka du₃-du₃-e kišib i₃-il₂-il₂\nka lal₃-e u₂-lal₃ e-bur₁₂-re",
+     "orig_lines": [
+      "103",
+      "104",
+      "105"
+     ],
+     "en": "The artistic mouth recites words; the harsh mouth brings litigation documents; the sweet mouth gathers sweet herbs."
+    },
+    {
+     "ref": "106–108",
+     "orig": "{ka tuku} {(1 ms. ḫas instead:) lul} {kuš}lu-ub₂-a-ni sa₂ im-dug₄\ngal-gal di {kuš}lu-ub₂ sug₄-ga ša-mu-un-de₆\nsilim dug₄ ka sug₄-ga ša-ba-ni-ib-ĝar",
+     "orig_lines": [
+      "106",
+      "107",
+      "108"
+     ],
+     "en": "The {garrulous} {(1 ms. has instead:) liar} fills (?) his bread bag; the haughty one brings an empty bag and can fill his empty mouth only with boasting."
+    },
+    {
+     "ref": "109",
+     "orig": "kuš du₃-du₃-e kuš-ni še₃-ba-e-du₃-e",
+     "orig_lines": [
+      "109"
+     ],
+     "en": "Who works with leather will eventually (?) work with his own leather."
+    },
+    {
+     "ref": "110",
+     "orig": "usu-tuku šu lu₂-ta ša-ba-ra-an-tum₃",
+     "orig_lines": [
+      "110"
+     ],
+     "en": "The strong one can escape (?) from anyone's hand."
+    },
+    {
+     "ref": "111–114",
+     "orig": "{lu₂}lil-e niĝ₂ u₂-gu i₃-ib-de₂-e\n/u₃{?}\\-sa₂ {lu₂}lil-e niĝ₂ u₂-gu i₃-de₂-e\nna-an-keše₂-keše₂-re-de₃ giri₁₇ šu am₃-mi-in-ĝal₂\nga-til₃-la giri₁₇ šu am₃-mi-in-ĝal₂",
+     "orig_lines": [
+      "111",
+      "112",
+      "113",
+      "114"
+     ],
+     "en": "The fool loses something. When sleeping, the fool loses something. \"Do not tie me up!\" he pleads; \"Let me live!\" he pleads."
+    },
+    {
+     "ref": "115–117",
+     "orig": "saĝ-du nu-tuku nam ši-ib-tar-re\nteš₂ nu-tuku lu₂ ur₂-še₃ mu-un-de₂-e\nĝe₂₆-e na-nam u₆-e ba-gub",
+     "orig_lines": [
+      "115",
+      "116",
+      "117"
+     ],
+     "en": "The imprudent decrees fates; the shameless one piles up (?) things in another's lap: \"I am such that I deserve admiration.\""
+    },
+    {
+     "ref": "118",
+     "orig": "dam /dim₃\\-e /nam{?}\\ tar-re ba-dab₅-dab₅",
+     "orig_lines": [
+      "118"
+     ],
+     "en": "A weak wife is always seized (?) by fate."
+    },
+    {
+     "ref": "119–123",
+     "orig": "lu₂ ḫuĝ-ĝa₂-zu [{kuš}]lu-ub₂ ši-me-da-ba-e\n{kuš}lu-ub₂ ši-ma-da-gu₇-e\n{kuš}lu-ub₂ /ši\\-[me]-/da\\-til-e\nĝa₂-la ši-/me\\-da-dag-ge\nga-ba-ra-gu₇ e₂-gal-la ba-gub",
+     "orig_lines": [
+      "119",
+      "120",
+      "121",
+      "122",
+      "123"
+     ],
+     "en": "If you hire a worker, he will share the bread bag with you; he eats with you from the same bag, and finishes up the bag with you. Then he will quit working with you and, saying \"I have to live on something\", he will serve at the palace."
+    },
+    {
+     "ref": "124–125",
+     "orig": "dumu-nitaḫ-zu e₂-zu-še₃ im-me\ndumu-munus-zu ama₅-ni-še₃ im-me",
+     "orig_lines": [
+      "124",
+      "125"
+     ],
+     "en": "You tell your son to come to your home; you tell your daughter to go to her women's quarters."
+    },
+    {
+     "ref": "126",
+     "orig": "kaš naĝ-a-zu-ne di na-an-ne-e",
+     "orig_lines": [
+      "126"
+     ],
+     "en": "You should not pass judgment when you drink beer."
+    },
+    {
+     "ref": "127",
+     "orig": "e₂-ta e₃ šag₄-zu na-an-gu₇-e",
+     "orig_lines": [
+      "127"
+     ],
+     "en": "You should not worry unduly about what leaves the house."
+    },
+    {
+     "ref": "128–130",
+     "orig": "an su₃-ud-dam ki kal-kal-la-am₃\nan-da niĝ₂ im-da-lu-lu-un\nkur-kur-re zi ši-im-da-pa-an-pa",
+     "orig_lines": [
+      "128",
+      "129",
+      "130"
+     ],
+     "en": "Heaven is far, earth is most precious, but it is with heaven that you multiply your goods, and all foreign lands breathe under it."
+    },
+    {
+     "ref": "131–133",
+     "orig": "ud buru₁₄-še₃ ud kal-kal-la-še₃\ngeme₂-gin₇ de₅-ga-ab egir₂-gin₇ gu₇-a\ndumu-ĝu₁₀ geme₂-gin₇ ri egir₂-gin₇ gu₇-a ur₅ ḫe₂-en-na-nam-ma-am₃",
+     "orig_lines": [
+      "131",
+      "132",
+      "133"
+     ],
+     "en": "At harvest time, at the most priceless time, collect like a slave girl, eat like a queen; my son, to collect like a slave girl, to eat like a queen, this is how it should be."
+    },
+    {
+     "ref": "134–142",
+     "orig": "aš₂ dug₄-dug₄-ge bar ši-in-dar\nigi-tum₃ la₂ saĝ ĝiš im-ra-ra\ngu₃ mur-re lu₂-lul-e tug₂ ši-bir₇-bir₇-e\naš₂ di niĝ₂-erim₂-e na de₅ še₃-il₂-il₂\ninim dirig u₃-bu-bu-ul-la-am₃ u₂ lipiš gig-ga-am₃\nMU dar-dar-da ga-mu-e-da-zalag-ge\ninim šudu₃-de₃-ĝu₁₀ ḫe₂-ĝal₂-la-am₃\na-ra-zu a sedₓ(KAD₃)-da šag₄-ge im-sedₓ(KAD₃)-e\naš₂ di{?} na-ĝa₂-aḫ di-da ĝizzal kalam-ma-ke₄",
+     "orig_lines": [
+      "134",
+      "135",
+      "136",
+      "137",
+      "138",
+      "139",
+      "140",
+      "141",
+      "142"
+     ],
+     "en": "Who insults can hurt only the skin; greedy eyes (?), however, can kill. The liar, shouting, tears up his garments. Insults bring (?) advice to the wicked. To speak arrogantly is like an abscess: a herb that makes the stomach sick. 1 line unclear My words of prayer bring abundance. Prayer is cool water that cools the heart. Only (?) insults and stupid speaking receive the attention of the Land."
+    },
+    {
+     "ref": "143–145",
+     "orig": "šuruppag{ki}-e dumu-ni-ra na še₃-mu-ni-in-de₅\nšuruppag{ki} dumu ubara-tu-tu-ke₄\nzi-ud-su₃-ra₂ dumu-ni-ra na še-mu-ni-in-de₅",
+     "orig_lines": [
+      "143",
+      "144",
+      "145"
+     ],
+     "en": "Šuruppag gave these instructions to his son. Šuruppag, the son of Ubara-Tutu, gave these instructions to his son Zi-ud-sura."
+    },
+    {
+     "ref": "146–152",
+     "orig": "3-kam-ma-še₃ šuruppag{ki} dumu-ni-ra na na-mu-un-de₅-[de₅]\n[šuruppag{ki} dumu] [ubara]-tu-tu-ke₄\n[zi-ud-su₃]-ra na še₃-mu-ni-in-de₅\ndumu-ĝu₁₀ na ga-de₅ na de₅-ĝu₁₀ ḫe₂-dab₅\nzi-ud-su₃-ra₂ inim ga-ra-ab-dug₄ ĝizzal ḫe₂-em-ši-ak\nna de₅-ga-ĝu₁₀ nam-bi₂-bar-re\ninim dug₄-ga-ĝu₁₀ na-ab-ta-bal-e-de₃\nna de₅ ab-ba niĝ₂ kal-la-am₃ /gu₂\\-zu ḫe₂-em-ši-ak",
+     "orig_lines": [
+      "146",
+      "147",
+      "148",
+      "149",
+      "150",
+      "151",
+      "152",
+      "152A"
+     ],
+     "en": "A third time, Šuruppag gave instructions to his son. Šuruppag, the son of Ubara-Tutu, gave instructions to his son Zi-ud-sura: My son, let me give you instructions: you should pay attention! Zi-ud-sura, let me speak a word to you: you should pay attention! Do not neglect my instructions! Do not transgress the words I speak! {(Some mss. add the line:) The instructions of an old man are precious; you should comply with them!}"
+    },
+    {
+     "ref": "153",
+     "orig": "dumu engar-ra-ra niĝ₂ nam-mu-ra-ra-an eg₂ pa₅-zu še₃-em-ra",
+     "orig_lines": [
+      "153"
+     ],
+     "en": "You should not beat a farmer's son: he has constructed (?) your embankments and ditches."
+    },
+    {
+     "ref": "154–164",
+     "orig": "[kar]-/ke₄\\ na-an-sa₁₀-sa₁₀-an ka u₄-sar-ra-kam\nama-a-tud na-an-sa₁₀-sa₁₀-an u₂ lipiš gig-ga-am₃\ndumu-gir₁₅ na-an-sa₁₀-sa₁₀-an zag e₂-ĝar₈-e us₂-sa-am₃\ngeme₂ e₂-gal-la na-an-sa₁₀-sa₁₀-an ĝiri₃ dur₂-bi-še₃ {(some mss. add:) e₂} ĝal₂-ĝal₂-la-am₃\nsaĝ kur-ra kur-bi-ta um-ta-a-ed₃\nlu₂ ki nu-zu-a-ni-ta u₃-mu-e-de₆\ndumu-ĝu₁₀ ki {d}utu e₃-a-aš\na ḫu-mu-ra-an-de₂-e igi-zu-še₃ ḫe₂-du\ne₂ nu-tuku e₂-a-ni-še₃ la-ba-du\niri nu-tuku iri-ni-še₃ la-ba-du\n{ĝiš}ig X [... šu] /la{?}\\-ba-an-da-us₂-sa\nX [X X]-/še₃\\ la-ba-an-da-ku₄-ku₄\nla-ba-e-da-ḫi-li-e la-ba-e-da-sun₇-e",
+     "orig_lines": [
+      "154",
+      "155",
+      "156",
+      "157",
+      "158",
+      "159",
+      "160",
+      "161",
+      "162",
+      "163",
+      "163A",
+      "163B",
+      "164"
+     ],
+     "en": "You should not buy a prostitute: she is a mouth that bites. You should not buy a house-born slave: he is a herb that makes the stomach sick. You should not buy a free man: he will always lean against the wall. You should not buy a palace slave girl: she will always be the bottom of the barrel (?). You should rather bring down a foreign slave from the mountains, or you should bring somebody from a place where he is an alien; my son, then he will pour water for you where the sun rises and he will walk before you. He does not belong to any family, so he does not want to go to his family; he does not belong to any city, so he does not want to go to his city. {(1 ms. adds 2 lines:) He cannot knock at the door of ……, he cannot enter …….} He will not …… with you, he will not be presumptuous with you."
+    },
+    {
+     "ref": "165–167",
+     "orig": "dumu-ĝu₁₀ ki {d}utu e₃-a-aš\ndili-zu-ne kaskal na-an-ni-du-un\nlu₂ zu-a-zu saĝ šu UD ba-/ra\\-ak-ke₄",
+     "orig_lines": [
+      "165",
+      "166",
+      "167"
+     ],
+     "en": "My son, you should not travel alone eastwards. Your acquaintance should not ……."
+    },
+    {
+     "ref": "168–169",
+     "orig": "mu mu-a sig₁₀-ga saĝ-du lu₂-u₃-ra im-ma{?}-X-e\nkur-ra kur na-an-na-dub-be₂",
+     "orig_lines": [
+      "168",
+      "169"
+     ],
+     "en": "A name placed on another one ……; you should not pile up a mountain on another one."
+    },
+    {
+     "ref": "170–171",
+     "orig": "nam-tar peš₁₀ dur₅-ra-am₃\nlu₂-da ĝiri₃-ni im-ma-da-an-ze₂-er",
+     "orig_lines": [
+      "170",
+      "171"
+     ],
+     "en": "Fate is a wet bank; it can make one slip."
+    },
+    {
+     "ref": "172–174",
+     "orig": "šeš-gal a-a na-nam nin₉ gal ama na-nam\nšeš-gal-zu-ur₂ ĝizzal ḫe₂-em-ši{!}-ak\nnin₉ gal ama-zu-gin₇ gu₂ ḫe₂-em-ši-ĝal₂",
+     "orig_lines": [
+      "172",
+      "173",
+      "174"
+     ],
+     "en": "The elder brother is indeed like a father; the elder sister is indeed like a mother. Listen therefore to your elder brother, and you should be obedient to your elder sister as if she were your mother."
+    },
+    {
+     "ref": "175–176",
+     "orig": "za-e igi-zu-ta kiĝ₂ na-an-ak-[e]\nka-zu-ta niĝ₂-nam nu-lu-lu-un",
+     "orig_lines": [
+      "175",
+      "176"
+     ],
+     "en": "You should not work using only your eyes; you will not multiply your possessions using only your mouth."
+    },
+    {
+     "ref": "177",
+     "orig": "ĝa₂-la dag-ge e₂ dur₂-bi-še₃ mu-un-ĝen",
+     "orig_lines": [
+      "177"
+     ],
+     "en": "The negligent one ruins (?) his family."
+    },
+    {
+     "ref": "178–180",
+     "orig": "ninda-e lu₂ kur-ra bi₂-in-ed₃-de₃\nlu₂-lul lu₂ bar-ra bi₂-in-tum₂-mu\nninda-e lu₂ kur-ta im-ma-da-ra-an-ed₃-de₃",
+     "orig_lines": [
+      "178",
+      "179",
+      "180"
+     ],
+     "en": "The need for food makes some people ascend the mountains; it also brings traitors and foreigners, since the need for food brings down other people from the mountains."
+    },
+    {
+     "ref": "181–182",
+     "orig": "uru₂ tur-re lugal-bi-ir amar ši-in-ga-an-u₃-tud\nuru₂ maḫ-e e₂ du₃-a ši-ḫur-re",
+     "orig_lines": [
+      "181",
+      "182"
+     ],
+     "en": "A small city provides (?) its king with a calf; a huge city digs (?) a house plot (?)."
+    },
+    {
+     "ref": "183–188",
+     "orig": "[...] X-ke₄ a₂ šu im-du₇-du₇\nlu₂ niĝ₂-tuku lu₂ niĝ₂ nu-tuku gig še₃-em-ĝar\nlu₂ dam tuku a₂ šu im-du₇-du₇\ndam nu-un-tuku še-er-tab-ba mu-un-nu₂\ne₂ gul-gul-lu-de₃ e₂ ša-ba-da-an-gul-e\nlu₂ zi-zi-i-de₃ lu₂ ša-ba-da-an-zi-zi-i",
+     "orig_lines": [
+      "183",
+      "184",
+      "185",
+      "186",
+      "187",
+      "188"
+     ],
+     "en": "…… is well equipped. The poor man inflicts all kinds of illnesses on the rich man. The married man is well equipped; the unmarried makes his bed in a haystack (?). He who wishes to destroy a house will go ahead and destroy the house; he who wishes to raise up will go ahead and raise up."
+    },
+    {
+     "ref": "189–192",
+     "orig": "gud maḫ-a gu₂-bi lu₂ a-ba-an-dab₅\nlu₂ id₂-/da\\ ba-ra-an-bal-e\nlu₂ gu-la iri-za-ka zag-ba u₃-ba-e-zal-ta\ndumu-ĝu₁₀ za-a ur₅-re ḫe₂-em-me-re-a-ed₃-de₃",
+     "orig_lines": [
+      "189",
+      "190",
+      "191",
+      "192"
+     ],
+     "en": "By grasping the neck of a huge ox, you can cross the river. By moving along (?) at the side of the mighty men of your city, my son, you will certainly ascend (?)."
+    },
+    {
+     "ref": "193–201",
+     "orig": "geme₂-/zu\\ ḫur{?}-saĝ-ta ši-im-ta-an-tum₃ sag₉ ši-im-ta-an-de₆\nḫul ši-in-ga-am₃-ta-an-tum₃\nsag₉-ga šu-am₃ ḫul šag₄ an-ga-am₃\nsag₉-ga šag₄-ge šu nu-bar-re\nḫul šag₄-ge šu nu-di-ni-bar-re\nsag₉-ga ki dur₅-ru-am₃ šag₄-ge nu-da₁₃-da₁₃\nḫul e₂ niĝ₂-gur₁₁-ra ur₅-e la-ba-an-gu₇-e\nmu-un-sag₉ mu-[un]-/sag₉\\\nka-ni mu-[un]-/tag\\-[tag]\nḫul-da id₂-da ma₂{?} ḫe₂-en-da-su\nan-edin-na {kuš}ummud ḫe₂-en-da-dar",
+     "orig_lines": [
+      "193",
+      "194",
+      "195",
+      "196",
+      "197",
+      "198",
+      "199",
+      "199A",
+      "199B",
+      "200",
+      "201"
+     ],
+     "en": "When you bring a slave girl from the hills, she brings both good and evil with her. The good is in the hands; the evil is in the heart. The heart does not let go of the good; but the heart cannot let go of the evil either. As if it were a watery place, the heart does not abandon the good. Evil is a storeroom ……. {(1 ms. adds:) 2 lines unclear} May the boat with the evil sink in the river! May his waterskin split in the desert!"
+    },
+    {
+     "ref": "202–203",
+     "orig": "šag₄ ki aĝ₂ niĝ₂ e₂ du₃-du₃-u₃-dam\nšag₄ ḫul gig niĝ₂ e₂ gul-gul-lu-dam",
+     "orig_lines": [
+      "202",
+      "203"
+     ],
+     "en": "A loving heart maintains a family; a hateful heart destroys a family."
+    },
+    {
+     "ref": "204–207",
+     "orig": "nir-ĝal₂-e niĝ₂-tuku gaba-ĝal₂ me nam-nun-na\nnir-ĝal₂-ra gu₂ ḫe₂-en-ne-ni-ĝal₂\na₂-tuku ni₂-zu ḫe₂-en-ne-ši-la₂\ndumu-ĝu₁₀ lu₂ ḫul-ĝal₂-ra ḫe₂-en-ne-ši-ĝal₂-le",
+     "orig_lines": [
+      "204",
+      "205",
+      "206",
+      "207"
+     ],
+     "en": "To have authority, to have possessions and to be steadfast are princely divine powers. You should submit to the respected; you should be humble before the powerful. My son, you will then survive (?) against the wicked."
+    },
+    {
+     "ref": "208–212",
+     "orig": "ezem-ma-ka dam na-an-tuku-tuku-e\nšag₄-ga ḫuĝ-ĝa₂-am₃ bar-ra ḫuĝ-ĝa₂-am₃\n{kug ḫuĝ-ĝa₂-am₃ za-gin₃ ḫuĝ-ĝa₂-am₃} {(1 ms. ḫas instead:) [...]-/am₃\\ za ḫuĝ-ĝa₂-am₃ za ḫuĝ-ĝa₂-am₃}\ntug₂{?} ḫuĝ-ĝa₂-am₃ gada{?} ḫuĝ-ĝa₂-am₃\n[... nu]-mu-un-da-sa₂",
+     "orig_lines": [
+      "208",
+      "209",
+      "210",
+      "211",
+      "212"
+     ],
+     "en": "You should not choose a wife during a festival. Her inside is illusory (?); her outside is illusory (?). {The silver on her is borrowed; the lapis lazuli on her is borrowed} {(1 ms. has instead the line:) ……; the jewellery on her is borrowed, the jewellery on her is borrowed}. The dress on her is borrowed; the linen garment on her is borrowed. With …… nothing (?) is comparable."
+    },
+    {
+     "ref": "213–214",
+     "orig": "gud [... na]-/an\\-ni-sa₁₀-sa₁₀\ngud /lul-la\\ na-/sa₁₀\\-sa₁₀ {e₂}tur₃ buru₃ X X [...]",
+     "orig_lines": [
+      "213",
+      "214"
+     ],
+     "en": "You should not buy a …… bull. You should not buy a vicious bull; …… a hole (?) in the cattle-pen ……."
+    },
+    {
+     "ref": "215",
+     "orig": "munus zid e₂ zid-še₃ lu₂ ši-/in\\-[ĝar]",
+     "orig_lines": [
+      "215"
+     ],
+     "en": "One appoints (?) a reliable woman for a good household."
+    },
+    {
+     "ref": "216–217",
+     "orig": "ud buru₁₄-ka anše na-an-sa₁₀-sa₁₀\nanše LA gu₇ anše-da im-[...]",
+     "orig_lines": [
+      "216",
+      "217"
+     ],
+     "en": "You should not buy a donkey at the time of harvest. A donkey which eats …… will …… with another donkey."
+    },
+    {
+     "ref": "218–219",
+     "orig": "anše lul-la gu₂-tar im-la₂\ndumu-ĝu₁₀ lu₂-lul-e zag-si mu-un-sag₉-sag₉",
+     "orig_lines": [
+      "218",
+      "219"
+     ],
+     "en": "A vicious donkey hangs its neck; however, a vicious man, my son, ……."
+    },
+    {
+     "ref": "220",
+     "orig": "munus bar-šu-ĝal₂-e e₂ dur₂-bi-še₃ mu-un-ĝen",
+     "orig_lines": [
+      "220"
+     ],
+     "en": "A woman with her own property ruins the house."
+    },
+    {
+     "ref": "221",
+     "orig": "kurun naĝ-naĝ-e buru₁₄ im-su-su-su",
+     "orig_lines": [
+      "221"
+     ],
+     "en": "A drunkard will drown the harvest."
+    },
+    {
+     "ref": "222–234",
+     "orig": "{f}šu-KU₆ {ĝiš}kun₅ lu₂ 2(MIN)-e da nu-DI\ne₂-a nim-gin₇ mi-ni-ib-dal-dal-en\neme₃ sila-a inim i₃-šid-e\nMUNUS.ŠAḪ sila-a dumu-ni-ra ga mu-ni-ib-gu₇-e\nmunus giri₁₇ ḫur ak šeg₁₁ gi₄-gi₄-dam\n{ĝiš}bal ḫur-ra šu-na na-mu-un-ĝal₂\ne₂-e₂-a i-in-ku₄-ku₄-ku₄\ne-sir₂-e-sir₂-ra gu₂ mu-un-gi-gi-de₃\nda ur₃-ra im-me im-me e₃-ab\nbad₃-si-bad₃-si-a igi mu-ši-X-il₂-il₂{?}-e\nki du₁₄-de₃ ĝal₂-la-še₃ zi im-X-pa{?}-/pa\\-[an]-e{?}\nki MU X /šub\\-ba a₂-za [X X] X IM [X]\n{ZI X gi₄ EŠ mu-un-ne{?}-pad₃ im-mi-ni-dug₄} {(1 ms. ḫas instead:) KA iri [...]}",
+     "orig_lines": [
+      "222",
+      "223",
+      "224",
+      "225",
+      "226",
+      "227",
+      "228",
+      "229",
+      "230",
+      "231",
+      "232",
+      "233",
+      "234"
+     ],
+     "en": "A female burglar (?) …… ladder; she flies into the houses like a fly. A she-donkey …… on the street. A sow suckles its child on the street. A woman who pricked herself begins to cry and holds the spindle which pricked (?) her in her hand. She enters every house; she peers into all streets. …… she keeps saying \"Get out!\" She looks around (?) from all parapets. She pants (?) where there is a quarrel. 2 lines unclear"
+    },
+    {
+     "ref": "235–241",
+     "orig": "{[X X]-ke₄ (erasure) šag₄ ḫul gig /tuku-tuku\\} {(1 ms. ḫas instead:) bar SUD [...]}\n/dumu-ĝu₁₀\\ [(...)] gum₂-gamₓ(LUM) mi-ni-ib-za\n{[...] A X X IN TAR} {(1 ms. ḫas instead:) /ki{?}\\ [...]} {(1 ms. ḫas instead:) ki-a naĝ-e [...]}\n[...] X X [...] tum₃\n[...] nu₂\n[...] DU\nšag₄ ḫul₂-la i-im-dirig-/ge\\ [...]",
+     "orig_lines": [
+      "235",
+      "236",
+      "237",
+      "238",
+      "239",
+      "240",
+      "241"
+     ],
+     "en": "Marry (?) …… whose heart hates (?). My son, …… 4 lines unclear A heart which overflows with joy ……."
+    },
+    {
+     "ref": "242–244",
+     "orig": "niĝ₂-nam nu-kal zi ku₇-ku₇-da\nniĝ₂ nam-kal-kal-en niĝ₂-e me-kal-kal\ndumu-ĝu₁₀ gun₃-gun₃-gin₇ igi gun₃-gun₃",
+     "orig_lines": [
+      "242",
+      "243",
+      "244"
+     ],
+     "en": "Nothing at all is to be valued, but life should be sweet. You should not serve things; things should serve you. My son, ……."
+    },
+    {
+     "ref": "245",
+     "orig": "{d}ezina₂-ra na-an-keše₂-keše₂-re-de₃-en {ĝiš}a₂-bi i₃-šar₂",
+     "orig_lines": [
+      "245"
+     ],
+     "en": "You should not …… grain; its …… are numerous."
+    },
+    {
+     "ref": "246–247",
+     "orig": "kir₁₁-e aš₂ nam-en dumu-munus in-u₃-tud-un\n{ĝiš}mi-si-IŠ-a lag nam-bi₂-šub-be₂-en dumu-nitaḫ in-u₃-tud-un",
+     "orig_lines": [
+      "246",
+      "247"
+     ],
+     "en": "You should not abuse a ewe; otherwise you will give birth to a daughter. You should not throw a lump of earth into the money chest (?); otherwise you will give birth to a son."
+    },
+    {
+     "ref": "248–249",
+     "orig": "dam nam-mu-un-kar-re-en gu₃ KA na-an-ĝa₂-ĝa₂\nki dam kar-re nam-silig gum-ĝa₂-am₃",
+     "orig_lines": [
+      "248",
+      "249"
+     ],
+     "en": "You should not abduct a wife; you should not make her cry (?). The place where the wife is abducted to ……."
+    },
+    {
+     "ref": "250–251",
+     "orig": "a ĝiri₃ a gu₂ niĝin₂-na ga-am₃-me-re₇-de₃-en\nlu₂ gu-la a₂ 1(DIŠ)-e ga-na-gam-me-en-de₃",
+     "orig_lines": [
+      "250",
+      "251"
+     ],
+     "en": "\"Let us run in circles (?), saying: \"Oh my foot, oh my neck!\". Let us with united forces (?) make the mighty bow!\""
+    },
+    {
+     "ref": "252–253",
+     "orig": "galam-ma na-an-ug₅-ge-en dumu in-sug₄-ge tud-da\nen-ra BAD-a-gin₇ {d}nanna-ug₅-ge-en šu na-an-du₃-du₃-en",
+     "orig_lines": [
+      "252",
+      "253"
+     ],
+     "en": "You should not kill a ……, he is a child born by ……. You should not kill …… like ……; you should not bind him."
+    },
+    {
+     "ref": "254",
+     "orig": "emeda(UM.ME)-ga-la₂ ama₅-a-ke₄ lugal-bi-ir nam ši-im-mi-ib-tar-re",
+     "orig_lines": [
+      "254"
+     ],
+     "en": "The wet-nurses in the women's quarters determine the fate of their lord."
+    },
+    {
+     "ref": "255–260",
+     "orig": "ama-zu-ur₂ inim dirig nam-ba-na-ab-be₂-en ḫul ša-ba-ra-gig-ga-am₃\ninim ama-za inim diĝir-za ka-še₃ nam-bi₂-ib-dib₂-be₂-en\nama {d}utu-/am₃\\ lu₂ mu-un-u₃-tud\nab-ba diĝir-ra-/am₃\\ [(X)] mu-un-dadag-ge\nab-ba diĝir-am₃ /inim\\-ma-ni zid-da\nna de₅ ab-ba-še₃ ĝizzal ḫe₂-em-ši-ia-ak",
+     "orig_lines": [
+      "255",
+      "256",
+      "257",
+      "258",
+      "259",
+      "260"
+     ],
+     "en": "You should not speak arrogantly to your mother; that causes hatred for you. You should not question the words of your mother and your personal god. The mother, like Utu, gives birth to the man; the father, like a god, makes him bright (?). The father is like a god: his words are reliable. The instructions of the father should be complied with."
+    },
+    {
+     "ref": "261",
+     "orig": "e₂ iri bar-ra-ke₄ iri šag₄-ga ši-du₃-du₃-e",
+     "orig_lines": [
+      "261"
+     ],
+     "en": "Without suburbs a city has no centre either."
+    },
+    {
+     "ref": "262–263",
+     "orig": "dumu-ĝu₁₀ gana₂ eg₂ dur₂-bi-še₃ ĝal₂-la\nal-duru₅ šukur₂-ra-am₃ al-ḫad₂ šukur₂-ra-am₃",
+     "orig_lines": [
+      "262",
+      "263"
+     ],
+     "en": "My son, a field situated at the bottom of the embankments, be it wet or dry, is nevertheless a source of income."
+    },
+    {
+     "ref": "264",
+     "orig": "niĝ₂ u₂-gu de₂-a niĝ₂-me-ĝar-ra",
+     "orig_lines": [
+      "264"
+     ],
+     "en": "It is inconceivable (?) that something is lost forever."
+    },
+    {
+     "ref": "265",
+     "orig": "{urud}{ ?}giĝ₄ dilmun{ki}-na sam₂-še₃ TE-ga",
+     "orig_lines": [
+      "265"
+     ],
+     "en": "…… of Dilmun ……."
+    },
+    {
+     "ref": "266–271",
+     "orig": "ur nu-zu ḫul-am₃ lu₂ nu-/zu\\ [ḫuš-am₃]\nki nu-/zu\\ ḫuš-am₃ ur nu-zu teš₂-am₃\nkaskal nu-zu gaba kur-ra-ka\ndiĝir kur-ra lu₂ gu₇-gu₇-u₃-me-eš\ne₂ lu₂-gin₇ nu-du₃ iri lu₂-gin₇ nu-du₃\nki-zu-a lu₂-ka lu₂ ša-ba-ra-an-ed₂-de₃\nsipad-/ra\\ kiĝ₂-kiĝ₂ mu-na-til udu gi₄-gi₄ [mu-na-til]",
+     "orig_lines": [
+      "266",
+      "266A",
+      "267",
+      "268",
+      "269",
+      "270",
+      "271"
+     ],
+     "en": "{To get lost is bad for a dog; but terrible for a man} {(1 ms. has instead:) An unknown place is terrible; to get lost is shameful (?) for a dog}. On the unfamiliar way at the edge of the mountains, the gods of the mountains are man-eaters. They do not build houses there as men do; they do not build cities there as men do. 1 line unclear"
+    },
+    {
+     "ref": "272–273",
+     "orig": "/engar\\-ra a-šag₄ ur₁₁-ru mu-na-til\n[...] X gi₄ mu-/na\\-KU-/en{?}\\\n[...] LA [...] u₂ de₅-/ge\\ [...]",
+     "orig_lines": [
+      "272",
+      "273",
+      "273A"
+     ],
+     "en": "For the shepherd, he stopped searching, he stopped bringing back the sheep. For the farmer (?), he stopped ploughing the field. 1 line unclear"
+    },
+    {
+     "ref": "274–276",
+     "orig": "kadra inim-ma-bi niĝ₂ šag₄ ten-na /mu{?}\\-[...]\ne₂-/gal\\-[la] /kur₉\\-ra-bi niĝ₂ šag₄ ten-na [...]\n/kadra\\ inim-inim-ma /mul\\ [...]",
+     "orig_lines": [
+      "274",
+      "275",
+      "276"
+     ],
+     "en": "This gift of words is something which soothes the mind ……; when it enters the palace, it soothes the mind ……. The gift of many words …… stars."
+    },
+    {
+     "ref": "277",
+     "orig": "na de₅ šuruppag{ki} dumu ubara-tu-tu-ke₄ na de₅-ga",
+     "orig_lines": [
+      "277"
+     ],
+     "en": "These are the instructions given by Šuruppag, the son of Ubara-Tutu."
+    },
+    {
+     "ref": "278–280",
+     "orig": "šuruppag{ki} dumu ubara-tu-tu-ke₄ na de₅-ga\nnin dub gal-gal-la šu du₇-a\nki-sikil {d}nisaba za₃-mi₂",
+     "orig_lines": [
+      "278",
+      "279",
+      "280"
+     ],
+     "en": "Praise be to the lady who completed the great tablets, the maiden Nisaba, that Šuruppag, the son of Ubara-Tutu, gave his instructions!"
+    }
+   ]
+  }
+ ]
+}

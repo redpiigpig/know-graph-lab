@@ -1,0 +1,167 @@
+{
+ "slug": "ninurta-turtle",
+ "source": "ETCSL",
+ "siglum": "ETCSL 1.6.3",
+ "source_url": "https://etcsl.orinst.ox.ac.uk/cgi-bin/etcsl.cgi?text=t.1.6.3",
+ "license": "ETCSL（Oxford）轉寫與英譯，非商業學術使用",
+ "compositions": [
+  {
+   "num": "1.6.3",
+   "title_en": "Ninurta and the turtle",
+   "segments": [
+    {
+     "ref": "1–8",
+     "orig": "X [...]\namar /anzud\\[{mušen}] [...]\n{ĝiš}ilar /KA\\ [...]\namar /anzud\\[{mušen}] [...]\nur-saĝ {d}/nin\\-[urta] [...]\n{ĝiš}gag KA [...]\namar /anzud\\[{mušen}] [...]\nX X X [...]",
+     "orig_lines": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8"
+     ],
+     "en": "8 lines fragmentary unknown no. of lines missing"
+    },
+    {
+     "ref": "1–4",
+     "orig": "dug₄-ga-ni-ta {ĝiš}tukul-zu ḫul-a mu-ni-in-tag\nme šu-ĝa₂ šu ba-ba-ĝu₁₀-ne me-bi abzu-še₃ ba-an-gi₄\nĝiš-ḫur šu-ĝa₂ šu ba-ba-ĝu₁₀-ne ĝiš-ḫur-bi abzu-še₃ ba-an-gi₄\ndub nam-tar-ra-/bi\\ abzu-še₃ ba-an-gi₄ me ab-la₂-e-en",
+     "orig_lines": [
+      "1",
+      "2",
+      "3",
+      "4"
+     ],
+     "en": "\"At his command your weapon struck me evilly. As I let the divine powers go out of my hand, these divine powers returned to the abzu. As I let the divine plan go out of my hand, this divine plan returned to the abzu. This tablet of destinies returned to the abzu. I was stripped of the divine powers.\""
+    },
+    {
+     "ref": "5–8",
+     "orig": "[inim amar] /anzud\\{mušen}-še₃ {d}nin-urta lul-aš ba-an-si\n[{d}nin-men]-na-ke₄ a-nir im-ĝa₂-ĝa₂\nĝe₂₆-e me-bi šu-ĝu₁₀-uš li-/bi₂\\-kur₉ nam-en-bi nu-ak-e\n[ĝe₂₆-e] e-ne-gin₇ /eš₃-e{?}\\ abzu-a nu-mu-un-til",
+     "orig_lines": [
+      "5",
+      "6",
+      "7",
+      "8"
+     ],
+     "en": "Ninurta was stunned at these words of the Anzud chick. Ninmena gave out a wail: \"And what about me? These divine powers have not fallen into my hand. I shall not exercise their authority. I shall not live (?) like him in the shrine, in the abzu.\""
+    },
+    {
+     "ref": "9",
+     "orig": "a-a {d}en-ki inim /mu\\-[un-dug₄]-/dug₄\\-ga-a abzu-a ba-da-an-zu",
+     "orig_lines": [
+      "9"
+     ],
+     "en": "Father Enki in the abzu knew what had been said."
+    },
+    {
+     "ref": "10–14",
+     "orig": "ur-saĝ {d}nin-urta amar anzud{mušen}-de₃ šu-ni bi₂-in-ti\nki {d}en-ki-ka₃-še₃ abzu-še₃ im-ma-da-/te\\\n{d}u₄-ta-u₁₈-lu amar anzud{mušen}-de₃ abzu-še₃ ba-an-gi₄\nen-e ur-saĝ-ra ba-ši-ḫul₂\na-a {d}en-ki /ur-saĝ\\ {d}nin-urta-ra ba-ši-ḫul₂",
+     "orig_lines": [
+      "10",
+      "11",
+      "12",
+      "13",
+      "14"
+     ],
+     "en": "The Anzud chick took the hero Ninurta by his hand and drew near with him to Enki's place, the abzu. The Anzud chick returned Uta-ulu to the abzu. The lord was delighted with the hero, Father Enki was delighted with the hero Ninurta."
+    },
+    {
+     "ref": "15–24",
+     "orig": "en {d}nu-/dim₂\\-[mud]-/e\\ /mi₂\\ zid mu-un-i-i-de₃{?}\nur-saĝ-e diĝir šeš-[zu-ne]-a diĝir /na\\-me ur₅-gin₇ nu-mu-un-ak-e\nmušen {ĝiš}tukul /kalag\\-[ga]-/zu\\ bi₂-dab₅-ba-še₃\nud me-da ud ul-/le₂-še₃ gu₂\\-bi ĝiri₃-zu(sourše: su) /ba\\-[gub-be₂-en]\ndiĝir gal-gal-e-ne a₂ nam-/ur\\-[saĝ-ĝa₂-zu] me-teš₂ [ḫe₂-i-i-ne]\na-a-zu {d}en-lil₂-le niĝ₂-dug₄-[zu] ḫe₂-ak\n{d}nin-men-na-ke₄ kiĝ₂-sig₁₀-ga-zu na-an-dim₂-e\nza-e-gin₇ ni₂ na-ab-tuku /diĝir na\\-me igi-zu-še₃ šu si sa₂ na-an-sa₂-e\nitid-da eš₃-e /abzu\\-a igi-du₈-a e₂{?}-zu saĝ ḫe₂-us₂\n[an] zag gal-la mu-/zu ḫe₂\\-pad₃-/de₃\\",
+     "orig_lines": [
+      "15",
+      "16",
+      "17",
+      "18",
+      "19",
+      "20",
+      "21",
+      "22",
+      "23",
+      "24"
+     ],
+     "en": "Lord Nudimmud honoured him duly: \"Hero, no god among your brother gods could have acted so. As for the bird which your mighty weapon captured, from now to eternity you will keep your foot placed on its neck. May the great gods give your heroic strength its due. May your father Enlil do whatever you command. May Ninmena not fashion your equal (?). May no one be as revered as you and no god extend an upraised hand before you. Monthly may your house (?) regularly receive tributes in the shrine, in the abzu. May An (?) proclaim your name in the seat of honour.\""
+    },
+    {
+     "ref": "25–30",
+     "orig": "ur-saĝ nam-tar-ra-bi šag₄-bi nu-ḫul₂\nki-gub-ba-ni a-/ĝi₆{?}\\ i-im-ku₁₀-ku₁₀-ge i-sig₇-sig₇-ge\nšag₄-bi niĝ₂ gal-gal i-im-bal-bal šag₄-bi i₃-kur₂-kur₂\ninim da-bi nu-ub-/tuku\\-a bar-bi i-im-dug₄-dug₄\nur-saĝ {d}nin-urta igi-bi ki-šar₂-ra ba-ni-in-ĝar\nlu₂ na-me nu-ub-dug₄ šag₄-bi zi nu-X-X",
+     "orig_lines": [
+      "25",
+      "26",
+      "27",
+      "28",
+      "29",
+      "30"
+     ],
+     "en": "The hero secretly was not happy with these promises. Where he stood, he darkened and yellowed like (?) a flood-storm (?). He contemplated great deeds and inwardly he was rebellious. He uttered a word which has no ……. The hero Ninurta set his sights on the whole world. He told no one and inwardly did not ……."
+    },
+    {
+     "ref": "31–32",
+     "orig": "en gal {d}en-ki ki ni₂-te-na-ke₄ inim šag₄-bi ba-X-[zu]\neš₃-e abzu-a a-ĝi₆ mud i-im-tuku₄-tuku₄-/e\\",
+     "orig_lines": [
+      "31",
+      "32"
+     ],
+     "en": "The great lord Enki intuitively grasped the substance of the plan. In the shrine, in the abzu he stirred up a dark flood-storm."
+    },
+    {
+     "ref": "33–35",
+     "orig": "sukkal {d}isimudₓ(PAB.NUN.ME.EZEN)-de₃ e₂-e ĝiri₃ mu-un-ru-gu₂\nur-saĝ {d}nin-urta ed₂-de₃ nu-mu-un-še-še\nsukkal {d}isimudₓ(PAB.NUN.ME.EZEN)-de₃-eš₂ šu-ni ba-an-zig₃",
+     "orig_lines": [
+      "33",
+      "34",
+      "35"
+     ],
+     "en": "By the house the minister Isimud opposed Ninurta. The hero Ninurta refused to come out and raised his hand against the minister Isimud."
+    },
+    {
+     "ref": "36–46",
+     "orig": "{d}en-ki-ke₄ im abzu-a ba-al-gu₇ ba-da-an-dim₂\nki sun₅-na kan₄ abzu-a ba-al-gu₇ ba-da-an-gub\n{d}/en\\-ki-ke₄ ki-lul-la-ke₄ mu-un-na-ab-dug₄-dug₄\nki-gub-ba ba-al-gi₄-še₃ ba-da-an-tum₃\nba-al-gu₇ eĝer-ra-ni sa-bi ba-da-an-dab₅\nur-saĝ {d}nin-urta ĝiri₃-bi ba-da-an-gi₄\n{d}en-ki /nu\\-zu-gin₇ a-na-am₃ ne-e im-me\numbin-ĝiri₃-/bi\\ ki bi₂-in-ḫur ḫabrud ḫul ba-da-an-dun «ud»\nur-saĝ {d}nin-urta šag₄-bi ba-da-an-šub\nur-saĝ-e ga-[X] /X\\ ed₃-de₃ nu-mu-un-zu-am₃\nba-al-gu₇ /ĝiri₃{?}\\ [umbin-ĝiri₃]-/bi\\ ba-an-sur-sur",
+     "orig_lines": [
+      "36",
+      "37",
+      "38",
+      "39",
+      "40",
+      "41",
+      "42",
+      "43",
+      "44",
+      "45",
+      "46"
+     ],
+     "en": "Against Ninurta, Enki fashioned a turtle from the clay of the abzu. Against him he stationed the turtle at an opening, at the gate of the abzu. Enki talked to him near the place of the ambush and brought him to the place where the turtle was. The turtle was able to grab Ninurta's tendon from behind. The hero Ninurta managed to turn back its feet. Enki, as if perplexed, said, \"What is this!\" He had the turtle scrape the ground with its claws, had it dig an evil pit. The hero Ninurta fell into it with the turtle. The hero did not know how to get out from ……. The turtle kept on gnawing his feet with its claws (?)."
+    },
+    {
+     "ref": "47–54",
+     "orig": "/en gal\\ {d}en-[ki]-ke₄ [gu₃ mu-un]-/na\\-de₂-e\nme X /kur{?}\\-ta mu-ni-in-niĝin₂-niĝin₂ /mu\\-pad₃-de₃\nĝe₂₆-ra saĝ ĝiš{?} ra-ĝu₁₀-uš igi-zu mu-e-ĝar-ra-/am₃\\\nX-bil₂-ga gal-gal di ĝe₂₆-e bi₂-/ib₂\\-ĝa₂-ĝa₂ ĝe₂₆-e bi₂-ib₂-zi-de₃\nza-e ĝe₂₆-ra a-gin₇ igi-zu mu-ĝar-ra\nki-gub-ba-zu a-na-am₃ mu-ra-an-dab₅ a-/ra₂{?}\\-bi a-na-gin₇-nam\nnam-kalag-ga-zu me-še₃ ba-an-ĝen nam-ur-saĝ-zu me-a\nḫur-saĝ gal-gal-e mu-ni-in-gul-gul e-ne-eš₂ a-na-am₃(sourše: nam) mu-ed₃-de₃",
+     "orig_lines": [
+      "47",
+      "48",
+      "49",
+      "50",
+      "51",
+      "52",
+      "53",
+      "54"
+     ],
+     "en": "The great lord Enki said to him: \"From ……, you who set your mind to kill me, …… who makes big claims -- I cut down, I raise up. You who set your sights on me like this -- what has your position seized for you, how ……? Where has your strength fled? Where is your heroism? In the great mountains you caused destruction, but how will you get out now?\""
+    },
+    {
+     "ref": "55–60",
+     "orig": "{d}nin-men-na-ke₄ inim-bi ba-da-an-pad₃\ntug₂ bar-ra-na /al-bir₇{?}\\-re KAŠ₄ im-sar-[sar-re]\n{u₂}ug gu₇-gu₇-ĝu₁₀-uš /za\\-[e] a-ba-a mu-ra-ab-tum₂\nlu₂ saĝ-bi mu-un-bul-bul ba-X-[X]-un-GIL-X za-e a-/ba-a mu\\-ra-/ab\\-tum₂\n{d}am-an-ki mu-bi nu-me-a u₄-/gu₇-gu₇\\-nu-de₂-de₂ mu-bi-im(sourše: tin)\nnam-uš₂ šu ĝar nu-tuku-a za-e a-[ba]-a mu-ra-ab-tum₂",
+     "orig_lines": [
+      "55",
+      "56",
+      "57",
+      "58",
+      "59",
+      "60"
+     ],
+     "en": "Ninmena learned of this situation. She ripped the clothes on her body and she ……. \"You my plant-eater Enki, who shall I send to you? Men will shake their heads in fear ……. Who shall I send to you? That name is not Enki. That name is Ugugu-that-does-not-pour (?). You who are death which has no mercy, who shall I send to you?\" unknown no. of lines missing"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,451 @@
+{
+ "slug": "inana-ebih",
+ "source": "ETCSL",
+ "siglum": "ETCSL 1.3.2",
+ "source_url": "https://etcsl.orinst.ox.ac.uk/cgi-bin/etcsl.cgi?text=t.1.3.2",
+ "license": "ETCSL（Oxford）轉寫與英譯，非商業學術使用",
+ "compositions": [
+  {
+   "num": "1.3.2",
+   "title_en": "Inana and Ebiḫ",
+   "segments": [
+    {
+     "ref": "1–6",
+     "orig": "in-nin me ḫuš-a ni₂ gur₃-ru me gal-la u₅-a (Šited in OB šatalogue from Nibru, at Pḫiladelpḫia, 0.2.01, line 8; OB šatalogue in tḫe Louvre, 0.2.02, line 8; OB šatalogue from Urim (U1), 0.2.03, line 10; OB šatalogue from Urim (U2), 0.2.04, line 13; OB šatalogue at Andrews University, 0.2.11, line 2)\n{d}inana a₂-an-kar₂ kug šu du₇ mud-bi gu₂ e₃\nme₃ gal-gal-la ḫub₂ dar ak {kuš}gur₂₁{ur₃}-bi ki us₂-sa\nud mar-uru₅-a šu tag dug₄-ga\nnin gal {d}inana šen-šen-na sa₂ sig₁₀-sig₁₀-ge₅ gal-zu\nkur gul-gul ti a₂-ta i-ni-in-ug₇ kur-re a₂ ba-e-šum₂",
+     "orig_lines": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6"
+     ],
+     "en": "Goddess of the fearsome divine powers, clad in terror, riding on the great divine powers, Inana, made perfect by the holy a-an-kar weapon, drenched in blood, rushing around in great battles, with shield resting on the ground (?), covered in storm and flood, great lady Inana, knowing well how to plan conflicts, you destroy mighty lands with arrow and strength and overpower lands."
+    },
+    {
+     "ref": "7–9",
+     "orig": "piriĝ-gin₇ an ki-a šeg₁₁ i-ni-in-gi₄ uĝ₃-e su i₃-ni-in-sag₃\nam gal-gin₇ kur gu₂-erim₂-ĝal₂-la u₃-na ba-gub-be₂-en\npiriĝ ḫuš-gin₇ uru₁₆-na nu-še-ga ze₂-za bi₂-ib₂-te-en-te-en",
+     "orig_lines": [
+      "7",
+      "8",
+      "9"
+     ],
+     "en": "In heaven and on earth you roar like a lion and devastate the people. Like a huge wild bull you triumph over lands which are hostile. Like a fearsome lion you pacify the insubordinate and unsubmissive with your gall."
+    },
+    {
+     "ref": "10–22",
+     "orig": "nin-ĝu₁₀ an-gin₇ buluĝ₃-ĝa₂-za\nki-sikil {d}inana ki-gin₇ maḫ-a-za\n{d}utu lugal-gin₇ e₃-a-za a₂ daĝal sud-sud-za\nan-na du-a-za ni₂ ḫuš gur₃-ru-za\nki-a ud še-er-zid gur₃-ru-za\nḫur-saĝ-ĝa₂ ĝen-na sa za-gin₃ e₃-a-za\nkur gi-rin-na a tu₅-a-za\nkur šuba₂ kur ki sikil u₃-tu-ud-da-za\nza-gin₃ ur₅-gin₇ ni₂-ba dur₂-dur₂-ra-za\nen ul en šar₂-gin₇ šita₂ gur₄-gur₄-ra-za\nme₃-ba {ĝiš}tukul ur₃-ra-gin₇ saĝ gur₄-gur₄-re-za\nsaĝ gig₂-ga šir₃-re-eš bi₂-ib-ra\nkur-kur-re i-lu-lam-ma-bi dug₃-ge-eš im-mi-ib₂-be₂",
+     "orig_lines": [
+      "10",
+      "11",
+      "12",
+      "13",
+      "14",
+      "15",
+      "16",
+      "17",
+      "18",
+      "19",
+      "20",
+      "21",
+      "22"
+     ],
+     "en": "My lady, on your acquiring the stature of heaven, maiden Inana, on your becoming as magnificent as the earth, on your coming forth like Utu the king and stretching your arms wide, on your walking in heaven and wearing fearsome terror, on your wearing daylight and brilliance on earth, on your walking in the mountain ranges and bringing forth beaming rays, on your bathing the girin plants of the mountains (in light), on your giving birth to the bright mountain, the mountain, the holy place, on your ……, on your being strong with the mace like a joyful lord, like an enthusiastic (?) lord, on your exulting in such battle like a destructive weapon -- the black-headed people ring out in song and all the lands sing their song sweetly."
+    },
+    {
+     "ref": "23–24",
+     "orig": "nin me₃ dumu gal {d}suen-na\nki-sikil {d}inana me-teš₂-e ga-i-i",
+     "orig_lines": [
+      "23",
+      "24"
+     ],
+     "en": "I shall praise the lady of battle, the great child of Suen, maiden Inana."
+    },
+    {
+     "ref": "25–32",
+     "orig": "in-nin-me-en an niĝin₂-na-ĝu₁₀-ne ki niĝin₂-na-ĝu₁₀-ne\n{d}inana-me-en an niĝin₂-na-ĝu₁₀-ne ki niĝin₂-na-ĝu₁₀-ne\nelam{ki} su-bir₄{ki}-a niĝin₂-na-ĝu₁₀-ne\nkur lu₅-lu₅-bi-a niĝin₂-na-ĝu₁₀-ne\nkur-šag₄-ga du₇-du₇-da-ĝu₁₀-ne\nin-nin₉-me-en kur-re te-a-me-en ni₂-bi na-ma-ra-ab-ak\n{d}inana-me-en kur-re te-a-me-en ni₂-bi na-ma-ra-ab-ak\nḫur-saĝ ebiḫ{ki}-ke₄ te-a-me-en ni₂-bi na-ma-ra-ab-ak",
+     "orig_lines": [
+      "25",
+      "26",
+      "27",
+      "28",
+      "29",
+      "30",
+      "31",
+      "32"
+     ],
+     "en": "(Inana announced:) \"When I, the goddess, was walking around in heaven, walking around on earth, when I, Inana, was walking around in heaven, walking around on earth, when I was walking around in Elam and Subir, when I was walking around in the Lulubi mountains, when I turned towards the centre of the mountains, as I, the goddess, approached the mountain it showed me no respect, as I, Inana, approached the mountain it showed me no respect, as I approached the mountain range of Ebiḫ it showed me no respect.\""
+    },
+    {
+     "ref": "33–36",
+     "orig": "ni₂-bi-ta na-ma-ra-ab-ak-gin₇\ngiri₁₇-bi ki-še₃ na-ma-ra-ab-te-a-gin₇\nnundum saḫar-ra na-ma-ni-ib-ur₃-ra-gin₇\nḫur-saĝ zig₃ šu-ĝu₁₀ ga-am₃-mi-ib-si ni₂-ĝu₁₀ ga-mi-/ib\\-zu",
+     "orig_lines": [
+      "33",
+      "34",
+      "35",
+      "36"
+     ],
+     "en": "\"Since they did not act appropriately on their own initiative, since they did not put their noses to the ground for me, since they did not rub their lips in the dust for me, I shall fill my hand with the soaring mountain range and let it learn fear of me.\""
+    },
+    {
+     "ref": "37–40",
+     "orig": "a₂ maḫ-bi-še₃ gud maḫ ga-ba-ši-gub\na₂ tur-bi-še₃ gud tur ga-ba-ši-gub\nḫub₂ ga-mu-un-šu₂ ešemen {d}inana kug ga-mu-ni-in-sar\nḫur-saĝ-ĝa₂ me₃ ga-ba-ab-de₆ šen-šen si ga-ba-ab-sa₂",
+     "orig_lines": [
+      "37",
+      "38",
+      "39",
+      "40"
+     ],
+     "en": "\"Against its magnificent sides I shall place magnificent battering-rams, against its small sides I shall place small battering-rams. I shall storm it and start the 'game' of holy Inana. In the mountain range I shall start battles and prepare conflicts.\""
+    },
+    {
+     "ref": "41–44",
+     "orig": "ti mar-uru₅-a si ga-ba-ab-sa₂\na₂-sag₃ ebiḫ₂-gin₇ ga-ba-ab-sur-sur\nĝiš-gid₂-da niĝ₂-su-ub ga-ba-ab-ak\n{ĝiš}ilar {kuš}gur₂₁{ur₃} si ga-na-ab-sa₂-sa₂",
+     "orig_lines": [
+      "41",
+      "42",
+      "43",
+      "44"
+     ],
+     "en": "\"I shall prepare arrows in the quiver. I shall …… slingstones with the rope. I shall begin the polishing of my lance. I shall prepare the throw-stick and the shield.\""
+    },
+    {
+     "ref": "45–48",
+     "orig": "{ĝiš}tir us₂-sa-bi-še₃ izi ga-am₃-sag₃\nḫul-du-bi-še₃ {urud}ḫa-zi-in ga-ba-ši-gub\na-niĝin₂-ba {d}gibil₆ lu₂ sikil-la kiĝ₂{?} ga-ba-an-du₃-du₃\nḫur-saĝ aratta{ki} šu nu-teĝ₃-ĝe₂₆ ni₂-bi ga-ba-ni-ib₂-sud",
+     "orig_lines": [
+      "45",
+      "46",
+      "47",
+      "48"
+     ],
+     "en": "\"I shall set fire to its thick forests. I shall take an axe to its evil-doing. I shall make Gibil, the purifier, do his work at its watercourses. I shall spread this terror through the inaccessible mountain range Aratta.\""
+    },
+    {
+     "ref": "49–52",
+     "orig": "iri an-ne₂ nam ba-an-kud-da-gin₇ ki-bi na-an-gi₄-gi₄\n{d}en-lil₂-le saĝ-ki gid₂-da-gin₇ gu₂-bi na-an-zi-zi\nkur-re in-di₃-ĝu₁₀ ḫe₂-kur-ku\nebiḫ{ki}-e ka tar-ĝu₁₀ ḫe₂-si-il-le me-teš₂ ḫu-mu-i-i",
+     "orig_lines": [
+      "49",
+      "50",
+      "51",
+      "52"
+     ],
+     "en": "\"Like a city which An has cursed, may it never be restored. Like a city at which Enlil has frowned, may it never again lift its neck up. May the mountain observe (?) my conduct. May Ebiḫ give me honour and praise me.\""
+    },
+    {
+     "ref": "53–58",
+     "orig": "{d}inana dumu {d}suen-na-ke₄\n{tug₂}pala₃-a ba-an-mur₁₀ ul gu₂ ba-an-e₃\nni₂ me-lem₄ ḫuš-a saĝ-ki-na še-er-ka-an ba-ni-in-dug₄\nzi-pa-aĝ₂ kug-ga-na {na₄}gug gi-rin-na si ba-ni-in-sa₂-sa₂\nšita saĝ 7-e zid-da-na nam-šul ba-ni-in-ak\ndur {na₄}za-gin₃-na ĝiri₃-ni bi₂-in-de₆",
+     "orig_lines": [
+      "53",
+      "54",
+      "55",
+      "56",
+      "57",
+      "58"
+     ],
+     "en": "Inana, the child of Suen, put on the garment of royalty and girded herself in joy. She bedecked her forehead with terror and fearsome radiance. She arranged cornelian rosettes around her holy throat. She brandished the seven-headed šita weapon vigorously to her right and placed straps of lapis lazuli on her feet."
+    },
+    {
+     "ref": "59–61",
+     "orig": "an-usan-na nir mi-ni-ib-e₃\nkan₄ u₆ di sila-ba bi₂-in-gub\nan-ra ne-saĝ mu-un-na-an-gub sizkur mu-na-ab-be₂",
+     "orig_lines": [
+      "59",
+      "60",
+      "61"
+     ],
+     "en": "At dusk she came forth regally and stood in the street at the Gate of Wonder. She made an offering to An and addressed a prayer to him."
+    },
+    {
+     "ref": "62–64",
+     "orig": "an {d}inana-da ḫul₂-la-e\nmu-un-gid₂ ki-na ba-e-tuš\nzag gal an-na-ka ba-e-si",
+     "orig_lines": [
+      "62",
+      "63",
+      "64"
+     ],
+     "en": "An, in delight at Inana, stepped forward and took his place. He filled the seat of honour of heaven."
+    },
+    {
+     "ref": "65–69",
+     "orig": "an a-a-ĝu₁₀ silim ma-ra-ab-be₂-en inim-ĝu₁₀-uš ĝeštug₂-zu\nan-ne₂ an-ba ni₂-ĝu₁₀ mi-ni-in-ri\nza-e-me-en inim-ĝu₁₀ an ki-a gaba-ri la-ba-e-ni-tuku\nan-bar-ra {ĝiš}silig-ga-am₃\nan-ti-bal ma-an-si-um",
+     "orig_lines": [
+      "65",
+      "66",
+      "67",
+      "68",
+      "69"
+     ],
+     "en": "(Inana announced:) \"An, my father, I greet you! Lend your ear to my words. An has made me terrifying throughout heaven. Owing to you my word has no rival in heaven or on earth. At the limits of heaven are the silig weapon, the antibal and mansium emblems.\""
+    },
+    {
+     "ref": "70–79",
+     "orig": "ki-gal sig₁₀-ge₅ {ĝiš}gu-za suḫuš gen₆-na\na₂ nam-šita₄ šu ĝa₂-ĝa₂ mu-bu-um-gin₇ gam\n6 la₂-e ki ḫa-ḫa-ze₂\n4 la₂-e ḫaš₂ gid₂-gid₂-i\nkaskal gaz-e ḫar-ra-an-na zag-še₃ DU\nlugal-bi-ir IŠ-IŠ an-na-ka iti₆-gin₇ e₃-a\nti a₂-ta e₃-a a-gar₃-e {ĝiš}kiri₆ tir zu₂ bir₅-gin₇ zi-zi\n{ĝiš}gana₂-ur₃ ki-bal sig₁₀-sig₁₀-ge₅\nabul-a-ba {ĝiš}si-ĝar gid₂-de₃ {ĝiš}ig-bi bi₂-ib-gub-be₂\nan lugal šu-ĝu₁₀ ḫe₂-em-mu-e-šum₂ a₂ [...]",
+     "orig_lines": [
+      "70",
+      "71",
+      "72",
+      "73",
+      "74",
+      "75",
+      "76",
+      "77",
+      "78",
+      "79"
+     ],
+     "en": "\"To set the socle in position and make the throne and foundation firm, to carry the might of the šita weapon which bends like a mubum tree, to hold the ground with the sixfold yoke, to extend the thighs with the fourfold yoke, to pursue murderous raids and widespread miltary campaigns, to appear to those kings in the …… of heaven like moonlight, to shoot the arrow from the arm and fall on fields, orchards and forests like the tooth of the locust, to take the harrow to rebel lands, to remove the locks from their city gates so the doors stand open -- King An, you have indeed given me all this, and …….\""
+    },
+    {
+     "ref": "80–82",
+     "orig": "lugal-la zid-da-na ḫe₂-ni-in-kur₉ ki-bal gul-gul-lu-de₃\nkur-ur₂-ra sur₂-du₃{mušen}-gin₇ saĝ ḫu-mu-da-dub₂-be₂\nan lugal mu-zu zag kalam-ma gu-gin₇ ga-an-ši-BAD",
+     "orig_lines": [
+      "80",
+      "81",
+      "82"
+     ],
+     "en": "\"You have placed me at the right hand of the king in order to destroy rebel lands: may he, with my aid, smash heads like a falcon in the foothills of the mountain, King An, and may I …… your name throughout the land like a thread.\""
+    },
+    {
+     "ref": "83–88",
+     "orig": "kur-kur-ra muš ki-in-dar-ra-gin₇ šu ḫu-mu-da-dub₂-be₂-eš\nmuš-saĝ-kal kur-bi-ta ed₃-da-gin₇ da-ga ḫu-mu-da-an-du\nkur-ra a₂ ḫe₂-bi₂-in-ĝar igi ḫe₂-ni-in-bar gid₂-da-bi ḫa-ba-zu\nḫar-ra-an kug an-na-ka-še₃ ḫe₂-ni-e₃ buru₃-da-bi ḫa-ba-zu\ndiĝir-re-e-ne ga-an{!}-ne-/dirig\\-[X-(X)]\n{d}inana-me-en {d}a-nun-na-ke₄-ne u₃-ba-DU",
+     "orig_lines": [
+      "83",
+      "84",
+      "85",
+      "86",
+      "87",
+      "88"
+     ],
+     "en": "\"May he destroy the lands as a snake in a crevice. May he make them slither around like a saĝkal snake coming down from a mountain. May he establish control over the mountain, examine it and know its length. May he go out on the holy campaign of An and know its depth. I want to surpass the other deities, since the Anuna deities have …….\""
+    },
+    {
+     "ref": "89–95",
+     "orig": "a-gin₇ ĝe₂₆-e kur-re an ki-a ni₂-ĝu₁₀ la-ba-ni-ib-/ta\\-a-ta\n{d}inana-me-en kur-re an ki-a ni₂-ĝu₁₀ la-ba-ni-ib-[ta]-a-ta\nḫur-saĝ ebiḫ{ki}-a-ke₄ kur-re an ki-a ni₂-ĝu₁₀ la-ba-ni-ib-ta-a-ta\nni₂-bi-ta na-ma-ra-ab-ak-gin₇\ngiri₁₇-bi ki-še₃ na-ma-ab-te-a-gin₇\nnundum saḫar-ra na-ma-ni-ib-ur₃-ra-gin₇\nḫur-saĝ zig₃ šu-ĝu₁₀ ga-am₃-mi-ib-si ni₂-ĝu₁₀ ga-mi-ib-/zu\\",
+     "orig_lines": [
+      "89",
+      "90",
+      "91",
+      "92",
+      "93",
+      "94",
+      "95"
+     ],
+     "en": "\"How can it be that the mountain did not fear me in heaven and on earth, that the mountain did not fear me, Inana, in heaven and on earth, that the mountain range of Ebiḫ, the mountain, did not fear me in heaven and on earth? Because it did not act appropriately on its own initiative, because it did not put its nose to the ground, because it did not rub its lips in the dust, may I fill my hand with the soaring mountain range and make it learn fear of me.\""
+    },
+    {
+     "ref": "96–99",
+     "orig": "a₂ maḫ-bi-še₃ gud maḫ ga-ba-ši-gub\na₂ tur-bi-še₃ gud tur ga-ba-ši-gub\nUŠ ga-mu-un-šub e{?}-[šen {d}inana] kug ga-mu-ni-in-sar\nḫur-saĝ-ĝa₂ me₃ ga-ba-laḫ₅ šen-šen ga-ba-ab-sar-sar",
+     "orig_lines": [
+      "96",
+      "97",
+      "98",
+      "99"
+     ],
+     "en": "\"Against its magnificent sides let me place magnificent battering rams, against its small sides let me place small battering rams. Let me storm it and start the 'game' of holy Inana. In the mountain range let me set up battle and prepare conflicts.\""
+    },
+    {
+     "ref": "100–103",
+     "orig": "ti mar-uru₅-am₃ si ga-ba-ab-sa₂\na₂-sag₃ ebiḫ₂-bi ga-ba-ab-sur-sur\nĝiš-gid₂-da niĝ₂-su-ub ga-ba-ab-ak\n{ĝiš}ilar {kuš}gur₂₁{ur₃} si ga-am₃-ma-ab-sa₂{!}-sa₂{!}",
+     "orig_lines": [
+      "100",
+      "101",
+      "102",
+      "103"
+     ],
+     "en": "\"Let me prepare arrows in the quiver. Let me …… slingstones with the rope. Let me begin the polishing of my lance. Let me prepare the throw-stick and the shield.\""
+    },
+    {
+     "ref": "104–107",
+     "orig": "tir us₂-sa-bi-še₃ izi ga-am₃-sag₃\nḫul-du-bi-še₃ {urud}ḫa-zi-in ga-ba-ši-gub\na-niĝin₂-ba {d}gibil₆ lu₂ sikil-la kiĝ₂ ga-ba-an-tuku-tuku\nḫur-saĝ aratta{ki} šu nu-teĝ₃-ĝe₂₆ ni₂-bi ga-ba-ni-ib₂-sud",
+     "orig_lines": [
+      "104",
+      "105",
+      "106",
+      "107"
+     ],
+     "en": "\"Let me set fire to its thick forests. Let me take an axe to its evil-doing. Let me make Gibil, the purifier, do his work at its watercourses. Let me spread this terror through the inaccessible mountain range Aratta.\""
+    },
+    {
+     "ref": "108–111",
+     "orig": "iri an-ne₂ nam ba-kud-da-gin₇ ki-bi na-an-gi₄-gi₄\n{d}en-lil₂-le saĝ-ki gid₂-da-gin₇ gu₂-bi na-an-zi-zi\nkur-re in-di₃-ĝu₁₀ ḫe₂-kur-<ku>\nebiḫ{ki} ka tar-ĝu₁₀ ḫe₂-si-il-le me-teš₂ ḫu-mu-i-i",
+     "orig_lines": [
+      "108",
+      "109",
+      "110",
+      "111"
+     ],
+     "en": "\"Like a city which An has cursed, may it never be restored. Like a city at which Enlil has frowned, may it never again lift its neck up. May the mountain observe (?) my conduct. May Ebiḫ give me honour and praise me.\""
+    },
+    {
+     "ref": "112–115",
+     "orig": "an lugal diĝir-re-e-ne-ke₄ mu-na-ni-ib-gi₄-gi₄\nlu₂-tur-ĝu₁₀ kur-re al bi₂-dug₄ šag₄-bi a-na ab-ak\n{d}inana-me-en kur-re al bi₂-dug₄ šag₄-bi a-na ab-ak\nḫur-saĝ ebiḫ{ki} al bi₂-dug₄ šag₄-bi a-na ab-ak",
+     "orig_lines": [
+      "112",
+      "113",
+      "114",
+      "115"
+     ],
+     "en": "An, the king of the deities, answered her: \"My little one demands the destruction of this mountain -- what is she taking on? Inana demands the destruction of this mountain -- what is she taking on? She demands the destruction of this mountain -- what is she taking on?\""
+    },
+    {
+     "ref": "116–120",
+     "orig": "ki-gub diĝir-re-e-ne-ke₄ ni₂ ḫuš im-da-ri-ri\nki-tuš kug {d}a-nun-na-ke₄-ne su zig₃ im-du₈-du₈\nni₂-bi ḫuš-a kalam-ma mu-un-ri\nḫur-saĝ-ĝa₂ me-lem₄-bi ḫuš-a kur-kur mu-un-ri\nsukud-da-bi an-na šag₄-bi nir mi-ni-ib-e₃",
+     "orig_lines": [
+      "116",
+      "117",
+      "118",
+      "119",
+      "120"
+     ],
+     "en": "\"It has poured fearsome terror on the abodes of the gods. It has spread fear among the holy dwellings of the Anuna deities. Its fearsomeness is terrible and weighs upon the Land. The mountain range's radiance is terrible and weighs upon all the lands. Its arrogance extends grandly to the centre of heaven.\""
+    },
+    {
+     "ref": "121–126",
+     "orig": "{ĝiš}kiri₆ nisig-bi gurun im-la₂ giri₁₇-zal im-du₈-du₈\nĝiš maḫ-bi aga₃ an-na IM DI u₆ di-de₃ ba-gub\nebiḫ{ki}-a ĝiš-an-dul₃ pa mul-mul-la-ba ug tab-ba mu-un-lu\nšeg₉ lu-lim-bi ni₂-ba mu-un-lu\nam-bi u₂ lu-a mu-un-gub\ntaraḫ-bi ḫa-šu-ur₂ ḫur-saĝ-ĝa₂-ka e-ne su₃-ud-bi im-me",
+     "orig_lines": [
+      "121",
+      "122",
+      "123",
+      "124",
+      "125",
+      "126"
+     ],
+     "en": "\"Fruit hangs in its flourishing gardens and luxuriance spreads forth. Its magnificent trees, a crown in the heavens, …… stand as a wonder to behold. In Ebiḫ …… lions are abundant under the canopy of trees and bright branches. It makes wild rams and stags freely abundant. It stands wild bulls in flourishing grass. Deer couple among the cypress trees of the mountain range.\""
+    },
+    {
+     "ref": "127–130",
+     "orig": "ni₂-bi ḫuš-a nu-mu-e-da-ku₄-ku₄\nḫur-saĝ-ĝa₂ me-lem₄-bi ḫuš-am₃\nki-sikil {d}inana saĝ nu-mu-e-de₃-ĝa₂-ĝa₂\nur₅-gin₇ ḫu-mu-na-ab-ak",
+     "orig_lines": [
+      "127",
+      "128",
+      "129",
+      "130"
+     ],
+     "en": "\"Its fearsomenness is terrible -- you cannot pass through. The mountain range's radiance is terrible -- maiden Inana, you cannot oppose it.\" Thus he spoke."
+    },
+    {
+     "ref": "131–137",
+     "orig": "nu-gig ib₂-ba-ni lipiš bal-a-ni\ne₂ me₃-ka ĝal₂ ba-an-taka₄\n{ĝiš}ig za-gin₃-na šu ba-an-us₂\nme₃ maḫ ba-ra-an-e₃ ud gal ki bi₂-in-us₂\nkug {d}inana-ke₄ mar-uru₅ sa₂ bi₂-in-dug₄\nmar-uru₅ zig₃-ga saḫar ḫul bi₂-ib-zig₃\nim-ḫul zig₃-ga šika im-bar-re",
+     "orig_lines": [
+      "131",
+      "132",
+      "133",
+      "134",
+      "135",
+      "136",
+      "137"
+     ],
+     "en": "The mistress, in her rage and anger, opened the arsenal and pushed on the lapis lazuli gate. She brought out magnificent battle and called up a great storm. Holy Inana reached for the quiver. She raised a towering flood with evil silt. She stirred up an evil raging wind with potsherds."
+    },
+    {
+     "ref": "138–143",
+     "orig": "nin-ĝu₁₀ ḫur-saĝ-ĝa₂ ba-du₇-du₇\nĝiri₃-ni 2-a-bi mu-un-sub₂\nĝiri₂ a₂ 2-a-bi u₃-sar ba-an-ak\nebiḫ{ki}-a gu₂-bi {u₂}numun₂-bur-gin₇ šu ba-an-ši-in-ti\nšag₄-bi zu₂ ĝiri₂-a ba-ni-in-ra\nka gal gu₃-an-ne₂-si-gin₇ mu-un-si-il-le",
+     "orig_lines": [
+      "138",
+      "139",
+      "140",
+      "141",
+      "142",
+      "143"
+     ],
+     "en": "My lady confronted the mountain range. She advanced step by step. She sharpened both edges of her dagger. She grabbed Ebiḫ's neck as if ripping up esparto grass. She pressed the dagger's teeth into its interior. She roared like thunder."
+    },
+    {
+     "ref": "144–151",
+     "orig": "ebiḫ{ki}-e na₄ su ni₂-ba-ke₄\nbar-bi-a dub-dab₅ ḫe₂-em-mi-ib-za\na₂-ta ri-a-ta muš-šag₄-tur₃ gal-gal-la uš₁₁ mu-un-gu₂-guru₅-gu₂\n{ĝiš}tir-bi aš₂ bi₂-in-dug₄ ĝiš-bi nam ba-an-kud\n{ĝiš}al-la-nu-um-bi enmen-ba mi-ni-in-ug₇\nbar-bi-a izi mi-ni-in-ri i-bi₂-bi bi₂-in-mu₂\nin-nin-e kur-re me bi₂-in-tal₂\nkug {d}inana-ke₄ a-la-ni-gin₇ bi₂-in-dim₂",
+     "orig_lines": [
+      "144",
+      "145",
+      "146",
+      "147",
+      "148",
+      "149",
+      "150",
+      "151"
+     ],
+     "en": "The rocks forming the body of Ebiḫ clattered down its flanks. From its sides and crevices great serpents spat venom. She damned its forests and cursed its trees. She killed its oak trees with drought. She poured fire on its flanks and made its smoke dense.The goddess established authority over the mountain. Holy Inana did as she wished."
+    },
+    {
+     "ref": "152–159",
+     "orig": "ḫur-saĝ ebiḫ{ki}-ke₄ im-ma-ĝen gu₃ im-ma-de₂-e\nḫur-saĝ il₂-la-zu-še₃ sukud-da-zu-še₃\nsag₉-ga-zu-še₃ sig₇-ga-zu-še₃\ntug₂-ba₁₃ kug-ga mur₁₀-ra-zu-še₃\nan-ne₂ šu si sa₂-a-zu-še₃\ngiri₁₇ ki-še₃ nu-te-a-zu-še₃\nnundum saḫar-ra nu-ur₃-ra-zu-še₃\nmu-ug₅-ge-en šag₄ sig₉-ga mu-un-sig₁₀-ge-en",
+     "orig_lines": [
+      "152",
+      "153",
+      "154",
+      "155",
+      "156",
+      "157",
+      "158",
+      "159"
+     ],
+     "en": "She went to the mountain range of Ebiḫ and addressed it: \"Mountain range, because of your elevation, because of your height, because of your attractiveness, because of your beauty, because of your wearing a holy garment, because of your reaching up to heaven, because you did not put your nose to the ground, because you did not rub your lips in the dust, I have killed you and brought you low.\""
+    },
+    {
+     "ref": "160–165",
+     "orig": "am-si-gin₇ si-za mi-ni-ib₂-dab₅-be₂-en\nam gal-gin₇ a₂ gur₄-gur₄-ra-za ki mu-e-ši-ib-us₂\ngud-gin₇ a₂ maḫ-zu ki ba-e-te-en ḫul-bi mu-ri-ib₂-us₂\nigi-za er₂-ra si ba-ni-in-sa₂\nšag₄-za a-nir-ra ba-ni-in-ĝar\nbar-bi-a mušen šag₄ sag₃-ga-ke₄ gud₃ im-ma-ni-us₂",
+     "orig_lines": [
+      "160",
+      "161",
+      "162",
+      "163",
+      "164",
+      "165"
+     ],
+     "en": "\"As with an elephant I have seized your tusks. As with a great wild bull I have brought you to the ground by your thick horns. As with a bull I have forced your great strength to the ground and pursued you savagely. I have made tears the norm in your eyes. I have placed laments in your heart. Birds of sorrow are building nests on these flanks.\""
+    },
+    {
+     "ref": "166–170",
+     "orig": "2-kam-ma-še₃ ni₂ ḫuš na-kur-ku silim zid-de₃-eš na-e\na-a-ĝu₁₀ {d}mu-ul-lil₂-le šag₄ kur-kur-ra-ka ni₂ gal-ĝu₁₀ mi-ni-in-ri\na₂ zid-da-ĝu₁₀ {ĝiš}tukul mi-ni-in-ri\na₂ gab₂-bu-ĝu₁₀ KU₇-e ri-ri-me-en\nmir-ĝu₁₀ {ĝiš}gana₂-ur₃ zu₂ gal-gal-la in-si-il-si-il-e",
+     "orig_lines": [
+      "166",
+      "167",
+      "168",
+      "169",
+      "170"
+     ],
+     "en": "For a second time, rejoicing in fearsome terror, she spoke out righteously: \"My father Enlil has poured my great terror over the centre of the mountains. On my right side he has placed a weapon. On my left side a …… is placed. My anger, a harrow with great teeth, has torn the mountain apart.\""
+    },
+    {
+     "ref": "171–175",
+     "orig": "e₂-gal mu-du₃ niĝ₂ dirig bi₂-ak\n{ĝiš}gu-za mi-ni-gub suḫuš-bi mi-ni-ge-en\nkur-ĝar-ra ĝiri₂ ba-da-ra mu-na-šum₂\ngala-ra {kuš}ub li-li-is₃ mu-na-šum₂\npi-li-pi-li saĝ šu bal mu-ni-ak",
+     "orig_lines": [
+      "171",
+      "172",
+      "173",
+      "174",
+      "175"
+     ],
+     "en": "\"I have built a palace and done much more. I have put a throne in place and made its foundation firm. I have given the kurĝara cult performers a dagger and prod. I have given the gala cult performers ub and lilis drums. I have transformed the pilipili cult performers.\""
+    },
+    {
+     "ref": "176–181",
+     "orig": "kur-re u₃-ma-ĝa₂ saĝ ba-šum₂\nḫur-saĝ ebiḫ{ki} u₃-ma-ĝu₁₀ saĝ ba-ra-šum₂\na maḫ e₃-a-gin₇ u₃-ba-ĝen\na zig₃-ga-gin₇ ĝiš-keše₂-ra₂ ba-sur\nkur-ra u₃-ma-ĝu₁₀ im-ma-gub\nebiḫ{ki}-e u₃-ma-ĝu₁₀ im-ma-gub",
+     "orig_lines": [
+      "176",
+      "177",
+      "178",
+      "179",
+      "180",
+      "181"
+     ],
+     "en": "\"In my victory I rushed towards the mountain. In my victory I rushed towards Ebiḫ, the mountain range. I went forward like a surging flood, and like rising water I overflowed the dam. I imposed my victory on the mountain. I imposed my victory on Ebiḫ.\""
+    },
+    {
+     "ref": "182–183",
+     "orig": "ebiḫ{ki} ḫul-a dumu gal {d}suen-na\nki-sikil {d}inana za₃-mi₂",
+     "orig_lines": [
+      "182",
+      "183"
+     ],
+     "en": "For destroying Ebiḫ, great child of Suen, maiden Inana, be praised."
+    },
+    {
+     "ref": "184",
+     "orig": "{d}nisaba za₃-mi₂",
+     "orig_lines": [
+      "184"
+     ],
+     "en": "Nisaba be praised."
+    }
+   ]
+  }
+ ]
+}

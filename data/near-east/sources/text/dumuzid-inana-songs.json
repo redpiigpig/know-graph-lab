@@ -1,0 +1,2507 @@
+{
+ "slug": "dumuzid-inana-songs",
+ "source": "ETCSL",
+ "siglum": "ETCSL 4.08.01–4.08.32",
+ "source_url": "https://etcsl.orinst.ox.ac.uk/cgi-bin/etcsl.cgi?text=t.4.08.01",
+ "license": "ETCSL（Oxford）轉寫與英譯，非商業學術使用",
+ "compositions": [
+  {
+   "num": "4.08.01",
+   "title_en": "A balbale to Inana (Dumuzid-Inana A)",
+   "segments": [
+    {
+     "ref": "1–11",
+     "orig": "šeš-e nin₉-ra mi₂ na-mu-e\n{d}utu nin₉-ra mi₂ na-mu-e\nkug {d}inana-ra mi₂ zid na-/mu\\-[e]\nin-nin₉ gu sar-ra ḫi-li gur₃-ru\n{d}inana gu sar-ra ḫi-li gur₃-ru\nše ab-sin₂-na ḫi-li ma-az dirig-ga\n{nin₉} {(1 ms. ḫas instead:) in-nin₉} gada maḫ-e ḫi-li ba{?}-e{?}-/te-a\\\n{d}inana gada maḫ-e ḫi-li ba{?}-e{?}-te-a\nal ga-mu-ra-ab-ak SAR ga-mu-ra-ab-šum₂ (lu-ur-/pi\\-[iq]-ki lu-um-ḫu-/ra\\-[ki])\n{in-nin₉} {(1 ms. ḫas instead:) nin₉-ĝu₁₀} gu sar-ra ga-mu-ra-de₆\n{d}inana gu sar-ra ga-mu-ra-de₆",
+     "orig_lines": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10",
+      "11"
+     ],
+     "en": "The brother speaks gently to his sister, Utu speaks gently to his sister, he speaks tenderly to holy Inana: \"Young lady, the flax in the garden beds is full of loveliness, Inana, the flax in the garden beds is full of loveliness, like the barley in the furrows, overflowing with loveliness and delight. {Sister} {(1 ms. has instead:) Young lady}, you took a fancy to a grand length of linen; Inana, you took a fancy to a grand length of linen. I will dig up the plants for you and give them to you. {Young lady} {(1 ms. has instead:) My sister}, I will bring you flax from the garden beds. Inana, I will bring you flax from the garden beds.\""
+    },
+    {
+     "ref": "12–14",
+     "orig": "{šeš} {(1 ms. ḫas instead:) šeš-ĝu₁₀} gu sar-ra a-ma-i-ra-ta\na-ba-a ma-e-ri a-ba-a ma-e-ri\ngu-bi ma-a-ra a-[ba]-a ma-e-ri",
+     "orig_lines": [
+      "12",
+      "13",
+      "14"
+     ],
+     "en": "\" {Brother} {(1 ms. has instead:) My brother}, when you have brought me flax from the garden beds, who will ret it for me? Who will ret it for me? Who will ret that flax for me?\""
+    },
+    {
+     "ref": "15–16",
+     "orig": "nin₉-ĝu₁₀ ri-a-bi ga-mu-ra-/de₆\\\n{d}inana ri-a-bi ga-mu-ra-de₆",
+     "orig_lines": [
+      "15",
+      "16"
+     ],
+     "en": "\"My sister, I will bring it to you already retted! Inana, I will bring it to you already retted!\""
+    },
+    {
+     "ref": "17–19",
+     "orig": "{šeš} {(1 ms. ḫas instead:) šeš-ĝu₁₀} ri-a-bi a-ma-i-[ra-ta]\na-ba-a ma-ab-NU-NU a-ba-a ma-ab-NU-NU\ngu-bi ma-a-ra a-ba-a ma-ab-NU-NU",
+     "orig_lines": [
+      "17",
+      "18",
+      "19"
+     ],
+     "en": "\" {Brother} {(1 ms. has instead:) My brother}, when you have brought it to me already retted, who will spin it for me? Who will spin it for me? Who will spin that flax for me?\""
+    },
+    {
+     "ref": "20–21",
+     "orig": "nin₉-ĝu₁₀ NU-a-bi ga-mu-ra-de₆\n{d}inana NU-a-bi ga-mu-ra-de₆",
+     "orig_lines": [
+      "20",
+      "21"
+     ],
+     "en": "\"My sister, I will bring it to you already spun! Inana, I will bring it to you already spun!\""
+    },
+    {
+     "ref": "22–24",
+     "orig": "{šeš} {(1 ms. ḫas instead:) šeš-ĝu₁₀} NU-a-bi a-ma-i-ra-ta\na-ba-a ma-ab-tab-be₂ a-ba-a ma-ab-tab-be₂\ngu-bi ma-a-ra a-ba-a ma-ab-tab-be₂",
+     "orig_lines": [
+      "22",
+      "23",
+      "24"
+     ],
+     "en": "\" {Brother} {(1 ms. has instead:) My brother}, when you have brought it to me already spun, who will twine it for me? Who will twine it for me? Who will twine that flax for me?\""
+    },
+    {
+     "ref": "25–26",
+     "orig": "nin₉-ĝu₁₀ tab-ba-bi ga-mu-ra-de₆\n{d}inana tab-ba-bi ga-mu-ra-de₆",
+     "orig_lines": [
+      "25",
+      "26"
+     ],
+     "en": "\"My sister, I will bring it to you already twined! Inana, I will bring it to you already twined!\""
+    },
+    {
+     "ref": "27–29",
+     "orig": "šeš tab-ba-bi a-ma-i-ra-ta\na-ba-a ma-ab-ze₂-ze₂ a-ba-a ma-ab-ze₂-ze₂\ngu-bi ma-a-ra a-ba-a ma-ab-ze₂-ze₂",
+     "orig_lines": [
+      "27",
+      "28",
+      "29"
+     ],
+     "en": "\"Brother, when you have brought it to me already twined, who will warp it for me? Who will warp it for me? Who will warp that flax for me?\""
+    },
+    {
+     "ref": "30–31",
+     "orig": "nin₉-ĝu₁₀ ze₂-a-bi ga-mu-ra-de₆\n{d}inana ze₂-a-bi ga-mu-ra-de₆",
+     "orig_lines": [
+      "30",
+      "31"
+     ],
+     "en": "\"My sister, I will bring it to you already warped! Inana, I will bring it to you already warped!\""
+    },
+    {
+     "ref": "32–34",
+     "orig": "šeš ze₂-a-bi a-ma-i-ra-ta\na-ba-a ma-ab-TUKU₅-TUKU₅ a-ba-a ma-<ab>-TUKU₅-TUKU₅\ngu-bi ma-a-ra a-ba-a ma-<ab>-TUKU₅-TUKU₅",
+     "orig_lines": [
+      "32",
+      "33",
+      "34"
+     ],
+     "en": "\"Brother, when you have brought it to me already warped, who will weave for me? Who will weave for me? Who will weave that flax for me?\""
+    },
+    {
+     "ref": "35–36",
+     "orig": "nin₉-ĝu₁₀ tuku₅-a-bi ga-mu-ra-de₆\n{d}inana tuku₅-a-bi ga-mu-ra-de₆",
+     "orig_lines": [
+      "35",
+      "36"
+     ],
+     "en": "\"My sister, I will bring it to you already woven! Inana, I will bring it to you already woven!\""
+    },
+    {
+     "ref": "37–39",
+     "orig": "šeš tuku₅-a-bi a-ma-i-ra-ta\na-ba-a ma-DAN₃-DAN₃ a-ba-a ma-DAN₃-DAN₃\ngu-bi ma-a-ra a-ba-a ma-DAN₃-DAN₃",
+     "orig_lines": [
+      "37",
+      "38",
+      "39"
+     ],
+     "en": "\"Brother, when you have brought it to me already woven, who will bleach it for me? Who will bleach it for me? Who will bleach that linen for me?\""
+    },
+    {
+     "ref": "40–41",
+     "orig": "nin₉-ĝu₁₀ dan₃-na-bi ga-mu-ra-de₆\n{d}inana dan₃-na-bi ga-mu-ra-de₆",
+     "orig_lines": [
+      "40",
+      "41"
+     ],
+     "en": "\"My sister, I will bring it to you already bleached! Inana, I will bring it to you already bleached!\""
+    },
+    {
+     "ref": "42–44",
+     "orig": "šeš dan₃-na-bi a-/ma\\-i-ra-ta\na-ba-a mu-da-an-nu₂ a-ba-a mu-da-an-nu₂\n[gu]-/bi\\ ma-a-ra a-ba-a mu(sourše: /ḫe₂\\)-[da-an-nu₂]",
+     "orig_lines": [
+      "42",
+      "43",
+      "44"
+     ],
+     "en": "\"Brother, when you have brought it to me already bleached, who will lie down on it with me? Who will lie down on it with me? Who will lie down on that linen with me?\""
+    },
+    {
+     "ref": "45–50",
+     "orig": "za-ra ḫe₂-da-an-nu₂ ḫe₂-da-an-nu₂\nza-ra nitalam-[zu] ḫe₂-da-an-nu₂\n{d}ama-ušumgal-an-[na] ḫe₂-da-an-nu₂\ngu₅-li {d}en-lil₂-la₂ ḫe₂-da-an-nu₂\nšag₄ zid-ta e₃-a ḫe₂-da-an-nu₂\na barag-ga ri-a ḫe₂-da-an-nu₂",
+     "orig_lines": [
+      "45",
+      "46",
+      "47",
+      "48",
+      "49",
+      "50"
+     ],
+     "en": "\"There shall lie down with you, there shall lie down with you, there shall lie down with you your bridegroom! Ama-ušumgal-ana shall lie down with you, the companion of Enlil shall lie down with you, the issue of a noble womb shall lie down with you, the offspring of a ruler shall lie down with you.\""
+    },
+    {
+     "ref": "51–56",
+     "orig": "i₃-ge₄-en mu-lu ša₃-ab-ĝa₂-kam mu-lu ša₃-ab-ĝa₂-kam\nšeš mu-lu ša₃-ab-ĝu₁₀ im-mi-in-dug₄-ga-am₃\nal nu-ak-am₃ guru₇ dub-dub-ba-am₃\nše ĝa₂-nun-e sa₂ dug₄-dug₄-ga-am₃\nmu-un-gar₃ {še-ni} {(1 ms. ḫas instead:) še maḫ} guru₇ šar₂-ra-kam\nsipad e-ze₂-/ni\\ siki sug₄-sug₄-ga-am₃",
+     "orig_lines": [
+      "51",
+      "52",
+      "53",
+      "54",
+      "55",
+      "56"
+     ],
+     "en": "\"Is it true?-- He is the man of my heart! He is the man of my heart! Brother, he is the man who has spoken to my heart! He does no hoeing, yet heaps up piles of grain; he delivers grain regularly to the storehouse, a farmer who has numerous piles of {grain} {(1 ms. has instead:) plentiful grain}; a shepherd whose sheep are heavy (?) with wool.\""
+    },
+    {
+     "ref": "57",
+     "orig": "bal-bal-e {d}inana-kam",
+     "orig_lines": [
+      "57"
+     ],
+     "en": "A balbale of Inana."
+    }
+   ]
+  },
+  {
+   "num": "4.08.02",
+   "title_en": "A balbale to Inana (Dumuzid-Inana B)",
+   "segments": [
+    {
+     "ref": "1–3",
+     "orig": "lu-bi-ĝu₁₀ /lu\\-bi-ĝu₁₀ lu-bi-ĝu₁₀\nla-bi-ĝu₁₀ la-/bi-ĝu₁₀\\ lal₃ ama ugu-na-ĝu₁₀\nĝeštin duru₅-ĝu₁₀ lal₃ ku₇-/ku₇\\-ĝu₁₀ ka lal₃ ama-na-ĝu₁₀",
+     "orig_lines": [
+      "1",
+      "2",
+      "3"
+     ],
+     "en": "\"My dearest, my dearest, my dearest, my darling, my darling, my honey of her own mother, my sappy vine, my honey-sweet, my honey-mouthed of her mother!\""
+    },
+    {
+     "ref": "4–6",
+     "orig": "igi-za igi du₈-ru-na-bi ma-dug₃ ĝen nin₉ ki aĝ₂-ĝu₁₀\nka-za gu₃ di-di-bi ma-dug₃ ka lal₃ ama-na-ĝu₁₀\nnundum-za ne su-ub-bi ma-dug₃ ĝen nin₉ ki aĝ₂-ĝu₁₀",
+     "orig_lines": [
+      "4",
+      "5",
+      "6"
+     ],
+     "en": "\"The gazing of your eyes is pleasant to me; come my beloved sister. The speaking of your mouth is pleasant to me, my honey-mouthed of her mother. The kissing of your lips is pleasant to me; come my beloved sister.\""
+    },
+    {
+     "ref": "7–12",
+     "orig": "nin₉-ĝu₁₀ še-za kaš-bi in-dug₃ ka lal₃ ama-na-ĝu₁₀\nbappir-za gu₂-me-ze₂-/bi\\ in-dug₃ ĝen nin₉ ki aĝ₂-ĝu₁₀\ne₂-a la-la-zu X X X X ka /lal₃\\ ama-na-ĝu₁₀\nnin₉-ĝu₁₀ la-la-zu X X [...] X ki aĝ₂-ĝu₁₀\ne₂-zu {e₂}/šutum\\ X ak ka [lal₃ ama-na]-/ĝu₁₀\\\nza-e dumu lugal-la LA{?} X X X X X X-ĝu₁₀",
+     "orig_lines": [
+      "7",
+      "8",
+      "9",
+      "10",
+      "11",
+      "12"
+     ],
+     "en": "\"My sister, the beer of your barley is good, my honey-mouthed of her mother. The ale of your beer-bread is good; come my beloved sister. In the house, your luxuriance ……, my honey-mouthed of her mother. My sister, your luxuriance ……, my beloved ……. Your house …… a storehouse, my honey-mouthed of her mother. You princess, my …….\""
+    },
+    {
+     "ref": "13–16",
+     "orig": "mu-un-til₃-le-na mu-un-til₃-le-na na-aĝ₂-erim₂ ma-kud-de₃-en\nšeš uru₂ bar-ra mu-un-til₃-le-nam na-aĝ₂-erim₂ ma-kud-de₃-en\nlu₂-kur₂-ra šu nu-mu-ni-in-dug₄-ga na-aĝ₂-erim₂ ma-kud-de₃-en\nlu₂-kur₂-ra saĝ NU X [...]-ba-a na-aĝ₂-erim₂ ma-kud-de₃-en",
+     "orig_lines": [
+      "13",
+      "14",
+      "15",
+      "16"
+     ],
+     "en": "\"For as long as you live, as long as you live, you shall take an oath for me, brother of the countryside, for as long as you live you shall take an oath for me. You shall take an oath for me that you will not touch another. You shall take an oath for me that you will not …… your head on anyone else.\""
+    },
+    {
+     "ref": "17–20",
+     "orig": "{tug₂}aĝ₂-lam₂ sal-la ma-/il₂\\-la-a-ĝu₁₀\nki-ig-ga aĝ₂-ĝu₁₀ mu-lu [ša₃-ab]-/ĝa₂{?}\\\nX na-aĝ₂-erim₂-ma [du₅-mu-ra-an]-/mar\\-mar šeš i-/bi₂\\ [sag₉-sag₉]-/ĝu₁₀\\\nšeš-ĝu₁₀ na-aĝ₂-erim₂-ma du₅-mu-ra-an-mar-mar šeš i-bi₂ sag₉-sag₉-ĝu₁₀",
+     "orig_lines": [
+      "17",
+      "18",
+      "19",
+      "20"
+     ],
+     "en": "\"My one who wears the …… niĝlam garment, my beloved, man of my heart! I shall impose an oath …… on you, my brother of the beautiful eyes. My brother, I shall impose an oath on you, my brother of the beautiful eyes.\""
+    },
+    {
+     "ref": "21–26",
+     "orig": "šu zid-da-zu gal₄-la-ĝa₂ de₃-em-mar\ngab₂-bu-zu saĝ-ĝu₁₀-uš im-ši-ri\nka-zu ka-ĝa₂ um-me-te\nšu-um-du-um-ĝu₁₀ ka-za u₃-ba-e-ni-dab₅\nza-e ur₅-ta na-aĝ₂-erim₂ ma-kud-de₃-en\nur₅-ra-am₃ mu{?} munus-e-ne-kam šeš i-bi₂ sag₉-sag₉-ĝu₁₀",
+     "orig_lines": [
+      "21",
+      "22",
+      "23",
+      "24",
+      "25",
+      "26"
+     ],
+     "en": "\"You are to place your right hand on my genitals while your left hand rests on my head, bringing your mouth close to my mouth, and taking my lips in your mouth: thus you shall take an oath for me. This is the oath of women, my brother of the beautiful eyes.\""
+    },
+    {
+     "ref": "27–32",
+     "orig": "ul gur₃-ru-ĝu₁₀ ul gur₃-ru-ĝu₁₀ ḫi-li-zu ze₂-ba-am₃\n{ĝiš}kiri₆ {ĝiš}ḫašḫur-a ul gur₃-ru-ĝu₁₀ ḫi-li-zu ze₂-ba-am₃\n{ĝiš}kiri₆ {ĝiš}meš₃-a gurun il₂-la-ĝu₁₀ ḫi-li-zu ze₂-ba-am₃\ndu₅-mu-zid-abzu ni₂-te-na-ĝu₁₀(sourše: ni) ḫi-li-zu ze₂-ba-am₃\ndim₃ kug-ga-ĝu₁₀ dim₃ kug-ga-ĝu₁₀ ḫi-li-zu ze₂-ba-am₃\ndim₃ ĝiš-nu₁₁-gal suḫ za-gin₃ keše₂ ḫi-li-zu ze₂-ba-am₃",
+     "orig_lines": [
+      "27",
+      "28",
+      "29",
+      "30",
+      "31",
+      "32"
+     ],
+     "en": "\"My desirable one, my desirable one, your charms are lovely, my desirable apple garden, your charms are lovely. My fruitful garden of meš trees, your charms are lovely, my one who is in himself Dumuzid-abzu, your charms are lovely. My holy statuette, my holy statuette, your charms are lovely. My alabaster statuette adorned with a lapis-lazuli jewel, your charms are lovely.\""
+    },
+    {
+     "ref": "33",
+     "orig": "bal-bal-e {d}inana-kam",
+     "orig_lines": [
+      "33"
+     ],
+     "en": "A balbale song of Inana."
+    }
+   ]
+  },
+  {
+   "num": "4.08.03",
+   "title_en": "A balbale to Inana (Dumuzid-Inana C)",
+   "segments": [
+    {
+     "ref": "1–2",
+     "orig": "nin₉-ĝu₁₀ e₂-a a-na-am₃ mu-e-[ak]\nlu₂-tur e₂-a a-na-am₃ mu-e-/ak\\",
+     "orig_lines": [
+      "1",
+      "2"
+     ],
+     "en": "\"My sister, what have you been doing in the house? Little one, what have you been doing in the house?\""
+    },
+    {
+     "ref": "3–8",
+     "orig": "a im-ma-tu₅ na-ma im-ma-su-ub\na šen-dilim₂ kug-ga im-ma-tu₅\nna-ma bur babbar-ra im-ma-su-ub\nu₅ ze₂-ba bur-ra im-ma-šeš₄\n{tug₂}pala₃ na-aĝ₂ ga-ša-an-an-na im-ma-mur₁₀\nur₅-re e₂-a mi-ni-ib₂-ni₁₀-ni₁₀-e-en",
+     "orig_lines": [
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8"
+     ],
+     "en": "\"I was bathing, I was rubbing myself with soap. I was washing myself with water from the holy kettle, I was rubbing myself with the soap from the white stone bowl. I was anointing myself with good oil from the stone bowl, and dressing myself in the formal dress proper to Inana. That is how I was busying myself in the house.\""
+    },
+    {
+     "ref": "9–18",
+     "orig": "šem-bi-zid i-bi₂-ĝa₂ mu-ni-mar-mar\ngu₂-bar-ĝu₁₀ mu-DU si bi₂-sa₂\nsiki-ĝu₁₀ im-da-la₂ a bi₂-/tu₅{?}\\\n{ĝiš}tukul-ĝu₁₀ bal in-na-sag₉-ga mu-zu\nsaĝ-ĝu₁₀ ba-suḫ₃ si bi₂-sa₂\nsuḫ-ĝu₁₀ ba-bur₂-bur₂ mu-dub-dub\ngu₂ gu₂-bar-ra-ka mu-ni-in-šub\nḫar kug-sig₁₇ šu-ĝa₂ im-mi-du₃\nza-gin₃ di₄-di₄ gu₂-ĝa₂ im-mi-sig₉\nmurub₂-bi gu₂ sa-ĝa₂ si bi₂-sa₂",
+     "orig_lines": [
+      "9",
+      "10",
+      "11",
+      "12",
+      "13",
+      "14",
+      "15",
+      "16",
+      "17",
+      "18"
+     ],
+     "en": "\"I have put lots of kohl on my eyes, I have arranged …… the nape of my neck. I have washed my dangling hair, I have tested my weapons that make his reign propitious. I have straightened my tousled head of hair, I have tightened my loosened hairgrips, and let my hair fall down the back of my neck. I have put a golden bracelet on my wrist. I have put little lapis-lazuli beads round my neck, and arranged their buttons over my neck muscles.\""
+    },
+    {
+     "ref": "19–26",
+     "orig": "nin₉ igi šag₄-za-ta mu-de₆-de₆\nšag₄-za šag₄ ki aĝ₂ mu-de₆-de₆\n{d}inana-zu teš₂ mu-ra-an-šum₂\nnin₉ mul-mul lal₃ ama ugu-za-me-en\nnin₉ lu₂ niĝ₂ 5 ma-ra-de₆-a-ĝu₁₀\nnin₉ lu₂ niĝ₂ 10 ma-ra-de₆-a-ĝu₁₀\nalan-za šu ma-ra-ni-in-du₇-am₃\nnin₉ mul-mul sag₉-ga-bi na-de₆",
+     "orig_lines": [
+      "19",
+      "20",
+      "21",
+      "22",
+      "23",
+      "24",
+      "25",
+      "26"
+     ],
+     "en": "\"Sister! I will bring you whatever you desire. I will bring the loving heart of your heart. Your goddess has given you good looks. Sister, shining bright, you are the honey of your own mother. My sister, to whom I shall bring five things, my sister, to whom I shall bring 10 things, she has perfected your appearance for you; sister, shining bright, she has really made it a delight.\""
+    },
+    {
+     "ref": "27–31",
+     "orig": "šeš-ĝu₁₀ e₂-gal-ta kur₉-re{?}-ni{?}\nnar-e-ne lu₂ ḫu-mu-ni-[...]\n[me]-e ka-ta mu-tin ga-mu-[...]-/de₂\\\n/ur₅\\-re šag₄-ga-ni ḫe-em-ḫul₂-/le\\\nur₅-re šag₄-ga-ni ḫe₂-em-sag₉-ge",
+     "orig_lines": [
+      "27",
+      "28",
+      "29",
+      "30",
+      "31"
+     ],
+     "en": "\"When my brother enters from the palace, the singers shall ……, and I shall pour wine into his mouth. That should gladden his heart, should please his heart.\""
+    },
+    {
+     "ref": "32–41",
+     "orig": "ḫe₂-laḫ₅ ḫe₂-laḫ₅ i₃-i₃ gara₂-bi ga-na ḫe₂-laḫ₅\nnin₉-ĝu₁₀ e₂-a ga-mu-u₈-da-/laḫ₅\\\nu₈-gin₇ sila₄ ḫe₂-em-tum₂ ḫe₂-[em-tum₂]\n[nin₉]-/ĝu₁₀ e₂\\-a ga-mu-u₈-da-/laḫ₅\\\nud₅-gin₇ maš₂ ḫe₂-em-tum₂ ḫe₂-[em-tum₂]\n/nin₉\\-ĝu₁₀ e₂-a ga-mu-u₈-/da\\-[laḫ₅]\nu₈-gin₇ sila₄ sag₉-sag₉-ga /ḫe₂\\-a\nnin₉-ĝu₁₀ e₂-a ga-mu-u₈-da-[laḫ₅]\nud₅-gin₇ maš₂ gun₃-gun₃-a ḫe₂-a\nnin₉-ĝu₁₀ e₂-a ga-mu-u₈-da-laḫ₅",
+     "orig_lines": [
+      "32",
+      "33",
+      "34",
+      "35",
+      "36",
+      "37",
+      "38",
+      "39",
+      "40",
+      "41"
+     ],
+     "en": "\"Let him bring, let him bring, now let him bring pats of butter and cream!\" \"My sister, I will bring them with me to the house.\" \"Let him bring, let him bring me lambs like ewes.\" \"My sister, I will bring them with me to the house.\" \"Let him bring, let him bring me kids like goats.\" \"My sister, I will bring them with me to the house!\" \"Let the lambs be as comely as ewes!\" \"My sister, I will bring them with me to the house!\" \"Let the kids be as fine as goats!\" \"My sister, I will bring them with me to the house!\""
+    },
+    {
+     "ref": "42–48",
+     "orig": "i-da-lam {gaba-me} {(1 ms. ḫas instead:) gaba-ĝu₁₀} ba-gub-gub\ni-da-lam {gal₄-la-me} {(1 ms. ḫas instead:) gal₄-la-ĝa₂} siki ba-an-mu₂\nur₂ mu-tin-na-še₃ di-di-de₃ ba-ba ga-ba-ḫul₂-ḫul₂-le-en-de₃-en\ngu₄-ud-an-ze₂-en gu₄-ud-an-ze₂-en\n{d}ba-u₂ gal₄-la-ĝa₂-ke₄-eš ga-ba-ḫul₂-ḫul₂-le-en-de₃-en\ngu₄-ud-an-ze₂-en gu₄-ud-an-ze₂-en\neĝer-bi in-na-sag₉ in-na-sag₉",
+     "orig_lines": [
+      "42",
+      "43",
+      "44",
+      "45",
+      "46",
+      "47",
+      "48"
+     ],
+     "en": "\"See now, {our} {(1 ms. has instead:) my} breasts stand out; see now, hair has grown on {our} {(1 ms. has instead:) my} genitals, signifying (?) my progress to the embrace of a man. Let us be very glad! Dance, dance! O Bau, let us be very glad about my genitals! Dance, dance! Later on it will delight him, it will delight him!\""
+    },
+    {
+     "ref": "x",
+     "orig": "",
+     "orig_lines": [],
+     "en": ""
+    },
+    {
+     "ref": "49",
+     "orig": "bal-bal-e {d}inana-kam",
+     "orig_lines": [
+      "49"
+     ],
+     "en": "A balbale of Inana."
+    },
+    {
+     "ref": "50–51",
+     "orig": "ḫe₂-laḫ₅ ḫe₂-laḫ₅\ni₃-i₃ gara₂-bi ga-na ḫe₂-laḫ₅",
+     "orig_lines": [
+      "50",
+      "51"
+     ],
+     "en": "\"Let him bring, let him bring, come let him bring pats of butter and cream!\""
+    },
+    {
+     "ref": "52",
+     "orig": "ĝiš-gi₄-ĝal₂-bi-im",
+     "orig_lines": [
+      "52"
+     ],
+     "en": "Its ĝišgiĝal."
+    }
+   ]
+  },
+  {
+   "num": "4.08.04",
+   "title_en": "A balbale to Inana (Dumuzid-Inana D)",
+   "segments": [
+    {
+     "ref": "1–3",
+     "orig": "di-/da\\-ĝu₁₀-ne di-da-ĝu₁₀-ne\ne₂ X [di-da-ĝu₁₀]-/ne\\ di-da-ĝu₁₀-ne\nga-ša-an-[na-ĝu₁₀] i-bi₂ mu-ši-in-bar",
+     "orig_lines": [
+      "1",
+      "2",
+      "3"
+     ],
+     "en": "As I was strolling, as I was strolling, as I was strolling …… the house, as I was strolling, he caught sight of my Inana."
+    },
+    {
+     "ref": "4–11",
+     "orig": "/šeš-e ta\\ [ma-ra]-/an\\-dug₄ ma-ra-an-taḫ\nšag₄ ki-ig-ga aĝ₂ ḫi-li aĝ₂ ku₇-ku₇-dam\nkug ga-ša-an-na-ĝu₁₀ aĝ₂-še₃ ma-ra-an-ba\nki-bi i-bi₂-ĝu₁₀ ma-ra-ĝu₁₀-ne\nmu-lu ki-ig-ga aĝ₂-ĝu₁₀ gaba im-ma-an-de₅\nḫi-li mu-e-ši-in-te dili mu-e-da-ḫul₂\nšeš-e e₂-ni-a im-ma-ni-in-kur₉-re-en\nmu-nu₂ lal₃ ḫab₂-ba bi₂-in-nu₂-en",
+     "orig_lines": [
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10",
+      "11"
+     ],
+     "en": "\"What did the brother say to you and speak to you? He of the loving heart and most sweet charms offered you a gift, my holy Inana. As I looked in that direction, my beloved man met you, and he fell in love with you, and he delighted in you alone! The brother brought you into his house and had you lie down on a bed dripping with honey.\""
+    },
+    {
+     "ref": "12–18",
+     "orig": "ze₂-ba kal-la-ĝu₁₀ ša₃-ab-ĝu₁₀ a-ba-nu₂\ndili-dili-ta eme ak dili-dili-ta\nšeš i-bi₂ sag₉-sag₉-ĝu₁₀ 50-am₃ mu-un-ak\nlu₂ sig₉-ga-gin₇ mu-na-de₃-gub\nki-ta tuku₄-e-da si-a mu-na-ni-in-ĝar\nšeš-ĝu₁₀ ib₂-ba-na šu gub-bu-de₃\nze₂-ba kal-la-ĝu₁₀ ud mu-un-di-ni-ib-zal-e",
+     "orig_lines": [
+      "12",
+      "13",
+      "14",
+      "15",
+      "16",
+      "17",
+      "18"
+     ],
+     "en": "When my sweet precious, my heart, had lain down too, each of them in turn kissing with the tongue, each in turn, then my brother of the beautiful eyes did it fifty times to her, exhaustedly waiting for her, as she trembled underneath him, dumbly silent for him. My dear precious passed the time with my brother laying his hands on her hips."
+    },
+    {
+     "ref": "19–20",
+     "orig": "šu ba-am₃-mu-u₈ nin₉-ĝu₁₀ šu ba-am₃-mu-u₈\nĝen nin₉ ki aĝ₂-ĝu₁₀ {e₂-gal-la} {(1 ms. ḫas instead:) e₂-me-še₃} ga-ĝen",
+     "orig_lines": [
+      "19",
+      "20"
+     ],
+     "en": "\"Let me go, my sister! Let me go! Come, my beloved sister, let me go {to the palace} {(1 ms. has instead:) to our house}!\""
+    },
+    {
+     "ref": "21–22",
+     "orig": "igi ad-da-ĝa₂ dumu tur ḫe₂-me-en\n{d}ba-u₂ lu₂ ḫa-ba-zu šu ba-e-re-ši-bar-re",
+     "orig_lines": [
+      "21",
+      "22"
+     ],
+     "en": "\"To my paternal eye you are still a small child. May Bau know you as a man. I'll let you go!\""
+    },
+    {
+     "ref": "23",
+     "orig": "bal-bal-e {d}inana-/kam\\",
+     "orig_lines": [
+      "23"
+     ],
+     "en": "A balbale of Inana."
+    }
+   ]
+  },
+  {
+   "num": "4.08.05",
+   "title_en": "The song of the lettuce: a balbale to Inana (Dumuzid-Inana E)",
+   "segments": [
+    {
+     "ref": "1–4",
+     "orig": "ba-lam ba-lam-lam ḫi-iz{sar}-am₃ a ba-an-dug₄\n{ĝiš}kiri₆ ĝi₆-edin-na gu₂ ĝar-ĝar-ra-na {sag₉-ga ama-na-ĝu₁₀} {(1 ms. ḫas instead:) ḫi-iz{sar} a ba-an-de₂}\nše ab-sin₂-ba ḫi-li-a sag₉-ĝu₁₀ ḫi-iz{sar}-am₃ a ba-an-dug₄\n{ĝiš}ḫašḫur aĝ₂ saĝ-ĝa₂ gurun il₂-la-ĝu₁₀ ḫi-iz{sar}-am₃ a ba-an-dug₄",
+     "orig_lines": [
+      "1",
+      "2",
+      "3",
+      "4"
+     ],
+     "en": "He has sprouted, he has burgeoned, he is well-watered lettuce, my shaded garden of the desert, richly flourishing, {his mother's favourite} {(1 ms. has instead:) he is well-watered lettuce}; my grain lovely in beauty in its furrows, he is well-watered lettuce; my first-class fruitful apple tree, he is well-watered lettuce."
+    },
+    {
+     "ref": "5–8",
+     "orig": "lu₂-lal₃-e lu₂-lal₃-e me-e mu-ku₇-ku₇-de₃-en\nen-ĝu₁₀ lu₂-lal₃-e dim₃-me-er-ra sag₉-ga ama-na-ĝu₁₀\nšu-ni lal₃-e /me\\-ri-ni lal₃-e ĝe₂₆-e mu-un-ku₇-ku₇-de₃-[en]\na₂-šu-ĝiri₃-ni lal₃ ku₇-ku₇-dam ĝe₂₆-e mu-un-ku₇-ku₇-[de₃-en]",
+     "orig_lines": [
+      "5",
+      "6",
+      "7",
+      "8"
+     ],
+     "en": "The honey man, the honey man will make me sweet; my lord, the honey man of a goddess, his mother's favourite, whose hands are honey, whose feet are honey, will make me sweet, whose limbs are honey-sweet, will make me sweet."
+    },
+    {
+     "ref": "9–10",
+     "orig": "en₃-dur šu-niĝin₂ tukum ku₇-ku₇-ĝu₁₀ /sag₉\\-[ga ama-na-ĝu₁₀]\n/ḫaš₄\\ sag₉-sag₉ a₂ buluĝ₅ e-ru-ĝu₁₀ ḫi-iz{sar}-am₃ [a ba-an-dug₄]",
+     "orig_lines": [
+      "9",
+      "10"
+     ],
+     "en": "Navel! My altogether immediately sweet, my favourite of his mother! Beautiful thighs, raised arms! My ……, he is well-watered lettuce."
+    },
+    {
+     "ref": "11",
+     "orig": "bal-bal-e {d}inana-[kam]",
+     "orig_lines": [
+      "11"
+     ],
+     "en": "A balbale of Inana."
+    }
+   ]
+  },
+  {
+   "num": "4.08.06",
+   "title_en": "A balbale to Inana (Dumuzid-Inana F)",
+   "segments": [
+    {
+     "ref": "1–4",
+     "orig": "ga-ša-an-ĝen gi-rin-e u₆ ga-e-da-dug₄\n/ga\\-[ša]-/an\\-[an]-/na\\-ĝen gi-rin ḫal-ḫal-la i-bi₂-ĝu₁₀ de₃-/ma{?}-al{?}\\\ninim /mu\\-[un]-/gar₃{?}\\-ra-bi su₈-ba-bi\nmu-ud-/na-ĝu₁₀\\ X [X] X [mi₂] [de₃]-/ma{?}\\-ab-dug₄",
+     "orig_lines": [
+      "1",
+      "2",
+      "3",
+      "4"
+     ],
+     "en": "I, the queen, will look with wonder at the foliage. I, Inana, will gaze at the open foliage. May my bridegroom speak to me …… kindly words such as a farmer or a shepherd would speak."
+    },
+    {
+     "ref": "5–8",
+     "orig": "ga-ša-an-ĝen gi-rin-e da-nu₂\nga-ša-an-an-na-ĝen gi-rin-e kaš₄ da-mu-ni-dug₄-dug₄\n[X X] /MI{?}\\-NE-še₃ de₃-eĝ₃-ĝa₂-sug₂-ge-eš\n[X X] /DA{?}\\ {d}ama-ušumgal-an-na X X [gaba] [da]-mu-da-ri",
+     "orig_lines": [
+      "5",
+      "6",
+      "7",
+      "8"
+     ],
+     "en": "I, the queen, will lie on the foliage. I, Inana, will run to the foliage. May they stand at my service ……. I will meet …… Ama-ušumgal-ana."
+    },
+    {
+     "ref": "9–16",
+     "orig": "[...] X X X X a da-an-su₃\n[... a] [da]-/mul-mul\\ meš₃-ĝu₁₀ pa da-e₃\n[e₂] [{d}mu]-/ul\\-lil₂-la₂-ke₄ a da-aĝ₂-su₃\n[X X] X a da-mul-mul meš₃-ĝu₁₀ pa da-an-e₃\n[X X] [e₂]-kur-ra a da-aĝ₂-su₃\n[(X)] /lugal\\-ĝu₁₀ {ĝiš}meš₃-gin₇ kisal-la bi₂-in-mu₂-mu₂\n[e₂] [{d}]/mu\\-ul-lil₂-la₂-ke₄ a bi₂-in-su₃\n/lugal{?}\\ {d}ama-ušumgal-an-na {ĝiš}meš₃-gin₇ kisal-la bi₂-in-mu₂-mu₂",
+     "orig_lines": [
+      "9",
+      "10",
+      "11",
+      "12",
+      "13",
+      "14",
+      "15",
+      "16"
+     ],
+     "en": "I will sprinkle water ……. I will make …… shine. I will make my meš tree sprout forth. I will sprinkle water in the house of Enlil. I will make …… shine. I will make my meš tree sprout forth. I will sprinkle water …… in E-kur. I will make my king grow like a meš tree in the courtyard. I will sprinkle water in the house of Enlil. I will make King Ama-ušumgal-ana grow like a meš tree in the courtyard."
+    },
+    {
+     "ref": "17–28",
+     "orig": "/u₃\\-mu-un-ra e₂-kur-re mu-da-ab-du₇\ne₂-gal ḫul₂-la me-te-ĝal₂ me-[en-de₃-en]\n/e₂\\ {d}mu-ul-lil₂-la₂-ke₄ [...]\n[e₂] [{d}mu]-/ul\\-lil₂-la₂-ke₄ [...]\n[...] e₂-kur-re{?} [...]\n[(X) lugal]-/ĝu₁₀\\ {ĝiš}meš₃ zid-de₃-[eš ...]\n[X X gi]-rin-na ḫi-li du₈-du₈ a-a /ama{?}-na{?}\\\n[...]-na-ĝu₁₀ ba-an-tud-da X [...]\n[...] X abzu-ta na-aĝ₂ ze₂-eb da-/aĝ₂\\-[tar]",
+     "orig_lines": [
+      "17",
+      "18",
+      "19",
+      "20",
+      "21",
+      "25",
+      "26",
+      "27",
+      "28"
+     ],
+     "en": "I am perfect for the lord in E-kur. We are a fitting ornament in the joyful palace. In the house of Enlil ……. In the house of Enlil ……. …… in E-kur ……. approx. 3 lines missing I shall decree a good destiny …… from the abzu for my king, a meš tree properly ……, …… verdant, full of beauty, of his mother and father, my …… who was born ……:"
+    },
+    {
+     "ref": "29–36",
+     "orig": "[...] a zid-da numun zid-da\n[...] X šeg₁₂ abzu-ta u₃-mu-un-da-ši-e₃\n[...] {ĝiš}meš₃-gin₇ pa da-an-e₃\n[...] [{d}]ama-ušumgal-an-na an-ne₂ ḫe₂-a-u₃-tud\n[...] X E šu ša-mu-da-dug₄\n[...] gi-rin-na-gin₇ ḫi-li-zu dug₃-ga-am₃\n[...] X mi₂ ga-mu-ra-ni-ib-dug₄\n[{d}ama-ušumgal]-an-na {ĝiš}meš₃ ne-en pa da-an-e₃",
+     "orig_lines": [
+      "29",
+      "30",
+      "31",
+      "32",
+      "33",
+      "34",
+      "35",
+      "36"
+     ],
+     "en": "…… good semen, good seed; when he comes forth from the brickbuilt abzu, I will make him sprout forth like a meš tree. Ama-ušumgal-ana, may An create ……. …… shall supply you with ……. Your sweet beauty, like foliage ……. I shall cherish you ……. I will make Ama-ušumgal-ana sprout forth as just such a meš tree!"
+    },
+    {
+     "ref": "37–44",
+     "orig": "[...] /EN{?}\\ KID balaĝ er₂ da-mu-ra-de₆\n[X X {ĝiš}]tir ḫa-šu-ur₂-ra-gin₇ zag-ĝu₁₀ du₅-mu-ri-ib-us₂\n[X X] X e₂-kur-re ḫu-mu-un-ši-ḫul₂-e\n/KA{?}-ĝu₁₀\\ X lu₂ /ša₃{?}-ab{?}\\-[ĝa₂] [...] de₃-ĝa₂-ra-sug₂-sug₂-ge-eš\nna-aĝ₂-zu-še₃ e₂-kur-re /dur₂\\ /de₃\\-X X\ne₂-kur-re e₂ {d}mu-ul-lil₂-la₂-ke₄ a-ra-zu-zu ga{?}-/gub{?}\\\nan-ne₂ /ki\\ maḫ-a-na ma-an-ze₂-eĝ₃-ĝen\nu₃-mu-un /kur\\ gal {d}mu-ul-lil₂ gaba ĜA₂ X X X",
+     "orig_lines": [
+      "37",
+      "38",
+      "39",
+      "40",
+      "41",
+      "42",
+      "43",
+      "44"
+     ],
+     "en": "I shall perform laments for you with the balaĝ drum (?) ……. I shall lean against you …… as against a wood of cypresses. May you (?) rejoice …… in E-kur. May they stand at your service ……, man of my heart. For your sake I shall take my seat (?) in E-kur. I shall stand (?) in prayer for you in E-kur, the house of Enlil. In his exalted location, An gave you to me. Lord Enlil, the Great Mountain, ……."
+    },
+    {
+     "ref": "45",
+     "orig": "bal-bal-e {d}inana-kam",
+     "orig_lines": [
+      "45"
+     ],
+     "en": "A balbale of Inana."
+    }
+   ]
+  },
+  {
+   "num": "4.08.07",
+   "title_en": "A balbale to Inana (Dumuzid-Inana G)",
+   "segments": [
+    {
+     "ref": "1–2",
+     "orig": "niĝ₂{?} lam-lam-ma ama ugu-/na{?}\\ [...] X\nšag₄ i-bi₂ sag₉-sag₉ ad-da-na ad mu-un-/da\\-[gi₄-gi₄]",
+     "orig_lines": [
+      "1",
+      "2"
+     ],
+     "en": "The burgeoning one, he …… with his own mother; the one with kindly eyes takes counsel with his father."
+    },
+    {
+     "ref": "3–12",
+     "orig": "šeš-me ḫe₂-me-en šeš-me ḫe₂-me-en\nšeš kan₄ e₂-gal-la-me ḫe₂-me-en\nu₃-mu-un-si {ĝiš}ma₂-gur₈-/ra\\-me ḫe₂-me-en\nnu-banda₃ {ĝiš}gigir₂-ra-me ḫe₂-me-en\nkuš₇ {ĝiš}gigir₂ sar-ra-me ḫe₂-me-en\nad-da iri di ku₅-ru-me ḫe₂-me-en\nmussa niĝ₂ 5 mussa niĝ₂ 10 <ḫe₂-me-en>\nšeš mussa ad-da-me ḫe₂-me-en\nmussa gu₂ zig₃-ga{!}-me ḫe₂-me-en\nama-me niĝ₂ ze₂-ba ḫe₂-me-da-ab-dug₄",
+     "orig_lines": [
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10",
+      "11",
+      "12"
+     ],
+     "en": "You are our brother, you are our brother. You are our brother in charge of the palace gate, you are our captain of the barge, you are our commander of the chariot, you are our servant of the hunting chariot; you are our city father and judge, you are the son-in-law of five things, the son-in-law of 10 things. Brother, you are the son-in-law of our father, you are our son-in-law supreme; our mother speaks favourably with you."
+    },
+    {
+     "ref": "13–16",
+     "orig": "im-ma-ĝen-na-zu na-aĝ₂-til₃ na-nam\ne₂-a kur₉-ra-zu ḫe₂-ĝal₂-la-am₃\nda nu₂-da ḫul₂-la dirig-ĝu₁₀\nze₂-ba-ĝu₁₀ ki{!}-nu₂-[a] [du₅]-/mu\\-ni-ib-ze₂-be₂-en-de₃-en",
+     "orig_lines": [
+      "13",
+      "14",
+      "15",
+      "16"
+     ],
+     "en": "Your coming here is life indeed, your entering the house is abundance; lying at your side is my utmost joy. My sweet, let us delight ourselves on the bed."
+    },
+    {
+     "ref": "17",
+     "orig": "bal-bal-e {d}inana-/kam\\",
+     "orig_lines": [
+      "17"
+     ],
+     "en": "A balbale of Inana."
+    }
+   ]
+  },
+  {
+   "num": "4.08.08",
+   "title_en": "A tigi to Inana (Dumuzid-Inana H)",
+   "segments": [
+    {
+     "ref": "1–8",
+     "orig": "ga-ša-an-ĝen ša-ga-ba-ta ud zal-la-ĝu₁₀-ne (iš-tu am-ša-li i-na šum-ṣu₂-li-ya)\nga-ša-an-an-na-ĝen ša-ga-ba-ta ud zal-la-ĝu₁₀-ne\nud zal-la-ĝu₁₀-ne e-ne di-da-ĝu₁₀-ne\nud zal ĝi₆ sa₂-a-še₃ en₃-du dug₄-ga-ĝu₁₀-ne (i-na šum-ṣu₂-lim u₃ šum-/ši-im\\)\ngaba mu-un-ri gaba mu-un-ri (im-ḫur-an-ni)\nu₃-mu-un gu₅-li an-na gaba mu-un-ri\nu₃-mu-un-e šu-ni-a šu im-ma-an-du₃ (iḫ-ṣi₂-in-an-ni)\n{d}ušumgal-an-na gu₂-ĝa₂-a gu₂-da ba-an-la₂ (ki-ša-di i-di-ir)",
+     "orig_lines": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8"
+     ],
+     "en": "While I, the lady, was passing the day yesterday, while I, Inana, was passing the day yesterday, while I was passing the day, while I was dancing, while I was singing songs all day until evening, he met me, he met me. The lord, the friend of An, met me; the lord took me in his hands, Ušumgal-ana embraced me about my neck."
+    },
+    {
+     "ref": "9–12",
+     "orig": "me-a-am šu ba-mu-u₈ e₂-me-še₃ da-ĝen\ngu₅-li {d}mu-ul-lil₂-la₂ šu ba-mu-u₈ /e₂-me\\-še₃ da-ĝen\nama-/ĝu₁₀\\ lul-la-še₃ ta mu-na-ab-gub-be₂-en (mi-nam az-za-as{?}-si₂)\nama-/ĝu₁₀\\ {d}ga-ša-an-gal-e lul-la-še₃ ta mu-na-ab-gub-be₂-en",
+     "orig_lines": [
+      "9",
+      "10",
+      "11",
+      "12"
+     ],
+     "en": "\"……, let me go, so that I can go to our house! Friend of Enlil, let me go, so that I can go to our house! What lie can I offer to my mother? What lie can I offer to my mother Ningal?\""
+    },
+    {
+     "ref": "13–22",
+     "orig": "ĝe₂₆-e ga-ri-ib-zu-zu ĝe₂₆-e ga-ri-ib-zu-zu (lu-uq-bi{?}-ki)\n{d}inana lul-la munus-e-ne ĝe₂₆-e ga-ri-ib-zu-zu\nma-la-ĝu₁₀ sila daĝal-la e-ne mu-di-ni-ib-ma{?}-ma{?} (i-na re-bi-tim im-me-li-il)\nub₃ sag₃{!}-sag₃ e-ne di-da ḫub₂ mu-di-ni-in-gub (i-na up-pi lu-pu-tim i-na me-lu-ul-tim i-ra-[ap]-pu-ud)\ni-lu-ni ze₂-ba-am₃ ad mu-ši-ib-ša₄ (qu₂-be₂-e-/ša\\ ṭa-bu-tim i-na-as-sa₃-as)\nḫul₂-ḫul₂-e ze₂-ba-am₃ ud mu-di-ni-ib-zal-e (it-ti-ša{?} uš-te-be₂-er-re)\nama ugu-zu-ur₂ lul-la-še₃ za-e gub-bu-na-da\nme-en-de₃ iti₆-še₃ e-ne su₃-ud ga{!}-da-e (i-na ri-ša-tim i nim-me-li-/il\\)\nki-nu₂ kug ḫe-nun-na suḫ ga-mu-ra-/du₈\\ (mu-uš-ṭa-ti-ki lu-pa-ṭi-ir)\nud dug₃ nam-ḫe₂-a ḫul₂-la ḫu-mu-u₃-di-ni-/ib\\-[zal-e] (li-ip-pu-uḫ₂)",
+     "orig_lines": [
+      "13",
+      "14",
+      "15",
+      "16",
+      "17",
+      "18",
+      "19",
+      "20",
+      "21",
+      "22"
+     ],
+     "en": "\"Let me teach you, let me teach you! Inana, let me teach you the lies of women: \"My girlfriend was dancing with me in the square. She ran around playfully with me, banging the drum. She sang her sweet songs for me. I passed the day there with her in pleasure and delight.\" Offer this as a lie to your own mother. As for us -- let me make love with you by moonlight! Let me loosen your hairgrip on the holy and luxuriant couch. May you pass a sweet day there with me in voluptuous pleasure.\""
+    },
+    {
+     "ref": "23",
+     "orig": "sa-gid₂-da-am₃",
+     "orig_lines": [
+      "23"
+     ],
+     "en": "Sa-gida."
+    },
+    {
+     "ref": "24–26",
+     "orig": "[X X] /ki\\-sikil-ĝen sila sir₂-ra X [...] (TA su{?}-qe₂-tim)\n[X X] X-da ud-da mu-e-da-X [...] (X IM X X X)\n[...] X X X [...]",
+     "orig_lines": [
+      "24",
+      "25",
+      "26"
+     ],
+     "en": "\"I the maiden, in the streets and alleys, ……, by day I …… with you,\" 1 line fragmentary approx. 11 lines missing"
+    },
+    {
+     "ref": "1–12",
+     "orig": "[X X] MU X X [...]\n[X X] X RA{?} su₃-/ud mu\\-un-ĝa₂-[ĝa₂]\n/kan₄ ama\\-me-da nam-mi-gub\nme-e ḫul₂-la-ta i₃-di-di-de₃-en\nkan₄ ga-ša-an-gal-la-da nam-mi-gub\nme-e ḫul₂-la-da i₃-di-di-de₃-en\nama-ĝu₁₀-ra mu-lu e-ne-eĝ₃ ḫu-mu-na-ab-be₂\nu₅-šu-ur₂-me a ki de₃-sud-e (li-sa₃-al-li-iḫ)\nama-ĝu₁₀ ga-ša-an-gal-ra mu-lu e-ne-eĝ₃ ḫu-mu-na-ab-be₂\nu₅-šu-ur₂-me a ki de₃-sud-e\nki-tuš-a-ni ir-bi ze₂-ba-am₃\ne-ne-eĝ₃-ĝa₂-ni aĝ₂ ḫul₂-/ḫul₂-la\\-am₃ (ša ḫi-di-a-/tim\\-ma)",
+     "orig_lines": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10",
+      "11",
+      "12"
+     ],
+     "en": "1 line fragmentary 1 line unclear There he is, standing at our mother's gate, while I am rushing around in excitement. There he is standing at Ningal's gate, while I am rushing around in excitement. Oh that someone would tell my mother! May our neighbour come to sprinkle water on the floor! Oh that someone would tell my mother Ningal! May our neighbour come to sprinkle water on the floor: the fragrance of her dwelling is pleasant, and her words are delightful."
+    },
+    {
+     "ref": "13–20",
+     "orig": "u₃-mu-un-ĝu₁₀ ur₂ kug-ge ḫe₂-du₇\n{d}ama-ušumgal-an-na mussa {d}suen-na\nen {d}dumu-zid ur₂ kug-ge ḫe₂-du₇\n{d}ama-ušumgal-an-na mussa {d}suen-na\nu₃-mu-un-ĝu₁₀ ḫe₂-ma-al-zu ze₂-ba-am₃\nedin-na u₂-šim-zu ku₇-ku₇-dam\n{d}ama-ušumgal-an-na ḫe₂-ma-al-zu ze₂-ba-am₃\nedin-na u₂-šim-zu ku₇-ku₇-dam",
+     "orig_lines": [
+      "13",
+      "14",
+      "15",
+      "16",
+      "17",
+      "18",
+      "19",
+      "20"
+     ],
+     "en": "My lord is perfect for the holy embrace. Ama-ušumgal-ana, the son-in-law of Suen, Lord Dumuzid, is perfect for the holy embrace. Ama-ušumgal-ana, son-in-law of Suen, my lord: how pleasing is your lavishness, and how sweet-tasting are your green plants from the plain! Ama-ušumgal-ana, how pleasing is your lavishness, and how sweet-tasting are your green plants from the plain!"
+    },
+    {
+     "ref": "21",
+     "orig": "sa-ĝar-ra-am₃",
+     "orig_lines": [
+      "21"
+     ],
+     "en": "Sa-ĝara."
+    },
+    {
+     "ref": "22",
+     "orig": "tigi {d}inana-kam",
+     "orig_lines": [
+      "22"
+     ],
+     "en": "A tigi of Inana."
+    }
+   ]
+  },
+  {
+   "num": "4.08.09",
+   "title_en": "A kunĝar to Inana (Dumuzid-Inana I)",
+   "segments": [
+    {
+     "ref": "1–6",
+     "orig": "ama-me-da nu-me-a sila a-ĝi₆ edin-na i-iĝ₃-ĝi₆-in-sar-re (u₂-ra{?}-an{?}-ni{?}) (Šited in OB šatalogue from Urim (U₃), 0.2.05, Seg. B, line 6)\nšul-e ama-me-da nu-me-a sila a-ĝi₆ edin-na i-iĝ₃-ĝi₆-in-sar-re\nama-ĝu₁₀ {d}ga-ša-an-gal-da nu-me-<a> sila a-ĝi₆ edin-na i-iĝ₃-ĝi₆-in-sar-re\n{d}ga-ša-an-gi-kug-ga-da nu-me-a sila a-ĝi₆ /edin\\-na i-iĝ₃-ĝi₆-in-sar-[re]\na-a {d}suen-da nu-me-a sila a-ĝi₆ edin-na i-iĝ₃-/ĝi₆\\-[in]-/sar\\-re\nšeš-ĝu₁₀ {d}utu-da nu-me-a sila a-ĝi₆ edin-na i-iĝ₃-ĝi₆-[in]-/sar\\-re",
+     "orig_lines": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6"
+     ],
+     "en": "\"If it were not for our mother, he would be chasing me along the dark (?) paths of the desert! If it were not for our mother, this young man would be chasing me along the dark (?) paths of the desert! If it were not for my mother Ningal, he would be chasing me along the dark (?) paths of the desert! If it were not for Ningikuga, he would be chasing me along the dark (?) paths of the desert! If it were not for Father Suen, he would be chasing me along the dark (?) paths of the desert! If it were not for my brother Utu, he would be chasing me along the dark (?) paths of the desert!\""
+    },
+    {
+     "ref": "7–22",
+     "orig": "{lu₂}ki-sikil du₁₄-gin₇ na-an-mu₂-mu₂-un\n{d}inana inim-gin₇ ga-am₃-me-en-de₃-en\n{d}inana du₁₄-gin₇ na-an-mu₂-mu₂-un\n{d}nin-e₂-gal-la ad-gin₇ ga-am₃-gi₄-de₃-en\na-a-ĝu₁₀ a-a-zu-gin₇ in-ga-dim₂\n{d}inana inim-gin₇ ga-am₃-me-en-de₃-en\n/ama-ĝu₁₀\\ ama-zu-gin₇ /in\\-ga-dim₂\n{d}nin-e₂-gal-la ad-[gin₇ ga]-/am₃\\-gi₄-de₃-en\n{d}ĝeštin-an-na {d}/nin{?}\\-X-ḫe₂-/nu\\-X-gin₇ in-ga-dim₂\n{d}inana inim-gin₇ ga-am₃-me-en-de₃-en\nĝe₂₆-e {d}utu-gin₇ in-ga-/dim₂\\-me-en\n{d}nin-e₂-gal-la ad-gin₇ /ga\\-am₃-gi₄-de₃-en\n{d}en-ki {d}suen-gin₇ in-ga-dim₂\n{d}inana inim-gin₇ ga-am₃-me-en-de₃-en\n{d}dur₇-tur {d}nin-gal-gin₇ in-ga-dim₂\n{d}nin-e₂-gal-/la\\ ad-gin₇ ga-am₃-gi₄-de₃-en",
+     "orig_lines": [
+      "7",
+      "8",
+      "9",
+      "10",
+      "11",
+      "12",
+      "13",
+      "14",
+      "15",
+      "16",
+      "17",
+      "18",
+      "19",
+      "20",
+      "21",
+      "22"
+     ],
+     "en": "\"Young woman, don't provoke a quarrel! Inana, let us talk it over! Inana, don't provoke a quarrel! Ninegala, let us discuss it together! My father is just as good as your father; Inana, let us talk it over! My mother is just as good as your mother; Ninegala, let us discuss it together! Ĝeštin-ana is just as good as ……; Inana, let us talk it over! I am just as good as Utu; Ninegala, let us discuss it together! Enki is just as good as Suen; Inana, let us talk it over! Durtur is just as good as Ningal; Ninegala, let us discuss it together!\""
+    },
+    {
+     "ref": "23–24",
+     "orig": "inim bi₂-in-eš-a inim ḫi-li-eš-am₃\ndu₁₄ mu₂-mu₂-da-a ḫi-li šag₄-ga-na-ke₄",
+     "orig_lines": [
+      "23",
+      "24"
+     ],
+     "en": "The words they speak are words towards desire; provoking a quarrel is the desire of his heart!"
+    },
+    {
+     "ref": "25–30",
+     "orig": "{na₄}šuba-/ke₄\\ {na₄}šuba-ke₄ {na₄}šuba na-ur₁₁-ru\n{d}ama-ušumgal-an-na {na₄}šuba-ke₄ {na₄}šuba na-ur₁₁-ru\n{na₄}šuba-na {na₄}šuba tur-tur-bi nu-mu-ne₂-eš na-/ĝa₂\\-[ĝa₂]\n[{na₄}]/šuba-na\\ {na₄}šuba gal-gal-bi /guru₇\\-še₃ na-du₃{?}-[du₃]\nPI-na-ni /ur₃\\-ra la₂-la₂-a ur₃-ra /mu\\-na-ab-la₂-[la₂]\n{d}inana [bad₃]-da la₂-la₂-a bad₃-da mu-na-ab-la₂-[la₂]",
+     "orig_lines": [
+      "25",
+      "26",
+      "27",
+      "28",
+      "29",
+      "30"
+     ],
+     "en": "He of the šuba jewels, he of the šuba jewels is indeed ploughing with the šuba jewels! Ama-ušumgal-ana, he of the šuba jewels, is indeed ploughing with the šuba jewels! He lays down like seeds the little jewels among his jewels. He piles up (?) like grain piles the large jewels among his jewels. He will carry them to the roof for his …… who is leaning towards him from the roof; he will carry them to the wall for Inana who is leaning towards him from the wall."
+    },
+    {
+     "ref": "31–35",
+     "orig": "/MUNUS\\ [X X X] [{d}]ama-ušumgal-an-na-ra gu₃ mu-na-de₂-e\n{na₄}/šuba\\ [ur₁₁]-ru {na₄}šuba ur₁₁-ru a-ba-a /mu\\-[na]-ur₁₁-ru\n{d}ama-ušumgal-an-na /{na₄}\\šuba /ur₁₁\\-ru a-ba-a mu-na-ur₁₁-ru\n{na₄}šuba-[na] /{na₄}šuba\\ tur-tur-bi ši-pa-aĝ₂-me de₃-a\n{na₄}šuba-na {na₄}/šuba\\ gal-gal-bi gaba kug-me de₃-a",
+     "orig_lines": [
+      "31",
+      "32",
+      "33",
+      "34",
+      "35"
+     ],
+     "en": "…… calls out to Ama-ušumgal-ana: \"Ploughing with the jewels, ploughing with the jewels, for whom is he ploughing? Ama-ušumgal-ana, ploughing with the jewels, for whom is he ploughing? May the little jewels among his jewels be on our throat! May the large jewels among his jewels be on our holy breast!\""
+    },
+    {
+     "ref": "36–40",
+     "orig": "{d}ama-ušumgal-an-na nu-u₈-gig-ra inim mu-ni-ib-gi₄-gi₄\nnu-u₈-gig-ga-am₃ dam-ĝu₁₀ nu-u₈-gig-ga-am₃ e-ne-er mu-na-ur₁₁-ru\nkug {d}inana-ke₄ nu-bar-ra e-ne-er mu-na-ur₁₁-ru\n{na₄}šuba-na-ke₄ {na₄}šuba-na-ke₄ {na₄}šuba na-ur₁₁-ru\n{d}ama-ušumgal-an-na-ke₄ {na₄}šuba-na-ke₄ {na₄}šuba na-ur₁₁-ru",
+     "orig_lines": [
+      "36",
+      "37",
+      "38",
+      "39",
+      "40"
+     ],
+     "en": "Ama-ušumgal-ana answers the mistress: \"It is for the mistress, it is for my spouse the mistress -- I am ploughing with them for her! For holy Inana, the priestess -- I am ploughing with them for her!\" He of the šuba jewels, he of the šuba jewels will indeed plough with the šuba jewels! Ama-ušumgal-ana, he of the šuba jewels, will indeed plough with the šuba jewels!"
+    },
+    {
+     "ref": "41–45",
+     "orig": "{na₄}šuba ur₁₁-ru {na₄}šuba ur₁₁-ru a-ba-a mu-na-ur₁₁-ru\n{d}ama-ušumgal-an-na {na₄}šuba ur₁₁-ru a-ba-a mu-na-ur₁₁-ru\nma-ab-du₃-da-a-ĝa₂ ma-ab-du₃-da-a-ĝa₂ sun₄-a-ni {na₄}za-gin₃-na (ba-a-ni-i)\nme-a-am an-ne₂ ma-ab-du₃-da-a-ĝa₂ sun₄-a-ni {na₄}za-gin₃-na\nX-e sun₄-a-ni {na₄}za-gin₃-na sun₄-a-ni {na₄}za-gin₃-na",
+     "orig_lines": [
+      "41",
+      "42",
+      "43",
+      "44",
+      "45"
+     ],
+     "en": "\"Ploughing with the jewels, ploughing with the jewels, for whom is he ploughing? Ama-ušumgal-ana, ploughing with the jewels, for whom is he ploughing? The beard of the one whom he will create for me, the one whom he will create for me, is of lapis-lazuli, the beard of the …… whom An will create for me is lapis-lazuli, the beard of the …… is of lapis-lazuli, his beard is of lapis-lazuli.\""
+    },
+    {
+     "ref": "46",
+     "orig": "kun-ĝar {d}inana-kam",
+     "orig_lines": [
+      "46"
+     ],
+     "en": "A kunĝar of Inana."
+    }
+   ]
+  },
+  {
+   "num": "4.08.10",
+   "title_en": "A song of Inana and Dumuzid (Dumuzid-Inana J)",
+   "segments": [
+    {
+     "ref": "1–12",
+     "orig": "[X] nin₉ ki aĝ₂ {d}dumu-zid-de₃\n[X] /GADAxKID₂\\ ki aĝ₂ {d}dur₇-tur₈-e\na X am zid-de₃ šag₄-ga ri-a\nnin-ĝu₁₀ nam-nin-e tud-da\n{e₂}tur₃-e i₃ gara₂ mu-un-da-ab-si\namaš-e ga [mu]-un-da-an-gid₂-e\nan-edin-ne₂ [(X)] X-ĝu₁₀ {d}ĝeštin-an-na-me-en\na ki-sikil X [... na]-nam\ntur-tur-zu [...] /na\\-nam\nunug{ki}-ga [...]-/bi\\ na-nam\nkul-aba₄{ki} [...] X-bi na-nam\nmu ud X X-me-en RU-RU-a-na X [(X)]",
+     "orig_lines": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10",
+      "11",
+      "12"
+     ],
+     "en": "\"…… beloved sister of Dumuzid, beloved …… of Durtur, …… seed implanted into the womb by a good bull, my lady, born to ladyship! With her aid the cattle-pen was filled with butter and cream, with her aid the sheepfold was long provided with milk. On the high plain, my ……, you are Ĝeštin-ana. O girl, …… indeed! Your little ones …… indeed! Unug …… indeed! Kulaba …… indeed! …… you are …….\""
+    },
+    {
+     "ref": "13–17",
+     "orig": "ki-sikil-[e bar] šeš-a-na-[ka]\nigi mu-un-na-ḫur giri₁₇ mu-un-/na\\-[ḫur]\nki lu₂-da nu-u₆-di ḫaš₂-gal mu-/un\\-[na-ḫur]\n{e₂}eš₂-dam e₂-gal-la si ba-ni-in-sa₂\nsukkal lu₂ e₂-gal-la-ta e₃-a ki-sikil-e en₃{en} mu-un-tar-re-«en»",
+     "orig_lines": [
+      "13",
+      "14",
+      "15",
+      "16",
+      "17"
+     ],
+     "en": "Because of her brother, the girl lacerated her eyes and lacerated her mouth; she lacerated her buttocks, the place not spoken of to men. She made her way towards the tavern of the palace. The girl questioned a minister who was coming out of the palace."
+    },
+    {
+     "ref": "18–24",
+     "orig": "sukkal lu₂ e₂-gal-la-ta e₃-a ki-sikil-[ra] mu-un-na-ab-gi₄\nšeš-zu nam-en-še₃ šu mu-/un-ĝa₂\\-ĝa₂-a\nnam-en unug{ki}-ga niĝ₂ X X-e\nme ḫal-ḫal-ne 10 išib-ne\nki za-za-a-ne a-tu₅-a-tu₅-a-ne susbu₂-be-e-ne\nitid-da eš₃ gal-e itid du-de₃ muš₂ nu-tum₂-mu-ne\nšeš-zu nam-en-še₃ šu mu-un-ĝa₂-ĝa₂-a",
+     "orig_lines": [
+      "18",
+      "19",
+      "20",
+      "21",
+      "22",
+      "23",
+      "24"
+     ],
+     "en": "The minister who was coming out of the palace answered the girl: \"Those endowed with divine powers, 10 incantation priests, prostration priests, bathed priests and ablution priests will never cease coming every month, once a month, to the great shrine, for (?) your brother, who has taken possession of the en priesthood, the en priesthood of Unug ……, for (?) your brother, who has taken possession of the en priesthood.\""
+    },
+    {
+     "ref": "25–32",
+     "orig": "ud-bi-a 7 ḫe₂-en-na-me-eš 7 ḫe₂-en-na-me-eš\nšir₃ dug₄-dug₄ unug{ki}-ga 7-me-eš\nzabalam{ki} ad ša₄-ša₄ 50-me-eš\ne-ne-ne an-na mul zu-me-eš ki ḫar-ra-an zu-me-eš\nan-na daĝal-ba nesaĝ il₂-la-me-eš\ne-ne-ne šir₃ im-zi-zi-ne šir₃ im-ĝa₂-ĝa₂-ne\nšir₃-e saĝ-bi nu-mu-un-ne-pad₃-ne\nad-da ki-gub-ba nu-mu-un-ĝa₂-ĝa₂-me-eš",
+     "orig_lines": [
+      "25",
+      "26",
+      "27",
+      "28",
+      "29",
+      "30",
+      "31",
+      "32"
+     ],
+     "en": "At that time there were seven, there were seven, the song performers of Unug were seven; in Zabalam the lament singers were fifty. They knew the stars of the heavens, and they knew the roads of the earth. In the broad heavens, they carried the first-fruit offerings. They raised songs, and they lowered songs; they did not declare the beginning of the song to them. They were elders not yet assigned to their positions."
+    },
+    {
+     "ref": "33–38",
+     "orig": "nin₉ ban₃-da murub₄-bi-a til₃-la gu₃ mu-un-na-de₂-e\ngaba ba-da-ab-gu-la gaba ba-da-ab-[tur-ra] gu₃ mu-/un\\-[na-de₂-e]\nme-e-de₃ šir₃ /im-zi\\-zi-de₃ šir₃{?} [im-ĝa₂]-/ĝa₂\\-ze₂-en\n[... murub₄]-/bi\\-a nu-mu-un-til₃\n[X X er₂]-/šem₃\\-ma-ka mu-un-til₃\n[er₂]-/šem₃\\-ma-kam kug za-gin₃-a-ka gu₃-dim-ma-ka mu-un-til₃",
+     "orig_lines": [
+      "33",
+      "34",
+      "35",
+      "36",
+      "37",
+      "38"
+     ],
+     "en": "The little sister dwelling among them spoke to them 1 line unclear \"While we raise the song, you will lower the song.\" …… she did not dwell among them ……. She dwelt in the …… of the eršema (?). She dwelt …… the eršema (?), of precious metal and lapis lazuli, of the goldsmith."
+    }
+   ]
+  },
+  {
+   "num": "4.08.12",
+   "title_en": "A song of Inana and Dumuzid (Dumuzid-Inana L)",
+   "segments": [
+    {
+     "ref": "1–6",
+     "orig": "šul {d}nanna-ĝu₁₀ lu₂ /AN\\ [...]\n/ze₂{?}\\-ba-ĝu₁₀ ki ma{!}-an-aĝ₂ /ḫul₂{?}\\ [...]\n[...] [{d}]ba-u₂ ki ma-ra-an-aĝ₂ lu₂{?} [...]\n[X] a{?} ru-a-ĝa₂{?} za-e{?} [...]\n[...] ZA KA X [...]\n[...] X KA X [...]",
+     "orig_lines": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6"
+     ],
+     "en": "My valiant Nanna, who ……, my dear one, you love me; joy ……. …… Bau loves you. 3 lines fragmentary unknown no. of lines missing"
+    }
+   ]
+  },
+  {
+   "num": "4.08.13",
+   "title_en": "A šir-namšub to Inana (Dumuzid-Inana M)",
+   "segments": [
+    {
+     "ref": "1–10",
+     "orig": "u₄-ru-u₄-ru [...]\naĝ₂ ga-ša-an-an-ka u₄-ru [...]\naĝ₂ me ur₃{?}-/ru{?}\\ u₄-ru [...]\naĝ₂ nu-nus zid-/ĝu₁₀\\ [...]\nki-/sikil\\ zid-/ĝu₁₀\\ [...]\nḫe₂-/nun\\ [X] {d}dumu-zid-/da\\ [...]\n{d}ušumgal-an-/na\\ [...]\naĝ₂ ga-ša-an gu [...]\n/ga-ša\\-an-e₂-gal-/la{?}\\ [...]\n[...] X X IŠ [...]",
+     "orig_lines": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10"
+     ],
+     "en": "1 line unclear Belonging to Inana ……. Belonging to the gatherer (?) of divine powers ……. Belonging to my good woman ……. My good young woman ……. Plenty …… Dumuzid ……. Ušumgal-ana ……. Belonging to the lady ……. Ninegala ……. 1 line fragmentary approx. 6 lines missing"
+    },
+    {
+     "ref": "1–4",
+     "orig": "[...] X X [...]\n[...] X GAN [...]\n[...] X X [...]\n[...] X X EN{?} X [...]",
+     "orig_lines": [
+      "1",
+      "2",
+      "3",
+      "4"
+     ],
+     "en": "4 lines fragmentary"
+    },
+    {
+     "ref": "5–6",
+     "orig": "šir₃-nam-šub-ba-/kam{?}\\\nšir₃-nam-[šub ...]",
+     "orig_lines": [
+      "5",
+      "6"
+     ],
+     "en": "A šir-namšub. A širnamšub of (?) ……."
+    }
+   ]
+  },
+  {
+   "num": "4.08.15",
+   "title_en": "A balbale to Inana (Dumuzid-Inana O)",
+   "segments": [
+    {
+     "ref": "1–7",
+     "orig": "X [...]\nmu-zu DI X [...]\ndi-da-ĝu₁₀-ne di-da-ĝu₁₀-ne\ngu₂ id₂ nun-na dib-ba-ĝu₁₀-ne\ngu₂ {id₂}buranun-na šu niĝin₂-na-ĝu₁₀-ne\n/za\\-pa-aĝ₂ u₃-mu-un-e gub-ba-ĝu₁₀-ne\ne-sir₂ gun₃-a dib-ba-ĝu₁₀-ne",
+     "orig_lines": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7"
+     ],
+     "en": "1 line fragmentary Your name ……. As I walk, as I walk, as I pass along the banks of the august river, as I roam along the banks of the Euphrates, as I stand …… the lord, as I pass along the gaudy streets:"
+    },
+    {
+     "ref": "8–13",
+     "orig": "gi gam-ma [X] X X X /ḫe₂-me-en\\\nše ab-sin₂-/na\\ [...] /sag₉\\-ga ḫe₂-me-en\n{d}ezina₂ [...] sag₉-ge ḫe₂-me-en\nšag₄-tur₃ ama /gan\\-bi ḫe₂-me-en(sourše: eš)\nama-za NE.KA {ĝiš}ĝeštin{?} ḫe₂-me-en\n{ ki-ig-ga aĝ₂-/ĝu₁₀\\} {(1 ms. ḫas instead:) [...]-zu} diĝir-za NE.KA {nam-nun-e ak-a} {(1 ms. ḫas instead:) nam-lu₂-ulu₃ i₃-ak}",
+     "orig_lines": [
+      "8",
+      "9",
+      "10",
+      "11",
+      "12",
+      "13"
+     ],
+     "en": "May you be …… a bending reed, may you be barley in the furrows, a beautiful ……, may you be Ezina, who beautifies ……, may you be a nursing mother of the womb, may you be your mother's ……, a vine, {my} {(1 ms. has instead:) your} beloved, your personal god's ……, acting {grandly} {(1 ms. has instead:) humanely}!"
+    },
+    {
+     "ref": "14–21",
+     "orig": "i₃-ma-al i₃-/ma\\-al {nam-zu ḫe₂-a} {(1 ms. ḫas instead:) ka silim de₂-a}\nnu-ma-al niĝ₂-gig-zu ḫe₂-a\ne₂ i₃-ma-al-[la] lu₂-bi ḫe₂-me-en\n/nin₉{?} sag₉\\-ga ban₃-da sag₉-ga\neš₂-/gin₇\\ [(...)] e₂ niĝ₂-gur₁₁-/ra{?}\\ sag₉-ga\nnitaḫ lu₂ ḫe₂-/me\\-[en] /lu₂ ḫe₂-me\\-[en]\nḫe₂-me-en dumu diĝir-za ḫe₂-[me-en]\nin-sag₉ ḫe₂-me-en in-buluĝ₃ /ḫe₂\\-[me-en]",
+     "orig_lines": [
+      "14",
+      "15",
+      "16",
+      "17",
+      "18",
+      "19",
+      "20",
+      "21"
+     ],
+     "en": "May \"There is enough, there is enough\" {be your blessing} {(1 ms. has instead:) is a splendid utterance}, and may \"There is none\" be your abomination. May you be the owner of a house where there is enough, with (?) a beautiful sister, beautiful children! A beautiful storehouse …… like a rope (?). May you be, may you be a male among men, among men. May you be, may you be the son of your god, may you be handsome, may you be praised!"
+    },
+    {
+     "ref": "22–33",
+     "orig": "diĝir iri-ni ba-an-sag₉ ḫe₂-/me\\-[en]\ndumu ama-ni ba-an-zil₂-zil₂-i /ḫe₂\\-[me-en]\nzi-šag₄-ĝal₂ iri-za-ka ḫe₂-me-en\nlu₂ saĝ-kal-la numun zid ḫe₂-[me-en]\nniĝ₂-gur₁₁ tuku nam-tar-ra [... ḫe₂-me-en]\nza-e lu₂ kug tuku-bi [ḫe₂-me-en]\nza-e lu₂ še /tuku\\-[bi ḫe₂-me-en]\nkug tuku kug-ta ḫul₂-la ḫe₂-[me-en]\nše tuku še-ta /ḫul₂\\-[la] /ḫe₂\\-[me-en]\nlipiš-tuku /šag₄{?} la\\-la-<ĝal₂> /ḫe₂\\-[me-en]\nX saĝ-ĝa₂ nu-gig-ge /ḫe₂\\-[me-en]\nšag₄ kuš₂-u₃ inim-ma nu-kuš₂-u₃ /ḫe₂\\-[me-en]",
+     "orig_lines": [
+      "22",
+      "23",
+      "24",
+      "25",
+      "26",
+      "27",
+      "28",
+      "29",
+      "30",
+      "31",
+      "32",
+      "33"
+     ],
+     "en": "May you be one who pleases his city's god, may you be a son who delights his mother, may you be the life-force of your city, may you be an honourable man, good offspring, may you be prosperous and …… destiny, may you own silver there, may you own grain there! Owning silver, may you delight in silver; owning grain, may you delight in grain! May you be valiant and joyous, may you not be blighted by ……. May you be a soother of hearts, who never wearies of words!"
+    },
+    {
+     "ref": "34",
+     "orig": "bal-bal-e {d}inana-[kam]",
+     "orig_lines": [
+      "34"
+     ],
+     "en": "A balbale of Inana."
+    }
+   ]
+  },
+  {
+   "num": "4.08.16",
+   "title_en": "A balbale (?) to Inana (Dumuzid-Inana P)",
+   "segments": [
+    {
+     "ref": "1–10",
+     "orig": "[...]-/ĝa₂{?} kug\\-ga-a-am₃\n[...] si sa₂-sa₂ me-e ( (illegible trašes))\n[...] gal₄-la ki X [X X]-am₃\n[...]-/an\\-du₇ nam-nun-na ba-an-du₇ ( (illegible trašes))\n[...] KI{?} X X GAM-e\n[...] igi ĝa₂-ĝa₂\n[...] si sa₂-sa₂ me-e\n[...] X šu BA [...]\n[...] X X X [X] X\n[...] X [...] X",
+     "orig_lines": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10"
+     ],
+     "en": "…… of my …… is holy. I am she who directs ……. …… genitals ……. …… is perfect for august status. Subduing ……, fixing my gaze ……, I am she who directs ……. 3 lines fragmentary"
+    },
+    {
+     "ref": "11–21",
+     "orig": "[...]-ĝu₁₀ gal₄-la-ĝu₁₀ MA{?} X X [...]\n[...] diĝir-e ba-ab-du₇-a-ĝu₁₀\n[...] dur₂-ra-ĝu₁₀\nX X [X] X-er-tab gun₃-a-ĝu₁₀\nX X [X X] X il₂-il₂{?} dur₂{?}-ra-ĝu₁₀ ( (illegible trašes))\nX X X [X] X-e mar-ra-ĝu₁₀\nX X X [X] X X dug₄-ga-ĝu₁₀\nX X X e₂-gal me-te-ĝu₁₀\nX X MA ZA ud zal-la-ĝu₁₀ ( muš3{?} X X)\nMUNUS [X X] PA-za kušum₄ tag-ga-am₃\n{d}dumu-zid-de₃{?} a X E mi-ni-in-ga-ga",
+     "orig_lines": [
+      "11",
+      "12",
+      "13",
+      "14",
+      "15",
+      "16",
+      "17",
+      "18",
+      "19",
+      "20",
+      "21"
+     ],
+     "en": "…… my genitals ……, my …… which is seemly for a deity, …… of my buttocks, my brightly coloured ……, …… of my buttocks, my …… established by ……, my …… ordered by ……, my …… which befits the palace, my …… which passes the time ……, …… is racing. Dumuzid brings ……."
+    },
+    {
+     "ref": "22–27",
+     "orig": "uĝ₃ šar₂-re-da i-bi₂-ĝu₁₀ mu-ma-al\n{d}dumu-zid nam-diĝir kalam-ma-še₃ mu-pad₃\n{d}dumu-zid ki-ig-ga aĝ₂ {d}mu-ul-lil₂-la₂-ra\nmu mu-ni-maḫ nam mu-ni-tar\nama-ĝu₁₀ saĝ us₂ mu-na-kal\nad-da-ĝu₁₀ silim-e-eš mu-un-na-e",
+     "orig_lines": [
+      "22",
+      "23",
+      "24",
+      "25",
+      "26",
+      "27"
+     ],
+     "en": "I gazed over all the people, and chose Dumuzid as god of the Land. For Dumuzid, beloved by Enlil, I exalted his name and decreed his destiny. My mother cherishes him constantly, and my father speaks his praise."
+    },
+    {
+     "ref": "28–35",
+     "orig": "a mu-ši-tu₅ na-ma mu-ši-su-ub\nšen a tu₅-a X u₃-mu-ši-gub\ntug₂-ĝu₁₀ tug₂ aĝ₂ kalag-ga-gin₇ si ba-sa₂-e\n{tug₂}pala₃ maḫ mu-na-kalag-ge-en\n[...] e₃-bi-še₃ ma-ma-ma-an\n[...]-bur₂-bur₂-re-en{?}\n[...]-ba{?}-/en{?}\\\n[...] X [...]",
+     "orig_lines": [
+      "28",
+      "29",
+      "30",
+      "31",
+      "32",
+      "33",
+      "34",
+      "35"
+     ],
+     "en": "I bathed and rubbed myself with soap for him, standing at the washing basin. For him I straightened my clothes as the garments of power, I reinforced for him the noble vestments. I put ……, I loosened …… 2 lines fragmentary approx. 7 lines missing"
+    },
+    {
+     "ref": "1–9",
+     "orig": "nin{?} X X [...] AN [...]\nuru₂{?} bar e₂{?} [X X] za-gin₃ AN [...]\nšag₄ eš₃-ĝu₁₀ a-ra-zu-a mu-ni-[...]\nkug a-ra-zu-a mi-X-/pad₃\\-[...]\nX X tug₂ kalag-ga <ga>-ša-an-an-na-me-[en]\ngala-e šir₃-ra mu-ni-ib₂-[...]\nnar-e en₃-du-a mu-ni-ib₂-[be₂]\nmu-ud-na-ĝu₁₀ mu-da-an-[ḫul₂-le]\n{am} {(1 ms. ḫas instead:) u₃-mu-un } {d}dumu-zid mu-da-an-[ḫul₂-le]",
+     "orig_lines": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9"
+     ],
+     "en": "The queen ……. Outside (?) the city, the house (?) …… lapis lazuli ……. In my sanctuary, …… in prayer, in holy prayer, ……. I am Inana …… powerful garment. The gala singer …… in song, the musician performs a hymn. My bridegroom rejoices beside me, the {wild bull} {(1 ms. has instead:) lord} Dumuzid rejoices beside me."
+    },
+    {
+     "ref": "10–17",
+     "orig": "kurku₂ ka{?} ka silim{?} A [...]\nga-ša-an kur-kur-<ra> tur mu{?}-ni-/ib₂\\-[...]\nu₃-gul zi-zi nibru/{ki}\\ [...]\nu₃-gul mar-mar tur an X [...]\nin-nin₉-e ni₂ silim-e-/eš\\ [...-e]\ngala-e šir₃-ra /mu\\-[...]\n{d}inana-ke₄ silim-e-eš [...-e]\ngal₄-la-ni šir₃-ra mi-ni-[...]",
+     "orig_lines": [
+      "10",
+      "11",
+      "12",
+      "13",
+      "14",
+      "15",
+      "16",
+      "17"
+     ],
+     "en": "…… a desire in laudatory words. The lady of all the lands ……, who raises up prayers in Nibru ……, who lowers prayers ……, the lady praises herself; the gala singer …… in song. Inana praises …… her genitals in song:"
+    },
+    {
+     "ref": "18–28",
+     "orig": "gal₄-la ĝar-ra{?} ne-en GAG X [...]\nsi-gin₇ {ĝiš}mar gal-e /keše₂\\ [...]\nma₂ an-na ne-en eš₂ la₂ [...]\nud-sakar gibil-gin₇ ḫi-li /gur₃\\-[ru-ĝu₁₀]\nkislaḫ ne-en edin-na šub{?}-[...]\na-šag₄{?} uz{mušen} ne-en uz{mušen} dur₂-[ra]-/ĝu₁₀\\\na-šag₄ an-na ne-en a ma-ra-ĝu₁₀\nma-a gal₄-la-ĝu₁₀ du₆ du₈-du₈-a a ma-«a»-ra\nki-sikil-ĝen a-ba-a ur₁₁-ru-a-bi\ngal₄-la-ĝu₁₀ ki duru₅ a ma-ra\nga-ša-an-ĝen gud a-ba-a bi₂-ib₂-gub-be₂",
+     "orig_lines": [
+      "18",
+      "19",
+      "20",
+      "21",
+      "22",
+      "23",
+      "24",
+      "25",
+      "26",
+      "27",
+      "28"
+     ],
+     "en": "\"These genitals, ……, like a horn, …… a great waggon, this moored Boat of Heaven …… of mine, clothed in beauty like the new crescent moon, this waste land abandoned in the desert ……, this field of ducks where my ducks sit, this high well-watered field of mine: my own genitals, the maiden's, a well-watered opened-up mound -- who will be their ploughman? My genitals, the lady's, the moist and well-watered ground -- who will put an ox there?\""
+    },
+    {
+     "ref": "29–30",
+     "orig": "in-nin₉ lugal-e ḫa-ra-an-ur₁₁-ru\n{d}dumu-zid lugal-e ḫa-ra-ur₁₁-ru",
+     "orig_lines": [
+      "29",
+      "30"
+     ],
+     "en": "\"Lady, the king shall plough them for you; Dumuzid the king shall plough them for you.\""
+    },
+    {
+     "ref": "31–34",
+     "orig": "[gal₄-la]-ĝa₂ ur₁₁-ru mu-lu ša₃-ab-ĝa₂-kam\n[...] ur₂ kug-ge a ba-an-tu₅\n[...] kug-ga-am₃ šen /kug{?}\\ X\n[...] X X X [...]",
+     "orig_lines": [
+      "31",
+      "32",
+      "33",
+      "34"
+     ],
+     "en": "\"Plough in my genitals, man of my heart!\" …… bathed her holy hips, …… holy ……, the holy basin 1 line fragmentary approx. 3 lines missing"
+    },
+    {
+     "ref": "1–11",
+     "orig": "{d}nin-e₂-gal kug-ga-/am₃\\ [...]\n[...] X ĜA₂ X [...]\n[...] NUN-bi{?} [...]\n[...]-e dam{?} [...]\n[...] LA [...]\n[...] X X X [...]\nur₂{?} /kug{?}\\ [...]\nĜIŠ.BIL₂{?} pa-pa-al /mu\\-[...]\nur₂ lugal-la-ta zig₃-ga-ni-[ta]\ngu mu-un-da-zig₃ še mu-un-da-zig₃\n/edin\\ {ĝiš}kiri₆ giri₁₇-zal-gin₇ mu-un-da-ab-si",
+     "orig_lines": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10",
+      "11"
+     ],
+     "en": "Ninegala, the holy ……. 5 lines fragmentary The holy embrace ……. Fresh fruits (?) and shoots ……. As she arises from the king's embrace, the flax rises up with her, the barley rises up with her. With her, the desert is filled with a glorious garden."
+    },
+    {
+     "ref": "12–17",
+     "orig": "e₂-nam-til₃-la e₂ lugal-la-ka\nnitalam₂-a-ni ul-la mu-un-da-an-tuš\ne₂-nam-til₃-la e₂ {d}dumu-zid-da-ka\n{d}inana ul-la mu-un-da-an-tuš\n{d}inana e₂-a-ni ḫul₂-la-e\nlugal-ra u₃-gul mu-na-ĝa₂-ĝa₂",
+     "orig_lines": [
+      "12",
+      "13",
+      "14",
+      "15",
+      "16",
+      "17"
+     ],
+     "en": "His wife dwelt happily with him in E-namtila, the king's house; Inana dwelt happily with him in E-namtila, Dumuzid's house. Rejoicing in his house, Inana pleads with the king:"
+    },
+    {
+     "ref": "18–27",
+     "orig": "ga sig₇-a-ma-ab mu-ud-na-ĝu₁₀ ga sig₇-/a\\-[ma-ab]\nmu-ud-na-ĝu₁₀ me-e ga de₃-e-da-/na₈\\-[na₈]\nam {d}dumu-zid ga sig₇-a-ma-/ab\\\nmu-ud-na-ĝu₁₀ me-e ga de₃-/e-da\\-[na₈-na₈]\nga ud₅-da-ke₄ amaš [...]\nnin šar₂-ra {dug}šakir kug-ĝa₂ sug₄-[...]\n{d}dumu-zid ga am-si-ḫar-ra-/an\\-[na ...]\n/am-si\\-ḫar-ra-an-na ga-bi [...]\nu₅ ga-bi ze₂-ba-am₃ [...]\nu₃-mu-un {d}du₅-mu-zid [...] me-e ga de₃-e-/da\\-[na₈-na₈]",
+     "orig_lines": [
+      "18",
+      "19",
+      "20",
+      "21",
+      "22",
+      "23",
+      "24",
+      "25",
+      "26",
+      "27"
+     ],
+     "en": "\"Make the milk yellow for me, my bridegroom, make the milk yellow for me, and I will drink the milk with you, my bridegroom! Wild bull Dumuzid, make the milk yellow for me, and I will drink the milk with you, my bridegroom! …… the goat's milk …… the fold; lord (?) of all things, fill my holy churns. Dumuzid, …… camel's milk. The milk of the camels ……. Their butter and milk are sweet, ……. Lord Dumuzid, …… I will drink the milk with you.\""
+    },
+    {
+     "ref": "28–42",
+     "orig": "nitalam-ĝu₁₀ ama₅ niĝ₂ dug₃-ga X [...]\n{d}inana me-e a-ra-ab-gub-[be₂-en]\ne₂-nam-til₃-la-za <igi> mu-e-ni-ib₂-[gub-be₂-en]\nsu₃-ra₂-aĝ₂ ki u₆ di kalam-ma-[kam]\ne₂ nam kur-kur-ra tar-ra na-[nam]\nuĝ₃ zi-ĝal₂-la si sa₂-e-dam\n{d}nin-e₂-gal me-e a-ra-ab-gub-be₂-[en]\ne₂-nam-til₃-la-za igi mu-e-ni-ib-gub-/be₂\\-[en]\ne₂-nam-til₃-la ama₅ zi su₃-ud-/ĝal₂\\-[la-am₃]\n[{d}inana me-e a-ra-ab]-/gub-be₂-en\\\n[e₂-nam-til₃-la-za igi mu-e-ni-ib-gub-be₂-en]\nX [...]",
+     "orig_lines": [
+      "28",
+      "29",
+      "30",
+      "31",
+      "32",
+      "33",
+      "34",
+      "35",
+      "36",
+      "37",
+      "38",
+      "42"
+     ],
+     "en": "\"My spouse, …… the pleasant building. Inana, I will place them at your disposal, I will place them there before you in your E-namtila, the amazing source of the Land's radiance, the house where the destiny of all the lands is decreed, where the living people are correctly guided. Ninegala, I will place them at your disposal, I will place them there before you in your E-namtila. Inana, I will place them at your disposal in E-namtila, the building which grants long life. I will place them there before you in your E-namtila. 3 lines missing1 line fragmentary\""
+    },
+    {
+     "ref": "43–47",
+     "orig": "šag₄ X [...]\ne₂-nam-[til₃-la] [...]\nga-ša-an-gal-e zid-/de₃-eš\\ X X\nnam-til₃ ud su₃-ra₂-aš du₅-mu-ra-ab-ze₂-eĝ₃\n{d}dumu-zid {d}inana ḫi-li ki-ga aĝ₂-bi-im",
+     "orig_lines": [
+      "43",
+      "44",
+      "45",
+      "46",
+      "47"
+     ],
+     "en": "Inside (?) ……, E-namtila ……. Ningal faithfully ……: \"I will give you life unto distant days, Dumuzid, the desire and love of Inana.\""
+    },
+    {
+     "ref": "48–66",
+     "orig": "{d}inana me-<e> a-ra-ab-gub-be₂-en\ne₂-nam-til₃-la-za <igi> mu-e-ni-gub-be₂-en\ne₂ me-lem₄-bi kalam-ma dul-la\ne₂ šag₄-bi-ta šu-luḫ kug-kug-ga-am₃\ne₂ niĝ₂{?}-gur₁₁{?}-ra gal-bi tum₂-ma\nX [X] X u₅ ga-ar₃-ni-ta\n[...]-e{?} ma-ra-ni-ib₂-gub-be₂\n[...] X-la-še₃\n[...]-an-ši-ak-e\n[...]-la si-a-na\n[...] X nin-a-na\n[...] [ki-ig]-/ga\\ aĝ₂-bi\n[...] /kalag\\-ga-ba\n[...]-/ga\\-ba\n[...] /lugal\\-la\n[...]-e\n[...] X\n[...] X\n[...] {d}inana-kam",
+     "orig_lines": [
+      "48",
+      "49",
+      "50",
+      "51",
+      "52",
+      "53",
+      "54",
+      "55",
+      "56",
+      "57",
+      "58",
+      "59",
+      "60",
+      "61",
+      "62",
+      "63",
+      "64",
+      "65",
+      "66"
+     ],
+     "en": "\"Inana, I will place them at your disposal, I will place them there before you in your E-namtila, the house whose splendour covers the Land, the house in which the purification rites are most holy, the house with appropriately grand treasures.\" …… with his butter and cheese, …… will place at your disposal there ……. 11 lines fragmentary …… of Inana."
+    },
+    {
+     "ref": "1–13",
+     "orig": "in-/nin₉\\ [...]\n{d}inana [...]\nmi₂ zid X [...]\n{d}en-lil₂ X [...]\nzag an [...]\nin-nin₉ [...]\nmi₂ zid [...]\nin-nin₉ [...]\nmu-un-[...]\nĝiš X [...]\nmi₂ zid X [...]\nšu BI [...]\nKA X [...]",
+     "orig_lines": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10",
+      "11",
+      "12",
+      "13"
+     ],
+     "en": "beginnings of 13 fragmentary linesunknown no. of lines missing"
+    }
+   ]
+  },
+  {
+   "num": "4.08.18",
+   "title_en": "A song of Inana and Dumuzid (Dumuzid-Inana R)",
+   "segments": [
+    {
+     "ref": "1–8",
+     "orig": "[{lu₂}ki-sikil kun-sig₃] /mul\\-mul-la sig₇ sag₉-ga-/am₃\\\n[{d}]/inana\\ kun-sig₃ mul-mul-la sig₇ sag₉-ga-am₃\n[{lu₂}ki-sikil] kun-sig₃ taraḫ X /lu{?}\\-lim X lu-lim-ma\n[{d}]/inana\\ kun-sig₃ taraḫ X [lu]-lim X lu-lim-e\n/{lu₂}\\ki-sikil še-zar-maš-gin₇ gun₃-/a\\ lugal-ra tum₂-ma\n{d}inana še-zar-maš-gin₇ gun₃-a {d}dumu-zid-ra tum₂-ma\n{lu₂}ki-sikil še-zar gu₂-nida{?}-a ḫi-li šu gi₄-a-ĝen\n{d}inana še-zar gu₂-nida{?}-a ḫi-li šu gi₄-a-ĝen",
+     "orig_lines": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8"
+     ],
+     "en": "Maiden, glossy mane, lovely beauty, Inana, glossy mane, lovely beauty! Maiden, mane of the ibex, …… red deer, …… red deer, Inana, mane of the ibex, …… red deer, …… red deer! Maiden, colourful as a pile of grain, fit for the king, Inana, colourful as a pile of grain, fit for Dumuzid! Maiden, you are a shock of two-row barley, fully developed in loveliness, Inana, you are a shock of two-row barley, fully developed in loveliness!"
+    },
+    {
+     "ref": "9–14",
+     "orig": "nin-ĝen nin-ĝen X X X ḫi{?}-li{?} gur₃-ru-ĝen\nme-e ki-sikil-ĝen /nin-ĝen\\ [X ḫi]-li gur₃-ru-ĝen\nnin{?} a an-ne₂ ru-a-ĝen{?} [X X ḫi]-li /gur₃\\-ru-ĝen\nu₅ ze₂{?}-ba u₅{?} ze₂{?}-ba X X X ir{?}-/si{?}\\-im ze₂-ba-ĝen\nIR{?} X IM{?} X X X X X X X ma₂ ḫe₂-em-ši-ib-us₂-e\nX X X X X X X X ma₂{?} ḫe₂-em-ši-ib-us₂-e",
+     "orig_lines": [
+      "9",
+      "10",
+      "11",
+      "12",
+      "13",
+      "14"
+     ],
+     "en": "I am the queen, I am the queen, I am …… full of loveliness! I am the maiden, I am the queen, I am …… full of loveliness! I am the queen, seed engendered by An, I am …… full of loveliness! I am good oil, good oil, …… sweet perfume! …… may he moor the boat ……. …… may he moor the boat ……."
+    },
+    {
+     "ref": "15–19",
+     "orig": "/nin\\-[ĝen] X X e₂ PAD₃{?} en{?}-ni-a{?} mu-un-da-an-di-di-in\n{d}/inana\\-[ĝen] X X X X-ni{?}-a{?} mu-un-da-an-di-di-in\nGA{?} X X X X X X X-ni-a mu-un-da-an-di-di-in\n{e₂}pa-paḫ X A{?} UB{?} X-ni{?}-a{?} mu-un-da-an-di-di-in\ne₂-e kab-dug₄-ga{?} X-ni-a mu-un-da-an-di-di-in",
+     "orig_lines": [
+      "15",
+      "16",
+      "17",
+      "18",
+      "19"
+     ],
+     "en": "I am the queen, I shall go with him to his ……. I am Inana, I shall go with him to his ……. I shall go with him to his ……. I shall go with him to his …… shrine. I shall go with him to the house with its measuring jars."
+    },
+    {
+     "ref": "20–28",
+     "orig": "mu-ti-in-e ga-/ĝu₁₀\\ ga-ga-ĝu₁₀ di-di du₅-mu-u₅-zu\n{d}ama-ušum-ĝu₁₀ ga-ĝu₁₀ ga-ga-ĝu₁₀ di-di du₅-mu-u₅-zu\n{d}ama-ušumgal-/an\\-na ga-ĝu₁₀ ga-ga-ĝu₁₀ di-di du₅-mu-u₅-zu\n{u₂}numun₂-še₃{?} ga-ĝu₁₀ ga{?}-ĝu₁₀-še₃{?} ga-ĝu₁₀ di-di du₅-mu-u₅-zu\n{ĝiš}asal₂ ki sed₅-še₃ ga-ĝu₁₀ di-di du₅-mu-u₅-zu\n{u₂}in-uš u₂ sikil-še₃ ga-ĝu₁₀ di-di du₅-mu-u₅-zu\n{u₂}rib-ba ki ḫalba₂-še₃ ga-ĝu₁₀ di-di du₅-mu-u₅-zu\namaš kug-ga amaš mu-ti-in-na-ĝa₂-še₃ di-di du₅-mu-u₅-zu\namaš kug-ge amaš {d}dumu-/zid-ĝa₂-še₃\\ /di-di du₅-mu\\-u₅-zu",
+     "orig_lines": [
+      "20",
+      "21",
+      "22",
+      "23",
+      "24",
+      "25",
+      "26",
+      "27",
+      "28"
+     ],
+     "en": "Let me learn the way to the man, my milk, my cream! Let me learn the way to my Ama-ušum, my milk, my cream! Let me learn the way to Ama-ušumgal-ana, my milk, my cream! Let me learn the way to the esparto grass, my milk, to my milk, my milk! Let me learn the way to the poplars, the cool place, my milk! Let me learn the way to the innuš plants, the pure plants, my milk! Let me learn the way to the grasslands, the frosty place, my milk! Let me learn the way to the holy sheepfold, my man's sheepfold! Let me learn the way to the holy sheepfold, my Dumuzid's sheepfold!"
+    },
+    {
+     "ref": "29",
+     "orig": "sa-gid₂-/da\\-am₃",
+     "orig_lines": [
+      "29"
+     ],
+     "en": "Sa-gida"
+    },
+    {
+     "ref": "30",
+     "orig": "mu-ru-bi X X a dug₄{?} aĝ₂ de₃-en-dug₄",
+     "orig_lines": [
+      "30"
+     ],
+     "en": "I will speak …… (this line is probably a catch-line to the second (sa-ĝara) section, not preserved)"
+    },
+    {
+     "ref": "1–13",
+     "orig": "[...] /aĝ₂ tur{?}\\-re [...] X /E NE{?}\\ [...]\n[X] /aĝ₂ tur\\-re I X [...]\n[X] šu aĝ₂ maḫ-e bi₂-in-X [...]\nX /šu{?}\\ aĝ₂ tur-re bi₂-[...]\n/niĝ₂{?}\\-šu aĝ₂ ir-ir-ĝu₁₀ aĝ₂ ba-ab-[...]\nX udu aĝ₂ gu₇-gu₇-ĝu₁₀ u₂ ba-ab-[...]\n[X] mu-nu₁₀-de₃ tur₃ /ki nu\\-mu-un-pad₃-/de₃\\\n[X] sipad-de₃ /amaš\\ ki nu-mu-un-pad₃-/de₃\\\n[X] u₅ gur₃-ru-ĝu₁₀ u₅ nu-un-/gur₃\\-[ru]\n[X] GA gur₃-ru-ĝu₁₀ ga nu-un-/gur₃\\-[ru]\n[X] X X X X-/ĝu₁₀\\ ḫul-ĝal₂-e im-[...]\n[...] X E /IM{?}\\ [...]\n[...] X [...]",
+     "orig_lines": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10",
+      "11",
+      "12",
+      "13"
+     ],
+     "en": "…… the small things, …… the small things, …… the great things, …… the small things, …… my property that has to be brought ……; my sheep that eat ……. The cowherd …… will not find the cow-pen, the shepherd …… will not find the sheepfold. My butter carrier will not carry the butter, my milk carrier will not carry the milk. My …… to the evil ones. 2 lines fragmentary unknown no. of lines missing"
+    },
+    {
+     "ref": "1–7",
+     "orig": "[...] X X\n/en{?}-e{?} ga{?} ma-ar mu{?}-un{?}-lu{?}\\ gu₂ [...]\n{d}dumu-zid-de₃ u₅ ma-ar mu-un-lu /gu₂\\ [...]\nu₅ gur₃-ru-ni u₅ mu-un-lu [...]\nga gur₃-ru-ni ga mu-un-lu [...]\nga u₅ gur₃-ru-ni e₂-a nu-mu-ni-in-kur₉ [...]\n/in\\-nin₉-e i₃ li saĝ ḫe₂-em-me-eb{?}-/šeš₂\\-[e]",
+     "orig_lines": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7"
+     ],
+     "en": "1 line fragmentary The lord made the milk abundant for me, ……. Dumuzid made the butter abundant for me, ……. When he carried the butter, butter was abundant. When he carried the milk, milk was abundant. When he carried milk and butter, he did not enter the house ……. May the lady anoint herself with finest oil!"
+    },
+    {
+     "ref": "8–16",
+     "orig": "mu-tin-na ga-ĝu₁₀ ga-ga-ĝu₁₀ di-di du₅-/mu\\-[u₅-zu]\n{d}ama-ušum-ĝu₁₀ ga-ĝu₁₀ ga-ga-ĝu₁₀ di-/di\\ <du₅-mu-u₅-zu>\n{d}ama-ušumgal-an-na ga-ĝu₁₀ ga-ga-ĝu₁₀ di-di <du₅-mu-u₅-zu>\n/{u₂}numun₂\\-še₃ ga-ĝu₁₀{?} X X X-še₃ ga-ĝu₁₀ di-di <du₅-mu-u₅-zu>\n{ĝiš}asal₂-e ki sed-de₃ ga-ĝu₁₀ di-di <du₅-mu-u₅-zu>\n{u₂}rib-ba ki ḫal-bi-še₃ ga-ĝu₁₀ «UN» di-di /du₅\\-[mu-u₅-zu]\n{u₂}in-nu-uš u₂ sikil-še₃ ga-ĝu₁₀ X X [du₅-mu-u₅-zu]\namaš kug-ge amaš mu-ud-na-ĝa₂-[še₃] [di-di du₅-mu-u₅-zu]\namaš kug-ge amaš {d}/dumu\\-[zid-ĝa₂-še₃] di-[di] [du₅-mu-u₅-zu]",
+     "orig_lines": [
+      "8",
+      "9",
+      "10",
+      "11",
+      "12",
+      "13",
+      "14",
+      "15",
+      "16"
+     ],
+     "en": "Let me learn the way to the man, my milk, my cream! Let me learn the way to my Ama-ušum, my milk, my cream! Let me learn the way to Ama-ušumgal-ana, my milk, my cream! Let me learn the way to the esparto grass, my milk, ……, my milk! Let me learn the way to the poplars, the cool place, my milk! Let me learn the way to the grasslands, the frosty place, my milk! Let me learn the way to the innuš plants, the pure plants, my milk! Let me learn the way to the holy sheepfold, my bridegroom's sheepfold! Let me learn the way to the holy sheepfold, my Dumuzid's sheepfold!"
+    },
+    {
+     "ref": "17–18",
+     "orig": "nu-u₈-gig-ge X [...]\nsu₈-ba {d}dumu-/zid\\ [...]",
+     "orig_lines": [
+      "17",
+      "18"
+     ],
+     "en": "The mistress ……. The shepherd Dumuzid ……."
+    },
+    {
+     "ref": "19",
+     "orig": "šir₃ [...]",
+     "orig_lines": [
+      "19"
+     ],
+     "en": "A …… song."
+    }
+   ]
+  },
+  {
+   "num": "4.08.20",
+   "title_en": "A kunĝar to Inana (Dumuzid-Inana T)",
+   "segments": [
+    {
+     "ref": "1–10",
+     "orig": "[X X] sed-sed-e sed{!} RI [...] (Šited in OB šatalogue from Nibru (N3), 0.2.06, line 19 (?))\nkug {d}inana-ra(sourše: ke₄) u₂ bur₁₂-bur₁₂-re bur₁₂-re [...]\nlu₂ zu₂-lum de₅-de₅-ge mu-nim-mar AN [...]\nkug {d}inana-ra lu₂ zu₂-lum de₅-de₅-ge mu-nim-/mar\\ [...]\na ḫe₂-en-na-tum₂ a ḫe₂-en-na-tum₂ numun ziz₂ gig₂-ga\n{d}inana-ra a-da du₆ ḫe₂-en-na-tum₂ numun ziz₂ babbar-ra\nlu₂ na-de₆ lu₂ na-de₆ du₆ za pad₃-še₃ na-de₆\nki-sikil {d}inana lu₂ na-de₆ du₆ za pad₃-še₃ na-de₆\ndu₆-ra gaba-bi-a za-gin₃-na bi₂-ib-de₅-de₅-ge\n{d}inana-ra du₆-ra gaba-bi-a za-gin₃-na bi₂-ib-de₅-de₅-ge",
+     "orig_lines": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10"
+     ],
+     "en": "…… he who cools, who cools ……. He who uproots the grass for holy Inana, who uproots ……. He who gathers the dates, …… the date palm. He who gathers the dates for holy Inana, …… the date palm. Let him bring her water, let him bring her water, and black emmer seeds. With the water let him bring Inana a heap, and white emmer seeds. The man brings, the man brings, he brings a heap of stones to choose from. The man brings to the maiden Inana, he brings a heap of stones to choose from. He gathers the lapis lazuli from the top of the heap. He gathers the lapis lazuli for Inana from the top of the heap."
+    },
+    {
+     "ref": "11–24",
+     "orig": "nunuz dur₂-ra in-pad₃-de₃ dur₂-ra-na mu-un-ĝa₂-ĝa₂\n{d}inana-ke₄ nunuz saĝ-ĝa₂ in-pad₃-de₃ saĝ-ĝa₂-na mu-un-ĝa₂-ĝa₂\n{na₄}lagab za-gin₃ dur₅-ru in-pad₃-de₃ gu₂-bar-ra-na mu-un-ĝa₂-ĝa₂\nniĝ₂-gal₄-la kug-sig₁₇ in-pad₃-de₃ siki saĝ-ĝa₂-na mu-un-ĝa₂-ĝa₂\nkug-sig₁₇ ĝeštug₂-ĝeštug₂ sal-la in-pad₃-de₃ ĝeštug₂-na{ĝeš-du-X} mu-un-ĝa₂-ĝa₂\nzabar aĝ₂-su-ub ak-a in-pad₃-de₃ us₂ ĝeštug₂-ga-na mu-un-ĝa₂-ĝa₂\nniĝ₂ lal₃ dirig-dirig-ga in-pad₃-de₃ /igi\\-ni-a mu-un-ĝa₂-ĝa₂ ( (illegible signs))\nniĝ₂ e₂-nun bar-ra in-pad₃-de₃ giri₁₇-ni-a mu-un-ĝa₂-ĝa₂\n/KIĜ₂\\.ĜIŠ.BAD.DIR in-pad₃-de₃ ka-ga₁₄{?}-na mu-un-ĝa₂-ĝa₂\ntum₁₂-šu-gur₄ sag₉-ga in-pad₃-de₃ en₃-dur-ra-na mu-un-ĝa₂-ĝa₂\npu₂ lal₃ a dug₃-ga in-pad₃-de₃ ib₂-ib₂-a-ni mu-un-ĝa₂-ĝa₂\n{na₄}ĝiš-nu₁₁-gal zalag-ga in-pad₃-de₃ ḫaš₄-na mu-un-ĝa₂-ĝa₂\n{{ĝiš}kim₃ siki{!}} {(1 ms. ḫas instead:) siki sug₄} gig₂-ga in-pad₃-de₃ gal₄-la-na mu-un-ĝa₂-ĝa₂ ( LAL2.GAG{?} […])\nḪUB₂-ḪUB₂-be₂{kuš}e-sir₂ du₇-a in-pad₃-de₃ me-ri-si-na mu-un-ĝa₂-ĝa₂",
+     "orig_lines": [
+      "11",
+      "12",
+      "13",
+      "14",
+      "15",
+      "16",
+      "17",
+      "18",
+      "19",
+      "20",
+      "21",
+      "22",
+      "23",
+      "24"
+     ],
+     "en": "She chooses the buttocks beads and puts them on her buttocks. Inana chooses the head stones and puts them on her head. She chooses the lumps of translucent lapis lazuli and puts them on the nape of her neck. She chooses the golden genitals and puts them on the hair of her head. She chooses the ribbons (?) of gold for the ears and puts them on her ears. She chooses the burnished bronze and puts it in her ear lobes (?). She chooses that which drips with honey and puts it on her face. She chooses that of the outer shrine and puts it on her nose. She chooses the …… and puts it on her mouth. She chooses the beautiful …… ring and puts it in her navel. She chooses a well of honey and fresh water and puts it on her hips. She chooses bright alabaster and puts it on her thighs. She chooses black {…… willow (?)} {(1 ms. has instead:) fleece (?)} and puts it on her genitals. She chooses ornate sandals and puts them on her toes."
+    },
+    {
+     "ref": "25",
+     "orig": "sa-/gid₂\\-da-/am₃\\",
+     "orig_lines": [
+      "25"
+     ],
+     "en": "Sa-gida."
+    },
+    {
+     "ref": "26–31",
+     "orig": "lu₂ du₆-ra {na₄}za-gin₃ de₅-de₅-ga-ra en gaba-na mu-ri\n{d}inana du₆-ra {na₄}za-gin₃ de₅-de₅-ga-ra {d}dumu-zid-da <gaba-na> mu-ri\n[mu₆]-sub₃ an-na kuš₇ {d}en-lil₂-la₂ en gaba-na mu-ri\nkuš₇ an-na na-gada {d}en-lil₂-la₂ {d}dumu-zid gaba-na /mu\\-ri\n{ĝiš}ig {na₄}za-gin₃-na ĝi₆-par₄-ra gub-ba en gaba-na mu-ri\n{ĝiš}ig sal araḫ₄ e₂-an-na-ka gub-ba {d}dumu-zid gaba-na mu-ri",
+     "orig_lines": [
+      "26",
+      "27",
+      "28",
+      "29",
+      "30",
+      "31"
+     ],
+     "en": "The lord meets her for whom lapis lazuli was gathered from the heap. Dumuzid meets Inana for whom lapis lazuli was gathered from the heap. The shepherd of An, the servant of Enlil, the lord meets her. The servant of An, the herdsman of Enlil, Dumuzid meets her. The lord meets her at the lapis lazuli door which stands in the ĝipar shrine. Dumuzid meets her at the narrow door which stands in the storehouse of E-ana."
+    },
+    {
+     "ref": "32–36",
+     "orig": "du₆-ra gaba-bi-a im-mi-in-gur-ru-a\n{d}inana-ke₄ du₆-ra gaba-bi-a im-mi-in-gur-ru-a\nmunus-e niĝ₂ i-lu-lam-ma-na ni₂ šu tag-ba ḫe₂-/ku₄{?}-ku₄{?}\\\nki-sikil-e [šir₃] dug₄-ga-ni-a a-a-ni-še₃ lu₂ mu-un-gi₄\n{d}inana ki-e-ne-di-ba sud{?}-a a-a-ni-še₃ lu₂ mu-un-gi₄",
+     "orig_lines": [
+      "32",
+      "33",
+      "34",
+      "35",
+      "36"
+     ],
+     "en": "When she turns from the top of the heap, when Inana turns from the top of the heap, may the woman enter (?) with her songs, decorated (?). The maiden, singing, sends a messenger to her father. Inana, dancing from joy, sends a messenger to her father:"
+    },
+    {
+     "ref": "37–47",
+     "orig": "ma-ĝu₁₀ ma-ĝu₁₀-a de₃-ma-ab-BU-ne\nga-ša-an-ĝen ma-ĝu₁₀ ma-ĝu₁₀-a de₃-ma-ab-BU-ne\nma ĝi₆-par₄-ra-ĝu₁₀-a de₃-ma-ab-BU-ne\nĝiš-nu₂ gi₄-rin-na-ĝu₁₀ de₃-ma-ab-gub-bu-ne(sourše: un-na-ab-gub-bu-ne)\nu₂ za-gin₃ dur₅-ru-ĝu₁₀ de₃-ma-ab-barag₂-ge-ne\nme-e mu-/lu\\ ša₃-ba-ĝu₁₀ de₃-ma-ni-ib-ku₄-ku₄-ne\n{d}ama-ušumgal-an-na-ĝu₁₀ de₃-ma-ni-ib-ku₄-ku₄-ne\nšu-ni šu-ĝu₁₀-ta de₃-ĝa₂{!}-da-ma-ma-ne\nša-ba-ni ša₃-ab-ĝu₁₀-ta de₃-ĝa₂-da-ma-ma-ne\nšu /saĝ\\-še₃ /ma\\-al-la-na u₃ ku-bi ze₂-ba an-ga\nša₃-<ab> ša₃-ba tab-ba-na ḫi-li-bi ku₇-ku₇-da an-ga",
+     "orig_lines": [
+      "37",
+      "38",
+      "39",
+      "40",
+      "41",
+      "42",
+      "43",
+      "44",
+      "45",
+      "46",
+      "47"
+     ],
+     "en": "\"Let them …… for me into my house, my house. Let them …… into my house, my house for me, the queen. Let them …… for me into my ĝipar shrine. Let them erect for me my flowered bed. Let them spread it for me with herbs like translucent lapis lazuli. For me let them bring in the man of my heart. Let them bring in to me my Ama-ušumgal-ana. Let them put his hand in my hand, let them put his heart by my heart. As hand is put to head, the sleep is so pleasant. As heart is pressed to heart, the pleasure is so sweet.\""
+    },
+    {
+     "ref": "48",
+     "orig": "/kun-ĝar\\ {d}/inana\\-kam",
+     "orig_lines": [
+      "48"
+     ],
+     "en": "Kunĝar of Inana."
+    }
+   ]
+  },
+  {
+   "num": "4.08.22",
+   "title_en": "A song of Inana and Dumuzid (Dumuzid-Inana V)",
+   "segments": [
+    {
+     "ref": "1–15",
+     "orig": "in-nin₉ šembi₂-zid lugal-/la\\-[kam]\n{d}inana /šembi₂-zid\\ {d}dumu-zid-da X\nul gur₃-ru ḫi-li šu tag dug₄-/ga\\\n{lu₂}sipad-ra tur₃-ra an-ši-/DU{?}\\\n{d}dumu-zid-ra amaš-a an-ši-/DU{?}\\\n{lu₂}sipad-da igi-bi kaskal im-da-an-X\n/ki{?}-sikil{?}\\ {d}inana ḫar-ra-an-na gaba mu-/un\\-[ri]\n[{d}]/dumu\\-zid-de₃ ud-gin₇ ba-an-ta-[e₃]\n[...] šu im-ma-an-[ri]\n[...] šu{?} im-ma-an-[ri]\n[...] X šu ri ba-ni-in-[X]\n[...] /in\\-ga-ba-ni-in-[X]\n[...] X ul šar₂-ra gu₂ im-/ma\\-[ni-e₃]\n[...] /{ĝiš}\\pa-pa-al im-ši-la₂-[la₂]\n[...] X ak{!} šag₄{?}-bi /ma\\-[...]",
+     "orig_lines": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10",
+      "11",
+      "12",
+      "13",
+      "14",
+      "15"
+     ],
+     "en": "The young lady, the king's kohl, Inana, Dumuzid's kohl, full of joy, adorned with loveliness, goes to the shepherd in the sheepfold, goes to Dumuzid in the cattle-pen. There on the road she …… the shepherd, the maiden Inana meets him on the path. Dumuzid comes forth like the daylight. …… extended his hand to ……; …… extended his hand to ……. …… extended hand. 1 line fragmentary …… enfolded in numerous buds, …… sprouted branches, …… heart ……."
+    }
+   ]
+  },
+  {
+   "num": "4.08.23",
+   "title_en": "A song of Inana and Dumuzid (Dumuzid-Inana W)",
+   "segments": [
+    {
+     "ref": "1–22",
+     "orig": "[...] IM X [...]\n[X X] X-ga IM X [...]\n[X X] /ḫa\\-za buru₃ a-šag₄-<ga> ĝal₂-/la\\-[ĝu₁₀]\n[u₂-ĝu₁₀] /{ĝiš}\\deḫi₃-ĝu₁₀ udu-ĝu₁₀ ḫa-/ma\\-[gu₇-e]\n[X X] X e₂-a sig₉-ga-[ĝu₁₀]\n/u₂\\-[ĝu₁₀] /še\\ la₂-a-ĝu₁₀ udu-ĝu₁₀ ḫa-ma-[gu₇-e]\n/zi kalam\\-ma a-šag₄-ga ĝal₂-la-ĝu₁₀\nu₂-ĝu₁₀ išin-na-<ĝu₁₀> udu-ĝu₁₀ ḫa-ma-gu₇-e\n/nu\\-siki il₂-il₂-ĝu₁₀ nu-mu-un-su da-ri-ĝu₁₀\nu₂-ĝu₁₀ {u₂}šakir₃-ra-ĝu₁₀ udu-ĝu₁₀ ḫa-ma-gu₇-e\ndub keše₂-da a-šag₄-ga ĝal₂-la-ĝu₁₀\nu₂-ĝu₁₀ ukuš₂-ti-ki-il-ĝu₁₀ udu-ĝu₁₀ ḫa-ma-gu₇-e\nsumun₂ kaš-a lal₃ dab₅-ba-ĝu₁₀\nu₂-ĝu₁₀ {gi}en₃-bar-ĝu₁₀ udu-ĝu₁₀ ḫa-ma-gu₇-e\namar gud-da-bi-da di-a-ĝu₁₀\nu₂-ĝu₁₀ {gi}ub-zal-ĝu₁₀ udu-ĝu₁₀ ḫa-ma-gu₇-e\n{ĝiš}kiri₆ {ĝiš}ḫašḫur-a ul gur₃-ru-ĝu₁₀\nu₂-ĝu₁₀ gi-zi-ĝu₁₀ udu-ĝu₁₀ ḫa-ma-gu₇-e",
+     "orig_lines": [
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10",
+      "11",
+      "12",
+      "13",
+      "14",
+      "15",
+      "16",
+      "17",
+      "18",
+      "19",
+      "20",
+      "21",
+      "22"
+     ],
+     "en": "4 lines missing2 lines fragmentary May my sheep eat my …… which is growing in the fields, my plants, my camel-thorn. May my sheep eat my ……, my plants, my winnowed barley. May my sheep eat my life of the Land which is growing in the fields, my plants, my stubble. May my sheep eat my support of orphans and sustenance of widows, my plants, my šakir plants. May my sheep eat my string of clay balls (?) which is growing in the fields, my plants, my colocynth. May my sheep eat my beer wort mixed with honey, my plants, my marsh reeds. May my sheep eat my calves going together with their bulls, my plants, my reed shoots. May my sheep eat my blossoming garden of apple trees, my plants, my reeds."
+    },
+    {
+     "ref": "23–38",
+     "orig": "šim a-šag₄-ga /lal₃\\ ta-ḫab₂-ba-ĝu₁₀\nu₂-ĝu₁₀ {u₂}/munzer\\-ĝu₁₀ udu-ĝu₁₀ ḫa-ma-gu₇-e\n{kuš}ummud dag-si la₂ X X-ĝu₁₀\nu₂-ĝu₁₀ {u₂}ḫarub-ba-ĝu₁₀ udu-/ĝu₁₀\\ ḫa-ma-gu₇-e\nu₂ {tug₂}bar-/dul₅\\-gin₇ barag₂-barag₂-ga-ĝu₁₀\nu₂-ĝu₁₀ {u₂}sas(/KI\\.KAL)-ĝu₁₀ udu-ĝu₁₀ ḫa-ma-/gu₇\\-[e]\nud tud-/da\\-ta ki-en-gi ḫe₂-ĝal₂-<la-ĝu₁₀>\nu₂-/ĝu₁₀\\ teme{sar}-ĝu₁₀ udu-ĝu₁₀ ḫa-ma-gu₇-e\n/siki gid₂\\-da {ĝiš}ga-rig₂ nu-zu-ĝu₁₀\n/u₂\\-ĝu₁₀ {u₂}numun₂-ĝu₁₀ udu-ĝu₁₀ ḫa-ma-gu₇-e\n/en\\-te-en nu-zu e₂-me-eš nu-zu-ĝu₁₀\n[u₂]-ĝu₁₀ {u₂}ĜIŠNIMBAR.TUR-ĝu₁₀ udu-ĝu₁₀ ḫa-/ma\\-gu₇-e\n[X] /SAR{?}\\ sag₉-ga dilib₃-e sal-sal-/ĝu₁₀\\\n[u₂-ĝu₁₀] {u₂}li-la-an-gi₄-<ĝu₁₀> udu-ĝu₁₀ /ḫa\\-ma-gu₇-e\n[X] X UD edin-na mu₂-a-/ĝu₁₀\\\n[u₂-ĝu₁₀ u₂]-/{ĝiš}\\ḫašḫur-<ĝu₁₀> udu-ĝu₁₀ ḫa-ma-gu₇-e",
+     "orig_lines": [
+      "23",
+      "24",
+      "25",
+      "26",
+      "27",
+      "28",
+      "29",
+      "30",
+      "31",
+      "32",
+      "33",
+      "34",
+      "35",
+      "36",
+      "37",
+      "38"
+     ],
+     "en": "May my sheep eat my aromatic plants of the fields, dripping with syrup, my plants, my licorice. May my sheep eat my …… waterskin hanging from the saddle, my plants, my ḫarub pods. May my sheep eat my grass spread out like a mantle, my plants, my meadow grass. May my sheep eat my native-born (?) of flourishing Sumer, my plants, my kali plants. May my sheep eat my unkempt long hair, my plants, my esparto grass. May my sheep eat my plants that ignore winter and summer, my plants, my date palm saplings. May my sheep eat my beautiful …… plants with a head of fine hairs, my plants, my lilangi plants. May my sheep eat my …… growing in the desert, my plants, my apple grass."
+    },
+    {
+     "ref": "39–44",
+     "orig": "[...] /bi₂\\-in-gi₄ ga lal₃ šu bi₂-in-gur\nšul /nitalam\\-[a]-ni-ra mu-na-an-ḫum-ḫum-e\nam-e šudu₃ im-ma-da-an-ša₄\n/kug\\ /{d}inana\\-ra mu-na-an-ḫum-ḫum-e\n[...] /gu₂\\ la₂ mi₂ na-bi₂-in-dug₄\n[{d}dumu-zid šudu₃ im-ma]-/da-an\\-ša₄",
+     "orig_lines": [
+      "39",
+      "40",
+      "41",
+      "42",
+      "43",
+      "44"
+     ],
+     "en": "…… and smeared milk and honey on it. The youth is gentle towards his spouse; the wild bull stands in prayer before her. He is gentle towards holy Inana. Embracing ……, he treats her gently. Dumuzid stands in prayer before her. approx. 5 lines missing"
+    }
+   ]
+  },
+  {
+   "num": "4.08.25",
+   "title_en": "A song of Inana and Dumuzid (Dumuzid-Inana Y)",
+   "segments": [
+    {
+     "ref": "1–8",
+     "orig": "[X] X X X X\nX ad-da-ni kiĝ₂-gi₄-a-gin₇\n[X] X DA [X] X-a-ĝu₁₀ kaš₄ [...] /ĝa₂{?}\\-nu",
+     "orig_lines": [
+      "6",
+      "7",
+      "8"
+     ],
+     "en": "5 lines missing1 line fragmentary …… his father like a messenger. 1 line fragmentary"
+    },
+    {
+     "ref": "9–23",
+     "orig": "mussa-/me\\ [ud ...-zal]\nmussa-me /ĝi₆\\ [...-sa₂]\niti₆ e₂-ba /mi\\-[ni-ib]-kur₉ X X\nmul e₂-ba mi-ni-ib-di₄-di₄-en\nmussa-me ud me-zal-la-gin₇\nmussa-me ĝi₆(sourše: me) me(sourše: ĝi₆)-sa₂-a-gin₇\niti₆ e₂-ba mi-ni-kur₉-ra-gin₇\nmul(sourše: iti₆) e₂-ba mi-ni-di₄-di₄-la₂-gin₇\nig-ta saĝ-kul\nX X-ra-si-il-le-en X",
+     "orig_lines": [
+      "9",
+      "10",
+      "11",
+      "12",
+      "13",
+      "14",
+      "15",
+      "16",
+      "17",
+      "18"
+     ],
+     "en": "(Utu speaks:) \"Our brother-in-law, the daytime will pass; our brother-in-law, night will come. Then I shall make the moonlight enter its house, I shall make the stars become dimmed in their house. Our brother-in-law, when the daytime has passed, our brother-in-law, when the night comes, and after the moonlight has entered its house, after the stars have become dimmed in their house, I shall draw the bolt from the door for you …….\" 5 lines missing"
+    },
+    {
+     "ref": "24–33",
+     "orig": "nin₉ /gal\\-[ĝu₁₀ ...]\nze₂-ba-ĝu₁₀ X [...] zid-de₃{?} [...]\nnin₉ gal-ĝu₁₀ /da\\ [...]-/ta\\\n[šeš] i-bi₂ /sag₉\\-[sag₉-ĝu₁₀]\n[X X]-/ra\\-ĝu₁₀ [...]-/zi\\-in\n[X X] al{?} /ĝal₂{?} LU\\ [X X] im-me X X\nbad₃-si-me al-ĝal₂ bad₃-si-me gul-lu\n/nitalam\\-me aĝ₂ kuš₂{?}-u₃ kuš₂-u₃\nšu u₈-ub-dab₅-be₂-en ta-me mu-un-ĝal₂\nšu e-ri-in-bar-re-eš e₂-me-eš-e ĝa₂-nu",
+     "orig_lines": [
+      "24",
+      "25",
+      "26",
+      "27",
+      "28",
+      "29",
+      "30",
+      "31",
+      "32",
+      "33"
+     ],
+     "en": "\"My elder sister! …….\" \"My sweet! …….\" \"My elder sister! …….\" \"My brother with kindly eyes!\" 2 lines unclear \"Here is our parapet! Tear down our parapet! Our spouse, exert (?) yourself, exert (?) yourself! If you are captured, what will become of us? They have let you go: come into our house!\""
+    },
+    {
+     "ref": "34–47",
+     "orig": "suḫur-e du₇-ĝu₁₀ suḫur-e du₇-ĝu₁₀\nze₂-ba-ĝu₁₀ suḫur-e du₇-ĝu₁₀\nmu-nim-mar-gin₇ suḫur-e du₇-ĝu₁₀\n{ĝiš}šinig-gin₇ gu₂ lum-lum-ĝu₁₀ /suḫur-e\\ du₇-ĝu₁₀\nmu-ti-in suḫur-za{?} unken-na du₇-/ĝu₁₀\\\nze₂-ba-ĝu₁₀ gaba-me-a su-ub-bi\ngi-ru suḫur-/za{?}\\ unken-na dugud-da\nšeš i-<bi₂> sag₉-sag₉-ĝu₁₀ gaba-me-a su-ub-bi\nsun₄ za-gin₃-ĝu₁₀ suḫur gakkul₃-ĝu₁₀\nsun₄ X za-gin₃-gin₇ gun₃-a-ĝu₁₀\nsuḫur gakkul₃-gin₇ ĝar-ĝar-ra-ĝu₁₀\ndim₃ zu₂-ĝu₁₀ me-dim₂ kug-sig₁₇-ga-ĝu₁₀\nniĝ₂ nagar kug-zu dim₂-ma-ĝu₁₀\ntibira kug-zu kiĝ₂ ak-a-ĝu₁₀",
+     "orig_lines": [
+      "34",
+      "35",
+      "36",
+      "37",
+      "38",
+      "39",
+      "40",
+      "41",
+      "42",
+      "43",
+      "44",
+      "45",
+      "46",
+      "47"
+     ],
+     "en": "\"My one distinguished by a shock of hair, my one distinguished by a shock of hair! My sweet, my one distinguished by a shock of hair! My one distinguished by a shock of hair like a palm tree! My shaggy-necked one like a tamarisk, my one distinguished by a shock of hair! My man distinguished in the assembly by your shock of hair! Rub it against our breast, my sweet! Noble one (?), honoured in the assembly with your shock of hair! Rub it against our breast, my brother with kindly eyes! My lapis lazuli beard, my fermenting-vat shock of hair! My beard mottled like lapis lazuli! My shock of hair sturdy as a fermenting vat! My ivory figurine, my golden figure! My object fashioned by a skilled carpenter! My one worked on by a skilled metal worker!\""
+    },
+    {
+     "ref": "48–55",
+     "orig": "ĝen nin₉ ki aĝ₂-ĝu₁₀ ka-ga₁₄ (X) ME RI MU ga{!}-e\nka-ga₁₄-ni-gin₇ gal₄-/la\\-[ni dug₃-ga-am₃]\n/gal₄-la\\-ni-gin₇ ka-ga₁₄-[ni dug₃-ga-am₃]\nsig₇-ge X [...]\nigi bi₂-[...]\nTA [...]\n[...] X MAŠ GUR-am₃",
+     "orig_lines": [
+      "48",
+      "49",
+      "50",
+      "51",
+      "52",
+      "53",
+      "55"
+     ],
+     "en": "\"Come (?), my beloved sister! I will …… mouth. Her genitals are as sweet as her mouth. Her mouth is as sweet as her genitals. …… beautiful. …… eyes. 3 lines fragmentary or missing\""
+    },
+    {
+     "ref": "56–65",
+     "orig": "/ka{?}\\-ga₁₄ inim ze₂-ba ḫe₂-me-en\nbal ud sag₉-ga e₃ ḫe₂-me-en\nezen saĝ-ki zalag-ga ḫe₂-me-en\nzabar-šu dadag-ga ḫe₂-me-en\nki aĝ₂ {d}mu-ul-lil₂-la₂\n{šag₄ diĝir-za} {(1 ms. ḫas instead:) diĝir-e} ḫa-me-ši-ḫuĝ-e\nĝi₆-a ĝa₂-nu ĝi₆-a gub-ba\n{d}utu-da ĝa₂-nu {d}utu-da gub-ba\ndiĝir-zu kaskal ḫa-ra-ab-sig₁₀-ge\nil₂-la₂ du₅-la₂ ḫa-ra-ab-sa₂-sa₂-«en»",
+     "orig_lines": [
+      "56",
+      "57",
+      "58",
+      "59",
+      "60",
+      "61",
+      "62",
+      "63",
+      "64",
+      "65"
+     ],
+     "en": "\"May you be sweet words in the mouth! May you be a reign which brings forth happy days! May you be a feast which brightens the countenance! May you be a shining mirror! Beloved of Enlil, may {the heart of your god} {(1 ms. has instead:) your god} be assuaged towards you! Come at night, stay at night! Come with the sun, stay with the sun! May your god pave the road for you, may he level the hills and depths for you!\""
+    }
+   ]
+  },
+  {
+   "num": "4.08.26",
+   "title_en": "A song of Inana and Dumuzid (Dumuzid-Inana Z)",
+   "segments": [
+    {
+     "ref": "1–9",
+     "orig": "[ama] ugu-ĝu₁₀ za-a-ra ĝa₂-a im-mi-in-tu-ud-en\n[ga]-/ša-an\\-gal{?}-ĝu₁₀ za-a-ra ĝa₂-a im-mi-in-tu-ud-en\n[X X]-/un{?}\\-ma-al-e-en ša₃-ab ki-ig aĝ₂-ĝa₂ i₃-du\n[X X]-/da\\-ĝa₂ ša₃-ab ki-ig aĝ₂-ĝa₂ bi₂-du\n[X X] [de₃]-mu-un-ši-du me-e mu-ši{!}-ḫul₂-en\n[{d}du₅-mu]-/zid\\ de₃-mu-un-ši-du me-e mu-da-ḫul₂-en\n[X X] ĜIŠ KU TUM{?} X /me{?}-e{?} mu-na{?}\\-X-/BU\\\n[{d}du₅-mu]-zid /de₃\\-[...] X [...]\n[...] X [...]",
+     "orig_lines": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9"
+     ],
+     "en": "My own mother gave birth to me for your sake, my Ningal gave birth to me for your sake. ……, my beloved heart will come. ……, my beloved heart will come there. May …… come to me (?), and I will rejoice over him. May Dumuzid come to me (?), and I will rejoice over him. 1 line unclear Dumuzid …… 1 line fragmentary unknown no. of lines missing"
+    },
+    {
+     "ref": "1–9",
+     "orig": "X X [...]\nmu-/ud-na\\-ĝu₁₀ /gu₂\\-[da ĝa₂-la₂-e-en-de₃-en]\nĝa₂-nu e-ne di de₃-/ḫul₂-le{?}\\-[en-de₃-en]\n{d}ama{!}-ušum-ĝu₁₀ gu₂-da ĝa₂-la₂-e-/en-de₃-en\\\nĝa₂-nu e-ne di₄{?} de₃-ḫul₂-le{?}-en-de₃-en\ngu₅-li an-na u₃-mu-un aĝ₂ ša₃-ba-ĝu₁₀\nur₅ sag₉-ge šag₄ ḫul₂-la {d}utu-me ḫe₂-me-en\nu₃-mu-un-ra da-an-ši-ĝen me-e du₅-mu-na-da-ab-dug₄\nu₃-mu-un ša₃-ab-ĝa₂ me-e du₅-mu-ne-de-be₂",
+     "orig_lines": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9"
+     ],
+     "en": "1 line fragmentary Let us embrace, my bridegroom! Come, let us rejoice in play! Let us embrace, my Ama-ušum! Come, let us rejoice in play! Friend of An, lord, my heart's desire, cheering the mood, gladdening the heart: may you be our sun god! I will go to the lord, I will talk with him, I will say to the lord of my heart:"
+    },
+    {
+     "ref": "10–19",
+     "orig": "ki {d}mu-ul-lil₂-da X KU IM{?} DI{?}-en\na-a-ĝu₁₀ {d}suen-e šag₄-ge bi₂-in-pad₃-de₃-en\nša₃-ab-ĝa₂ bi₂-in-pad₃-de₃-en me-e mu-lu ša₃-ba-ĝen\naga zid men kug saĝ-za ma-ra-ni-ma-al\ndim₃-me-er gal-gal-e-ne i-bi₂-bi ša-mu-un-gub-en\n{d}a-nun-na-ke₄-ne mu-lu dalla bi₂-in-e₃-a\nmu-ud-na-ĝu₁₀ gu₂-da ĝa₂-la₂-e-en-de₃-en\nmu-nu₂ gi-rin-ĝa₂-da ga-ba-e-nu₂-en-de₃-en\n{d}ama-ušum-ĝu₁₀ gu₂-da ĝa₂-la₂-/e\\-[en-de₃-en]\nmu-nu₂-«da» gi-rin-ĝa₂-da ga-ba-X-[nu₂-en-de₃-en]",
+     "orig_lines": [
+      "10",
+      "11",
+      "12",
+      "13",
+      "14",
+      "15",
+      "16",
+      "17",
+      "18",
+      "19"
+     ],
+     "en": "\"…… with Enlil, and my father, Suen, chose you in his heart. I myself chose you in my heart; you are the man of the heart. He has placed on your head for me the good headdress and the holy crown. You shall stand in service before the great gods, the Anuna gods who shine forth radiantly. Let us embrace, my bridegroom! Let us lie on my flowered bed! Let us embrace, my Ama-ušum! Let us lie on my flowered bed!\""
+    }
+   ]
+  },
+  {
+   "num": "4.08.28",
+   "title_en": "A song of Inana and Dumuzid (Dumuzid-Inana B1)",
+   "segments": [
+    {
+     "ref": "1–9",
+     "orig": "ud ḫe₂-ĝal₂-la na-nam ĝi₆ nam-ḫe₂ na-nam\nitid giri₁₇-zal na-nam mu asila na-nam\nud-ba {lu₂}sipad-de₃ šag₄ ḫul₂-la ak-de₃\n[{e₂}]tur₃-ra du-de₃ ur₅-bi zalag-ge-de₃\n/amaš\\ kug-ga ud-gin₇ kar₂-kar₂-re-de₃\n/su₈\\-ba {d}dumu-zid-de₃ šag₄ kug-ga na-an-tum₄\nga-ša-an an-na ga-ša-an ki-a-ra(sourše: ke₄)\ngu₃ mu-na-de₂-e ĝalga umuš-a-ke₄\n{d}ama-ušumgal-an-na inim mu-un-na-ni-ib-be₂",
+     "orig_lines": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9"
+     ],
+     "en": "It was in the days of abundance, it was in the nights of plenty; it was in the months of luxuriance, it was in the years of rejoicing. In those days the shepherd, the shepherd Dumuzid decided in his holy heart to make his heart joyful, to go to the cattle-pen, to brighten its mood, to make the holy sheepfold shine like the day. He of decision and resolve spoke to the queen of heaven, the queen of earth. Ama-ušumgal-ana addressed words to her:"
+    },
+    {
+     "ref": "10–14",
+     "orig": "nitalam a zal ki a-ri-a-še₃ ga-de₆\n{e₂}tur₃ daĝal-la-ĝu₁₀ en₃-bi ga-me-ši-tar\namaš kug-ga-ĝu₁₀ a-ra₂-bi ga-me-ši-zu\nudu-ĝu₁₀ ka u₂-gu₇ ga-me-ši-ĝar\na naĝ dug₃-ga LI-bi ga-me-ši-kiĝ₂",
+     "orig_lines": [
+      "10",
+      "11",
+      "12",
+      "13",
+      "14"
+     ],
+     "en": "\"Wife, I am going to bring flowing water to the arid (?) place. I am going to look after my spacious cattle-pen. I am going to find out the condition of the holy sheepfold. I am going to feed my sheep. I am going to seek out the …… of fresh water for drinking.\""
+    },
+    {
+     "ref": "15–20",
+     "orig": "nitalam umuš-bi ba-an-na-dug₄\nĝalga-a-ni e-ne-ra mu-un-na-an-šum₂\nnitalam-ni tuš-bi-še₃ im-ma-an-gi₄\nkug ga-ša-an-na-ke₄ e₂-tur₃-kalam-ma-ke₄\nX mu-ni-in-kur₉ niĝ₂-me-/ĝar\\ ba-an-dab₅\nmu-gi₁₇-ib ga-ša-an-an-na a-ĝi₆-gin₇ ba-lu₃",
+     "orig_lines": [
+      "15",
+      "16",
+      "17",
+      "18",
+      "19",
+      "20"
+     ],
+     "en": "He told his wife of this resolve; he presented his decision to her. His wife returned to their dwelling; holy Inana brought …… into E-tur-kalama. She was dumbfounded; the mistress Inana was thrown into confusion as if by a flood wave."
+    },
+    {
+     "ref": "21",
+     "orig": "ki-ru-gu₂ 1-kam-ma",
+     "orig_lines": [
+      "21"
+     ],
+     "en": "1st kirugu."
+    },
+    {
+     "ref": "22–34",
+     "orig": "ud-ba {lu₂}sipad-de₃ edin-še₃ ba-ra-e₃\nĝuruš {d}dumu-zid-de₃ {e₂}tur₃-ra ga DU\nnin₉-a-ni ga-ša-an dub-sar-ke₄\nan-da ki-bi-da-še₃ ba-ši-re₇\namaš kug-ga ki udu du-ru šag₄-ba\nsipad-de₃ nin₉-a-ni ki-bi ba-an-su-ne₂-eš₂\ntil₃-le-da-an-ni sipad-de₃ til₃-le-da-an-ni\nnin₉-a-ni nar en₃-du zu-a tuš-ba til₃-le-da-an-ni\n{e₂}tur₃-ra ḫe₂-ĝal₂ im-mi-in-si\namaš-e nam-ḫe₂-a i₃-zal-e\ni₃-gu₇-ne u₂ sikil i₃-gu₇-ne\ni₃ sur-sur-ra lal₃ i₃-nun-na-ke₄\ni₃-naĝ-ne &kaš;ulušin₃ kurun",
+     "orig_lines": [
+      "22",
+      "23",
+      "24",
+      "25",
+      "26",
+      "27",
+      "28",
+      "29",
+      "30",
+      "31",
+      "32",
+      "33",
+      "34"
+     ],
+     "en": "Then the shepherd went out into the desert. The young man Dumuzid …… in the cattle-pen. His sister, the queen of scribes, went to …… heaven and earth. The shepherd and his sister entered there into the holy sheepfold inside which the sheep live. He was living there, the shepherd was living there; and his sister, the singer expert in song, was living in that dwelling. Abundance filled the cattle-pen, plenty flowed in the sheepfold. They ate, they ate pure food -- pressed oil, honey and ghee. They drank emmer beer and strong liquor."
+    },
+    {
+     "ref": "35–41",
+     "orig": "{d}dumu-zid nin₉-a-ni šag₄ ḫul₂-la zal-e-de₃\nsu₈-[ba] {d}dumu-zid-de₃ šag₄ kug-ga na-an-tum₄\nX X mu-un-ši-la₂ tur₃-ta ba-ši-in-kur₉\n[X] mu-un-na-/ni\\-in-de₆ u₈ sila₄-bi-da\nsila₄ ama-bi-/še₃\\ u₃-mu-un-na-an-kud\nba-ši-in-u₅ X ĝiš mi-ni-in-/du\\\nsipad-de₃ nin₉-a-/ni\\ gu₃ mu-un-na-de₂-e",
+     "orig_lines": [
+      "35",
+      "36",
+      "37",
+      "38",
+      "39",
+      "40",
+      "41"
+     ],
+     "en": "Dumuzid, the shepherd Dumuzid decided in his holy heart to make the heart of his sister overflow with joy. He fastened …… and brought them into the cow-pen. He brought …… for her, a ewe with its lamb. The lamb jumped up on its mother, and then mounted her and copulated with her. The shepherd said to his sister:"
+    },
+    {
+     "ref": "42–46",
+     "orig": "nin₉-ĝu₁₀ igi bar-/ra\\ sila₄ ama-/ni\\ [(X)] /a\\-nam mu-un-ši-/kiĝ₂\\-[kiĝ₂]\nnin₉-a-ni mu-un-/na\\-[ni-ib-gi₄-gi₄]\nama-a-ni murgu-na u₃-mu-un-ši-[u₅] i-lu mu-un-du-du\ntukum-bi murgu-na u₃-mu-/un\\-[ši-u₅] i-lu mu-un-du-du\nDU a-na-am₃ ĝiš-a-ni mu-un-[du₃ zal]-/le\\-eš a-ni mi-ni-in-si",
+     "orig_lines": [
+      "42",
+      "43",
+      "44",
+      "45",
+      "46"
+     ],
+     "en": "\"Look, my sister! What is the lamb seeking from his mother?\" His sister replied to him: \"He is mounting on the back of his mother, and making her sing out.\" (Dumuzid speaks:) \"If he is mounting on her back, and making her sing out, what it really is ……: he is copulating with her and filling her to overflowing with his semen.\""
+    },
+    {
+     "ref": "47–56",
+     "orig": "maš₂ nin₉-a-ni [u₃]-/mu\\-un-ši-gud\nba-ši-in-u₅ /ĝiš\\ mi-ni-in-[du₃]\nsipad-de₃ nin₉-a-ni [gu₃] mu-un-na-de₂-e\nnin₉-ĝu₁₀ igi bar-ra maš₂-e nin₉-[a-ni] a-na-am₃ mu-un-ši-kiĝ₂-kiĝ₂\nnin₉-a-ni šag₄ nu-dab₅-ba-na [mu]-un-na-ni-ib-gi₄-gi₄\nnin₉-a-ni murgu-na u₃-/mu\\-[un-ši-u₅] i-lu mu-un-du-du\ntukum-bi murgu-na u₃-mu-un-[ši-u₅] i-lu mu-un-du-du\nte-am₃ a ri-a-ni gal₄-[la] mi-ni-in-su-su\nĝar-ra šeš-ĝu₁₀ su-lum ma-ra e-ne bad ba-u₅\na-ba-a MI ŠA AM mi-ni-in-tuku-e en-na a-ga-bi-še₃",
+     "orig_lines": [
+      "47",
+      "48",
+      "49",
+      "50",
+      "51",
+      "52",
+      "53",
+      "54",
+      "55",
+      "56"
+     ],
+     "en": "The kid jumped up on his sister and then mounted her and copulated with her. The shepherd said to his sister: \"Look, my sister! What is the kid seeking from his sister?\" His sister, not grasping the meaning, replied to him: \"He is mounting on the back of his sister, and making her sing out.\" (Dumuzid speaks:) \"If he is mounting on her back, and making her sing out, what it really is: he is filling her genitals with his ejaculated semen.\" \"My brother, …… to me derisively …… mount! Who will cause …… to have …… in the future?\""
+    },
+    {
+     "ref": "57",
+     "orig": "ki-ru-gu₂ 2-kam-ma",
+     "orig_lines": [
+      "57"
+     ],
+     "en": "2nd kirugu."
+    },
+    {
+     "ref": "58–59",
+     "orig": "sipad-de₃ su nu-um-/zig₃{?}\\ UR SU la-ba-an-SU\nnin₉-a-ni gu₃ mu-un-na-de₂-e",
+     "orig_lines": [
+      "58",
+      "59"
+     ],
+     "en": "The shepherd was not frightened (?), and did not ……. He said to his sister: unknown no. of lines missing"
+    }
+   ]
+  },
+  {
+   "num": "4.08.29",
+   "title_en": "A song of Inana and Dumuzid (Dumuzid-Inana C1)",
+   "segments": [
+    {
+     "ref": "1–10",
+     "orig": "[X X] NE{?}-/gin₇{?}\\ [...]\n[X X] X-gin₇ ab₂ X ZU [X] X [X]\n[{d}nin]-e₂-gal-la li-bi-ir-si-zu /en\\-[me-eš]\n[X X] nunuz dub₂-dub₂-gin₇ [X X]\n[{d}inana] li-bi-ir-si-zu en-me-eš\n[...]-ĝu₁₀{?} di-di-ta-am₃ (iš-te-na-a a X)\n[X X] ĝar AM₃(A.AN{?}) 2(MIN)-am₃\n[X X] X [...] MU{?} X [X]\n[mušen]-/du₃\\-am₃ X BU X [...]\n[šu]-/KU₆\\-de₃ /mu\\-lu mu-gi-a šag₄-ga-bi (ša qe₂-er-bi ša a-pi₂-im)",
+     "orig_lines": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10"
+     ],
+     "en": "2 lines fragmentary Ninegala, your wedding ushers are lords! …… like someone cracking eggs ……. Inana, your ushers are lords! …… is first, …… is second, 1 line fragmentary the fowler ……, and the fisherman from the depths of the reedbeds."
+    },
+    {
+     "ref": "11–20",
+     "orig": "/{lu₂}{ ?}\\su₈-ba-še₃ mu-lu da-an-gi₄-gi₄ (X X)\n[i₃] saĝ /ga\\ saĝ mi₂ /de₃-ĝa₂-ab\\-be₂ ([li-ka]-an-ni-a-am)\n/engar{?}\\-ĝu₁₀-u₈{?}-še₃ mu-lu <da-an-gi₄-gi₄>\n[X] /ĝeštin\\-e mi₂ de₃-<ĝa₂-ab-be₂>\n[mušen]-/du₃\\ X sa-du₃ nu₂-a-še₃ (/ša\\ še-e-tum šu-nu-la-at-sum₂)\n[nin]-ĝen mu-lu <da-an-gi₄-gi₄>\n[mušen] /sig₅{?}\\-ga mi₂ de₃-<ĝa₂-ab-be₂>\n/šu\\-KU₆-dam ĝiš-gi /sa\\-du₃-a-ni-še₃ (/ša{?}\\ a{?}-pi-/im{?}\\)\nga-ša-an-/an\\-na-ĝen mu-lu <da-an-gi₄-gi₄>\nsuḫurku₆ gur-gur-ra mi₂ de₃-<ĝa₂-ab-be₂>",
+     "orig_lines": [
+      "11",
+      "12",
+      "13",
+      "14",
+      "15",
+      "16",
+      "17",
+      "18",
+      "19",
+      "20"
+     ],
+     "en": "\"I will send a messenger to the shepherd: let him treat me to the best butter and the best milk! I will send a messenger to my farmer: let him treat me to …… and wine! I, the lady, will send a messenger to the fowler, whose bird-nets are spread out: let him treat me to fine birds! I, Inana, will send a messenger to the fisherman too whose nets are set up in the reedbeds: let him treat me to fat carp!\""
+    },
+    {
+     "ref": "21–32",
+     "orig": "li-bi-ir-si-ni niĝ₂-de₆-a(sourše: a-de₆) im-de₆\nmušen zag-ga mušen-du₃ mu-un-de₆ (ub{?}-lam{?})\nsuḫurku₆ /gur-gur\\-ra šu-KU₆-de₃ mu-un-de₆\nnin-/ĝu₁₀\\ [X (X)] X ba-an-da-ab-dug₄ (iš-ta-ka-an)\n{lu₂}sipad-de₃ i₃ šu-še₃ mu-un-la₂ (it-ta-na-ši)\n{d}dumu-zid-de₃ ga zag-še₃ mu-un-la₂ (i-na [bu]-/di\\-šu)\ni₃ ga ĜAR-ban₃-da zag-še₃ mu-un-la₂ (qal{?}-qal{?})\nga {dug}šakir{?}-ra zag-še₃ mu-un-la₂\n[X]-/ĝu₁₀\\ e₂-e gu₃ ba-an-de₂\n[{d}]/dumu\\-zid-de₃ X X X\n[e₂] ĝal₂-lu nin-ĝu₁₀ e₂ [ĝal₂-lu]\n[X] X /mu-un\\-[...]",
+     "orig_lines": [
+      "21",
+      "22",
+      "23",
+      "24",
+      "25",
+      "26",
+      "27",
+      "28",
+      "29",
+      "30",
+      "31",
+      "32"
+     ],
+     "en": "One of her ushers brought the gifts. The fowler brought choice birds, and the fisherman brought fat carp and put them …… my lady. The shepherd carried butter in his hands, Dumuzid carried milk on his shoulders. He carried butter and milk in containers on his shoulders, he carried milk in the churn on his shoulders. …… called out to the house; Dumuzid ……: \"Open the house, my lady! Open the house!\" 1 line fragmentary approx. 4 lines missing"
+    },
+    {
+     "ref": "1–11",
+     "orig": "nu-u₈-gig-ge X [...] (X X X)\nama /ugu\\-ni ĝiri₃ mu-un-gub-[gub] (i-na MUNUS-mi-ša i-X-X)\n[X] i-lu-zu mu-un-gub-X (X X-nu u₂-za-az)\ni-/gi₄\\-[in]-zu₇ NI.MUŠ₂-dam X [X] (X X X)\ni-gi₄-/in-zu₇\\ A ME X X [na-nam]\ni-gi₄-in-/zu₇\\ e-ne za-ra [... na-nam]\ni-/gi₄\\-in-zu₇ a-a-zu na-/nam\\\ni-gi₄-in-zu₇ ama-zu na-nam\nama-ni ama-zu-gin₇ in-ga{?}-X X X (X X a a [X] X)\na-a-ni a-a-zu-gin₇ in-ga-NE{?}-en\ne₂ ĝal₂-lu nin-ĝu₁₀ e₂ ĝal₂-lu",
+     "orig_lines": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10",
+      "11"
+     ],
+     "en": "The mistress ……. She stepped forward to her own mother, and stood …… expert in song: (Ningal speaks:) \"He will be just like ……. He will be just like ……. He will be just like …… for you. He will be just like your father. He will be just like your mother. His mother too will …… just like your mother! His father too will …… just like your father!\" (Dumuzid speaks:) \"Open the house, my lady! Open the house!\""
+    },
+    {
+     "ref": "12–23",
+     "orig": "{d}inana dug₄-ga ama-na-še₃\na mu-un-tu₅ i₃ dug₃-ga mu-/un\\-šeš₂\n{tug₂}pala₃ maḫ bar-ra nam-mi-in-dul\nu₃ mu-lu-ug-ga-ni šu ba-an-ti\n{na₄}za-gin₃ gu₂-a si bi₂-ib₂-sa₂-sa₂-e\n{na₄}kišib šu-ni-a ba-ni-in-du₈ (i-na X iš ta [X] X)\nin-nin₉-e ĝiri₃-ni mu-un-gub-gub (iš X X ma)\n{d}dumu-zid-de₃ {ĝiš}ig im-ma-ni-in-us₂ (ip te X [...])\ne₂-e iti₆-gin₇ im-ma-na-ra-e₃ (iš{?} X X X)\nigi mu-un-ši-bar mu-un-na-ḫul₂-la (iḫ{?} X X X)\ngu₂-da mu-ni-in-/la₂ ne\\ [mu]-/un-su{?}-su-ub{?} \\\n[...] X X [...]",
+     "orig_lines": [
+      "12",
+      "13",
+      "14",
+      "15",
+      "16",
+      "17",
+      "18",
+      "19",
+      "20",
+      "21",
+      "22",
+      "23"
+     ],
+     "en": "At her mother's bidding, Inana bathed in water and anointed herself with sweet oil. She covered her body with a grand robe; she also took her pin. She straightened the lapis lazuli stones on her neck, and grasped her cylinder seal in her hand. The young lady stepped forward as Dumuzid pushed open the door, and like a moonbeam she came forth to him from the house. He looked at her and rejoiced in her; he embraced her and kissed her. 1 line fragmentary approx. 9 lines missing"
+    },
+    {
+     "ref": "1–8",
+     "orig": "X [...]\n{d}dumu-zid-de₃ X [...]\nen {d}dumu-zid /IM{?}\\ [...] (X X)\nlugal-ĝu₁₀ e₂-e [...]\nlugal-ĝu₁₀ /nitalam\\-[ĝu₁₀ ...]\n{d}dumu-zid-de₃ lu₂{?} X /A{?}\\ NU X X\nlugal-ĝu₁₀ e₂-/a kur₉\\-ra-ma(sourše: na)-ni\nsu₈-ba {d}dumu-zid-de₃ nitalam-a-ni-ir gu₃ mu-na-de₂-e",
+     "orig_lines": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8"
+     ],
+     "en": "1 line fragmentary Dumuzid ……. Lord Dumuzid ……. \"My master, …… home. My master, my spouse ……. Dumuzid ……. My master, take me (?) into the house.\" The shepherd Dumuzid said to his bride:"
+    },
+    {
+     "ref": "9–13",
+     "orig": "nitalam-ĝu₁₀ X-ta{?} e₃-i₃\n{d}inana X X X e₂ diĝir{!}-ĝa₂\ne₂ diĝir-ĝa₂-še₃ mu-e{?}-tum₃-en\nigi diĝir-ĝa₂-še₃ i₃-e{?}-nu₂-en\nzag gu-la diĝir-ĝa₂-ka {d}/inana\\ mu-da-tuš-u₃-de₃-en (X X X [X] X X)",
+     "orig_lines": [
+      "9",
+      "10",
+      "11",
+      "12",
+      "13"
+     ],
+     "en": "\"My bride, come forth from the ……. Inana, …… the house of my personal god. I shall bring you to the house of my god. I shall get you to lie down before my god and, Inana, you shall sit with me in my god's seat of honour!\""
+    },
+    {
+     "ref": "14–24",
+     "orig": "ur₅-gin₇ ḫu-mu-na-ab-be₂-a-ka\nX X X-ka im-/ma\\-an-tuš (X [X] ab)\n[X X X] X ŠU X [...] X X X (a-na A IGI{?} RI{?} AB{?} NU X X X)\n[X]-ra ĝiri₃ im-ma-an-/gub\\-[gub] (it-ta-X X)\n[X] X [a]-ra-zu mu-na-ab-be₂ ([...] X X)\n[...] X [...] RU{?} X [X]\n[...] X X X [...]\n[...] X X [...]\n[...] ḪA{?} [...]\n[...] NE [...]\n[...] /li\\-bi-ir-si-zu{?}",
+     "orig_lines": [
+      "14",
+      "15",
+      "16",
+      "17",
+      "18",
+      "19",
+      "20",
+      "21",
+      "22",
+      "23",
+      "24"
+     ],
+     "en": "When he had spoken thus to her, she sat down …… 1 line fragmentary …… stepped forward ……. …… uttered a prayer …… 5 lines fragmentary …… your usher …… approx. 4 lines missing"
+    },
+    {
+     "ref": "1–4",
+     "orig": "[...] X [...]\n[X X] igi-/za\\ [...]\n[{d}ama]-ušumgal-ĝu₁₀ {ĝiš}ma₂ [...] (X X X)\n[X] /in\\-nin₉-ra gu₂ ab-[...]",
+     "orig_lines": [
+      "1",
+      "2",
+      "3",
+      "4"
+     ],
+     "en": "1 line fragmentary …… before you ……. My Ama-ušumgal, …… boat. …… the young lady:"
+    },
+    {
+     "ref": "5–13",
+     "orig": "[nam]-geme₂-ĝu₁₀-še₃ la-ba-e-de₃-ri\n[...]-na-am₃ banšur{?}-zu banšur{?} šen-na-am₃ (X X lu-ub-bi-<ib>)\nbanšur{?} šen-e im-ma-ni-ib-gu₇{!}-e-en (i-ik-kal X X X)\nbanšur{?}-zu banšur{?} /šen{?}-na{?}\\ banšur{?} šen-am₃ (ma{?} X [...])\nza-e /ḪUB{?}\\ [X X] ba-ni-ib-gu₇{!}-e-en (i [X] X X X)\nama-/ĝu₁₀ ḪUB\\ [X X] la{?}-ba-ni-ib-gu₇{!}\n/šeš\\ /tu\\-ur-tu-ra la-ba-ni-ib₂-gu₇{!} (X X X)\nnin₉-ĝu₁₀ {d}ĝeštin-an-na la-ba-ni-ib₂-gu₇{!}\nza-e [...] E šu ba-ni-ib-gu₇{!}-e ([...] na)",
+     "orig_lines": [
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10",
+      "11",
+      "12",
+      "13"
+     ],
+     "en": "\"I have not carried you off to be my slave girl! ……, your table will be a splendid table. You will eat at a splendid table. Your table will be a splendid table, a splendid table. You will eat ……. My mother does not eat there, Durtur's brother does not eat there, my sister Ĝeštin-ana does not eat there; but you will eat …….\""
+    },
+    {
+     "ref": "14–27",
+     "orig": "nitalam-ĝu₁₀ tug₂ na-ma-TUKU₅-TUKU₅-an\n[...]-e gu na-/ma\\-NU-NU-un\n[...] /siki\\ ud₅{?} na-ma-ni-ib₂-du₃-un ([...] ab [X] X [X] X)\n[...] /na{?}-ma{?}\\-DUN-DUN-an\n[X] X X [...] X nun-na ([...]-šum)\nX X X [...] X-an\n[X] IM{?} [...] X [...]\nninda nam X [X] X X [...]\n{d}nin-e₂-gal-la PA{?} [...]\nam {d}dumu-zid X X [X] X [...]\nX-e še-er-zid kug an-ur₂{?}-[ra] X X\n[X X]-na-ĝu₁₀ an-ne₂ še-er-zid [...]\n[X X X] BA /an{?}\\-ur₂{?} X [...]\n[...] X X [...]",
+     "orig_lines": [
+      "14",
+      "15",
+      "16",
+      "17",
+      "18",
+      "19",
+      "20",
+      "21",
+      "22",
+      "23",
+      "24",
+      "25",
+      "26",
+      "27"
+     ],
+     "en": "\"My bride, you should not weave cloth for me! ……, you should not spin yarn for me! ……, you should not comb out goat's wool for me! ……, you should not warp threads for me!\" 3 lines fragmentary \"You should not (?) …… bread for me!\" Ninegala, ……. The wild bull Dumuzid ……. …… holy radiance on the horizon ……, …… radiance in heaven ……, 2 lines fragmentary up to 5 lines missing"
+    }
+   ]
+  },
+  {
+   "num": "4.08.30",
+   "title_en": "A song of Inana and Dumuzid (Dumuzid-Inana D1)",
+   "segments": [
+    {
+     "ref": "1–7",
+     "orig": "[e₂]-/temen-ni₂-guru₃{?}-a{?}\\ X [...]\ne₂ uru₂-ze₂-ba šu si sa₂-a-bi\ne₂ {d}suen-na-ka dadag-ga-bi\ne₂-an-na-ka urin du₃-a-bi\ne₂ šu-bi-še₃ ḫe₂-rig₇\ne₂ zid-da-ĝu₁₀ dungu-gen₆{du-gu-ge} i-im-dirig\nmu inim-ĝar sag₉-ga in-ga-am₃",
+     "orig_lines": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7"
+     ],
+     "en": "The …… of E-temen-ni-guru, the organisation of the house of Eridug, the radiance of the house of Suen, and the erected banners of the E-ana were all given as gifts to the house. My good house floats like a cloud; its name too is a favourable omen."
+    },
+    {
+     "ref": "8–12",
+     "orig": "ki-nu₂ gi-rin{ri}-na za-gin₃ sig₁₀{zi}-ga-am₃\n{d}gibil₆ iri₁₂-gal-la mu-ra-an-kug-kug-ga\nmu-lu₂ nam-ga-ša-an-e šu gal du₃-a\nšu(sourše: u₃)-mu-un-na-ni mu-ra-an-sig₉\ne₂ {gi}ušub-na mu-ra-ab-kug-ga šu-luḫ mu-ra-ĝa₂-ĝa₂",
+     "orig_lines": [
+      "8",
+      "9",
+      "10",
+      "11",
+      "12"
+     ],
+     "en": "He who excels at the ceremonies of queenship has lined with his straw the flowered couch, inlaid with lapis lazuli, which Gibil has purified for you in the Iri-gal shrine and, in the house which he has sanctified for you with his sweet reeds, he is performing the purification rites for you."
+    },
+    {
+     "ref": "13–17",
+     "orig": "ud ba-an-nu₂ ud ba-an-dug₄\nud ki-nu₂-a i-bi₂ kar₂-kar₂-dam\nud u₃-mu-un-e mi₂ zi-zi-i-dam\nu₃-mu-un-ra nam-til₃ ze₂-eĝ₃-ĝa₂-a\nu₃-mu-un-ra ešgiri₂(erroneous) si-bi-/ir\\) šibir šum₂{šu}-mu-na-ab",
+     "orig_lines": [
+      "13",
+      "14",
+      "15",
+      "16",
+      "17"
+     ],
+     "en": "On the day of the moon's disappearance, the day appointed (?), the day when the couch will be inspected, the day when the lord will make love, grant life to the lord and give the staff and the crook to the lord!"
+    },
+    {
+     "ref": "18–22",
+     "orig": "al ba-an-dug₄ al ba-an-dug₄ ki-nu₂ al ba-an-dug₄\nki-nu₂ šag₄ ḫul₂-la al ba-an-dug₄ ki-nu₂ al ba-an-dug₄\nki-nu₂ ur₂ ze₂-ba al ba-an-dug₄ ki-nu₂ al ba-an-dug₄\n/ki\\-nu₂ nam-lugal-la al ba-an-dug₄ ki-nu₂ al ba-an-dug₄\n[ki]-nu₂ nam-nin-a al ba-an-dug₄ ki-nu₂ al ba-an-dug₄",
+     "orig_lines": [
+      "18",
+      "19",
+      "20",
+      "21",
+      "22"
+     ],
+     "en": "She desires it, she desires it, she desires the couch. She desires the couch of heart's joy, she desires the couch. She desires the couch of the sweet embrace, she desires the couch. She desires the kingly couch, she desires the couch. She desires the queenly couch, she desires the couch."
+    },
+    {
+     "ref": "23–27",
+     "orig": "[ze₂]-/ba\\-ni-da ze₂-ba-ni-da ki-nu₂ ze₂-ba-ni-da\n[ki-nu₂] šag₄ ḫul₂-la ze₂-ba-ni-da ki-nu₂ ze₂-ba-ni-da\n[ki-nu₂] /ur₂\\ ze₂-ba ze₂-ba-ni-da ki-nu₂ ze₂-ba-ni-da\n[ki-nu₂] /nam\\-lugal-la ze₂-ba-ni-da ki-nu₂ ze₂-ba-ni-da\n[ki-nu₂ nam]-nin-a ze₂-ba-ni-da ki-nu₂ ze₂-ba-ni-da",
+     "orig_lines": [
+      "23",
+      "24",
+      "25",
+      "26",
+      "27"
+     ],
+     "en": "When she makes comfortable, when she makes comfortable, when she makes the couch comfortable; when she makes the couch of heart's joy comfortable, when she makes the couch comfortable; when she makes the couch of the sweet embrace comfortable, when she makes the couch comfortable; when she makes the kingly couch comfortable, when she makes the couch comfortable; when she makes the queenly couch comfortable, when she makes the couch comfortable,"
+    },
+    {
+     "ref": "28–32",
+     "orig": "[X X ki]-/nu₂{?}\\ mu-un-na-barag₂-ge ki-nu₂ mu-un-na-barag₂-ge\n[X X ki-nu₂ mu]-/un\\-na-barag₂-ge ki-nu₂ mu-un-na-barag₂-ge\n/lugal\\ [ki-nu₂ ze₂-ba-ni-še₃ gu₃ mu-un-na-de₂-e]\nki aĝ₂ /ki-nu₂ ze₂-ba-ni-še₃ gu₃ mu-un\\-[na-de₂-e]\ninim{i-ni} til₃ inim ud su₁₃-ra₂{ra} gu₃ mu-un-na-de₂-e",
+     "orig_lines": [
+      "28",
+      "29",
+      "30",
+      "31",
+      "32"
+     ],
+     "en": "she covers the couch for him ……, covers the couch for him; she covers the couch for him ……, covers the couch for him; she calls the king to her sweet couch, she calls the beloved to her sweet couch, and speaks to him words of life, words of long days."
+    },
+    {
+     "ref": "33–46",
+     "orig": "ga-ša-an-šubur-ra sukkal zid e₂-an-na-ke₄\nkišib-la₂{!}{ ki-še-eb-la₂} zid-da-na im-ma-an-dab₅\nur₂ ga-ša-an-na-ka-še₃ ḫi-li-a mu-ni-kur₉\nu₃-mu-un-e aĝ₂ šag₄-ge ba-e-pad₃-da-zu\nlugal-e nitalam ki aĝ₂-zu ur₂ kug niĝ₂ dug₃-zu ud ḫa-ba-ni-ib-su₃-ud-de₃\nbal sag₉-ga pa e₃ šum₂-mu-un-ab\n{ĝiš}gu-za nam-lugal-la suḫuš gen₆-na-ba šum₂-mu-na-ab\nĝidru kalam si sa₂ ešgiri₂ šibir šum₂-mu-na-ab\naga zid men-na saĝ dalla-a šum₂-mu-na-ab\n{d}utu e₃-ta {d}utu šu₂-še₃\n{tum₉}ulu₃-ta{tu-mu-ul-lu-ta} {tum₉}mir-ra-a-še₃tu-mu-{d}mi-ra\na-ab-ba igi-nim-ta a-ab-ba sig-še₃\n{ĝiš}ḫa-lu-ub₂{!}-ta {ĝiš}erin-na-še₃(sourše: ta)\nki-en-gi ki-uri-a ešgiri₂ šibir šum₂-mu-na-ab(sourše: ta)",
+     "orig_lines": [
+      "33",
+      "34",
+      "35",
+      "36",
+      "37",
+      "38",
+      "39",
+      "40",
+      "41",
+      "42",
+      "43",
+      "44",
+      "45",
+      "46"
+     ],
+     "en": "Ninšubur, the good minister of E-ana, clasps him by his right hand and brings him in bliss to Inana's embrace: \"May the lord whom you have chosen in your heart, the king, your beloved husband, enjoy long days in your holy and sweet embrace! Give him a propitious and famous reign, give him a royal throne of kingship on its firm foundation, give him the sceptre to guide the Land, and the staff and crook, and give him the righteous headdress and the crown which glorifies the head! From the rising of the sun to the setting of the sun, from the south to the north, from the upper sea to the lower sea, from where the ḫalub tree grows to where the cedar grows, over all Sumer and Akkad, grant him the staff and the crook!\""
+    },
+    {
+     "ref": "47–59",
+     "orig": "saĝ gig₂ dur₂-ru-na-bi nam-sipad-bi ḫe₂-ak-e\ne-ne engar-gin₇ gana₂ ḫe₂-ĝa₂-ĝa₂\nsipad zid-gin₇ amaš ḫe₂-em-mi-lu-lu\ngu ḫe₂-en-da-ĝal₂ še ḫe₂-en-da-ĝal₂\nid₂-da a-eštub ḫe₂-en-da-ĝal₂\na-šag₄-ga še gu-nu ḫe₂-en-da-ĝal₂\nambar-ra ku₆ mušen gu₃ ḫu-mu-da-ra-ra\nmu-gi-e gi sumun gi ḫenbur ḫe₂-en-da-an-mu₂\nan-edin-na {mu}MAŠ-GURUM ḫe₂-en-da-an-mu₂\ntir-tir-ra šeg₉ šeg₉-bar ḫe₂-en-da-lu\npu₂-{ĝiš}kiri₆ lal₃ ĝeštin ḫe₂-en-da-il₂\nmu₂-sar-ra ḫi-iz{sar} za₃-ḫi-li{sar} ḫe₂-en-da-mu₂\ne₂-gal-la zi su₃-ud-ĝal₂ ḫe₂-en-da-an-ĝal₂",
+     "orig_lines": [
+      "47",
+      "48",
+      "49",
+      "50",
+      "51",
+      "52",
+      "53",
+      "54",
+      "55",
+      "56",
+      "57",
+      "58",
+      "59"
+     ],
+     "en": "\"May he act as shepherd of the black-headed inhabitants; may he, like a farmer, make the fields productive; may he make the sheepfolds multiply, like a trustworthy shepherd. Under him, may there be flax, may there be barley; in the rivers may there be carp floods. Under him, may there be mottled barley in the fields; in the marshes, fish, and may the birds chatter. Under him, may the old reeds and the young reeds grow tall in the reedbeds; under him, may the mašgurum bushes flourish on the high plains. Under him, may the wild sheep and wild goats multiply in the forests; under him, may the irrigated orchards produce syrup and wine. Under him, may lettuce and cress flourish in the garden plots; under him, may there be long life in the palace.\""
+    },
+    {
+     "ref": "60–64",
+     "orig": "{id₂}idigna {id₂}buranun-na a-u₅-ba ḫu-mu-ni-ib-/tum₂\\\ngu₂-gu₂-ba u₂ ḫu-mu-ta-mu₂-mu₂ a-gar₃ ḫe₂-en-si\nguru₇-du₆ guru₇-maš kug ga-ša-an {d}nisaba-ke₄ gu₂ ḫu-mu-ni-gur-gur\nga-ša-an-/ĝu₁₀\\ nin an ki nin an ki šu₂-a\nur₂ [...] ud ḫa-ba-ni-ib-sud-e",
+     "orig_lines": [
+      "60",
+      "61",
+      "62",
+      "63",
+      "64"
+     ],
+     "en": "\"May high flood-waters flow in the Tigris and Euphrates, may the grasses grow tall on their banks, and may the meadows be covered. May the holy lady Nisaba pile high the grain heaps and mounds. My lady, queen of heaven and earth, queen who encompasses heaven and earth, may he enjoy long days …… embrace.\""
+    },
+    {
+     "ref": "65–70",
+     "orig": "lugal [...] /saĝ\\ il₂-la mu-un-ĝen-ne₂\nur₂ /kug\\ [ga-ša-an-na]-/ka{?}\\-še₃ saĝ il₂-la mu-un-ĝen\nlugal X [X saĝ] /il₂\\-la ĝen-ne₂\nnin{!}-ĝu₁₀-[ra] /saĝ\\ il₂-la ĝen-ne₂\nX U₃ [...] il₂-la KA-ta\nmu-/gi₁₇\\-[ib] [gu₂-da mu-un]-da-la₂",
+     "orig_lines": [
+      "65",
+      "66",
+      "67",
+      "68",
+      "69",
+      "70"
+     ],
+     "en": "With head high, the king goes now ……, with head high he goes to the holy embrace of Inana. The king going now with head high ……, going now to my lady with head high, 1 line fragmentary he embraces the mistress. (the ends of a number of further lines are preserved) unknown no. of lines missing"
+    }
+   ]
+  },
+  {
+   "num": "4.08.31",
+   "title_en": "A balbale to Inana (Dumuzid-Inana E1)",
+   "segments": [
+    {
+     "ref": "1–16",
+     "orig": "X [...]\niri{?} /A\\ [...]\nUD X [...]\nḪA X [...]\nX X [...]\n[X] X [...]\n[...] X me-teš₂ X [...]\nX X X [...] EZEN [...]\nšul{?}-e{?} X X MU U₃ X [...]\nbur-e bur-ta [...]\nku₆-ma-al id₂{?}-ta{?} X [...]\nMUŠ₂ X X MUŠ₂{?} X balaĝ{?}-ta I{?} [...]\nud-bi-a MUŠ₂ nitaḫ{?} UD NE [...]\nX ki ĝiš gid₂ [...]\nsaĝ TI X MES{?} la₂ [...]\ntur-tur-ra{?} SA{?} A₂{?} E X [...]",
+     "orig_lines": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10",
+      "11",
+      "12",
+      "13",
+      "14",
+      "15",
+      "16"
+     ],
+     "en": "16 lines fragmentary or unclear"
+    },
+    {
+     "ref": "17–22",
+     "orig": "ki-sikil tur-ra suḫ /mu\\-[...]\nĝuruš tur-ra {tug₂}niĝ₂-la₂ mu-[...]\nki{?} ezem{?}-ma-še₃ ma-la-ĝu₁₀-u₃ /ḫe₂{?}\\-[...]\nur-ra mu-un-u₅ ur-ra /mu\\-[...]\n[X] X X ur-maḫ-a /mu\\-[...]\n[...] X ur gal-la [...]",
+     "orig_lines": [
+      "17",
+      "18",
+      "19",
+      "20",
+      "21",
+      "22"
+     ],
+     "en": "The young maiden …… a tiara. The young man …… sword belt. Let my girlfriend …… to the place of the festival. She rides on a beast, …… on a beast. …… on a lion ……. …… on a great beast ……. unknown no. of lines missing"
+    },
+    {
+     "ref": "1–16",
+     "orig": "[...] X X X [...]\n[X X] /mu{?}-un{?}\\-de₅-de₅ ĝeštug₂-/ga{?}\\ [...]\nim-da-du₇-ru im-da-du₇-ru X X i-[...]\nšem-bi-zid-da im-da-/du₇\\-[ru]\nmu-un-dub-dub-be₂ mu-un-bur₂-/bur₂\\-[re]\na im-ma-tu₅ naĝa im-ma-[su-ub]\nna-ma bur babbar-ra im-ma-[su-ub]\na {urud}šen-dilim₂ kug-ga im-ma-[tu₅]\nu₅ ze₂-ba {na₄}bur-ra /im\\-ma-[šeš₄]\ntug₂ dan₃-na-ni im-ma-[mur₁₀]\nmu-un-bur₂-bur₂-re mu-un-/dub\\-[dub-be₂]\ni-bi₂-ni šem-bi-zid-da [...-mar]\n{na₄}za-gin₃ gu₂-ni(sourše: si)-a im-ma-[sig₉]\nmurub₂-bi gu₂ sa-na si bi₂-[sa₂ ]\n{na₄}kišib gu₂-bar-ra-na im-mi-[...]\n{tug₂}pala₃ na-aĝ₂-ga-ša-an-na-ka bar-/ra\\ [...-dul]",
+     "orig_lines": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10",
+      "11",
+      "12",
+      "13",
+      "14",
+      "15",
+      "16"
+     ],
+     "en": "1 line fragmentary …… gathers ……, …… on her ears. She blends (?), she blends (?) ……. She blends (?) kohl. She lets down her hair which was combed up. She bathes and rubs herself with soap. She rubs herself with soap from the white bowl, she bathes with water from the holy ewer. She anoints herself with sweet oil from the stone bowl. She dresses in her laundered clothes. She combs up her hair which was let down. She paints her eyes with kohl. She puts the lapis lazuli beads on her neck, arranging their button on her neck sinews. She …… a cylinder seal on the nape of her neck. She covers her body with a queenly robe."
+    },
+    {
+     "ref": "17–21",
+     "orig": "{d}dur₇-tur e₂ ma-la-ga{?} [...]\n{d}dur₇-tur il₂-la du-a KU BI{?} X [...]\n{d}dur₇-tur du₅-la₂-ta /du₇\\-[du₇ ...]\n{d}dur₇-tur ma-la-ga [...]\n/{d}dur₇-tur{?}\\ X [X] X [...]",
+     "orig_lines": [
+      "17",
+      "18",
+      "19",
+      "20",
+      "21"
+     ],
+     "en": "Durtur …… the house of her girlfriend. Durtur, walking on the hills, ……. Durtur, circling (?) around in the valleys, ……. Durtur …… her girlfriend. Durtur ……. unknown no. of lines missing"
+    },
+    {
+     "ref": "1–7",
+     "orig": "[...] X ḪA E X AN X X\n[...] X X X X na-an-na\n[...] {d}u₃-mu-un-ban₃-da\n[...] [{d}ga]-/ša\\-an-sumun₂{?}-na\n{d}dur₇-tur X X ŠE₃-bi-ta šembi₂-zid i-bi₂-[na] [...]\nX X di-de₃ X X in-na{?}-an-šum₂-ma X [...]\nX ALAM{?} ĝiš ki [...]",
+     "orig_lines": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7"
+     ],
+     "en": "2 lines fragmentary …… Lugalbanda. …… Ninsumun. Durtur …… kohl on her eyes. 2 lines fragmentary"
+    },
+    {
+     "ref": "8",
+     "orig": "bal-bal-e {d}/inana\\-[kam]",
+     "orig_lines": [
+      "8"
+     ],
+     "en": "A balbale of Inana."
+    }
+   ]
+  },
+  {
+   "num": "4.08.32",
+   "title_en": "A song of Inana and Dumuzid (Dumuzid-Inana F1)",
+   "segments": [
+    {
+     "ref": "1–10",
+     "orig": "/da-ĝu₁₀\\ X [...]\nmu-nu₂ lal₃ ḫab₂-ba [...]\nšu-ni šu-ĝa₂ /im\\-[ma-...]\nme-ri-ni me-ri-ĝa₂ im-ma-[...]\nšu-um-du-um-ĝu₁₀ ka-na ba-[...]\nmurub₄{?} X maḫ{?} TA ḪA{?} RA{?} [...]\nšag₄ ki X X aĝ₂-ĝa₂-ni eš₂{?}-gin₇ mu-[...]\nḫar{?}-gin₇ /šu\\-ĝa₂ im-mi-in-[...]\nza-gin₇ gu₂-ĝa₂ teš₂{?} ba-ni-/in\\-[...]\nkug{?}-gin₇ mu-ud-na-ĝa₂ ba-ni-[...]",
+     "orig_lines": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10"
+     ],
+     "en": "…… my side. …… on a bed dripping with honey. …… his hand in my hand. …… his foot by my foot. …… my lips on his mouth. 2 lines fragmentary …… like a bracelet on my hand. …… lapis lazuli on my neck. …… like silver …… of my bridegroom."
+    },
+    {
+     "ref": "11–15",
+     "orig": "šeš-e {ĝiš}kiri₆-ni-a im-/ma\\-[...]\nmu gub-ba-ni ḫe₂{?}-X-ni{?}-/gub{?}\\\nmu nu₂-a-ni /ḫe₂{?}\\-X-nu₂-e-/de₃{?}\\\nX X X X X X /bi₂\\-in-nu₂ X\nzu₂-lum in-/ze₂{?}-ze₂{?}\\ X-ĝa₂ bi₂-in-PA [X]",
+     "orig_lines": [
+      "11",
+      "12",
+      "13",
+      "14",
+      "15"
+     ],
+     "en": "The brother …… in his garden. …… stand …… his standing tree. …… lie down …… his recumbent tree. He laid me down ……. …… dates."
+    },
+    {
+     "ref": "16–23",
+     "orig": "aĝ₂-e {ĝiš}ḫašḫur-a ma-da-ab-be₂\nze₂-ba kal-la-ĝu₁₀ /saĝ{?}\\-ĝa₂ ba-an-X X\naĝ₂-e {mu}PEŠ₃-a ma-da-ab-be₂\nze₂-ba kal-la-ĝu₁₀ /NA{?} X X AB{?}\\ ĜA₂ (X)\naĝ₂-e {mu}KIM₃{?}-e /ma\\-[da-ab-be₂]\nze₂-ba kal-/la\\-ĝu₁₀ X [...]\naĝ₂-e /ka{?}\\ X saĝ-e [ma-da-ab-be₂]\nze₂-ba kal-/la\\-ĝu₁₀ X ĜA₂ X [...]",
+     "orig_lines": [
+      "16",
+      "17",
+      "18",
+      "19",
+      "20",
+      "21",
+      "22",
+      "23"
+     ],
+     "en": "The …… spoke to me among the apple trees. My precious sweet …… my head. The …… spoke to me among the fig trees. My precious sweet …… my ……. The …… spoke to me among the willow (?) trees. My precious sweet ……. The …… spoke to me ……. My precious sweet …… my ……."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,181 @@
+{
+ "slug": "sumerian-flood",
+ "source": "ETCSL",
+ "siglum": "ETCSL 1.7.4",
+ "source_url": "https://etcsl.orinst.ox.ac.uk/cgi-bin/etcsl.cgi?text=t.1.7.4",
+ "license": "ETCSL（Oxford）轉寫與英譯，非商業學術使用",
+ "compositions": [
+  {
+   "num": "1.7.4",
+   "title_en": "The Flood story",
+   "segments": [
+    {
+     "ref": "1–10",
+     "orig": "[...] im-ĝa₂-/ĝa₂\\ [...]\nnam-lu₂-ulu₃-ĝu₁₀ ḫa-lam-ma-bi-a ga-ba-/ni-ib\\-[...]\n{d}nin-tur₅-ra niĝ₂-dim₂-dim₂-ma-ĝu₁₀ sig₁₀-[sig₁₀]-/bi\\-[a] ga-ba-ni-ib-gi₄-gi₄\nuĝ₃ ki-ur₃-bi-ta ga-ba-ni-ib-gur-ru-ne\niri{ki} me-a-bi ḫe₂-em-mi-in-du₃ ĝissu-bi ni₂ ga-ba-ab-dub₂-bu\niri me-a šeg₁₂-bi ki kug-ga ḫe₂-em-mi-in-šub\nki-eš-<bar> me-a ki kug-ga ḫe₂-em-mi-ni-ib-ri\nKUG{?} A niĝ₂ izi ten-na si mi-ni-in-si-sa₂\nĝarza me maḫ šu mi-ni-ib-šu-du₇",
+     "orig_lines": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9"
+     ],
+     "en": "…… sets up ……. \"I will …… the perishing of my mankind; for Nintur, I will stop the annihilation of my creatures, and I will return the people from their dwelling grounds. Let them build many cities so that I can refresh myself in their shade. Let them lay the bricks of many cities in pure places, let them establish places of divination in pure places, and when the fire-quenching …… is arranged, the divine rites and exalted powers are perfected and the earth is irrigated, I will establish well-being there.\""
+    },
+    {
+     "ref": "10–14",
+     "orig": "ki a im-ma-ab-dug₄ silim ga-mu-ni-in-ĝar\nan {d}en-lil₂ {d}en-ki {d}nin-ḫur-saĝ-ĝa₂-ke₄\nsaĝ gig₂-ga mu-un-dim₂-eš-a-ba\nniĝ₂-gilim ki-ta ki-ta mu-lu-lu\nmaš₂-anše niĝ₂-ur₂-4 edin-na me-te-a-aš bi₂-ib₂-ĝal₂",
+     "orig_lines": [
+      "10",
+      "11",
+      "12",
+      "13",
+      "14"
+     ],
+     "en": "After An, Enlil, Enki and Ninḫursaĝa had fashioned the black-headed people, they also made animals multiply everywhere, and made herds of four-legged animals exist on the plains, as is befitting. approx. 32 lines missing"
+    },
+    {
+     "ref": "1–3",
+     "orig": "[...] /mu-un\\-[...]\n[...] AM₃ [...]\n[...] X de₅-/ga\\ ga-ba-ni-in-[...]",
+     "orig_lines": [
+      "1",
+      "2",
+      "3"
+     ],
+     "en": "3 lines fragmentary"
+    },
+    {
+     "ref": "4–5",
+     "orig": "[du]-/lum\\-bi igi ga-ba-ni-ib-du₈-/du₈\\-[X]\nX šidim kalam-ma-ke₄ uš gen₆ /ḫa\\-ba-ab-ba-[al]",
+     "orig_lines": [
+      "4",
+      "5"
+     ],
+     "en": "\"I will oversee their labour. Let …… the builder of the Land, dig a solid foundation.\""
+    },
+    {
+     "ref": "6–18",
+     "orig": "[ud X] X nam-lugal-la an-ta ed₃-de₃-a-ba\nmen maḫ {ĝiš}gu-za nam-lugal-la an-ta ed₃-a-ba\n[ĝarza me] /maḫ\\ šu mi-ni-ib-šu-du₇\n[iri-bi-e]-/ne\\ [šeg₁₂-bi ki kug-ga im]-/ma\\-an-da-šub\nmu-bi ba-an-sa₄ kab dug₄-/ga\\ [ba-ḫal]-/ḫal\\-la\nnesaĝ iri-be₂-e-ne eridug{ki} maš₂-saĝ {d}nu-dim₂-mud mi-ni-in-šum₂\n2-kam-ma-še₃ nu-gig-ra bad₃-tibira{ki} mi-ni-in-šum₂\n3-kam-ma la-ra-ag {d}pa-bil₂-«ḫur»-saĝ mi-ni-in-šum₂\n4-kam-ma zimbir{ki} šul {d}utu mi-ni-in-šum₂\n5-kam-ma šuruppag {d}sud₃{ki}-ra mi-ni-in-šum₂\niri-be₂-e-ne mu-bi ba-an-sa₄-a kab dug₄-ga ba-ḫal-ḫal-la\nid₂ IM GUN₂{?} ma-an-šu₄-am₃ im-ma-al-la a im-ma-an-de₆\nid₂ tur-tur-re šu luḫ-bi ĜAR ḪAR-ḪAR mi-ni-ib₂-ĝar-ĝar",
+     "orig_lines": [
+      "6",
+      "7",
+      "8",
+      "9",
+      "10",
+      "11",
+      "12",
+      "13",
+      "14",
+      "15",
+      "16",
+      "17",
+      "18"
+     ],
+     "en": "After the …… of kingship had descended from heaven, after the exalted crown and throne of kingship had descended from heaven, the divine rites and the exalted powers were perfected, the bricks of the cities were laid in holy places, their names were announced and the …… were distributed. The first of the cities, Eridug, was given to Nudimmud the leader. The second, Bad-tibira, was given to the Mistress. The third, Larag, was given to Pabilsaĝ. The fourth, Zimbir, was given to the hero Utu. The fifth, Šuruppag, was given to Sud. And after the names of these cities had been announced and the …… had been distributed, the river ……, …… was watered, and with the cleansing of the small canals …… were established. approx. 34 lines missing"
+    },
+    {
+     "ref": "1–27",
+     "orig": "ki-tuš an-na X [...]\ne-[...]\na-ma-ru [...]\nnam-lu₂-[ulu₃ ...]\n/ur₅-gin₇\\ bi₂-in-ak [...]\nud-bi-a {d}nin-/tur₅\\ [...] DIM₂ A [...]\nkug {d}inana-ke₄ uĝ₃-bi-še₃ a-nir mu-[un-ĝa₂-ĝa₂]\n{d}en-ki šag₄ ni₂-te-na-ke₄ ad i-ni-/in\\-[gi₄-gi₄]\nan {d}en-lil₂ {d}en-ki {d}nin-ḫur-saĝ-ĝa₂-[ke₄]\ndiĝir an ki-ke₄ mu an {d}en-lil₂ mu-X-[pad₃]\nud-ba zi-ud-su₃-ra₂ lugal-am₃ gudug X [...]\nan saĝ NIĜIN mu-un-dim₂-dim₂ EN [...]\nnam-sun₅-na inim sig₁₀-sig₁₀-ge ni₂ teĝ₃-ĝe₂₆ [...]\nud šu₂-uš-e saĝ us₂ gub-ba [...]\nma-mu₂ nu-me-a ed₂-de₃ inim /bal\\ [...]\nmu an ki-bi-ta pad₃-pad₃-de₃ [...]\n/ki{?}\\-ur₃-še₃ diĝir-re-e-ne e₂-ĝar₈ [...]\nzi-ud-su₃-ra₂ da-bi gub-ba ĝiš mu-[un-tuku]\niz-zi-da a₂ gab₂-bu-ĝu₁₀ gub-ba [...]\niz-zi-da inim ga-ra-ab-dug₄ inim-[ĝu₁₀ ḫe₂-dab₅]\nna de₅-ga-ĝu₁₀ ĝizzal [ḫe₂-em-ši-ak]\nDAG-me-a a-ma-ru ugu kab /dug₄\\-[ga ...] ba-/ur₃\\ [...]\nnumun nam-lu₂-ulu₃ ḫa-lam-e-/de₃\\ [nam-bi ba-tar]\ndi-til-la inim pu-uḫ₂-ru-[um-ma-ka šu gi₄-gi₄ nu-ĝal₂]\ninim dug₄-ga an {d}en-[lil₂-la₂-ka] [šu bal-e nu-zu]\nnam-lugal-bi bal-bi /ba\\-[bur₁₂ e-ne šag₄ kuš₂-u₃-de₃]\n/e\\-ne-eš₂ [...]\n/a\\-na MU-/MU\\ [...]",
+     "orig_lines": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10",
+      "11",
+      "12",
+      "13",
+      "14",
+      "15",
+      "16",
+      "17",
+      "18",
+      "19",
+      "20",
+      "21",
+      "22",
+      "23",
+      "24",
+      "25",
+      "26",
+      "27",
+      "28"
+     ],
+     "en": "……seat in heaven. …… flood. …… mankind. So he made ……. Then Nintur ……. Holy Inana made a lament for its people. Enki took counsel with himself. An, Enlil, Enki and Ninḫursaĝa made all the gods of heaven and earth take an oath by invoking An and Enlil. In those days Zi-ud-sura the king, the gudug priest, ……. He fashioned ……. The humble, committed, reverent ……. Day by day, standing constantly at ……. Something that was not a dream appeared, conversation ……, …… taking an oath by invoking heaven and earth. In the Ki-ur, the gods …… a wall. Zi-ud-sura, standing at its side, heard: \"Side-wall standing at my left side, ……. Side-wall, I will speak words to you; take heed of my words, pay attention to my instructions. A flood will sweep over the …… in all the ……. A decision that the seed of mankind is to be destroyed has been made. The verdict, the word of the divine assembly, cannot be revoked. The order announced by An and Enlil cannot be overturned. Their kingship, their term has been cut off; their heart should be rested about this. Now ……. What …….\" approx. 38 lines missing"
+    },
+    {
+     "ref": "1–11",
+     "orig": "im-ḫul-im-ḫul {tum₉}si-si-ig du₃-a-bi teš₂-bi i₃-sug₂-ge-eš\na-ma-ru ugu kab dug₄-ga ba-an-da-ab-ur₃-e\nud 7-am₃ ĝi₆ 7-am₃\na-ma-ru kalam-ma ba-ur₃-ra-ta\n{ĝiš}ma₂ gur₄-gur₄ a gal-la im-ḫul tuku₄-tuku₄-a-ta\n{d}utu i-im-ma-ra-e₃ an ki-a ud ĝa₂-ĝa₂\nzi-ud-su₃-ra₂ {ĝiš}ma₂ gur₄-gur₄ ab-BUR₂ mu-un-da-buru₃\nšul {d}utu ĝiš-nu₁₁-ni-da {ĝiš}ma₂ gur₄-gur₄-še₃ ba-an-kur₉-re-en\nzi-ud-su₃-ra₂ lugal-am₃\nigi {d}utu-še₃ giri₁₇ ki su-ub ba-gub\nlugal-e gud im-ma-ab-gaz-e udu im-ma-ab-šar₂-re",
+     "orig_lines": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10",
+      "11"
+     ],
+     "en": "All the windstorms and gales arose together, and the flood swept over the ……. After the flood had swept over the land, and waves and windstorms had rocked the huge boat for seven days and seven nights, Utu the sun god came out, illuminating heaven and earth. Zi-ud-sura could drill an opening in the huge boat and the hero Utu entered the huge boat with his rays. Zi-ud-sura the king prostrated himself before Utu. The king sacrificed oxen and offered innumerable sheep."
+    },
+    {
+     "ref": "12–17",
+     "orig": "[...] X si gal [...] sikil-la-da\n[...] X mu-un-na-X-X-ba\n[...]\n[...] bi₂-in-si\n[...] X tab-ba\n[...] A X",
+     "orig_lines": [
+      "12",
+      "13",
+      "14",
+      "15",
+      "16",
+      "17"
+     ],
+     "en": "six lines fragmentary approx. 33 lines missing"
+    },
+    {
+     "ref": "1–2",
+     "orig": "zi an-na zi ki-a i₃-pad₃-de₃-en-ze₂-en za-zu-da ḫe₂-em-da-la₂\nan {d}en-lil₂ zi an-na zi ki-a i₃-pad₃-de₃-ze₂-en za-da-ne-ne im-da-la₂",
+     "orig_lines": [
+      "1",
+      "2"
+     ],
+     "en": "\"They have made you swear by heaven and earth, ……. An and Enlil have made you swear by heaven and earth, …….\""
+    },
+    {
+     "ref": "3–11",
+     "orig": "niĝ₂-gilim-ma ki-ta ed₃-de₃ im-ma-ra-ed₃-de₃\nzi-ud-su₃-ra₂ lugal-am₃\nigi an {d}en-lil₂-la₂-še₃ giri₁₇ ki su-ub ba-/gub{!}\\\nan {d}en-lil₂ zi-ud-su₃-ra₂ mi₂-e-/eš₂{?}\\ [...-dug₄-...]\ntil₃ diĝir-gin₇ mu-un-na-šum₂-mu\nzi da-ri₂ diĝir-gin₇ mu-un-<na>-ab-ed₃-de₃\nud-ba zi-ud-su₃-ra₂ lugal-am₃\nmu niĝ₂-gilim-ma numun nam-lu₂-ulu₃ uru₃ ak\nkur-bal kur dilmun-na ki {d}utu e₃-še₃ mu-un-til₃-eš",
+     "orig_lines": [
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10",
+      "11"
+     ],
+     "en": "More and more animals disembarked onto the earth. Zi-ud-sura the king prostrated himself before An and Enlil. An and Enlil treated Zi-ud-sura kindly ……, they granted him life like a god, they brought down to him eternal life. At that time, because of preserving the animals and the seed of mankind, they settled Zi-ud-sura the king in an overseas country, in the land Dilmun, where the sun rises."
+    },
+    {
+     "ref": "12",
+     "orig": "za-e{?} X [...] /BA\\ X-bi til₃-eš X",
+     "orig_lines": [
+      "12"
+     ],
+     "en": "\"You …….\" approx. 39 lines missing"
+    }
+   ]
+  }
+ ]
+}

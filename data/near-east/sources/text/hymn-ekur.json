@@ -1,0 +1,312 @@
+{
+ "slug": "hymn-ekur",
+ "source": "ETCSL",
+ "siglum": "ETCSL 4.05.1",
+ "source_url": "https://etcsl.orinst.ox.ac.uk/cgi-bin/etcsl.cgi?text=t.4.05.1",
+ "license": "ETCSL（Oxford）轉寫與英譯，非商業學術使用",
+ "compositions": [
+  {
+   "num": "4.05.1",
+   "title_en": "Enlil in the E-kur (Enlil A)",
+   "segments": [
+    {
+     "ref": "1–9",
+     "orig": "{d}en-lil₂ su₃-ra₂-še₃ dug₄-ga-ni maḫ {inim-ma-ni} {(1 ms. ḫas instead:) dug₄-ga-ni} kug-ga-am₃ (Šited in OB šatalogue from Nibru, at Pḫiladelpḫia, 0.2.01, line 5; OB šatalogue in tḫe Louvre, 0.2.02, line 5; OB šatalogue from Urim (U2), 0.2.04, line 16; OB šatalogue at Andrews University, 0.2.11, line 10)\nniĝ₂ nu-kur₂-ru ka-ta e₃-a-ni nam ul-še₃ tar-re\nigi il₂-la-ni kur-re di-di\nĝiš-nu₁₁ il₂-la-ni kur-šag₄-ga igi ĝal₂\na-a {d}en-lil₂ barag kug {barag} {(some mss. ḫave instead:) engur} maḫ-a daĝal-bi tuš-a-ni\n{d}nu-nam-nir nam-en nam-nun-na šu gal du₇-a-ni\ndiĝir ki ni₂-ba mu-un-na-gam-e-eš\ndiĝir-diĝir {d}a-nun-na {mu-un-na-sun₅-sun₅-ne-eš} {(1 ms. ḫas instead:) mu-un-na-sug₂-sug₂-ge₄-eš}\na₂ aĝ₂-ĝa₂ zid-de₃-eš im-ma-sug₂-ge-eš",
+     "orig_lines": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9"
+     ],
+     "en": "Enlil's commands are by far the loftiest, his {words} {(1 ms. has instead:) commands} are holy, his utterances are immutable! The fate he decides is everlasting, his glance makes the mountains anxious, his …… reaches (?) into the interior of the mountains. All the gods of the earth bow down to Father Enlil, who sits comfortably on the holy dais, the lofty {dais} {(some mss. have instead:) engur}, to Nunamnir, whose lordship and princeship are most perfect. The Anuna gods {enter before him} {(1 ms. has instead:) stand before him} and obey his instructions faithfully."
+    },
+    {
+     "ref": "10–17",
+     "orig": "en u₁₉-ru gal an ki-a dirig di zu gal-an-zu-e\ndur-an-ki-ka dur₂ ba-an-ĝar ĝeštug₂ daĝal-la-ke₄\nnam-nun-na ni₂ pa e₃-a ši-bi₂-in-ak ki-ur₃ ki gal-la\nnibru{ki} uz₃-saĝ maḫ an ki-ka ki-tuš im-ma-ni-in-du₃\niri igi-bi ni₂ me-lem₄ ḫuš-a\nbar-bi diĝir u₁₉-ru-na saĝ nu-ĝa₂-ĝa₂-dam\nšag₄-bi ka ĝiri₂ kiĝ₂-a ka garaš₂-a-ka\n{ĝiš}es₂-ad ki-bal-a pu₂ sa ak-a",
+     "orig_lines": [
+      "10",
+      "11",
+      "12",
+      "13",
+      "14",
+      "15",
+      "16",
+      "17"
+     ],
+     "en": "The mighty lord, the greatest in heaven and earth, the knowledgeable judge, the wise one of wide-ranging wisdom, has taken his seat in the Dur-an-ki, and made the Ki-ur, the great place, resplendent with majesty. He has taken up residence in Nibru, the lofty bond (?) between heaven and earth. The front of the city is laden with terrible fearsomeness and radiance, its back is such that even the mightiest god dare not attack, and its interior is the blade of a sharp dagger, a blade of catastrophe. For the rebel lands it is a snare, a trap set with a net."
+    },
+    {
+     "ref": "18–25",
+     "orig": "gal-bi dug₄-ga-bi ud la-ba-ni-ib-su₃-ud-de₃\ndi-da inim erim₂-ĝal₂ nu-mu-ni-ib-be₂\nšag₄-a bar-a {eme} {(some mss. ḫave instead:) inim} si nu-sa₂\ninim kur₂ niĝ₂ kur₂ u₃-nu-ĝar-ra\n{še₂₉-eš₂} {(some mss. ḫave instead:) LU₂-eš₂} di niĝ₂-erim₂ i-{d}utu\nigi bal niĝ₂-a₂-ĝar {inim-inim} {(1 ms. ḫas instead:) inim eme} sig dug₄-dug₄\nsun₇-na inim bur₂-ra ni₂ buluĝ₅ di silim-eš₂ di\niri niĝ₂-gig-ga nu-mu-ni-ib-dib-be₂",
+     "orig_lines": [
+      "18",
+      "19",
+      "20",
+      "21",
+      "22",
+      "23",
+      "24",
+      "25"
+     ],
+     "en": "It cuts short the life of those who speak too mightily. It permits no evil word to be spoken in judgment (?). ……, deception, inimical speech, hostility, impropriety, ill-treatment, wickedness, wrongdoing, looking askance (?), violence, slandering, arrogance, licentious speech (?), egotism and boasting are abominations not tolerated within the city."
+    },
+    {
+     "ref": "26–34",
+     "orig": "nibru{ki} a₂-bi sa-par₃ gal-la-am₃\nšag₄-ba ḫu-ri₂-in{mušen}-e dub₃ mu-un-bad-ba₉-re₆\nlu₂-erim₂ lu₂ ḫul-ĝal₂ šu-bi la-ba-ra-e₃\niri niĝ₂-gen₆-na saĝ-e-eš rig₇-ga\nniĝ₂-zid niĝ₂-si-sa₂ gi₁₆-sa-še₃ ak-a\ntug₂ dan₂-dan₂-na kar-ra ĝal₂-la\nšeš-gal šeš-ban₃-da dugud-de₃-da nam-lu₂-ulu₃ ak-da\ninim ab-ba-še₃ ĝizzal ak-de₃ ni₂ šu-a gi₄-gi₄-dam\ndumu ama-ni-ir sun₅-na ni₂ teĝ₃-ĝe₂₆-da nam-ab-ba sud-de₃",
+     "orig_lines": [
+      "26",
+      "27",
+      "28",
+      "29",
+      "30",
+      "31",
+      "32",
+      "33",
+      "34"
+     ],
+     "en": "The borders of Nibru form a great net, within which the ḫurin eagle spreads wide its talons. The evil or wicked man does not escape its grasp. In this city endowed with steadfastness, for which righteousness and justice have been made a lasting possession, and which is clothed (?) in pure clothing on the quay, the younger brother honours the older brother and treats him with human dignity; people pay attention to a father's word and reap the benefits; the child behaves humbly and modestly towards his mother and attains a ripe old age."
+    },
+    {
+     "ref": "35–43",
+     "orig": "iri a₂-dam kug {d}en-lil₂-la₂-kam\nnibru{ki} eš₃ ki aĝ₂ a-a kur gal-la-kam\nbarag nam-ḫe₂ e₂-kur e₂ za-gin₃ saḫar-ta ša-ba-ra-an-il₂\nḫur-saĝ il₂-la-gin₇ ki sikil-la bi₂-in-mu₂\nnun-bi kur gal a-a {d}en-lil₂\ne₂-kur eš₃ maḫ-a barag-ba dur₂ bi₂-in-ĝar\ne₂-a me-bi diĝir sag₂ nu-di\nšu-luḫ sikil-bi ki-gin₇ nu-silig-ge\nme-bi me abzu lu₂ igi nu-bar-re-de₃",
+     "orig_lines": [
+      "35",
+      "36",
+      "37",
+      "38",
+      "39",
+      "40",
+      "41",
+      "42",
+      "43"
+     ],
+     "en": "In the city, the holy settlement of Enlil, in Nibru, the beloved shrine of father Great Mountain, he has made the dais of abundance, the E-kur, the shining temple, rise from the soil; he has made it grow on pure land as high as a towering mountain. Its prince, the Great Mountain, Father Enlil, has taken his seat on the dais of the E-kur, the lofty shrine. No god can cause harm to the temple's divine powers. Its holy hand-washing rites are everlasting like the earth. Its divine powers are the divine powers of the abzu: no one can look upon them."
+    },
+    {
+     "ref": "44–55",
+     "orig": "šag₄-bi ab su₃-ra₂ an-zag nu-zu-a\n{KA} {(1 ms. ḫas instead:) KI} urin du₃-a urin mul-la-ba\ndi-ir-ga me ul-e šu im-ta-du₇-du₇\ninim-inim-ma-bi šudu₃-šudu₃-de₃\n{mu₇-mu₇-bi} {(1 ms. ḫas instead:) tu₆ dug₄-bi} inim sizkur-ra-kam\ninim-bi inim-ĝar sag₉ bar šu {(1 ms. adds:) ĝiš} šub-šub-bu-da\nĝarza niĝ₂ kal-kal-la-kam ({šu-qu₃-ru-/tum\\} {(anotḫer ms. ḫas instead:) šu-qu-ru-u₂-/tum\\})\nezen i₃ gara₂ sud ḫe₂-ĝal₂-la du₈-a\nĝiš-ḫur-bi giri₁₇-zal šag₄ ḫul₂-la di-bi niĝ₂ gal-gal-la-kam\nud šu₂-uš ezem-ma ud zal-le buru₁₄ maḫ-am₃\ne₂ {d}en-lil₂-la₂ kur ḫe₂-ĝal₂-la-kam\nšu gid₂ igi-tum₃ la₂ šu sumur niĝ₂-gig-ga",
+     "orig_lines": [
+      "44",
+      "45",
+      "46",
+      "47",
+      "48",
+      "49",
+      "50",
+      "51",
+      "52",
+      "53",
+      "54",
+      "55"
+     ],
+     "en": "Its interior is a wide sea which knows no horizon. In its …… glistening as a banner (?), the bonds and ancient divine powers are made perfect. Its words are prayers, its incantations are supplications. Its word is a favourable omen ……, its rites are most precious. At the festivals, there is plenty of fat and cream; they are full of abundance. Its divine plans bring joy and rejoicing, its verdicts are great. Daily there is a great festival, and at the end of the day there is an abundant harvest. The temple of Enlil is a mountain of abundance; to reach out, to look with greedy eyes, to seize are abominations in it."
+    },
+    {
+     "ref": "56–64",
+     "orig": "e₂-a en-bi e₂-da mu₂-a\nlagar{!}-bi (ša{!} ka-ra-bi) šu silim-ma ḫe₂-du₇-am₃\nabzu gudug-bi {šu-luḫ-ḫa} {(1 ms. ḫas instead:) šu-luḫ-ḫa-zu} tum₂-ma-me-eš\nnu-eš₃-bi šita kug-ge du₇-me-eš\nengar maḫ-bi sipad zid kalam-ma\nud dug₃-ga zid-de₃-eš tu-ud-da-am₃\nengar gana₂ daĝal-la ḫe₂-du₇-am₃\nši-im-da-ĝen nidba gal-gal-la-da\nĝiš-la₂-bi nu-mu-un-DU e₂-kur za-gin₃-še₃",
+     "orig_lines": [
+      "56",
+      "57",
+      "58",
+      "59",
+      "60",
+      "61",
+      "62",
+      "63",
+      "64"
+     ],
+     "en": "The lagar priests of this temple whose lord has grown together with it are expert in blessing; its gudug priests of the abzu are suited for {(1 ms. adds:) your} lustration rites; its nueš priests are perfect in the holy prayers. Its great farmer is the good shepherd of the Land, who was born vigorous on a propitious day. The farmer, suited for the broad fields, comes with rich offerings; he does not …… into the shining E-kur."
+    },
+    {
+     "ref": "65–73",
+     "orig": "{d}en-lil₂ a₂-dam kug ki-a ḫur-ra-za\nnibru{ki} iri ni₂-za ši-im-mi-du₃-du₃-am₃\nki-ur₃ kur ki sikil-zu a bi₂-dug₃-ga\nub-da 4-ba murub₄-ba dur-an-ki-ka ki ba-e-ni-tag-ge\nsaḫar-bi zi kalam-ma zi kur-kur-ra-ka\nšeg₁₂-bi kug ḫuš-a uš₈ {na₄}za-gin₃-na-ka\nam-gin₇ ki-en-gi-ra si mul {ba-ni-ib-be₂} {(some mss. ḫave instead:) ba-ni-ib-il₂}\nkur-kur-re saĝ im-ma-da-sag₃-ge\nezen gal-gal-ba uĝ₃-e nam-ḫe₂-a ud-bi mu-un-di-ni-ib-zal-e",
+     "orig_lines": [
+      "65",
+      "66",
+      "67",
+      "68",
+      "69",
+      "70",
+      "71",
+      "72",
+      "73"
+     ],
+     "en": "Enlil, when you marked out the holy settlements, you also built Nibru, your own city. You (?) …… the Ki-ur, the mountain, your pure place. You founded it in the Dur-an-ki, in the middle of the four quarters of the earth. Its soil is the life of the Land, and the life of all the foreign countries. Its brickwork is red gold, its foundation is lapis lazuli. You {made it glisten on high} {(1 ms. has instead:) raised its glistening top} in Sumer as if it were the horns of a wild bull. It makes all the foreign countries tremble with fear. At its great festivals, the people pass their time in abundance."
+    },
+    {
+     "ref": "74–83",
+     "orig": "{d}en-lil₂ {d}uraš kug ḫi-li du₈-du₈-a-zu\nabzu {barag} {(1 ms. ḫas instead:) engur} kug-ga gal-bi tum₂-ma-zu\nkur sig itima kug ki ni₂ te-en-te-en-zu\ne₂-kur e₂ za-gin₃ ki-tuš maḫ ni₂ gur₃-ru-zu\nni₂ me-lem₄-bi an-ne₂ im-us₂\nĝissu-bi kur-kur-ra ša-mu-un-la₂\nsuḫ₁₀-bi an-šag₄-ga-aš ša-mu-un-bad-ba₉-re₆\nen-en-e barag-barag-ge₂-ne\nnidba kug-ge si mu-ni-in-sa₂-eš\n{šudu₃} {(some mss. ḫave instead:) inim} sizkur-ra u₃-gul mu-na-ĝa₂-ĝa₂",
+     "orig_lines": [
+      "74",
+      "75",
+      "76",
+      "77",
+      "78",
+      "79",
+      "80",
+      "81",
+      "82",
+      "83"
+     ],
+     "en": "Enlil, holy Uraš is favoured with beauty for you; you are greatly suited for the abzu, the holy {throne} {(1 ms. has instead:) engur}; you refresh yourself in the deep underworld, the holy chamber. Your presence spreads awesomeness over the E-kur, the shining temple, the lofty dwelling. Its fearsomeness and radiance reach up to heaven, its shadow stretches over all the foreign lands, and its crenellation reaches up to the midst of heaven. All lords and sovereigns regularly supply holy offerings there, approaching Enlil with prayers and supplications."
+    },
+    {
+     "ref": "84–92",
+     "orig": "{d}en-lil₂ sipad igi zid bar-ra-zu\ngu₃ zid de₂-a kalam-ma il₂-la-zu\nkur šu-ni-še₃ kur ĝiri₃-ni-še₃\nkur-ra ki su₃-ra₂-bi gu₂ mu-na-ab-ĝa₂-ĝa₂\na sed₄-gin₇ du₈-a niĝ₂ ki-šar₂-ra-ka\nmaš₂-da-ri-a gu₂-un dugud-da-bi\nsa₂ bi₂-in-dug₄ e₂ niĝ₂-gur₁₁-ra-ka\nkisal maḫ-ḫa nidba si bi₂-in-sa₂\ne₂-kur e₂ za-gin₃-na ma-sar-re-eš im-mi-in-tum₃",
+     "orig_lines": [
+      "84",
+      "85",
+      "86",
+      "87",
+      "88",
+      "89",
+      "90",
+      "91",
+      "92"
+     ],
+     "en": "Enlil, if you look upon the shepherd favourably, if you elevate the one truly called in the Land, then the foreign countries are in his hands, the foreign countries are at his feet! Even the most distant foreign countries submit to him. He will then cause enormous incomes and heavy tributes, as if they were cool water, to reach the treasury. In the great courtyard he will supply offerings regularly. Into the E-kur, the shining temple, he will bring (?) ……."
+    },
+    {
+     "ref": "93–99",
+     "orig": "{d}en-lil₂ sipad zid {teš₂-ba} {(1 ms. ḫas instead:) ni₂-ba} lu-a\nna-gada mas-su niĝ₂-zi-ĝal₂-la-ka\nnam-nun gal-la-ni {ni₂ pa e₃-a-aš bi₂-in-ak} {(some mss. ḫave instead:) pa e₃ ši-bi₂-in-ak}\nmen suḫ₁₀ kug-ga {mu-ni-in-sig₇} {(1 ms. ḫas instead:) mu-ni-in-sig₁₀}\ntum₉ ḫur-saĝ-ĝa₂ barag-ge si-a-na\n{d}tir-an-na-gin₇ an-e ši-in-gi₄\ndungu dirig-ga-gin₇ ni₂-bi-a mu-un-ĝen",
+     "orig_lines": [
+      "93",
+      "94",
+      "95",
+      "96",
+      "97",
+      "98",
+      "99"
+     ],
+     "en": "Enlil, faithful shepherd of the teeming multitudes, herdsman, leader of all living creatures, has manifested his rank of great prince, {adorning himself with} {(1 ms. has instead:) putting on} the holy crown. As the Wind of the Mountain (?) occupied the dais, he spanned the sky as the rainbow. Like a floating cloud, he moved alone (?)."
+    },
+    {
+     "ref": "100–108",
+     "orig": "an-na dili nun-bi-im ki-a ušumgal-bi-im\n{d}a-nun-na-ke₄-ne diĝir maḫ-bi-im\nnam ni₂-te-a-ni ši-im-mi-in-tar-re\ndiĝir na-me igi nu-mu-ni-in-du₈\nsukkal-maḫ-a-ni {kingal} {(1 ms. ḫas instead:) kindagal} {d}nuska\ndug₄-ga inim šag₄-ga ĝal₂-la-ni\nmu-un-da-an-zu šag₄ mu-da-an-kuš₂-u₃\na₂ aĝ₂-ĝa₂ daĝal-bi mu-un-na-da-an-tum₂\nšita kug me kug-ga šu mu-un-na-mu₂-mu₂",
+     "orig_lines": [
+      "100",
+      "101",
+      "102",
+      "103",
+      "104",
+      "105",
+      "106",
+      "107",
+      "108"
+     ],
+     "en": "He alone is the prince of heaven, the dragon of the earth. The lofty god of the Anuna himself determines the fates. No god can look upon him. His great minister and {commander} {(1 ms. has instead:) chief barber} Nuska learns his commands and his intentions from him, consults with him and then executes his far-reaching instructions on his behalf. He prays to him with holy prayers (?) and divine powers (?)."
+    },
+    {
+     "ref": "109–123",
+     "orig": "kur gal {d}en-lil₂-da nu-me-a\niri nu-du₃ a₂-dam ki li-bi₂-ib-ĝar\ntur₃ nu-du₃ amaš nu-ĝar-ĝar\nlugal nu-il₂-e en nu-u₃-tud\nlu₂-maḫ nin-diĝir maš₂-e nu-mu-un-dab₅-be₂\nerin₂-e šagina ugula nu-tuku-tuku\nid₂-da a-eštubku₆ u₃-bi nu-dun-dun\neĝer-bi ab-ta e₃ si li-bi₂-in-sa₂ kun-bi nu-mu-un-sud-e\nab-e erim₃ dugud ni₂-ba nu-mu-un-u₃-tud\nku₆ engur-ra-ke₄ ĝiš-gi-a nunuz nu-mu-ni-ib-nu₂-nu₂\nmušen an-na-ke₄ ki daĝal-la gud₃ la-ba-ni-ib-u₂-us₂\nan-na dungu sir₂-ra ka-bi nu-du₈-e\na-šag₄-ga še gu-nu a-gar₃-ra nu-si-si\nedin-na giri₁₇-zal-bi u₂-šim nu-mu₂-mu₂\n{ĝiš}kiri₆-a {ĝiš daĝal} {(1 ms. ḫas instead:) {ĝiš}tir} kur-ra-ke₄ gurun nu-il₂-e",
+     "orig_lines": [
+      "109",
+      "110",
+      "111",
+      "112",
+      "113",
+      "114",
+      "115",
+      "116",
+      "117",
+      "118",
+      "119",
+      "120",
+      "121",
+      "122",
+      "123"
+     ],
+     "en": "Without the Great Mountain Enlil, no city would be built, no settlement would be founded; no cow-pen would be built, no sheepfold would be established; no king would be elevated, no lord would be given birth; no high priest or priestess would perform extispicy; soldiers would have no generals or captains; no carp-filled waters would dredge (?) the rivers at their peak; the carp would not …… come straight up (?) from the sea, they would not dart about. The sea would not produce all its heavy treasure, no freshwater fish would lay eggs in the reedbeds, no bird of the sky would build nests in the spacious land; in the sky the thick clouds would not open their mouths; on the fields, dappled grain would not fill the arable lands, vegetation would not grow lushly on the plain; in the gardens, the {spreading trees} {(1 ms. has instead:) forests} of the mountain would not yield fruits."
+    },
+    {
+     "ref": "124–130",
+     "orig": "kur gal {d}en-lil₂-da nu-me-a\n{d}nin-tur₅ nu-ug₅-ge saĝ ĝiš nu-ra-ra\nab₂-e {e₂}tur₃-ra amar-bi nu-šub-be₂\nu₈-e amaš-bi-a sila₄ ĝa₂ gig nu-e₃\na-za-lu-lu ni₂-ba lu-a\n{TUG₂-bi KUL-ba nu-mu-ni-ib-nu₂-nu₂} {(1 ms. ḫas instead:) tuš-bi šag₄-ba nu-mu-un-ib-tuš-tuš}\nmaš₂-anše niĝ₂-ur₂-4-e numun nu-mu-ni-ib-e₃ e-ne su₃-ud-bi nu-mu-un-u₅",
+     "orig_lines": [
+      "124",
+      "125",
+      "126",
+      "127",
+      "128",
+      "129",
+      "130"
+     ],
+     "en": "Without the Great Mountain Enlil, Nintur would not kill, she would not strike dead; no cow would drop its calf in the cattle-pen, no ewe would bring forth a …… lamb in its sheepfold; the living creatures which multiply by themselves would not {lie down in their ……} {(1 ms. has instead:) sit within ……}; the four-legged animals would not propagate, they would not mate."
+    },
+    {
+     "ref": "131–138",
+     "orig": "{d}en-lil₂ niĝ₂ galam-ma-galam-ma-zu niĝ₂-me-ĝar sug₄-ga\nšag₄-bi gu suḫ₃-a si nu-sa₂-e-dam\ngu-gu gilim-ma igi nu-pad₃-de₃-dam\nnam-diĝir-zu-še₃ nir im-te-ĝal₂\nšag₄ kuš₂-u₃ ad gi₄-gi₄ en ni₂-te-na-me-en\nniĝ₂ ak-zu a-ba i₃-zu-zu\nme-zu me pa nu-ed₂-de₃\nmuš₃-za diĝir igi nu-bar-re-dam",
+     "orig_lines": [
+      "131",
+      "132",
+      "133",
+      "134",
+      "135",
+      "136",
+      "137",
+      "138"
+     ],
+     "en": "Enlil, your ingenuity takes one's breath away! By its nature it is like entangled threads which cannot be unravelled, crossed threads which the eye cannot follow. Your divinity can be relied on. You are your own counsellor and adviser, you are a lord on your own. Who can comprehend your actions? No divine powers are as resplendent as yours. No god can look you in the face."
+    },
+    {
+     "ref": "139–155",
+     "orig": "en diĝir lugal {d}en-lil₂-la₂-me-en\ndi-kud ka-aš bar an ki-me-en\ninim maḫ-zu an-gin₇ dugud-da-gin₇ zig₃-zig₃ nu-e-zu\ninim-zu-še₃ diĝir {d}a-nun-na šu šum₂-ma{!} im-ma-an-ak-eš\ninim-zu an-še₃ idim-ma ki-še₃ temen-am₃\nan-še₃ idim gal an-ne₂ us₂-sa\nki-še₃ temen sag₂ nu-di-dam\nan-e um-ma-te ḫe₂-ĝal₂-la-am₃\nan-ta ḫe₂-ĝal₂ im-da-šeĝ₃-šeĝ₃\nki-a um-ma-te giri₁₇-zal-am₃\nki-ta giri₁₇-zal im-da-mu₂-mu₂\ninim-zu gu-am₃ inim-zu še-am₃\n[inim]-zu a-eštub zi kur-kur-ra-kam\nniĝ₂-zi-ĝal₂ niĝ₂-ki{!} u₅-a\nzi dug₃-ga u₂-šim im-da-pa-an-pa-an\n{d}en-lil₂ sipad zid-me-en DU.DU-bi mu-un-zu\nX-ga dub₃-tuku-am₃ mul gun₃-gun₃-a",
+     "orig_lines": [
+      "139",
+      "140",
+      "141",
+      "142",
+      "143",
+      "144",
+      "145",
+      "146",
+      "147",
+      "148",
+      "149",
+      "150",
+      "151",
+      "152",
+      "153",
+      "154",
+      "155"
+     ],
+     "en": "You, Enlil, are lord, god, king. You are a judge who makes decisions about heaven and earth. Your lofty word is as heavy as heaven, and there is no one who can lift it. The Anuna gods …… at your word. Your word is weighty in heaven, a foundation on the earth. In the heavens, it is a great ……, reaching up to the sky. On the earth it is a foundation which cannot be destroyed. When it relates to the heavens, it brings abundance: abundance will pour from the heavens. When it relates to the earth, it brings prosperity: the earth will produce prosperity. Your word means flax, your word means grain. Your word means the early flooding, the life of the lands. It makes the living creatures, the animals (?) which copulate and breathe joyfully in the greenery. You, Enlil, the good shepherd, know their ways (?). …… the sparkling stars."
+    },
+    {
+     "ref": "156–166",
+     "orig": "{d}nin-lil₂ nitalam kug inim-ma-ni šag₄-ga\ntug₂-ba₁₃ kug ulutim₂-ta nir-ra alan me-dim₂-ta sig₁₀-ga\nmunus zid igi il₂-la ba-e-de₃-tuku-dam\nul gur₃-ru e₂-kur-ra nin me-te-ĝal₂ zu\nad gi₄-gi₄ inim-ma ba-ab-du₇\ninim-ma-ni su-a bi₂-dug₃-ga-bi i₃ li šag₄-ga-kam\nbarag kug barag sikil-da {ši-im-mu-e-da-an-til₃} {(1 ms. ḫas instead:) ša-mu-da-an-tuš}\nad ši-mu-da-an-gi₄-gi₄ šag₄ ši-mu-da-an-kuš₂-u₃\nnam tar-re ki {d}utu e₃-a nam ši-mu-da-ab-tar-re\n{d}nin-lil₂ nin an ki nin kur-kur-ra-ke₄\nza₃-mi₂ kur gal-la-ka mi₂ dug₄-ga",
+     "orig_lines": [
+      "156",
+      "157",
+      "158",
+      "159",
+      "160",
+      "161",
+      "162",
+      "163",
+      "164",
+      "165",
+      "166"
+     ],
+     "en": "You married Ninlil, the holy consort, whose words are of the heart, her of noble countenance in a holy ba garment, her of beautiful shape and limbs, the trustworthy lady of your choice. Covered with allure, the lady who knows what is fitting for the E-kur, whose words of advice are perfect, whose words bring comfort like fine oil for the heart, who {shares} {(1 ms. has instead:) sits on} the holy throne, the pure throne with you, she takes counsel and discusses matters with you. You decide the fates together at the place facing the sunrise. Ninlil, the lady of heaven and earth, the lady of all the lands, is honoured in the praise of the Great Mountain."
+    },
+    {
+     "ref": "167–171",
+     "orig": "maḫ-di inim-ma-ni ki-bi-še₃ ĝar\ndug₄-ga a₂-taḫ-a-ni niĝ₂ nu-kur₂-ru\nka-ta e₃-a-ni saĝ ba-an-gub\nĝiš-ḫur-ḫur-ra-ni inim ge-en-ge-en\nkur gal a-a {d}en-lil₂ za₃-mi₂-zu maḫ-am₃",
+     "orig_lines": [
+      "167",
+      "168",
+      "169",
+      "170",
+      "171"
+     ],
+     "en": "Prominent one whose words are well established, whose command and support are things which are immutable, whose utterances take precedence, whose plans are firm words, Great Mountain, Father Enlil, your praise is sublime!"
+    }
+   ]
+  }
+ ]
+}

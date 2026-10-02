@@ -1,0 +1,595 @@
+{
+ "slug": "nanna-nibru",
+ "source": "ETCSL",
+ "siglum": "ETCSL 1.5.1",
+ "source_url": "https://etcsl.orinst.ox.ac.uk/cgi-bin/etcsl.cgi?text=t.1.5.1",
+ "license": "ETCSL（Oxford）轉寫與英譯，非商業學術使用",
+ "compositions": [
+  {
+   "num": "1.5.1",
+   "title_en": "Nanna-Suen's journey to Nibru",
+   "segments": [
+    {
+     "ref": "1–8",
+     "orig": "ur-saĝ-e iri ama-/na\\-[še₃] (Šited in OB šatalogue from Urim (U2), 0.2.04, line 47)\n{d}nanna-{d}suen-e /ĝeštug₂\\-[ga-ni na-an-gub]\n{d}suen-e iri ama-/na\\-[še₃]\n{d}aš-im₂-babbar-re ĝeštug₂-[ga-ni na-an-gub]\niri ama-na-še₃ a-a-[na-še₃]\n{d}nanna-{d}suen-e ĝeštug₂-ga-ni na-[an-gub]\n{d}en-lil₂-la₂-še₃ {d}nin-lil₂-[la₂-še₃]\n{d}aš-im₂-babbar-e ĝeštug₂-ga-ni na-an-gub",
+     "orig_lines": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8"
+     ],
+     "en": "The heroic Nanna-Suen fixed his mind on the city of his mother. Suen Ašimbabbar fixed his mind on the city of his mother. Nanna-Suen fixed his mind on the city of his mother and his father. Ašimbabbar fixed his mind on the city of Enlil and Ninlil:"
+    },
+    {
+     "ref": "9–16",
+     "orig": "ur-saĝ-me-en ĝe₂₆-e iri-ĝu₁₀-še₃ ga-ĝen\nĝe₂₆-e iri-ĝu₁₀-še₃ ga-ĝen a-a-ĝu₁₀-še₃ ga-an-ši-ĝen\n{d}suen-me-en ĝe₂₆-e iri-ĝu₁₀-še₃ ga-ĝen\nĝe₂₆-e iri-ĝu₁₀-še₃ ga-ĝen a-a-ĝu₁₀-še₃ ga-an-ši-ĝen\na-a-ĝu₁₀ {d}en-lil₂-la₂-še₃ ga-an-ši-ĝen\nĝe₂₆-e iri-ĝu₁₀-še₃ ga-ĝen ama-ĝu₁₀-še₃ ga-an-ši-ĝen\nama-ĝu₁₀ {d}nin-lil₂-la₂-še₃ ga-an-ši-ĝen\na-a-ĝu₁₀-še₃ ga-an-ši-ĝen",
+     "orig_lines": [
+      "9",
+      "10",
+      "11",
+      "12",
+      "13",
+      "14",
+      "15",
+      "16"
+     ],
+     "en": "\"I, the hero, will set off for my city. I will set off for my city, I will set off to my father. I, Suen, will set off for my city. I will set off for my city, I will set off to my father. I will set off to my father Enlil. I will set off for my city, I will set off to my mother. I will set off to my mother Ninlil. I will set off to my father.\""
+    },
+    {
+     "ref": "17–27",
+     "orig": "iri šen-šen-na ki sikil-la [...]\n[... e₃ gal]-/gal\\-la-am₃\n[... e₃ gal]-/gal\\-la-am₃\n[...] e₃ gal-gal-la₂-am₃\n[...] e₃ gal-gal-la₂-am₃",
+     "orig_lines": [
+      "17",
+      "24",
+      "25",
+      "26",
+      "27"
+     ],
+     "en": "\"The shining city, the pure place ……. 6 lines missing …… very great, …… very great, …… very great, …… very great.\""
+    },
+    {
+     "ref": "28–36",
+     "orig": "[nibru{ki}]-/ĝu₁₀\\ ĝiš-kin₂ ĝiš gig₂ ki dug₃-ge mu₂-a\n[eš₃] [nibru{ki}]-/ĝu₁₀\\ ĝiš-kin₂ ĝiš babbar ki sikil-e mu₂-a\n[nibru{ki}-ĝu₁₀] ki dug₃-ga barag-bi ša-mu-un-du₃\neš₃ nibru{ki} mu-bi mu dug₃-ga-am₃\nnibru{ki}-ĝu₁₀ ki dug₃-ga barag-bi ša-mu-un-du₃\neš₃ nibru{ki} mu-bi mu dug₃-ga-am₃\niri-ĝu₁₀ {kur}dilmun{ki} nu-me-a {ĝiš}ĝišnimbar ba-mu₂\nnibru{ki} {kur}dilmun{ki} nu-me-a {ĝiš}ĝišnimbar ba-mu₂\nama gal {d}nin-lil₂-le šag₄ gada ba-ni-in-la₂",
+     "orig_lines": [
+      "28",
+      "29",
+      "30",
+      "31",
+      "32",
+      "33",
+      "34",
+      "35",
+      "36"
+     ],
+     "en": "\"My Nibru, where black birch trees grow in a good place, my sanctuary Nibru, where white birch trees grow in a pure place -- my Nibru's shrine is built in a good place. The sanctuary Nibru's name is a good name. My Nibru's shrine is built in a good place. The sanctuary Nibru's name is a good name. Before Dilmun existed, palm trees grew in my city. Before Dilmun existed, palm trees grew in Nibru and the great mother Ninlil was clothed in fine linen.\""
+    },
+    {
+     "ref": "37–38",
+     "orig": "{d}suen-e {ĝiš}ma₂-gur₈ im-nu₂-e\n{ĝiš}ma₂-gur₈ im-nu₂-e {gi}kid-bur₂ im-gi₄-[gi₄]",
+     "orig_lines": [
+      "37",
+      "38"
+     ],
+     "en": "Suen set about constructing (?) a barge. He set about constructing (?) a barge and sent for reed matting."
+    },
+    {
+     "ref": "39–48",
+     "orig": "{ĝiš}ma₂-gur₈-ra gi-bi tum-ma-al{ki}-še₃\n{d}nanna-{d}suen-e lu₂ im-ši-in-/gi₄\\-[gi₄]\n{ĝiš}ma₂-gur₈-ra esir-bi abzu-še₃\n{d}aš-im₂-babbar-re lu₂ im-ši-in-gi₄-gi₄\n{u₂}A.NUMUN₂-bi du₆-a-šag₄-ga-še₃\n{d}nanna-{d}suen-e lu₂ im-ši-in-gi₄-gi₄\n{ĝiš}mi-ri₂-za-bi tir ḫa-šu-ur₂-ra-še₃\n{d}aš-im₂-babbar-e lu₂ im-ši-in-gi₄-gi₄\n{ĝiš}eme-sig-bi tir kug-nun-na-še₃\n[{d}nanna-{d}]/suen\\-e [lu₂ im-ši-in-gi₄]-/gi₄\\\n[{ĝiš}a-da-ma₂-bi kur šim {ĝiš}erin-na-še₃]\n[{d}aš-im₂-babbar-e lu₂ im-ši-in-gi₄-gi₄]",
+     "orig_lines": [
+      "39",
+      "40",
+      "41",
+      "42",
+      "43",
+      "44",
+      "45",
+      "46",
+      "47",
+      "48",
+      "48A",
+      "48B"
+     ],
+     "en": "Nanna-Suen despatched people to Tummal for the barge's reeds. Ašimbabbar despatched people to the abzu for the barge's pitch. Nanna-Suen despatched people to Du-ašaga for its rushes. Ašimbabbar despatched people to the cypress forest for its strakes (?). Nanna-Suen despatched people to the forests of Kug-nuna for its ribbing (?). {(3 mss. add 2 lines in a parallel passage:) Ašimbabbar despatched people to the mountain of fragrant cedar for its beams.}"
+    },
+    {
+     "ref": "49–58",
+     "orig": "[{ĝiš}u₃-bi tir] [eb₂-la-ka]-/še₃\\\n[{d}aš-im₂-babbar-e lu₂ im-ši-in-gi₄-gi₄]\n[{ĝiš}u₃-suḫ₅-bi {ĝiš}tir šim {ĝiš}erin-na-še₃]\n[{d}nanna-{d}suen-e lu₂ im-ši-in-gi₄-gi₄]\n[u₂ X X-bi {ĝiš}li la-an-gi₄-še₃]\n[{d}aš-im₂-babbar-e lu₂ im-ši-in-gi₄-gi₄]\n[...]-bi [...-še₃]\n{d}aš-/im₂-babbar\\-re /lu₂\\ [im-ši-in-gi₄-gi₄]\n[...]-/bi\\ DUL u₂ X-/še₃\\\n{d}nanna-{d}suen-e lu₂ im-ši-in-gi₄-[gi₄]",
+     "orig_lines": [
+      "49",
+      "50",
+      "51",
+      "52",
+      "53",
+      "54",
+      "55",
+      "56",
+      "57",
+      "58"
+     ],
+     "en": "Ašimbabbar despatched people to the forests of Ebla for its planking. Nanna-Suen despatched people to the fragrant cedar forest for its fir wood. Ašimbabbar despatched people to the junipers of Langi for its ……. Ašimbabbar despatched people to …… for its ……. Nanna-Suen despatched people to the mound of …… for its ……."
+    },
+    {
+     "ref": "59–82",
+     "orig": "[{ĝiš}]ma₂-gur₈-ra gi-bi tum-ma-al[{ki}-ta]\n[{d}]/nanna\\-{d}suen-ra mu-na-da-/ri\\-[a]\n/{ĝiš}\\ma₂-gur₈-ra esir-bi abzu-[ta]\n{d}aš-im₂-babbar-ra mu-na-da-ri-a\n{u₂}A.NUMUN₂-bi du₆-a-šag₄-ga-ta\n{d}nanna-{d}suen-ra mu-na-da-an-ri-a\n{ĝiš}mi-ri₂-za-bi tir ḫa-šu-ur₂-ra-ta\n{d}aš-im₂-babbar-ra mu-na-da-an-ri-a\n{ĝiš}eme-sig-bi tir kug-nun-na-ta\n{d}nanna-{d}suen-ra mu-na-da-an-ri-a\n{ĝiš}a-da-ma₂-bi kur šim {ĝiš}erin-na-ta\n{d}aš-im₂-babbar-e mu-na-da-an-ri-am₃\n{ĝiš}u₃-bi tir eb₂-la-ta\n{d}aš-im₂-babbar-ra mu-na-da-an-ri-a\n{ĝiš}u₃-suḫ₅-bi {ĝiš}tir šim {ĝiš}erin-na-ta\n{d}nanna-{d}suen mu-na-da-an-ri-a\nu₂ X X-bi {ĝiš}li la-an-gi₄-ta\n{d}aš-im₂-babbar-ra mu-na-da-an-ri-a\n[...-bi ...-ta]\n[{d}aš-im₂-babbar-ra mu-na-da-an-ri-a]\n[...-bi DUL u₂ X-ta]\n[{d}nanna-{d}suen-ra mu-na-da-an-ri-a]\n[...]-/ni\\-in-ri\n/{d}\\utu mu-un-da-ḫul₂\n[...] /bi₂\\-in-ĝar\n{d}gibil₆ mu-un-da-ḫul₂\n[...] X ba-ni-ib-be₂-e\n[...] ba-ni-in-dug₄\n[...] X-nu₂\n[...] X-bi bi₂-in-du₈\n[... mu]-/un\\-da-ḫul₂\n[...] X\n[... mu]-/un\\-da-ḫul₂\n[...] X\n[...] X\nX [...]\n{d}suen [...]\naškud₂-/zu\\ [...]\n{d}suen-e {ĝiš}ma₂ X [...]\n{d}suen-e {ĝiš}ma₂ a-a X [...]\n{d}suen-e {ĝiš}ma₂-gur₈-ra X [...]\n{d}suen-e a-u₃-a [...]\n{d}suen-e a-[u₃-a ...]\na-[u₃-a ...]\na-u₃-[a ...]\na-u₃-a [...]\na-u₃-a {d}aš-[im₂-babbar-e] [...]\na-u₃-a ur₂ [...]\na-u₃-a {d}/nanna\\-[{d}suen-e] [...]\na-u₃-a dumu [{d}en-lil₂-la₂ ...]\na-[u₃-a ...]\na-u₃-[a ...]\na-u₃-a [...]\na-u₃-a {d}nanna-[{d}suen-e] [...]\nlugal-zu a-a-ni [...]\n{d}nanna šul {d}suen-e [...]\n{d}suen-e a-a [...]\n{d}aš-im₂-babbar-e [...]\n{d}suen-[e] [...]\nX [...] a-u₃-a-ba [...]\na-u₃-a-ba [...] X X X [...]\na-u₃-a-ba [...] a-u₃-a {d}[...]\nX [...] X [...] a-u₃-a X X X [...]\n[...] BI [...] lugal-zu a-a-ni {d}en-lil₂-ra\nnesaĝ mu-un-na-ab-tum₃ [...] MU [...] X\n[...] saĝ us₂ mu-na-dur₂-ru-ne-eš\na-u₃-a-ba dumu X X X {d}nanna-ar X gi₄ X\nmu-na-dur₂-ru-ne-[eš ...] X [...]",
+     "orig_lines": [
+      "59",
+      "60",
+      "61",
+      "62",
+      "63",
+      "64",
+      "65",
+      "66",
+      "67",
+      "68",
+      "68A",
+      "68B",
+      "69",
+      "70",
+      "71",
+      "72",
+      "73",
+      "74",
+      "75",
+      "76",
+      "77",
+      "78",
+      "79",
+      "80",
+      "81",
+      "82",
+      "83",
+      "84",
+      "85",
+      "86",
+      "87",
+      "88",
+      "89",
+      "90",
+      "91",
+      "97",
+      "98",
+      "99",
+      "100",
+      "101",
+      "102",
+      "103",
+      "104",
+      "110",
+      "111",
+      "112",
+      "113",
+      "114",
+      "115",
+      "116",
+      "122",
+      "123",
+      "124",
+      "125",
+      "126",
+      "127",
+      "128",
+      "129",
+      "130",
+      "136",
+      "137",
+      "138",
+      "139",
+      "140",
+      "141",
+      "142",
+      "143",
+      "144"
+     ],
+     "en": "When the barge's reeds were brought to Nanna-Suen from Tummal, when the barge's pitch was brought to Ašimbabbar from the abzu, when its rushes were brought to Nanna-Suen from Du-ašaga, when its strakes (?) were brought to Ašimbabbar from the cypress forest, when its ribbing (?) was brought to Nanna-Suen from the forests of Kug-nuna, {(3 mss. add 2 lines:) when its beams were brought to Ašimbabbar from the mountain of fragrant cedar,} when its planking was brought to Ašimbabbar from the forests of Ebla, when its fir wood was brought to Nanna-Suen from the fragrant cedar forest, when its …… was brought to Ašimbabbar from the junipers of Langi, when its …… was brought to Ašimbabbar from ……, when its …… was brought to Nanna-Suen from the mound of ……, 1 line fragmentaryUtu rejoiced at him and put ……. Gibil rejoiced at him. lines 83-146 missing or fragmentary"
+    },
+    {
+     "ref": "147–150",
+     "orig": "[{d}nanna-{d}suen]-me-en [...]-en\n[e₂] [{d}en-lil₂-la₂]-še₃ X [(X) zag im]-/la₂\\-la₂-e-en\n{d}aš-im₂-babbar{ar}-me-en e₂ {d}en-lil₂-la₂-še₃\nX X [...] zag im-la₂-la₂-e-en",
+     "orig_lines": [
+      "147",
+      "148",
+      "149",
+      "150"
+     ],
+     "en": "(He declared:) \"I am Nanna-Suen, I ……, I will …… to the house of Enlil. I am Ašimbabbar, and I will …… to the house of Enlil.\" 6 lines missing"
+    },
+    {
+     "ref": "157–166",
+     "orig": "[gud-da tur₃-re gu₂ bi₂-ib-gur-gur-re]\n[{d}nanna-{d}suen-e e₂ {d}en-lil₂-la₂-še₃]\n[udu niga šag₄ mu-da-ab-la₂-e]\n[{d}aš-im₂-babbar-e e₂ {d}en-lil₂-la₂-še₃]\n[tur₃-e ib₂-da-ab-luḫ-luḫ-e]\n[{d}nanna-{d}suen-e e₂ {d}en-lil₂-la₂-še₃]\n[ud₅-de₃ niĝ₂-ar₃-ra bi₂-ib₂-gu₇-e]\n[{d}aš-im₂-babbar-e e₂ {d}en-lil₂-la₂-še₃]\n[ze₂-da-niĝ₂-bar-bar-sur-ra ...]\n[{d}nanna-{d}suen-e e₂ {d}en-lil₂-la₂-še₃]",
+     "orig_lines": [
+      "157",
+      "158",
+      "159",
+      "160",
+      "161",
+      "162",
+      "163",
+      "164",
+      "165",
+      "166"
+     ],
+     "en": "Nanna-Suen will gather bulls for the cow-pen for the house of Enlil. Ašimbabbar will collect (?) fattened sheep for the house of Enlil. Nanna-Suen will purify the cow-pen for the house of Enlil. Ašimbabbar will feed meal to the goats for the house of Enlil. Nanna-Suen will …… porcupines for the house of Enlil."
+    },
+    {
+     "ref": "167–175",
+     "orig": "[peš₂-ĝiš-gi niĝ₂ kun sud kun sud-da]\n[šag₄ am₃-mi-ni-ib₂-gul-gul]\n[{d}aš-im₂-babbar-e e₂ {d}en-lil₂-la₂-še₃]\n[kud-da mušen tur-re šu bi₂-ib₂-zu-zu]\n[{d}nanna-{d}suen-e e₂ {d}en-lil₂-la₂-še₃]\n[u₅-bi₂{mušen} tur tul₂-ta ba-ra-an-tum₂-mu]\n{d}aš-im₂-babbar-[e] [e₂ {d}en-lil₂-la₂-še₃]\na-zag-gun₃{mušen} tur X-ta ba-ra-an-tum₂-mu\n{d}nanna-{d}suen-e e₂ {d}en-lil₂-la₂-še₃",
+     "orig_lines": [
+      "167",
+      "168",
+      "169",
+      "170",
+      "171",
+      "172",
+      "173",
+      "174",
+      "175"
+     ],
+     "en": "Ašimbabbar will …… long-tailed bush-rats for the house of Enlil. Nanna-Suen will gather (?) turtles (?) and small birds for the house of Enlil. Ašimbabbar will bring small ubi birds from the pond for the house of Enlil. Nanna-Suen will bring small azagun birds from the …… for the house of Enlil."
+    },
+    {
+     "ref": "176–185",
+     "orig": "suḫurku₆-e šag₄ mu-da-ab-sur-re\n{d}aš-im₂-babbar-re e₂ {d}en-lil₂-la₂-še₃\neštubku₆-e <...>-bi zag im-la₂\n{d}nanna-{d}suen-e e₂ {d}en-lil₂-la₂-še₃\ni₃ A.NUMUN₂ a mu-un-de₂-de₂-e\n{d}aš-im₂-babbar-re e₂ {d}en-lil₂-la₂-še₃\nnunuz ĝir₃-lam-ma mu-un-/sig₉\\-[sig₉-ge]\n{d}nanna-{d}suen-e e₂ [{d}en-lil₂-la₂-še₃]\ngi sumun gi ḫenbur mud [ĝal₂ im-me]\n{d}aš-im₂-babbar-re e₂ {d}[en-lil₂-la₂-še₃]",
+     "orig_lines": [
+      "176",
+      "177",
+      "178",
+      "179",
+      "180",
+      "181",
+      "182",
+      "183",
+      "184",
+      "185"
+     ],
+     "en": "Ašimbabbar will …… suḫur carp for the house of Enlil. Nanna-Suen will …… eštub carp for the house of Enlil. Ašimbabbar will pour the oil of rushes onto the water for the house of Enlil. Nanna-Suen will fill baskets with eggs for the house of Enlil. Ašimbabbar will cause old reed and fresh reed to thrive for the house of Enlil."
+    },
+    {
+     "ref": "186–197",
+     "orig": "u₈ 600-am₃ sila₄ im-mi-in-tu-ud\nudu-utua₂-bi šag₄-ba šu ba-ni-in-ba-ba\ngu₂ {id₂}surungal-la im-mi-in-ba\n{d}nanna-{d}suen-e e₂ {d}en-[lil₂-la₂-še₃]\nud₅ 600-am₃ maš₂ im-mi-in-tu-[ud]\nmaš₂-ud₅-da šag₄-ba šu ba-ni-in-ba-ba\ngu₂ {id₂}surungal-la im-mi-in-ba\n{d}aš-im₂-babbar-re e₂ {d}en-lil₂-[la₂-še₃]\nab₂ 600-am₃ amar im-mi-in-tu-[ud]\ngud-ab₂-ba šag₄-ba šu ba-ni-in-ba-ba\ngu₂ {id₂}surungal-la im-mi-in-ba\n{d}nanna-{d}suen-e e₂ {d}/en\\-[lil₂-la₂-še₃]",
+     "orig_lines": [
+      "186",
+      "187",
+      "188",
+      "189",
+      "190",
+      "191",
+      "192",
+      "193",
+      "194",
+      "195",
+      "196",
+      "197"
+     ],
+     "en": "Nanna-Suen will cause six hundred ewes to give birth to lambs for the house of Enlil, for he will cause their rams to be let loose among them, and he will distribute them along the banks of the Surungal canal. Ašimbabbar will cause six hundred she-goats to give birth to kids for the house of Enlil, for he will cause their bucks to be let loose among them, and he will distribute them along the banks of the Surungal canal. Nanna-Suen will cause six hundred cows to give birth to calves for the house of Enlil, for he will cause their bulls to be let loose among them, and he will distribute them along the banks of the Surungal canal."
+    },
+    {
+     "ref": "198–202",
+     "orig": "nidba-a saĝ-bi enegir{ki}-a eĝer-/bi\\ [urim₂{ki}-ma]\ne₂-ta nu-e₃ e₂-ta nu-e₃ e₂-ta nam-ta-ab-e₃\n{d}nin-girid₂-da e₂-ta nu-e₃ e₂-ta nam-ta-ab-e₃\nsilim-ma ḫe₂-me-en silim-ma ḫe₂-me-en {ĝiš}ma₂ silim-ma ḫe₂-me-en\n{ĝiš}ma₂ {d}suen-na silim-ma ḫe₂-me-en {ĝiš}ma₂ silim-ma ḫe₂-me-en",
+     "orig_lines": [
+      "198",
+      "199",
+      "200",
+      "201",
+      "202"
+     ],
+     "en": "Enegir lay ahead of the offerings, Urim lay behind them. She brought out of the house what should not come out of the house, what should not come out of the house -- Ningirida brought out of the house what should not come out of the house: \"Welcome, welcome, welcome, O boat! O boat of Suen, welcome, welcome, O boat!\""
+    },
+    {
+     "ref": "203–208",
+     "orig": "{ĝiš}/ma₂\\-[gur₈]-/ra\\ zid₂ im-ma-ab-gub-be₂ duḫ im-ma-ab-sal-e\nĝiri₃-/ni gakkul\\ zabar-ra im-ma-an-šu₂-šu₂\nšu-si-ni bulug {ĝiš}taškarin mu-na-an-bur₁₂-bur₁₂-re\naškud₂-bi i₃-ḫe-nun-na-ka šu ga-am₃-ma-ni-ib-ur₃\nšag₄-zu-a i₃-nun lal₃ ĝeštin niĝ₂ ḫe₂-ni-ib-gu-ul-gu-ul-e\nsi {ĝiš}ma₂-saĝ-ĝa₂-zu suḫurku₆ eštubku₆ /ul-ul\\ ḫu-mu-ni-ib-/dug₄\\\n{ĝiš}ma₂-e gu₂-bi nu-mu-na-ab-šum₂-mu nibru{ki}-še₃ ba-du-[un]",
+     "orig_lines": [
+      "203",
+      "204",
+      "204A",
+      "205",
+      "206",
+      "207",
+      "208"
+     ],
+     "en": "She laid out flour before the barge and spread bran. At her feet stood a covered bronze gakkul vat. {(1 ms. adds 1 line:) With her fingers she pulled out the boxwood bung (?) for him (declaring):} \"I shall rub precious oil on this peg. May ghee, syrup and wine be abundant in your midst, may the suḫur carp and the eštub carp rejoice at the prow of your boat!\" But the boat did not give her its cargo: \"I am going to Nibru!\""
+    },
+    {
+     "ref": "209–213",
+     "orig": "nidba-a saĝ-bi larsam{ki}-ma eĝer-bi enegir{ki}-a\ne₂-ta nu-e₃ e₂-ta nu-e₃ e₂-ta nam-ta-ab-e₃\n{d}še-ri₅-da sag₉-ga e₂-<ta> nu-e₃ e₂-ta nam-ta-ab-e₃\nsilim-ma ḫe₂-me-en silim-ma ḫe₂-me-en {ĝiš}ma₂ silim-ma ḫe₂-me-en\n{ĝiš}ma₂ a-a-ĝu₁₀ silim-ma ḫe₂-me-en {ĝiš}ma₂ silim-ma ḫe₂-me-[en]",
+     "orig_lines": [
+      "209",
+      "210",
+      "211",
+      "212",
+      "213"
+     ],
+     "en": "Larsam lay ahead of the offerings, Enegir lay behind them. She brought out of the house what should not come out of the house, what should not come out of the house -- the lovely Šerida brought out of the house what should not come out of the house: \"Welcome, welcome, welcome, O boat! O boat of my father, welcome, welcome, O boat!\""
+    },
+    {
+     "ref": "214–219",
+     "orig": "{ĝiš}ma₂-gur₈-ra zid₂ im-ma-ab-gub-be₂ duḫ im-ma-ab-[sal-e]\nĝiri₃-ni gakkul zabar-ra im-ma-an-šu₂-šu₂\nšu-si-ni {ĝiš}bulug {ĝiš}taškarin mu-na-bur₁₂-bur₁₂-re\naškud₂-bi i₃-ḫe-nun-na-ka šu ga-am₃-ma-ni-ib-ur₃\nšag₄-zu-a i₃-nun lal₃ ĝeštin niĝ₂ ḫe₂-ni-ib-gu-ul-gu-[ul-e]\nsi {ĝiš}ma₂-saĝ-ĝa₂-zu suḫurku₆ eštubku₆ ul-ul ḫu-mu-ni-/ib\\-[dug₄]\n{ĝiš}ma₂-e gu₂-bi nu-mu-na-ab-šum₂-mu nibru{ki}-še₃ ba-du-[un]",
+     "orig_lines": [
+      "214",
+      "215",
+      "215A",
+      "216",
+      "217",
+      "218",
+      "219"
+     ],
+     "en": "She laid out flour before the barge and spread bran. At her feet stood a covered bronze gakkul vat. {(1 ms. adds 1 line:) With her fingers she pulled out the boxwood bung (?) for him (declaring):} \"I shall rub precious oil on this peg. May ghee, syrup and wine be abundant in your midst, may the suḫur carp and the eštub carp rejoice at the prow of your boat!\" But the boat did not give her its cargo: \"I am going to Nibru!\""
+    },
+    {
+     "ref": "220–224",
+     "orig": "nidba-a saĝ-bi ki unug{ki}-ga eĝer-bi larsam/{ki}\\-[ma]\ne₂-ta nu-e₃ e₂-ta nu-e₃ e₂-ta nam-ta-/ab\\-[e₃]\nkug {d}inana-ke₄ e₂-ta nu-e₃ e₂-ta nam-ta-ab-e₃\nsilim-ma ḫe₂-me-en silim-ma ḫe₂-[me-en] {ĝiš}ma₂ silim-ma ḫe₂-me-en\n{ĝiš}ma₂ a-a-ĝu₁₀ silim-ma ḫe₂-me-en {ĝiš}/ma₂\\ [silim-ma ḫe₂]-/me\\-en\n{ĝiš}ma₂ {d}suen-na silim-ma ḫe₂-/me-en\\ {ĝiš}ma₂ /silim\\-[ma ḫe₂-me-en]",
+     "orig_lines": [
+      "220",
+      "221",
+      "222",
+      "223",
+      "224",
+      "224A"
+     ],
+     "en": "Unug lay ahead of the offerings, Larsam lay behind them. She brought out of the house what should not come out of the house, what should not come out of the house -- holy Inana brought out of the house what should not come out of the house: \"Welcome, welcome, welcome, O boat! O boat of my father welcome, welcome, O boat! {(1 ms. adds 1 line:) O boat of Suen welcome, welcome, O boat!}\""
+    },
+    {
+     "ref": "225–230",
+     "orig": "{ĝiš}ma₂-gur₈-ra zid₂ im-ma-ab-gub-be₂ duḫ im-ma-ab-sal-e\nĝiri₃-ni gakkul zabar-ra im-ma-an-šu₂-šu₂\nšu-si-ni bulug {ĝiš}taškarin-na mu-na-an-bur₁₂-bur₁₂-re\naškud₂-zu i₃-ḫe-nun-na-ka šu ga-am₃-ma-ni-ib-ur₃\nšag₄-zu-a i₃-nun lal₃ ĝeštin niĝ₂ ḫe₂-ni-ib-gu-ul-gu-/ul\\-[e]\nsi {ĝiš}ma₂-saĝ-ĝa₂-zu suḫurku₆ eštubku₆ ul-ul ḫu-mu-/ni\\-[ib-dug₄]\n{ĝiš}ma₂-e gu₂-bi nu-mu-na-ab-/šum₂\\-[mu] nibru{ki}-še₃ ba-du-[un]",
+     "orig_lines": [
+      "225",
+      "226",
+      "226A",
+      "227",
+      "228",
+      "229",
+      "230"
+     ],
+     "en": "She laid out flour before the barge and spread bran. At her feet stood a covered bronze gakkul vat. {(1 ms. adds 1 line:) With her fingers she pulled out the boxwood bung (?) for him (declaring):} \"I shall rub precious oil on your peg. May ghee, syrup and wine be abundant in your midst, may the suḫur carp and the eštub carp rejoice at the prow of your boat!\" But the boat did not give her its cargo: \"I am going to Nibru!\""
+    },
+    {
+     "ref": "231–235",
+     "orig": "nidba-a saĝ-bi šuruppag{ki}-a eĝer-bi unug{ki}-ga\ne₂-ta nu-e₃ e₂-ta nu-e₃ e₂-ta nam-ta-ab-e₃\n{d}nin-unug-ke₄ e₂-ta nu-e₃ e₂-ta nam-ta-ab-e₃\nsilim-ma ḫe₂-me-en silim-ma ḫe₂-me-en {ĝiš}ma₂ silim-ma ḫe₂-me-en\n{ĝiš}ma₂ {d}suen-na silim-ma ḫe₂-me-en {ĝiš}ma₂ silim-ma ḫe₂-me-en",
+     "orig_lines": [
+      "231",
+      "232",
+      "233",
+      "234",
+      "235"
+     ],
+     "en": "Šuruppag lay ahead of the offerings, Unug lay behind them. She brought out of the house what should not come out of the house, what should not come out of the house -- Ninunuga brought out of the house what should not come out of the house: \"Welcome, welcome, welcome, O boat! O boat of Suen welcome, welcome, O boat!\""
+    },
+    {
+     "ref": "236–241",
+     "orig": "{ĝiš}ma₂-gur₈-ra zid₂ im-ma-ab-gub-be₂ duḫ im-ma-ab-sal-e\nĝiri₃-ni gakkul zabar-ra im-ma-an-šu₂-šu₂\nšu-si-ni bulug {ĝiš}taškarin-na mu-na-an-bur₁₂-bur₁₂-re\naškud₂-zu i₃-ḫe-nun-na-ka šu ga-am₃-ma-ni-ib-ur₃\nšag₄-zu-a i₃-nun lal₃ ĝeštin niĝ₂ ḫe₂-ni-ib-gu-ul-gu-ul-e\nsi {ĝiš}ma₂-saĝ-ĝa₂-zu suḫurku₆ eštubku₆ ul-ul ḫu-mu-ni-/ib\\-[dug₄]\n{ĝiš}ma₂-e gu₂-bi nu-mu-na-ab-šum₂-mu nibru{ki}-še₃ ba-du-[un]",
+     "orig_lines": [
+      "236",
+      "237",
+      "237A",
+      "238",
+      "239",
+      "240",
+      "241"
+     ],
+     "en": "She laid out flour before the barge and spread bran. At her feet stood a covered bronze gakkul vat. {(1 ms. adds 1 line:) With her fingers she pulled out the boxwood bung (?) for him (declaring):} \"I shall rub precious oil on this peg. May ghee, syrup and wine be abundant in your midst, may the suḫur carp and the eštub carp rejoice at the prow of your boat!\" But the boat did not give her its cargo: \"I am going to Nibru!\""
+    },
+    {
+     "ref": "242–246",
+     "orig": "nidba-a saĝ-bi tum-ma-al{ki}-a eĝer-bi šuruppag{ki}-ga\ne₂-ta nu-e₃ e₂-ta nu-e₃ e₂-ta nam-ta-ab-e₃\n{d}nin-lil₂ sag₉-ga e₂-ta nu-e₃ e₂-ta nam-ta-ab-e₃\nsilim-ma ḫe₂-me-en silim-ma ḫe₂-me-en {ĝiš}ma₂ silim-ma ḫe₂-me-en\n{ĝiš}ma₂ dumu nun-na silim-ma ḫe₂-me-en {ĝiš}ma₂ silim-ma ḫe₂-me-en",
+     "orig_lines": [
+      "242",
+      "243",
+      "244",
+      "245",
+      "246"
+     ],
+     "en": "Tummal lay ahead of the offerings, Šuruppag lay behind them. She brought out of the house what should not come out of the house, what should not come out of the house -- the fair Ninlil brought out of the house what should not come out of the house: \"Welcome, welcome, welcome, O boat! O boat of the princely son welcome, welcome, O boat!\""
+    },
+    {
+     "ref": "247–252",
+     "orig": "{ĝiš}ma₂-gur₈-ra zid₂ im-ma-ab-gub-be₂ duḫ im-ma-ab-sal-e\nĝiri₃-ni gakkul zabar-ra im-ma-an-šu₂-šu₂\nšu-si-ni /bulug\\ {ĝiš}/taškarin\\-[na] /mu\\-na-an-bur₁₂-bur₁₂-re\naškud₂-zu i₃-ḫe-nun-na-ka šu ga-am₃-ma-ni-ib-ur₃\nšag₄-zu-a i₃-nun lal₃ ĝeštin niĝ₂ ḫe₂-ni-ib-gu-ul-gu-ul-e\nsi {ĝiš}ma₂-saĝ-ĝa₂-zu suḫurku₆ eštubku₆ ul-ul ḫu-mu-ni-ib-dug₄\n{ĝiš}ma₂-e gu₂-bi nu-mu-na-ab-šum₂-mu nibru{ki}-še₃ ba-du-un",
+     "orig_lines": [
+      "247",
+      "248",
+      "248A",
+      "249",
+      "250",
+      "251",
+      "252"
+     ],
+     "en": "She laid out flour before the barge and spread bran. At her feet stood a covered bronze gakkul vat. {(1 ms. adds 1 line:) With her fingers she pulled out the boxwood bung (?) for him (declaring):} \"I shall rub precious oil on this peg. May ghee, syrup and wine be abundant in your midst, may the suḫur carp and the eštub carp rejoice at the prow of your boat!\" But the boat did not give her its cargo: \"I am going to Nibru!\""
+    },
+    {
+     "ref": "253–257",
+     "orig": "nidba-a saĝ-bi nibru{ki}-a eĝer-bi tum-ma-al{ki}-a\nkar za-gin₃ kar {d}en-lil₂-la₂-še₃\n{d}nanna-{d}suen-e {ĝiš}ma₂ na-ga-am₃-mi-in-us₂\nkar babbar kar {d}en-lil₂-la₂-še₃\n{d}aš-im₂-babbar₂-e {ĝiš}ma₂ na-ga-am₃-mi-in-us₂",
+     "orig_lines": [
+      "253",
+      "254",
+      "255",
+      "256",
+      "257"
+     ],
+     "en": "Nibru lay ahead of the offerings, Tummal lay behind them. At the Shining Quay, the quay of Enlil, Nanna-Suen finally docked the boat. At the White Quay, the quay of Enlil, Ašimbabbar finally docked the boat."
+    },
+    {
+     "ref": "258–264",
+     "orig": "kun-saĝ a-a ugu-na nam-mi-in-gub\ni₃-du₈ a-a ugu-ni-ra gu₃ mu-na-de₂-e\ne₂ ĝal₂-lu i₃-du₈ e₂ ĝal₂-lu\n[e₂] /ĝal₂\\-lu {d}kal-kal e₂ ĝal₂-lu\n[{d}kal]-/kal\\ lu₂-ĝiš-e₃ e₂ ĝal₂-lu\n[lu₂-ĝiš]-ed₃ ĝiš-e₃ e₂ ĝal₂-lu\ni₃-du₈ e₂ ĝal₂-lu {d}kal-kal e₂ ĝal₂-lu",
+     "orig_lines": [
+      "258",
+      "259",
+      "260",
+      "261",
+      "262",
+      "263",
+      "264"
+     ],
+     "en": "He stood at the grand stairway of his father who begot him and called out to the porter of his father who begot him: \"Open the house, porter, open the house! Open the house, Kalkal, open the house! Kalkal, doorkeeper, open the house! Doorman, doorkeeper, open the house! Porter, open the house! Kalkal, open the house!\""
+    },
+    {
+     "ref": "265–274",
+     "orig": "gud-da tur₃-re gu₂ bi₂-ib-gur-gur-re\n{d}nanna-{d}suen-me-en e₂ {d}en-lil₂-la₂-še₃ i₃-du₈ e₂ [ĝal₂-lu]\nudu niga šag₄ mu-da-ab-la₂-e\n{d}aš-im₂-babbar-me-en e₂ {d}en-lil₂-la₂-še₃ i₃-du₈ e₂ ĝal₂-lu\ntur₃-e ib₂-<da>-ab-luḫ-luḫ-e\n{d}nanna-{d}suen-me-en e₂ {d}en-lil₂-la₂-še₃ i₃-du₈ e₂ ĝal₂-lu\nud₅-de₃ niĝ₂-ar₃-ra bi₂-ib₂-gu₇-en\n{d}aš-im₂-babbar-me-en e₂ {d}en-lil₂-la₂-še₃ i₃-du₈ e₂ ĝal₂-lu\nze₂-da-niĝ₂-bar-bar-sur-ra <...>\n{d}nanna-{d}suen-me-en e₂ {d}en-lil₂-la₂-še₃ i₃-du₈ e₂ ĝal₂-lu",
+     "orig_lines": [
+      "265",
+      "266",
+      "267",
+      "268",
+      "269",
+      "270",
+      "271",
+      "272",
+      "273",
+      "274"
+     ],
+     "en": "\"I, Nanna-Suen, have gathered bulls for the cow-pen for the house of Enlil; porter, open the house. I, Ašimbabbar, have collected (?) fattened sheep for the house of Enlil; porter, open the house. I, Nanna-Suen, shall purify the cow-pen for the house of Enlil; porter, open the house. I, Ašimbabbar, shall feed meal to the goats for the house of Enlil; porter, open the house. I, Nanna-Suen, have …… porcupines for the house of Enlil; porter, open the house.\""
+    },
+    {
+     "ref": "275–283",
+     "orig": "peš₂-ĝiš-gi niĝ₂ kun sud kun sud-da\n{d}aš-im₂-babbar-me-en šag₄ am₃-mi-ni-ib₂-gul-gul\n{d}aš-im₂-babbar-me-en e₂ {d}en-lil₂-la₂-še₃ i₃-du₈ e₂ ĝal₂-lu\nkud-da mušen tur-re šu bi₂-ib₂-zu-zu\n{d}nanna-{d}suen-me-en e₂ {d}en-lil₂-la₂-še₃ i₃-du₈ e₂ ĝal₂-lu\nu₅-bi₂{mušen} tur tul₂-ta ba-ra-an-tum₂-mu\n{d}aš-im₂-babbar-me-en e₂ {d}en-lil₂-la₂-še₃ i₃-du₈ e₂ ĝal₂-lu\na-zag-gun₃{mušen} tur tul₂-ta ba-ra-an-tum₂-mu\n{d}nanna-{d}suen-me-en e₂ {d}en-lil₂-la₂-še₃ i₃-du₈ e₂ ĝal₂-lu",
+     "orig_lines": [
+      "275",
+      "276",
+      "277",
+      "278",
+      "279",
+      "280",
+      "281",
+      "282",
+      "283"
+     ],
+     "en": "\"I, Ašimbabbar -- I, Ašimbabbar -- have …… long-tailed bush-rats for the house of Enlil; porter, open the house. I, Nanna-Suen, have gathered (?) turtles (?) and little birds for the house of Enlil; porter, open the house. I, Ašimbabbar, have brought small ubi birds from the pond for the house of Enlil; porter, open the house. I, Nanna-Suen, have brought small azagun birds from the pond for the house of Enlil; porter, open the house.\""
+    },
+    {
+     "ref": "284–293",
+     "orig": "suḫurku₆-e šag₄ mu-da-ab-sur-re\n{d}aš-im₂-babbar₂-me-en e₂ {d}en-lil₂-la₂-še₃ i₃-du₈ e₂ ĝal₂-[lu]\neštubku₆-e zag im-la₂-la₂-e\n{d}nanna-{d}/suen\\-[me]-en e₂ [{d}en-lil₂-la₂-še₃ i₃]-du₈ e₂ ĝal₂-lu\ni₃ A.NUMUN₂ a mu-un-de₂-de₂-e\n{d}aš-im₂-babbar-me-en e₂ {d}en-lil₂-la₂-še₃ i₃-du₈ e₂ ĝal₂-lu\nnunuz ĝir₃-lam-e mu-un-sig₉-sig₉-ge\n{d}nanna-{d}suen-me-en e₂ {d}en-lil₂-la₂-še₃ i₃-du₈ e₂ ĝal₂-lu\ngi sumun gi ḫenbur-e [mud] ĝal₂ im-me\n{d}aš-im₂-babbar-me-en e₂ {d}en-lil₂-la₂-še₃ i₃-du₈ e₂ ĝal₂-lu",
+     "orig_lines": [
+      "284",
+      "285",
+      "286",
+      "287",
+      "288",
+      "289",
+      "290",
+      "291",
+      "292",
+      "293"
+     ],
+     "en": "\"I, Ašimbabbar, …… suḫur carp for the house of Enlil; porter, open the house. I, Nanna-Suen, …… eštub carp for the house of Enlil; porter, open the house. I, Ašimbabbar, shall pour the oil of rushes onto the water for the house of Enlil; porter, open the house. I, Nanna-Suen, have filled baskets with eggs for the house of Enlil; porter, open the house. I, Ašimbabbar, have caused old reed and fresh reed to thrive for the house of Enlil; porter, open the house.\""
+    },
+    {
+     "ref": "294–305",
+     "orig": "u₈ 600-am₃ sila₄ im-mi-in-[tu]-ud\nudu-utua₂-bi šag₄-ba šu ba-ni-in-ba-ba\ngu₂ {id₂}surungal im-[mi-in-ba]\n{d}nanna-{d}suen-me-en e₂ {d}en-lil₂-la₂-še₃ i₃-/du₈\\ [e₂ ĝal₂-lu]\nud₅ 600-am₃ maš₂ im-mi-in-tu-ud\nmaš₂-ud₅-da-bi šag₄-ba šu ba-ni-in-ba-ba\ngu₂ {id₂}surungal [im-mi-in-ba]\n{d}aš-im₂-babbar-me-en e₂ {d}en-lil₂-la₂-še₃ i₃-[du₈] e₂ [ĝal₂-lu]\nab₂ /600\\-am₃ amar im-mi-in-tu-ud\ngud-ab₂-ba šag₄-ba šu ba-ni-in-ba-ba\ngu₂ {id₂}surungal im-mi-[in-ba]\n{d}nanna-{d}suen-me-en e₂ {d}en-lil₂-la₂-še₃ [i₃-du₈ e₂ ĝal₂-lu]",
+     "orig_lines": [
+      "294",
+      "295",
+      "296",
+      "297",
+      "298",
+      "299",
+      "300",
+      "301",
+      "302",
+      "303",
+      "304",
+      "305"
+     ],
+     "en": "\"I, Nanna-Suen, have caused six hundred ewes to give birth to lambs for the house of Enlil, for I have caused their rams to be let loose among them, and I have distributed them along the banks of the Surungal canal; porter, open the house. I, Ašimbabbar, have caused six hundred she-goats to give birth to kids for the house of Enlil, for I have caused their bucks to be let loose among them, and I have distributed them along the banks of the Surungal canal; porter, open the house. I, Nanna-Suen, have caused six hundred cows to give birth to calves for the house of Enlil, for I have caused their bulls to be let loose among them, and I have distributed them along the banks of the Surungal canal; porter, open the house.\""
+    },
+    {
+     "ref": "306–308",
+     "orig": "i₃-du₈ e₂ ĝal₂-lu {d}kal-kal e₂ /ĝal₂-lu\\\nniĝ₂ saĝ {ĝiš}ma₂ niĝ₂-saĝ ga-ra-ni-ib-šum₂\nniĝ₂ eĝer {ĝiš}ma₂ niĝ₂ eĝer ga-ra-ni-ib-šum₂",
+     "orig_lines": [
+      "306",
+      "307",
+      "308"
+     ],
+     "en": "\"Porter, open the house! Kalkal, open the house! I will give you that which is in the prow of the boat as a first offering, and I will give you that which is in the stern of the boat as a last offering.\""
+    },
+    {
+     "ref": "309–318",
+     "orig": "ḫul₂-la-da i₃-du₈-e ḫul₂-la-da\ni₃-du₈-e ḫul₂-la-da e₂ taka₄ nam-mi-in-la₂\n{d}kal-kal lu₂-ĝiš-e₃ ḫul₂-la-da\ni₃-du₈-e ḫul₂-la-da e₂ taka₄ nam-mi-in-la₂\n{d}kal-kal lu₂-{ĝiš}mud-e ḫul₂-la-da\ni₃-du₈-e ḫul₂-la-da e₂ taka₄ nam-mi-in-la₂\nkur-ra igi ĝal₂ e₂ {d}en-lil₂-la₂-še₃\n{d}nanna-{d}suen-e nidba si bi₂-in-sa₂\n{d}en-lil₂-e nidba ḫul₂-la-da\ndumu-ni {d}suen-ra ninda mu-na-ba-e",
+     "orig_lines": [
+      "309",
+      "310",
+      "311",
+      "312",
+      "313",
+      "314",
+      "315",
+      "316",
+      "317",
+      "318"
+     ],
+     "en": "Rejoicing, the porter rejoicing, the porter rejoicing opened the house. Kalkal, the doorkeeper, rejoicing, the porter rejoicing opened the house. Kalkal, in charge of the bolt-handle, rejoicing, the porter rejoicing opened the house. At the house of Enlil, ……, Nanna-Suen made the offerings. Enlil, rejoicing over the offerings, offered bread to Suen, his son."
+    },
+    {
+     "ref": "319–325",
+     "orig": "{d}suen-ra {d}en-lil₂ mu-un-da-ḫul₂ mi₂ zid na-mu-un-ne\nlu₂-tur-ĝu₁₀ lu₂ {ninda}gug₂ gu₇-a-ra {ninda}gug₂ šum₂-mu-na-ab-ze₂-en\n{d}nanna-ĝu₁₀ {ninda}gug₂ gu₇ ki aĝ₂-ĝa₂-ra {ninda}gug₂ šum₂-mu-na-ab-ze₂-en\nninda-ba u₃ ninda maḫ e₂-kur-ta e₃-mu-na-ra-ab-ze₂-en\nkaš sig₅-ga a₂ sikil-la-ĝu₁₀ de₂-mu-na-ra-ab-ze₂-en\nti-lim-da u₁₈-ru ki us₂-sa mu-bi ḫe₂-em-ma-X-(X)\n{ninda}gug₂ gi-rin-na lal₃ si-gug₂ a sikil dug₄-ga-na-ab-ze₂-en",
+     "orig_lines": [
+      "319",
+      "320",
+      "321",
+      "322",
+      "323",
+      "324",
+      "325"
+     ],
+     "en": "Enlil rejoiced over Suen and spoke kindly: \"Give sweet cakes to my little fellow who eats sweet cakes. Give sweet cakes to my Nanna who loves eating sweet cakes. Bring out from the E-kur the bread allotment and first quality bread for him. Pour out for him the finest beer, my pure ……. May the …… of the towering tilimda vessels, standing on the ground, ……. Order pure sweet cake, syrup, crescent (?) cake and clear water for him.\""
+    },
+    {
+     "ref": "326–330",
+     "orig": "{d}suen-e a-a ugu-ni-ra mu-na-ni-ib-gi₄-gi₄\na-a ugu-ĝu₁₀ gu₇-a-zu ši-im-si-in\nkur gal a-a ugu-ĝu₁₀ naĝ-a-zu ši-im-si-in\nigi il₂-la-zu nam-lugal-am₃\n{d}en-lil₂ ḫe₂-ĝal₂-zu a-GABA gub-ba-am₃",
+     "orig_lines": [
+      "326",
+      "327",
+      "328",
+      "329",
+      "330"
+     ],
+     "en": "Suen replied to his father who begot him: \"Father who begot me, I am indeed satisfied with what you have given me to eat. O Great Mountain, father who begot me, I am indeed satisfied with what you have given me to drink. Wherever you lift your eyes, there is kingship. O Enlil, your abundance is …….\""
+    },
+    {
+     "ref": "331–339",
+     "orig": "šum₂-ma-da-ab {d}en-lil₂ šum₂-ma-da-ab urim₂{ki}-še₃ ga-ĝen\nid₂-da a-eštub šum₂-ma-da-ab urim₂{ki} ga-ĝen\na-šag₄-ga še gu-nu šum₂-ma-da-ab urim₂{ki} ga-ĝen\nambar-ra ku₆-da suḫurku₆ šum₂-ma-da-ab urim₂{ki} ga-ĝen\nĝiš-gi-a gi sumun gi ḫenbur šum₂-ma-da-ab urim₂{ki} ga-ĝen\n{ĝiš}tir-{ĝiš}tir-ra šeg₉ šeg₉-bar šum₂-ma-da-ab urim₂{ki} ga-ĝen\nan-edin-na {ĝiš}maš-gurum šum₂-ma-da-ab urim₂{ki} ga-ĝen\npu₂-kiri₆ lal₃ ĝeštin šum₂-ma-da-ab urim₂{ki} ga-ĝen\ne₂-gal-la zi su₃-ud-ĝal₂ šum₂-ma-da-ab urim₂{ki} ga-ĝen",
+     "orig_lines": [
+      "331",
+      "332",
+      "333",
+      "334",
+      "335",
+      "336",
+      "337",
+      "338",
+      "339"
+     ],
+     "en": "\"Give to me, Enlil, give to me -- I want to set off for Urim! In the river give me the carp-flood -- I want to set off for Urim! In the fields give me speckled barley -- I want to set off for Urim! In the marshes give me kuda carp and suḫur carp -- I want to set off for Urim! In the reedbeds give me old reed and fresh reed -- I want to set off for Urim! In the forests give me the ibex and wild ram -- I want to set off for Urim! In the high plain give me the mašgurum tree -- I want to set off for Urim! In the orchards give me syrup and wine -- I want to set off for Urim! In the palace give me long life -- I want to set off for Urim!\""
+    },
+    {
+     "ref": "340–348",
+     "orig": "mu-na-an-šum₂ {d}en-lil₂ mu-na-an-šum₂ urim₂{ki}-še₃ ba-ĝen\nid₂-da a-eštub mu-na-an-šum₂ urim₂{ki}-še₃ ba-ĝen\na-šag₄-ga še gu-nu mu-na-an-šum₂ urim₂{ki}-še₃ ba-ĝen\nambar-a ku₆-da suḫurku₆ mu-na-an-šum₂ urim₂{ki}-še₃ ba-ĝen\nĝiš-gi-a gi sumun gi ḫenbur mu-na-an-šum₂ urim₂{ki}-še₃ ba-ĝen\ntir-tir-ra šeg₉ šeg₉-bar mu-na-an-šum₂ urim₂{ki}-še₃ ba-ĝen\nan-edin-na {ĝiš}maš-gurum mu-na-an-šum₂ urim₂{ki}-še₃ ba-ĝen\npu₂-kiri₆ lal₃ ĝeštin mu-na-an-šum₂ urim₂{ki}-še₃ ba-ĝen\ne₂-gal-la zi su₃-ud-ĝal₂ mu-na-an-šum₂ urim₂{ki}-še₃ ba-an-ĝen",
+     "orig_lines": [
+      "340",
+      "341",
+      "342",
+      "343",
+      "344",
+      "345",
+      "346",
+      "347",
+      "348"
+     ],
+     "en": "He gave to him, Enlil gave to him -- and he set off for Urim. In the river he gave him the carp-flood -- and he set off for Urim. In the field he gave him speckled barley -- and he set off for Urim. In the pond he gave him kuda carp and suḫur carp -- and he set off for Urim. In the reedbeds he gave him old reed and fresh reed -- and he set off for Urim. In the forests he gave him the ibex and wild ram -- and he set off for Urim. In the high plain he gave him the mašgurum tree -- and he set off for Urim. In the orchards he gave him syrup and wine -- and he set off for Urim. In the palace he gave him long life -- and he set off for Urim."
+    },
+    {
+     "ref": "349–352",
+     "orig": "lugal-ĝu₁₀ barag-za {d}en-lil₂-la₂\n{d}nanna-ar-{d}suen-e ud 7 ḫe₂-a-ši-ib-tud\nbarag kug-za ama gal {d}nin-lil₂-la₂\nen {d}aš-im₂-babbar-e ud 7 ḫe₂-a-ši-ib-tud",
+     "orig_lines": [
+      "349",
+      "350",
+      "351",
+      "352"
+     ],
+     "en": "My king, on your throne, for Enlil, may Nanna-Suen make you be born for seven days. On your holy throne, for the great mother Ninlil, may Lord Ašimbabbar make you be born for seven days."
+    }
+   ]
+  }
+ ]
+}

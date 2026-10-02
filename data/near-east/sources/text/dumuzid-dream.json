@@ -1,0 +1,509 @@
+{
+ "slug": "dumuzid-dream",
+ "source": "ETCSL",
+ "siglum": "ETCSL 1.4.3",
+ "source_url": "https://etcsl.orinst.ox.ac.uk/cgi-bin/etcsl.cgi?text=t.1.4.3",
+ "license": "ETCSL（Oxford）轉寫與英譯，非商業學術使用",
+ "compositions": [
+  {
+   "num": "1.4.3",
+   "title_en": "Dumuzid's dream",
+   "segments": [
+    {
+     "ref": "1–4",
+     "orig": "šag₄-ga-ni er₂ im-si edin-še₃ ba-ra-e₃ (Šited in OB šatalogue from Nibru, at Pḫiladelpḫia, 0.2.01, line 19 (?); OB šatalogue in tḫe Louvre, 0.2.02, line 13 (?); OB šatalogue from Urim (U2), 0.2.04, line 26)\nĝuruš šag₄-ga-ni er₂ im-si edin-še₃ ba-ra-e₃\n{d}dumu-zid šag₄-ga-ni er₂ im-si edin-še₃ ba-ra-e₃\nĝidru {(1 ms. adds:) nam-sipad-da} gu₂-na mu-un-di-la₂ i-lu mu-un-du-du",
+     "orig_lines": [
+      "1",
+      "2",
+      "3",
+      "4"
+     ],
+     "en": "His heart was full of tears as he went out into the countryside. The lad's heart was full of tears as he went out into the countryside. Dumuzid's heart was full of tears as he went out into the countryside. He carried with him his {(1 ms. adds:) shepherd's} stick on his shoulder, sobbing all the time:"
+    },
+    {
+     "ref": "5–14",
+     "orig": "i-lu ĝar-u₃ i-lu ĝar-u₃ edin i-lu ĝar-u₃\nedin i-lu ĝar-u₃ ambar inim ĝar-u₃\nal-lub id₂-da girid₂ i-lu ĝar-u₃\nbi₂-za-za id₂-da inim ĝar-u₃ ama-ĝu₁₀ inim ḫe₂-em-me\nama-ĝu₁₀ {d}dur₇-tur-ĝu₁₀ inim ḫe₂-em-me\nama-ĝu₁₀ niĝ₂ 5-am₃ inim ḫe₂-em-me\nama-ĝu₁₀ niĝ₂ 10-am₃ inim ḫe₂-em-me\nud-da ud ug₅-ge-ĝu₁₀ nu-un-zu\nedin ama ugu-ĝu₁₀ inim mu-e-de₃-zu-un\nnin₉ ban₃-da-ĝu₁₀-gin₇ er₂-ĝu₁₀ ḫe₂-še₈-še₈",
+     "orig_lines": [
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10",
+      "11",
+      "12",
+      "13",
+      "14"
+     ],
+     "en": "\"Grieve, grieve, O countryside, grieve! O countryside, grieve! O marshes, cry out! O …… crabs of the river, grieve! O frogs of the river, cry out! My mother will call to me, my mother, my Durtur, will call to me, my mother will call to me for five things, my mother will call to me for 10 things: if she does not know the day when I am dead, you, O countryside, can inform my mother who bore me. Like my little sister may you weep for me.\""
+    },
+    {
+     "ref": "15–18",
+     "orig": "ud ul-e ba-nu₂ ud ul-e ba-nu₂ sipad ud ul-e ba-nu₂\nsipad ud ul-e ba-nu₂-gin₇ ma-mu₂-de₃ ba-nu₂\ni-im-zig₃ ma-mu₂-da i-im-bu-lu-uḫ₂ u₃-sa₂-ga-am₃\nigi-ni šu bi₂-in-kiĝ₂ niĝ₂-me-ĝar sug₄-ga-am₃",
+     "orig_lines": [
+      "15",
+      "16",
+      "17",
+      "18"
+     ],
+     "en": "In ancient times he lay down, in ancient times he lay down, in ancient times the shepherd lay down. When in ancient times the shepherd lay down, he lay down to dream. He woke up -- it was a dream! He shivered -- it was sleep! He rubbed his eyes, he was terrified."
+    },
+    {
+     "ref": "19–24",
+     "orig": "tum₂-mu-un-ze₂-en tum₂-mu-un-ze₂-en nin₉-ĝu₁₀ tum₂-mu-un-ze₂-en\n{d}ĝeštin-an-na-ĝu₁₀ tum₂-mu-un-ze₂-en nin₉-ĝu₁₀ tum₂-mu-un-ze₂-en\ndub-sar im zu-ĝu₁₀ tum₂-mu-un-ze₂-en nin₉-ĝu₁₀ tum₂-mu-un-ze₂-en\nnar en₃-du zu-ĝu₁₀ tum₂-mu-un-ze₂-en nin₉-ĝu₁₀ tum₂-mu-un-ze₂-en\nlu₂-ban₃-da šag₄ inim-ma zu-ĝu₁₀ tum₂-mu-un-ze₂-en nin₉-ĝu₁₀ tum₂-mu-un-ze₂-en\num-ma šag₄ ma-mu₂-da zu-ĝu₁₀ tum₂-mu-un-ze₂-en nin₉-ĝu₁₀ tum₂-mu-un-ze₂-en",
+     "orig_lines": [
+      "19",
+      "20",
+      "21",
+      "22",
+      "23",
+      "24"
+     ],
+     "en": "\"Bring, bring, bring my sister! Bring my Ĝeštin-ana, bring my sister! Bring my scribe proficient in tablets, bring my sister! Bring my singer expert in songs, bring my singer! Bring my perspicacious girl, bring my sister! Bring my wise woman who knows the meanings of dreams, bring my sister! I will relate the dream to her.\""
+    },
+    {
+     "ref": "25–39",
+     "orig": "ma-mu₂ ga-mu-un-na-bur₂\nma-mu₂-da nin₉-ĝu₁₀ ma-mu₂-da šag₄ ma-mu₂-da-ĝa₂\n{u₂}numun₂ ma-ra-zi-zi {u₂}numun₂ ma-ra-mu₂-mu₂\ngi dili du₃-e saĝ /ma\\-[ra-an]-sag₃-ge\ngi dili-dili du₃-e dili ma-ra-an-ba₉-re₆\n{ĝiš}tir-ra ĝiš an-gin₇ ni₂-bi ma-ra-an-zig₃-[ga]\n{ne-mur} {(1 ms. ḫas instead:) ki-izi} kug-ĝa₂ a mu-da-an-de₂\n{dug}šakir₃ kug-ĝa₂ TUN₃-bi ba-ra-an-ba₉-re₆\n{ĝiš}an-za-am kug-ĝu₁₀ {ĝiš}gag-ta la₂-a {ĝiš}gag-ta ba-ra-an-/si\\-[ig]\n{ĝiš}ma-nu-ĝu₁₀ u₂-gu mu-da-an-de₂\n{d}nin-ninna₂{mušen}-ta-e ĝa₂ udu-ka sila₄ šu ba-ni-ib-ti\nsur₂-du₃{mušen}-e gi dub-ba-na-ka buru₅{mušen} šu ba-ni-ib-ti\nmaš₂-ud₅-da-ĝu₁₀ sun₄ za-gin₃-bi saḫar-ra ma-ra-an-gid₂-e\nudu-utua₂-ĝu₁₀ a₂ gur-gur-ra-bi ki ma-ra-ab-ḫur-ḫur-re\n{dug}šakir₃ i₃-dur₂-dur₂ ga nu-un-de₂\nan-za-am i₃-dur₂-dur₂ {d}dumu-zid nu-til₃ amaš lil₂-la₂-am₃ al-du₃",
+     "orig_lines": [
+      "25",
+      "26",
+      "27",
+      "28",
+      "29",
+      "30",
+      "31",
+      "32",
+      "33",
+      "34",
+      "35",
+      "36",
+      "37",
+      "38",
+      "39",
+      "40"
+     ],
+     "en": "\"A dream, my sister! A dream! In my dream, rushes were rising up for me, rushes kept growing for me; a single reed was shaking its head at me; twin reeds -- one was being separated from me. Tall trees in the forest were rising up together over me. Water was poured over my holy {coals} {(1 ms. has instead:) brazier} for me, the cover of my holy churn was removed, my holy drinking cup was torn down from the peg where it hung, my shepherd's stick disappeared from me. An owl (?) took a lamb from the sheep house, a falcon caught a sparrow on the reed fence, my male goats were dragging their dark beards in the dust for me, my rams were scratching the earth with their thick legs for me. The churns were lying on their sides, no milk was being poured, the drinking cups were lying on their sides, Dumuzid was dead, the sheepfold was haunted.\""
+    },
+    {
+     "ref": "41–55",
+     "orig": "{d}ĝeštin-an-na-ke₄ {d}dumu-zid mu-un-na-ni-ib-gi₄-gi₄\nšeš-ĝu₁₀ ma-mu₂-zu nu-sag₉-sag₉ nam-ma-an-bur₂-e\n{d}dumu-zid ma-mu₂-zu nu-sag₉-sag₉ nam-ma-an-bur₂-e\n{u₂}numun₂ ma-ra-an-zi-zi {u₂}numun₂ ma-ra-an-mu₂-mu₂\nsa-gaz šubtum₆-ta ma-ra-an-zig₃-ga\ngi dili du₃-e saĝ ma-ra-an-sag₃-ge\nama ugu-zu saĝ ma-ra-an-sag₃-ge\ngi dili-dili du₃-e dili ma-ra-an-ba₉-re₆\nĝe₂₆-e u₃ za-e dili ma-ra-an-bad-ba₉-re₆\n{ĝiš}tir-ra ĝiš an ni₂-bi ma-ra-an-zi-zi\nlu₂ ḫul-ĝal₂-e i-zi-a im-mu-e-ni-dab₅-be₂\nne-mur kug-zu a mu-da-an-de₂\namaš e₂ sig₉-ga ba-e-de₃-ĝa₂-ĝa₂\n{dug}šakir₃ kug-zu TUN₃-bi ma-ra-an-ba₉-re₆\nlu₂ ḫul-ĝal₂-e šu-na ba-e-ni-in-ku₄-ku₄",
+     "orig_lines": [
+      "41",
+      "42",
+      "43",
+      "44",
+      "45",
+      "46",
+      "47",
+      "48",
+      "49",
+      "50",
+      "51",
+      "52",
+      "53",
+      "54",
+      "55"
+     ],
+     "en": "Ĝeštin-ana answered Dumuzid: \"My brother, your dream is not favourable, don't tell me any more of it! Dumuzid, your dream is not favourable, don't tell me any more of it! The rushes rising up for you, which kept growing for you, are bandits rising against you from their ambush. The single reed shaking its head at you is your mother who bore you, shaking her head for you. The twin reeds of which one was being separated from you is you and I -- one will be separated from you. The tall trees in the forest rising up together over you are the evil men catching you within the walls. That water was poured over your holy coals means the sheepfold will become a house of silence. That the cover of your holy churn was removed for you means the evil man will bring it inside in his hands.\""
+    },
+    {
+     "ref": "56–69",
+     "orig": "an-za-am kug {ĝiš}gag-ta la₂-a {ĝiš}gag-ta ba-ra-an-si-ig\ndu₁₀-ub ama ugu-za-ta ba-ra-šub-bu-de₃\n{ĝiš}ma-nu-zu u₂-gu mu-un-da-an-de₂\ngal₅-la₂-e {izi} {(some mss. ḫave instead:) niĝ₂} {(1 ms. ḫas instead:) ne₃ (i-ne-er-šu)} bi₂-ra-ra-am₃\n{d}nin-ninna₂{mušen}-ta-e ĝa₂ udu-ka sila₄ šu ba-ni-ib-ti\n{lu₂ ḫul-ĝal₂-e te-[zu ma-ra]-an-sag₃-ge} {(1 ms. ḫas instead:) lu₂ ḫul-ĝal₂-e ĝa₂ udu am₃-mu-e-re-šub}\nsur₂-du₃{mušen}-e gi dub-ba-an-ka buru₅ šu ba-ni-ib-ti\n{gal₅-la₂ gal-e ĝa₂ udu-ta} {(1 ms. ḫas instead:) gal₅-la₂-e amaš tur₃-ta} {am₃-mu-e-re-ed₃-ed₃} {(1 ms. ḫas instead:) /am₃\\-[ma]-/ra\\-e₃}\n[{dug}]/šakir₃\\ i₃-[dur₂]-dur₂ [ga nu-un-de₂] an-za-am i₃-dur₂-dur₂ {d}dumu-zid nu-un-til₃ amaš lil₂-la₂ am₃-du₃\nšu-zu šu-du₃-[a ba-e-dab₅] a₂-zu a₂-la₂-e ba-e-la₂\nmaš₂-ud₅-da-zu sun₄ za-gin₃-bi saḫar-ra ma-ra-an-gid₂-e\nsiki-ĝu₁₀ mar-uru₅-gin₇ an-na ma-ra-ni₁₀-ni₁₀-e\nudu-utua₂-zu a₂ gur-gur-ra-bi ki ma-ra-ab-ḫur-ḫur-re\nšu-si-ĝu₁₀ {ĝiš}bulug taškarin-gin₇ te ma-ra-ab-ḫur-ḫur-re",
+     "orig_lines": [
+      "56",
+      "57",
+      "58",
+      "59",
+      "60",
+      "61",
+      "62",
+      "63",
+      "64",
+      "65",
+      "66",
+      "67",
+      "68",
+      "69"
+     ],
+     "en": "\"Your holy drinking cup torn down from the peg where it hung is you falling off the lap of the mother who bore you. That your shepherd's stick disappeared from you means the demons {will set fire to it} {(1 ms. has instead:) will smash it}. The owl (?) taking a lamb from the sheep house {is the evil man who will hit you on the cheek} {(1 ms. has instead:) is the evil man who will destroy the sheep house}. The falcon catching a sparrow on the reed fence is the big demon coming {down} {(1 ms. has instead:) out} from the sheep house. That the churns were lying on their sides, no milk was being poured, the drinking cups were lying on their sides, that Dumuzid was dead, and the sheepfold haunted, means your hands will be bound in handcuffs, your arms will be bound in fetters. That your male goats were dragging their dark beards in the dust for you means that my hair will whirl around in the air like a hurricane for you. That your rams were scratching the earth with their thick legs for you means that I shall lacerate my cheeks with my fingernails for you as if with a boxwood needle.\""
+    },
+    {
+     "ref": "70–82",
+     "orig": "inim-bi ka-ga₁₄-na um-ma-da-ĝa₂-ĝa₂\nnin₉ du₆-da ed₃-bi₂ nin₉ du₆-da ed₃-[bi₂]\nnin₉ du₆-da ed₃-da-/zu\\-[ne]\ndu₆-da lu₂-ulu₃-gin₇ nam-ed₃-da-[nam]\n{šag₄-za} {(1 ms. ḫas instead:) siki-zu} bar-za u₃-/mu\\-[ni-ḫur]\ntug₂-za ḫaš₄-za u₃-/mu\\-[ni-ḫur]\nnin₉ du₆-da ed₃-bi₂\nnin₉ du₆-da ed₃-/da\\-[zu-ne]\ndu₆-da igi il₂-la-[ab]\nam₃-ma{?}-an-gig lipiš bal nam-lu₂-/ulu₃\\-[ke₄-ne]\n{ĝiš}ma₂-gur₈ id₂-da AM₃ X [...]\nĝiš šu-ka šu am₃-/mi\\-[in-du₈]\nĝiš gu₂-ka ba-an-pad₃ bur₂-[bur₂-bi lu₂ nu-zu]",
+     "orig_lines": [
+      "70",
+      "71",
+      "72",
+      "73",
+      "74",
+      "75",
+      "76",
+      "77",
+      "78",
+      "79",
+      "80",
+      "81",
+      "82"
+     ],
+     "en": "Hardly had she spoken these words when he said, \"Sister, go up onto the mound, sister, go up onto the mound! Sister, when you go up onto the mound, do not go up onto the mound like an ordinary person, but lacerate {your heart} {(1 ms. has instead:) your hair} and your liver, lacerate your clothes and your crotch, sister, and then go up onto the mound! Sister, when you go up onto the mound, look out from the mound! The evil ……, hated by men, …… a river barge! They hold in their hands the wood to bind the hands, they are identified (?) from the wood to bind the neck -- no man knows how to undo it!\""
+    },
+    {
+     "ref": "83–86",
+     "orig": "ama-{d}ĝeštin-an-na-ke₄ du₆-da ba{?}-[an-ed₃ igi] ba-[an]-il₂ X [...]\n{d}ĝeštin-an-na-ke₄ gu₂ um-ma-da-[gid₂]\nma-la-ga-ni {d}ĝeštin-du₃-du₃-e ad{?} [...]\ngu₂{?} keše₂-da gal-gal mu-un-ši-/re₇\\-[eš ...] mu-un-ši-[re₇-eš]",
+     "orig_lines": [
+      "83",
+      "84",
+      "85",
+      "86"
+     ],
+     "en": "Ama-ĝeštin-ana went up onto the mound and looked around, Ĝeštin-ana craned her neck. Her girl friend Ĝeštin-dudu advised her: \"The big men who bind the neck are already coming for him, they are …… coming for him!\""
+    },
+    {
+     "ref": "87–90",
+     "orig": "ad ĝar-ra ma-la-ĝu₁₀ mu-ši-re₇re{?}-[eš]\ngu₂ keše₂-da ĝe₂₆-e mu-ni-in-/pad₃\\-[de₃]\nšeš-ĝu₁₀ gal₅-la₂-zu im-ši-re₇-[eš saĝ u₂-a šub-u₃]\n[{d}dumu]-zid gal₅-la₂-zu im-ši-re₇-eš saĝ u₂-[a šub-u₃]",
+     "orig_lines": [
+      "87",
+      "88",
+      "89",
+      "90"
+     ],
+     "en": "\"My adviser and girl friend! Are they coming?\" \"Yes, I will point out to you those who bind the neck!\" \"My brother, your demons are coming for you! Duck down your head in the grass! Dumuzid, your demons are coming for you! Duck down your head in the grass!\""
+    },
+    {
+     "ref": "91–94",
+     "orig": "nin₉-ĝu₁₀ saĝ u₂-a ga-an-šub ki-ĝu₁₀ na-ab-/pad₃\\-[de₃]\nsaĝ u₂ di₄-di₄-la₂ ga-an-šub ki-ĝu₁₀ na-ab-pad₃-de₃\nsaĝ u₂ gal-gal-la ga-an-šub ki-ĝu₁₀ na-ab-pad₃-de₃\neg₂ a-ra-li-ka ga-an-šub ki-ĝu₁₀ na-ab-pad₃-de₃",
+     "orig_lines": [
+      "91",
+      "92",
+      "93",
+      "94"
+     ],
+     "en": "\"My sister, I will duck down my head in the grass! Don't reveal my whereabouts to them! I will duck down my head in the short grass! Don't reveal my whereabouts to them! I will duck down my head in the tall grass! Don't reveal my whereabouts to them! I will drop down into the ditches of Arali! Don't reveal my whereabouts to them!\""
+    },
+    {
+     "ref": "95–97",
+     "orig": "ud ki-zu ab-pad₃-de₃-en-na-a ur-zu ḫu-mu-gu₇-e\nur gig₂ ur nam-sipad-da-zu\nur gir₁₅ ur nam-en-na-zu ur-zu ḫu-mu-gu₇-e",
+     "orig_lines": [
+      "95",
+      "96",
+      "97"
+     ],
+     "en": "\"If I reveal your whereabouts to them, may your dog devour me! The black dog, your shepherd dog, the noble dog, your lordly dog, may your dog devour me!\""
+    },
+    {
+     "ref": "98–102",
+     "orig": "ĝeštug₂{?} mu-un-de₅-ge [X] X na-ba gu₅-li-zu de₅-ga\n[a šeš-ĝu₁₀] gu₅-li dub₃-sa\n[X] X-gin₇ na-[an]-tuku-nam\n[X X] X X [mi-ni-in]-/kiĝ₂\\-kiĝ₂-a-ta\nX-bi-a inim X [X] u₃-mu-ra-ab-dug₄",
+     "orig_lines": [
+      "98",
+      "99",
+      "100",
+      "101",
+      "102"
+     ],
+     "en": "She remembered (?): \"…… give your friend instructions about it! O my brother, may you never have a friend or comrade like ……! After the demons (?) have searched for you, ……, if he tells you …….\""
+    },
+    {
+     "ref": "103–106",
+     "orig": "gu₅-li-ĝu₁₀ saĝ u₂-a ga-an-šub ki-ĝu₁₀ na-ab-pad₃-de₃\nsaĝ u₂ di₄-di₄-la₂ ga-an-šub ki-ĝu₁₀ na-ab-pad₃-de₃\nsaĝ u₂ gal-gal-la ga-an-šub ki-ĝu₁₀ na-ab-pad₃-de₃\neg₂ a-ra-li ga-an-šub ki-ĝu₁₀ na-ab-pad₃-de₃",
+     "orig_lines": [
+      "103",
+      "104",
+      "105",
+      "106"
+     ],
+     "en": "\"My friend, I will duck down my head in the grass! Don't reveal my whereabouts to them! I will duck down my head in the short grass! Don't reveal my whereabouts to them! I will duck down my head in the tall grass! Don't reveal my whereabouts to them! I will drop down into the ditches of Arali! Don't reveal my whereabouts to them!\""
+    },
+    {
+     "ref": "107–109",
+     "orig": "ud ki-zu ab-pad₃-de₃-en-na-a ur-zu ḫu-mu-gu₇-e-en\nur gig₂ ur nam-sipad-da-zu\nur gir₁₅ ur nam-en-na-zu ur-zu ḫu-mu-gu₇-en",
+     "orig_lines": [
+      "107",
+      "108",
+      "109"
+     ],
+     "en": "\"If I reveal your whereabouts to them, may your dog devour me! The black dog, your shepherd dog, the noble dog, your lordly dog, may your dog devour me!\""
+    },
+    {
+     "ref": "110–138",
+     "orig": "lugal-ra lu₂ mu-<ši>-re₇-eš-am₃ lu₂ ḫi-ḫi-a-me-eš\nu₂ nu-zu-me-eš a nu-zu-me-eš\nzid₂ dub-dub-ba nu-gu₇-me-eš\na bal-bal-a nu-na₈-na₈-me-eš\nkadra niĝ₂ dug₃-ga šu nu-gid₂-i-me-eš\nur₂ dam niĝ₂ dug₃-ge-eš₂ nu-sig₉-ge-me-eš\ndumu niĝ₂ ku₇-ku₇-da ne nu-su-ub-ba-me-eš\nšum₂{sar} niĝ₂ sis-am₃ zu₂ nu-gub-bu-me-eš\nlu₂ ku₆ nu-gu₇-me-eš lu₂ ga-raš{sar} nu-gu₇-me-eš\nlugal-ra dumu adab{ki}-a 2-am₃ mu-un-ši-re₇{re}-eš\n{ĝiš}kiši₁₆ a šu-ru-ug-ga {ĝiš}dala₂ a ḫab₂-ba\nšu-ni {ĝiš}banšur-ra eme-ni e₂-gal-la\nlugal-ra dumu akšak{ki} 2-am₃ mu-un-ši-re₇{re}-eš\nX nim-AḪ.ME-da gu₂-ba la₂-a\nlugal-ra dumu unug{ki}-ga 2-am₃ mu-un-ši-re₇{re}-eš\n{ĝiš}tukul saĝ kud-a ur₂-ra la₂-a\nlugal-ra dumu urim₂{ki}-ma 2-am₃ mu-un-ši-re₇{re}-eš\ntug₂ {šen-na} {(1 ms. ḫas instead:) dan₃-na} kar-ra ĝal₂-la\nlugal-ra dumu nibru{ki} 2-am₃ mu-un-ši-re₇{re}-eš\nlu₂ lu₂-ra im₂-ma-ni-ib amaš {e₂}tur₃-še₃ <mu-un>-ši-re₇{re}-eš\n{d}ĝeštin-an-na-ke₄ amaš tur₃-še₃ mu-ni-in-dab₅-be₂-ne\nid₂ a-ba mu-un-na-ba-e-ne šu /nu\\-[um]-ma-gid₂-de₃\na-šag₄ še-ba mu-un-/na\\-[ba]-e-ne šu [nu]-um-ma-/gid₂\\-[de₃]\ngal₅-la₂ tur-re gal₅-la₂ gu-la-[ra gu₃ mu]-/un\\-na-de₂-e\ngal₅-la₂ kug-zu gal₅-la₂ til₃-la\ngal₅-la₂ gal-/bi\\ murub₄-bi til₃-la\nkug-zu [X ba]-/an\\-da-ḫa-lam-ma-gin₇\nX X X-še₃ ba-an-gib-ba-gin₇\nnin₉ ki šeš am₃-mu-un-pad₃-de₃-a",
+     "orig_lines": [
+      "110",
+      "111",
+      "112",
+      "113",
+      "114",
+      "115",
+      "116",
+      "117",
+      "118",
+      "119",
+      "120",
+      "121",
+      "122",
+      "123",
+      "124",
+      "125",
+      "126",
+      "127",
+      "128",
+      "129",
+      "130",
+      "131",
+      "132",
+      "133",
+      "134",
+      "135",
+      "136",
+      "137",
+      "138"
+     ],
+     "en": "Those who come for the king are a motley crew, who know not food, who know not drink, who eat no sprinkled flour, who drink no poured water, who accept no pleasant gifts, who do not enjoy a wife's embraces, who never kiss dear little children, who never chew sharp-tasting garlic, who eat no fish, who eat no leeks. There were two men of Adab who came for the king. They were thistles in dried-up waters, they were thorns in stinking waters -- 'his hand was on the table, his tongue was in the palace' (Alludes to a proverb) . Then there were two men of Akšak who came for the king, with …… carried on their shoulders. Then there were two men of Unug who came for the king. With head-smashing clubs tied to their waists, there were two men of Urim who came for the king. With {shining} {(1 ms. has instead:) clean} clothes on the quayside, there were two men of Nibru who came for the king. Crying \"Man run after man!\", they came to the sheepfold and cow-pen. They caught Ĝeštin-ana at the sheepfold and cow-pen. They offered a river of water, but she wouldn't accept it. They offered her a field of grain, but she wouldn't accept it. The little demon spoke to the big demon, the wise demon, the lively demon, and the big demon who was between them, wise like …… destroying a ……, like …… barring a ……, they spoke:"
+    },
+    {
+     "ref": "139–150",
+     "orig": "ud ul{?}-la₂-ta a-ba-a igi mi-ni-in-du₈-a\nĝa₂-nam-ma-an-ze₂-en gu₅-li-ni-ir ga-an-ši-re₇-en-de₃-en\nud ne gu₅-li-ni-ir\nid₂ a-ba mu-un-na-ba-e-ne šu am₃-ma-gid₂-de₃-«en»\na-šag₄ še-ba mu-un-na-ba-e-ne šu am₃-ma-gid₂-de₃\ngu₅-li-ĝu₁₀ saĝ u₂-a ḫe₂-en-šub ki-ni ba-ra-zu\n[{d}dumu-zid]-de₃ saĝ u₂-a ḫe₂-en-šub ki-ni ba-ra-zu\n{d}dumu-zid-de₃ saĝ u₂-a mu-ni-in-kiĝ₂-kiĝ₂-ne nu-mu-un-pad₃-de₃\nsaĝ u₂ di₄-di₄-la₂ ḫe₂-en-šub ki-ni ba-ra-zu\n{d}dumu-zid-de₃ saĝ u₂ di₄-di₄-la₂ mu-ni-in-kiĝ₂-kiĝ₂-ne nu-mu-un-pad₃-[de₃]\nsaĝ u₂ gal-gal-la ḫe₂-en-šub ki-ni ba-ra-zu\n{d}dumu-zid-de₃ saĝ u₂ gal-gal-la mu-ni-in-kiĝ₂-kiĝ₂-ne [nu-mu-un]-pad₃-de₃\neg₂ a-ra-li-ka ḫe₂-en-šub ki-ni ba-ra-zu",
+     "orig_lines": [
+      "139",
+      "140",
+      "141",
+      "142",
+      "143",
+      "144",
+      "144A",
+      "145",
+      "146",
+      "147",
+      "148",
+      "149",
+      "150"
+     ],
+     "en": "\"Who since the most ancient times has ever known a sister reveal a brother's whereabouts? Come! Let us go to his friend!\" Then they offered his friend a river of water, and he accepted it. They offered him a field of grain, and he accepted it. \"My friend ducked down his head in the grass, but I don't know his whereabouts {(1 ms. adds:) Dumuzid ducked down his head in the grass, but I don't know his whereabouts}.\" They looked for Dumuzid's head in the grass, but they couldn't find him. \"He ducked down his head in the short grass, but I don't know his whereabouts.\" They looked for Dumuzid's head in the short grass, but they couldn't find him. \"He ducked down his head in the tall grass, but I don't know his whereabouts.\" They looked for Dumuzid's head in the tall grass, but they couldn't find him. \"He has dropped down into the ditches of Arali, but I don't know his whereabouts.\""
+    },
+    {
+     "ref": "151–155",
+     "orig": "{d}dumu-zid-de₃ eg₂ a-ra-li-ka mu-ni-in-dab₅-be₂-ne\n{d}dumu-zid-de₃ er₂ im-ma-an-pad₃ šeₓ(SIG₇)-šeₓ(SIG₇) i₃-ĝa₂-ĝa₂\niri-a nin₉-ĝu₁₀ mu-un-til₃-le-en gu₅-li-ĝu₁₀ mu-un-ug₅-ge-en\ndumu nin₉-e sila-a ḫe₂-en-gub lu₂ ne ḫe₂-su-ub-be₂\ndumu gu₅-li sila-a ḫe₂-en-gub lu₂ ne na-an-su-ub-be₂",
+     "orig_lines": [
+      "151",
+      "152",
+      "153",
+      "154",
+      "155"
+     ],
+     "en": "They caught Dumuzid in the ditches of Arali. Dumuzid began to weep and was tear-stricken: \"In the city my sister saved my life, my friend caused my death. If a sister leaves (?) a child in the street, someone should kiss it. But if a friend leaves (?) a child in the street, no one should kiss it.\""
+    },
+    {
+     "ref": "156–164",
+     "orig": "lu₂ ba-an-niĝin₂-niĝin₂-ne-eš a-niĝin₂ ba-ni-in-du₈-uš\ngu mu-un-na-sur-ru-ne sa mu-un-na-keše₂-/da\\-[ne]\ngu zi-ip-pa-tum mu-un-na-sur-ru-ne\n{ĝiš}ma-nu mu-un-na-ḫur-ru-ne\nlu₂ igi-na-ke₄ niĝ₂ mu-un-ra-ra\nlu₂ murgu-na-ke₄ 1 kuš₃-gin₇ mu-un-bur₂-[re]\nšu-ni šu-du₃-a ba-e-dab₅-be₂\na₂-ni a₂-la₂-a ba-e-la₂-e\nĝuruš-e {d}utu-ra an-še₃ šu-ni ba-ni-in-zig₃",
+     "orig_lines": [
+      "156",
+      "157",
+      "158",
+      "159",
+      "160",
+      "161",
+      "162",
+      "163",
+      "164"
+     ],
+     "en": "The men surrounded him and drained the standing waters. They twisted a cord for him, they knotted a net for him. They wove a reed hawser for him, they cut sticks for him. The one in front of him threw missiles at him, the one behind him …… one cubit. His hands were bound in handcuffs, his arms were bound in fetters. The lad raised his hands heavenward to Utu:"
+    },
+    {
+     "ref": "165–173",
+     "orig": "{d}utu murum₅-ĝu₁₀-me-en ĝe₂₆-e mussa-/zu\\-[me-en]\ne₂-an-na-še₃ u₂ gur₃-ru-/me\\-[en]\nunug{ki}-še₃ niĝ₂-mussa ak-a-me-en\nnundum kug-ge ne su-ub-ba-[me-en ]\ndub₃ kug-ga dub₃ {d}inana-ka e-ne di dug₄-/ga\\-[me-en ]\nšu-ĝu₁₀ šu maš-da₃ u₃-mu-e-ni-[sig₁₀]\nĝiri₃-ĝu₁₀ ĝiri₃ maš-da₃ u₃-mu-e-ni-[sig₁₀]\n[gal₅-la₂]-gal₅-la₂-ĝu₁₀ ga-ba-da-an-ze₂-er\nKU-{ĝiš}bir₅-re-eš-dil-da-/re\\-[eš] zi-ĝu₁₀ ga-ba-ši-de₆",
+     "orig_lines": [
+      "165",
+      "166",
+      "167",
+      "168",
+      "169",
+      "170",
+      "171",
+      "172",
+      "173"
+     ],
+     "en": "\"Utu, you are my brother-in-law, I am your sister's husband! I am he who carries food to E-ana, I am he who brought the wedding gifts to Unug, I am he who kisses the holy lips, I am he who dances on the holy knees, the knees of Inana. Please change my hands into gazelle hands, change my feet into gazelle feet, so I can evade my demons. Let me escape with my life to Ku-bireš-dildareš.\""
+    },
+    {
+     "ref": "174–180",
+     "orig": "{d}utu er₂-na {(1 ms. adds:) kadra-gin₇} šu ba-ši-in-ti\nlu₂ arḫuš-a-gin₇ arḫuš /ba\\-[ni-in-ak]\nšu-ni šu maš-da₃ u₃-mu-ni-in-sig₁₀\nĝiri₃-ni ĝiri₃ maš-da₃ u₃-mu-ni-in-sig₁₀\ngal₅-la₂-gal₅-la₂-e-ne ba-da-an-ze₂-er\nKU-{ĝiš}bir₅-re-eš-dil-da-re-eš zi-ni ba-ši-in-de₆\ngal₅-la₂-ne-ne mu-ni-/in\\-[kiĝ₂-kiĝ₂-ne] nu-mu-[un-pad₃-de₃]",
+     "orig_lines": [
+      "174",
+      "175",
+      "176",
+      "177",
+      "178",
+      "179",
+      "180"
+     ],
+     "en": "Utu accepted his tears {(1 ms. adds:) as a gift}. Like a merciful man he showed him mercy. He changed his hands into gazelle hands, he changed his feet into gazelle feet, and so he evaded the demons, and escaped with his life to Ku-bireš-dildareš. The demons searched for him, but didn't find him."
+    },
+    {
+     "ref": "181–191",
+     "orig": "ĝa₂-nam-ma-an-ze₂-en KU-{ĝiš}bir₅-re-[eš] ga-an-ši-re₇{re}-de₃-en\n[...] X X sa-par₃-gin₇ [...]\n{d}dumu-zid KU-{ĝiš}bir₅-re-eš mu-ni-in-dab₅-be₂-ne\nlu₂ ba-an-niĝin₂-niĝin₂-ne-eš a-niĝin₂ ba-ni-in-du₈-uš\ngu mu-un-na-sur-ru-ne sa {mu-un-na-keše₂-/da\\-[ne]} {(1 ms. ḫas instead:) mu-un-na-keše₂-re-ne}\ngu zi-ip-pa-tum mu-un-na-sur-ru-ne\n{ĝiš}ma-nu mu-un-na-ḫur-ru-ne\nlu₂ igi-na-ke₄ niĝ₂ mu-un-ra-ra\nlu₂ /murgu-na\\-ke₄ 1 kuš₃-gin₇ mu-un-bur₂-re\nšu-ni šu-du₃-a ba-e-dab₅-be₂\na₂-ni a₂-la₂-a ba-e-la₂-e\nĝuruš-e {d}utu-ra an-še₃ šu-ni ba-ni-in-zig₃",
+     "orig_lines": [
+      "181",
+      "181A",
+      "182",
+      "183",
+      "184",
+      "185",
+      "186",
+      "187",
+      "188",
+      "189",
+      "190",
+      "191"
+     ],
+     "en": "\"Come, let us go to Ku-bireš.\" {(1 ms. adds:) …… like a net …….} They caught Dumuzid at Ku-bireš. The men surrounded him and drained the standing waters. They twisted a cord for him, they knotted a net for him. They wove a reed hawser for him, they cut sticks for him, the one in front of him threw missiles at him, the one behind him ……. His hands were bound in handcuffs, his arms were bound in fetters. The lad raised his hands heavenward to Utu:"
+    },
+    {
+     "ref": "192–199",
+     "orig": "{d}utu murum₅-ĝu₁₀-me-en ĝe₂₆-e mussa-zu-me-en\ne₂-an-na-še₃ u₂ gur₃-ru-me-en\nunug{ki}-še₃ niĝ₂-mussa ak-a-me-en\nnundum kug-ge ne su-ub-ba-me-en\ndub₃ kug-ge dub₃ {d}inana-ke₄ e-ne di dug₄-ga-me-en\nšu-ĝu₁₀ šu {maš-da₃} {(1 ms. ḫas instead:) muš-a} u₃-mu-e-[ni]-sig₁₀\nĝiri₃-ĝu₁₀ ĝiri₃ {maš-da₃} {(1 ms. ḫas instead:) muš-a} u₃-mu-e-ni-sig₁₀\ne₂ um-ma {d}be-li-li zi-ĝu₁₀ ga-ba-ši-in-de₆",
+     "orig_lines": [
+      "192",
+      "193",
+      "194",
+      "195",
+      "196",
+      "197",
+      "198",
+      "199"
+     ],
+     "en": "\"Utu, you are my brother-in-law, I am your sister's husband! I am he who carries food to E-ana, I am he who brought the wedding gifts to Unug, I am he who kisses the holy lips, I am he who dances on the holy knees, the knees of Inana. Please change my hands into {gazelle} {(1 ms. has instead:) snake} hands, change my feet into {gazelle} {(1 ms. has instead:) snake} feet, so I can escape to the house of Old Woman Belili.\""
+    },
+    {
+     "ref": "200–205",
+     "orig": "{d}utu er₂-na šu ba-ši-in-ti\nšu-ni šu {maš-da₃} {(1 ms. ḫas instead:) muš-a} u₃-mu-ni-in-sig₁₀\nĝiri₃-ni ĝiri₃ {maš-da₃} {(1 ms. ḫas instead:) muš-a} u₃-mu-ni-in-sig₁₀\n[gal₅-la₂-gal₅-la₂]-e-ne im-ma-da-/an\\-[ze₂-er]\ne₂ um-ma {d}be-li-li zi-ni ba-ši-in-de₆\ne₂ um-ma {d}be-li-li-še₃ ba-an-na-te",
+     "orig_lines": [
+      "200",
+      "201",
+      "202",
+      "203",
+      "204",
+      "205"
+     ],
+     "en": "Utu accepted his tears. He changed his hands into {gazelle} {(1 ms. has instead:) snake} hands, he changed his feet into {gazelle} {(1 ms. has instead:) snake} feet, so he evaded the demons and escaped with his life to the house of Old Woman Belili. He approached the house of Old Woman Belili."
+    },
+    {
+     "ref": "206–208",
+     "orig": "um-ma lu₂ nu-me-en dam diĝir-ra-me-en\na ub-ta-an-bal-bal a tukum-bi ga-naĝ\nzid₂ ub-ta-an-dub-dub zid₂ tukum-bi ga-gu₇",
+     "orig_lines": [
+      "206",
+      "207",
+      "208"
+     ],
+     "en": "\"Old woman! I am not just a man, I am the husband of a goddess! Would you pour water -- please -- so I can drink water. Would you sprinkle flour -- please -- so I can eat flour.\""
+    },
+    {
+     "ref": "209–212",
+     "orig": "a ub-ta-an-bal zid₂ ub-ta-an-dub šag₄-bi-a ba-an-tuš\num-ma e₂-ta ba-ra-e₃\num-ma e₂-ta ed₂-da-ni\ngal₅-la₂-e-ne igi ba-ni-in-du₈-uš-am₃",
+     "orig_lines": [
+      "209",
+      "210",
+      "211",
+      "212"
+     ],
+     "en": "She poured water, and she sprinkled flour, and he sat down inside the house. The old woman left the house. When the old woman left the house, the demons saw her."
+    },
+    {
+     "ref": "213–226",
+     "orig": "tukum-bi ud-da um-ma ki {d}dumu-zid til₃-la nu-ub-zu\nigi ni₂ te-a na-bar-bar-re\ngu₃ ni₂ te-a na-de₂-de₂-e\nĝa₂-nam-ma-an-ze₂-en e₂ um-ma {d}be-li-li-še₃ ga-an-ši-re₇-de₃-en\n{d}dumu-zid-de₃ e₂ um-ma {d}be-li-li-še₃ mu-un-dab₅-be₂-ne\nlu₂ ba-an-/niĝin₂-niĝin₂-ne\\-eš a-niĝin₂ ba-ni-in-du₈-uš\ngu mu-na-ab-[sur-ru-ne sa] mu-un-na-keše₂-da-[ne]\ngu /zi\\-[ip]-pa-/tum\\ [mu-un-na]-sur-[ru-ne]\n[{ĝiš}ma-nu] mu-na-an-ḫur-ru-ne\n/lu₂\\ [igi]-/na\\-ke₄ niĝ₂ /mu\\-[un-ra-ra]\n/lu₂\\ [murgu-na-ke₄ 1 kuš₃-gin₇ mu-un]-/bur₂\\-re\nšu-[ni šu-du₃-a ba-e]-dab₅-be₂\na₂-[ni a₂-la₂-a ba-e-la₂]-e\nĝuruš-[e] {d}utu-ra an-še₃ šu-ni ba-ni-in-zig₃",
+     "orig_lines": [
+      "213",
+      "214",
+      "215",
+      "216",
+      "217",
+      "218",
+      "219",
+      "220",
+      "221",
+      "222",
+      "223",
+      "224",
+      "225",
+      "226"
+     ],
+     "en": "\"Unless the old woman is aware of Dumuzid's whereabouts, she is indeed looking frightened! She is indeed screaming in a frightened way! Come, let us go to the house of Old Woman Belili!\" They caught Dumuzid at the house of Old Woman Belili. The men surrounded him and drained the standing waters. They twisted a cord for him, they knotted a net for him. They wove a reed hawser for him, they cut sticks for him, the one in front of him threw missiles at him, the one behind him ……. His hands were bound in handcuffs, his arms were bound in fetters. The lad raised his hands heavenward to Utu:"
+    },
+    {
+     "ref": "227–234",
+     "orig": "{d}utu /murum₅-ĝu₁₀-me-en\\ ĝe₂₆-e mussa-zu-me-en\ne₂-an-na-/še₃\\ [u₂ gur₃]-/ru\\-me-en\nunug{ki}-še₃ niĝ₂-mussa(/mi₂\\-[us₂]-/sa₂\\) ak-me-en\nnundum kug-ge ne [su-ub]-/ba\\-me-en\ndub₃ kug-ge dub₃ {d}inana-[ke₄] e-ne di dug₄-ga-me-en\nšu-ni šu maš-da₃ [u₃]-mu-ni-in-sig₁₀\nĝiri₃-ni ĝiri₃ maš-da₃ u₃-mu-ni-in-sig₁₀\namaš kug amaš nin₉-ĝa₂-še₃ zi-ĝu₁₀ ga-ba-ši-in-de₆",
+     "orig_lines": [
+      "227",
+      "228",
+      "229",
+      "230",
+      "231",
+      "232",
+      "233",
+      "234"
+     ],
+     "en": "\"Utu, you are my brother-in-law, I am your sister's husband! I am he who carries food to E-ana, I am he who brought the wedding gifts to Unug, I am he who kisses the holy lips, I am he who dances on the holy knees, the knees of Inana. Please change my hands into gazelle hands, change my feet into gazelle feet, so I can escape to the holy sheepfold, my sister's sheepfold.\""
+    },
+    {
+     "ref": "235–244",
+     "orig": "{d}utu er₂-na šu ba-ši-ni-in-ti\nšu-ni šu {maš-da₃} {(1 ms. ḫas instead:) muš-a} u₃-mu-ni-in-sig₁₀\nĝiri₃-ni ĝiri₃ {maš-da₃} {(1 ms. ḫas instead:) muš-a} u₃-mu-ni-in-sig₁₀\namaš kug amaš nin₉-na-še₃ zi-ni ba-ši-in-tum₃\namaš kug amaš nin₉-na-še₃ ba-an-na-te\n{d}ĝeštin-an-na-ke₄ gu₃ an-<še₃ ba>-te gu₃ ki-še₃ ba-te\ngu₃ šu niĝin₂-bi an-ur₂-ra tug₂-gin₇ i-im-dul gada-gin₇ i-im-bur₂\nigi mu-un-na-ḫur giri₁₇ mu-un-na-ḫur\nĝeštug₂ ki u₆ di mu-un-na-ḫur\nki lu₂-da nu-di ḫaš₄-gal mu-un-[na-ḫur]",
+     "orig_lines": [
+      "235",
+      "236",
+      "237",
+      "238",
+      "239",
+      "240",
+      "241",
+      "242",
+      "243",
+      "244"
+     ],
+     "en": "Utu accepted his tears. He changed his hands into {gazelle} {(1 ms. has instead:) snake} hands, he changed his feet into {gazelle} {(1 ms. has instead:) snake} feet, so he evaded the demons, and escaped with his life to the holy sheepfold, his sister's sheepfold. He approached the holy sheepfold, his sister's sheepfold. Ĝeštin-ana cried toward heaven, cried toward earth. Her cries covered the horizon completely like a cloth, they were spread out like linen. She lacerated her eyes, she lacerated her face, she lacerated her ears in public; in private she lacerated her buttocks."
+    },
+    {
+     "ref": "245–255",
+     "orig": "šeš-ĝu₁₀ sila-a ga-[...]-niĝin₂-niĝin₂ ĝe₂₆-e [...]\ntukum-bi {d}ĝeštin-an-na-ke₄ ki [{d}dumu-zid] til₃-la nu-[ub-zu]\nigi ni₂ te-a na-bar-bar-[re]-«en»\ngu₃ ni₂ te-[a] na-de₂-de₂-e\nĝa₂-nam-ma-an-ze₂-en amaš tur₃-še₃ [ga-ba]-ši-ĝen\ngal₅-la₂ 1 amaš tur₃-še₃ kur₉-ra-ni\n{ĝiš}gag-ga-ra izi /ba\\-[ni]-in-ra\nĜIŠ NI X gu₃ ba-ni-ra\n2-kam-ma amaš tur₃-še₃ kur₉-ra-ni\n{ĝiš}ma-nu izi ba-ni-ra\n3-kam-ma amaš tur₃-še₃ kur₉-ra-ni\n{dug}šakir₃ kug-ga-a TUN₃-bi [ba]-ra-[ba₉-re₆]",
+     "orig_lines": [
+      "245",
+      "246",
+      "247",
+      "248",
+      "249",
+      "250",
+      "251",
+      "251A",
+      "252",
+      "253",
+      "254",
+      "255"
+     ],
+     "en": "\"My brother, I will go round in the streets …….\" (The demons said:) \"Unless Ĝeštin-ana is aware of Dumuzid's whereabouts, she is indeed looking frightened! She is indeed screaming in a frightened way! Come, let us go to the sheepfold and cow-pen!\" When the first demon entered the sheepfold and cow-pen, {he set fire to the bolt} {(1 ms. has instead:) he shouted ……}. When the second entered the sheepfold and cow-pen, he set fire to the shepherd's stick. When the third entered the sheepfold and cow-pen, he removed the cover of the holy churn."
+    },
+    {
+     "ref": "256–260",
+     "orig": "4-kam-ma amaš tur₃-še₃ kur₉-ra-ni\nan-za-am {ĝiš}gag-ta la₂-a {ĝiš}gag-ta ba-ra-ab-si-ig\n5-kam-ma amaš tur₃ kur₉-ra-ni\n{dug}šakir₃ i₃-dur₂-dur₂ ga nu-un-de₂\nki-izi kug-ĝa₂ a mu-da-an-de₂\n5-kam-ma amaš tur₃-še₃ kur₉-ra-ni\nan-za-am kug {ĝiš}gag-ta la₂-ĝu₁₀ {ĝiš}gag-ta ba-ra-ab-si-ig\n6-kam-ma amaš tur₃-še₃ kur₉-ra-ni\n{dug}šakir₃ i₃-dur₂-dur₂ ga nu-un-de₂\n7-kam-ma amaš tur₃-še₃ kur₉-ra-ni\nan-za-am i₃-dur₂-dur₂ {d}dumu-zid nu-un-til₃ amaš lil₂-la₂ al-du₃",
+     "orig_lines": [
+      "256",
+      "257",
+      "258",
+      "259",
+      "A",
+      "B",
+      "C",
+      "D",
+      "E",
+      "F",
+      "260"
+     ],
+     "en": "{When the fourth entered the sheepfold and cow-pen, he tore down the drinking cup from the peg where it hung. When the fifth entered the sheepfold and cow-pen, the churns lay on their sides, no milk was poured, the drinking cups lay on their sides, Dumuzid was dead, the sheepfold was haunted.} {(instead of lines 256-260, 1 ms. has:) When the fourth entered the sheepfold and cow-pen, he poured water on my holy brazier. When the fifth demon entered the sheepfold and cow-pen, he tore down my holy drinking cup from the peg where it hung. When the sixth demon entered the sheepfold and cow-pen, the churns lay on their sides, and no milk was poured. When the seventh demon entered the sheepfold and cow-pen, the drinking cups lay on their sides, Dumuzid was dead, the sheepfold was haunted.}"
+    },
+    {
+     "ref": "261–999",
+     "orig": "{d}dumu-zid ug₅-ga šir₃-kal-/kal\\-[am₃]",
+     "orig_lines": [
+      "261"
+     ],
+     "en": "A šir-kalkal for the dead Dumuzid."
+    }
+   ]
+  }
+ ]
+}

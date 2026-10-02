@@ -1,0 +1,521 @@
+{
+ "slug": "lament-eridug",
+ "source": "ETCSL",
+ "siglum": "ETCSL 2.2.6",
+ "source_url": "https://etcsl.orinst.ox.ac.uk/cgi-bin/etcsl.cgi?text=t.2.2.6",
+ "license": "ETCSL（Oxford）轉寫與英譯，非商業學術使用",
+ "compositions": [
+  {
+   "num": "2.2.6",
+   "title_en": "The lament for Eridug",
+   "segments": [
+    {
+     "ref": "1–10",
+     "orig": "/ud te-eš dug₄\\-[ga tug₂-gin₇ ba-e-dul gada-gin₇ ba-e-bur₂]\neridug{ki}-ga tug₂-gin₇ ba-e-[dul gada-gin₇ ba-e-bur₂]\niri-a ud ḫuš-e šeg₁₁ mi-/ni\\-[ib-gi₄-gi₄ ...]\neridug{ki}-ga ud ḫuš-e šeg₁₁ mi-ni-ib-gi₄-/gi₄\\ [...]\nza-pa-aĝ₂-bi niĝ₂-me-ĝar u₁₈-lu-gin₇ ba-/e-dul\\ [uĝ₃-bi ...]\neridug{ki} niĝ₂-me-ĝar u₁₈-lu-gin₇ ba-e-dul uĝ₃-/bi\\ [...]",
+     "orig_lines": [
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10"
+     ],
+     "en": "4 lines missing The roaring storm covered it like a cloak, was spread over it like a sheet. It covered Eridug like a cloak, was spread over it like a sheet. In the city, the furious storm resounded ……. In Eridug, the furious storm resounded ……. Its voice was smothered with silence as by a gale. Its people ……. Eridug was smothered with silence as by a gale. Its people ……."
+    },
+    {
+     "ref": "11–18",
+     "orig": "lugal-bi iri-ni iri kur₂-gin₇ bar-ta ba-ra-gub /er₂\\ [gig mu-un-še₈-še₈]\na-a {d}en-ki iri-ni iri kur₂-gin₇ bar-ta ba-ra-gub /er₂\\ [gig mu-un-še₈]-/še₈\\\nnam iri ḫul-a-na er₂ gig mu-un-še₈-še₈\nnin-bi mušen dal-a-gin₇ iri-ni ba-ra-e₃\nama e₂-maḫ-a kug {d}dam-gal-nun-na iri-ni ba-ra-e₃\niri me kug-kug-ga me-bi šu ba-ab-bal\nĝarza me gal-gal-la-kam me-bi ba-da-kur₂\neridug{ki}-ga igi ni₁₀-ni₁₀-bi ba-kur₂ šu suḫ₃-a ba-ab-dug₄",
+     "orig_lines": [
+      "11",
+      "12",
+      "13",
+      "14",
+      "15",
+      "16",
+      "17",
+      "18"
+     ],
+     "en": "Its king stayed outside his city as if it were an alien city. He wept bitter tears. Father Enki stayed outside his city as if it were an alien city. He wept bitter tears. For the sake of his harmed city, he wept bitter tears. Its lady, like a flying bird, left her city. The mother of E-maḫ, holy Damgalnuna, left her city. The divine powers of the city of holiest divine powers were overturned. The divine powers of the rites of the greatest divine powers were altered. In Eridug everything was reduced to ruin, was wrought with confusion."
+    },
+    {
+     "ref": "19–26",
+     "orig": "ud ḫul du₃-a iri-ta ba-ra-ĝen kalam i₃-ur₄-ur₄-re\nud sig₅ ḫul nu-ĝal₂-la sag₉-ga nu-zu ḫul nu-zu-e\nsu-bir₄{ki}-e a-gin₇ im-mi-ib₂-ĝar šu im-ma-da-an-šub\niri-a ud zalag-ga e₃-a ud ba-da-ku₁₀-ku₁₀\neridug{ki}-ga ud zalag-ga e₃-a ud ba-da-ku₁₀-ku₁₀\n{d}utu an-ur₂-ra šu₂-a-gin₇ an-usan-še₃ ba-du₃\niri an-ne₂ nam ba-an-ku₅-ra₂-gin₇ ni₂-bi-a ba-an-gul\n{d}en-lil₂-le saĝ-ki gid₂-da-gin₇ eridug{ki} eš₃ abzu gu₂ ki-še₃ ba-ni-ib-ĝar",
+     "orig_lines": [
+      "19",
+      "20",
+      "21",
+      "22",
+      "23",
+      "24",
+      "25",
+      "26"
+     ],
+     "en": "The evil-bearing storm went out from the city. It swept across the Land -- a storm which possessses neither kindness nor malice, does not distinguish between good and evil. Subir came down like rain. It struck hard. In the city where bright daylight used to shine forth, the day darkened. In Eridug where bright daylight used to shine forth, the day darkened. As if the sun had set below the horizon, it turned into twilight. As if An had cursed the city, alone he destroyed it. As if Enlil had frowned upon it, Eridug, the shrine Abzu, bowed low."
+    },
+    {
+     "ref": "27",
+     "orig": "ki-ru-gu₂ 1-kam-ma-am₃",
+     "orig_lines": [
+      "27"
+     ],
+     "en": "1st kirugu."
+    },
+    {
+     "ref": "28",
+     "orig": "a uru₂ gul-la e₂ gul-la-ri gig-ga-bi im-me",
+     "orig_lines": [
+      "28"
+     ],
+     "en": "It cried out bitterly: \"O the destruction of the city! The destruction of the house!\""
+    },
+    {
+     "ref": "29",
+     "orig": "ĝiš-gi₄-ĝal₂-bi-im",
+     "orig_lines": [
+      "29"
+     ],
+     "en": "Its ĝišgiĝal."
+    },
+    {
+     "ref": "30–37",
+     "orig": "2-kam-ma-še₃ ud-de₃ iri mu-un-gul-gul ad-bi gig-ga-am₃\n[...] X giri₁₆ im-ma-ni-ib₂-ĝar\n[...] X a-nir ba-da-an-tab\n[abul-la-bi {ĝiš}]/si\\-ĝar bi₂-in-kud {ĝiš}ig-bi ud-de₃ im-ma-gub\n[...] gub-ba uĝ₃ zar-re-eš ba-an-sal\n[...] /mu\\-un-du₈ ni₂-bi-a ba-an-gul\n[...] X er₂-ra mu-un-kur₉\n[...] X X pe-el [...]",
+     "orig_lines": [
+      "30",
+      "31",
+      "32",
+      "33",
+      "34",
+      "35",
+      "36",
+      "37"
+     ],
+     "en": "A second time the storm destroyed the city -- its song was plaintive. …… was trampled (?). …… intensified the lament. It cut the lock from its main gate. The storm dislodged its door. …… It stacked the people up in heaps. …… on its own destroyed it. It turned …… into tears. …… defiled …… 1 line missing"
+    },
+    {
+     "ref": "39–47",
+     "orig": "[... ulutim₂]-/bi\\ mu-un-kur₂\n[...] /ulutim₂\\-bi mu-un-kur₂\n[... bad₃]-/bi\\ mu-un-ni₁₀-ni₁₀ ur₂-ba ba-ni-ib₂-bal\n/iri{?}\\ ki sikil-la zal-a-ni saḫar-ra ur₂ mi-ni-ib₂-si\nu₆-nir eš₃ an-ne₂ us₂-sa-bi saḫar-tu₁₁-e ba-an-ĝar\nĝiš-bur₂-ba me-te e₂-a-ke₄ ni₂ il₂-il₂-a il₂-bi ba-e-suḫ{!}\nkan₄ u₆-nir-gal-an-ki-ni₂-ḫuš-ri-a-bi\n{ĝiš}ig za-gin₃-bi gu₂-guru₅ bi₂-in-dug₄ {ĝiš}saĝ-kul(sourše: MU)-bi ba-du₃\nĝiš-kan₄-na-bi ba-ra-an-bur₁₂ e₂ igi ba-ab-kur₂",
+     "orig_lines": [
+      "39",
+      "40",
+      "41",
+      "42",
+      "43",
+      "44",
+      "45",
+      "46",
+      "47"
+     ],
+     "en": "…… It distorted its appearance. …… It distorted its appearance. It circled its …… wall. It overturned its foundations. Throughout his city, the pure, radiant (?) place, the foundations were filled with dust. It cast down its ziggurat, the shrine which reaches up to heaven, into a heap of debris. The loftiness of its elevated door-ornament, befitting a house, was stripped down (?). It cut down the gate, its Great-Ziggurat-of-Heaven-and-Earth-Covered-with-Terrible-Awesomeness, its shining door, and it broke through its bolt. It ripped out its doorframe. The house was defaced."
+    },
+    {
+     "ref": "48",
+     "orig": "ki-ru-gu₂ 2-kam-ma-am₃",
+     "orig_lines": [
+      "48"
+     ],
+     "en": "2nd kirugu."
+    },
+    {
+     "ref": "49",
+     "orig": "eridug{ki} gul-la-ri gul-la-bi gig-ga-am₃",
+     "orig_lines": [
+      "49"
+     ],
+     "en": "The destruction of Eridug! Its destruction was grievous."
+    },
+    {
+     "ref": "50",
+     "orig": "ĝiš-gi₄-ĝal₂-bi-im",
+     "orig_lines": [
+      "50"
+     ],
+     "en": "Its ĝišgiĝal."
+    },
+    {
+     "ref": "51–57",
+     "orig": "kan₄ igi piriĝ-ĝa₂ ki nam tar-re-ba\n{ĝiš}tir(sourše: TE+ĜAR) e₂-a ḫe₂-du₇-bi ba-ra-an-guz [...]\n{d}ka-ḫe₂-ĝal₂ {d}igi-ḫe₂-ĝal₂ i₃-du₈ [e₂-a ...]\nud nu-dug₄-ga-ba mu-un-gul-gul-lu-/uš\\ [(X X) mu-un]-/kur₂\\-kur₂-ru-uš\nkan₄ uz-ga gurušta(sourše: UŠ) nidba gal-gal /gul\\-[la ...]\nku₆ mušen-bi muš₃ ba-ni-ib₂-tum₂ gul-/la\\ [...]\ne₂ kug {na₄}za-gin₃-na zal-a-ni er₂ X [...]",
+     "orig_lines": [
+      "51",
+      "52",
+      "53",
+      "54",
+      "55",
+      "56",
+      "57"
+     ],
+     "en": "At its lion-faced gate, the place where fates are determined, it mutilated the copse (?) forming the ornament of the house ……. Ka-ḫeĝala and Igi-ḫeĝala, the doorkeepers of the house, ……. Prematurely they destroyed it utterly. They completely altered ……. At the gate of the uzga precinct, the animal-fattener …… the great offerings. Its birds and fish were neglected there. Destruction ……. Throughout his house, radiant (?) in silver and lapis lazuli, tears ……."
+    },
+    {
+     "ref": "58–65",
+     "orig": "ḫuĝ-ĝa₂ šagina [...] X [...]\nezem-ma gal-e X X [...]\nšir₃ kug šir₃ ḫa-/mun\\ [...]\nšem₃ {kuš}a₂-la₂ [...]\nme gal me šar₂-/ra\\ [...]\nki diĝir an ki-a [...]\ndi lugal-e ĝidru kug a₂ zid-[da ...]\nen lu₂-maḫ nin-diĝir [...]",
+     "orig_lines": [
+      "58",
+      "59",
+      "60",
+      "61",
+      "62",
+      "63",
+      "64",
+      "65"
+     ],
+     "en": "The hired man and the governor ……. The festivals …… grandly ……. Holy songs, songs of all kinds ……. The šem drum and ala drum ……. The great divine powers, all the divine powers ……. The place of the gods of heaven and earth ……. The judgment by the king, the holy sceptre at his right side, ……. The en priestess, lumaḫ priest and nindiĝir priestess ……."
+    },
+    {
+     "ref": "66–73",
+     "orig": "sukkal {d}isimud-de₃ a₂ [...]\ne₂ lu₂ nu-zu-ba da-bi X [...]\neridug{ki} eš₃ abzu sig₉-ga-bi [...]\ntug₂ maḫ-ḫe su-ub-ba lu₂-erim₂{?}-e /ḫe₂\\-[...]\nX lu₂ X uĝ₃ X X ḫe₂-mi-/in{?}\\-[...]\n[u₃]-mun-bi a{?} bal-bal-e-da uš₂-ni im-bal\n[...] X an sig₇-ga-gin₇ ul-še₃ tag-ga-/am₃\\\n[...] /gu₂\\-da ba-an-la₂",
+     "orig_lines": [
+      "66",
+      "67",
+      "68",
+      "69",
+      "70",
+      "71",
+      "72",
+      "73"
+     ],
+     "en": "The minister Isimud ……. Strangers to the house …… its side. Eridug, the shrine Abzu, …… silently. The enemy …… cleansed in a magnificent robe. …… a man …… the people ……. Along with the fluids spilled from his guts, his blood spilled forth. The ……, which like the azure sky was embellished forever, …… grasped ……."
+    },
+    {
+     "ref": "74",
+     "orig": "[ki-ru-gu₂ 3-kam]-/ma\\-am₃",
+     "orig_lines": [
+      "74"
+     ],
+     "en": "3rd kirugu."
+    },
+    {
+     "ref": "75–76",
+     "orig": "X [...]\n/A\\ [...]",
+     "orig_lines": [
+      "75",
+      "76"
+     ],
+     "en": "2 lines fragmentary"
+    },
+    {
+     "ref": "77",
+     "orig": "ĝiš-gi₄-ĝal₂-[bi-im]",
+     "orig_lines": [
+      "77"
+     ],
+     "en": "Its ĝišgiĝal."
+    },
+    {
+     "ref": "78–99",
+     "orig": "X [...] X ur₅ uš₂-a šag₄ sag₃-[ga ...]\n[...] X kug tum₁₂{mušen}-ma-/gin₇\\ [...]\nAN X [...]\nmušen uru₂ gul-la-ke₄ gud₃ [...]\nu₃-ku-ku{mušen} mušen šag₄ sag₃-ga-ke₄ ki{?} [...]\nšag₄ dab₅ X [...]\n{ĝiš}kiši₁₆ kur-ra-ke₄ zu₂ ba-ni-ib₂-[keše₂]\n{ĝiš}kiši₁₆ kur-ra-ke₄ gar₃ ba-ni-ib₂-[(...)] X X\n{urud}šen kug lu₂ igi nu-/bar\\-[re]-da\n/šimaški\\{ki} elam{ki} lu₂ ḫa-/lam\\-[ma igi i-ni]-in-bar\ne₂-ĜEŠTUG₂.{d}NISABA e₂ /ĝeštug₂\\ [...] /KA{?}\\ [...] ba-šu₂\nme abzu še-er-ka-an dug₄-ga [...] X ba-ab-DU\n/gi₁₆-sa\\ kug erim₃ ĝar-ĝar-a ki X [...] ĝar-ra-ba\nmuru₉-gin₇ ki [us₂-sa ...]-a-ba\nburu₅{mušen}-gin₇ a₂-[bur₂-bi sar-sar]-/ra\\ ba-e-re₇-eš\nkug {na₄}za-gin₃ [...] /ba\\-ab-DU\neridug{ki} niĝ₂ [...] X ba-ab-dug₄\neš₃ bar X [...]-bi-a\nan-šeĝ₆-/ĝa₂\\ [...]-in-du₃\ntir ḫur-/saĝ{?}\\-[ĝa₂ ...] mu-ni-in-[...]\nX NE X [...] X [...]\n/IM{?}\\ [...]",
+     "orig_lines": [
+      "78",
+      "79",
+      "80",
+      "81",
+      "82",
+      "83",
+      "84",
+      "85",
+      "86",
+      "87",
+      "88",
+      "89",
+      "90",
+      "91",
+      "92",
+      "93",
+      "94",
+      "95",
+      "96",
+      "97",
+      "98",
+      "99"
+     ],
+     "en": "…… distressed and anxious …… like a pigeon ……. 1 line fragmentary The birds of the destroyed city …… a nest. The ukuku bird, bird of heart's sorrow, …… the place. Pain ……. The area became entangled in wild thornbushes. It …… wild thornbushes. The Šimaškians and Elamites, the destroyers, looked at the holy kettles which no one may look at. In the House of Nisaba's Wisdom, the house of understanding, …… covered over ……. The divine powers which embellish the Abzu ……. When the holy treasures stored in the treasury were put ……, when, like a mist lying heavily on the earth, ……, they went like small birds shooed from their hiding places. 7 lines fragmentary unknown no. of lines missing"
+    },
+    {
+     "ref": "1",
+     "orig": "a-a {d}en-ki [i-lu] /ni₂\\-te-/na\\ [...]",
+     "orig_lines": [
+      "1"
+     ],
+     "en": "Father Enki uttered a lament for himself ……."
+    },
+    {
+     "ref": "2",
+     "orig": "ki-ru-gu₂ 4-[kam-ma-am₃]",
+     "orig_lines": [
+      "2"
+     ],
+     "en": "4th kirugu."
+    },
+    {
+     "ref": "3",
+     "orig": "a-a {d}en-ki i-lu ni₂-te-na gu₃ gig im-me",
+     "orig_lines": [
+      "3"
+     ],
+     "en": "Bitterly Father Enki uttered a lament for himself."
+    },
+    {
+     "ref": "4",
+     "orig": "ĝiš-gi₄-ĝal₂-bi-im",
+     "orig_lines": [
+      "4"
+     ],
+     "en": "Its ĝišgiĝal."
+    },
+    {
+     "ref": "5–9",
+     "orig": "nam-bi-še₃ {d}en-ki lugal abzu-ke₄\niri-ni iri kur₂-gin₇ bar-ta ba-da-gub gu₂ ki-še₃ ba-an-la₂\nnin-bi ab₂ zid arḫuš-a kug {d}dam-gal-nun-na\ngaba-ni i₃-ḫur-[re] igi-ni i₃-ḫur-re gu₃ nir-ra im-me\nšu 2-a-na ĝiri₂ ba-da-ra šu bi₂-in-du₈ teš₂-bi i₃-gu₇-e",
+     "orig_lines": [
+      "5",
+      "6",
+      "7",
+      "8",
+      "9"
+     ],
+     "en": "Because of this, Enki, king of the abzu, stayed outside his city as if it were an alien city. It bowed its neck down to the ground. Eridu's lady, holy Damgalnuna, the faithful cow, the compassionate one, clawed at her breast, clawed at her eyes. She uttered a frenzied cry. She held a dagger and a sword in her two hands -- they clashed together."
+    },
+    {
+     "ref": "10–15",
+     "orig": "siki-ni {u₂}numun₂-bur-gin₇ i₃-ze₂-e i-lu gig ĝa₂-[ĝa₂]\nuru₂ munus-zu nu-/til\\-[la a]-/la\\-zu nu-gi₄-a-ĝu₁₀ me-a er₂-zu ba-gig\nuru₂-ze₂-eb{ki} /uru₂\\ munus-zu nu-til-la a-la-zu nu-gi₄-a-ĝu₁₀ me-a er₂-zu ba-šeš₂{?}\ngud-/gin₇\\ [...] maḫ-za ba-e-šub-be₂-en /ḫul{?}\\ [...] mu-šub-be₂\nX [...] X dim₂-ma-me-en šag₄-/ĝu₁₀\\ [...]\n[...] AN ga-ša-an-e [...]",
+     "orig_lines": [
+      "10",
+      "11",
+      "12",
+      "13",
+      "14",
+      "15"
+     ],
+     "en": "She tore out her hair like rushes, uttering a bitter lament: \"You, my city whose woman does not dwell there, whose charms do not satisfy her -- where is a lament uttered bitterly for you? Eridug! You, my city whose woman does not dwell there, whose charms do not satisfy her -- where are tears wept for you? I fall like a bull in your lofty …… falls ……. I am ……. My heart …… queen …….\" (incorporating end of 5th kirugu)"
+    },
+    {
+     "ref": "1–8",
+     "orig": "[...] X X [...]\n[...] su₃-ud-da-aš diĝir gal-[gal]-e-[ne]\nu₃-[mu-un] {d}mu-ul-lil₂ lugal kur-kur-ra-ke₄\nki-/en\\-[gi]-/ra\\ i-bi₂ ḫul ḫe₂-en-ši-bar ĝiri₃-bal-a ḫe₂-em-gul{?}\nki-ur₃ ki gal zag ḫe₂-bi₂-in-tag\ne₂-kur za-gin₃-na du₃-a-ba {ĝiš}al-e ḫe₂-em-mi-in-ra\nzag /ḫe₂-bi\\-in-tag šu li-bi₂-in-dag\nkiĝ₂-/sig\\ unu₂ gal-ni mu-ni ḫe₂-pad₃-de₃",
+     "orig_lines": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8"
+     ],
+     "en": "1 line fragmentary …… far away …… the great gods. Lord Enlil, king of the lands, looked maliciously at Sumer. He demolished it. He destroyed the Ki-ur, the great place. He razed with the pickaxe all of the shining E-kur. He destroyed it but did not abandon it -- at the lunches, in his great dining hall, they call his name."
+    },
+    {
+     "ref": "9–20",
+     "orig": "{d}/a\\-[ru]-ru nin₉ {d}mu-ul-lil₂-la₂-ke₄\niri-ni iri-saĝ-rig₇ zag ḫe₂-bi₂-in-tag\nkeš₃[{ki}] ki-ulutim₂ kalam-ma-ke₄\nitima kug ud nu-zu-ba uĝ₃-e igi ḫe₂-ni-in-bar\nzag ḫe₂-bi₂-in-tag šu li-bi₂-in-tag\nkiĝ₂-sig unu₂ gal-ni mu-ni ḫe₂-pad₃-de₃\nu₃-mu-un {d}nanna u₃-mu-un {d}aš-im₂-babbar\n/iri-ni\\ urim₂{ki}-ma zag ḫe₂-bi₂-in-tag\n[šag₄]-mar-ra-ka ka-na-aĝ₂-bi ḫe₂-en-til\n[e₂]-kiš-nu-ĝal₂ aĝ₂-gig-ga ḫe₂-bi₂-ak šag₄-/bi{?}\\ ḫe₂-bi₂-ra\n[zag] ḫe₂-bi₂-in-tag šu li-bi₂-in-dag\n[kiĝ₂]-sig unu₂ gal-ni mu-ni ḫe₂-pad₃-de₃",
+     "orig_lines": [
+      "9",
+      "10",
+      "11",
+      "12",
+      "13",
+      "14",
+      "15",
+      "16",
+      "17",
+      "18",
+      "19",
+      "20"
+     ],
+     "en": "Aruru, the sister of Enlil, destroyed her city Iri-saĝ-rig. In Keš, the creation place of the Land, the people saw inside its holy sanctuary where daylight had been unknown. She destroyed it but did not abandon it -- at the lunches, in her great dining hall, they call her name. Lord Nanna, Lord Ašimbabbar, destroyed his city Urim. He decimated the Land with famine. He committed a sacrilege against the E-kiš-nu-ĝal. He struck at its heart. He destroyed it but did not abandon it -- at the lunches, in his great dining hall, they call his name."
+    },
+    {
+     "ref": "21–25",
+     "orig": "{d}ga-ša-an-an-na ga-ša-an an ki-ke₄\niri-ni unug{ki}-ga zag ḫe₂-bi₂-in-tag\ne₂-an-na e₂ ub 7 izi 7 kar-kar-re-de₃ an X /TI{?}\\\nzag ḫe₂-bi₂-in-tag šu li-bi₂-in-dag\nkiĝ₂-sig unu₂ gal-ni mu-ni ḫe₂-pad₃-de₃",
+     "orig_lines": [
+      "21",
+      "22",
+      "23",
+      "24",
+      "25"
+     ],
+     "en": "Inana, the queen of heaven and earth, destroyed her city Unug. Fleeing from the E-ana, the house of seven corners and seven fires ……, she destroyed it but did not abandon it -- at the lunches, in her great dining hall, they call her name."
+    },
+    {
+     "ref": "26",
+     "orig": "[mu]-ud-na-ĝu₁₀ uru₂-zu uru₂-ze₂-eb{ki}-gin₇ gul-la a-ba-[a igi mu-ni-in]-/du₈\\",
+     "orig_lines": [
+      "26"
+     ],
+     "en": "(Damgalnuna speaks:) \"My beloved, who has ever seen such a destruction as that of your city Eridug!\""
+    },
+    {
+     "ref": "27",
+     "orig": "ki-ru-gu₂ 6-kam-ma-am₃",
+     "orig_lines": [
+      "27"
+     ],
+     "en": "6th kirugu."
+    },
+    {
+     "ref": "28",
+     "orig": "[mu-ud]-/na\\-ĝu₁₀ me-na ba-du₃-e me-na ba-gul{?}-e me-teš₂ abzu{?} [...] X",
+     "orig_lines": [
+      "28"
+     ],
+     "en": "\"My beloved, for how long was it built? For how long is it destroyed? …… adornment of the Abzu.\""
+    },
+    {
+     "ref": "29",
+     "orig": "[ĝiš]-gi₄-ĝal₂-bi-im",
+     "orig_lines": [
+      "29"
+     ],
+     "en": "Its ĝišgiĝal."
+    },
+    {
+     "ref": "30–36",
+     "orig": "[u₃]-mu-un {d}am-an-ki uru₂-zu uru₂-ze₂-eb gul-la a-ba-a mu-[ni-in]-du₈\n[eš₃] abzu e₂-zu-gin₇ ḫul-a a-ba-a igi mu-ni-in-du₈\nki-šu-tag-ga-ni lu₂ nu-ed₃-de₃\nkiĝ₂-sig unu₂ gal-ni mu-ni li-bi₂-in-pad₃-de₃\n{d}en-ki lugal abzu-ke₄\nšag₄ ba-an-sag₃ /ur₅-ra-ni\\ ba-uš₂ inim nitalam-na-še₃\nni₂-te-a-ni i-si-iš mi-ni-ib-la₂ šag₄-ka-tab-ba ba-an-nu₂",
+     "orig_lines": [
+      "30",
+      "31",
+      "32",
+      "33",
+      "34",
+      "35",
+      "36"
+     ],
+     "en": "\"Lord Enki, who has ever seen such a destruction as that of your city Eridug? Who has ever seen such a misfortune as that of the shrine Abzu, your house?\" No one goes up to his offering terrace. At the lunches, in his great dining hall, they do not call his name. Enki, king of the abzu, felt distressed, felt anxious. At the words of his spouse, he himself began to wail. He lay down and fasted."
+    },
+    {
+     "ref": "37–44",
+     "orig": "lugal-ĝu₁₀ ur₅ nam-ba-ug₇-e šag₄ nam-ba-sag₃-ge\na-a {d}en-ki ur₅ nam-ba-ug₇-e šag₄ nam-ba-sag₃-ge\ndumu an-na šag₄-zu ki-ur₃-zu-še₃ iri-zu-še₃ /muštug₂-zu\\-še₃\niri kur₂-ra tuš-a gig-ga-am₃ iri-zu-še₃ muštug₂-zu-še₃\ne₂ kur₂-ra tuš-a gig-ga-am₃ e₂-zu-še₃ /muštug₂\\-zu-še₃\niri lu₂ ta nu-ub-da-sa₂-a iri-zu-še₃ muštug₂-zu\ne₂ lu₂ ta nu-ub-da-sa₂-a e₂-zu muštug₂-zu\neridug{ki}-ga ud-bi ba-sud-sud ĝi₆-bi ba-til-til",
+     "orig_lines": [
+      "37",
+      "38",
+      "39",
+      "40",
+      "41",
+      "42",
+      "43",
+      "44"
+     ],
+     "en": "My king, you must not be distressed, you must not be anxious. Father Enki, you must not be distressed, you must not be anxious. Son of An, return your heart to your Ki-ur and your attention to your city. Living in an alien city is miserable -- return your attention to your city. Living in an alien house is miserable -- return your attention to your house. What can anyone compare with this city? -- Return your attention to your city. What can anyone compare with this house? -- Return your attention to your house. Eridug's day is long. Its night is over."
+    },
+    {
+     "ref": "45–52",
+     "orig": "aš-te-zu tuš-a ḫu-mu-ra-ab-be₂\nmu-nu₂-zu nu₂-a ḫu-mu-ra-ab-be₂\ne₂-zu [ni₂] ten-na-ab ḫu-mu-ra-ab-be₂\nbarag kug-zu ḫul₂-/la-bi\\ dirig-bi tuš-a ḫu-mu-ra-ab-be₂\na-a-zu an lugal diĝir-re-e-ne-ke₄ šag₄-zu ḫe₂-eb-dug₃-ge\nlu₂-ulu₃ lu₂ sun₅-na er₂ e₂ zid dam-za mu-ra-an-de₆ igi-zu-še₃ du₁₂-a-bi\nlu₂-ulu₃-bi šag₄-zu ḫa-ba-na-ḫuĝ-ĝe₂₆\nsizkur₂-ra dug₄-<ga>-na igi zid bar-mu-še-eb",
+     "orig_lines": [
+      "45",
+      "46",
+      "47",
+      "48",
+      "49",
+      "50",
+      "51",
+      "52"
+     ],
+     "en": "May your throne say to you \"Sit down\". May your bed say to you \"Lie down\". May your house say to you \"Be rested\". May your holy dais also say joyfully to you \"Sit down\". May your father An, the king of the gods, satisfy your heart. A person, a humble man, brings you a lament over your wife's faithful house. When he sings it before you, may that person soothe your heart. When he recites a prayer, look kindly upon him."
+    },
+    {
+     "ref": "53",
+     "orig": "ki-ru-gu₂ 7-kam-ma-am₃",
+     "orig_lines": [
+      "53"
+     ],
+     "en": "7th kirugu."
+    },
+    {
+     "ref": "54",
+     "orig": "X X X X zag-zu ḫe₂-[bi₂]-in-tag e₂-zu ba-e-de₃-šub",
+     "orig_lines": [
+      "54"
+     ],
+     "en": "It destroyed your …… and struck against your house."
+    },
+    {
+     "ref": "55",
+     "orig": "[ĝiš-gi₄-ĝal₂]-/bi\\-im",
+     "orig_lines": [
+      "55"
+     ],
+     "en": "Its ĝišgiĝal."
+    },
+    {
+     "ref": "56–59",
+     "orig": "[... ki]-bi ḫa-ra-ab-gi₄-gi₄\n[...] X-za\n[...] X\n[lu₂] ḫa-lam ak-a-gin₇ saĝ nu-mu-/un\\-[...]",
+     "orig_lines": [
+      "56",
+      "57",
+      "58",
+      "59"
+     ],
+     "en": "…… and may he restore it for you. 2 lines fragmentary Do not hide like a criminal ……."
+    },
+    {
+     "ref": "1–5",
+     "orig": "iri me nun-na a gal-la dirig-ga a-e ba-da-ri /sag₉{?}\\ [...]\nsug daĝal-bi ĝiri₃ ba-an-ĝa₂-ĝa₂ šag₄-ba {ĝiš}kiši₁₇ kur-ra /ib₂{?}\\-[mu₂-mu₂]\nma₂ giri₁₇-zal-la ma₂ taraḫ abzu a-e ba-da-ri{!} /sag₉{?}\\ [...] amaš-bi kar bi₂-ib₂-/kar{?}\\ [...]\n{d}sir₂/sir₂ an-gub-ba u₂ lu₂ ma₂ u₅ na-nam ma₂-saĝ-ĝa₂ [...] igi-bi-da ba-e-šu₂ BU X [...]\ne₂-a lu₂-erim₂-e mu-un-ḫul-uš me-bi šu suḫ₃-a /ba\\-[ab-dug₄]",
+     "orig_lines": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+     ],
+     "en": "House of princely powers, standing in mighty water -- the waters have receded from it ……. One can walk on its wide swamp. Within it grow wild thornbushes. The delightful boat Wild goat of the abzu -- the waters have receded from it; …… its sheepfold …… the wharf. They were Sirsir, the tutelary deity, and the man who rides the boat. At the prow …… was hurled down in front of them. Evildoers destroyed the house, and its rites were disturbed."
+    },
+    {
+     "ref": "6–7",
+     "orig": "gi-gu₃-na-ke₄ e₂ kug lu₂-erim₂-e abzu [...]\ne₂-u₆-nir eš₃ an-gin₇ saĝ-bi mu-un-il₂ ĝissu-[bi ...]",
+     "orig_lines": [
+      "6",
+      "7"
+     ],
+     "en": "At the giguna shrine, the sacred house, evildoers ……. The E-unir -- the shrine raises its head as high as heaven. Its shadow ……."
+    },
+    {
+     "ref": "8–14",
+     "orig": "kan₄ gu-la kan₄ igi piriĝ-ĝa₂ ki nam-tar-ra lu₂-erim₂-[e] {ĝiš}ig-bi izi ba-ab-[šum₂]\n{d}ka-ḫe₂-ĝal₂ {d}igi-ḫe₂-ĝal₂-e i₃-du₈ e₂-a X [...]\n[...] X {d}en-ki-ke₄ ki X X X A ĝeštug₂ uĝ₃-bi [...]\n[...] du ki ḫa-[lam] abzu me {d}a-nun-[na] [...]\n[...]-/bi\\ bi₂-ib₂-de₂-a kalam-ma [...]\n[...] X-gin₇ ĝiš GA BA [...]\n[...] X šag₄ iri X [...]",
+     "orig_lines": [
+      "8",
+      "9",
+      "10",
+      "11",
+      "12",
+      "13",
+      "14"
+     ],
+     "en": "At the great gate, the lion-faced gate, the place where fates are determined, evildoers ……. They set fire to its door. Ka-ḫeĝala and Igi-ḫeĝala, the doorkeepers of the house, ……. …… Enki, at the …… place, …… its people. …… the destroyed place, the Abzu …… the powers of the Anuna gods. 3 lines fragmentary (continuation of 3rd kirugu)"
+    },
+    {
+     "ref": "1–6",
+     "orig": "eridug{ki}-/ga\\ [...]\niri ĝiš-gi NE [...]\neridug{ki}-ga gud-ab₂ [...]\nšaḫ₂ ĝiš-gi nu-me-[a ...]\neridug{ki}-ga gud-gin₇ X [...]\nnin iri-ke₄ e₂-ĝu₁₀ IM X [...] X X [...]",
+     "orig_lines": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6"
+     ],
+     "en": "Eridug ……. City in the reedbeds ……. In Eridug, young bulls ……. Without being a marsh boar ……. Eridug, like a bull ……. The lady of the city cried, \"My city ……!\""
+    },
+    {
+     "ref": "7",
+     "orig": "ki-ru-gu₂ 3-[kam]-ma-[am₃]",
+     "orig_lines": [
+      "7"
+     ],
+     "en": "3rd kirugu."
+    },
+    {
+     "ref": "8",
+     "orig": "a-a {d}en-ki a e₂-zu a iri-zu a nam-lu₂-ulu₃-zu kur-ra [...]",
+     "orig_lines": [
+      "8"
+     ],
+     "en": "Father Enki! O your house, O your city, O your people …… the mountains."
+    },
+    {
+     "ref": "9",
+     "orig": "ĝiš-gi₄-ĝal₂-bi-[im]",
+     "orig_lines": [
+      "9"
+     ],
+     "en": "Its ĝišgiĝal."
+    }
+   ]
+  }
+ ]
+}

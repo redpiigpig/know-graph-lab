@@ -1,0 +1,2316 @@
+{
+ "slug": "gudea-cylinders",
+ "source": "ETCSL",
+ "siglum": "ETCSL 2.1.7",
+ "source_url": "https://etcsl.orinst.ox.ac.uk/cgi-bin/etcsl.cgi?text=t.2.1.7",
+ "license": "ETCSL（Oxford）轉寫與英譯，非商業學術使用",
+ "compositions": [
+  {
+   "num": "2.1.7",
+   "title_en": "The building of Ninĝirsu's temple (Gudea, cylinders A and B)",
+   "segments": [
+    {
+     "ref": "1–4",
+     "orig": "(A1.1) ud /an ki\\-a nam tar-[re]-/da\\\n(A1.2) /lagaš\\[{ki}]-e me gal-la [saĝ] an-še₃ mi-ni-ib₂-il₂\n(A1.3) {d}en-lil₂-e en {d}nin-ĝir₂-su₂-še₃ igi zid mu-ši-bar\n(A1.4) iri-me-a niĝ₂-du₇ pa nam-e₃",
+     "orig_lines": [
+      "1",
+      "2",
+      "3",
+      "4"
+     ],
+     "en": "On the day when in heaven and earth the fates had been decided, Lagaš raised its head high in full grandeur, and Enlil looked at Lord Ninĝirsu with approval. In our city there was perfection."
+    },
+    {
+     "ref": "5–9",
+     "orig": "(A1.5) šag₄ gu₂-bi nam-gi₄\n(A1.6) šag₄ {d}en-lil₂-la₂ gu₂-bi nam-gi₄\n(A1.7) šag₄ gu₂-bi nam-gi₄\n(A1.8) a-ĝi₆ uru₁₆ nam-mul ni₂ il₂-il₂\n(A1.9) šag₄ {d}en-lil₂-la₂-ke₄ {id₂}idigna-am₃ a dug₃-ga nam-de₆",
+     "orig_lines": [
+      "5",
+      "6",
+      "7",
+      "8",
+      "9"
+     ],
+     "en": "The heart overflowed with joy, Enlil's heart, a river in flood, overflowed with joy. The heart overflowed with joy, and just as the Tigris brings sweet water, so Enlil, whose will is an enormous flood, sparkling and awe-inspiring, came to a sweet decision:"
+    },
+    {
+     "ref": "10–16",
+     "orig": "(A1.10) e₂-e lugal-bi gu₃ ba-de₂\n(A1.11) e₂-ninnu me-bi an ki-a pa e₃ mu-ak-ke₄\n(A1.12) ensi₂ lu₂ ĝeštug₃ daĝal-kam ĝeštug₃ i₃-ĝa₂-ĝa₂\n(A1.13) niĝ₂ gal-gal-la šu mi-ni-mu₂-mu₂\n(A1.14) gud du₇ /maš₂\\ du₇-re₆ si im-sa₂-sa₂-e\n(A1.15) šeg₁₂ nam tar-ra saĝ mu-ši-ib₂-il₂\n(A1.16) e₂ kug du₃-de₃ gu₂-bi mu-ši-ib₂-zig₃",
+     "orig_lines": [
+      "10",
+      "11",
+      "12",
+      "13",
+      "14",
+      "15",
+      "16"
+     ],
+     "en": "\"The lord called for his house and I intend to make the grandeur of E-ninnu known everywhere. Using his wisdom, the ruler (i.e. Gudea) will achieve great things. He will direct faultless cattle and kids for offering. It is for him the fated brick is waiting. It is by him that the building of the holy house is to be done.\""
+    },
+    {
+     "ref": "17–23",
+     "orig": "(A1.17) lugal-ni-ir ud ne maš-ĝi₆-ka\n(A1.18) gu₃-de₂-a en {d}nin-ĝir₂-su₂-ra igi mu-ni-du₈-am₃\n(A1.19) e₂-a-ni du₃-ba mu-na-dug₄\n(A1.20) e₂-ninnu me-bi gal-gal-la-am₃\n(A1.21) igi mu-na-ni-ĝar\n(A1.22) gu₃-de₂-a šag₄-ga-ni su₃-ra₂-am₃\n(A1.23) inim-e mi-ni-kuš₂-u₃",
+     "orig_lines": [
+      "17",
+      "18",
+      "19",
+      "20",
+      "21",
+      "22",
+      "23"
+     ],
+     "en": "On that day, in a nocturnal vision Gudea saw his master, Lord Ninĝirsu. Ninĝirsu spoke to him of his house, of its building. He showed him an E-ninnu with full grandeur. Outstanding though his mind was, the message remained to be understood for him."
+    },
+    {
+     "ref": "24–32",
+     "orig": "(A1.24) ga-na ga-na-ab-dug₄ ga-na ga-na-ab-dug₄\n(A1.25) inim-ba ḫa-mu-da-gub\n(A1.26) sipad-me nam-nun-ne₂ saĝ ma-ab-šum₂-šum₂\n(A1.27) niĝ₂ maš-ĝi₆-ke₄ ma-ab-de₆-a-ĝa₂\n(A1.28) šag₄-bi nu-zu\n(A1.29) ama-ĝu₁₀ ma-mu-ĝu₁₀ ga-na-de₆\n(A2.1) ensi kug-zu me-te-na-ĝu₁₀\n(A2.2) {d}nanše nin₉ diĝir sirara₆-ta-ĝu₁₀\n(A2.3) šag₄-bi ḫa-ma-pad₃-de₃",
+     "orig_lines": [
+      "24",
+      "25",
+      "26",
+      "27",
+      "28",
+      "29",
+      "30",
+      "31",
+      "32"
+     ],
+     "en": "\"Well, I have to tell her about this! Well, I have to tell her about this! I will ask her to stand by me in this matter. Profound things (?) came suddenly to me, the shepherd, but the meaning of what the nocturnal vision brought to me I do not understand. So I will take my dream to my mother and I will ask my dream-interpreter, an expert on her own, my divine sister from Sirara, Nanše, to reveal its meaning to me.\""
+    },
+    {
+     "ref": "33–38",
+     "orig": "(A2.4) ma₂-gur₈-ra-na ĝiri₃ nam-mi-gub\n(A2.5) iri-ni niĝin₆{ki}-še₃ id₂-niĝin₆{ki}-du-a ma₂ mu-ni-ri\n(A2.6) id₂-de₃ ḫul₂-la-e kur-ku₄ i₃-si-il-e\n(A2.7) ba-gara₂ e₂ id₂-de₃ la₂-a-e im-ti-a-ta\n(A2.8) ninda ĝiš bi₂-tag a sed₆ i₃-de₂\n(A2.9) lugal ba-gara₂-ra mu-na-ĝen šudu₃ mu-na-ša₄",
+     "orig_lines": [
+      "33",
+      "34",
+      "35",
+      "36",
+      "37",
+      "38"
+     ],
+     "en": "He stepped aboard his boat, directed it on the canal Id-Niĝin-dua towards her city Niĝin, and merrily cut through the waves of the river. After he had reached Bagara, the house extending as far as the river, he offered bread, poured cold water and went to the master of Bagara to pray to him."
+    },
+    {
+     "ref": "39–51",
+     "orig": "(A2.10) ur-saĝ piriĝ zig₃-ga gaba-šu-ĝar nu-tuku\n(A2.11) {d}nin-ĝir₂-su₂ abzu-a /gal-di\\\n(A2.12) nibru{ki}-a nir-/ĝal₂\\\n(A2.13) ur-saĝ /ma\\-a-dug₄ šu zid ga-mu-ra-ab-ĝar\n(A2.14) {d}nin-ĝir₂-su e₂-zu ga-mu-ra-du₃\n(A2.15) me šu ga-mu-ra-ab-du₇\n(A2.16) nin₉-zu dumu eridug{ki}-ge tud-da\n(A2.17) nir-ĝal₂ me-te-na nin ensi₃ diĝir-re-ne-ke₄\n(A2.18) {d}nanše nin₉ diĝir sirara₆-ta-ĝu₁₀\n(A2.19) ĝiri₃-bi ḫa-ma-ĝa₂-ĝa₂\n(A2.20) gu₃ de₂-a-ni ĝiš ba-tuku-am₃\n(A2.21) lugal-a-ni sizkur₂ ra₂-zu-ni gu₃-de₂-a-aš₂\n(A2.22) en {d}nin-ĝir₂-su-ke₄ šu ba-ši-ti",
+     "orig_lines": [
+      "39",
+      "40",
+      "41",
+      "42",
+      "43",
+      "44",
+      "45",
+      "46",
+      "47",
+      "48",
+      "49",
+      "50",
+      "51"
+     ],
+     "en": "\"Warrior, rampant lion, who has no opponent! Ninĝirsu, important in the abzu, respected in Nibru! Warrior, I want to carry out faithfully what you have commanded me; Ninĝirsu, I want to build up your house for you, I want to make it perfect for you, so I will ask your sister, the child born of Eridug, an authority on her own, the lady, the dream-interpreter among the gods, my divine sister from Sirara, Nanše, to show me the way.\" His call was heard; his master, Lord Ninĝirsu, accepted from Gudea his prayer and supplication."
+    },
+    {
+     "ref": "52–63",
+     "orig": "(A2.23) e₂ ba-gara₂{!}-ka eš₃-eš₃ i₃-ak\n(A2.24) ensi₂-ke₄ {d}ĝa₂-tum₃-dug₃-še₃ ki-nu₂-a-ni ba-gub\n(A2.25) ninda ĝiš bi₂-tag a sed₆ i₃-de₂\n(A2.26) kug {d}ĝa₂-tum₃-dug₃-ra mu-na-ĝen\n(A2.27) sizkur₂ mu-na-be₂\n(A2.28) nin-ĝu₁₀ dumu an kug-ge tud-da\n(A2.29) nir-ĝal₂ me-te-na diĝir saĝ zig₃\n(A3.1) kalam-ma til₃-la\n(A3.2) nu-du-zu iri-na\n(A3.3) nin ama lagaš{ki} ki ĝar-ra-me\n(A3.4) igi uĝ₃-še₃ u₃-ši-bar-ra-zu ni₂-a ḫe₂-ĝal₂-la-am₃\n(A3.5) šul zid lu₂ igi mu-bar-ra-zu nam-til₃ mu-na-sud",
+     "orig_lines": [
+      "52",
+      "53",
+      "54",
+      "55",
+      "56",
+      "57",
+      "58",
+      "59",
+      "60",
+      "61",
+      "62",
+      "63"
+     ],
+     "en": "Gudea celebrated the ešeš festival in the house of Bagara. The ruler set up his bed near to Ĝatumdug. He offered bread and poured cold water and went to holy Ĝatumdug to pray to her: \"My lady, child begotten by holy An, an authority on her own, proud goddess, living in the Land, …… of her city! Lady, mother, you who founded Lagaš, if you but look upon your people, it brings abundance; the worthy young man on whom you look will enjoy a long life.\""
+    },
+    {
+     "ref": "64–67",
+     "orig": "(A3.6) ama nu-tuku-me ama-ĝu₁₀ ze₂-me\n(A3.7) a nu-tuku-me a-ĝu₁₀ ze₂-me\n(A3.8) a-ĝu₁₀ šag₄-ga šu ba-ni-dug₄ unu₆-a i₃-tud-e\n(A3.9) {d}ĝa₂-tum₃-dug₃ mu kug-zu dug₃-ga-am₃",
+     "orig_lines": [
+      "64",
+      "65",
+      "66",
+      "67"
+     ],
+     "en": "\"For me, who has no mother, you are my mother; for me, who has no father, you are my father. You implanted my semen in the womb, gave birth to me in the sanctuary, Ĝatumdug, sweet is your holy name!\""
+    },
+    {
+     "ref": "68–79",
+     "orig": "(A3.10) ĝi₆-a ma-ni-nu₂\n(A3.11) {ĝiš}ĝiri₂ gal-ĝu₁₀-me zag-ĝu₁₀ mu-us₂\n(A3.12) NE.GI.BAR a gal-la du₃-a-me\n(A3.13) zi šag₄ mu-ši-ni-ĝal₂\n(A3.14) an-dul₃ daĝal-me ĝissu-zu-še₃\n(A3.15) ni₂ ga-ma-ši-ib₂-te\n(A3.16) /šu maḫ\\-za sa-ga a₂ zid-da-bi\n(A3.17) nin-ĝu₁₀ {d}ĝa₂-tum₃-dug₃ ĝa₂-ra ḫa-mu-u₃-ru\n(A3.18) iri-še₃ i₃-du-e ĝiškim-ĝu₁₀ ḫe₂-sag₉\n(A3.19) kur a-ta il₂-la niĝin₆{ki}-še₃\n(A3.20) u₂(sourše: sukkal)-dug₄ sag₉-ga-zu igi-še₃ ḫa-ma-ĝen\n(A3.21) {d}lamma sag₉-ga-zu ĝiri₃-a ḫa-mu-da-ĝen",
+     "orig_lines": [
+      "68",
+      "69",
+      "70",
+      "71",
+      "72",
+      "73",
+      "74",
+      "75",
+      "76",
+      "77",
+      "78",
+      "79"
+     ],
+     "en": "\"Tonight I shall lie down here (?). You are my great dagger (?), being attached to my side; you are a …… planted in great waters, providing me with life; you are a broad sunshade; let me cool off in your shade. May the favourable, right-hand palm of your lofty hands, my lady Ĝatumdug, lend me protection! I am going to the city, may my sign be favourable! May your friendly guardian go before me, and may your friendly protecting genius walk with me on the way towards Niĝin, the mountain rising from the water.\""
+    },
+    {
+     "ref": "80–89",
+     "orig": "(A3.22) ga-na ga-na-ab-dug₄\n(A3.23) ga-na ga-na-ab-dug₄\n(A3.24) inim-ba ḫa-mu-da-gub\n(A3.25) ama-ĝu₁₀ ma-mu-ĝu₁₀ ga-na-de₆\n(A3.26) ensi₃ kug-zu me-te-na-ĝu₁₀\n(A3.27) {d}nanše nin₉ diĝir sirara₆-ta-ĝu₁₀\n(A3.28) šag₄-bi ḫa-ma-pad₃-de₃\n(A3.29) gu₃ de₂-a-ni ĝiš ba-tuku-am₃\n(A4.1) nin-a-ni sizkur₂ ra₂-zu-ni\n(A4.2) gu₃-de₂-a-aš₂ kug {d}ĝa₂-tum₃-dug₃-ge šu ba-ši-ti",
+     "orig_lines": [
+      "80",
+      "81",
+      "82",
+      "83",
+      "84",
+      "85",
+      "86",
+      "87",
+      "88",
+      "89"
+     ],
+     "en": "\"Well, I have to tell her about this! Well, I have to tell her about this! I will ask her to stand by me in this matter. I will take my dream to my mother and I will ask my dream-interpreter, an expert on her own, my divine sister from Sirara, Nanše, to reveal its meaning to me.\" His call was heard; his lady, holy Ĝatumdug, accepted from Gudea his prayer and supplication."
+    },
+    {
+     "ref": "90–100",
+     "orig": "(A4.3) ma₂-gur₈-ra-na ĝiri₃ nam-mi-gub\n(A4.4) iri-ni niĝin₆{ki}-še₃ <ma₂ mu-ni-ri> kar niĝin₆{ki}-na-ke₄ ma₂ bi₂-us₂\n(A4.5) ensi₂-ke₄ kisal diĝir sirara₆-ta-ka saĝ an-še₃ mi-ni-il₂\n(A4.6) ninda ĝiš bi₂-tag a sed₆ i₃-de₂\n(A4.7) {d}nanše mu-na-ĝen šudu₃ mu-na-ša₄\n(A4.8) {d}nanše nin uru₁₆ nin me {d}kal-{d}kal-la\n(A4.9) nin {d}en-lil₂-gin₇ nam tar-tar-re\n(A4.10) {d}nanše-ĝu₁₀ dug₄-ga-zu zid-dam\n(A4.11) saĝ-bi-še₃ e₃-a-am₃\n(A4.12) ensi diĝir-re-ne-me\n(A4.13) nin kur-kur-ra-me ama inim-ĝu₁₀ ud-da ma-mu-da",
+     "orig_lines": [
+      "90",
+      "91",
+      "92",
+      "93",
+      "94",
+      "95",
+      "96",
+      "97",
+      "98",
+      "99",
+      "100"
+     ],
+     "en": "He stepped aboard his boat, directed it towards her city Niĝin, mooring it at the quay of Niĝin. The ruler raised his head high in the courtyard of the goddess from Sirara. He offered bread, poured cold water and went to Nanše to pray to her: \"Nanše, mighty lady, lady of most precious (?) powers, lady who like Enlil determine fates, my Nanše, what you say is trustworthy and takes precedence. You are the interpreter of dreams among the gods, you are the lady of all the lands. Mother, my matter today is a dream:\""
+    },
+    {
+     "ref": "101–109",
+     "orig": "(A4.14) šag₄ ma-mu-da-ka lu₂ 1(DIŠ)-am₃ an-gin₇ ri-ba-ni\n(A4.15) ki-gin₇ ri-ba-ni\n(A4.16) a-ne saĝ-ĝa₂-ni-še₃ diĝir-ra-am₃\n(A4.17) a₂-ni-še₃ anzud₂{mušen}-dam\n(A4.18) sig-ba-a(sourše: ni)-ni(sourše: a)-še₃ a-ma-ru-kam\n(A4.19) zid-da gabu₂-na piriĝ i₃-nu₂-nu₂\n(A4.20) e₂-a-ni du₃-da ma-an-dug₄\n(A4.21) šag₄-ga-ni nu-mu-zu\n(A4.22) ud ki-šar₂-ra ma-ta-e₃",
+     "orig_lines": [
+      "101",
+      "102",
+      "103",
+      "104",
+      "105",
+      "106",
+      "107",
+      "108",
+      "109"
+     ],
+     "en": "\"In the dream there was someone who was as enormous as the heavens, who was as enormous as the earth. His head was like that of a god, his wings were like those of the Anzud bird, his lower body was like a flood storm. Lions were lying at his right and his left. He spoke to me about building his house, but I could not understand what he exactly meant, then daylight rose for me on the horizon.\""
+    },
+    {
+     "ref": "110–114",
+     "orig": "(A4.23) munus 1(DIŠ)-am₃ a-ba me-a nu a-ba me-a-ni\n(A4.24) saĝ-ĝa₂ e₃ ki garadin₉ mu-ak\n(A4.25) gi-dub-ba kug NE-a šu im-mi-du₈\n(A4.26) dub mul-an dug₃-ga im-mi-ĝal₂\n(A5.1) ad im-dab₆-gi₄-gi₄",
+     "orig_lines": [
+      "110",
+      "111",
+      "112",
+      "113",
+      "114"
+     ],
+     "en": "\"Then there was a woman -- whoever she was. She …… sheaves. She held a stylus of refined silver in her hand, and placed it on a tablet with propitious stars, and was consulting it.\""
+    },
+    {
+     "ref": "115–123",
+     "orig": "(A5.2) 2(MAN)-kam ur-saĝ-ĝa₂-am₃\n(A5.3) a₂ mu-gur le-um za-gin₃ šu im-mi-du₈\n(A5.4) e₂-a ĝiš-ḫur-bi im-ĝa₂-ĝa₂\n(A5.5) igi-ĝu₁₀-še₃ dusu kug i₃-gub\n(A5.6) {ĝiš}u₃-šub kug / si\\ ib₂-sa₂\n(A5.7) šeg₁₂ nam tar-ra {ĝiš}u₃-šub-ba ma-an-ĝal₂\n(A5.8) ildag₂ zid-da igi-ĝu₁₀ gub-ba\n(A5.9) ti-gid₂{mušen}-lu₂ a ud mi-ni-ib₂-zal-zal-e\n(A5.10) dur₃ a₂ zid-da lugal-ĝa₂-ke₄ ki ma-ḫur-ḫur-e",
+     "orig_lines": [
+      "115",
+      "116",
+      "117",
+      "118",
+      "119",
+      "120",
+      "121",
+      "122",
+      "123"
+     ],
+     "en": "\"There was, furthermore, a warrior. His arm was bent, holding a lapis lazuli tablet in his hand, and he was setting down the plan of the house. The holy basket stood in front of me, the holy brick mould was ready and the fated brick was placed in the mould for me. In a fine ildag tree standing before me tigidlu birds were spending the day twittering. My master's right-side donkey stallion was pawing the ground for me.\""
+    },
+    {
+     "ref": "124–131",
+     "orig": "(A5.11) ensi₂-ra ama-ni {d}nanše mu-na-ni-ib₂-gi₄-gi₄\n(A5.12) sipad-ĝu₁₀ ma-mu-zu ĝe₂₆ ga-mu-ra-bur₂-bur₂\n(A5.13) lu₂ an-gin₇ ri-ba ki-gin₇ ri-ba-eše₂\n(A5.14) saĝ-ĝa₂-<ni>-še₃ diĝir a₂-ni-še₃\n(A5.15) anzud₂{mušen}-eše₂ sig-ba-a-ni-še₃ a-ma-ru-eše₂\n(A5.16) zid-da gabu₂-na piriĝ i₃-nu₂-nu₂(sourše: SA₄-SA₄)-a\n(A5.17) šeš-ĝu₁₀ {d}nin-ĝir₂-su₂ ga-nam me-am₃\n(A5.18) eš₃ e₂-ninnu-na du₃-ba za-ra ma-ra-an-dug₄",
+     "orig_lines": [
+      "124",
+      "125",
+      "126",
+      "127",
+      "128",
+      "129",
+      "130",
+      "131"
+     ],
+     "en": "His mother Nanše answered the ruler: \"My shepherd, I will explain your dream for you in every detail. The person who, as you said, was as enormous as the heavens, who was as enormous as the earth, whose head was like that of a god, whose wings, as you said, were like those of the Anzud bird, and whose lower body was, as you said, like a flood storm, at whose right and left lions were lying, was in fact my brother Ninĝirsu. He spoke to you about the building of his shrine, the E-ninnu.\""
+    },
+    {
+     "ref": "132–133",
+     "orig": "(A5.19) ud ki-šar₂-ra ma-ra-ta-e₃-a\n(A5.20) diĝir-zu {d}nin-ĝiš-zid-da ud-gin₇ ki-ša-ra ma-«ra-da»-ra-ta-e₃",
+     "orig_lines": [
+      "132",
+      "133"
+     ],
+     "en": "\"The daylight that had risen for you on the horizon is your personal god Ninĝišzida, who will rise for you as the daylight on the horizon.\""
+    },
+    {
+     "ref": "134–140",
+     "orig": "(A5.21) ki-sikil saĝ-ĝa₂ e₃ ki garadin₉ mu-ak\n(A5.22) gi-dub-ba kug NE šu bi₂-du₈-a\n(A5.23) dub mul dug₃-ga bi₂-ĝal₂-la-a\n(A5.24) ad im-da-gi₄-a\n(A5.25) nin₉-ĝu₁₀ {d}nisaba ga-nam me-am₃\n(A6.1) e₂-a du₃-ba mul kug-ba\n(A6.2) gu₃ ma-ra-a-de₂",
+     "orig_lines": [
+      "134",
+      "135",
+      "136",
+      "137",
+      "138",
+      "139",
+      "140"
+     ],
+     "en": "\"The young woman …… sheaves, who held a stylus of refined silver in her hand, who had placed it on a tablet with propitious stars and was consulting it, was in fact my sister Nisaba. She announced to you the holy stars auguring the building of the house.\""
+    },
+    {
+     "ref": "141–143",
+     "orig": "(A6.3) 2(MAN)-kam-ma ur-saĝ-am₃ a₂ mu-gur₈\n(A6.4) le-um za-gin₃ šu bi₂-du₈-a\n(A6.5) {d}nin-dub-kam e₂-a ĝiš-ḫur-ba im-mi-sig₁₀-sig₁₀-ge",
+     "orig_lines": [
+      "141",
+      "142",
+      "143"
+     ],
+     "en": "\"The second one, who was a warrior and whose arm was bent, holding a lapis lazuli tablet in his hand, was Nindub, putting the plan of the house on the tablet.\""
+    },
+    {
+     "ref": "144–146",
+     "orig": "(A6.6) igi-zu-še₃ dusu kug gub-ba u₃-šub kug si sa₂-a\n(A6.7) šeg₁₂ nam tar-ra u₃-šub-ba ĝal₂-la\n(A6.8) šeg₁₂ zid e₂-ninnu ga-nam me-am₃",
+     "orig_lines": [
+      "144",
+      "145",
+      "146"
+     ],
+     "en": "\"As regards the holy basket standing in front of you, the holy brick mould which was ready and the fated brick placed in the mould, this part of the dream concerns the good brick of the E-ninnu.\""
+    },
+    {
+     "ref": "147–149",
+     "orig": "(A6.9) ildag₂ zid-da igi-zu gub-ba\n(A6.10) ti-gid₂{mušen}-lu₂ a ud mi-ni-ib₂-zal-a-eše₂\n(A6.11) e₂ du₃-de₃ igi-zu u₃ dug₃-ga nu-ši-ku₄-ku₄",
+     "orig_lines": [
+      "147",
+      "148",
+      "149"
+     ],
+     "en": "\"As regards the fine ildag tree standing before you, in which, as you said, tigidlu birds were spending the day twittering, this means that the building of the house will not let sweet sleep come into your eyes.\""
+    },
+    {
+     "ref": "150–151",
+     "orig": "(A6.12) {anše}dur₉ a₂ zid-da lugal-zak-ke₄ ki ma-ra-ḫur-ḫur-a-eše₂\n(A6.13) ze₂-me e₂-ninnu-/uš₂{?}\\ ni-is-ku-gin₇ ki im-ši-ḫur-e",
+     "orig_lines": [
+      "150",
+      "151"
+     ],
+     "en": "\"As regards that part when the right-side donkey stallion of your master, as you said, pawed the ground for you; this refers to you, who will paw the ground for the E-ninnu like a choice steed.\""
+    },
+    {
+     "ref": "152–172",
+     "orig": "(A6.14) na ga-de₅ na de₅-ĝu₁₀ ḫe₂-dab₅\n(A6.15) ĝir₂-su{ki} e₂ saĝ ki lagaš{ki}-še₃ ĝiri₃-zu ki i₃-bi₂-us₂\n(A6.16) e₂ niĝ₂-gur₁₁-<ra>-za kišib u₃-mi-kur₂ ĝiš u₃-ma-ta-ĝar\n(A6.17) lugal-zu {ĝiš}gigir u₃-mu-DI\n(A6.18) {anše}dur₉{ur₃} u₃-ši-la₂\n(A6.19) {ĝiš}gigir-bi kug NE za-gin₃-na šu u₃-ma-ni-tag\n(A6.20) ti mar-uru₅-a ud-gin₇ i₃-e₃\n(A6.21) an-kar₂ a₂ nam-ur-saĝ-ka mi₂ u₃-ma-ni-dug₄\n(A6.22) šu-nir ki aĝ₂-ni u₃-mu-na-dim₂\n(A6.23) mu-zu u₃-mi-sar\n(A6.24) balaĝ ki aĝ₂-ni ušumgal kalam-ma\n(A6.25) ĝiš-gu₃-di mu tuku niĝ₂ ad gi₄-gi₄-ni\n(A6.26) ur-saĝ niĝ₂-ba-e ki aĝ₂-ra\n(A7.1) lugal-zu en {d}nin-ĝir₂-su₂\n(A7.2) e₂-ninnu anzud₂{mušen} babbar₂-ra u₃-mu-na-da-kur₉-re\n(A7.3) tur dug₄-ga-zu maḫ dug₄-ga-am₃ šu ba-a-ši-ib₂-ti\n(A7.4) en-na šag₄ an-gin₇ su₃-ra₂-ni\n(A7.5) {d}nin-ĝir₂-su₂ dumu {d}en-lil₂-la₂-ka za-ra ma-ra-ḫuĝ-ĝe₂₆-e\n(A7.6) ĝiš-ḫur e₂-a-na ma-ra-pad₃-pad₃-de₃\n(A7.7) ur-saĝ-e me-ni gal-gal-la-am₃\n(A7.8) šu ma-ra-ni-ib₂-mu₂-mu₂",
+     "orig_lines": [
+      "152",
+      "153",
+      "154",
+      "155",
+      "156",
+      "157",
+      "158",
+      "159",
+      "160",
+      "161",
+      "162",
+      "163",
+      "164",
+      "165",
+      "166",
+      "167",
+      "168",
+      "169",
+      "170",
+      "171",
+      "172"
+     ],
+     "en": "\"Let me advise you and may my advice be taken. Direct your steps to Ĝirsu, the foremost house of the land of Lagaš, open your storehouse up and take out wood from it; build (?) a chariot for your master and harness a donkey stallion to it; decorate this chariot with refined silver and lapis lazuli and equip it with arrows that will fly out from the quiver like sunbeams, and with the an-kar weapon, the strength of heroism; fashion for him his beloved standard and write your name on it, and then enter before the warrior who loves gifts, before your master Lord Ninĝirsu in E-ninnu-the-white-Anzud-bird, together with his beloved balaĝ drum Ušumgal-kalama, his famous instrument to which he keeps listening. Your requests will then be taken as if they were commands; and the drum will make the inclination of the lord -- which is as inconceivable as the heavens -- will make the inclination of Ninĝirsu, the son of Enlil, favourable for you so that he will reveal the design of his house to you in every detail. With his powers, which are the greatest, the warrior will make the house thrive (?) for you.\""
+    },
+    {
+     "ref": "173–195",
+     "orig": "(A7.9) sipad zid gu₃-de₂-a\n(A7.10) gal mu-zu gal i₃-ga-tum₂-mu\n(A7.11) inim {d}nanše-e mu-na-dug₄-ga-aš\n(A7.12) saĝ sig ba-ši-ĝar\n(A7.13) e₂ niĝ₂-gur₁₁-ra-na kišib bi₂-kur₂\n(A7.14) ĝiš im-ma-ta-ĝar\n(A7.15) gu₃-de₂-a ĝiš-a mu-DU.DU\n(A7.16) ĝiš-e mi₂ im-e\n(A7.17) {ĝiš}meš₃-e saĝ bi₂-sag₉\n(A7.18) {ĝiš}ḫa-lu-ub₂-ba tun₃ bi₂-bar\n(A7.19) {ĝiš}gigir za-gin₃-še₃ mu-na-a-DI\n(A7.20) dur₉{ur₃}-bi piriĝ-kaš₄-e-pad₃-da\n(A7.21) im-ma-ši-la₂-la₂\n(A7.22) šu-nir ki aĝ₂-ni mu-na-dim₂\n(A7.23) mu-ni im-mi-sar\n(A7.24) balaĝ ki aĝ₂-e ušumgal kalam-ma\n(A7.25) ĝiš-gu₃-di mu tuku niĝ₂ ad gi₄-gi₄-ni\n(A7.26) ur-saĝ niĝ₂-ba-e ki aĝ₂-ra\n(A7.27) lugal-ni en {d}nin-ĝir₂-su-ra\n(A7.28) e₂-ninnu anzud₂{mušen} babbar₂-ra\n(A7.29) mu-na-da-ku₄-ku₄\n(A7.30) e₂-a ḫul₂-la i₃-na-ni-kur₉\n(A8.1) gu₃-de₂-a eš₃ e₂-ninnu-ta zalag-ga nam-ta-e₃",
+     "orig_lines": [
+      "173",
+      "174",
+      "175",
+      "176",
+      "177",
+      "178",
+      "179",
+      "180",
+      "181",
+      "182",
+      "183",
+      "184",
+      "185",
+      "186",
+      "187",
+      "188",
+      "189",
+      "190",
+      "191",
+      "192",
+      "193",
+      "194",
+      "195"
+     ],
+     "en": "The true shepherd Gudea is wise, and able too to realise things. Accepting what Nanše had told him, he opened his storehouse up and took out wood from it. Gudea checked (?) the wood piece by piece, taking great care of the wood. He smoothed meš wood, split ḫalub wood with an axe and built (?) a blue chariot from them for him. He harnessed to it the stallion Piriĝ-kaše-pada. He fashioned for him his beloved standard, wrote his name on it, and then entered before the warrior who loves gifts, before his master Lord Ninĝirsu in E-ninnu-the-white-Anzud-bird, together with his beloved balaĝ drum Ušumgal-kalama, his famous instrument to which he keeps listening. He joyfully brought the drum to him in the temple. Gudea came out of the shrine E-ninnu with a radiant face."
+    },
+    {
+     "ref": "196–206",
+     "orig": "(A8.2) 2(MIN)-kam-ma e₂-še₃ ud-u₃-de₃ bi₂-dib\n(A8.3) ĝi₆-ĝi₆ ba-an-dib\n(A8.4) du₆-du₆ mu-si-ig inim-ĝar mu-gi₄\n(A8.5) aḫ dug₄-ga ĝiri₂-ta im-ta-ĝar\n(A8.6) šu-ga-lam ki ḫuš ki di kud-de₃\n(A8.7) ki {d}nin-ĝir₂-su-ke₄ kur-kur-ra igi mi-ni-ĝal₂-la-še₃\n(A8.8) udu-i₃ gukkal maš₂ niga ensi₂-ke₄\n(A8.9) {f}ešgar ĝiš nu-zu kuš-ba mi-ni-durunₓ(KU.KU)\n(A8.10) li{ĝiš} u₂ sikil kur-ra-kam izi-a bi₂-si-si\n(A8.11) šim erin ir-sim diĝir-ra-kam\n(A8.12) i₃-bi₂-bi mu-du₃",
+     "orig_lines": [
+      "196",
+      "197",
+      "198",
+      "199",
+      "200",
+      "201",
+      "202",
+      "203",
+      "204",
+      "205",
+      "206"
+     ],
+     "en": "Thereafter the house was the concern of all the days and all the nights that he made pass by. He levelled what was high, rejected chance utterances (?), he removed the sorcerers' spittle (?) from the roads. Facing Šu-galam, the fearful place, the place of making judgments, from where Ninĝirsu keeps an eye on all lands, the ruler had a fattened sheep, a fat-tail sheep, and a grain-fed kid rest on hides of a virgin kid. He put juniper, the mountains' pure plant, onto the fire, and raised smoke with cedar resin, the scent of gods."
+    },
+    {
+     "ref": "207–216",
+     "orig": "(A8.13) lugal-<ni>-ir uĝ₃-ĝa₂ mu-na-zig₃ šudu₃ mu-na-ša₄\n(A8.14) ub-šu-kin-na-ka mu-na-ĝen giri₁₇ šu mu-na-ĝal₂\n(A8.15) lugal-ĝu₁₀ {d}nin-ĝir₂-su₂ en a ḫuš gi₄-a\n(A8.16) en zid a kur gal-e ri-a\n(A8.17) šul ka tar <gaba-ri> nu-tuku\n(A8.18) {d}nin-ĝir₂-su e₂-zu ma-ra-du₃-e\n(A8.19) ĝiškim-ĝu₁₀ nu-ĝu₁₀\n(A8.20) ur-saĝ niĝ₂-du₇-e gu₃ ba-a-de₂\n(A8.21) dumu {d}en-lil₂-la₂ en {d}nin-ĝir₂-su\n(A8.22) šag₄-bi nu-mu-u₃-da-zu",
+     "orig_lines": [
+      "207",
+      "208",
+      "209",
+      "210",
+      "211",
+      "212",
+      "213",
+      "214",
+      "215",
+      "216"
+     ],
+     "en": "He rose to his master in public and prayed to him; he went to him in the Ubšu-unkena and saluted him: \"My master Ninĝirsu, lord who has turned back the fierce waters, true lord, semen ejaculated by the Great Mountain, noble young hero who has no opponent! Ninĝirsu, I am going to build up your house for you, but I lack an ominous sign. Warrior, you asked for perfection, but, son of Enlil, Lord Ninĝirsu, you did not let me know your will as to how to achieve it.\""
+    },
+    {
+     "ref": "217–225",
+     "orig": "(A8.23) šag₄ ab-gin₇ zi-zi-zu\n(A8.24) iz-zi₈-gin₇ ĝa₂-ĝa₂-zu\n(A8.25) a e₃-a-gin₇ gu₃ nun di-zu\n(A8.26) a-ma-ru₁₂-gin₇ u₂-uru₁₈ gul-gul-zu\n(A8.27) ud-gin₇ ki-bal-še₃ du₇-du₇-zu\n(A9.1) lugal-ĝu₁₀ šag₄-zu a e₃-a u₂ nu-la₂-zu\n(A9.2) ur-saĝ šag₄ an-gin₇ su₃-ra₂-zu\n(A9.3) dumu {d}en-lil₂-la₂ en {d}nin-ĝir₂-su\n(A9.4) ĝe₂₆ a-na mu-u₃-da-zu",
+     "orig_lines": [
+      "217",
+      "218",
+      "219",
+      "220",
+      "221",
+      "222",
+      "223",
+      "224",
+      "225"
+     ],
+     "en": "\"Your will, ever-rising as the sea, crashing down as a destructive flood, roaring like gushing waters, destroying cities (?) like a flood-wave, battering against the rebel lands like a storm; my master, your will, gushing water that no one can stem; warrior, your will inconceivable as the heavens -- can I learn anything about it from you, son of Enlil, Lord Ninĝirsu?\""
+    },
+    {
+     "ref": "226–231",
+     "orig": "(A9.5) 2(MIN)-kam-ma-še₃ nu₂-a-ra nu₂-a-ra\n(A9.6) saĝ-ĝa₂ mu-na-gub ul₄ mu-tag-tag-e\n(A9.7) ma-du₃-na ma-du₃-na\n(A9.8) ensi₂ e₂-ĝu₁₀ ma-du₃-na\n(A9.9) gu₃-de₂-a e₂-ĝu₁₀ du₃-da ĝiškim-bi ga-ra-ab-šum₂\n(A9.10) ĝarza-ĝa₂ mul-an kug-ba gu₃ ga-mu-ra-a-de₂",
+     "orig_lines": [
+      "226",
+      "227",
+      "228",
+      "229",
+      "230",
+      "231"
+     ],
+     "en": "Afterwards, Ninĝirsu stepped up to the head of the sleeper, briefly touching him: \"You who are going to build it for me, you who are going to build it for me, ruler, you who are going to build my house for me, Gudea, let me tell you the ominous sign for building my house, let me tell you the pure stars of heaven indicating my regulations (?).\""
+    },
+    {
+     "ref": "232–240",
+     "orig": "(A9.11) e₂-ĝu₁₀ e₂-ninnu an-ne₂ ki ĝar-ra\n(A9.12) me-bi me gal-gal me-me-a dirig-ga\n(A9.13) e₂ lugal-bi igi sud il₂-il₂\n(A9.14) anzud₂{mušen}-gin₇ šeg₁₂ gi₄-a-bi-še₃\n(A9.15) an im-ši-dub₂-dub₂\n(A9.16) me-lem₄ ḫuš-bi an-ne₂ im-us₂\n(A9.17) e₂-ĝa₂ ni₂ gal-bi kur-kur-ra mu-ri\n(A9.18) mu-bi-e an-zag-ta kur-kur-re gu₂ im-ma-si-si\n(A9.19) ma₂-gan me-luḫ-ḫa kur-bi-ta im-ma-ta-ed₃-de₃",
+     "orig_lines": [
+      "232",
+      "233",
+      "234",
+      "235",
+      "236",
+      "237",
+      "238",
+      "239",
+      "240"
+     ],
+     "en": "\"As if at the roaring of the Anzud bird, the heavens tremble at my house, the E-ninnu founded by An, the powers of which are the greatest, surpassing all other powers, at the house whose owner looks out over a great distance. Its fierce halo reaches up to heaven, the great fearsomeness of my house settles upon all the lands. In response to its fame all lands will gather from as far as heaven's borders, even Magan and Meluḫa will come down from their mountains.\""
+    },
+    {
+     "ref": "241–247",
+     "orig": "(A9.20) ĝe₂₆ {d}nin-ĝir₂-su a ḫuš gi₄-a\n(A9.21) ur-saĝ gal ki {d}en-lil₂-la₂-ka\n(A9.22) en gaba-ri nu-tuku\n(A9.23) e₂-ĝu₁₀ e₂-ninnu ĝe₂₆-en kur-ra ab-dirig\n(A9.24) tukul-ĝu₁₀ šar₂-ur₃ kur šu-še₃ ĝar-ĝar\n(A9.25) igi ḫuš-a-ĝu₁₀ kur-re nu-um-il₂\n(A9.26) a₂(sourše: DA) bad-a-ĝu₁₀ lu₂ la-ba-ta-e₃",
+     "orig_lines": [
+      "241",
+      "242",
+      "243",
+      "244",
+      "245",
+      "246",
+      "247"
+     ],
+     "en": "\"I am Ninĝirsu who has turned back the fierce waters, the great warrior of Enlil's realm, a lord without opponent. My house the E-ninnu, a crown, is bigger than the mountains; my weapon the Šar-ur subdues all the lands. No country can bear my fierce stare, nobody escapes my outstretched arms.\""
+    },
+    {
+     "ref": "248–253",
+     "orig": "(A10.1) a ugu₄-ĝu₁₀ nam gal ki aĝ₂-da\n(A10.2) lugal a-ma-ru {d}en-lil₂-la₂\n(A10.3) igi ḫuš-a-ni kur-da nu-il₂\n(A10.4) {d}nin-ĝir₂-su ur-saĝ {d}en-lil₂-la₂\n(A10.5) mu-še₃ mu-sa₄\n(A10.6) me 50-a zag mi-ni-keše₂",
+     "orig_lines": [
+      "248",
+      "249",
+      "250",
+      "251",
+      "252",
+      "253"
+     ],
+     "en": "\"Because of his great love, my father who begot me called me \"King, Enlil's flood, whose fierce stare is never lifted from the mountains, Ninĝirsu, warrior of Enlil\", and endowed me with fifty powers.\""
+    },
+    {
+     "ref": "254–261",
+     "orig": "(A10.7) {ĝiš}banšur mu-il₂\n(A10.8) šu-luḫ si bi₂-sa₂\n(A10.9) šu si sa₂-a-ĝu₁₀ an kug-ge u₃-a ba-zig₃-ge\n(A10.10) niĝ₂ šu-ĝa₂ dug₃-ga-am₃\n(A10.11) a ugu₄-ĝu₁₀ dug₃-ga-bi mu-gu₇\n(A10.12) an lugal diĝir-re-ne-ke₄\n(A10.13) {d}nin-ĝir₂-su lugal išib an-na\n(A10.14) mu-še₃ mu-sa₄",
+     "orig_lines": [
+      "254",
+      "255",
+      "256",
+      "257",
+      "258",
+      "259",
+      "260",
+      "261"
+     ],
+     "en": "\"I lay the ritual table and perform correctly the hand-washing rites. My outstretched hands wake holy An from sleep. My father who begot me receives the very best food from my hands. An, king of the gods, called me therefore \"Ninĝirsu, king, lustration priest of An\".\""
+    },
+    {
+     "ref": "262–265",
+     "orig": "(A10.15) ti-ra-aš₂ abzu-gin₇\n(A10.16) nam-nun-na ki im-ma-ni-ĝar\n(A10.17) šag₄-bi-a /itid\\-da ud-sakar-ra\n(A10.18) me gal-gal ezen an-na-ĝu₁₀ šu gal ma-du₇-du₇",
+     "orig_lines": [
+      "262",
+      "263",
+      "264",
+      "265"
+     ],
+     "en": "\"I founded the Tiraš shrine with as much majesty as the abzu. Each month at the new moon the great rites (?), my \"Festival of An\", are performed for me perfectly in it.\""
+    },
+    {
+     "ref": "266–270",
+     "orig": "(A10.19) e₂-ḫuš ki ḫuš-ĝu₁₀\n(A10.20) muš-ḫuš-gin₇ ki sumur-ra bi₂-du₃\n(A10.21) ki-bal-ĝa₂ nu-mi-ib₂-dug₄-ga\n(A10.22) ud šag₄-ĝu₁₀ um-ši-mi-ri₂-a\n(A10.23) muš ze₂ guru₅-a-gin₇ uš ma-a-u₃-ku-e",
+     "orig_lines": [
+      "266",
+      "267",
+      "268",
+      "269",
+      "270"
+     ],
+     "en": "\"Like a fierce snake, I built E-ḫuš, my fierce place, in a dread location. When my heart gets angry at a land that rebels against me -- unutterable idea (?) -- it will produce venom for me like a snake that dribbles poison.\""
+    },
+    {
+     "ref": "271–276",
+     "orig": "(A10.24) e₂-babbar₂ ki a₂ aĝ₂-ĝa₂-ĝa₂\n(A10.25) ki {d}utu-gin₇ dalla-a-ĝa₂\n(A10.26) ki-ba {d}ištaran-gin₇ di iri-ĝa₂ si ba-ni-ib₂-sa₂-e\n(A10.27) e₂-ba-gara₂ ki banšur-ra-ĝu₁₀\n(A10.28) diĝir gal-gal lagaš{ki}-a-ke₄-ne\n(A10.29) gu₂ ma-si-si-ne",
+     "orig_lines": [
+      "271",
+      "272",
+      "273",
+      "274",
+      "275",
+      "276"
+     ],
+     "en": "\"In the E-babbar, where I issue orders, where I shine like Utu, there I justly decide the lawsuits of my city like Ištaran. In the E-bagara, my dining place, the great gods of Lagaš gather around me.\""
+    },
+    {
+     "ref": "277–285",
+     "orig": "(A11.1) e₂-ĝu₁₀ e₂ saĝ-kal kur-kur-ra\n(A11.2) a₂ zid-da lagaš{ki}\n(A11.3) anzud₂{mušen} an-šar₂-ra šeg₁₂ gi₄-gi₄\n(A11.4) e₂-ninnu e₂ nam-lugal-ĝu₁₀\n(A11.5) sipad zid gu₃-de₂-a\n(A11.6) ud šu zid ma-ši-tum₃-da\n(A11.7) an-še₃ tum₉ duru₅-e gu₃ ba-de₂\n(A11.8) an-ta ḫe₂-ĝal₂ ḫa-mu-ra-ta-du\n(A11.9) kalam-e ḫe₂-ĝal₂-la šu ḫe₂-a-da-peš-e",
+     "orig_lines": [
+      "277",
+      "278",
+      "279",
+      "280",
+      "281",
+      "282",
+      "283",
+      "284",
+      "285"
+     ],
+     "en": "\"When you, true shepherd Gudea, really set to work for me on my house, the foremost house of all lands, the right arm of Lagaš, the Anzud bird roaring on the horizon, the E-ninnu, my royal house, I will call up to heaven for humid winds so that plenty comes down to you from heaven and the land will thrive under your reign in abundance.\""
+    },
+    {
+     "ref": "286–293",
+     "orig": "(A11.10) e₂-ĝa₂ uš ki ĝar-ra-bi-da\n(A11.11) ḫe₂-ĝal₂ ḫe₂-da-ĝen\n(A11.12) gana₂ gal-gal-e šu ma-ra-ab-il₂-e\n(A11.13) eg₂ pa₅ gu₂-bi ma-ra-ab-zi-zi\n(A11.14) du₆-du₆ ki a nu-ed₃-da\n(A11.15) a ma-ra-ed₃-de₃\n(A11.16) ki-en-gi-ra₂ i₃ dirig mu-da-de₂\n(A11.17) siki dirig mu-da-la₂",
+     "orig_lines": [
+      "286",
+      "287",
+      "288",
+      "289",
+      "290",
+      "291",
+      "292",
+      "293"
+     ],
+     "en": "\"Laying the foundations of my temple will bring immediate abundance: the great fields will grow rich for you, the levees and ditches will be full to the brim for you, the water will rise for you to heights never reached by the water before. Under you more oil than ever will be poured and more wool than ever will weighed in Sumer.\""
+    },
+    {
+     "ref": "294–305",
+     "orig": "(A11.18) ud temen-ĝu₁₀ ma-sig₉-ge₄-na\n(A11.19) e₂-ĝu₁₀ ud šu zid ma-ši-tum₃-da\n(A11.20) ḫur-saĝ ki {tum₉}mir tuš-a-še₃\n(A11.21) ĝiri₃-ĝu₁₀ ki i₃-bi₂-us₂\n(A11.22) nitaḫ a₂ dirig-ke₄ {tum₉}mir-e ḫur-saĝ ki sikil-ta\n(A11.23) tum₉ si ma-ra-ab-sa₂-e\n(A11.24) kalam-e zi-šag₄-ĝal₂ u₃-ma-šum₂\n(A11.25) lu₂ dili lu₂ 2(MIN)-da kiĝ₂ mu-da-ak-ke₄\n(A11.26) ĝi₆-a-na i₃-ti ma-ra-e₃-e₃\n(A11.27) e-bar₇-gana₂ ud-«ma»-dam ma-ra-e₃-e₃\n(A12.1) e₂ ud-de₃ ma-ra-du₃-e\n(A12.2) ĝi₆-e ma-ra-ab-mu₂-mu₂",
+     "orig_lines": [
+      "294",
+      "295",
+      "296",
+      "297",
+      "298",
+      "299",
+      "300",
+      "301",
+      "302",
+      "303",
+      "304",
+      "305"
+     ],
+     "en": "\"When you drive in my foundation pegs for me, when you really set to work for me on my house, I shall direct my steps to the mountains where the north wind dwells and make the man with enormous wings, the north wind, bring you wind from the mountains, the pure place, so that this will give vigour to the Land, and thus one man will be able to do as much work as two. At night the moonlight, at noon the sun will send plentiful light for you so the day will build the house for you and the night will make it rise for you.\""
+    },
+    {
+     "ref": "306–314",
+     "orig": "(A12.3) sig-ta {ĝiš}ḫa-lu-ub₂\n(A12.4) {ĝiš}NE-ḫa-an{!} mu-ra-ta-ed₃-de₃\n(A12.5) igi-nim-ta {ĝiš}erin {ĝiš}šu-ur₂-men₂ {ĝiš}za-ba-lum ni₂-bi-a ma-ra-an-tum₃\n(A12.6) kur {ĝiš}esi-a-ka\n(A12.7) {ĝiš}esi ma-ra-ni-tum₃\n(A12.8) kur na-ka na gal ḫur-saĝ-ĝa₂\n(A12.9) lagab-ba ma-ra-kud-e\n(A12.10) ud-bi-a a₂-zu izi bi₂-tag\n(A12.11) ĝiškim-ĝu₁₀ ḫa-mu-u₃-zu",
+     "orig_lines": [
+      "306",
+      "307",
+      "308",
+      "309",
+      "310",
+      "311",
+      "312",
+      "313",
+      "314"
+     ],
+     "en": "\"I will bring ḫalub and neḫan trees up from the south, and cedar, cypress and zabalumwood together will be brought for you from the uplands. From the ebony mountains I will have ebony trees brought for you, in the mountains of stones I will have the great stones of the mountain ranges cut in slabs for you. On that day I will touch your arm with fire and you will know my sign.\""
+    },
+    {
+     "ref": "315–322",
+     "orig": "(A12.12) gu₃-de₂-a i₃-zig₃ u₃-sa-ga-am₃\n(A12.13) i₃-ḫa-luḫ ma-mu-dam\n(A12.14) inim dug₄-ga {d}nin-ĝir₂-su-ka-še₃\n(A12.15) saĝ sig ba-ši-ĝar\n(A12.16) maš₂ babbar₂-ra šu mu-gid₂-de₃\n(A12.17) maš₂-a šu i₃-gid₂ maš₂-a-ni i₃-sag₉\n(A12.18) gu₃-de₂-a šag₄ {d}nin-ĝir₂-su-ka\n(A12.19) ud-dam mu-na-e₃",
+     "orig_lines": [
+      "315",
+      "316",
+      "317",
+      "318",
+      "319",
+      "320",
+      "321",
+      "322"
+     ],
+     "en": "Gudea rose -- it was sleep; he shuddered -- it was a dream. Accepting Ninĝirsu's words, he went to perform extispicy on a white kid. He performed it on the kid and his omen was favourable. Ninĝirsu's intention became as clear as daylight to Gudea."
+    },
+    {
+     "ref": "323–329",
+     "orig": "(A12.20) gal mu-zu gal i₃-ga-tum₂-mu\n(A12.21) ensi₂-ke₄ iri-na lu₂ dili-gin₇\n(A12.22) na de₅ ba-ni-ĝar\n(A12.23) ki lagaš{ki}-e dumu ama dili-a-gin₇ šag₄ mu-na-AŠ-e\n(A12.24) ĝiš-šu mu-du₈ ĝiš-ĝiri₂ mu-zig₃\n(A12.25) u₂-guru₅ mu-ĝar inim dug₄-ga bi₂-gi₄\n(A12.26) šer₇-da e₂-ba im-ma-an-gi₄",
+     "orig_lines": [
+      "323",
+      "324",
+      "325",
+      "326",
+      "327",
+      "328",
+      "329"
+     ],
+     "en": "He is wise, and able too to realise things. The ruler gave instructions to his city as to one man. The land of Lagaš became of one accord for him, like children of one mother. He opened manacles, removed fetters; established ……, rejected legal complaints, and locked up (?) those guilty of capital offences (instead of executing them)."
+    },
+    {
+     "ref": "330–344",
+     "orig": "(A13.1) u₃-sa-an bar-us₂-sa eme i₃-du₈\n(A13.2) siki udu gan-na-kam šu-a mi-ni-ĝar-ĝar\n(A13.3) ama-a dumu-da gu₃ nu-ma-da-de₂\n(A13.4) dumu-u₃ ama-ni-ra ka du₃-a\n(A13.5) nu-ma-na-dug₄\n(A13.6) arad₂ a₂ ĝiš tag tuku-ra\n(A13.7) lugal-a-ni saĝ nu-ma-da-dub₂\n(A13.8) geme₂ lu₂ nam-ra₂ ḫul mu-na-ak\n(A13.9) nin-a-ni igi-na niĝ₂ nu-mu-na-ni-ra\n(A13.10) ensi₂ e₂-ninnu du₃-ra\n(A13.11) gu₃-de₂-a-ar inim-ĝar-bi lu₂-u₃ nu-ma-ni-ĝar\n(A13.12) ensi₂-ke₄ iri mu-kug\n(A13.13) izi im-ma-ta-la₂\n(A13.14) uzug₃-ga ni₂-ĝal₂ lu₂-GI.AN\n(A13.15) iri-ta ba-ta-e₃",
+     "orig_lines": [
+      "330",
+      "331",
+      "332",
+      "333",
+      "334",
+      "335",
+      "336",
+      "337",
+      "338",
+      "339",
+      "340",
+      "341",
+      "342",
+      "343",
+      "344"
+     ],
+     "en": "He undid the tongue of the goad and the whip, replacing them with wool from lamb-bearing sheep. No mother shouted at her child. No child answered its mother back. No slave who …… was hit on the head by his master, no misbehaving slave girl was slapped on the face by her mistress. Nobody could make the ruler building the E-ninnu, Gudea, let fall a chance utterance. The ruler cleansed the city, he let purifying fire loose over it. He expelled the persons ritually unclean, unpleasant to look at, and …… from the city."
+    },
+    {
+     "ref": "345–352",
+     "orig": "(A13.16) pisaĝ u₃-šub-ba-še₃ maš₂ ba-ši-nu₂\n(A13.17) šeg₁₂ maš₂-e bi₂-pad₃\n(A13.18) ka-al-bi-še₃ igi zid ba-ši-bar\n(A13.19) sipad mu pad₃-da {d}nanše-ke₄ nam-nun-na i₃-ĝar\n(A13.20) pisaĝ u₃-šub-ba-<ka> ĝiš bi₂-ḫur-ra-ni\n(A13.21) ka-al nam-nun-na mu-ni-ĝar-ra-ni\n(A13.22) anzud₂{mušen} šu-nir lugal-la-na-kam\n(A13.23) urin-še₃ bi₂-mul",
+     "orig_lines": [
+      "345",
+      "346",
+      "347",
+      "348",
+      "349",
+      "350",
+      "351",
+      "352"
+     ],
+     "en": "In respect of the …… of the brick-mould he had a kid lie down, and he requested from the kid an omen about the brick. He looked at the excavated earth (?) approvingly, and the shepherd, called by his name by Nanše, …… it with majesty. After making a drawing on the …… of the brick mould and …… the excavated earth with majesty, he made the Anzud bird, the standard of his master, glisten there as a banner."
+    },
+    {
+     "ref": "353–364",
+     "orig": "(A13.24) u₅ bur₃ eše₃-še₃ iri mu-na-kug-ge\n(A13.25) u₅ mu-na-sikil-e\n(A13.26) li{ĝiš} u₂ sikil kur-ra-kam izi-a bi₂-si-si\n(A13.27) šim erin ir-sim diĝir-ra-kam i₃-bi₂-bi mu-du₃\n(A13.28) ud sizkur₂-ra mu-na-a-ĝal₂\n(A13.29) ĝi₆ šudu₃-de₃ mu-na-zal-e\n(A14.1) {d}a-[nun-na] ki lagaš{ki}\n(A14.2) e₂ {d}nin-ĝir₂-su-ka du₃-de₃\n(A14.3) gu₃-de₂-a sizkur₂ ra₂-/zu\\-[(X)]\n(A14.4) mu-da-an-šu₄-šu₄-ge-eš₂\n(A14.5) sipad zid gu₃-de₂-a ḫul₂-la-gin₇\n(A14.6) im-ma-na-ni-ib₂-ĝar",
+     "orig_lines": [
+      "353",
+      "354",
+      "355",
+      "356",
+      "357",
+      "358",
+      "359",
+      "360",
+      "361",
+      "362",
+      "363",
+      "364"
+     ],
+     "en": "The citizens were purifying an area of 24 iku for him, they were cleansing that area for him. He put juniper, the mountains' pure plant, onto the fire and raised smoke with cedar resin, the scent of gods. For him the day was for praying, and the night passed for him in supplications. In order to build the house of Ninĝirsu, the Anuna gods of the land of Lagaš stood by Gudea in prayer and supplication, and all this made the true shepherd Gudea extremely happy."
+    },
+    {
+     "ref": "365–371",
+     "orig": "(A14.7) ud-ba ensi₂-ke₄ kalam-ma-na zig₃-ga ba-ni-ĝar\n(A14.8) ma-da gu₂-saĝ šar₂-šar₂-ra-na\n(A14.9) gu₂-edin-na {d}nin-ĝir₂-su-ka-ka\n(A14.10) zig₃-ga ba-ni-ĝar\n(A14.11) iri du₃-a a₂-dam ĝar-ra-na\n(A14.12) gu₂-ĝiš-bar-ra {d}nanše-ka\n(A14.13) zig₃-ga ba-ni-ĝar",
+     "orig_lines": [
+      "365",
+      "366",
+      "367",
+      "368",
+      "369",
+      "370",
+      "371"
+     ],
+     "en": "Now the ruler imposed a levy on his Land. He imposed a levy on his realm of abundant ……, on Ninĝirsu's Gu-edina. He imposed a levy on his built-up cities and settlements, on Nanše's Gu-ĝišbara."
+    },
+    {
+     "ref": "372–376",
+     "orig": "(A14.14) gud ḫuš zig₃-ga gaba gi₄ nu-tuku\n(A14.15) {ĝiš}erin babbar₂-ra lugal-bi-ir dab₆-ba\n(A14.16) im-ru-a {d}nin-ĝir₂-su-ka-ka\n(A14.17) zig₃-ga mu-na-ĝal₂\n(A14.18) šu-nir maḫ-bi lugal-kur-dub₂ saĝ-bi-a mu-gub",
+     "orig_lines": [
+      "372",
+      "373",
+      "374",
+      "375",
+      "376"
+     ],
+     "en": "There was a levy for him on the clans of Ninĝirsu \"Rampant fierce bull which has no opponent\" and \"White cedars surrounding their master\", and he placed Lugal-kur-dub, their magnificent standard, in front of them."
+    },
+    {
+     "ref": "377–381",
+     "orig": "(A14.19) peš₁₀-ĝal₂ gaba-ĝal₂ a-ta e₃-a\n(A14.20) id₂ maḫ a dirig ḫe₂-ĝal₂-bi barag₂-barag₂\n(A14.21) im-ru-a {d}nanše-ka\n(A14.22) zig₃-ga mu-na-ĝal₂\n(A14.23) u₅ kug šu-nir {d}nanše-kam saĝ-bi-a mu-gub",
+     "orig_lines": [
+      "377",
+      "378",
+      "379",
+      "380",
+      "381"
+     ],
+     "en": "There was a levy for him on the clan of Nanše \"Both river banks and shores rising out of the waters, the huge river, full of water, which spreads its abundance everywhere\", and he placed the holy pelican (?), the standard of Nanše, in front of them."
+    },
+    {
+     "ref": "382–385",
+     "orig": "(A14.24) gu maš₂-anše edin-na la₂-a\n(A14.25) ni-is-ku erin₂ mu tuku erin₂ {d}utu ki aĝ₂\n(A14.26) im-ru-a {d}inana-ka zig₃-ga mu-na-ĝal₂\n(A14.27) aš-me šu-nir {d}inana-kam saĝ-bi-a mu-gub",
+     "orig_lines": [
+      "382",
+      "383",
+      "384",
+      "385"
+     ],
+     "en": "There was a levy for him on the clans of Inana \"The net suspended for catching the beasts of the steppe\" and \"Choice steeds, famous team, the team beloved by Utu\", and he placed the rosette, the standard of Inana, in front of them."
+    },
+    {
+     "ref": "386–391",
+     "orig": "(A14.28) e₂ {d}nin-ĝir₂-su-ka du₃-de₃\n(A15.4) [...] TE [...]\n(A15.5) šu /NI\\ [...] /UŠ\\ [...] ĝar",
+     "orig_lines": [
+      "386",
+      "390",
+      "391"
+     ],
+     "en": "In order to build the house of Ninĝirsu, 3 lines missing2 lines fragmentary"
+    },
+    {
+     "ref": "392–396",
+     "orig": "(A15.6) elam elam-ta mu-na-ĝen\n(A15.7) šušin ki šušin-ta mu-na-ĝen\n(A15.8) ma₂-gan me-luḫ-ḫa kur-bi-ta gu₂ ĝiš mu-na-ab-ĝal₂\n(A15.9) e₂ {d}nin-ĝir₂-su-ka du₃-de₃\n(A15.10) gu₃-de₂-a iri-ni ĝir₂-su{ki}-še₃ gu₂ mu-na-si-si",
+     "orig_lines": [
+      "392",
+      "393",
+      "394",
+      "395",
+      "396"
+     ],
+     "en": "The Elamites came to him from Elam, the Susians came to him from Susa. Magan and Meluḫa loaded wood from their mountains upon their shoulders for him, and to build the house of Ninĝirsu, they gathered for Gudea at his city Ĝirsu."
+    },
+    {
+     "ref": "397–404",
+     "orig": "(A15.11) {d}nin-zag-ga-da a₂ mu-da-aĝ₂\n(A15.12) urud-da-ni še maḫ de₆-a-gin₇\n(A15.13) gu₃-de₂-a lu₂ e₂ du₃-a-ra\n(A15.14) mu-na-ab-us₂-e\n(A15.15) {d}nin-sikil-a-da a₂ mu-da-aĝ₂\n(A15.16) {ĝiš}ḫa-lu-ub₂ gal-gal {ĝiš}esi ĝiš-ab-ba-bi\n(A15.17) ensi₂ e₂-ninnu du₃-ra\n(A15.18) mu-na-ab-us₂-e",
+     "orig_lines": [
+      "397",
+      "398",
+      "399",
+      "400",
+      "401",
+      "402",
+      "403",
+      "404"
+     ],
+     "en": "Ninzaga was commanded and he made his copper, as much as if it were a huge grain transport, reach Gudea, the man in charge of building the house. Ninsikila was also instructed and she made large ḫalub logs, ebony, and aba wood reach the ruler building the E-ninnu."
+    },
+    {
+     "ref": "405–411",
+     "orig": "(A15.19) kur {ĝiš}erin-na lu₂ nu-ku₄-ku₄-da\n(A15.20) gu₃-de₂-a en {d}nin-ĝir₂-su-ke₄\n(A15.21) ĝiri₂ mu-na-ni-ĝar\n(A15.22) {ĝiš}erin-bi tun₃ gal-e im-mi-kud\n(A15.23) šar₂-ur₃ a₂ zid-da lagaš{ki}-a\n(A15.24) tukul a-ma-ru lugal-la-na-še₃\n(A15.25) tun₃ im-ma-bar",
+     "orig_lines": [
+      "405",
+      "406",
+      "407",
+      "408",
+      "409",
+      "410",
+      "411"
+     ],
+     "en": "Lord Ninĝirsu directed Gudea into the impenetrable mountain of cedars and he cut down its cedars with great axes and carved the Šar-ur, the right arm of Lagaš, his master's flood-storm weapon, out of it."
+    },
+    {
+     "ref": "412–423",
+     "orig": "(A15.26) muš-maḫ-am₃ a-e im-dirig-ga-am₃\n(A15.27) ḫur-saĝ {ĝiš}erin-<na-ta> ad {ĝiš}erin-na\n(A15.28) ḫur-saĝ {ĝiš}šu-ur₂-men₂-ta\n(A15.29) ad {ĝiš}šu-ur₂-men₂\n(A15.30) ḫur-saĝ {ĝiš}za-ba-lum-ma-ta\n(A15.31) ad {ĝiš}za-ba-lum\n(A15.32) {ĝiš}u₃-<suḫ₅> gal-gal {ĝiš}tu-lu-bu-um\n(A15.33) {ĝiš}e-ra-num₂\n(A15.34) ad gal-gal-bi dirig-dirig-ga-bi\n(A15.35) kar maḫ kan₄-sur-ra-ke₄\n(A16.1) [gu₃-de₂-a en {d}nin-ĝir₂-su-ra]\n(A16.2) [im-ma-na-us₂]",
+     "orig_lines": [
+      "412",
+      "413",
+      "414",
+      "415",
+      "416",
+      "417",
+      "418",
+      "419",
+      "420",
+      "421",
+      "422",
+      "423"
+     ],
+     "en": "It was like a giant serpent floating on the water as, for Lord Ninĝirsu, Gudea had the long rafts floating downstream moor at the main quay of Kan-sura: logs of cedar wood from the cedar hills, logs of cypress wood from the cypress hills, logs of zabalum wood from the zabalum hills, tall spruce trees, plane trees, and eranum trees."
+    },
+    {
+     "ref": "424–433",
+     "orig": "(A16.3) [kur na lu₂ nu-ku₄-ku₄-da]\n(A16.4) [gu₃-de₂-a] en [{d}nin-ĝir₂]-su-[ke₄]\n(A16.5) ĝiri₂ mu-[na-ni-ĝar]\n(A16.6) na gal-gal-bi lagab-ba mi-ni-de₆\n(A16.7) ma₂ ḫa-u₃-na ma₂ na-lu-a\n(A16.8) esir₂ a-ba-al esir₂ igi-esir₂ im-babbar₂-ra\n(A16.9) ḫur-saĝ ma₂-ad-ga-ta\n(A16.10) niĝ₂-gur₁₁ ma₂ še gana₂ de₆-a-gin₇\n(A16.11) gu₃-de₂-a en {d}nin-ĝir₂-su-ra\n(A16.12) im-ma-na-us₂",
+     "orig_lines": [
+      "424",
+      "425",
+      "426",
+      "427",
+      "428",
+      "429",
+      "430",
+      "431",
+      "432",
+      "433"
+     ],
+     "en": "Lord Ninĝirsu directed Gudea into the impenetrable mountains of stones and he brought back great stones in the form of slabs. For Lord Ninĝirsu, Gudea had ships with ḫauna dock there, and ships with gravel, with dried bitumen, …… bitumen, and gypsum from the hills of Madga, cargoes like boats bringing grain from the fields."
+    },
+    {
+     "ref": "434–445",
+     "orig": "(A16.13) ensi₂ e₂-ninnu du₃-ra\n(A16.14) niĝ₂ gal-gal-e šu mu-na-ab-il₂\n(A16.15) ḫur-saĝ urud-ke₄ ki-maš-ta\n(A16.16) ni₂-bi mu-na-ab-pad₃\n(A16.17) urud-bi gi-dirig-ba mu-ni-ba-al\n(A16.18) lu₂ e₂ lugal-na du₃-dam\n(A16.19) ensi₂-ra kug-sig₁₇ kur-bi-ta\n(A16.20) saḫar-ba mu-na-tum₃\n(A16.21) gu₃-de₂-a kug NE-a kur-bi-ta mu-na-ta-ed₃-de₃\n(A16.22) gug gi-rin-e me-luḫ-ḫa-ta\n(A16.23) šu mu-na-peš-e\n(A16.24) kur nu₁₁-ta nu₁₁ mu-na-ta-ed₃-de₃",
+     "orig_lines": [
+      "434",
+      "435",
+      "436",
+      "437",
+      "438",
+      "439",
+      "440",
+      "441",
+      "442",
+      "443",
+      "444",
+      "445"
+     ],
+     "en": "Great things came to the succour of the ruler building the E-ninnu: a copper mountain in Kimaš revealed itself to him. He mined its copper onto rafts. To the man in charge of building his master's house, the ruler, gold was brought in dust form from its mountains. For Gudea refined silver was brought down from its mountains. Translucent cornelian from Meluḫa was spread before him. From the alabaster mountains alabaster was brought down to him."
+    },
+    {
+     "ref": "446–451",
+     "orig": "(A16.25) sipad-de₃ e₂ kug-ga mu-du₃-e\n(A16.26) kug-dim₂ im-da-tuš\n(A16.27) e₂-ninnu za mu-du₃-e zadim im-da-tuš\n(A16.28) urud nagga-a mu-du₃-e\n(A16.29) saĝĝa-simug {d}nin-tur₅ kalam-ma-ke₄\n(A16.30) igi-ni-še₃ si im-<mi>-sa₂",
+     "orig_lines": [
+      "446",
+      "447",
+      "448",
+      "449",
+      "450",
+      "451"
+     ],
+     "en": "The shepherd was going to build the house with silver, so he sat together with silversmiths. He was going to build the E-ninnu with precious stone, so he sat with jewellers. He was going to build it with copper and tin, so the mother-goddess of the Land directed before him the chief of the smiths."
+    },
+    {
+     "ref": "452–456",
+     "orig": "(A16.31) {na₄}šu-min-e ud-da-am₃ šeg₁₂ mu-na-ab-gi₄\n(A16.32) {na₄}esi na₄ šu-ke₄\n(A17.1) [...] 2(MIN) [...] peš\n(A17.2) [...] X TI [X] X NAM [X] /a\\ maḫ [X] /DU\\-a-gin₇\n(A17.3) [...] /MU\\ [...] X",
+     "orig_lines": [
+      "452",
+      "453",
+      "454",
+      "455",
+      "456"
+     ],
+     "en": "The heavy hammer-stones roared for him like a storm. The dolerite, the light hammer-stones, …… two …… three. …… like a huge mass of water gushing forth, 1 line fragmentary 1 line missing"
+    },
+    {
+     "ref": "458–462",
+     "orig": "(A17.5) /UD\\ [...] MU [...]\n(A17.6) ĝi₂₅-/ĝi₂₅\\ mu-na-gid₂\n(A17.7) nam e₂ du₃-da lugal-la-na-še₃\n(A17.8) u₃ ĝi₆ an-na nu-um-ku₄-ku₄\n(A17.9) u₃ an-ba-ra saĝ nu-mi-ib₂-du₃-e",
+     "orig_lines": [
+      "458",
+      "459",
+      "460",
+      "461",
+      "462"
+     ],
+     "en": "He …… the days (?). Gudea prolonged the nights (?) for Ninĝirsu. Because of building the house for his master, he neither slept at night, nor did he rest his head during the siesta."
+    },
+    {
+     "ref": "463–470",
+     "orig": "(A17.10) igi zid bar-ra {d}nanše-kam\n(A17.11) {d}en-lil₂-la₂ lu₂ šag₄-ga-na-kam\n(A17.12) ensi₂ [X] X X [(X)] {d}nin-ĝir₂-su-ka-kam\n(A17.13) gu₃-de₂-a unu₆ maḫ-a tud-da\n(A17.14) {d}ĝa₂-tum₃-dug₃-ga-kam\n(A17.15) {d}nisaba-ke₄ e₂ ĝeštug₂-ke₄\n(A17.16) ĝal₂ mu-na-taka₄\n(A17.17) e₂-a {d}en-ki-ke₄ ĝiš-ḫur-bi si mu-na-sa₂",
+     "orig_lines": [
+      "463",
+      "464",
+      "465",
+      "466",
+      "467",
+      "468",
+      "469",
+      "470"
+     ],
+     "en": "For the one looked on with favour by Nanše, for the favourite of Enlil, for the ruler …… by Ninĝirsu, for Gudea, born in the august sanctuary by Ĝatumdug, Nisaba opened the house of understanding and Enki put right the design of the house."
+    },
+    {
+     "ref": "471–481",
+     "orig": "(A17.18) e₂ me-lem₄-bi an-ne₂ us₂-sa\n(A17.19) me-bi an ki-da gu₂ la₂-a\n(A17.20) lugal-bi en igi ḫuš il₂-il₂\n(A17.21) ur-saĝ {d}nin-ĝir₂-su me₃ gal-zu-bi\n(A17.22) e₂-ninnu anzud₂{mušen} babbar₂-še₃\n(A17.23) gu₃-de₂-a sig-ta ba-ši-ĝen\n(A17.24) nim-še₃ u₅ bi₂-dug₄\n(A17.25) nim-ta ba-ši-ĝen sig-še₃ u₅ bi₂-dug₄\n(A17.26) iku zid-dam eš₂ i₃-ĝar-ĝar\n(A17.27) a₂-ba ĝiš bi₂-ĝar ni₂-te-ni mu-zu\n(A17.28) ḫul₂-la-gin₇ im-ma-na-ni-ib₂-ĝar",
+     "orig_lines": [
+      "471",
+      "472",
+      "473",
+      "474",
+      "475",
+      "476",
+      "477",
+      "478",
+      "479",
+      "480",
+      "481"
+     ],
+     "en": "Towards the house whose halo reaches to heaven, whose powers embrace heaven and earth, whose owner is a lord with a fierce stare, whose warrior Ninĝirsu is expert at battle, towards E-ninnu-the-white-Anzud-bird, Gudea went from the south and admired it northwards. From the north he went towards it and admired it southwards. He measured out with rope exactly one iku. He drove in pegs at its sides and personally verified them. This made him extremely happy."
+    },
+    {
+     "ref": "482–491",
+     "orig": "(A17.29) u₃-te-am₃ e₂ libir-ra-aš₂ ra₂-zu-a ba-ĝen\n(A18.1) gu₃-de₂-a barag ĝir₂-nun-na-ta\n(A18.2) šag₄ mu-na-ḫuĝ-ĝe₂₆-e\n(A18.3) ud im-zal a mu-tu₁₇\n(A18.4) me-te-ni mu-gi\n(A18.5) {d}utu ḫe₂-ĝal₂ mu-na-ta-e₃\n(A18.6) gu₃-de₂-a [2(MIN)]-kam-aš₂ iri-kug-[ta] im-ma-[ta]-/e₃\\\n(A18.7) gud du₇ maš₂ du₇-re₆ ĝiš bi₂-tag\n(A18.8) e₂-e im-ma-ĝen\n(A18.9) giri₁₇ šu im-ma-ĝal₂",
+     "orig_lines": [
+      "482",
+      "483",
+      "484",
+      "485",
+      "486",
+      "487",
+      "488",
+      "489",
+      "490",
+      "491"
+     ],
+     "en": "When the night fell, he went to the old temple to pray, so that the inclination of the one from the dais of Ĝir-nun (i.e. Ninĝirsu) would become favourable for Gudea. When day broke, he took a bath and arranged his outfit correctly. Utu let abundance come forth for him. Gudea left Iri-kug a second time; he sacrificed a perfect bull and a perfect kid. He went to the house and saluted it."
+    },
+    {
+     "ref": "492–498",
+     "orig": "(A18.10) dusu kug {ĝiš}u₃-šub zid nam tar-ra\n(A18.11) e₂-/ninnu\\ /mu\\-[...]\n(A18.12) X [...] mu-la₂ saĝ il₂ mu-ĝen\n(A18.13) {d}lugal-kur-dub₂ igi-še₃ mu-na-ĝen\n(A18.14) {d}ig-alim-ke₄ ĝiri₂ mu-na-ĝa₂-ĝa₂\n(A18.15) {d}nin-ĝiš-zid-da diĝir-ra-ni\n(A18.16) šu mu-da-ĝal₂-ĝal₂",
+     "orig_lines": [
+      "492",
+      "493",
+      "494",
+      "495",
+      "496",
+      "497",
+      "498"
+     ],
+     "en": "He …… the holy basket and true fated brick mould …… the E-ninnu. As he …… and walked proudly, Lugal-kur-dub walked in front of him, Ig-alim directed him and Ninĝišzida, his personal god, held him by the hand throughout the time."
+    },
+    {
+     "ref": "499–512",
+     "orig": "(A18.17) pisaĝ u₃-šub-ka a sa-ga i₃-ak\n(A18.18) ensi₂-ra a-dab₆ si-im a₂-la₂ mu-na-du₁₂-am₃\n(A18.19) ka-al šeg₁₂-bi saĝ im-mi-du₈\n(A18.20) lal₃ i₃-nun i₃-ḫe-nun-na al im-ma-ni-tag\n(A18.21) šembulugₓ(ŠIMxUḪ₃) ŠIMxPI ĝiš ḫi-a\n(A18.22) aḫ-še₃ im-mi-ak\n(A18.23) dusu kug mu-il₂ u₃-šub-e im-ma-gub\n(A18.24) gu₃-de₂-a im u₃-šub-ba i₃-ĝar\n(A18.25) niĝ₂-du₇ pa bi₂-e₃\n(A18.26) e₂-a šeg₁₂-bi pa e₃ mu-ni-ĝa₂-ĝa₂\n(A18.27) kur-kur-re i₃ mu-da-sud-e\n(A18.28) erin mu-da-sud-e\n(A19.1) iri-ni ki lagaš{ki}-e si₁₁-le₂-a\n(A19.2) ud mu-di₃-ni-ib₂-zal-e",
+     "orig_lines": [
+      "499",
+      "500",
+      "501",
+      "502",
+      "503",
+      "504",
+      "505",
+      "506",
+      "507",
+      "508",
+      "509",
+      "510",
+      "511",
+      "512"
+     ],
+     "en": "He poured clear water into the …… of the brick mould -- adab, sim and ala drums were playing for the ruler. He prepared the excavated earth for making (?) the brick, and hoed honey, ghee and precious oil into it. He worked balsam (?) and essences from all kinds of trees into the paste. He lifted up the holy carrying-basket and put it next to the brick mould. Gudea placed the clay into the brick mould and acted exactly as prescribed, bringing the first brick of the house into existence in it, while all the bystanders sprinkled oil or cedar perfume. His city and the land of Lagaš spent the day with him in joy."
+    },
+    {
+     "ref": "513–522",
+     "orig": "(A19.3) u₃-šub mu-dub₂ šeg₁₂ ḫad₂-de₃ ba-šub\n(A19.4) ka-al im aga₃-ri₂-na-ba-še₃\n(A19.5) igi zid ba-ši-bar\n(A19.6) ŠIMxPI ḫa-šu-ur₂ šembulugₓ(ŠIMxUḪ₃)-a\n(A19.7) saĝ im-<ma>-ni-du₈\n(A19.8) šeg₁₂ u₃-šub-ba mi-ni-ĝar-ra-ni\n(A19.9) {d}utu im-da-ḫul₂\n(A19.10) aga₃-ri₂ id₂ maḫ-gin₇ zig₃-ga-na\n(A19.11) lugal {d}en-/ki\\ /nam{?}\\ mu-[X]-/tar\\\n(A19.12) [X] mu-/ĝar u₃-šub-ba{?}\\ e₂-a i₃-kur₉",
+     "orig_lines": [
+      "513",
+      "514",
+      "515",
+      "516",
+      "517",
+      "518",
+      "519",
+      "520",
+      "521",
+      "522"
+     ],
+     "en": "He shook the brick mould and left the brick to dry. He looked at the …… with satisfaction. He anointed it with cypress essence and balsam (?). Utu rejoiced over the brick put into the mould by Gudea, and King Enki …… the …… rising like a great river. …… and Gudea went into the house."
+    },
+    {
+     "ref": "523–542",
+     "orig": "(A19.13) pisaĝ u₃-šub-ba-ta šeg₁₂ ba-ta-il₂\n(A19.14) men kug an-ne₂ il₂-la\n(A19.15) šeg₁₂ mu-il₂ uĝ₃-ĝa₂-na mu-ĝen\n(A19.16) erin₂ kug {d}utu saĝ bal-e-dam\n(A19.17) šeg₁₂-e e₂-še₃ saĝ il₂-la-bi\n(A19.18) ab₂ {d}nanna tur₃-ba erin₂-erin₂-dam\n(A19.19) šeg₁₂ mu-ĝar e₂-a mu-kuₓ(DU)-kuₓ(DU)\n(A19.20) e₂-a ĝiš-ḫur-bi im-ĝa₂-ĝa₂\n(A19.21) {d}nisaba šag₄ šid zu-am₃\n(A19.22) lu₂-tur gibil-bi e₂ du₃-gin₇\n(A19.23) igi-ni u₃ dug₃-ga nu-ši-ku₄-ku₄\n(A19.24) ab₂ amar-bi-še₃ igi ĝal₂-la-gin₇\n(A19.25) e₂-še₃ te-te-ma im-ši-ĝen\n(A19.26) lu₂ ninda tur ka-a gub-ba-gin₇\n(A19.27) du-du-e nu-ši-kuš₂-u₃\n(A19.28) šag₄ lugal-na ud-dam mu-<na>-e₃\n(A20.1) gu₃-de₂-a-ar inim {d}nin-ĝir₂-su-ka urin-am₃ mu-du₃\n(A20.2) šag₄ gu₃ di e₂ du₃-da-ka-na\n(A20.3) inim-ĝar sag₉-ga-a lu₂ ma-a-ĝar\n(A20.4) ḫul₂-la-gin₇ im-ma-na-ni-ib₂-ĝar",
+     "orig_lines": [
+      "523",
+      "524",
+      "525",
+      "526",
+      "527",
+      "528",
+      "529",
+      "530",
+      "531",
+      "532",
+      "533",
+      "534",
+      "535",
+      "536",
+      "537",
+      "538",
+      "539",
+      "540",
+      "541",
+      "542"
+     ],
+     "en": "He raised the brick out of the …… of the mould, and it looked as a holy crown worn by An. He lifted up the brick and went around among his people: it was like Utu's holy team tossing (?) their heads. The brick lifting its head toward the house was as if Nanna's cows were eager to be tethered in their pen. He put down the brick, entered the house and as if he himself were Nisaba knowing the inmost secrets (?) of numbers, he started setting down (?) the ground plan of the house. As if he were a young man building a house for the first time, sweet sleep never came into his eyes. Like a cow keeping an eye on its calf, he went in constant worry to the house. Like a man who takes but little food into his mouth, he went around untiringly. The intention of his master had become clear for him, the words of Ninĝirsu had become as conspicuous as a banner to Gudea. In (?) his heart beating loudly because of building the house, someone …… a propitious ominous remark. This made him extremely happy."
+    },
+    {
+     "ref": "543–550",
+     "orig": "(A20.5) maš-a šu i₃-gid₂ maš-a-ni i₃-sag₉\n(A20.6) a-MIR-e še ba-šum₂ igi-bi si ib₂-sa₂\n(A20.7) gu₃-de₂-a saĝ-še₃ nu₂\n(A20.8) mu-nu₂ inim mu-na-ta-e₃\n(A20.9) e₂ lugal-na-ka du₃-bi\n(A20.10) e₂-ninnu an ki-ta bad-bi\n(A20.11) /igi\\-a mu-na-a-ĝal₂\n(A20.12) ḫul₂-la-gin₇ im-[ma-na]-/ni-ib₂-ĝar\\",
+     "orig_lines": [
+      "543",
+      "544",
+      "545",
+      "546",
+      "547",
+      "548",
+      "549",
+      "550"
+     ],
+     "en": "He performed extispicy on a kid and his omen was favourable. He cast grain on to …… and its appearance was right. Gudea lay down for a dream oracle, and while he was sleeping a message came to him: in the vision he saw his master's house already built, the E-ninnu separating heaven and earth. This made him extremely happy."
+    },
+    {
+     "ref": "551–561",
+     "orig": "(A20.13) gu mu-ba-ra me šu im-du₇-du₇\n(A20.14) uz-ga kug-ge eš₃ mu-ĝa₂-ĝa₂\n(A20.15) e₂-a {d}en-ki-ke₄ temen mu-sig₉-ge\n(A20.16) {d}nanše dumu eridug{ki}-ke₄ eš-bar kiĝ₂-ĝe₂₆ mi₂ ba-ni-dug₄\n(A20.17) ama lagaš{ki} kug {d}ĝa₂-tum₃-dug₃-ke₄\n(A20.18) šeg₁₂-bi kur-ku₄-a mu-ni-tud\n(A20.19) {d}ba-u₂ nin dumu-saĝ an-na-ke₄\n(A20.20) i₃ šim erin-na ba-ni-sud\n(A20.21) e₂-e en ba-gub la-gal ba-gub\n(A20.22) me-e šu si im-ma-sa₂\n(A20.23) {d}a-nun-na u₃ di-de₃ im-ma-šu₄-šu₄-ge-eš₂",
+     "orig_lines": [
+      "551",
+      "552",
+      "553",
+      "554",
+      "555",
+      "556",
+      "557",
+      "558",
+      "559",
+      "560",
+      "561"
+     ],
+     "en": "He stretched out lines in the most perfect way; he set up (?) a sanctuary in the holy uzga. In the house, Enki drove in the foundation pegs, while Nanše, the daughter of Eridug, took care of the oracular messages. The mother of Lagaš, holy Ĝatumdug, gave birth to its bricks amid cries (?), and Bau, the lady, first-born daughter of An, sprinkled them with oil and cedar essence. En and lagar priests were detailed to the house to provide maintenance for it. The Anuna gods stood there full of admiration."
+    },
+    {
+     "ref": "562–577",
+     "orig": "(A20.24) gu₃-de₂-a lu₂ e₂ du₃-a-ke₄\n(A20.25) e₂-a dusu-bi men kug saĝ-ĝa₂ mu-ni-ĝal₂\n(A20.26) uš mu-ĝar a₂-ĝar ki im-mi-tag\n(A20.27) sa₂ mu-sig₁₀ šeg₁₂-ga gu bi₂-dub₂\n(A21.1) e₂-a sa₂ 2-nam nam-mi-sig₁₀\n(A21.2) gu {dug}ba saĝ ĝal₂-la-am₃\n(A21.3) e₂-a sa₂ 3-am₃ nam-mi-sig₁₀\n(A21.4) anzud₂{mušen} amar-a a₂ pag-am₃\n(A21.5) e₂-a sa₂ 4 nam(sourše: RI)-mi-sig₁₀\n(A21.6) nemurₓ(PIRIĜ.TUR) piriĝ ḫuš-a gu₂-da la₂-am₃\n(A21.7) e₂-a sa₂ 5-am₃ nam-mi-sig₁₀\n(A21.8) an nisig su-lim il₂-la-am₃\n(A21.9) e₂-a sa₂ 6-am₃ nam-mi-sig₁₀\n(A21.10) ud sa₂-dug₄-ga ḫi-li guru₃-am₃\n(A21.11) e₂-a sa₂ 7 nam-mi-sig₁₀\n(A21.12) e₂-ninnu i₃-ti ud zal-la kalam si-am₃",
+     "orig_lines": [
+      "562",
+      "563",
+      "564",
+      "565",
+      "566",
+      "567",
+      "568",
+      "569",
+      "570",
+      "571",
+      "572",
+      "573",
+      "574",
+      "575",
+      "576",
+      "577"
+     ],
+     "en": "Gudea, in charge of building the house, placed on his head the carrying-basket for the house, as if it were a holy crown. He laid the foundation, set the walls on the ground. He marked out a square, aligned the bricks with a string. He marked out a second square on the site of the temple, saying, \"It is the line-mark for a topped-off jar of 1 ban capacity (?).\" He marked out a third square on the site of the temple, saying, \"It is the Anzud bird enveloping its fledgling with its wings.\" He marked out a fourth square on the site of the temple, saying, \"It is a panther embracing a fierce lion.\" He marked out a fifth square on the site of the temple, saying, \"It is the blue sky in all its splendour.\" He marked out a sixth square on the site of the temple, saying, \"It is the day of supply, full of luxuriance.\" He marked out a seventh square on the site of the temple, saying, \"It is the E-ninnu bathing the Land with moonlight at dawn.\""
+    },
+    {
+     "ref": "578–590",
+     "orig": "(A21.13) ĝiš-kan₄-na im-ĝa₂-ĝa₂-ne\n(A21.14) an nisig-ga men il₂-la-am₃\n(A21.15) ĝiš-kan₄-na-ta ba-ta-tuš\n(A21.16) e₂ maḫ an-da gu₂ la₂-am₃\n(A21.17) e₂ mu-du₃ ĝiš-e im-ma-šub\n(A21.18) ambar {d}nanna saĝ keše₂ {d}en-ki-ka-kam\n(A21.19) e₂ ḫur-saĝ-gin₇ im-mu₂-mu₂-ne\n(A21.20) dugud-gin₇ an-šag₄-ge im-mi-ni-ib₂-dirig-dirig-ne\n(A21.21) gud-gin₇ si im-mi-ib₂-il₂-il₂-ne\n(A21.22) ĝiš-gana₂ abzu-gin₇ kur-kur-ra saĝ ba-ni-ib₂-il₂-ne\n(A21.23) e₂-e ḫur-saĝ-gin₇ an ki-a saĝ an-še₃ mi-ni-ib₂-il₂\n(A21.24) erin duru₅ ki u₂ rib mu₂-a-am₃\n(A21.25) e₂-ninnu šeg₁₂ ki-en-gi-ra₂-ka ḫi-li mu-ni-ib₂-du₈-du₈",
+     "orig_lines": [
+      "578",
+      "579",
+      "580",
+      "581",
+      "582",
+      "583",
+      "584",
+      "585",
+      "586",
+      "587",
+      "588",
+      "589",
+      "590"
+     ],
+     "en": "They inserted the wooden door frames, which were like a crown worn in the blue sky. As Gudea sat down at a wooden door frame, from there it was like a huge house embracing heaven. As he built the house and laid wooden scaffolding against it, it was like Nanna's lagoon attended by Enki. They made the house grow as high as the hills, they mad it float in the midst of heaven as a cloud, they made it lift its horns as a bull and they made it raise its head above all the lands, like the ĝišgana tree over the abzu. As the house had been made to lift its head so high as to fill the space between heaven and earth like the hills, it was like a luxuriant cedar growing among high grass (?); E-ninnu was decorated most alluringly among Sumer's buildings."
+    },
+    {
+     "ref": "591–601",
+     "orig": "(A21.26) e₂-a ĝiš im-ĝa₂-ĝa₂-ne\n(A21.27) ušum abzu teš₂-ba ed₂-de₃-dam\n(A21.28) KA an-na im-mi-ib₂-u₃-u₃-dam\n(A22.1) muš-maḫ ḫur-saĝ-ĝa₂ nam ak-am₃\n(A22.2) e₂ gi guru₅-bi muš kur-ra teš₂-ba nu₂-am₃\n(A22.3) sa-tu-/bi\\ erin duru₅ ḫa-/šu\\-ur₂-ra šu ḫe₂-tag-ga-am₃\n(A22.4) aga₃ erin igi u₆ di-bi-a erin babbar₂ im-ĝa₂-ĝa₂-ne\n(A22.5) šim zid i₃-ḫe-nun-ka mi₂ ba-ni-ib₂-e-ne\n(A22.6) e₂ im-du₈-a-bi ḫe-nun abzu šu tag-ga-am₃\n(A22.7) A.ĜAR.KA-bi im-ši-ib₂-suru₅-ne\n(A22.8) eš₃ e₂-ninnu šu E₂xBAD{?} an-na-ka ĝar-ĝar-a-am₃",
+     "orig_lines": [
+      "591",
+      "592",
+      "593",
+      "594",
+      "595",
+      "596",
+      "597",
+      "598",
+      "599",
+      "600",
+      "601"
+     ],
+     "en": "As they placed wooden beams on the house, they looked like dragons of the abzu coming out all together, they were like …… of heaven ……, they were like huge serpents of the foothills ……. The reeds cut for the house were like mountain snakes sleeping together. Its upper parts were covered with luxuriant cedar and cypress, and they put white cedars in its inner room of cedar, marvellous to behold. They treated them with good perfume and precious oil. The mud-wall of the house was covered with the abundance (?) of the abzu and they tied its …… to it. The shrine of E-ninnu was thus placed in the …… hand of An."
+    },
+    {
+     "ref": "602–616",
+     "orig": "(A22.9) ensi₂-ke₄ e₂ mu-du₃ mu-mu₂\n(A22.10) kur gal-gin₇ mu-mu₂\n(A22.11) temen abzu-bi dim gal-gal ki-a mi-ni-sig₉-sig₉\n(A22.12) {d}en-ki-da e₂-an-gur₄-ra-ka\n(A22.13) šag₄ mu-di₃-ni-ib₂-kuš₂-u₃\n(A22.14) temen an-na ur-saĝ-am₃ e₂-e im-mi-dab₆\n(A22.15) ki-a-naĝ diĝir-re-<ne>-ka a im-na₈-na₈-a\n(A22.16) e₂-ninnu dim gal mu-gen₆\n(A22.17) abgal₂-bi mu-du₃\n(A22.18) iri-na {ĝiš}asal₂ dug₃-bi mu-du₃\n(A22.19) ĝissu-bi mu-la₂\n(A22.20) {ĝiš}šar₂-ur₃-bi urin gal-gin₇ lagaš{ki}-da im-da-sig₉\n(A22.21) šu-ga-lam ki ḫuš-ba im-mi-ni-ĝar\n(A22.22) su zig₃ bi₂-du₈-du₈ barag ĝir₂-nun-na ki di kud-ba\n(A22.23) u₂-a lagaš{ki} gud gal-gin₇ a₂ ba-il₂-il₂",
+     "orig_lines": [
+      "602",
+      "603",
+      "604",
+      "605",
+      "606",
+      "607",
+      "608",
+      "609",
+      "610",
+      "611",
+      "612",
+      "613",
+      "614",
+      "615",
+      "616"
+     ],
+     "en": "The ruler built the house, he made it high, high as a great mountain. Its abzu foundation pegs, big mooring stakes, he drove into the ground so deep they could take counsel with Enki in the E-engura. He had heavenly foundation pegs surround the house like warriors, so that each one was drinking water at the libation place of the gods. He fixed the E-ninnu, the mooring stake, he drove in its pegs shaped like praying wizards. He planted the pleasant poplars of his city so that they cast their shadow. He embedded its Šar-ur weapon beside Lagaš like a big standard, placed it in its dreadful place, the Šu-galam, and made it emanate fearsome radiance. On the dais of Ĝir-nun, on the place of making judgments, the provider of Lagaš lifted his horns like a mighty bull."
+    },
+    {
+     "ref": "617–624",
+     "orig": "(A22.24) na gal-gal lagab-ba mi-ni-de₆-a\n(A23.1) mu 1-a mu-de₆ mu 1-a mu-ak\n(A23.2) ud 2 ud 3 nu-ma-da-ab-zal\n(A23.3) a₂ ud-da 1-ta mu-du₃\n(A23.4) ud 7-kam-ma-ka e₂-e im-mi-dab₆\n(A23.5) na da-bi kun-še₃ mu-nu₂\n(A23.6) /šim\\-še₃ mu-dim₂-dim₂\n(A23.7) e₂-a mi-ni-šu₄-šu₄",
+     "orig_lines": [
+      "617",
+      "618",
+      "619",
+      "620",
+      "621",
+      "622",
+      "623",
+      "624"
+     ],
+     "en": "It took one year to bring the great stones in slabs and it took another year to fashion them, although not even two or three days did he let pass idly. Then it needed a day's work to set up each one but by the seventh day he had set them all up around the house. He laid down the trimmings from the slabs as stairs, or fashioned basins from them, and had them stand in the house."
+    },
+    {
+     "ref": "625–629",
+     "orig": "(A23.8) na kisal maḫ-a <im>-mi-du₃-a-na\n(A23.9) na-du₃-a lugal kisal si\n(A23.10) gu₃-de₂-a en {d}nin-ĝir₂-su-ke₄\n(A23.11) ĝir₂-nun-ta mu-zu\n(A23.12) na-ba mu-še₃ im-ma-sa₄",
+     "orig_lines": [
+      "625",
+      "626",
+      "627",
+      "628",
+      "629"
+     ],
+     "en": "The stela which he set up in the great courtyard he named as \"The king who …… the courtyard, Lord Ninĝirsu, has recognised Gudea from the Ĝir-nun\"."
+    },
+    {
+     "ref": "630–635",
+     "orig": "(A23.13) na kan₄-sur-ra bi₂-du₃-a\n(A23.14) lugal a-ma-ru {d}en-lil₂-la₂\n(A23.15) gaba-šu-ĝar nu-tuku\n(A23.16) gu₃-de₂-a en {d}nin-ĝir₂-su-ke₄\n(A23.17) igi zid mu-ši-bar\n(A23.18) na-ba mu-še₃ im-ma-sa₄",
+     "orig_lines": [
+      "630",
+      "631",
+      "632",
+      "633",
+      "634",
+      "635"
+     ],
+     "en": "The stela which he set up at the Kan-sura gate he named as \"The king, Enlil's flood storm, who has no opponent, Lord Ninĝirsu, has looked with favour at Gudea\"."
+    },
+    {
+     "ref": "636–641",
+     "orig": "(A23.19) na igi ud e₃-a-<ka> bi₂-du₃-a\n(A23.20) lugal ud gu₃ di {d}en-lil₂-la₂\n(A23.21) en gaba-ri nu-tuku\n(A23.22) gu₃-de₂-a en {d}nin-ĝir₂-su-ke₄\n(A23.23) šag₄ kug-ge bi₂-pad₃\n(A23.24) na-ba mu-še₃ im-ma-sa₄",
+     "orig_lines": [
+      "636",
+      "637",
+      "638",
+      "639",
+      "640",
+      "641"
+     ],
+     "en": "The stela which he set up facing the rising sun he named as \"The king, the roaring storm of Enlil, the lord without rival, Lord Ninĝirsu, has chosen Gudea with his holy heart\"."
+    },
+    {
+     "ref": "642–646",
+     "orig": "(A23.25) na igi šu-ga-lam-ma-ka bi₂-du₃-a\n(A23.26) lugal mu-ni-še₃ kur tuku₂-tuku₂-e\n(A23.27) gu₃-de₂-a en {d}nin-ĝir₂-su-ke₄\n(A23.28) gu-za-ni mu-gen₆\n(A23.29) na-ba mu-še₃ im-ma-sa₄",
+     "orig_lines": [
+      "642",
+      "643",
+      "644",
+      "645",
+      "646"
+     ],
+     "en": "The stela which he set up facing Šu-galam he named as \"The king, at whose name the foreign countries tremble, Lord Ninĝirsu, has made Gudea's throne firm\"."
+    },
+    {
+     "ref": "647–650",
+     "orig": "(A23.30) na igi e₂-uru₁₈-ga-ka bi₂-du₃-a\n(A24.1) gu₃-de₂-a en {d}nin-ĝir₂-su-ke₄\n(A24.2) nam dug₃ mu-ni-tar\n(A24.3) na-ba mu-še₃ im-ma-sa₄",
+     "orig_lines": [
+      "647",
+      "648",
+      "649",
+      "650"
+     ],
+     "en": "The stela which he set up facing E-uru-ga he named as \"Lord Ninĝirsu has decided a good fate for Gudea\"."
+    },
+    {
+     "ref": "651–654",
+     "orig": "(A24.4) na a-ga {d}ba-u₂-ka bi₂-du₃-a\n(A24.5) e₂-ninnu igi an-na-ke₄ zu\n(A24.6) {d}ba-u₂ zi-šag₄-ĝal₂ gu₃-de₂-a\n(A24.7) na-ba mu-še₃ im-ma-sa₄",
+     "orig_lines": [
+      "651",
+      "652",
+      "653",
+      "654"
+     ],
+     "en": "The stela which he set up by the inner room (?) of Bau he named as \"The eyes of An know the E-ninnu, and Bau is the life source of Gudea\"."
+    },
+    {
+     "ref": "655–664",
+     "orig": "(A24.8) e₂ lugal-na zid-de₃-eš₂ mu-du₃\n(A24.9) sipad zid gu₃-de₂-a an ki im-da-mu₂\n(A24.10) ud-sakar gibil-gin₇ men bi₂-il₂\n(A24.11) mu-bi kur-šag₄-še₃\n(A24.12) pa bi₂-e₃\n(A24.13) gu₃-de₂-a e₂ {d}nin-ĝir₂-su-ka\n(A24.14) {d}utu-gin₇ dugud-ta ba-ta-e₃\n(A24.15) ḫur-saĝ za-gin₃-na-gin₇ mu-mu₂\n(A24.16) ḫur-saĝ nu₁₁ babbar₂-ra-gin₇\n(A24.17) u₆ di-de₃ ba-gub",
+     "orig_lines": [
+      "655",
+      "656",
+      "657",
+      "658",
+      "659",
+      "660",
+      "661",
+      "662",
+      "663",
+      "664"
+     ],
+     "en": "He built his master's house exactly as he had been told to. The true shepherd Gudea made it grow so high as to fill the space between heaven and earth, had it wear a tiara shaped like the new moon, and had its fame spread as far as the heart of the highlands. Gudea made Ninĝirsu's house come out like the sun from the clouds, had it grow to be like hills of lapis lazuli and had it stand to be marvelled at like hills of white alabaster."
+    },
+    {
+     "ref": "665–672",
+     "orig": "(A24.18) dub-la₂-bi am-gin₇ mu-šu₄-šu₄\n(A24.19) ušum-bi ur-maḫ-gin₇ šu-ba bi₂-nu₂-nu₂\n(A24.20) gi-gun₄-bi ab-zu-gin₇ ki sikil-e bi₂-mu₂\n(A24.21) urin-bi taraḫ kug abzu-gin₇\n(A24.22) si ba-mul-mul\n(A24.23) ud-sakar gibil an-na gub-ba-gin₇\n(A24.24) gu₃-de₂-a e₂ {d}nin-ĝir₂-su-ka\n(A24.25) u₆ di-de₃ ba-gub",
+     "orig_lines": [
+      "665",
+      "666",
+      "667",
+      "668",
+      "669",
+      "670",
+      "671",
+      "672"
+     ],
+     "en": "He made its door-sockets stand like wild bulls and he flanked them with dragons crouching on their paws like lions. He had its terraced tower (?) grow on a place as pure as the abzu. He made the metal tops of its standards twinkle as the horns of the holy stags of the abzu. Gudea made the house of Ninĝirsu stand to be marvelled at like the new moon in the skies."
+    },
+    {
+     "ref": "673–687",
+     "orig": "(A24.26) e₂-a dub-la₂-bi šu₄-šu₄-ga-bi\n(A24.27) la-ḫa-ma abzu-da šu₄-ga-am₃\n(A25.1) e₂ ĝiš ĝar-ra-bi a-ĝi₆ ambar maḫ muš a sig-ga-am₃\n(A25.2) e₂ KA gid₂-da-bi\n(A25.3) an bar-bar-ra ni₂-ĝal₂-la-am₃\n(A25.4) e₂ e₂-dul₄-la-bi nu₁₁ an-šag₄-ge dirig-ga-am₃\n(A25.5) kan₄ ki lugal kur₉-bi-ta\n(A25.6) ḫu-ri₂-in am-še₃ igi il₂-il₂-dam\n(A25.7) {ĝiš}ti kan₄-e us₂-sa-bi\n(A25.8) tirₓ(NIR)-an-na an-ne₂ us₂-sa-am₃\n(A25.9) ĝiš-kan₄ an-na-bi e₂-ninnu ud gu₃-ba gu₃ di teš₂-ba gub-ba-am₃\n(A25.10) sig₇-igi-bi ni₂ il₂-il₂-a-bi\n(A25.11) igi u₆ di diĝir-re-ne-kam\n(A25.12) e₂-a barag babbar₂ mu-ru-gu₂-ni\n(A25.13) ḫur-saĝ za-gin₃-na an ki-a ki ḫe₂-us₂-sa-am₃",
+     "orig_lines": [
+      "673",
+      "674",
+      "675",
+      "676",
+      "677",
+      "678",
+      "679",
+      "680",
+      "681",
+      "682",
+      "683",
+      "684",
+      "685",
+      "686",
+      "687"
+     ],
+     "en": "The built-in door-sockets of the house are laḫama deities standing by the abzu. Its timber store (?) looks like waves (?) of an enormous lagoon where snakes have dived (?) into the water. Its …… is …… full of fearsomeness. Its …… is a light floating in the midst of heaven. On the Gate where the King Enters an eagle is raising its eyes toward a wild bull. Its curved wooden posts joining above the gate are a rainbow stretching over the sky. Its upper lintel of the gate like (?) the E-ninnu stands among rumbling, roaring storms. Its awe-inspiring eyebrow-shaped arch (?) meets the admiring eyes of the gods. His white dais …… of the house is a firmly founded lapis lazuli mountain connecting heaven and earth."
+    },
+    {
+     "ref": "688–695",
+     "orig": "(A25.14) kiĝ₂-sig₁₇ unu₆ gal mu-ĝa₂-ĝa₂-ne\n(A25.15) bur kug-sig₁₇ lal₃ ĝeštin de₂-a\n(A25.16) an-ne₂ šu₄-ga-am₃\n(A25.17) e₂-nu₂-da mu-du₃-ne\n(A25.18) kur šar₂-da meš₃ kug abzu-a\n(A25.19) gurun₇ il₂-la-am₃\n(A25.20) mu-du₃ šu im-ta-ĝar-ra-ta\n(A25.21) šag₄ diĝir-re-ne gu₂-bi gi₄-a-am₃",
+     "orig_lines": [
+      "688",
+      "689",
+      "690",
+      "691",
+      "692",
+      "693",
+      "694",
+      "695"
+     ],
+     "en": "They installed the great dining hall for the evening meals: it was as if An himself were setting out golden bowls filled with honey and wine. They built the bedchamber: it is the abzu's fruit-bearing holy meš tree among innumerable mountains. He finished with the building, which made the hearts of the gods overflow with joy."
+    },
+    {
+     "ref": "696–721",
+     "orig": "(A25.22) sipad zid gu₃-de₂-a gal mu-zu\n(A25.23) gal i₃-ga-tum₂-mu\n(A25.24) a-ga tukul la₂ kan₄ me₃-ba\n(A25.25) ur-saĝ šeg₉-saĝ-6 saĝ-ar-bi\n(A25.26) im-ma-ab-dab₅-be₂\n(A25.27) igi iri{ki}-še₃ ki ni₂ guru₃-ba\n(A25.28) muš(sourše: ur)-saĝ-7-am₃ im-ma-ab-dab₅-e\n(A26.1) šu-ga-lam kan₄ me-lem₄-ba\n(A26.2) ušum ĝišnimbar-bi im-ma-ab-dab₅-be₂\n(A26.3) igi ud e₃ ki nam tar-re-ba\n(A26.4) šu-nir {d}utu saĝ-alim-ma\n(A26.5) im-ma-da-sig₉-ge\n(A26.6) kan₄-sur-ra igi u₆ di-ba\n(A26.7) ur-maḫ ni₂ diĝir-re-ne-kam\n(A26.8) im-ma-ab-dab₅-e\n(A26.9) tar-sir₂-sir₂ ki a₂ aĝ₂-ba\n(A26.10) ku-li-an-na urud-bi\n(A26.11) im-ma-ab-dab₅-e\n(A26.12) a-ga {d}ba-u₂ ki šag₄ kuš₂-ba\n(A26.13) ma₂-gi₄-lum gud-alim-bi-da\n(A26.14) im-ma-ab-dab₅-e\n(A26.15) ur-saĝ ug₅-ga i₃-me-ša-ke₄-eš₂\n(A26.16) ka-bi ki a naĝ-še₃ mu-ĝar\n(A26.17) mu-bi mu-ru diĝir-re-ne-ka\n(A26.18) gu₃-de₂-a ensi₂ lagaš{ki}-ke₄\n(A26.19) pa e₃ ba-ni-a",
+     "orig_lines": [
+      "696",
+      "697",
+      "698",
+      "699",
+      "700",
+      "701",
+      "702",
+      "703",
+      "704",
+      "705",
+      "706",
+      "707",
+      "708",
+      "709",
+      "710",
+      "711",
+      "712",
+      "713",
+      "714",
+      "715",
+      "716",
+      "717",
+      "718",
+      "719",
+      "720",
+      "721"
+     ],
+     "en": "The true shepherd Gudea is wise, and able too to realise things. In the inner room (?) where the weapons hang, at the Gate of Battle he had the warriors Six-headed wild ram and …… head take their stand. Facing the city, its place laden with awe, he had the Seven-headed serpent take its stand. In Šu-galam, its awesome gate, he had the Dragon and the Date palm take their stand. Facing the sunrise, where the fates are decided, he erected the standard of Utu, the Bison head, beside others already there. At the Kan-sura gate, at its lookout post, he had the Lion, the terror of the gods, take its stand. In the Tar-sirsir, where the orders are issued, he had the Fish-man and the Copper take their stand. In Bau's inner room (?), where the heart can be soothed, he had the Magilum boat and the Bison take their stand. Because these were warriors slain by Ninĝirsu, he set their mouths towards libation places. Gudea, the ruler of Lagaš, made their names appear among those of the gods."
+    },
+    {
+     "ref": "722–729",
+     "orig": "(A26.20) ig {ĝiš}erin-na e₂-a šu₄-ga-bi\n(A26.21) {d}iškur an-ta gu₃ nun di-da-am₃\n(A26.22) e₂-ninnu saĝ-kul-bi idim\n(A26.23) {ĝiš}nu-kušu₄-bi ur-maḫ\n(A26.24) si-ĝar-bi-ta muš-šag₄-tur₃ muš-ḫuš\n(A26.25) am-še₃ eme ed₂-de₃\n(A26.26) ga-du ig-e u₅ us₂-sa-bi\n(A26.27) ug nemurₓ(PIRIĜ.TUR) tur-tur šu-ba du₂-ru-na-am₃",
+     "orig_lines": [
+      "722",
+      "723",
+      "724",
+      "725",
+      "726",
+      "727",
+      "728",
+      "729"
+     ],
+     "en": "The cedar doors installed in the house are Iškur roaring above. The locks of the E-ninnu are bisons, its door-pivots are lions, from its bolts horned vipers and fierce snakes are hissing at wild bulls. Its jambs, against which the door leaves close, are young lions and panthers lying on their paws."
+    },
+    {
+     "ref": "730–737",
+     "orig": "(A26.28) e₂-a gag ĝiš-ur₃ kug mu-sig₉-ge₄-ne\n(A26.29) ušum lu₂-še₃ šu ib₂-ĝar-ra-am₃\n(A26.30) ig-ba eš₂ kug im-suru₅-ne\n(A27.1) {d}niraḫ kug abzu dar-a-am₃\n(A27.2) e₂-sa-la₂-a-bi keš₃{ki} aratta{ki} na de₅-ga-am₃\n(A27.3) e₂-sa-du₈-a-bi piriĝ ḫuš-am₃\n(A27.4) kalam-ma igi mi-ni-ib₂-ĝal₂\n(A27.5) dili du igi-bi nu-ma-dib-be₂",
+     "orig_lines": [
+      "730",
+      "731",
+      "732",
+      "733",
+      "734",
+      "735",
+      "736",
+      "737"
+     ],
+     "en": "The shining roof-beam nails hammered into the house are dragons gripping a victim. The shining ropes attached to the doors are holy Niraḫ parting the abzu. Its …… is pure like Keš and Aratta, its …… is a fierce lion keeping an eye on the Land; nobody going alone can pass in front of it."
+    },
+    {
+     "ref": "738–758",
+     "orig": "(A27.6) e₂-ninnu ni₂-bi kur-kur-ra\n(A27.7) tug₂-gin₇ im-dul₄\n(A27.8) e₂ kug NE-a an-ne₂ ki ĝar-ra\n(A27.9) šembi₂-zid-da šu tag dug₄-ga\n(A27.10) še-er-zid an-na-ka i₃-ti-gin₇ e₃-a\n(A27.11) e₂ igi-bi kur gal ki us₂-sa\n(A27.12) šag₄-bi nam-šub šir₃ ḫa-mun\n(A27.13) bar-bi an e₂ maḫ ḫe₂-ĝal₂-la zig₃-ga\n(A27.14) gu₂-en bar-ra-bi\n(A27.15) ki di kud {d}a-nun-ke₄-ne\n(A27.16) a-lal₃-bi-ta inim šudu₃-da\n(A27.17) šukur₂-bi-da ḫe₂-ĝal₂ diĝir-re-ne-kam\n(A27.18) urin e₂-da sig₉-sig₉-ga-bi\n(A27.19) anzud₂{mušen} kur šubaₓ(MUŠ)-a a₂(sourše: DA) ḫe₂-ba₉-ra₂-am₃\n(A27.20) e₂-ninnu im-bi im ḫa-mun\n(A27.21) {id₂}edin-ta ed₃-da\n(A27.22) lugal-bi en {d}nin-ĝir₂-su-ke₄\n(A27.23) šag₄ kug-ge bi₂-pad₃\n(A27.24) šembi₂-zid-gin₇ saĝ-ĝa₂ mi-ni-ib₂-de₂\n(A28.1) gu₃-de₂-a še-er-zid an-na-ka\n(A28.2) šu tag ba-ni-dug₄",
+     "orig_lines": [
+      "738",
+      "739",
+      "740",
+      "741",
+      "742",
+      "743",
+      "744",
+      "745",
+      "746",
+      "747",
+      "748",
+      "749",
+      "750",
+      "751",
+      "752",
+      "753",
+      "754",
+      "755",
+      "756",
+      "757",
+      "758"
+     ],
+     "en": "The fearsomeness of the E-ninnu covers all the lands like a garment. The house! It is founded by An on refined silver, it is painted with kohl, and comes out as the moonlight with heavenly splendour. The house! Its front is a great mountain firmly grounded, its inside resounds with incantations and harmonious hymns, its exterior is the sky, a great house rising in abundance, its outer assembly hall is the Anuna gods' place of rendering judgments, from its …… words of prayer can be heard, its food supply is the abundance of the gods, its standards erected around the house are the Anzud bird spreading its wings over the bright mountain. E-ninnu's clay plaster, harmoniously blended clay taken from the Edin canal, has been chosen by its master Lord Ninĝirsu with his holy heart, and was painted by Gudea with the splendours of heaven as if kohl were being poured all over it."
+    },
+    {
+     "ref": "759–769",
+     "orig": "(A28.3) e₂ gud-bi-ta\n(A28.4) i₃ kur₉ ga kur₉\n(A28.5) udun-maḫ-bi-ta\n(A28.6) gug₂ gal si gal\n(A28.7) ĝiri₂-PA-na-bi\n(A28.8) gud gu₇ udu gu₇\n(A28.9) e₂ ki šukur₂-bi uz-ga eš₃ ĝa₂-ĝa₂\n(A28.10) ne-saĝ-bi\n(A28.11) kur ĝeštin biz-biz-ze₂\n(A28.12) e₂-lunga₃-bi-ta\n(A28.13) {id₂}idigna a-u₃-ba ĝal₂-la-am₃",
+     "orig_lines": [
+      "759",
+      "760",
+      "761",
+      "762",
+      "763",
+      "764",
+      "765",
+      "766",
+      "767",
+      "768",
+      "769"
+     ],
+     "en": "From its cow-pen butter and milk are brought in. From its huge oven, great cakes and croissants come. Its …… feeds cattle and sheep. Its house of food rations …… an uzga shrine. Its wine-cellar (?) is a mountain oozing wine, from its brewery as much beer comes as the Tigris at high water."
+    },
+    {
+     "ref": "770–780",
+     "orig": "(A28.14) e₂ niĝ₂-gur₁₁-<ra>-bi-a za kug nagga\n(A28.15) e₂ {ĝiš}gigir-ra-bi\n(A28.16) kur ki-a gub-ba\n(A28.17) a-ga balaĝ-a-bi gud gu₃ nun di\n(A28.18) kisal-bi šudu₃ kug si-im a₂-la₂\n(A28.19) kun na₄ e₂-a nu₂-a-bi\n(A28.20) ḫur-saĝ ul nun-ne₂-eš₂ nu₂-am₃\n(A28.21) kun an-na ur₃-še₃ da-a-bi\n(A28.22) nu₁₁ kur-še₃ igi sud il₂-dam\n(A28.23) {ĝiš}kiri₆ gig₂ edin e₂-še₃ sig₉-ga-bi\n(A28.24) kur ĝeštin biz-biz-ze₂ ki ni₂ <me>-lem₄-e mu₂-am₃",
+     "orig_lines": [
+      "770",
+      "771",
+      "772",
+      "773",
+      "774",
+      "775",
+      "776",
+      "777",
+      "778",
+      "779",
+      "780"
+     ],
+     "en": "Its storehouse is full of gems, silver and tin. Its coach-house is a mountain set on the ground. Its drum hall is a roaring bull. Its courtyard resounds with holy prayers, sim and ala drums. Its stone stairs, laid before the house, are like a mountain range lying down in princely joy. Its upper stairs leading (?) to the roof are like a light clearly visible as far as the mountains. Its vineyard \"Black garden in the steppe\", planted near the house, is a mountain oozing wine and grows in a place with fearsomeness and radiance."
+    },
+    {
+     "ref": "781–798",
+     "orig": "(A29.1) na 7 e₂-e dab₆-ba-bi\n(A29.2) niĝ₂ lugal-bi-da šag₄ kuš₂-kuš₂-dam\n(A29.3) e₂-ninda-ki-sig₁₀-bi\n(A29.4) niĝ₂ sikil abzu na de₅-ga-am₃\n(A29.5) šim na₄ e₂-a šu₄-ga-bi\n(A29.6) e₂ gudug kug a nu-silig₅-ge-dam\n(A29.7) bad₃-si an-na\n(A29.8) tum₁₂{mušen} du₂-ru-na-bi\n(A29.9) eridug{ki} nam ḪI A du₃-X-am₃\n(A29.10) e₂-ninnu tum₁₂{mušen}-e ni₂ bi₂-ne\n(A29.11) an-dul₃ pa gal-gal ĝissu dug₃-ga-kam\n(A29.12) sim{mušen} mušen-e šeg₁₂ mu-gi₄-gi₄\n(A29.13) e₂-kur {d}en-lil₂-la₂ ezen ĝal₂-la-am₃\n(A29.14) e₂-a ni₂ gal-bi\n(A29.15) kalam-ma mu-ri\n(A29.16) ka tar-ra-bi\n(A29.17) kur-re ba-ti\n(A29.18) e₂-ninnu ni₂-bi kur-kur-ra tug₂-gin₇ im-dul₄",
+     "orig_lines": [
+      "781",
+      "782",
+      "783",
+      "784",
+      "785",
+      "786",
+      "787",
+      "788",
+      "789",
+      "790",
+      "791",
+      "792",
+      "793",
+      "794",
+      "795",
+      "796",
+      "797",
+      "798"
+     ],
+     "en": "The seven stones surrounding the house are there to take counsel with its owner. Its chapel for funerary offerings is as pure as the clean abzu. The stone basins set up in the house are like the holy room of the lustration priest where water never ceases to flow. Its high battlements where pigeons live is …… Eridug ……. E-ninnu offers rest to pigeons, it is a protective cover with large branches and a pleasant shade, with swallows and other birds chirping loudly there. It is Enlil's E-kur when a festival takes place in it. The house's great awesomeness settles upon the whole Land, its praise reaches to the highlands, the awesomeness of the E-ninnu covers all lands like a garment."
+    },
+    {
+     "ref": "799–803",
+     "orig": "(A30.1) e₂ lugal-bi ḫi-li-a i₃-du₃\n(A30.2) {d}nin-ĝiš-zid-da-ke₄\n(A30.3) ki gal-la bi₂-du₃\n(A30.4) gu₃-de₂-a ensi₂ lagaš{ki}-ke₄\n(A30.5) temen-bi mu-sig₉",
+     "orig_lines": [
+      "799",
+      "800",
+      "801",
+      "802",
+      "803"
+     ],
+     "en": "The house has been built most sumptuously by its lord. It was built on a pedestal by Ninĝišzida. Its foundation pegs were driven in by Gudea, the ruler of Lagaš."
+    },
+    {
+     "ref": "804–812",
+     "orig": "(A30.6) e₂ {d}utu-gin₇ kalam-ma e₃-a\n(A30.7) gud gal-gin₇ saḫar bar-ra gub-ba\n(A30.8) i₃-ti giri₁₇-zal-gin₇\n(A30.9) unken-ne₂ si-a\n(A30.10) ḫur-saĝ sig₇-ga-gin₇\n(A30.11) ḫi-li guru₃-a\n(A30.12) u₆ di-de₃ gub-ba\n(A30.13) e₂-ninnu ki-bi gi₄-a-ba\n(A30.14) {d}nin-ĝir₂-su za₃-mi₂",
+     "orig_lines": [
+      "804",
+      "805",
+      "806",
+      "807",
+      "808",
+      "809",
+      "810",
+      "811",
+      "812"
+     ],
+     "en": "For the restoration of E-ninnu, the house that rises like the sun over the Land, stands like a great bull in the …… sand, illuminates the assembly like delightful moonlight, is as sumptuous as lush green foothills, and stands to be marvelled at, praise be to Ninĝirsu!"
+    },
+    {
+     "ref": "813–814",
+     "orig": "(A30.15) e₂ {d}nin-ĝir₂-su-ka du₃-a\n(A30.16) za₃-mi₂ mu-ru-bi-im",
+     "orig_lines": [
+      "813",
+      "814"
+     ],
+     "en": "This is the middle of the hymn \"The building of Ninĝirsu's house\"."
+    },
+    {
+     "ref": "815–819",
+     "orig": "(B1.1) e₂ dim gal kalam-ma\n(B1.2) an ki-da mu₂-a\n(B1.3) e₂-ninnu šeg₁₂ zid {d}en-lil₂-e nam dug₃-ga tar-ra\n(B1.4) ḫur-saĝ nisig-ga u₆-e gub-ba\n(B1.5) kur-kur-ta e₃-a",
+     "orig_lines": [
+      "815",
+      "816",
+      "817",
+      "818",
+      "819"
+     ],
+     "en": "House, mooring post of the Land, grown so high as to fill the space between heaven and earth, E-ninnu, the true brickwork, for which Enlil determined a good fate, green hill standing to be marvelled at, standing out above all the lands!"
+    },
+    {
+     "ref": "820–823",
+     "orig": "(B1.6) e₂ kur gal-am₃ an-ne₂ im-us₂\n(B1.7) {d}utu-am₃ an-šag₄-ge im-si\n(B1.8) e₂-ninnu anzud₂{mušen} babbar₂-ra-am₃\n(B1.9) kur-ra dub₃ mi-ni-ib₂-bad",
+     "orig_lines": [
+      "820",
+      "821",
+      "822",
+      "823"
+     ],
+     "en": "The house is a great mountain reaching up to the skies. It is Utu filling the midst of the heavens; E-ninnu is the white Anzud bird spreading its talons upon the mountain land."
+    },
+    {
+     "ref": "824–829",
+     "orig": "(B1.10) uĝ₃ ba-ĝar-ĝar kalam ba-gub-gub\n(B1.11) {d}a-nun-na u₆ di-de₃ im-ma-šu₄-šu₄-ge-eš₂\n(B1.12) ensi₂ kug-zu-am₃ inim zu-am₃\n(B1.13) nam-diĝir-re giri₁₇ ki im-mi-su₂-su₂\n(B1.14) sizkur₂ ra-zu-a niĝ₂-dun-a ki im-mi-us₂-us₂\n(B1.15) ensi₂-ke₄ diĝir iri-na-ke₄ ra₂-zu im-ma-be₂",
+     "orig_lines": [
+      "824",
+      "825",
+      "826",
+      "827",
+      "828",
+      "829"
+     ],
+     "en": "All the people were placed (?) before it, the whole Land was detailed (?) to it. The Anuna gods stood there in admiration. The ruler, who is wise, who is knowledgeable, kissed the ground before that godly company. He touched the ground in prostration (?), with supplications and prayers; the ruler, the god of his city prayed."
+    },
+    {
+     "ref": "830–833",
+     "orig": "(B1.16) e₂ ninda gu₇-bi ninda ba-an-taḫ\n(B1.17) kiĝ₂-sigₓ(SAR) udu dab₅-bi udu im-ma-a-taḫ\n(B1.18) bur ḫe₂-ĝal₂ an-šag₄ NE-ša-gin₇\n(B1.19) gaba-ba si bi₂-sa₂",
+     "orig_lines": [
+      "830",
+      "831",
+      "832",
+      "833"
+     ],
+     "en": "For the bread-consuming house he added more and more bread, for the suppers in need of mutton he added sheep. In front of the house he lined up bowls like …… abundance ……."
+    },
+    {
+     "ref": "834–841",
+     "orig": "(B1.20) <{d}>a-nun-na-ke₄-<ne>-er mu-ne-gub\n(B1.21) šudu₃ mu-ne-ša₄ {d}a-nun-na-{d}a-nun-na u₆ di-de₃ ki lagaš{ki}\n(B2.1) {d}lamma kur-kur-ra dug₄-ga-ne-ne a maḫ e₃-a\n(B2.2) lu₂ u₂ la₂ ba-ab-la₂-e\n(B2.3) šul zid lu₂ igi mu-ši-bar-ra-ne\n(B2.4) nam-til₃ mu-na-sud\n(B2.5) sipad-me e₂ mu-du₃ lugal-ĝu₁₀ e₂-a-na mi-ni-ku₄-ku₄\n(B2.6) <{d}>a-nun-na bar-ĝu₁₀-a šudu₃ ḫe₂-mi-sa₄-za",
+     "orig_lines": [
+      "834",
+      "835",
+      "836",
+      "837",
+      "838",
+      "839",
+      "840",
+      "841"
+     ],
+     "en": "He went to the Anuna gods and prayed to them: \"O all you Anuna gods, admired by the land of Lagaš, protectors of all the countries, whose command, a massive breach in a dam, carries away any who try to stop it. The worthy young man on whom you have looked will enjoy a long life. I, the shepherd, built the house, and now I will let my master enter his house. O Anuna gods, may you pray on my behalf!\""
+    },
+    {
+     "ref": "842–850",
+     "orig": "(B2.7) sipad zid gu₃-de₂-a\n(B2.8) gal mu-zu gal i₃-ga-tum₂-mu\n(B2.9) u₂-dug₄ sag₉-<ga>-ni igi-še₃ mu-na-ĝen\n(B2.10) {d}lamma sag₉-ga-ni eĝer-ni im-us₂\n(B2.11) lugal-ni e₂ ul e₂ libir ki-tuš-na-še₃\n(B2.12) gu₃-de₂-a en {d}nin-ĝir₂-su-ra\n(B2.13) niĝ₂-ba na-gu-ul-gu-ul\n(B2.14) en-ra e₂-ninnu-a mu-na-kurₓ(DU)\n(B2.15) šudu₃ mu-na-ša₄",
+     "orig_lines": [
+      "842",
+      "843",
+      "844",
+      "845",
+      "846",
+      "847",
+      "848",
+      "849",
+      "850"
+     ],
+     "en": "The true shepherd Gudea is wise, and able too to realise things. His friendly guardian went before him and his friendly protecting genius followed him. For his master, Lord Ninĝirsu, Gudea gave numerous gifts to the house of yore, the old house, his dwelling place. He went into the E-ninnu to the lord, and prayed to him:"
+    },
+    {
+     "ref": "851–862",
+     "orig": "(B2.16) lugal-ĝu₁₀ {d}nin-ĝir₂-su\n(B2.17) en a ḫuš gi₄-a\n(B2.18) en dug₄-ga-ni saĝ-biš e₃-a\n(B2.19) dumu-nitaḫ₂ {d}en-lil₂-la₂ ur-saĝ ma-a-dug₄\n(B2.20) šu zid ma-ra-a-ĝar\n(B2.21) {d}nin-ĝir₂-su e₂-zu mu-ra-du₃\n(B2.22) ḫul₂-/la ḫa-ni\\-ku₄-ku₄\n(B2.23) {d}ba-u₂-ĝu₁₀ a₂-mi-zu ma-ra-ĝar\n(B3.1) ki-tuš dug₃-ga-ma-ni-ib₂\n(B3.2) gu₃ de₂-a-ni ĝiš ba-tuku-am₃\n(B3.3) ur-saĝ-e sizkur₂ ra₂-<zu>-ni\n(B3.4) gu₃-de₂-a-aš₂ en {d}nin-ĝir₂-su-ke₄ šu ba-ši-ti",
+     "orig_lines": [
+      "851",
+      "852",
+      "853",
+      "854",
+      "855",
+      "856",
+      "857",
+      "858",
+      "859",
+      "860",
+      "861",
+      "862"
+     ],
+     "en": "\"My master Ninĝirsu, lord who has turned back the fierce waters, lord whose commands take precedence, male child of Enlil, warrior, I have carried out faithfully what you have ordered me to do. Ninĝirsu, I have built up your house for you; now I shall let you enter it in joy! My goddess Bau, I have set up your E-mi quarters for you: take up pleasant residence in them.\" His call was heard, his hero Lord Ninĝirsu accepted from Gudea his prayer and supplication."
+    },
+    {
+     "ref": "863–870",
+     "orig": "(B3.5) mu ĝen-na-am₃ itid til-la-am₃\n(B3.6) mu gibil an-na im-ma-gub\n(B3.7) itid e₂-ba ba-a-kur₉\n(B3.8) itid-bi ud 3-am₃ im-ta-zal\n(B3.9) {d}nin-ĝir₂-su eridug{ki}-ta ĝen-am₃\n(B3.10) i₃-ti sa-sa im-e₃\n(B3.11) kalam-ma ud mu-ĝal₂ e₂-ninnu {d}suen u₃-tud-da\n(B3.12) saĝ im-ma-da-ab-sa₂",
+     "orig_lines": [
+      "863",
+      "864",
+      "865",
+      "866",
+      "867",
+      "868",
+      "869",
+      "870"
+     ],
+     "en": "The year ended and the month was completed. A new year started, a month began and three days elapsed in that month. As Ninĝirsu arrived from Eridug, beautiful moonlight shone illuminating the Land, and the E-ninnu competed with the new-born Suen."
+    },
+    {
+     "ref": "871–882",
+     "orig": "(B3.13) gu₃-de₂-a gug za-gin₃ mi-ni-uḫ\n(B3.14) ub-da im-mi-dug₄\n(B3.15) i₃-ḫe-nun-na ki ba-ni-sud\n(B3.16) MUŠ DA MA lu₂ kiĝ₂ ak-am₃\n(B3.17) e₂-ta ba-ta-e₃\n(B3.18) lal₃ i₃-nun ĝeštin ga še-a\n(B3.19) ĝiš-<ĝi₆>-par₄ {ĝiš}peš₃ niĝ₂-ĝen-na\n(B3.20) ga saĝ-ba dim₂-ma\n(B3.21) zu₂-lum {ĝiš}an ĝeštin tur-tur\n(B3.22) niĝ₂ izi nu-tag-ga\n(B3.23) niĝ₂-gu₇ diĝir-re-ne-kam\n(B3.24) lal₃ i₃-nun-na kiĝ₂ ba-ni-ak",
+     "orig_lines": [
+      "871",
+      "872",
+      "873",
+      "874",
+      "875",
+      "876",
+      "877",
+      "878",
+      "879",
+      "880",
+      "881",
+      "882"
+     ],
+     "en": "Gudea made a paste with cornelian and lapis lazuli and applied it to the corners. He sprinkled the floor with precious oil. He made the ……, who worked there (?), leave the house. Syrup, ghee, wine, sour milk, ĝipar fruit, fig-cakes topped with cheese, dates, …… and small grapes, things untouched by fire, were the foods for the gods which he prepared with syrup and ghee."
+    },
+    {
+     "ref": "883–891",
+     "orig": "(B3.25) ud diĝir zid-da du-da\n(B3.26) gu₃-de₂-a ud /ten\\-ta\n(B3.27) kiĝ₂-sigₓ(SAR)-ge bi₂-dib\n(B4.1) e₂-e {d}asar-ri šu si ba-sa₂\n(B4.2) {d}nin-ma-da-ke₄ na de₅ mi-ni-ĝar\n(B4.3) lugal {d}en-ki-ke₄ eš-bar kiĝ₂ ba-an-šum₂\n(B4.4) {d}nin-dub išib maḫ eridug{ki}-ga₁₄-ke₄\n(B4.5) na-izi ba-ni-sig₉\n(B4.6) nin ĝarza kal-la-ke₄ {d}nanše šir₃ kug dug₄ zu e₂-e ba-an-dug₄",
+     "orig_lines": [
+      "883",
+      "884",
+      "885",
+      "886",
+      "887",
+      "888",
+      "889",
+      "890",
+      "891"
+     ],
+     "en": "On the day when the true god was to arrive, Gudea was busy with the evening meal from early morning. Asari cared for the maintenance of the house. Ninmada took care of its cleaning. King Enki gave oracular pronouncements concerning it. Nindub, the chief purification priest of Eridug, filled it with the smoke of incense. The lady of precious rites, Nanše, versed in singing holy songs, sang songs for the house."
+    },
+    {
+     "ref": "892–906",
+     "orig": "(B4.7) u₈ gig₂-ge umbin mi-ni-ib₂-kiĝ₂\n(B4.8) im-ma-al an-na-ke₄\n(B4.9) ubur si ba-ni-ib₂-sa₂\n(B4.10) {ĝiš}šinig {ĝiš}ŠEG₉.AN u₃-tud-<da>-ta\n(B4.11) e₂-ninnu im-ta-sikil-e-ne\n(B4.12) im-ta-dadag-ge-eš₂\n(B4.13) ensi₂-ke₄ iri-a dub₃ bi₂-ĝar\n(B4.14) kalam-ma sig bi₂-ĝar\n(B4.15) du₆-du₆ mu-si-ig inim-ĝar mu-gi₄\n(B4.16) a-aḫ dug₄-ga ĝiri₂-ta ĝar-am₃\n(B4.17) iri-a ama lu₂ tur₅-ra-ke₄\n(B4.18) a silim ĝar-ra-am₃ maš-anše niĝ₂-zi-ĝal₂ edin-na\n(B4.19) teš₂-bi-še₃ gam-ma-am₃\n(B4.20) ur-maḫ piriĝ ušumgal edin-na-ka\n(B4.21) u₃ dub₃ ĝar-ra-am₃",
+     "orig_lines": [
+      "892",
+      "893",
+      "894",
+      "895",
+      "896",
+      "897",
+      "898",
+      "899",
+      "900",
+      "901",
+      "902",
+      "903",
+      "904",
+      "905",
+      "906"
+     ],
+     "en": "They sheared the black ewes and milked the udder of the cow of heaven. They cleaned the E-ninnu, they polished it with brooms of tamarisk and ……. The ruler made the whole city kneel down, made the whole land prostrate itself. He levelled what was high, rejected chance utterances (?); the sorcerers' spittle (?) was removed from the roads. In the city only the mother of a sick person administered a potion. The wild animals, creatures of the steppe, all had crouched together. The lions and the dragons of the steppe were lying asleep."
+    },
+    {
+     "ref": "907–909",
+     "orig": "(B4.22) ud sizkur₂-re ĝi₆ šudu₃-de₃\n(B4.23) i₃-ti /niĝ₂\\ ud-zal-la-ke₄\n(B4.24) lugal-bi mu-um-ĝe₂₆-e",
+     "orig_lines": [
+      "907",
+      "908",
+      "909"
+     ],
+     "en": "The day was for supplication, the night was for prayer. The moonlight …… early morning. Its master ……."
+    },
+    {
+     "ref": "910–924",
+     "orig": "(B5.1) ur-saĝ {d}nin-ĝir₂-su e₂-a mi-NI-ku₄-ku₄\n(B5.2) e₂-a lugal-bi im-ma-ĝen\n(B5.3) ḫu-ri₂-in am-še₃ igi il₂-il₂-dam\n(B5.4) ur-saĝ e₂-a-na ku₄-ku₄-da-ni\n(B5.5) ud me₃-še₃ gu₃ {ĝa₂}ĝar-am₃\n(B5.6) {d}nin-ĝir₂-su e₂-na mu-kuₓ(DU)-kuₓ(DU)\n(B5.7) eš₃ abzu ezen ĝal₂-/la-am₃\\\n(B5.8) lugal [e₂]-/ni\\-ta nam-ta-ĝen\n(B5.9) {d}utu ki lagaš<{ki}>-e e₃-am₃\n(B5.10) {d}ba-u₂ a₂-mi-ni-še₃ du-a-ni\n(B5.11) munus zid e₂-a-ni-še₃ šu ĝa₂-ĝa₂-dam\n(B5.12) a₂-nu₂-da-ka-na kur₉-ra-ni\n(B5.13) {id₂}idigna a-u₃-ba {ĝa₂}ĝar-am₃\n(B5.14) da PI-na-ka tuš-a-ni\n(B5.15) nin dumu an kug-ga {ĝiš}kiri₆ nisig-ga gurun il₂-la-am₃",
+     "orig_lines": [
+      "910",
+      "911",
+      "912",
+      "913",
+      "914",
+      "915",
+      "916",
+      "917",
+      "918",
+      "919",
+      "920",
+      "921",
+      "922",
+      "923",
+      "924"
+     ],
+     "en": "Warrior Ninĝirsu entered the house, the owner of the house had arrived. He was an eagle raising its eyes toward a wild bull. The warrior's entering his house was a storm roaring into battle. Ninĝirsu entered his house and it became the shrine of the abzu when there is a festival. The owner came out of his house and he was Utu rising over the land of Lagaš. Bau's going to her E-mi quarters was a true woman's taking her house in hand. Her entering her bedroom was the Tigris at high water. When she sat down beside her ……, she was the lady, the daughter of holy An, a green garden bearing fruit."
+    },
+    {
+     "ref": "925–928",
+     "orig": "(B5.16) ud e₃-am₃ nam tar-ra-am₃\n(B5.17) {d}ba-/u₂\\ a₂(sourše: DA)-mi-na kur₉-ra-am₃\n(B5.18) ki lagaš{ki} ḫe₂-ĝal₂-la-am₃\n(B5.19) ud im-zal {d}utu lagaš{ki}-ke₄ kalam-ma saĝ mi-ni-il₂",
+     "orig_lines": [
+      "925",
+      "926",
+      "927",
+      "928"
+     ],
+     "en": "The daylight came out, the fate had been decided. Bau entered her E-mi quarters, and there was abundance for the land of Lagaš. The day dawned. Utu of Lagaš lifted his head over the Land."
+    },
+    {
+     "ref": "929–933",
+     "orig": "(B5.20) gud-i₃ udu-i₃ e₂-e bi₂-dab₅\n(B5.21) bur an-na mu-gub tin mu-ni-/de₂-de₂\\\n(B5.22) {d}a-nun-<na> ki lagaš(sourše: ŠIR.BUR){ki} en {d}nin-ĝir₂-su-da ki-bi mu-da-rin₂-ne₂-eš₂-am₃\n(B5.23) e₂-a nam-išib-ba šu mi-ni-du₇\n(B5.24) eš-bar kiĝ₂ mi₂ mi-ni-dug₄",
+     "orig_lines": [
+      "929",
+      "930",
+      "931",
+      "932",
+      "933"
+     ],
+     "en": "The house received fattened oxen and sheep. Bowls were set up in the open air and were filled with wine. The Anuna gods of the land of Lagaš gathered around Lord Ninĝirsu. In the house the purification had been completed, the oracular pronouncements had been taken care of."
+    },
+    {
+     "ref": "934–943",
+     "orig": "(B6.1) tin bur gal-la im-ma-de₂\n(B6.2) e₂-ninnu UL /GAL\\ UL DU gu₂ im-ma-gur-re\n(B6.3) eš₃ {d}nin-dub-ke₄ šeg₁₂ mu-gi₄-gi₄\n(B6.4) ninda ud-da ga maš₂-lulim-ma\n(B6.5) ud ĝi₆-e de₆-a\n(B6.6) nir-ĝal₂ dumu ki aĝ₂ {d}en-lil₂-la₂ ur-saĝ {d}nin-ĝir₂-su\n(B6.7) u₃-a mi-ni-zi-zi\n(B6.8) me gal-gal-la saĝ /mi-ni\\-il₂-e\n(B6.9) AN /KA\\ /mar\\-za e₂-a SA-ni\n(B6.10) eš₃ e₂-ninnu ki-us₂ mu-ĝa₂-ĝa₂",
+     "orig_lines": [
+      "934",
+      "935",
+      "936",
+      "937",
+      "938",
+      "939",
+      "940",
+      "941",
+      "942",
+      "943"
+     ],
+     "en": "Wine was poured from big jars while …… was heaped up in the E-ninnu. Nindub caused the sanctuary to be filled with clatter and noise (?) and with fresh bread and hind's milk available day and night; he woke from sleep the noble one, the beloved son of Enlil, the warrior Ninĝirsu. Ninĝirsu raised his head with all the great powers, and …… rituals, …… for (?) the sanctuary E-ninnu."
+    },
+    {
+     "ref": "944–956",
+     "orig": "(B6.11) zid-du-e šu si sa₂-da\n(B6.12) erim₂-du-e gu₂ ĝiš ĝa₂-ĝa₂-da\n(B6.13) e₂ gen₆-ne₂-da e₂ dug₃-ge-da\n(B6.14) iri-ni eš₃ ĝir₂-su{ki} na de₆ šum₂-mu-da\n(B6.15) {ĝiš}gu-za nam tar-ra gub-da\n(B6.16) ĝidru ud su₃-ra₂ šu-a ĝa₂-ĝa₂-da\n(B6.17) sipad {d}nin-ĝir₂-su-ke₄ gu₃ de₂-a-ar\n(B6.18) men nisig-ga-gin₇ saĝ an-še₃ il₂-da\n(B6.19) kuš la₂ gada la₂ saĝ-a mur₁₀-a\n(B6.20) kisal e₂-ninnu-ka ki-gub pad₃-de₃-da\n(B6.21) ig gal dim ĝir₂-nun-na gal₅-la₂ gal ĝir₂-su{ki}\n(B6.22) {d}ig-alim dumu ki aĝ₂-ĝa₂-ni\n(B6.23) en {d}nin-ĝir₂-su-ra me-ni-da mu-na-da-dib-e",
+     "orig_lines": [
+      "944",
+      "945",
+      "946",
+      "947",
+      "948",
+      "949",
+      "950",
+      "951",
+      "952",
+      "953",
+      "954",
+      "955",
+      "956"
+     ],
+     "en": "With his divine duties, namely to guide the hand of the righteous one; to force the evil-doer's neck into a neck stock; to keep the house safe; to keep the house pleasant; to instruct his city and the sanctuaries of Ĝirsu; to set up an auspicous throne; to hold the sceptre of never-ending days; to raise high the head of the shepherd called by Ninĝirsu, as if he wore a blue crown; and to appoint to their offices in the courtyard of E-ninnu the skin-clad ones, the linen-clad ones and those whose head is covered, Gudea introduced Ig-alim, the Great Door (ig gal), the Pole (dim) of Ĝir-nun, the chief bailiff of Ĝirsu, his beloved son, to Lord Ninĝirsu."
+    },
+    {
+     "ref": "957–970",
+     "orig": "(B6.24) e₂ sikil-e-da šu₄-luḫ ĝa₂-ĝa₂-da\n(B6.25) šu kug a en-ra šum₂-mu-da\n(B6.26) kaš bur-ra de₂-da tin dug-a de₂-da\n(B7.1) e₂-lunga₃ e₂ a₂ sikil-ba\n(B7.2) u₂-lu₅-ši-e a pap-sir₂-gin₇\n(B7.3) kun-ka₃-an za-a-da\n(B7.4) gud du₇ maš₂ du₇ udu niga\n(B7.5) ninda ud-da ga maš₂-lulim-ma\n(B7.6) ud ĝi₆-e de₆-a nir-ĝal₂ dumu ki aĝ₂\n(B7.7) {d}en-lil₂-la₂ ur-saĝ {d}nin-ĝir₂-su\n(B7.8) gu₇-a naĝ-a X-bi u₃-a «MI» zi-zi-<da>\n(B7.9) en šu₄-luḫ dadag-ga dumu-saĝ e₂-ninnu\n(B7.10) {d}šul-šag₄-ga {d}nin-ĝir₂-su-ra\n(B7.11) me-ni-da mu-na-da-dib(sourše: LU)-e",
+     "orig_lines": [
+      "957",
+      "958",
+      "959",
+      "960",
+      "961",
+      "962",
+      "963",
+      "964",
+      "965",
+      "966",
+      "967",
+      "968",
+      "969",
+      "970"
+     ],
+     "en": "With his divine duties, namely to keep the house clean; to let hands always be washed; to serve water to the lord with holy hands; to pour beer into bowls; to pour wine into jars; to make emmer beer in the brewery, the house of pure strength, fizz like the water of the Papsir canal; to make certain that faultless cattle and goats, grain-fed sheep, fresh bread and hind's milk are available day and night; to wake from sleep the noble one, Enlil's beloved son, the warrior Ninĝirsu, by offering (?) food and drink, Gudea introduced Šul-šaga, the lord of the pure hand-washings (šu-luḫ), the first-born son of E-ninnu, to Ninĝirsu."
+    },
+    {
+     "ref": "971–982",
+     "orig": "(B7.12) šita₂ saĝ 7 šu du₈-a-da\n(B7.13) e₂-en-kar₂ kan₄ me₃-ka ig-bi ĝal₂ da₁₃-da₁₃-<da>\n(B7.14) eme ĝiri₂ mi-tum ĝiš-a-ma-ru\n(B7.15) mar₆-ra-tum ĝiš-ḫur me₃-bi\n(B7.16) si sa₂-sa₂-a-da\n(B7.17) kur gu₂-erim₂-ĝal₂ {d}en-lil₂-la₂-ka\n(B7.18) a-gin₇ ĝa₂-ĝa₂-da\n(B7.19) ur-saĝ {ĝiš}šar₂-ur₃ me₃-a kur šu-še₃ ĝar-ĝar\n(B7.20) šagina gu₂-tuku e₂-ninnu\n(B7.21) {mušen}sur₂-du₃ ki-bal-a\n(B7.22) {d}lugal-kur-dub₂ šagina-ni\n(B7.23) en {d}nin-ĝir₂-su-ra me-ni-da mu-na-da-dib-e",
+     "orig_lines": [
+      "971",
+      "972",
+      "973",
+      "974",
+      "975",
+      "976",
+      "977",
+      "978",
+      "979",
+      "980",
+      "981",
+      "982"
+     ],
+     "en": "With his divine duties, namely to carry the seven-headed mace; to open the door of the an-kar house, the Gate of Battle; to hit exactly with the dagger blades, with the mitum mace, with the \"floodstorm\" weapon and with the marratum club, its battle tools; to inundate Enlil's enemy land, Gudea introduced Lugal-kur-dub, the warrior Šar-ur, who in battle subdues all the foreign lands, the mighty general of the E-ninnu, a falcon against the rebel lands, his general, to Lord Ninĝirsu."
+    },
+    {
+     "ref": "983–989",
+     "orig": "(B7.24) mi-tum an-na-ke₄ ud /ḫuš\\-gin₇\n(B8.1) kur-še₃ gu₃ ĝar-ra-a\n(B8.2) {ĝiš}šar₂-ur₃ a-ma-ru me₃\n(B8.3) ĝiš-gaz ki-bal-a\n(B8.4) en-ne₂ ki-bal kur saĝ-ki-ni u₃-ma-da-gid₂-da\n(B8.5) gu₃ mi-ri₂-a-ni u₃-ma-ra\n(B8.6) lipiš-bi u₃-mu-ra₂",
+     "orig_lines": [
+      "983",
+      "984",
+      "985",
+      "986",
+      "987",
+      "988",
+      "989"
+     ],
+     "en": "After the heavenly mitum mace had roared against the foreign lands like a fierce storm -- the Šar-ur, the flood storm in battle, the cudgel for the rebel lands -- after the lord had frowned at the rebellious land, the foreign country, hurled at it his furious words, driven it insane (the text here seems to be corrupt, and there may be some lines missing) ,"
+    },
+    {
+     "ref": "990–992",
+     "orig": "(B8.7) en-na šagina 2-kam-ni\n(B8.8) kur-šu-na-buru₅{mušen}-am₃\n(B8.9) dumu {d}en-lil₂-la₂-ra me-ni-da mu-na-da-dib-e",
+     "orig_lines": [
+      "990",
+      "991",
+      "992"
+     ],
+     "en": "With his divine duties, Gudea introduced the lord's second general, Kur-šuna-buruam, to the son of Enlil."
+    },
+    {
+     "ref": "993–1005",
+     "orig": "(B8.10) nam-šita ki lagaš{ki}\n(B8.11) šu du₈-a-da\n(B8.12) sizkur₂ ra₂-zu-bi dug₃-ga ĝa₂-ĝa₂-da\n(B8.13) ur-saĝ eridug{ki}-še₃ du-a-ni\n(B8.14) silim-ma dug₃ di-da\n(B8.15) {d}nin-ĝir₂-su eridug{ki}-ta du-ni\n(B8.16) iri du₃-a {ĝiš}gu-za-bi gen₆-na-<da>\n(B8.17) nam-til₃ sipad zid\n(B8.18) gu₃-de₂-a-da\n(B8.19) giri₁₇ šu ĝal₂-la-da\n(B8.20) ad gi₄-gi₄-ni\n(B8.21) {d}lugal-si-sa₂ en {d}nin-ĝir₂-su-<ra>\n(B8.22) me-ni-da mu-na-da-dib-e",
+     "orig_lines": [
+      "993",
+      "994",
+      "995",
+      "996",
+      "997",
+      "998",
+      "999",
+      "1000",
+      "1001",
+      "1002",
+      "1003",
+      "1004",
+      "1005"
+     ],
+     "en": "With his divine duties, namely to send entreaties on behalf of the land of Lagaš; to perform supplications and prayers for it, propitious ones; to greet pleasantly the warrior departing for Eridug; and until (?) Ninĝirsu comes from Eridug, to keep the throne of the built-up city firm; to pray, with hand placed before the nose, together with Gudea, for the life of the true shepherd, Gudea introduced his adviser, Lugal-si-sa, to Lord Ninĝirsu."
+    },
+    {
+     "ref": "1006–1014",
+     "orig": "(B8.23) tur dug₄-ga-da\n(B8.24) maḫ dug₄-ga-da\n(B8.25) inim si sa₂-e zu₂ keše₂ ak-da\n(B8.26) erim₂ dug₄-/ga{?}\\ [...] X [...]-/da\\\n(B9.1) ur-saĝ barag kug-ga tuš-a-ra\n(B9.2) {d}nin-ĝir₂-su-ra e₂-ninnu-a inim-bi ku₄-ku₄-da\n(B9.3) {d}šakkan₂ šeg₉-bar sukkal e₂-dug₃-ga saĝ-an-ni\n(B9.4) en {d}nin-ĝir₂-su-ra me-ni-da\n(B9.5) mu-na-da-dib-e",
+     "orig_lines": [
+      "1006",
+      "1007",
+      "1008",
+      "1009",
+      "1010",
+      "1011",
+      "1012",
+      "1013",
+      "1014"
+     ],
+     "en": "With his divine duties, namely to request; to command; to co-operate with the one speaking straightforwardly; to …… the one speaking evil; to inform Ninĝirsu, the warrior sitting on a holy dais in the E-ninnu, Gudea introduced Šakkan, the wild ram, the minister of the E-duga, his ……, to Lord Ninĝirsu."
+    },
+    {
+     "ref": "1015–1023",
+     "orig": "(B9.6) a kug-ge-da naĝa sikil-e-da\n(B9.7) i₃ bur babbar₂-ra naĝa E₂.NUN-na-da\n(B9.8) ĝiš-nu₂ u₂ za-gin₃ ba-ra-ga-na\n(B9.9) u₃ dug₃ ku₄-ku₄-da\n(B9.10) e₂-nu₂ e₂-dug₃-ga-ni-a\n(B9.11) bar-ra ku₄-ku₄-da\n(B9.12) šag₄-ga nu-e₃-e₃-da\n(B9.13) {d}kinda-zid lu₂ e₂-dug₃-ga-kam\n(B9.14) en {d}nin-ĝir₂-su-ra me-ni-da mu-na-da-dib-e",
+     "orig_lines": [
+      "1015",
+      "1016",
+      "1017",
+      "1018",
+      "1019",
+      "1020",
+      "1021",
+      "1022",
+      "1023"
+     ],
+     "en": "With his divine duties, namely to clean with water; to clean with soap; to …… with oil from white bowls and with (?) soap; to urge him to sweet sleep on his bed strewn with fresh herbs; to let him enter the E-duga, his bed chamber, from outside (?) and to make him not wish to leave it, Gudea introduced Kinda-zid, the man in charge of the E-duga, to Lord Ninĝirsu."
+    },
+    {
+     "ref": "1024–1034",
+     "orig": "(B9.15) {ĝiš}gigir kug an mul-a erin₂-na-da\n(B9.16) {anše}dur₉{ur₃}-bi piriĝ-kaš₄-e-pad₃-da\n(B9.17) anše-ba sig₁₀-ga-da\n(B9.18) anše sig-a anše eridug{ki}-ga₁₄\n(B9.19) {anše}dur₉-da E₂ KA kur-kur kur₉ di-da\n(B9.20) lugal-bi {d}nin-ĝir₂-su ḫul₂-la tum₂-mu-da\n(B9.21) lu₂ ug-gin₇ šeg₁₂ gi₄-a\n(B9.22) mar-uru₅-gin₇ zig₃-ga\n(B9.23) maškim da-ga {d}/nin-ĝir₂\\-su-ka\n(B10.1) {d}en-šeg₁₂-nun sipad anše-ka-ni\n(B10.2) en {d}nin-ĝir₂-su-ra me-ni-da mu-na-da-dib-e",
+     "orig_lines": [
+      "1024",
+      "1025",
+      "1026",
+      "1027",
+      "1028",
+      "1029",
+      "1030",
+      "1031",
+      "1032",
+      "1033",
+      "1034"
+     ],
+     "en": "With his divine duties, namely to yoke up the holy chariot decorated with stars; to harness the donkey stallion, Piriĝ-kaše-pada, before it; to …… a slender donkey from Eridug with the stallion; to have them joyfully transport their owner Ninĝirsu, Gudea introduced En-šeg-nun, who roars like a lion, who rises like a flood storm, Ninĝirsu's hurrying bailiff, his donkey herdsman, to Lord Ninĝirsu."
+    },
+    {
+     "ref": "1035–1040",
+     "orig": "(B10.3) i₃ ḫi-a-da gara₂(sourše: BI) ḫi-a-da\n(B10.4) ud₅ kug ud₅ ga naĝ maš₂-lulim\n(B10.5) ama {d}nin-ĝir₂-su-ka\n(B10.6) i₃ ga-bi eš₃ e₂-ninnu-a muš nu-tum₂-da\n(B10.7) en-lulim sipad maš₂-lulim en {d}nin-ĝir₂-su-ra\n(B10.8) me-ni-da mu-na-da-dib-e",
+     "orig_lines": [
+      "1035",
+      "1036",
+      "1037",
+      "1038",
+      "1039",
+      "1040"
+     ],
+     "en": "With his divine duties, namely, to make the butter abundant; to make the cream abundant; to see that the butter and the milk of the holy goats, the milking goats, and the hind, the mother of Ninĝirsu, do not cease to flow in the E-ninnu sanctuary, Gudea introduced En-lulim, the herdsman of the hinds, to Lord Ninĝirsu."
+    },
+    {
+     "ref": "1041–1047",
+     "orig": "(B10.9) ti-gi₄ niĝ₂ dug₃-ge si sa₂-a-da\n(B10.10) kisal e₂-ninnu ḫul₂-a si-a-da\n(B10.11) al-ĝar mi-ri₂-tum niĝ₂ e₂-dug₃-ga\n(B10.12) ur-saĝ ĝeštug{tug₂}-a-ra\n(B10.13) {d}nin-ĝir₂-su-ra e₂-ninnu dug₃-bi ĝa₂-ĝa₂-da\n(B10.14) nar ki aĝ₂-a-ni ušumgal kalam-ma\n(B10.15) en {d}nin-ĝir₂-su-ra me-ni-da mu-na-da-dib-e",
+     "orig_lines": [
+      "1041",
+      "1042",
+      "1043",
+      "1044",
+      "1045",
+      "1046",
+      "1047"
+     ],
+     "en": "With his divine duties, namely to tune properly the sweet-toned tigi instrument; to fill the courtyard of E-ninnu with joy; to make the alĝar and miritum, instruments of the E-duga, offer their best in the E-ninnu to Ninĝirsu, the warrior with an ear for music, Gudea introduced his beloved musician, Ušumgal-kalama, to Lord Ninĝirsu."
+    },
+    {
+     "ref": "1048–1057",
+     "orig": "(B10.16) šag₄ ḫuĝ-ĝa₂-da bar ḫuĝ-ĝa₂-da\n(B10.17) igi er₂ pad₃-da er₂ šeₓ(SIG)-da\n(B10.18) šag₄ a-nir-ta a-nir be₄-da\n(B10.19) en-na šag₄ ab-gin₇ zig₃-ga-ni\n(B10.20) {id₂}buranuna{ki}-gin₇ luḫ-ḫa-ni\n(B10.21) a-ma-ru-gin₇ sa-ga dug₄-<ga>-ni\n(B10.22) kur gu₂-erim₂-ĝal₂ {d}en-lil₂-la₂-ka\n(B10.23) a-gin₇ u₃-mi-/ĝar šag₄\\ [...] /gu₂-bi gi₄\\-a-ni a sed₆{?} su₃-da\n(B11.1) balaĝ-ĝa₂-ni lugal-igi-ḫuš-am₃\n(B11.2) en {d}nin-ĝir₂-su-ra me-ni-da mu-na-da-dib-e",
+     "orig_lines": [
+      "1048",
+      "1049",
+      "1050",
+      "1051",
+      "1052",
+      "1053",
+      "1054",
+      "1055",
+      "1056",
+      "1057"
+     ],
+     "en": "With his divine duties, namely to soothe the heart, to soothe the spirits; to dry weeping eyes; to banish mourning from the mourning heart; to …… the heart of the lord that rises like the sea, that washes away like the Euphrates, that hits like a flood storm, that has overflowed with joy after inundating a land which is Enlil's enemy, Gudea introduced his balaĝ drum, Lugal-igi-ḫuš, to Lord Ninĝirsu."
+    },
+    {
+     "ref": "1058–1069",
+     "orig": "(B11.3) lukur ki ig-ni ḫe₂-ĝal₂ lu₂ šar₂\n(B11.4) {d}za-za-ru\n(B11.5) {d}iškur-pa-e₃\n(B11.6) <{d}>ur₂-agrun-ta-e₃-a\n(B11.7) {d}ḫe₂-ĝir₂-nun-na\n(B11.8) {d}ḫe₂-šag₄-ga\n(B11.9) {d}zu₂-ur₂-ĝu₁₀\n(B11.10) {d}za-ar-ĝu₁₀\n(B11.11) dumu maš 7 {d}ba-u₂-me\n(B11.12) ban₃-da en {d}nin-ĝir₂-su-ka-me\n(B11.13) nam-šita sag₉-ga gu₃-de₂-a-a-da\n(B11.14) en {d}nin-ĝir₂-su-ra mu-na-da-šu₄-ge-eš₂",
+     "orig_lines": [
+      "1058",
+      "1059",
+      "1060",
+      "1061",
+      "1062",
+      "1063",
+      "1064",
+      "1065",
+      "1066",
+      "1067",
+      "1068",
+      "1069"
+     ],
+     "en": "Zazaru, Iškur-pa-e, Ur-agrunta-ea, Ḫe-Ĝir-nuna, Ḫe-šaga, Zurĝu and Zarĝu, who are Bau's septuplets, the offspring of Lord Ninĝirsu, his beloved lukur maidens, who create plenty for the myriads, stepped forward to Lord Ninĝirsu with friendly entreaties on behalf of Gudea."
+    },
+    {
+     "ref": "1070–1081",
+     "orig": "(B11.15) gana₂ gal-gal-e šu il₂-la-da\n(B11.16) eg₂ pa₄ lagaš{ki}-ke₄\n(B11.17) gu₂-bi zig₃-ga-da\n(B11.18) edin lugal-bi-ir tum₂\n(B11.19) gu₂-edin-na-ka {d}ezina₂-ku₃-su₃ pa sikil-e\n(B11.20) absin₃-na saĝ an-še₃ il₂-še₃\n(B11.21) gana₂ zid-bi gig ziz₂ gu₂-gu₂ um-de₆\n(B11.22) guru₇-guru₇ maš ki lagaš{ki}-ke₄\n(B11.23) gu₂ gur-gur-ra-da\n(B11.24) saĝ-tun₃ {d}en-lil₂-la₂ engar gu₂-edin-na\n(B11.25) {d}ĝiš-bar-e₃ en {d}nin-ĝir₂-su-ra\n(B11.26) me-ni-da mu-na-da-an-dib-be₂",
+     "orig_lines": [
+      "1070",
+      "1071",
+      "1072",
+      "1073",
+      "1074",
+      "1075",
+      "1076",
+      "1077",
+      "1078",
+      "1079",
+      "1080",
+      "1081"
+     ],
+     "en": "With his divine duties, namely to see that the great fields grow rich; to see that the levees and ditches of Lagaš will be full to the brim; to see that Ezina-Kusu, the pure stalk, will raise its head high in the furrows in Gu-edina, the plain befitting its owner; to see that after the good fields have provided wheat, emmer and all kinds of pulses, numerous grain heaps -- the yield of the land of Lagaš -- will be heaped up, Gudea introduced Ĝišbar-e, Enlil's surveyor, the farmer of Gu-edina, to Lord Ninĝirsu."
+    },
+    {
+     "ref": "1082–1087",
+     "orig": "(B12.1) ambar-bi ku₆ḪI.SUḪUR ku₆suḫur u₃-de₆\n(B12.2) ĝiš-gi /nisig\\-ga-bi gi ḫa-bu₃-ur₂ u₃-de₆\n(B12.3) imin-šatam ra-/gaba\\ gu₂-edin-na-ke₄\n(B12.4) {d}nin-ĝir₂-su-ra e₂-ninnu-a inim-bi ku₄-ku₄-da\n(B12.5) {d}lamma enkud-e gu₂-edin-na\n(B12.6) en {d}nin-ĝir₂-su-ra me-ni-da mu-na-da-dib-e",
+     "orig_lines": [
+      "1082",
+      "1083",
+      "1084",
+      "1085",
+      "1086",
+      "1087"
+     ],
+     "en": "With his divine duties, namely to make sure that Imin-šatam, the messenger of Gu-edina, informs Ninĝirsu in the E-ninnu about the amount of carp and perch (?) yielded by the marshes, and about the quantity of new shoots of reed yielded by the green reedbeds, Gudea introduced Lama, the inspector of the fisheries of Gu-edina, to Lord Ninĝirsu."
+    },
+    {
+     "ref": "1088–1099",
+     "orig": "(B12.7) edin ki dug₃-ge na de₅-ga-da\n(B12.8) gu₂-edin-na edin dug₃-ge\n(B12.9) na de₅ šum₂-ma-da\n(B12.10) mušen-bi [rin₂]-rin₂-na-da\n(B12.11) nunuz-bi e₂-DI-a ĝal₂-la-da\n(B12.12) ama-bi buluĝ₃-e-da\n(B12.13) du₈-du₈ maš-anše lu-a-ba\n(B12.14) edin ki aĝ₂ {d}nin-ĝir₂-su-ka-ke₄\n(B12.15) niĝ₂-kud nu-ak-da\n(B12.16) {d}dim-gal-abzu niĝir gu₂-edin-na\n(B12.17) en {d}nin-ĝir₂-su-ra me-ni-da\n(B12.18) mu-na-da-dib-be₂",
+     "orig_lines": [
+      "1088",
+      "1089",
+      "1090",
+      "1091",
+      "1092",
+      "1093",
+      "1094",
+      "1095",
+      "1096",
+      "1097",
+      "1098",
+      "1099"
+     ],
+     "en": "With his divine duties, namely to administer the open country, the pleasant place; to give directions concerning the Gu-edina, the pleasant open country; to make its birds propagate (?); to have them lay their eggs in nests (?); to have them rear their young; to see that the multiplication of the beasts of Ninĝirsu's beloved countryside does not diminish, Gudea introduced Dim-gal-abzu, the herald of Gu-edina, to Lord Ninĝirsu."
+    },
+    {
+     "ref": "1100–1106",
+     "orig": "(B12.19) iri du₃-a-da ki-tuš ĝar-ra-da\n(B12.20) bad₃ iri-kug-ga en-nu du₃-a-da\n(B12.21) {d}aga-us₂ dag-ga-na-bi\n(B12.22) šita₂ saĝ maḫ {ĝiš}erin babbar₂-ra\n(B12.23) e₂-e dab₆-ba-da\n(B12.24) {d}lugal-en-nu-iri-kug-ga-kam\n(B12.25) en {d}nin-ĝir₂-su-ra me-ni-da mu-na-da-dib-e",
+     "orig_lines": [
+      "1100",
+      "1101",
+      "1102",
+      "1103",
+      "1104",
+      "1105",
+      "1106"
+     ],
+     "en": "With his divine duties, namely to erect cities; to found settlements; to build guard-houses for the wall of the Iri-kug; to have its divine resident constable, the mace of white cedar with its enormous head, patrol around the house, Gudea introduced Lugal-ennu-iri-kugakam to Lord Ninĝirsu."
+    },
+    {
+     "ref": "1107–1117",
+     "orig": "(B12.26) an kug-ge zid-de₃-eš₂ mu-ĝar\n(B13.1) {d}en-lil₂-e saĝ-ba gur bi₂-dar\n(B13.2) {d}nin-ḫur-saĝ-ke₄ igi zid ba-ši-bar\n(B13.3) {d}/en-ki\\ lugal eridug/{ki}-ke₄\\ temen-bi /mu\\-sig₉\n(B13.4) en zid šag₄ zalag-zalag-ga-ke₄\n(B13.5) {d}suen-e me-bi an ki-a im-mi-dirig-ga-am₃\n(B13.6) {d}nin-ĝir₂-su-ke₄ eš₃ numun i-a šag₄-ge ba-ni-pad₃\n(B13.7) ama {d}nanše šeg₁₂ ki lagaš{ki}-ka\n(B13.8) mi₂ zid ba-ni-in-dug₄\n(B13.9) diĝir numun zid-zid-da-ke₄\n(B13.10) e₂ /mu\\-du₃ mu-/bi\\ pa /bi₂-e₃\\",
+     "orig_lines": [
+      "1107",
+      "1108",
+      "1109",
+      "1110",
+      "1111",
+      "1112",
+      "1113",
+      "1114",
+      "1115",
+      "1116",
+      "1117"
+     ],
+     "en": "Holy An made the location appropriate. Enlil wound (?) a turban (?) round its top. Ninḫursaĝa looked at it approvingly. Enki, the king of Eridug, drove in its foundation pegs. The true lord with a pure heart, Suen, made its powers the largest in heaven and on earth. Ninĝirsu chose it among shrines of sprouting seeds with his heart. Mother Nanše cared for it especially among the buildings of the land of Lagaš. But it was the god of most reliable progeny who built the house and made its name famous."
+    },
+    {
+     "ref": "1118–1124",
+     "orig": "(B13.11) aĝrig kalag-[ga] {d}nanše-/ke₄\\\n(B13.12) sipad /gu₂\\-tuku {d}nin-ĝir₂-su-ka-ke₄\n(B13.13) gal /mu\\-zu gal i₃-/ga\\-tum₂-/mu\\\n(B13.14) e₂-e lu₂ /e₂\\ du₃-a-ke₄\n(B13.15) gu₃-de₂-a ensi₂\n(B13.16) lagaš{ki}-ke₄\n(B13.17) saĝ im-rig₇(sourše: PA.TUK.DU)-ge",
+     "orig_lines": [
+      "1118",
+      "1119",
+      "1120",
+      "1121",
+      "1122",
+      "1123",
+      "1124"
+     ],
+     "en": "The mighty steward of Nanše, the accomplished shepherd of Ninĝirsu, is wise, and able too to realise things; the man in charge of building the house, Gudea the ruler of Lagaš, was to make presents for the house."
+    },
+    {
+     "ref": "1125–1142",
+     "orig": "(B13.18) {ĝiš}gigir kur mu-gam su zig₃ guru₃ ni₂ gal u₅-a\n(B13.19) {anše}dur₉{ur₃}-bi ud-gu₃-dug₃-dug₃-ga\n(B13.20) anše-ba sig₁₀-ga-da\n(B13.21) šita₂ saĝ 7 tukul ḫuš me₃\n(B13.22) tukul ub 2-e nu-il₂ ĝiš-gaz me₃\n(B13.23) mi-tum tukul nir₃ saĝ piriĝ\n(B14.1) kur-da gaba nu-gi₄\n(B14.2) {ĝiš}eme(sourše: KAxĜIR₂) ĝiri₂ šu-nir 10 lal 1\n(B14.3) a₂ nam-ur-saĝ-ĝa₂\n(B14.4) {ĝiš}pan tir meš₃-gin₇ gu₃ ĝar-ra-ni\n(B14.5) ti sumur me₃-a nim-gin₇ ĝir₂-da-ni\n(B14.6) e₂-mar-uru₅ ug piriĝ muš-ḫuš-še₃\n(B14.7) eme ed₂-de₃-da-ni\n(B14.8) a₂ me₃ me nam-lugal si-si-a-da\n(B14.9) ensi₂ lu₂ e₂ du₃-a-ke₄\n(B14.10) gu₃-de₂-a ensi₂\n(B14.11) lagaš{ki}-ke₄\n(B14.12) saĝ im-mi-ib₂-rig₇-ge",
+     "orig_lines": [
+      "1125",
+      "1126",
+      "1127",
+      "1128",
+      "1129",
+      "1130",
+      "1131",
+      "1132",
+      "1133",
+      "1134",
+      "1135",
+      "1136",
+      "1137",
+      "1138",
+      "1139",
+      "1140",
+      "1141",
+      "1142"
+     ],
+     "en": "Gudea, the ruler in charge of building the house, the ruler of Lagaš, presented it with the chariot \"It makes the mountains bow down\", which carries awesome radiance and on which great fearsomeness rides and with its donkey stallion, Ud-gu-dugduga, to serve before it; with the seven-headed mace, the fierce battle weapon, the weapon unbearable both for the North and for the South, with a battle cudgel, with the mitum mace, with the lion-headed weapon made from nir stone, which never turns back before the highlands, with dagger blades, with nine standards, with the \"strength of heroism\", with his bow which twangs like a meš forest, with his angry arrows which whizz like lightning flashes in battle, and with his quiver, which is like a lion, a piriĝ lion, or a fierce snake sticking out its tongue -- strengths of battle imbued with the power of kingship."
+    },
+    {
+     "ref": "1143–1154",
+     "orig": "(B14.13) /urud\\ nagga lagab za-gin₃-na kug NE gug gi-rin me-luḫ-ḫa-da\n(B14.14) {urud}šen maḫ {urud}uri maḫ\n(B14.15) {urud}eš₂-da kug {urud}bur kug an-ne₂ tum₂\n(B14.16) X IM X ḪU GA-ke₄\n(B14.17) banšur kug an-na il₂-la-da\n(B14.18) ki sa₂-[dug₄-ga] bi₂-[gub]\n(B14.19) {d}nin-/ĝir₂\\-[su]-ke₄ iri-ni\n(B14.20) lagaš{ki}-e /u₂{?} X\\ ki dug₃ ba-šum₂\n(B14.21) e₂ ki-nu₂-a ki ni₂ te e₂-a-ba\n(B14.22) nu₂ mu-ni-gub\n(B14.23) kur-kur-re mušen-gin₇ sila-ba dumu {d}en-lil₂-la₂-da\n(B14.24) ni₂ mu-da-ab-ten-ten",
+     "orig_lines": [
+      "1143",
+      "1144",
+      "1145",
+      "1146",
+      "1147",
+      "1148",
+      "1149",
+      "1150",
+      "1151",
+      "1152",
+      "1153",
+      "1154"
+     ],
+     "en": "Along with copper, tin, slabs of lapis lazuli, refined silver and pure Meluḫa cornelian, he set up (?) huge copper cauldrons, huge …… of copper, shining copper goblets and shining copper jars worthy of An, for laying (?) a holy table in the open air …… at the place of regular offerings (?). Ninĝirsu gave his city, Lagaš ……. He set up his bed within the bedchamber, the house's resting place; and everyone (?) rested like birds in the streets with the son of Enlil."
+    },
+    {
+     "ref": "1155–1181",
+     "orig": "(B14.25) id₂-de₃ a zal-le si-a-da\n(B14.26) ambar-ra ḪI.SUḪURku₆ suḫurku₆ ĝal₂-la-da\n(B15.1) enkud ku₃-ĝal₂-bi zag-ba gub-ba-da\n(B15.2) a gal-gal-e še si-si-a-<da>\n(B15.3) guru₇-du₆ guru₇-maš ki lagaš{ki}-ke₄\n(B15.4) gu₂ gur-gur-ra-da\n(B15.5) tur₃ du₃-a-da a-maš du₃-a-da\n(B15.6) u₈ zid-da sila₄ /du₃-du₃\\-a-da\n(B15.7) udu-nitaḫ₂ u₈ zid-bi šu ba-ba-ra-da\n(B15.8) ab₂ zid-da amar gub-gub-ba-da\n(B15.9) šag₄-ba {gud}ninda₂ gu₃ nun-bi di-da\n(B15.10) gud-e šudul₂-la si sa₂-a-da\n(B15.11) engar gud-ra-bi zag-ba gub-ba-da\n(B15.12) anše niĝ₂-tug₂-bi il₂-a-da\n(B15.13) a₂-dab₅ še si-bi eĝer-bi us₂-sa-/da\\\n(B15.14) dur₉-e {urud}ḫa-X maḫ la₂-a-da\n(B15.15) e₂-kin₂-kin₂ maḫ il₂-la-da\n(B15.16) ĜA₂ DA ĜA₂ GADA+KID₂.DU₈ e₂ geme₂ tur {d}/nin-ĝir₂-su\\-[ka]-/ke₄\\\n(B15.17) [...] /A\\-gin₇ [...] a-a-da\n(B15.18) [...] /GI\\ EN ĝar-e si /sa₂\\-a-da\n(B15.19) kisal e₂(sourše: SA)-ninnu-/ke₄\\ ḫul₂-la si-a-da\n(B15.20) si-im-da a₂-la₂ balaĝ nam-nar šu du₇-a\n(B15.21) balaĝ ki aĝ₂-ni ušumgal kalam-ma\n(B15.22) saĝ-ba ĝen-na-da\n(B15.23) ensi₂ e₂-ninnu mu-du₃-a\n(B16.1) gu₃-de₂-a en {d}nin-ĝir₂-su-ra\n(B16.2) mu-na-da-ku₄-ku₄ (sourše uses REŠ 144 ḫere; everywḫere else it uses REŠ 56)",
+     "orig_lines": [
+      "1155",
+      "1156",
+      "1157",
+      "1158",
+      "1159",
+      "1160",
+      "1161",
+      "1162",
+      "1163",
+      "1164",
+      "1165",
+      "1166",
+      "1167",
+      "1168",
+      "1169",
+      "1170",
+      "1171",
+      "1172",
+      "1173",
+      "1174",
+      "1175",
+      "1176",
+      "1177",
+      "1178",
+      "1179",
+      "1180",
+      "1181"
+     ],
+     "en": "With his duties, namely to fill the channels with flowing water; to make the marshes full with carp and perch (?) and to have the inspector of fisheries and the inspector of dykes stand at their posts; to fill the great waters with boats carrying grain; to see that tons, heaps and tons -- the yield of the land of Lagaš -- will be piled up; to see that cattle-pens and sheepfolds will be erected; to see that lambs abound around healthy ewes; to have the rams let loose on the healthy ewes; to see that numerous calves stand beside healthy cows; to see that breed bulls bellow loudly among them; to have the oxen properly yoked and to have the farmers and ox drivers stand beside them; to have donkeys carry packsaddles and to have their drivers, who feed them, follow behind them; to see that large copper …… will be strapped onto jackasses; to see that the principal mill will produce (?); to …… the house of Ninĝirsu's young slave women; to set …… right; to see that the courtyard of the E-ninnu will be filled with joy; to see that the ala drums and balaĝ drum will sound in perfect concert with the sim drums, and to see that his beloved drum Ušumgal-kalama will walk in front of the procession, the ruler who had built the E-ninnu, Gudea, himself entered before Lord Ninĝirsu."
+    },
+    {
+     "ref": "1182–1202",
+     "orig": "(B16.3) /e₂\\-e me gal-la /saĝ\\ mi-ni-ib₂-il₂\n(B16.4) ni₂ me-lem₄-ma šu mi-ni-ib₂-du₇\n(B16.5) ma₂-gur₈-gin₇ sumur₃{?} im-[X]\n(B16.6) dim₂-sa-bi im-ak\n(B16.7) lugal-bi barag ĝir₂-nun-na-ka\n(B16.8) ur-saĝ {d}nin-ĝir₂-su ud-de₃-eš₂ im-e₃\n(B16.9) {ĝiš}PU₂ niĝ₂ il₂-la du₂-ru-na-bi\n(B16.10) an sig₇-ga su₂-lim il₂-la-am₃\n(B16.11) šu-nir-bi saĝ-šu₄-ga-bi\n(B16.12) {d}nin-ĝir₂-su <su> zig₃ mu-guru₃-am₃\n(B16.13) kuš la₂ igi-bi-še₃ si sa₂-a-bi\n(B16.14) muš-gu₃ sig₇-ga a tu₁₇-a-am₃\n(B16.15) {ĝiš}gigir za-gin₃ ul il₂-a-na\n(B16.16) lugal-bi ur-saĝ {d}nin-ĝir₂-su /{d}\\utu-am₃ mu-gub\n(B16.17) gu-za gu₂-en-na gub-ba-bi\n(B16.18) e₂ kug an-na ul-la du₂-ru-na-am₃\n(B16.19) nu₂-bi ki-nu₂-a gub-ba-bi\n(B16.20) šilamₓ(TUR₃) ki-nu₂-ba dub₃ ĝar-ra-am₃\n(B17.1) bar kug u₂ za-gin₃ ba-ra-ga-ba\n(B17.2) ama {d}ba-u₂ en {d}nin-ĝir₂-su-da\n(B17.3) ki-nu₂ mu-da-ab-dug₃-ge",
+     "orig_lines": [
+      "1182",
+      "1183",
+      "1184",
+      "1185",
+      "1186",
+      "1187",
+      "1188",
+      "1189",
+      "1190",
+      "1191",
+      "1192",
+      "1193",
+      "1194",
+      "1195",
+      "1196",
+      "1197",
+      "1198",
+      "1199",
+      "1200",
+      "1201",
+      "1202"
+     ],
+     "en": "The temple towered upwards in full grandeur, unparallelled in fearsomeness and radiance. Like a boat it …… and ……. Its owner, the warrior Ninĝirsu, came out as the daylight on the dais of Ĝir-nun. Its …… resting on supports was like the blue sky in all its splendour. Its standards and their caps (?) were Ninĝirsu himself emanating fearsomeness; their leather straps stretched out in front of them were green snake-eater birds bathing. Its owner, the warrior Ninĝirsu, stood like Utu in his most fascinating blue chariot. Its throne, standing in the guena hall, was An's holy seat which is sat upon joyfully. Its bed, standing in the bedroom, was a young cow kneeling down in its sleeping place. On its holy quilt (?), strewn with fresh herbs, Mother Bau was resting comfortably with Lord Ninĝirsu."
+    },
+    {
+     "ref": "1203–1210",
+     "orig": "(B17.4) zabar gal-gal-e teš₂ mu-gu₇-e\n(B17.5) e₂ zid-da /zag\\-da /zabar\\ kug-ge ne-/saĝ\\\n(B17.6) mi-ni-ib₂-šeĝ₆-šeĝ₆\n(B17.7) bur kug unu₆ gal-la šu₄-ga-bi\n(B17.8) buniĝ(SUG) maḫ ban₃-da a nu-silig₅-ge-dam\n(B17.9) eš₂-da-bi da-ba gub-ba-bi\n(B17.10) {id₂}idigna {id₂}buranuna{ki}-bi-da\n(B17.11) ḫe₂-ĝal₂ tum₂-tum₂-am₃",
+     "orig_lines": [
+      "1203",
+      "1204",
+      "1205",
+      "1206",
+      "1207",
+      "1208",
+      "1209",
+      "1210"
+     ],
+     "en": "Large bronze plates (?) offered all sorts of food (?). In the good house …… were cooked in shining bronze vessels (?). Its pure bowls standing in the great dining hall were troughs in various sizes that never lack water, and the goblets beside them were the Tigris and Euphrates continually carrying abundance."
+    },
+    {
+     "ref": "1211–1223",
+     "orig": "(B17.12) niĝ₂-du₇ iri-na-ke₄ pa bi₂-e₃\n(B17.13) gu₃-de₂-a e₂-ninnu mu-du₃\n(B17.14) me-bi šu bi₂-du₇\n(B17.15) e₂-i₃-gara₂-ba i₃ gara₂ i₃-kur₉\n(B17.16) e₂ kug AN.KA-ba ninda mu-ni-ĝar-ĝar\n(B17.17) ur₅ mu-du₈ šu-šu mu-luḫ(sourše: ĜAR)\n(B17.18) ud lugal-ni e₂-a kur₉-ra\n(B17.19) ud 7(IMIN)-ne-eš₂\n(B17.20) geme₂ nin-a-ni mu-da-sa₂-am₃\n(B17.21) arad₂-de₃ lugal-e zag mu-da-gub-am₃\n(B18.1) iri-na u₂-si₁₉-ni zag-bi-a mu-da-a-nu₂-am₃\n(B18.2) eme niĝ₂-ḫul-da inim ba-da-kur₂\n(B18.3) niĝ₂-erim₂ e₂-ba im-ma-an-/gi₄\\",
+     "orig_lines": [
+      "1211",
+      "1212",
+      "1213",
+      "1214",
+      "1215",
+      "1216",
+      "1217",
+      "1218",
+      "1219",
+      "1220",
+      "1221",
+      "1222",
+      "1223"
+     ],
+     "en": "He had everything function as it should in his city. Gudea had built the E-ninnu, made its powers perfect. He brought butter and cream into its dairy and provided its …… with bread (?). He had debts remitted and made all hands clear. When his master entered the house, for seven days the slave woman was allowed to became equal to her mistress and the slave was allowed to walk side by side with his master. But the ritually unclean ones could sleep only at the border of his city. He silenced the evil-speaking tongue and locked up evil."
+    },
+    {
+     "ref": "1224–1231",
+     "orig": "(B18.4) niĝ₂-/gen₆\\-[na] {d}[nanše] {d}/nin\\-[ĝir₂-su]-/ka\\-[še₃]\n(B18.5) en₃ [im]-/ma\\-[ši-tar ]\n(B18.6) nu-/siki\\ [lu₂ niĝ₂-tuku] nu-/mu\\-[na-ĝar]\n(B18.7) nu-/mu\\-[su] lu₂ [a₂-tuku] nu-na-[ĝar]\n(B18.8) e₂ /ibila\\ nu-[tuku]\n(B18.9) dumu-/munus\\-[bi i₃-bi]-lu-[ba mi-ni-kur₉]\n(B18.10) ud niĝ₂-si-[sa₂] mu-na-/ta-e₃\\\n(B18.11) niĝ₂-erim₂ i₃-{d}utu gu₂-bi ĝiri₃ bi₂-us₂",
+     "orig_lines": [
+      "1224",
+      "1225",
+      "1226",
+      "1227",
+      "1228",
+      "1229",
+      "1230",
+      "1231"
+     ],
+     "en": "He paid attention to the justice of Nanše and Ninĝirsu. He provided protection for the orphan against the rich, and provided protection for the widow against the powerful. He had the daughter become the heir in the families without a son. A day of justice dawned for him. He set his foot on the neck of evil ones and malcontents."
+    },
+    {
+     "ref": "1232–1247",
+     "orig": "(B18.12) iri-e {d}utu-gin₇\n(B18.13) ki-ša-ra im-ma-ta-a-e₃\n(B18.14) saĝ-ĝa₂-ni-a gur im-mi-dar\n(B18.15) igi an kug-ga-ke₄\n(B18.16) ne-te-ni bi₂-zu\n(B18.17) gud-gin₇ saĝ il₂-la mu-ku₄-ku₄\n(B18.18) eš₃ e₂-ninnu-a\n(B18.19) gud du₇ maš₂ du₇-e ĝiš bi₂-tag\n(B18.20) bur an-na mu-gub\n(B18.21) ten mu-ni-de₂-de₂\n(B18.22) ušumgal kalam-ma ti-gi₄-a mu-gub\n(B19.1) a₂-la₂ ud-dam šeg₁₂ mu-na-ab-gi₄\n(B19.2) ensi₂ zag-e₃-a\n(B19.3) nam-mi-gub\n(B19.4) iri-ni u₆ mu-e\n(B19.5) gu₃-de₂-a [...]",
+     "orig_lines": [
+      "1232",
+      "1233",
+      "1234",
+      "1235",
+      "1236",
+      "1237",
+      "1238",
+      "1239",
+      "1240",
+      "1241",
+      "1242",
+      "1243",
+      "1244",
+      "1245",
+      "1246",
+      "1247"
+     ],
+     "en": "Like Utu, he rose on the horizon for the city. He wound (?) a turban (?) on his head. He made himself known by the eyes of holy An. He entered the shrine of E-ninnu with raised head like a bull and sacrificed there faultless oxen and kids. He set bowls in the open air and filled them full with wine. Ušumgal-kalama was accompanied by tigi drums, and ala drums roared for him like a storm. The ruler stepped onto the outer wall (?) and his city looked up to him in admiration. Gudea ……. 6 lines missing"
+    },
+    {
+     "ref": "1254–1257",
+     "orig": "(B19.12) [... ḫe₂]-ĝal₂ [mu-na]-/ta\\-[e₃]\n(B19.13) ki še gu-[nu] mu-na-mu₂-mu₂\n(B19.14) ensi₂-da lagaš{ki}-e ḫe₂-ĝal₂-la\n(B19.15) šu mu-da-peš-e",
+     "orig_lines": [
+      "1254",
+      "1255",
+      "1256",
+      "1257"
+     ],
+     "en": "…… made abundance come forth for him. The earth produced mottled barley for him. Lagaš thrived in abundance with the ruler."
+    },
+    {
+     "ref": "1258–1276",
+     "orig": "(B19.16) ur-saĝ e₂ gibil-na kur₉-ra-am₃\n(B19.17) en {d}nin-ĝir₂-su-ra ĝišbun dug₃ mu-na-ni-ib₂-ĝal₂\n(B19.18) an zag gal-la mu-na-tuš\n(B19.19) an-ra {d}en-lil₂ im-ma-ni-us₂\n(B19.20) {d}en-lil₂-ra\n(B19.21) {d}nin-maḫ mu-ni-us₂\n(B20.13) [...] /SUD\\ [...]",
+     "orig_lines": [
+      "1258",
+      "1259",
+      "1260",
+      "1261",
+      "1262",
+      "1263",
+      "1276"
+     ],
+     "en": "For the warrior who entered his new house, for Lord Ninĝirsu, he arranged a rich banquet. He seated An at the place of honour for him, he seated Enlil next to An and Ninmaḫ next to Enlil. 12 lines missing1 line fragmentary"
+    },
+    {
+     "ref": "1277–1284",
+     "orig": "(B20.14) e₂-/da\\ lugal /im\\-da-/ḫul₂\\\n(B20.15) šeg₁₂ ninnu-ka /nam\\ im-[mi-ib₂]-tar-re\n(B20.16) /šeg₁₂\\ [e₂-ninnu]\n(B20.17) nam dug₃ ḫe₂-tar\n(B20.18) šeg₁₂ e₂-ninnu nam ḫe₂-tar\n(B20.19) nam dug₃ ḫe₂-tar\n(B20.20) e₂ kur an-ne₂ ki ĝar-ra\n(B20.21) me gal-la du₃-a",
+     "orig_lines": [
+      "1277",
+      "1278",
+      "1279",
+      "1280",
+      "1281",
+      "1282",
+      "1283",
+      "1284"
+     ],
+     "en": "Rejoicing over the house, the owner determined a fate for the brickwork of E-ninnu: \"O brickwork of E-ninnu, let there be a good fate determined, brickwork of E-ninnu, let there be a fate determined, let there be a good fate determined! House! Mountain founded by An, built in grandeur!\" 16 lines missing"
+    },
+    {
+     "ref": "1301–1320",
+     "orig": "(B21.17) /šeg₁₂ e₂\\-[ninnu]-ka nam i₃-mi-ib₂-tar-re\n(B21.18) šeg₁₂ nam ḫe₂-tar\n(B21.19) šeg₁₂ e₂-ninnu nam dug₃ ḫe₂-tar\n(B21.20) e₂ IM ne-mur šub ki{!} us₂-[sa] an gu₂ la₂-a\n(B22.1) [...] kug [...] E [...]\n(B22.16) [...]-/a{?}\\",
+     "orig_lines": [
+      "1301",
+      "1302",
+      "1303",
+      "1304",
+      "1305",
+      "1320"
+     ],
+     "en": "…… determined a fate for the brickwork of E-ninnu: \"O brickwork, let there be a fate determined, brickwork of E-ninnu, let there be a good fate determined! House …… embers (?) …… embracing heaven. …… holy …….\" 14 lines missing1 line fragmentary"
+    },
+    {
+     "ref": "1321–1325",
+     "orig": "(B22.17) [...] mu-zu-še₃ tur₃ ḫe₂-em-ši-du₃-du₃\n(B22.18) a-maš ḫe₂-em-ši-gibil₄-gibil₄\n(B22.19) uĝ₃ u₂-sal-la ḫe₂-ĝal₂-<la ḫa-mu-da>-nu₂\n(B22.20) ki-en-gi-re₆ kur-kur-<re> igi-bi ḫa-mu-ši-ĝal₂\n(B23.1) e₂ anzud₂{mušen}-zu an-ne₂ ḫa-ra-[ab]-/il₂\\",
+     "orig_lines": [
+      "1321",
+      "1322",
+      "1323",
+      "1324",
+      "1325"
+     ],
+     "en": "\"On your behalf, numerous cow-pens will be erected and many sheepfolds renewed! The people will lie down in safe pastures, enjoying abundance under you. The eyes of Sumer and all the countries will be directed toward you. An will elevate your house of Anzud for you.\" 11 lines missing"
+    },
+    {
+     "ref": "1337–1354",
+     "orig": "(B23.13) [...] X [...] /GA\\ [...] me\n(B23.14) [...] /NINA\\ [X] du₃-a\n(B23.15) [...] du₃ [...] /PA{?}\\\n(B23.16) [{d}]/gilgameš₂\\-da mu₂-a\n(B23.17) {ĝiš}gu-za gub-ba-bi lu₂ nu-kur₂-e\n(B23.18) diĝir-zu en {d}nin-ĝiš-zid-da dumu-KA an-na-kam\n(B23.19) diĝir-ama-zu {d}nin-sumun₂-na ama gan numun zid-da\n(B23.20) numun-e ki aĝ₂-ĝa₂-am₃\n(B23.21) ab₂ zid-de₃ dumu(sourše: MUNUS) ba-tud-da-me\n(B23.22) meš₃ zid ki lagaš{ki}-[a] e₃-a\n(B24.1) {d}nin-ĝir₂-su-ka-me\n(B24.2) sig-ta nim-še₃ /mu\\-zu ḫe₂-ĝal₂\n(B24.3) gu₃-de₂-a [dug₄]-ga-za\n(B24.4) [X] BI TUG₂ /lu₂\\ na-DU\n(B24.5) [...] X KA ĝuruš [X] an-ne₂ zu-me\n(B24.6) /ensi₂ zid\\ e₂-e nam [dug₃] tar-ra-me\n(B24.7) /gu₃\\-de₂-a /dumu\\ {d}nin-ĝiš-zid-da-ka\n(B24.8) /nam\\-til₃ /ḫa\\-mu-ra-sud",
+     "orig_lines": [
+      "1337",
+      "1338",
+      "1339",
+      "1340",
+      "1341",
+      "1342",
+      "1343",
+      "1344",
+      "1345",
+      "1346",
+      "1347",
+      "1348",
+      "1349",
+      "1350",
+      "1351",
+      "1352",
+      "1353",
+      "1354"
+     ],
+     "en": "3 lines fragmentary \"…… grown as tall as Gilgameš. No one shall remove its throne set up there. Your god, Lord Ninĝišzida, is the grandson of An; your divine mother is Ninsumun, the bearing mother of good offspring, who loves her offspring; you are a child born by the true cow. You are a true youth made to rise over the land of Lagaš by Ninĝirsu; your name is established from below to above. Gudea, nobody …… what you say. You are …… a man known to An. You are a true ruler, for whom the house has determined a good fate. Gudea, son of Ninĝišzida, you will enjoy a long life!\""
+    },
+    {
+     "ref": "1355–1361",
+     "orig": "(B24.9) /e₂\\ kur gal-gin₇ an-ne₂ us₂-sa\n(B24.10) ni₂ me-lem₄-bi kalam-ma ru-a\n(B24.11) an-ne₂ {d}en-lil₂-e nam lagaš{ki} tar-ra\n(B24.12) {d}nin-ĝir₂-su-ka nam-nir-ĝal₂-ni\n(B24.13) kur-kur-re zu-a\n(B24.14) e₂-ninnu an ki-da mu₂-a\n(B24.15) {d}nin-ĝir₂-su za₃-mi₂",
+     "orig_lines": [
+      "1355",
+      "1356",
+      "1357",
+      "1358",
+      "1359",
+      "1360",
+      "1361"
+     ],
+     "en": "The house reaches up to heaven like a huge mountain and its fearsomeness and radiance have settled upon the Land. An and Enlil have determined the fate of Lagaš; Ninĝirsu's authority has become known to all the countries; E-ninnu has grown so high as to fill the space between heaven and earth. Ninĝirsu be praised!"
+    },
+    {
+     "ref": "1362–1363",
+     "orig": "(B24.16) /e₂\\ {d}nin-ĝir₂-su-/ka\\ du₃-a\n(B24.17) za₃-mi₂ eĝer-bi",
+     "orig_lines": [
+      "1362",
+      "1363"
+     ],
+     "en": "This is the end of the hymn \"The building of Ninĝirsu's house\"."
+    }
+   ]
+  }
+ ]
+}

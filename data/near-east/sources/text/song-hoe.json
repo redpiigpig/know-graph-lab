@@ -1,0 +1,230 @@
+{
+ "slug": "song-hoe",
+ "source": "ETCSL",
+ "siglum": "ETCSL 5.5.4",
+ "source_url": "https://etcsl.orinst.ox.ac.uk/cgi-bin/etcsl.cgi?text=t.5.5.4",
+ "license": "ETCSL（Oxford）轉寫與英譯，非商業學術使用",
+ "compositions": [
+  {
+   "num": "5.5.4",
+   "title_en": "The song of the hoe",
+   "segments": [
+    {
+     "ref": "1–7",
+     "orig": "en-e niĝ₂-du₇-e pa na-an-ga-mi-in-e₃ (Šited in OB šatalogue from Nibru, at Pḫiladelpḫia, 0.2.01, line 3; OB šatalogue at Andrews University, 0.2.11, line 9; OB šatalogue at Yale, 0.2.12, Seg. A, line 3)\nen nam tar-ra-na šu nu-bal-e-de₃\n{d}en-lil₂ numun kalam-ma {ki-ta} {(2 mss. ḫave instead:) eš₃-ta} {ed₂-de₃} {(3 otḫer mss. ḫave instead:) ed₃-de₃}\nan ki-ta ba₉-re₆-de₃ saĝ na-an-ga-ma-an-šum₂\nki an-ta ba₉-re₆-de₃ saĝ na-an-ga-ma-an-šum₂\n{uzu-e₃-a} {(2 mss. ḫave instead:) uzu-mu₂-a} saĝ mu₂-mu₂-de₃\ndur-an-ki-ka bulug {nam-mi-in-la₂} {(1 ms. ḫas instead:) nam-il₂-e} {(1 ms. ḫas instead:) nam-il₂-la}",
+     "orig_lines": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7"
+     ],
+     "en": "Not only did the lord make the world appear in its correct form -- the lord who never changes the destinies which he determines: Enlil, who will make the human seed of the Land come {forth} {(3 mss. have instead:) up} from the {earth} {(2 other mss. have instead:) chamber} -- and not only did he hasten to separate heaven from earth, and hasten to separate earth from heaven, but, in order to make it possible for humans to grow in {'Where Flesh Came Forth'} {(2 mss. have instead:) 'Where Flesh Grew'} (the name of a cosmic location) , he first {suspended} {(2 mss. have instead:) raised} the axis of the world at Dur-an-ki."
+    },
+    {
+     "ref": "8–17",
+     "orig": "{ĝiš}al-e mu-un-ĝar ud al-e₃\neš₂-gar₃ mu-un-du₃ nam al-tar-re\n{ĝiš}al-e {ĝiš}dusu-e a₂ si ba-ab-sa₂-e\n{d}en-lil₂-le {ĝiš}al-a-ni za₃-mi₂ ba-an-dug₄\n{ĝiš}al-a-ni kug-sig₁₇-ga saĝ-bi {na₄}za-gin₃-na\n{ĝiš}al sa la₂-a-ni kug-me kug-sig₁₇-ga\n{ĝiš}al-a-ni a₂ bulug-ba apin {na₄}za-gin₃-na-kam\nzu₂-bi gud-si-AŠ {bad₃ gal ed₂-de₃-dam} {(1 ms. ḫas instead:) saĝ gal u₃-tud-da}\nen-e {ĝiš}al mu-un-šid nam mi-ni-ib-tar-re\nki-in-du men kug saĝ-ĝa₂ mu-ni-in-ĝal₂",
+     "orig_lines": [
+      "8",
+      "9",
+      "10",
+      "11",
+      "12",
+      "13",
+      "14",
+      "15",
+      "16",
+      "17"
+     ],
+     "en": "He did this with the help of the hoe (al) -- and so daylight broke forth (aled). By distributing (altare) the shares of duty he established daily tasks, and for the hoe (al) and the carrying-basket wages were even established. Then Enlil praised his hoe (al), his hoe (al) wrought in gold, its top inlaid with lapis lazuli, his hoe (al) whose blade was tied on with a cord, which was adorned with silver and gold, his hoe (al), the edge of whose point (?) was a plough of lapis lazuli, whose blade was like a battering ram {standing up to a great (gal) wall} {(1 ms. has instead:) born for a great (gal) person (?)}. The lord evaluated the hoe (al), determined its future destiny and placed a holy crown on its head ……."
+    },
+    {
+     "ref": "18–27",
+     "orig": "{{uzu-e₃-a} {(1 ms. ḫas instead:) uzu-mu₂-a} {ĝiš}al am₃-mi-ni-in-du₃}\nuzu-mu₂-a saĝ nu-ĝa₂-ĝa₂-de₃\nsaĝ nam-lu₂-ulu₃ u₃-šub-ba mi-ni-in-ĝar\n{d}en-lil₂-še₃ kalam-ma-ni ki mu-un-ši-in-dar-re\nsaĝ gig₂-ga-ni-še₃ igi zid mu-ši-in-bar\n{d}a-nun-na mu-un-na-sug₂-sug₂-ge-eš\nšu-bi giri₁₇-ba mu-un-ne-ĝal₂\n{d}en-lil₂ a-ra-zu-a mu-ni-in-ḫuĝ-e-ne\nuĝ₃ saĝ gig₂-ga al mu-un-da-be₂-ne\nnin en u₃-tud-de₃ lugal u₃-tud-de₃\n{d}nin-men-na-ke₄ tud-tud al-ĝa₂-ĝa₂",
+     "orig_lines": [
+      "18",
+      "18A",
+      "19",
+      "20",
+      "21",
+      "22",
+      "23",
+      "24",
+      "25",
+      "26",
+      "27"
+     ],
+     "en": "Here, {in {'Where Flesh Came Forth'} {(1 ms. has instead:) 'Where Flesh Grew'} (the name of a cosmic location) , he set this very hoe (al) to work;} {(1 other ms. has instead:) in 'Where Flesh Grew' the unassailable (?),} he had it place the first model of mankind in the brick mould. His Land started to break through the soil towards Enlil. He looked with favour at his black-headed people. Now the Anuna gods stepped forward to him, and did (ĝal) obeisance to him. They calmed Enlil with a prayer, for they wanted to demand (al-dug) the black-headed people from him. Ninmena, the lady who had given birth to the ruler, who had given birth to the king, now set (alĝaĝa) human reproduction going."
+    },
+    {
+     "ref": "28–34",
+     "orig": "mas-su an ki-a en {d}nu-nam-nir-ra\nsaĝ zid saĝ kal-la mu-ni-ib-sa₄-sa₄\nsaĝ-bi gu dili-a {mu-un-ed₂-de₃-a} {(1 ms. ḫas instead:) mu-un-ne-ed₃-de₃-a} {(1 otḫer ms. ḫas instead:) mu-un-ni-ib-du₈}\ndiĝir-re-e-ne-ra šukur₂-še₃ mu-un-dab₅-be₂\n{d}en-ki-ke₄ {ĝiš}al-a-ni za₃-mi₂ ba-an-dug₄\nki-sikil {d}nisaba eš-bar-ra ba-an-gub\n{ĝiš}al mul {ĝiš}al kug-ba šu mu-un-ne-ĝal₂",
+     "orig_lines": [
+      "28",
+      "29",
+      "30",
+      "31",
+      "32",
+      "33",
+      "34"
+     ],
+     "en": "The leader of heaven and earth, Lord Nunamnir, named the important persons and valued (kal) persons. He formed those persons into a row and recruited them to provide for the gods. Now Enki praised Enlil's hoe (al), and the maiden Nisaba was made responsible for keeping records of the decisions. And so people took (ĝal) the shining hoes (al), the holy hoes (al), into their hands."
+    },
+    {
+     "ref": "35–42",
+     "orig": "e₂-kur e₂ {d}en-lil₂-la₂ {ĝiš}al-e ĝar-ra-am₃\nud-de₃ al-du₃-e ĝi₆ al-mu₂-mu₂\nnibru{ki} ki ĝar-ra ama₅ tum-ma-al{ki}-a\ntum-ma-al {{gi}pisaĝ ninda} {(1 ms. ḫas instead:) gašam in-du₃} ama {d}nin-lil₂-la₂-kam\ne₂-mi tum-ma-al{ki}-a niĝ₂ sa₂ dug₄-ga-ta\nur-saĝ {d}nin-urta {d}en-lil₂-ra mu-na-da-an-ku₄-ku₄\nmaš₂ gig₂ nesaĝ en-na-ta\nkug {d}nin-i₃-si-in-na {d}en-lil₂-ra mu-na-da-an-ku₄-ku₄",
+     "orig_lines": [
+      "35",
+      "36",
+      "37",
+      "38",
+      "39",
+      "40",
+      "41",
+      "42"
+     ],
+     "en": "The E-kur, the temple of Enlil, was founded by the hoe (al). By day it was building (aldue) it, by night it caused the temple to grow (almumu). In well-founded Nibru, the hero Ninurta entered into the presence of Enlil in the inner chamber of the Tummal -- the Tummal, the {bread basket (?)} {(1 ms. has instead:) …… masterpiece (?)} of Mother Ninlil -- the innermost chamber of the Tummal, with regular food deliveries. Holy Ninisina entered into the presence of Enlil with black kids and fruit offerings for the lord."
+    },
+    {
+     "ref": "43–45",
+     "orig": "abzu igi piriĝ₃-ĝa₂ me al nu-di-da\nal-tar lu₂ zid-de₃ en {d}nu-dim₂-mud-e\nabzu al-du₃-e eridug{ki} al-tar-ra",
+     "orig_lines": [
+      "43",
+      "44",
+      "45"
+     ],
+     "en": "Next comes the Abzu, with the lions before it, where the divine powers may not be requested (al-dug): the hoe wielder (?) (altar), the good man, Lord Nudimmud, was building (aldue) the Abzu, Eridug having been chosen as the construction site (altar)."
+    },
+    {
+     "ref": "46–48",
+     "orig": "ama diĝir-re-e-ne {d}nin-ḫur-saĝ-ĝa₂-ke₄\nud al-tar en-na keš₃{ki}-a mu-da-an-til₃\n{d}šul-pa-e₃-a na-nam {ĝiš}al-tar mu-da-an-gub",
+     "orig_lines": [
+      "46",
+      "47",
+      "48"
+     ],
+     "en": "The mother of the gods, Ninḫursaĝa, had the mighty (?) (altar) light of the lord live with her in Keš; she had Šul-pa-e, no less, help her with the construction work (altar)."
+    },
+    {
+     "ref": "49–51",
+     "orig": "eš₃ e₂-an-na {ĝiš}al-e kug-ga-am₃\nnin e₂-an-na { im-ma-al } {(2 mss. ḫave instead:) munus} zid-da\n{ĝiš}al du₆-du₆-dam {ĝiš}al {u₂}KI.KAL-dam",
+     "orig_lines": [
+      "49",
+      "50",
+      "51"
+     ],
+     "en": "The shrine E-ana was cleaned up by means of the hoe (al) for the lady of E-ana, the good {cow (immal)} {(2 mss. have instead:) woman}. The hoe (al) deals with ruin mounds, the hoe (al) deals with weeds."
+    },
+    {
+     "ref": "52–55",
+     "orig": "ki zabalam{ki}-a {ĝiš}al lu₂ {d}inana-kam\n{ĝiš}al nam mi-ni-ib-tar-re {sun₄} {(1 ms. ḫas instead:) zu₂} za-gin₃ ed₂-de₃\n{ĝiš}al-tar-ra-ni-a {d}utu mu-da-an-gub\n{ĝiš}al-tar ka tar-ra šul {d}utu-kam",
+     "orig_lines": [
+      "52",
+      "53",
+      "54",
+      "55"
+     ],
+     "en": "In the city of Zabalam, the hoe (al) is Inana's workman (?). She determined the destiny of the hoe (al), with its projecting lapis-lazuli {beard} {(1 ms. has instead:) tooth}. Utu was ready to help her with her building project (altar); it is the renowned (?) building project (altar) of youthful Utu."
+    },
+    {
+     "ref": "56–58",
+     "orig": "nin ĝeštug₂ daĝal-la {d}nisaba-ke₄\nšudum e₂-an-na-ka {ĝiš}al-tar ba-an-dug₄\ne₂-ḫa-mun na-nam {ĝiš}al-tar mu-da-an-gub",
+     "orig_lines": [
+      "56",
+      "57",
+      "58"
+     ],
+     "en": "The lady with broad (daĝal) intelligence, Nisaba, ordered the measuring of the E-ana for a construction project (altar), and then designed her own E-ḫamun for construction (altar)."
+    },
+    {
+     "ref": "59–70",
+     "orig": "lugal {ĝiš}al šid-da us₂-a ud zal-la\nur-saĝ {d}nin-urta ki-bal-a {ĝiš}al-tar ba-an-gub\niri en-še₃ nu-še-ga šu-še₃ al-ĝa₂-ĝa₂\nan-še₃ ud-dam šeg₁₁ al-gi₄-gi₄\nki-še₃ ušumgal-am₃ al-ĝa₂-ĝa₂\n{d}šara₂ {d}en-lil₂-la₂ dub₃-ba {nam-mi-in-tuš} {(1 ms. ḫas instead:) nam-mi-in-ĝar}\nniĝ₂ al-dug₄-ga-ni mu-na-da-ab-šum₂-mu\nšita₂ {ĝiš}tukul ti mar-uru₅ {{ĝiš}al} {(3 mss. ḫave instead:) al} am₃-ma-an-dug₄\n{d}dumu-zid al-lum-lum-ma igi-nim-ma-ka\n{d}gibil₆ {ĝiš}al-a-ni saĝ an-še₃ mi-ni-il₂\n{ĝiš}al-e kug-ga-am₃ izi nam-mi-in-la₂\n{d}a-nun-na al-ḫul₂-ḫul₂-le-de₃-eš",
+     "orig_lines": [
+      "59",
+      "60",
+      "61",
+      "62",
+      "63",
+      "64",
+      "65",
+      "66",
+      "67",
+      "68",
+      "69",
+      "70"
+     ],
+     "en": "The king who measured up the hoe (al) and who passes (zal) his time in its tracks, the hero Ninurta, has introduced working with the hoe (altar) into the rebel (bal) lands. He subdues (alĝaĝa) any city that does not obey its lord. Towards heaven he roars (algigi) like a storm, earthwards he strikes (alĝaĝa) like a dragon (ušumgal). Šara {sat down on} {(1 ms. has instead:) got onto} Enlil's knees, and Enlil gave him what he had desired (al-dug): {he had mentioned the mace, the club, arrows and quiver, and the hoe (al)} {(3 mss. have instead:) he desired (al-dug) the mace, the club, arrows and quiver}. Dumuzid is the one who makes the upper land fertile (allumlum). Gibil made his hoe (al) raise its head towards the heavens -- he caused the hoe (al), sacred indeed, to be refined with fire. The Anuna were rejoicing (alḫulḫuledeš)."
+    },
+    {
+     "ref": "71–82",
+     "orig": "e₂ {d}ĝeštin-an-na-ka {ĝiš}al-ĝar-surₓ(UZ₃xBALAĜ)-ra-am₃\nama {d}ĝeštin-an-na-ka {ĝiš}al-ĝar-surₓ(UZ₃xBALAĜ) gu₃ dug₃-ga-ka\nen-e {ĝiš}al-a-ni gud-gin₇ mur im-ša₄\nirigal-am₃ {ĝiš}al saĝ ki-a tum₂-ma\nadₓ(BAD.LU₂) {ĝiš}al-e ki-ta tum₂-ma-am₃\nšul idim an-na šeš-ban₃-da {d}nergal-ka-kam\nur-saĝ {d}gilgameš₂ {ĝiš}al-e sa-par₄-am₃\ndumu {d}nin-sumun₂-ka {(1 ms. adds:) gašam} {ĝiš}ĝisal-e dub-saĝ-ĝa₂\n{ĝiš}al-e id₂-da kindagal-am₃\n{dag} {(1 ms. ḫas instead:) ki} agrun-na-ka {ĝiš}al-e sukkal-am₃\nḫul-ĝal₂ ud nu₂-a dumu {ĝiš}al-me-eš\nu₄-sa₂ dug₄-ga-ta an-ta u₃-tud-de₃-eš",
+     "orig_lines": [
+      "71",
+      "72",
+      "73",
+      "74",
+      "75",
+      "76",
+      "77",
+      "78",
+      "79",
+      "80",
+      "81",
+      "82"
+     ],
+     "en": "The temple of Ĝeštin-ana resembled the drumsticks, the drumsticks of Mother Ĝeštin-ana that make a pleasant sound. The lord (Enlil) bellowed at his hoe (al) like a bull. As for the grave (irigal): the hoe (al) buries people, but dead people are also brought up from the ground by the hoe (al) (This may allude to Enkidu's ghost being put in contact with Gilgameš.) . With the hoe (al), the hero honoured by An, the younger brother of Nergal, the warrior Gilgameš is as powerful as a hunting net. The {(1 ms. adds:) sage} son of Ninsumun is pre-eminent with oars (ĝisal) (This may allude to Gilgameš rowing across the waters of death.) . With the hoe (al) he is the great barber (kindagal) of the watercourses. In the {chamber} {(1 ms. has instead:) place} of the shrine, with the hoe (al) he is the minister (sukkal). The wicked (ḫulĝal) …… are sons of the hoe (al); they are born in sleep from heaven."
+    },
+    {
+     "ref": "83–93",
+     "orig": "an-še₃ al-ti-ri₂-gu₇ mušen diĝir-ra-am₃\nki-še₃ {ĝiš}al-am₃ ĝiš-gi-a ur-ra tir-ra ušumgal-am₃\nki me₃-ka dur₁₀-al-lub-am₃\nki bad₃-ka {ĝiš}al-lu₅-ḫab₂-am₃\nki {ĝiš}banšur-ra {ĝiš}ma-al-tum-ma\nki {ĝiš}gigir-ka {ĝiš}ma-a-a-al-tum-ma\ne₂ anše-ka {ĝiš}ar-gibil₂-am₃\n{ĝiš}al-am₃ mu-bi dug₃-ga ḫur-saĝ-ĝa₂ mu-un-ĝal₂\nĝiš ḫur-saĝ-ĝa₂ {ĝiš}al-la-nu-um-ma\nšim ḫur-saĝ-ĝa₂ {ĝiš}ar-ga-nu-um-ma\nna₄ ḫur-saĝ-ĝa₂ {na₄}algameš-am₃",
+     "orig_lines": [
+      "83",
+      "84",
+      "85",
+      "86",
+      "87",
+      "88",
+      "89",
+      "90",
+      "91",
+      "92",
+      "93"
+     ],
+     "en": "In the sky there is the altirigu bird, the bird of the god. On the earth there is the hoe (al): a dog in the reedbeds, a dragon (ušumgal) in the forest. On the battlefield, there is the dur-allub battle-axe. By the city wall there is the battle-net (alluḫab). On the dining-table there is the bowl (maltum). In the waggon shed, there is the sledge (mayaltum). In the donkey stable there is the cupboard (argibil). The hoe (al)! -- the sound of the word is sweet: it also occurs (munĝal) on the hillsides: the tree of the hillsides is the allanum oak. The fragrance of the hillsides is the arganum balm. The precious stone of the hillsides is the algameš steatite."
+    },
+    {
+     "ref": "94–106",
+     "orig": "{ĝiš}al lum-lum-ma {ĝiš}al lam-lam-ma\n{ĝiš}al še dug₃-ga {ĝiš}al {sa-par₄-am₃} {(1 ms. ḫas instead:) /šabra\\-[...]}\n{ĝiš}al u₃-šub-ba {ĝiš}al saĝ ĝal₂-la-am₃\n{ĝiš}al-am₃ a₂ nam-ĝuruš-a-kam\n{ĝiš}al {ĝiš}dusu niĝ₂ iri du₃-du₃-dam\ne₂ zid al-du₃-e gana₂ zid al-ĝa₂-ĝa₂\ngan₂-ne₂ zid-de₃ šu daĝal-la-me-en\ngan₂-ne₂ lugal-bi-ir bal-e\ngan₂-ne₂ lugal-bi-ir gu₂ nu-ĝar-ra-e\n{ĝiš}al-e lugal-bi-ir gu₂ mu-na-ab-ĝa₂-ĝa₂\n{u₂}numun₂ ḫul {u₂}numun₂ ḫul-e saĝ dub₂-dub₂-be₂\nur₂-ba mu-un-bur₁₂-re pa-bi mu-un-ze₂-e\n{ĝiš}al-e {u₂}ḫirin{ḫu-ri₂-in} šu-še₃ al-ĝa₂-ĝa₂",
+     "orig_lines": [
+      "94",
+      "95",
+      "96",
+      "97",
+      "98",
+      "99",
+      "100",
+      "101",
+      "102",
+      "103",
+      "104",
+      "105",
+      "106"
+     ],
+     "en": "The hoe (al) makes everything prosper, the hoe makes everything flourish. The hoe (al) is good barley, the hoe (al) is {a hunting net} {(1 ms. has instead:) an overseer}. The hoe (al) is brick moulds, the hoe (al) has made people exist (ĝal). It is the hoe (al) that is the strength of young manhood. The hoe (al) and the basket are the tools for building cities. It builds (aldue) the right kind of house, it cultivates (alĝaĝa) the right kind of fields. It is you, hoe, that extend (daĝal) the good agricultural land! The hoe (al) subdues for its owner (lugal) any agricultural lands that have been recalcitrant (bal) against their owner (lugal), any agricultural lands that have not submitted to their owner (lugal). It chops the heads off the vile esparto grasses, yanks them out at their roots, and tears at their stalks. The hoe (al) also subdues (alĝaĝa) the ḫirin weeds."
+    },
+    {
+     "ref": "107–109",
+     "orig": "{ĝiš}al-e ĝiš nam tar-ra a-a {d}en-lil₂-la₂\n{ĝiš}al-e za₃-mi₂ dug₄-ga\n{d}nisaba za₃-mi₂",
+     "orig_lines": [
+      "107",
+      "108",
+      "109"
+     ],
+     "en": "The hoe (al), the implement whose destiny was fixed by Father Enlil -- the renowned hoe (al)! Nisaba be praised!"
+    }
+   ]
+  }
+ ]
+}

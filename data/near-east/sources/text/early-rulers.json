@@ -1,0 +1,45 @@
+{
+ "slug": "early-rulers",
+ "source": "ETCSL",
+ "siglum": "ETCSL 5.2.5",
+ "source_url": "https://etcsl.orinst.ox.ac.uk/cgi-bin/etcsl.cgi?text=t.5.2.5",
+ "license": "ETCSL（Oxford）轉寫與英譯，非商業學術使用",
+ "compositions": [
+  {
+   "num": "5.2.5",
+   "title_en": "The poem of early rulers",
+   "segments": [
+    {
+     "ref": "1–16",
+     "orig": "[...] X li-bi-in-du₃-a\n[...] X-am₃ lu₂-be₂-ne šu bal ak-a\n[...] /lugal\\-e mu 36000-am₃ in-ak\n[...] /lugal\\-e lu₂ an-še₃ bi₂-in-ed₂-de₃\n[...] /zi\\-ud-su₃-ra₂-gin₇ nam-til₃ i₃-kiĝ₂-kiĝ₂\n[...] ba-an-za-za dab₅{?}-ba{?}-ta\n[...] /kalam{?}\\-ma{?} nu{?}-dar-ra-ke₄\n[...] /lugal\\-e-ne dub-saĝ ud ul-le₂-a-ke₄-ne\n[...]-un-peš₄-peš₄-/a\\ nu-un-tu-ud-da\n[...]-/gin₇\\ šu-ĝu₁₀ sa₂ bi₂-in-dug₄-ga\n[...] na-me nu-mu-un-zu-a",
+     "orig_lines": [
+      "6",
+      "7",
+      "8",
+      "9",
+      "10",
+      "11",
+      "12",
+      "13",
+      "14",
+      "15",
+      "16"
+     ],
+     "en": "up to 5 lines missing …… is not made ……. …… those men were overthrown. …… the king? He reigned 36,000 years! …… the king, the one who ascended to heaven? …… he who, like Zi-ud-sura, tried to find life? …… he who was honoured and then seized? …… was not rivalled in the Land? …… the kings, the leaders of former days? ……, have they not been born? …… can my hand reach them? …… no one knows it."
+    },
+    {
+     "ref": "17–21",
+     "orig": "[...]-a-bi [...] X igi niĝin₂-na-kam\n[...] /nu\\-zalag-ga [...] ugu nam-uš₂-a-kam [a]-ba-am₃ {bi₂-in-dirig-ga} {(1 ms. ḫas instead:) [...] X ĜIŠ KA-am₃}\n[...] /il₂\\-la ud šag₄ ḫul₂-la X niĝ₂-me-ĝar mu 36000-am₃ in-ak\n[...] diĝir-re-e-ne bi₂-in-šum₂-ma-am₃ [...]-ra{?}-ra nam-til₃ i₃-kiĝ₂-kiĝ₂\n[...] ḫa-la lu₂-u₁₈-lu-kam [...] til₃-a e₂ ĝuruš-ke₄",
+     "orig_lines": [
+      "17",
+      "18",
+      "19",
+      "20",
+      "21"
+     ],
+     "en": "…… is like the twinkling of an eye. Who would consider …… without cheerfulness to be superior to death? 36,000 years of silence …… just one day of happiness. Having been given …… the gods, life was sought for ……. …… the share of mankind, …… live in the house of the young men."
+    }
+   ]
+  }
+ ]
+}

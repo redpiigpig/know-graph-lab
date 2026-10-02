@@ -1,0 +1,865 @@
+{
+ "slug": "enki-world-order",
+ "source": "ETCSL",
+ "siglum": "ETCSL 1.1.3",
+ "source_url": "https://etcsl.orinst.ox.ac.uk/cgi-bin/etcsl.cgi?text=t.1.1.3",
+ "license": "ETCSL（Oxford）轉寫與英譯，非商業學術使用",
+ "compositions": [
+  {
+   "num": "1.1.3",
+   "title_en": "Enki and the world order",
+   "segments": [
+    {
+     "ref": "1–16",
+     "orig": "en maḫ-di an ki nir-ĝal₂ ni₂-te-na (Šited in OB šatalogue from Nibru, at Pḫiladelpḫia, 0.2.01, line 42; OB šatalogue in tḫe Louvre, 0.2.02, line 32)\na-a {d}en-ki gud-dam a ri-a am gal-e tud-/da\\\nmi₂ dug₄-ga kur gal {d}en-lil₂-le ki aĝ₂ an kug-ga\nlugal {ĝiš}meš₃ abzu-a du₃-a kur-kur-ta il₂-la\nušumgal maḫ eridug{ki}-ga gub-ba\nĝissu-bi an ki-a dul-la\n[{ĝiš}]tir {ĝiš}ĝeštin-na kalam-ma la₂-a\n[{d}en]-ki en ḫe₂-ĝal₂-la {d}a-nun-na-ke₄-ne\n[{d}nu]-/dim₂\\-mud peš₁₀-ĝal₂ e₂-kur-ra gaba-ĝal₂ an ki-a\n[e₂]-/zu\\ maḫ abzu-ta sig₉-ga dim gal an ki-a\n[{d}en]-ki igi 1 il₂-la-ni kur-šag₄-ge di-di\n[alim] u₃-tud lu-lim u₃-tud-da\n[šeg₉] u₃-tud šeg₉-bar u₃-tud-da\n[X] šag₄-tum₂-ma si-dug₄-ga šag₄ ḫur-saĝ-ĝa₂-ka\n[(X)] X sig₇-ga-ba lu₂ nu-ku₄-ku₄-da\n[šag₄ kalam]-/ma\\ gi ḫal-ḫal-la-gin₇ igi-zu im-ši-ĝal₂",
+     "orig_lines": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10",
+      "11",
+      "12",
+      "13",
+      "14",
+      "15",
+      "16"
+     ],
+     "en": "Grandiloquent lord of heaven and earth, self-reliant, Father Enki, engendered by a bull, begotten by a wild bull, cherished by Enlil, the Great Mountain, beloved by holy An, king, meš tree planted in the Abzu, rising over all lands; great dragon who stands in Eridug, whose shadow covers heaven and earth, a grove of vines extending over the Land, Enki, lord of plenty of the Anuna gods, Nudimmud, mighty one of the E-kur, strong one of heaven and earth! Your great house is founded in the Abzu, the great mooring-post of heaven and earth. Enki, from whom a single glance is enough to unsettle the heart of the mountains; wherever bison are born, where stags are born, where ibex are born, where wild goats are born, in meadows ……, in hollows in the heart of the hills, in green …… unvisited by man, you have fixed your gaze on the heart of the Land as on split reeds."
+    },
+    {
+     "ref": "17–31",
+     "orig": "ud šid-e itid e₂-ba ku₄-ku₄ mu šu du₇-du₇-da\nmu šu du₇ unken-e eš-bar šum₂-mu-da\neš-bar kiĝ₂ ud-da si sa₂-sa₂-e-da\na-a {d}en-ki uĝ₃ saĝ si-a-ba lugal-bi za-e-me-en\nka ba-a-zu niĝ₂ im-lu-lu ḫe₂-ĝal₂ ki bi₂-ib-us₂\npa-zu gu gurun-ba sig₇-ga gada ḫa-ad-e du₇-a\nX diĝir-re-e-ne-ka me-te-aš im-mi-ib₂-ĝal₂\n[X] X ĝiš {ĝiš}tir-ba du₃-a {tug₂}zulumḫi-e na-nam\n[u₈] zid sila₄ zid na-su₈-e me-te-aš im-mi-ib₂-ĝal₂\n[X] X gana₂ zid-da X [...] um-mi-in-ra\n[...] guru₇-du₆ guru₇-maš-e gu₂ im-da-gur-re\n[X X] X i₃ na-nam ga na-nam tur₃ amaš-e nam-de₆\n[sipad]-de₃ i-lu-lam-ma-na dug₃-ge-eš im-mi-ib-be₂\n/unud(UNU₃)\\-de₃ dun₅-dun₅ {dug}šakir-ra-ka-na ud im-di-ni-ib-zal-e\n/kiĝ₂\\-sig unu₂ gal diĝir-re-e-ne-ka me-te-aš im-mi-ib-ĝal₂",
+     "orig_lines": [
+      "17",
+      "18",
+      "19",
+      "20",
+      "21",
+      "22",
+      "23",
+      "24",
+      "25",
+      "26",
+      "27",
+      "28",
+      "29",
+      "30",
+      "31"
+     ],
+     "en": "Counting the days and putting the months in their houses, so as to complete the years and to submit the completed years to the assembly for a decision, taking decisions to regularise the days: Father Enki, you are the king of the assembled people. You have only to open your mouth for everything to multiply and for plenty to be established. Your branches …… green with their fruit ……, …… do honour to the gods. …… in its forests is like a fleecy garment. Good sheep and good lambs do honour to ……. When …… the prepared fields, …… will accumulate stockpiles and stacks. …… there is oil, there is milk, produced by the sheepfold and cow-pen. The shepherd sweetly sings his rustic song, the cowherd spends the day rocking his churns. Their products would do honour to the late lunches in the gods' great dining hall."
+    },
+    {
+     "ref": "32–37",
+     "orig": "/inim\\-zu ĝuruš-e usu-ni-gin₇ šag₄-ga mu-ni-ĝal₂\ngud a₂ gur-ra-gin₇ kisal-a mu-un-du₇-du₇\n/inim\\-zu ki-sikil-e ḫi-li-a-ni-gin₇ saĝ-ĝa₂ mu-ni-in-ĝal₂\n[iri{ki}] ĝar-ĝar-ra-bi uĝ₃-e u₆ mu-e\n[X X] X sig₁₀-ga-am₃ kaskal-e am₃-ra\n[X X] X DAG.KISIM₅xAB₂ du₃-a a₂-bi na-sud-e",
+     "orig_lines": [
+      "32",
+      "33",
+      "34",
+      "35",
+      "36",
+      "37"
+     ],
+     "en": "Your word fills the young man's heart with vigour, so that like a thick-horned bull he butts about in the courtyard. Your word bestows loveliness on the young woman's head, so that the people in their settled cities gaze at her in wonder. 2 lines unclear"
+    },
+    {
+     "ref": "38–47",
+     "orig": "[en-en]-e-ne barag-barag-ge₂-/e\\-ne\n[šag₄-bi] /ḫul₂\\-ḫul₂-la-da silim di-e-de₃\n[za-a]-da kur gal {d}en-lil₂-le a₂ mu-un-da-an-aĝ₂\n[{d}en-ki] en ḫe₂-ĝal₂-la en ĝeštug₂-ga\n[en] an-ne₂ ki aĝ₂ ḫe₂-du₇ eridug{ki}-ga\n[dug₄]-/ga\\ eš-bar ki-bi-še₃ ĝar nam tar-re gal-zu\n[X X] ud-de₃ saĝ ba-ab-gi₄ itid e₂-ba ba-an-kur₉\n[... ba]-e-a-ed₃-de₃ šid-bi sa₂ ba-ab-dug₄\n[...] uĝ₃ ki-tuš-ba bi₂-in-tuš\n[...] /KA{?}\\ TAR na-gada-bi bi₂-in-us₂\n[...] X šu du₇-a\n[...] /su\\ NA ba-an-gi₄",
+     "orig_lines": [
+      "38",
+      "39",
+      "40",
+      "41",
+      "42",
+      "43",
+      "44",
+      "45",
+      "46",
+      "47",
+      "48",
+      "49"
+     ],
+     "en": "Enlil, the Great Mountain, has commissioned you to gladden the hearts of lords and rulers and wish them well. Enki, lord of prosperity, lord of wisdom, lord, the beloved of An, the ornament of Eridug, who establish commands and decisions, who well understands the decreeing of fates: you close up the days ……, and make the months enter their houses. You bring down ……, you have reached their number. You make the people dwell in their dwelling places ……, you make them follow their herdsman ……. 2 lines unclear"
+    },
+    {
+     "ref": "50–51",
+     "orig": "[...] /E\\ TAR {ĝiš}tukul e₂-ba bi₂-in-gi₄\n[...] X X /en\\ uĝ₃ ki-tuš-ba bi₂-in-ge-en",
+     "orig_lines": [
+      "50",
+      "51"
+     ],
+     "en": "You turn weapons away from their houses ……, you make the people safe in their dwellings ……."
+    },
+    {
+     "ref": "52–60",
+     "orig": "[a-a] [{d}]en-ki uĝ₃ numun-a e₃-ni numun zid ḫe₂-i-i\n{d}nu-dim₂-mud u₈ zid ĜA₂ e₃-ni sila₄ zid ḫe₂-u₃-tud\nab₂ numun e₃-ni amar zid ḫe₂-u₃-tud\nud₅ zid ĜA₂ e₃-ni maš₂ zid ḫe₂-u₃-tud\ngan₂-ne₂ gana₂ zid ĜA₂ u₃-un-e₃-en\nguru₇-du₆ guru₇-maš-e an-edin-na gu₂ ḫu-mu-un-gur-gur-re\nkalam-ma ki tab-ba-a u₃-ba-e₃{?}-en\n[...]-a-ni [...]",
+     "orig_lines": [
+      "52",
+      "53",
+      "54",
+      "55",
+      "56",
+      "57",
+      "58",
+      "60"
+     ],
+     "en": "When Father Enki goes forth to the inseminated people, good seed will come forth. When Nudimmud goes forth to the good pregnant ewes, good lambs will be born; when he goes forth to the fecund cows, good calves will be born; whe he goes forth to the good pregnant goats, good kids will be born. If you go forth to the cultivated fields, to the good germinating fields, stockpiles and stacks can be accumulated on the high plain. If you go forth to the parched areas of the Land, 2 lines missing or unclear"
+    },
+    {
+     "ref": "61–80",
+     "orig": "{d}en-ki lugal abzu-ke₄ ni₂ gal na-kur-ku silim zid-de₃-eš na-e\na-a-ĝu₁₀ lugal an ki-ke₄\nan ki-a pa e₃ ma-ni-in-ak\npap-ĝu₁₀ lugal kur-kur-ra-ke₄\nme mu-un-ur₄-ur₄ me šu-ĝu₁₀-še₃ mu-un-ĝar\ne₂-kur-re e₂ {d}en-lil₂-la₂-ta\nabzu eridug{ki}-ĝu₁₀-še₃ nam-galam mu-de₆\na zid am gal-e ri-a-me-en dumu-saĝ an-na-me-en\nud gal ki gal-la e₃-a-me-en en gal kalam-me-en\ngu₂-gal barag-barag-ge₂-ne-me-en a-a kur-kur-ra-me-en\nšeš-gal diĝir-re-e-ne-me-en ḫe₂-ĝal₂ šu du₇-me-en\nkišib-ĝal₂ an ki-bi-da-me-en\nĝeštug₂ ĝizzal kur-kur-ra-me-en\nan lugal-da barag an-na-ka di si sa₂-e-me-en\n{d}en-lil₂-da kur-ra igi ĝal₂-la-ka nam dug₃ tar-ra-me-en\nnam tar-ra ki ud e₃-a-ke₄ šu-ĝa₂ mu-un-ĝal₂\n{d}nin-tur₅-re mi₂ zid dug₄-ga-me-en\n{d}nin-ḫur-saĝ-ĝa₂-ke₄ mu dug₃ sa₄-a-me-en\npalil {d}a-nun-na-ke₄-ne-me-en\nu₃-tud-da dumu-saĝ an kug-ga-me-en",
+     "orig_lines": [
+      "61",
+      "62",
+      "63",
+      "64",
+      "65",
+      "66",
+      "67",
+      "68",
+      "69",
+      "70",
+      "71",
+      "72",
+      "73",
+      "74",
+      "75",
+      "76",
+      "77",
+      "78",
+      "79",
+      "80"
+     ],
+     "en": "Enki, the king of the Abzu, rejoicing in great splendour, justly praises himself: \"My father, the king of heaven and earth, made me famous in heaven and earth. My elder brother, the king of all the lands, gathered up all the divine powers and placed them in my hand. I brought the arts and crafts from the E-kur, the house of Enlil, to my Abzu in Eridug. I am the good semen, begotten by a wild bull, I am the first born of An. I am a great storm rising over the great earth, I am the great lord of the Land. I am the principal among all rulers, the father of all the foreign lands. I am the big brother of the gods, I bring prosperity to perfection. I am the seal-keeper of heaven and earth. I am the wisdom and understanding of all the foreign lands. With An the king, on An's dais, I oversee justice. With Enlil, looking out over the lands, I decree good destinies. He has placed in my hands the decreeing of fates in the place where the sun rises. I am cherished by Nintur. I am named with a good name by Ninḫursaĝa. I am the leader of the Anuna gods. I was born as the firstborn son of holy An.\""
+    },
+    {
+     "ref": "81–83",
+     "orig": "en-e nam-maḫ mu-un-du-a-ta\nnun gal-e ni₂-te-ni za₃-mi₂ mi-ni-in-dug₄-ga-ta\n{d}a-nun-na šudu₃ a-ra-zu-a ši-im-ma-an-sug₂-sug₂-ge-eš",
+     "orig_lines": [
+      "81",
+      "82",
+      "83"
+     ],
+     "en": "After the lord had proclaimed his greatness, after the great prince had eulogised himself, the Anuna gods stood there in prayer and supplication:"
+    },
+    {
+     "ref": "84–85",
+     "orig": "en nam-galam-ma ĝiri₃ gub-ba\neš-bar kiĝ₂-ĝa₂ za₃-mi₂ dug₄-ga {d}en-ki za₃-mi₂",
+     "orig_lines": [
+      "84",
+      "85"
+     ],
+     "en": "\"Praise be to Enki, the much-praised lord who controls all the arts and crafts, who takes decisions!\""
+    },
+    {
+     "ref": "86–88",
+     "orig": "2-kam-ma-še₃ nam gal ḫul₂-la-da\n{d}en-ki lugal abzu-ke₄ ni₂ gal na-kur-ku silim zid-de₃-eš na-e\nen-me-en dug₄-ga zid-da-me-en saĝ-bi-še₃ e₃-a-me-en",
+     "orig_lines": [
+      "86",
+      "87",
+      "88"
+     ],
+     "en": "In a state of high delight Enki, the king of the Abzu, rejoicing in great splendour, again justly praises himself: \"I am the lord, I am one whose word is reliable, I am one who excels in everything.\""
+    },
+    {
+     "ref": "89–99",
+     "orig": "dug₄-ga-ĝu₁₀ tur₃ im-ši-du₃-du₃ amaš im-ši-niĝin₂-niĝin₂\nan-e um-ma-te im ḫe₂-ĝal₂-la an-ta šeĝ₃-ĝa₂\nki-e um-ma-te a-eštub u₃-ba ĝal₂-la-am₃\na-gar₃ sig₇-sig₇-ga-bi um-ma-/te\\\ninim-ĝu₁₀-ta guru₇-du₆ guru₇-maš-e gu₂ im-/da-gur\\-[re]\n[e₂]-ĝu₁₀ eš₃ ki sikil-la bi₂-du₃ mu dug₃-ga bi₂-sa₄\nabzu-ĝu₁₀ eš₃ KA-a bi₂-du₃ nam dug₃-ga bi₂-tar\ne₂-ĝu₁₀ ĝissu-bi ambar muš-a i-ni-[in-la₂]\ne₂-ĝu₁₀ /suḫur\\ku₆{ !}-e{!} u₂-lal₃-e sun₄ im-ši-sud-e\neštub[ku₆ gi-zi di₄]-di₄-la₂ kun mu-na-sud-e\nburu₅{mušen} gud₃-ba šeg₁₁ mu-da-an-gi₄-gi₄",
+     "orig_lines": [
+      "89",
+      "90",
+      "91",
+      "92",
+      "93",
+      "94",
+      "95",
+      "96",
+      "97",
+      "98",
+      "99"
+     ],
+     "en": "\"At my command, sheepfolds have been built, cow-pens have been fenced off. When I approach heaven, a rain of abundance rains from heaven. When I approach earth, there is a high carp-flood. When I approach the green meadows, at my word stockpiles and stacks are accumulated. I have built my house, a shrine, in a pure place, and named it with a good name. I have built my Abzu, a shrine, in ……, and decreed a good fate for it. The shade of my house extends over the …… pool. By my house the suḫur carp dart among the honey plants, and the eštub carp wave their tails among the small gizi reeds. The small birds chirp in their nests.\""
+    },
+    {
+     "ref": "100–122",
+     "orig": "en AB [...] ĝiš ma-an-la₂-eš\n{d}en-ki-me-[en] za₃-mi₂-ĝa₂ ši-im-ma-sug₂-sug₂-ge-[eš]\nabgal abrig lu₂ igi X [...]\nA.ZI/ZI ZI/ZI{!}.A{sar} /ud{?}\\ su₃-ra₂-ĝa₂ ši-im-ma-/an\\-sug₂-/sug₂\\-[ge-eš]\nenkum /ninkum\\-e-ne šu si [ša]-/ma\\-an-sa₂-[e-eš ]\nid₂ ša-ma-ab-kug /eš₃ šag₄-ga\\ ša-ma-ab-la₂\nabzu-ĝa₂ šir₃ kug nam-šub ma-an-la₂\nma₂-gur₈-ĝu₁₀ men taraḫ abzu\nšag₄-ba ḫul₂-ḫul₂-la ša-ma-ni-ib-de₆\nambar maḫ ki šag₄-ge pad₃-da-ĝa₂\na₂-bi ša-ma-an-sud-e gu₂ ša-ma-an-mar-mar-e\ngu₃ ra-e-ne {ĝiš}ĝisal šu ša-ma-an-du₇-uš\nšir₃ ša-ma-ab-dug₃-ge-ne id₂ ša-ma-ab-ḫul₂-le-ne\n{d}niĝir-sig₇ ensi₂ /{ĝiš}\\ma₂-gur₈-ra-ke₄\nĝidru kug-sig₁₇ šu ša-ma-[ab-du₈]\n{d}en-ki-me-en ma₂ taraḫ abzu-ĝa₂{!} a₂ ša-ma-ni-ib-aĝ₂-e\nen-me-en ĝe₂₆-e ga-ĝen\n{d}en-ki-me-en kalam-ĝa₂-aš ga-an-e₃\n/en\\ [nam] tar-tar-re-ĝu₁₀ ĝe₂₆-e ga-am₃-[...]\n[...] ra ga-an-[...]\n[...] X-e u₆-e ga-am₃-[...]\n[...] X X ma-ab-šum₂ ḫe₂-gu₇-[e]\n[...] sikil-la ga-an-[...]",
+     "orig_lines": [
+      "100",
+      "101",
+      "102",
+      "103",
+      "104",
+      "105",
+      "106",
+      "107",
+      "108",
+      "109",
+      "110",
+      "111",
+      "112",
+      "113",
+      "114",
+      "115",
+      "116",
+      "117",
+      "118",
+      "119",
+      "120",
+      "121",
+      "122"
+     ],
+     "en": "\"The lords pay heed …… to me. I am Enki! They stand before me, praising me. The abgal priests and abrig officials who …… stand before me …… distant days. The enkum and ninkum officiants organise ……. They purify the river for me, they …… the interior of the shrine for me. In my Abzu, sacred songs and incantations resound for me. My barge 'Crown', the 'Stag of the Abzu', transports me there most delightfully. It glides swiftly for me through the great marshes to wherever I have decided, it is obedient to me. The stroke-callers make the oars pull in perfect unison. They sing for me pleasant songs, creating a cheerful mood on the river. Niĝir-sig, the captain of my barge, holds the golden sceptre for me. I am Enki! He is in command of my boat 'Stag of the Abzu'. I am the lord! I will travel! I am Enki! I will go forth into my Land! I, the lord who determines the fates, ……,\"4 lines unclear"
+    },
+    {
+     "ref": "123–130",
+     "orig": "[{ĝiš}]/erin\\ sig₇-sig₇-ga-bi u₆ ga-am₃-dug₄\n/kur\\ [me-luḫ-ḫa{ki}] ma₂-gan{ki} dilmun{ki}-bi\n{d}en-[ki]-me-en igi ḫe₂-em-da-a-du₈\n{ĝiš}ma₂ dilmun{ki}-na ĝiš ḫe₂-en-du₃\n{ĝiš}[ma₂] ma₂-gan{ki}-na an-zag ḫe₂-en-la₂\n{ĝiš}ma₂-gi₄-lum me-luḫ-ḫa{ki}-a-ke₄\nkug-sig₁₇ kug-babbar bal-še₃ ḫe₂-ak-e\n{d}en-lil₂ [lugal] kur-kur-ra-ra nibru{ki}-še₃ ḫe₂-na-ab-tum₂",
+     "orig_lines": [
+      "123",
+      "124",
+      "125",
+      "126",
+      "127",
+      "128",
+      "129",
+      "130"
+     ],
+     "en": "\"I will admire its green cedars. Let the lands of Meluḫa, Magan and Dilmun look upon me, upon Enki. Let the Dilmun boats be loaded (?) with timber. Let the Magan boats be loaded sky-high. Let the magilum boats of Meluḫa transport gold and silver and bring them to Nibru for Enlil, king of all the lands.\""
+    },
+    {
+     "ref": "131–133",
+     "orig": "iri nu-tuku-ra e₂ nu-tuku-ra\n[mar]-/tu\\ maš₂-anše saĝ-e-eš mu-ni-rig₇",
+     "orig_lines": [
+      "131",
+      "132"
+     ],
+     "en": "He presented animals to those who have no city, to those who have no houses, to the Martu nomads."
+    },
+    {
+     "ref": "134–139",
+     "orig": "nun [gal kalam-ma]-na e₃-a-ra\n{d}a-nun-na-ke₄-ne mi₂ zid mu-un-ne-ne\nen me gal me sikil-la u₅-a\nme gal me šar₂-ra ĝiri₃ gub-ba\nan ki niĝ₂-daĝal-/ba\\ zag ša₄-a\neridug{ki} ki kug ki /kal\\-kal-la-aš me maḫ šu ti-a\n{d}en-ki en an ki za₃-mi₂",
+     "orig_lines": [
+      "133",
+      "134",
+      "135",
+      "136",
+      "137",
+      "138",
+      "139"
+     ],
+     "en": "The Anuna gods address affectionately the great prince who has travelled in his Land: \"Lord who rides upon the great powers, the pure powers, who controls the great powers, the numberless powers, foremost in all the breadth of heaven and earth; who received the supreme powers in Eridug, the holy place, the most esteemed place, Enki, lord of heaven and earth -- praise!\""
+    },
+    {
+     "ref": "140–161",
+     "orig": "nun gal kalam-ma-na{!} e₃-a-ra\nen-en-e-ne barag-barag-ge₂-ne\nka-mu₇-ĝal₂ eridug{ki}-ga-ke₄-ne\nšag₄-gada-la₂ ki-en-gi-ra-ke₄-ne\nnam-išib abzu mu-na-ab-be₂-ne\na-a {d}en-ki ki kug /ki kal\\-[la ĝiri₃] im-mi-ib-gub-bu-ne\ndag agrun-na in-[...]-ge-ne\nki-gub-ba mu [...]-sa₄-[e]-ne\neš₃ maḫ abzu [...]-sikil-e-ne\nšag₄-ba li an-na u₂ sikil-la /im\\-[mi]-/ib₂\\-ed₂-ne\n[X X] kug ki-en-DU maḫ [...] {d}en-ki-ka-ke₄ [ si] im-sa₂-e-ne\nkun-saĝ eridug{ki}-ga kar dug₃-ga im-mi-ib₂-galam-e-ne\ntaraḫ abzu kar dug₃ kar maḫ im-mi-ib-dub-e-ne\nuz-ga kug mu-na-ĝa₂-ĝa₂-ne\na-ra-zu-a-ra-zu mu-na-ab-be₂-ne\n[...]-/ne\\\n[...]-/ne\\\n[...]-ne\n[...] X\n[{ĝiš}ma₂]-gur₈-ra [...] X\n/a-ĝi₆ uru₁₆\\ [...]-/ĝa₂{?}\\",
+     "orig_lines": [
+      "140",
+      "141",
+      "142",
+      "143",
+      "144",
+      "145",
+      "146",
+      "147",
+      "148",
+      "149",
+      "150",
+      "151",
+      "152",
+      "153",
+      "154",
+      "155",
+      "156",
+      "157",
+      "158",
+      "160",
+      "161"
+     ],
+     "en": "All the lords and rulers, the incantation-priests of Eridug and the linen-clad priests of Sumer, perform the purification rites of the Abzu for the great prince who has travelled in his land; for Father Enki they stand guard in the holy place, the most esteemed place. They …… the chambers ……, they …… the emplacements, they purify the great shrine of the Abzu ……. They bring there the tall juniper, the pure plant. They organise the holy …… in the great watercourse …… of Enki. Skilfully they build the main stairway of Eridug on the Good Quay. They prepare the sacred uzga shrine, where they utter endless prayers. 7 lines fragmentary or unclear"
+    },
+    {
+     "ref": "162–165",
+     "orig": "{d}en-ki-ra A X [...] DU a-da-min₃-na [mu-na]-/ab\\-sag₃-ge\nsuḫur-mašku₆-e [u₂-lal₃-e sun₄ mu]-na-sud-e\nnun gal-ra /2\\-[kam-ma] a-da-min₃ mu-na-e\neštubku₆-e gi-zi di₄-di₄-la₂-bi /kun\\ [mu-na]-sud-e",
+     "orig_lines": [
+      "162",
+      "163",
+      "164",
+      "165"
+     ],
+     "en": "For Enki, …… squabbling together, and the suḫurmaš carp dart among the honey plants, again fighting amongst themselves for the great prince. The eštub carp wave their tails among the small gizi reeds."
+    },
+    {
+     "ref": "166–181",
+     "orig": "urin gal abzu-ta sig₉-ga an-dul₃-e-eš ak-e\nĝissu-bi ki-šar₂-ra la₂-a uĝ₃-e ni₂ te-en-ten\nus₂-saĝ dimgul ambar [muš]-a du₃-a kur-kur-ta il₂-la\nen ensi₂ gal abzu-ke₄\ntaraḫ abzu-ka a₂ ša-mu-un-aĝ₂-e\nmeš₃ abzu-ta še-er-ka-an dug₄-ga\neridug{ki} ki kug ki kal-kal-la-aš me maḫ šu ti-a\nnu-banda₃ maḫ kur-ra dumu {d}en-lil₂-la₂-ke₄\ngi-muš kug-ga šu im-mi-in-du₈\nur-saĝ abzu-še₃ [saĝ im]-mi-ib-il₂-il₂-e\n[...] X X\n/an\\ [...]\nlu₂ [...] EN [...]",
+     "orig_lines": [
+      "166",
+      "167",
+      "168",
+      "169",
+      "170",
+      "171",
+      "172",
+      "173",
+      "174",
+      "175",
+      "176",
+      "180",
+      "181"
+     ],
+     "en": "The lord, the great ruler of the Abzu, issues instructions on board the 'Stag of the Abzu' -- the great emblem erected in the Abzu, providing protection, its shade extending over the whole land and refreshing the people, the pillar and pole planted in the …… marsh, rising high over all the foreign lands. The noble captain of the lands, the son of Enlil, holds in his hand the sacred punt-pole, a meš tree ornamented in the Abzu which received the supreme powers in Eridug, the holy place, the most esteemed place. The hero proudly lifts his head towards the Abzu. 6 lines missing or unclear"
+    },
+    {
+     "ref": "182–187",
+     "orig": "{d}sirsir [...] ma₂-[laḫ₅ {ĝiš}ma₂-gur₈-ra-ke₄]\nen-ra {ĝiš}ma₂ šu [...]\n{d}niĝir-sig₇ /ensi₂\\ ma₂-gur₈-ra-[ke₄]\nen-ra ĝidru kug šu [ša-ma-ab-du₈]\nla-ḫa-ma engur-ra 50-bi mi₂ zid mu-/un\\-[ne-ne]\ngu₃ ra-e-ne gam₄-gam{mušen} an-na-/gin₇\\ [...]",
+     "orig_lines": [
+      "182",
+      "183",
+      "184",
+      "185",
+      "186",
+      "187"
+     ],
+     "en": "Sirsir ……, the boatman of the barge, …… the boat for the lord. Niĝir-sig, the captain of the barge, holds the holy sceptre for the lord. The fifty laḫama deities of the subterranean waters speak affectionately to him. The stroke-callers, like heavenly gamgam birds, ……."
+    },
+    {
+     "ref": "188–191",
+     "orig": "lugal u₃-na gub a-a {d}en-ki kalam-ma [...]\nnun gal kalam-ma e₃-a-[ra]\nḫe₂-ĝal₂ an ki-a pa e₃ mu-na-ab-ak\n{d}en-ki-ke₄ nam im-mi-ib-tar-re",
+     "orig_lines": [
+      "188",
+      "189",
+      "190",
+      "191"
+     ],
+     "en": "The intrepid king, Father Enki …… in the Land. Prosperity was made to burgeon in heaven and on earth for the great prince who travels in the Land. Enki decreed its fate:"
+    },
+    {
+     "ref": "192–209",
+     "orig": "ki-en-gi kur gal ma-da an ki\nše-er-zid gur₃-ru ud e₃-ta ud šu-uš uĝ₃-e me šum₂-mu\nme-zu me maḫ šu nu-tu-tu\nšag₄-zu galam kad₅ lu₂ nu-pad₃-de₃\numun₂ zid ki diĝir u₃-tud-za an-gin₇ šu nu-teĝ₃-ĝe₂₆\nlugal u₃-tud suḫ zid keše₂-de₃\nen u₃-tud saĝ-men ĝa₂-ĝa₂\nen-zu en idim an lugal-da barag an-na i-im-tuš\nlugal-zu kur gal a-a {d}en-lil₂\n{ĝiš}erin-gin₇ šar₂ dug₄-ge ša-mu-ra-an-gi₁₆-ib a-a kur-kur-ra-ke₄\n{d}a-nun-na diĝir gal-gal-e-ne\nšag₄-za ki-ur₃-ra šu ba-ni-in-ti-eš\ngi-gun₄-na ĝiš dili ĝiš dili-za u₂ mi-ni-ib-sug₄-sug₄-ne\ne₂ ki-en-gi tur₃-zu ḫe₂-du₃-du₃ ab₂-zu ḫe₂-lu-lu\namaš-zu ḫe₂-ĝar-ĝar udu-zu ḫe₂-šar₂-šar₂\ngi-gun₄-na-zu an-ne₂ ḫe₂-em-us₂\n[e₂] zid-zu šu an-še₃ ḫe₂-em-il₂\n{d}a-nun-na-ke₄-ne šag₄-zu-a nam ḫe₂-em-da-ab-tar-re-ne",
+     "orig_lines": [
+      "192",
+      "193",
+      "194",
+      "195",
+      "196",
+      "197",
+      "198",
+      "199",
+      "200",
+      "201",
+      "202",
+      "203",
+      "204",
+      "205",
+      "206",
+      "207",
+      "208",
+      "209"
+     ],
+     "en": "\"Sumer, great mountain, land of heaven and earth, trailing glory, bestowing powers on the people from sunrise to sunset: your powers are superior powers, untouchable, and your heart is complex and inscrutable. Like heaven itself, your just matrix, in which gods too can be born, is beyond reach. Giving birth to kings who put on the good diadem, giving birth to lords who wear the crown on their heads -- your lord, the honoured lord, sits with An the king on An's dais. Your king, the Great Mountain, Father Enlil, the father of all the lands, has blocked you impenetrably (?) like a cedar tree. The Anuna, the great gods, have taken up dwellings in your midst, and consume their food in your giguna shrines among the unique and exceptional trees. Household Sumer, may your sheepfolds be built and your cattle multiply, may your giguna touch the skies. May your good temples reach up to heaven. May the Anuna determine the destinies in your midst.\""
+    },
+    {
+     "ref": "210–211",
+     "orig": "eš₃ urim₂{ki}-e nam-mi-ib-dib\n{d}en-ki lugal abzu-ke₄ nam im-mi-ib-tar-re",
+     "orig_lines": [
+      "210",
+      "211"
+     ],
+     "en": "Then he proceeded to the sanctuary of Urim. Enki, lord of the Abzu, decreed its fate:"
+    },
+    {
+     "ref": "212–218",
+     "orig": "iri me-te-ĝal₂-la a tu₅-tu₅ gud silim-ma gub-ba\nbarag nam-ḫe₂ kur-ra dub₃ ba₉-re₆ ḫur-saĝ-gin₇ il₂-la\n{ĝiš}tir ḫa-šu-ur₂-ra ĝissu daĝal-la ne₃-ni-ta nir-ĝal₂\nme šu du₇-a-zu si ḫe₂-em-sa₂\nkur gal {d}en-lil₂-le an ki-a mu maḫ-zu mi-ni-in-pad₃\niri nam tar-ra {d}en-ki-ka₃-me-en\neš₃ urim₂{ki} gu₂ an-še₃ ḫe₂-zig₃",
+     "orig_lines": [
+      "212",
+      "213",
+      "214",
+      "215",
+      "216",
+      "217",
+      "218"
+     ],
+     "en": "\"City which possesses all that is fitting, bathed by water! Sturdy bull, altar of abundance that strides across the mountains, rising like the hills, forest of ḫašur cypresses with broad shade, self-confident! May your perfect powers be well-directed. The Great Mountain Enlil has pronounced your name great in heaven and on earth. City whose fate Enki has decreed, sanctuary of Urim, you shall rise high to heaven!\""
+    },
+    {
+     "ref": "219–220",
+     "orig": "kur me-luḫ-ḫa{ki} nam-mi-ib₂-dib\n{d}en-ki lugal abzu-ke₄ nam nam-mi-ib₂-tar-/re\\",
+     "orig_lines": [
+      "219",
+      "220"
+     ],
+     "en": "Then he proceeded to the land of Meluḫa. Enki, lord of the Abzu, decreed its fate:"
+    },
+    {
+     "ref": "221–237",
+     "orig": "kur gig₂ ĝiš-zu ĝiš gal ḫe₂-em {ĝiš}tir-/zu meš₃\\ kur-ra ḫe₂-em\n{ĝiš}gu-za-bi e₂-gal lugal-la-ke₄ [me]-/te ḫe₂-em\\-mi-ib-ĝal₂\ngi-zu gi gal ḫe₂-em gi [... ḫe₂-em]\nur-saĝ-e ki me₃-ka {ĝiš}tukul [...]\ngud-zu gud gal ḫe₂-em gud kur-[ra ḫe₂-em]\ngu₃-bi gu₃ am kur-ra-ka [ḫe₂-em]\nme gal diĝir-re-e-ne-ke₄ šu ḫe₂-[em-mi-du₇]\ndar{mušen}-dar{mušen} kur-ra sun₄ {na₄}/gug\\ [ḫe₂-em-la₂]\nmušen-zu {d}ḫa-ia₃{mušen} [ḫe₂]-/em\\\nmu₇-mu₇-bi e₂-gal lugal-la-ka [me-te ḫe₂]-/em\\-mi-ib-ĝal₂\nkug-zu kug-sig₁₇ ḫe₂-em\nurud-zu nagga zabar-/ra\\ [ḫe₂-em]\nkur niĝ₂-nam-zu ḫe₂-[ĝal₂ ḫe₂-em]\nnam-lu₂-ulu₃-zu ḫe₂-X [...]\n[nitaḫ₂]-zu nitaḫ₂ tab-ba-ni-ir gud-gin₇ ḫe₂-en-ed₂-de₃\n[X X] KI A iri{ki} AN X-na-ke₄\n[X X] TU-gin₇ ḪAR ba-an-ak",
+     "orig_lines": [
+      "221",
+      "222",
+      "223",
+      "224",
+      "225",
+      "226",
+      "227",
+      "228",
+      "229",
+      "230",
+      "231",
+      "232",
+      "233",
+      "234",
+      "235",
+      "236",
+      "237"
+     ],
+     "en": "\"Black land, may your trees be great trees, may your forests be forests of highland meš trees! Chairs made from them will grace royal palaces! May your reeds be great reeds, may they ……! Heroes shall …… them on the battlefield as weapons! May your bulls be great bulls, may they be bulls of the mountains! May their bellowing be the bellowing of wild bulls of the mountains! The great powers of the gods shall be made perfect for you! May the francolins of the mountains wear cornelian beards! May your birds all be peacocks! May their cries grace royal palaces! May all your silver be gold! May all your copper be tin-bronze! Land, may all you possess be plentiful! May your people ……! May your men go forth like bulls against their fellow men!\" 2 lines unclear"
+    },
+    {
+     "ref": "238–247",
+     "orig": "[kur] /dilmun\\{ki}-na mu-un-sikil mu-un-dadag\n[{d}]/nin\\-sikil-la zag-ba nam-mi-in-gub\n[X X] X eš₃ agargara-še₃ ba-an-šum₂ ku₆ X BI i₃-gu₇-e\n[{ĝiš}]/ĝišnimbar\\ gana₂ zid-še₃ ba-an-šum₂ zu₂-lum-bi [i₃]-gu₇-e\n[X] X elam{ki} mar-ḫa-ši[{ki}] [...]\nḪA.IB-gin₇ teš₂-bi gu₇-u₃-[dam]\nlugal {d}en-lil₂-le a₂ šum₂-[ma]\ne₂-bi mu-un-ḫul bad₃-bi mu-un-[gul]\nkug {na₄}za-gin₃-bi e₂ niĝ₂-gur₁₁-bi\n{d}en-lil₂ lugal kur-kur-ra-ra nibru{ki}-še₃ ḫe₂-na-ab-tum₂",
+     "orig_lines": [
+      "238",
+      "239",
+      "240",
+      "241",
+      "242",
+      "243",
+      "244",
+      "245",
+      "246",
+      "247"
+     ],
+     "en": "He cleansed and purified the land of Dilmun. He placed Ninsikila in charge of it. He gave …… for the fish spawn, ate its …… fish, bestowed palms on the cultivated land, ate its dates. …… Elam and Marḫaši ……. …… to devour ……. The king endowed with strength by Enlil destroyed their houses, demolished (?) their walls. He brought their silver and lapis-lazuli, their treasure, to Enlil, king of all the lands, in Nibru."
+    },
+    {
+     "ref": "248–249",
+     "orig": "iri nu-tuku e₂ nu-tuku-ra\n{d}en-ki-ke₄ mar-tu maš₂-anše saĝ-e-eš mu-ni-rig₇",
+     "orig_lines": [
+      "248",
+      "249"
+     ],
+     "en": "Enki presented animals to those who have no city, who have no houses, to the Martu nomads."
+    },
+    {
+     "ref": "250–266",
+     "orig": "ki-bi-ta igi-ni ĝar-ra-[ta]\na-a {d}en-ki {id₂}buranun-na nam-mi-in-/il₂\\-a-ta\ngud du₇-du₇-gin₇ u₃-na mu-un-na-gub\nĝiš₃ im-zi-zi dub₃ im-nir-/re\\\n{id₂}idigna a zal-le im-ma-/an\\-[si]\nšilam u₂-numun-na amaš ĝiri₂-tab-ba amar-bi gu₃ di-/dam\\\n{id₂}/idigna\\ gud du₇-gin₇ a₂-na mu-na-/ab\\-[...]\nĝiš₃ im-zig₃ niĝ₂-mussa nam-de₆\n{id₂}idigna am gal-gin₇ šag₄ im-ḫul₂ u₃-tud-ba mu-/ni\\-[...]\na nam-de₆ a zal-le na-nam kurun₂-bi na-dug₃-ge\nše nam-de₆ še gu-nu na-nam uĝ₃-e na-gu₇-e\ne₂-kur-re e₂ {d}en-lil₂-la₂-ke₄ niĝ₂ ĝal₂-la nam-/si\\\n{d}en-ki-da {d}en-lil₂ mu-un-da-ḫul₂ nibru{ki} [giri₁₇-zal-am₃]\nen-e nam-en-še₃ suḫ mu-un-[keše₂]\nnam-lugal-še₃ aga zid mu-un-ak\na₂ gab₂-bu-na ki nam-mi-in-us₂\nḫe₂-ĝal₂ ki-ta mu-na-ra-ĝen",
+     "orig_lines": [
+      "250",
+      "251",
+      "252",
+      "253",
+      "254",
+      "255",
+      "256",
+      "257",
+      "258",
+      "259",
+      "260",
+      "261",
+      "262",
+      "263",
+      "264",
+      "265",
+      "266"
+     ],
+     "en": "After he had turned his gaze from there, after Father Enki had lifted his eyes across the Euphrates, he stood up full of lust like a rampant bull, lifted his penis, ejaculated and filled the Tigris with flowing water. He was like a wild cow mooing for its young in the wild grass, its scorpion-infested cow-pen. The Tigris …… at his side like a rampant bull. By lifting his penis, he brought a bridal gift. The Tigris rejoiced in its heart like a great wild bull, when it was born ……. It brought water, flowing water indeed: its wine will be sweet. It brought barley, mottled barley indeed: the people will eat it. It filled the E-kur, the house of Enlil, with all sorts of things. Enlil was delighted with Enki, and Nibru was glad. The lord put on the diadem as a sign of lordship, he put on the good crown as a sign of kingship, touching the ground on his left side. Plenty came forth out of the earth for him."
+    },
+    {
+     "ref": "267–273",
+     "orig": "zid-da-na ĝidru ĝal₂-la-bi\n{id₂}idigna {id₂}buranun-na teš₂ gu₇-u₃-da\nka giri₁₇-zal-ta kab₂ di-da-bi\nḫe-nun e₂-gal-ta i₃-gin₇ laḫ₄-am₃\nen nam tar-ra {d}en-ki lugal abzu-ke₄\n{d}en-bi₂-lu-lu ku₃-ĝal₂ id₂-da-ke₄\n[{d}en]-/ki\\-ke₄ zag-ba nam-mi-in-gub",
+     "orig_lines": [
+      "267",
+      "268",
+      "269",
+      "270",
+      "271",
+      "272",
+      "273"
+     ],
+     "en": "Enki, the lord of the destinies, Enki, the king of the Abzu, placed in charge of all this him who holds a sceptre in his right hand, him who with glorious mouth submits to verification the devouring force of the Tigris and Euphrates, while prosperity pours forth from the palace like oil -- Enbilulu, the inspector of waterways."
+    },
+    {
+     "ref": "274–277",
+     "orig": "[ambar-re gu₃ ba]-an-de₂ SUḪUR.ḪIku₆ suḫurku₆ ba-an-šum₂\n[ĝiš-gi gu₃ ba]-an-de₂ gi sumun gi ḫenbur ba-an-šum₂",
+     "orig_lines": [
+      "274",
+      "275"
+     ],
+     "en": "He called the marshes and gave them the various species of carp, he spoke to the reedbeds and bestowed on them the old and new growths of reeds. 2 lines missing"
+    },
+    {
+     "ref": "278–284",
+     "orig": "[...] /a\\-da-min₃ mu-/ni\\-[...]\n/sa-par₄-ra-ni\\ ku₆ nu-e₃\nniĝ₂-keše₂-da-ni u₃-tud nu-e₃\ngu la₂-a-na mušen nu-e₃\n/EZENxKUG{?} lu₂{?} a₂ maḫ\\ dumu ezen sur₁₂{?}-a\n{d}/UR₅.ŠA\\ lu₂{?} ku₆-e ki aĝ₂-ĝa₂\n/{d}en-ki-ke₄\\ zag-ba nam-mi-in-gub",
+     "orig_lines": [
+      "278",
+      "279",
+      "280",
+      "281",
+      "282",
+      "283",
+      "284"
+     ],
+     "en": "He issued a challenge ……. Enki placed in charge of all this him from whose net no fish escapes, him from whose trap no living thing escapes, him from whose bird-net no bird escapes, 1 line unclear -- ……, who loves fish."
+    },
+    {
+     "ref": "285–298",
+     "orig": "en-e eš₃ mu-un-ĝar eš₃ kug-ga-am₃ šag₄-bi galam kad₅-am₃\na-ab-ba eš₃ mu-un-ĝar eš₃ kug-ga-am₃ šag₄-bi galam kad₅-am₃\neš₃ šag₄-bi gu suḫ₃-a niĝ₂ lu₂ nu-zu-a\n[eš₃] ki-gub-bi {mul}iku DU-a\n[eš₃] kug-ga igi-nim-ma gub-bi {mul}{ ĝiš}gigir-še₃ i₃-DU\nX ab ḫu-luḫ-ḫa /i-zi\\ zig₃-ga-am₃ me-lem₄-bi /ḫuš\\-a\n[{d}]a-nun-na diĝir gal-gal-e-[ne] saĝ nu-mu-un-[ĝa₂-ĝa₂-ne]\n/šag₄-be₂-ne te-en-ten im-ši\\-ĝa₂-ĝa₂ e₂-gal /ḫul₂\\-[le-dam]\n{d}a-nun-na-[ke₄-ne] šudu₃ [a-ra-zu]-a ši-im-ma-sug₂-sug₂-[ge-eš]\n{d}en-ki-ra e₂-[engur-ra]-ka barag maḫ{?} mu-[na-ri-e-ne]\nen-ra zal-le [...] X [...]\nnun gal X X X u₃-/tud\\ [...]\nu₅{mušen} <a>-ab-ba bulug KAxX [...]\n/eš₃\\ niĝ₂ dug₃ eš₃ niĝ₂ u₃-[tud ...]",
+     "orig_lines": [
+      "285",
+      "286",
+      "287",
+      "288",
+      "289",
+      "290",
+      "291",
+      "292",
+      "293",
+      "294",
+      "295",
+      "296",
+      "297",
+      "298"
+     ],
+     "en": "The lord established a shrine, a holy shrine, whose interior is elaborately constructed. He established a shrine in the sea, a holy shrine, whose interior is elaborately constructed. The shrine, whose interior is a tangled thread, is beyond understanding. The shrine's emplacement is situated by the constellation the Field, the holy upper shrine's emplacement faces towards the Chariot constellation. Its terrifying sea is a rising wave, its splendour is fearsome. The Anuna gods dare not approach it. …… to refresh their hearts, the palace rejoices. The Anuna stand by with prayers and supplications. They set up a great altar for Enki in the E-engura, for the lord ……. The great prince ……. …… the pelican of the sea. 1 line unclear"
+    },
+    {
+     "ref": "299–308",
+     "orig": "e₂-kur-re e₂ {d}/en\\-[lil₂-la₂]-/ke₄\\ niĝ₂ ĝal₂-la [nam-si]\n{d}en-ki-da {d}en-lil₂ mu-ḫul₂-ḫul₂ nibru{ki} giri₁₇-zal-am₃\n[...] X eš₃ kug-ga u₅-a\n[... e]-ne su₃-ud di [...] ĝar-ra\na-ĝi₆ uru₁₆ gal-la engur-[ra]-ke₄\ni-zi ḫu-luḫ-ḫa kur-ku ab-ba [...] X [...]\nzi-pa-aĝ₂-ta e₃ [...] X\nin-nin₉ sirara₂/{ki}-a\\ [X X] /ku₆\\ X [{d}]/nanše\\\na-ab-ba ki niĝ₂-/daĝal\\-la-ba\n{d}en-ki-ke₄ zag-ba nam-mi-in-gub",
+     "orig_lines": [
+      "299",
+      "300",
+      "301",
+      "302",
+      "303",
+      "304",
+      "305",
+      "306",
+      "307",
+      "308"
+     ],
+     "en": "He filled the E-kur, the house of Enlil, with goods of all sorts. Enlil was delighted with Enki, and Nibru was glad. Enki placed in charge of all this, over the wide extent of the sea, her who sets sail …… in the holy shrine, who induces sexual intercourse ……, who …… over the enormous high flood of the subterranean waters, the terrifying waves, the inundation of the sea ……, who comes forth from the ……, the mistress of Sirara, …… -- Nanše."
+    },
+    {
+     "ref": "309–317",
+     "orig": "šeĝ₁₄ an-na-ka gu₃ ba-an-de₂\ndungu dirig-ga-/gin₇\\ bi₂-in-us₂\nan-ur₂-še₃ zig₃-/ga\\ [...] im-sar-re\ndu₆-du₆ gana₂-še₃ [...] i₃-ĝa₂-ĝa₂\nud gal-la u₅-a niĝ₂-ĝir₂-da du₇-du₇\n{ĝiš}si-ĝar kug an-šag₄-ge gib-ba\ndumu an-na ku₃-ĝal₂ an ki-a\n{d}iškur lu₂ ḫe-<ĝal₂> dumu an-na-ke₄\n{d}en-ki-ke₄ zag-ba nam-mi-in-gub",
+     "orig_lines": [
+      "309",
+      "310",
+      "311",
+      "312",
+      "313",
+      "314",
+      "315",
+      "316",
+      "317"
+     ],
+     "en": "He called to the rain of the heavens. He …… as floating clouds. He made …… rising at the horizon. He turned the mounds into fields ……. Enki placed in charge of all this him who rides on the great storms, who attacks with lightning bolts, the holy bar which blocks the entrance to the interior of heaven, the son of An, the canal inspector of heaven and earth -- Iškur, the bringer of plenty, the son of An."
+    },
+    {
+     "ref": "318–325",
+     "orig": "{ĝiš}apin {ĝiš}šudul₂ erin₂-bi si ba-an-sa₂\nnun gal {d}en-ki-ke₄ gud si-par₄ us₂-a ba-an-šum₂\nab-sin₂ kug-ge ka ba-an-du₈\ngan₂-ne₂ zid-de₃ še ba-an-mu₂\nen suḫ-gir₁₁ ḫe₂-du₇ an-edin-na\na₂-šita₄ engar {d}en-lil₂-la₂\n{d}en-ki-im-du lu₂ eg₂ pa₅-ra-ke₄\n{d}en-ki-ke₄ zag-ba nam-mi-in-gub",
+     "orig_lines": [
+      "318",
+      "319",
+      "320",
+      "321",
+      "322",
+      "323",
+      "324",
+      "325"
+     ],
+     "en": "He organised ploughs, yokes and teams. The great prince Enki bestowed the horned oxen that follow the …… tools, he opened up the holy furrows, and made the barley grow on the cultivated fields. Enki placed in charge of them the lord who wears the diadem, the ornament of the high plain, him of the implements, the farmer of Enlil -- Enkimdu, responsible for ditches and dykes."
+    },
+    {
+     "ref": "326–334",
+     "orig": "en-e gana₂ zid-de₃ gu₃ ba-an-de₂ še gu-nu ba-an-šum₂\n{d}en-ki-ke₄ gig-zid₂ gu₂-gal-la sa-zid₂ ba-an-e₃\nše-eštub še gu-nu še in-nu-ḫa-bi guru₇-še₃ mu-un-dub-dub\n{d}en-ki-ke₄ guru₇-du₆ guru₇-maš-e im-ma-da-an-tab-tab\n{d}en-lil₂-da uĝ₃-e ḫe₂-ĝal₂-la šu mu-un-di-ni-ib-peš-e\nsaĝ bar gun₃-gun₃ igi lal₃ šu₂-šu₂\nin-nin₉ e-ne su₃-ud ĝal₂ usu kalam-ma zi saĝ gig₂-ga\n{d}ezina₂ ninda dug₃ niĝ₂ ki-šar₂-ra-ke₄\n{d}en-ki-ke₄ zag-ba nam-mi-in-gub",
+     "orig_lines": [
+      "326",
+      "327",
+      "328",
+      "329",
+      "330",
+      "331",
+      "332",
+      "333",
+      "334"
+     ],
+     "en": "The lord called the cultivated fields, and bestowed on them mottled barley. Enki made chickpeas, lentils and …… grow. He heaped up into piles the early, mottled and innuḫa varieties of barley. Enki multiplied the stockpiles and stacks, and with Enlil's help he enhanced the people's prosperity. Enki placed in charge of all this her whose head and body are dappled, whose face is covered in syrup, the mistress who causes sexual intercourse, the power of the Land, the life of the black-headed -- Ezina, the good bread of the whole world."
+    },
+    {
+     "ref": "335–340",
+     "orig": "nun gal-e {ĝiš}al-e sa bi₂-in-sig₁₀ {ĝiš}u₃-šub-[ba] si bi₂-in-sa₂\nagarin₄-e i₃-ḫe-nun-na-gin₇ ĝiš₃ im-ma-an-[dug₄]\n{ĝiš}al zu₂ sig₉-ga-ni muš ad₆ gu₇ niĝ₂ šu [ĝal₂]\n{ĝiš}u₃-šub ĝar-ra-ni zar gu₂-nida u₈-e si sa₂-am₃\n{d}kulla lu₂ šeg₁₂-e kalam-ma KAM\n{d}en-ki-ke₄ zag-ba nam-mi-in-gub",
+     "orig_lines": [
+      "335",
+      "336",
+      "337",
+      "338",
+      "339",
+      "340"
+     ],
+     "en": "The great prince fixed a string to the hoe, and organised brick moulds. He penetrated the …… like precious oil. Enki placed in charge of them him whose sharp-bladed hoe is a corpse-devouring snake that ……, whose brick mould in place is a tidy stack of hulled grain for the ewes -- Kulla, who …… bricks in the Land."
+    },
+    {
+     "ref": "341–348",
+     "orig": "gu mu-un-ĝar us₂-e si bi₂-in-sa₂\na₂ unken-na-ka e₂ bi₂-in-ĝar šu-luḫ-e si bi₂-in-sa₂\nnun gal-e uš ki nam-mi-in-tag šeg₁₂ ki nam-mi-in-us₂\nuš ki tag-ga-ni nu-silig-ge\ne₂ zid du₃-a-ni nu-kar₂-kar₂-re\nnir-gam-ma-ni {d}tir-an-na-gin₇ an-šag₄-ge us₂-sa\n{d}muš-dam-ma šidim gal {d}en-lil₂-la₂-ke₄\n{d}en-ki-ke₄ zag-ba nam-mi-in-gub",
+     "orig_lines": [
+      "341",
+      "342",
+      "343",
+      "344",
+      "345",
+      "346",
+      "347",
+      "348"
+     ],
+     "en": "He tied down the strings and coordinated them with the foundations, and with the power of the assembly he planned a house and performed the purification rituals. The great prince put down the foundations, and laid the bricks. Enki placed in charge of all this him whose foundations once laid do not sag, whose good houses once built do not collapse (?), whose vaults reach up into the heart of the heavens like a rainbow -- Mušdama, Enlil's master builder."
+    },
+    {
+     "ref": "349–357",
+     "orig": "edin uru₁₆-na men kug nam-mi-in-guru₃\nan-edin-na sun₄ /{na₄}\\za-gin₃ am₃-la₂ suḫ₁₀ [{na₄}]za-gin₃ am₃-keše₂\nki dug₃-ga u₂-šim giri₁₇-zal-am₃ šu gal mu-un-du₇-du₇\nmaš₂-anše an-edin-na mi-ni-in-lu me-te-aš bi₂-ib-ĝal₂\nšeg₉ šeg₉-bar u₂-numun-na mu-un-lu e-ne su₃-ud-bi mu-un-e\nur-saĝ an-edin-na men-bi-im edin-na lugal-bi-im\npiriĝ gal an-edin-na a₂-/tuku gal{?} a₂\\ maḫ {d}en-lil₂-la₂-kam\n{d}šakkan₂ lugal ḫur-saĝ-ĝa₂-ke₄\n{d}en-ki-ke₄ zag-ba nam-mi-in-gub",
+     "orig_lines": [
+      "349",
+      "350",
+      "351",
+      "352",
+      "353",
+      "354",
+      "355",
+      "356",
+      "357"
+     ],
+     "en": "He raised a holy crown over the upland plain. He fastened a lapis-lazuli beard to the high plain, and made it wear a lapis-lazuli headdress. He made this good place perfect with greenery in abundance. He multiplied the animals of the high plain to an appropriate degree, he multiplied the ibex and wild goats of the pastures, and made them copulate. Enki placed in charge of them the hero who is the crown of the high plain, who is the king of the countryside, the great lion of the high plain, the muscular, the hefty, the burly strength of Enlil -- Šakkan, the king of the hills."
+    },
+    {
+     "ref": "358–367",
+     "orig": "tur₃ mu-un-du₃ šu-luḫ-e si bi₂-in-sa₂\namaš mu-un-ĝar i₃ gara₂ saĝ bi₂-in-šum₂\nki ninda gu₇ diĝir-re-e-ne-ke₄ giri₁₇-zal-la mi-ni-in-gi₄\nedin u₂-šim-gin₇ du₃-a ḫe₂-ĝal₂ sa₂ bi₂-in-dug₄\nlugal u₂-a zid e₂-an-na gu₅-li [an-na]\nmussa(sourše: MUNUS.US₂.DAM) ki aĝ₂ šul {d}suen-na dam /kug\\ /{d}\\[inana]\nin-nin₉ nin me gal-gal-la-ke₄\nsila daĝal-la kul-aba{ki}-ka e-ne su₃-ud-bi dug₄-dug₄\n{d}dumu-zid-{d}ušumgal-an-na gu₅-li an-na-kam\n{d}en-ki-ke₄ [zag]-ba nam-mi-[in-gub]",
+     "orig_lines": [
+      "358",
+      "359",
+      "360",
+      "361",
+      "362",
+      "363",
+      "364",
+      "365",
+      "366",
+      "367"
+     ],
+     "en": "He built the sheepfolds, carried out their cleaning, made the cow-pens, bestowed on them the best fat and cream, and brought luxury to the gods' dining places. He made the plain, created for greenery, achieve prosperity. Enki placed in charge of all this the king, the good provider of E-ana, the friend of An, the beloved son-in-law of the youth Suen, the holy spouse of Inana the mistress, the lady of the great powers who allows sexual intercourse in the open squares of Kulaba -- Dumuzid-ušumgal-ana, the friend of An."
+    },
+    {
+     "ref": "368–380",
+     "orig": "e₂-kur-re e₂ {d}en-lil₂-la₂-ke₄ niĝ₂ ĝal₂-la nam-si\n{d}en-ki-da {d}en-lil₂ mu-un-da-ḫul₂ nibru{ki} giri₁₇-zal-am₃\nin mu-un-dub bulug-ga mu-un-si-si\n{d}en-ki-ke₄ {d}a-nun-na-ke₄-ne-/er\\\niri{ki}-a ki-ur₃-ra ša-mu-un-di-ni-in-ĝar\na-šag₄-ga gan₂-ne₂ ša-mu-un-de₃-ni-in-ĝar\nur-saĝ gud ḫa-šu-ur₂-ta e₃-a gu₃ ḫuš de₂-de₂-e\nšul {d}utu gud silim-ma gub-ba u₃-na silig ĝar-ra\nad-da iri-gal ki ud e₃-a niĝir [gal] an kug-ga\ndi-kud ka-aš bar /kiĝ₂\\ diĝir-re-e-ne\nsun₄ {na₄}za-gin₃ la₂ an kug-ga an-ur₂-ta e₃-a\n{d}utu dumu {d}nin-gal-e tud-da\n{d}en-ki-ke₄ an ki niĝin₂-na-ba zag-ba nam-mi-in-gub",
+     "orig_lines": [
+      "368",
+      "369",
+      "370",
+      "371",
+      "372",
+      "373",
+      "374",
+      "375",
+      "376",
+      "377",
+      "378",
+      "379",
+      "380"
+     ],
+     "en": "He filled the E-kur, the house of Enlil, with possessions. Enlil was delighted with Enki and Nibru was glad. He demarcated borders and fixed boundaries. For the Anuna gods, Enki situated dwellings in cities and disposed agricultural land into fields. Enki placed in charge of the whole of heaven and earth the hero, the bull who comes out of the ḫašur forest bellowing truculently, the youth Utu, the bull standing triumphantly, audaciously, majestically, the father of the Great City (an expression for the underworld) , the great herald in the east of holy An, the judge who searches out verdicts for the gods, with a lapis-lazuli beard, rising from the horizon into the holy heavens -- Utu, the son born by Ningal."
+    },
+    {
+     "ref": "381–386",
+     "orig": "mug mu-un-dun temen si bi₂-in-sa₂\n{d}en-ki-ke₄ niĝ₂ nam-munus-a šu gal ba-/ni\\-in-du₇\n{d}en-ki-ra uĝ₃-e {tug₂}SIKI.NUMUN₂-a mu-un-da-an-[...]-e\nteš₂ e₂-gal me-te lugal-la\n{d}uttu munus zid niĝ₂-me-ĝar-ra\n{d}en-ki-ke₄ zag-ba nam-mi-in-gub",
+     "orig_lines": [
+      "381",
+      "382",
+      "383",
+      "384",
+      "385",
+      "386"
+     ],
+     "en": "He picked out the tow from the fibres, and set up the loom. Enki greatly perfected the task of women. For Enki, the people …… in …… garments. Enki placed in charge of them the honour of the palace, the dignity of the king -- Uttu, the conscientious woman, the silent one."
+    },
+    {
+     "ref": "387–390",
+     "orig": "ud-ba dili-ni ĝarza₂ taka₄-am₃\nmunus /gal an\\-[na-ke₄] {d}inana ĝarza₂ taka₄-am₃\n{d}inana a-[a-ni] {d}en-ki-ra\ne₂-a ba-ši-in-kur₉ er₂ mu-na-še₈-še₈ di-bi{!} nam-mu-na-ab-be₂",
+     "orig_lines": [
+      "387",
+      "388",
+      "389",
+      "390"
+     ],
+     "en": "Then, alone lacking any functions, the great woman of heaven, Inana, lacking any functions -- Inana came in to see her father Enki in his house, weeping to him, and making her complaint to him:"
+    },
+    {
+     "ref": "391–394",
+     "orig": "{d}a-nun-na diĝir gal-gal-[e]-ne nam tar-tar-ra-bi\n{d}en-lil₂-le [šu]-za ma-ra-ni-in-ge-en\nmunus-me-en dili-ĝu₁₀-/ne\\ [a]-/na\\ bi₂-dug₄\nkug {d}inana-me-en /mar\\-[za-ĝu₁₀] /me\\-a",
+     "orig_lines": [
+      "391",
+      "392",
+      "393",
+      "394"
+     ],
+     "en": "\"Enlil left it in your hands to confirm the functions of the Anuna, the great gods. Why did you treat me, the woman, in an exceptional manner? I am holy Inana -- where are my functions?\""
+    },
+    {
+     "ref": "395–402",
+     "orig": "{d}a-ru-ru nin₉ {d}en-/lil₂\\-[la₂]-/ke₄\\\n{d}nin-tur₅ nin tud-tud-da\nšeg₁₂ tud-tud kug nam-en-na-ni šu ḫe₂-em-ma-an-[ti]\ngi-dur kud im-ma-an ga-raš{sar}-a-ni ḫe₂-em-ma-da-/an-ri\\\nsila₃-ĝar-ra {na₄}za-gin₃ duru₅-ni šu ḫe₂-em-ma-an-ti\na-la₂ kug na de₅-ga-ni šu ḫe₂-em-ma-da-an-ri\nšag₄-zu kalam-ma ḫe₂-em\nlugal u₃-tud en u₃-tud-bi šu-ni-a ḫe₂-en-ĝal₂",
+     "orig_lines": [
+      "395",
+      "396",
+      "397",
+      "398",
+      "399",
+      "400",
+      "401",
+      "402"
+     ],
+     "en": "\"Aruru, Enlil's sister, Nintur, the lady of giving birth, is to get the holy birth-bricks as her prerogative. She is to carry off the lancet for umbilical cords, the special sand and leeks. She is to get the sila-ĝara bowl of translucent lapis lazuli (in which to place the afterbirth) . She is to carry off the holy consecrated ala vessel. She is to be the midwife of the land! The birthing of kings and lords is to be in her hands.\""
+    },
+    {
+     "ref": "403–405",
+     "orig": "nin₉ e-ĝu₁₀ kug {d}nin-isin₂{si}-na-ke₄\nunu₂ šuba-a šu ḫe₂-em-ma-an-ti nu-gig an-na ḫe₂-em\nan-e ḫe₂-em-ma-gub kurku₂-a ḫe₂-em-ma-ab-be₂",
+     "orig_lines": [
+      "403",
+      "404",
+      "405"
+     ],
+     "en": "\"My illustrious sister, holy Ninisina, is to get the jewellery of šuba stones. She is to be the mistress of heaven. She is to stand beside An and speak to him whenever she desires.\""
+    },
+    {
+     "ref": "406–411",
+     "orig": "nin₉ e-ĝu₁₀ kug {d}nin-mug-ke₄\nbulug kug-sig₁₇ ma-an-ga-ra kug-babbar šu ḫe₂-em-ma-an-ti\n{na₄}ĝiri₂-zu₂-gal an-ta-sur-ra-ni ḫe₂-em-ma-da-an-ri\ntibira kalam-ma ḫe₂-em\nlugal u₃-tud suḫ zid keše₂-de₃\nen u₃-tud saĝ-men ĝa₂-ĝa₂ šu-na ḫe₂-en-ĝal₂",
+     "orig_lines": [
+      "406",
+      "407",
+      "408",
+      "409",
+      "410",
+      "411"
+     ],
+     "en": "\"My illustrious sister, holy Ninmug, is to get the golden chisel and the silver burin. She is to carry off her big flint antasura blade. She is to be the metal-worker of the Land. The fitting of the good diadem when a king is born and the crowning with the crown when a lord is born are to be in her hands.\""
+    },
+    {
+     "ref": "412–417",
+     "orig": "nin₉ e-ĝu₁₀ kug {d}nisaba-ke₄\ngi-1-nindan šu ḫe₂-em-ma-an-ti\neš₂ za-gin₃ a₂-na ḫa-ba-an-la₂\nme gal-gal-e gu₃ ḫa-ba-an-de₂-e\nin ḫe₂-dub-e ki ḫe₂-sur-re dub-sar kalam-ma ḫe₂-em\nnaĝ gu₇ diĝir-re-e-ne-ke₄ šu-ni-a ḫe₂-en-ĝal₂",
+     "orig_lines": [
+      "412",
+      "413",
+      "414",
+      "415",
+      "416",
+      "417"
+     ],
+     "en": "\"My illustrious sister, holy Nisaba, is to get the measuring-reed. The lapis-lazuli measuring tape is to hang over her arm. She is to proclaim all the great powers. She is to demarcate boundaries and mark borders. She is to be the scribe of the Land. The planning of the gods' meals is to be in her hands.\""
+    },
+    {
+     "ref": "418–421",
+     "orig": "{d}nanše nin uru₁₆-e u₅<{mušen}> kug-ga ĝiri₃-ni-še₃ ba-an-gub\nenkud [a]-ab-ba-ka ḫe₂-em\nku₆ niĝ₂ dug₃-dug₃ mušen niĝ₂ ku₇-ku₇\na-a-ni {d}en-lil₂-ra nibru{ki}-še₃ šu ḫu-mu-na-ra-gid₂-i",
+     "orig_lines": [
+      "418",
+      "419",
+      "420",
+      "421"
+     ],
+     "en": "\"Nanše, the august lady, who rests her feet on the holy pelican, is to be the fisheries inspector of the sea. She is to be responsible for accepting delectable fish and delicious birds from there to go to Nibru for her father Enlil.\""
+    },
+    {
+     "ref": "422–423",
+     "orig": "munus-me-en dili-ĝu₁₀-ne a-na bi₂-ak\n/kug\\ {d}inana-me-en mar-za-ĝu₁₀ me-a",
+     "orig_lines": [
+      "422",
+      "423"
+     ],
+     "en": "\"But why did you treat me, the woman, in an exceptional manner? I am holy Inana -- where are my functions?\""
+    },
+    {
+     "ref": "424–436",
+     "orig": "/{d}\\[en]-ki-ke₄ dumu-ni kug {d}inana-ra [mu]-na-ni-ib₂-gi₄-gi₄\n[a-na] a-ra-an-la₂\n[in]-/nin₉\\ a-na a-ra-an-la₂ [a-na a]-/ra\\-ab-taḫ-e-de₃-en\n[ki-sikil] {d}inana a-na a-ra-an-la₂ [a-na a-ra]-ab-taḫ-e-de₃-en\nmunus /gu₃{?}\\ [sag₉]-ge gu₃ ḫa-ba-e-de₂\na₂-bi-/še₃{?} ḫa\\-ba-e-/re-a\\-ed₃\na₂ ur-saĝ-ba tug₂ ḫe₂-em-mi-dul\nzag zid-da-bi zag gab₂-bu-/bi\\ šu bal ḫe₂-ba-e-ni-/in\\-[ak]\ntug₂ a₂ munus-a ḫe₂-em-mi-mur₁₀\neme munus-a ka-ba ḫa-ba-e-ni-ĝar\n{ĝiš}bal {ĝiš}kirid šu-še₃ ḫe₂-em-mi-šum₂\nmunus še-er-ka-an-/bi{?}\\ [X]-/še₃{?}\\ ḫa-ba-e-ri-a-dug₄\n/ešgiri₂ šibir\\ {ĝiš}ma-nu nam-sipad-da zag-ba ḫe₂-em-de₃-gub",
+     "orig_lines": [
+      "424",
+      "425",
+      "426",
+      "427",
+      "428",
+      "429",
+      "430",
+      "431",
+      "432",
+      "433",
+      "434",
+      "435",
+      "436"
+     ],
+     "en": "Enki answered his daughter, holy Inana : \"How have I disparaged you? Goddess, how have I disparaged you? How can I enhance you? Maiden Inana, how have I disparaged you? How can I enhance you? I made you speak as a woman with pleasant voice. I made you go forth ……. I covered …… with a garment. I made you exchange its right side and its left side. I clothed you in garments of women's power. I put women's speech in your mouth. I placed in your hands the spindle and the hairpin. I …… to you women's adornment. I settled on you the staff and the crook, with the shepherd's stick beside them.\""
+    },
+    {
+     "ref": "437–444",
+     "orig": "ki-sikil {d}inana a-na-ra-la₂ a-na-ra-ab-taḫ-e-en-de₃-en\nme₃ šen-šen-na inim-ĝar-ra-ba inim til₃-a ḫe₂-ne-de₃-en\nmurub₄-ba a₁₂-ra₂-bu{mušen} nu-me-en-na inim ḫul ḫu-mu-ne-de₃-en\ngu si sa₂-a ḫu-mu-e-suḫ₃-suḫ₃\nki-sikil {d}inana gu suḫ₃-a si ḫu-mu-e-ni-sa₂\ntug₂ ḫu-mu-e-ni-ĝar gada ḫu-mu-e-ni-mur₁₀\nmug ḫu-mu-e-ni-dun {ĝiš}bal ḫu-mu-e-ni-NU\n[tug₂] /guz\\-za gu-du gun₃-a ḫu-mu-e-ni-gun₃",
+     "orig_lines": [
+      "437",
+      "438",
+      "439",
+      "440",
+      "441",
+      "442",
+      "443",
+      "444"
+     ],
+     "en": "\"Maiden Inana, how have I disparaged you? How can I enhance you? Amongst the ominous ocurrences in the hurly-burly of battle, I shall make you speak vivifying words; and in its midst, although you are not an arabu bird\"(a bird of ill omen) , I shall make you speak ill-omened words also. I made you tangle straight threads; maiden Inana, I made you straighten out tangled threads. I made you put on garments, I made you dress in linen. I made you pick out the tow from the fibres, I made you spin with the spindle. I made you colour tufted (?) cloth with coloured threads."
+    },
+    {
+     "ref": "445–450",
+     "orig": "{d}inana saĝ saḫar-re-eš ḫe₂-mu-e-dub saĝ numun-e-eš ḫe₂-mu-e-ĝar\n{d}inana niĝ₂ nu-gul-u₃ ḫe₂-mu-e-gul niĝ₂ nu-sig₁₀-ge₅ ḫe₂-mu-e-sig₁₀\nšem₃ a-nir-ra-da tug₂ ḫe₂-em-mi-si-ig\nki-sikil {d}inana tigi a-da-ab e₂-ba ḫe₂-em-mi-gi₄\nlu₂ u₆ di igi nu-kuš₂-u₃-me-en\nki-sikil {d}inana pu₂ su₃-ra₂ eš₂ la₂ nu-zu-me-en",
+     "orig_lines": [
+      "445",
+      "446",
+      "447",
+      "448",
+      "449",
+      "450"
+     ],
+     "en": "\"Inana, you heap up human heads like piles of dust, you sow heads like seed. Inana, you destroy what should not be destroyed; you create what should not be created. You remove the cover from the šem drum of lamentations, Maiden Inana, while shutting up the tigi and adab instruments in their homes. You never grow weary with admirers looking at you. Maiden Inana, you know nothing of tying the ropes on deep wells.\""
+    },
+    {
+     "ref": "451–471",
+     "orig": "i₃-ne-eš₂ šag₄ gu₂-bi nam-gi₄ kalam ki-bi ḫe₂-em-gi₄\nšag₄ /{d}\\en-lil₂-la₂ gu₂-bi nam-gi₄ kalam ki-bi ḫe₂-em-gi₄\nšag₄ gu₂-bi gi₄-a nam-lu₂-u₁₈-lu-ka\n[...] X E X X niĝ₂ nam-ba-e-ĝa₂-ĝa₂\n[...] tab-ba-zu ḫe₂-a\n[...] mu-e-da-an-TI\n[...]-/ne\\-ke₄\n[...] suḫ₁₀ za-gin₃ [... nam]-/en\\-na-zu-um\n[...] X A [... nam-en-na]-zu-um\n[...] /gu₃\\ de₂-de₂-bi [... nam-en-na]-zu-um\n[...] X GI EN [... nam]-en-na-zu-um\n[...] X DA [...]-/da-an\\-DU\n[...]-/un\\-da-sa₂-sa₂-e-ne\n[...] mu-ra-ni-ib-X\n[...]-ra-teĝ₃-ĝe₂₆-ne\n[...] /ĝar\\-ra-/a\\\n[...]-ab-SAR-SAR-ne\n[...]-ge-ne\n[...] tuku\n[...] X-a\n[...] X-ba",
+     "orig_lines": [
+      "451",
+      "452",
+      "453",
+      "454",
+      "455",
+      "456",
+      "457",
+      "458",
+      "459",
+      "460",
+      "461",
+      "462",
+      "463",
+      "464",
+      "465",
+      "466",
+      "467",
+      "468",
+      "469",
+      "470",
+      "471"
+     ],
+     "en": "\"But now, the heart has overflowed, the Land is restored; Enlil's heart has overflowed, the Land is restored. In his overflowing heart of mankind,\"4 lines unclear \"…… lapis-lazuli headdress …… is your prerogative, …… is your prerogative, …… is your prerogative, …… is your prerogative.\" 10 lines unclear"
+    },
+    {
+     "ref": "472",
+     "orig": "[a-a {d}en-ki za₃]-mi₂",
+     "orig_lines": [
+      "472"
+     ],
+     "en": "Praise be to Father Enki."
+    }
+   ]
+  }
+ ]
+}

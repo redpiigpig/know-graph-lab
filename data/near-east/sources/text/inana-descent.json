@@ -1,0 +1,903 @@
+{
+ "slug": "inana-descent",
+ "source": "ETCSL",
+ "siglum": "ETCSL 1.4.1",
+ "source_url": "https://etcsl.orinst.ox.ac.uk/cgi-bin/etcsl.cgi?text=t.1.4.1",
+ "license": "ETCSL（Oxford）轉寫與英譯，非商業學術使用",
+ "compositions": [
+  {
+   "num": "1.4.1",
+   "title_en": "Inana's descent to the nether world",
+   "segments": [
+    {
+     "ref": "1–5",
+     "orig": "an gal-ta ki gal-še₃ ĝeštug₂-ga-ni na-an-/gub\\ (Šited in OB šatalogue from Nibru, at Pḫiladelpḫia, 0.2.01, line 41; OB šatalogue in tḫe Louvre, 0.2.02, line 33; OB šatalogue from Urim (U2), 0.2.04, line 27)\ndiĝir an gal-ta ki gal-še₃ ĝeštug₂-ga-ni na-an-[gub]\n{d}inana an gal-[ta ki gal-še₃] ĝeštug₂-ga-ni na-an-[gub]\nnin-ĝu₁₀ an mu-un-šub ki mu-un-šub kur-ra ba-e-a-ed₃\n{d}inana an mu-un-šub ki mu-un-šub kur-ra ba-e-a-ed₃",
+     "orig_lines": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+     ],
+     "en": "From the great heaven she set her mind on the great below. From the great heaven the goddess set her mind on the great below. From the great heaven Inana set her mind on the great below. My mistress abandoned heaven, abandoned earth, and descended to the underworld. Inana abandoned heaven, abandoned earth, and descended to the underworld."
+    },
+    {
+     "ref": "6–13",
+     "orig": "nam-en mu-un-šub nam-lagar mu-un-šub kur-ra ba-e-a-ed₃\nunug{ki}-ga e₂-an-na mu-un-šub kur-ra ba-e-a-ed₃\nbad₃-/tibira\\{ki}-a e₂-muš₃-kalam-ma mu-un-šub kur-ra ba-[e-a]-ed₃\nzabalam{ki}-a gi-gun₄{ki}-na mu-un-šub kur-ra ba-e-a-ed₃\nadab{ki}-a e₂-šar-ra mu-un-šub kur-ra ba-e-a-ed₃\nnibru{ki}-a barag-dur₂-ĝar-ra mu-un-šub [kur-ra ba-e-a-ed₃]\nkiš{ki}-a ḫur-saĝ-kalam-ma mu-un-šub kur-ra ba-e-[a-ed₃]\na-ga-de₃{ki}-a e₂-ul-maš{ki} mu-un-šub kur-a ba-e-a-ed₃\numma{ki}-a ib-gal mu-un-šub <kur-ra ba-e-a-ed₃>\nurim₂{ki}-ma e₂-dilmun-na mu-un-šub <kur-ra ba-e-a-ed₃>\nkisiga{ki}-a amaš-e₂-kug mu-un-šub <kur-ra ba-e-a-ed₃>\nĝir₂-su{ki}-a e₂-eš₂-dam-kug mu-un-šub <kur-ra ba-e-a-ed₃>\ni₃-si-in-na{ki} e₂-šeg₁₂-me-še₃-du₇ mu-un-šub <kur-ra ba-e-a-ed₃>\nakšak{ki}-a an-za-gar₃ mu-un-šub <kur-ra ba-e-a-ed₃>\nšuruppag{ki}-e niĝin₃-ĝar-kug mu-un-šub <kur-ra ba-e-a-ed₃>\nka-zal-lu{ki} e₂-šag₄-ḫul₂-la mu-un-šub <kur-ra ba-e-a-ed₃>",
+     "orig_lines": [
+      "6",
+      "7",
+      "8",
+      "9",
+      "10",
+      "11",
+      "12",
+      "13",
+      "13A",
+      "13B",
+      "13C",
+      "13D",
+      "13E",
+      "13F",
+      "13G",
+      "13H"
+     ],
+     "en": "She abandoned the office of en, abandoned the office of lagar, and descended to the underworld. She abandoned the E-ana in Unug, and descended to the underworld. She abandoned the E-muš-kalama in Bad-tibira, and descended to the underworld. She abandoned the Giguna in Zabalam, and descended to the underworld. She abandoned the E-šara in Adab, and descended to the underworld. She abandoned the Barag-dur-ĝara in Nibru, and descended to the underworld. She abandoned the Ḫursaĝ-kalama in Kiš, and descended to the underworld. She abandoned the E-Ulmaš in Agade, and descended to the underworld. {(1 ms. adds 8 other lines:) She abandoned the Ibgal in Umma, and descended to the underworld. She abandoned the E-Dilmuna in Urim, and descended to the underworld. She abandoned the Amaš-e-kug in Kisiga, and descended to the underworld. She abandoned the E-ešdam-kug in Ĝirsu, and descended to the underworld. She abandoned the E-šeg-meše-du in Isin, and descended to the underworld. She abandoned the Anzagar in Akšak, and descended to the underworld. She abandoned the Niĝin-ĝar-kug in Šuruppag, and descended to the underworld. She abandoned the E-šag-ḫula in Kazallu, and descended to the underworld.}"
+    },
+    {
+     "ref": "14–19",
+     "orig": "me 7-bi zag mu-ni-in-keše₂\nme mu-un-ur₄-ur₄ šu-ni-še₃ mu-un-la₂\nme dug₃ ĝiri₃ gub-ba i-im-ĝen\ntug₂-šu-gur-ra men edin-na saĝ-ĝa₂-na mu-un-ĝal₂\nḫi-li saĝ-ki-na šu ba-ni-in-ti\n{na₄}za-gin₃ di₄-di₄-la₂ gu₂-na ba-an-la₂",
+     "orig_lines": [
+      "14",
+      "15",
+      "16",
+      "17",
+      "18",
+      "19"
+     ],
+     "en": "She took the seven divine powers. She collected the divine powers and grasped them in her hand. With the good divine powers, she went on her way. She put a turban, headgear for the open country, on her head. She took a wig for her forehead. She hung small lapis-lazuli beads around her neck."
+    },
+    {
+     "ref": "20–25",
+     "orig": "na₄-nunuz tab-ba gaba-na ba-ni-in-si\n{tug₂}pala₃ tug₂ nam-nin-a bar-ra-na ba-an-dul\nšembizid lu₂ ḫe₂-em-du ḫe₂-em-du igi-na ba-ni-in-ĝar\ntu-di-da lu₂ ĝa₂-nu ĝa₂-nu gaba-na ba-an-gid₂\nḫar kug-sig₁₇ šu-na ba-an-du₈\ngi-diš-nindan eš₂-gana₂ za-gin₃ šu ba-ni-in-du₈",
+     "orig_lines": [
+      "20",
+      "21",
+      "22",
+      "23",
+      "24",
+      "25"
+     ],
+     "en": "She placed twin egg-shaped beads on her breast. She covered her body with a pala dress, the garment of ladyship. She placed mascara which is called \"Let a man come, let him come\" on her eyes. She pulled the pectoral which is called \"Come, man, come\" over her breast. She placed a golden ring on her hand. She held the lapis-lazuli measuring rod and measuring line in her hand."
+    },
+    {
+     "ref": "26–27",
+     "orig": "{d}inana kur-še₃ i-im-ĝen\nsukkal-a-ni {d}ga-ša-an-šubur-ra eĝer-a-na i-im-ĝen",
+     "orig_lines": [
+      "26",
+      "27"
+     ],
+     "en": "Inana travelled towards the underworld. Her minister Ninšubur travelled behind her."
+    },
+    {
+     "ref": "28–31",
+     "orig": "kug {d}inana-ke₄ {d}nin-šubur-ra gu₃ mu-na-de₂-e\nĝa₂-nu sukkal zid e₂-an-na-ĝu₁₀\nsukkal e-ne-eĝ₃ sag₉-sag₉-ga-ĝu₁₀\nra-gaba e-ne-eĝ₃ ge-en-gen₆-na-ĝu₁₀\n[na] ga-e-de₅ na de₅-ĝu₁₀ /ḫe₂\\-[dab₅]\n[inim] ga-ra-ab-dug₄ ĝizzal [ḫe₂-em-ši-ak]",
+     "orig_lines": [
+      "28",
+      "29",
+      "30",
+      "31",
+      "30A",
+      "31A"
+     ],
+     "en": "Holy Inana said to Ninšubur: \"Come my faithful minister of E-ana, {my minister who speaks fair words, my escort who speaks trustworthy words} {(1 ms. has instead:) I am going to give you instructions: my instructions must be followed; I am going to say something to you: it must be observed}.\""
+    },
+    {
+     "ref": "32–36",
+     "orig": "ud-da kur-še₃ ed₃-de₃-en\nud-da kur-še₃ ĝen-na-ĝu₁₀-ne\ner₂ du₆-du₆-dam mar-mar-ma-ni-ib\nšem₃ gu₂-en-na du₁₂-du₁₂-a-ma-ni-ib\n[e₂] diĝir-re-e-ne niĝin₂-niĝin₂-na-ma-ni-ib",
+     "orig_lines": [
+      "32",
+      "33",
+      "34",
+      "35",
+      "36"
+     ],
+     "en": "\"On this day I will descend to the underworld. When I have arrived in the underworld, make a lament for me on the ruin mounds. Beat the drum for me in the sanctuary. Make the rounds of the houses of the gods for me.\""
+    },
+    {
+     "ref": "37–40",
+     "orig": "[i-bi₂-zu] ḫur-ma-ab giri₁₇-zu ḫur-ma-ab\n[ĝeštug₂ ki] u₆ di-zu [ḫur-ma-ab]\nki mu-lu-da nu-di ḫaš₄-gal-zu ḫur-ma-ab\nmu-lu nu-tuku-gin₇ tug₂ dili-a mur₁₀-ma-ab\ne₂-kur-re e₂ {d}mu-ul-lil₂-la₂-še₃ me-ri-zu dili [gub-mu-un]",
+     "orig_lines": [
+      "37",
+      "37A",
+      "38",
+      "39",
+      "40"
+     ],
+     "en": "\"Lacerate your eyes for me, lacerate your nose for me. {(1 ms. adds 1 line:) Lacerate your ears for me, in public.} In private, lacerate your buttocks for me. Like a pauper, clothe yourself in a single garment and all alone set your foot in the E-kur, the house of Enlil.\""
+    },
+    {
+     "ref": "41–47",
+     "orig": "[e₂]-kur-re e₂ {d}mu-ul-lil₂-la₂-še₃ ku₄-ku₄-da-zu-ne\ni-bi₂ {d}mu-ul-lil₂-la₂-še₃ er₂ šeš₂-a\n[a-a] {d}mu-ul-lil₂ du₅-mu-zu mu-lu kur-ra nam-ba-da-an-gam-e\nkug sag₉-ga-zu saḫar kur-ra-ka nam-ba-da-ab-šar₂-re\nza-gin₃ sag₉-ga-zu za zadim-ma-ka nam-ba-da-an-si-il-si-il\n{ĝiš}taškarin-zu ĝiš nagar-ra-ka nam-ba-an-dar-dar-e\nki-sikil {d}ga-ša-an-na kur-ra nam-ba-da-an-gam-e",
+     "orig_lines": [
+      "41",
+      "42",
+      "43",
+      "44",
+      "45",
+      "46",
+      "47"
+     ],
+     "en": "\"When you have entered the E-kur, the house of Enlil, lament before Enlil: \"Father Enlil, don't let anyone kill your daughter in the underworld. Don't let your precious metal be alloyed there with the dirt of the underworld. Don't let your precious lapis lazuli be split there with the mason's stone. Don't let your boxwood be chopped up there with the carpenter's wood. Don't let young lady Inana be killed in the underworld.\"\""
+    },
+    {
+     "ref": "48–56",
+     "orig": "ud-da {d}mu-ul-lil₂ e-ne-eĝ₃-ba nu-ri-gub urim₂{ki}-še₃ ĝen-na\nurim₂{ki} e₂-mud-kur-ra-ka\n[e₂]-kiš-[nu]-ĝal₂ {d}nanna-še₃ ku₄-ku₄-da-[zu]-ne\n[i]-bi₂ {d}nanna-še₃ er₂ šeš₂-a\n[a]-a {d}nanna du₅-mu-zu mu-lu kur-ra [nam-ba-da]-an-gam-e\n[kug sag₉-ga]-zu saḫar kur-ra-ka nam-ba-da-ab-[šar₂]-re\n[za-gin₃] sag₉-ga-zu za zadim-ma-ka nam-ba-da-an-si-il-si-il\n[{ĝiš}taškarin-zu] ĝiš nam-nagar-[ra-ka] nam-ba-da-an-dar-dar-[re]\nki-/sikil\\ /{d}\\ga-[ša-an-na] [kur-ra nam-ba]-da-an-gam-e",
+     "orig_lines": [
+      "48",
+      "49",
+      "50",
+      "51",
+      "52",
+      "53",
+      "54",
+      "55",
+      "56"
+     ],
+     "en": "\"If Enlil does not help you in this matter, go to Urim. In the E-mud-kura at Urim, when you have entered the E-kiš-nu-ĝal, the house of Nanna, lament before Nanna: \"Father Nanna, don't let anyone kill your daughter in the underworld. Don't let your precious metal be alloyed there with the dirt of the underworld. Don't let your precious lapis lazuli be split there with the mason's stone. Don't let your boxwood be chopped up there with the carpenter's wood. Don't let young lady Inana be killed in the underworld.\"\""
+    },
+    {
+     "ref": "57–64",
+     "orig": "ud-/da\\ /{d}\\nanna e-ne-eĝ₃-[ba] [nu-ri-gub] uru₂-ze₂-eb{ki}-še₃ ĝen-na\nuru₂-ze₂-eb{ki} e₂ {d}am-[an-ki-ka₃-še₃] [ku₄-ku₄-da-zu]-ne\n[i-bi₂] {d}am-an-ki-ka₃-še₃ er₂ šeš₂-am₃\na-a {d}am-an-ki du₅-mu-zu mu-lu kur-ra nam-ba-da-an-gam-e\nkug sag₉-ga-zu saḫar kur-ra-ka nam-ba-da-ab-[šar₂-re]\nza-gin₃ sag₉-ga-zu za zadim-ma-ka nam-ba-da-an-[si-il-si]-il\n{ĝiš}taškarin-zu ĝiš nagar-ra-ka nam-ba-da-an-dar-[dar-re]\nki-sikil {d}ga-ša-an-na kur-ra nam-ba-da-an-gam-e",
+     "orig_lines": [
+      "57",
+      "58",
+      "59",
+      "60",
+      "61",
+      "62",
+      "63",
+      "64"
+     ],
+     "en": "\"And if Nanna does not help you in this matter, go to Eridug. In Eridug, when you have entered the house of Enki, lament before Enki: \"Father Enki, don't let anyone kill your daughter in the underworld. Don't let your precious metal be alloyed there with the dirt of the underworld. Don't let your precious lapis lazuli be split there with the mason's stone. Don't let your boxwood be chopped up there with the carpenter's wood. Don't let young lady Inana be killed in the underworld.\"\""
+    },
+    {
+     "ref": "65–67",
+     "orig": "a-a {d}am-an-ki u₃-mu-un mu-uš-«ĝiš»-tug₂ <da>-ma-al-la-ke₄\nu₂ nam-til₃-la mu-un-zu a nam-til₃-la mu-un-zu\ne-ne ma-ra ḫu-mu-un-til₃-le-en",
+     "orig_lines": [
+      "65",
+      "66",
+      "67"
+     ],
+     "en": "\"Father Enki, the lord of great wisdom, knows about the life-giving plant and the life-giving water. He is the one who will restore me to life.\""
+    },
+    {
+     "ref": "68–72",
+     "orig": "{d}inana kur-še₃ ĝen-/na\\-[ni-ta]\nsukkal-a-ni {d}nin-šubur-ra-ke₄ eĝer-a-ni i₃-[im-ĝen]\nsukkal-a-ni {d}nin-šubur-ra gu₃ mu-na-[de₂-e]\nĝen-na {d}ga-ša-an-šubur-ĝu₁₀ saĝ [keše₂ ḫe₂-ak]\ne-ne-<eĝ₃> a-ra-dug₄-ga-ĝu₁₀ gu₂-zu la-ba-ši-šub",
+     "orig_lines": [
+      "68",
+      "69",
+      "70",
+      "71",
+      "72"
+     ],
+     "en": "When Inana travelled on towards the underworld, her minister Ninšubur travelled on behind her. She said to her minister Ninšubur: \"Go now, my Ninšubur, and pay attention. Don't neglect the instructions I gave you.\""
+    },
+    {
+     "ref": "73–77",
+     "orig": "{d}inana e₂-gal ganzer-še₃ um-ma-te\n{ĝiš}ig kur-ra-ka šu ḫul ba-an-us₂\nabula kur-ra-ka gu₃ ḫul ba-an-de₂\ne₂ ĝal₂-u₃ i₃-du₈ e₂ ĝal₂-u₃\ne₂ ĝal₂-u₃ {d}ne-ti e₂ ĝal₂-u₃ dili-ĝu₁₀-še₃ ga-kur₉",
+     "orig_lines": [
+      "73",
+      "74",
+      "75",
+      "76",
+      "77"
+     ],
+     "en": "When Inana arrived at the palace Ganzer, she pushed aggressively on the door of the underworld. She shouted aggressively at the gate of the underworld: \"Open up, doorman, open up. Open up, Neti, open up. I am all alone and I want to come in.\""
+    },
+    {
+     "ref": "78–84",
+     "orig": "{d}ne-ti i₃-du₈ gal kur-ra-ke₄\nkug {d}inana inim mu-na-ni-ib-gi₄-gi₄\na-ba-me-en za-e\nme-e {d}ga-ša-an(sourše: na)-na ki {d}utu e₃-a-aš\ntukum-bi za-e {d}inana ki {d}utu e₃-a-aš\na-na-am₃ ba-du-un kur nu-gi₄-še₃\nḫar-ra-an lu₂ du-bi nu-gi₄-gi₄-de₃ šag₄-zu a-gin₇ tum₂-mu-un",
+     "orig_lines": [
+      "78",
+      "79",
+      "80",
+      "81",
+      "82",
+      "83",
+      "84"
+     ],
+     "en": "Neti, the chief doorman of the underworld, answered holy Inana: \"Who are you?\" \"I am Inana going to the east.\" \"If you are Inana going to the east, why have you travelled to the land of no return? How did you set your heart on the road whose traveller never returns?\""
+    },
+    {
+     "ref": "85–89",
+     "orig": "kug {d}inana-ke₄ mu-na-ni-ib₂-gi₄-gi₄\nnin₉ gal-ĝu₁₀ kug {d}ga-ša-an-ki-gal-la-ke₄\nmu dam-a-ni u₃-mu-un gud-gal-an-na ba-an-ug₅-ga\nki-sig₁₀-ga-na i-bi₂ du₈-u₃-de₃\nkaš ki-sig₁₀-ga-na gu-ul ba-ni-in-de₂ ur₅ ḫe₂-na-nam-ma",
+     "orig_lines": [
+      "85",
+      "86",
+      "87",
+      "88",
+      "89"
+     ],
+     "en": "Holy Inana answered him: \"Because Lord Gud-gal-ana, the husband of my elder sister holy Ereškigala, has died; in order to have his funeral rites observed, she offers generous libations at his wake -- that is the reason.\""
+    },
+    {
+     "ref": "90–93",
+     "orig": "{d}ne-ti i₃-du₈ gal kur-ra-ke₄\nkug {d}inana-ra mu-na-ni-ib-gi₄-gi₄\ngub-ba-a {d}inana nin-ĝa₂ ga-an-na-ab-dug₄\nnin-ĝu₁₀ {d}ereš-ki-gal-la-ra ga-an-na-dug₄ [inim-zu] ga-an-na-ab-dug₄",
+     "orig_lines": [
+      "90",
+      "91",
+      "92",
+      "93"
+     ],
+     "en": "Neti, the chief doorman of the underworld, answered holy Inana: \"Stay here, Inana. I will speak to my mistress. I will speak to my mistress Ereškigala and tell her what you have said.\""
+    },
+    {
+     "ref": "94–101",
+     "orig": "{d}ne-ti i₃-du₈ gal kur-ra-ke₄\nnin-a-ni {d}ereš-ki-gal-la-ra\ne₂-[a-ni-še₃ ba]-ši-in-kur₉ gu₃ mu-na-de₂\nnin-ĝu₁₀ ki-sikil 1(DIŠ)-am₃\n{d}/inana\\ [nin₉-zu e₂-gal ganzer-še₃ um-ma-te]\n{ĝiš}ig [kur-ra-ka šu ḫul ba-an-us₂]\n[abula kur-ra-ka gu₃ ḫul ba-an-de₂]\ne₂-an-na [mu-un-šub kur-ra ba-e-a-ed₃]",
+     "orig_lines": [
+      "94",
+      "95",
+      "96",
+      "97",
+      "98",
+      "99",
+      "100",
+      "101"
+     ],
+     "en": "Neti, the chief doorman of the underworld, entered the house of his mistress Ereškigala and said: \"My mistress, there is a lone girl outside. It is Inana, your sister, and she has arrived at the palace Ganzer. She pushed aggressively on the door of the underworld. She shouted aggressively at the gate of the underworld. She has abandoned E-ana and has descended to the underworld.\""
+    },
+    {
+     "ref": "102–107",
+     "orig": "me 7-bi zag [mu-ni-in-keše₂]\nme mu-[un-ur₄-ur₄ šu-ni-še₃ mu-un-la₂]\nme [dug₃ ĝiri₃ gub-ba i-im-ĝen]\ntug₂-šu-gur-ra [men edin-na saĝ-ĝa₂-na mu-un-ĝal₂]\nḫi-li saĝ-ki-na [šu ba-ni-in-ti]\n[{na₄}za]-gin₃ /di₄\\-[di₄-la₂ gu₂-na i-im-la₂]",
+     "orig_lines": [
+      "102",
+      "103",
+      "104",
+      "105",
+      "106",
+      "107"
+     ],
+     "en": "\"She has taken the seven divine powers. She has collected the divine powers and grasped them in her hand. She has come on her way with all the good divine powers. She has put a turban, headgear for the open country, on her head. She has taken a wig for her forehead. She has hung small lapis-lazuli beads around her neck.\""
+    },
+    {
+     "ref": "108–113",
+     "orig": "na₄-nunuz tab-ba [gaba-na i-im-si]\n{tug₂}pala₃ nam-nin-a [bar-ra-na i-im-dul]\nšembizid lu₂ ḫe₂-em-du igi-ni [i-im-ĝar]\ntu-di-da lu₂ ĝa₂-nu ĝa₂-nu [gaba-na i-im-gid₂]\nḫar kug-sig₁₇ šu-na i-/im\\-[la₂]\ngi-diš-nindan eš₂-gana₂ za-gin₃ šu-na i-/im\\-[du₈]",
+     "orig_lines": [
+      "108",
+      "109",
+      "110",
+      "111",
+      "112",
+      "113"
+     ],
+     "en": "\"She has placed twin egg-shaped beads on her breast. She has covered her body with the pala dress of ladyship. She has placed mascara which is called \"Let a man come\" on her eyes. She has pulled the pectoral which is called \"Come, man, come\" over her breast. She has placed a golden ring on her hand. She is holding the lapis-lazuli measuring rod and measuring line in her hand.\""
+    },
+    {
+     "ref": "114–122",
+     "orig": "ud-ba {d}ereš-ki-gal-la-ke₄ ḫaš₂ bar-bi bi₂-in-ra\nnundum zu₂ bi₂-in-gub inim šag₄-še₃ ba-ti\n{d}ne-ti i₃-du₈ gal-ni-ir gu₃ mu-na-de₂-e\nĝa₂-nu {d}ne-ti i₃-du₈ gal kur-ra-ĝu₁₀\ninim a-ra-dug₄-ga-ĝu₁₀ gu₂-zu la-ba-an-šub-be₂-/en\\\nabula kur-ra 7-bi {ĝiš}si-ĝar-bi ḫe₂-eb-us₂\ne₂-gal ganzer dili-bi {ĝiš}ig-bi šu ḫa-ba-an-us₂\ne-ne ku₄-ku₄-da-ni-ta\ngam-gam-ma-ni tug₂ zil-zil-la-ni-ta lu₂ ba-/an\\-[de₆]",
+     "orig_lines": [
+      "114",
+      "115",
+      "116",
+      "117",
+      "118",
+      "119",
+      "120",
+      "121",
+      "122"
+     ],
+     "en": "When she heard this, Ereškigala slapped the side of her thigh. She bit her lip and took the words to heart. She said to Neti, her chief doorman: \"Come Neti, my chief doorman of the underworld, don't neglect the instructions I will give you. Let the seven gates of the underworld be bolted. Then let each door of the palace Ganzer be opened separately. As for her, after she has entered, and crouched down and had her clothes removed, they will be carried away.\""
+    },
+    {
+     "ref": "123–128",
+     "orig": "{d}ne-ti i₃-du₈ gal kur-ra-[ke₄]\ninim nin-a-na-še₃ saĝ keše₂ ba-ši-[in-ak]\nabula kur-ra 7-bi {ĝiš}si-ĝar-bi [bi₂-ib₂-us₂]\ne₂-gal ganzer dili-bi [{ĝiš}ig-bi šu ba-an-us₂]\nkug {d}inana-ra gu₃ mu-na-de₂-[e]\nĝa₂-nu {d}inana kur₉-um-[ma-ni]",
+     "orig_lines": [
+      "123",
+      "124",
+      "125",
+      "126",
+      "127",
+      "128"
+     ],
+     "en": "Neti, the chief doorman of the underworld, paid attention to the instructions of his mistress. He bolted the seven gates of the underworld. Then he opened each of the doors of the palace Ganzer separately. He said to holy Inana: \"Come on, Inana, and enter.\""
+    },
+    {
+     "ref": "129–133",
+     "orig": "{d}inana ku₄-ku₄-da-[ni-ta]\ngi-diš-nindan eš₂-gana₂ za-gin₃ [šu-na lu₂ ba-da-an-ze₂-er]\nabula 1-kam-ma ku₄-[ku₄-da-ni-ta]\ntug₂-šu-gur-ra men edin-na saĝ-ĝa₂-na lu₂ ba-da-an-ze₂-er\nta-am₃ ne-e\nsi-a {d}inana me kur-ra-ke₄ šu al-du₇-du₇\n{d}inana ĝarza kur-ra-ke₄ ka-zu na-an-ba-e",
+     "orig_lines": [
+      "129",
+      "129A",
+      "129B",
+      "130",
+      "131",
+      "132",
+      "133"
+     ],
+     "en": "And when Inana entered, {(1 ms. adds 2 lines:) the lapis-lazuli measuring rod and measuring line were removed from her hand, when she entered the first gate,} the turban, headgear for the open country, was removed from her head. \"What is this?\" \"Be silent, Inana, a divine power of the underworld has been fulfilled. Inana, you must not open your mouth against the rites of the underworld.\""
+    },
+    {
+     "ref": "134–138",
+     "orig": "abula 2-kam-ma ku₄-ku₄-da-[ni-ta]\n{na₄}za-gin₃ di₄-di₄-la₂ gu₂-na lu₂ ba-da-an-ze₂-er\nta-am₃ ne-e\nsi-a {d}inana me kur-ra-ke₄ šu al-du₇-du₇\n{d}inana ĝarza kur-ra-ke₄ ka-zu na-an-ba-e",
+     "orig_lines": [
+      "134",
+      "135",
+      "136",
+      "137",
+      "138"
+     ],
+     "en": "When she entered the second gate, the small lapis-lazuli beads were removed from her neck. \"What is this?\" \"Be silent, Inana, a divine power of the underworld has been fulfilled. Inana, you must not open your mouth against the rites of the underworld.\""
+    },
+    {
+     "ref": "139–143",
+     "orig": "abula 3-kam-ma ku₄-ku₄-da-ni-ta\nna₄-nunuz tab-ba gaba-na lu₂ ba-da-an-ze₂-er\nta-am₃ ne-e\nsi-a {d}inana me kur-ra-ke₄ šu al-du₇-du₇\n{d}inana ĝarza kur-ra-ke₄ ka-zu na-an-ba-e",
+     "orig_lines": [
+      "139",
+      "140",
+      "141",
+      "142",
+      "143"
+     ],
+     "en": "When she entered the third gate, the twin egg-shaped beads were removed from her breast. \"What is this?\" \"Be silent, Inana, a divine power of the underworld has been fulfilled. Inana, you must not open your mouth against the rites of the underworld.\""
+    },
+    {
+     "ref": "144–148",
+     "orig": "abula 4-kam-ma ku₄-ku₄-da-ni-ta\ntu-di-da lu₂ ĝa₂-nu ĝa₂-nu gaba-na lu₂ ba-da-an-ze₂-er\nta-am₃ ne-e\nsi-a {d}inana me kur-ra-ke₄ šu al-du₇-du₇\n{d}inana ĝarza kur-ra-ke₄ ka-zu na-an-ba-e",
+     "orig_lines": [
+      "144",
+      "145",
+      "146",
+      "147",
+      "148"
+     ],
+     "en": "When she entered the fourth gate, the \"Come, man, come\" pectoral was removed from her breast. \"What is this?\" \"Be silent, Inana, a divine power of the underworld has been fulfilled. Inana, you must not open your mouth against the rites of the underworld.\""
+    },
+    {
+     "ref": "149–153",
+     "orig": "abula 5-kam-ma ku₄-ku₄-da-ni-ta\nḫar kug-sig₁₇ šu-na lu₂ ba-da-an-ze₂-er\nta-am₃ ne-e\nsi-a {d}inana me kur-ra-ke₄ šu al-du₇-du₇\n{d}inana ĝarza kur-ra-ke₄ ka-zu na-an-ba-e",
+     "orig_lines": [
+      "149",
+      "150",
+      "151",
+      "152",
+      "153"
+     ],
+     "en": "When she entered the fifth gate, the golden ring was removed from her hand. \"What is this?\" \"Be silent, Inana, a divine power of the underworld has been fulfilled. Inana, you must not open your mouth against the rites of the underworld.\""
+    },
+    {
+     "ref": "154–158",
+     "orig": "abula 6-kam-ma ku₄-ku₄-da-ni-ta\ngi-diš-nindan eš₂-gana₂ za-gin₃ šu-[na] lu₂ ba-da-an-ze₂-er\nta-am₃ ne-e\nsi-a {d}inana me kur-ra-ke₄ šu al-du₇-du₇\n{d}inana ĝarza kur-ra-ke₄ ka-zu na-an-ba-e",
+     "orig_lines": [
+      "154",
+      "155",
+      "156",
+      "157",
+      "158"
+     ],
+     "en": "When she entered the sixth gate, the lapis-lazuli measuring rod and measuring line were removed from her hand. \"What is this?\" \"Be silent, Inana, a divine power of the underworld has been fulfilled. Inana, you must not open your mouth against the rites of the underworld.\""
+    },
+    {
+     "ref": "159–163",
+     "orig": "abula 7-kam-ma ku₄-ku₄-da-ni-ta\n[{tug₂}pala₃] tug₂ nam-nin-a bar-ra-na lu₂ ba-da-an-ze₂-er\nta-am₃ ne-e\nsi-a {d}inana me kur-ra-ke₄ šu al-du₇-du₇\n{d}inana ĝarza kur-ra-ke₄ ka-zu na-an-ba-e",
+     "orig_lines": [
+      "159",
+      "160",
+      "161",
+      "162",
+      "163"
+     ],
+     "en": "When she entered the seventh gate, the pala dress, the garment of ladyship, was removed from her body. \"What is this?\" \"Be silent, Inana, a divine power of the underworld has been fulfilled. Inana, you must not open your mouth against the rites of the underworld.\""
+    },
+    {
+     "ref": "164–172",
+     "orig": "gam-gam-ma-ni tug₂ zil-zil-la-ni-ta lu₂ ma-an-de₆\nnin₉-a-ni {ĝiš}gu-za-ni-ta im-ma-da-an-zig₃\ne-ne {ĝiš}gu-za-ni-ta dur₂ im-mi-in-ĝar\n{d}a-nun-na di-kud 7-bi igi-ni-še₃ di mu-un-da-ku₅-ru-ne\nigi mu-ši-in-bar i-bi₂ uš₂-a-kam\ninim i-ne-ne inim lipiš gig-ga-am₃\ngu₃ i-ne-de₂ gu₃ nam-tag-tag-ga-am₃\nmunus tur₅-ra uzu niĝ₂ sag₃-ga-še₃ ba-an-kur₉\nuzu niĝ₂ sag₃-ga {ĝiš}gag-ta lu₂ ba-da-an-la₂",
+     "orig_lines": [
+      "164",
+      "165",
+      "166",
+      "167",
+      "168",
+      "169",
+      "170",
+      "171",
+      "172"
+     ],
+     "en": "After she had crouched down and had her clothes removed, they were carried away. Then she made her sister Ereškigala rise from her throne, and instead she sat on her throne. The Anuna, the seven judges, rendered their decision against her. They looked at her -- it was the look of death. They spoke to her -- it was the speech of anger. They shouted at her -- it was the shout of heavy guilt. The afflicted woman was turned into a corpse. And the corpse was hung on a hook."
+    },
+    {
+     "ref": "173–175",
+     "orig": "[ud 3] ĝi₆ 3-am₃ um-ta-zal-la-ta\nsukkal-a-ni {d}nin-šubur-ra-ke₄\nsukkal inim sag₉-sag₉-ga-ni\nra-gaba inim ge-en-ge-en-na-ni\ninim nin-a-na-še₃ ĝeštug₂ ba-ši-in-gub\n[na] de₅-[ga]-ni šu nu-bar-re\n[inim] dug₄-ga-ni gu₂-ni la-ba-ši-šub",
+     "orig_lines": [
+      "173",
+      "174",
+      "174A",
+      "174B",
+      "175",
+      "175A",
+      "175B"
+     ],
+     "en": "After three days and three nights had passed, her minister Ninšubur {(2 mss. add 2 lines:) , her minister who speaks fair words, her escort who speaks trustworthy words,} {carried out the instructions of her mistress} {(1 ms. has instead 2 lines:) did not forget her orders, she did not neglect her instructions}."
+    },
+    {
+     "ref": "176–182",
+     "orig": "er₂ du₆-du₆-dam mu-un-na-ĝa₂-ĝa₂\n[šem₃] gu₂-en-na mu-un-du₁₂-a\ne₂ diĝir-re-e-ne-ke₄ mu-un-na-niĝin₂-niĝin₂\nigi-ni mu-un-[na]-ḫur giri₁₇-ni mu-un-ḫur\nki lu₂-da nu-«u₆»-di ḫaš₄-gal-a-ni mu-un-na-ḫur\nmu-lu nu-tuku-gin₇ tug₂ dili-a /im\\-[ma]-an-mur₁₀\n[e₂-kur] e₂ {d}en-lil₂-la₂-še₃ ĝiri₃-ni dili mu-un-gub",
+     "orig_lines": [
+      "176",
+      "177",
+      "178",
+      "179",
+      "180",
+      "181",
+      "182"
+     ],
+     "en": "She made a lament for her in her ruined (houses). She beat the drum for her in the sanctuaries. She made the rounds of the houses of the gods for her. She lacerated her eyes for her, she lacerated her nose. In private she lacerated her buttocks for her. Like a pauper, she clothed herself in a single garment, and all alone she set her foot in the E-kur, the house of Enlil."
+    },
+    {
+     "ref": "183–189",
+     "orig": "[e₂-kur] e₂ {d}en-lil₂-la₂-še₃ ku₄-ku₄-da-ni-ta\n[igi] [{d}en-lil₂-la₂]-še₃ er₂ im-ma-še₈-še₈\n[a-a] [{d}mu-ul-lil₂] du₅-mu-zu mu-lu kur-ra nam-ba-da-an-gam-e\n[kug] sag₉-ga-zu [saḫar kur]-/ra\\-ka nam-ba-[da-ab-šar₂]-e\n[{na₄}za-gin₃] sag₉-ga-zu za zadim-ka nam-[ba-da-an]-si-il-si-il\n[{ĝiš}taškarin-zu] ĝiš nagar-ra-ka nam-ba-[dar]-/dar\\-re\n[ki-sikil] /{d}\\ga-ša-an-na kur-ra nam-ba-da-[an]-gam-e",
+     "orig_lines": [
+      "183",
+      "184",
+      "185",
+      "186",
+      "187",
+      "188",
+      "189"
+     ],
+     "en": "When she had entered the E-kur, the house of Enlil, she lamented before Enlil: \"Father Enlil, don't let anyone kill your daughter in the underworld. Don't let your precious metal be alloyed there with the dirt of the underworld. Don't let your precious lapis lazuli be split there with the mason's stone. Don't let your boxwood be chopped up there with the carpenter's wood. Don't let young lady Inana be killed in the underworld.\""
+    },
+    {
+     "ref": "190–194",
+     "orig": "[a-a] [{d}]en-lil₂ lipiš bal-a-ni {d}nin-šubur-ra-ke₄ mu-na-ni-ib-gi₄-gi₄\n[dumu-ĝu₁₀] an gal al bi₂-in-dug₄ ki gal al bi₂-in-dug₄\n[{d}inana] an gal al bi₂-in-dug₄ ki gal al bi₂-in-dug₄\nme kur-ra me al nu-di-da sa₂ bi₂-in-dug₄-[ga-bi kur]-/re\\ ḫe₂-eb-us₂\na-ba-am₃ ki-bi sa₂ in-na-an-dug₄ [ed₃-de₃] al mu-ni-in-dug₄",
+     "orig_lines": [
+      "190",
+      "191",
+      "192",
+      "193",
+      "194"
+     ],
+     "en": "In his rage Father Enlil answered Ninšubur: \"My daughter craved the great heaven and she craved the great below as well. Inana craved the great heaven and she craved the great below as well. The divine powers of the underworld are divine powers which should not be craved, for whoever gets them must remain in the underworld. Who, having got to that place, could then expect to come up again?\""
+    },
+    {
+     "ref": "195–203",
+     "orig": "a-a {d}en-lil₂ inim-bi nu-mu-na-gub urim₂{ki}-[še₃] ba-ĝen\nurim₂{ki} [e₂-mud]-kur-ra-ka\ne₂-kiš-nu-ĝal₂ [e₂ {d}nanna-še₃ ku₄-ku₄-da-ni]-ta\nigi {d}nanna-še₃ er₂ [im-ma]-še₈-še₈\na-a {d}nanna du₅-mu-zu mu-lu kur-ra nam-[ba]-da-an-gam-e\nkug sag₉-ga-zu saḫar kur-ra-ka nam-ba-[da-ab]-šar₂-re\n{na₄}za-gin₃ sag₉-ga-zu za zadim-ka nam-ba-[da-an]-si-il-si-il-i\n{ĝiš}taškarin-zu ĝiš nagar-ra-ka [nam-ba]-da-[an-dar-dar]-re\nki-sikil {d}ga-ša-an-na kur-ra nam-ba-da-[an]-gam-e",
+     "orig_lines": [
+      "195",
+      "196",
+      "197",
+      "198",
+      "199",
+      "200",
+      "201",
+      "202",
+      "203"
+     ],
+     "en": "Thus Father Enlil did not help in this matter, so she went to Urim. In the E-mud-kura at Urim, when she had entered the E-kiš-nu-ĝal, the house of Nanna, she lamented before Nanna: \"Father Nanna, don't let your daughter be killed in the underworld. Don't let your precious metal be alloyed there with the dirt of the underworld. Don't let your precious lapis lazuli be split there with the mason's stone. Don't let your boxwood be chopped up there with the carpenter's wood. Don't let young lady Inana be killed in the underworld.\""
+    },
+    {
+     "ref": "204–208",
+     "orig": "a-a {d}nanna lipiš bal-a-ni [{d}nin-šubur-ra-ke₄ mu-na-ni]-ib-gi₄-gi₄\ndumu-ĝu₁₀ an gal al bi₂-in-dug₄ [ki gal] al bi₂-in-dug₄\n{d}inana an gal al bi₂-in-dug₄ [ki gal] al [bi₂]-in-dug₄\nme kur-ra me al nu-di-da /sa₂\\ [bi₂-in-dug₄-ga-bi kur]-/re\\ ḫe₂-eb-us₂\na-ba-am₃ ki-bi [sa₂ in-na-an-dug₄ ed₃-de₃ al mu-ni-ib-dug₄ ]",
+     "orig_lines": [
+      "204",
+      "205",
+      "206",
+      "207",
+      "208"
+     ],
+     "en": "In his rage Father Nanna answered Ninšubur: \"My daughter craved the great heaven and she craved the great below as well. Inana craved the great heaven and she craved the great below as well. The divine powers of the underworld are divine powers which should not be craved, for whoever gets them must remain in the underworld. Who, having got to that place, could then expect to come up again?\""
+    },
+    {
+     "ref": "209–216",
+     "orig": "a-a {d}nanna inim-bi nu-/mu\\-[na-gub uru₂-ze₂-eb{ki}-še₃] /ba\\-ĝen\nuru₂-ze₂-eb{ki} e₂ {d}en-ki-ka₃-še₃ [ku₄-ku₄]-da-ni-ta\nigi {d}en-ki-ka₃-še₃ [er₂ im]-/ma\\-še₈-še₈\na-a {d}en-ki du₅-mu-zu mu-lu [kur-ra nam-ba]-/da\\-an-gam-e\nkug sag₉-ga-zu saḫar kur-ra-ka nam-[ba-da-ab-šar₂]-re\n{na₄}za-gin₃ sag₉-ga-zu za zadim-ka nam-ba-da-an-[si-il-si]-il-i\n{ĝiš}taškarin-zu ĝiš nagar-ra-ka nam-ba-an-dar-dar-re\nki-sikil {d}ga-ša-an-na kur-ra nam-ba-da-an-gam-e",
+     "orig_lines": [
+      "209",
+      "210",
+      "211",
+      "212",
+      "213",
+      "214",
+      "215",
+      "216"
+     ],
+     "en": "Thus Father Nanna did not help her in this matter, so she went to Eridug. In Eridug, when she had entered the house of Enki, she lamented before Enki: \"Father Enki, don't let anyone kill your daughter in the underworld. Don't let your precious metal be alloyed there with the dirt of the underworld. Don't let your precious lapis lazuli be split there with the mason's stone. Don't let your boxwood be chopped up there with the carpenter's wood. Don't let young lady Inana be killed in the underworld.\""
+    },
+    {
+     "ref": "217–225",
+     "orig": "a-a {d}en-ki {d}nin-šubur-ra-ke₄ mu-un-na-ni-ib-gi₄-gi₄\ndumu-ĝu₁₀ a-na bi₂-in-ak ĝe₂₆-e mu-un-kuš₂-u\n{d}inana [a-na] bi₂-in-ak ĝe₂₆-e mu-un-kuš₂-u\nnin kur-kur-/ra\\-[ke₄] a-na bi₂-in-ak ĝe₂₆-e mu-un-kuš₂-u\nnu-u₈-/gig\\ /an\\-na-ke₄ a-na bi₂-in-ak ĝe₂₆-e mu-un-kuš₂-u\na-a {d}en-ki inim-bi ba-e-de₃-gub\numbin-si-ni mu-dur₇ ba-ra-an-de₆ kur-ĝar-ra-aš ba-an-dim₂\numbin-si 2-kam-ma mu-dur₇ ba-ra-an-de₆ gala-tur-ra-aš ba-an-dim₂\nkur-ĝar-ra u₂ nam-til₃-la ba-an-šum₂\ngala-tur-ra a nam-til₃-la ba-an-šum₂",
+     "orig_lines": [
+      "217",
+      "218",
+      "219",
+      "220",
+      "221",
+      "221A",
+      "222",
+      "223",
+      "224",
+      "225"
+     ],
+     "en": "Father Enki answered Ninšubur: \"What has my daughter done? She has me worried. What has Inana done? She has me worried. What has the mistress of all the lands done? She has me worried. What has the mistress of heaven done? She has me worried.\" {(1 ms. adds 1 line:) Thus Father Enki helped her in this matter.} He removed some dirt from the tip of his fingernail and created the kur-ĝara. He removed some dirt from the tip of his other fingernail and created the gala-tura. To the kur-ĝara he gave the life-giving plant. To the gala-tura he gave the life-giving water."
+    },
+    {
+     "ref": "226–235",
+     "orig": "[a-a] {d}en-ki gala-tur-ra kur-ĝar-ra gu₃ mu-na-[de₂-e]\n1-am₃ u₂ nam-til₃-la 1-am₃ a nam-til₃-la ugu-ni-a šub-ba-ab-ze₂-en\nĝen-na-an-ze₂-en ĝiri₃ kur-še₃ nu₂-ba-an-ze₂-en\n{ĝiš}ig nim-gin₇ dal-dal-e-de₃-en-ze₂-en\nza-ra lil₂-gin₇ gur-gur-re-de₃-en-ze₂-en\nama gan-e nam dumu-ne-ne-še₃\n{d}ereš-ki-gal-la-ke₄ i-nu₂-nu₂-ra-am₃\nmur kug-ga-na gada nu-um-bur₂\ngaba-ni bur šaĝan-gin₇ nu-um-gid₂\n/šu{?}\\-si-ni {urud}lub-bi-gin₇ am₃-da-ĝal₂\nsiki-ni ga-raš{sar}-gin₇ saĝ-ĝa₂-na mu-un-ur₄-ur₄-re",
+     "orig_lines": [
+      "226",
+      "226A",
+      "227",
+      "228",
+      "229",
+      "230",
+      "231",
+      "232",
+      "233",
+      "234",
+      "235"
+     ],
+     "en": "{Then Father Enki spoke out to the gala-tura and the kur-ĝara:} \" {(1 ms. has instead the line:) One of you sprinkle the life-giving plant over her, and the other the life-giving water.} Go and direct your steps to the underworld. Flit past the door like flies. Slip through the door pivots like phantoms. The mother who gave birth, Ereškigala, on account of her children, is lying there. Her holy shoulders are not covered by a linen cloth. Her breasts are not full like a šagan vessel. Her nails are like a pickaxe (?) upon her. The hair on her head is bunched up as if it were leeks.\""
+    },
+    {
+     "ref": "236–245",
+     "orig": "u-u₈-a šag₄-ĝu₁₀ dug₄-ga-ni\nkuš₂-u₃-me-en nin-me a šag₄-zu [dug₄]-ga-<zu>-ne-[ne]\n[u-u₈]-a bar-ĝu₁₀ dug₄-ga-ni\nkuš₂-u₃-me-en nin-me a bar-zu [dug₄]-ga-<zu>-ne-[ne]\na-ba-am₃ za-e-me-en-ze₂-en\nšag₄-ĝu₁₀-[ta] šag₄-zu-še₃ bar-ĝu₁₀-ta bar-<zu>-še₃ dug₄-ga-na-ab-ze₂-en\ndiĝir ḫe₂-me-en-ze₂-en inim ga-mu-ra-an-dug₄\nlu₂-ulu₃ ḫe₂-me-en-ze₂-en nam-zu-ne ḫe₂-eb-tar-re\nzi an-na zi ki-a pad₃-de₃-ne-ze₂-na-am₃\ned₃{?}-[...]-ab-ze₂-en",
+     "orig_lines": [
+      "236",
+      "237",
+      "238",
+      "239",
+      "240",
+      "241",
+      "242",
+      "243",
+      "244",
+      "245"
+     ],
+     "en": "\"When she says \"Oh my heart\", you are to say \"You are troubled, our mistress, oh your heart\". When she says \"Oh my body\", you are to say \"You are troubled, our mistress, oh your body\". (She will then ask:) \"Who are you? Speaking to you from my heart to your heart, from my body to your body -- if you are gods, let me talk with you; if you are mortals, may a destiny be decreed for you.\" Make her swear this by heaven and earth. 1 line fragmentary\""
+    },
+    {
+     "ref": "246–253",
+     "orig": "a id₂-bi ma-ra-ba-e-ne šu nam-[ba]-gid₂-i-en-ze₂-en\na-šag₄ še-ba ma-ra-ba-e-ne šu nam-ba-gid₂-i-en-ze₂-en\nuzu niĝ₂ sag₃-ga {ĝiš}gag-ta la₂ šum₂-me-ab {dug₄-ga-na-ab-ze₂-en} {(1 ms. ḫas instead:) dug₄-ga-ma-ab-ĝen-ze₂-en }\nuzu niĝ₂ sag₃-ga ga-ša-an-<zu>-ne-ne\nniĝ₂ lugal-me «en» ḫe₂-a niĝ₂ nin-me(sourše: bi) ḫe₂-a šum₂-ma-ze₂-en dug₄-ga-na-ab-ze₂-en(sourše: dug₄-ga-ma-ab-ĝen-ze₂-en)\nuzu niĝ₂ sag₃-ga {ĝiš}gag-ta la₂-a im-ma-da-ab-šum₂-mu-ze₂-en\n1-am₃ u₂ nam-til₃-la 1-am₃ a nam-til₃-la ugu-na šub-bu-de₃-en-ze₂-en\n{d}inana ḫa-ba-gub",
+     "orig_lines": [
+      "246",
+      "247",
+      "248",
+      "249",
+      "250",
+      "251",
+      "252",
+      "253"
+     ],
+     "en": "\"They will offer you a riverful of water -- don't accept it. They will offer you a field with its grain -- don't accept it. But say to her: \"Give us the corpse hanging on the hook.\" (She will answer:) \"That is the corpse of your queen.\" Say to her: \"Whether it is that of our king, whether it is that of our queen, give it to us.\" She will give you the corpse hanging on the hook. One of you sprinkle on it the life-giving plant and the other the life-giving water. Thus let Inana arise.\""
+    },
+    {
+     "ref": "254–262",
+     "orig": "gala-tur kur-ĝar-ra inim {d}en-ki-ka₃-še₃ saĝ keše₂ ba-[ši-in]-ak-eš\n{ĝiš}ig nim-gin₇ mu-un-dal-dal\nza-ra lil₂-gin₇ mu-un-gur-gur\n[ama gan-e] nam dumu-ne-ne-še₃\n[{d}ereš-ki]-gal-la-ke₄ i-nu₂-nu₂-ra-am₃\n[mur] kug-[ga]-na gada nu-un-bur₂\n[gaba-ni] bur šaĝan-na nu-un-gid₂\n[šu-si]-ni {urud}lub-bi-gin₇ /an\\-[da-ĝal₂]\n[siki]-ni ga-raš{sar}-gin₇ saĝ-[ĝa₂-na mu-un-ur₄-ur₄]",
+     "orig_lines": [
+      "254",
+      "255",
+      "256",
+      "257",
+      "258",
+      "259",
+      "260",
+      "261",
+      "262"
+     ],
+     "en": "The gala-tura and the kur-ĝara paid attention to the instructions of Enki. They flitted through the door like flies. They slipped through the door pivots like phantoms. The mother who gave birth, Ereškigala, because of her children, was lying there. Her holy shoulders were not covered by a linen cloth. Her breasts were not full like a šagan vessel. Her nails were like a pickaxe (?) upon her. The hair on her head was bunched up as if it were leeks."
+    },
+    {
+     "ref": "263–272",
+     "orig": "[u₃-u₈-a] /šag₄\\-ĝu₁₀ dug₄-ga-ni\n[kuš₂-u₃-me]-en nin-me a šag₄-zu in-na-[ne]-eš\n[u₃-u₈-a] bar-ĝu₁₀ dug₄-ga-ni\n[kuš₂-u₃-me]-en nin-me a bar-zu in-na-ne-eš\n[a-ba-am₃] za-e-me-en-ze₂-en\n[šag₄-ĝu₁₀-ta] šag₄-zu-še₃ bar-ĝu₁₀-ta bar-zu-še₃ ba-e-de₃-en-ze₂-en\n[diĝir ḫe₂-me-en]-ze₂-en inim ga-mu-ra-an-dug₄\n[lu₂-ulu₃ ḫe₂-me]-/en\\-ze₂-en nam-zu-ne ga-mu-ri-ib-tar\n[zi an-na zi ki-a] mu-ni-in-pad₃-de₃-eš\n[...]-/ed₃\\-de₃-de₃-eš",
+     "orig_lines": [
+      "263",
+      "264",
+      "265",
+      "266",
+      "267",
+      "268",
+      "269",
+      "270",
+      "271",
+      "272"
+     ],
+     "en": "When she said \"Oh my heart\", they said to her \"You are troubled, our mistress, oh your heart\". When she said \"Oh my body\", they said to her \"You are troubled, our mistress, oh your body\". (Then she asked:) \"Who are you? I tell you from my heart to your heart, from my body to your body -- if you are gods, I will talk with you; if you are mortals, may a destiny be decreed for you.\" They made her swear this by heaven and earth. They ……."
+    },
+    {
+     "ref": "273–281",
+     "orig": "id₂ a-ba mu-ne-ba-e šu nu-um-ma-gid₂-de₃\na-šag₄ še-ba mu-ne-ba-e šu nu-um-ma-gid₂-de₃\nuzu niĝ₂ sag₃-ga {ĝiš}gag-ta la₂ šum₂-me-eb in-na-an-ne-eš\nkug {d}ereš-ki-gal-la-ke₄ /gala\\-[tur kur-ĝar-ra] mu-na-ni-ib-gi₄-gi₄\nuzu {niĝ₂} {(1 ms. ḫas instead:) aĝ₂ } sag₃-ga {niĝ₂} {(1 ms. ḫas instead:) aĝ₂ } ga-ša-an-zu-ne-ne-kam\n[niĝ₂] /lugal\\-me {niĝ₂} {(1 ms. ḫas instead:) aĝ₂ } nin-me ḫe₂-a šum₂-me-eb in-na-an-ne-eš\nuzu niĝ₂ sag₃-ga {ĝiš}gag-ta la₂ im-me-ne-šum₂-uš\n1-am₃ u₂ nam-til₃-la 1-am₃ a nam-til₃-la ugu-a bi₂-in-šub-bu-uš\n{d}inana ba-gub",
+     "orig_lines": [
+      "273",
+      "274",
+      "275",
+      "276",
+      "277",
+      "278",
+      "279",
+      "280",
+      "281"
+     ],
+     "en": "They were offered a river with its water -- they did not accept it. They were offered a field with its grain -- they did not accept it. They said to her: \"Give us the corpse hanging on the hook.\" Holy Ereškigala answered the gala-tura and the kur-ĝara: \"The corpse is that of your queen.\" They said to her: \"Whether it is that of our king or that of our queen, give it to us.\" They were given the corpse hanging on the hook. One of them sprinkled on it the life-giving plant and the other the life-giving water. And thus Inana arose."
+    },
+    {
+     "ref": "282–289",
+     "orig": "{d}ereš-ki-gal-la gala-<tur> kur-ĝar-ra gu₃ [mu-na-de₂]-e\ntum₂-mu-un-ze₂-en ga-ša-an-<zu>-ne-[ne] [...]-zu{?}-ne-ne ba-dab₅\n{d}inana inim {d}en-ki-[ka₃-ta] /kur\\-ta ed₃\n{d}inana kur-ta ed₃-da-ni\n{d}a-nun-na-ke₄-e-ne ba-ab-ḫa-za-aš\na-ba-am₃ lu₂ kur-ta im-[ta]-ed₃-de₃ kur-ta silim-ma-ni bi₂-in-ed₃-de₃\nud-da {d}inana kur-ta ba-ed₃-de₃\nsaĝ-dili saĝ-ĝa₂-na ḫa-ba-ab-šum₂-mu",
+     "orig_lines": [
+      "282",
+      "283",
+      "284",
+      "285",
+      "286",
+      "287",
+      "288",
+      "289"
+     ],
+     "en": "Ereškigala said to the gala-tura and the kur-ĝara: \"Bring your queen ……, your …… has been seized.\" Inana, because of Enki's instructions, was about to ascend from the underworld. But as Inana was about to ascend from the underworld, the Anuna seized her: \"Who has ever ascended from the underworld, has ascended unscathed from the underworld? If Inana is to ascend from the underworld, let her provide a substitute for herself.\""
+    },
+    {
+     "ref": "290–294",
+     "orig": "{d}inana kur-ta ba-ed₃-de₃\nlu₂ igi-na sukkal nu-me-a {ĝiš}ĝidru šu bi₂-in-du₈\nbar-ra-na ra-gaba nu-me-a {ĝiš}tukul ur₂-ra bi₂-in-la₂\ngal₅-la₂ tur-tur gi-šukur-gin₇\ngal₅-la₂ gal-gal gi dub-ba-an-na-gin₇ zag-ga-na ba-an-dab₅-be-eš",
+     "orig_lines": [
+      "290",
+      "291",
+      "292",
+      "293",
+      "294"
+     ],
+     "en": "So when Inana left the underworld, the one in front of her, though not a minister, held a sceptre in his hand; the one behind her, though not an escort, carried a mace at his hip, while the small demons, like a reed enclosure, and the big demons, like the reeds of a fence, restrained her on all sides."
+    },
+    {
+     "ref": "295–305",
+     "orig": "lu₂ e-ne-ra in-ši-re₇-eš-am₃\nlu₂ {d}inana-ra in-ši-re₇-eš-am₃\nu₂ nu-zu-me-eš a nu-zu-me-eš\nzid₂ dub-dub-ba nu-gu₇-me-eš\na bal-bal-a nu-na₈-na₈-me-eš\nkadra niĝ₂ dug₃-ge šu nu-gid₂-me-eš\nur₂ dam niĝ₂ dug₃-ge-eš nu-sig₉-ge-me-eš\ndumu niĝ₂ ku₇-ku₇-da ne nu-su-ub-ba-me-eš\ndam ur₂ lu₂-ka ba-ra-an-si-il-si-il-le-eš\ndumu lu₂ du₁₀-ub-ta ba-ra-an-zig₃-ge-eš\ne₂-gi₄-a e₂ ušbar-ra-ka im-ta-an-e₃-eš-am₃\n/ur₂\\ lu₂-ka dam šu ti-a-me-eš\n/ubur\\ emeda(UM.ME){da} la₂-ka dumu šu ti-a-me-eš\nšum₂{sar} niĝ₂ sis-a nu-gum-e-me-eš\nlu₂ ku₆ nu-gu₇-me-eš lu₂ ga-raš{sar} nu-gu₇-[me-eš]\nlu₂ {d}inana mu-un-ši-re₇-[eš-am₃]",
+     "orig_lines": [
+      "295",
+      "296",
+      "297",
+      "298",
+      "299",
+      "300",
+      "301",
+      "302",
+      "303",
+      "304",
+      "305",
+      "300A",
+      "301A",
+      "305A",
+      "305B",
+      "305C"
+     ],
+     "en": "Those who accompanied her, those who accompanied Inana, know no food, know no drink, eat no flour offering and drink no libation. {They accept no pleasant gifts. They never enjoy the pleasures of the marital embrace, never have any sweet children to kiss. They tear away the wife from a man's embrace. They snatch the son from a man's knee. They make the bride leave the house of her father-in-law} {(instead of lines 300-305, 1 ms. has 2 lines:) They take the wife away from a man's embrace. They take away the child hanging on a wet-nurse's breasts}. {(1 ms. adds 3 lines:) They crush no bitter garlic. They eat no fish, they eat no leeks. They, it was, who accompanied Inana.}"
+    },
+    {
+     "ref": "306–310",
+     "orig": "{d}inana kur-ta ed₃-da-ni\n{d}nin-šubur-ra-ke₄ kan₄ ganzer-[ra-ka] ĝiri₃-ni-še₃ ba-an-šub\nsaḫar-ra ba-da-an-tuš tug₂-mu-dur₇-ra ba-an-mur₁₀\ngal₅-la₂-e-ne kug {d}inana-ra gu₃ mu-un-na-de₂-e\n{d}inana iri-zu-še₃ ĝen-ba e-ne ga-ba-ab-tum₂-mu-de₃-en",
+     "orig_lines": [
+      "306",
+      "307",
+      "308",
+      "309",
+      "310"
+     ],
+     "en": "After Inana had ascended from the underworld, Ninšubur threw herself at her feet at the door of the Ganzer. She had sat in the dust and clothed herself in a filthy garment. The demons said to holy Inana: \"Inana, proceed to your city, we will take her back.\""
+    },
+    {
+     "ref": "311–321",
+     "orig": "kug {d}inana-ke₄ gal₅-la₂-e-ne mu-un-ne-ni-gi₄-gi₄\nsukkal e-ne-eĝ₃ sag₉-sag₉-ga-ĝu₁₀\nra-gaba e-ne-eĝ₃ ge-en-gen₆-na-ĝu₁₀\n[na] de₅-ga-ĝu₁₀ šu nu-un-bar-re\n[e-ne]-eĝ₃ ma-ra-[ab-dug₄]-ga-ĝu₁₀-uš gu₂-ni [la]-ba-da-[an-ši-šub]\ner₂ du₆-du₆-dam ma-an-ĝa₂-ĝa₂\nšem₃ gu₂-en-na ma-an-du₁₂-am₃\ne₂ diĝir-re-e-ne ma-an-niĝin₂-niĝin₂\ni-bi₂-ni ma-an-ḫur giri₁₇-ni ma-an-ḫur\n/ĝeštug₂\\-[ga]-ni ki u₆ di ma-ḫur\nki mu-lu-da nu-di ḫaš₄-gal-a-ni ma-an-ḫur\nmu-lu nu-tuku-gin₇ tug₂ dili-a im-ma-an-mur₁₀",
+     "orig_lines": [
+      "311",
+      "312",
+      "313",
+      "314",
+      "315",
+      "316",
+      "317",
+      "318",
+      "319",
+      "319A",
+      "320",
+      "321"
+     ],
+     "en": "Holy Inana answered the demons: \"This is my minister of fair words, my escort of trustworthy words. She did not forget my instructions. She did not neglect the orders I gave her. She made a lament for me on the ruin mounds. She beat the drum for me in the sanctuaries. She made the rounds of the gods' houses for me. She lacerated her eyes for me, lacerated her nose for me. {(1 ms. adds 1 line:) She lacerated her ears for me in public.} In private, she lacerated her buttocks for me. Like a pauper, she clothed herself in a single garment.\""
+    },
+    {
+     "ref": "322–328",
+     "orig": "e₂-kur-re e₂ {d}mu-ul-lil₂-la₂-še₃\nurim₂{ki}-ma e₂ {d}nanna-še₃\nuru₂-ze₂-eb{ki} e₂ {d}am-an-ki-ka₃-še₃\nĝiri₃-ni dili mu-un-gub\nigi {d}am-an-ki-ka₃ er₂ bi₂-še₈-še₈\ne-ne ma-a-ra mu-un-til₃-le-en\ne-ne ta-gin₇ nam-ma-ra-ab-ze₂-eĝ₃-/en\\-[ze₂-en]\nga-an-ši-re₇-de₃-en umma{ki}-a šeg₁₂-kur-šag₄-ga-še₃ ga-am₃-ši-re₇-de₃-en",
+     "orig_lines": [
+      "322",
+      "323",
+      "324",
+      "325",
+      "325A",
+      "326",
+      "327",
+      "328"
+     ],
+     "en": "\"All alone she directed her steps to the E-kur, to the house of Enlil, and to Urim, to the house of Nanna, and to Eridug, to the house of Enki. {(1 ms. adds 1 line:) She wept before Enki.} She brought me back to life. How could I turn her over to you? Let us go on. Let us go on to the Šeg-kuršaga in Umma.\""
+    },
+    {
+     "ref": "329–333",
+     "orig": "/umma\\[{ki}-a] šeg₁₂-kur-šag₄-ga-ta\n{d}šara iri-ni-a ĝiri₃-ni-še₃ ba-an-šub\nsaḫar-ra ba-da-an-tuš tug₂-mu-dur₇-ra ba-an-mur₁₀\ngal₅-la₂-e-ne kug {d}inana-ra gu₃ mu-na-de₂-e\n{d}inana iri-zu-še₃ ĝen-ba e-ne ga-ba-ab-tum₂-mu-de₃",
+     "orig_lines": [
+      "329",
+      "330",
+      "331",
+      "332",
+      "333"
+     ],
+     "en": "At the Šeg-kuršaga in Umma, Šara, in his own city, threw himself at her feet. He had sat in the dust and dressed himself in a filthy garment. The demons said to holy Inana: \"Inana, proceed to your city, we will take him back.\""
+    },
+    {
+     "ref": "334–338",
+     "orig": "kug {d}inana-ke₄ gal₅-la₂-e-ne mu-na-ni-ib-gi₄-gi₄\nen₃-du /du\\ {d}šara-ĝu₁₀\numbin kud-ku₅-ra-ĝu₁₀ gu₂-tar la₂-ĝu₁₀\nen₃ ta-gin₇ nam-ma-ra-ni-ib-ze₂-eĝ₃-ĝen\nga-e-re₇-en-de₃-en bad₃-tibira{ki}-a e₂-muš₃-kalam-ma-še₃ ga-an-ši-re₇-en-de₃-en",
+     "orig_lines": [
+      "334",
+      "335",
+      "336",
+      "337",
+      "338"
+     ],
+     "en": "Holy Inana answered the demons: \"Šara is my singer, my manicurist and my hairdresser. How could I turn him over to you? Let us go on. Let us go on to the E-muš-kalama in Bad-tibira.\""
+    },
+    {
+     "ref": "339–343",
+     "orig": "bad₃-tibira{ki}-a e₂-muš₃-kalam-ma-ta\n{d}lu₂-lal₃-e iri-ni-a ĝiri₃-ni-še₃ ba-an-šub\nsaḫar-a im-da-an-tuš tug₂-mu-dur₇-ra ba-an-mur₁₀\ngal₅-la₂-e-ne kug {d}inana-ra gu₃ mu-na-de₂-e\n{d}inana iri-zu-še₃ ĝen-ba e-ne ga-ba-ab-tum₂-mu-un-de₃-en",
+     "orig_lines": [
+      "339",
+      "340",
+      "341",
+      "342",
+      "343"
+     ],
+     "en": "At the E-muš-kalama in Bad-tibira, Lulal, in his own city, threw himself at her feet. He had sat in the dust and clothed himself in a filthy garment. The demons said to holy Inana: \"Inana, proceed to your city, we will take him back.\""
+    },
+    {
+     "ref": "344–347",
+     "orig": "kug {d}inana-ke₄ gal₅-la₂-e-ne mu-na-ni-ib-gi₄-gi₄\n{d}lu₂-lal₃ zag e₃-a a₂ zid-da gab₂-bu-ĝu₁₀ us₂-sa\ne-ne ta-gin₇ nam-ma-ra-ab-ze₂-eĝ₃-en-ze₂-en\nga-e-re₇-de₃-en {ĝiš}ḫašḫur gul-la edin kul-aba₄{ki}-še₃ [ga-an-ši-re₇-en-de₃-en]",
+     "orig_lines": [
+      "344",
+      "345",
+      "346",
+      "347"
+     ],
+     "en": "Holy Inana answered the demons: \"Outstanding Lulal follows me at my right and my left. How could I turn him over to you? Let us go on. Let us go on to the great apple tree in the plain of Kulaba.\""
+    },
+    {
+     "ref": "348–353",
+     "orig": "{ĝiš}ḫašḫur gul-la edin kul-aba₄{ki}-še₃ ĝiri₃-ni-še₃ ba-e-re₇{re}-eš\n{d}dumu-zid tug₂ maḫ-a i-im-mur₁₀ maḫ-a dur₂-a dur₂ im-ma-ĝar\ngal₅-la₂-e-ne ḫaš₄-a-na i-im-dab₅-be₂-eš\n{dug}šakir 7-e ga mu-un-de₂-eš-am₃\n7-am₃ X-TU-ra-gin₇ saĝ mu-un-da-sag₃-ge-ne\nsipad-de₃ gi-gid₂ gi-di-da igi-ni šu /nu\\-mu-un-tag-ge-ne",
+     "orig_lines": [
+      "348",
+      "349",
+      "350",
+      "351",
+      "352",
+      "353"
+     ],
+     "en": "They followed her to the great apple tree in the plain of Kulaba. There was Dumuzid clothed in a magnificent garment and seated magnificently on a throne. The demons seized him there by his thighs. The seven of them poured the milk from his churns. The seven of them shook their heads like ……. They would not let the shepherd play the pipe and flute before her (?)."
+    },
+    {
+     "ref": "354–358",
+     "orig": "igi mu-un-ši-in-bar igi uš₂-a-ka\ninim i-ne-ne inim lipiš gig-ga\ngu₃ i-ne-de₂ gu₃ nam-tag-tag-ga\nen₃-še₃ tum₃-mu-an-ze₂-en\nkug {d}inana-ke₄ su₈-ba {d}dumu-zid-da šu-ne-ne-a in-na-šum₂",
+     "orig_lines": [
+      "354",
+      "355",
+      "356",
+      "357",
+      "358"
+     ],
+     "en": "She looked at him, it was the look of death. She spoke to him (?), it was the speech of anger. She shouted at him (?), it was the shout of heavy guilt: \"How much longer? Take him away.\" Holy Inana gave Dumuzid the shepherd into their hands."
+    },
+    {
+     "ref": "359–367",
+     "orig": "lu₂ e-ne lu₂ mu-un-ne-re₇-eš-am₃\nlu₂ {d}dumu-zid mu-un-ši-re₇-eš-am₃\nu₂ nu-zu-me-eš a nu-zu-me-eš\nzid₂ dub-dub-ba nu-gu₇-me-eš\na bal-bal-a nu-na₈-na₈-me-eš\nur₂ dam niĝ₂ dug₃-ge-eš₂ nu-sig₉-ge-eš\ndumu niĝ₂ ku₇-ku₇-da ne nu-su-ub-me-eš\ndumu lu₂ du₁₀-ub-ta ba-ra-an-zig₃-ge-eš\ne₂-gi₄-a e₂ ušbar-ra-ka um-ta-an-e₃-eš",
+     "orig_lines": [
+      "359",
+      "360",
+      "361",
+      "362",
+      "363",
+      "364",
+      "365",
+      "366",
+      "367"
+     ],
+     "en": "Those who had accompanied her, who had come for Dumuzid, know no food, know no drink, eat no flour offering, drink no libation. They never enjoy the pleasures of the marital embrace, never have any sweet children to kiss. They snatch the son from a man's knee. They make the bride leave the house of her father-in-law."
+    },
+    {
+     "ref": "368–375",
+     "orig": "{d}dumu-zid-de₃ er₂ im-da-pad₃ šeₓ(SIG₇)-šeₓ(SIG₇) i₃-ĝa₂-ĝa₂\nĝuruš-e {d}utu-ra an-še₃ šu-ni ba-an-na-zig₃\n{d}utu murum₅-ĝu₁₀-me-en ĝe₂₆-e mussa-zu-me-en\ne₂ ama-zu-še₃ i₃ gur₃-ru-me-en\ne₂ {d}nin-gal-še₃ ga gur₃-ru-me-en\nšu-ĝu₁₀ šu muš-a u₃-mu-ni-in-šum₂\nĝiri₃-ĝu₁₀ ĝiri₃ muš-a u₃-mu-ni-in-šum₂\ngal₅-la₂-ĝu₁₀ ga-ba-da-kar nam-mu-un-ḫa-za-ne",
+     "orig_lines": [
+      "368",
+      "369",
+      "370",
+      "371",
+      "372",
+      "373",
+      "374",
+      "375"
+     ],
+     "en": "Dumuzid let out a wail and wept. The lad raised his hands to heaven, to Utu: \"Utu, you are my brother-in-law. I am your relation by marriage. I brought butter to your mother's house. I brought milk to Ningal's house. Turn my hands into snake's hands and turn my feet into snake's feet, so I can escape my demons, let them not keep hold of me.\""
+    },
+    {
+     "ref": "376–383",
+     "orig": "[{d}utu er₂-na] šu ba-an-ši-in-ti\n[gal₅-la₂-e-ne] nu-ḫa-[ḫa-ne]\n[šu-ni šu] muš-a mu-e-ni-šum₂\n[ĝiri₃-ni] ĝiri₃ muš-a mu-e-ni-šum₂\n[gal₅-la₂]-e-ne ba-ni-kar\n[... muš]-saĝ-kal 1-gin₇\n[... ba-ni]-in-dab₅-be₂-eš-a\n[...]-/be₂{?}\\\n[...]-/eš\\\nkug {d}inana-/ke₄{?}\\ [...]-ni šag₄-ga-ni nam-DU",
+     "orig_lines": [
+      "376",
+      "376A",
+      "377",
+      "378",
+      "379",
+      "379A",
+      "380",
+      "381",
+      "382",
+      "383"
+     ],
+     "en": "Utu accepted his tears. {(1 ms. adds 1 line:) Dumuzid's demons could not keep hold of him.} Utu turned Dumuzid's hands into snake's hands. He turned his feet into snake's feet. Dumuzid escaped his demons. {(1 ms. adds 1 line:) Like a saĝkal snake he …….} They seized ……. 2 lines fragmentary Holy Inana …… her heart."
+    },
+    {
+     "ref": "384–393",
+     "orig": "kug {d}inana-ke₄ mu-ud-na-ni er₂ gig i₃-še₈-še₈\n[kug {d}inana-ke₄ ...] [{d}]/dumu-zid-de₃\\ [(X)] šag₄-ga-ni nam-[DU (...)]\n[...] dam-ni [(X X)] a₂-na [...]\n[...] NI [(X X)] X [...]\n[...]-gin₇ im-mi-[...] /im\\-mi-X-[...]\n{u₂}numun₂ i₃-bur₁₂-re {u₂}numun₂ i₃-ze₂-e\ndam lu₂ ur₂-zu-ne-ne [nu₂]-a me dam kal-la-ĝu₁₀\ndumu lu₂ ur₂-zu-ne-ne nu₂-a me dumu kal-la-ĝu₁₀\n[me-am₃] [mu-lu]-/ĝu₁₀\\ me-am₃ mu-un-KAxX-e\n[me-am₃] [mu-lu]-/ĝu₁₀\\ me-am₃ mu-un-TAG-TAG X-e",
+     "orig_lines": [
+      "384",
+      "385",
+      "386",
+      "387",
+      "388",
+      "389",
+      "390",
+      "391",
+      "392",
+      "393"
+     ],
+     "en": "Holy Inana wept bitterly for her husband. 4 lines fragmentary She tore at her hair like esparto grass, she ripped it out like esparto grass. \"You wives who lie in your men's embrace, where is my precious husband? You children who lie in your men's embrace, where is my precious child? Where is my man? Where ……? Where is my man? Where ……?\""
+    },
+    {
+     "ref": "394–398",
+     "orig": "[nim-e kug] {d}inana-ra gu₃ mu-/na\\-de₂-e\n[ĝe₂₆-e ki] /lu₂{?}\\-zu ga-mu-re-[pad₃] a-na-am₃ niĝ₂-ba-ĝu₁₀-um\n[kug] [{d}inana]-ke₄ nim-e mu-na-ni-ib-gi₄-gi₄\n[za-e ki mu-lu-ĝu₁₀] ba-ab-pad₃-de₃-en niĝ₂-ba a-ra-ba-e\n[...] /ga\\-mu-un-dul-dul",
+     "orig_lines": [
+      "394",
+      "395",
+      "396",
+      "397",
+      "398"
+     ],
+     "en": "A fly spoke to holy Inana: \"If I show you where your man is, what will be my reward?\" Holy Inana answered the fly: \"If you show me where my man is, I will give you this gift: I will cover …….\""
+    },
+    {
+     "ref": "399–403",
+     "orig": "nim-e /kug\\ {d}inana-ke₄ im-ma-an-[...]\nki-sikil {d}inana-ke₄ nim-e nam mu-ni-/ib₂\\-tar-re\ne₂ kaš-a-/ka\\ zabar ĜIRI₃{?} naĝ{?}-a-ke₄ ḫu-mu-ra-[X X]-a-ze₂-[(X)]\ndu₅-mu /lu₂\\ kug-zu-ke₄-ne-gin₇ nam X [...]\n[i₃-ne-eš₂ nam]-tar-ra {d}inana-ke₄ ur₅ ḫe₂-/en\\-na-[nam-ma-am₃]",
+     "orig_lines": [
+      "399",
+      "400",
+      "401",
+      "402",
+      "403"
+     ],
+     "en": "The fly helped (?) holy Inana. Young lady Inana decreed the destiny of the fly: \"In the beer-house, may …… bronze vessels …… for you. You will live (?) like the sons of the wise.\" Now Inana decreed this fate and thus it came to be."
+    },
+    {
+     "ref": "404–410",
+     "orig": "[...] er₂ im-/še₈\\-še₈\nnin₉{?} im-ma-ĝen šu-še₃ mu-da-ab-si\ni₃-ne-eš₂ me-le-e-a (X) X-/ĝu₁₀\\\n/za-e\\ mu MAŠ-am₃ nin₉-zu mu MAŠ-am₃\nud za-e al di-di-e ud-bi ḫe₂-tuš-[e]\nud nin₉-zu al di-di-e ud-bi ḫe₂-bur₂-[e]\nkug {d}inana-ke₄ {d}dumu-zid saĝ-bi-še₃ X X bi₂-in-šum₂-/šum₂\\-[mu]",
+     "orig_lines": [
+      "404",
+      "405",
+      "406",
+      "407",
+      "408",
+      "409",
+      "410"
+     ],
+     "en": "…… was weeping. She came up to the sister (?) and …… by the hand: \"Now, alas, my ……. You for half the year and your sister for half the year: when you are demanded, on that day you will stay, when your sister is demanded, on that day you will be released.\" Thus holy Inana gave Dumuzid as a substitute ……."
+    },
+    {
+     "ref": "411–412",
+     "orig": "kug {d}ereš-ki-gal-la-ke₄\nza₃-mi₂-zu dug₃-ga-am₃",
+     "orig_lines": [
+      "411",
+      "412"
+     ],
+     "en": "Holy Ereškigala -- sweet is your praise."
+    }
+   ]
+  }
+ ]
+}

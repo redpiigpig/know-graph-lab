@@ -1,0 +1,290 @@
+{
+ "slug": "enki-ninmah",
+ "source": "ETCSL",
+ "siglum": "ETCSL 1.1.2",
+ "source_url": "https://etcsl.orinst.ox.ac.uk/cgi-bin/etcsl.cgi?text=t.1.1.2",
+ "license": "ETCSL（Oxford）轉寫與英譯，非商業學術使用",
+ "compositions": [
+  {
+   "num": "1.1.2",
+   "title_en": "Enki and Ninmaḫ",
+   "segments": [
+    {
+     "ref": "1–11",
+     "orig": "ud re-a-ta ud an ki-bi-ta ba-an-[dim₂-ma-ba] (Šited in OB šatalogue from Nibru, at Pḫiladelpḫia, 0.2.01, line 7, line 20, line 21; OB šatalogue in tḫe Louvre, 0.2.02, line 7, line 14, line 15; OB šatalogue from Nibru (N3), 0.2.06, line 6)\nĝi₆ re-a-ta ĝi₆ an ki-bi-ta /ba\\-[an-dim₂-ma-ba]\n[mu re]-a-/ta\\ mu nam ba-[tar-ra-ba]\n[{d}a]-/nun\\-na-ke₄-ne ba-tu-ud-da-a-ba\n{d}ama-{d}inana nam-NIR.PA-še₃ ba-tuku-a-ba\n{d}ama-{d}inana an ki-a ba-ḫal-ḫal-la-a-ba\n{d}ama-{d}inana [...] ba-a-peš u₃-tud-da-a-ba\ndiĝir kurum₆-ma-bi A X X unu₂{?}-bi-še₃ ba-ab-keše₂-a-<ba>\ndiĝir šar₂-šar₂ kiĝ₂-ĝa₂ al-sug₂-ge-eš diĝir tur-tur du₂-lum im-il₂-il₂-e-ne\ndiĝir id₂ <im> dun-dun-u₃-ne saḫar-bi ḫa-ra-li im-dub-dub-be₂-ne\ndiĝir im ar₃-ar₃-re-ne zi-bi inim am₃-ma-ĝar-re-ne",
+     "orig_lines": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10",
+      "11"
+     ],
+     "en": "In those days, in the days when heaven and earth were created; in those nights, in the nights when heaven and earth were created; in those years, in the years when the fates were determined; when the Anuna gods were born; when the goddesses were taken in marriage; when the goddesses were distributed in heaven and earth; when the goddesses …… became pregnant and gave birth; when the gods were obliged (?) …… their food …… dining halls; the senior gods oversaw the work, while the minor gods were bearing the toil. The gods were digging the canals and piling up the silt in Ḫarali. The gods, crushing the clay, began complaining about this life."
+    },
+    {
+     "ref": "12–23",
+     "orig": "ud-ba ĝeštug₂ daĝal mud diĝir šar₂-šar₂ ĝal₂-ĝal₂\n{d}en-ki-ke₄ engur buru₃ a-sur-ra ki diĝir na-me šag₄-bi u₆ nu-um-me\nki-nu₂-ni i₃-nu₂ u₃ ku nu-um-zi-zi\ndiĝir er₂-ra im-pad-pad-ne a-nir ĝal₂ i₃-ak im-me-ne\nlu₂ ku-ra i₃-nu₂-a-ra ki-nu₂-bi nu-um-zi-zi-<ra>\n{d}namma-ke₄ ama palil u₃-tud diĝir šar₂-šar₂-ra-ke₄-ne\ner₂-ra diĝir-re-e-ne dumu-ni-ir ba-ši-in-de₆\nX mu-un-ši-nu₂-u₃-nam u₃ mu-un-ši-ku-ku-na-nam\n[X] TE BA [... nu-mu-un]-zi-zi\ndim₃-me₂-er šu dim₂-dim₂-ma-zu X gu₂{?}-bi im-tu₁₀-tu₁₀-ne\ndu₅-mu-ĝu₁₀ ki-nu₂-zu zig₃-ga [i-bi₂] ma-al-la-zu-ta na-aĝ₂-kug-zu u₃-mu-e-kiĝ₂-ĝa₂\nkiĝ₂-sig₁₀ dim₃-me₂-er-e-ne-ke₄ u₃-mu-[e]-dim₂ du₂-lum-bi ḫa-ba-tu-lu-/ne\\",
+     "orig_lines": [
+      "12",
+      "13",
+      "14",
+      "15",
+      "16",
+      "17",
+      "18",
+      "19",
+      "20",
+      "21",
+      "22",
+      "23"
+     ],
+     "en": "At that time, the one of great wisdom, the creator of all the senior gods, Enki lay on his bed, not waking up from his sleep, in the deep engur, in the subterranean water, the place the inside of which no other god knows. The gods said, weeping: \"He is the cause of the lamenting!\" Namma, the primeval mother who gave birth to the senior gods, took the tears of the gods to the one who lay sleeping, to the one who did not wake up from his bed, to her son: \"Are you really lying there asleep, and …… not awake? The gods, your creatures, are smashing their ……. My son, wake up from your bed! Please apply the skill deriving from your wisdom and create a substitute (?) for the gods so that they can be freed from their toil!\""
+    },
+    {
+     "ref": "24–37",
+     "orig": "{d}en-ki-ke₄ inim ama-na {d}namma-ke₄ ki-nu₂-na ba-ta-zig₃\nḫal-an-kug niĝin₂ šag₄ kuš₂-u₃-da-na ḫaš im-mi-/ni\\-[ra]\nĝeštug₂ ĝizzal en₃ tar [...] nam-kug-zu mud me-dim₂ niĝ₂-nam-ma SIG₇-EN SIG₇-ḪI im-ta-an-e₃\n{d}en-ki-ke₄ a₂-ni ba-ši-in-de₆ ĝeštug₂ i₃-ni₁₀-ni₁₀-e\n{d}en-ki-ke₄ mud me-dim₂ ni₂-te-a-na šag₄-bi ĝeštug₂-ta u₃-mu-ni-de₅-ge\nama-ni {d}namma-ra gu₃ mu-un-na-de₂-e\nama-ĝu₁₀ mud mu-ĝar-ra-zu i₃-ĝal₂-la-am₃ zub-sig₃ diĝir-re-e-ne keše₂-i₃\nšag₄ im ugu abzu-ka u₃-mu-e-ni-in-šar₂\nSIG₇-EN SIG₇-ḪI im mu-e-kir₃-kir₃-re-ne za-e me-dim₂ u₃-mu-e-ni-ĝal₂\n{d}nin-maḫ-e an-ta-zu ḫe₂-ak-e\n{d}nin-imma₃ {d}šu-zi-an-na {d}nin-ma-da {d}nin-barag «&d;nin-barag»\n{d}nin-mug {d}ŠAR.ŠAR.GABA {d}nin-gun₃-na\ntud-tud-a-zu ḫa-ra-gub-bu-ne\nama-ĝu₁₀ za-e nam-bi u₃-mu-e-tar {d}nin-maḫ zub-sig₃-bi ḫe₂-keše₂\n[...] i₃-du₃ nam-lu₂-ulu₃ [...]\n[...]-ke₄{?} nam-lu₂-ulu₃ am₃-[ma-...]\n[...] ḪA{?} saĝ-e saĝ am₃-/ma\\-[...]\n[...] dim₂-zu unu₆ RI-zu ga-a-/am₃\\\n[...] SAR-e ĝiš-nu₁₁ mi-ni-in-il₂ nam-lu₂{?}-[ulu₃ ...]\n[...] sag₂ numun₂-e mi-ni-in-ri u₃-tud na-bi mu-de₅",
+     "orig_lines": [
+      "24",
+      "25",
+      "26",
+      "27",
+      "28",
+      "29",
+      "30",
+      "31",
+      "32",
+      "33",
+      "34",
+      "35",
+      "36",
+      "37",
+      "38",
+      "39",
+      "40",
+      "41",
+      "42",
+      "43"
+     ],
+     "en": "At the word of his mother Namma, Enki rose up from his bed. In Ḫal-an-kug, his room for pondering, he slapped his thigh in annoyance. The wise and intelligent one, the prudent, …… of skills, the fashioner of the design of everything brought to life birth-goddesses (?). Enki reached out his arm over them and turned his attention to them. And after Enki, the fashioner of designs by himself, had pondered the matter, he said to his mother Namma: \"My mother, the creature you planned will really come into existence. Impose on him the work of carrying baskets. You should knead clay from the top of the abzu; the birth-goddesses (?) will nip off the clay and you shall bring the form into existence. Let Ninmaḫ act as your assistant; and let Ninimma, Šu-zi-ana, Ninmada, Ninbarag, Ninmug, …… and Ninguna stand by as you give birth. My mother, after you have decreed his fate, let Ninmaḫ impose on him the work of carrying baskets.\" 5 lines fragmentary …… she placed it on grass and purified the birth."
+    },
+    {
+     "ref": "44–51",
+     "orig": "{d}en-ki-ke₄ kiĝ₂ ni₁₀-ni₁₀-da [X] mi-ni-in-la₂ šag₄-bi ba-ḫul₂\nama-ni {d}namma {d}nin-maḫ-še₃ ĝišbun na-am₃-ma-ni-in-ĝar\ngu₂ SIG₇-EN SIG₇-ḪI nun-ne-ke₄ nam-tar gi saĝ ninda i-im-gu₇-e\nan-e {d}en-lil₂-bi en {d}nu-dim₂-mud-e maš kug i-im-šeĝ₆-šeĝ₆\ndiĝir šar₂-šar₂-ra-ke₄-e-ne ka tar i-im-si-il-le-ne\nen ĝeštug₂ daĝal-la a-ba-a ĝeštug₂ i₃-de₅-ge\nen gal {d}en-ki-ke₄ niĝ₂ ak-ak-zu-še₃ a-ba-a i₃-sig₁₀-ge\na-a tud-da-gin₇ me nam tar-tar-ra me za-e al-me-en-na",
+     "orig_lines": [
+      "44",
+      "45",
+      "46",
+      "47",
+      "48",
+      "49",
+      "50",
+      "51"
+     ],
+     "en": "Enki …… brought joy to their heart. He set a feast for his mother Namma and for Ninmaḫ. All the princely birth-goddesses (?) …… ate delicate reed (?) and bread. An, Enlil, and Lord Nudimmud roasted holy kids. All the senior gods praised him: \"O lord of wide understanding, who is as wise as you? Enki, the great lord, who can equal your actions? Like a corporeal father, you are the one who has the me of deciding destinies, in fact you are the me.\""
+    },
+    {
+     "ref": "52–55",
+     "orig": "{d}en-ki-ke₄ {d}nin-maḫ-e kaš im-na₈-na₈-ne šag₄-bi ul mu-un-te\n{d}nin-maḫ-e {d}en-ki-ra gu₃ mu-na-de₂-e\nme-dim₂ na-aĝ₂-lu₂-ulu₃-ta sag₉-ge ḫul ma-al-la-a-kam\nki šag₄ gi₄-a-ĝu₁₀ na-aĝ₂-tar bi₂-ib-sig₁₀-ge bi₂-ib-ḫul-e",
+     "orig_lines": [
+      "52",
+      "53",
+      "54",
+      "55"
+     ],
+     "en": "Enki and Ninmaḫ drank beer, their hearts became elated, and then Ninmaḫ said to Enki: \"Man's body can be either good or bad and whether I make a fate good or bad depends on my will.\""
+    },
+    {
+     "ref": "56–61",
+     "orig": "{d}en-ki-ke₄ {d}nin-maḫ-e mu-na-ni-ib-gi₄-gi₄\nnam-tar šag₄-ge de₆-a-zu sag₉-ge ḫul ma-al ga-am₃-ši-ib₂-la₂\n{d}nin-maḫ-e im ugu abzu-a šu-ni mu-ni-in-ti\nlu₂ gi šu šu₂-šu₂ sa₂-sa₂-de₃ nu-gam lu₂-u₃ am₃-ma-ni-in-dim₂\n{d}en-ki-ke₄ lu₂ gi šu šu₂-šu₂ sa₂-sa₂-de₃ nu-gam igi du₈-a-ni-ta\nnam-bi i-ni-in-tar saĝ lugal-la-ke₄ am₃-ma-ni-in-gub",
+     "orig_lines": [
+      "56",
+      "57",
+      "58",
+      "59",
+      "60",
+      "61"
+     ],
+     "en": "Enki answered Ninmaḫ: \"I will counterbalance whatever fate -- good or bad -- you happen to decide.\" Ninmaḫ took clay from the top of the abzu in her hand and she fashioned from it first a man who could not bend his outstretched weak hands. Enki looked at the man who cannot bend his outstretched weak hands, and decreed his fate: he appointed him as a servant of the king."
+    },
+    {
+     "ref": "62–65",
+     "orig": "gi₄-bi ĝiš-nu₁₁ gi₄-gi₄ lu₂ u₆-e am₃-ma-ni-in-dim₂\n{d}en-ki-ke₄ ĝiš-nu₁₁ gi₄-gi₄ lu₂ u₆-e igi [du₈-a-ni-ta]\nnam-bi i-ni-in-tar nam-nar mi-ni-in-ba\n[X] gal ušumgal-la igi lugal-la-ke₄ am₃-[ma]-ni-in-[gub]",
+     "orig_lines": [
+      "62",
+      "63",
+      "64",
+      "65"
+     ],
+     "en": "Second, she fashioned one who turned back (?) the light, a man with constantly opened eyes (?). Enki looked at the who turned back (?) the light, the man with constantly opened eyes (?), and decreed his fate allotting to it the musical arts, making him as the chief …… in the king's presence."
+    },
+    {
+     "ref": "66–68",
+     "orig": "{peš-bi [ĝiri₃ 2] ḫum ĝiri₃ dab₅-ba-a [am₃-ma-ni-in-dim₂]} {(1 ms. ḫas instead:) [lu₂] peš-bi {lu₂}lil u₃-tud-bi lu₂-u₃ am₃-ma-[...]}\n{{d}en-[ki-ke₄] ĝiri₃ 2{!} ḫum ĝiri₃ dab₅-ba igi [du₈-a-ni-ta]} {(1 ms. ḫas instead:) {d}en-ki-ke₄ {lu₂}lil u₃-tud-bi lu₂-u₃ igi du₈-a-ni-/ta\\}\n{kiĝ₂ [...] kug-babbar-dim₂ me-lem₄-ma-ni /am₃\\-[ma]-ni-in-[X]} {(1 ms. ḫas instead:) nam-bi i-ni-/in-tar\\ saĝ lugal-la-ke₄ im-ma-ši-in-gub}",
+     "orig_lines": [
+      "66",
+      "67",
+      "68"
+     ],
+     "en": "{Third, she fashioned one with both feet broken, one with paralysed feet. Enki looked at the one with both feet broken, the one with paralysed feet and …… him for the work of …… and the silversmith and …….} {(1 ms. has instead:) She fashioned one, a third one, born as an idiot. Enki looked at this one, the one born as an idiot, and decreed his fate: he appointed him as a servant of the king.}"
+    },
+    {
+     "ref": "69–71",
+     "orig": "peš-gi lu₂ a sur-sur-ra am₃-[ma]-ni-dim₂\n{d}en-ki-ke₄ lu₂ a sur-sur-ra igi du₈-a-ni-ta\na mu₇-mu₇ mi-ni-in-tu₅ nam-tar su-bi am₃-ma-ni-in-zig₃",
+     "orig_lines": [
+      "69",
+      "70",
+      "71"
+     ],
+     "en": "Fourth, she fashioned one who could not hold back his urine. Enki looked at the one who could not hold back his urine and bathed him in enchanted water and drove out the namtar demon from his body."
+    },
+    {
+     "ref": "72–74",
+     "orig": "peš-peš-gi munus nu-u₃-tud am₃-ma-ni-in-dim₂\n{d}en-ki-ke₄ munus nu-u₃-tud igi du₈-a-ni-ta\n{nam-bi /mi\\-ni-in-tar e₂-mi₂-a-ke₄ am₃-ma-ni-in-du₃} {(1 ms. ḫas instead:) uš-bar mu-ni-in-du₈ e₂-mi₂-a-kam am₃-ma-ši-in-dim₂}",
+     "orig_lines": [
+      "72",
+      "73",
+      "74"
+     ],
+     "en": "Fifth, she fashioned a woman who could not give birth. Enki looked at the woman who could not give birth, {and decreed her fate: he made (?) her belong to the queen's household.} {(1 ms. has instead:) …… as a weaver, fashioned her to belong to the queen's household.}"
+    },
+    {
+     "ref": "75–78",
+     "orig": "peš-bal-gi lu₂ su-ba ĝiš₃ nu-ĝar gal₄-la nu-ĝar am₃-ma-ni-dim₂\n{d}en-ki-ke₄ lu₂ su-ba ĝiš₃ nu-ĝar gal₄-la nu-ĝar igi du₈-a-ni-ta\n{d}nibru{ki} tiru(GAL.TE{?})-e mu-e mu-ni-in-sa₄-a\nigi lugal-la-ke₄ gub-bu-de₃ nam-bi a-ma-ni-in-tar",
+     "orig_lines": [
+      "75",
+      "76",
+      "77",
+      "78"
+     ],
+     "en": "Sixth, she fashioned one with neither penis nor vagina on its body. Enki looked at the one with neither penis nor vagina on its body and gave it the name 'Nibru eunuch (?)', and decreed as its fate to stand before the king."
+    },
+    {
+     "ref": "79–82",
+     "orig": "{{d}nin-maḫ-e im niĝin₂ šu-na ki-a mu-un-šub lul-aš lib mu-un-ĝar} {(1 ms. ḫas instead:) {d}en-ki-ke₄ im šu-niĝin₂-na ki-a in-šub lul-aš i₃-ni-gi}\nen gal {d}en-ki-ke₄ {d}nin-maḫ-a-ra gu₃ mu-un-[na]-de₂-e\nlu₂ šu dim₂-ma-zu-še₃ nam-bi i-ni-in-tar ninda i-ni-in-šum₂\nĝe₂₆-e ga-na ga-mu-ra-ab-dim₂ za-e u₃-tud-bi nam-bi tar-ra-ab",
+     "orig_lines": [
+      "79",
+      "80",
+      "81",
+      "82"
+     ],
+     "en": "{Ninmaḫ threw the pinched-off clay from her hand on the ground and a great silence fell}{(1 ms. has instead:) Enki threw all (?) the clay to the ground and was greatly ……}. The great lord Enki said to Ninmaḫ: \"I have decreed the fates of your creatures and given them their daily bread. Come, now I will fashion somebody for you, and you must decree the fate of the newborn one!\""
+    },
+    {
+     "ref": "83–91",
+     "orig": "{d}en-ki-ke₄ me-dim₂ saĝ-ĝa₂ X-ga{?} ka šag₄-ba a-ma-ni-dim₂\n{d}nin-maḫ-a-ra gu₃ mu-un-na-de₂-e\n{a ĝiš₃ ak šag₄ munus-a-ka ri-a} {(1 ms. ḫas instead:) a gan šag₄ munus-a-ka} a šag₄-ga-na munus-bi mu-un-u₃-tud\n{d}nin-maḫ [...] u₃-tud-bi-še₃ am₃-mi-ni-gub\nmunus-bi ud-bi [...] GA AŠ X KA {šag₄-ba i-in-šub} {(1 ms. ḫas instead:) saĝ-bi-iš [ba]-/ra\\-an-e₃}\n{d}nin-[maḫ] [...] i₃-si-ig\ngi₄-bi u₄-mu-ul a-za-ad-bi gig-ga ki nam-X-bi gig-ga igi-bi gig-ga gu₂-bi gig-ga\nzi til-til ti sur-sur mur gig-ga šag₄ gig-ga lipiš gig-ga\nšu-bi(sourše: NI) a-za-ad la₂-la₂ ka-bi-še₃ ninda nu-ĝar murgu₂ [saĝ]-du ze₂-re\nzag-še sur ĝiri₃ sur-sur a-gar₃ nu-DU am₃-ma-ni-/in\\-dim₂",
+     "orig_lines": [
+      "83",
+      "84",
+      "85",
+      "86",
+      "87",
+      "87A",
+      "88",
+      "89",
+      "90",
+      "91"
+     ],
+     "en": "Enki devised a shape with head, …… and mouth in its middle, and said to Ninmaḫ: \"Pour ejaculated semen into a woman's womb, and the woman will give birth to the semen of her womb.\" Ninmaḫ stood by for the newborn ……. and the woman brought forth …… in the midst ……. In return (?), this was Umul: its head was afflicted, its place of …… was afflicted, its eyes were afflicted, its neck was afflicted. It could hardly breathe, its ribs were shaky, its lungs were afflicted, its heart was afflicted, its bowels were afflicted. With its hand and its lolling head it could not not put bread into its mouth; its spine and head were dislocated. The weak hips and the shaky feet could not carry (?) it on the field -- Enki fashioned it in this way."
+    },
+    {
+     "ref": "92–101",
+     "orig": "{d}en-ki-ke₄ {d}nin-maḫ-ra gu₃ mu-na-de₂-e\nlu₂ šu dim₂-ma-zu nam i-ni-in-tar ninda mi-ni-[šum₂]\nza-e lu₂ šu dim₂-ĝu₁₀-uš nam-bi tar-ra-ab ninda ḫe₂-[...-šum₂]\n{d}nin-maḫ-e u₄-mu-ul igi [du₈-a-ni-ta e-ne]-še₃ ba-e-gi₄\nu₄-mu-ul mu-na-te en₃ mu-na-tar-tar-re dug₄-ga nu-zu-e\nninda gu₇-a-ni-še₃ mu-na-ab-de₆ šu nu-mu-na-da-gid₂-/de₃\\\n{ĝiš}gur₈-u₆ šag₄{?} nu-mu-na-nu₂ nu-mu-da-an-ĝal₂-ĝal₂\ngub [nu]-mu-da-tuš nu-mu-da-nu₂ e₂ nu-mu-da-[X] ninda nu-mu-da-[gu₇]\n{d}nin-maḫ-e {d}en-ki-ra inim-ma mu-[...-gi₄-gi₄]\nlu₂ šu dim₂-ma-zu lu₂ til₃-la in-nu lu₂ [ug₅-ga] /in\\-nu il₂-bi nu-mu-da",
+     "orig_lines": [
+      "92",
+      "93",
+      "94",
+      "95",
+      "96",
+      "97",
+      "98",
+      "99",
+      "100",
+      "101"
+     ],
+     "en": "Enki said to Ninmaḫ: \"For your creatures I have decreed a fate, I have given them their daily bread. Now, you should decree a fate for my creature, give him his daily bread too.\" Ninmaḫ looked at Umul and turned to him. She went nearer to Umul asked him questions but he could not speak. She offered him bread to eat but he could not reach out for it. He could not lie on ……, he could not ……. Standing up he could not sit down, could not lie down, he could not …… a house, he could not eat bread. Ninmaḫ answered Enki: \"The man you have fashioned is neither alive nor dead. He cannot support himself (?).\""
+    },
+    {
+     "ref": "102–110",
+     "orig": "{d}en-ki-ke₄ {d}nin-maḫ-e mu-na-ni-ib-gi₄-gi₄\nlu₂ gi šu sig-ra nam mi-ni-tar ninda mi-ni-in-šum₂\nlu₂ ĝiš-nu₁₁ gi₄-gi₄-ra nam mi-ni-tar ninda mi-ni-in-šum₂\n/lu₂\\ ĝiri₃ ḫum dab₅-ra nam mi-ni-tar ninda mi-ni-in-šum₂\nlu₂ a [sur-sur]-ra nam mi-ni-tar [ninda mi-ni-in-šum₂]\nmunus nu-[u₃-tud]-ra nam mi-ni-tar /ninda\\ mi-ni-/in\\-[šum₂]\nlu₂ [su-ba ĝiš₃ nu-ĝar gal₄-la nu-ĝar]-ra nam mi-ni-[tar ninda mi-ni-in-šum₂]\nnin₉-ĝu₁₀ [...]\n[...]\nA [...]",
+     "orig_lines": [
+      "102",
+      "103",
+      "104",
+      "105",
+      "106",
+      "107",
+      "108",
+      "109",
+      "110",
+      "111"
+     ],
+     "en": "Enki answered Ninmaḫ: \"I decreed a fate for the first man with the weak hands, I gave him bread. I decreed a fate for the man who turned back (?) the light, I gave him bread. I decreed a fate for the man with broken, paralysed feet, I gave him bread. I decreed a fate for the man who could not hold back his urine, I gave him bread. I decreed a fate for the woman who could not give birth, I gave her bread. I decreed the fate for the one with neither penis nor vagina on its body, I gave it bread. My sister, …….\"2 lines fragmentary"
+    },
+    {
+     "ref": "112",
+     "orig": "{d}nin-[maḫ-e] [{d}en-ki-ra gu₃ mu-na-de₂-e]\naĝ₂-[ĝa₂ ...]\naĝ₂-/ĝa₂\\ [...]\nMA A [...]\naĝ₂-ĝa₂ [...]\naĝ₂-ĝa₂ [...]\naĝ₂-[ĝa₂] X [...]\n[...]\n[...]\n[...] X X DU [...]",
+     "orig_lines": [
+      "112",
+      "113",
+      "114",
+      "115",
+      "116",
+      "117",
+      "118",
+      "119",
+      "120",
+      "121"
+     ],
+     "en": "Ninmaḫ answered Enki: 9 lines fragmentary"
+    },
+    {
+     "ref": "122–128",
+     "orig": "[...] NI DU AĜ₂ TAG-še₃ [mu-ni]-/in\\-kur₉-re\na₂-še₃ an nu-mu-e-tuš ki nu-[mu-e]-tuš i-bi₂ il₂-la-zu ka-na-aĝ₂-ĝa₂ nu-ed₂-en\nki za-e nu-tuš-en e₂-ĝu₁₀ du₃-a inim-zu { mu } {(1 ms. ḫas instead:) ĝiš} nu-tuku\nki za-e nu-til₃-en iri-ĝu₁₀ du₃-a niĝ₂-ĝu₁₀ lib ba-sig₉-ge-en\n[iri]-ĝu₁₀ gel-le-eĝ₃-ĝa₂ e₂-ĝu₁₀ gul-la { du₅-mu-<ĝu₁₀> } {(1 ms. ḫas instead:) dumu-ĝu₁₀} šu dab₅-ba\n[lu₂]-kar-ra-ĝen e₂-kur-ta { e₃-ĝen } {(1 ms. ḫas instead:) e₃-a}\nud me-e niĝ₂-ĝu₁₀ šu-zu-ta šu la-ba-ra-e₃",
+     "orig_lines": [
+      "122",
+      "123",
+      "124",
+      "125",
+      "126",
+      "127",
+      "128"
+     ],
+     "en": "(Ninmaḫ's answer continues) \"You (?) entered ……. Look, you do not dwell in heaven, you do not dwell on earth, you do not come out to look at the Land. Where you do not dwell but where my house is built, your words cannot be heard. Where you do not live but where my city is built, I myself am silenced (?). My city is ruined, my house is destroyed, my child has been taken captive. I am a fugitive who has had to leave the E-kur, even I myself could not escape from your hand.\""
+    },
+    {
+     "ref": "129–139",
+     "orig": "{d}en-ki-ke₄ {d}nin-maḫ-ra mu-na-ni-ib-gi₄-gi₄\ninim ka-zu e₃-a a-ba-a i₃-kur₂-re\nu₄-mu-ul X TU dab₅-ba ur₂-zu-ta šu ĝal₂-ab-ta\n{d}nin-maḫ{?} kiĝ₂-ĝa₂-zu ḫe₂-bi₂-la₂-la₂ šu nu-du₇ ma-dab₅ a-ba-am₃ saĝ mu-un-ĝa₂-ĝa₂\nlu₂ me{?}-dim₂{?}-ĝu₁₀ eĝer-zu-še₃ tuku-a ka-bi šu ḫe₂-bi₂-ĝal₂\nud-da ĝiš₃-ĝu₁₀ me-teš₂ ḫa-ba-i-i ĝeštug₂ de₅-ge-zu ḫe₂-ĝal₂\nenkum ninkum\nud X ĝiri₃ šub-šub gu₂ nam-bi-[...] ka tar-zu ḫe₂-[si-il]-le-ne\nnin₉-ĝu₁₀ a₂ nam-ur-saĝ-ĝa₂ [...] DU\nšir₃ [...] nam-dub{?} [...]\ndiĝir ĝiš tuku-a-bi u₄-mu-ul du₃{?} [...] e₂-ĝu₁₀ ḫe₂-ak-[e]",
+     "orig_lines": [
+      "129",
+      "130",
+      "131",
+      "132",
+      "133",
+      "134",
+      "135",
+      "136",
+      "137",
+      "138",
+      "139"
+     ],
+     "en": "Enki replied to Ninmaḫ: \"Who could change the words that left your mouth? Remove Umul from your lap ……. Ninmaḫ, may your work be ……, you …… for me what is imperfect; who can oppose (?) this? The man whom I shaped …… after you ……, let him pray! Today let my penis be praised, may your wisdom be confirmed (?)! May the enkum and ninkum …… proclaim your glory ……. My sister, the heroic strength ……. The song …… the writing (?) ……. The gods who heard …… let Umul build (?) my house …….\""
+    },
+    {
+     "ref": "140–141",
+     "orig": "{d}nin-maḫ-e en gal {d}en-ki-ke₄ zag nu-mu-ni-in-ša₄\na-a {d}en-ki za₃-mi₂-zu dug₃-ga",
+     "orig_lines": [
+      "140",
+      "141"
+     ],
+     "en": "Ninmaḫ could not rival the great lord Enki. Father Enki, your praise is sweet!"
+    }
+   ]
+  }
+ ]
+}

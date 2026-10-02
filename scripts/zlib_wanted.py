@@ -88,6 +88,9 @@ PRIORITY = {
     # 使用者：全部下載，比對過才決定用不用——所以兩份都在第 2 層，核心只是排在同層前面的順序。檔案 data/zlib-wanted/gods-coordinates.jsonl。
     "gods-coordinates-core": 2,
     "gods-coordinates": 2,
+    # 古近東大藏經的英譯欄（使用者 10-02「去找英文」）：赫梯、烏加里特、現代埃及譯本沒有公有領域替代，
+    # 只能靠這份。36 筆，檔案 data/zlib-wanted/near-east-translations.jsonl。
+    "near-east-translations": 2,
     # 史學五百篇（策展清單裡館內沒有的專著）。使用者 10-02：全部下載，與諸神的座標同層。
     "historiography-top500": 2,
     # 全集：梅延多夫與當代各東方教會神學家（10-01 使用者點名），與其他全集同層。

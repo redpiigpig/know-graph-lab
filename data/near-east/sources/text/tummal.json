@@ -1,0 +1,105 @@
+{
+ "slug": "tummal",
+ "source": "ETCSL",
+ "siglum": "ETCSL 2.1.3",
+ "source_url": "https://etcsl.orinst.ox.ac.uk/cgi-bin/etcsl.cgi?text=t.2.1.3",
+ "license": "ETCSL（Oxford）轉寫與英譯，非商業學術使用",
+ "compositions": [
+  {
+   "num": "2.1.3",
+   "title_en": "The history of the Tummal",
+   "segments": [
+    {
+     "ref": "1–6",
+     "orig": "en-me-barag-ge₄-e-si lugal-e\niri-na-nam e₂ {d}en-lil₂-la₂ in-du₃\nag-ga dumu en-me-barag-ge₄-e-si-ke₄\ntum-ma-al{ki}-e pa bi₂-i-e₃\n{d}nin-lil₂ tum-ma-al{ki}-še₃ in-tum₃\na-ra₂ 1-a-kam tum-ma-al{ki} ba-šub",
+     "orig_lines": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6"
+     ],
+     "en": "En-me-barage-si, the king, built the Iri-nanam in Enlil's temple. Aga, son of En-me-barage-si, made the Tummal flourish and brought Ninlil into the Tummal. Then the Tummal fell into ruins for the first time."
+    },
+    {
+     "ref": "7–11",
+     "orig": "{{m}meš₃-an-ne₂-pad₃-da} {(1 ms. ḫas instead:) {d}meš₃-an-ne₂-pad₃-da} bur-šu₂-šu₂-a e₂ {d}en-lil₂-la₂ in-du₃\n{{m}meš₃-ki-aĝ₂-nun-na} {(1 ms. ḫas instead:) {d}meš₃-ki-aĝ₂-nun-na} dumu meš₃-an-ne₂-pad₃-da-ke₄\ntum-ma-al{ki}-e pa bi₂-i-e₃\n{d}nin-lil₂ tum-ma-al{ki}-še₃ in-tum₃\na-ra₂ 2-a-kam tum-ma-al{ki} ba-šub",
+     "orig_lines": [
+      "7",
+      "8",
+      "9",
+      "10",
+      "11"
+     ],
+     "en": "Meš-Ane-pada built the Bur-šušua in Enlil's temple. Meš-ki-aĝ-nuna, son of Meš-Ane-pada, made the Tummal flourish and brought Ninlil into the Tummal. Then the Tummal fell into ruins for a second time."
+    },
+    {
+     "ref": "12–16",
+     "orig": "{d}gilgameš₃-e numun₂-bur-ra barag {d}en-lil₂-la₂ in-du₃\n{m}ur-lugal dumu {d}gilgameš₃-ke₄\ntum-ma-al{ki}-e pa bi₂-i-e₃\n{d}nin-lil₂ tum-ma-al{ki}-še₃ in-tum₃\na-ra₂ 3-a-kam tum-ma-al{ki} ba-šub",
+     "orig_lines": [
+      "12",
+      "13",
+      "14",
+      "15",
+      "16"
+     ],
+     "en": "Gilgameš built the Numunbura in Enlil's shrine. Ur-lugal, son of Gilgameš, made the Tummal flourish and brought Ninlil into the Tummal. Then the Tummal fell into ruins for a third time."
+    },
+    {
+     "ref": "17–21",
+     "orig": "{na-an-ni} {(1 ms. ḫas instead:) {d}na-an-ni} {ĝiš}kiri₆ maḫ e₂ {d}en-lil₂-la₂ in-du₃\n{{m}meš₃-ki-aĝ₂-{d}nanna} {(Urim mss. ḫave:) {d}meš₃-ki-aĝ₂-{d}nanna} dumu {na-an-ni-ke₄} {(Urim mss. ḫave:) {m}na-an-ni-ke₄}\ntum-ma-al{ki}-e pa bi₂-i-e₃\n{d}nin-lil₂ tum-ma-al{ki}-še₃ in-tum₃\na-ra₂ 4-a-kam tum-ma-al{ki} ba-šub",
+     "orig_lines": [
+      "17",
+      "18",
+      "19",
+      "20",
+      "21"
+     ],
+     "en": "Nanni built the Lofty Garden in Enlil's temple. Meš-ki-aĝ-Nanna, son of Nanni, made the Tummal flourish and brought Ninlil into the Tummal. Then the Tummal fell into ruins for a fourth time."
+    },
+    {
+     "ref": "22–26",
+     "orig": "{{d}ur-{d}namma-ke₄} {(1 ms. ḫas instead:) {m}ur-{d}namma-ke₄} e₂-kur in-du₃\n{šul-gi} {(Urim mss. ḫave:) {d}šul-gi} dumu {d}ur-{d}namma-ke₄\ntum-ma-al{ki}-e pa bi₂-i-e₃\n{d}nin-lil₂ tum-ma-al{ki}-še₃ in-tum₃\na-ra₂ 5-a-kam tum-ma-al{ki} ba-šub",
+     "orig_lines": [
+      "22",
+      "23",
+      "24",
+      "25",
+      "26"
+     ],
+     "en": "Ur-Namma, built the E-kur. Šulgi, son of Ur-Namma, made the Tummal flourish and brought Ninlil into the Tummal. Then the Tummal fell into ruins for a fifth time."
+    },
+    {
+     "ref": "27–30",
+     "orig": "mu {d}amar-{d}suen-ka-ta\n{d}šu-{d}suen-ta\nen-na mu {d}i-bi₂-{d}suen lugal-e\n{en-am-gal-an-na} {(1. ms. ḫas instead:) en-me-gal-an-na} en {d}inana unug{ki}-ga maš₂-e in-pad₃-de₃\n{d}nin-lil₂ tum-ma-al{ki}-še₃ i-ĝen-ĝen",
+     "orig_lines": [
+      "27",
+      "27a",
+      "28",
+      "29",
+      "30"
+     ],
+     "en": "From the years of {Amar-Suena} {(1 ms. has instead:) Šu-Suen} until King Ibbi-Suen chose {En-am-gal-ana} {(1. ms. has instead:) En-me-gal-ana} by extispicy as the high priest of Inana of Unug, Ninlil came regularly to the Tummal."
+    },
+    {
+     "ref": "31",
+     "orig": "inim lu₂-{d}inana ašgab gal {d}en-lil₂-la₂-še₃ sar-re",
+     "orig_lines": [
+      "31"
+     ],
+     "en": "Written according to the words of Lu-Inana the chief leatherworker of Enlil."
+    },
+    {
+     "ref": "32–33",
+     "orig": "{d}iš-bi-er₃-ra e₂-kur igi ĝal₂-la₂\n{e₂}šutum {d}en-lil₂-la₂ in-du₃",
+     "orig_lines": [
+      "32",
+      "33"
+     ],
+     "en": "Išbi-Erra, who looks after the E-kur, built the storehouse of Enlil."
+    }
+   ]
+  }
+ ]
+}

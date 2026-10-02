@@ -1,0 +1,485 @@
+{
+ "angim": {
+  "source": "ETCSL",
+  "segments": 41,
+  "orig": "ready",
+  "en": "ready",
+  "zh": "none"
+ },
+ "asarluhi-a": {
+  "source": "ETCSL",
+  "segments": 5,
+  "orig": "ready",
+  "en": "ready",
+  "zh": "none"
+ },
+ "bird-fish": {
+  "source": "ETCSL",
+  "segments": 22,
+  "orig": "ready",
+  "en": "ready",
+  "zh": "none"
+ },
+ "curse-agade": {
+  "source": "ETCSL",
+  "segments": 28,
+  "orig": "ready",
+  "en": "ready",
+  "zh": "none"
+ },
+ "dumuzid-dream": {
+  "source": "ETCSL",
+  "segments": 32,
+  "orig": "ready",
+  "en": "ready",
+  "zh": "none"
+ },
+ "dumuzid-enkimdu": {
+  "source": "ETCSL",
+  "segments": 13,
+  "orig": "ready",
+  "en": "ready",
+  "zh": "none"
+ },
+ "dumuzid-geshtinana": {
+  "source": "ETCSL",
+  "segments": 7,
+  "orig": "ready",
+  "en": "ready",
+  "zh": "none"
+ },
+ "dumuzid-inana-songs": {
+  "source": "ETCSL",
+  "segments": 175,
+  "orig": "ready",
+  "en": "ready",
+  "zh": "none"
+ },
+ "early-rulers": {
+  "source": "ETCSL",
+  "segments": 2,
+  "orig": "ready",
+  "en": "ready",
+  "zh": "none"
+ },
+ "enki-nibru": {
+  "source": "ETCSL",
+  "segments": 15,
+  "orig": "ready",
+  "en": "ready",
+  "zh": "none"
+ },
+ "enki-ninhursag": {
+  "source": "ETCSL",
+  "segments": 43,
+  "orig": "ready",
+  "en": "ready",
+  "zh": "none"
+ },
+ "enki-ninmah": {
+  "source": "ETCSL",
+  "segments": 19,
+  "orig": "ready",
+  "en": "ready",
+  "zh": "none"
+ },
+ "enki-world-order": {
+  "source": "ETCSL",
+  "segments": 55,
+  "orig": "ready",
+  "en": "ready",
+  "zh": "none"
+ },
+ "enlil-ninlil": {
+  "source": "ETCSL",
+  "segments": 9,
+  "orig": "ready",
+  "en": "ready",
+  "zh": "none"
+ },
+ "enlil-sud": {
+  "source": "ETCSL",
+  "segments": 17,
+  "orig": "ready",
+  "en": "ready",
+  "zh": "none"
+ },
+ "enmerkar-aratta": {
+  "source": "ETCSL",
+  "segments": 48,
+  "orig": "ready",
+  "en": "ready",
+  "zh": "none"
+ },
+ "enmerkar-ensuhgirana": {
+  "source": "ETCSL",
+  "segments": 29,
+  "orig": "ready",
+  "en": "ready",
+  "zh": "none"
+ },
+ "farmers-instructions": {
+  "source": "ETCSL",
+  "segments": 18,
+  "orig": "ready",
+  "en": "ready",
+  "zh": "none"
+ },
+ "gilgamesh-aga": {
+  "source": "ETCSL",
+  "segments": 15,
+  "orig": "ready",
+  "en": "ready",
+  "zh": "none"
+ },
+ "gilgamesh-bull": {
+  "source": "ETCSL",
+  "segments": 39,
+  "orig": "ready",
+  "en": "ready",
+  "zh": "none"
+ },
+ "gilgamesh-death": {
+  "source": "ETCSL",
+  "segments": 49,
+  "orig": "ready",
+  "en": "ready",
+  "zh": "none"
+ },
+ "gilgamesh-huwawa": {
+  "source": "ETCSL",
+  "segments": 69,
+  "orig": "ready",
+  "en": "ready",
+  "zh": "none"
+ },
+ "gilgamesh-netherworld": {
+  "source": "ETCSL",
+  "segments": 38,
+  "orig": "ready",
+  "en": "ready",
+  "zh": "none"
+ },
+ "grain-sheep": {
+  "source": "ETCSL",
+  "segments": 20,
+  "orig": "ready",
+  "en": "ready",
+  "zh": "none"
+ },
+ "grain-sumer": {
+  "source": "ETCSL",
+  "segments": 5,
+  "orig": "ready",
+  "en": "ready",
+  "zh": "none"
+ },
+ "gudea-cylinders": {
+  "source": "ETCSL",
+  "segments": 143,
+  "orig": "ready",
+  "en": "ready",
+  "zh": "none"
+ },
+ "hoe-plough": {
+  "source": "ETCSL",
+  "segments": 27,
+  "orig": "ready",
+  "en": "ready",
+  "zh": "none"
+ },
+ "hymn-ekur": {
+  "source": "ETCSL",
+  "segments": 18,
+  "orig": "ready",
+  "en": "ready",
+  "zh": "none"
+ },
+ "iddin-dagan-a": {
+  "source": "ETCSL",
+  "segments": 41,
+  "orig": "ready",
+  "en": "ready",
+  "zh": "none"
+ },
+ "in-nin-sagura": {
+  "source": "ETCSL",
+  "segments": 27,
+  "orig": "ready",
+  "en": "ready",
+  "zh": "none"
+ },
+ "inana-an": {
+  "source": "ETCSL",
+  "segments": 21,
+  "orig": "ready",
+  "en": "ready",
+  "zh": "none"
+ },
+ "inana-bilulu": {
+  "source": "ETCSL",
+  "segments": 21,
+  "orig": "ready",
+  "en": "ready",
+  "zh": "none"
+ },
+ "inana-descent": {
+  "source": "ETCSL",
+  "segments": 64,
+  "orig": "ready",
+  "en": "ready",
+  "zh": "none"
+ },
+ "inana-ebih": {
+  "source": "ETCSL",
+  "segments": 36,
+  "orig": "ready",
+  "en": "ready",
+  "zh": "none"
+ },
+ "inana-enki": {
+  "source": "ETCSL",
+  "segments": 72,
+  "orig": "ready",
+  "en": "ready",
+  "zh": "none"
+ },
+ "inana-shukaletuda": {
+  "source": "ETCSL",
+  "segments": 25,
+  "orig": "ready",
+  "en": "ready",
+  "zh": "none"
+ },
+ "ishme-dagan-hymns": {
+  "source": "ETCSL",
+  "segments": 173,
+  "orig": "ready",
+  "en": "ready",
+  "zh": "none"
+ },
+ "kesh-temple-hymn": {
+  "source": "ETCSL",
+  "segments": 23,
+  "orig": "ready",
+  "en": "ready",
+  "zh": "none"
+ },
+ "lagash-rulers": {
+  "source": "ETCSL",
+  "segments": 17,
+  "orig": "ready",
+  "en": "ready",
+  "zh": "none"
+ },
+ "lament-eridug": {
+  "source": "ETCSL",
+  "segments": 45,
+  "orig": "ready",
+  "en": "ready",
+  "zh": "none"
+ },
+ "lament-nibru": {
+  "source": "ETCSL",
+  "segments": 62,
+  "orig": "ready",
+  "en": "ready",
+  "zh": "none"
+ },
+ "lament-sumer-urim": {
+  "source": "ETCSL",
+  "segments": 64,
+  "orig": "ready",
+  "en": "ready",
+  "zh": "none"
+ },
+ "lament-unug": {
+  "source": "ETCSL",
+  "segments": 40,
+  "orig": "ready",
+  "en": "ready",
+  "zh": "none"
+ },
+ "lament-urim": {
+  "source": "ETCSL",
+  "segments": 77,
+  "orig": "ready",
+  "en": "ready",
+  "zh": "none"
+ },
+ "literary-catalogues": {
+  "source": "ETCSL",
+  "segments": 508,
+  "orig": "ready",
+  "en": "none",
+  "zh": "none"
+ },
+ "lugal-e": {
+  "source": "ETCSL",
+  "segments": 81,
+  "orig": "ready",
+  "en": "ready",
+  "zh": "none"
+ },
+ "lugalbanda-anzud": {
+  "source": "ETCSL",
+  "segments": 26,
+  "orig": "ready",
+  "en": "ready",
+  "zh": "none"
+ },
+ "lugalbanda-cave": {
+  "source": "ETCSL",
+  "segments": 35,
+  "orig": "ready",
+  "en": "ready",
+  "zh": "none"
+ },
+ "man-and-god": {
+  "source": "ETCSL",
+  "segments": 18,
+  "orig": "ready",
+  "en": "ready",
+  "zh": "none"
+ },
+ "marriage-martu": {
+  "source": "ETCSL",
+  "segments": 16,
+  "orig": "ready",
+  "en": "ready",
+  "zh": "none"
+ },
+ "nanna-hymns": {
+  "source": "ETCSL",
+  "segments": 88,
+  "orig": "ready",
+  "en": "ready",
+  "zh": "none"
+ },
+ "nanna-nibru": {
+  "source": "ETCSL",
+  "segments": 36,
+  "orig": "ready",
+  "en": "ready",
+  "zh": "none"
+ },
+ "nanse-a": {
+  "source": "ETCSL",
+  "segments": 24,
+  "orig": "ready",
+  "en": "ready",
+  "zh": "none"
+ },
+ "nin-me-sara": {
+  "source": "ETCSL",
+  "segments": 14,
+  "orig": "ready",
+  "en": "ready",
+  "zh": "none"
+ },
+ "ningishzida-netherworld": {
+  "source": "ETCSL",
+  "segments": 16,
+  "orig": "ready",
+  "en": "ready",
+  "zh": "none"
+ },
+ "ninurta-turtle": {
+  "source": "ETCSL",
+  "segments": 12,
+  "orig": "ready",
+  "en": "ready",
+  "zh": "none"
+ },
+ "nisaba-a": {
+  "source": "ETCSL",
+  "segments": 9,
+  "orig": "ready",
+  "en": "ready",
+  "zh": "none"
+ },
+ "shulgi-a": {
+  "source": "ETCSL",
+  "segments": 15,
+  "orig": "ready",
+  "en": "ready",
+  "zh": "none"
+ },
+ "shulgi-royal-hymns": {
+  "source": "ETCSL",
+  "segments": 260,
+  "orig": "ready",
+  "en": "ready",
+  "zh": "none"
+ },
+ "shuruppag": {
+  "source": "ETCSL",
+  "segments": 90,
+  "orig": "ready",
+  "en": "ready",
+  "zh": "none"
+ },
+ "song-hoe": {
+  "source": "ETCSL",
+  "segments": 15,
+  "orig": "ready",
+  "en": "ready",
+  "zh": "none"
+ },
+ "song-lettuce": {
+  "source": "ETCSL",
+  "segments": 4,
+  "orig": "ready",
+  "en": "ready",
+  "zh": "none"
+ },
+ "sumerian-flood": {
+  "source": "ETCSL",
+  "segments": 11,
+  "orig": "ready",
+  "en": "ready",
+  "zh": "none"
+ },
+ "sumerian-king-list": {
+  "source": "ETCSL",
+  "segments": 22,
+  "orig": "ready",
+  "en": "ready",
+  "zh": "none"
+ },
+ "sumerian-proverbs": {
+  "source": "ETCSL",
+  "segments": 2125,
+  "orig": "ready",
+  "en": "ready",
+  "zh": "none"
+ },
+ "temple-hymns": {
+  "source": "ETCSL",
+  "segments": 108,
+  "orig": "ready",
+  "en": "ready",
+  "zh": "none"
+ },
+ "tummal": {
+  "source": "ETCSL",
+  "segments": 8,
+  "orig": "ready",
+  "en": "ready",
+  "zh": "none"
+ },
+ "urnamma-a": {
+  "source": "ETCSL",
+  "segments": 45,
+  "orig": "ready",
+  "en": "ready",
+  "zh": "none"
+ },
+ "winter-summer": {
+  "source": "ETCSL",
+  "segments": 34,
+  "orig": "ready",
+  "en": "ready",
+  "zh": "none"
+ }
+}
