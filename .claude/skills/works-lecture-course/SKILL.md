@@ -1263,6 +1263,7 @@ B 線＝前人概論怎麼切（比較表）。一次派一個 Sonnet。
 - **作者 2026-10-02：「接著寫下去把整本書寫完」**（第一章小標維持原樣）。逐章初稿放 `output/christianity-intro/draft_chNN.md`：
   第二章完成（正文約 9,200 字＋進階兩篇〈歷史上的以色列〉〈分道揚鑣〉＋討論 6 題）。🚨 第二、三章仍在教會史之前，
   正文不用「天主教／東正教／新教／梵二」等宗派名詞（梵二《教會對非基督宗教態度宣言》放進階補充）。
+- ✅ 體例（2026-10-02 作者）：**專有名詞第一次出現時括號附英文**（基督教 Christianity、新教 Protestantism、天主教 Roman Catholic Church、東正教 Eastern Orthodox Church、東方正統教會 Oriental Orthodox Churches 等），同人物附原文姓名的規則。
 - ✅ 小標（2026-10-02）：**導論用功能性小標**（本書的定位與讀者／第一序與第二序／本書的結構及其神學意涵／名詞的約定／體例說明），正文各章小標用意象式。
 - 補書不只 z-lib；先查站上既有（梵二 SC／DV 中拉英在 `data/creeds/ecumenical-councils/vatican-ii/`、
   奧斯堡信條與路德小教理在 `data/creeds/protestant-confessions/`、通諭中譯在 `data/encyclicals/`），
