@@ -1,0 +1,194 @@
+{
+ "slug": "pratimoksa-c04",
+ "title": "比丘戒本（四）二不定",
+ "family": "pi",
+ "intro": "二不定法（aniyata）：比丘與女人獨坐，可信優婆夷舉發而罪名未定，依其所說與比丘自承，於波羅夷、僧殘、波逸提（第二條為僧殘、波逸提）中隨一治之。各部兩條次第相同：一屏處可作婬處坐，二露處不可作婬處坐而說麁語。《十誦戒本》結說與問清淨接在第二條同一段內，以「「諸大德！已說二不定法」下刀；大眾說出世部梵本攝頌歸結說，根有戒經攝頌歸總標。",
+ "units": [
+  {
+   "id": "ay0",
+   "label": "總標：二不定法半月半月說"
+  },
+  {
+   "id": "ay1",
+   "label": "不定一・屏處可作婬處與女人坐"
+  },
+  {
+   "id": "ay2",
+   "label": "不定二・露處與女人坐說麁惡語"
+  },
+  {
+   "id": "ayz",
+   "label": "結說・三問清淨"
+  }
+ ],
+ "versions": [
+  {
+   "id": "pi",
+   "lang": "pi",
+   "label": "巴利・上座部",
+   "who": "Theravāda Bhikkhupātimokkha・Mahāsaṅgīti 本（SuttaCentral）"
+  },
+  {
+   "id": "T1429",
+   "lang": "lzh",
+   "label": "四分戒本",
+   "who": "法藏部・後秦 佛陀耶舍譯《四分律比丘戒本》（唐 懷素集）",
+   "work": "T1429"
+  },
+  {
+   "id": "T1422a",
+   "lang": "lzh",
+   "label": "五分戒本",
+   "who": "化地部・劉宋 佛陀什等譯《彌沙塞五分戒本》",
+   "work": "T1422a"
+  },
+  {
+   "id": "sa-sarv",
+   "lang": "sa",
+   "label": "梵・說一切有部",
+   "who": "Sarvāstivāda Prātimokṣasūtra・von Simson 1986／2000（GRETIL）"
+  },
+  {
+   "id": "T1436",
+   "lang": "lzh",
+   "label": "十誦戒本",
+   "who": "說一切有部・姚秦 鳩摩羅什譯《十誦比丘波羅提木叉戒本》",
+   "work": "T1436"
+  },
+  {
+   "id": "sa-mahl",
+   "lang": "sa",
+   "label": "梵・大眾說出世部",
+   "who": "Mahāsāṃghika-Lokottaravāda Prātimokṣasūtra・Tatia 1976（GRETIL）"
+  },
+  {
+   "id": "T1426",
+   "lang": "lzh",
+   "label": "僧祇戒本",
+   "who": "大眾部・東晉 佛陀跋陀羅譯《摩訶僧祇律大比丘戒本》",
+   "work": "T1426"
+  },
+  {
+   "id": "T1460",
+   "lang": "lzh",
+   "label": "解脫戒經",
+   "who": "飲光部・元魏 般若流支譯",
+   "work": "T1460"
+  },
+  {
+   "id": "sa-mula",
+   "lang": "sa",
+   "label": "梵・根本說一切有部",
+   "who": "Mūlasarvāstivāda Prātimokṣasūtra・Banerjee 1954（GRETIL）"
+  },
+  {
+   "id": "T1454",
+   "lang": "lzh",
+   "label": "根有戒經",
+   "who": "根本說一切有部・唐 義淨譯《根本說一切有部戒經》",
+   "work": "T1454"
+  }
+ ],
+ "works": [
+  "T1422a",
+  "T1426",
+  "T1429",
+  "T1436",
+  "T1454",
+  "T1460"
+ ],
+ "anchors": [
+  {
+   "work": "T1429",
+   "range": [
+    "T22n1429_p1017a03",
+    "T22n1429_p1017a18"
+   ]
+  },
+  {
+   "work": "T1422a",
+   "range": [
+    "T22n1422a_p0196a04",
+    "T22n1422a_p0196a14"
+   ]
+  },
+  {
+   "work": "T1436",
+   "range": [
+    "T23n1436_p0472b16",
+    "T23n1436_p0472b24"
+   ]
+  },
+  {
+   "work": "T1426",
+   "range": [
+    "T22n1426_p0550c23",
+    "T22n1426_p0551a09"
+   ]
+  },
+  {
+   "work": "T1460",
+   "range": [
+    "T24n1460_p0661a14",
+    "T24n1460_p0661a28"
+   ]
+  },
+  {
+   "work": "T1454",
+   "range": [
+    "T24n1454_p0502b06",
+    "T24n1454_p0502b22"
+   ]
+  }
+ ],
+ "cells": {
+  "ay0": {
+   "pi": "Aniyatuddeso Ime kho panāyasmanto dve aniyatā dhammā uddesaṁ āgacchanti.",
+   "T1429": "「諸大德！是二不定法，半月半月說，戒經中來。",
+   "T1422a": "「諸大德！是二不定法，半月半月戒經中說。",
+   "sa-sarv": "III. aniyatau dharmau PrMoSū_Aniy.0: imau punar āyuṣmanto dvāv aniyatau dharmāv anvardhamāsaṃ prātimokṣasūtroddeśam āgacchataḥ //",
+   "T1436": "「諸大德！是二不定法，半月半月波羅提木叉中說。",
+   "sa-mahl": "[III. duve aniyatā dharmāḥ /] PrMoSū(Mā-L)Aniy. ime kho punar āyuṣmanto duve aniyatā dharmā anvardhamāsaṃ sūtre prātimokṣe uddeśam āgacchanti Ō",
+   "T1426": "「諸大德！是二不定法，半月半月次說波羅提木叉。",
+   "T1460": "「諸大德！此二不定法，半月半月說解脫戒經中來。",
+   "sa-mula": "III. dvāv aniyatau dharmau / imau khalu āyuṣmantau dvau aniyatau dharmau anvardhamāsaṃ prātimokṣasūtroddeśam āgacchataḥ /",
+   "T1454": "「諸大德！此二不定法，半月半月戒經中說。」攝頌曰：若在屏障中，堪行婬欲處， 及在非障處，無有第三人。"
+  },
+  "ay1": {
+   "pi": "Aniyata 1. Paṭhamaaniyata Yo pana bhikkhu mātugāmena saddhiṁ eko ekāya raho paṭicchanne āsane alaṅkammaniye nisajjaṁ kappeyya, tamenaṁ saddheyyavacasā upāsikā disvā tiṇṇaṁ dhammānaṁ aññatarena vadeyya pārājikena vā saṅghādisesena vā pācittiyena vā, nisajjaṁ bhikkhu paṭijānamāno tiṇṇaṁ dhammānaṁ aññatarena kāretabbo pārājikena vā saṅghādisesena vā pācittiyena vā, yena vā sā saddheyyavacasā upāsikā vadeyya, tena so bhikkhu kāretabbo, ayaṁ dhammo aniyato.",
+   "T1429": "「若比丘！共女人獨在屏處覆處障處，可作婬處坐，說非法語。有住信優婆夷，於三法中一一法說：若波羅夷、若僧伽婆尸沙、若波逸提；是坐比丘自言：『我犯是罪。』於三法中應一一治：若波羅夷、若僧伽婆尸沙、若波逸提，如住信優婆夷所說，應如法治是比丘，是名不定法。",
+   "T1422a": "「若比丘，共一女人獨屏處可婬處坐。可信優婆夷見，於三法中一一法說，若波羅夷、若僧伽婆尸沙、若波逸提。若比丘言：『如優婆夷所說。』應三法中隨所說治。是初不定法。",
+   "sa-sarv": "PrMoSū_Aniy.1: yaḥ punar bhikṣur mātṛgrāmeṇa sārdham ekaikena rahasi praticchanne āsane niṣadyāṃ kalpayed alaṃ gama(n)īyena taṃ ca śrāddheyavacanopāsikā trayāṇāṃ dharmāṇām anyatamānyatamena dharmeṇa vadet pārājikena vā saṃghāvaśeṣeṇa vā pātayantikena vā niṣadyāṃ bhikṣuḥ pratijānamānas trayāṇāṃ dharmāṇām anyatamānyatamena dharmeṇa kārayitavyaḥ pārājikena vā saṃghāvaśeṣeṇa vā pātayantikena vā yena yena dharmeṇa vā śrāddheyavacanopāsikā taṃ bhikṣuṃ vadet tena tena sa bhikṣuḥ k(ā)rayitavyaḥ ayaṃ dharmo 'niyataḥ 1",
+   "T1436": "「若比丘，共一女人，獨屏覆處可婬處坐。可信優婆夷，是比丘應三法中若一一法說：若波羅夷、若僧伽婆尸沙、若波夜提。若比丘自言：『我坐是處。』應三法中隨所說法治：若波羅夷、若僧伽婆尸沙、若波夜提，隨可信優婆夷所說，種種餘法治是比丘。是初不定法。",
+   "sa-mahl": "PrMoSū(Mā-L)Aniy.1. yo puna bhikṣu mātṛgrāmeṇa sārdhaṃ praticchannāsane alaṃkarmaṇīye eko [ekā]ya raho niṣadyāṃ kalpeya, tam enaṃ śraddheyavacasā upāsikā dṛṣṭvā trayāṇāṃ dharmāṇām anyatarānyatareṇa dharmeṇa vadeya pārājikena vā saṃghātiśeṣeṇa vā pācattikena vā / niṣadyāṃ bhikṣuḥ pratijānamāno trayāṇāṃ dharmāṇām anyatarānyatareṇa dharmeṇa kārāpayitavyo pārājikena vā saṃghātiśeṣeṇa vā pācattikena vā yena yena vā punar asya śraddheyavacasā upāsikā dṛṣṭvā dharmeṇa vadeya, tena so bhikṣu dharmeṇa kārāpayitavyo / ayaṃ dharmo aniyato /",
+   "T1426": "「若比丘，與女人獨屏覆處可婬處坐，可信優婆夷於三法中一一如法說，若波羅夷、若僧伽婆尸沙、若波夜提。比丘自言：『我坐是處。』於三法中一一如法治，若波羅夷、若僧伽婆尸沙、若波夜提，應隨可信優婆夷所說法治彼比丘。是初不定法。",
+   "T1460": "「若比丘，共一女人獨在覆障處、無人見處坐說欲事。有信優婆夷，三法中一一法說，若波羅夷、若僧伽婆尸沙、若波逸提。是坐處比丘自言：『我犯是罪。』於三法中應一一治，若波羅夷、若僧伽婆尸沙、若波夜提。如有信優婆夷所說，應如法治是比丘。是名不定法。",
+   "sa-mula": "Aniy.1 (PrMoSū_Mū-Banerjee) yaḥ punar bhikṣur mātṛgrāmeṇa sārdham eka ekikayā rahasi praticchanne āsane niṣadyāṃ kalpayed alaṃ kāmayitum* / sacec chrāddheyavacanopāsikā trayāṇāṃ dharmāṇām anyatamānyatamadharmeṇa vadet pārājikena vā saṃghādiśeṣeṇa vā pāyantikena vā niṣadyāṃ bhikṣuḥ pratijānamānaḥ trayāṇāṃ dharmāṇām anyatamānyatamena dharmeṇa kārayitavyaḥ pārājikena vā saṃghāvaśeṣeṇa vā pāyantikena vā yena yena vā punaḥ śrāddheyavacanopāsikā taṃ bhikṣuṃ dharmeṇa vadet tena tena dharmeṇa sa bhikṣuḥ kārayitavyo 'yaṃ dharmo 'niyataḥ /",
+   "T1454": "「若復苾芻，獨與一女人，在於屏障堪行婬處坐，有正信鄔波斯迦，於三法中隨一而說：若波羅市迦、若僧伽伐尸沙、若波逸底迦。彼坐苾芻自言其事者，於三法中應隨一一法治：若波羅市迦、若僧伽伐尸沙、若波逸底迦，或以鄔波斯迦所說事治彼苾芻，是名不定法。"
+  },
+  "ay2": {
+   "pi": "Aniyata 2. Dutiyaaniyata Na heva kho pana paṭicchannaṁ āsanaṁ hoti nālaṅkammaniyaṁ, alañca kho hoti mātugāmaṁ duṭṭhullāhi vācāhi obhāsituṁ, yo pana bhikkhu tathārūpe āsane mātugāmena saddhiṁ eko ekāya raho nisajjaṁ kappeyya, tamenaṁ saddheyyavacasā upāsikā disvā dvinnaṁ dhammānaṁ aññatarena vadeyya saṅghādisesena vā pācittiyena vā, nisajjaṁ bhikkhu paṭijānamāno dvinnaṁ dhammānaṁ aññatarena kāretabbo saṅghādisesena vā pācittiyena vā, yena vā sā saddheyyavacasā upāsikā vadeyya, tena so bhikkhu kāretabbo, ayampi dhammo aniyato.",
+   "T1429": "「若比丘！共女人，在露現處，不可作婬處坐，作麁惡語。有住信優婆夷，於二法中一一法說：若僧伽婆尸沙、若波逸提；是坐比丘自言：『我犯是事。』於二法中應一一法治：若僧伽婆尸沙、若波逸提，如住信優婆夷所說，應如法治是比丘，是名不定法。",
+   "T1422a": "「若比丘，共一女人獨露處坐，說麁惡婬欲語。可信優婆夷見，於二法中一一法說，若僧伽婆尸沙、若波逸提。若比丘言：『如優婆夷所說。』應二法中隨所說治。是二不定法。」",
+   "sa-sarv": "PrMoSū_Aniy.2: na ca rahasi praticchanne āsane niṣadyāṃ kalpayen nāla(ṃ) gamanīyena api tu taṃ m(ā)tṛgrāmaṃ duṣṭhulayā vācā ābhāṣeta pāpikayā asabhyayā maithunopasaṃhitayā taṃ ca śrāddheyavacanopāsikā dvayor dharmayor anyatamānyatamena dharmeṇa vadet saṃghāvaśeṣeṇa vā pātayantikena vā niṣadyāṃ bhikṣuḥ pratijānamāno dvayor dharmayor anyatamānyatamena dharmeṇa kārayitavyaḥ saṃghāvaśeṣeṇa vā pā(t)ayantikena vā yena yena dharmeṇa vā śrāddheyavacanopāsikā taṃ bhikṣuṃ vadet tena tena sa bhikṣuḥ kārayitavyaḥ ayam api dharmo 'niyataḥ 2 /",
+   "T1436": "「若比丘，共一女人，非屏覆處不可婬處坐，是比丘與女人，說麁惡婬欲語。可信優婆夷，二法中一一法說：若僧伽婆尸沙、若波夜提。若比丘自言：『我坐是處。』應二法中隨所說法治：若僧伽婆尸沙、若波夜提，隨可信優婆夷所說，種種餘法治是比丘。是二不定法。」",
+   "sa-mahl": "PrMoSū(Mā-L)Aniy.2. na haiva kho punaḥ praticchannāsanaṃ bhavati, nālaṃ karmaṇīyaṃ, alaṃ kho puna mātṛgrāmaṃ duṣṭhullāya vācāya obhāṣituṃ pāpikāya maithunopasaṃhitāya / tathārūpe ca bhikṣu āsane mātṛgrāmeṇa sārdham eko ekāya raho niṣadyāṃ kalpeya, tam enaṃ śraddheyavacasā upāsikā dṛṣṭvā dvinnāṃ dharmāṇām anyatarānyatareṇa dharmeṇa vadeya saṃghātiśeṣeṇa vā pācattikena vā / niṣadyāṃ bhikṣuḥ pratijānamāno dvinnāṃ dharmāṇām anyatarāntareṇa dharmeṇa kārāpayitavyo saṃghātiśeṣeṇa vā pācattikena vā, yena yena vā punar asya śraddheyavacasā upāsikā dṛṣṭvā dharmeṇa vadeya, tena tena so bhikṣu dharmeṇa kārāpayitavyo / ayaṃ pi dharmo aniyato /",
+   "T1426": "「若比丘，與女人獨露現處不可婬處坐，可信優婆夷於二法中一一如法說，若僧伽婆尸沙、若波夜提。比丘自言：『我坐是處。』於二法中一一如法治，若僧伽婆尸沙、若波夜提，應隨可信優婆夷所說法治彼比丘。是二不定法。」",
+   "T1460": "「若比丘，共一女人不覆處坐。有信優婆夷，二法中一一法說，若僧伽婆尸沙、若波逸提。是坐比丘自言：『我犯是罪。』二法中應一一治，若僧伽婆尸沙、若波逸提。如有信優婆夷所說，應如法治是比丘。是名不定法。」",
+   "sa-mula": "Aniy.2 (PrMoSū_Mū-Banerjee) yaḥ punar bhikṣur mātṛgrāmeṇa sārdham eka ekikayā rahasi praticchanne āsane niṣadyāṃ kalpayen nālaṃ kāmayitum* / sacec chrāddheyavacanopāsikā dvayor dharmayoḥ anyatamānyatamadharmeṇa vadet saṃghāvaśeṣeṇa vā pāyantikena vā niṣadyāṃ bhikṣuḥ pratijānato dvayor dharmayoḥ saṃghāvaśeṣeṇa vā pāyantikena vā yena yena vā punaḥ śrāddheyavacanopāsikā taṃ bhikṣuṃ dharmeṇa vadet tena tena dharmeṇa sa bhikṣuḥ kārayitavyo 'yam api dharmo 'niyataḥ /",
+   "T1454": "「若復苾芻，獨與一女人，在非屏障不堪行婬處坐，有正信鄔波斯迦，於二法中隨一而說：若僧伽伐尸沙、若波逸底迦。彼坐苾芻自言其事者，於二法中應隨一一法治：若僧伽伐尸沙、若波逸底迦，或以鄔波斯迦所說事治彼苾芻，是名不定法。」"
+  },
+  "ayz": {
+   "pi": "Uddiṭṭhā kho āyasmanto dve aniyatā dhammā. Tatthāyasmante pucchāmi, kaccittha parisuddhā, dutiyampi pucchāmi, kaccittha parisuddhā, tatiyampi pucchāmi, kaccittha parisuddhā, parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti. Aniyato niṭṭhito",
+   "T1429": "「諸大德！我已說二不定法。今問諸大德！是中清淨不？（如是三說）諸大德！是中清淨，默然故，是事如是持。",
+   "T1422a": "「諸大德。已說二不定法。今問，諸大德是中清淨不？」（第二、第三亦如是說）「諸大德是中清淨，默然故，是事如是持。」",
+   "sa-sarv": "uddiṣṭau mayāyuṣma(n)to dvāv aniyatau dharmau tatrāham āyuṣmataḥ pṛcchāmi kaccit sthātra pariśuddhā dvir api trir api pṛcchāmi kaccit sthātra pariśuddhāḥ pariśuddhā atrāyuṣmanto (yasmā)t tūṣṇīm evam etad dhārayāmi (// //)",
+   "T1436": "「諸大德！已說二不定法，今問諸大德是中清淨不？」（第二、第三亦如是問。）「諸大德！是中清淨，默然故，是事如是持。」",
+   "sa-mahl": "// uddānaṃ // (1) praticchannāsanaṃ (2) rahoniṣadyā ca / uddiṣṭāḥ kho punar āyuṣmanto duve aniyatā dharmāḥ / tatrāyuṣmanto pṛcchāmi kaccittha pariśuddhāḥ? dvitīyaṃ pi āyuṣmanto pṛcchāmi kaccittha pariśuddhā? tṛtīyaṃ pi āyuṣmanto pṛcchāmi kaccittha pariśuddhāḥ? pariśuddhā atrāyuṣmanto yasmāt tūṣṇīm evam etaṃ dhārayāmi /",
+   "T1426": "「諸大德！已說二不定法。今問諸大德！是中清淨不？是中清淨不？是中清淨不？」「諸大德！是中清淨，默然故，是事如是持。」（二不定竟）",
+   "T1460": "「諸大德！我已說二不定法。今問諸大德是中清淨不？」（如是三說）「諸大德是中清淨，默然故，是事如是持。」",
+   "sa-mula": "uddiṣṭā me āyuṣmantaḥ dvāv aniyatau dharmau / tatrāham āyuṣmataḥ paripṛcchāmi -- kaścit sthātra pariśuddhāḥ dvir api trir api paripṛcchāmi -- kaścit sthātra pariśuddhāḥ pariśuddhā atrāyuṣmanto yasmāt tūṣṇīm evam etad dhārayāmi /",
+   "T1454": "「諸大德！我已說二不定法。今問諸大德！是中清淨不？」（如是三說）「諸大德！是中清淨，默然故，我今如是持。」"
+  }
+ }
+}

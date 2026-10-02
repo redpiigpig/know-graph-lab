@@ -456,3 +456,76 @@ SETS['pratimoksa-c03'] = _pm(
             ('ssz', '「諸大德！我'),
         ]),
     })
+
+
+SETS['pratimoksa-c04'] = _pm(
+    '比丘戒本（四）二不定',
+    '二不定法（aniyata）：比丘與女人獨坐，可信優婆夷舉發而罪名未定，依其所說與比丘自承，於波羅夷、僧殘、波逸提（第二條為僧殘、波逸提）中隨一治之。各部兩條次第相同：一屏處可作婬處坐，二露處不可作婬處坐而說麁語。《十誦戒本》結說與問清淨接在第二條同一段內，以「「諸大德！已說二不定法」下刀；大眾說出世部梵本攝頌歸結說，根有戒經攝頌歸總標。',
+    [
+        ('ay0', '總標：二不定法半月半月說'),
+        ('ay1', '不定一・屏處可作婬處與女人坐'),
+        ('ay2', '不定二・露處與女人坐說麁惡語'),
+        ('ayz', '結說・三問清淨'),
+    ],
+    {
+        'pi': ('Nissaggiyapācittiyā', False, [
+            ('ay0', 'Aniyatuddeso\nIme'),
+            ('ay1', 'Aniyata 1. Paṭhamaaniyata'),
+            ('ay2', 'Aniyata 2. Dutiyaaniyata'),
+            ('ayz', 'Uddiṭṭhā kho āyasmanto'),
+        ]),
+        'T1429': ('「諸大德！是三', False, [
+            ('ay0', '「諸大德！是二'),
+            ('ay1', '「若比丘！共'),
+            ('ay2', '「若比丘！共'),
+            ('ayz', '「諸大德！我'),
+        ]),
+        'T1422a': ('「諸大德！是三', False, [
+            ('ay0', '「諸大德！是二'),
+            ('ay1', '「若比丘，共'),
+            ('ay2', '「若比丘，共'),
+            ('ayz', '「諸大德。已'),
+        ]),
+        'sa-sarv': ('IV. niḥsargikāḥ', False, [
+            ('ay0', 'III. aniyatau dharmau'),
+            ('ay1', 'PrMoSū_Aniy.1:'),
+            ('ay2', 'PrMoSū_Aniy.2:'),
+            ('ayz', 'uddiṣṭau mayāyuṣma(n)to'),
+        ]),
+        'T1436': ('「諸大德！是三', False, [
+            ('ay0', '「諸大德！是二'),
+            ('ay1', '「若比丘，共'),
+            ('ay2', '「若比丘，共'),
+            ('ayz', '「諸大德！已'),
+        ]),
+        'sa-mahl': ('[IV. triṃśan nissargikapācattikā', False, [
+            ('ay0', '[III. duve aniyatā'),
+            ('ay1', 'PrMoSū(Mā-L)Aniy.1.'),
+            ('ay2', 'PrMoSū(Mā-L)Aniy.2.'),
+            ('ayz', '// uddānaṃ //\n(1)'),
+        ]),
+        'T1426': ('「諸大德！是三', False, [
+            ('ay0', '「諸大德！是二'),
+            ('ay1', '「若比丘，與'),
+            ('ay2', '「若比丘，與'),
+            ('ayz', '「諸大德！已'),
+        ]),
+        'T1460': ('「諸大德！此三', False, [
+            ('ay0', '「諸大德！此二'),
+            ('ay1', '「若比丘，共'),
+            ('ay2', '「若比丘，共'),
+            ('ayz', '「諸大德！我'),
+        ]),
+        'sa-mula': ('triṃśan naisargikapāyantikā', False, [
+            ('ay0', 'III. dvāv aniyatau'),
+            ('ay1', 'Aniy.1 (PrMoSū_Mū-Banerjee)'),
+            ('ay2', 'Aniy.2 (PrMoSū_Mū-Banerjee)'),
+            ('ayz', 'uddiṣṭā me āyuṣmantaḥ'),
+        ]),
+        'T1454': ('「諸大德！此三', False, [
+            ('ay0', '「諸大德！此二'),
+            ('ay1', '「若復苾芻，'),
+            ('ay2', '「若復苾芻，'),
+            ('ayz', '「諸大德！我'),
+        ]),
+    })
