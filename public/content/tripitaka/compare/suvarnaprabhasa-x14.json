@@ -1,0 +1,76 @@
+{
+ "slug": "suvarnaprabhasa-x14",
+ "title": "金光明經・如意寶珠品",
+ "family": "sa",
+ "intro": "只見於義淨〈如意寶珠品〉＝藏譯 Toh 556 第十四章。佛說除雷電恐怖的如意寶珠陀羅尼（四方光明電王名號）；觀自在、執金剛、梵王、帝釋、四王、諸龍王亦各說呪護持。藏譯無觀自在、執金剛二呪。",
+ "units": [
+  {
+   "id": "x14-00",
+   "label": "佛說如意寶珠陀羅尼・四方電王"
+  },
+  {
+   "id": "x14-01",
+   "label": "觀自在、執金剛、梵王、帝釋、四王、龍王各說呪"
+  },
+  {
+   "id": "x14-02",
+   "label": "佛讚諸呪"
+  },
+  {
+   "id": "x14-03",
+   "label": "品尾題（藏）"
+  }
+ ],
+ "versions": [
+  {
+   "id": "bo",
+   "lang": "bo",
+   "label": "藏譯",
+   "who": "德格版 Toh 556（二十九章本）・84000"
+  },
+  {
+   "id": "en",
+   "lang": "en",
+   "label": "84000 英譯",
+   "who": "譯自藏譯・與藏文逐句對齊"
+  },
+  {
+   "id": "T0665",
+   "lang": "lzh",
+   "label": "義淨本",
+   "who": "義淨譯《金光明最勝王經》・703 年",
+   "work": "T0665"
+  }
+ ],
+ "works": [
+  "T0665"
+ ],
+ "anchors": [
+  {
+   "work": "T0665",
+   "node": "金光明最勝王經如意寶珠品第十四",
+   "uid": "T16n0665_p0433b05"
+  }
+ ],
+ "cells": {
+  "x14-00": {
+   "bo": "ཀུན་དགའ་བོ་ཁྱོད་ཀྱིས་གློག་ཐམས་ཅད་ཟློག་པ། སོ་སོར་འབྲང་བ་སྔོན་གྱི་ཡང་དག་པར་རྫོགས་པའི་སངས་རྒྱས་རྣམས་ཀྱིས་གསུངས་པ། ང་ཡང་ད་ལྟར་འཆད་ཀྱིས་ཟུང་ཤིག ། ཀུན་དགའ་བོ་ཤར་ཕྱོགས་ན་འོང་བ་ཞེས་བྱ་བའི་གློག་ཡོད། ཀུན་དགའ་བོ་ལྷོ་ཕྱོགས་ན་སྐད་བརྒྱ་པ་ཞེས་བྱ་བའི་གློག་ཡོད། ཀུན་དགའ་བོ་ནུབ་ཕྱོགས་ན་འོད་ཉམས་པ་ཞེས་བྱ་བའི་གློག་ཡོད། ཀུན་དགའ་བོ་བྱང་ཕྱོགས་ན་རྒྱུན་གྱི་བདག་པོ་ཞེས་བྱ་བའི་གློག་ཡོད་དེ། ཀུན་དགའ་བོ་གང་ལ་ལ་གློག་འདི་རྣམས་ཀྱི་མིང་ཤེས་པ་དང་། ཕྱོགས་རྣམ་པར་གནས་ པ་ཤེས་པ་དེ་ལ་གློག་གི་འཇིགས་པ་ཐམས་ཅད་མི་འབྱུང་བར་ཤེས་པར་བྱའོ། ། གློག་གི་མིང་འདི་དག་ཡི་གེར་བྲིས་ཏེ། གནས་གང་དུ་བཞག་པའི་གནས་དེ་དག་ཏུ། གློག་ཐམས་ཅད་མི་འབབ་བོ། །དེ་ནས་བཅོམ་ལྡན་འདས་ཀྱིས་དེའི་ཚེ། དྲཱ་བི་ཌའི་གསང་སྔགས་ཀྱི་ཚིག་འདི་དག་བཀའ་སྩལ་ཏོ། ། ཏདྱ་ཐཱ། ནི་མི་ནི་མི། ནི་མིན་དྷ་རི། འཇིག་རྟེན་གསུམ་སྣང་བར་བྱེད་པ། ལག་ན་རྩེ་གསུམ་པས་ཕྱོགས་འདིར་གློག་ཐམས་ཅད་ལས་བདག་ལ་སྲུངས་ཤིག་སྲུངས་ཤིག་སྭཱ་ཧཱ། ཡང་དེའི་ཚེ་བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་འཕགས་པ་སྤྱན་རས་གཟིགས་དབང་ཕྱུག་འཁོར་དེ་ཉིད་དུ་འདུས་པར་གྱུར་ཏེ། འདུག་པ་དེས་བཅོམ་ལྡན་འདས་ལ་འདི་སྐད་ཅེས་གསོལ་ཏོ། །བཅོམ་ལྡན་འདས་བདག་གིས་ཀྱང་ཆོས་ཀྱི་རྣམ་གྲངས་འདི་ལ། དྲཱ་བི་ཌའི་གསང་སྔགས་ཀྱི་ཚིག་རྣམས་བརྗོད་པར་བགྱིའོ། །ཏདྱ་ཐཱ། ཀ་ཊེ་བི་ཀ་ཊེ། ནི་ཀ་ཊེ། པྲ་ཏྱ་རྠི་ཀེ ། པྲཏྱ་མི་ཏྲེ། ཤུདྡྷེ། མུཀྟེ། བི་མ་ལེ། པྲ་བྷཱ་སྭ་རེ། ཨཎྜ་རེ། པཎྜ་རེ། ཤྭེ་ཏེ། པཎྜ་ར་བཱ་སི་ནི། ཧ་རི་ཀཎྜ་རི། ཀ་པི་ལི། པིཾ་ག་ལ། ཨཀྵི་ད་དྷི་མུ་ཁི། དུས་མ་ཡིན་པར་འཆི་བ་ཐམས་ཅད་ལས་བདག་ལ་སྲུངས་ཤིག་སྲུངས་ཤིག ། འཕགས་པ་སྤྱན་རས་གཟིགས་དབང་ཕྱུག་གི་གཟི་བརྗིད་ཀྱིས། བདག་དུས་མ་ཡིན་པར་འཆི་བ་ཐམས་ཅད་མཐོང་བར་མ་གྱུར་ཅིག་སྭཱ་ཧཱ། དེ་ནས་གསང་བ་པའི་བདག་པོ་ལག་ན་རྡོ་རྗེས། བཅོམ་ལྡན་འདས་ག་ལ་བ་དེ་ལོགས་སུ་ཐལ་མོ་སྦྱར་བ་བཏུད་དེ། བཅོམ་ལྡན་འདས་ལ་འདི་སྐད་ཅེས་གསོལ་ཏོ། །བཅོམ་ལྡན་འདས་བདག་གིས་ཀྱང་ཆོས་ཀྱི་རྣམ་གྲངས་འདི་ལ་གཟུངས་ཀྱི་ཚིག་རྣམས་བརྗོད་པར་བགྱིའོ། །ཏདྱ་ཐཱ། མུ་ནི་མུ་ནི། མུ་ནི་ན་དྷ་རི་མུ་ནི། མ་ཏི་མ་ཏི། སུ་མ་ཏི། མ་ཧཱ་མ་ཏི། ཧཱ་ཧཱ་ཧཱ་ཧཱ། ཁྱོད་ལ་སྡིག་པ་མེད་ཀྱིས་མ་འཇིགས་ཤིག་ཅེས་ལག་ན་རྡོ་རྗེས་སྨྲས་ཀྱིས་དྲཱ་བི་ཌ་སྭཱ་ཧཱ། བཅོམ་ལྡན་འདས་བདག་གི་བསྲུང་བ་གཞན་གྱིས་མི་ཐུབ་པ་འདི་སུའི་སྙིང་ལ་འཛིན་ཏམ། ཡི་གེར་བྲིས་པ་དེ་བདག་གིས་རྟག་ པར་རྒྱུན་དུ། འཇིགས་པ་ཐམས་ཅད་ལས་བསྲུང་བར་བགྱིའོ། །དུས་མ་ལགས་པར་འགུམ་པ་ཐམས་ཅད་ལས་ཐར་བར་བགྱིའོ། །དེ་ནས་མི་མཇེད་ཀྱི་བདག་པོ་ཚངས་པས། བཅོམ་ལྡན་འདས་ལ་འདི་སྐད་ཅེས་གསོལ་ཏོ། ། བཅོམ་ལྡན་འདས་བདག་གིས་ཀྱང་། སེམས་ཅན་ཐམས་ཅད་ཀྱི་དོན་དང་། ཕན་པ་དང་། བདེ་བ་བསྐྱེད་པའི་སླད་དུ། ཆོས་ཀྱི་རྣམ་གྲངས་འདི་ལ། གཟུངས་ཀྱི་གསང་སྔགས་ཀྱི་ཚིག་རྣམས་བརྗོད་པར་བགྱིའོ། །ཏདྱ་ཐཱ། ཧི་ལི་མི་ལི། ཙི་ལི་སྭཱ་ཧཱ།",
+   "en": "Chapter 14: The Wish-fulfilling Jewel Dhāraṇī  Then the Bhagavat, in the midst of the great assembly, said to Venerable Ānanda, “Ānanda, there is that which repels all lightning, which has been taught by the samyaksaṃbuddhas of the past. Following them, I also will now teach it, so you should retain it! “Ānanda, to the east there is the lightning called Āgata, to the south there is the lightning called Hundredth Moment, to the west there is the lightning called Waning Light, and to the north there is the lightning called Satamapati. “Ānanda, someone who knows the name of each lightning and knows the direction where it is situated will know that all danger from lightning will not occur. When they write down the names of the lightning, wherever they dwell there will be no lightning that strikes.” Then, at that time, the Bhagavat recited these words of a Dravidian mantra:  tadyathā | nimi nimi nimindhari, illuminator of the three worlds who holds a trident in his hands, protect me, protect me from all lightning in this place! svāhā |  Also at that time, the bodhisattva mahāsattva Avalokiteśvara was present in that assembly. Being present, he said to the Bhagavat, “Bhagavat, I also, for this Dharma teaching, will recite the words of a Dravidian mantra:  tadyathā | kate vikate nikate pratyarthike pratyamitre śuddhe mukte vimale prabhāsvare aṇḍare paṇḍare śvete paṇḍaravāsini harikaṇḍari piṃgala akṣi dadhi mukhi. Protect me, protect me from all premature death. Through the magnificence of Ārya Avalokiteśvara may I never see any premature death! svāhā |  Then Vajrapāṇi, the lord of secrets, placed his palms together, bowed toward the Bhagavat, and said to the Bhagavat, “Bhagavat, I also will recite the words of a dhāraṇī for this Dharma teaching:  tadyathā | muni muni muni nadhari muni mati mati sumati mahāmati hā hā hā hā. Vajrapāṇi has said, ‘You have no bad karma, so do not be afraid!’ svāhā |  “Bhagavat, whoever keeps in their heart this invincible protection of mine, or writes it out, will always be continually protected from all danger. I will save them from all premature death.”",
+   "T0665": "爾時，世尊於大眾中，告阿難陀曰：「汝等當知，有陀羅尼名如意寶珠，遠離一切災厄，亦能遮止諸惡雷電，過去如來、應、正等覺所共宣說。我於今時於此經中，亦為汝等大眾宣說，能於人天為大利益，哀愍世間，擁護一切，令得安樂。」時諸大眾及阿難陀聞佛語已，各各至誠瞻仰世尊，聽受神呪。佛言：「汝等諦聽，於此東方有光明電王，名阿揭多；南方有光明電王，名設羝嚕；西方有光明電王，名主多光；北方有光明電王，名蘇多末尼。若有善男子、善女人得聞如是電王名字，及知方處者，此人即便遠離一切怖畏之事，及諸災橫悉皆消殄。若於住處書此四方電王名者，於所住處無雷電怖，亦無災厄及諸障惱，非時抂死，悉皆遠離。」爾時世尊即說呪曰：「怛姪他　儞弭　儞弭　儞弭　尼民達哩　窒哩盧迦　盧羯儞　窒哩輸攞波儞　曷𠸪叉　曷𠸪叉「我某甲及此住處，一切恐怖所有苦惱雷電霹靂，乃至抂死，悉皆遠離，莎訶。」"
+  },
+  "x14-01": {
+   "bo": "བྲཧྨ་པཱུ་རེ་སྭཱ་ཧཱ། བྲཧྨ་སྭ་རེ་སྭཱ་ཧཱ། བྲཧྨ་བྷི་སུ་གརྦྷེ། པུཥྤ་སཾ་སྟ་རེ་སྭཱ་ཧཱ། བཅོམ་ལྡན་འདས་འདི་ནི་བདག་གི་བསྲུང་བ་ཚངས་པའི་ཆད་པ་ཞེས་བགྱི་སྟེ། དུས་མ་ལགས་པར་འགུམ་པ་ཐམས་ཅད་ལས་ཡོངས་སུ་སྐྱོབ་པ། སྡིག་པ་ཐམས་ཅད་རབ་ཏུ་ཞི་བར་བགྱིད་པ་ལགས་སོ། །དེ་ནས་ལྷའི་དབང་པོ་བརྒྱ་བྱིན་གྱིས་བཅོམ་ལྡན་འདས་ག་ལ་བ་དེ་ལོགས་སུ་ཐལ་མོ་སྦྱར་བ་བཏུད་དེ། བཅོམ་ལྡན་འདས་ལ་འདི་སྐད་ཅེས་གསོལ་ཏོ། །བཅོམ་ལྡན་འདས་བདག་གིས་ཀྱང་ཆོས་ཀྱི་རྣམ་གྲངས་འདི་ལ་གཟུངས་ཀྱི་གསང་སྔགས་ཀྱི་ཚིག་རྣམས་བརྗོད་པར་བགྱིའོ། །ཏདྱ་ཐཱ། ནི་བ་རཱ་ཎི། བནྡྷ་མཱ་རནྟེ་མ་ཏི་ཏི། ཏི་ཏི། གཽ་རཱི། གནྡྷ་རི། ཙཎྜཱ་ལི། མཱ་ཏངྒི། པ་རྞ་ལེ། ཧི་ན་མ་དྷྱ་མ་དྷ་རི་ཎི་མ་ལ་ནི། ད་ལ་མད་དེ། ཙཀྲ་བཱ་ཀྲཱི། ཤ་བ་རི། ཤ་བ་རི་སྭཱ་ཧཱ། བཙུན་པ་བཅོམ་ལྡན་འདས་འདི་ནི་བདག་གི་རིག་སྔགས་རྡོ་རྗེའི་ལྕེ་འབེབས་པ་ཞེས་བགྱི་སྟེ། འཇིགས་པ་ཐམས་ཅད་ལས་ཐར་བར་བགྱིད་པ། དུས་མ་ལགས་པར་འགུམ་པ་ཐམས་ཅད་ལས་ཡོངས་སུ་སྐྱོབ་པ་ལགས་སོ། །དེ་ནས་རྒྱལ་པོ་ཆེན་པོ་ཡུལ་འཁོར་སྲུང་དང་། འཕགས་སྐྱེས་པོ་དང་། མིག་མི་བཟང་དང་། རྒྱལ་པོ་ཆེན་པོ་རྣམ་ཐོས་ཀྱི་བུས། བཅོམ་ལྡན་འདས་ག་ལ་བ་དེ་ལོགས་སུ་ཐལ་མོ་སྦྱར་བ་བཏུད་དེ། བཅོམ་ལྡན་འདས་ལ་འདི་སྐད་ཅེས་གསོལ་ཏོ། ། བཅོམ་ལྡན་འདས་བདག་ཅག་གིས་ཀྱང་། སྐྱེ་བོ་མང་པོ་ལ་ཕན་པ་དང་། སྐྱེ་བོ་ མང་པོ་ལ་བདེ་བ་དང་། འཇིག་རྟེན་ལ་སྙིང་བརྩེ་བའི་སླད་དུ། ཆོས་ཀྱི་རྣམ་གྲངས་འདི་ལ་གཟུངས་ཀྱི་གསང་སྔགས་ཀྱི་ཚིག་རྣམས་བརྗོད་པར་བགྱིའོ། །ཏདྱ་ཐཱ། པུཥྤེ་སུ་པུཥྤེ། དྷུ་མ་པ་རི་ཧཱ་རེ། ཨཱརྱ་པུ་ཤ་སྟེ། ཤཱན་ཏི། ནིརྨུཀ་ཏེ། མངྒ་ལྱ། ཧི་ར་ཎྱ་གདྡྷེ་སྟུ་ཏེ། སྟ་བི་ཏེ་སྭཱ་ཧཱ། བཙུན་པ་བཅོམ་ལྡན་འདས་འདི་ནི་རྒྱལ་པོ་ཆེན་པོ་བཞི་པོ་བདག་ཅག་གི་བསྲུང་བ་འཇིགས་པ་མ་མཆིས་པ་ཞེས་བགྱི་སྟེ། འཇིགས་པ་ཐམས་ཅད་ལས་མི་འཇིགས་པར་བགྱིད་པ། ཚེ་སྐྱོང་བ་དུས་མ་ལགས་པར་འགུམ་པ་ཐམས་ཅད་ལས་ཡོངས་སུ་སྐྱོབ་པ་ལགས་སོ། །དེ་ནས་ཀླུའི་རྒྱལ་པོ་རྒྱ་མཚོ་དང་། ཀླུའི་རྒྱལ་པོ་གློག་འོད་དང་། ཀླུའི་རྒྱལ་པོ་མ་དྲོས་པ་དང་། ཀླུའི་རྒྱལ་པོ་གློག་ལྕེ་དང་། ཀླུའི་རྒྱལ་པོ་འོད་ཟེར་བརྒྱ་པས། བཅོམ་ལྡན་འདས་ག་ལ་བ་དེ་ལོགས་སུ་ཐལ་མོ་སྦྱར་བ་བཏུད་དེ། བཅོམ་ལྡན་འདས་ལ་འདི་སྐད་ཅེས་གསོལ་ཏོ། །བཅོམ་ལྡན་འདས་བདག་ཅག་གི་སྲུང་བ་ཆེན་པོ་ཡིད་བཞིན་གྱི་ནོར་བུ་ཞེས་བགྱི་བ། གློག་ཐམས་ཅད་ཟློག་པ། དུས་མ་ལགས་པར་འགུམ་པ་ཐམས་ཅད་སེལ་བ། དུག་རྣམས་མི་གདུག་པར་བགྱིད་པ། གཤེད་བྱེད་དང་། བྱད་སྟེམས་དང་། རོ་ལངས་དང་། བཀྲ་མི་ཤིས་པའི་འཇིགས་པ་ཞི་བར་བགྱིད་པ་མཆིས་ན། བཅོམ་ལྡན་འདས་བདག་ཅག་ཀླུའི་སྐྱེ་གནས་འདི་ནས་དབྱུང་བ་དང་། སེར་སྣ་སྤང་བའི་སླད་དུ་ཐུགས་བརྩེ་བར་དགོངས་ཏེ་བཞེས་སུ་གསོལ། དེ་ཅིའི་སླད་དུ་ཞེ་ན། བཅོམ་ལྡན་འདས་བདག་ཅག་ཀླུ་རྣམས་ནི་སེར་སྣ་ཅན་ཏེ་སེམས་སེར་སྣས་བསྐོར་བ་ལགས་སོ། །ཏདྱ་ཐཱ། ཨཱརྱ་ཛེ་ཨ་མ་རེ་ཨ་མྲྀ་ཏེ། ཨཀྵ་ཡེ། ཨ་བྷི་ཡེ། པུཎྱཻ། བརྱ་བ་ཏེ། སརྦ་པཱ་པྃ། པྲ་ཤ་མཱ་ནི་ཡེ་སྭཱ་ཧཱ། ཨཱརྱ་པུཎྱ་སོ་པཱ་ཀཱི་ཡེ་སྭཱ་ཧཱ། བཙུན་པ་བཅོམ་ལྡན་འདས་གསང་སྔགས་ཀྱི་ཚིག་འདི་དག་སྐྱེས་པའམ། བུད་མེད་གང་ལ་ལའི་ལྕེ་ལ་འདོན་པའམ། ཡི་གེར་བྲིས་པ་དེ་ལ་གློག་གི་འཇིགས་པ་ཐམས་ཅད་མ་མཆིས་པར་རིག་པར་བགྱིའོ། །རྩ་བའི་དུག་གམ། མཆེ་བའི་ དུག་གམ། དབྱིག་དུག་གམ། གང་དག་གཞན་ཡང་ཡན་ལག་ལས་བྱུང་བའི་དུག་དེ་དག་གིས་དེ་འགུམ་པའི་དུས་བགྱིད་པར་མི་འགྱུར་རོ། ། བདག་འཇིགས་པ་ཐམས་ཅད་དང་། གནོད་པ་ཐམས་ཅད་ལས་བདེ་ལེགས་སུ་གྱུར་ཅིག །དེ་ནས་བཅོམ་ལྡན་འདས་ཀྱིས་བརྒྱ་བྱིན་དང་། ཚངས་པ་དང་། འཇིག་རྟེན་སྐྱོང་བ་དང་། ཀླུའི་དབང་པོ་དེ་དག་ལ་ལེགས་སོ་ཞེས་བྱ་བ་གནང་སྟེ། བཞིན་བཟངས་དག་ཁྱེད་སྐྱེ་བོ་མང་པོ་ལ་ཕན་པ་དང་། སྐྱེ་བོ་མང་པོ་ལ་བདེ་བའི་ཕྱིར་ཞུས་ཏེ། ཆོས་ཀྱི་རྣམ་གྲངས་འདི་རྗེས་སུ་ཡོངས་སུ་བཟུང་བའི་ཕྱིར། དྲཱ་བི་ཌའི་གསང་སྔགས་ཀྱི་ཚིག་རྣམས་བཤད་པ་ལེགས་སོ་ལེགས་སོ། །ཕྱོགས་རྣམས་ནི་གཉིད་ལོག་པ་དང་། མྱོས་པ་དང་། རབ་ཏུ་མྱོས་པ་རྣམས་བསྲུང་བར་འགྱུར་རོ། །",
+   "en": "Then Mahābrahmā, the lord of Sahā, said to the Bhagavat, “Bhagavat, I also, for the welfare, benefit, and happiness of beings, will recite the words of a mantra for this Dharma teaching:  tadyathā | hili mili cili svāhā brahmapūre svāha brahmasvare svāha brahmabhisugarbhe puṣpasaṃstare svāhā |  “Bhagavat, this protection of mine is called Brahmā’s punishment, and it will protect from all premature death and bring to an end all bad karma.” Then Śakra, the lord of devas, with his palms together, bowed toward the Bhagavat and said to the Bhagavat, “Bhagavat, I also will recite the words of a dhāraṇī-mantra for this Dharma teaching:  tadyathā | nivarāni banddha mādantema titi titi gaurī gandhari caṇḍāli mātaṅgi parṇale hinamadhyamadhariṇi malani dalamdade cakrāvākrī śavari savari svāhā |  “Venerable Bhagavat, this vidyāmantra of mine, which is called hurled-down vajra flames, frees from all dangers, all fear and terror, and protects from all premature death.” Then Mahārāja Dhṛtarāṣṭra, Mahārāja Virūḍhaka, Mahārāja Virūpākṣa, and Mahārāja Vaiśravaṇa bowed toward the Bhagavat, and said to the Bhagavat, “Bhagavat, we also, in order to bring benefit to many beings, in order to bring happiness to many beings, and because of compassion for the world, will recite the words of a mantra for this Dharma teaching:  tadyathā | puṣpe supuṣpe dhumaparihāre āryapraśaste śānti nirmukte maṅgalya hiraṇyagarbhe stute stavite svāhā |  “Venerable Bhagavat, this protection of ours, of we Four Mahārājas, which is called the absence of danger, makes those in danger become safe, protects life, and saves from all premature death.” Then the nāga king Sāgara, the nāga king Vidyutprabha, the nāga king Anavatapta, the nāga king Lightning Tongue, and the nāga king Royal Light, with palms together, bowed toward the Bhagavat and said to the Bhagavat, “Bhagavat, our great protection, which is called the wish-fulfilling jewel, repels all lightning, prevents all premature death, neutralizes poisons, and causes danger from enemies, conjured spirits, zombies, and inauspiciousness to cease. “Bhagavat, regard us with compassion and accept this, so that we may leave this existence as nāgas and forsake miserliness. Why is that? Bhagavat we nāgas are miserly, and our minds are encircled by miserliness. tadyathā | āryaje amare amṛte akṣaye abhiye puṇyai paryavate sarvapāpaṃ praśamāniye svāha āryapuṇyasopākiye svāhā |  “Venerable Bhagavat, if any man or woman recites the words of this mantra with their tongue or writes it out, then they will know that there is no danger from lightning and there will be no premature death caused by poison from plants, poison from animal bites, poison from treasures, or any other category of poison. May I go from all dangers and all harm to become perfectly happy!” The Bhagavat then congratulated Śakra, Brahmā, the world protectors, and the nāga lords, saying, “It is excellent, excellent that you elegant men have taught the words of the Dravidian mantras in order to enter and possess completely this Dharma teaching, for the sake of benefit for many beings and happiness for many beings. It will protect in every direction those who are asleep, those who are intoxicated, and even those who are completely intoxicated.”",
+   "T0665": "爾時觀自在菩薩摩訶薩在大眾中，即從座起，偏袒右肩，合掌恭敬，白佛言：「世尊！我今亦於佛前，略說如意寶珠神呪，於諸人天為大利益，哀愍世間，擁護一切，令得安樂，有大威力，所求如意。」即說呪曰：「怛姪他　喝帝　毘喝帝　儞喝帝　鉢喇窒體雞　鉢喇底（丁履反）蜜窒囇　戍提　目羝毘末麗　鉢喇婆莎（蘇活反）囇　安茶（入聲）囇般茶囇稅（平聲） 帝　般茶囉婆死儞　喝囇羯茶（引）囇　劫畢麗　氷揭羅惡綺　達地目企　曷𠸪叉　曷𠸪叉「我某甲及此住處，一切恐怖所有苦惱，乃至抂死，悉皆遠離，願我莫見罪惡之事，常蒙聖觀自在菩薩大悲威光之所護念，莎訶。」爾時，執金剛祕密主菩薩，即從座起，合掌恭敬，白佛言：「世尊！我今亦說陀羅尼呪，名曰無勝，於諸人天為大利益，哀愍世間，擁護一切，有大威力，所求如願。」即說呪曰：「怛姪他　母儞母儞　母尼囇　末底末底　蘇末底　莫訶末底　呵呵呵　磨婆　以那悉底帝（引）　波跛　跋折攞波儞　惡甜（火含反）姪㗚茶（上）莎訶「世尊！我此神呪名曰無勝擁護，若有男女一心受持，書寫讀誦，憶念不忘，我於晝夜，常護是人，於一切恐怖乃至抂死，悉皆遠離。」爾時，索訶世界主梵天王，即從座起，合掌恭敬，白佛言：「世尊！我亦有陀羅尼微妙法門，於諸人天為大利益，哀愍世間，擁護一切，有大威力，所求如願。」即說呪曰：「怛姪他　醯哩　弭哩　地哩　莎訶　跋囉甜魔布囇　跋囉甜麼末泥　跋囉甜麼揭鞞　補澁跛僧悉怛囇　莎訶「世尊！我此神呪名曰梵治，悉能擁護持是呪者，令離憂惱及諸罪業，乃至抂死，悉皆遠離。」爾時，帝釋天主即從座起，合掌恭敬，白佛言：「世尊！我亦有陀羅尼，名跋折羅扇儞，是大明呪，能除一切恐怖厄難，乃至抂死，悉皆遠離，拔苦與樂，利益人天。」即說呪曰：「怛姪他　毘儞　婆喇儞　畔陀麼彈滯磨膩儞㨖　爾瞿哩　健陀哩　旃茶哩　摩登耆（上）卜羯死　薩囉跋[口*束*頁]鞞（去）　呬娜末低　答麼　嗢多喇儞　莫呼喇儞　達喇儞　計斫羯囉婆抧　捨伐哩　奢伐哩　莎訶」爾時，多聞天王、持國天王、增長天王、廣目天王俱從座起，合掌恭敬，白佛言：「世尊！我今亦有神呪，名施一切眾生無畏，於諸苦惱常為擁護，令得安樂，增益壽命，無諸患苦，乃至抂死，悉皆遠離。」即說呪曰：「怛姪他補澁閉　蘇補澁閉　度麼鉢唎呵囇　阿囄耶鉢喇設悉帝　扇帝涅　目帝忙揭例窣覩帝　悉哆鼻帝　莎訶」爾時，復有諸大龍王，所謂末那斯龍王、電光龍王、無熱池龍王、電舌龍王、妙光龍王，俱從座起，合掌恭敬，白佛言：「世尊！我亦有如意寶珠陀羅尼，能遮惡電，除諸恐怖，能於人天為大利益，哀愍世間，擁護一切，有大威力，所求如願，乃至抂死，悉皆遠離，一切毒藥皆令止息，一切造作蠱道呪術不吉祥事悉令除滅。我今以此神呪奉獻世尊，惟願哀愍慈悲納受，當令我等離此龍趣永捨慳貪。何以故？由此慳貪於生死中受諸苦惱，我等願斷慳貪種子。」即說呪曰：「怛姪他　阿折囇　阿末囇　阿蜜㗚諦　惡叉裔　阿弊裔　奔尼鉢唎耶栗諦　薩婆波跛　鉢喇苫摩尼裔　莎訶　阿離裔般豆　蘇波尼裔莎訶「世尊！若有善男子、善女人，口中說此陀羅尼明呪，或書經卷，受持讀誦、恭敬供養者，終無雷電霹靂，及諸恐怖苦惱憂患，乃至抂死，悉皆遠離；所有毒藥蠱魅厭禱，害人虎狼師子毒蛇之類，乃至蚊虻悉不為害。」"
+  },
+  "x14-02": {
+   "bo": "བཅོམ་ལྡན་འདས་ཀྱིས་དེ་སྐད་ཅེས་བཀའ་སྩལ་ནས། དགེ་སློང་དེ་དག་དང་། བརྒྱ་བྱིན་དང་། ཚངས་པ་དང་། འཇིག་རྟེན་སྐྱོང་བ་དེ་དག་དང་། ཀླུའི་དབང་པོ་དེ་དག་དང་། ལྷ་དང་། མི་དང་། ལྷ་མ་ཡིན་དང་། དྲི་ཟར་བཅས་པའི་འཇིག་རྟེན་ཡི་རངས་ཏེ་བཅོམ་ལྡན་འདས་ཀྱིས་གསུངས་པ་ལ་མངོན་པར་བསྟོད་དོ། །",
+   "en": "Then the Bhagavat said to the great assembly, “Well done! Well done! All of these dhāraṇī-mantras have great power, so that all the things wished for in the minds of beings will be perfectly obtained, exactly as they have wanted. They will bring a vast benefit as long as the mind is one-pointed. Do not have any doubt!” When the Bhagavat had spoken, the world, with its bhikṣus, Śakra, Brahmā, world protectors, nāga lords, devas, humans, asuras, and gandharvas, was overjoyed and praised the words of the Bhagavat.",
+   "T0665": "爾時，世尊普告大眾：「善哉！善哉！此等神呪皆有大力，能隨眾生心所求事，悉令圓滿，為大利益，除不至心；汝等勿疑。」時諸大眾聞佛語已，歡喜信受。"
+  },
+  "x14-03": {
+   "bo": "གསེར་འོད་དམ་པ་མདོ་སྡེའི་དབང་པོའི་རྒྱལ་པོ་ལས། ཡིད་བཞིན་གྱི་ནོར་བུའི་གཟུངས་ཀྱི་ལེའུ་ཞེས་བྱ་སྟེ་བཅུ་བཞི་པའོ།། །།",
+   "en": "This concludes “The Wish-Fulfilling Jewel Dhāraṇī,” the fourteenth chapter of “The Lord King of Sūtras, the Sublime Golden Light.”"
+  }
+ }
+}

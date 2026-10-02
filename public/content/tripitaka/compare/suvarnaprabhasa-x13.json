@@ -1,0 +1,82 @@
+{
+ "slug": "suvarnaprabhasa-x13",
+ "title": "金光明經・無染著陀羅尼品",
+ "family": "sa",
+ "intro": "合部〈銀主陀羅尼品〉＝義淨〈無染著陀羅尼品〉＝藏譯 Toh 556 第十三章。佛告舍利子：無染著陀羅尼是諸菩薩之母，舍利子請說，佛說呪及其功德。",
+ "units": [
+  {
+   "id": "x13-00",
+   "label": "佛告舍利子・陀羅尼句義"
+  },
+  {
+   "id": "x13-01",
+   "label": "舍利子請說・說呪・功德"
+  },
+  {
+   "id": "x13-02",
+   "label": "品尾題（藏）"
+  }
+ ],
+ "versions": [
+  {
+   "id": "bo",
+   "lang": "bo",
+   "label": "藏譯",
+   "who": "德格版 Toh 556（二十九章本）・84000"
+  },
+  {
+   "id": "en",
+   "lang": "en",
+   "label": "84000 英譯",
+   "who": "譯自藏譯・與藏文逐句對齊"
+  },
+  {
+   "id": "T0664",
+   "lang": "lzh",
+   "label": "合部本",
+   "who": "寶貴合《合部金光明經》・597 年",
+   "work": "T0664"
+  },
+  {
+   "id": "T0665",
+   "lang": "lzh",
+   "label": "義淨本",
+   "who": "義淨譯《金光明最勝王經》・703 年",
+   "work": "T0665"
+  }
+ ],
+ "works": [
+  "T0664",
+  "T0665"
+ ],
+ "anchors": [
+  {
+   "work": "T0664",
+   "node": "銀主陀羅尼品第十一",
+   "uid": "T16n0664_p0386a08"
+  },
+  {
+   "work": "T0665",
+   "node": "無染著陀羅尼品第十三",
+   "uid": "T16n0665_p0432c15"
+  }
+ ],
+ "cells": {
+  "x13-00": {
+   "bo": "དེ་ནས་བཅོམ་ལྡན་འདས་ཀྱིས། ཚེ་དང་ལྡན་པ་ཤ་ར་དྭ་ཏིའི་བུ་ལ་བཀའ་སྩལ་པ། ཤ་ར་དྭ་ཏིའི་བུ་འདི་ལྟ་སྟེ། ཆགས་པ་མེད་པའི་གཟུངས་ཞེས་བྱ་བའི་ཆོས་ཀྱི་རྣམ་གྲངས་འདི་ནི། བྱང་ཆུབ་སེམས་དཔའ་ཆོས་ཐམས་ཅད་ལ་བསྒོམས་པ་རྣམས་ཀྱི་མ་དང་། བྱང་ཆུབ་སེམས་དཔའི་སྔོན་གྱི་སྤྱོད་པ་དང་། བྱང་ཆུབ་སེམས་དཔའ་རྣམས་ཀྱིས་ཡོངས་སུ་འཛིན་པ་ཡིན་ནོ། །དེ་སྐད་ཅེས་བཀའ་སྩལ་པ་དང་། བཅོམ་ལྡན་འདས་ལ་ཚེ་དང་ལྡན་པ་ཤ་ར་དྭ་ཏིའི་བུས་འདི་སྐད་ཅེས་གསོལ་ཏོ། །བཅོམ་ལྡན་འདས་གཟུངས་ནི་ཡུལ་ན་མི་གནས། ཕྱོགས་ན་མི་གནས་པ་ལགས་ན། བཅོམ་ལྡན་འདས་གཟུངས་གཟུངས་ཞེས་བགྱི་བའི་གཟུངས་ཀྱི་ཚིག་གི་དོན་དེ་གང་ལགས། དེ་སྐད་ཅེས་གསོལ་པ་དང་། བཅོམ་ལྡན་འདས་ཀྱིས་ཚེ་དང་ལྡན་པ་ཤ་ར་དྭ་ཏིའི་བུ་ལ་འདི་སྐད་ཅེས་བཀའ་སྩལ་ཏོ། །ཤ་ར་དྭ་ཏིའི་བུ་ཇི་ལྟར་ཁྱོད་ཐེག་པ་ཆེན་པོ་ལ་གནས་པ་དང་། ཐེག་པ་ཆེན་པོ་ལ་མོས་པ་དང་། ཐེག་པ་ཆེན་པོ་ལ་ལྷག་པར་བྱ་བ་བྱས་པ་ཡིན་ན། ཤ་ར་དྭ་ཏིའི་བུ་ཇི་ལྟར་ཁྱོད་གཟུངས་ནི་ཡུལ་ན་མི་གནས་ཕྱོགས་ན་མི་གནས་ཤིང་། ཆོས་ཀྱང་མ་ཡིན། ཆོས་མ་ཡིན་པ་ཡང་མ་ཡིན། འདས་པ་ཡང་མ་ཡིན། མ་འོངས་པ་ཡང་མ་ཡིན། ད་ལྟར་བྱུང་བ་ཡང་མ་ཡིན། དངོས་པོ་ཅན་ཡང་མ་ཡིན། དངོས་པོ་མེད་པ་ཅན་ཡང་མ་ཡིན། རྐྱེན་ལས་བྱུང་བ་ཡང་མ་ཡིན། རྐྱེན་མེད་པ་ལས་བྱུང་བ་ཡང་མ་ཡིན། འགྲོ་བ་ལས་བྱུང་བ་ཡང་མ་ཡིན། འགྲོ་བ་མེད་པ་ལས་བྱུང་བ་ཡང་མ་ཡིན། ཆོས་གང་གི་སྐྱེ་བ་ཡང་མ་ཡིན། འགོག་པ་ཡང་མ་ཡིན་པར་ཆོས་སྟོན་མོད་ཀྱི། བྱང་ཆུབ་སེམས་དཔའ་རྣམས་ལ་ཕན་པར་བྱ་བའི་ཕྱིར། འདི་ལྟ་སྟེ། སངས་རྒྱས་ཀྱི་ཡོན་ཏན་དང་། སངས་རྒྱས་ཀྱི་ཚུལ་ཁྲིམས་དང་། སངས་རྒྱས་ཀྱི་བསླབ་པ་དང་། སངས་རྒྱས་ཀྱི་དགོངས་པ་དང་། སངས་རྒྱས་འབྱུང་བ་འདི་ལྟ་སྟེ། ཆགས་པ་མེད་པའི་གཟུངས་ཞེས་བྱ་བའི་ཆོས་ཀྱི་རྣམ་གྲངས་སྒྲུབ་པའི་ལམ་གྱི་རིག་པ་དང་། སྟོབས་ཀྱི་གནས་སྟོན་པ་ལེགས་སོ་ལེགས་སོ། །",
+   "en": "Chapter 13: The Dhāraṇī of Nonattachment  Then the Bhagavat said to Venerable Śāradvatīputra, “Śāradvatīputra, it is thus: this Dharma teaching called The Dhāraṇī of Nonattachment is the mother of the bodhisattvas who meditate on all phenomena. It is the past practice of bodhisattvas and it is held by the bodhisattvas.” Venerable Śāradvatīputra asked the Bhagavat, “Bhagavat, if a dhāraṇī is not located in an object and not located in a direction, then, Bhagavat, what is the meaning of the word dhāraṇī?” The Bhagavat replied to Venerable Śāradvatīputra, “Śāradvatīputra, you are within the Mahāyāna, have faith in the Mahāyāna, and are adept in the Mahāyāna. Śāradvatīputra, it is just you who have taught that a dhāraṇī is not located in an object and not located in a direction. It is not a phenomenon. It is not a nonphenomenon. It is not past, it is not future, and it is not present. It is not a thing, and it is not nothing. It does not originate from a condition, and it does not originate from the absence of a condition. It does not originate from a being, and it does not originate from the absence of a being. It is not the production of any phenomenon, and it is not their cessation. “Nevertheless, it is excellent, excellent, that, for the benefit of bodhisattvas, there is the teaching on the topic of the knowledge and power of the path of practicing the Dharma teaching of The Dhāraṇī of Nonattachment, which is composed of the qualities of the buddhas, the correct conduct of the buddhas, the training of the buddhas, the intention of the buddhas, and the occurrence of the buddhas.”",
+   "T0664": "爾時，世尊告命者奢利弗言：「奢利弗！此諸菩薩熏修諸法——所謂諸菩薩母、菩薩昔行、菩薩攝受——有法本名不染著陀羅尼。」如是語已，命者奢利弗白佛言：「世尊！言陀羅尼，陀羅尼者此何句義？為陀羅尼？非陀羅尼？世尊！為方處？非方處？」如是語已，佛告命者奢利弗言：「甚善，甚善！奢利弗！如汝發行大乘、信解大乘、增力大乘，如汝所說：其陀羅尼，非方處、非不方處，非法、非不法，非過去、非未來、非現在，非事物、非不事物，非緣、非不緣，非行、非不行，無有法生、亦無有滅，但為利益菩薩故。如是說是陀羅尼所作道、合、力、住，所謂佛諸功德，佛戒、佛學、佛密意、佛出生，所謂法本，名不染著陀羅尼。」",
+   "T0665": "爾時，世尊告具壽舍利子：「今有法門，名無染著陀羅尼，是諸菩薩所修行法，過去菩薩之所受持，是菩薩母。」說是語已，具壽舍利子白佛言：「世尊！陀羅尼者，是何句義？世尊！陀羅尼者，非方處、非非方處。」作是語已，佛告舍利子：「善哉！善哉！舍利子！汝於大乘已能發起，信解大乘，尊重大乘。如汝所說，陀羅尼者，非方處、非非方處，非法、非非法，非過去、非未來、非現在，非事、非非事，非緣、非非緣，非行、非非行，無有法生，亦無法滅。然為利益諸菩薩故，作如是說。於此陀羅尼功用正道理趣勢力安立，即是諸佛功德，諸佛禁戒，諸佛所學，諸佛祕意，諸佛生處，故名無染著陀羅尼最妙法門。」"
+  },
+  "x13-01": {
+   "bo": "དེ་སྐད་ཅེས་བཀའ་སྩལ་ པ་དང་། བཅོམ་ལྡན་འདས་ལ་ཚེ་དང་ལྡན་པ་ཤ་ར་དྭ་ཏིའི་བུས་འདི་སྐད་ཅེས་གསོལ་ཏོ། ། བཅོམ་ལྡན་འདས་འདི་ལྟ་སྟེ། གཟུངས་ཐོབ་པས་གང་ལ་གནས་ན། བྱང་ཆུབ་སེམས་དཔའ་བླ་ན་མེད་པ་ཡང་དག་པར་རྫོགས་པའི་བྱང་ཆུབ་ལས་ཕྱིར་མི་ལྡོག་པར་འགྱུར་བ་དང་། ཡང་དག་པར་དམ་བཅས་པར་འགྱུར་བ་དང་། རྟེན་མེད་པའི་ཆོས་ཀྱི་རང་བཞིན་གྱི་སྤོབས་པ་ཅན་གྱི་སློབ་དཔོན་དང་། ལམ་ལ་ཤིན་ཏུ་གནས་པར་འགྱུར་བའི་གཟུངས་ཀྱི་ཆོས་ཀྱི་རྣམ་གྲངས་བཤད་དུ་གསོལ། བདེ་བར་གཤེགས་པ་བཤད་དུ་གསོལ། དེ་སྐད་ཅེས་གསོལ་པ་དང་། བཅོམ་ལྡན་འདས་ཀྱིས་ཚེ་དང་ལྡན་པ་ཤ་ར་དྭ་ཏིའི་བུ་ལ་འདི་སྐད་ཅེས་བཀའ་སྩལ་ཏོ། །ཤ་ར་དྭ་ཏིའི་བུ་ལེགས་སོ་ལེགས་སོ། ། ཤ་ར་དྭ་ཏིའི་བུ་དེ་དེ་བཞིན་ཏེ་གཟུངས་ཐོབ་པའི་བྱང་ཆུབ་སེམས་དཔའ་དེ་ལ་སངས་རྒྱས་ཉིད་དུ་བརྗོད་པར་བྱ་སྟེ། ཤ་ར་དྭ་ཏིའི་བུ་གང་ལ་ལ་གཟུངས་ཐོབ་པའི་བྱང་ཆུབ་སེམས་དཔའ་ལ་བཀུར་སྟིར་བྱེད་པ་དང་། བླ་མར་བྱེད་པ་དང་། རིམ་གྲོར་བྱེད་པ་དང་། མཆོད་པར་བྱེད་པ་དེས་སངས་རྒྱས་ལ་བཀུར་སྟིར་བྱས་པར་འགྱུར་རོ། ། ཤ་ར་དྭ་ཏིའི་བུ་གང་ལ་ལ་གཟུངས་འདི་ཉན་པར་བྱེད་པ་དང་། གང་དག་གཟུངས་འདི་འཆང་བར་བྱེད་པ་དང་། གང་དག་མོས་པར་བྱེད་པ་དེ་རྣམས་ལ་བྱང་ཆུབ་ཀྱི་སེམས་དང་མ་བྲལ་བས། སངས་རྒྱས་ལ་ཇི་ལྟར་མཆོད་པ་དེ་བཞིན་དུ་འགྱུར་རོ། །ཤ་ར་དྭ་ཏིའི་བུ་གཟུངས་དེ་ནི་འདི་ཡིན་ཏེ་ཏདྱ་ཐཱ། སན་དྷཱ་ར་ཎི། ཨུཏ་དྷཱ་ར་ཎི། སུ་སཾ་པྲ་ཏིཥྛི་ཏེ། སུ་ནཱ་མ། སུ་པྲ་ཏིཥྛི་ཏེ། བི་ཛ་ཡ་བ་ལ། སཏྟྱ་པྲ་ཏི་ཛྙཱ། སུ་ཨཱ་རོ་ཧ། ཛྙཱ་ན་པྲ་ཏི། ཨུཏྤཱ་ད་ནི། ཨ་བ་ནཱ་བ་ནི། ཨ་བྷི་ཥིཉྩ་ནི། ཨ་བྷི་བྱ་ཧཱ་ར། ཤུ་བྷ་བ་ཏི། སུ་ནིཿཤྲི་ཏ། བ་ཧུ་གུཾ་བྷ། ཨ་བྷི་བ་དཱ་སྭཱ་ཧཱ། ཤ་ར་དྭ་ཏིའི་བུ་ཆགས་པ་མེད་པའི་གཟུངས་ཀྱི་ཚིག་འདི་བྱང་ཆུབ་སེམས་དཔའ་གང་གིས་ཤིན་ཏུ་གནས་པ་དང་། ལེགས་པར་གཟུང་བ་བྱས་ནས། འཆང་བར་བྱེད་པ་དེ་བསྐལ་པའམ། བསྐལ་པ་ལས་ལྷག་པའམ། བསྐལ་པ་སྟོང་ངམ། བསྐལ་པ་བརྒྱ་ཕྲག་སྟོང་ དུ་ཡང་སྨོན་ལམ་ཟད་པར་མི་འགྱུར་ལ། དེའི་ལུས་ལ་མཚོན་གྱིས་ཚུགས་པར་མི་འགྱུར་ཏེ། དུག་གིས་མ་ཡིན་ཞིང་སྦྲུལ་གྱིས་ཚུགས་པར་མི་འགྱུར་རོ། ། དེ་ཅིའི་ཕྱིར་ཞེ་ན། ཤ་ར་དྭ་ཏིའི་བུ་ཆགས་པ་མེད་པའི་གཟུངས་འདི་ནི། འདས་པའི་སངས་རྒྱས་རྣམས་ཀྱི་ཡུམ། མ་བྱོན་པའི་སངས་རྒྱས་རྣམས་ཀྱི་ཡུམ། ད་ལྟར་བྱུང་བའི་སངས་རྒྱས་རྣམས་ཀྱི་ཡུམ་སྟེ། འདི་ལྟ་སྟེ། ཆགས་པ་མེད་པའི་གཟུངས་ཞེས་བྱ་བའི་ཆོས་ཀྱི་རྣམ་གྲངས་ཡིན་ནོ། ། ཤ་ར་དྭ་ཏིའི་བུ་གང་དག་གིས་སྟོང་གསུམ་གྱི་སྟོང་ཆེན་པོའི་འཇིག་རྟེན་གྱི་ཁམས་གྲངས་མེད་པ་ཕྲག་བཅུ་རིན་པོ་ཆེ་སྣ་བདུན་གྱིས་བཀང་སྟེ། སངས་རྒྱས་བཅོམ་ལྡན་འདས་རྣམས་ལ་ཡོན་དུ་ཕུལ་ཞིང་སངས་རྒྱས་བཅོམ་ལྡན་འདས་དེ་རྣམས་ལ་བསྐལ་པ་གྲངས་མེད་པར་ན་བཟའ་དང་། ཞལ་ཟས་གྱ་ནོམ་པས་བཞུགས་པར་བྱེད་པ་བས། གང་དག་གིས་ཆགས་པ་མེད་པའི་གཟུངས་ཀྱི་ཆོས་ཀྱི་རྣམ་གྲངས་འདི་ལས་ཚིག་གཅིག་ཙམ་འཛིན་པར་བྱེད་པའི་སེམས་ཅན་དེ་དག་དེ་བས་ཆེས་བསོད་ནམས་མང་དུ་སྐྱེད་པར་འགྱུར་རོ། ། དེ་ཅིའི་ཕྱིར་ཞེ་ན། ཚེ་དང་ལྡན་པ་ཤ་ར་དྭ་ཏིའི་བུ་འདི་ལ་ཆགས་པ་མེད་པའི་གཟུངས་ཀྱི་ཆོས་ཀྱི་རྣམ་གྲངས་འདི་ནི། སངས་རྒྱས་ཐམས་ཅད་ཀྱི་ཡུམ་ཡིན་ནོ། །",
+   "en": "Then Venerable Śāradvatīputra said to the Bhagavat, “Bhagavat, I pray that you give the Dharma teaching of the dhāraṇī. A bodhisattva who has obtained the dhāraṇī, wherever they dwell, will be irreversible from the highest, most complete enlightenment; their commitments will be genuine, they will be ācāryas with an eloquence that has the nature of being a nondependent phenomenon, and they will remain perfectly upon the path. I pray for the Sugata to teach it.” The Bhagavat said to Śāradvatīputra, “Excellent, excellent, Śāradvatīputra! It is so. The bodhisattva who has obtained this dhāraṇī should be called a buddha. Śāradvatīputra, whoever honors, venerates, serves, and makes offerings to a bodhisattva who has obtained this dhāraṇī will be someone who has honored a buddha. “Śāradvatīputra, anyone who hears this dhāraṇī, anyone who possesses this dhāraṇī, and anyone who aspires to this dhāraṇī will become inseparable from the enlightenment mind, the same as if they had made offerings to a buddha. “Śāradvatīputra, this is the dhāraṇī:  tadyathā | sandhāraṇi utdhāraṇi susaṃpratiṣṭhite sunāma supratiṣṭhite vijayabala, sattyapratijñā suāroha jñānapratiutpādani avanāvani abhiṣiñcani abhivyāhāra śubhavati suniḥśrita bahuguṃbha abhivadā svāhā |  “Śāradvatīputra, any bodhisattva who is firmly established in the words of this dhāraṇī of nonattachment perfectly retains them and possesses them, and so their prayer will not be exhausted for an eon, for longer than an eon, for a thousand eons, or for a hundred thousand eons. Their body will not be harmed by weapons or poisons, and they will not be bitten by snakes. “Why is that? Śāradvatīputra, it is because this unbounded dhāraṇī is the mother of the buddhas of the past, the mother of the buddhas of the future, and the mother of the buddhas of the present, and that is this Dharma teaching called The Dhāraṇī of Nonattachment. “Śāradvatīputra, if someone were to fill ten asaṃkhyeya trichiliocosm world realms with the seven jewels and make an offering of them to the buddha bhagavats, and if they were to provide the requisites of clothing and food of various kinds for asaṃkhyeya eons, the merit that comes from someone who possesses just one word of this dhāraṇī would still be far greater. “Why is that? Śāradvatīputra, it is because this Dharma teaching of the unbounded dhāraṇī is the mother of the tathāgatas.”",
+   "T0664": "如是語已，命者奢利弗白佛言：「世尊！願為演說。修伽多！願為演說此陀羅尼法本，菩薩於中住已，當成不退轉於阿耨多羅三藐三菩提、當成正願不依止法自性辯才、當得希有自安住道，所謂得陀羅尼故。」如是語已，佛告命者奢利弗言：「甚善，甚善！奢利弗！如是，如是。奢利弗！得陀羅尼菩薩應言如佛。奢利弗！得陀羅尼菩薩，若有供養、尊重、承事、供給者，當如供養於佛。奢利弗！若當有聞此陀羅尼，若持、若信解，彼等還應如是供養，不離菩提心，如佛無異。奢利弗！此是陀羅尼：「多𭊾他（一）刪陀囉尼（二）欝多囉尼（三）三鉢囉帝駃癡（去聲）多（四）修那摩（五）修鉢囉帝沙吒（六）鼻闍夜婆羅（七）薩帝耶鉢囉帝闍若（八）修阿嚧訶（九）闍那摩帝（十）欝多波駄泥（十一）阿婆那摩泥（十二）阿鼻師駄泥（十三）阿鼻婢耶訶囉（十四）首婆嘙帝（十五）修泥尸利多（十六）婆睺窮婆（十七）阿鼻婆陀（十八）娑婆訶「奢利弗！此是陀羅尼句，名不染著。正住、正受作已，若菩薩持者，彼若一劫、若百劫、若千劫、若百千劫不捨諸願，彼身當能降伏刀仗、毒藥、惡獸皆能降伏。何以故？奢利弗！此不染著陀羅尼，過去諸佛母、未來諸佛母、現在諸佛母，所謂法本名不染著陀羅尼。奢利弗！若有十阿僧祇三千大千世界七寶滿中，作已施與諸佛世尊，及以上勝衣服、飲食當持供養彼等諸佛阿僧祇劫，若於此不染著陀羅尼法本當持一句，此生福德過多於彼。何以故？奢利弗！此不染著陀羅尼法本是諸佛母故。」",
+   "T0665": "作是語已，舍利子白佛言：「世尊！惟願善逝為我說此陀羅尼法。若諸菩薩能安住者，於無上菩提不復退轉，成就正願，得無所依，自性辯才，獲希有事，安住聖道，皆由得此陀羅尼故。」佛告舍利子：「善哉！善哉！如是！如是！如汝所說。若有菩薩得此陀羅尼者，應知是人與佛無異。若有供養尊重、承事供給此菩薩者，應知即是供養於佛。舍利子！若有餘人聞此陀羅尼，受持讀誦生信解者，亦應如是恭敬供養，與佛無異，以是因緣獲無上果。」爾時世尊即為演說陀羅尼曰：「怛姪他　刪陀喇儞　嗢多喇儞　蘇三鉢囉底瑟恥哆　蘇那麼　蘇鉢喇底瑟恥哆鼻逝也　跋羅　薩底也　鉢喇底慎若　蘇阿　嚧訶　慎若那末底　嗢波彈儞　阿伐那末底　阿毘師彈儞　阿鞞毘耶訶囉　輸婆　伐底　蘇尼室唎多（引）薄虎郡社（引）阿毘婆䭾（引）莎訶」佛告舍利子：「此無染著陀羅尼句，若有菩薩能善安住、能正受持者，當知是人若於一劫、若百劫、若千劫、若百千劫，所發正願無有窮盡，身亦不被刀杖、毒藥、水火、猛獸之所損害。何以故？舍利子！此無染著陀羅尼，是過去諸佛母，未來諸佛母，現在諸佛母。舍利子！若復有人以十阿僧企耶三千大千世界滿中七寶，奉施諸佛，及以上妙衣服、飲食種種供養，經無數劫；若復有人於此陀羅尼，乃至一句能受持者，所生之福，倍多於彼。何以故？舍利子！此無染著陀羅尼甚深法門，是諸佛母故。」時具壽舍利子及諸大眾聞是法已，皆大歡喜，咸願受持。"
+  },
+  "x13-02": {
+   "bo": "གསེར་འོད་དམ་པ་མདོ་སྡེའི་དབང་པོའི་རྒྱལ་པོ་ལས་ཆགས་པ་མེད་པའི་གཟུངས་ཞེས་བྱ་བའི་ལེའུ་སྟེ་བཅུ་གསུམ་པའོ།། །།དེ་ནས་བཅོམ་ལྡན་འདས་ཀྱིས་ཚེ་དང་ལྡན་པ་ཀུན་དགའ་བོ་ལ་བཀའ་སྩལ་པ།",
+   "en": "This concludes “The Dhāraṇī of Nonattachment,” the thirteenth chapter of “The Lord King of Sūtras, the Sublime Golden Light.”"
+  }
+ }
+}

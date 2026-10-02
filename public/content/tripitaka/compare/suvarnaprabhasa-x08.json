@@ -1,0 +1,67 @@
+{
+ "slug": "suvarnaprabhasa-x08",
+ "title": "金光明經・金勝陀羅尼品",
+ "family": "sa",
+ "intro": "只見於義淨〈金勝陀羅尼品〉＝藏譯 Toh 556 第八章。佛告善住菩薩：金勝陀羅尼為三世佛母，說禮佛菩薩名號、呪及持誦法。",
+ "units": [
+  {
+   "id": "x8-00",
+   "label": "佛告善住・禮諸佛菩薩名・金勝陀羅尼"
+  },
+  {
+   "id": "x8-01",
+   "label": "持呪功德與道場法"
+  },
+  {
+   "id": "x8-02",
+   "label": "品尾題（藏）"
+  }
+ ],
+ "versions": [
+  {
+   "id": "bo",
+   "lang": "bo",
+   "label": "藏譯",
+   "who": "德格版 Toh 556（二十九章本）・84000"
+  },
+  {
+   "id": "en",
+   "lang": "en",
+   "label": "84000 英譯",
+   "who": "譯自藏譯・與藏文逐句對齊"
+  },
+  {
+   "id": "T0665",
+   "lang": "lzh",
+   "label": "義淨本",
+   "who": "義淨譯《金光明最勝王經》・703 年",
+   "work": "T0665"
+  }
+ ],
+ "works": [
+  "T0665"
+ ],
+ "anchors": [
+  {
+   "work": "T0665",
+   "node": "金光明最勝王經金勝陀羅尼品第八",
+   "uid": "T16n0665_p0423b23"
+  }
+ ],
+ "cells": {
+  "x8-00": {
+   "bo": "རིགས་ཀྱི་བུ་གསེར་ཅན་ཞེས་བྱ་བའི་གཟུངས་འདི་གང་རིགས་ཀྱི་བུའམ། རིགས་ཀྱི་བུ་མོ་གང་ལ་ལས་འདས་པ་དང་། མ་འོངས་པ་དང་། ད་ལྟར་གྱི་སངས་རྒྱས་ཐམས་ཅད་མངོན་དུ་མཆོད་ཅིང་བཀུར་སྟི་བྱེད་འདོད་པས་གཟུངས་འདི་བཅང་ཞིང་གཟུང་བར་བྱའོ། ། དེ་ཅིའི་ཕྱིར་ཞེ་ན། གཟུངས་འདི་འདས་པ་དང་། མ་འོངས་པ་དང་། ད་ལྟར་གྱི་སངས་རྒྱས་བཅོམ་ལྡན་འདས་རྣམས་ཀྱི་ཡུམ་ཡིན་པའི་ཕྱིར། གཟུངས་འདི་འཛིན་པ་ནི་བསོད་ནམས་ཀྱི་ཚོགས་རྒྱ་ཆེར་འཕེལ་བར་འགྱུར་རོ། ། འདས་པའི་སངས་རྒྱས་བཅོམ་ལྡན་འདས་དཔག་ཏུ་མེད་པ་དག་ལ་དགེ་བའི་རྩ་བ་བསྐྱེད་པ་རྣམས་ཀྱིས་འཛིན་ཅིང་འཆང་བར་འགྱུར་རོ། ། ཚུལ་ཁྲིམས་རྣམ་པར་དག་པ་མ་ཉམས་ཤིང་སྐྱོན་མེད་ པ་རྣམས་ཀྱིས། ཆོས་ཀྱི་རྣམ་གྲངས་ཤིན་ཏུ་ཟབ་མོ་འདི་ལ་འཇུག་ནུས་པར་འགྱུར་རོ། །དེ་ནས་བཅོམ་ལྡན་འདས་ཀྱིས་བཀའ་སྩལ་པ། གཟུངས་སྔགས་བསྒྲུབ་པའི་ཆོ་ག་ནི། སྔར་སངས་རྒྱས་བཅོམ་ལྡན་འདས་དང་། བྱང་ཆུབ་སེམས་དཔའི་མཚན་འདི་དག་བརྗོད་ཅིང་། སེམས་རྩེ་གཅིག་པས་ཕྱག་འཚོལ་ལ་དེ་ནས་སྔགས་འདི་གདོན་པར་བྱའོ། །ཕྱོགས་བཅུའི་སངས་རྒྱས་ཐམས་ཅད་ལ་ཕྱག་འཚལ་ལོ། །བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་རྣམས་ལ་ཕྱག་འཚལ་ལོ། ། ཉན་ཐོས་དང་རང་སངས་རྒྱས་དང་། འཕགས་པ་ཐམས་ཅད་ལ་ཕྱག་འཚལ་ལོ། ། སངས་རྒྱས་ཤཱཀྱ་ཐུབ་པ་ལ་ཕྱག་འཚལ་ལོ། ། ཤར་ཕྱོགས་ཀྱི་སངས་རྒྱས་མི་འཁྲུགས་པ་ལ་ཕྱག་འཚལ་ལོ། ། ལྷོ་ཕྱོགས་ཀྱི་སངས་རྒྱས་རིན་པོ་ཆེའི་ཏོག་ལ་ཕྱག་འཚལ་ལོ། ། ནུབ་ཕྱོགས་ཀྱི་སངས་རྒྱས་འོད་དཔག་མེད་ལ་ཕྱག་འཚལ་ལོ། ། བྱང་ཕྱོགས་ཀྱི་སངས་རྒྱས་རྔ་སྒྲའི་རྒྱལ་པོ་ལ་ཕྱག་འཚལ་ལོ། ། སྟེང་གི་ཕྱོགས་ཀྱི་སངས་རྒྱས་ཡངས་པའི་དཔལ་ལ་ཕྱག་འཚལ་ལོ། ། འོག་གི་ཕྱོགས་ཀྱི་སངས་རྒྱས་སྣང་བ་དམ་པའི་དཔལ་ལ་ཕྱག་འཚལ་ལོ། ། སངས་རྒྱས་རིན་ཆེན་སྙིང་པོ་ལ་ཕྱག་འཚལ་ལོ། ། སངས་རྒྱས་ཀུན་ཏུ་འོད་ལ་ཕྱག་འཚལ་ལོ། ། སངས་རྒྱས་ཀུན་ཏུ་སྣང་བ་ལ་ཕྱག་འཚལ་ལོ། ། སངས་རྒྱས་སྤོས་མཆོག་བརྩེགས་པའི་རྒྱལ་པོ་ལ་ཕྱག་འཚལ་ལོ། ། སངས་རྒྱས་པདྨ་དམ་པ་ལ་ཕྱག་འཚལ་ལོ། ། སངས་རྒྱས་མཉམ་པར་གཟིགས་ལ་ཕྱག་འཚལ་ལོ། ། སངས་རྒྱས་རིན་ཆེན་གཙུག་ཏོར་ཅན་ལ་ཕྱག་འཚལ་ལོ། ། སངས་རྒྱས་རིན་ཆེན་བླ་མ་ལ་ཕྱག་འཚལ་ལོ། ། སངས་རྒྱས་རིན་ཆེན་འོད་ལ་ཕྱག་འཚལ་ལོ། ། སངས་རྒྱས་དྲི་མེད་འོད་སྣང་ལ་ཕྱག་འཚལ་ལོ། །སངས་རྒྱས་སྤོབས་པས་བཀོད་པར་དགོངས་པ་ལ་ཕྱག་འཚལ་ལོ། ། སངས་རྒྱས་ཟླ་འོད་རྣམ་དག་གྲགས་པའི་ཏོག་གི་རྒྱལ་པོ་ལ་ཕྱག་འཚལ་ལོ། ། སངས་རྒྱས་མེ་ཏོག་འོད་བཀོད་ལ་ཕྱག་འཚལ་ལོ། ། སངས་རྒྱས་འོད་སྣང་རྒྱལ་པོ་ལ་ཕྱག་འཚལ་ལོ། ། སངས་རྒྱས་དགེ་འོད་དྲི་མ་མེད་པར་གྲགས་པའི་ རྒྱལ་པོ་ལ་ཕྱག་འཚལ་ལོ། ། སངས་རྒྱས་སྤྱན་རས་གཟིགས་དབང་མི་འཇིགས་པ་ལ་ཕྱག་འཚལ་ལོ། ། སངས་རྒྱས་འཇིགས་མེད་གྲགས་པ་ལ་ཕྱག་འཚལ་ལོ། ། སངས་རྒྱས་རབ་མཆོག་རྒྱལ་པོ་ལ་ཕྱག་འཚལ་ལོ། ། བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་སྤྱན་རས་གཟིགས་དབང་ཕྱུག་ལ་ཕྱག་འཚལ་ལོ། ། བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་སའི་སྙིང་པོ་ལ་ཕྱག་འཚལ་ལོ། ། བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་ནམ་མཁའི་སྙིང་པོ་ལ་ཕྱག་འཚལ་ལོ། ། བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་འཇམ་དཔལ་ལ་ཕྱག་འཚལ་ལོ། ། བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་ཕྱག་ན་རྡོ་རྗེ་ལ་ཕྱག་འཚལ་ལོ། ། བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་ཀུན་ཏུ་བཟང་པོ་ལ་ཕྱག་འཚལ་ལོ། ། བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་བློ་གྲོས་མི་ཟད་པ་ལ་ཕྱག་འཚལ་ལོ། ། བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་མཐུ་ཆེན་ཐོབ་པ་ལ་ཕྱག་འཚལ་ལོ། ། བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་བྱམས་པ་ལ་ཕྱག་འཚལ་ལོ། ། བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་ལེགས་པའི་བློ་གྲོས་ལ་ཕྱག་འཚལ་ལོ། །དེ་དག་ལ་ཕྱག་འཚལ་ནས་གཟུངས་འདི་གདོན་པར་བྱའོ། །ན་མོ་རཏྣ་ཏྲ་ཡཱ་ཡ། ཏདྱ་ཐཱ། ཀུ་ཊི་ཀུ་ཊི་ནི། ཨི་མི་རི་ཏོ། ཀོ་ཥ་ཎི། ཨི་མི་རི་ཎི། ཨི་རཱི་སྭཱ་ཧཱ། དེ་ནས་བཅོམ་ལྡན་འདས་ཀྱིས་བྱང་ཆུབ་སེམས་དཔའ་བདེ་བར་གནས་པ་ལ་བཀའ་སྩལ་པ། གཟུངས་འདི་ནི་དུས་གསུམ་གྱི་སངས་རྒྱས་རྣམས་ཀྱི་ཡུམ་ཡིན་པའི་ཕྱིར།",
+   "en": "Chapter 8: The Dhāraṇī Called Golden  Then the Bhagavat said to the bodhisattva mahāsattva Sukhavihāra within that assembly, “Noble one, any noble man or noble woman who wishes to make an offering to all the buddhas of the past, the future, and the present should carry and possess this dhāraṇī that is called golden. Why is that? It is because this dhāraṇī is the mother of the past, future, and present buddha bhagavats. One who possesses this dhāraṇī will greatly increase their accumulation of merit. Those who planted roots of merit with countless bhagavats of the past will possess and hold this dhāraṇī. Those who have pure, faultless conduct without deterioration will be able to enter this extremely profound Dharma teaching.” Then the Bhagavat said, “This is the rite for practicing the dhāraṇī-mantra: Recite these names of past buddha bhagavats and bodhisattvas and with a one-pointed mind, pay homage to them, and then recite the mantra:  “I pay homage to all the buddhas in the ten directions,  “I pay homage to the bodhisattva mahāsattvas. “I pay homage to all the śrāvakas, pratyekabuddhas, and āryas. “I pay homage to the Buddha Śākyamuni. “I pay homage to the Buddha Akṣobhya in the east. “I pay homage to the Buddha Ratnaketu in the south. “I pay homage to the Buddha Amitābha in the west. “I pay homage to the Buddha Dundubhisvara in the north. “I pay homage to the Buddha Viśālaśrī above. “I pay homage to the Buddha Varaprabha below. “I pay homage to the Buddha Ratnagarbha. “I pay homage to the Buddha Samantaprabha. “I pay homage to the Buddha Samantāvabhāsa. “I pay homage to the Buddha Supreme Incense Heap. “I pay homage to the Buddha Excellent Lotus. “I pay homage to the Buddha Equally Seeing. “I pay homage to the Buddha Ratnaśikhin. “I pay homage to the Buddha Highest Jewels. “I pay homage to the Buddha Ratnaprabha. “I pay homage to the Buddha Courageous Established Intention. “I pay homage to the Buddha Completely Pure Moonlight Sign Renowned King. “I pay homage to the Buddha Radiant Flower Display. “I pay homage to the Buddha Aṃśurāja. “I pay homage to the Buddha Renowned King Virtuous Stainless Light. “I pay homage to the Buddha Avalokiteśvarābhaya. “I pay homage to the Buddha Abhayakīrti. “I pay homage to the Buddha Supreme King. “I pay homage to the bodhisattva mahāsattva Avalokiteśvara. “I pay homage to the bodhisattva mahāsattva Kṣitigarbha. “I pay homage to the bodhisattva mahāsattva Ākāśagarbha. “I pay homage to the bodhisattva mahāsattva Mañjuśrī. “I pay homage to the bodhisattva mahāsattva Vajrapāṇi. “I pay homage to the bodhisattva mahāsattva Samantabhadra. “I pay homage to the bodhisattva mahāsattva Akṣayamati. “I pay homage to the bodhisattva mahāsattva Mahāsthāmaprāpta. “I pay homage to the bodhisattva mahāsattva Maitreya. “I pay homage to the bodhisattva mahāsattva Sumati. “Having paid homage to them, recite this dhāraṇī:  namo ratnatrayāya | tadyathā | kuṭi kuṭini imirito koṣaṇi imiriṇi irī svāha |  Then the Bhagavat said to the bodhisattva Sukhavihāra, “This dhāraṇī is the mother of the buddhas in the three times.",
+   "T0665": "爾時，世尊復於眾中告善住菩薩摩訶薩：「善男子！有陀羅尼名曰金勝，若有善男子、善女人，欲求親見過去、未來、現在諸佛，恭敬供養者，應當受持此陀羅尼。何以故？此陀羅尼乃是過、現、未來諸佛之母。是故當知持此陀羅尼者，具大福德，已於過去無量佛所殖諸善本，今得受持，於戒清淨不毀不缺，無有障礙，決定能入甚深法門。」世尊即為說持呪法，先稱諸佛及菩薩名，至心禮敬，然後誦呪。「南無十方一切諸佛。南無諸大菩薩摩訶薩。南謨聲聞緣覺一切賢聖。「南謨釋迦牟尼佛。南謨東方不動佛。南謨南方寶幢佛。南謨西方阿彌陀佛。南謨北方天鼓音王佛。南謨上方廣眾德佛。南謨下方明德佛。南謨寶藏佛。南謨普光佛。南謨普明佛。南謨香積王佛。南謨蓮花勝佛。南謨平等見佛。南謨寶髻佛。南謨寶上佛。南謨寶光佛。南謨無垢光明佛。南謨辯才莊嚴思惟佛。南謨淨月光稱相王佛。南謨華嚴光佛。南謨光明王佛。南謨善光無垢稱王佛。南謨觀察無畏自在王佛。南謨無畏名稱佛。南謨最勝王佛。南謨觀自在菩薩摩訶薩。南謨地藏菩薩摩訶薩。南謨虛空藏菩薩摩訶薩。南謨妙吉祥菩薩摩訶薩。南謨金剛手菩薩摩訶薩。南謨普賢菩薩摩訶薩。南謨無盡意菩薩摩訶薩。南謨大勢至菩薩摩訶薩。南謨慈氏菩薩摩訶薩。南謨善慧菩薩摩訶薩。「陀羅尼曰：「南謨喝𡃤怛娜怛喇夜也　怛姪他　君睇　君睇　矩折囇　矩折囇　壹窒哩　蜜窒哩　莎訶」"
+  },
+  "x8-01": {
+   "bo": "རིགས་ཀྱི་བུའམ། རིགས་ཀྱི་བུ་མོ་གང་ལ་ལ་ཞིག་གིས་གཟུངས་འདི་འཆང་ཞིང་འཛིན་ན། བསོད་ནམས་ཀྱི་ཚོགས་ཚད་མེད་དཔག་ཏུ་མེད་པ་འཕེལ་བར་འགྱུར་རོ། ། གྲངས་མེད་པའི་སངས་རྒྱས་རྣམས་ལ་བཀུར་སྟི་དང་། མཆོད་པ་དང་། རིམ་གྲོ་དང་། བསྔགས་པར་བྱས་པར་འགྱུར་རོ། ། སངས་རྒྱས་དེ་རྣམས་ཀྱིས་ཀྱང་བླ་ན་མེད་པ་ཡང་དག་པར་རྫོགས་པའི་བྱང་ཆུབ་ཏུ་དེ་ལ་ལུང་སྟོན་པར་འགྱུར་རོ། ། བདེ་བར་གནས་པ་གང་ཞིག་གཟུངས་སྔགས་འདི་འཆང་བ་དེས་གོས་དང་། བསོད་ སྙོམས་དང་། རིན་པོ་ཆེ་དང་། མང་དུ་ཐོས་ཤིང་མཁས་པ་དང་། ནད་མེད་ཅིང་ཚེ་རིང་བ་ལ་སོགས་པ་ཡིད་བཞིན་དུ་འཐོབ་སྟེ། བསོད་ནམས་ཤིན་ཏུ་མང་དུ་འཕེལ་ལོ། །ཅི་དང་ཅི་འདོད་པ་དེ་དང་དེ་དག་ཐམས་ཅད་འགྲུབ་པར་འགྱུར་རོ། །བདེ་བར་གནས་ནས་སྔགས་འདི་འཆང་ཞིང་འཛིན་ན། བླ་ན་མེད་པ་ཡང་དག་པར་རྫོགས་པའི་བྱང་ཆུབ་མ་ཐོབ་ཀྱི་བར་དུ། རྟག་པར་བྱང་ཆུབ་སེམས་དཔའ་གསེར་གྱི་གྲོང་ཁྱེར་རི་བོ་དང་། བྱང་ཆུབ་སེམས་དཔའ་བྱམས་པ་དང་། བྱང་ཆུབ་སེམས་དཔའ་རྒྱ་མཚོ་དང་། བྱང་ཆུབ་སེམས་དཔའ་ཀུན་ཏུ་སྤྱན་རས་གཟིགས་དབང་ཕྱུག་དང་། བྱང་ཆུབ་སེམས་དཔའ་འཇམ་དཔལ་དང་། བྱང་ཆུབ་སེམས་དཔའ་པིང་ག་ལ་ཆེན་པོ་ལ་སོགས་པ་དང་ལྷན་ཅིག་ཏུ་གནས་ཏེ། བྱང་ཆུབ་སེམས་དཔའ་དེ་རྣམས་ཀྱིས་སྲུང་བར་བྱེད་དོ། ། བདེ་བར་གནས་པས་གཟུངས་འདི་སྒྲུབ་པའི་ཆོ་ག་ནི་འདི་ཡིན་པར་ཤེས་པར་བྱའོ། ། ཐོག་མར་བཟླས་བརྗོད་ཁྲི་རྩ་བརྒྱད་ཚང་བར་བཟླས་པས་བསྙེན་པར་བྱའོ། །དེ་ནས་ཁང་པ་དབེན་པའི་ནང་དུ། དཀྱིལ་འཁོར་བྱས་ཏེ། ཚེས་བཅུ་དྲུག་གི་ཉིན་པར་ཁྲུས་བྱས་གོས་སར་པ་གྱོན་ཏེ། བདུག་པ་དང་། མེ་ཏོག་དང་། ཞལ་ཟས་སྣ་མང་པོ་ལ་སོགས་པས། མཆོད་པ་བྱ་ཞིང་དཀྱིལ་འཁོར་གྱི་ནང་དུ་ཞུགས་ནས། ཐོག་མར་སྔར་སྨོས་པའི་སངས་རྒྱས་དང་བྱང་ཆུབ་སེམས་དཔའ་རྣམས་ཀྱི་མཚན་ནས་བརྗོད་དེ། གུས་པར་ཕྱག་འཚལ་ཞིང་སྡིག་པ་བཤགས་ནས། པུས་མོ་གཡས་པའི་ལྷ་ང་ས་ལ་བཙུགས་ཏེ། སྔགས་དེ་སྟོང་རྩ་བརྒྱད་ཚང་བར་བཟླས་སོ། །དེ་ནས་ལུས་བསྲང་སྟེ་འདུག་ནས་ཅི་འདོད་པ་དེ་བསམ་པར་བྱའོ། ། དེ་ནས་ཉི་མ་མ་ཤར་བར་དཀྱིལ་འཁོར་གྱི་ནང་དུ་ཁ་ཟས་གཙང་མ་ཟ་གཅིག་ཏུ་བཟའོ། ། དེ་ནས་ཞག་བཅྭ་ལྔ་ལོན་པ་དང་། གཟོད་དཀྱིལ་འཁོར་དེ་ནས་བྱུང་བར་བྱས་ཏེ། མི་དེ་ནི་བསོད་ནམས་དང་གཟི་བརྗིད་ཀྱི་མཐུ་བསམ་གྱིས་མི་ཁྱབ་པ་དང་ལྡན་ཞིང་། བསམ་པ་ཐམས་ཅད་ཡོངས་སུ་རྫོགས་པར་འགྱུར་རོ། ། གལ་ཏེ་བསམ་པ་མ་གྲུབ་ན་ཡང་དཀྱིལ་འཁོར་དེར་ཞུགས་ན། བསམ་པ་ཡོངས་སུ་ རྫོགས་པར་འགྱུར་བས། དེ་ཕྱིན་ཅད་ཀྱང་རྟག་ཏུ་རྗེས་སུ་དྲན་པར་བྱའོ། །",
+   "en": "Therefore, any noble man or noble woman who carries and possesses this dhāraṇī will increase their accumulation of merit immeasurably, incalculably. They will have revered, made offerings to, served, and praised countless buddhas. Those buddhas will give them the prophecy of their attainment of the highest, most complete enlightenment. “Sukhavihāra, those who carry this dhāraṇī-mantra will attain the fulfillment of their wishes, such as clothes, alms, jewels, becoming learned and wise, becoming healthy, and having a long life, and their merit will increase greatly. Whatever they wish for will all be accomplished. “Sukhavihāra, if this mantra is carried and possessed until the attainment of the highest, most complete enlightenment, one will always be in the company of the bodhisattva Golden City Mountain, the bodhisattva Maitreya, the bodhisattva Sāgara, the bodhisattva Samantāvalokiteśvara, the bodhisattva Mañjuśrī, the bodhisattva Mahāpiṅgala, and so on. Those bodhisattvas will protect them. “Sukhavihāra, know that this is the rite for accomplishing this dhāraṇī. For the first repetition, one should perform a propitiation by repeating it ten thousand and eight times. Then one should make a maṇḍala inside a solitary building and, on the sixteenth day of the month, wash, put on new clothes, and make offerings with parasols, flowers, various kinds of food, and so on, placing them inside the maṇḍala. At the beginning, as previously described, one should recite the names of the buddhas and bodhisattvas, and then pay homage with veneration and confess bad actions. One should then kneel with the right knee on the ground, repeat that mantra a thousand and eight times, and then sit up straight and think about what one wishes for. Then, before the sun rises, eat one pure meal within the maṇḍala. When someone comes out from that maṇḍala after fifteen days have passed, they will have inconceivable power, merit, and majesty, and all their wishes will be fulfilled. “If their wishes are not fulfilled, they should reenter that maṇḍala and then their wishes will be fulfilled. From then on, they should always remember this.”",
+   "T0665": "佛告善住菩薩：「此陀羅尼，是三世佛母，若有善男子、善女人持此呪者，能生無量無邊福德之聚，即是供養恭敬、尊重讚歎無數諸佛，如是諸佛皆與此人授阿耨多羅三藐三菩提記。善住！若有人能持此呪者，隨其所欲，衣食財寶、多聞聰慧、無病長壽，獲福甚多，隨所願求，無不遂意。善住！持是呪者，乃至未證無上菩提，常與金城山菩薩、慈氏菩薩、大海菩薩、觀自在菩薩、妙吉祥菩薩、大氷伽羅菩薩等而共居止，為諸菩薩之所攝護。善住當知！持此呪時，作如是法，先應誦持滿一萬八遍為前方便。次於闇室莊嚴道場，黑月一日清淨洗浴，著鮮潔衣，燒香散花，種種供養并諸飲食。入道場中，先當稱禮如前所說諸佛菩薩，至心殷重悔先罪已，右膝著地，可誦前呪滿一千八遍，端坐思惟，念其所願。日未出時，於道場中，食淨黑食，日唯一食，至十五日方出道場。能令此人福德威力不可思議，隨所願求無不圓滿，若不遂意，重入道場，既稱心已，常持莫忘。」"
+  },
+  "x8-02": {
+   "bo": "གསེར་འོད་དམ་པ་མདོ་སྡེའི་དབང་པོའི་རྒྱལ་པོ་ལས་གསེར་ཅན་ཞེས་བྱ་བའི་གཟུངས་ཏེ་ལེའུ་བརྒྱད་པའོ།། །།དེ་ནས་བཅོམ་ལྡན་འདས་ཀྱིས་གཟུངས་དེ་གསུངས་ནས། །",
+   "en": "This concludes “The Dhāraṇī Called Golden,” the eighth chapter of “The Lord King of Sūtras, the Sublime Golden Light.”"
+  }
+ }
+}
