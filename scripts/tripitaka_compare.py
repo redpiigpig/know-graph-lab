@@ -5528,6 +5528,194 @@ _suvx("x14", "如意寶珠品",
       [("T0665", ["金光明最勝王經如意寶珠品第十四"], [("x14-00", "爾時，世尊於大眾中，告阿難陀曰"), ("x14-01", "爾時觀自在菩薩摩訶薩在大眾中"),
                                                 ("x14-02", "爾時，世尊普告大眾")])])
 
+# ── 楞伽經：梵本（GRETIL，Vaidya 1963；九品＋〈Sagāthakam〉共十品）為骨架；藏譯 Toh 107 沒有 84000 TMX。
+#    漢譯求那跋陀羅 T0670（四卷，只立〈一切佛語心品〉一品，無梵本第一、九、十品）、菩提流支 T0671（十卷十八品）、
+#    實叉難陀 T0672（七卷十品，品次同梵本）。品界不落在目錄節點上的本子取整部、用起頭字切，掛範圍錨點。
+_LK_ZH = {"T0670": ("四卷本", "求那跋陀羅譯《楞伽阿跋多羅寶經》・443 年"),
+          "T0671": ("十卷本", "菩提流支譯《入楞伽經》・513 年"),
+          "T0672": ("七卷本", "實叉難陀譯《大乘入楞伽經》・700–704 年")}
+
+
+def _lk_nodes(work):
+    toc = json.loads((TRIP / f"{work}.toc.json").read_text(encoding="utf-8"))["toc"]
+    return [n["head"] for n in toc if n.get("type") != "xu"]
+
+
+def _lk(slug, title, intro, units, sa, zh):
+    """sa＝梵本 src 的 start／end（＋cut_out）與 cuts；zh＝[(work, nodes, cuts, extra)]，nodes＝None 取整部（範圍錨點）。"""
+    sa_src, sa_cuts = sa
+    SETS[slug] = {
+        "title": f"楞伽經・{title}", "family": "sa", "extra_works": [], "intro": intro, "units": units,
+        "versions": [{"id": "sa", "lang": "sa", "label": "梵本", "who": "Vaidya 校訂本（1963）・GRETIL",
+                      "src": {"gretil": "sa_saddharmalaGkAvatArasUtra"} | sa_src, "cuts": sa_cuts}]
+                    + [{"id": w, "lang": "lzh", "label": _LK_ZH[w][0], "who": _LK_ZH[w][1],
+                        "src": {"work": w, "nodes": nodes or _lk_nodes(w), "start": cuts[0][1]}
+                               | ({} if nodes else {"anchor_nodes": []})
+                               | {x: y for x, y in (extra or {}).items() if x != "reorder"},
+                        "cuts": cuts} | ({"reorder": True} if (extra or {}).get("reorder") else {})
+                       for w, nodes, cuts, extra in zh]}
+
+
+_lk("lankavatara-c01", "羅婆那王勸請品",
+    "梵本第一品〈Rāvaṇādhyeṣaṇā〉＝菩提流支〈請佛品〉＝實叉難陀〈羅婆那王勸請品〉。佛出龍宮，楞伽王羅婆那歌讚勸請入城、"
+    "勸大慧代問；佛化現無量寶山說經後隱沒，王自悟唯心；佛復現身大笑，許王問「法與非法」二法。"
+    "求那跋陀羅四卷本無此品，只有開頭的如是我聞，隨即接梵本第二品大慧讚佛偈。"
+    "梵本第二歌（1.4–43）菩提流支全譯為偈，實叉難陀只譯到獻宮殿，其後入城、勸請大慧、化山、王思惟改寫為長行；依梵本頌號分節。",
+    [("l1-00", "經題・歸敬"), ("l1-01", "如是我聞・說處・與會菩薩"), ("l1-02", "佛出龍宮微笑・羅婆那聞而詣佛"), ("l1-03", "羅婆那初讚偈（1.1–3）"),
+     ("l1-04", "都吒迦歌讚・請佛入楞伽城（1.4–19）"), ("l1-05", "佛許請・乘花宮入城受供（1.20–27）"), ("l1-06", "王勸請大慧問自證境界（1.28–31）"),
+     ("l1-07", "佛化無量寶山說經・隱沒（1.32–37）"), ("l1-08", "王獨見己身・思惟唯心（1.37–43）"), ("l1-09", "王開悟・空中聲讚"),
+     ("l1-10", "王願重見・佛復現身"), ("l1-11", "佛大笑放光・大慧問因・佛讚"), ("l1-12", "佛許王問・王化供具昇座"),
+     ("l1-13", "王問：法尚應捨，何況非法"), ("l1-14", "佛答：瓶喻火喻・何者法、何者非法"), ("l1-15", "過去佛亦是分別・如畫・寂滅一緣"),
+     ("l1-16", "品尾題")],
+    ({"start": "// Saddharmalaṅkāvatārasūtram", "end": "START Parivarta 2",
+      "cut_out": [("START Parivarta 1", "rāvaṇādhyeṣaṇāparivartaḥ prathamaḥ")]},
+     [("l1-00", "// Saddharmalaṅkāvatārasūtram"), ("l1-01", "evaṃ mayā śrutam / ekasmin samaye bhagavāṃl"),
+      ("l1-02", "tena khalu punaḥ samayena bhagavān sāgaranāgarāja"), ("l1-03", "cittasvabhāvanayadharmavidhiṃ"),
+      ("l1-04", "atha rāvaṇo laṅkādhipatiḥ toṭaka"), ("l1-05", "tasya tadvacanaṃ śrutvā"), ("l1-06", "rāvaṇo yakṣavargāśca saṃpūjya"),
+      ("l1-07", "nirmāya bhagavāṃstatra"), ("l1-08", "adrākṣīdrāvaṇo yakṣa"), ("l1-09", "samanantaraprativibuddhe"),
+      ("l1-10", "atha tasminnantare rāvaṇasyaitadabhavat"), ("l1-11", "atha bhagavān punarapi tasyāṃ velāyāṃ parṣadam"),
+      ("l1-12", "jānanneva bhagavāṃllaṅkādhi"), ("l1-13", "bhagavānāha - brūhi laṅkādhipate"), ("l1-14", "bhagavānāha - nanu laṅkādhipate"),
+      ("l1-15", "yadapyuktavānasi laṅkādhipate"), ("l1-16", "rāvaṇādhyeṣaṇāparivarto nāma prathamaḥ")]),
+    [("T0670", None, [("l1-01", "如是我聞")], {"end": "爾時大慧菩薩與摩帝菩薩"}),
+     ("T0671", ["請佛品第一"], [("l1-00", "歸命大智海"), ("l1-01", "如是我聞"), ("l1-02", "爾時婆伽婆於大海龍王宮說法"), ("l1-03", "「心具於法藏"),
+                           ("l1-04", "爾時羅婆那楞伽王，以都吒迦"), ("l1-05", "爾時三界尊，聞夜叉請已"), ("l1-06", "羅婆那等眾，供養說法者"),
+                           ("l1-07", "爾時佛神力，復化作山城"), ("l1-08", "羅婆那夜叉，忽然見自身"), ("l1-09", "爾時羅婆那十頭羅剎楞伽王，見分別心過"),
+                           ("l1-10", "爾時羅婆那楞伽王復作是念"), ("l1-11", "爾時世尊智慧觀察現在大眾"), ("l1-12", "爾時如來知而故問羅婆那王"),
+                           ("l1-13", "爾時世尊知而即告楞伽王言"), ("l1-14", "佛告楞伽王：「楞伽王！汝不見瓶"), ("l1-15", "「楞伽王！汝言：『我於過去")], None),
+     ("T0672", ["羅婆那王勸請品第一"], [("l1-01", "如是我聞"), ("l1-02", "爾時世尊，於海龍王宮說法"), ("l1-03", "「心自性法藏"),
+                                 ("l1-04", "爾時羅婆那楞伽王，以都咤迦"), ("l1-05", "爾時世尊聞是語已"), ("l1-06", "時羅婆那王并其眷屬，復更供養大慧"),
+                                 ("l1-07", "爾時世尊以神通力"), ("l1-08", "羅婆那王唯自見身"), ("l1-09", "時楞伽王尋即開悟"),
+                                 ("l1-10", "爾時羅婆那王復作是念"), ("l1-11", "爾時世尊普觀眾會"), ("l1-12", "爾時如來知楞伽王欲問此義"),
+                                 ("l1-13", "爾時世尊告彼王言"), ("l1-14", "爾時佛告楞伽王言"), ("l1-15", "「楞伽王！汝言：『我於過去")], None)])
+
+# 梵本第二品〈Ṣaṭtriṃśatsāhasrasarvadharmasamuccaya〉＝菩提流支〈問答品〉＋〈集一切佛法品〉＝實叉難陀〈集一切法品〉，
+# 求那跋陀羅卷一起。全品是大慧一問一答相接，依問題分六組。
+_LK2_SIK = ["大乘入楞伽經集一切法品第二之一"]
+_LK2_BOD = ["集一切佛法品第三之一"]
+
+_lk("lankavatara-c02-1", "集一切法品（一）百八問",
+    "梵本第二品開頭＝菩提流支〈問答品〉＝實叉難陀〈集一切法品〉之首＝求那跋陀羅〈一切佛語心品〉之首。大慧讚佛、自說姓名，以偈問百八義；"
+    "佛讚問，反問何不問須彌、芥子的塵數，再舉所問，答以「百八句」（菩提流支作「百八見」）。問偈各本次第大同而字句出入多，整段對讀不細切。",
+    [("l2a-01", "大慧讚佛偈（2.1–8）"), ("l2a-02", "自說姓名・佛許問（2.9–11）"), ("l2a-03", "大慧以偈問百八義（2.12–59）"),
+     ("l2a-04", "佛讚問・次第舉所問（2.60–77）"), ("l2a-05", "何不問塵數・重舉所問・許說百八句（2.77–98）"), ("l2a-06", "百八句")],
+    ({"start": "ṣaṭtriṃśatsāhasrasarvadharmasamuccayo nāma dvitīyaḥ parivartaḥ /",
+      "end": "atha khalu mahāmatirbodhisattvo mahāsattvaḥ punarapi bhagavantametadavocat - katividho"},
+     [("l2a-01", "ṣaṭtriṃśatsāhasrasarvadharmasamuccayo nāma dvitīyaḥ parivartaḥ /"),
+      ("l2a-02", "atha khalu mahāmatirbodhisattvo mahāsattvo bhagavantamābhiḥ"), ("l2a-03", "atha khalu mahāmatirbodhisattvo mahāsattvo bhagavatā kṛtāvakāśo"),
+      ("l2a-04", "idaṃ śrutvā mahāvīro"), ("l2a-05", "evaṃ hi pṛccha māṃ putra"),
+      ("l2a-06", "atha khalu mahāmatirbodhisattvo mahāsattvo bhagavantametadavocat - katamadbhagavan aṣṭottara")]),
+    [("T0670", None, [("l2a-01", "爾時大慧菩薩與摩帝菩薩"), ("l2a-02", "爾時大慧菩薩偈讚佛已"), ("l2a-03", "爾時大慧菩薩摩訶薩，承佛所聽"),
+                      ("l2a-04", "無上世間解，聞彼所說偈"), ("l2a-05", "是等所應請"), ("l2a-06", "「不生句，生句")],
+      {"end": "爾時大慧菩薩摩訶薩復白佛言：「世尊！諸識有幾種"}),
+     ("T0671", ["入楞伽經問答品第二"], [("l2a-01", "爾時聖者大慧菩薩與諸一切大慧菩薩"), ("l2a-02", "爾時大慧菩薩摩訶薩如法偈讚佛已"),
+                                  ("l2a-03", "爾時聖者大慧菩薩摩訶薩聞佛聽問"), ("l2a-04", "大天佛聞彼，所說諸偈句"), ("l2a-05", "佛子今何故"),
+                                  ("l2a-06", "「生見不生見")], None),
+     ("T0672", _LK2_SIK, [("l2a-01", "爾時大慧菩薩摩訶薩與摩帝菩薩"), ("l2a-02", "爾時大慧菩薩摩訶薩偈讚佛已"), ("l2a-03", "爾時大慧菩薩摩訶薩蒙佛許已"),
+                          ("l2a-04", "爾時世尊，聞其所請大乘微妙"), ("l2a-05", "此等所應請"), ("l2a-06", "爾時大慧菩薩摩訶薩白佛言：「世尊！何者是一百八句")],
+      {"end": "爾時大慧菩薩摩訶薩復白佛言：「世尊！諸識有幾種"})])
+
+_lk("lankavatara-c02-2", "集一切法品（二）藏識海浪",
+    "大慧問諸識生住滅：識有相、相續二種生住滅，轉相、業相、真相三相；斥外道斷見與作者論，七種自性、七種第一義。"
+    "大慧請說心意意識五法自性，佛說四緣眼識轉、藏識如海、轉識如浪，以偈問答；勸遠離憒閙、修聖智三相；"
+    "大慧請說百八句所依聖智事，佛以兔角、牛角、色與虛空破有無二見。",
+    [("l2b-01", "諸識二種生住滅・三相・藏識不滅"), ("l2b-02", "外道斷見・作者論・七種自性・七種第一義"), ("l2b-03", "沙門婆羅門斷滅論"),
+     ("l2b-04", "三緣合生之過"), ("l2b-05", "觀一切法如幻・漸入如來身"), ("l2b-06", "大慧請說心意意識五法自性"),
+     ("l2b-07", "四緣眼識轉・藏識如瀑流・行相微細"), ("l2b-08", "海浪偈（2.99–106）"), ("l2b-09", "青赤色像・大海波浪・日光之問答（2.107–114）"),
+     ("l2b-10", "若說真實者，彼心無真實（2.114–122）"), ("l2b-11", "離憒閙・初中後夜修習"), ("l2b-12", "上聖智三相"),
+     ("l2b-13", "大慧請說聖智事分別自性・兔角有無"), ("l2b-14", "非觀待分別而言兔角無"), ("l2b-15", "色與虛空・牛角析至微塵"),
+     ("l2b-16", "勸離兔角牛角虛空色見"), ("l2b-17", "偈（2.123–127）")],
+    ({"start": "atha khalu mahāmatirbodhisattvo mahāsattvaḥ punarapi bhagavantametadavocat - katividho",
+      "end": "atha khalu mahāmatirbodhisattvo mahāsattvaḥ punarapi svacittadṛśyadhārāviśuddhyarthaṃ"},
+     [("l2b-01", "atha khalu mahāmatirbodhisattvo mahāsattvaḥ punarapi bhagavantametadavocat - katividho"),
+      ("l2b-02", "tīrthakarāṇāṃ mahāmate ayaṃ vādo"), ("l2b-03", "punaraparaṃ mahāmate vikalpabhavatrayaduḥkha"),
+      ("l2b-04", "yadi punarmahāmate abhūtvā śraddhāvijñānānāṃ"), ("l2b-05", "ye punaranye mahāmate śramaṇā vā brāhmaṇā vā niḥsvabhāva"),
+      ("l2b-06", "punarapi mahāmatirāha - deśayatu me bhagavān cittamanomanovijñāna"),
+      ("l2b-07", "atha khalu bhagavān punareva mahāmatiṃ bodhisattvaṃ mahāsattvametadavocat - caturbhir"),
+      ("l2b-08", "atha khalu bhagavāṃstasyāṃ velāyāmimā gāthā abhāṣata"), ("l2b-09", "nīlaraktaprakāraṃ hi vijñānaṃ"),
+      ("l2b-10", "bhāṣase yadi vā tattvaṃ"), ("l2b-11", "punaraparaṃ mahāmate bodhisattvena svacittadṛśyagrāhya"),
+      ("l2b-12", "punaraparaṃ mahāmate bodhisattvena mahāsattvena cittavijñānaprajñā"),
+      ("l2b-13", "atha khalu mahāmatirbodhisattvo mahāsattvaḥ punareva tasyā"),
+      ("l2b-14", "atha khalu mahāmatirbodhisattvo mahāsattvo bhagavantametadavocat - nanu bhagavan vikalpasy"),
+      ("l2b-15", "anye punarmahāmate tīrthakaradṛṣṭayo rūpakāraṇa"),
+      ("l2b-16", "atha khalu bhagavān punarapi mahāmatiṃ bodhisattvaṃ mahāsattvametadavocat - śaśago"),
+      ("l2b-17", "atha khalu bhagavāṃstasyāṃ velāyāmimā gāthā abhāṣata")]),
+    [("T0670", None, [("l2b-01", "爾時大慧菩薩摩訶薩復白佛言：「世尊！諸識有幾種"), ("l2b-02", "大慧！彼諸外道，作如是論"),
+                      ("l2b-03", "「復次，大慧！妄想三有苦滅"), ("l2b-04", "大慧！若復說無種有種識"), ("l2b-05", "大慧！若復諸餘沙門婆羅門"),
+                      ("l2b-06", "爾時大慧菩薩復白佛言：「世尊所說心意意識"), ("l2b-07", "爾時，世尊告大慧菩薩言：「四因緣故"),
+                      ("l2b-08", "爾時世尊欲重宣此義，而說偈言"), ("l2b-09", "爾時，大慧菩薩以偈問曰"), ("l2b-10", "爾時世尊以偈答曰：「若說真實者"),
+                      ("l2b-11", "「復次，大慧！若菩薩摩訶薩欲知自心現量"), ("l2b-12", "「復次，大慧！菩薩摩訶薩建立智慧相住已"),
+                      ("l2b-13", "爾時大慧菩薩摩訶薩知大菩薩眾心之所念"), ("l2b-14", "爾時，大慧菩薩摩訶薩白佛言：「世尊！得無妄想者"),
+                      ("l2b-15", "大慧！復有餘外道見，計著色空"), ("l2b-16", "爾時世尊告大慧菩薩摩訶薩言：「當離兔角"),
+                      ("l2b-17", "爾時世尊欲重宣此義，而說偈言")],
+      {"end": "爾時大慧菩薩為淨自心現流故"}),
+     ("T0671", _LK2_BOD, [("l2b-01", "爾時聖者大慧菩薩復白佛言：「世尊！諸識有幾種"), ("l2b-02", "大慧！彼諸外道作如是說，所謂"),
+                          ("l2b-03", "「復次，大慧！汝今諦聽，我為汝說虛妄分別"), ("l2b-04", "大慧！若本無始生依三法生種種識者"),
+                          ("l2b-05", "「大慧！若復有沙門婆羅門，見諸法離自性"), ("l2b-06", "爾時聖者大慧菩薩摩訶薩復白佛言：「惟願世尊，為諸菩薩摩訶薩，說心"),
+                          ("l2b-07", "爾時佛告聖者大慧菩薩摩訶薩言：「大慧！有四因緣"), ("l2b-08", "爾時世尊，而說偈言"),
+                          ("l2b-09", "爾時聖者大慧菩薩摩訶薩以偈問佛"), ("l2b-10", "「若說真實者"), ("l2b-11", "「復次，大慧！若菩薩摩訶薩，欲知自心"),
+                          ("l2b-12", "「復次，大慧！菩薩摩訶薩建立住持智慧心相者"), ("l2b-13", "爾時聖者大慧菩薩摩訶薩，知諸大菩薩眾心之所念"),
+                          ("l2b-14", "爾時聖者大慧菩薩摩訶薩白佛言：「世尊！世尊！愚癡凡夫"), ("l2b-15", "「大慧！復有餘外道，見色有因"),
+                          ("l2b-16", "爾時佛告聖者大慧菩薩言：「大慧！汝當應離兔角"), ("l2b-17", "爾時世尊重說偈言")],
+      {"end": "爾時聖者大慧菩薩摩訶薩為淨自心現流", "anchor_nodes": []}),
+     ("T0672", _LK2_SIK, [("l2b-01", "爾時大慧菩薩摩訶薩復白佛言：「世尊！諸識有幾種"), ("l2b-02", "「大慧！彼諸外道作如是說"),
+                          ("l2b-03", "大慧！我今當說，若了境如幻"), ("l2b-04", "「復次，大慧！若本無有識三緣合生"),
+                          ("l2b-05", "「大慧！復有沙門婆羅門，觀一切法"), ("l2b-06", "爾時大慧菩薩摩訶薩復白佛言：「世尊！唯願為我說心、意、意識"),
+                          ("l2b-07", "爾時世尊告大慧菩薩摩訶薩言：「有四種因緣"), ("l2b-08", "爾時世尊重說頌言"),
+                          ("l2b-09", "爾時大慧菩薩摩訶薩以頌問曰"), ("l2b-10", "爾時世尊以頌答曰：「若說真實者"),
+                          ("l2b-11", "「復次，大慧！菩薩摩訶薩若欲了知能取所取"), ("l2b-12", "「復次，大慧！菩薩摩訶薩住智慧心所住相已"),
+                          ("l2b-13", "爾時大慧菩薩摩訶薩知諸菩薩心之所念"), ("l2b-14", "爾時大慧菩薩摩訶薩復白佛言：「世尊！彼豈不以妄見"),
+                          ("l2b-15", "「大慧！復有外道，見色形狀"), ("l2b-16", "大慧！汝應遠離兔角"), ("l2b-17", "爾時世尊即說頌言")],
+      {"end": "爾時大慧菩薩摩訶薩，為淨心現流故", "anchor_nodes": []})])
+
+_lk("lankavatara-c02-3", "集一切法品（三）種性與三自性",
+    "淨自心現流是漸是頓；法性所流佛（報佛）、法性佛、化佛三種說法；聲聞乘二相；如來所說常不思議與外道之別；聲聞畏生死求涅槃；"
+    "一切法不生；聲聞、緣覺、如來、不定、無種性五種種性，一闡提有捨善根與大悲兩種；三自性、二無我、四種建立與誹謗；菩薩現種種身。"
+    "求那跋陀羅五種性併在一段，以段中「緣覺乘無間種性者」「彼如來乘無間種性」切。",
+    [("l2c-01", "淨自心現流：漸淨非頓、頓現無相"), ("l2c-02", "法性所流佛・法性佛・化佛說法"), ("l2c-03", "聲聞乘二種差別相"),
+     ("l2c-04", "常不思議與外道之別"), ("l2c-05", "聲聞畏生死妄想而求涅槃"), ("l2c-06", "一切法不生"), ("l2c-07", "五種種性・聲聞乘種性"),
+     ("l2c-08", "緣覺乘種性"), ("l2c-09", "如來乘種性・不定種性"), ("l2c-10", "偈：三乘一乘非乘（2.128–131）"),
+     ("l2c-11", "一闡提二種"), ("l2c-12", "菩薩一闡提畢竟不入涅槃"), ("l2c-13", "三自性・偈（2.132）"), ("l2c-14", "人無我・法無我"),
+     ("l2c-15", "大慧請說建立誹謗・偈（2.133）"), ("l2c-16", "四種非有建立・誹謗"), ("l2c-17", "菩薩現種種身如如意寶・偈（2.134）")],
+    ({"start": "atha khalu mahāmatirbodhisattvo mahāsattvaḥ punarapi svacittadṛśyadhārāviśuddhyarthaṃ",
+      "end": "atha khalu mahāmatirbodhisattvo mahāsattvaḥ punarapi bhagavantamadhyeṣate sma - deśayatu bhagavān śūnyatā"},
+     [("l2c-01", "atha khalu mahāmatirbodhisattvo mahāsattvaḥ punarapi svacittadṛśyadhārāviśuddhyarthaṃ"),
+      ("l2c-02", "punaraparaṃ mahāmate dharmatāniṣyandabuddhaḥ"), ("l2c-03", "punaraparaṃ mahāmate dvividhaṃ śrāvakayāna"),
+      ("l2c-04", "atha khalu mahāmatirbodhisattvo mahāsattvo bhagavantametadavocat - nityamacintyaṃ"),
+      ("l2c-05", "punaraparaṃ mahāmate saṃsāravikalpaduḥkha"), ("l2c-06", "punaraparaṃ mahāmate anutpannān sarvadharmān"),
+      ("l2c-07", "punaraparaṃ mahāmate pañcābhisamayagotrāṇi"), ("l2c-08", "tatra mahāmate pratyekabuddhayānābhisamayagotrakaḥ"),
+      ("l2c-09", "tatra mahāmate tathāgatayānābhisamayagotraṃ"), ("l2c-10", "atha khalu bhagavāṃstasyāṃ velāyāmimā gāthā abhāṣat"),
+      ("l2c-11", "tatrecchantikānāṃ"), ("l2c-12", "punarapi mahāmatirāha - katamo"),
+      ("l2c-13", "punaraparaṃ mahāmate bodhisattvena mahāsattvena svabhāvalakṣaṇatraya"),
+      ("l2c-14", "punaraparaṃ mahāmate bodhisattvena mahāsattvena nairātmyadvaya"),
+      ("l2c-15", "atha khalu mahāmatirbodhisattvo mahāsattvaḥ punarapi bhagavantametadavocat - samāropāpavāda"),
+      ("l2c-16", "atha khalu bhagavānetameva gāthārtham"), ("l2c-17", "punaraparaṃ mahāmate bodhisattvāścittamano")]),
+    [("T0670", None, [("l2c-01", "爾時大慧菩薩為淨自心現流故"), ("l2c-02", "大慧！法依佛，說一切法"), ("l2c-03", "「復次，大慧！有二種聲聞乘通分別相"),
+                      ("l2c-04", "爾時，大慧菩薩摩訶薩白佛言：「世尊！世尊所說常及不思議"), ("l2c-05", "「復次，大慧！諸聲聞畏生死妄想苦"),
+                      ("l2c-06", "「復次，大慧！一切法不生"), ("l2c-07", "「復次，大慧！有五無間種性"), ("l2c-08", "大慧！緣覺乘無間種性者"),
+                      ("l2c-09", "大慧！彼如來乘無間種性"), ("l2c-10", "爾時世尊，欲重宣此義，說偈言"), ("l2c-11", "「大慧！彼一闡提非一闡提"),
+                      ("l2c-12", "大慧白佛言：「世尊！此中云何畢竟"), ("l2c-13", "「復次，大慧！菩薩摩訶薩，當善三自性"),
+                      ("l2c-14", "「復次，大慧！菩薩摩訶薩善觀二種無我相"), ("l2c-15", "爾時，大慧菩薩摩訶薩復白佛言：「世尊！建立誹謗相"),
+                      ("l2c-16", "爾時，世尊於此偈義復重顯示"), ("l2c-17", "「復次，大慧！菩薩摩訶薩善知心、意、意識、五法、自性、二無我相，趣究竟")],
+      {"end": "爾時，大慧菩薩摩訶薩復請佛言：「唯願世尊為我等說一切法空"}),
+     ("T0671", _LK2_BOD, [("l2c-01", "爾時聖者大慧菩薩摩訶薩為淨自心現流"), ("l2c-02", "「復次，大慧！法佛報佛說一切法"),
+                          ("l2c-03", "「復次，大慧！聲聞乘有二種差別相"), ("l2c-04", "爾時聖者大慧菩薩摩訶薩復白佛言：「世尊！世尊所說常不可思議"),
+                          ("l2c-05", "「復次，大慧！諸聲聞辟支佛，畏生死"), ("l2c-06", "「復次，大慧！過去未來現在一切諸佛，皆說諸法不生"),
+                          ("l2c-07", "「復次，大慧！我說五種乘性證法"), ("l2c-08", "「大慧！何者辟支佛乘性證法"), ("l2c-09", "「大慧！何者如來乘性證法"),
+                          ("l2c-10", "爾時世尊重說偈言"), ("l2c-11", "「大慧！何者無性乘"), ("l2c-12", "大慧菩薩白佛言：「世尊！此二種一闡提"),
+                          ("l2c-13", "「復次，大慧！菩薩摩訶薩當善知三法自體相"), ("l2c-14", "「復次，大慧！菩薩摩訶薩應當善觀二無我相"),
+                          ("l2c-15", "爾時聖者大慧菩薩復白佛言：「世尊！世尊有無謗相"), ("l2c-16", "爾時世尊於此偈義復重宣說"),
+                          ("l2c-17", "「復次，大慧！諸菩薩摩訶薩如實知心")],
+      {"end": "爾時聖者大慧菩薩復請佛言：「惟願世尊為我等說一切法空", "anchor_nodes": []}),
+     ("T0672", _LK2_SIK, [("l2c-01", "爾時大慧菩薩摩訶薩，為淨心現流故"), ("l2c-02", "「復次，大慧！法性所流佛"),
+                          ("l2c-03", "「復次，大慧！聲聞乘有二種差別相"), ("l2c-04", "爾時大慧菩薩摩訶薩白佛言：「世尊！如來所說常不思議"),
+                          ("l2c-05", "「復次，大慧！諸聲聞畏生死"), ("l2c-06", "「復次，大慧！去來現在諸如來說一切法不生"),
+                          ("l2c-07", "「復次，大慧！有五種種性"), ("l2c-08", "「大慧！云何知是緣覺乘種性"), ("l2c-09", "「大慧！如來乘種性所證法"),
+                          ("l2c-10", "爾時世尊即說頌言"), ("l2c-11", "「復次，大慧！此中一闡提"), ("l2c-12", "大慧菩薩言：「世尊！此中何者畢竟"),
+                          ("l2c-13", "「復次，大慧！菩薩摩訶薩當善知三自性相"), ("l2c-14", "「復次，大慧！菩薩摩訶薩當善觀察二無我相"),
+                          ("l2c-15", "爾時大慧菩薩摩訶薩復白佛言：「世尊！願說建立誹謗相"), ("l2c-16", "爾時世尊欲重說此義，告大慧言"),
+                          ("l2c-17", "「大慧！菩薩摩訶薩善知心、意、意識、五法、自性、二無我相已")],
+      {"end": "爾時大慧菩薩摩訶薩復請佛言：「願為我說一切法空", "anchor_nodes": []})])
+
 # ── 讀原文 ──────────────────────────────────────────────────────────────────
 def read_jsonl(work: str) -> list[dict]:
     return [json.loads(l) for l in (TRIP / f"{work}.jsonl").read_text(encoding="utf-8").splitlines() if l.strip()]

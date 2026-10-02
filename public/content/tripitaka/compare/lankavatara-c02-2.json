@@ -1,0 +1,237 @@
+{
+ "slug": "lankavatara-c02-2",
+ "title": "楞伽經・集一切法品（二）藏識海浪",
+ "family": "sa",
+ "intro": "大慧問諸識生住滅：識有相、相續二種生住滅，轉相、業相、真相三相；斥外道斷見與作者論，七種自性、七種第一義。大慧請說心意意識五法自性，佛說四緣眼識轉、藏識如海、轉識如浪，以偈問答；勸遠離憒閙、修聖智三相；大慧請說百八句所依聖智事，佛以兔角、牛角、色與虛空破有無二見。",
+ "units": [
+  {
+   "id": "l2b-01",
+   "label": "諸識二種生住滅・三相・藏識不滅"
+  },
+  {
+   "id": "l2b-02",
+   "label": "外道斷見・作者論・七種自性・七種第一義"
+  },
+  {
+   "id": "l2b-03",
+   "label": "沙門婆羅門斷滅論"
+  },
+  {
+   "id": "l2b-04",
+   "label": "三緣合生之過"
+  },
+  {
+   "id": "l2b-05",
+   "label": "觀一切法如幻・漸入如來身"
+  },
+  {
+   "id": "l2b-06",
+   "label": "大慧請說心意意識五法自性"
+  },
+  {
+   "id": "l2b-07",
+   "label": "四緣眼識轉・藏識如瀑流・行相微細"
+  },
+  {
+   "id": "l2b-08",
+   "label": "海浪偈（2.99–106）"
+  },
+  {
+   "id": "l2b-09",
+   "label": "青赤色像・大海波浪・日光之問答（2.107–114）"
+  },
+  {
+   "id": "l2b-10",
+   "label": "若說真實者，彼心無真實（2.114–122）"
+  },
+  {
+   "id": "l2b-11",
+   "label": "離憒閙・初中後夜修習"
+  },
+  {
+   "id": "l2b-12",
+   "label": "上聖智三相"
+  },
+  {
+   "id": "l2b-13",
+   "label": "大慧請說聖智事分別自性・兔角有無"
+  },
+  {
+   "id": "l2b-14",
+   "label": "非觀待分別而言兔角無"
+  },
+  {
+   "id": "l2b-15",
+   "label": "色與虛空・牛角析至微塵"
+  },
+  {
+   "id": "l2b-16",
+   "label": "勸離兔角牛角虛空色見"
+  },
+  {
+   "id": "l2b-17",
+   "label": "偈（2.123–127）"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sa",
+   "lang": "sa",
+   "label": "梵本",
+   "who": "Vaidya 校訂本（1963）・GRETIL"
+  },
+  {
+   "id": "T0670",
+   "lang": "lzh",
+   "label": "四卷本",
+   "who": "求那跋陀羅譯《楞伽阿跋多羅寶經》・443 年",
+   "work": "T0670"
+  },
+  {
+   "id": "T0671",
+   "lang": "lzh",
+   "label": "十卷本",
+   "who": "菩提流支譯《入楞伽經》・513 年",
+   "work": "T0671"
+  },
+  {
+   "id": "T0672",
+   "lang": "lzh",
+   "label": "七卷本",
+   "who": "實叉難陀譯《大乘入楞伽經》・700–704 年",
+   "work": "T0672"
+  }
+ ],
+ "works": [
+  "T0670",
+  "T0671",
+  "T0672"
+ ],
+ "anchors": [
+  {
+   "work": "T0670",
+   "range": [
+    "T16n0670_p0483a11",
+    "T16n0670_p0485c17"
+   ]
+  },
+  {
+   "work": "T0671",
+   "range": [
+    "T16n0671_p0521c23",
+    "T16n0671_p0525a07"
+   ]
+  },
+  {
+   "work": "T0672",
+   "range": [
+    "T16n0672_p0593b13",
+    "T16n0672_p0596a14"
+   ]
+  }
+ ],
+ "cells": {
+  "l2b-01": {
+   "sa": "atha khalu mahāmatirbodhisattvo mahāsattvaḥ punarapi bhagavantametadavocat - katividho bhagavan vijñānānāmutpādasthitinirodho bhavati? bhagavānāha - dvividho mahāmate vijñānānāmutpattisthitinirodho bhavati, na ca tārkikā avabudhyante yaduta prabandhanirodho lakṣaṇanirodhaśca / dvividha utpādo vijñānānām, prabandhotpado lakṣaṇotpādaśca / dvividhā sthitiḥ prabandhasthitirlakṣaṇasthitiśca / trividhaṃ vijñānaṃ pravṛttilakṣaṇaṃ karmalakṣaṇaṃ jātilakṣaṇaṃ ca / dvividhaṃ mahāmate vijñānaṃ saṃkṣepeṇa aṣṭalakṣaṇoktaṃ khyātivijñānaṃ vastuprativikalpavijñānaṃ ca / yathā mahāmate darpaṇasya rūpagrahaṇam, evaṃ khyātivijñānasyākhyāsyati / khyātivijñānaṃ ca mahāmate vastuprativikalpavijñānaṃ ca / dve 'pyete 'bhinnalakṣaṇe 'nyonyahetuke / tatra khyātivijñānaṃ mahāmate acintyavāsanāpariṇāmahetukam / vastuprativikalpavijñānaṃ ca mahāmate viṣayavikalpahetukamanādikālaprapañcavāsanāhetukaṃ ca // tatra sarvendriyavijñānanirodho mahāmate yaduta ālayavijñānasya abhūtaparikalpavāsanāvaicitryanirodhaḥ / eṣa hi mahāmate lakṣaṇanirodhaḥ / prabandhanirodhaḥ punarmahāmate yasmācca pravartate / yasmāditi mahāmate yadāśrayeṇa yadālambanena ca / tatra yadāśrayamanādikālaprapañcadauṣṭhulyavāsanā yadālambanaṃ svacittadṛśyavijñānaviṣaye vikalpāḥ / tadyathā mahāmate mṛtparamāṇubhyo mṛtpiṇḍaḥ, na cānyo nānanyaḥ, tathā suvarṇaṃ bhūṣaṇāt / yadi ca mahāmate mṛtpiṇḍo mṛtparamāṇubhyo 'nyaḥ syāt, tairnārabdhaḥ syāt / sa cārabdhastairmṛtparamāṇubhiḥ, tasmānnānyaḥ / athānanyaḥ syāt, mṛtpiṇḍaparamāṇvoḥ pratibhāgo na syāt / evameva mahāmate pravṛttivijñānānyālayavijñānajātilakṣaṇādanyāni syuḥ, anālayavijñānahetukāni syuḥ / athānanyāni pravṛttivijñānanirodhe ālayavijñānavirodhaḥ syāt, sa ca na bhavati svajātilakṣaṇanirodhaḥ / tasmānmahāmate na svajātilakṣaṇanirodho vijñānānāṃ kiṃ tu karmalakṣaṇanirodhaḥ / svajātilakṣaṇe punarnirudhyamāne ālayavijñānanirodhaḥ syāt / ālayavijñāne punarnirudhyamāne nirviśiṣṭastīrthakarocchedavādenāyaṃ vādaḥ syāt /",
+   "T0670": "爾時大慧菩薩摩訶薩復白佛言：「世尊！諸識有幾種生住滅？」佛告大慧：「諸識有二種生住滅，非思量所知。諸識有二種生：謂流注生，及相生。有二種住：謂流注住，及相住。有二種滅：謂流注滅，及相滅。諸識有三種相：謂轉相、業相、真相。大慧！略說有三種識，廣說有八相。何等為三？謂真識、現識，及分別事識。大慧！譬如明鏡，持諸色像；現識處現，亦復如是。大慧！現識及分別事識，此二壞不壞，相展轉因。大慧！不思議薰及不思議變，是現識因。大慧！取種種塵，及無始妄想薰，是分別事識因。大慧！若覆彼真識種種不實諸虛妄滅，則一切根識滅。大慧！是名相滅。大慧！相續滅者，相續所因滅，則相續滅，所從滅及所緣滅，則相續滅。大慧！所以者何？是其所依故。依者，謂無始妄想薰。緣者，謂自心見等識境妄想。大慧！譬如泥團微塵，非異非不異。金莊嚴具，亦復如是。大慧！若泥團微塵異者，非彼所成；而實彼成，是故不異。若不異者，則泥團微塵應無分別。如是，大慧！轉識藏識真相若異者，藏識非因；若不異者，轉識滅藏識亦應滅。而自真相實不滅。是故，大慧！非自真相識滅，但業相滅。若自真相滅者，藏識則滅。大慧！藏識滅者，不異外道斷見論議。",
+   "T0671": "爾時聖者大慧菩薩復白佛言：「世尊！諸識有幾種生住滅？」佛告聖者大慧菩薩言：「大慧！諸識生住滅，非思量者之所能知。大慧！諸識各有二種生住滅。大慧！諸識二種滅者：一者、相滅；二者、相續滅。大慧！諸識又二種住：一者、相住；二者、相續住。大慧！諸識有二種生：一者、相生；二者、相續生。大慧！識有三種。何等三種？一者、轉相識；二者、業相識；三者、智相識。大慧！有八種識，略說有二種。何等為二？一者、了別識；二者、分別事識。大慧！如明鏡中見諸色像，大慧！了別識亦如是見種種鏡像。大慧！了別識、分別事識，彼二種識無差別相，迭共為因。大慧！了別識不可思議熏變因。大慧！分別事識分別取境界因。無始來戲論熏習，大慧！阿梨耶識虛妄分別種種熏滅，諸根亦滅。大慧！是名相滅。大慧！相續滅者，相續因滅則相續滅，因滅緣滅則相續滅。大慧！所謂依法依緣。言依法者，謂無始戲論妄想熏習；言依緣者，謂自心識見境界分別。大慧！譬如泥團微塵非異非不異，金莊嚴具亦復如是，非異非不異。大慧！若泥團異者非彼所成，而實彼成，是故不異；若不異者，泥團微塵應無差別。大慧！如是轉識阿梨耶識，若異相者，不從阿梨耶識生；若不異者，轉識滅阿梨耶識亦應滅，而自相阿梨耶識不滅。是故大慧！諸識自相滅，自相滅者業相滅，若自相滅者阿梨耶識應滅。大慧！若阿梨耶識滅者，此不異外道斷見戲論。",
+   "T0672": "爾時大慧菩薩摩訶薩復白佛言：「世尊！諸識有幾種生住滅？」佛言：「大慧！諸識有二種生住滅，非臆度者之所能知。所謂相續生及相生，相續住及相住，相續滅及相滅。諸識有三相，謂轉相、業相、真相。大慧！識廣說有八，略則唯二，謂現識及分別事識。大慧！如明鏡中現諸色像，現識亦爾。大慧！現識與分別事識，此二識無異，相互為因。大慧！現識以不思議熏變為因；分別事識以分別境界及無始戲論習氣為因。大慧！阿賴耶識虛妄分別種種習氣滅，即一切根識滅，是名相滅。大慧！相續滅者，謂所依因滅及所緣滅，即相續滅。所依因者，謂無始戲論虛妄習氣。所緣者，謂自心所見分別境界。大慧！譬如泥團與微塵非異非不異，金與莊嚴具亦如是。大慧！若泥團與微塵異者，應非彼成，而實彼成，是故不異。若不異者，泥團微塵應無分別。大慧！轉識、藏識若異者，藏識非彼因；若不異者，轉識滅藏識亦應滅；然彼真相不滅。大慧！識真相不滅，但業相滅，若真相滅者，藏識應滅；若藏識滅者，即不異外道斷滅論。"
+  },
+  "l2b-02": {
+   "sa": "tīrthakarāṇāṃ mahāmate ayaṃ vādo yaduta viṣayagrahaṇoparamādvijñānaprabandhoparamo bhavati / vijñānaprabandhoparamādanādikālaprabandhavyucchittiḥ syāt / kāraṇataśca mahāmate tīrthakarāḥ prabandhapravṛttiṃ varṇayanti / na cakṣurvijñānasya rūpālokasamudayata utpattiṃ varṇayanti anyatra kāraṇataḥ / kāraṇaṃ punarmahāmate pradhānapuruṣeśvarakālāṇupravādāḥ // punaraparaṃ mahāmate saptavidho bhāvasvabhāvo bhavati yaduta samudayasvabhāvo bhāvasvabhāvo lakṣaṇasvabhāvo mahābhūtasvabhāvo hetusvabhāvaḥ pratyayasvabhāvo niṣpattisvabhāvaśca saptamaḥ // punaraparaṃ mahāmate saptavidhaḥ paramārtho yaduta cittagocaro jñānagocaraḥ prajñāgocaro dṛṣṭidvayagocaro dṛṣṭidvayātikrāntagocaraḥ sutabhūmyanukramaṇagocarastathāgatasya pratyātmagatigocaraḥ // etanmahāmate atītānāgatapratyutpannānāṃ tathāgatānāmarhatāṃ samyaksaṃbuddhānāṃ bhāvasvabhāvaparamārthahṛdayaṃ yena samanvāgatāstathāgatā laukikalokottaratamān dharmānāryeṇa prajñācakṣuṣā svasāmānyalakṣaṇapatitān vyavasthāpayanti / tathā ca vyavasthāpayanti yathā tīrthakaravādakudṛṣṭisādhāraṇā na bhavanti / kathaṃ ca mahāmate tīrthakaravādakudṛṣṭisādhāraṇā bhavanti? yaduta svacittaviṣayavikalpadṛṣṭyanavabodhanādvijñānānām / svacittadṛśyamātrānavatāreṇa mahāmate bālapṛthagjanā bhāvābhāvasvabhāvaparamārthadṛṣṭidvayavādino bhavanti //",
+   "T0670": "大慧！彼諸外道，作如是論，謂：『攝受境界滅，識流注亦滅。若識流注滅者，無始流注應斷。』大慧！外道說流注生因，非眼、識、色、明集會而生，更有異因。大慧！彼因者說言：『若勝妙、若士夫、若自在、若時、若微塵。』「復次，大慧！有七種性自性，所謂：集性自性、性自性、相性自性、大種性自性、因性自性、緣性自性、成性自性。「復次，大慧！有七種第一義，所謂：心境界、慧境界、智境界、見境界、超二見境界、超子地境界、如來自到境界。大慧！此是過去未來現在，諸如來、應供、等正覺，性自性第一義心（此心梵音肝栗大，肝栗大宋言心，謂如樹木心，非念慮心；念慮心梵音云質多也）。以性自性第一義心，成就如來世間、出世間、出世間上上法，聖慧眼入自共相建立；如所建立，不與外道論惡見共。大慧！云何外道論惡見共？所謂：自境界妄想見，不覺識自心所現，分齊不通。大慧！愚癡凡夫，性、無性、自性、第一義，作二見論。",
+   "T0671": "大慧！彼諸外道作如是說，所謂『離諸境界相續識滅，相續識滅已即滅諸識。』大慧！若相續識滅者，無始世來諸識應滅。大慧！諸外道說相續諸識從作者生，不說識依眼色空明和合而生，而說有作者。大慧！何者是外道作者？勝人、自在、時、微塵等是能作者。「復次，大慧！有七種自性。何等為七？一者、集性自性；二者、性自性；三者、相性自性；四者、大性自性；五者、因性自性；六者、緣性自性；七者、成性自性。「復次，大慧！有七種第一義。何等為七？一者、心境界；二者、智境界；三者、慧境界；四者、二見境界；五者、過二見境界；六者、過佛子地境界；七者、入如來地內行境界。「大慧！此是過去未來現在諸佛、如來、應、正遍知性自性第一義心。大慧！依此性自性第一義心，諸佛如來畢竟得於世間出世間，諸佛智慧眼同相別相諸法建立，如所建立不與外道邪見共同。大慧！云何不與外道邪見共同？所謂分別自心境界妄想見，而不覺知自心想見。大慧！諸愚癡凡夫，無有實體以為第一義，說二見論。",
+   "T0672": "「大慧！彼諸外道作如是說：『取境界相續識滅，即無始相續識滅。』大慧！彼諸外道說相續識從作者生，不說眼識依色光明和合而生，唯說作者為生因故。作者是何？彼計勝性丈夫自在時及微塵，為能作者。復次大慧！有七種自性，所謂：集自性，性自性，相自性，大種自性，因自性，緣自性，成自性。復次大慧！有七種第一義，所謂：心所行，智所行，二見所行，超二見所行，超子地所行，如來所行，如來自證聖智所行。大慧！此是過去未來現在一切如來、應、正等覺法自性第一義心；以此心成就如來世間出世間最上法，以聖慧眼，入自共相種種安立，其所安立不與外道惡見共。大慧！云何為外道惡見？謂不知境界自分別現，於自性第一義，見有見無而起言說。"
+  },
+  "l2b-03": {
+   "sa": "punaraparaṃ mahāmate vikalpabhavatrayaduḥkhavinivartanamajñānatṛṣṇākarmapratyayavinivṛttiṃ svacittadṛśyamāyāviṣayānudarśanaṃ bhāṣiṣye / ye kecinmahāmate śramaṇā vā brāhmaṇā vā abhūtvā śraddhāhetuphalābhivyaktidravyaṃ ca kālāvasthitaṃ pratyayeṣu ca skandhadhātvāyatanānāmutpādasthitiṃ cecchanti, bhūtvā ca vyayam, te mahāmate saṃtatikriyotpādabhaṅgabhavanirvāṇamārgakarmaphalasatyavināśocchedavādino bhavanti / tatkasya hetoḥ? yadidaṃ pratyakṣānupalabdherādyadarśanābhāvāt / tadyathā mahāmate ghaṭakapālābhāvo ghaṭakṛtyaṃ na karoti, nāpi dagdhabījamaṅkurakṛtyaṃ karoti, evameva mahāmate ye skandhadhātvāyatanabhāvā niruddhā nirudhyante nirotsyante, svacittadṛśyavikalpadarśanāhetutvānnāsti nairantaryapravṛttiḥ //",
+   "T0670": "「復次，大慧！妄想三有苦滅，無知愛業緣滅，自心所現幻境隨見。今當說。大慧！若有沙門婆羅門，欲令無種有種因果現，及事時住，緣陰界入生住，或言生已滅。大慧！彼若相續、若事、若生、若有、若涅槃、若道、若業、若果、若諦，破壞斷滅論。所以者何？以此現前不可得，及見始非分故。大慧！譬如破瓶，不作瓶事；亦如焦種，不作牙事。如是，大慧！若陰界入性，已滅今滅、當滅，自心妄想見無因故，彼無次第生。",
+   "T0671": "「復次，大慧！汝今諦聽，我為汝說虛妄分別以為有物，為斷三種苦。何等為三？謂無知愛業因緣滅，自心所見如幻境界。大慧！諸沙門婆羅門作如是說：『本無始生依因果而現。』復作是說：『實有物住，依諸緣故，有陰、界、入、生、住、滅，以生者滅故。』大慧！彼沙門婆羅門說：『相續體本無始有，若生若滅若涅槃若道若業若果若諦。』破壞諸法是斷滅論，非我所說。何以故？以現法不久當可得故；不見根本故。大慧！譬如瓶破不得瓶用。大慧！譬如燋種不生芽等。大慧！彼陰、界、入是滅，過去陰、界、入滅，現在未來亦滅。何以故？因自心虛妄分別見故。大慧！無彼陰、界、入相續體故。",
+   "T0672": "大慧！我今當說，若了境如幻、自心所現，則滅妄想三有苦及無知愛業緣。「大慧！有諸沙門婆羅門，妄計非有及有於因果外顯現諸物，依時而住；或計蘊、界、處依緣生住，有已即滅。大慧！彼於若相續、若作用、若生、若滅、若諸有、若涅槃、若道、若業、若果、若諦，是破壞斷滅論。何以故？不得現法故，不見根本故。大慧！譬如瓶破不作瓶事，又如燋種不能生牙；此亦如是，若蘊、界、處法已現當滅，應知此則無相續生，以無因故，但是自心虛妄所見。"
+  },
+  "l2b-04": {
+   "sa": "yadi punarmahāmate abhūtvā śraddhāvijñānānāṃ trisaṃgatipratyayakriyāyogenotpattirabhaviṣyat, asatāmapi mahāmate kūrmaromnāmutpattirabhaviṣyat, sikatābhyo vā tailasya / pratijñāhānirniyamanirodhaśca mahāmate prasajyate, kriyākarmakaraṇavaiyarthyaṃ ca sadasato bruvataḥ / teṣāmapi mahāmate trisaṃgatipratyayakriyāyogenopadeśo vidyate hetuphalasvalakṣaṇatayā atītānāgatapratyutpannāsatsallakṣaṇāstitāṃ yuktyāgamaistarkabhūmau vartamānāḥ svadṛṣṭidoṣavāsanatayā nirdekṣyanti / evameva mahāmate bālapṛthagjanāḥ kudṛṣṭidaṣṭā viṣamamatayo 'jñaiḥ praṇītaṃ sarvapraṇītamiti vakṣyanti //",
+   "T0670": "大慧！若復說無種有種識，三緣合生者，龜應生毛，沙應出油。汝宗則壞，違決定義。有種無種說有如是過，所作事業，悉空無義。大慧！彼諸外道，說有三緣合生者，所作方便因果自相，過去、未來、現在，有種、無種相。從本已來成事相承，覺想地轉，自見過習氣，作如是說。如是，大慧！愚癡凡夫，惡見所害，邪曲迷醉，無智妄稱一切智說。",
+   "T0671": "大慧！若本無始生依三法生種種識者，龜毛何故不生？沙不出油？汝之所立決定之義是即自壞，汝說有無，說生所成因果亦壞。大慧！若如是依三法因緣，應生諸法因果自相，過去現在未來有無諸相譬喻，及阿含自覺觀地依自見薰心，作如是說。大慧！愚癡凡夫亦復如是，惡見所害邪見迷意，無智妄稱一切智說。",
+   "T0672": "「復次，大慧！若本無有識三緣合生，龜應生毛、沙應出油，汝宗則壞，違決定義，所作事業悉空無益。大慧！三合為緣是因果性，可說為有，過現未來從無生有，此依住覺想地者，所有理教及自惡見熏習餘氣，作如是說。大慧！愚癡凡夫惡見所噬邪見迷醉，無智妄稱一切智說。"
+  },
+  "l2b-05": {
+   "sa": "ye punaranye mahāmate śramaṇā vā brāhmaṇā vā niḥsvabhāvaghanālātacakragandharvanagarānutpādamāyāmarīcyudakacandrasvapnasvabhāvabāhyacittadṛśyavikalpānādikālaprapañcadarśanena svacittavikalpapratyayavinivṛttirahitāḥ parikalpitābhidhānalakṣyalakṣaṇābhidheyarahitā dehabhogapratiṣṭhāsamālayavijñānaviṣayagrāhyagrāhakavisaṃyuktaṃ nirābhāsagocaramutpādasthitibhaṅgavarjyaṃ svacittotpādānugataṃ vibhāvayiṣyanti, nacirātte mahāmate bodhisattvā mahāsattvāḥ saṃsāranirvāṇasamatāprāptā bhaviṣyanti / mahākaruṇopāyakauśalyānābhogagatena mahāmate prayogena sarvasattvamāyāpratibimbasamatayā anārabdhapratyayatayā adhyātmabāhyaviṣayavimuktatayā cittabāhyādarśanatayā animittādhiṣṭhānānugatā anupūrveṇa bhūmikramasamādhiviṣayānugamanatayā traidhātukasvacittatayā adhimuktitaḥ prativibhāvayamānā māyopamasamādhiṃ pratilabhante / svacittanirābhāsamātrāvatāreṇa prajñāpāramitāvihārānuprāptā utpādakriyāyogavirahitāḥ samādhivajrabimbopamaṃ tathāgatakāyānugataṃ tathatānirmāṇānugataṃ balābhijñāvaśitākṛpākaruṇopāyamaṇḍitaṃ sarvabuddhakṣetratīrthyāyatanopagataṃ cittamanomanovijñānarahitaṃ parāvṛttyānuśrayānupūrvakaṃ tathāgatakāyaṃ mahāmate te bodhisattvāḥ pratilapsyante / tasmāttarhi mahāmate bodhisattvairmahāsattvaistathāgatakāyānugamena pratilābhinā skandhadhātvāyatanacittahetupratyayakriyāyogotpādasthitibhaṅgavikalpaprapañcarahitairbhavitavyaṃ cittamātrānusāribhiḥ // anādikālāprapañcadauṣṭhulyavikalpavāsanahetukaṃ tribhavaṃ paśyato nirābhāsabuddhabhūmyanutpādasmaraṇatayā pratyātmāryadharmagatiṃgataḥ svacittavaśavartī anābhogacaryāgatiṃgato viśvarūpamaṇisadṛśaḥ sūkṣmaiḥ sattvacittānupraveśakairnirmāṇavigrahaiścittamātrāvadhāraṇatayā bhūmikramānusaṃghau pratiṣṭhāpayati / tasmāttarhi mahāmate bodhisattvena mahāsattvena svasiddhāntakuśalena bhavitavyam //",
+   "T0670": "大慧！若復諸餘沙門婆羅門，見離自性、浮雲、火輪揵闥婆城，無生、幻、焰、水月及夢，內外心現，妄想無始虛偽，不離自心。妄想因緣滅盡，離妄想說所說、觀所觀，受用建立身之藏識。於識境界，攝受及攝受者不相應。無所有境界，離生住滅，自心起隨入分別。大慧！彼菩薩不久當得生死涅槃平等，大悲巧方便，無開發方便。大慧！彼一切眾生界，皆悉如幻，不勤因緣，遠離內外境界，心外無所見。次第隨入無相處，次第隨入從地至地三昧境界，解三界如幻，分別觀察，當得如幻三昧。度自心現無所有，得住般若波羅蜜。捨離彼生所作方便金剛喻三摩提，隨入如來身。隨入如如化，神通自在，慈悲方便，具足莊嚴。等入一切佛剎，外道入處，離心意意識。是菩薩漸次轉身，得如來身。大慧！是故欲得如來隨入身者，當遠離陰界入心，因緣所作方便，生住滅妄想虛偽。唯心直進，觀察無始虛偽過妄想習氣，因三有思惟無所有，佛地無生，到自覺聖趣，自心自在，到無開發行。如隨眾色摩尼，隨入眾生微細之心，而以化身隨心量度，諸地漸次相續建立。是故大慧！自悉檀善，應當修學。」",
+   "T0671": "「大慧！若復有沙門婆羅門，見諸法離自性故；如雲、火輪、揵闥婆城，不生不滅故；如幻、陽炎、水中月故；如夢，內外心依無始世來虛妄分別戲論而現故；離自心虛妄分別可見因緣故；離滅盡妄想說所說法故；離身資生持用法故；離阿梨耶識取境界相應故；入寂靜境界故；離生住滅法故；如是思惟觀察自心以為生故。大慧！如是菩薩不久當得世間涅槃平等之心。大慧！汝巧方便開發方便，觀察一切諸眾生界，皆悉如幻如鏡中像故；無因緣起遠離內境故；自心見外境界故；次第隨入無相處故；次第隨入從地至地三昧境界故；信三界自心幻故。大慧！如是修行者當得如幻三昧故；入自心寂靜境界故；到彼岸境界故；離作者生法故；得金剛三昧故；入如來身故；入如來化身故；入諸力通自在大慈大悲莊嚴身故；入一切佛國土故；入一切眾生所樂故；離心、意、意識境界故；轉身得妙身故。大慧！諸菩薩摩訶薩如是修行者，必得如來無上妙身。大慧！菩薩欲證如來身者，當遠離陰、界、入心因緣和合法故；遠離生、住、滅虛妄分別戲論故。諸法唯心，當如是知，見三界因無始世來虛妄分別戲論而有故；觀如來地寂靜不生故；進趣內身聖行故。大慧！汝當不久得心自在無功用行究竟故；如眾色隨摩尼寶化身入諸眾生微細心故；以入隨心地故；令諸眾生次第入地故。是故大慧！諸菩薩摩訶薩應當善知諸菩薩修行自內法故。」",
+   "T0672": "「大慧！復有沙門婆羅門，觀一切法皆無自性，如空中雲、如旋火輪、如乾闥婆城、如幻、如焰、如水中月、如夢所見，不離自心；由無始來虛妄見故取以為外。作是觀已斷分別緣，亦離妄心所取名義，知身及物并所住處，一切皆是藏識境界，無能所取及生住滅，如是思惟恒住不捨。大慧！此菩薩摩訶薩不久當得生死涅槃二種平等，大悲方便無功用行，觀眾生如幻如影從緣而起，知一切境界離心無得，行無相道漸昇諸地住三昧境，了達三界皆唯自心，得如幻定絕眾影像，成就智慧證無生法；入金剛喻三昧，當得佛身恒住如如，起諸變化力通自在。大慧！方便以為嚴飾遊眾佛國，離諸外道及心意識，轉依次第成如來身。大慧！菩薩摩訶薩欲得佛身，應當遠離蘊、界、處心因緣所作生住滅法戲論分別，但住心量觀察三有，無始時來妄習所起，思惟佛地無相無生自證聖法，得心自在無功用行，如如意寶隨宜現身，令達唯心漸入諸地。是故大慧！菩薩摩訶薩於自悉檀應善修學。」"
+  },
+  "l2b-06": {
+   "sa": "punarapi mahāmatirāha - deśayatu me bhagavān cittamanomanovijñānapañcadharmasvabhāvalakṣaṇakusumadharmaparyāyaṃ buddhabodhisattvānuyātaṃ svacittadṛśyagocaravisaṃyojanaṃ sarvabhāṣyayuktitattvalakṣaṇavidāraṇaṃ sarvabuddhapravacanahṛdayaṃ laṅkāpurigirimalaye nivāsino bodhisattvānārabhyodadhitaraṃgālayavijñānagocaraṃ dharmakāyaṃ tathāgatānugītaṃ prabhāṣasva //",
+   "T0670": "爾時大慧菩薩復白佛言：「世尊所說心意意識、五法、自性相，一切諸佛菩薩所行，自心見等，所緣境界不和合顯示，一切說成真實相，一切佛語心，為楞伽國摩羅耶山海中住處諸大菩薩，說如來所歎海浪藏識境界法身。」",
+   "T0671": "爾時聖者大慧菩薩摩訶薩復白佛言：「惟願世尊，為諸菩薩摩訶薩，說心、意、意識五法自體相應法門，諸佛菩薩修行之處，遠離自心邪見境界和合故；能破一切言語譬喻體相故；一切諸佛所說法心，為楞伽城摩羅耶山大海中諸菩薩，說觀察阿梨耶識大海波境界，說法身如來所說法故。」",
+   "T0672": "爾時大慧菩薩摩訶薩復白佛言：「世尊！唯願為我說心、意、意識五法自性相眾妙法門，此是一切諸佛菩薩入自心境離所行相，稱真實義諸佛教心。唯願如來為此山中諸菩薩眾，隨順過去諸佛，演說藏識海浪法身境界。」"
+  },
+  "l2b-07": {
+   "sa": "atha khalu bhagavān punareva mahāmatiṃ bodhisattvaṃ mahāsattvametadavocat - caturbhirmahāmate kāraṇaiścakṣurvijñānaṃ pravartate / katamaiścaturbhiḥ? yaduta svacittadṛśyagrahaṇānavabodhato 'nādikālaprapañcadauṣṭhulyarūpavāsanābhiniveśato vijñānaprakṛtisvabhāvato vicitrarūpalakṣaṇakautūhalataḥ / ebhirmahāmate caturbhiḥ kāraṇairoghāntarajalasthānīyādālayavijñānātpravṛttivijñānataraṃgautpadyate / yathā mahāmate cakṣurvijñāne, evaṃ sarvandriyaparamāṇuromakūpeṣu yugapatpravṛttikramaviṣayādarśabimbadarśanavat udadheḥ pavanāhatā iva mahāmate viṣayapavanacittodadhitaraṃgā avyucchinnahetukriyālakṣaṇā anyonyavinirmuktāḥ karmajātilakṣaṇasuvinibaddharūpasvabhāvānavadhāriṇo mahāmate pañca vijñānakāyāḥ pravartante / saha taireva mahāmate pañcabhirvijñānakāyairhetuviṣayaparicchedalakṣaṇāvadhārakaṃ nāma manovijñānaṃ taddhetujaśarīraṃ pravartate / na ca teṣāṃ tasya caivaṃ bhavati - vayamatrānyonyahetukāḥ svacittadṛśyavikalpābhiniveśapravṛttā iti // atha ca anyonyābhinnalakṣaṇasahitāḥ pravartante vijñaptiviṣayaparicchede / tathā ca pravartamānāḥ pravartante yathā samāpannasyāpi yoginaḥ sūkṣmagativāsanāpravṛttā na prajñāyante / yogināṃ caivaṃ bhavati - nirodhya vijñānāni samāpatsyāmahe iti / te cāniruddhaireva vijñānaiḥ samāpadyante vāsanābījānirodhādaniruddhāḥ, viṣayapravṛttagrahaṇavaikalyānniruddhāḥ / evaṃ sūkṣmo mahāmate ālayavijñānagatipracāro yattathāgataṃ sthāpayitvā bhūmipratiṣṭhitāṃśca bodhisattvān, na sukaramanyaiḥ śrāvakapratyekabuddhatīrthyayogayogibhiradhigantuṃ samādhiprajñābalādhānato 'pi vā paricchettum / anyatra bhūmilakṣaṇaprajñājñānakauśalapadaprabhedaviniścayajinānantakuśalamūlopacayasvacittadṛśyavikalpaprapañcavirahitairvanagahanaguhālayāntargatairmahāmate hīnotkṛṣṭamadhyamayogayogibhirna śakyaṃ svacittavikalpadṛśyadhārādraṣṭranantakṣetrajinābhiṣekavaśitābalābhijñāsamādhayaḥ prāptum / kalyāṇamitrajinapuraskṛtairmahāmate śakyaṃ cittamanovijñānaṃ svacittadṛśyasvabhāvagocaravikalpasaṃsārabhavodadhiṃ karmatṛṣṇājñānahetukaṃ tartum / ata etasmātkāraṇānmahāmate yoginā kalyāṇamitrajinayoge yogaḥ prārabdhavyaḥ //",
+   "T0670": "爾時，世尊告大慧菩薩言：「四因緣故，眼識轉。何等為四？謂：自心現攝受不覺，無始虛偽過色習氣，計著識性自性，欲見種種色相。大慧！是名四種因緣水流處，藏識轉識浪生。大慧！如眼識，一切諸根微塵毛孔俱生，隨次境界生，亦復如是。譬如明鏡，現眾色像。大慧！猶如猛風，吹大海水。外境界風，飄蕩心海，識浪不斷。因所作相異不異，合業生相，深入計著，不能了知色等自性，故五識身轉。大慧！即彼五識身，俱因差別分段相知，當知是意識因彼身轉。彼不作是念：『我展轉相因，自心現，妄想計著轉。』而彼各各壞相俱轉，分別境界，分段差別，謂彼轉。如修行者入禪三昧，微細習氣轉而不覺知，而作是念：『識滅然後入禪正受。』實不識滅而入正受，以習氣種子不滅，故不滅；以境界轉攝受不具，故滅。大慧！如是微細藏識究竟邊際，除諸如來及住地菩薩；諸聲聞、緣覺、外道修行所得三昧智慧之力，一切不能測量決了餘地相智慧、巧便分別、決斷句義。最勝無邊善根成熟，離自心現妄想虛偽，宴坐山林，下中上修，能見自心妄想流注，無量剎土諸佛灌頂，得自在力神通三昧。諸善知識佛子眷屬，彼心意意識，自心所現自性境界虛妄之想，生死有海，業愛無知，如是等因，悉以超度。是故，大慧！諸修行者，應當親近最勝知識。」",
+   "T0671": "爾時佛告聖者大慧菩薩摩訶薩言：「大慧！有四因緣眼識生。何等為四？一者、不覺自內身取境界故；二者、無始世來虛妄分別色境界薰習執著戲論故；三者、識自性體如是故；四者、樂見種種色相故。大慧！是名四種因緣，於阿梨耶識海起大勇波能生轉識。大慧！如眼識起識，一切諸根毛孔一時轉識生，如鏡中像多少一時。復有隨因緣次第生。大慧！猶如猛風吹境心海而識波生，不斷因事相故；迭共不相離故；業體相使縛故；不覺色體故；而五識身轉故。大慧！不離彼五識因了別識相名為意識，共彼因常轉故。大慧！五識及心識不作是念：『我迭共為因。』自心見虛妄分別取諸境界，而彼各各不異相，俱現分別境界。如是彼識微細生滅，以入修行三昧者不覺不知微細熏習，而修行者作是心：『我滅諸識入三昧。』而修行者不滅諸識入三昧。大慧！熏集種子心不滅，取外境界諸識滅。大慧！如是微細阿梨耶識行，除佛如來及入地諸菩薩摩訶薩，諸餘聲聞辟支佛外道修行者不能知故；入三昧智力亦不能覺，以其不知諸地相故；以不知智慧方便差別善決定故；以不能覺諸佛如來集諸善根故；以不能知自現境界分別戲論故；以不能入種種稠林阿梨耶識窟故。大慧！惟下中上如實修行者，乃能分別見自心中虛妄見故；能於無量國土為諸如來授位故；得無量自在力神通三昧故；依善知識佛子眷屬而能得見心、意、意識自心自體境界故；分別生死大海以業愛無智以為因有故。大慧！是故如實修行者，應推覓親近善知識故。」",
+   "T0672": "爾時世尊告大慧菩薩摩訶薩言：「有四種因緣眼識轉。何等為四？所謂：不覺自心現而執取故，無始時來取著於色虛妄習氣故，識本性如是故，樂見種種諸色相故。大慧！以此四緣，阿賴耶識如瀑流水，生轉識浪。如眼識，餘亦如是。於一切諸根微塵毛孔眼等，轉識或頓生，譬如明鏡現眾色像；或漸生，猶如猛風吹大海水。心海亦爾，境界風吹起諸識浪，相續不絕。大慧！因所作相非一非異，業與生相相繫深縛，不能了知色等自性，五識身轉。大慧！與五識俱，或因了別差別境相有意識生，然彼諸識不作是念：『我等同時，展轉為因。』而於自心所現境界，分別執著俱時而起，無差別相各了自境。大慧！諸修行者入於三昧，以習力微起而不覺知，但作是念：『我滅諸識入於三昧。』實不滅識而入三昧，以彼不滅習氣種故，但不取諸境，名為識滅。「大慧！如是藏識行相微細，唯除諸佛及住地菩薩，其餘一切二乘外道定慧之力皆不能知。唯有修行如實行者，以智慧力了諸地相善達句義，無邊佛所廣集善根，不妄分別自心所見，能知之耳。大慧！諸修行人宴處山林上中下修，能見自心分別流注，得諸三昧自在力通，諸佛灌頂菩薩圍繞，知心、意、意識所行境界，超愛業無明生死大海，是故汝等應當親近諸佛菩薩，如實修行大善知識。」"
+  },
+  "l2b-08": {
+   "sa": "atha khalu bhagavāṃstasyāṃ velāyāmimā gāthā abhāṣata - taraṃgā hyudadheryadvatpavanapratyayeritāḥ / nṛtyamānāḥ pravartante vyucchedaśca na vidyate // Lank_2.99 // ālayaughastathā nityaṃ viṣayapavaneritaḥ / citraistaraṃgavijñānairnṛtyamānaḥ pravartate // Lank_2.100 // nīle rakte 'tha lavaṇe śaṅkhe kṣīre ca śārkare / kaṣāyaiḥ phalapuṣpādyaiḥ kiraṇā yatha bhāskare // Lank_2.101 // na cānyena ca nānanyena taraṃgā hyudadhermatāḥ / vijñānāni tathā sapta cittena saha saṃyutāḥ // Lank_2.102 // udadheḥ pariṇāmo 'sau taraṃgāṇāṃ vicitratā / ālayaṃ hi tathā citraṃ vijñānākhyaṃ pravartate // Lank_2.103 // cittaṃ manaśca vijñānaṃ lakṣaṇārthaṃ prakalpyate / abhinnalakṣaṇā hyaṣṭau na lakṣyā na ca lakṣaṇam // Lank_2.104 // udadheśca taraṃgāṇāṃ yathā nāsti viśeṣaṇam / vijñānānāṃ tathā cittaiḥ pariṇāmo na labhyate // Lank_2.105 // cittena cīyate karma manasā ca vicīyate / vijñānena vijānāti dṛśyaṃ kalpeti pañcabhiḥ // Lank_2.106 //",
+   "T0670": "爾時世尊欲重宣此義，而說偈言：「譬如巨海浪，斯由猛風起， 洪波鼓冥壑，無有斷絕時。 藏識海常住，境界風所動， 種種諸識浪，騰躍而轉生。 青赤種種色，珂乳及石蜜， 淡味眾華果，日月與光明， 非異非不異。海水起波浪， 七識亦如是，心俱和合生。 譬如海水變，種種波浪轉； 七識亦如是，心俱和合生， 謂彼藏識處，種種諸識轉。 謂以彼意識，思惟諸相義， 不壞相有八，無相亦無相。 譬如海波浪，是則無差別； 諸識心如是，異亦不可得。 心名採集業，意名廣採集， 諸識識所識，現等境說五。」",
+   "T0671": "爾時世尊，而說偈言：「譬如巨海浪，斯由猛風起； 洪波鼓冥壑，無有斷絕時。 梨耶識亦爾，境界風吹動； 種種諸識浪，騰躍而轉生。 青赤鹽珂乳，味及於石蜜； 眾華與果實，如日月光明。 非異非不異，海水起波浪； 七識亦如是，心俱和合生。 譬如海水動，種種波浪轉； 梨耶識亦爾，種種諸識生。 心意及意識，為諸相故說； 諸識無別相，非見所見相。 譬如海水波，是則無差別； 諸識心如是，異亦不可得。 心能集諸業，意能觀集境； 識能了所識，五識現分別。」",
+   "T0672": "爾時世尊重說頌言：「譬如巨海浪，斯由猛風起， 洪波鼓溟壑，無有斷絕時。 藏識海常住，境界風所動， 種種諸識浪，騰躍而轉生。 青赤等諸色，鹽貝乳石蜜， 花果日月光，非異非不異。 意等七種識，應知亦如是， 如海共波浪，心俱和合生。 譬如海水動，種種波浪轉； 藏識亦如是，種種諸識生。 心意及意識，為諸相故說； 八識無別相，無能相所相。 譬如海波浪，是則無差別； 諸識心如是，異亦不可得。 心能積集業，意能廣積集； 了別故名識，對現境說五。」"
+  },
+  "l2b-09": {
+   "sa": "nīlaraktaprakāraṃ hi vijñānaṃ khyāyate nṛṇām / taraṃgacittasādharmyaṃ vada kasmānmahāmate // Lank_2.107 // nīlaraktaprakāraṃ hi taraṃgeṣu na vidyate / vṛttiśca varṇyate cittaṃ lakṣaṇārthaṃ hi bāliśān // Lank_2.108 // na tasya vidyate vṛttiḥ svacittaṃ grāhyavarjitam / grāhye sati hi vai grāhastaraṃgaiḥ saha sādhyate // Lank_2.109 // dehabhogapratiṣṭhānaṃ vijñānaṃ khyāyate nṛṇām / tenāsya dṛśyate vṛttistaraṃgaiḥ saha sādṛśā // Lank_2.110 // udadhistaraṃgabhāvena nṛtyamāno vibhāvyate / ālayasya tathā vṛttiḥ kasmādbuddhyā na gamyate // Lank_2.111 // bālānāṃ buddhivaikalyādālayaṃ hyudadhiryathā / taraṃgavṛttisādharmyaṃ dṛṣṭāntenopanīyate // Lank_2.112 // udeti bhāskaro yadvatsamahīnottame jine / tathā tvaṃ lokapradyota tattvaṃ deśesi bāliśān // Lank_2.113 // kṛtvā dharmeṣvavasthānaṃ kasmāttattvaṃ na bhāṣase /",
+   "T0670": "爾時，大慧菩薩以偈問曰：「青赤諸色像，眾生發諸識， 如浪種種法，云何唯願說。」爾時，世尊以偈答曰：「青赤諸雜色，波浪悉無有， 採集業說心，開悟諸凡夫。 彼業悉無有，自心所攝離， 所攝無所攝，與彼波浪同。 受用建立身，是眾生現識， 於彼現諸業，譬如水波浪。」爾時，大慧菩薩復說偈言：「大海波浪性，鼓躍可分別； 藏與業如是，何故不覺知？」爾時，世尊以偈答曰：「凡夫無智慧，藏識如巨海， 業相猶波浪，依彼譬類通。」爾時，大慧菩薩復說偈言：「日出光等照，下中上眾生。 如來照世間，為愚說真實， 已分部諸法，何故不說實？」",
+   "T0671": "爾時聖者大慧菩薩摩訶薩以偈問佛：「青赤諸色像，自識如是見； 水波相對法，何故如是說？」爾時世尊以偈答曰：「青赤諸雜色，波中悉皆無； 說轉識心中，為凡夫相說。 彼業悉皆無，自心離可取； 可取及能取，與彼波浪同。 身資生住持，眾生惟識見； 是故現轉識，水波浪相似。 大海波浪動，鼓躍可分別； 阿梨耶識轉，何故不覺知？ 凡夫無智慧，梨耶識如海； 波浪轉對法，是故譬喻說。」爾時聖者大慧菩薩摩訶薩復說偈言：「日出光等照，下中上眾生； 如來出世間，為凡夫說實。 佛得究竟法，何故不說實？」",
+   "T0672": "爾時大慧菩薩摩訶薩以頌問曰：「青赤諸色像，眾生識顯現； 如浪種種法，云何願佛說？」爾時世尊以頌答曰：「青赤諸色像，浪中不可得； 言心起眾相，開悟諸凡夫。 而彼本無起，自心所取離； 能取及所取，與彼波浪同。 身資財安住，眾生識所現； 是故見此起，與浪無差別。」爾時大慧復說頌言：「大海波浪性，鼓躍可分別； 藏識如是起，何故不覺知？」爾時世尊以頌答曰：「阿賴耶如海，轉識同波浪； 為凡夫無智，譬喻廣開演。」爾時大慧復說頌言：「譬如日光出，上下等皆照； 世間燈亦然，應為愚說實。 已能開示法，何不顯真實？」"
+  },
+  "l2b-10": {
+   "sa": "bhāṣase yadi vā tattvaṃ citte tattvaṃ na vidyate // Lank_2.114 // udadheryathā taraṃgā hi darpaṇe supine yathā / dṛśyanti yugapatkāle tathā cittaṃ svagocare // Lank_2.115 // vaikalyādviṣayāṇāṃ hi kramavṛttyā pravartate / vijñānena vijānāti manasā manyate punaḥ // Lank_2.116 // pañcānāṃ khyāyate dṛśyaṃ kramo nāsti samāhite / citrācāryo yathā kaściccitrāntevāsiko 'pi vā / citrārthe nāmayedraṅgān deśayāmi tathā hyaham // Lank_2.117 // raṅge na vidyate citraṃ na bhūmau na ca bhājane / sattvānāṃ karṣaṇārthāya raṅgaiścitraṃ vikalpyate / deśanā vyabhicāraṃ ca tattvaṃ hyakṣaravarjitam // Lank_2.118 // kṛtvā dharmeṣvavasthānaṃ tattvaṃ deśemi yoginām / tattvaṃ pratyātmagatikaṃ kalpyakalpena varjitam / deśemi jinaputrāṇāṃ neyaṃ bālāna deśanā // Lank_2.119 // vicitrā hi yathā māyā dṛśyate na ca vidyate / deśanāpi tathā citrā deśyate 'vyabhicāriṇī / deśanā hi yadanyasya tadanyasyāpyadeśanā // Lank_2.120 // āture āture yadvadbhiṣadragvyaṃ prayacchati / buddhā hi tadvatsattvānāṃ cittamātraṃ vadanti vai // Lank_2.121 // tārkikāṇāmaviṣayaṃ śrāvakāṇāṃ na caiva hi / yaṃ deśayanti vai nāthāḥ pratyātmagatigocaram // Lank_2.122 //",
+   "T0670": "爾時世尊以偈答曰：「若說真實者，彼心無真實。 譬如海波浪，鏡中像及夢， 一切俱時現，心境界亦然。 境界不具故，次第業轉生， 識者識所識，意者意謂然， 五則以顯現，無有定次第。 譬如工畫師，及與畫弟子， 布彩圖眾形，我說亦如是。 彩色本無文，非筆亦非素， 為悅眾生故，綺錯繢眾像。 言說別施行，真實離名字， 分別應初業，修行示真實。 真實自悟處，覺想所覺離， 此為佛子說，愚者廣分別。 種種皆如幻，雖現無真實， 如是種種說，隨事別施設， 所說非所應，於彼為非說。 彼彼諸病人，良醫隨處方， 如來為眾生，隨心應量說。 妄想非境界，聲聞亦非分， 哀愍者所說，自覺之境界。",
+   "T0671": "「若說真實者，彼心無真實； 譬如海波浪，鏡中像及夢。 俱時而得現，心境界亦然； 境界不具故，是故次第現。 識者識所識，意者然不然； 吾則以現見，定中無如是。 譬如巧畫師，及畫師弟子， 布綵圖眾像，我說法亦爾。 綵色本無文，非筆亦非器， 為眾生說故，綺錯畫眾像。 言說離真實，真實離名字； 我得真實處，如實內身知。 離覺所覺相，解如實為說， 此為佛子說，愚者異分別。 種種皆如幻，唯見非真實， 如是種種說，隨事實不實。 為此人故說，於彼為非說； 彼彼諸病人，良醫隨處藥， 如來為眾生，唯心應器說。 妄想非境界，聲聞亦非分； 諸如來世尊，自覺境界說。",
+   "T0672": "爾時世尊以頌答曰：「若說真實者，彼心無真實。 譬如海波浪，鏡中像及夢； 俱時而顯現，心境界亦然。 境界不具故，次第而轉生； 識以能了知，意復意謂然。 五識了現境，無有定次第； 譬如工畫師，及畫師弟子， 布彩圖眾像，我說亦如是。 彩色中無文，非筆亦非素。 為悅眾生故，綺煥成眾像； 言說則變異，真實離文字。 我所住實法，為諸修行說； 真實自證處，能所分別離。 此為佛子說，愚夫別開演； 種種皆如幻，所見不可得。 如是種種說，隨事而變異； 所說非所應，於彼為非說。 譬如眾病人，良醫隨授藥； 如來為眾生，隨心應量說。 世間依怙者，證智所行處； 外道非境界，聲聞亦復然。"
+  },
+  "l2b-11": {
+   "sa": "punaraparaṃ mahāmate bodhisattvena svacittadṛśyagrāhyagrāhakavikalpagocaraṃ parijñātukāmena saṃgaṇikāasaṃsargamiddhanivaraṇavigatena bhavitavyam / prathamamadhyamapaścādrātrajāgarikāyoganuyuktena bhavitavyam / kutīrthyaśāstrākhyāyikāśrāvakapratyekabuddhayānalakṣaṇavirahitena ca bhavitavyam / svacittadṛśyavikalpalakṣaṇagatiṃgatena ca bhavitavyaṃ bodhisattvena mahāsattvena //",
+   "T0670": "「復次，大慧！若菩薩摩訶薩欲知自心現量、攝受及攝受者妄想境界，當離群聚習俗睡眠，初中後夜常自覺悟修行方便；當離惡見經論言說，及諸聲聞緣覺乘相；當通達自心現妄想之相。",
+   "T0671": "「復次，大慧！若菩薩摩訶薩，欲知自心離虛妄分別能取可取境界相者，當離憒閙離睡眠蓋，初夜後夜常自覺悟修行方便，離諸外道一切戲論，離聲聞緣覺乘相，當通達自心現見虛妄分別之相。",
+   "T0672": "「復次，大慧！菩薩摩訶薩若欲了知能取所取分別境界，皆是自心之所現者，當離憒閙昏滯睡眠，初中後夜勤加修習；遠離曾聞外道邪論及二乘法，通達自心分別之相。"
+  },
+  "l2b-12": {
+   "sa": "punaraparaṃ mahāmate bodhisattvena mahāsattvena cittavijñānaprajñālakṣaṇavyavasthāyāṃ sthitvā upariṣṭādāryajñānalakṣaṇatrayayogaḥ karaṇīyaḥ / tatropariṣṭādāryajñānalakṣaṇatrayaṃ mahāmate katamat? yaduta nirābhāsalakṣaṇaṃ sarvabuddhasvapraṇidhānādhiṣṭhānalakṣaṇaṃ pratyātmāryajñānagatilakṣaṇaṃ ca / yānyadhigamya yogī khañjagardabha iva cittaprajñājñānalakṣaṇaṃ hitvā jinasutāṣṭamīṃ prāpya bhūmiṃ taduttare lakṣaṇatraye yogamāpadyate // tatra nirābhāsalakṣaṇaṃ punarmahāmate sarvaśrāvakapratyekabuddhatīrthalakṣaṇaparicayātpravartate / adhiṣṭhānalakṣaṇaṃ punarmahāmate pūrvabuddhasvapraṇidhānādhiṣṭhānataḥ pravartate / pratyātmāryajñānagatilakṣaṇaṃ punarmahāmate sarvadharmalakṣaṇānabhiniveśato māyopamasamādhikāyapratilambhādbuddhabhūmigatigamanapracārāt pravartate / etanmahāmate āryāṇāṃ lakṣaṇatrayaṃ yenāryeṇa lakṣatrayeṇa samanvāgatā āryāḥ svapratyātmāryajñānagatigocaramadhigacchanti / tasmāttarhi mahāmate āryajñānalakṣaṇatrayayogaḥ karaṇīyaḥ //",
+   "T0670": "「復次，大慧！菩薩摩訶薩建立智慧相住已，於上聖智三相，當勤修學。何等為聖智三相當勤修學？所謂：無所有相、一切諸佛自願處相、自覺聖智究竟之相。修行得此已，能捨跛驢心慧智相，得最勝子第八之地，則於彼上三相修生。大慧！無所有相者，謂聲聞、緣覺及外道相，彼修習生。大慧！自願處相者，謂諸先佛自願處修生。大慧！自覺聖智究竟相者，一切法相無所計著，得如幻三昧身，諸佛地處進趣行生。大慧！是名聖智三相。若成就此聖智三相者，能到自覺聖智境界。是故，大慧！聖智三相，當勤修學。」",
+   "T0671": "「復次，大慧！菩薩摩訶薩建立住持智慧心相者，於上聖智三相當勤修學。大慧！何等為上聖智三相？所謂無所有相；一切諸佛自願住持相；內身聖智自覺知相。修行此已，能捨跛驢智慧之相，得勝子第八地三相修行。大慧！何者無所有相？謂觀聲聞緣覺外道相。大慧！何者一切諸佛自願住持相？謂諸佛本自作願住持諸法。大慧！何者內身聖智自覺知相？一切法相無所執著，得如幻三昧身，諸佛地處進趣修行。大慧！是名上聖智三相。若成就此三相者，能到自覺聖智境界。是故大慧！諸菩薩摩訶薩求上聖智三相者，當如是學。」",
+   "T0672": "「復次，大慧！菩薩摩訶薩住智慧心所住相已，於上聖智三相當勤修學。何者為三？所謂：無影像相，一切諸佛願持相，自證聖智所趣相。諸修行者獲此相已，即捨跛驢智慧心相，入菩薩第八地，於此三相修行不捨。大慧！無影像相者，謂由慣習一切二乘外道相故而得生起；一切諸佛願持相者，謂由諸佛自本願力所加持故而得生起；自證聖智所趣相者，謂由不取一切法相成就如幻諸三昧身趣佛地智故而得生起。大慧！是名上聖智三種相。若得此相，即到自證聖智所行之處，汝及諸菩薩摩訶薩應勤修學。」"
+  },
+  "l2b-13": {
+   "sa": "atha khalu mahāmatirbodhisattvo mahāsattvaḥ punareva tasyā bodhisattvaparṣadaścittāśayavicāramājñāya āryajñānavastupravicayaṃ nāma dharmaparyāyaṃ sarvabuddhādhiṣṭhānādhiṣṭhito bhagavantaṃ paripṛcchati sma - deśayatu me bhagavānāryajñānavastupravicayaṃ nāma dharmaparyāyamaṣṭottarapadaśataprabhedāśrayam, yamāśritya tathāgatā arhantaḥ samyaksaṃbuddhā bodhisattvānāṃ mahāsattvānāṃ svasāmānyalakṣaṇapatitānāṃ parikalpitasvabhāvagatiprabhedaṃ deśayanti, yena parikalpitasvabhāvagatiprabhedena suprativibhāgaviddhena pudgaladharmanairātmyapracāraṃ prativiśodhya bhūmiṣu kṛtavidyāḥ sarvaśrāvakapratyekabuddhatīrthakaradhyānasamādhisamāpattisukhamatikramya tathāgatācintyaviṣayapracāragatipracāraṃ pañcadharmasvabhāvagativinivṛttaṃ tathāgataṃ dharmakāyaṃ prajñājñānasunibaddhadharmaṃ māyāviṣayābhinivṛttaṃ sarvabuddhakṣetratuṣitabhavanākaniṣṭhālayopagaṃ tathāgatakāyaṃ pratilabheran // bhagavānāha - iha mahāmate eke tīrthyātīrthyadṛṣṭayo nāstitvābhiniviṣṭā vikalpabuddhihetukṣayasvabhāvābhāvānnāsti śaśasya viṣāṇaṃ vikalpayanti / yathā śaśaviṣāṇaṃ nāsti, evaṃ sarvadharmāḥ / anye punarmahāmate bhūtaguṇāṇudravyasaṃsthānasaṃniveśaviśeṣaṃ dṛṣṭvā nāstiśaśaśṛṅgābhiniveśābhiniviṣṭā asti gośṛṅgamiti kalpayanti / te mahāmate antadvayadṛṣṭipatitāścittamātrānavadhāritamatayaḥ / svacittadhātuvikalpena te puṣṇanti / dehabhogapratiṣṭhāgativikalpamātre mahāmate śaśaśṛṅgaṃ nāstyastivinivṛttaṃ na kalpayettathā mahāmate sarvabhāvānāṃ nāstyastivinivṛttaṃ na kalpayitavyam // ye punarmahāmate nāstyastivinivṛttā nāsti śaśaśṛṅgaṃ na kalpayanti, tairanyonyāpekṣahetutvānnāsti śaśaviṣāṇamiti na kalpayitavyam / āparamāṇupravicayādvastvanupalabdhabhāvānmahāmate āryajñānagocaravinivṛttamasti gośṛṅgamiti na kalpayitavyam //",
+   "T0670": "爾時大慧菩薩摩訶薩知大菩薩眾心之所念，名聖智事分別自性經，承一切佛威神之力而白佛言：「世尊！唯願為說聖智事分別自性經，百八句分別所依。如來、應供、等正覺，依此分別說菩薩摩訶薩入自相、共相、妄想自性。以分別說妄想自性故，則能善知周遍觀察人法無我，淨除妄想，照明諸地，超越一切聲聞、緣覺及諸外道諸禪定樂，觀察如來不可思議所行境界，畢定捨離五法自性。諸佛如來法身智慧，善自莊嚴，超幻境界，昇一切佛剎、兜率天宮乃至色究竟天宮，逮得如來常住法身。」佛告大慧：「有一種外道，作無所有妄想計著。覺知因盡，兔無角想。如兔無角，一切法亦復如是。大慧！復有餘外道見種、求那、極微、陀羅驃形處橫法，各各差別。見已計著無兔角橫法，作牛有角想。大慧！彼墮二見，不解心量，自心境界妄想增長身受用，建立妄想限量。大慧！一切法性亦復如是，離有無，不應作想。大慧！若復離有無而作兔無角想，是名邪想。彼因待觀，故兔無角，不應作想，乃至微塵分別事性，悉不可得。大慧！聖境界離，不應作牛有角想。」",
+   "T0671": "爾時聖者大慧菩薩摩訶薩，知諸大菩薩眾心之所念，承佛如來住持之力，問於如來名聖智行分別法門體：「世尊！願為我說名聖智行分別法門體，依百八見分別說，如來、應、正遍知依此百八見，為諸菩薩摩訶薩分別說自相同相妄想分別體修行差別法。大慧諸菩薩善得此妄想分別自體法行差別，能清淨人無我法無我，善解諸地，過諸聲聞辟支佛禪定三摩跋提之樂，得諸佛如來不可思議境界修行故；得離五法自體相行，入諸佛法身體真實行故；得如來法身善決定處，如幻境界所成故；一切國土從兜率天阿迦尼吒處得如來法身故。」佛告聖者大慧菩薩：「有一種外道邪見執著空無所有，妄想分別智因有二，自體無體，分別兔角無，如兔角無諸法亦無。大慧！復有餘外道，見四大功德實有物，見各各有差別相實無兔角，虛妄執著妄想分別實有牛角。大慧！彼諸外道墮於二見不知唯心，妄想分別增長自心界。大慧！如身資生器世間等，惟是心分別，不得分別兔角離於有無。大慧！不得分別一切諸法離於有無。大慧！若有人離於有無，作如是言：『無有有兔角分別。』不得分別無有有兔角，彼人見相待因，不得分別無兔角。何以故？大慧！乃至觀察微細微塵不見實事，離聖人智境界，不得分別有牛角。」",
+   "T0672": "爾時大慧菩薩摩訶薩知諸菩薩心之所念，承一切佛威神之力，白佛言：「唯願為說百八句差別所依聖智事自性法門，一切如來、應、正等覺，為諸菩薩摩訶薩墮自共相者，說此妄計性差別義門；知此義已，則能淨治二無我觀境照明諸地，超越一切二乘外道三昧之樂，見諸如來不可思議所行境界，畢竟捨離五法自性，以一切佛法身智慧而自莊嚴，入如幻境住一切剎，兜率陀宮色究竟天，成如來身。」佛言：「大慧！有一類外道，見一切法隨因而盡，生分別解，想兔無角起於無見，如兔角無，一切諸法悉亦如是。復有外道，見大種、求那、塵等諸物形量分位各差別已，執兔無角，於此而生牛有角想。大慧！彼墮二見不了唯心，但於自心增長分別。大慧！身及資生器世間等，一切皆唯分別所現。大慧！應知兔角離於有無，諸法悉然，勿生分別。云何兔角離於有無？互因待故，分析牛角乃至微塵，求其體相終不可得，聖智所行遠離彼見，是故於此不應分別。」"
+  },
+  "l2b-14": {
+   "sa": "atha khalu mahāmatirbodhisattvo mahāsattvo bhagavantametadavocat - nanu bhagavan vikalpasyāpravṛttilakṣaṇaṃ dṛṣṭvā anumimīmahe vikalpāpravṛttyapekṣaṃ tasya nāstitvam / bhagavānāha - na hi mahāmate vikalpāpravṛttyapekṣaṃ tasya nāstitvam / tatkasya hetoḥ? vikalpasya tatpravṛttihetutvāt / tadviṣāṇāśrayapravṛtto hi mahāmate vikalpaḥ / yasmādviṣāṇāśrayapravṛtto mahāmate vikalpaḥ, tasmādāśrayahetutvādanyānanyavivarjitatvānna hi tadapekṣaṃ nāstitvaṃ śaśaviṣāṇasya / yadi punarmahāmate vikalpo 'nyaḥ syācchaśaviṣāṇādaviṣāṇahetukaḥ syāt / athānanyaḥ syāt, taddhetukatvādāparamāṇupravicayānupalabdherviṣāṇādananyatvāttadabhāvaḥ syāt / tadubhayabhāvābhāvātkasya kimapekṣya nāstitvaṃ bhavati? atha na bhavati mahāmate apekṣya nāstitvaṃ śaśaviṣāṇasya astitvamapekṣya nāstitvaṃ śaśaviṣāṇaṃ na kalpayitavyaṃ viṣamahetutvānmahāmate nāstyastitvam siddhirna bhavati nāstyastitvavādinām /",
+   "T0670": "爾時，大慧菩薩摩訶薩白佛言：「世尊！得無妄想者，見不生想已，隨比思量觀察不生妄想，言無耶？」佛告大慧：「非觀察不生妄想言無。所以者何？妄想者，因彼生故，依彼角生妄想。以依角生妄想，是故言依因，故離異不異，故非觀察不生妄想言無角。大慧！若復妄想異角者，則不因角生；若不異者，則因彼故。乃至微塵分析推求，悉不可得，不異角故。彼亦非性，二俱無性者，何法何故而言無耶？大慧！若無故無角，觀有故言兔無角者，不應作想。大慧！不正因故而說有無，二俱不成。",
+   "T0671": "爾時聖者大慧菩薩摩訶薩白佛言：「世尊！世尊！愚癡凡夫不見分別相，而比智分別彼人見無。」佛告聖者大慧菩薩言：「大慧！非觀分別心彼人無相。何以故？因虛妄分別心，依角有分別心。大慧！依止虛妄角有分別心，是故依依止因離相待法，非見法彼無角。大慧！若離分別心更有分別，應離角有，非因角有。大慧！若不離彼分別心，彼法乃至觀察微塵不見有實物。大慧！不離於心彼法應無，以彼二法有無不可得。若爾，見何等法有？何等法無？大慧！若不如是見有無，不得分別有無。此義云何？見有牛角、見無兔角，不得如是分別。大慧！以因不相似故，有無義不成。以諸外道凡夫聲聞說有無義，二俱不成故。",
+   "T0672": "爾時大慧菩薩摩訶薩復白佛言：「世尊！彼豈不以妄見起相，比度觀待妄計無耶？」佛言：「不以分別起相待以言無。何以故？彼以分別為生因故，以角分別為其所依，所依為因離異不異，非由相待顯兔角無。大慧！若此分別異兔角者，則非角因；若不異者，因彼而起。大慧！分析牛角乃至極微，求不可得；異於有角言無角者，如是分別決定非理。二俱非有誰待於誰？若相待不成，待於有故言兔角無，不應分別，不正因故。有無論者執有執無，二俱不成。"
+  },
+  "l2b-15": {
+   "sa": "anye punarmahāmate tīrthakaradṛṣṭayo rūpakāraṇasaṃsthānābhiniveśābhiniviṣṭā ākāśabhāvāparicchedakuśalā rūpamākāśabhāvavigataṃ paricchedaṃ dṛṣṭvā vikalpayanti / ākāśameva ca mahāmate rūpam / rūpabhūtānupraveśānmahāmate rūpamevākāśam / ādheyādhāravyayasthānabhāvena mahāmate rūpākāśakāraṇayoḥ pravibhāgaḥ pratyetavyaḥ / bhūtāni mahāmate pravartamānāni parasparasvalakṣaṇabhedabhinnāni ākāśe cāpratiṣṭhitāni / na ca teṣvākāśaṃ nāsti / evameva śaśasya viṣāṇaṃ mahāmate goviṣāṇamapekṣya bhavati / goviṣāṇaṃ punarmahāmate aṇuśo vibhajyamānaṃ punarapyaṇavo vibhajyamānā aṇutvalakṣaṇe nāvatiṣṭhante / tasya kimapekṣya nāstitvaṃ bhavati? athānyadapekṣya vastu, tadapyevaṃdharmi //",
+   "T0670": "大慧！復有餘外道見，計著色空事形處橫法，不能善知虛空分齊，言色離虛空，起分齊見妄想。大慧！虛空是色，隨入色種。大慧！色是虛空持所持處所建立，性色空事，分別當知。大慧！四大種生時，自相各別，亦不住虛空，非彼無虛空。如是，大慧！觀牛有角，故兔無角。大慧！又牛角者，析為微塵，又分別微塵，剎那不住，彼何所觀故而言無耶？若言觀餘物者，彼法亦然。」",
+   "T0671": "「大慧！復有餘外道，見色有因妄想執著形相長短，見虛空無形相分齊，見諸色相異於虛空有其分齊。大慧！虛空即是色，以色大入虛空故。大慧！色即是虛空，依此法有彼法、依彼法有此法故；以依色分別虛空，依虛空分別色故。大慧！四大種生自相各別不住虛空，而四大中非無虛空。大慧！兔角亦如是，因牛角有言兔角無。大慧！又彼牛角析為微塵，分別微塵相不可得見，彼何等何等法有？何等何等法無？而言有耶無耶？若如是觀餘法亦然。」",
+   "T0672": "「大慧！復有外道，見色形狀虛空分齊而生執著，言色異虛空起於分別。大慧！虛空是色隨入色種。大慧！色是虛空，能持所持建立性故，色空分齊應如是知。大慧！大種生時自相各別，不住虛空中，非彼無虛空。大慧！兔角亦爾，觀待牛角言彼角無。大慧！分析牛角乃至微塵，又析彼塵其相不現。彼何所待而言無耶？若待餘物彼亦如是。"
+  },
+  "l2b-16": {
+   "sa": "atha khalu bhagavān punarapi mahāmatiṃ bodhisattvaṃ mahāsattvametadavocat - śaśagośṛṅgākāśarūpapadṛṣṭivikalpavigatena mahāmate bhavitavyam, tadanyaiśca bodhisattvaiḥ / svacittadṛśyavikalpānugamamanasā ca mahāmate bhavitavyam / sarvajinasutakṣetramaṇḍale ca tvayā svacittadṛśyayogopadeśaḥ karaṇīyaḥ //",
+   "T0670": "爾時世尊告大慧菩薩摩訶薩言：「當離兔角牛角，虛空形色，異見妄想。汝等諸菩薩摩訶薩，當思惟自心現妄想，隨入為一切剎土最勝子，以自心現方便而教授之。」",
+   "T0671": "爾時佛告聖者大慧菩薩言：「大慧！汝當應離兔角牛角、虛空色異妄想見等。大慧！汝亦應為諸菩薩說離兔角等相。大慧！汝應當知自心所見虛妄分別之相。大慧！汝當於諸佛國土中為諸佛子，說汝自心現見一切虛妄境界。」",
+   "T0672": "大慧！汝應遠離兔角、牛角、虛空及色所有分別，汝及諸菩薩摩訶薩，應常觀察自心所見分別之相，於一切國土為諸佛子說觀察自心修行之法。」"
+  },
+  "l2b-17": {
+   "sa": "atha khalu bhagavāṃstasyāṃ velāyāmimā gāthā abhāṣata - dṛśyaṃ na vidyate cittaṃ cittaṃ dṛśyātpravartate / devabhogapratiṣṭhānamālayaṃ khyāyate nṛṇām // Lank_2.123 // cittaṃ manaśca vijñānaṃ svabhāvaṃ dharmapañcakam / nairātmyaṃ dvitayaṃ śuddhaṃ prabhāṣante vināyakāḥ // Lank_2.124 // dīrghahrasvādisaṃbandhamanyonyataḥ pravartate / astitvasādhakaṃ nāsti asti nāstitvasādhakam // Lank_2.125 // aṇuśo bhajyamānaṃ hi naiva rūpaṃ vikalpayet / cittamātraṃ vyavasthānaṃ kudṛṣṭyā na prasīdati // Lank_2.126 // tārkikāṇāmaviṣayaḥ śrāvakāṇāṃ na caiva hi / yaṃ deśayanti vai nāthāḥ pratyātmagatigocaram // Lank_2.127 //",
+   "T0670": "爾時世尊欲重宣此義，而說偈言：「色等及心無，色等長養心， 身受用安立，識藏現眾生。 心意及與識，自性法有五， 無我二種淨，廣說者所說。 長短有無等，展轉互相生， 以無故成有，以有故成無。 微塵分別事，不起色妄想， 心量安立處，惡見所不樂。 覺想非境界，聲聞亦復然， 救世之所說，自覺之境界。」",
+   "T0671": "爾時世尊重說偈言：「色於心中無，心依境見有； 內識眾生見，身資生住處。 心意與意識，自性及五法； 二種無我淨，如來如是說。 長短有無等，展轉互相生； 以無故成有，以有故成無。 分別微塵體，不起色妄想； 但心安住處，惡見不能淨。 非妄智境界，聲聞亦不知； 如來之所說，自覺之境界。」",
+   "T0672": "爾時世尊即說頌言：「心所見無有，唯依心故起； 身資所住影，眾生藏識現。 心意及與識，自性五種法， 二無我清淨，諸導師演說。 長短共觀待，展轉互相生； 因有故成無，因無故成有。 微塵分析事，不起色分別； 唯心所安立，惡見者不信。 外道非行處，聲聞亦復然； 救世之所說，自證之境界。」"
+  }
+ }
+}
