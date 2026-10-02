@@ -1,0 +1,141 @@
+{
+ "slug": "lankavatara-c10-8",
+ "title": "楞伽經・偈頌品（八）10.784–884",
+ "family": "sa",
+ "intro": "梵本 10.784–884：佛滅後毘耶娑等仙人與諸王朝、壞色衣與乞食、佛自述家世（迦旃延種、瞻婆國）、付法大慧、袈裟補納、未來論師、不生論與數論、中有、心生如河燈、火喻、賴耶生諸識、轉依與教理；末為梵本經尾題與菩提流支流通文。實叉難陀本以偈作結，無流通文。",
+ "units": [
+  {
+   "id": "g08-01",
+   "label": "10.784–789 未來諸仙論師・王朝・劫轉世間"
+  },
+  {
+   "id": "g08-02",
+   "label": "10.790–800 壞色衣・乞食・天王・四時・釋迦出惡世・佛之家世"
+  },
+  {
+   "id": "g08-03",
+   "label": "10.801–804 付法・過去佛・未來佛名慧"
+  },
+  {
+   "id": "g08-04",
+   "label": "10.805–812 衣割截補納・三衣・一不生多"
+  },
+  {
+   "id": "g08-05",
+   "label": "10.813–821 未來論師・梵王帝釋施衣鉢"
+  },
+  {
+   "id": "g08-06",
+   "label": "10.822–833 不生論・剎那・數論・藏識如水銀"
+  },
+  {
+   "id": "g08-07",
+   "label": "10.834–850 一異・中有・天眼見眾生"
+  },
+  {
+   "id": "g08-08",
+   "label": "10.851–866 心生如河燈・緣起・火喻・乞食"
+  },
+  {
+   "id": "g08-09",
+   "label": "10.867–884 此法門・賴耶生諸識・轉依・教理"
+  },
+  {
+   "id": "g08-10",
+   "label": "經尾"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sa",
+   "lang": "sa",
+   "label": "梵本",
+   "who": "Vaidya 校訂本（1963）・GRETIL"
+  },
+  {
+   "id": "T0672",
+   "lang": "lzh",
+   "label": "七卷本",
+   "who": "實叉難陀譯《大乘入楞伽經》・700–704 年",
+   "work": "T0672"
+  },
+  {
+   "id": "T0671",
+   "lang": "lzh",
+   "label": "十卷本",
+   "who": "菩提流支譯《入楞伽經》・513 年",
+   "work": "T0671"
+  }
+ ],
+ "works": [
+  "T0671",
+  "T0672"
+ ],
+ "anchors": [
+  {
+   "work": "T0672",
+   "range": [
+    "T16n0672_p0631a08",
+    "T16n0672_p0631a08"
+   ]
+  },
+  {
+   "work": "T0671",
+   "range": [
+    "T16n0671_p0576a20",
+    "T16n0671_p0576a20"
+   ]
+  }
+ ],
+ "cells": {
+  "g08-01": {
+   "sa": "vyāsaḥ kaṇādaḥ ṛṣabhaḥ kapilaḥ śākyanāyakaḥ / nirvṛte mama paścāttu bhaviṣyantyevamādayaḥ // Lank_10.784 // mayi nirvṛte varṣaśate vyāso vai bhāratastathā / pāṇḍavāḥ kauravā rāmaḥ paścānmaurī bhaviṣyati // Lank_10.785 // mauryā nandāśca guptāśca tato mlecchā nṛpādhamāḥ / mlecchānte śastrasaṃkṣobhaḥ śastrānte ca kaliryugaḥ / kaliyugānte lokaiśca saddharmo hi na bhāvitaḥ // Lank_10.786 // evamādyānyatītāni cakravadbhramate jagat / vahnyādityasamāyogātkāmadhāturvidīryate // Lank_10.787 // punaḥ saṃsthāsyate divyaṃ tasmiṃllokaḥ pravartsyate / cātuṃ rvarṇā nṛpendrāśca ṛṣayo dharmameva ca // Lank_10.788 // vedāśca yajñaṃ dānaṃ ca dharmasthā vartsyate punaḥ / ākhyāyiketihāsādyairgadyacūrṇikavārtikaiḥ / evaṃ mayā śrutādibhyo loko vai vibhramiṣyati // Lank_10.789 //",
+   "T0672": "我釋迦滅後，當有毘耶娑； 迦那梨沙婆，劫比羅等出。 我滅百年後，毘耶娑所說； 婆羅多等論，次有半擇娑。 憍拉婆囉摩，次有冐狸王； 難陀及毱多，次篾利車王。 於後刀兵起，次有極惡時； 彼時諸世間，不修行正法。 如是等過後，世間如輪轉； 日火共和合，焚燒於欲界。 復立於諸天，世間還成就； 諸王及四姓，諸仙垂法化。 韋陀祠施等，當有此法興； 談論戲笑法，長行與解釋。 我聞如是等，迷惑於世間；",
+   "T0671": "毘耶娑迦那，及於梨沙婆， 迦毘羅釋迦，我入涅槃後； 未來世當有，如是等出世。 我滅後百年，毘耶娑圍陀； 及於般荼婆，鳩羅婆失羅。 然後復更有，及於毛釐等； 次毛釐掘多，次有無道王。 次有刀劍亂，次刀劍末世； 次於末世世，無法無修行。 如是等過未，如輪轉世間； 日火共和合，焚燒於欲界。 復成妙世界，彼器世間生； 四姓及國王，諸仙人及法。 供養大會施，時法還如本； 話笑本如是，長行及子註。 子註復重作，種種說無量； 如是我聞等，迷沒諸世間。 不知真實法，何者為是非？"
+  },
+  "g08-02": {
+   "sa": "suraktākoṭitaṃ kṛtvā upariṣṭādvivarṇayet / nīlakardamagomayaiḥ paṭaṃ vai saṃpracitrayet / sarvavāsairvicitrāṅgastīrthyaliṅgavivarjitaḥ // Lank_10.790 // śāsanaṃ deśayedyogī buddhānāmeṣa vai dhvajaḥ / vastrapūtaṃ jalaṃ peyaṃ kaṭisūtraṃ ca dhārayet / upapadyamānaṃ kālena bhaikṣyaṃ vā nīcavarjitam // Lank_10.791 // divyaṃ saṃjāyate svargāddvau cānyau mānuṣodbhavau / ratnalakṣaṇasaṃpanno devajanmajageśvaraḥ // Lank_10.792 // svargaṃ prabhuñjate dvīpāṃścaturo dharmaśāsanaḥ / bhuktvā tu suciraṃ dvīpāṃstṛṣṇayā vipraṇaśyati // Lank_10.793 // kṛtayugaśca tretā ca dvāparaṃ kalinastathā / ahaṃ cānye kṛtayuge śākyasiṃhaḥ kalau yuge // Lank_10.794 // siddhārthaḥ śākyatanayo viṣṇurvyāso maheśvaraḥ / evamādyāni tīrthyāni nirvṛte me bhaviṣyati // Lank_10.795 // evaṃ mayā śrutādibhyaḥ śākyasiṃhasya deśanā / itihāsaṃ purāvṛttaṃ vyāsasyaitadbhaviṣyati // Lank_10.796 // viṣṇurmaheśvaraścāpi sṛṣṭitvaṃ deśayiṣyati / evaṃ me nirvṛte paścādevamādyaṃ bhaviṣyati // Lank_10.797 // mātā ca me vasumatiḥ pitā vipraḥ prajāpatiḥ / kātyāyanasagotro 'haṃ nāmnā vai virajo jinaḥ // Lank_10.798 // campāyāṃ haṃ samutpannaḥ pitāpi ca pitāmahaḥ / somagupteti nāmnāsau somavaṃśasamudbhavaḥ // Lank_10.799 // cīrṇavrataḥ pravrajitaḥ sahasraṃ deśitaṃ nayam / vyākṛtya parinirvāsye abhiṣicya mahāmatim // Lank_10.800 //",
+   "T0672": "所受種種衣，若有正色者。 青泥牛糞等，染之令壞色； 所服一切衣，令離外道相。 現於修行者，諸佛之憧相； 亦繫於腰絛，漉水而飲用。 次第而乞食，不至於非處； 生於勝妙天，及生於人中。 寶相具足者，生天及人王； 王有四天下，法教久臨御。 上昇於天宮，由貪皆退失； 純善及三時，二時并極惡。 餘佛出善時，釋迦出惡世； 於我涅槃後，釋種悉達多。 毘紐大自在，外道等俱出； 如是我聞等，釋師子所說。 談古及笑語，毘夜娑仙說； 於我涅槃後，毘紐大自在， 彼說如是言：『我能作世間； 我名離塵佛，姓迦多衍那。 父名世間主，母號為具財； 我生瞻婆國，我之先祖父。 從於月種生，故號為月藏； 出家修苦行，演說千法門， 與大慧授記，然後當滅度。』",
+   "T0671": "衣裳如法染，擣治令潔淨。 清泥牛糞等，壞色而受用； 諸香塗身衣，離於外道相。 流通我法輪，是諸如來相； 不漉水不飲，腰繩及內衣。 依時行乞食，離於下賤家； 生於妙天境，及人中勝處。 諸寶相成就，天人中自在； 依法修行者，生天四天下。 多時而受用，依多貪還滅； 正時及三災，及於二惡世。 我及餘正時，釋迦末世時； 釋種悉達他，八臂及自在。 如是等外道，我滅出於世； 如是我聞等，釋迦師子說。 曾有如是事，毘耶娑說是； 八臂那羅延，及摩醯首羅。 說如是等言，我化作世間； 我母名善才，父名梵天王。 我姓迦旃延，離於諸煩惱； 生於瞻波城，我父及祖父。 父名為月護，從於月種生， 出家修實行，說於千種句。 授記入涅槃，"
+  },
+  "g08-03": {
+   "sa": "matirdāsyati dharmāya dharmo dāsyati mekhale / mekhalaḥ śiṣyo daurbalyātkalpānte nāśayiṣyati // Lank_10.801 // kāśyapaḥ krakucchandaśca kanakaśca vināyakaḥ / ahaṃ ca virajo 'nye vai sarve te kṛtino jināḥ // Lank_10.802 // kṛte yuge tataḥ paścānmatirnāmena nāyakaḥ / bhaviṣyati mahāvīraḥ pañcajñeyāvabodhakaḥ // Lank_10.803 // na dvāpare na tretāyāṃ na paścācca kalau yuge / saṃbhavo lokanāthānāṃ saṃbudhyante kṛte yuge // Lank_10.804 //",
+   "T0672": "大慧付達摩，次付彌佉梨， 彌佉梨惡時，劫盡法當滅。 迦葉拘留孫，拘那含牟尼， 及我離塵垢，皆出純善時。 純善漸減時，有導師名慧， 成就大勇猛，覺悟於五法； 非二時三時，亦非極惡時， 於彼純善時，現成等正覺。",
+   "T0671": "付慧轉法輪； 大慧與法勝，勝與彌佉梨； 彌佉無弟子，於後時法滅。 迦葉拘留孫，拘那含及我； 離於諸煩惱，一切名正時。 過彼正法後，有佛名如意； 於彼成正覺，為人說五法。 無二三災中，過未世亦爾； 諸佛不出世，正時出於世。"
+  },
+  "g08-04": {
+   "sa": "ahāryā lakṣaṇāyāśca acchinnadaśakaiḥ saha / moracandrasamaiścandrairuttarīyaṃ vicitrayet // Lank_10.805 // dvayaṅgulaṃ tryaṅgulaṃ vāpi candraṃ candrāntaraṃ bhavet / anyathā citryamānaṃ hi lobhanīyaṃ hi bāliśān // Lank_10.806 // rāgāgniṃ śamayennityaṃ snāyādvai jñānavāriṇā / triśaraṇaṃ trisaṃdhyāsu yogī kuryātprayatnataḥ // Lank_10.807 // iṣuprastarakāṣṭhādyā utkṣepādyaiḥ samīritāḥ / ekaḥ kṣiptaḥ patatyekaḥ kuśalākuśalastathā // Lank_10.808 // ekaṃ ca bahudhā nāsti vailakṣaṇyānna kutracit / vāyubhā grāhakāḥ sarve kṣetravaddāyakā bhavet // Lank_10.809 // yadyekaṃ bahudhā vai syātsarve hyakṛtakā bhavet / kṛtakasya vināśaḥ syāttārkikāṇāmayaṃ nayaḥ // Lank_10.810 // dīpabījavadetatsyātsādṛśyādbahudhā kutaḥ / ekaṃ hi bahudhā bhavati tārkikāṇāmayaṃ nayaḥ // Lank_10.811 // na tilājjāyate mudgo na vrīhiryavahetukaḥ / godhūmadhānyajātāni ekaṃ hi bahudhā katham // Lank_10.812 //",
+   "T0672": "衣雖不割縷，雜碎而補成， 如孔雀尾目，無有人侵奪； 或二指三指，間錯而補成， 異此之所作，愚夫生貪著。 惟畜於三衣，恒滅貪欲火， 沐以智慧水，日夜三時修； 如放箭勢極，一墜還放一， 亦如抨酪木，善不善亦然。 若一能生多，則有別異相， 施者應如田，受者應如風； 若一能生多，一切無因有， 所作因滅壞，是妄計所立。 若妄計所立，如燈及種子， 一能生多者，但相似非多； 胡麻不生豆，稻非穬麥因， 小豆非穀種，云何一生多？",
+   "T0671": "無人奪有相，衣裳不割裁； 納衣碎破雜，如孔雀畫色。 二寸或三寸，間錯而補納； 若不如是者，愚人所貪奪。 常滅貪欲火，智水常洗浴； 日夜六時中，如實修行法。 如放箭石木，勢極則還下； 放一還下一，善不善亦爾。 一中無多種，以相無如是； 如風取一切，如田地被燒。 若一能作多，一切無作有； 不爾一切失，是妄覺者法。 如燈及種子，云何多相似？ 一能生於多，是妄覺者法。 如麻不生豆，稻不生[麩-夫+黃]麥； 小麥等種子，云何一生多？"
+  },
+  "g08-05": {
+   "sa": "pāṇiniṃ śabdanetāramakṣapādo bṛhaspatiḥ / lokāyatapraṇetāro brahmā garbho bhaviṣyati // Lank_10.813 // kātyāyanaḥ sūtrakartā yajñavalkastathaiva ca / bhuḍhukajyotiṣādyāni bhaviṣyanti kalau yuge // Lank_10.814 // balī puṇyakṛtāllokātprajābhāgyādbhaviṣyati / rakṣakaḥ sarvadharmāṇāṃ rājā balī mahīpatiḥ // Lank_10.815 // vālmīko masurākṣaśca kauṭilya āśvalāyanaḥ / ṛṣayaśca mahābhāgā bhaviṣyanti anāgate // Lank_10.816 // siddhārthaḥ śākyatanayo bhūtāntaḥ pañcacūḍakaḥ / vāgbaliratha medhāvī paścātkāle bhaviṣyati // Lank_10.817 // ajinaṃ daṇḍakāṣṭhaṃ ca mekhalācakramaṇḍalam / dadāti brahmā maheśvaro vanabhūmau vyavasthite // Lank_10.818 // bhaviṣyati mahāyogī nāmnā vai virajo muniḥ / mokṣasya deśakaḥ śāstā munīnāmeṣa vai dhvajaḥ // Lank_10.819 // brahmā brahmaśataiḥ sārdhaṃ devaiśca bahubhirmama / ajinaṃ prapātya gaganāttatraivāntarhito vaśī // Lank_10.820 // sarvacitrāṇi vāsāṃsi bhaikṣyapātraṃ suraiḥ saha / indro virūḍhakādyāśca vanabhūmau dadanti me // Lank_10.821 //",
+   "T0672": "名手作聲論，廣主造王論， 順世論妄說，當生梵藏中； 迦多延造經，樹皮仙說祀， 鵂鶹出天文，惡世時當有。 世間諸眾生，福力感於王， 如法御一切，守護於國土； 青蟻及赤豆，側僻與馬行， 此等大福仙，未來世當出。 釋子悉達多，步多五髻者， 口力及聰慧，亦於未來出。 我在於林野，梵王來惠我， 鹿皮三岐杖，膊絛及軍持； 此大修行者，當成離垢尊， 說於真解脫，牟尼之幢相。 梵王與梵眾，諸天及天眾， 施我鹿皮衣，還歸自在宮。 我在林樹間，帝釋四天王， 施我妙衣服，及以乞食鉢。",
+   "T0671": "波尼出聲論，阿叉波太白； 末世有梵藏，說於世俗論。 迦旃延作經，夜婆伽亦爾； 浮稠迦天文，是後末世論。 婆梨說世福，世人依福德； 能護於諸法，王婆離施地。 彌迦摩修羅，阿舒羅等說； 迷惑及王論，末世諸仙現。 悉達他釋種，浮單陀五角； 口力及黠慧，我滅後出世。 阿示那三掘，彌佉羅澡罐； 我住阿蘭若，梵天施與我。 汝當未來世，名大離塵垢； 能說真解脫，是諸牟尼尊。 梵天共梵眾，及餘諸天眾； 鹿皮等施我，還沒自在天。 諸雜間錯衣，及為乞食鉢； 帝釋四天王，閑處施與我。"
+  },
+  "g08-06": {
+   "sa": "anutpādavādahetviṣṭo 'jāto jāyeta vā punaḥ / sādhayiṣyatyanutpādaṃ vāṅbhātraṃ kīrtyate tu vai // Lank_10.822 // tasyāvidyā kāraṇaṃ teṣāṃ cittānāṃ saṃpravartitā / antarā kimavasthāsau yāvadrūpaṃ na jānati // Lank_10.823 // samanantarapradhvastaṃ cittamanyatpravartate / rūpaṃ na tiṣṭhate kiṃcitkimālambya pravartsyate // Lank_10.824 // yasmādyatra pravarteta cittaṃ vitathahetukam / na prasiddhaṃ kathaṃ tasya kṣaṇabhaṅgo 'vadhāryate // Lank_10.825 // yogināṃ hi samāpattiḥ suvarṇajinadhātavaḥ / ābhāsvaravimānāni abhedyā lokakāraṇāt // Lank_10.826 // sthitayaḥ prāptidharmāśca buddhānāṃ jñānasaṃpadaḥ / bhikṣutvaṃ samayaprāptirdṛṣṭā vai kṣaṇikā katham // Lank_10.827 // gandharvapuramāyādyā rūpā vai kṣaṇikā katham / abhūtikā ca bhūtāni bhūtāḥ kiṃcitkva cāgatau // Lank_10.828 // avidyāhetukaṃ cittamanādimatisaṃcitam / utpādabhaṅgasaṃbaddhaṃ tārkikaiḥ saṃprakalpyate // Lank_10.829 // dvividhaḥ sāṃkhyavādaśca pradhānātpariṇāmikam / pradhāne vidyate kāryaṃ kāryaṃ svātmaprasādhitam // Lank_10.830 // pradhānaṃ saha bhāvena guṇabhedaḥ prakīrtitaḥ / kāryakāraṇavaicitryaṃ pariṇāme na vidyate // Lank_10.831 // yathā hi pāradaḥ śuddha upakleśairna lipyate / ālayaṃ hi tathā śuddhamāśrayaḥ sarvadehinām // Lank_10.832 // hiṅgugandhaḥ palāṇḍuśca garbhiṇyā garbhadarśanam / lavaṇādibhiśca lāvaṇyaṃ bījavatkiṃ na vartate // Lank_10.833 //",
+   "T0672": "若立不生論，是因生復生， 如是立無生，惟是虛言說。 無始所積集，無明為心因； 生滅而相續，妄計所分別。 僧佉論有二，勝性及變異。 勝中有所作，所作應自成； 勝性與物俱，求那說差別。 作所作種種，變異不可得； 如水銀清淨，塵垢不能染。 藏識淨亦然，眾生所依止； 如興渠葱氣，鹽味及胎藏。 種子亦如是，云何而不生？",
+   "T0671": "說無生及因，生及與不生； 欲成於不生，是但說言語。 若無明等因，能生於諸心； 未生於色時，中間云何住？ 即時滅於心，而更生餘心； 色不一念住，觀何法能生。 依於何因緣？心是顛倒因； 彼不能成法，云何知生滅？ 修行者合定，金安闍那性， 光音天宮殿，世間法不壞。 住於所證法，是諸一切佛； 如來等智慧，比丘證於法， 及餘所證法，彼法常不壞。 云何虛妄見？諸法念不住。 乾闥婆幻色，何故念不住？ 諸色無四大，諸大何所為？ 因無明有心，無始世界習； 依生滅和合，妄覺者分別。 僧佉有二種，從勝及轉變； 勝中有於果，果復成就果。 勝是大體相，說功德差別； 因果二種法，於轉變中無。 如水鏡清淨，諸塵土不染； 真如如是淨，依止於眾生。 如興求及葱，女人懷胎藏； 鹽及鹽中味，種子云何有？"
+  },
+  "g08-07": {
+   "sa": "anyatve ca tadanyatve ubhayaṃ nobhaye tathā / astitvaṃ nirupādānaṃ na ca nāsti na saṃskṛtam // Lank_10.834 // aśvavadvidyate hyātmā skandhairgobhāvavarjitam / saṃskṛtāsaṃskṛtaṃ vācyamavaktavyaṃ svabhāvakam // Lank_10.835 // yuktyāgamābhyāṃ durdṛṣṭyā tarkadṛṣṭyā malīkṛtam / anirdhāryaṃ vadantyātmā nopādāne na cānyataḥ // Lank_10.836 // doṣanirdhāraṇā hyeṣāṃ skandhenātmā vibhāvyate / ekatvena tadanyatvena na ca budhyanti tārkikāḥ // Lank_10.837 // darpaṇe udake netre yatha bimbaṃ pradṛśyate / ekatvānyatvarahitastathā skandheṣu pudgalaḥ // Lank_10.838 // bhāvyaṃ vibhāvanādhyātā mārgaḥ satyā ca darśanam / etatrayaṃ vibhāvento mucyante hi kudarśanaiḥ // Lank_10.839 // dṛṣṭaṃ naṣṭaṃ yathā vidyuccakraṃ chidragṛhe yathā / pariṇāmaḥ sarvadharmāṇāṃ bālairiva na kalpayet // Lank_10.840 // bhāvābhāvena nirvāṇaṃ bālānāṃ cittamohanam / āryadarśanasadbhāvādyathāvasthānadarśanāt // Lank_10.841 // utpādabhaṅgarahitaṃ bhāvābhāvavivarjitam / lakṣyalakṣaṇanirmuktaṃ pariṇāmaṃ vibhāvayet // Lank_10.842 // tīrthyavādavinirmuktaṃ nāmasaṃsthānavarjitam / adhyātmadṛṣṭinilayaṃ pariṇāmaṃ vibhāvayet // Lank_10.843 // saṃsparśapīḍanābhyāṃ vai devānāṃ nārakāṇi ca / antarābhavikā nāsti vijñānena pravartitā // Lank_10.844 // jarajāṇḍajasaṃsvedādyā antarābhavasaṃbhavāḥ / sattvakāyā yathā citrā gatyāgatyāṃ vibhāvayet // Lank_10.845 // yuktyāgamavyapetāni niḥkleśapakṣakṣayāvahā / tīrthyadṛṣṭipralāpāni matimānna samācaret // Lank_10.846 // ādau nirdhāryate ātmā upādānādviśeṣayet / anirdhārya viśeṣanti vandhyāputraṃ viśiṣyate // Lank_10.847 // paśyāmi sattvān divyena prajñāmāṃsavivarjitam / saṃsāraskandhanirmuktaṃ mūrtimān sarvadehinām // Lank_10.848 // durvarṇasuvarṇagataṃ muktāmuktaviśeṣaṇam / divyaṃ saṃskāravigataṃ saṃskārasthaṃ prapaśyate // Lank_10.849 // mūrtimān gatisaṃdhau vai tārkikāṇāmagocaram / atikrāntamānuṣyagatimahaṃ nānye kutārkikāḥ // Lank_10.850 //",
+   "T0672": "一性及異性，俱不俱亦然。 非所取之有，非無非有為； 馬中牛性離，蘊中我亦然。 所說為無為，悉皆無自性； 理教等求我，是妄垢惡見。 不了故說有，惟妄取無餘； 諸蘊中之我，一異皆不成。 彼過失顯然，妄計者不覺； 如水鏡及眼，現於種種影。 遠離一異性，蘊中我亦然； 行者修於定，見諦及以道。 勤修此三種，解脫諸惡見； 猶如孔隙中，見電光速滅。 法遷變亦然，不應起分別； 愚夫心迷惑，取涅槃有無。 若得聖見者，如實而能了； 應知變異法，遠離於生滅。 亦離於有無，及以能所相； 應知變異法，遠離外道論。 亦離於名相，內我見亦滅； 諸天樂觸身，地獄苦逼體。 若無彼中有，諸識不得生； 應知諸趣中，眾生種種身。 胎卵濕生等，皆隨中有生； 離聖教正理，欲滅惑反增。 是外道狂言，智者不應說； 先應決了我，及分別諸取， 以如石女兒，無決了分別。 我離於肉眼，以天眼慧眼， 見諸眾生身，離諸行諸蘊； 觀見諸行中，有好色惡色， 解脫非解脫，有住天中者； 諸趣所受身，惟我能了達。 超過世所知，非計度境界；",
+   "T0671": "異體不異體，二體離二法； 有法無因緣，非無於有為； 如馬中無牛，陰中我亦爾。 說有為無為，是法無可說； 惡見量阿含，依邪覺垢染。 不覺說有我，非因不離因； 五陰中無我，取我是過失。 一中及異中，妄覺者不覺； 水鏡及眼中，如見鏡中像。 遠離於一異，陰中我亦爾； 可觀及能觀，禪道見眾生。 觀察是三法，離於邪見法： 即滅於知見，如孔中見空。 諸法轉變相，愚人妄分別； 涅槃離有無，住如實見處。 遠離生滅法，亦離有無體； 離能見可見，觀察轉變法。 離諸外道說，離名相形體； 依內身邪見，觀察轉變法。 諸天及地獄，觸及於逼惱； 無有中陰法，云何依識生？ 胎卵濕化等，生於中陰中； 眾生身種種，應觀於去來。 離量及阿含，能生煩惱種； 諸外道浪言，智慧者莫取。 先觀察於我，後觀於因緣； 不知有說有，故石女兒勝。 般若離肉眼，妙眼見眾生； 離於有為陰，妙身體眾生。 住好惡色中，出離縛解脫； 妙體住有為，能見妙法身。 在於六趣中，妄覺非境界； 我過於人道，非餘妄覺者。"
+  },
+  "g08-08": {
+   "sa": "nāstyātmā jāyate cittaṃ kasmādetatpravartate / nadīdīpabījavattasya nirgamaḥ kiṃ na kathyate // Lank_10.851 // anutpanne ca vijñāne ajñānādi na vidyate / tadabhāve na vijñānaṃ saṃtatyā jāyate katham // Lank_10.852 // adhvatrayamanadhvaśca avaktavyaśca pañcamaḥ / jñeyametaddhi buddhānāṃ tārkikaiḥ saṃprakīrtyate // Lank_10.853 // avaktavyaśca saṃskārairjñānaṃ saṃskārahetukam / gṛhṇāti saṃskāragataṃ jñānaṃ saṃskāraśabditam // Lank_10.854 // asmin satīdaṃ bhavati pratyayāścāpyahetukāḥ / vyañjakenopadiśyante tadabhāvānna kārakam // Lank_10.855 // pavanaṃ hi vahnerdahanaṃ preraṇe na tu saṃbhave / prerya nirvāyate tena kathaṃ sattvaprasādhakāḥ // Lank_10.856 // saṃskṛtāsaṃskṛtaṃ vācyamupādānavivarjitam / kathaṃ hi sādhakastasya vahnirbālairvikalpyate // Lank_10.857 // anyonyasya balādhānādvahnirvai jāyate nṛṇām / sattvaḥ pravartitaḥ kena vahnivatkalpyate yataḥ // Lank_10.858 // skandhāyatanakadambasya manādyākāraṇo nu vai / nairātmā sārthavannityaṃ cittena saha vartate // Lank_10.859 // dvāvetau bhāsvarau nityaṃ kāryakāraṇavarjitau / agnirhyasādhakasteṣāṃ na ca budhyanti tārkikāḥ // Lank_10.860 // cittaṃ sattvāśca nirvāṇaṃ prakṛtyā bhāsurā nu vai / doṣairanādikaiḥ kliṣṭā abhinnā gaganopamāḥ // Lank_10.861 // hastiśayyādivacchāyā(?) stīrthyadṛṣṭyā malīkṛtāḥ / manovijñānasaṃchannā agnirādyairviśodhitāḥ // Lank_10.862 // dṛṣṭāśca te yathābhūtaṃ dṛṣṭvā kleśā vidāritāḥ / dṛṣṭāntagahanaṃ hitvā gatāste āryagocaram // Lank_10.863 // jñānajñeyavibhāgena anyatvaṃ kalpyate yataḥ / na ca budhyanti durmedhā avaktavyaśca kathyate // Lank_10.864 // bherī yathā candanajā bālaiḥ kurvanti nānyathā / candanāgarusaṃkāśaṃ tathā jñānaṃ kutārkikaiḥ // Lank_10.865 // utthitaḥ khalubhaktaśca pātrasaṃśritamātrakam / doṣairmukhavikārādyaiḥ śuddhaṃ bhaktaṃ samācaret // Lank_10.866 //",
+   "T0672": "無我而生心，此心云何生？ 豈不說心生，如河燈種子； 若無無明等，心識則不生。 離無明無識，云何生相續？ 妄計者所說，三世及非世， 第五不可說，諸佛之所知。 諸行取所住，彼亦為智因， 不應說智慧，而名為諸行。 有此因緣故，則有此法生， 無別有作者，是我之所說。 風不能生火，而令火熾然， 亦由風故滅，云何喻於我？ 所說為無為，皆離於諸取。 云何愚分別，以火成立我？ 諸緣展轉力，是故能生火。 若分別如火，是我從誰生？ 意等為因故，諸蘊處積集。 無我之商主，常與心俱起； 此二常如日，遠離能所作。 非火能成立，妄計者不知； 眾生心涅槃，本性常清淨。 無始過習染，無異如虛空； 象臥等外道，諸見所雜染。 意識之所覆，計火等為淨； 若得如實見，便能斷煩惱。 捨邪喻稠林，到聖所行處； 智所知差別，各異而分別。 無智者不知，說所不應說， 如愚執異材，作栴檀沈水， 妄計與真智，當知亦復然。 食訖持鉢歸，洗濯令清淨， 澡漱口餘味，應當如是修。",
+   "T0671": "『而無生我心，何因如是生？ 如河燈種子，何不如是說？ 而識未生時，未有無明等。 離於闇無識，云何相續生？』 三世及無世，第五不可說； 是諸佛境界，妄覺者觀行。 行中不可說，以離智行中； 取於諸行中，智離於行法。 依此法生此，現見是無因； 諸緣不可見，離於無作者。 依風火能燒，因風動能生； 風能吹動火，風還能滅火。 愚者不分別，云何生眾生？ 說有為無為，離於依所依。 云何成彼法？風火愚分別。 彼此增長力，彼此法不及。 云何而生火？惟言語無義。 眾生是誰作？而分別如火； 能作陰入軀，意等因能生。 如常無我義，共心常轉生； 二法常清淨，離於諸因果。 火不能成彼，妄覺者不知； 心眾生涅槃，自性體清淨。 無始等過染，如虛空無差； 外道邪見垢，如白象床城。 依意意識覆，大等能清淨； 彼人見如實，見已破煩惱。 捨譬喻稠林，彼人取聖境； 知能知差別，彼分別異體。 矇鈍人不覺，復言不可說； 譬如栴檀鼓，愚人作異說。 如栴檀沈水，諸佛智亦爾； 愚人不覺知，以依虛妄見。 中後不受食，以鉢依量取； 離口等諸過，噉於清淨食。"
+  },
+  "g08-09": {
+   "sa": "imaṃ nayaṃ yo 'numinoti yuktitaḥ prasādavān yogaparo hyakalpanaḥ / anāśrito hyarthaparo bhavedasau hiraṇmayīṃ dharmagatiṃ pradīpayet // Lank_10.867 // bhāvābhāvapratyayamohakalpanā kudṛṣṭijālaṃ samalaṃ hi tasya tu / sarāgadoṣapratighaṃ nivartate nirañjano buddhakaraiśca sicyate // Lank_10.868 // tīrthyā kāraṇadigmūḍhā anye pratyayavihvalāḥ / anye ahetusadbhāvāducchedaṃ āryamāsthitāḥ // Lank_10.869 // vipākapariṇāmaśca vijñānasya manasya ca / mano hyālayasaṃbhūtaṃ vijñānaṃ ca manobhavam // Lank_10.870 // ālayātsarvacittāni pravartanti taraṃgavat / vāsanāhetukāḥ sarve yathāpratyayasaṃbhavāḥ // Lank_10.871 // kṣaṇabhedasaṃkalābaddhāḥ svacittārthavigrāhiṇaḥ / saṃsthānalakṣaṇākārā manocakṣvādisaṃbhavāḥ // Lank_10.872 // anādidoṣasaṃbaddhamarthābhāvāsanoditam / bahirdhā dṛśyate cittaṃ tīrthadṛṣṭinivāraṇam // Lank_10.873 // taddhetukamevānyattadālambya pravartate / yadā saṃjāyate dṛṣṭiḥ saṃsāraśca pravartate // Lank_10.874 // māyāsvapnanibhā bhāvā gandharvanagaropamāḥ / marīcyudakacandrābhāḥ svavikalpaṃ vibhāvayet // Lank_10.875 // vṛttibhedāttu tathatā samyagjñānaṃ tadāśrayam / māyāśūraṃgamādīni samādhīni parāṇi ca // Lank_10.876 // bhūmipraveśāllabhate abhijñā vaśitāni ca / jñānamāyopamaṃ kāyamabhiṣiktaṃ ca saugatam // Lank_10.877 // nivartate yadā cittaṃ nivṛttaṃ paśyato jagat / muditāṃ labhate bhūmiṃ buddhabhūmiṃ labhanti ca // Lank_10.878 // āśrayeṇa nivṛttena viśvarūpo maṇiryathā / karoti sattvakṛtyāni pratibimbaṃ yathā jale // Lank_10.879 // sadasatpakṣanirmuktamubhayaṃ nobhayaṃ na ca / pratyekaśrāvakīyābhyāṃ niṣkrāntā saptamī bhavet // Lank_10.880 // pratyātmadṛṣṭadharmāṇāṃ bhūtabhūmiviśodhitam / bāhyatīrthyavinirmuktaṃ mahāyānaṃ vinirdiśet // Lank_10.881 // parāvṛttirvikalpasya cyutināśavivarjitam / śaśaromamaṇiprakhyaṃ muktānāṃ deśayennayam // Lank_10.882 // yathā hi grantho granthena yuktyā yuktistathā yadi / ato yuktirbhavedyuktimanyathā tu na kalpayet // Lank_10.883 // cakṣuḥ karma ca tṛṣṇā ca avidyāyoniśastathā / cakṣūrūpe manaścāpi āvilasya manastathā // Lank_10.884 //",
+   "T0672": "若於此法門，如理正思惟。 淨信離分別，成就最勝定； 離著處於義，成金光法燈。 分別於有無，及諸惡見網； 三毒等皆離，得佛手灌頂。 外道執能作，迷方及無因； 於緣起驚怖，斷滅無聖性。 變起諸果報，謂諸識及意； 意從賴耶生，識依末那起。 賴耶起諸心，如海起波浪； 習氣以為因，隨緣而生起。 剎那相鈎鎖，取自心境界； 種種諸形相，意根等識生。 由無始惡習，似外境而生； 所見惟自心，非外道所了。 因彼而緣彼，而生於餘識； 是故起諸見，流轉於生死。 諸法如幻夢，水月焰乾城； 當知一切法，惟是自分別。 正智依真如，而起諸三昧； 如幻首楞嚴，如是等差別。 得入於諸地，自在及神通； 成就如幻智，諸佛灌其頂。 見世間虛妄，是時心轉依； 獲得歡喜地，諸地及佛地。 既得轉依已，如眾色摩尼； 利益諸眾生，應現如水月。 捨離有無見，及以俱不俱； 過於二乘行，亦超第七地。 自內現證法，地地而修治； 遠離諸外道，應說是大乘。 說解脫法門，如兔角摩尼； 捨離於分別，離死及遷滅。 教由理故成，理由教故顯； 當依此教理，勿更餘分別。」",
+   "T0671": "此是如法行，不能知相應； 依於法能信，莫分別邪行。 不著世間物，能取於正義； 彼人取真金，能然於法燈。 癡有無因緣，邪見網分別； 一切煩惱垢，離於貪瞋恚。 爾時不復生，以無一切染； 諸如來身手，而授於佛位。 外道迷因果，餘者迷因緣； 及無因有物，斷見無聖人。 受於果轉變，識及於意識； 意從本識生，識從於意生。 一切識從本，能生如海波； 一切從熏因，隨因緣而生。 念差別鉤鎖，縛自心取境； 似於形體相，意眼等識生。 無始來過縛，依熏生取境； 見外心諸法，遮諸外道見。 依彼更生餘，及依彼觀生； 是故生邪見，及世間生死。 諸法如夢幻，如乾闥婆城； 陽焰水中月，觀察是自心。 行差非真如，正智幻三昧； 依首楞嚴定，及餘諸三昧。 入於初地得，諸通及三昧； 智及如意身，受位入佛地。 爾時心不生，以見世虛妄； 得觀地餘地，及得於佛地。 轉於依止身，如諸色摩尼； 亦如水中月，作諸眾生業。 離有無朋黨，離二及不二； 出於二乘地，及出第七地。 內身見諸法，地地中清淨； 離外道外物，爾時說大乘。 轉於分別識，離於變易滅； 如兔角摩尼，得解脫者說。 如依結相應，依法亦如是； 依相應相應，莫分別於異。 眼識業及受，無明及正見； 眼色及於意，意識染如是。」"
+  },
+  "g08-10": {
+   "sa": "ityāryasaddharmalaṅkāvatāro nāma mahāyānasūtraṃ sagāthakaṃ samāptamiti // ye dharmā hetuprabhavā hetuṃ teṣāṃ tathāgato hyavadat / teṣāṃ ca yo nirodho evaṃ vādī mahāśramaṇaḥ //",
+   "T0671": "佛說此妙經，聖者大慧士， 菩薩摩訶薩，羅婆那大王， 叔迦婆羅那，甕耳等羅叉， 天龍夜叉等，乾闥婆修羅， 諸天比丘僧，大歡喜奉行。"
+  }
+ }
+}
