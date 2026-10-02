@@ -13,6 +13,13 @@
   "en": "ready",
   "zh": "none"
  },
+ "assyrian-prophecies": {
+  "source": "ORACC",
+  "segments": 317,
+  "orig": "ready",
+  "en": "ready",
+  "zh": "none"
+ },
  "bird-fish": {
   "source": "ETCSL",
   "segments": 22,
@@ -464,6 +471,13 @@
  "tummal": {
   "source": "ETCSL",
   "segments": 8,
+  "orig": "ready",
+  "en": "ready",
+  "zh": "none"
+ },
+ "underworld-vision": {
+  "source": "ORACC",
+  "segments": 69,
   "orig": "ready",
   "en": "ready",
   "zh": "none"

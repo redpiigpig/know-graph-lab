@@ -1,0 +1,2932 @@
+{
+ "slug": "assyrian-prophecies",
+ "source": "ORACC",
+ "siglum": "SAA 09 001, SAA 09 002, SAA 09 003, SAA 09 004, SAA 09 005, SAA 09 006, SAA 09 007, SAA 09 008, SAA 09 009, SAA 09 010, SAA 09 011",
+ "source_url": "https://oracc.museum.upenn.edu/saao/saa09/",
+ "license": "ORACC（CC BY-SA 3.0）",
+ "compositions": [
+  {
+   "num": "SAA 09 001",
+   "title_en": "Oracles of Encouragement to Esarhaddon",
+   "segments": [
+    {
+     "ref": "—",
+     "orig": "beginning (about 10 lines) destroyed",
+     "orig_lines": [],
+     "en": "(Beginning destroyed)"
+    },
+    {
+     "ref": "o i 1'",
+     "orig": "[x x x x x x] dan-ni-te",
+     "orig_lines": [
+      "o i 1'"
+     ],
+     "en": "[......] strong (f.)"
+    },
+    {
+     "ref": "o i 2'",
+     "orig": "[x x x x (x)] rap-šat{*}",
+     "orig_lines": [
+      "o i 2'"
+     ],
+     "en": "[......] is wide (f.)"
+    },
+    {
+     "ref": "o i 3'",
+     "orig": "[x x x x] ⸢KI{*}⸣ dan ni",
+     "orig_lines": [
+      "o i 3'"
+     ],
+     "en": "[......] ..."
+    },
+    {
+     "ref": "o i 4'–o i 5'",
+     "orig": "[{m}aš-šur—PAB]—AŠ LUGAL KUR.KUR\n[la] ⸢ta⸣-pa-làḫ",
+     "orig_lines": [
+      "o i 4'",
+      "o i 5'"
+     ],
+     "en": "[Esarh]addon, king of the lands, fear [not]!"
+    },
+    {
+     "ref": "o i 6'–o i 10'",
+     "orig": "⸢ai{*}⸣-ʾu šá-a-ru ša i-di-ba-ka-a-ni\na-qa-pu-šú la ak-su-pu-u-ni\nna-ka-ru-te-ka\nki-i šá-aḫ-šu-ri ša ITI.SIG₄\nina IGI GÌR.2-MEŠ-ka i-tan-ga-ra-ru",
+     "orig_lines": [
+      "o i 6'",
+      "o i 7'",
+      "o i 8'",
+      "o i 9'",
+      "o i 10'"
+     ],
+     "en": "What wind has risen against you, whose wing I have not broken? Your enemies will roll before your feet like ripe apples."
+    },
+    {
+     "ref": "o i 11'–o i 17'",
+     "orig": "{d}GAŠAN GAL-tú a-na-ku\na-na-ku {d}15 ša URU.arba-ìl\nša na-ka-ru-te-ka\nina IGI GÌR.2-MEŠ-ka ak-kar-ru-u-ni\nai-ú-te di-ib-bi-ia\nša aq-qa-ba-kan-ni\nina UGU-ḫi la ta-zi{!}-zu-u-ni",
+     "orig_lines": [
+      "o i 11'",
+      "o i 12'",
+      "o i 13'",
+      "o i 14'",
+      "o i 15'",
+      "o i 16'",
+      "o i 17'"
+     ],
+     "en": "I am the Great Lady; I am Ištar of Arbela, who cast your enemies before your feet. What words have I spoken to you that you could not rely upon?"
+    },
+    {
+     "ref": "o i 18'–o i 19'",
+     "orig": "a-na-ku {d}15 ša URU.arba-ìl\nna-ka-ru-te-ka ú-ka-a-ṣa{*}",
+     "orig_lines": [
+      "o i 18'",
+      "o i 19'"
+     ],
+     "en": "I am Ištar of Arbela. I will flay your enemies and give them to you."
+    },
+    {
+     "ref": "o i 20'–o i 23'",
+     "orig": "a-da-na-ka <$x$> a-na-ku\n{d}15 ša URU.arba-ìl\nina pa-na-tu-u-ka\nina ku-tal-li-ka",
+     "orig_lines": [
+      "o i 20'",
+      "o i 21'",
+      "o i 22'",
+      "o i 23'"
+     ],
+     "en": "I am Ištar of Arbela. I will go before you and behind you."
+    },
+    {
+     "ref": "o i 24'–o i 27'",
+     "orig": "a-la-ka la ta-pa-làḫ\nat-ta ina ŠÀ-bi mu-gi\na-na-ku ina ŠÀ-bi u₈-u-a\na-ta-ab-bi ú-šab",
+     "orig_lines": [
+      "o i 24'",
+      "o i 25'",
+      "o i 26'",
+      "o i 27'"
+     ],
+     "en": "Fear not! You are paralysed, but in the midst of woe I will rise and sit down (beside you)."
+    },
+    {
+     "ref": "o i 28'–o i 29'",
+     "orig": "ša pi-i m{*}{d}15—la—ta-ši-ia-aṭ\nDUMU URU.arba-ìl",
+     "orig_lines": [
+      "o i 28'",
+      "o i 29'"
+     ],
+     "en": "By the mouth of Issar-la-tašiyaṭ of Arbela."
+    },
+    {
+     "ref": "o i 30'–o i 35'",
+     "orig": "LUGAL KUR—aš-šur la ta-pa-làḫ\nna-ak-ru ša MAN KUR—aš-šur\n⸢a{*}⸣-na ṭa-ba-aḫ-ḫi a-da-na\n[ina] ⸢É⸣—re-du-te-ka\n[ú-ta]-⸢qa⸣-an-ka\n[ú-ra-ba]-ak-ka",
+     "orig_lines": [
+      "o i 30'",
+      "o i 31'",
+      "o i 32'",
+      "o i 33'",
+      "o i 34'",
+      "o i 35'"
+     ],
+     "en": "King of Assyria, have no fear! I will deliver up the enemy of the king of Assyria for slaughter. [I will] keep you safe and [make] you [great in] your Palace of Succession."
+    },
+    {
+     "ref": "o i 36'",
+     "orig": "[x x x] ⸢GAL⸣-tu a-na-ku",
+     "orig_lines": [
+      "o i 36'"
+     ],
+     "en": "I am the Gr[eat Lady. I am Ištar o]f Arbela"
+    },
+    {
+     "ref": "o i 37'–o i 39'",
+     "orig": "[a-na-ku {d}15] ⸢ša⸣ URU.arba-ìl\n[x x x x x] ⸢TA{v}{*} ŠÀ-bi⸣-šú\n[x x x x x x x]+⸢x⸣-šú",
+     "orig_lines": [
+      "o i 37'",
+      "o i 38'",
+      "o i 39'"
+     ],
+     "en": "[ ......] from his midst"
+    },
+    {
+     "ref": "o ii 1'",
+     "orig": "beginning (about 6 lines) destroyed\n[x x] ⸢x⸣+[x x x x x x x]",
+     "orig_lines": [
+      "o ii 1'"
+     ],
+     "en": "(Break)"
+    },
+    {
+     "ref": "o ii 2'–o ii 7'",
+     "orig": "⸢ai{*}⸣-ʾu{*} ⸢x⸣+[x x x x x x]\nla áš-me-⸢ka⸣ [na-ka-ru-te]\nina si-ga-⸢ra⸣-[te sa-al-mu-ti]\nina ma-da-[na-ti x x]\nna-kar{ar}-ka ina{*} ⸢ŠÀ{?}⸣ [qa-ra-bi]\ne-da-ni-ʾe ak-⸢ta⸣-[šá-ad]",
+     "orig_lines": [
+      "o ii 2'",
+      "o ii 3'",
+      "o ii 4'",
+      "o ii 5'",
+      "o ii 6'",
+      "o ii 7'"
+     ],
+     "en": "What [......] I would not have heard you? [The enemies ...] in neck st[ocks, [the vassals] under tribu[te]; I defea[ted] your enemy in a single [encounter]."
+    },
+    {
+     "ref": "o ii 8'",
+     "orig": "ú-ta-ki-il-ka la uš-ba-[ku]",
+     "orig_lines": [
+      "o ii 8'"
+     ],
+     "en": "I have given you faith, I do not sit (idle)!"
+    },
+    {
+     "ref": "o ii 9'–o ii 10'",
+     "orig": "ša pi-i MÍ.si-in-qi-šá—a-mur\nDUMU.MÍ URU.arba-ìl",
+     "orig_lines": [
+      "o ii 9'",
+      "o ii 10'"
+     ],
+     "en": "By the mouth of the woman Sinqiša-amur of Arbela."
+    },
+    {
+     "ref": "o ii 11'–o ii 12'",
+     "orig": "ri-i-šá-ak TA{v} {m}aš-šur—PAB—AŠ\nLUGAL-ia ri-i-ši URU.arba-ìl",
+     "orig_lines": [
+      "o ii 11'",
+      "o ii 12'"
+     ],
+     "en": "I rejoice with Esarhaddon, my king; Arbela rejoices!"
+    },
+    {
+     "ref": "o ii 13'–o ii 15'",
+     "orig": "ša pi-i MÍ.re-mu-te—al-la-te\nša URU.da-ra—a-ḫu-u-ia\nša bir-ti KUR-MEŠ-ni",
+     "orig_lines": [
+      "o ii 13'",
+      "o ii 14'",
+      "o ii 15'"
+     ],
+     "en": "By the mouth of the woman Remutti-Allati of Dara-ahuya, a town in the mountains."
+    },
+    {
+     "ref": "o ii 16'–o ii 19'",
+     "orig": "la ta-pa-làḫ {m}aš-šur—PAB—AŠ :{*}\na-na-ku {d}EN is-si-ka\na-da-bu-bu\nGIŠ.ÙR-MEŠ ša ŠÀ-bi-ka",
+     "orig_lines": [
+      "o ii 16'",
+      "o ii 17'",
+      "o ii 18'",
+      "o ii 19'"
+     ],
+     "en": "Fear not, Esarhaddon! I am Bel. (Even as) I speak to you, I watch over the beams of your heart."
+    },
+    {
+     "ref": "o ii 20'–o ii 26'",
+     "orig": "a-ḫa-ri-di ki-i MÍ.AMA-ka\ntu-šab-šu-ka-ni\n60 DINGIR-MEŠ GAL-MEŠ is-si-ia\nit-ti-ti-su it-ta-ṣar-u-ka\n{d}30 ina ZAG-ka {d}UTU ina 150-ka\n60 DINGIR-MEŠ GAL-MEŠ ina bat-ti—bat-ti-ka\ni-za-zu MURUB₄-ka{*} ir-tak-su",
+     "orig_lines": [
+      "o ii 20'",
+      "o ii 21'",
+      "o ii 22'",
+      "o ii 23'",
+      "o ii 24'",
+      "o ii 25'",
+      "o ii 26'"
+     ],
+     "en": "When your mother gave birth to you, sixty great gods stood with me and protected you. Sin was at your right side, Šamaš at your left; sixty great gods were standing around you and girded your loins."
+    },
+    {
+     "ref": "o ii 27'–o ii 33'",
+     "orig": "ina UGU a-me-lu-ti la ta-tak-kil\nmu-tu-uḫ IGI.2-MEŠ-ka\na-na a.a-ši du-gul-an-ni\na-na-ku {d}15 ša URU.arba-ìl\naš-šur is-si-ka ú-sa-lim\nṣe-ḫe-ra-ka a-ta-ṣa-ak-ka\nla ta-pa-làḫ na-i-da-a-ni",
+     "orig_lines": [
+      "o ii 27'",
+      "o ii 28'",
+      "o ii 29'",
+      "o ii 30'",
+      "o ii 31'",
+      "o ii 32'",
+      "o ii 33'"
+     ],
+     "en": "Do not trust in man. Lift up your eyes, look to me! I am Ištar of Arbela; I reconciled Aššur with you. When you were small, I took you to me. Do not fear; praise me!"
+    },
+    {
+     "ref": "o ii 34'–o ii 39'",
+     "orig": "ai-ʾu{!} šu-ú na-ak-ru\nša i-di-ba{*}-kan-ni\na-na-ku qa-la-ku-u-ni\nur-ki-ú-te lu-u ki-i pa-ni-u-te\na-na-ku {d}PA EN qar—ṭup-pi\nna-i-da-a-ni",
+     "orig_lines": [
+      "o ii 34'",
+      "o ii 35'",
+      "o ii 36'",
+      "o ii 37'",
+      "o ii 38'",
+      "o ii 39'"
+     ],
+     "en": "What enemy has attacked you while I remained silent? The future shall be like the past. I am Nabû, lord of the stylus. Praise me!"
+    },
+    {
+     "ref": "o ii 40'",
+     "orig": "ša pi-i MÍ.ba-ia-a DUMU URU.arba-ìl",
+     "orig_lines": [
+      "o ii 40'"
+     ],
+     "en": "By the mouth of the woman Bayâ, 'son'(!) of Arbela."
+    },
+    {
+     "ref": "o iii 1'",
+     "orig": "beginning (about 14 lines) destroyed\nku-[x x x x x x x x x]",
+     "orig_lines": [
+      "o iii 1'"
+     ],
+     "en": "(Break)"
+    },
+    {
+     "ref": "o iii 2'",
+     "orig": "a-na-⸢ku a{*}⸣-[x x x x]",
+     "orig_lines": [
+      "o iii 2'"
+     ],
+     "en": "I will [......]"
+    },
+    {
+     "ref": "o iii 3'",
+     "orig": "at-ta tal-[x x x (x)]",
+     "orig_lines": [
+      "o iii 3'"
+     ],
+     "en": "you shall [.....]."
+    },
+    {
+     "ref": "o iii 4'",
+     "orig": "a-na-ku {d}⸢NIN{*}⸣.[LÍL (x)]",
+     "orig_lines": [
+      "o iii 4'"
+     ],
+     "en": "I am Mu[llissu (...)]."
+    },
+    {
+     "ref": "o iii 5'–o iii 6'",
+     "orig": "ša pi-i MÍ.DINGIR-sa—a-⸢mur⸣\nURU.ŠÀ—URU-a{*}.[a]",
+     "orig_lines": [
+      "o iii 5'",
+      "o iii 6'"
+     ],
+     "en": "By the mouth of the woman Ilussa-am[ur] of the Inner City."
+    },
+    {
+     "ref": "o iii 7'",
+     "orig": "a-na-ku {d}15 ša ⸢URU⸣.[arba-ìl]",
+     "orig_lines": [
+      "o iii 7'"
+     ],
+     "en": "I am Ištar of [Arbela]."
+    },
+    {
+     "ref": "o iii 8'–o iii 14'",
+     "orig": "{m}aš-šur—PAB—AŠ MAN KUR—⸢aš⸣-[šur]\nina URU.ŠÀ—URU URU.⸢NINA⸣\nURU.kal-ḫa URU.arba-⸢ìl⸣\nUD-MEŠ ar-ku-u-⸢te⸣\nMU.AN.NA-MEŠ da-ra-⸢te⸣\na-na {m}aš-šur—PAB—AŠ LUGAL-⸢ia⸣\na-da-an-na [o]",
+     "orig_lines": [
+      "o iii 8'",
+      "o iii 9'",
+      "o iii 10'",
+      "o iii 11'",
+      "o iii 12'",
+      "o iii 13'",
+      "o iii 14'"
+     ],
+     "en": "Esarhaddon, king of A[ssyria]! In the Inner City, Nineveh, Calah and Arbela I will give long days and everlasting years to Esarhaddon, my king."
+    },
+    {
+     "ref": "o iii 15'–o iii 22'",
+     "orig": "sa-ab-su-ub-ta-⸢ka⸣\nra-bi-tu a-na-ku\nmu-še-⸢niq{*}⸣-ta-ka\nde-iq-tú a-na-ku\nša UD-me ar-ku-te\nMU.AN.NA-MEŠ da-ra-te\nGIŠ.GU.ZA-ka ina KI.TA AN-e\nra-bu-te uk-ti-in",
+     "orig_lines": [
+      "o iii 15'",
+      "o iii 16'",
+      "o iii 17'",
+      "o iii 18'",
+      "o iii 19'",
+      "o iii 20'",
+      "o iii 21'",
+      "o iii 22'"
+     ],
+     "en": "I am your great midwife, I am your excellent wet nurse. For long days and everlasting years I have established your throne under the great heavens."
+    },
+    {
+     "ref": "o iii 23'–o iii 29'",
+     "orig": "ina ma-si-ki ša KUG.GI\nina MURUB₄ AN-e a-ḫa-ri-di\nnu-ur ša il-me-ši\nina IGI {m}aš-šur—PAB—AŠ MAN KUR—aš-šur\nú-šá-na-ma-ra\nki-i a-ge-e ša SAG.DU-ia\na-ḫa-ri-su",
+     "orig_lines": [
+      "o iii 23'",
+      "o iii 24'",
+      "o iii 25'",
+      "o iii 26'",
+      "o iii 27'",
+      "o iii 28'",
+      "o iii 29'"
+     ],
+     "en": "I watch in a golden chamber in the midst of the heavens; I let the lamp of amber shine before Esarhaddon, king of Assyria, and I watch him like the crown of my head."
+    },
+    {
+     "ref": "o iii 30'–o iv 4",
+     "orig": "la ta-pa-làḫ LUGAL\naq-ṭi-ba-ak\nla as-li-⸢ka⸣\nú-ta-ki-⸢il⸣-[ka]\nla ú-ba-áš-[ka]\nÍD ina tu-qu-un-ni\nú-še-ba-ar-ka",
+     "orig_lines": [
+      "o iii 30'",
+      "o iii 31'",
+      "o iii 32'",
+      "o iv 1",
+      "o iv 2",
+      "o iv 3",
+      "o iv 4"
+     ],
+     "en": "Have no fear, my king! I have spoken to you, I have not lied to you; I have given you faith, I will not let you come to shame. I will take you safely across the River."
+    },
+    {
+     "ref": "o iv 5–o iv 10",
+     "orig": "{m}aš-šur—PAB—AŠ ap-lu\nke-e-nu DUMU {d}NIN.LÍL\nḫa-an-ga-ru ak-ku\nina ŠU.2-ia\nLÚ.KÚR-MEŠ-ka\nú-qa-at-ta",
+     "orig_lines": [
+      "o iv 5",
+      "o iv 6",
+      "o iv 7",
+      "o iv 8",
+      "o iv 9",
+      "o iv 10"
+     ],
+     "en": "Esarhaddon, rightful heir, son of Mullissu! With an angry dagger in my hand I will finish off your enemies."
+    },
+    {
+     "ref": "o iv 11–o iv 13",
+     "orig": "{m}aš-šur—PAB—AŠ MAN KUR—aš-šur\nka-a-su šá ma-lu-u qi-il-te\nka-la-pu ša 02 GÍN",
+     "orig_lines": [
+      "o iv 11",
+      "o iv 12",
+      "o iv 13"
+     ],
+     "en": "O Esarhaddon, king of Assyria, cup filled with lye, axe of two shekels!"
+    },
+    {
+     "ref": "o iv 14–o iv 19",
+     "orig": "{m}aš-šur—PAB—AŠ ina URU.ŠÀ—URU\nUD-MEŠ ar-ku-u-ti\nMU-MEŠ da-ra-a-ti\na-da-nak-⸢ka⸣\n{m}aš-šur—PAB—AŠ ina ŠÀ-bi URU.arba-⸢ìl⸣\na-ri-it-ka de-iq-tú a-[na-ku]",
+     "orig_lines": [
+      "o iv 14",
+      "o iv 15",
+      "o iv 16",
+      "o iv 17",
+      "o iv 18",
+      "o iv 19"
+     ],
+     "en": "Esarhaddon! I will give you long days and everlasting years in the Inner City. O Esarhaddon, I will be your good shield in Arbela."
+    },
+    {
+     "ref": "o iv 20–o iv 25",
+     "orig": "{m}aš-šur—PAB—AŠ DUMU.UŠ ⸢ke⸣-[e-nu]\nDUMU {d}NIN.[LÍL]\nḫi-is-sa-at-[ka]\nḫa-sa-[ku]\nar-ta-am-⸢ka{*}⸣\na—dan-[niš]",
+     "orig_lines": [
+      "o iv 20",
+      "o iv 21",
+      "o iv 22",
+      "o iv 23",
+      "o iv 24",
+      "o iv 25"
+     ],
+     "en": "Esarhaddon, ri[ghtful] heir, son of Mul[lissu]! I am mindful of you, I have loved you greatly."
+    },
+    {
+     "ref": "o iv 26–o iv 32",
+     "orig": "ina ki-zir-ti-⸢ka⸣\nina AN-e GAL-⸢MEŠ⸣\nú-kal-ka\nina ZAG-ka\nqut-ru ú-qa-at-⸢tar⸣\nina KAB-⸢ka⸣\nIZI ú-⸢šá⸣-[ḫaz]",
+     "orig_lines": [
+      "o iv 26",
+      "o iv 27",
+      "o iv 28",
+      "o iv 29",
+      "o iv 30",
+      "o iv 31",
+      "o iv 32"
+     ],
+     "en": "I keep you in the great heavens by your curl. I make smoke rise up on your right side, I kindle fire on your left."
+    },
+    {
+     "ref": "o iv 33–o iv 35",
+     "orig": "LUGAL-tú ina UGU [x x (x)]\nda-aʾ-[x x]\nina ⸢UGU da{*}⸣-[x x x]",
+     "orig_lines": [
+      "o iv 33",
+      "o iv 34",
+      "o iv 35"
+     ],
+     "en": "The kingship [is] stro[ng] on [......]"
+    },
+    {
+     "ref": "—",
+     "orig": "rest (about 14 lines) destroyed",
+     "orig_lines": [],
+     "en": "(Break)"
+    },
+    {
+     "ref": "o v 1–o v 7",
+     "orig": "TA{v} pa-ni-šú\nla i-ma-ḫar\nka-kiš-a-ti\npu-uš-ḫa-a-ti\nšá i-da-ba-bu-u-ni\nina IGI GÌR.2-šú\nú-bat-taq-šú-nu",
+     "orig_lines": [
+      "o v 1",
+      "o v 2",
+      "o v 3",
+      "o v 4",
+      "o v 5",
+      "o v 6",
+      "o v 7"
+     ],
+     "en": "[......] shall not receive [...] from him. I will cut the conspiring weasels and shrews to pieces before his feet."
+    },
+    {
+     "ref": "o v 8–o v 9",
+     "orig": "at-ti at-ti-ma\nLUGAL šar-ri-ma",
+     "orig_lines": [
+      "o v 8",
+      "o v 9"
+     ],
+     "en": "You (f.) are you. The king is my king!"
+    },
+    {
+     "ref": "o v 10–o v 11",
+     "orig": "ša pi-i MÍ.15—EN—da-i-ni\nše-lu-tu ša LUGAL",
+     "orig_lines": [
+      "o v 10",
+      "o v 11"
+     ],
+     "en": "By the mouth of the woman Issar-beli-da''ini, a votaress of the king."
+    },
+    {
+     "ref": "o v 12",
+     "orig": "a-na-ku {d}be-let—arba-ìl",
+     "orig_lines": [
+      "o v 12"
+     ],
+     "en": "I am the Lady of Arbela."
+    },
+    {
+     "ref": "o v 13",
+     "orig": "a-na AMA—LUGAL",
+     "orig_lines": [
+      "o v 13"
+     ],
+     "en": "To the king's mother:"
+    },
+    {
+     "ref": "o v 14–o v 20",
+     "orig": "ki-i ta-ḫu-ri-ni-ni\nma-a ša ZAG\nša šu-me-li\nina su-ni-ki ta-sak-ni\nma-a ia-ú\nṣi-it—ŠÀ-bi-ia\nEDIN tu-sar-pi-di",
+     "orig_lines": [
+      "o v 14",
+      "o v 15",
+      "o v 16",
+      "o v 17",
+      "o v 18",
+      "o v 19",
+      "o v 20"
+     ],
+     "en": "Because you implored me, saying: \"You have placed the ones at the (king's) right and left side in your lap, but made my own offspring roam the steppe\" —"
+    },
+    {
+     "ref": "o v 21–o v 23",
+     "orig": "ú-ma-a LUGAL la ta-pa-làḫ\nLUGAL-tú ik-ku-u\nda-na-nu ik-ku-u-ma",
+     "orig_lines": [
+      "o v 21",
+      "o v 22",
+      "o v 23"
+     ],
+     "en": "Now fear not, my king! The kingdom is yours, yours is the power!"
+    },
+    {
+     "ref": "o v 24–o v 25",
+     "orig": "ša pi-i MÍ.NIN—AD-šá\nDUMU.MÍ URU.arba-ìl",
+     "orig_lines": [
+      "o v 24",
+      "o v 25"
+     ],
+     "en": "By the mouth of the woman Ahat-abiša of Arbela."
+    },
+    {
+     "ref": "o v 26",
+     "orig": "DI-mu a-na {m}aš-šur—PAB—AŠ MAN KUR—aš-šur",
+     "orig_lines": [
+      "o v 26"
+     ],
+     "en": "All is well with Esarhaddon, king of Assyria."
+    },
+    {
+     "ref": "o v 27–o v 30",
+     "orig": "{d}15 šá URU.arba-ìl\na-na EDIN ta-at-tu-ṣi\nšul-mu a-na mu-ri-šá\na-na bi-rit URU ta-sap-ra",
+     "orig_lines": [
+      "o v 27",
+      "o v 28",
+      "o v 29",
+      "o v 30"
+     ],
+     "en": "Ištar of Arbela has gone out to the steppe and sent (an oracle of) well-being to her calf in the city."
+    },
+    {
+     "ref": "o v 31–o v 36",
+     "orig": "a-na ú-ṣe-⸢e⸣-[šá{?}]\nšá ú-[x x x x]\nLÚ.[x x x x (x)]\nmu-⸢x⸣+[x x x x x]\nki-⸢i{?}⸣ [x x x x x x]\n⸢x⸣+[x x x x x x]",
+     "orig_lines": [
+      "o v 31",
+      "o v 32",
+      "o v 33",
+      "o v 34",
+      "o v 35",
+      "o v 36"
+     ],
+     "en": "At [her] coming out [......]"
+    },
+    {
+     "ref": "—",
+     "orig": "rest (about 8 lines) destroyed",
+     "orig_lines": [],
+     "en": "(Break)"
+    },
+    {
+     "ref": "o vi 1",
+     "orig": "[la ta-pa-làḫ {m}aš-šur—PAB]—⸢AŠ⸣",
+     "orig_lines": [
+      "o vi 1"
+     ],
+     "en": "[Fear not, Esarhad]don!"
+    },
+    {
+     "ref": "o vi 2",
+     "orig": "[a-na-ku {d}be-let—URU].⸢arba⸣-ìl",
+     "orig_lines": [
+      "o vi 2"
+     ],
+     "en": "[I am the Lady of Arb]ela."
+    },
+    {
+     "ref": "o vi 3–o vi 12",
+     "orig": "[{m}aš-šur—PAB—AŠ šá] ina DÙG.GA\n[{d}15] šá URU.arba-ìl\nḫa-bu-un-šú\ntu-mal-lu-u-ni\nda-ba-bu pa-ni-u\nšá a-qa-ba-kan-ni\nina UGU-ḫi la ta-zi-zi\nú-ma-a\nina UGU ur-ki-i\nta-za-az-ma",
+     "orig_lines": [
+      "o vi 3",
+      "o vi 4",
+      "o vi 5",
+      "o vi 6",
+      "o vi 7",
+      "o vi 8",
+      "o vi 9",
+      "o vi 10",
+      "o vi 11",
+      "o vi 12"
+     ],
+     "en": "[O Esarhaddon, whos]e bosom [Iš]tar of Arbela has filled with favour! Could you not rely on the previous utterance which I spoke to you? Now you can rely on this later one too."
+    },
+    {
+     "ref": "o vi 13–o vi 20",
+     "orig": "na-ʾi-da-an-ni\nki-i UD-mu\ni-ši-ṣu-u-ni\nzi-qa-a-ti\nlu-ki-il-lu\nina pa-ni na-ʾi-da-an-ni\n⸢ni{*}⸣-ir-ri-ṭu\n⸢TA{v}⸣ ŠÀ É.GAL-ia",
+     "orig_lines": [
+      "o vi 13",
+      "o vi 14",
+      "o vi 15",
+      "o vi 16",
+      "o vi 17",
+      "o vi 18",
+      "o vi 19",
+      "o vi 20"
+     ],
+     "en": "Praise me! When daylight declines, let them hold torches! Praise me before them!"
+    },
+    {
+     "ref": "o vi 21–o vi 30",
+     "orig": "⸢ú⸣-še-ṣa\nak-lu taq-nu ta-kal\nA-MEŠ taq-nu-ti\nta-šá-at-ti\nina ŠÀ-bi É.GAL-ka\nta-taq-qu-un\nDUMU-ka DUMU—DUMU-ka\nLUGAL-u-tú\nina bur-ki šá {d}MAŠ\nú-pa-áš",
+     "orig_lines": [
+      "o vi 21",
+      "o vi 22",
+      "o vi 23",
+      "o vi 24",
+      "o vi 25",
+      "o vi 26",
+      "o vi 27",
+      "o vi 28",
+      "o vi 29",
+      "o vi 30"
+     ],
+     "en": "I will banish trembling from my palace. You shall eat safe food and drink safe water, and you shall be safe in your palace. Your son and grandson shall rule as kings on the lap of Ninurta."
+    },
+    {
+     "ref": "o vi 31–o vi 32",
+     "orig": "ša pi-i {m}la—da-gíl—DINGIR\nDUMU URU.arba-ìl\n(5 lines blank)\nrest (about 8 lines) broken away",
+     "orig_lines": [
+      "o vi 31",
+      "o vi 32"
+     ],
+     "en": "By the mouth of La-dagil-ili of Arbela."
+    }
+   ]
+  },
+  {
+   "num": "SAA 09 002",
+   "title_en": "Oracles Concerning Babylon and the Stabilization of the King’s Rule",
+   "segments": [
+    {
+     "ref": "—",
+     "orig": "beginning (about 5 lines) destroyed",
+     "orig_lines": [],
+     "en": "(Beginning broken away)"
+    },
+    {
+     "ref": "i 1'",
+     "orig": "[x x x x x x]-⸢bu{*}⸣-bu-ni",
+     "orig_lines": [
+      "i 1'"
+     ],
+     "en": "[...... sp]oke"
+    },
+    {
+     "ref": "i 2'",
+     "orig": "[x x x x x ú-da]-⸢ʾi{*}⸣-i-nu{*}",
+     "orig_lines": [
+      "i 2'"
+     ],
+     "en": "[... have stre]ngthened"
+    },
+    {
+     "ref": "i 3'",
+     "orig": "[x x x x x x x]-ši-na",
+     "orig_lines": [
+      "i 3'"
+     ],
+     "en": "[......] their"
+    },
+    {
+     "ref": "i 4'",
+     "orig": "[x x x x x] a-da-an",
+     "orig_lines": [
+      "i 4'"
+     ],
+     "en": "[......] I will give"
+    },
+    {
+     "ref": "i 5'",
+     "orig": "[x x a-na-ku{?}] ⸢{d}⸣ba-ni-tu",
+     "orig_lines": [
+      "i 5'"
+     ],
+     "en": "[... I am] the Creatress."
+    },
+    {
+     "ref": "i 6'",
+     "orig": "[x x x x x] ú-ta-qa-an",
+     "orig_lines": [
+      "i 6'"
+     ],
+     "en": "I will put [...] in order"
+    },
+    {
+     "ref": "i 7'",
+     "orig": "[GIŠ.GU.ZA{?} ša {m}aš-šur—PAB]—AŠ{*} ú-ka-na",
+     "orig_lines": [
+      "i 7'"
+     ],
+     "en": "and consolidate [the throne of Esarha]ddon."
+    },
+    {
+     "ref": "i 8'",
+     "orig": "[x x x x x x] a-ni-nu {d}IŠ.TAR-MEŠ",
+     "orig_lines": [
+      "i 8'"
+     ],
+     "en": "[......]. We are the goddesses"
+    },
+    {
+     "ref": "i 9'",
+     "orig": "[x x x x] ⸢ina⸣ É.SAG.ÍL",
+     "orig_lines": [
+      "i 9'"
+     ],
+     "en": "[...... i]n Esaggil."
+    },
+    {
+     "ref": "i 10'–i 12'",
+     "orig": "[x x x x {m}]aš-šur—PAB—AŠ MAN KUR—aš-šur\n[LÚ.KÚR-MEŠ-ka] ⸢ú⸣-sa-pa-ak\n[ina GÌR.2-ia] ú-kab-ba-as",
+     "orig_lines": [
+      "i 10'",
+      "i 11'",
+      "i 12'"
+     ],
+     "en": "Esarhaddon, king of Assyria! I will seize [your enemies] and trample [them under my foot]."
+    },
+    {
+     "ref": "i 13'",
+     "orig": "[la ta-pa]-⸢al{*}⸣-li-ḫi AMA—MAN\nblank space (slightly less than a line)",
+     "orig_lines": [
+      "i 13'"
+     ],
+     "en": "[Be not a]fraid, mother of the king."
+    },
+    {
+     "ref": "i 14'",
+     "orig": "[TA{v} pi-i {m}{d}PA]—ḫu-sa-an-ni URU.ŠÀ—URU-a.a",
+     "orig_lines": [
+      "i 14'"
+     ],
+     "en": "[From the mouth of Nabû]-hussanni of the Inner City."
+    },
+    {
+     "ref": "i 15'",
+     "orig": "[la ta-pa]-làḫ {m}aš-šur—PAB—AŠ",
+     "orig_lines": [
+      "i 15'"
+     ],
+     "en": "[Have no fe]ar, Esarhaddon!"
+    },
+    {
+     "ref": "i 16'–i 19'",
+     "orig": "[a-ki LÚ].⸢MÁ{*}⸣.LAḪ₄ dam{*}-qí ina ka-a-ri DÙG.GA\n[GIŠ.MÁ ú]-⸢kal⸣-la a-ki šá pa-ni-ti\n[lu ina] ⸢ur{*}⸣-ki-ti ina bat-bat-ti-ka\n[a-sa]-⸢ḫur{*}⸣ ma-ṣar-ta-ka a{*}-na-ṣar",
+     "orig_lines": [
+      "i 16'",
+      "i 17'",
+      "i 18'",
+      "i 19'"
+     ],
+     "en": "[Like a] skilled pilot [I will st]eer [the ship] into a good port. [The fu]ture [shall] be like the past; [I will go] around you and protect you."
+    },
+    {
+     "ref": "i 20'–i 21'",
+     "orig": "[ma-ṣar-tú šá] KUR.KUR da{*}-an-na-at a—dan-niš\n[60 DINGIR-MEŠ ina ZAG]-ia 60 DINGIR-MEŠ ina KAB-ia",
+     "orig_lines": [
+      "i 20'",
+      "i 21'"
+     ],
+     "en": "[The watch over] the lands is very strong. [Sixty gods are standing at] my [right side], sixty gods at my left."
+    },
+    {
+     "ref": "i 22'–i 23'",
+     "orig": "[i-za-zu {m}]aš-šur—PAB—AŠ MAN KUR—aš-šur\n[LÚ.KÚR-MEŠ]-⸢ka{*}⸣ a-ka-šá-ad",
+     "orig_lines": [
+      "i 22'",
+      "i 23'"
+     ],
+     "en": "Esarhaddon, king of Assyria! I will vanquish yo[ur enemies]."
+    },
+    {
+     "ref": "i 24'",
+     "orig": "[x x x x x x]+⸢x⸣ EN-šú-nu a-na-ku",
+     "orig_lines": [
+      "i 24'"
+     ],
+     "en": "[......] I am their lord"
+    },
+    {
+     "ref": "i 25'",
+     "orig": "[x x x x x TA] ⸢ŠU⸣.2-ia maḫ-ru",
+     "orig_lines": [
+      "i 25'"
+     ],
+     "en": "[... from] my hand they have received"
+    },
+    {
+     "ref": "i 26'",
+     "orig": "[x x x x x x x] ⸢ú⸣-da-in-an-ni-ni",
+     "orig_lines": [
+      "i 26'"
+     ],
+     "en": "[......] strengthened me"
+    },
+    {
+     "ref": "i 27'",
+     "orig": "[x x x x x x x x {m}]aš-šur—PAB—AŠ",
+     "orig_lines": [
+      "i 27'"
+     ],
+     "en": "[......] Esarhaddon"
+    },
+    {
+     "ref": "i 28'",
+     "orig": "[x x x x x x x x]-MEŠ šá AN-e",
+     "orig_lines": [
+      "i 28'"
+     ],
+     "en": "[......]s of the heavens"
+    },
+    {
+     "ref": "i 29'",
+     "orig": "[x x x x x x x x x]+⸢x⸣ par-šá-mu-tú",
+     "orig_lines": [
+      "i 29'"
+     ],
+     "en": "[......] old age"
+    },
+    {
+     "ref": "i 30'",
+     "orig": "[x x x x x x x x]+⸢x⸣ ú-šal-lak-šú",
+     "orig_lines": [
+      "i 30'"
+     ],
+     "en": "[......] I will make him go"
+    },
+    {
+     "ref": "i 31'",
+     "orig": "[x x x x x x x x]+⸢x⸣ ú-ka-na",
+     "orig_lines": [
+      "i 31'"
+     ],
+     "en": "[......] I will consolidate"
+    },
+    {
+     "ref": "i 32'",
+     "orig": "[x x x x x x x ú-šá]-⸢an{*}⸣-mar",
+     "orig_lines": [
+      "i 32'"
+     ],
+     "en": "[...... I will l]ight"
+    },
+    {
+     "ref": "i 33'",
+     "orig": "[x x x x x x] ⸢šul⸣-me ⸢šá⸣ [{m}aš-šur—PAB]—AŠ{*}",
+     "orig_lines": [
+      "i 33'"
+     ],
+     "en": "[...... the w]ell-being of [Esarhadd]on"
+    },
+    {
+     "ref": "i 34'",
+     "orig": "[x x x x x x] ú-⸢x⸣+[x x]+⸢x⸣",
+     "orig_lines": [
+      "i 34'"
+     ],
+     "en": "[......] I will [...]."
+    },
+    {
+     "ref": "i 35'",
+     "orig": "[TA{v} pi-i MÍ.ba-ia]-⸢a⸣ URU.arba-ìl-⸢a.a⸣",
+     "orig_lines": [
+      "i 35'"
+     ],
+     "en": "[From the mouth of Bayâ] of Arbela."
+    },
+    {
+     "ref": "i 36'–i 38'",
+     "orig": "[a-na-ku {d}]⸢be⸣-let—arba-ìl\n[{m}aš-šur—PAB—AŠ MAN] ⸢KUR⸣—aš-šur\n[la ta-pa-làḫ x x x x x]-⸢ti⸣",
+     "orig_lines": [
+      "i 36'",
+      "i 37'",
+      "i 38'"
+     ],
+     "en": "[I am the La]dy of Arbela. [Esarhaddon, king of] Assyria, [fear not!]"
+    },
+    {
+     "ref": "—",
+     "orig": "rest (about two lines) destroyed\nbeginning (3-4 lines) destroyed",
+     "orig_lines": [],
+     "en": "(Break)"
+    },
+    {
+     "ref": "ii 1'–ii 5'",
+     "orig": "⸢LÚ⸣.KÚR-MEŠ-ka mar{*} [šu-nu-ni x x (x)]\nina ŠÀ-bi É.GAL-ka lu [kam-mu-sa-ka{?}]\nKUR—aš-šur.KI is-si-ka ⸢ú⸣-[sal-lam]\nša kal—UD-me kal-la-ma-⸢ri⸣ [ma-ṣar-ta-ka]\na-na-ṣar a-gu-ka ⸢ú{*}⸣-[ka-na]",
+     "orig_lines": [
+      "ii 1'",
+      "ii 2'",
+      "ii 3'",
+      "ii 4'",
+      "ii 5'"
+     ],
+     "en": "[I will annihilate] whatever enemies you [have]. As for [you, stay] in your palace; I will [reconcile] Assyria with you. I will protect [you] by day and by dawn and [consolidate] your crown."
+    },
+    {
+     "ref": "ii 6'–ii 10'",
+     "orig": "a-ki iṣ-ṣur a-kap-pi ina ⸢UGU{*}⸣ [AMAR-šú]\nina UGU-ḫi-ka a-ṣab-bur ina bat-⸢bat⸣-[ti]-⸢ka⸣\na-la-ab-bi a-sa-ḫu-ur\na-ki mu-ra{!}-ni dam{!}-qí ina É.GAL-ka\na-du-al LÚ.KÚR-MEŠ-ka ú-ṣa-a-na",
+     "orig_lines": [
+      "ii 6'",
+      "ii 7'",
+      "ii 8'",
+      "ii 9'",
+      "ii 10'"
+     ],
+     "en": "Like a winged bird ov[er its young] I will twitter over you and go in circles around you. Like a beautiful (lion) cub I will run about in your palace and sniff out your enemies."
+    },
+    {
+     "ref": "ii 11'–ii 14'",
+     "orig": "ina É.GAL-ka ú-ta-qa-an-ka\nni-kit-tu ni-ir-ri-ṭu ú-šá-an-ṣa-ka\nDUMU.UŠ-ka DUMU.UŠ—DUMU.UŠ-ka\nLUGAL{*}-u-tu ina IGI {d}MAŠ up-pa-áš",
+     "orig_lines": [
+      "ii 11'",
+      "ii 12'",
+      "ii 13'",
+      "ii 14'"
+     ],
+     "en": "I will keep you safe in your palace; I will make you overcome anxiety and trembling. Your son and grandson shall rule as kings before Ninurta."
+    },
+    {
+     "ref": "ii 15'–ii 16'",
+     "orig": "ta-ḫu-ma-a-ni ša KUR.KUR\nú-ga-am-mar a-da-nak-ka",
+     "orig_lines": [
+      "ii 15'",
+      "ii 16'"
+     ],
+     "en": "I will abolish the frontiers of all the lands and give them to you."
+    },
+    {
+     "ref": "ii 17'–ii 20'",
+     "orig": "a-me-lu-tu ṭùl-lu-ma-a\na-na-ku ši-i qa-bi-tu e-pi-is-su\nDUMU.MÍ ḫu-bur-tu a-na-ku\nú-ṣa-a-na ú-⸢ba{*}-ra ad-da⸣-[nak]-ka{*}",
+     "orig_lines": [
+      "ii 17'",
+      "ii 18'",
+      "ii 19'",
+      "ii 20'"
+     ],
+     "en": "Mankind is deceitful; I am one who says and does. I will sniff out, catch and give you the 'noisy daughter.'"
+    },
+    {
+     "ref": "ii 21'–ii 23'",
+     "orig": "at-ta a-na a.a-ši na-i-da-an-ni\ndi-ib-bi-⸢ia{*}⸣ an-nu-ti TA{v} ŠÀ URU.arba-ìl\nina É-a-nu-uk-ka e-si-ip",
+     "orig_lines": [
+      "ii 21'",
+      "ii 22'",
+      "ii 23'"
+     ],
+     "en": "As for you, praise me! Gather into your innards these words of mine from Arbela:"
+    },
+    {
+     "ref": "ii 24'–ii 27'",
+     "orig": "DINGIR-MEŠ ša É.SAG.ÍL ina EDIN ḪUL{*} bal-li{*}\nšar-bu-bu ar-ḫi-iš 02 GÍBIL-MEŠ\nina pa-ni-šú-nu lu-še-ṣi-ú lil-li-ku\nšu-lam-ka li-iq-bi-u",
+     "orig_lines": [
+      "ii 24'",
+      "ii 25",
+      "ii 26'",
+      "ii 27'"
+     ],
+     "en": "The gods of Esaggil languish in the 'steppe' of mixed evil. Quickly let two burnt offerings be sent out to their presence, and let them go and announce your well-being!"
+    },
+    {
+     "ref": "ii 28'",
+     "orig": "TA{v} pi-i šá {m}la—da-gíl—DINGIR URU.arba-ìl-a.a",
+     "orig_lines": [
+      "ii 28'"
+     ],
+     "en": "From the mouth of La-dagil-ili of Arbela."
+    },
+    {
+     "ref": "ii 29'",
+     "orig": "a-ki ta-ap-pa-la la ke-nu-ti",
+     "orig_lines": [
+      "ii 29'"
+     ],
+     "en": "Thus shall you answer the disloyal ones!"
+    },
+    {
+     "ref": "ii 30'",
+     "orig": "a-bat {d}15{*} šá URU.arba-ìl a-bat šar-ra-ti {d}NIN{*}.LÍL",
+     "orig_lines": [
+      "ii 30'"
+     ],
+     "en": "The word of Ištar of Arbela, the word of Queen Mullissu:"
+    },
+    {
+     "ref": "ii 31'–ii 33'",
+     "orig": "a-da{*}-gal as-sa-nam-me\nú-ḫa-a.a-a-ṭa{*} la ke-nu-ti\nina ŠU.2 LUGAL-ia a-šá-kan",
+     "orig_lines": [
+      "ii 31'",
+      "ii 32'",
+      "ii 33'"
+     ],
+     "en": "I will look, I will listen, I will search out the disloyal ones, and I will put them into the hands of my king."
+    },
+    {
+     "ref": "ii 34'",
+     "orig": "a-da{*}-ab-ub{!} a-na ma-aʾ-[du-ti]",
+     "orig_lines": [
+      "ii 34'"
+     ],
+     "en": "I will speak to the multi[tudes]:"
+    },
+    {
+     "ref": "ii 35'–ii 37'",
+     "orig": "si-ta-am-me-a na-pa-aḫ{*} [{d}UTU-ši]\nra{*}-ba{*} {d}UTU{*}-ši a{*}-⸢x⸣+[x x x x]\na-⸢ba{*}⸣-an-ni [x x x x x]",
+     "orig_lines": [
+      "ii 35'",
+      "ii 36'",
+      "ii 37'"
+     ],
+     "en": "Listen, sunr[ise] and sunset! I will create [......]."
+    },
+    {
+     "ref": "ii 38'–ii 39'",
+     "orig": "a-bat ⸢{d}15⸣ [šá URU.arba-ìl]\na-⸢na x⸣ [x x x x x x]",
+     "orig_lines": [
+      "ii 38'",
+      "ii 39'"
+     ],
+     "en": "The word of Ištar [of Arbela] to [......]"
+    },
+    {
+     "ref": "—",
+     "orig": "about two lines broken away\nbeginning (about two lines) destroyed",
+     "orig_lines": [],
+     "en": "(Break)"
+    },
+    {
+     "ref": "iii 1'",
+     "orig": "lu-u et-⸢ka⸣-[ka x x x x x x]",
+     "orig_lines": [
+      "iii 1'"
+     ],
+     "en": "Be on [your] guard [......]"
+    },
+    {
+     "ref": "iii 2'",
+     "orig": "LÚ.da-gíl—⸢MUŠEN⸣-[MEŠ x x x x]",
+     "orig_lines": [
+      "iii 2'"
+     ],
+     "en": "the augur[s ......]"
+    },
+    {
+     "ref": "iii 3'",
+     "orig": "a-na-⸢ku⸣-ma bi-[x x x x x]",
+     "orig_lines": [
+      "iii 3'"
+     ],
+     "en": "I myself [......]"
+    },
+    {
+     "ref": "iii 4'",
+     "orig": "a-⸢ga-lal⸣ ma-aʾ-⸢du⸣-[ti x x x x]",
+     "orig_lines": [
+      "iii 4'"
+     ],
+     "en": "I will roll many [......]"
+    },
+    {
+     "ref": "iii 5'",
+     "orig": "a-bi-ar ⸢ú-ba-ra⸣ [x x x x x]",
+     "orig_lines": [
+      "iii 5'"
+     ],
+     "en": "I will choose and catc[h ......]"
+    },
+    {
+     "ref": "iii 6'",
+     "orig": "a-⸢na-ku x⸣+[x x x]+⸢x a-x⸣+[x x x x]",
+     "orig_lines": [
+      "iii 6'"
+     ],
+     "en": "I [......]."
+    },
+    {
+     "ref": "iii 7'–iii 11'",
+     "orig": "⸢a{*}-ke{*}⸣-e{*} a{*}-ke-e ša a-na{*} LÚ{*}.[ERIM{?}-MEŠ]\nma-aʾ-du-ti ú{*}-<$sa{?}$>-na-ʾu-[x-ni]\nma-a im—ma-ti KUR na-ku-ru ib-ba-áš-ši\nma-a ina URU.kal-ḫi NINA.KI lu la nu-šab\nat-ta lu qa-la-ka {m}aš-šur—PAB—AŠ",
+     "orig_lines": [
+      "iii 7'",
+      "iii 8'",
+      "iii 9'",
+      "iii 10'",
+      "iii 11'"
+     ],
+     "en": "How, how (to answer) those who ... many [men], saying, \"When will the change in the land come about? Let us not stay in Calah and Nineveh!\" As for you, keep silent, Esarhaddon!"
+    },
+    {
+     "ref": "iii 12'–iii 15'",
+     "orig": "LÚ.ṣi-ra-ni NIM.MA.KI-a.a\nKUR.man-na-a.a a-bi-ar KUR.URI-a.a\nši-iṭ-ri-šú a-bar-ri-im\ni-gi-ib ša {m}mu-gal-li{*} ú-bat-taq",
+     "orig_lines": [
+      "iii 12'",
+      "iii 13'",
+      "iii 14'",
+      "iii 15'"
+     ],
+     "en": "I will choose the emissaries of the Elamite and the Mannean. I will seal the writings of the Urarṭian. I will cut off the ... of Mugallu."
+    },
+    {
+     "ref": "iii 16'–iii 17'",
+     "orig": "man-nu LÚ.e-du man-nu LÚ.ḫa-ab-lu\nla ta-pa-làḫ ina GIŠ.MI {m}aš-šur—PAB—AŠ MAN KUR—aš-šur",
+     "orig_lines": [
+      "iii 16'",
+      "iii 17'"
+     ],
+     "en": "Who (then) is the lone man? Who is the wronged man? Have no fear! Well sheltered is Esarhaddon, king of Assyria."
+    },
+    {
+     "ref": "iii 18'",
+     "orig": "TA{v} pi-i MÍ.ur-kit-tu—šar-rat URU.kal-ḫi-tú",
+     "orig_lines": [
+      "iii 18'"
+     ],
+     "en": "From the mouth of the woman Urkittu-šarrat of Calah."
+    },
+    {
+     "ref": "iii 19'–iii 20'",
+     "orig": "{m}⸢aš-šur—PAB—AŠ⸣ la ta-pa-làḫ KUR—aš-šur ú-ta-qa-an\nDINGIR-MEŠ ⸢ze{*}-nu{*}-ti{*} TA{v}{*} KUR{*}—aš-šur{*} ú{*}-sal{*}-lam{*}⸣",
+     "orig_lines": [
+      "iii 19'",
+      "iii 20'"
+     ],
+     "en": "Esarhaddon, have no fear! I will put Assyria in order and reconcile the angry gods with Assyria."
+    },
+    {
+     "ref": "iii 21'–iii 25'",
+     "orig": "ṣi-ip-pu-tu ša LÚ.⸢KÚR-MEŠ⸣-ka a{*}-na{*}-sa-aḫ\nda-me ša LÚ.KÚR-MEŠ ša LUGAL-ia a-tab-ba-ak\nšar-ri a-na-ṣar LÚ.KÚR-MEŠ ina GIŠ{*}.si-ga{*}-ra-te\nLÚ.sa-al-mu-ti ina ma-da{*}-na-ti\nina IGI GÌR.2-šú ub-ba-la",
+     "orig_lines": [
+      "iii 21'",
+      "iii 22'",
+      "iii 23'",
+      "iii 24'",
+      "iii 25'"
+     ],
+     "en": "I will pull away the cover of your enemies and shed the blood of my king's enemies. I will protect my king; I will bring enemies in neck stocks and vassals with tribute before his feet."
+    },
+    {
+     "ref": "iii 26'–iii 28'",
+     "orig": "a-na-ku AD-ka AMA-ka\nbir-ti a-gap-pi-ia ur-ta-bi-ka\nné-ma-al-ka am-mar",
+     "orig_lines": [
+      "iii 26'",
+      "iii 27'",
+      "iii 28'"
+     ],
+     "en": "I am your father and mother. I raised you between my wings; I will see your success."
+    },
+    {
+     "ref": "iii 29'–iii 34'",
+     "orig": "la ta-pal-làḫ {m}aš-šur—PAB—AŠ\nbir-ti i-zi-ri-ia am-ma-te-ia\na-šá-kan-ka ina ŠÀ-bi u₈-a\nLÚ.KÚR-MEŠ ša LUGAL-ia a-⸢ka⸣-[šá]-⸢ad{*}⸣\nKUR—aš-šur ú-ta-qa-an ⸢LUGAL⸣-[u-tu ša]\nAN{*}-e ú-ta-qa-⸢an⸣ [x x x x]",
+     "orig_lines": [
+      "iii 29'",
+      "iii 30'",
+      "iii 31'",
+      "iii 32'",
+      "iii 33'",
+      "iii 34'"
+     ],
+     "en": "Have no fear, Esarhaddon! I will place you between my arm and my forearm. In woe I will vanquish the enemies of my king. I will put Assyria in order, I will put the kin[gdom of] heaven in order. [...]"
+    },
+    {
+     "ref": "iii 35'",
+     "orig": "[na]-⸢pa{*}⸣-aḫ {d}UTU-⸢ši⸣ [x x x x]",
+     "orig_lines": [
+      "iii 35'"
+     ],
+     "en": "[t]he sunri[se ......]"
+    },
+    {
+     "ref": "iii 36'",
+     "orig": "[ra-ba {d}UTU]-⸢ši{*} x⸣ [x x x x]",
+     "orig_lines": [
+      "iii 36'"
+     ],
+     "en": "[the sunse]t [......]"
+    },
+    {
+     "ref": "—",
+     "orig": "rest (about 5 lines) destroyed\nbeginning (2-3 lines) destroyed",
+     "orig_lines": [],
+     "en": "(Break)"
+    },
+    {
+     "ref": "iv 1'",
+     "orig": "[x x x x x x še]-⸢tu{?}⸣-qi",
+     "orig_lines": [
+      "iv 1'"
+     ],
+     "en": "[...... to a]vert"
+    },
+    {
+     "ref": "iv 2'",
+     "orig": "[x x x x x]-⸢al⸣ {d}aš-šur",
+     "orig_lines": [
+      "iv 2'"
+     ],
+     "en": "[......] Aššur"
+    },
+    {
+     "ref": "iv 3'",
+     "orig": "[x x x x x x x] ⸢at⸣-ta",
+     "orig_lines": [
+      "iv 3'"
+     ],
+     "en": "[...... y]ou"
+    },
+    {
+     "ref": "iv 4'",
+     "orig": "[x x x É.SAG].⸢ÍL⸣ KÁ.DINGIR.KI",
+     "orig_lines": [
+      "iv 4'"
+     ],
+     "en": "[... Esaggi]l, Babylon"
+    },
+    {
+     "ref": "iv 5'",
+     "orig": "[x x x x x x] ⸢et⸣-ka-ku",
+     "orig_lines": [
+      "iv 5'"
+     ],
+     "en": "[......] I am on my guard"
+    },
+    {
+     "ref": "iv 6'",
+     "orig": "[x x x x x x x] ⸢x x x LUGAL{?}⸣",
+     "orig_lines": [
+      "iv 6'"
+     ],
+     "en": "[...... to my] king"
+    },
+    {
+     "ref": "iv 7'",
+     "orig": "[x x x x] a-ti-din",
+     "orig_lines": [
+      "iv 7'"
+     ],
+     "en": "I gave [......]."
+    },
+    {
+     "ref": "iv 8'",
+     "orig": "[a-na-ku {d}ur]-⸢ki{*}⸣-tú na-id-a-ni",
+     "orig_lines": [
+      "iv 8'"
+     ],
+     "en": "[I am Urk]ittu. Praise me!"
+    },
+    {
+     "ref": "iv 9'",
+     "orig": "[bé-et tal-la]-⸢ku{*}⸣-u-ni a-na-ṣar{*}-ka",
+     "orig_lines": [
+      "iv 9'"
+     ],
+     "en": "[Wherever you g]o, I will guard you."
+    },
+    {
+     "ref": "iv 10'",
+     "orig": "[x x x]-ra-ka",
+     "orig_lines": [
+      "iv 10'"
+     ],
+     "en": "[......] you"
+    },
+    {
+     "ref": "iv 11'",
+     "orig": "[x x x x x] na-i-da-an-ni",
+     "orig_lines": [
+      "iv 11'"
+     ],
+     "en": "[......] Praise me!"
+    },
+    {
+     "ref": "iv 12'",
+     "orig": "[(x) x x x] ⸢a{*}⸣—dan-niš",
+     "orig_lines": [
+      "iv 12'"
+     ],
+     "en": "[......] very"
+    },
+    {
+     "ref": "iv 13'",
+     "orig": "[x x x x] ⸢da⸣-ʾa-at-tú at-ta",
+     "orig_lines": [
+      "iv 13'"
+     ],
+     "en": "[...... s]trong, you"
+    },
+    {
+     "ref": "iv 14'",
+     "orig": "[x x x x] ⸢la⸣ ta-pa-làḫ",
+     "orig_lines": [
+      "iv 14'"
+     ],
+     "en": "[......] Have no fear!"
+    },
+    {
+     "ref": "iv 15'",
+     "orig": "[x x x x x] ⸢IGI{*}⸣.2-ka",
+     "orig_lines": [
+      "iv 15'"
+     ],
+     "en": "[......] your eyes"
+    },
+    {
+     "ref": "iv 16'–iv 18'",
+     "orig": "[x x x x] ⸢šak{*}-na⸣\n[x x x x x x]-⸢du{*}⸣\n[x x x x x x]-⸢ši{*}⸣",
+     "orig_lines": [
+      "iv 16'",
+      "iv 17'",
+      "iv 18'"
+     ],
+     "en": "(Break)"
+    },
+    {
+     "ref": "iv 19'",
+     "orig": "[x x x ú-sa]-⸢al{*}⸣-lam",
+     "orig_lines": [
+      "iv 19'"
+     ],
+     "en": "[I will re]concile [......]"
+    },
+    {
+     "ref": "iv 20'",
+     "orig": "[la ta-pa-làḫ] mu-u-ri",
+     "orig_lines": [
+      "iv 20'"
+     ],
+     "en": "[Have no fear], my calf!"
+    },
+    {
+     "ref": "iv 21'",
+     "orig": "[(x) x x x x] gat{*}-ta-ka a-ši{*}-al",
+     "orig_lines": [
+      "iv 21'"
+     ],
+     "en": "I will cover your figure [......]."
+    },
+    {
+     "ref": "iv 22'",
+     "orig": "[bir-ti i]-⸢zi{*}⸣-ri-ia",
+     "orig_lines": [
+      "iv 22'"
+     ],
+     "en": "[I will sh]elter you [between my uppe]r arm"
+    },
+    {
+     "ref": "iv 23'",
+     "orig": "[am-ma-te-ia a]-⸢na⸣-ṣar-ka",
+     "orig_lines": [
+      "iv 23'"
+     ],
+     "en": "[and my forearm]."
+    },
+    {
+     "ref": "iv 24'",
+     "orig": "[x x x x x] ke-e-ni",
+     "orig_lines": [
+      "iv 24'"
+     ],
+     "en": "[......] righteous"
+    },
+    {
+     "ref": "iv 25'",
+     "orig": "[x x x tu]-⸢ba{?}⸣-ʾa-a-ni",
+     "orig_lines": [
+      "iv 25'"
+     ],
+     "en": "[...... you s]eek me"
+    },
+    {
+     "ref": "iv 26'",
+     "orig": "[x x x]-⸢bi{?}⸣ ina pa-ni-ia",
+     "orig_lines": [
+      "iv 26'"
+     ],
+     "en": "[......] in my presence"
+    },
+    {
+     "ref": "iv 27'",
+     "orig": "[x x x x] ⸢LUGAL⸣-ta-ka ú-ta-qa-an",
+     "orig_lines": [
+      "iv 27'"
+     ],
+     "en": "[......] I will put your kingdom in order."
+    },
+    {
+     "ref": "iv 28'",
+     "orig": "[x x x x] ⸢la{*}⸣ ta-pal-li-ḫi",
+     "orig_lines": [
+      "iv 28'"
+     ],
+     "en": "[As for you, mother of the king], have no fear!"
+    },
+    {
+     "ref": "iv 29'",
+     "orig": "[x x x x] ⸢tu⸣-kul-ti {d}aš-šur",
+     "orig_lines": [
+      "iv 29'"
+     ],
+     "en": "[......] the support of Aššur."
+    },
+    {
+     "ref": "iv 30'–iv 31'",
+     "orig": "[x x x x] ⸢la⸣ ta-pa-làḫ\n[x x x x x x x]+⸢x⸣+[x]+⸢x⸣",
+     "orig_lines": [
+      "iv 30'",
+      "iv 31'"
+     ],
+     "en": "[Esarhaddon], have no fear!"
+    },
+    {
+     "ref": "—",
+     "orig": "rest (5-6 lines) destroyed",
+     "orig_lines": [],
+     "en": "(Rest destroyed)"
+    }
+   ]
+  },
+  {
+   "num": "SAA 09 003",
+   "title_en": "The Covenant of Aššur",
+   "segments": [
+    {
+     "ref": "i 1–i 4",
+     "orig": "[x x x x x x x x x x]\n[x x x x x x x x x x]\n[x x x x x x x]-⸢an{*}⸣\n[x x x x x x x]-nu{*}-ni",
+     "orig_lines": [
+      "i 1",
+      "i 2",
+      "i 3",
+      "i 4"
+     ],
+     "en": "(i 1) (Beginning destroyed)"
+    },
+    {
+     "ref": "i 5",
+     "orig": "[x x x x x x] ṭa{*}-ab-tú",
+     "orig_lines": [
+      "i 5"
+     ],
+     "en": "favour [......]"
+    },
+    {
+     "ref": "i 6",
+     "orig": "[x x x x x x]+⸢x⸣ di-na{*}",
+     "orig_lines": [
+      "i 6"
+     ],
+     "en": "give [......]!"
+    },
+    {
+     "ref": "i 7",
+     "orig": "[x x x x] ⸢iḫ⸣-ti-ṣi-in{*}",
+     "orig_lines": [
+      "i 7"
+     ],
+     "en": "He has taken care of [...],"
+    },
+    {
+     "ref": "i 8",
+     "orig": "[x x x-šú]-⸢nu{*}⸣ us-se-li-a",
+     "orig_lines": [
+      "i 8"
+     ],
+     "en": "he has promoted th[eir ...]."
+    },
+    {
+     "ref": "i 9–i 11",
+     "orig": "[DI-mu a]-na AN-e u KI.TIM\n[DI]-⸢mu{*}⸣ a-na É.ŠÁR.RA\n[DI-mu] ⸢a{*}⸣-na {m}aš-šur—PAB—AŠ MAN KUR—aš-šur",
+     "orig_lines": [
+      "i 9",
+      "i 10",
+      "i 11"
+     ],
+     "en": "Heaven and earth are [well]; Ešarra is [wel]l; Esarhaddon, king of Assyria, is [well]."
+    },
+    {
+     "ref": "i 12–i 13",
+     "orig": "[šul]-⸢mu⸣ šá {m}aš-šur—PAB—AŠ\n[iš-kun]-u{*}-ni{*} ina UGU GÌR.2 lil-lik",
+     "orig_lines": [
+      "i 12",
+      "i 13"
+     ],
+     "en": "[May the well-b]eing which Esarhaddon [has established] gain footing!"
+    },
+    {
+     "ref": "i 14",
+     "orig": "[i-sin-nu ina] ⸢É⸣.ŠÁR.RA {d}aš-šur is-sa-kan",
+     "orig_lines": [
+      "i 14"
+     ],
+     "en": "Aššur has arranged [a feast in] Ešarra."
+    },
+    {
+     "ref": "i 15",
+     "orig": "[(x) x x] ša URU{*}.ŠÀ—URU",
+     "orig_lines": [
+      "i 15"
+     ],
+     "en": "[......] of the Inner City"
+    },
+    {
+     "ref": "i 16",
+     "orig": "[x x x {m}aš]-⸢šur{*}—PAB{*}⸣—AŠ",
+     "orig_lines": [
+      "i 16"
+     ],
+     "en": "[...... Es]arhaddon"
+    },
+    {
+     "ref": "i 17",
+     "orig": "[(x) x x x x x x x x]-⸢ni⸣",
+     "orig_lines": [
+      "i 17"
+     ],
+     "en": "[......]"
+    },
+    {
+     "ref": "i 18",
+     "orig": "[x x x x i]-⸢na{*}⸣-áš-ši",
+     "orig_lines": [
+      "i 18"
+     ],
+     "en": "[...... l]ifts up"
+    },
+    {
+     "ref": "i 19",
+     "orig": "[x x x x x x] KUR.KUR",
+     "orig_lines": [
+      "i 19"
+     ],
+     "en": "[......] the lands"
+    },
+    {
+     "ref": "i 20",
+     "orig": "[x x x x]-⸢ti⸣ ina IGI {d}aš-šur",
+     "orig_lines": [
+      "i 20"
+     ],
+     "en": "[......] before Aššur"
+    },
+    {
+     "ref": "i 21",
+     "orig": "[x x x]-⸢a{?}⸣-ni TA{v} {m}aš-šur—PAB—AŠ",
+     "orig_lines": [
+      "i 21"
+     ],
+     "en": "[......] with Esarhaddon"
+    },
+    {
+     "ref": "i 22",
+     "orig": "[x x x] il-lak-u-ni",
+     "orig_lines": [
+      "i 22"
+     ],
+     "en": "[......] they come"
+    },
+    {
+     "ref": "i 23",
+     "orig": "[x x x x]-šú i-šar-ru-pu",
+     "orig_lines": [
+      "i 23"
+     ],
+     "en": "[......] they burn"
+    },
+    {
+     "ref": "i 24",
+     "orig": "[x x a]-⸢na{*}⸣ ga-ri-ni-šú",
+     "orig_lines": [
+      "i 24"
+     ],
+     "en": "[... t]o his mother"
+    },
+    {
+     "ref": "i 25",
+     "orig": "[x x x] ⸢lu{?}⸣ MUN{*} 03{*} tim-me",
+     "orig_lines": [
+      "i 25"
+     ],
+     "en": "[...] ... three pillars"
+    },
+    {
+     "ref": "i 26",
+     "orig": "[x x x] ⸢IGI⸣.2{?}-šú ú-še-taq",
+     "orig_lines": [
+      "i 26"
+     ],
+     "en": "[...] he runs his [ey]e over [...]."
+    },
+    {
+     "ref": "i 27",
+     "orig": "[si-ta-am]-me-a DUMU-MEŠ KUR—aš-šur",
+     "orig_lines": [
+      "i 27"
+     ],
+     "en": "[List]en, O Assyrians!"
+    },
+    {
+     "ref": "i 28–i 34",
+     "orig": "[LUGAL LÚ].⸢KÚR⸣-šú ik-ta-šad\n[LUGAL-ku]-⸢nu⸣ LÚ.KÚR-šú\n[ina KI.TA] ⸢GÌR⸣.2-šú is-sa-kan\n[TA{v} ra]-⸢ba{*}⸣ {d}UTU-ši\n[a-di na-pa]-⸢aḫ⸣ {d}UTU-ši\n[TA{v} na-pa]-⸢aḫ⸣ {d}UTU-ši\n[a-di ra]-ba {d}UTU-ši",
+     "orig_lines": [
+      "i 28",
+      "i 29",
+      "i 30",
+      "i 31",
+      "i 32",
+      "i 33",
+      "i 34"
+     ],
+     "en": "[The king] has vanquished his enemy. [You]r [king] has put his enemy [under] his foot, [from] sun[se]t [to] sun[ris]e, [from] sun[ris]e [to] sun[se]t!"
+    },
+    {
+     "ref": "i 35",
+     "orig": "[URU.me-li]-⸢di⸣ a-ḫap-pi",
+     "orig_lines": [
+      "i 35"
+     ],
+     "en": "I will destroy [Meli]d,"
+    },
+    {
+     "ref": "i 36",
+     "orig": "[x x x a]-⸢ḫap{*}-pi{*}⸣",
+     "orig_lines": [
+      "i 36"
+     ],
+     "en": "[I will de]stroy [...],"
+    },
+    {
+     "ref": "i 37",
+     "orig": "[x x x x x x x]",
+     "orig_lines": [
+      "i 37"
+     ],
+     "en": "[I will ......],"
+    },
+    {
+     "ref": "ii 1–ii 2",
+     "orig": "[KUR].gi-mir-a.a ina ŠU{*}-šú a-⸢šá{*}-kan{*}⸣\n⸢i⸣-šá-tu ina KUR.el-li-pi um-ma-ad",
+     "orig_lines": [
+      "ii 1",
+      "ii 2"
+     ],
+     "en": "I will deliver the Cimmerians into his hands and set the land of Ellipi on fire."
+    },
+    {
+     "ref": "ii 3–ii 7",
+     "orig": "kip-pat erbe-tim {d}aš-šur it-ta-na-šú\nTA{v} É i-nap-pa-ḫa-an-ni\nÉ i-rab-bu-u-ni\nLUGAL mi-ḫir-šú la-áš-šú\na-ki ṣi-it—{d}šá-maš na-mir",
+     "orig_lines": [
+      "ii 3",
+      "ii 4",
+      "ii 5",
+      "ii 6",
+      "ii 7"
+     ],
+     "en": "Aššur has given the totality of the four regions to him. From sunrise to sunset there is no king equal to him; he shines as brilliantly as the sun."
+    },
+    {
+     "ref": "ii 8–ii 9",
+     "orig": "an-ni-u (sup. ras.) šul-mu ša ina IGI {d}EN—TÙR\nina IGI DINGIR-MEŠ-ni šá-ki-nu-u-ni",
+     "orig_lines": [
+      "ii 8",
+      "ii 9"
+     ],
+     "en": "This is the (oracle of) well-being placed before Bel-Tarbaṣi and the gods."
+    },
+    {
+     "ref": "ii 10–ii 13",
+     "orig": "an-nu-rig LÚ.sar-sar-a-ni{*} an{*}-nu-⸢ti{*}⸣\nus-sa-ad-bi-bu-ka us-se-ṣu-nik{*}-ka\nil-ti-bu-ka at-ta pi-i-ka\ntap-ti-ti-a ma-a a-ni-na {d}aš-šur{*}",
+     "orig_lines": [
+      "ii 10",
+      "ii 11",
+      "ii 12",
+      "ii 13"
+     ],
+     "en": "Now then, these traitors provoked you, had you banished, and surrounded you; but you opened your mouth (and cried): \"Hear me, O Aššur!\""
+    },
+    {
+     "ref": "ii 14–ii 17",
+     "orig": "a-na-ku kil-la-ka as-se-me\nTA{v} ŠÀ-bi KÁ.GAL AN-e\nat-ta-qa-al-la-al-la\nla{*}-ak-ru-ur i-šá-tu lu-šá-kil-šú-nu",
+     "orig_lines": [
+      "ii 14",
+      "ii 15",
+      "ii 16",
+      "ii 17"
+     ],
+     "en": "I heard your cry. I issued forth as a fiery glow from the gate of heaven, to hurl down fire and have it devour them."
+    },
+    {
+     "ref": "ii 18–ii 21",
+     "orig": "at-ta ina bir-tu-šú-nu ta-za-az\nTA{v} pa{*}-ni-ka at-ti-ši\na-na KUR-e us-se-li-šú-nu\nNA₄-MEŠ aq-qul-lu ina UGU-ḫi-šú-nu a-zu-nu-un",
+     "orig_lines": [
+      "ii 18",
+      "ii 19",
+      "ii 20",
+      "ii 21"
+     ],
+     "en": "You were standing in their midst, so I removed them from your presence. I drove them up the mountain and rained (hail)stones and fire of heaven upon then."
+    },
+    {
+     "ref": "ii 22–ii 25",
+     "orig": "LÚ.KÚR-MEŠ-ka uḫ-ta-ti-ip\nda-me-šú-nu ÍD um-tal-li\nle-mu-ru lu-na-i{*}-⸢du⸣-ni\na-ki {d}aš-šur EN DINGIR-MEŠ a-na-ku-ni",
+     "orig_lines": [
+      "ii 22",
+      "ii 23",
+      "ii 24",
+      "ii 25"
+     ],
+     "en": "I slaughtered your enemies and filled the river with their blood. Let them see (it) and praise me, (knowing) that I am Aššur, lord of the gods."
+    },
+    {
+     "ref": "ii 26",
+     "orig": "an-nu-u šul-mu šá ina IGI ṣa-al-me",
+     "orig_lines": [
+      "ii 26"
+     ],
+     "en": "This is the well-being (placed) before the Image."
+    },
+    {
+     "ref": "ii 27–ii 32",
+     "orig": "ṭup-pi a-de-e an-ni{*}-u šá {d}aš-šur\nina UGU ḫa-ʾu-u-ti ina IGI LUGAL e-rab\nÌ—DÙG.GA i-za-ar-ri-qu\nUDU.SISKUR-MEŠ ep-pu-šú\nŠEM-ḪI.A il-lu-ku\nina IGI LUGAL i-sa-as-si-u",
+     "orig_lines": [
+      "ii 27",
+      "ii 28",
+      "ii 29",
+      "ii 30",
+      "ii 31",
+      "ii 32"
+     ],
+     "en": "This covenant tablet of Aššur enters the king's presence on a cushion. Fragrant oil is sprinkled, sacrifices are made, incense is burnt, and they read it out in the king's presence."
+    },
+    {
+     "ref": "ii 33–ii 34",
+     "orig": "a-bat {d}15 šá URU.arba-ìl\na-na {m}aš-šur—PAB—AŠ MAN KUR—aš-šur",
+     "orig_lines": [
+      "ii 33",
+      "ii 34"
+     ],
+     "en": "The word of Ištar of Arbela to Esarhaddon, king of Assyria:"
+    },
+    {
+     "ref": "ii 35–ii 36",
+     "orig": "DINGIR-MEŠ AD-MEŠ-ia ⸢ŠEŠ-MEŠ{*}-ia{*} al{*}-ka{*}⸣-ni\nina ŠÀ a-⸢de⸣-[e x x x x]",
+     "orig_lines": [
+      "ii 35",
+      "ii 36"
+     ],
+     "en": "Come, gods, my fathers and brothers, [enter] into the cove[nant ......]"
+    },
+    {
+     "ref": "iii 1",
+     "orig": "possibly one line missing\n[x x x x x x x x x x]",
+     "orig_lines": [
+      "iii 1"
+     ],
+     "en": "(Break)"
+    },
+    {
+     "ref": "iii 2–iii 6",
+     "orig": "ina UGU [tam]-⸢le⸣-e ḫi-⸢ir-ṣu{*}⸣ [x x x]\nA-MEŠ ṣar-ṣa-ri ta-si-qi-šú-⸢nu{*}⸣\nDUG.ma-si-tú ša 1(bán)\nA-MEŠ ṣar-ṣa-ri tu-um-ta-al-li\nta-at-ta-an-na-šú-nu",
+     "orig_lines": [
+      "iii 2",
+      "iii 3",
+      "iii 4",
+      "iii 5",
+      "iii 6"
+     ],
+     "en": "[She placed] a slice of ... on the [ter]race and gave them water from a cooler to drink; she filled a flagon of one seah with water from a cooler and gave it to them with the words:"
+    },
+    {
+     "ref": "iii 7–iii 11",
+     "orig": "ma-a ta-qab-bi-a ina ŠÀ-ku-nu\nma-a {d}15{*} pa{*}-aq-tú ši-i\nma-a tal-la-ka ina URU-MEŠ-ku{*}-nu\nna-gi-a-ni-ku-nu NINDA-MEŠ ta-ka-la\nta-maš-ši-a a-de-e an-nu-ti",
+     "orig_lines": [
+      "iii 7",
+      "iii 8",
+      "iii 9",
+      "iii 10",
+      "iii 11"
+     ],
+     "en": "\"In your hearts you say, 'Ištar is slight,' and you will go to your cities and districts, eat (your) bread and forget this covenant."
+    },
+    {
+     "ref": "iii 12–iii 15",
+     "orig": "ma-a TA ŠÀ A-MEŠ an-nu-ti\nta-šat-ti-a ta-ḫa-sa-sa-ni\nta-na-ṣa-ra a-de-e an-nu-ti\nša ina UGU {m}aš-šur—PAB—AŠ áš-kun-u-ni",
+     "orig_lines": [
+      "iii 12",
+      "iii 13",
+      "iii 14",
+      "iii 15"
+     ],
+     "en": "\"(But when) you drink from this water, you will remember me and keep this covenant which I have made on behalf of Esarhaddon.\""
+    },
+    {
+     "ref": "iii 16–iii 17",
+     "orig": "a-bat {d}15{*} šá URU.arba-ìl\na-na {m}aš-šur—PAB—AŠ MAN KUR—aš-šur",
+     "orig_lines": [
+      "iii 16",
+      "iii 17"
+     ],
+     "en": "The word of Ištar of Arbela to Esarhaddon, king of Assyria:"
+    },
+    {
+     "ref": "iii 18–iii 19",
+     "orig": "a-ki šá me-me-ni la e-pa-šú-u-ni\nla a-di-nak-kan-ni",
+     "orig_lines": [
+      "iii 18",
+      "iii 19"
+     ],
+     "en": "As if I did not do or give you anything!"
+    },
+    {
+     "ref": "iii 20–iii 24",
+     "orig": "ma-a 04 si-ip-pi šá KUR—aš-šur\nla ak-pu-pa-a la a-di-nak-ka-a\nLÚ.KÚR-ka la ak-šu-du\nLÚ.gi-ṣi-ṣi-ka a.a-bi-ka\n[a-ki] ⸢gur{*}⸣-ṣip-ti la al-qu-tú",
+     "orig_lines": [
+      "iii 20",
+      "iii 21",
+      "iii 22",
+      "iii 23",
+      "iii 24"
+     ],
+     "en": "Did I not bend the four doorjambs of Assyria, and did I not give them to you? Did I not vanquish your enemy? Did I not collect your haters and foes [like but]terflies?"
+    },
+    {
+     "ref": "iii 25",
+     "orig": "[at]-⸢ta{*}⸣ a-na a.a-ši mi-nu ta-di-na",
+     "orig_lines": [
+      "iii 25"
+     ],
+     "en": "[As for yo]u, what have you given to me?"
+    },
+    {
+     "ref": "iii 26–iii 31",
+     "orig": "[a]-⸢ka{*}⸣-li ša qa-ri-te\n⸢la{*}⸣-[áš-šú] ša ak la{*} É—DINGIR\n⸢ak⸣-[ka]-⸢li⸣ a-ka-li\nak-⸢ka-li{*}⸣ ka-a-si\nma-a ina{*} pa{*}-ni a-da-gal\nIGI.2 ina UGU-ḫi ak-tar-ar",
+     "orig_lines": [
+      "iii 26",
+      "iii 27",
+      "iii 28",
+      "iii 29",
+      "iii 30",
+      "iii 31"
+     ],
+     "en": "[There is no fo]od for my banquet, as if there were no temple; I [am depri]ved of my food, I am d[ep]rived of my cup! I am waiting for them, I have cast my eye upon them."
+    },
+    {
+     "ref": "iii 32–iii 37",
+     "orig": "ma-a ket-tu-ma 1(bán) a-kal a-ṣu{*}-di\n1(bán) DUG.ma-si-tú ša KAŠ DÙG.GA\nke-in Ú.ur-qí a-ku-su\nla-áš-ši-a ina pi-ia la-áš-kun\nlu-mal-li ka-a-su ina UGU-ḫi la-as-si\nla-la-a.a lu-tir-ra",
+     "orig_lines": [
+      "iii 32",
+      "iii 33",
+      "iii 34",
+      "iii 35",
+      "iii 36",
+      "iii 37"
+     ],
+     "en": "Verily, establish a seah of bowl food and a one-seah flagon of sweet beer! Let me take and put in my mouth vegetables and soup, let me fill the cup and drink from it, let me restore my charms!"
+    },
+    {
+     "ref": "iv 1–iv 2",
+     "orig": "[x x x x x x x x x]\n[x x x x x x x x]-ni",
+     "orig_lines": [
+      "iv 1",
+      "iv 2"
+     ],
+     "en": "(iv 1) (Break)"
+    },
+    {
+     "ref": "iv 3",
+     "orig": "[x x x x x x] la-áš-ši",
+     "orig_lines": [
+      "iv 3"
+     ],
+     "en": "let me lift [......]"
+    },
+    {
+     "ref": "iv 4",
+     "orig": "[x x x x x x la]-⸢al⸣-lik",
+     "orig_lines": [
+      "iv 4"
+     ],
+     "en": "[let m]e go [......]"
+    },
+    {
+     "ref": "iv 5",
+     "orig": "[x x x x x] e-ta-li-a",
+     "orig_lines": [
+      "iv 5"
+     ],
+     "en": "I went up [......]"
+    },
+    {
+     "ref": "iv 6",
+     "orig": "[x x x i-sin]-nu a-sa-kan",
+     "orig_lines": [
+      "iv 6"
+     ],
+     "en": "and arranged [a fea]st [...]."
+    },
+    {
+     "ref": "iv 7–iv 9",
+     "orig": "[a-ki ina ŠÀ-bi{?}] a-na-ku-ni\n[ma-a nu-da{?}] a-ki {d}15\n[šá URU].⸢arba-ìl⸣ at-ti-ni",
+     "orig_lines": [
+      "iv 7",
+      "iv 8",
+      "iv 9"
+     ],
+     "en": "[When] I was [there, they said: \"We know] that you are Ištar [of A]rbela.\""
+    },
+    {
+     "ref": "iv 10–iv 13",
+     "orig": "[a-na KUR—aš]-šur ut-ta-am-me-šá\n[né-mal{?}]-⸢ka⸣ la-mu-ur KUR-MEŠ-ni\n[ina GÌR.2-ia{?}] la-ak-bu-us\n[la-ad-bu{?}]-ub ina UGU {m}aš-šur—PAB—AŠ",
+     "orig_lines": [
+      "iv 10",
+      "iv 11",
+      "iv 12",
+      "iv 13"
+     ],
+     "en": "I set out [for] Assyria to see yo[ur success], to tread the mountains [with my feet], [and to spea]k about Esarhaddon."
+    },
+    {
+     "ref": "iv 14–iv 19",
+     "orig": "[ú-ma]-⸢a⸣ ri-iš {m}aš-šur—PAB—AŠ\n[04 si-ip]-⸢pi⸣ ša KUR—aš-šur\n[ak-tap]-⸢pa⸣ at-ta-nak-ka\n[LÚ.KÚR]-⸢ka⸣ ak-ta-šá-ad\n[UN-MEŠ{?}] ⸢ša⸣ is-si-ka i-za-zu-ni\n[ṭè-en{?}-šú]-⸢nu⸣ na-bal-ku-ut",
+     "orig_lines": [
+      "iv 14",
+      "iv 15",
+      "iv 16",
+      "iv 17",
+      "iv 18",
+      "iv 19"
+     ],
+     "en": "[No]w rejoice, Esarhaddon! [I have be]nt [the four doorjamb]s of Assyria and given them to you; I have vanquished yo[ur enemy. The mood of the people] who stand with you has been turned upside down."
+    },
+    {
+     "ref": "iv 20–iv 21",
+     "orig": "[ina ŠÀ an-ni]-⸢ti⸣ ta-am-mar\n[a-ki {d}15 šá URU].arba-ìl a-na-ku-ni",
+     "orig_lines": [
+      "iv 20",
+      "iv 21"
+     ],
+     "en": "[From thi]s you shall see [that] I am [Ištar of] Arbela."
+    },
+    {
+     "ref": "iv 22–iv 24",
+     "orig": "[ki-ma LÚ.LUL-MEŠ{?}] ⸢us⸣-sa-di-du-ni\n[ša i-mit-ti] ša šu-me-li\n[ši-ip-ṭu{?}] na-ṣu i-za-⸢zu⸣",
+     "orig_lines": [
+      "iv 22",
+      "iv 23",
+      "iv 24"
+     ],
+     "en": "[As soon as the traitors] have been dragged forth, ['the ones at the right and] left side' shall stand there to bear [the punishment]."
+    },
+    {
+     "ref": "iv 25–iv 30",
+     "orig": "[LÚ.man-za-az]—É.⸢GAL⸣\n[LÚ.ARAD]—⸢É⸣.GAL šu-⸢nu⸣\n[ša ina UGU]-ka i-si-ḫu-ni\n[al-ti]-bi-a ina UGU šin-ni-šú-nu\n[a-na GIŠ].za-qi-ba-a-ni\n[as]-sa-kan-šú-nu\n(2 lines blank)",
+     "orig_lines": [
+      "iv 25",
+      "iv 26",
+      "iv 27",
+      "iv 28",
+      "iv 29",
+      "iv 30"
+     ],
+     "en": "(As for) those cou]rtiers and palace [personnel who] rebelled [against] you, [I have sur]rounded them and impaled them by their teeth."
+    },
+    {
+     "ref": "iv 31–iv 35",
+     "orig": "[{m}la—da-gíl]—⸢DINGIR{*} LÚ.ra⸣-gi-mu\n[URU.arba-ìl]-⸢a.a⸣\n[x x x x x x] {d}15\n[x x x x x x]-lu-ni\n[ir-tu-gu-um] (blank)\n(end of column)",
+     "orig_lines": [
+      "iv 31",
+      "iv 32",
+      "iv 33",
+      "iv 34",
+      "iv 35"
+     ],
+     "en": "[La-dagil-i]li, a prophet of [Arbela, prophesied (this) when ......] Ištar [......]."
+    }
+   ]
+  },
+  {
+   "num": "SAA 09 004",
+   "title_en": "Fragment of a Collection of Encouragement Oracles",
+   "segments": [
+    {
+     "ref": "1'",
+     "orig": "beginning (possibly one line only) destroyed\n[x x x x x] ⸢x x⸣ [x x x]",
+     "orig_lines": [
+      "1'"
+     ],
+     "en": "(Beginning destroyed)"
+    },
+    {
+     "ref": "2'",
+     "orig": "[{m}aš-šur—PAB]—⸢AŠ⸣ MAN KUR—aš-šur [x x x]",
+     "orig_lines": [
+      "2'"
+     ],
+     "en": "[Esarhaddo]n, king of Assyria, [......]"
+    },
+    {
+     "ref": "3'",
+     "orig": "[ka]-⸢kiš⸣-a-ti ⸢ú⸣-[ba{?}-ra{?}]",
+     "orig_lines": [
+      "3'"
+     ],
+     "en": "I will [catch ... and wease]ls, (and)"
+    },
+    {
+     "ref": "4'",
+     "orig": "[ina IGI] GÌR.2-ka ⸢a⸣-[kar-ra-ar]",
+     "orig_lines": [
+      "4'"
+     ],
+     "en": "I will [cast them before] your feet."
+    },
+    {
+     "ref": "5'",
+     "orig": "[at]-⸢ta{?}⸣ la ta-⸢pal⸣-[làḫ x x]",
+     "orig_lines": [
+      "5'"
+     ],
+     "en": "[As for yo]u, fe[ar] not! [......]"
+    },
+    {
+     "ref": "6'",
+     "orig": "[x x]+⸢x⸣ ur-ki-u-te a-⸢kaš{?}⸣-[šad x x x]",
+     "orig_lines": [
+      "6'"
+     ],
+     "en": "I will v[anquish] the later [......]"
+    },
+    {
+     "ref": "7'",
+     "orig": "[x x]-⸢ka⸣ tap-ta-an-[x x x]",
+     "orig_lines": [
+      "7'"
+     ],
+     "en": "You shall ... yo[ur ......]"
+    },
+    {
+     "ref": "8'",
+     "orig": "[x x]-⸢ti⸣ a-šá-[kan x x]",
+     "orig_lines": [
+      "8'"
+     ],
+     "en": "[...] I will p[ut ......]"
+    },
+    {
+     "ref": "9'",
+     "orig": "[x x x]+⸢x-ka-bar⸣ ina ⸢x⸣+[x x x]",
+     "orig_lines": [
+      "9'"
+     ],
+     "en": "[...] massive in [...]"
+    },
+    {
+     "ref": "—",
+     "orig": "rest destroyed",
+     "orig_lines": [],
+     "en": "(Rest destroyed)"
+    }
+   ]
+  },
+  {
+   "num": "SAA 09 005",
+   "title_en": "An Oracle to the Queen Mother",
+   "segments": [
+    {
+     "ref": "1",
+     "orig": "a-bat {d}15 ša URU.arba-ìl [x x x x x x]",
+     "orig_lines": [
+      "1"
+     ],
+     "en": "The word of Ištar of Arbela [to the king's mother: ...]"
+    },
+    {
+     "ref": "2",
+     "orig": "kin-ṣa-a.a kan-ṣa a-⸢na{*}⸣ [x x x x x x x]",
+     "orig_lines": [
+      "2"
+     ],
+     "en": "My knees are bent fo[r ......]."
+    },
+    {
+     "ref": "3",
+     "orig": "{d}NIN.LÍL a-na kil-li [ša mu-ri-šá ta-se-me]",
+     "orig_lines": [
+      "3"
+     ],
+     "en": "Mullissu [has heard] the cry [of her calf]."
+    },
+    {
+     "ref": "4",
+     "orig": "qab-le-ki ru-uk-si ⸢x⸣+[x x x x x x]",
+     "orig_lines": [
+      "4"
+     ],
+     "en": "Gird (f.) your loins! [......]"
+    },
+    {
+     "ref": "5",
+     "orig": "ša {m}aš-šur—PAB—AŠ MAN KUR—aš-šur [x x x x x x]",
+     "orig_lines": [
+      "5"
+     ],
+     "en": "of Esarhaddon, king of Assyria [......]"
+    },
+    {
+     "ref": "6",
+     "orig": "<$1$> {d}NIN.URTA 15 u 150 ⸢ša{?}⸣ [x x x x x]",
+     "orig_lines": [
+      "6"
+     ],
+     "en": "Ninurta [shall go] at the right and left side o[f .......]"
+    },
+    {
+     "ref": "7",
+     "orig": "a.a-bi-šú ina KI.TA{*} GÌR{*}.2{*}-[šú x x x x x x]",
+     "orig_lines": [
+      "7"
+     ],
+     "en": "[shall put] his enemies under [his] foot [......]"
+    },
+    {
+     "ref": "8",
+     "orig": "ina É.GAL EDIN ú-[ṣa x x x x x x]",
+     "orig_lines": [
+      "8"
+     ],
+     "en": "I will g[o out] to the Palace of the Steppe [...]"
+    },
+    {
+     "ref": "b.e. 9",
+     "orig": "tu{*}-qu-un a-na {m}[aš-šur—PAB—AŠ MAN KUR—aš-šur]",
+     "orig_lines": [
+      "b.e. 9"
+     ],
+     "en": "I will give security for [Esarhaddon, king of Assyria]"
+    },
+    {
+     "ref": "b.e. 10",
+     "orig": "⸢ad⸣-dan LÚ{*}.[KÚR-MEŠ-šú]",
+     "orig_lines": [
+      "b.e. 10"
+     ],
+     "en": "[His] e[nemies]"
+    },
+    {
+     "ref": "r 1",
+     "orig": "ina ŠÀ{*} ⸢x⸣+[x x x x x x x x x x]",
+     "orig_lines": [
+      "r 1"
+     ],
+     "en": "within [......]"
+    },
+    {
+     "ref": "r 2",
+     "orig": "ú-⸢ba⸣-[x x x x x x x x x x]",
+     "orig_lines": [
+      "r 2"
+     ],
+     "en": "I will [......]"
+    },
+    {
+     "ref": "r 3",
+     "orig": "LÚ.KÚR ⸢ša⸣ [x x x x x x x x x]",
+     "orig_lines": [
+      "r 3"
+     ],
+     "en": "The enemy who [......]"
+    },
+    {
+     "ref": "r 4",
+     "orig": "LÚ.KÚR ⸢ša lum{?} x⸣ [x ina IGI GÌR.2-MEŠ-šú]",
+     "orig_lines": [
+      "r 4"
+     ],
+     "en": "the enemy who ... [...]"
+    },
+    {
+     "ref": "r 5",
+     "orig": "ni{*}-ik{*}-ru-ur{*} ni-⸢il{*}⸣-[x x x x x x]",
+     "orig_lines": [
+      "r 5"
+     ],
+     "en": "we will cast [before his feet] and g[o ...]."
+    },
+    {
+     "ref": "r 6",
+     "orig": "{d}NIN.LÍL ⸢dul{*}⸣-la [x x x x x x]",
+     "orig_lines": [
+      "r 6"
+     ],
+     "en": "Glorify (pl.) [...] Mullissu! [......]"
+    },
+    {
+     "ref": "r 7",
+     "orig": "⸢ša{?}⸣ {d}UTU ši-na EN AD{*}-u-a ú-⸢za{?}⸣-[x x x x x x]",
+     "orig_lines": [
+      "r 7"
+     ],
+     "en": "are those of Šamaš, until my father [......]."
+    }
+   ]
+  },
+  {
+   "num": "SAA 09 006",
+   "title_en": "An Oracle from Tašmetu-ereš of Arbela",
+   "segments": [
+    {
+     "ref": "o 1",
+     "orig": "{d}15 ša URU.arba-[ìl ma-a x x x x x x x x]",
+     "orig_lines": [
+      "o 1"
+     ],
+     "en": "Ištar of Arbe[la has said: ......]"
+    },
+    {
+     "ref": "o 2",
+     "orig": "ma-a ú-ta-qa-[an x x x x x x x x x x]",
+     "orig_lines": [
+      "o 2"
+     ],
+     "en": "\"I will put in order [......]"
+    },
+    {
+     "ref": "o 3",
+     "orig": "ú-ta-qa-an [x x x x x x x x x x x]",
+     "orig_lines": [
+      "o 3"
+     ],
+     "en": "I will put in order [......]"
+    },
+    {
+     "ref": "o 4",
+     "orig": "[x]-ru-bi ⸢x⸣+[x x x x x x x x x x x x x]",
+     "orig_lines": [
+      "o 4"
+     ],
+     "en": "... [......]"
+    },
+    {
+     "ref": "o 5",
+     "orig": "ma-a ⸢URU⸣.[x x x x x x x x x x x x x]",
+     "orig_lines": [
+      "o 5"
+     ],
+     "en": "\"the city [......]"
+    },
+    {
+     "ref": "o 6",
+     "orig": "in-ta-[x x x x x x x x x x x x x]",
+     "orig_lines": [
+      "o 6"
+     ],
+     "en": "Th[ey ...]ed [......]"
+    },
+    {
+     "ref": "o 7",
+     "orig": "e-tar-⸢bu⸣ [x x x x x x x x x x x x]",
+     "orig_lines": [
+      "o 7"
+     ],
+     "en": "they entered [......]"
+    },
+    {
+     "ref": "o 8",
+     "orig": "ša LUGAL [x x x x x x x x x x x x]",
+     "orig_lines": [
+      "o 8"
+     ],
+     "en": "of the king [......]"
+    },
+    {
+     "ref": "o 9",
+     "orig": "i-du-⸢ku⸣ [x x x x x x x x x x x x x]",
+     "orig_lines": [
+      "o 9"
+     ],
+     "en": "they killed [......]"
+    },
+    {
+     "ref": "b.e. 10",
+     "orig": "a-ka-[x x x x x x x x x x x x]",
+     "orig_lines": [
+      "b.e. 10"
+     ],
+     "en": "I will c[ast ......]"
+    },
+    {
+     "ref": "r 1",
+     "orig": "⸢ma⸣-a la ⸢a-x⸣+[x x x x x x x x]",
+     "orig_lines": [
+      "r 1"
+     ],
+     "en": "\"I do not [......]"
+    },
+    {
+     "ref": "r 2",
+     "orig": "⸢ú⸣-su-tú [x x x x x x x x x x x x]",
+     "orig_lines": [
+      "r 2"
+     ],
+     "en": "help [......]"
+    },
+    {
+     "ref": "r 3",
+     "orig": "a-se-me a-tan-[x x x x x x x x x x]",
+     "orig_lines": [
+      "r 3"
+     ],
+     "en": "I heard and [......]"
+    },
+    {
+     "ref": "r 4",
+     "orig": "LÚ{v}.KÚR-MEŠ-ka [x x x x x x x x x x]",
+     "orig_lines": [
+      "r 4"
+     ],
+     "en": "your enemies [......]"
+    },
+    {
+     "ref": "r 5",
+     "orig": "an-ni-i [x x x x x x x x x]",
+     "orig_lines": [
+      "r 5"
+     ],
+     "en": "this [......]"
+    },
+    {
+     "ref": "r 6",
+     "orig": "⸢ir⸣-gu-mu-[u-ni x x x x x x x x x]",
+     "orig_lines": [
+      "r 6"
+     ],
+     "en": "prophes[ied ......]"
+    },
+    {
+     "ref": "r 7",
+     "orig": "[ina] ⸢ŠÀ⸣-bi ⸢ru-x⸣+[x x x x x x x x x]",
+     "orig_lines": [
+      "r 7"
+     ],
+     "en": "[wit]hin [......]"
+    },
+    {
+     "ref": "r 8",
+     "orig": "ša ir-gu-⸢mu⸣-[u-ni x x x x x x]",
+     "orig_lines": [
+      "r 8"
+     ],
+     "en": "who prophes[ied ......]"
+    },
+    {
+     "ref": "r 9",
+     "orig": "ina ⸢pa⸣-an ku-⸢du⸣-[x x x x x x x]",
+     "orig_lines": [
+      "r 9"
+     ],
+     "en": "before [......]"
+    },
+    {
+     "ref": "r 10",
+     "orig": "⸢a-di⸣ LÚ{v}.KÚR-[MEŠ-ka x x x x x]",
+     "orig_lines": [
+      "r 10"
+     ],
+     "en": "until [your] enemi[es ......]."
+    },
+    {
+     "ref": "t.e. 11",
+     "orig": "[o {m}]⸢{d}⸣LÁL—KAM-eš ⸢LÚ⸣.[ra-gi-mu x x x x]",
+     "orig_lines": [
+      "t.e. 11"
+     ],
+     "en": "[T]ašmetu-ereš, a [prophet of ......],"
+    },
+    {
+     "ref": "t.e. 12",
+     "orig": "[ina] ⸢ŠÀ⸣ URU.arba-ìl ir-⸢tu⸣-[gu-um o]",
+     "orig_lines": [
+      "t.e. 12"
+     ],
+     "en": "pro[phesied] (this) in the city of Arbela."
+    }
+   ]
+  },
+  {
+   "num": "SAA 09 007",
+   "title_en": "Prophecies for Crown Prince Assurbanipal",
+   "segments": [
+    {
+     "ref": "o 1",
+     "orig": "[MÍ].{d}NIN.LÍL—kab-ta-at MÍ.ra-gi-in-tú",
+     "orig_lines": [
+      "o 1"
+     ],
+     "en": "The prophetess Mullissu-kabtat (has said):"
+    },
+    {
+     "ref": "o 2",
+     "orig": "[ma]-a a-bat LUGAL {d}NIN.LÍL ši-i ma-a la ta-pal-làḫ {m}aš{*}-šur{*}—DÙ—A",
+     "orig_lines": [
+      "o 2"
+     ],
+     "en": "\"It is the word of Queen Mullissu: Fear not, Assurbanipal!"
+    },
+    {
+     "ref": "o 3–o 7",
+     "orig": "[ma]-a a-di ki-i šá aq-bu-u-ni ep-pa-šu-u-ni ad-da-nak-kan-ni\n[ma]-⸢a⸣ a-di ina UGU DUMU-MEŠ šá šá—SU₆-MEŠ ina UGU ḫal-pe-te šá LÚ.SAG-MEŠ\n[at]-⸢ta⸣ LUGAL-u-tú ina UGU-ḫi-šú-nu tu-up-pa-šú-u-ni\n[a-ḫa]-⸢ṣi{*}⸣-in{*}-ka ina É—UŠ-u-ti\n[ma-a AD-ka x x]+⸢x⸣-a-ti TÚG.pi-tu-tu i-rak-kas",
+     "orig_lines": [
+      "o 3",
+      "o 4",
+      "o 5",
+      "o 6",
+      "o 7"
+     ],
+     "en": "\"Until I have done and given to you what I promised, until you rule as king over the sons of the bearded courtiers and the successors of the eunuchs, [I will look af]ter you in the Palace of Succession; [your father] shall gird the diadem [...]."
+    },
+    {
+     "ref": "o 8–o 11",
+     "orig": "[ma-a x x LUGAL]-MEŠ šá KUR.KUR a-na a-ḫe-iš i-qab-bu-u-ni\n[ma-a al-ka-ni ni]-il-lik ina UGU {m}aš{*}-šur{*}—DÙ—A LUGAL ši-i-bi ra-ši ⸢x⸣\n[ma-a mi-i-nu šá DINGIR]-MEŠ a-na AD-MEŠ-ni AD—AD-MEŠ-ni i-ši-mu-u-ni\n[ma-a ú-ma-a šu]-⸢ú⸣ ina bir-tu-⸢un⸣-ni lip-ru-us",
+     "orig_lines": [
+      "o 8",
+      "o 9",
+      "o 10",
+      "o 11"
+     ],
+     "en": "\"[The ... king]s of the lands shall say to one another: ['Come, let us] go to Assurbanipal! The king has witnesses! [Whatever the god]s decreed for our fathers and forefathers, [let him now] arbitrate between us.'"
+    },
+    {
+     "ref": "o 12–o 13",
+     "orig": "[ù {d}NIN].⸢LÍL⸣ taq-ṭi-bi ma-a [LUGAL]-⸢MEŠ⸣ šá KUR.KUR\n[ta-pi]-⸢al⸣ ta{*}-ḫu-ma-a-ni tu{*}-kal-lam{*}-⸢šú{*}-nu{*} KASKAL{*}⸣-MEŠ ina GÌR.2-šú-nu{*} GAR-an",
+     "orig_lines": [
+      "o 12",
+      "o 13"
+     ],
+     "en": "\"[Mullis]su [has] said: [You shall ru]le over [the king]s of the lands; you shall show them their frontiers and set the courses they take."
+    },
+    {
+     "ref": "o 14",
+     "orig": "[ma]-⸢a{*}⸣ šá-ni-tú laq-bak-ka ma-a ki-i KUR.NIM.KI KUR.gi-mir a-⸢ga{*}⸣-mar{*}",
+     "orig_lines": [
+      "o 14"
+     ],
+     "en": "\"Secondly, let me tell you: I will finish the land of Gomer like (I finished) Elam."
+    },
+    {
+     "ref": "r 1–r 2",
+     "orig": "[ma]-a ta-al-la gi-ṣu a-šab-bir ma-a mur-din-nu a-na ni-ip-ši a-nap-pa-áš\na-dam{*}-mu-ma-a-te a-na sar-bi ú-ta-ra",
+     "orig_lines": [
+      "r 1",
+      "r 2"
+     ],
+     "en": "\"... I will break the thorn, I will pluck the bramble into a tuft of wool, I will turn the wasps into a squash."
+    },
+    {
+     "ref": "r 3–r 5",
+     "orig": "ḫal-la-la-at-ti en-gur{*}-a-ti\nat-ta ta-qab-bi ma-a mi-i-nu ḫal-la-la-at-ti en-gur{*}-a-ti\nḫal-la-la-at-ti ina{*} KUR.mu-ṣur e-rab en-gur{*}-a-te ú-ṣa-a",
+     "orig_lines": [
+      "r 3",
+      "r 4",
+      "r 5"
+     ],
+     "en": "\"Like a centipede, like a ...! You say, 'What does it mean, like a centipede, like a ...?' Like a centipede I will enter Egypt, like a ... I will come out."
+    },
+    {
+     "ref": "r 6",
+     "orig": "ma-a šá {d}NIN.LÍL AMA-šú-ni la ta-pal-làḫ šá GAŠAN—arba-ìl ta-ri-su-ni la ta-pal-làḫ",
+     "orig_lines": [
+      "r 6"
+     ],
+     "en": "\"You whose mother is Mullissu, have no fear! You whose nurse is the Lady of Arbela, have no fear!"
+    },
+    {
+     "ref": "r 7–r 11",
+     "orig": "ma-a ki-i ta-ri-ti ina UGU gi-iš-ši-ia ÍL{*}-ši-ka\nma-a GIŠ.ḪAŠḪUR{*}.KUR.RA ina bi-rit UBUR-MEŠ-ia a-šak-kan-ka\nšá mu-ši-ia e-rak an-ṣar-ka šá kal—UD-me ḫi-il-pa-ka ad-dan\nšá kal-la-ma-ri un-na-ni-ka ú-ṣur ú-ṣur up-pa-áš-ka\n⸢ma-a⸣ at-ta la ta-pal-làḫ mu-u-ri šá ana-ku ú-rab-bu-u-ni",
+     "orig_lines": [
+      "r 7",
+      "r 8",
+      "r 9",
+      "r 10",
+      "r 11"
+     ],
+     "en": "\"I will carry you on my hip like a nurse, I will put you between my breasts (like) a pomegranate. At night I will stay awake and guard you; in the daytime I will give you milk; at dawn I will play 'watch, watch your ...' with you. As for you, have no fear, my calf, whom I (have) rear(ed).\""
+    }
+   ]
+  },
+  {
+   "num": "SAA 09 008",
+   "title_en": "Words Concerning the Elamites",
+   "segments": [
+    {
+     "ref": "o 1",
+     "orig": "dib-bi [ša KUR.NIM.MA].⸢KI{*}⸣-a.a",
+     "orig_lines": [
+      "o 1"
+     ],
+     "en": "Words [concerning the Elam]ites."
+    },
+    {
+     "ref": "o 2",
+     "orig": "ki-i an-[ni-i DINGIR] ⸢i⸣-qab-bi",
+     "orig_lines": [
+      "o 2"
+     ],
+     "en": "[God] says as follows:"
+    },
+    {
+     "ref": "o 3",
+     "orig": "ma-a at-⸢ta{*}⸣-[lak at]-tal-ka",
+     "orig_lines": [
+      "o 3"
+     ],
+     "en": "\"I have go[ne and I ha]ve come.\""
+    },
+    {
+     "ref": "o 4",
+     "orig": "05-šú 06-šú iq-[ṭi]-⸢bi⸣ id—da-a-te",
+     "orig_lines": [
+      "o 4"
+     ],
+     "en": "He s[ai]d (this) five, six times, and then:"
+    },
+    {
+     "ref": "o 5–o 7",
+     "orig": "ma-a TA{v} UGU GIŠ.[nàr]-an-ti at-tal-ka\nma-a MUŠ ša ina ŠÀ-bi-šá as-sa-ad-da\nab-ta-taq ù ma-a GIŠ.nàr-an-tu",
+     "orig_lines": [
+      "o 5",
+      "o 6",
+      "o 7"
+     ],
+     "en": "\"I have come from the [m]ace. I have pulled out the snake which was inside it, I have cut it in pieces, and I have broken the mace.\""
+    },
+    {
+     "ref": "o 8–r 2",
+     "orig": "aḫ-te-pi ù ma-a KUR.NIM.MA.KI\na-ḫap-pi :. o{*} Á.2-MEŠ-šú TA{v} kaq-qir\ni-sap-pan ma-a ki-i an-ni-i\nKUR.NIM.MA.KI a{*}-gam-mar\nrest uninscribed",
+     "orig_lines": [
+      "o 8",
+      "b.e. 9",
+      "r 1",
+      "r 2"
+     ],
+     "en": "And (he said): \"I will destroy Elam; its army shall be levelled to the ground. In this manner I will finish Elam.\""
+    }
+   ]
+  },
+  {
+   "num": "SAA 09 009",
+   "title_en": "Words of Encouragement to Assurbanipal",
+   "segments": [
+    {
+     "ref": "o 1–o 2",
+     "orig": "[ki-din]-nu šá {d}⸢NIN⸣.LÍL\n[(x) x x] ša {d}GAŠAN—URU.⸢arba⸣-ìl",
+     "orig_lines": [
+      "o 1",
+      "o 2"
+     ],
+     "en": "[O prote]ge of Mullissu, [...] of the Lady of Arbela!"
+    },
+    {
+     "ref": "o 3–o 7",
+     "orig": "[ši-na]-⸢ma⸣ ina DINGIR.DINGIR dan-na\n[i-ra]-⸢ʾa{*}⸣-a-ma u ÁG-ši{!}-na\n[a-na] m{*}AN.ŠÁR—ba-an—A DÙ-ut ŠU.2-ši-na\n[il]-⸢ta⸣-nap-pa-ra šá TI.LA-šú\n[ú-šá]-⸢áš⸣-ka-na-šu ŠÀ-bu",
+     "orig_lines": [
+      "o 3",
+      "o 4",
+      "o 5",
+      "o 6",
+      "o 7"
+     ],
+     "en": "[They] are the strongest among the gods; they [lov]e and keep sending their love [to] Assurbanipal, the creation of their hands. [They g]ive him heart for the sake of his life:"
+    },
+    {
+     "ref": "o 8–o 15",
+     "orig": "[ba-la]-ṭa-ka er-šá-a-ku-ma a-rap-pu-da EDIN\n[e]-⸢ta⸣-nab-bir ÍD-MEŠ u tam-tim-MEŠ\n⸢e-ta⸣-na-at-ti-iq KUR-MEŠ-e ḫur-sa-a-ni\ne-⸢ta⸣-nab-bir ÍD-MEŠ ka-li-ši-na\ne-⸢ta⸣-nak-kal-a-ni ia-a-ši\nṣe-⸢ta⸣-a-te sa-rab-a-te\nil-ta-nap-pa-ta ba-nu-ú la-a-ni\nan-ḫa-⸢ku{*}⸣-ma šá-ad-da-lu-pu-ka la-a-ni-ia",
+     "orig_lines": [
+      "o 8",
+      "o 9",
+      "o 10",
+      "o 11",
+      "o 12",
+      "o 13",
+      "o 14",
+      "o 15"
+     ],
+     "en": "I roam the desert desiring your [lif]e. I cross over rivers and oceans, I traverse mountains and mountain chains, I cross over all rivers. Droughts and showers consume me and affect my beautiful figure. I am worn out, my body is exhausted for your sake."
+    },
+    {
+     "ref": "o 16–o 19",
+     "orig": "ina UKKIN{*} DINGIR-MEŠ ka-la-me aq-ṭi-bi ba-la-ṭa-ka\ndan-na rit-ta-a.a la ú-ram-ma-ka ina IGI DINGIR-MEŠ\nnag-ga-la-pa-a.a ḫar-ru-ud-da\nit-ta-na-áš-šá-a-ka a-na ka-a-šá",
+     "orig_lines": [
+      "o 16",
+      "o 17",
+      "o 18",
+      "o 19"
+     ],
+     "en": "I have ordained life for you in the assembly of all the gods. My arms are strong, they shall not forsake you before the gods. My shoulders are alert, they will keep carrying you."
+    },
+    {
+     "ref": "o 20–o 21",
+     "orig": "⸢ina{*} NUNDUN{*}⸣-MEŠ{*}-⸢te{?}⸣-ia{*} e-ta-nar-riš{*} TI.LA-ka\n[x x x x x] TI.LA-ka TI.LA tu-šá-tar",
+     "orig_lines": [
+      "o 20",
+      "o 21"
+     ],
+     "en": "I keep demanding life for you with my lips; [...] your life; you shall increase life."
+    },
+    {
+     "ref": "o 22–o 25",
+     "orig": "[x x x x x] ⸢{d}⸣AG li-iḫ-da-a NUNDUN-MEŠ-ka\n[ina UKKIN DINGIR-MEŠ] ka-la-a-me\n[aq-ṭa-nab]-bi dam-qa-a-te-ka\n[TI.LA-ka er-šá]-ku-ma a-rap-pu-da ⸢EDIN⸣",
+     "orig_lines": [
+      "o 22",
+      "o 23",
+      "o 24",
+      "o 25"
+     ],
+     "en": "[O favourite of] Nabû, may your lips rejoice! [I keep spe]aking good words about you [in the assembly of] all [the gods]; I roam the desert [desiri]ng [your life]."
+    },
+    {
+     "ref": "o 26–o 28",
+     "orig": "[ina ŠÀ u₈-a a]-⸢ta⸣-bi a.a-ab-ka a-ṭa-[ba-aḫ]\n[x x x x x x]+⸢x⸣-ma a-na KUR-šú i-tu-[ra]\n[x x x x x x x]-u-ni a-šá-⸢x⸣+[x x x]",
+     "orig_lines": [
+      "o 26",
+      "o 27",
+      "o 28"
+     ],
+     "en": "[In woe I will r]ise and slau[ghter] your enemy; [your ...] will [...] and retur[n] to his country."
+    },
+    {
+     "ref": "—",
+     "orig": "about 4 lines broken away\nabout 7 lines obliterated or uninscribed",
+     "orig_lines": [],
+     "en": "(Break)"
+    },
+    {
+     "ref": "r 1'–r 3'",
+     "orig": "[x] {d}[NIN].⸢LÍL⸣ u ⸢{d}⸣GAŠAN—arba-ìl.KI\n[a-na] {m}AN.ŠÁR—DÙ—A ⸢DÙ⸣-ut ŠU.2-MEŠ-⸢ši⸣-na\n⸢lu{*}⸣-ú-bal-liṭ-ṭa a-na ⸢da-a-ri⸣\nblank",
+     "orig_lines": [
+      "r 1'",
+      "r 2'",
+      "r 3'"
+     ],
+     "en": "May Mullissu and the Lady of Arbela keep Assurbanipal, the creation of their hands, alive for ever!"
+    },
+    {
+     "ref": "r 4'–r 5'",
+     "orig": "ša ⸢KA{*}⸣ MÍ{*}.KALAG{*}-šá—a-mur\n[DUMU.MÍ URU.arba]-⸢ìl{*}⸣",
+     "orig_lines": [
+      "r 4'",
+      "r 5'"
+     ],
+     "en": "By the mouth of the woman Dunnaša-amur [of Arbe]la."
+    },
+    {
+     "ref": "r 6'–r 7'",
+     "orig": "ITI.⸢BARAG{*}⸣ UD 18{*}-KAM lim-mu {m}EN—KUR-u-a\nLÚ.GAR.KUR ṣur-ri\nrest (about 8 lines) destroyed",
+     "orig_lines": [
+      "r 6'",
+      "r 7'"
+     ],
+     "en": "Nis[an] 18, eponymy of Bel-šadû'a, governor of Tyre (650)."
+    }
+   ]
+  },
+  {
+   "num": "SAA 09 010",
+   "title_en": "Fragment of a Prophecy",
+   "segments": [
+    {
+     "ref": "o 1'–o 2'",
+     "orig": "beginning broken away\n⸢si⸣-[x x x x x x x x x]\nis-[x x x x x x x x x]",
+     "orig_lines": [
+      "o 1'",
+      "o 2'"
+     ],
+     "en": "(Beginning destroyed)"
+    },
+    {
+     "ref": "o 3'",
+     "orig": "nu-[x x x x x x x x x]",
+     "orig_lines": [
+      "o 3'"
+     ],
+     "en": "we [......]"
+    },
+    {
+     "ref": "o 4'",
+     "orig": "né-me-[el x x x x x x x x]",
+     "orig_lines": [
+      "o 4'"
+     ],
+     "en": "because [......]"
+    },
+    {
+     "ref": "o 5'",
+     "orig": "ina IGI [x x x x x x x x]",
+     "orig_lines": [
+      "o 5'"
+     ],
+     "en": "before [......]"
+    },
+    {
+     "ref": "o 6'–o 7'",
+     "orig": "pa-ni [x x x x x x x x]\ngu-[x x x x x x x x]",
+     "orig_lines": [
+      "o 6'",
+      "o 7'"
+     ],
+     "en": "face [......]"
+    },
+    {
+     "ref": "—",
+     "orig": "rest broken away\nbeginning broken away",
+     "orig_lines": [],
+     "en": "(Break)"
+    },
+    {
+     "ref": "r 1'",
+     "orig": "[x] ⸢ib⸣-ba-áš-[ši x x x x]",
+     "orig_lines": [
+      "r 1'"
+     ],
+     "en": "shall be [......]"
+    },
+    {
+     "ref": "r 2'",
+     "orig": "ú-še-ṣa-an-ni [x x x x x x]",
+     "orig_lines": [
+      "r 2'"
+     ],
+     "en": "shall bring me out [......]"
+    },
+    {
+     "ref": "r 3'",
+     "orig": "LUGAL-u-tú id-dan-[x x x x x x]",
+     "orig_lines": [
+      "r 3'"
+     ],
+     "en": "shall give the kingship [......]"
+    },
+    {
+     "ref": "r 4'",
+     "orig": "ša KUR.KUR gab-⸢bu⸣ [x x x x x]",
+     "orig_lines": [
+      "r 4'"
+     ],
+     "en": "of all lands [......]"
+    },
+    {
+     "ref": "r 5'",
+     "orig": "UD-mu šá tap-⸢x⸣+[x x x x x x]",
+     "orig_lines": [
+      "r 5'"
+     ],
+     "en": "the day when you [......]"
+    },
+    {
+     "ref": "r 6'",
+     "orig": "u šá ke-⸢nu⸣-[ni x x x x x]",
+     "orig_lines": [
+      "r 6'"
+     ],
+     "en": "and those who are lo[yal ......]"
+    },
+    {
+     "ref": "r 7'–r 8'",
+     "orig": "lu-ur-⸢ri⸣-[ik x x x x x]\nú-[x x x x x x x x x]",
+     "orig_lines": [
+      "r 7'",
+      "r 8'"
+     ],
+     "en": "I will lengthen [......]"
+    },
+    {
+     "ref": "—",
+     "orig": "rest destroyed",
+     "orig_lines": [],
+     "en": "(Break)"
+    },
+    {
+     "ref": "l.e. 1",
+     "orig": "[x x x x] MÍ.KALAG-šá—a-mur ma-a [x x x x x x x x]",
+     "orig_lines": [
+      "l.e. 1"
+     ],
+     "en": "[...] the woman Dunnaša-amur (said): \"[......]"
+    },
+    {
+     "ref": "l.e. 2",
+     "orig": "[x x x x x] ma-a MÍ.GUB.BA šá ra-[x x x x x x x x]",
+     "orig_lines": [
+      "l.e. 2"
+     ],
+     "en": "[...] the prophetess who [......]"
+    }
+   ]
+  },
+  {
+   "num": "SAA 09 011",
+   "title_en": "Report on a Vision and an Oracle to Assurbanipal",
+   "segments": [
+    {
+     "ref": "—",
+     "orig": "completely destroyed",
+     "orig_lines": [],
+     "en": "(Beginning destroyed)"
+    },
+    {
+     "ref": "r 1",
+     "orig": "[x x]+⸢x⸣ it-tal-[x x x x x x x x x x x]",
+     "orig_lines": [
+      "r 1"
+     ],
+     "en": "[...] wen[t ......]"
+    },
+    {
+     "ref": "r 2",
+     "orig": "[la-a] tal-li-ki a-⸢na⸣ [x x x x x x x x]",
+     "orig_lines": [
+      "r 2"
+     ],
+     "en": "did you/she [not] go t[o ......]"
+    },
+    {
+     "ref": "r 3",
+     "orig": "[ma]-⸢a⸣ UD-me ⸢in ni{?}⸣ ú ⸢kin⸣ [x x x x x x x]",
+     "orig_lines": [
+      "r 3"
+     ],
+     "en": "\"days ... [......]"
+    },
+    {
+     "ref": "r 4",
+     "orig": "⸢LÚ⸣.KÚR a-kaš-šad šá {m}aš-šur—DÙ—A [x x x x x x]",
+     "orig_lines": [
+      "r 4"
+     ],
+     "en": "\"I will vanquish the enemy of Assurbanipal [......]"
+    },
+    {
+     "ref": "r 5",
+     "orig": "[ma]-⸢a⸣ ši-bi KUR.KUR ú-taq-qa-[an x x x x x]",
+     "orig_lines": [
+      "r 5"
+     ],
+     "en": "\"Sit down! I will put the lands in orde[r ......]"
+    },
+    {
+     "ref": "r 6",
+     "orig": "⸢ma⸣-a ina di-gi-li-ia ⸢pa⸣-[ni-i x x x x x]",
+     "orig_lines": [
+      "r 6"
+     ],
+     "en": "\"In my pr[evious] vision [......]"
+    },
+    {
+     "ref": "r 7",
+     "orig": "[a]—dan-niš kak-kab-tú šá KUG.GI ⸢an{?}⸣-[x x x x x]",
+     "orig_lines": [
+      "r 7"
+     ],
+     "en": "\"very [much]; a golden star ornament [......]"
+    },
+    {
+     "ref": "r 8",
+     "orig": "[GIŠ].BANŠUR 01 qa NINDA dan-ni ina ⸢UGU⸣ [x x x x x]",
+     "orig_lines": [
+      "r 8"
+     ],
+     "en": "[a t]able, one 'litre' of strong bread upon [it ......]"
+    },
+    {
+     "ref": "r 9",
+     "orig": "⸢DUG⸣.síḫ-ḫa-ru sa-ʾu mat [x x x x x x]",
+     "orig_lines": [
+      "r 9"
+     ],
+     "en": "a ... platter [......]"
+    },
+    {
+     "ref": "r 10",
+     "orig": "[x x]+⸢x⸣-ma-ni šá šad-du-[ni x x x x x x x]",
+     "orig_lines": [
+      "r 10"
+     ],
+     "en": "[...]s pulled taut [......]"
+    },
+    {
+     "ref": "r 11",
+     "orig": "[šá]-pal kak-kab-tú šá [KUG.GI x x x x x x x]",
+     "orig_lines": [
+      "r 11"
+     ],
+     "en": "[un]der the [golden] star ornament [......]"
+    },
+    {
+     "ref": "r 12",
+     "orig": "[ina] re-še-ia ⸢x⸣+[x x x x x x x x x x x]",
+     "orig_lines": [
+      "r 12"
+     ],
+     "en": "[at] my head [......]"
+    },
+    {
+     "ref": "r 13",
+     "orig": "⸢MUL-MEŠ{?}⸣ [x x x x x x x x x x x x x]",
+     "orig_lines": [
+      "r 13"
+     ],
+     "en": "[s]tar[s ......]"
+    },
+    {
+     "ref": "—",
+     "orig": "rest broken away",
+     "orig_lines": [],
+     "en": "(Rest destroyed)"
+    }
+   ]
+  }
+ ]
+}

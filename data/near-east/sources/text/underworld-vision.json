@@ -1,0 +1,573 @@
+{
+ "slug": "underworld-vision",
+ "source": "ORACC",
+ "siglum": "SAA 03 032",
+ "source_url": "https://oracc.museum.upenn.edu/saao/saa03/",
+ "license": "ORACC（CC BY-SA 3.0）",
+ "compositions": [
+  {
+   "num": "SAA 03 032",
+   "title_en": "The Underworld Vision of an Assyrian Prince",
+   "segments": [
+    {
+     "ref": "o 1",
+     "orig": "[x x x x x x x x x x x x x x x x x x x x x x x x x x] pi-qit-tu a-na [x x x]+⸢x⸣-ni-⸢ni⸣",
+     "orig_lines": [
+      "o 1"
+     ],
+     "en": "[...... who ......] an office to [...]"
+    },
+    {
+     "ref": "o 2–o 3",
+     "orig": "[x x x x x x x x x x x x x x x x x x x x x x x x x x] a-ḫa-⸢x⸣+[x]-su{?} É mu-ḫi-iṭ ti-ra-[ni x x x]-ma{?} šu-ú im-tal-[lik]\n[x x x x x x x x x x x x] IGI{?}.2 [x x x x x x x x x]-⸢ziz{?}⸣ IGI{?} ša-as-su-ki en-qu-ú-ti na-ṣi-ir [pi-riš]-ti be-lí-šú-⸢un{?}⸣",
+     "orig_lines": [
+      "o 2",
+      "o 3"
+     ],
+     "en": "[......]... [he frequented] the house of the examiners of visceral omina, taking councel with them; [......]... eyes [... he st]ood before the wise bookkeepers, who guard the secret of their lords."
+    },
+    {
+     "ref": "o 4",
+     "orig": "[x x x x x x x x x]+⸢x⸣ pa-an LÚ.⸢GAR{?}⸣-MEŠ [ù] ⸢LÚ⸣.GAL-⸢MEŠ⸣ [x x] il{*}-te-niš ú-pa-qid-su-nu-ti-ma ma-ṣar-ti NÍG.GA-šú ú-dan-⸢nin{?}⸣",
+     "orig_lines": [
+      "o 4"
+     ],
+     "en": "[......] he appointed together the governors and magnates [...] and strengthened the watch over his property."
+    },
+    {
+     "ref": "o 5–o 7",
+     "orig": "[x x x x x x x x x x x x x]+⸢x⸣-ra-[a]-ti {m}da-a-⸢da{?}⸣ LÚ.MU-šú ši-kar KUR-i ⸢ma⸣-la ba-šú-ú ma-la {d}šá-maš e-li-šú na-ap-⸢ḫu⸣\n[x x x x x x x x x x x] ba{?}-ḫu-la{?}-ti-[šú] a-na qa-ti-šú ú-ma-al-li ù šu-ú ⸢it⸣-ti ṣur-ri-šú ul i-ta-a-ma šá-lum-ma-tu im-ši-i-ma\n[x x x x x x x x i-na e]-⸢gi{?}⸣-it ŠÀ [šá pu]-luḫ-tú lab-šá-tu i-ši-iṭ-ma ik-pu-⸢ud{?}-ma{?}⸣ ŠÀ-ba-šú a-na e-peš DÙG.GA",
+     "orig_lines": [
+      "o 5",
+      "o 6",
+      "o 7"
+     ],
+     "en": "[He ......] Dada, his cook, mountain beer as much as there was, as much as the sun shines on; he made him responsible for his subjects, but as for himself, he did not consult with his heart; he forgot the divine splendour and [...... in] the carelessness of his heart, which was clothed with fear, he misbehaved, though his heart strove to do good."
+    },
+    {
+     "ref": "o 8–o 9",
+     "orig": "[x x x x x x x x x] x sa-di-ri-[i-šú] ⸢im{?}⸣-nu-ma ki-ma A-MEŠ PÚ mad-le-e ur-<ra> ù MI tiq-na-[a]-⸢ti⸣ si-mat LUGAL-ú-ti ú-šá-az-na-an a{?}-⸢na⸣ ga-nu-ni-šú\n[x x x x x x x x] e-re-e-bi NÍG.TUG si{?}-[mat x x x]-⸢ma{?}⸣-a-ti ra-ʾi-im te-ni-še-e-ti ki-ma it-te-[e] ù ku-up-ri ša ul-tu na-ag-bi [il]-lam-ma i{?}-na{?} IGI suk{?}-[x x]",
+     "orig_lines": [
+      "o 8",
+      "o 9"
+     ],
+     "en": "[While...] they tallied his regular offerings, like well water in buckets, day and night, he kept amassing jewels suitable for royalty into his treasuries. At the entrance [......], wealth [...], which mankind loves, became abundant like tar and bitumen which comes up from the underground source."
+    },
+    {
+     "ref": "o 10",
+     "orig": "[x x x x x x x x IM].KALAG.GA LÚ.DUG.QA.BUR [x x x x] GAL-MEŠ ú-ḫal-lap-ši-ma ⸢ul⸣-tu uš-ši-šá a-di ga-ba-dib-bi-šá KUG.UD uš-ma-al-li",
+     "orig_lines": [
+      "o 10"
+     ],
+     "en": "[...... like] the clay of the potter, he coated it with large [...], and had it filled with silver from its foundations to its parapets."
+    },
+    {
+     "ref": "o 11",
+     "orig": "[x x x x x x x]+⸢x⸣ ù BÀD-MEŠ ri-ik-⸢x⸣+[x x x]+⸢x⸣ im x ⸢x⸣+[x x x]+⸢x⸣ qi-rib NINA.KI URU be-lu-ú-ti ḫar-ra-an šul-me ù me-šá-ri",
+     "orig_lines": [
+      "o 11"
+     ],
+     "en": "[He ......] and the walls [......] within Nineveh, lordly city, the way of peace and justice."
+    },
+    {
+     "ref": "o 12",
+     "orig": "[x x x x x x x x] e{?} [x]+⸢x ni{?}⸣ su{?} na{?} [x x x x x x x x x x] x x x x x-MEŠ ḫu-ra-su{?} ṣi{?}-iš{?} ù{?} ⸢ṭu{?}⸣-ba-a-ti ú-šá-aṣ-bi-tu-⸢ši{?}⸣",
+     "orig_lines": [
+      "o 12"
+     ],
+     "en": "[......]......[......] they provided it with golden [...]s, ... and joy."
+    },
+    {
+     "ref": "o 13",
+     "orig": "[x x x x x x x i]-⸢pad{*}⸣-dan-ni ki-šá-di i{?}-ru{?}-[x x x x x x x x] x x x x x BAL.TIL.KI a-na e-re-bi [e-ti]-qu pi-i-šú ip-te-e-ma ki-ma LÚ it-ti-⸢šú{?}⸣ [x x x]",
+     "orig_lines": [
+      "o 13"
+     ],
+     "en": "[......] ...... neck [......] to enter Assur, a passer-by opened his mouth [and spoke] to him like a man."
+    },
+    {
+     "ref": "o 14",
+     "orig": "[x x x] i{?}-na{?}-ḫa{?} [x x x x]+⸢x⸣ x e{?}-na{?}-ma{?} i{?}-ra{?}-⸢x⸣+[x x x x x x x] x x ⸢in{?}⸣-gu ŠÀ-bi ṣur-ra-šú [x x x x x] INIM.GAR lum-ni i-na ŠÀ-bi-šú ul ⸢x⸣+[x x x x]",
+     "orig_lines": [
+      "o 14"
+     ],
+     "en": "[...]...[...]...[......] the heart rejoiced, his mind [......]. He did not [let] a bad mood [enter] his heart."
+    },
+    {
+     "ref": "o 15",
+     "orig": "[x x x] MU-šú ⸢x⸣+[x x x x x x]+⸢x⸣ tir [x x] di{?} is [x x x x x x x x x x]-bi DINGIR a-na la šu-bi{?}-[x x x]+⸢x x⸣+[x x x x x x] a-na e-te-qu{?} [x x]",
+     "orig_lines": [
+      "o 15"
+     ],
+     "en": "[...] his name [......]......[......] of a god, in order not to [......] to go past [...]."
+    },
+    {
+     "ref": "o 16",
+     "orig": "[i-na UD]-me-šú-ma [x x x x x x x] i{?}-na ⸢x⸣+[x x x x x x x x x x x x]-ti e-ṭu-ú-[tú x] ŠAḪ{?} ú-nap-pal [x x x]+⸢x x⸣+[x x x]+⸢x⸣+[x] LUGAL{?} maḫ-ra-a [x x]",
+     "orig_lines": [
+      "o 16"
+     ],
+     "en": "[At] that ti[me ......] in [...... like a p]ig he turned dark [...] upside down [......] a former king [...]."
+    },
+    {
+     "ref": "o 17",
+     "orig": "[x x x] i ⸢x⸣+[x x x x x x x x] ul [x x x x x x x x x x x x x x x]+⸢x⸣ x il-lik-ma a-na DUMU LÚ.A.BA [x x x x x x x x x x x]-ú ip-te{?} [x x]",
+     "orig_lines": [
+      "o 17"
+     ],
+     "en": "[......]...[......] he went and opened [......] to a son of a scribe [......]."
+    },
+    {
+     "ref": "o 18–o 19",
+     "orig": "[x x x] ⸢lu⸣ ik [x x x x x x x x x x x x x x x x x x x x x x x x] a-na man-zal-ti-šú e-zi-iz ù [x x x x x x x x x] ⸢ga⸣-nu-ni\n[x x x] it-⸢ta{?}⸣-[x x x x x x x x x x x x x x x x x x x x x x]+⸢x⸣ i{?}-na{?}-a{?}-ḫa{?} MI ul i-ni-a bi-ki-i-⸢tu{?}⸣ [x x x x x x x x x x] ni [x]",
+     "orig_lines": [
+      "o 18",
+      "o 19"
+     ],
+     "en": "[......] he stood at his position and [......] the treasure chamber; [...]...[......] he did [not] rest by night, he did not stop wailing [......]."
+    },
+    {
+     "ref": "o 20",
+     "orig": "[x x x x] UD 07-⸢KÁM⸣ [x x x x x x x x x x x x x x x x x x x x x] pal{?}-ḫa{?}-a{?}-ma la it-ta-an-al-la-[ka x x x x x x x x x]+⸢x⸣ x",
+     "orig_lines": [
+      "o 20"
+     ],
+     "en": "[...] on the 7th day [.......]; they (fem.) were frightened and did not wander [with him ......]."
+    },
+    {
+     "ref": "o 21",
+     "orig": "[x x x x] e-diš-ši-šú ⸢x⸣+[x x x x x x x x x x x x x x x]-šú su-qa-ni i{?}-ba-aʾ ina É ḫa-šá-di ni-gu-ti [x x x x x x x x x x x] AN{?} am-mu-u{?} [x]",
+     "orig_lines": [
+      "o 21"
+     ],
+     "en": "[...] alone [......] he went along the streets; in the house of the marriage festival, the merry-making [......]..."
+    },
+    {
+     "ref": "o 22",
+     "orig": "[x x x x]-ú kas-pu ra-⸢x⸣+[x x x x x x x x x x GIŠ.nar{?}]-kab-ti ù ši-pir ni-kil-ti it-ti nam-ṣa-ri-šú ir{?}-⸢x⸣+[x x x x x x x x x]-tú{?} ik-tum [x]",
+     "orig_lines": [
+      "o 22"
+     ],
+     "en": "[...] silver [......; he ...ed] with his sword, [cha]riot and artifacts, covered [......]"
+    },
+    {
+     "ref": "o 23",
+     "orig": "[x x x]-ú-ti ina KI.TIM šá la [x x x x x x x x x x x x] qé-re-et{?} LUGAL{?} ⸢ma{?}⸣-ka-le-e GAL-MEŠ nap-ḫar ⸢x⸣+[x x x x x x x x ik{?}]-tal-du ka-ri-[x]",
+     "orig_lines": [
+      "o 23"
+     ],
+     "en": "[...] in the underworld, which do not [......] the royal banquet, magnificent dishes, all kinds of [......]..."
+    },
+    {
+     "ref": "o 24",
+     "orig": "[x x x x]-ú-šú ḪUL-MEŠ UGU AN ⸢x⸣+[x x x x x x x x x x x x] x-x-ta la ši-im-ti-šú É [x]+⸢x⸣ x ⸢x⸣+[x x x x x x x x x x x x]-du-ur [x]",
+     "orig_lines": [
+      "o 24"
+     ],
+     "en": "He [was befallen by] evil beyond [...], [......] not destined for him [......]..."
+    },
+    {
+     "ref": "o 25",
+     "orig": "[x x x]-A.AN MU.AN.NA-MEŠ il-ku ù [x x x x x x x x x x x x]+⸢x⸣ KUG.GI gab-bu-ṣu-ú it-[x]+⸢x⸣ [x]-ti{?} [x x x x x x x x x x x ta]-⸢mar⸣-ti [x]",
+     "orig_lines": [
+      "o 25"
+     ],
+     "en": "[......] years, indemnity service and [......] ... gold [......]..."
+    },
+    {
+     "ref": "o 26",
+     "orig": "[x x x]-tu a-na-an-tu e-li LÚ.DUMU{?}—[x x x x x x x x x x x]-MEŠ i-zi-zu-⸢ma⸣ i{?}-⸢ba{?}⸣-lu ú{?} ⸢x⸣+[x]+⸢x⸣ nu{?} [x x x x x x x x x x x x x]+⸢x⸣ [x]",
+     "orig_lines": [
+      "o 26"
+     ],
+     "en": "[...] battle against [......] they stood there and implored [......]"
+    },
+    {
+     "ref": "o 27",
+     "orig": "[x x] ù{?} LÚ.SIPA UN-MEŠ rab{?}-ba{?}-a-ti [x x x x x x x x x x] a-na dum{?}-qí{?} ka-a.a-ma-nam-ma ina UD-me-šú {m}ku-um-ma-a DUMU [x x x x x a-na] É.KUR{?} i{?}-ru{?}-um{?}-⸢ma{?}⸣",
+     "orig_lines": [
+      "o 27"
+     ],
+     "en": "[......] and the shepherd of the multitudinous peoples [......] steadily for good. In those days Kummâ, son of [......] entered [into] the temple,"
+    },
+    {
+     "ref": "o 28",
+     "orig": "[x x] a-na a-ra-di a-ra-li-[i x x x x x x x x x x x x x x x x] ti{?} x MURUB₄{?} ti{?} x mu{?} x x gim{?}-ri ⸢x⸣+[x x x x x x] ú-ṣar-ra-am-ma",
+     "orig_lines": [
+      "o 28"
+     ],
+     "en": "[...] planning to go down to the underworld [......] ... the middle ... of the universe [...]."
+    },
+    {
+     "ref": "o 29",
+     "orig": "[x] ⸢NÍG⸣.NA ŠEM.LI iš-kun-ma{?} li-iḫ-ši{?} ú{?}-[laḫ-ḫiš x x x x x x] ⸢pi{*}⸣-i{*} DINGIR-⸢MEŠ⸣ ú{?}-qal-lil{?} ù{?} ŠÀ{?}-bi ⸢DINGIR{?}⸣ ú-zi-iz [x x x x x x] ik{?}-tar{?}-rab{?}",
+     "orig_lines": [
+      "o 29"
+     ],
+     "en": "He set up a censer of juniper; whispering [......], he belittled [the co]mmand of the gods, and angered the heart of the god, while he kept uttering blessings [......]:"
+    },
+    {
+     "ref": "o 30",
+     "orig": "[x] ⸢{d}⸣al-la-tum {d}al-la-tum be-el-tu KI [x x x x x x x x x a]-⸢ra{?}⸣-al-li-i na-⸢din{?}⸣ [x x]+⸢x⸣ KI{?}.MAḪ{?}-⸢MEŠ{?}⸣ šá ⸢x⸣+[x x x x x x] ka-ru ⸢x⸣+[x]",
+     "orig_lines": [
+      "o 30"
+     ],
+     "en": "\"O Allatu, Allatu, lady of the [wide under]world, [queen of the nether]world, giv[er of ...] tombs of [......]...!"
+    },
+    {
+     "ref": "o 31",
+     "orig": "[x] e{?}-ku-ut-ti ḫa-liq-ti pa-nu-šá lid-din-am-⸢ma⸣ [x x x x x x x x x] šá{?} lu [x x] ⸢x⸣+[x] ik me na x i{?}-ta-⸢x⸣+[x x x x x x]+⸢x⸣ NE{?} ŠI{?} [x x x]",
+     "orig_lines": [
+      "o 31"
+     ],
+     "en": "\"May the [ghost of] a lost orphan girl glance at me [......]......[......]!"
+    },
+    {
+     "ref": "o 32",
+     "orig": "[ina{?}] ⸢NUNDUN⸣-MEŠ šá tuš-ši iq-ta-ba-a a-li la ARAD-⸢MEŠ{?}⸣ [x x x x x x x x x] li [x x]+⸢x⸣ a{?}-di UD-⸢um bal{?}⸣-ṭa-ku{?} a-na [x x]+⸢x⸣+[x x]+⸢x x⸣+[x]+⸢x⸣ x ⸢x⸣+[x]",
+     "orig_lines": [
+      "o 32"
+     ],
+     "en": "\"She said to me with insolent lips: where no slaves [......]. As long as I live, [......] to [......]."
+    },
+    {
+     "ref": "o 33",
+     "orig": "[x x]+⸢x⸣ i-na UD-um šim-ti-ia a-na {d}a-nun-na-⸢ki⸣ [x x x x] ra x ⸢šul{?}⸣-ma{?} [x x x{?}] x ša-a É{?} [x] ina{?} x [x]+⸢x⸣ lu{?}-uš{?} a{?}-ta-⸢x⸣+[x] lu{?} x ⸢x⸣+[x]",
+     "orig_lines": [
+      "o 33"
+     ],
+     "en": "\"[...] on the day of my destined death, [......] to the Anunnaki [...] well-being [...]......"
+    },
+    {
+     "ref": "o 34",
+     "orig": "[i]-⸢na⸣ zi-ik-ri šu-me-e-⸢ki{*} kab{*}⸣-te i-na pi-⸢x⸣+[x x x] il-la-a ab-bi{?} x x x x iš{?}-ša-ḫaṭ{?} x ni-i [x x] x x šu{?} x ḫar x x ak x",
+     "orig_lines": [
+      "o 34"
+     ],
+     "en": "[A]t the mention of your weighty name, by the comma[nd of your great divinity] she will rise up ......[......].\""
+    },
+    {
+     "ref": "o 35",
+     "orig": "[x {d}]⸢EREŠ⸣.KI.GAL ina ša-at—mu-ši ina MÁŠ.MI i-zi-za-ma{?} ⸢iq{?}⸣-bi-i-šú 01-en UDU.⸢SISKUR⸣-ka a-na-[ku{?}-ma su]-up-pi-i-ka lu-uš-me ḫi-šiḫ-ta-ka lu-kal-lim{?}-ka{?}",
+     "orig_lines": [
+      "o 35"
+     ],
+     "en": "Ereškigal appeared in a dream in the middle of the night and said to him: \"There was an offering (made) by you; let me hear your prayers that I may fulfill your desire."
+    },
+    {
+     "ref": "o 36",
+     "orig": "[x x x] pi-i DINGIR-ti-ia GAL-ti in-tuq{*}-ta ⸢bur{?}⸣ [x]+⸢x⸣ šú{?} ⸢x⸣+[x x] ul ap-pal-ka mi{?}-[nu tas]-ḫu{?}-ram-ma {d}šá-maš{?} ta{?}-[x x x]",
+     "orig_lines": [
+      "o 36"
+     ],
+     "en": "\"[...] happened by the command of my great divinity; I shall not answer [......]. Why did you turn to me, ig[noring] Šamaš?\""
+    },
+    {
+     "ref": "o 37",
+     "orig": "[{m}ku]-⸢ma⸣-a.a ig-gal-ti-ma ki-ma su-um-me id-mu-um-ma [x x x x] qaq-qa-ri qaq-qa-ri lu{?} [x x x{?}] i-ba-ki ⸢šut{?}⸣-tum it-ta-na-⸢az{?}⸣-[za-ar]",
+     "orig_lines": [
+      "o 37"
+     ],
+     "en": "Kummâ awakened, mourned like a dove, and weeping \"[...] my ground, my ground [...],\" he cursed again and again the dream."
+    },
+    {
+     "ref": "o 38",
+     "orig": "[iš-ni-ma] iš-ši ŠU.2-šú ú-sa-ap-pi a-na {d}EREŠ.KI.GAL [a]-na pa-an {d}U.GUR LUGAL KI.[TIM DAGAL-tim] ⸢ḫa⸣-ʾ-i-ri-šá ⸢il⸣-la-ka di-ma-[a-šú]",
+     "orig_lines": [
+      "o 38"
+     ],
+     "en": "[Once again] he lifted his hands and prayed to Ereškigal, [his] tears flowing before Nergal, king of the [wide] underworld, her spouse:"
+    },
+    {
+     "ref": "o 39",
+     "orig": "[x x x x a-na] di-na-ni-ku-nu UN-MEŠ a-pa-⸢ti⸣ [x x x x]-ú 01-⸢en{?}⸣ [x x x x x]+⸢x⸣-nu-u pa-dàk-ka-a-ti ú-šak-pu-pu [x x x]",
+     "orig_lines": [
+      "o 39"
+     ],
+     "en": "\"[...... as] substitutes for you the widespread peoples [......]; they will cause storerooms to bulge out [......]."
+    },
+    {
+     "ref": "o 40",
+     "orig": "[x x x x]+⸢x⸣ bi-nu-tu [x x x x x] ŠAḪ ú-nap-pal ⸢tu{?}⸣-šap{?}-ta-ni pa-an ni-ṣir-⸢ti⸣ e{?} la ta-ši-ma a{?} [x x x x x x]",
+     "orig_lines": [
+      "o 40"
+     ],
+     "en": "\"[...] creature [...] a pig turns upside down [...]. Unveil the face of the secret, decree ...[......]!\""
+    },
+    {
+     "ref": "r 1",
+     "orig": "[{m}ku-um]-ma-a.a NÁ-ma tab-ri-it mu-ši i-na-⸢ṭa⸣-al ina MÁŠ.MI-šú a-na x x x ⸢É{?}⸣ [x] ⸢ṣa{?}⸣-ab{?}-tàk{?} ra-šub-bat-su ap-pal-lis{?} x [x x x x x x x x x x x x x x x]",
+     "orig_lines": [
+      "r 1"
+     ],
+     "en": "Kummâ lay down to sleep and saw a night vision. In his dream: I was a captive in ..., the house [of ...]. I beheld his terrifying splendour [......]."
+    },
+    {
+     "ref": "r 2",
+     "orig": "[{d}]⸢nam⸣-tar SUKKAL KI.TIM ba-nu-u te-re-e-⸢ti⸣ a-mu-ur-ma LÚ ina pa-ni-šú ú-šu-uz SÍG.ÙZ SAG.DU-šú ina KAB-šú ṣa-bit ina 15-šú nam-⸢ṣa-ru⸣ [ṣa-bit x x x x]",
+     "orig_lines": [
+      "r 2"
+     ],
+     "en": "I saw Namtar, the vizier of the underworld, who fashions the visceral omens; a man stood before him, while he held the hair of his head in his left hand, and wielded a dagger in his right [...]."
+    },
+    {
+     "ref": "r 3",
+     "orig": "[{d}]⸢nam⸣-tar-tu MÍ.ERIM SAG.DU ku-ri-i-bi šak-na-at ŠU.2 GÌR.2 ša LÚ {d}mu-ú-⸢tu{?}⸣ SAG.DU MUŠ.ḪUŠ{*} šá-ki-in ŠU.2-šú LÚ-MEŠ GÌR.2-šú ⸢x⸣+[x x]",
+     "orig_lines": [
+      "r 3"
+     ],
+     "en": "Namtartu, his wife, had the head of a cherub, (her) hands and feet being human. Death had the head of a dragon, his hands were human, his feet [...]."
+    },
+    {
+     "ref": "r 4",
+     "orig": "⸢{d}ALAD⸣ ḪUL SAG.DU ŠU.2 ša LÚ-MEŠ AGA a-pi-ir GÌR.2 ÉR.MUŠEN ina GÌR.2 KAB-šú ku-še-e ka-bi-is {d}al-lu-ḫap-pu SAG.DU UR.MAḪ 04 ŠU.2 GÌR.2 LÚ-[MEŠ o]",
+     "orig_lines": [
+      "r 4"
+     ],
+     "en": "The Evil Genie had a human head and hands, was crowned with a tiara and had the feet of an eagle. With his left foot he was trampling on a crocodile. Alluhappu had a lion's head, his four hands and feet were (like) those of human beings."
+    },
+    {
+     "ref": "r 5",
+     "orig": "⸢SAG.ḪUL⸣.ḪA.ZA SAG.DU ša MUŠEN a-kap-pa-a-šú pe-ta-a it-ta-nap-ra-áš ŠU.2 GÌR.2 LÚ-MEŠ {d}ḫu-muṭ—ta-bal LÚ.MÁ.DU.DU KI.TIM SAG.DU {d}IM.DUGUD.MUŠEN 04 ŠU.2 ⸢GÌR⸣.[2 x x]",
+     "orig_lines": [
+      "r 5"
+     ],
+     "en": "The Upholder of Evil had the head of a bird, his wings were spread out and he flew here and there; (his) hands and feet were human. Humuṭ-tabal, the ferryman of the underworld, had an Anzû head, his four hands and feet [...]."
+    },
+    {
+     "ref": "r 6",
+     "orig": "⸢GIDIM{?}⸣ SAG.DU GUD 04 ŠU.2 GÌR.2 LÚ-MEŠ ú-tuk-ku lem-nu SAG.DU UR.MAḪ ŠU.2 GÌR.2 {d}IM.DUGUD.MUŠEN {d}ŠU.LAK UR.MAḪ ka-a.a-ma-ni-ú ina UGU GÌR.2-šú ár-ka-a-ti ú-šu-[uz]",
+     "orig_lines": [
+      "r 6"
+     ],
+     "en": "The Ghost had an ox's head, his four hands and feet were (like) those of human beings. The Evil Spirit had a lion's head, (his) hands and feet were those of Anzû. Šulak was a lion, standing constantly on his hind legs."
+    },
+    {
+     "ref": "r 7",
+     "orig": "⸢{d}⸣[NAM].ERIM SAG.DU UDU.ÙZ ŠU.2 GÌR.2 LÚ-MEŠ {d}NE.DU₈ Ì.DU₈ KI.TIM SAG.DU UR.MAḪ ŠU.2 LÚ-MEŠ GÌR.2 MUŠEN mim-ma lem-nu 02 SAG.DU-MEŠ-šú 01 SAG.DU UR.MAḪ 02-u SAG.DU x [x x x x]",
+     "orig_lines": [
+      "r 7"
+     ],
+     "en": "The Oath had a goat's head, (his) hands and feet were human. Nedu, the porter of the underworld, had a lion's head, and human hands, his feet were those of a bird. Total Evil had two heads, one was the head of a lion, the second was the head of [...]."
+    },
+    {
+     "ref": "r 8",
+     "orig": "[{d}]⸢IGI⸣-ra-MEŠ 03 GÌR.2-šú 02 maḫ-ra-a-ti MUŠEN ar-ki-tu GUD.NÍTA pu-ul-ḫi me-lam-me ra-ši 02 DINGIR-MEŠ MU-šú-nu ul i-di 01-en SAG.DU ŠU.2 GÌR.2 {d}IM.DUGUD.MUŠEN ina KAB-šú ⸢ŠU{?}⸣.[2 x x]+⸢x⸣ [x x]",
+     "orig_lines": [
+      "r 8"
+     ],
+     "en": "[Muh]ra had three feet, the two front ones were those of a bird, the rear one was that of a bull. He had fearsomeness and luminous splendour. Of two gods I did not know the names — one had the head, hands, and feet of Anzû, in his left hand [......]."
+    },
+    {
+     "ref": "r 9",
+     "orig": "šá-⸢nu⸣-ú SAG.DU LÚ GAR AGA a-pi-ir ina ZAG-šú GIŠ.mì-i-ṭu na-ši ina KAB-šú ina ⸢maḫ⸣-ri-šú ta šid [x] ⸢NIGIN{?}⸣ 15 DINGIR-MEŠ ú-šu-uz-zu a-mur-šú-nu-ti ú-ṣa-al-⸢li⸣-[šú-nu-ti]",
+     "orig_lines": [
+      "r 9"
+     ],
+     "en": "The other had a man's head, he was crowned with a tiara, carried in his right hand a mace, in his left hand, before him, ....... In all, fifteen gods were present. I saw them and saluted [them] in prayer."
+    },
+    {
+     "ref": "r 10",
+     "orig": "01-en eṭ-lum zu-mur-šú ki-ma it-te-e ṣa-lim a-na ša an-zi-i pa-nu-šú ma-áš-lu ⸢na⸣-aḫ-lap-ti sa-am-ti la-biš ina KAB-šú GIŠ.BAN na-ši ina ZAG-šú nam-ṣa-ru ṣa-[bit ina] ⸢GÌR{?}.2{?}⸣ KAB ṣi-⸢ra{?}⸣ [ú]-⸢ka{?}-bi{?}⸣-[is]",
+     "orig_lines": [
+      "r 10"
+     ],
+     "en": "There was a man, his body black as pitch, his face resembling that of Anzû; he was clad in red armour. In his left hand he carried a bow, in his right hand he wielded a dagger, while he trampled on a snake with his left foot."
+    },
+    {
+     "ref": "r 11",
+     "orig": "⸢IGI⸣.2-ia ki-i ad-ku-ú UR.SAG {d}U.GUR ina GIŠ.GU.ZA LUGAL-ú-ti a-ši-ib a-gu-u LUGAL-ú-ti a-⸢pi⸣-ir ina ŠU.2-šú ki-lál-le-e 02 GIŠ.mì-i-ṭi{?} ŠÚR-MEŠ ṣa-bit 02-a.a SAG.DU-MEŠ {d}⸢x⸣+[x x]+⸢x⸣ DU [x]",
+     "orig_lines": [
+      "r 11"
+     ],
+     "en": "When I raised my eyes, (I saw) the valiant Nergal seated on a regal throne, apparelled with the royal tiara; with both hands he grasped two grim maces, each with two ... heads."
+    },
+    {
+     "ref": "r 12",
+     "orig": "⸢x x x x x x x x x x x x x x x x x x x x x⸣-šú-nu kam-ru i-[x]+⸢x⸣ TE{?} i-di-šú NIM.GÍR i-bar-ri-iq {d}600 DINGIR-MEŠ GAL{*}-MEŠ 15 150 kán-[su x x x]+⸢x⸣ bu{?} [x]",
+     "orig_lines": [
+      "r 12"
+     ],
+     "en": "[......] were heaped [upon] them. Lightning was flashing in ... his arms, the Anunnaki, the great gods, knelt to his right and left [...]."
+    },
+    {
+     "ref": "r 13",
+     "orig": "a-ra-al-lu ma-li pu-luḫ-tu i-na pa-an DUMU NUN-e na-di ši-iš{?}-šú dan-nu [x x x ina] a-bu-sa-ti-ia iṣ-bat-an-ni-ma a-na maḫ-ri-šú ú-qar-[ri]-⸢ban{?}⸣-ni",
+     "orig_lines": [
+      "r 13"
+     ],
+     "en": "The nether world was full of terror; a mighty silence lay before the crown prince [...]. He took me by my forelock and pulled me in front of him."
+    },
+    {
+     "ref": "r 14",
+     "orig": "[a]-mur-šu-ma i-tar-ru-ra iš-da-a.a me-lam-mu-šu ez-zu-ti is-ḫu-pu-u-ni GÌR.2 DINGIR-ti-šú [GAL]-⸢ti⸣ áš-šiq-ma ak-mis a-zi-iz i-na-ṭa-al-an-ni-ma ú-na-a-⸢ša{?}⸣ [SAG].⸢DU{?}-su⸣",
+     "orig_lines": [
+      "r 14"
+     ],
+     "en": "I looked at him and my bones shivered! His grimly luminescent splendour overwhelmed me, I kissed the feet of his great divinity and knelt down. Then I stood up, while he looked at me, shaking his head."
+    },
+    {
+     "ref": "r 15",
+     "orig": "[ri]-⸢gim⸣-šu ú-dan-nin-am-ma ki-ma UD-me ⸢še-gi⸣-i ez-zi-iš e-li-ia i-šá-as-si šab-bi-ṭu si-mat DINGIR-ti-šú šá ki-ma ba-áš-me pu-luḫ-tu ma-lu-ú",
+     "orig_lines": [
+      "r 15"
+     ],
+     "en": "He raised his voice, crying out like a howling storm in fury against me and drawing toward me the sceptre, which is so fitting to his godhead, and which is as dreadful as a viper, to kill me."
+    },
+    {
+     "ref": "r 16",
+     "orig": "[a]-⸢na{?}⸣ ŠÀ-bi-ia i-šá-a-ṭa a-na da-ki-[ia] {d}I.ŠUM ma-lik-šú mu-kil ab-bu-ut-ti KAR-ir ZI-tim ra-ʾi-im ki-na-a-ti ù ki-a-am iq-ta-bi eṭ-lum la tuš-ma-ta LUGAL KI.TIM ⸢DAGAL-tim⸣",
+     "orig_lines": [
+      "r 16"
+     ],
+     "en": "Išum, his adviser, the intercessor, who spares life, who loves truth, howewer, said thus: \"Do not kill the man, O king of the w[id]e underworld!"
+    },
+    {
+     "ref": "r 17",
+     "orig": "[x x] ⸢taš{?}⸣-ri-ḫi-i-ka ba-ḫu-la-ti ša KUR DÙ.A.BI lil-tam-mu-ú ŠÀ-bi kaš-ka-ši dan-dan-ni ka-mì-i ḪUL-MEŠ ki-ma A-MEŠ PÚ el-lu-ú-⸢ti⸣ ú-ni-iḫ-[šú]",
+     "orig_lines": [
+      "r 17"
+     ],
+     "en": "[Let him go, and] may the peoples of all the lands always hear your glorification!\" He made the heart of the all-powerful, the almighty one who binds the evil, as calm as pure well water, (and)"
+    },
+    {
+     "ref": "r 18",
+     "orig": "[id]-⸢din{?}⸣ {d}U.GUR an-na-a qa-ba-a-šú am—mì-i-ni ḫi-ir-ti na-ra-am-ti šar-rat a-ra-al-lu tu-šá-as-li [x]",
+     "orig_lines": [
+      "r 18"
+     ],
+     "en": "Nergal (relented), saying thus: \"Why did you insult my beloved wife, the queen of the nether world?"
+    },
+    {
+     "ref": "r 19",
+     "orig": "[i]-⸢na⸣ qí-bit-i-šá ṣi-ir-ti ša la ut-tak-ka-ru {d}bi-ib-⸢bu{*}⸣ GÍR.LAL KI.TIM a-[na] {d}LUGAL.SU.LA Ì.DU₈ lip-qid-ka-ma KÁ {d}INNIN {d}A.A ú-še-ṣi-[ka]",
+     "orig_lines": [
+      "r 19"
+     ],
+     "en": "\"[B]y her high command, which cannot be changed, may Bibbu, the hangman of the underworld, turn you over to the porter, Lugalsula, that he may let you out of the gate of Ištar and Aya."
+    },
+    {
+     "ref": "r 20–r 21",
+     "orig": "[la] ⸢tam{?}-ta⸣-ši-ma la tu-maš-šar-an-ni-ma di-in ka-ra-ši-i ul a-ša-am i-na qí-bit {d}šá-maš ip-pi-ru da-ṣa-a-ti ù saḫ-ma-šá-a-[ti]\n[x x]+⸢x⸣ il{*}-te-niš lid-di-ba-ni-ka-a-ma ina ḫu-bur-ri-ši-⸢na šam⸣-ra-a-ti a.a ir-ḫi-i-ka ši-it-⸢tú⸣",
+     "orig_lines": [
+      "r 20",
+      "r 21"
+     ],
+     "en": "\"Do not forget or neglect me! Then I will not pass a verdict of annihilation on you. (But) on the command of Šamaš, may distress, acts of violence and rebellion together blow you down so that, by their oppressive clamour, sleep may not come to you."
+    },
+    {
+     "ref": "r 22",
+     "orig": "[LÚ.ÚŠ] an-nu-ú šá ina KI.TIM ta-am-ru ša re-ʾe-e šit-ra-ḫi ša AD-ia ⸢AN⸣.[ŠÁR] LUGAL DINGIR-MEŠ ú-šam-ṣu-u ma-la lib-bu-⸢šú{?}⸣",
+     "orig_lines": [
+      "r 22"
+     ],
+     "en": "\"This [corpse] which (lies) buried in the underworld, is that of the proud shepherd who fulfilled the wishes of my father [Aššur], the king of the gods;"
+    },
+    {
+     "ref": "r 23",
+     "orig": "[LUGAL] ⸢šá⸣ ul-tu a-ṣe-e {d}šam-ši a-di e-reb—{d}UTU-ši ma-ta-a-ti nap-ḫar-ši-na ki-ma qé{*}-e{*} uš-tab-ru-ú-ma i-⸢be⸣-lu gi-im-⸢ru⸣",
+     "orig_lines": [
+      "r 23"
+     ],
+     "en": "\"[The king wh]o from east and west made all the lands be looked upon as booty, who ruled everything;"
+    },
+    {
+     "ref": "r 24",
+     "orig": "[LUGAL] ⸢šá{?}⸣ AN.ŠÁR i-na pa-an sa-an-gu-ti-šú e-peš a-ki-it EDIN el-le-ti ša GIŠ.SAR ḪÉ.NUN tam-šil KUR.lab-na-na ⸢x⸣+[x]+⸢x⸣ x x gap{?}-ša{?} x x x ṣa{?}-lim a-na du-ur da-⸢ri⸣",
+     "orig_lines": [
+      "r 24"
+     ],
+     "en": "\"[For wh]om Aššur, at the beginning of his office as high priest, [dec]reed the building of the holy Akitu House of the plain, surrounded by a garden of abundance, the likeness of Mount Lebanon, ...... for ever and ever;"
+    },
+    {
+     "ref": "r 25",
+     "orig": "[i-ši]-mu-šú-ma {d}ia-ab-ru ⸢{d}⸣ḫum-ba {d}nap-ru-šú zu-mur-šú na-aṣ-ru ú-šal-la-mu NUMUN-šú um-man-šú KI.KAL-šú ú-še-za-bu [i]-⸢na⸣ tam-ḫa-ri LÚ.nar{?}-ka{?}-ba-ti la iq-ru-ba{?}-⸢áš{?}-šú{?}⸣",
+     "orig_lines": [
+      "r 25"
+     ],
+     "en": "\"Whose body Yabru, Humban and Naprušu protect, whose progeny they keep healthy, and whose army and camp they rescued so that no charioteer could come near him in battle."
+    },
+    {
+     "ref": "r 26",
+     "orig": "[o šu]-ú za-⸢ru⸣-ú-ka ⸢ši{?}⸣-[e]-ḫu mu-de-e a-ma-ti ra-pa-áš uz-ni pal-ku-u ka-ra-áš ta-šim-ti ša GIŠ.ḪUR-MEŠ šá mar-⸢kas⸣ qaq-qa-ri ḫi-i-[ṭu]",
+     "orig_lines": [
+      "r 26"
+     ],
+     "en": "\"He is your father, the eminent one, experienced in matters, wide of understanding, comprehensive in the seat of ordaining fate, who scanned the plans of the mainstay of the earth."
+    },
+    {
+     "ref": "r 27",
+     "orig": "⸢ša{?}⸣-a ina qa-[bé]-e-šú ip-ḫu-ú ḫa-si-sa-šú a-sak-ku i-ku-la an-zil-la ú-kab-bi-sa ḫa-an-ṭiš me-lam-me LUGAL-ti-šú gal-tu-ti e-saḫ-ḫap-ku-nu a-di šá-a-[ri]",
+     "orig_lines": [
+      "r 27"
+     ],
+     "en": "\"Who(ever of you) may have closed his ear to his speech, tasted the forbidden, trampled on the consecrated — the luminous splendour of his terrifying majesty will throw you down instantly, until (you are but) wind!"
+    },
+    {
+     "ref": "r 28",
+     "orig": "a-ma-tu an-[ni]-tu ki-i gi-iṣ-ṣi ina ŠÀ-bi-ku-nu lu-ú na-da-a-ta at-lak a-na e-la-a-ti a-di a-ḫa-sa-sa-ka iq-ba-[am-ma]",
+     "orig_lines": [
+      "r 28"
+     ],
+     "en": "\"May this word be set like a thorn in your heart! Go forth to the upper world until I think of you!\", he said [to me]."
+    },
+    {
+     "ref": "r 29",
+     "orig": "a-gal-ti-⸢ma⸣ ki-ma eṭ-li ta-pi-ik da-me šá ina ṣu-ṣe-e i-di-ši-šú it-tan-al-la-ku EN—bir-ki ik-tùm-mu-šú-ma i-tar-⸢ra{?}⸣-ku ŠÀ-bu-u-⸢šú⸣",
+     "orig_lines": [
+      "r 29"
+     ],
+     "en": "I woke up, and like a man who has let blood, who roams alone in a reed thicket, whom a runner catches up with, so that his heart pounds,"
+    },
+    {
+     "ref": "r 30",
+     "orig": "ù ki-ma lil-li-di ŠÁḪ ṣe-eḫ-ru šá ina UGU sin-niš-ti-šú e-lu-ú ŠÀ-bu-šú it-tan-am-pa-ḫu TU₁₅ a-⸢na⸣ KA-šú ù EGIR-šú it-te-ni-iṣ-ṣi",
+     "orig_lines": [
+      "r 30"
+     ],
+     "en": "or like a just matured young boar, who has mounted on his mate, and whose innards inflate so that he gives out wind from his mouth and backside,"
+    },
+    {
+     "ref": "r 31",
+     "orig": "ka-bit-tu ú-šá-aṣ-ri-iḫ-ma u₈-a ŠÀ-bi i-qab-bi ina su-ú-qí šil-ta-ḫiš ú-ṣi-ma ep-ri E.SÍR SILA.DAGAL.LA a-na KA-šú ú-sa-ap ri-ig-mu gal-tu iš-ta-nak-kan u₈-a a.[a]",
+     "orig_lines": [
+      "r 31"
+     ],
+     "en": "he became inflamed with lamentation and called out, \"Woe, my heart!\" He flew into the road like an arrow, scooped up into his mouth the dust from street and square, continually letting out terrified shriek, \"Woe is me!\","
+    },
+    {
+     "ref": "r 32",
+     "orig": "mi-nu-ú an-na-a-ti ta-ši-man-ni ia-a-ši i-šá-as-si qur-di {d}U.GUR {d}EREŠ.KI.GAL ša a-na re-ṣu-ti NUN-ma i-zi-zu ina pa-an ba-ḫu-la-ti KUR—aš-šur.KI mar-ṣi-iš id-da-lál",
+     "orig_lines": [
+      "r 32"
+     ],
+     "en": "He cried \"Why have you decreed this for me?\", and in his pain he praised before the peoples of Assyria the mighty deeds of Nergal and Ereškigal, who had come to the aid of the prince."
+    },
+    {
+     "ref": "r 33",
+     "orig": "ù šu-ú LÚ.A.BA ša ina maḫ-re-e ṭa-aʾ-tu im-ḫu-ru ina man-zal-ti AD-šú e-zi-zu i-na uz-ni ni-kil-ti ša {d}É.A ú-šat-li-mu-šú",
+     "orig_lines": [
+      "r 33"
+     ],
+     "en": "But also that scribe, who previously had accepted bribes, who occupied the post of his father, with the wise understanding which Ea had given him,"
+    },
+    {
+     "ref": "r 34",
+     "orig": "INIM{?}.GAR{?}-e di-li-li i-na ŠÀ-bi-šú iš-du-ud-ma ki-a-am ina ṣur-ri-šú iq-bi ma-a áš-šú a-de-e a-na le-mut-ti a.a iṭ-[ḫu]-ni a.a is-niq-u-ni",
+     "orig_lines": [
+      "r 34"
+     ],
+     "en": "he took the words of praise to heart and spoke to himself: \"So that the (curses of) the treaty may not come near me to do (me) evil, and may not threaten me,"
+    },
+    {
+     "ref": "r 35",
+     "orig": "[šá {d}U.GUR] iq-bu-u ep-ši-ti-ia{*} lu-pu-uš il-lik-ma a-na É.GAL ú-šá-an-ni ma-a an-nu-ú lu NAM.BÚR.BI-ia",
+     "orig_lines": [
+      "r 35"
+     ],
+     "en": "let me always carry out my actions as [Nergal] has ordered!\" He went and repeated it to the palace, saying: \"Let this be my expiation!\""
+    }
+   ]
+  }
+ ]
+}
