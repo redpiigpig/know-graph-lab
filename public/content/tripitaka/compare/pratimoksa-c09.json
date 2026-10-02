@@ -1,0 +1,283 @@
+{
+ "slug": "pratimoksa-c09",
+ "title": "比丘戒本（九）七滅諍",
+ "family": "pi",
+ "intro": "七滅諍法（adhikaraṇasamatha）：僧中諍事起時，依七法除滅。各部名目相同：現前毘尼、憶念毘尼、不癡毘尼、自言治、多人語（多覓罪相、多人宗，yebhuyyasikā）、覓罪相（本言治、伏本語、求罪自性，tassapāpiyasikā）、如草覆地。次第分三種：巴利是自言、多人語、覓罪相；四分、十誦、僧祇、解脫戒經與說一切有部、大眾說出世部梵本是自言、覓罪相、多人語；五分把本言治（覓罪相）放在自言之前；根有戒經與根本說一切有部梵本把自言（pratijñā）移到最後一二位（段序依原本）。根有戒經七法同在一段偈頌、三部梵本中說一切有部 AŚ.5／6、大眾說出世部與根本說一切有部七法同在一行，皆在各法名目處下刀。",
+ "units": [
+  {
+   "id": "as0",
+   "label": "總標：七滅諍法半月半月說"
+  },
+  {
+   "id": "as1",
+   "label": "滅諍一・現前毘尼"
+  },
+  {
+   "id": "as2",
+   "label": "滅諍二・憶念毘尼"
+  },
+  {
+   "id": "as3",
+   "label": "滅諍三・不癡毘尼"
+  },
+  {
+   "id": "as4",
+   "label": "滅諍四・自言治"
+  },
+  {
+   "id": "as5",
+   "label": "滅諍五・多人語（多覓罪相）"
+  },
+  {
+   "id": "as6",
+   "label": "滅諍六・覓罪相（本言治、求罪自性）"
+  },
+  {
+   "id": "as7",
+   "label": "滅諍七・如草覆地"
+  },
+  {
+   "id": "asz",
+   "label": "結說・三問清淨"
+  }
+ ],
+ "versions": [
+  {
+   "id": "pi",
+   "lang": "pi",
+   "label": "巴利・上座部",
+   "who": "Theravāda Bhikkhupātimokkha・Mahāsaṅgīti 本（SuttaCentral）"
+  },
+  {
+   "id": "T1429",
+   "lang": "lzh",
+   "label": "四分戒本",
+   "who": "法藏部・後秦 佛陀耶舍譯《四分律比丘戒本》（唐 懷素集）",
+   "work": "T1429",
+   "reorder": true
+  },
+  {
+   "id": "T1422a",
+   "lang": "lzh",
+   "label": "五分戒本",
+   "who": "化地部・劉宋 佛陀什等譯《彌沙塞五分戒本》",
+   "work": "T1422a",
+   "reorder": true
+  },
+  {
+   "id": "sa-sarv",
+   "lang": "sa",
+   "label": "梵・說一切有部",
+   "who": "Sarvāstivāda Prātimokṣasūtra・von Simson 1986／2000（GRETIL）",
+   "reorder": true
+  },
+  {
+   "id": "T1436",
+   "lang": "lzh",
+   "label": "十誦戒本",
+   "who": "說一切有部・姚秦 鳩摩羅什譯《十誦比丘波羅提木叉戒本》",
+   "work": "T1436",
+   "reorder": true
+  },
+  {
+   "id": "sa-mahl",
+   "lang": "sa",
+   "label": "梵・大眾說出世部",
+   "who": "Mahāsāṃghika-Lokottaravāda Prātimokṣasūtra・Tatia 1976（GRETIL）",
+   "reorder": true
+  },
+  {
+   "id": "T1426",
+   "lang": "lzh",
+   "label": "僧祇戒本",
+   "who": "大眾部・東晉 佛陀跋陀羅譯《摩訶僧祇律大比丘戒本》",
+   "work": "T1426",
+   "reorder": true
+  },
+  {
+   "id": "T1460",
+   "lang": "lzh",
+   "label": "解脫戒經",
+   "who": "飲光部・元魏 般若流支譯",
+   "work": "T1460",
+   "reorder": true
+  },
+  {
+   "id": "sa-mula",
+   "lang": "sa",
+   "label": "梵・根本說一切有部",
+   "who": "Mūlasarvāstivāda Prātimokṣasūtra・Banerjee 1954（GRETIL）",
+   "reorder": true
+  },
+  {
+   "id": "T1454",
+   "lang": "lzh",
+   "label": "根有戒經",
+   "who": "根本說一切有部・唐 義淨譯《根本說一切有部戒經》",
+   "work": "T1454",
+   "reorder": true
+  }
+ ],
+ "works": [
+  "T1422a",
+  "T1426",
+  "T1429",
+  "T1436",
+  "T1454",
+  "T1460"
+ ],
+ "anchors": [
+  {
+   "work": "T1429",
+   "range": [
+    "T22n1429_p1022a23",
+    "T22n1429_p1022b03"
+   ]
+  },
+  {
+   "work": "T1422a",
+   "range": [
+    "T22n1422a_p0199c06",
+    "T22n1422a_p0199c13"
+   ]
+  },
+  {
+   "work": "T1436",
+   "range": [
+    "T23n1436_p0478b03",
+    "T23n1436_p0478b12"
+   ]
+  },
+  {
+   "work": "T1426",
+   "range": [
+    "T22n1426_p0555a26",
+    "T22n1426_p0555b09"
+   ]
+  },
+  {
+   "work": "T1460",
+   "range": [
+    "T24n1460_p0665a03",
+    "T24n1460_p0665a12"
+   ]
+  },
+  {
+   "work": "T1454",
+   "range": [
+    "T24n1454_p0507b04",
+    "T24n1454_p0507b17"
+   ]
+  }
+ ],
+ "cells": {
+  "as0": {
+   "pi": "Adhikaraṇasamathā Ime kho panāyasmanto satta adhikaraṇasamathā dhammā uddesaṁ āgacchanti. Uppannuppannānaṁ adhikaraṇānaṁ samathāya vūpasamāya:",
+   "T1429": "「諸大德！是七滅諍法，半月半月說，戒經中來。若有諍事起，即應除滅。",
+   "T1422a": "「諸大德！是七滅諍法，半月半月戒經中說。",
+   "sa-sarv": "VIII. adhikaraṇaśamathā dharmāḥ (ime punar āyuṣmantaḥ saptādhi)karaṇa(śa)mathā dharmā anvardhamāsaṃ prātimokṣasūtroddeśam āgacchanti /",
+   "T1436": "「諸大德！是七滅諍法，半月半月波羅提木叉中說。",
+   "sa-mahl": "[VIII. sapta adhikaraṇaśamathā dharmāḥ] ime kho punar āyuṣmanto sapta adhikaraṇasamathā dharmā anvardhamāsaṃ sūtre prātimokṣe uddeśam āgacchanti ye utpannotpannānām adhikaraṇānāṃ śamathāya vyapaśamathāya saṃvartante / sayyathīdaṃ Ō",
+   "T1426": "「諸大德！是七滅諍法，半月半月次說波羅提木叉。",
+   "T1460": "「諸大德！此七滅諍法，半月半月說戒經中來。「若比丘，有諍事起，應除滅。",
+   "sa-mula": "sapta adhikaraṇaśamathā dharmāḥ ime khalv āyuṣmantaḥ saptādhikaraṇaśamathāḥ dharmā anvardhamāsaṃ prātimokṣasūtroddeśam āgacchanti /",
+   "T1454": "「諸大德！此七滅諍法，半月半月戒經中說。」攝頌曰：現前并憶念、不癡與求罪、 多人語自言、草掩除眾諍。"
+  },
+  "as1": {
+   "pi": "Adhikaraṇasamatha 1 Sammukhāvinayo dātabbo.",
+   "T1429": "「應與現前毘尼，當與現前毘尼。",
+   "T1422a": "「應與現前比尼，與現前比尼。",
+   "sa-sarv": "PrMoSū_AŚ.1: saṃm(u)kha(v)inayārhasya saṃmukhavinay(aṃ dāsyāmaḥ 1)",
+   "T1436": "「應與現前毘尼人，當與現前毘尼。",
+   "sa-mahl": "PrMoSū(Mā-L)AŚ.1. saṃmukhavinayo śamatho /",
+   "T1426": "「若隨事隨順人，應與現前比尼人，與現前比尼。",
+   "T1460": "「應與現前毘尼，當與現前毘尼。",
+   "sa-mula": "saṃmukhavinayārhāya saṃmukhavinayaṃ dāsyāmaḥ /",
+   "T1454": "「應與現前毘奈耶，當與現前毘奈耶。"
+  },
+  "as2": {
+   "pi": "Adhikaraṇasamatha 2 Sativinayo dātabbo.",
+   "T1429": "「應與憶念毘尼，當與憶念毘尼。",
+   "T1422a": "「應與憶念比尼，與憶念比尼。",
+   "sa-sarv": "PrMoSū_AŚ.2: (smṛti)vinayā(r)hasya (s)mṛti(vinayaṃ dāsyāma)ḥ 2",
+   "T1436": "「應與憶念毘尼人，當與憶念毘尼。",
+   "sa-mahl": "PrMoSū(Mā-L)AŚ.2. smṛtivinayo śamatho /",
+   "T1426": "「應與憶念比尼人，與憶念比尼。",
+   "T1460": "「應與憶念毘尼，當與憶念毘尼。",
+   "sa-mula": "smṛtivinayārhāya smṛtivinayaṃ dāsyāmaḥ /",
+   "T1454": "應與憶念毘奈耶，當與憶念毘奈耶。"
+  },
+  "as3": {
+   "pi": "Adhikaraṇasamatha 3 Amūḷhavinayo dātabbo.",
+   "T1429": "「應與不癡毘尼，當與不癡毘尼。",
+   "T1422a": "「應與不癡比尼，與不癡比尼。",
+   "sa-sarv": "PrMoSū_AŚ.3: amūḍha(v)i(na)yā(rhas)ya amūḍhavinayaṃ dāsyāmaḥ 3",
+   "T1436": "「應與不癡毘尼人，當與不癡毘尼。",
+   "sa-mahl": "PrMoSū(Mā-L)AŚ.3. amūḍhavinayo śamatho /",
+   "T1426": "「應與不癡比尼人，與不癡比尼。",
+   "T1460": "「應與不癡毘尼，當與不癡毘尼。",
+   "sa-mula": "amūḍhavinayārhāya amūḍhavinayaṃ dāsyāmaḥ /",
+   "T1454": "應與不癡毘奈耶，當與不癡毘奈耶。"
+  },
+  "as4": {
+   "pi": "Adhikaraṇasamatha 4 Paṭiññāya kāretabbaṁ.",
+   "T1429": "「應與自言治，當與自言治。",
+   "T1422a": "「應與自言，與自言治。",
+   "sa-sarv": "PrMoSū_AŚ.4: pratijñāvinayārhasya pratijñāṃ kāra(yi)ṣyāma(ḥ) 4",
+   "T1436": "「應與自言治人，當與自言治。",
+   "sa-mahl": "PrMoSū(Mā-L)AŚ.4. pratijñākārako śamatho /",
+   "T1426": "「應與自言治比尼人，與自言治比尼。",
+   "T1460": "「應與自言治，當與自言治。",
+   "sa-mula": "pratijñākārakārhāya pratijñāṃ dāsyāmaḥ / utpannotpannāny adhikaraṇāny ebhiḥ saptabhir adhikaraṇaśamathair dharmair dāpayiṣyāmaḥ śamayiṣyāmo vyupaśamayiṣyāmo dharmavinaye śāstuḥ śāsane /",
+   "T1454": "應與自言毘奈耶，當與自言毘奈耶。"
+  },
+  "as5": {
+   "pi": "Adhikaraṇasamatha 5 Yebhuyyasikā.",
+   "T1429": "「應與多人覓罪，當與多人覓罪。",
+   "T1422a": "「應與多人語，與多人語。",
+   "sa-sarv": "PrMoSū_AŚ.6: yadbhūyeṣikārhasya yadbhūyeṣikaṃ dāsyāmaḥ 6",
+   "T1436": "「應與多覓罪相人，當與多覓罪相。",
+   "sa-mahl": "PrMoSū(Mā-L)AŚ.6. yo bhūyasiko śamatho /",
+   "T1426": "「應與多覓罪相比尼人，與多覓罪相比尼。",
+   "T1460": "「應與多人宗，當與多人宗。",
+   "sa-mula": "yadbhūyeṣiyārhāya yadbhūyeṣiyaṃ dāsyāmaḥ /",
+   "T1454": "應與多人語毘奈耶，當與多人語毘奈耶。"
+  },
+  "as6": {
+   "pi": "Adhikaraṇasamatha 6 Tassapāpiyasikā.",
+   "T1429": "「應與覓罪相，當與覓罪相。",
+   "T1422a": "「應與本言，與本言治。",
+   "sa-sarv": "PrMoSū_AŚ.5: tatsvabhāvaiṣikārhasya tatsvabhā(vaiṣikāṃ) dāsyāmaḥ 5",
+   "T1436": "「應與覓罪相人，當與覓罪相。",
+   "sa-mahl": "PrMoSū(Mā-L)AŚ.5. tasya pāpeyasiko śamatho /",
+   "T1426": "「應與覓罪相比尼人，與覓罪相比尼。",
+   "T1460": "「應與伏本語，當與伏本語。",
+   "sa-mula": "tatsvabhāveṣiyārhāya tatsvabhāveṣiyaṃ dāsyāmaḥ /",
+   "T1454": "應與求罪自性毘奈耶，當與求罪自性毘奈耶。"
+  },
+  "as7": {
+   "pi": "Adhikaraṇasamatha 7 Tiṇavatthārakoti.",
+   "T1429": "「應與如草覆地，當與如草覆地。",
+   "T1422a": "「應與草布地，與草布地。」",
+   "sa-sarv": "PrMoSū_AŚ.7: utpanno(tpannāny adhikaraṇāni) tṛṇaprastārakena vyupaśamayiṣyāmo dharmeṇa .i... 7 (//)",
+   "T1436": "「種種僧中諍事起，如草布地除滅，應當學。」",
+   "sa-mahl": "PrMoSū(Mā-L)AŚ.7. tṛṇaprastārako ca śamatho saptamo /",
+   "T1426": "「應與如草敷地比尼人，與如草敷地比尼。」",
+   "T1460": "「應與草覆地，當與草覆地。」",
+   "sa-mula": "tṛṇaprastārakārhāya tṛṇaprastārakaṃ dāsyāmaḥ /",
+   "T1454": "應與草掩毘奈耶，當與草掩毘奈耶。"
+  },
+  "asz": {
+   "pi": "Uddiṭṭhā kho āyasmanto satta adhikaraṇasamathā dhammā. Tatthāyasmante pucchāmi, kaccittha parisuddhā, dutiyampi pucchāmi, kaccittha parisuddhā, tatiyampi pucchāmi, kaccittha parisuddhā, parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti. Adhikaraṇasamathā niṭṭhitā",
+   "T1429": "「諸大德！我已說七滅諍法。今問諸大德，是中清淨不？（如是三說）諸大德！是中清淨，默然故，是事如是持。",
+   "T1422a": "「諸大德！已說七滅諍法。今問，諸大德是中清淨不？」（第二、第三亦如是說）「諸大德是中清淨，默然故，是事如是持。」",
+   "sa-sarv": "ud(d)iṣṭā mayāyuṣmantaḥ saptādhikaraṇaśamathā dharmās t(atrāham āyu)ṣmata(ḥ pṛ)cchāmi kaccit sthātra pariśuddhā dvir api tri(r api) pṛcchāmi kaccit sthātra (pariśuddhāḥ pari)śuddhā atrāyuṣmanto yasmāt tūṣṇīm evam evāhaṃ dhārayāmi //",
+   "T1436": "「諸大德！已說七滅諍法，今問諸大德是中清淨不？」（第二、第三亦如是問。）「諸大德！是中清淨，默然故，是事如是持。」",
+   "sa-mahl": "uddiṣṭāḥ kho punar āyuṣmanto sapta adhikaraṇaśamathā dharmāḥ / tatrāyuḥmanto pṛcchāmi Ō kaccittha pariśuddhāḥ? dvitīyaṃ pi āyuḥmanto pṛcchāmi kaccittha pariśuddhāḥ? tṛtīyaṃ pi āyuḥmanto pṛcchāmi kaccittha pariśuddhāḥ? pariśuddhā atrāyuḥmanto yasmāt tūḥṇīm evam etaṃ dhārayāmi /",
+   "T1426": "「諸大德！已說七滅諍法。今問諸大德！是中清淨不？是中清淨不？是中清淨不？」「諸大德！是中清淨，默然故，是事如是持。」（七滅諍竟）",
+   "T1460": "「諸大德！我已說七滅諍法。今問諸大德是中清淨不？」（如是三說）「諸大德是中清淨，默然故，是事如是持。」",
+   "sa-mula": "uddiṣṭā me āyuṣmantaḥ saptādhikaraṇaśamathā dharmāḥ / tatrāham āyuṣmataḥ paripṛcchāmi -- kaccit sthātra pariśuddhāḥ dvir api trir api paripṛcchāmi -- kaccit sthātra pariśuddhāḥ / pariśuddhā āyuṣmanto yasmāt tūṣṇīm evam evāhaṃ dhārayāmi /",
+   "T1454": "「若有諍事起，當以七法順大師教，如法如律而除滅之。」「諸大德！我已說七滅諍法。今問諸大德！是中清淨不？」（如是三說）「諸大德！是中清淨，默然故，我今如是持。」"
+  }
+ }
+}
