@@ -94,6 +94,9 @@ def load_pages() -> dict[int, dict]:
     for f in files:
         d = json.loads(open(f, encoding="utf-8").read())
         s, e = d["start"], d["end"]
+        if s == e and len(d["pages"]) > 1:
+            # 單頁重跑時 Gemini 偶爾把同一頁拆成幾筆（頁碼／眉／正文各一筆，259、289 頁）：單頁檔直接接回一筆
+            d["pages"] = [{"page": s, "text": "\n".join(p.get("text") or "" for p in d["pages"])}]
         # 🚨 不信模型回報的 page：它常填印刷頁碼，被 ocr_pdf 換算到隔壁幾頁去
         #    （序言的段落跑進第一章）。頁數剛好就照回傳順序對回，不對就整批不用、交給 MinerU。
         if len(d["pages"]) != e - s + 1:
