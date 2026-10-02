@@ -1,0 +1,264 @@
+{
+ "slug": "pi-mn5",
+ "title": "無穢經（穢經・求欲經）",
+ "family": "pi",
+ "intro": "舍利弗說四種人：內有穢而不自知、有穢而自知、無穢而不自知、無穢而自知，各以塵污或淨潔的銅盤常拭與不拭為喻；再說「穢」就是種種惡欲（犯戒不欲人知、想獨得佛問、居前、上座、受敬重、得好供養），惡欲未斷者雖住林乞食也不受敬重（盛屍銅盤喻），已斷者雖近聚落也受敬重（盛美食銅盤喻）；最後目連以車匠斫治車輪（軸）之喻讚歎舍利弗。中阿含 87 與求欲經（法炬譯）在惡欲之後另有一整段「心不生如是欲」的反說，巴利本沒有，單列一節；兩本的惡欲多了「為王臣所識」「與居士共論」幾項。增壹阿含 25.6 把穢稱為「結」，惡欲先說問佛說法、入村居前、上座受食、食後說法、園中說法，再說犯戒諸項，次第與巴利相反（設 reorder），也沒有受敬重與衣食諸項。中阿含與求欲經發問者是「一比丘」，巴利與增壹是目連。",
+ "units": [
+  {
+   "id": "a00",
+   "label": "經題"
+  },
+  {
+   "id": "a01",
+   "label": "如是我聞・說法處・舍利弗告諸比丘"
+  },
+  {
+   "id": "a02",
+   "label": "四種人：有穢不知・有穢自知・無穢不知・無穢自知，孰劣孰勝"
+  },
+  {
+   "id": "a03",
+   "label": "問：何故同有穢、同無穢而一劣一勝"
+  },
+  {
+   "id": "a04",
+   "label": "有穢而不知：不求斷穢・塵污銅盤不拭"
+  },
+  {
+   "id": "a05",
+   "label": "有穢而自知：精勤斷穢・污盤常拭轉淨"
+  },
+  {
+   "id": "a06",
+   "label": "無穢而不知：作淨想起欲・淨盤不拭轉污"
+  },
+  {
+   "id": "a07",
+   "label": "無穢而自知：不起欲・淨盤常拭更淨"
+  },
+  {
+   "id": "a07b",
+   "label": "結：以此因緣一劣一勝"
+  },
+  {
+   "id": "a08",
+   "label": "問：何謂穢・答：惡不善欲"
+  },
+  {
+   "id": "a09",
+   "label": "惡欲之一：犯戒不欲人知・欲屏處受訶・欲勝人訶"
+  },
+  {
+   "id": "a10",
+   "label": "惡欲之二：欲獨問佛說法・入村居前・上座第一食・食後說法・為眾說法"
+  },
+  {
+   "id": "a11",
+   "label": "惡欲之三：欲為王臣所識・四眾敬重・得勝妙衣食臥具醫藥"
+  },
+  {
+   "id": "a12",
+   "label": "惡欲未斷，雖住林乞食不受敬重：盛屍（糞）銅盤喻"
+  },
+  {
+   "id": "a12b",
+   "label": "心不生如是欲：諸項反說（中阿含、求欲經）"
+  },
+  {
+   "id": "a13",
+   "label": "惡欲已斷，雖近聚落受請亦受敬重：盛美食銅盤喻"
+  },
+  {
+   "id": "a14",
+   "label": "目連說喻：車匠斫治車輪・善男子聞法如得華鬘"
+  },
+  {
+   "id": "a15",
+   "label": "二大龍相讚・歡喜"
+  },
+  {
+   "id": "a16",
+   "label": "尾題"
+  }
+ ],
+ "versions": [
+  {
+   "id": "pi",
+   "lang": "pi",
+   "label": "巴利 MN 5",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "zh-nan",
+   "lang": "lzh",
+   "label": "漢譯南傳",
+   "who": "元亨寺版・N09（譯自巴利）"
+  },
+  {
+   "id": "MA87",
+   "lang": "lzh",
+   "label": "中阿含 87 穢經",
+   "who": "東晉 瞿曇僧伽提婆譯・397–398 年",
+   "work": "T0026"
+  },
+  {
+   "id": "EA25.6",
+   "lang": "lzh",
+   "label": "增壹阿含 25.6",
+   "who": "東晉 瞿曇僧伽提婆譯・397 年",
+   "work": "T0125",
+   "reorder": true
+  },
+  {
+   "id": "T0049",
+   "lang": "lzh",
+   "label": "求欲經",
+   "who": "西晉 法炬譯",
+   "work": "T0049"
+  }
+ ],
+ "works": [
+  "T0026",
+  "T0049",
+  "T0125"
+ ],
+ "anchors": [
+  {
+   "work": "T0026",
+   "node": "（八七）中阿含穢品經第一",
+   "uid": "T01n0026_p0566a13"
+  },
+  {
+   "work": "T0125",
+   "range": [
+    "T02n0125_p0632a20.2",
+    "T02n0125_p0632a20.3"
+   ]
+  }
+ ],
+ "cells": {
+  "a00": {
+   "pi": "Majjhima Nikāya 5 Anaṅgaṇasutta",
+   "zh-nan": "第五　無穢經"
+  },
+  "a01": {
+   "pi": "Evaṁ me sutaṁ— ekaṁ samayaṁ bhagavā sāvatthiyaṁ viharati jetavane anāthapiṇḍikassa ārāme. Tatra kho āyasmā sāriputto bhikkhū āmantesi: “āvuso bhikkhave”ti. “Āvuso”ti kho te bhikkhū āyasmato sāriputtassa paccassosuṁ. Āyasmā sāriputto etadavoca:",
+   "zh-nan": "如是我聞。—— 一時，世尊住舍衛城祇陀林給孤獨園。爾時，尊者舍利弗告諸比丘曰：「比丘諸賢！」彼等比丘應尊者舍利弗曰：「尊者！」尊者舍利弗乃曰：",
+   "MA87": "我聞如是：一時，佛遊婆奇瘦，在鼉山怖林鹿野園中。爾時，尊者舍梨子告諸比丘：「諸賢！",
+   "EA25.6": "聞如是：一時，尊者舍利弗、尊者目揵連在羅閱城迦蘭陀竹園所。",
+   "T0049": "聞如是：一時，婆伽婆在婆祇尸收摩林鼻量鹿野苑中。彼時尊者舍利弗告諸比丘：「諸賢！"
+  },
+  "a02": {
+   "pi": "“Cattārome, āvuso, puggalā santo saṁvijjamānā lokasmiṁ. Katame cattāro? Idhāvuso, ekacco puggalo sāṅgaṇova samāno ‘atthi me ajjhattaṁ aṅgaṇan’ti yathābhūtaṁ nappajānāti. Idha panāvuso, ekacco puggalo sāṅgaṇova samāno ‘atthi me ajjhattaṁ aṅgaṇan’ti yathābhūtaṁ pajānāti. Idhāvuso, ekacco puggalo anaṅgaṇova samāno ‘natthi me ajjhattaṁ aṅgaṇan’ti yathābhūtaṁ nappajānāti. Idha panāvuso, ekacco puggalo anaṅgaṇova samāno ‘natthi me ajjhattaṁ aṅgaṇan’ti yathābhūtaṁ pajānāti. Tatrāvuso, yvāyaṁ puggalo sāṅgaṇova samāno ‘atthi me ajjhattaṁ aṅgaṇan’ti yathābhūtaṁ nappajānāti, ayaṁ imesaṁ dvinnaṁ puggalānaṁ sāṅgaṇānaṁyeva sataṁ hīnapuriso akkhāyati. Tatrāvuso, yvāyaṁ puggalo sāṅgaṇova samāno ‘atthi me ajjhattaṁ aṅgaṇan’ti yathābhūtaṁ pajānāti, ayaṁ imesaṁ dvinnaṁ puggalānaṁ sāṅgaṇānaṁyeva sataṁ seṭṭhapuriso akkhāyati. Tatrāvuso, yvāyaṁ puggalo anaṅgaṇova samāno ‘natthi me ajjhattaṁ aṅgaṇan’ti yathābhūtaṁ nappajānāti, ayaṁ imesaṁ dvinnaṁ puggalānaṁ anaṅgaṇānaṁyeva sataṁ hīnapuriso akkhāyati. Tatrāvuso, yvāyaṁ puggalo anaṅgaṇova samāno ‘natthi me ajjhattaṁ aṅgaṇan’ti yathābhūtaṁ pajānāti, ayaṁ imesaṁ dvinnaṁ puggalānaṁ anaṅgaṇānaṁyeva sataṁ seṭṭhapuriso akkhāyatī”ti.",
+   "zh-nan": "「諸賢！世間有四種人，云何為四？曰：於此處，有人〔心〕有穢而不如實知『內〔心〕有穢』，又有人有穢而如實知『內有穢』。諸賢！於此處，又有人無穢而不如實知『內無穢』，又有人無穢而如實知『內無穢』。諸賢！於此處，若有此穢而不如實知『內有穢』之人，是謂此等二有穢者中之劣者，又有此穢而如實知『內有穢』之人，是謂此等二有穢者中之優者也。又於此處，若無穢而不如實知『內無穢』之人，是謂此等二無穢者中之劣者。又無穢而如實知『內無穢』之人，是謂此等二無穢者中之優者也。」",
+   "MA87": "世有四種人。云何為四？或有一人內實有穢不自知，內有穢不知如真；或有一人內實有穢自知，內有穢知如真；或有一人內實無穢不自知，內無穢不知如真；或有一人內實無穢自知，內無穢知如真。「諸賢！若有一人內實有穢不自知，內有穢不知如真者，此人於諸人中為最下賤。若有一人內實有穢自知，內有穢知如真者，此人於諸人中為最勝也。若有一人內實無穢不自知，內無穢不知如真者，此人於諸人中為最下賤。若有一人內實無穢自知，內無穢知如真者，此人於諸人中為最勝也。」",
+   "EA25.6": "爾時，舍利弗告諸比丘：「世間有此四人。云何為四？所謂第一人者與結相隨，然內有結而不知。或有一人與結相隨，然內有結如實知之。或有一人不與結相隨，然內無結如實而不知。或有一人不與結相隨，然內無結如實知之。「諸賢當知，第一人者與結相隨，然內有結而不知，此二有結人中，此人最為下賤。所謂彼第二人與結相隨，內有結如實知之，此人極為妙。彼第三人不與結相隨，內無結如實而不知，此人於二無結人中，此人最為下賤。所謂彼第四人不與結相隨，內無結如實知之，此人於無結人中最為第一。諸賢當知，世間有此四人。」",
+   "T0049": "世間有四種人現可知。云何為四？此諸賢！或有人內有求欲，彼內有求欲，不知如真。此諸賢！或有人內有求欲，彼內有求欲，知如真。此諸賢！或有人內無求欲，彼內無求欲，不知如真。此諸賢！或有人，內無求欲，彼內無求欲，知如真。此諸賢！或彼一人，內有求欲，彼內有求欲，不知如真者，我說此人之人最弊惡。此諸賢！或有人內有求欲，彼內有求欲，知如真者，我說此人之人最勝。此諸賢！或有人內無求欲，彼內無求欲，不知如真者，我說此人之人最弊惡。此諸賢！或有人內無求欲，彼內無求欲，知如真者，我說此人之人最勝。」"
+  },
+  "a03": {
+   "pi": "Evaṁ vutte, āyasmā mahāmoggallāno āyasmantaṁ sāriputtaṁ etadavoca: “Ko nu kho, āvuso sāriputta, hetu ko paccayo yenimesaṁ dvinnaṁ puggalānaṁ sāṅgaṇānaṁyeva sataṁ eko hīnapuriso akkhāyati, eko seṭṭhapuriso akkhāyati? Ko panāvuso sāriputta, hetu ko paccayo yenimesaṁ dvinnaṁ puggalānaṁ anaṅgaṇānaṁyeva sataṁ eko hīnapuriso akkhāyati, eko seṭṭhapuriso akkhāyatī”ti?",
+   "zh-nan": "如是說已，尊者大目犍連對尊者舍利弗曰：「尊者舍利弗！以何因、何緣，於此等二有穢者中，一稱為劣者，而他（另一）者稱為優者耶？又以何因、何緣，於此等二無穢者中，一稱為劣者，而他者稱為優者耶？」",
+   "MA87": "於是，有一比丘即從坐起，偏袒著衣，叉手向尊者舍梨子，白曰：「尊者舍梨子！何因、何緣說前二人俱有穢，穢污心，一者下賤，一者最勝？復何因緣說後二人俱無穢，不穢污心，一者下賤，一者最勝？」",
+   "EA25.6": "是時，尊者目連問舍利弗曰：「有何因緣，有結相隨人，一人下賤，一人最妙？復有何因緣，此二無結人相隨，一人下賤，一人最妙？」",
+   "T0049": "彼時，有異比丘從座起，一向著衣，叉手向尊者舍利弗，白尊者舍利弗曰：「云何，尊者舍利弗！何因何緣，此前二種人俱有求欲、俱有著意，說一人弊惡、說一人最勝耶？復何因何緣，此後二種人，俱有無求欲、俱有無著，說一人弊惡、說一人最勝耶？」"
+  },
+  "a04": {
+   "pi": "“Tatrāvuso, yvāyaṁ puggalo sāṅgaṇova samāno ‘atthi me ajjhattaṁ aṅgaṇan’ti yathābhūtaṁ nappajānāti, tassetaṁ pāṭikaṅkhaṁ—na chandaṁ janessati na vāyamissati na vīriyaṁ ārabhissati tassaṅgaṇassa pahānāya; so sarāgo sadoso samoho sāṅgaṇo saṅkiliṭṭhacitto kālaṁ karissati. Seyyathāpi, āvuso, kaṁsapāti ābhatā āpaṇā vā kammārakulā vā rajena ca malena ca pariyonaddhā. Tamenaṁ sāmikā na ceva paribhuñjeyyuṁ na ca pariyodapeyyuṁ, rajāpathe ca naṁ nikkhipeyyuṁ. Evañhi sā, āvuso, kaṁsapāti aparena samayena saṅkiliṭṭhatarā assa malaggahitā”ti? “Evamāvuso”ti. “Evameva kho, āvuso, yvāyaṁ puggalo sāṅgaṇova samāno ‘atthi me ajjhattaṁ aṅgaṇan’ti yathābhūtaṁ nappajānāti, tassetaṁ pāṭikaṅkhaṁ—na chandaṁ janessati na vāyamissati na vīriyaṁ ārabhissati tassaṅgaṇassa pahānāya; so sarāgo sadoso samoho sāṅgaṇo saṅkiliṭṭhacitto kālaṁ karissati.",
+   "zh-nan": "〔舍利弗答曰：〕「尊者！於此處，對有穢而不如實知『內有穢』者，應如次之期待，即：彼捨離彼穢，不發願、不努力、不精勤，而具貪、瞋、癡，有穢、穢污心以至命終。恰如從市肆，或打鐵店，持來一銅盤，塵垢覆蓋，其所有者既不使用又不拂拭，而〔任其〕放置於塵埃中，則其銅盤將愈增受塵垢也。如是，對彼有穢而不如實知：『內有穢』者，應如次期待，即：彼對彼穢之捨離，將不發願、不努力、不精勤，而具貪、瞋、癡，具穢、穢污心以至命終。",
+   "MA87": "於是，尊者舍梨子答彼比丘曰：「賢者！若有一人內實有穢不自知，內有穢不知如真者，當知彼人不欲斷穢，不求方便，不精勤學，彼便有穢，穢污心命終；彼因有穢，穢污心命終故，便不賢死，生不善處。所以者何？彼因有穢，穢污心命終故。賢者！猶如有人或從市肆，或從銅作家，買銅槃來，塵垢所污，彼持來已，不數洗塵，不數揩拭，亦不日炙，又著饒塵處，如是銅槃增受塵垢。賢者！如是若有一人內實有穢不自知，內有穢不知如真者，當知彼人不欲斷穢，不求方便，不精勤學，彼便有穢，穢污心命終；彼因有穢，穢污心命終故，便不賢死，生不善處。所以者何？彼因有穢，穢污心命終故。",
+   "EA25.6": "舍利弗對曰：「彼與結相隨，內有結如實不知。彼人作是念：『我當作淨想。』彼便思惟作淨想。當作淨想時，便起欲心，以起欲心已，便有貪欲、瞋恚、癡心而命終。爾時，不求方便，滅此欲心，便有瞋恚、愚癡之心而命終。目連當知，猶如有人詣市買得銅器，塵土垢坌，極為不淨。彼人不隨時摩抆，不隨時淨洗，然彼銅器倍更生垢，極為不淨。此第一人亦復如是，與垢相隨，內有結如實不知，彼便作是念：『我當思惟淨想。』已思惟淨想，便生欲心，已生欲心，則有貪欲、瞋恚、愚癡而命終，不求方便，滅此欲心。",
+   "T0049": "「此諸賢！或有一人內有求欲，彼內有求欲，不知如真者，當知彼亦無樂行，亦無進行，亦無精進。彼住求欲，彼求欲意著命終。彼求欲意著命終已，亦不善終，亦不生善處。何以故？彼求欲著意終故。猶若，諸賢！有人，若在販肆，若在客作家，若持銅鉢來，垢穢不淨。彼持來已，亦不隨時洗拭，亦不隨時拭，亦不隨時摩，但著塵土中，如是此銅鉢，但增上受垢穢。如是，諸賢！或有一人內有求欲，彼內有求欲，不知如真；當知彼亦不樂行，亦不進行，亦不精進，彼但住求欲，彼內求著意命終。內求著意命終已，終亦不善，亦不生善處。何以故？彼內求著求欲命終故。"
+  },
+  "a05": {
+   "pi": "Tatrāvuso, yvāyaṁ puggalo sāṅgaṇova samāno ‘atthi me ajjhattaṁ aṅgaṇan’ti yathābhūtaṁ pajānāti, tassetaṁ pāṭikaṅkhaṁ—chandaṁ janessati vāyamissati vīriyaṁ ārabhissati tassaṅgaṇassa pahānāya; so arāgo adoso amoho anaṅgaṇo asaṅkiliṭṭhacitto kālaṁ karissati. Seyyathāpi, āvuso, kaṁsapāti ābhatā āpaṇā vā kammārakulā vā rajena ca malena ca pariyonaddhā. Tamenaṁ sāmikā paribhuñjeyyuñceva pariyodapeyyuñca, na ca naṁ rajāpathe nikkhipeyyuṁ. Evañhi sā, āvuso, kaṁsapāti aparena samayena parisuddhatarā assa pariyodātā”ti? “Evamāvuso”ti. “Evameva kho, āvuso, yvāyaṁ puggalo sāṅgaṇova samāno ‘atthi me ajjhattaṁ aṅgaṇan’ti yathābhūtaṁ pajānāti, tassetaṁ pāṭikaṅkhaṁ—chandaṁ janessati vāyamissati vīriyaṁ ārabhissati tassaṅgaṇassa pahānāya; so arāgo adoso amoho anaṅgaṇo asaṅkiliṭṭhacitto kālaṁ karissati.",
+   "zh-nan": "賢者！然，又或彼有穢而如實知：『內有穢』者，應如次期待，即：彼對彼穢之捨離，將發願、努力、精勤，彼無貪、瞋、癡，無穢、無穢污心以至命終。恰如從市肆或打鐵店，持來一銅盤，塵垢覆蓋，但其所有者使用之、拂拭之，又不〔任其〕放置於塵垢中，則其銅盤他日（多日）後將清淨皎潔也。如是雖有穢，對彼有穢而如實知：『內有穢』者，應如次期待，即：彼對彼穢之捨離，將發願、努力、精勤，彼無貪、瞋、癡，無穢、無穢污心以至命終。",
+   "MA87": "「賢者！若有一人我內有穢，我內實有此穢知如真者，當知彼人欲斷此穢，求方便，精勤學，彼便無穢，不穢污心命終；彼因無穢，不穢污心命終故，便賢死，生善處。所以者何？彼因無穢，不穢污心命終故。賢者！猶如有人或從市肆，或從銅作家，買銅槃來，塵垢所污，彼持來已，數數洗塵，數數揩拭，數數日炙，不著饒塵處，如是銅槃便極淨潔。賢者！如是若有一人我內有穢，我內實有此穢知如真者，當知彼人欲斷此穢，求方便，精勤學，彼便無穢，不穢污心命終；彼因無穢，不穢污心命終故，便賢死，生善處。所以者何？彼因無穢，不穢污心命終故。",
+   "EA25.6": "「彼第二人與結相隨，內有結如實知！『我今可捨淨想，思惟不淨想。』彼已捨淨想，思惟不淨想，彼以思惟不淨想，便不生欲心，求方便，不得者得、不獲者獲、不及者及，便無貪欲、瞋恚、愚癡，亦復無結而命終。猶如有人從市中買得銅器，塵垢所染，彼人隨時修治，洗蕩使淨。此人亦復如是。與結相隨，內有結如實知之。彼人便捨淨想，思惟不淨想，彼思惟不淨想，更求方便，不得者得、不獲者獲、不作證者教令得證，已無欲心、無瞋恚、愚癡而命終。是謂，目連！有此二人與結相隨，一人下賤，一人最妙。」",
+   "T0049": "「此諸賢！或有人內求欲，彼內求欲，知如真；當知彼樂行精進，彼求欲止，彼無求欲意，不著命終。彼無求欲意，不著命終已，終亦善，所生處亦善。何以故？彼無求欲無著意故。猶若，諸賢！有人若販肆客作家，持銅鉢來，垢穢不淨。彼持來已，隨時洗，隨時拭，隨時摩，不著塵土中，此銅鉢於後時清淨白。如是，諸賢！或有人內有求欲，彼內求欲，知如真；當知彼樂行、進行、精進，彼求欲斷，無有求欲意，不著命終。彼無有求欲意，不著命終已，終亦善，亦生善處。何以故？彼無求欲，無著意命終故。"
+  },
+  "a06": {
+   "pi": "Tatrāvuso, yvāyaṁ puggalo anaṅgaṇova samāno ‘natthi me ajjhattaṁ aṅgaṇan’ti yathābhūtaṁ nappajānāti, tassetaṁ pāṭikaṅkhaṁ—subhanimittaṁ manasi karissati, tassa subhanimittassa manasikārā rāgo cittaṁ anuddhaṁsessati; so sarāgo sadoso samoho sāṅgaṇo saṅkiliṭṭhacitto kālaṁ karissati. Seyyathāpi, āvuso, kaṁsapāti ābhatā āpaṇā vā kammārakulā vā parisuddhā pariyodātā. Tamenaṁ sāmikā na ceva paribhuñjeyyuṁ na ca pariyodapeyyuṁ, rajāpathe ca naṁ nikkhipeyyuṁ. Evañhi sā, āvuso, kaṁsapāti aparena samayena saṅkiliṭṭhatarā assa malaggahitā”ti? “Evamāvuso”ti. “Evameva kho, āvuso, yvāyaṁ puggalo anaṅgaṇova samāno ‘natthi me ajjhattaṁ aṅgaṇan’ti yathābhūtaṁ nappajānāti, tassetaṁ pāṭikaṅkhaṁ—subhanimittaṁ manasi karissati, tassa subhanimittassa manasikārā rāgo cittaṁ anuddhaṁsessati; so sarāgo sadoso samoho sāṅgaṇo saṅkiliṭṭhacitto kālaṁ karissati.",
+   "zh-nan": "尊者！又，對彼無穢而不如實知『內無穢』者，應如次豫想，即：將念淨相，由彼之念淨相，而破其心之貪欲，如是，彼具貪、瞋、癡，具穢、穢污心以至命終。恰如從市肆或打鐵店，持來一銅盤，清淨皎潔，其所有者既不使用、又不拂拭，而〔任其〕放置於塵埃中，則銅盤日後將愈增受穢垢。如是，雖對彼之無穢而不如實知：『內無穢』者，應如次豫想，即：將念淨相，由彼之念淨相，而破其心之貪欲，彼如是，具貪、瞋、癡，具穢、穢污心以至命終。",
+   "MA87": "「賢者！若有一人我內無穢，我內實無此穢不知如真者，當知彼人不護由眼耳所知法，彼因不護由眼耳所知法故，則為欲心纏，彼便有欲有穢，穢污心命終；彼因有欲有穢，穢污心命終故，便不賢死，生不善處。所以者何？彼因有欲有穢，穢污心命終故。賢者！猶如有人或從市肆，或從銅作家，買銅槃來，無垢淨潔，彼持來已，不數洗塵，不數揩拭，不數日炙，著饒塵處，如是銅槃必受塵垢。賢者！如是若有一人我內無穢，我內實無此穢不知如真者，當知彼人不護由眼耳所知法，彼因不護由眼耳所知法故，則為欲心纏，彼便有欲有穢，穢污心命終；彼因有欲有穢，穢污心命終故，便不賢死，生不善處。所以者何？彼因有欲有穢，穢污心命終故。",
+   "EA25.6": "目連曰：「復以何因緣，使此二人不與結相隨，一人下賤，一人最妙？」舍利弗曰：「彼第三人不與結相隨，內無結如實而不知。彼便作是思惟，我不求方便思惟，不得者得、不獲者獲、不作證者而作證。彼人有欲心、瞋恚、愚癡所縛而命終。猶如有人詣市買銅器，塵垢所染，然不隨時洗治，亦不隨時修治；此第三人亦復如是，不與結相隨，內無結如實不知，亦不作是學，我當求方便，滅此諸結；而有貪欲、瞋恚、愚癡之心而命終。",
+   "T0049": "「此諸賢！或有人內無求欲，彼內無求欲，不知如真者；當知彼不能護眼耳意法。住彼不能護眼耳意法已，意有婬欲，彼雜欲雜求，著意命終。彼雜欲雜求，著意命終已，終亦不善，生亦不善。何以故？雜欲雜求，意著命終故。猶若，諸賢！有人若販肆客作家，持清淨銅鉢來。持來已，亦不隨時洗，亦不隨時拭，亦不隨時摩，著塵土中，如是此銅鉢，於後時垢穢不淨。如是，諸賢！或有人內無求欲，彼內無求欲，不知如真；當知彼不能護眼耳意法。彼不能護眼耳意法已，有婬欲意、雜欲意，雜欲雜求，著意命終。彼雜欲雜求，著意命終已，終亦不善，生亦不善。何以故？彼雜欲雜求，著意命終故。"
+  },
+  "a07": {
+   "pi": "Tatrāvuso, yvāyaṁ puggalo anaṅgaṇova samāno ‘natthi me ajjhattaṁ aṅgaṇan’ti yathābhūtaṁ pajānāti, tassetaṁ pāṭikaṅkhaṁ—subhanimittaṁ na manasi karissati, tassa subhanimittassa amanasikārā rāgo cittaṁ nānuddhaṁsessati; so arāgo adoso amoho anaṅgaṇo asaṅkiliṭṭhacitto kālaṁ karissati. Seyyathāpi, āvuso, kaṁsapāti ābhatā āpaṇā vā kammārakulā vā parisuddhā pariyodātā. Tamenaṁ sāmikā paribhuñjeyyuñceva pariyodapeyyuñca, na ca naṁ rajāpathe nikkhipeyyuṁ. Evañhi sā, āvuso, kaṁsapāti aparena samayena parisuddhatarā assa pariyodātā”ti? “Evamāvuso”ti. “Evameva kho, āvuso, yvāyaṁ puggalo anaṅgaṇova samāno ‘natthi me ajjhattaṁ aṅgaṇan’ti yathābhūtaṁ pajānāti, tassetaṁ pāṭikaṅkhaṁ—subhanimittaṁ na manasi karissati, tassa subhanimittassa amanasikārā rāgo cittaṁ nānuddhaṁsessati; so arāgo adoso amoho anaṅgaṇo asaṅkiliṭṭhacitto kālaṁ karissati.",
+   "zh-nan": "尊者！又對彼之無穢而如實知『內無穢』者，應如次期待，即：將不念淨相，由彼之不念淨相，而不破其心之貪欲，如是彼，無貪、瞋、癡，無穢、無穢污心以至命終。恰如從市肆或打鐵店，持來一銅盤，清淨皎潔，其所有者使用之、又拂拭之，而不〔任其〕放置於塵埃中，如是，彼之銅盤他日實愈清淨皎潔。如是，對彼無穢而如實知『內無穢』者，應如次期待，即：將不念淨相，由彼之不念淨相，而不破其心貪欲，如是，彼無貪、瞋、癡，無穢、無穢污心以至命終。",
+   "MA87": "「賢者！若有一人我內無穢，我內實無此穢知如真者，當知彼人護由眼耳所知法，彼因護由眼耳所知法故，則不為欲心纏，彼便無欲無穢，不穢污心命終；彼因無欲無穢，不穢污心命終故，便賢死，生善處。所以者何？彼因無欲無穢，不穢污心命終故。賢者！猶如有人或從市肆，或從銅作家，買銅槃來，無垢淨潔，彼持來已，數數洗磨，數數揩拭，數數日炙，不著饒塵處，如是銅槃便極淨潔。賢者！如是若有一人我內無穢，我內實無此穢知如真者，當知彼人護由眼耳所知法，彼因護由眼耳所知法故，則不為欲心纏，彼便無欲無穢，不穢污心命終；彼因無欲無穢，不穢污心命終故，便賢死，生善處。所以者何？彼因無欲無穢，不穢污心命終故。",
+   "EA25.6": "「彼第四人不與結俱，內無結如實知之。彼便作是思惟，求方便，不得者得、不獲者獲、不作證者令作證。彼以無此結而命終。猶如有人詣市，得好銅器極淨潔，復加隨時修治，磨洗其器。爾時，彼器倍復淨好，此第四人亦復如是，不與結相隨，內無結如實知之，彼便作是思惟，求方便，不獲者獲、不得者得、不作證者而作證，彼便無結使貪欲、瞋恚、愚癡，身壞命終。",
+   "T0049": "「此諸賢！或有人內無求欲，彼內無求欲，知如真；當知彼能護眼耳意法。彼護眼耳意法已，亦無欲意，無欲無求，意無著命終。彼無欲無求，無著意命終已，終亦善，生亦善。何以故？無求無欲，意無著命終故。猶若，諸賢！有人若販肆客作家，持清淨銅鉢來。持來已，隨時洗，隨時拭，隨時摩，不著塵土中，如是此鉢增上清淨白。如是，諸賢！彼人亦如是，內無求欲，彼內無求欲，知如真；當知彼能護眼耳意法。彼護眼耳意法已，無有婬欲，彼無雜欲求，無著意命終。彼無雜欲雜求，無著意命終已，終亦善，生亦善。何以故？彼無雜欲無雜求，無意著命終故。"
+  },
+  "a07b": {
+   "pi": "Ayaṁ kho, āvuso moggallāna, hetu ayaṁ paccayo yenimesaṁ dvinnaṁ puggalānaṁ sāṅgaṇānaṁyeva sataṁ eko hīnapuriso akkhāyati, eko seṭṭhapuriso akkhāyati. Ayaṁ panāvuso moggallāna, hetu ayaṁ paccayo yenimesaṁ dvinnaṁ puggalānaṁ anaṅgaṇānaṁyeva sataṁ eko hīnapuriso akkhāyati, eko seṭṭhapuriso akkhāyatī”ti.",
+   "zh-nan": "尊者目犍連！以此因、此緣，於此等二有穢者中，一稱為劣者，而他者稱為優者；又以此因、此緣，於此等二無穢者中，一稱為劣者，而他者稱為優者。」",
+   "MA87": "「賢者！因是緣是，說前二人俱有穢，穢污心，一者下賤，一者最勝。因是緣是，說後二人俱無穢穢污心，一者下賤，一者最勝。」",
+   "EA25.6": "是謂，目連！有此二人不與結相隨，內無結如實知之，一人為上，一人下賤。」",
+   "T0049": "是為，諸賢！所因所緣，命此初二種人求欲著意，說一人弊惡、說一人最勝；是為所因所緣，此後二種人，內無求欲意無著，說一人弊惡、說一人最勝。」"
+  },
+  "a08": {
+   "pi": "“Aṅgaṇaṁ aṅgaṇanti, āvuso, vuccati. Kissa nu kho etaṁ, āvuso, adhivacanaṁ yadidaṁ aṅgaṇan”ti? “Pāpakānaṁ kho etaṁ, āvuso, akusalānaṁ icchāvacarānaṁ adhivacanaṁ, yadidaṁ aṅgaṇan”ti.",
+   "zh-nan": "〔大目犍連曰：〕「尊者！雖謂『穢、穢』者，究竟其『穢』之名辭是對何而言耶？」〔舍利弗曰：〕「所云『穢』之名辭者，即是惡、不善、欲行境之同義語也。",
+   "MA87": "於是，復有比丘即從坐起，偏袒著衣，叉手向尊者舍梨子，白曰：「尊者舍梨子！所說穢者，何等為穢？」尊者舍梨子答比丘曰：「賢者！無量惡不善法從欲生，謂之穢。所以者何？",
+   "EA25.6": "是時，尊者目連問舍利弗曰：「何以故名曰結？」舍利弗曰：「目連當知，惡不善法，起諸邪見，故名為結。",
+   "T0049": "彼時有異比丘從座起，一向著衣，叉手向尊者舍利弗，白尊者舍利弗曰：「云何，尊者舍利弗！名求欲？求欲者，何以故名為求欲？」「諸賢！以求欲無量諸惡法，故名為求欲。"
+  },
+  "a09": {
+   "pi": "“Ṭhānaṁ kho panetaṁ, āvuso, vijjati yaṁ idhekaccassa bhikkhuno evaṁ icchā uppajjeyya: ‘āpattiñca vata āpanno assaṁ, na ca maṁ bhikkhū jāneyyuṁ āpattiṁ āpanno’ti. Ṭhānaṁ kho panetaṁ, āvuso, vijjati yaṁ taṁ bhikkhuṁ bhikkhū jāneyyuṁ: ‘āpattiṁ āpanno’ti. ‘Jānanti maṁ bhikkhū āpattiṁ āpanno’ti— iti so kupito hoti appatīto. Yo ceva kho, āvuso, kopo yo ca appaccayo— ubhayametaṁ aṅgaṇaṁ. Ṭhānaṁ kho panetaṁ, āvuso, vijjati yaṁ idhekaccassa bhikkhuno evaṁ icchā uppajjeyya: ‘āpattiñca vata āpanno assaṁ, anuraho maṁ bhikkhū codeyyuṁ, no saṅghamajjhe’ti. Ṭhānaṁ kho panetaṁ, āvuso, vijjati yaṁ taṁ bhikkhuṁ bhikkhū saṅghamajjhe codeyyuṁ, no anuraho. ‘Saṅghamajjhe maṁ bhikkhū codenti, no anuraho’ti— iti so kupito hoti appatīto. Yo ceva kho, āvuso, kopo yo ca appaccayo— ubhayametaṁ aṅgaṇaṁ. Ṭhānaṁ kho panetaṁ, āvuso, vijjati yaṁ idhekaccassa bhikkhuno evaṁ icchā uppajjeyya: ‘āpattiñca vata āpanno assaṁ, sappaṭipuggalo maṁ codeyya, no appaṭipuggalo’ti. Ṭhānaṁ kho panetaṁ, āvuso, vijjati yaṁ taṁ bhikkhuṁ appaṭipuggalo codeyya, no sappaṭipuggalo. ‘Appaṭipuggalo maṁ codeti, no sappaṭipuggalo’ti— iti so kupito hoti appatīto. Yo ceva kho, āvuso, kopo yo ca appaccayo— ubhayametaṁ aṅgaṇaṁ.",
+   "zh-nan": "尊者！於此處，有一比丘起如次之欲望，即：我雖犯罪，願比丘眾不知『我之犯罪。』然，比丘眾對彼比丘，知『彼犯罪』之事，彼思：『彼比丘眾知我犯罪。』而憤激、抱不滿。尊者！彼之憤激、不滿，及兩者皆是穢也。尊者！於此處，有一比丘起如次之欲望，即：我雖犯罪，願比丘眾於屏處對我呵責，而不於眾中為之。然，比丘眾，對彼比丘，於眾中呵責之，而不於屏處，彼思：『比丘眾於眾中呵責我，而不於屏處。』而憤激、抱不滿。尊者！彼之憤激、不滿，兩者皆是穢也。尊者！於此處，又有一比丘起如次之欲望，即：我雖犯罪，願同輩人呵責我，而不由非同輩人呵責。然，若由非同輩人呵責彼，而不由同輩人呵責，彼思：『由非同輩人呵責我，而不由同輩人呵責者。』而憤激、抱不滿。尊者！彼之憤激、不滿，乃兩者皆是穢也。",
+   "MA87": "或有一人心生如是欲：『我所犯戒，莫令他人知我犯戒。』賢者！或有他人知彼犯戒，彼因他人知犯戒故，心便生惡，若彼心生惡及心生欲者，俱是不善。賢者！或有一人心生如是欲：『我所犯戒，當令他人於屏處訶，莫令在眾訶我犯戒。』賢者！或有他人於眾中訶，不在屏處，彼因他人在眾中訶，不在屏處故，心便生惡，若彼心生惡及心生欲者，俱是不善。賢者！或有一人心生如是欲：『我所犯戒，令勝人訶，莫令不如人訶我犯戒。』賢者！或有不如人訶彼犯戒，非是勝人，彼因不如人訶，非勝人故，心便生惡，若彼心生惡及心生欲者，俱是不善。",
+   "EA25.6": "「或復有時，比丘作是念：『我今犯戒，使諸比丘不知我犯戒。』或復有時，彼比丘犯戒，諸比丘知此比丘犯戒，既有不善，又有貪欲，此二俱不善。「或復有時，比丘作是念：『我今犯戒，不使餘比丘語我言犯戒。』或復有時，彼比丘犯戒，餘比丘語言犯戒。既有不善，又有貪欲，此二俱不善。「或復有時，彼比丘作是念：『我今犯戒，使清淨比丘告我，不使不清淨比丘告我。』或復有時，不清淨比丘告彼比丘言：『彼比丘犯戒。』既有不善，又有貪欲，此二俱不善。「或復有時，比丘作是念：『我今犯戒。若有比丘告我者，當在屏處，不在大眾之中。』或復有時，彼比丘犯戒，在大眾中告語，不在屏處。比丘復作是念：『此諸比丘在大眾中告我，不在屏處。』既有不善，又有貪欲，此二俱不善。「目連當知，此諸法之本，興起此行者，名為結使。",
+   "T0049": "此諸賢！或有人有求欲生，少有所犯不令他知，而有所犯。諸賢！可知是處，彼人所犯，他知此意恚。此諸賢！若彼恚已，欲有所行，但有不善。此諸賢！或有人少有求欲生，而有所犯，但私語他不在眾中，是彼所犯。諸賢！可知是處，彼人所犯眾中說，不在獨處在眾中說，彼意恚。此諸賢！彼意恚已，欲有所行，但有不善。此諸賢！或有人有所犯，欲語等已人，不語不等已人有所犯。諸賢！可知是處，謂彼人所犯語不等人，有所犯語不等人，是彼所犯，是意恚。此諸賢！彼意恚已，若欲有所行但有不善。"
+  },
+  "a10": {
+   "pi": "Ṭhānaṁ kho panetaṁ, āvuso, vijjati yaṁ idhekaccassa bhikkhuno evaṁ icchā uppajjeyya: ‘aho vata mameva satthā paṭipucchitvā paṭipucchitvā bhikkhūnaṁ dhammaṁ deseyya, na aññaṁ bhikkhuṁ satthā paṭipucchitvā paṭipucchitvā bhikkhūnaṁ dhammaṁ deseyyā’ti. Ṭhānaṁ kho panetaṁ, āvuso, vijjati yaṁ aññaṁ bhikkhuṁ satthā paṭipucchitvā paṭipucchitvā bhikkhūnaṁ dhammaṁ deseyya, na taṁ bhikkhuṁ satthā paṭipucchitvā paṭipucchitvā bhikkhūnaṁ dhammaṁ deseyya. ‘Aññaṁ bhikkhuṁ satthā paṭipucchitvā paṭipucchitvā bhikkhūnaṁ dhammaṁ deseti, na maṁ satthā paṭipucchitvā paṭipucchitvā bhikkhūnaṁ dhammaṁ desetī’ti— iti so kupito hoti appatīto. Yo ceva kho, āvuso, kopo yo ca appaccayo— ubhayametaṁ aṅgaṇaṁ. Ṭhānaṁ kho panetaṁ, āvuso, vijjati yaṁ idhekaccassa bhikkhuno evaṁ icchā uppajjeyya: ‘aho vata mameva bhikkhū purakkhatvā purakkhatvā gāmaṁ bhattāya paviseyyuṁ, na aññaṁ bhikkhuṁ bhikkhū purakkhatvā purakkhatvā gāmaṁ bhattāya paviseyyun’ti. Ṭhānaṁ kho panetaṁ, āvuso, vijjati yaṁ aññaṁ bhikkhuṁ bhikkhū purakkhatvā purakkhatvā gāmaṁ bhattāya paviseyyuṁ, na taṁ bhikkhuṁ bhikkhū purakkhatvā purakkhatvā gāmaṁ bhattāya paviseyyuṁ. ‘Aññaṁ bhikkhuṁ bhikkhū purakkhatvā purakkhatvā gāmaṁ bhattāya pavisanti, na maṁ bhikkhū purakkhatvā purakkhatvā gāmaṁ bhattāya pavisantī’ti— iti so kupito hoti appatīto. Yo ceva kho, āvuso, kopo yo ca appaccayo— ubhayametaṁ aṅgaṇaṁ. Ṭhānaṁ kho panetaṁ, āvuso, vijjati yaṁ idhekaccassa bhikkhuno evaṁ icchā uppajjeyya: ‘aho vata ahameva labheyyaṁ bhattagge aggāsanaṁ aggodakaṁ aggapiṇḍaṁ, na añño bhikkhu labheyya bhattagge aggāsanaṁ aggodakaṁ aggapiṇḍan’ti. Ṭhānaṁ kho panetaṁ, āvuso, vijjati yaṁ añño bhikkhu labheyya bhattagge aggāsanaṁ aggodakaṁ aggapiṇḍaṁ, na so bhikkhu labheyya bhattagge aggāsanaṁ aggodakaṁ aggapiṇḍaṁ. ‘Añño bhikkhu labhati bhattagge aggāsanaṁ aggodakaṁ aggapiṇḍaṁ, nāhaṁ labhāmi bhattagge aggāsanaṁ aggodakaṁ aggapiṇḍan’ti— iti so kupito hoti appatīto. Yo ceva kho, āvuso, kopo yo ca appaccayo— ubhayametaṁ aṅgaṇaṁ. Ṭhānaṁ kho panetaṁ, āvuso, vijjati yaṁ idhekaccassa bhikkhuno evaṁ icchā uppajjeyya: ‘aho vata ahameva bhattagge bhuttāvī anumodeyyaṁ, na añño bhikkhu bhattagge bhuttāvī anumodeyyā’ti. Ṭhānaṁ kho panetaṁ, āvuso, vijjati yaṁ añño bhikkhu bhattagge bhuttāvī anumodeyya, na so bhikkhu bhattagge bhuttāvī anumodeyya. ‘Añño bhikkhu bhattagge bhuttāvī anumodati, nāhaṁ bhattagge bhuttāvī anumodāmī’ti— iti so kupito hoti appatīto. Yo ceva kho, āvuso, kopo yo ca appaccayo— ubhayametaṁ aṅgaṇaṁ. Ṭhānaṁ kho panetaṁ, āvuso, vijjati yaṁ idhekaccassa bhikkhuno evaṁ icchā uppajjeyya: ‘aho vata ahameva ārāmagatānaṁ bhikkhūnaṁ dhammaṁ deseyyaṁ, na añño bhikkhu ārāmagatānaṁ bhikkhūnaṁ dhammaṁ deseyyā’ti. Ṭhānaṁ kho panetaṁ, āvuso, vijjati yaṁ añño bhikkhu ārāmagatānaṁ bhikkhūnaṁ dhammaṁ deseyya, na so bhikkhu ārāmagatānaṁ bhikkhūnaṁ dhammaṁ deseyya. ‘Añño bhikkhu ārāmagatānaṁ bhikkhūnaṁ dhammaṁ deseti, nāhaṁ ārāmagatānaṁ bhikkhūnaṁ dhammaṁ desemī’ti— iti so kupito hoti appatīto. Yo ceva kho, āvuso, kopo yo ca appaccayo— ubhayametaṁ aṅgaṇaṁ. Ṭhānaṁ kho panetaṁ, āvuso, vijjati yaṁ idhekaccassa bhikkhuno evaṁ icchā uppajjeyya: ‘aho vata ahameva ārāmagatānaṁ bhikkhunīnaṁ dhammaṁ deseyyaṁ …pe… upāsakānaṁ dhammaṁ deseyyaṁ …pe… upāsikānaṁ dhammaṁ deseyyaṁ, na añño bhikkhu ārāmagatānaṁ upāsikānaṁ dhammaṁ deseyyā’ti. Ṭhānaṁ kho panetaṁ, āvuso, vijjati yaṁ añño bhikkhu ārāmagatānaṁ upāsikānaṁ dhammaṁ deseyya, na so bhikkhu ārāmagatānaṁ upāsikānaṁ dhammaṁ deseyya. ‘Añño bhikkhu ārāmagatānaṁ upāsikānaṁ dhammaṁ deseti, nāhaṁ ārāmagatānaṁ upāsikānaṁ dhammaṁ desemī’ti— iti so kupito hoti appatīto. Yo ceva kho, āvuso, kopo yo ca appaccayo— ubhayametaṁ aṅgaṇaṁ.",
+   "zh-nan": "尊者！於此處，又有一比丘起如次之欲望，即：願我師因我之質問而對比丘眾說法，而不因其他比丘之質問而說法。然，若師因其他比丘之質問而對比丘眾說法，不因彼之質問而說法，彼思：『師因其他比丘之質問而對比丘眾說法，不因我之質問而說法。』而憤激、抱不滿。尊者！彼之憤激、不滿，乃兩者皆是穢也。尊者！於此處，又有一比丘起如次之慾望，即：願比丘眾扈從我（令我在最前而隨從我）至村里行乞，而不扈從其他比丘至村里行乞。然，比丘眾扈從其他比丘至村里行乞，而不扈從彼至村里行乞者，彼思：『比丘眾扈從其他比丘至村里行乞，而不扈從我至村里行乞。』而憤激、抱不滿。尊者！彼之憤激、不滿，乃兩者皆是穢也。尊者！於此處，又有一比丘起如次之欲望，即：願令我於食堂得第一座、第一澡水、第一食，而不令其他比丘於食堂得第一座、第一澡水、第一食。然，若其他比丘於食堂得第一座、第一澡水、第一食，而彼於食堂不得第一座、第一澡水、第一食，彼思：『其他比丘於食堂得第一座、第一澡水、第一食，而我於食堂不得第一座、第一澡水、第一食』故，而憤激、抱不滿。尊者！彼之憤激、不滿，兩者皆是穢也。尊者！於此處，又有一比丘起如次之欲望，即：願於食堂食畢，由我說隨喜（表示感謝），而非由其他比丘說隨喜。然，若於食堂食畢，由其他比丘說隨喜，非由彼說隨喜，彼思：『於食堂食畢，由其他比丘說隨喜，非由我說隨喜。』而憤激、抱不滿。彼之憤激、不滿，乃兩者皆是穢也。尊者！於此處，又有一比丘起如次之欲望，即：願令我對集於園中之比丘眾說法，而不令其他比丘對集於園中之比丘眾說法。然，其他比丘對集於園中之比丘眾說法，非由彼說法，彼思：『其他比丘對集於園中之比丘眾說法，非由我為之。』而憤激、抱不滿。尊者！彼之憤激、不滿，乃兩者皆是穢也。尊者！於此處，又有一比丘起如次之欲望，即：願令我對集於院中之比丘尼……〔乃至〕……優婆塞……〔乃至〕……優婆夷說法，而不令其他比丘對集於院中之比丘尼……〔乃至〕……優婆塞……〔乃至〕……優婆夷說法。然，其他比丘對集於院中之比丘尼……優婆塞、優婆夷說法，非由彼說法，彼思：『其他比丘對集於院中之比丘尼……優婆塞、優婆夷說法，非由我為之。』故，而憤激、抱不滿。尊者！彼之憤激、不滿，乃兩者皆是穢也。",
+   "MA87": "「賢者！或有一人心生如是欲：『令我在佛前坐，問世尊法，為諸比丘說，莫令餘比丘在佛前坐，問世尊法，為諸比丘說。』賢者！或有餘比丘在佛前坐，問世尊法，為諸比丘說，彼因餘比丘在佛前坐，問世尊法，為諸比丘說故，心便生惡，若彼心生惡及心生欲者，俱是不善。賢者！或有一人心生如是欲：『諸比丘入內時，令我最在其前，諸比丘侍從我將入內，莫令餘比丘諸比丘入內時，最在其前，諸比丘侍從彼將入內。』賢者！或有餘比丘諸比丘入內時，最在其前，諸比丘侍從彼將入內，彼因餘比丘諸比丘入內時，最在其前，諸比丘侍從彼將入內故，心便生惡，若彼心生惡及心生欲者，俱是不善。「賢者！或有一人心生如是欲：『諸比丘已入內時，令我最在上坐，得第一座，第一澡水，得第一食，莫令餘比丘諸比丘已入內時，最在上坐，得第一座，第一澡水，得第一食。』賢者！或有餘比丘諸比丘已入內時，最在上坐，得第一座，第一澡水，得第一食；彼因餘比丘諸比丘已入內時，最在上坐，得第一座，第一澡水，得第一食故，心便生惡，若彼心生惡及心生欲者，俱是不善。「賢者！或有一人心生如是欲：『諸比丘食竟，收攝食器，行澡水已，令我為諸居士說法，勸發渴仰，成就歡喜；莫令餘比丘諸比丘食竟，收攝食器，行澡水已，為諸居士說法，勸發渴仰，成就歡喜。』賢者！或有餘比丘諸比丘食竟，收攝食器，行澡水已，為諸居士說法，勸發渴仰，成就歡喜；彼因餘比丘諸比丘食竟，收攝食器，行澡水已，為諸居士說法，勸發渴仰，成就歡喜故，心便生惡，若彼心生惡及心生欲者，俱是不善。「賢者！或有一人心生如是欲：『諸居士往詣眾園時，令我與共會共集，共坐共論，莫令餘比丘諸居士往詣眾園時，與共會共集，共坐共論。』賢者！或有餘比丘諸居士往詣眾園時，與共會共集，共坐共論，彼因餘比丘諸居士往詣眾園時，與共會共集，共坐共論故，心便生惡，若彼心生惡及心生欲者，俱是不善。",
+   "EA25.6": "或復有人而作是念：『如來問我義已，然後與諸比丘說法，不問餘比丘義，而如來與比丘說法。』或復有是時，世尊語餘比丘而說法，然不語彼比丘如來說法。『如來不語我與比丘說法。』或有不善，或有貪欲。既有不善，又有貪欲，此二俱不善。「或復有時，比丘作是念：『我恒在諸比丘前而入村乞食，不使餘比丘在比丘前而入村乞食。』或有是時，餘比丘在前而入村乞食，不使彼比丘在比丘前而入村乞食。『我不在比丘前而入村乞食。』既有不善，又有貪欲，此二俱不善。「目連當知，或復有是時，比丘作是念：『我當在比丘前坐，先前受水，先前得食，不使餘比丘先比丘坐，先前受水，先前得食。』或復有時，餘比丘在比丘前坐，先前受水，先前得食，不使彼比丘在比丘前坐，先前受水，先前得食。『我不在比丘前坐，先前受水，先前得食。』既有不善，又有貪欲，此二俱不善。「或復有時，比丘作是念：『我食已與檀越說法，不使餘比丘食訖與檀越說法。』或復有時，餘比丘食竟與檀越說法，不使彼比丘食竟與檀越說法。『不使我食竟與檀越說法。』既有不善，又有貪欲，此二俱不善。「或復有時，比丘作是念：『我當至園中，與長者婆羅門說法，不使餘比丘至園中，與長者婆羅門說法。』或復有時，餘比丘至園中，與長者婆羅門說法，不使餘比丘至園中，與長者婆羅門說法。『不使我至園中，與長者婆羅門說法。』既有不善，又有貪欲，此二俱不善。",
+   "T0049": "此諸賢！或有人有求欲生：『我當坐世尊前，我當問世尊，為諸比丘說法；不令餘比丘在世尊前，問世尊已，為諸比丘說法。』諸賢！可知是處，有餘比丘坐世尊前，問世尊已，能為諸比丘說法，是彼意恚。此諸賢！意恚已，欲有所行但有不善。「此諸賢！或有人有求欲生：『若比丘所入處，令我在前行；不令餘比丘，比丘所入處，在前行。』諸賢！可知是處，比丘所入處，異比丘在前行，是比丘所入處，異比丘在前行已，有異比丘在比丘前行，是意恚。此諸賢！彼意恚已，欲有所行但有不善。「此諸賢！或有人求欲生：『此諸比丘入內已，最在前坐、在前受水、在前受摶食；不欲令餘比丘，諸比丘入內已，前坐、前受水、前受摶食。』諸賢！可知是處，有異比丘，諸比丘入已，最在前坐、前受水、前受摶食。彼異比丘，諸比丘入已，在前坐、前受水、前受摶食，是彼意恚。彼意恚已，欲有所行但有不善。「此諸賢！或有求欲生：『諸比丘食已，收攝鉢器，令為居士說法勸進教授等，教授等令歡喜；不令餘比丘，諸比丘食已收攝鉢器，為居士說法勸進教授等，教授等令歡喜。』諸賢！可知是處，有餘比丘，諸比丘食已收攝鉢器，至令歡喜。是彼餘比丘，諸比丘食已收攝鉢器，至令歡喜；彼意恚已，此諸賢！欲有所行但有不善。「此諸賢！或有人有求欲生：『若居士入園，令我共居士談論論語，不令餘比丘，居士入園，共居士談論論語。』諸賢！可知是處，有異比丘，居士入園已，共談論論語。是彼餘比丘，居士入園已而共談論論語，是彼意恚。此諸賢！彼意恚已，彼欲有所行但有不善。"
+  },
+  "a11": {
+   "pi": "Ṭhānaṁ kho panetaṁ, āvuso, vijjati yaṁ idhekaccassa bhikkhuno evaṁ icchā uppajjeyya: ‘aho vata mameva bhikkhū sakkareyyuṁ garuṁ kareyyuṁ māneyyuṁ pūjeyyuṁ, na aññaṁ bhikkhuṁ bhikkhū sakkareyyuṁ garuṁ kareyyuṁ māneyyuṁ pūjeyyun’ti. Ṭhānaṁ kho panetaṁ, āvuso, vijjati yaṁ aññaṁ bhikkhuṁ bhikkhū sakkareyyuṁ garuṁ kareyyuṁ māneyyuṁ pūjeyyuṁ, na taṁ bhikkhuṁ bhikkhū sakkareyyuṁ garuṁ kareyyuṁ māneyyuṁ pūjeyyuṁ. ‘Aññaṁ bhikkhuṁ bhikkhū sakkaronti garuṁ karonti mānenti pūjenti, na maṁ bhikkhū sakkaronti garuṁ karonti mānenti pūjentī’ti— iti so kupito hoti appatīto. Yo ceva kho, āvuso, kopo yo ca appaccayo— ubhayametaṁ aṅgaṇaṁ. Ṭhānaṁ kho panetaṁ, āvuso, vijjati yaṁ idhekaccassa bhikkhuno evaṁ icchā uppajjeyya: ‘aho vata mameva bhikkhuniyo …pe… upāsakā …pe… upāsikā sakkareyyuṁ garuṁ kareyyuṁ māneyyuṁ pūjeyyuṁ, na aññaṁ bhikkhuṁ upāsikā sakkareyyuṁ garuṁ kareyyuṁ māneyyuṁ pūjeyyun’ti. Ṭhānaṁ kho panetaṁ, āvuso, vijjati yaṁ aññaṁ bhikkhuṁ upāsikā sakkareyyuṁ garuṁ kareyyuṁ māneyyuṁ pūjeyyuṁ, na taṁ bhikkhuṁ upāsikā sakkareyyuṁ garuṁ kareyyuṁ māneyyuṁ pūjeyyuṁ. ‘Aññaṁ bhikkhuṁ upāsikā sakkaronti garuṁ karonti mānenti pūjenti, na maṁ upāsikā sakkaronti garuṁ karonti mānenti pūjentī’ti— iti so kupito hoti appatīto. Yo ceva kho, āvuso, kopo yo ca appaccayo— ubhayametaṁ aṅgaṇaṁ. Ṭhānaṁ kho panetaṁ, āvuso, vijjati yaṁ idhekaccassa bhikkhuno evaṁ icchā uppajjeyya: ‘aho vata ahameva lābhī assaṁ paṇītānaṁ cīvarānaṁ, na añño bhikkhu lābhī assa paṇītānaṁ cīvarānan’ti. Ṭhānaṁ kho panetaṁ, āvuso, vijjati yaṁ añño bhikkhu lābhī assa paṇītānaṁ cīvarānaṁ, na so bhikkhu lābhī assa paṇītānaṁ cīvarānaṁ. ‘Añño bhikkhu lābhī paṇītānaṁ cīvarānaṁ, nāhaṁ lābhī paṇītānaṁ cīvarānan’ti— iti so kupito hoti appatīto. Yo ceva kho, āvuso, kopo yo ca appaccayo— ubhayametaṁ aṅgaṇaṁ. Ṭhānaṁ kho panetaṁ, āvuso, vijjati yaṁ idhekaccassa bhikkhuno evaṁ icchā uppajjeyya: ‘aho vata ahameva lābhī assaṁ paṇītānaṁ piṇḍapātānaṁ …pe… paṇītānaṁ senāsanānaṁ …pe… paṇītānaṁ gilānappaccayabhesajjaparikkhārānaṁ, na añño bhikkhu lābhī assa paṇītānaṁ gilānappaccayabhesajjaparikkhārānan’ti. Ṭhānaṁ kho panetaṁ, āvuso, vijjati yaṁ añño bhikkhu lābhī assa paṇītānaṁ gilānappaccayabhesajjaparikkhārānaṁ, na so bhikkhu lābhī assa paṇītānaṁ gilānappaccayabhesajjaparikkhārānaṁ. ‘Añño bhikkhu lābhī paṇītānaṁ gilānappaccayabhesajjaparikkhārānaṁ, nāhaṁ lābhī paṇītānaṁ gilānappaccayabhesajjaparikkhārānan’ti— iti so kupito hoti appatīto. Yo ceva kho, āvuso, kopo yo ca appaccayo— ubhayametaṁ aṅgaṇaṁ. Imesaṁ kho etaṁ, āvuso, pāpakānaṁ akusalānaṁ icchāvacarānaṁ adhivacanaṁ, yadidaṁ aṅgaṇanti.",
+   "zh-nan": "尊者！於此處，又有一比丘起如次之欲望，即：願比丘眾應對我恭敬、尊重、尊敬及崇拜，而不對其他比丘恭敬、尊重、尊敬及崇拜。然，比丘眾對其他比丘恭敬、尊重、尊敬、崇拜，而不對彼恭敬、尊重、尊敬、崇拜，彼思：『比丘眾對其他比丘恭敬、尊重、尊敬、崇拜，而不對我恭敬、尊重、尊敬、崇拜。』而憤激、抱不滿。尊者！彼之憤激、不滿，乃兩者皆是穢也。尊者！於此處，又有一比丘起如次之欲望，即：實願比丘尼……乃至……優婆塞……乃至……優婆夷對我恭敬、尊重、尊敬、崇拜，而不對其他比丘恭敬、尊重、尊敬、崇拜。然，比丘尼……〔乃至〕……優婆塞……〔乃至〕……優婆夷對其他比丘恭敬、尊重、尊敬、崇拜，而不對彼恭敬、尊重、尊敬、崇拜，彼思：『比丘尼……〔乃至〕……優婆塞……〔乃至〕……優婆夷對其他比丘恭敬、尊重、尊敬、崇拜，而不對我恭敬、尊重、尊敬、崇拜。』而憤激、抱不滿。尊者！彼之憤激、不滿，乃兩者皆是穢也。尊者！於此處，又有一比丘起如次之欲望，即：願令我得良好衣服，而不令其他比丘得良好衣服。然，其他比丘得良好衣服，而彼不得良好衣服，彼思：『其他比丘得良好衣服，非由我得之。』而憤激、抱不滿。尊者！彼之憤激、不滿，乃兩者皆是穢也。尊者！於此處，又有一比丘起如次之欲望，即：願我得良好施食，乃至良好牀座、醫藥資具，而不令其他比丘得良好施食，乃至良好牀座、醫藥資具。然，其他比丘得良好施食……乃至……良好牀座、醫藥資具，非由彼得之，彼思：『其他比丘得良好施食，乃至良好牀座、醫藥資具，非由我得之。』而憤激、抱不滿。尊者！彼之憤激、不滿，乃兩者皆是穢也。尊者！所云『穢』者，即是惡、不善、欲行境域之同義語也。",
+   "MA87": "「賢者！或有一人心生如是欲：『令我為王者所識，及王大臣、梵志、居士、國中人民所知重，莫令餘比丘為王者所識，及王大臣、梵志、居士、國中人民所知重。』賢者！或有餘比丘為王者所識，及王大臣、梵志、居士、國中人民所知重，彼因餘比丘為王者所識，及王大臣、梵志、居士、國中人民所知重故，心便生惡，若彼心生惡及心生欲者，俱是不善。「賢者！或有一人心生如是欲：『令我為四眾比丘、比丘尼、優婆塞、優婆私所敬重，莫令餘比丘為四眾比丘、比丘尼、優婆塞、優婆私所敬重。』賢者！或有餘比丘為四眾比丘、比丘尼、優婆塞、優婆私所敬重，彼因餘比丘為四眾比丘、比丘尼、優婆塞、優婆私所敬重故，心便生惡，若彼心生惡及心生欲者，俱是不善。「賢者！或有一人心生如是欲：『令我得衣被、飲食、床褥、湯藥、諸生活具，莫令餘比丘得衣被、飲食、床褥、湯藥、諸生活具。』賢者！或有餘比丘得衣被、飲食、床褥、湯藥、諸生活具，彼因餘比丘得衣被、飲食、床褥、湯藥、諸生活具故，心便生惡，若彼心生惡及心生欲者，俱是不善。",
+   "T0049": "「此諸賢！或有人有求欲生：『令王大臣婆羅門居士，非是一人，悉令識我；不欲令餘比丘，王大臣婆羅門居士非是一人。』諸賢！可知是處，彼餘比丘，為王大臣所識，及婆羅門居士非是一人。是彼餘比丘為王大臣所識，及婆羅門居士非是一人，彼意恚。此諸賢！彼意恚已，欲有所行但有不善。「此諸賢！或有人有求欲生：『令我於四部眾，比丘、比丘尼、優婆塞、優婆夷，得供養；莫令餘比丘於四部眾，比丘、比丘尼、優婆塞、優婆夷，得供養。』諸賢！可知是處，有餘比丘，於四部眾，比丘、比丘尼、優婆塞、優婆夷，得供養。是彼餘比丘，於四部眾，比丘、比丘尼、優婆塞、優婆夷，得供養，彼意恚。此諸賢！彼意恚已，欲有所行但有不善。「此諸賢！或有人有求欲生：『令我得衣被床臥病瘦醫藥，莫令餘比丘得衣被床臥病瘦醫藥。』諸賢！可知是處，餘比丘得衣被床臥病瘦醫藥。是彼餘比丘得衣被床臥病瘦醫藥，彼意恚。此諸賢！彼意恚已，欲有所行但有不善。"
+  },
+  "a12": {
+   "pi": "Yassa kassaci, āvuso, bhikkhuno ime pāpakā akusalā icchāvacarā appahīnā dissanti ceva sūyanti ca, kiñcāpi so hoti āraññiko pantasenāsano piṇḍapātiko sapadānacārī paṁsukūliko lūkhacīvaradharo, atha kho naṁ sabrahmacārī na ceva sakkaronti na garuṁ karonti na mānenti na pūjenti. Taṁ kissa hetu? Te hi tassa āyasmato pāpakā akusalā icchāvacarā appahīnā dissanti ceva sūyanti ca. Seyyathāpi, āvuso, kaṁsapāti ābhatā āpaṇā vā kammārakulā vā parisuddhā pariyodātā. Tamenaṁ sāmikā ahikuṇapaṁ vā kukkurakuṇapaṁ vā manussakuṇapaṁ vā racayitvā aññissā kaṁsapātiyā paṭikujjitvā antarāpaṇaṁ paṭipajjeyyuṁ. Tamenaṁ jano disvā evaṁ vadeyya: ‘ambho, kimevidaṁ harīyati jaññajaññaṁ viyā’ti? Tamenaṁ uṭṭhahitvā apāpuritvā olokeyya. Tassa sahadassanena amanāpatā ca saṇṭhaheyya, pāṭikulyatā ca saṇṭhaheyya, jegucchatā ca saṇṭhaheyya; jighacchitānampi na bhottukamyatā assa, pageva suhitānaṁ. Evameva kho, āvuso, yassa kassaci bhikkhuno ime pāpakā akusalā icchāvacarā appahīnā dissanti ceva sūyanti ca, kiñcāpi so hoti āraññiko pantasenāsano piṇḍapātiko sapadānacārī paṁsukūliko lūkhacīvaradharo, atha kho naṁ sabrahmacārī na ceva sakkaronti na garuṁ karonti na mānenti na pūjenti. Taṁ kissa hetu? Te hi tassa āyasmato pāpakā akusalā icchāvacarā appahīnā dissanti ceva sūyanti ca.",
+   "zh-nan": "尊者！任何比丘，若彼被聞、見未捨離此等惡、不善、欲行之境域，雖然彼是閑林住者、僻陬獨住者，又，是乞食者、次第乞食者、〔著〕糞掃衣者、粗服者，彼之同行者則對彼不恭敬、不尊重、不尊敬、不崇拜。何以故？以聞、見彼尊者未捨離此等惡、不善、欲行之域故也。尊者！譬如，於此處，從市肆或打鐵店，持來一清淨皎潔之銅盤，其所有者盛以蛇屍或狗屍、人屍，以其他銅盤覆蓋之，而持到市肆。其有人見曰：『君！其藏何者耶？是如何殊妙之物耶？』即開其蓋而觀之。觀已，起惡心、不吉利、厭惡之念；飢者不生食欲、何況飽食者耶？茫然！啞然！如是，尊者！任何比丘，若彼被聞、見未捨離此等惡、不善、欲行之境域，雖然彼是閑林住者、僻陬之獨住者，又，是乞食者、次第乞食者、〔著〕糞掃衣者、粗服者，彼之同行者則對彼不恭敬、不尊重、不尊敬、不崇拜，何以故？以見、聞彼長老未捨離此等惡、不善、欲行之域故也。",
+   "MA87": "「賢者！如是彼人若有諸智梵行者，不知彼生如是無量惡不善心欲者，如是彼非沙門沙門想，非智沙門智沙門想，非正智正智想，非正念正念想，非清淨清淨想。賢者！如是彼人若有諸智梵行者，知彼生如是無量惡不善心欲者，如是彼非沙門非沙門想，非智沙門非智沙門想，非正智非正智想，非正念非正念想，非清淨非清淨想。「賢者！猶如有人或從市肆，或從銅作家，買銅合槃來，盛滿中糞，蓋覆其上便持而去，經過店肆，近眾人行，彼眾見已，皆欲得食，意甚愛樂，而不憎惡，則生淨想；彼持去已，住在一處便開示之，眾人見已，皆不欲食，無愛樂意，甚憎惡之，生不淨想。若欲食者則不復用，況其本自不欲食耶？「賢者！如是彼人若有諸智梵行者，不知彼生如是無量惡不善心欲者，如是彼非沙門沙門想，非智沙門智沙門想，非正智正智想，非正念正念想，非清淨清淨想。賢者！如是彼人若有諸智梵行者，知彼生如是無量惡不善心欲者，如是彼非沙門非沙門想，非智沙門非智沙門想，非正智非正智想，非正念非正念想，非清淨非清淨想。賢者！當知如是人莫得親近，莫恭敬禮事。若比丘不應親近便親近，不應恭敬禮事便恭敬禮事者，如是彼便長夜得無利無義，則不饒益，不安隱快樂，生苦憂慼。",
+   "EA25.6": "目連！復知諸有四部之眾，犯此行者，皆共聞知。雖言我行阿練若，在閑靜之處，正使著五納衣，恒行乞食，不擇貧富，行不卒暴，往來住止，坐起動靜，言語默然，彼比丘作是念：『使比丘、比丘尼、優婆塞、優婆夷斯諸梵行者，恒來供養我。』彼比丘雖有是念，然四部眾亦不隨時供養。所以然者，以彼比丘惡不善行未除故，見聞念知。猶如有人，一銅器極為清淨，復以不淨盛著銅器中，復以餘器蓋其上，持行詣國界。眾人見已，問彼人曰：『君所持者是何物乎？我等欲得觀見。』是時，眾人素既飢儉，謂呼：『是好飲食。』尋發器蓋，然是不淨，皆共得見。此比丘亦復如是。雖有阿練若行，隨時乞食，著五納衣，正身正意，繫念在前，彼雖生此念：『欲使諸梵行者，隨時來供養。』然復諸梵行人，不隨時供養。所以然者，以彼比丘惡不善法結使未盡故。",
+   "T0049": "「此諸賢！或有人亦如是有智慧梵行者，當捨此無量諸惡不善求欲行，當莫行此。若與非沙門俱，為沙門行；若與非智慧沙門俱，為智慧沙門；不應求上座而求上座、無有定而言有定、與不淨俱而言有淨。諸賢！如是彼於智慧梵行者，有如此無量諸惡不善行。知有此行，知與非沙門俱，為非沙門；與非智慧沙門俱，知非智慧沙門俱；不應求上座，如是求上座；無有定，知無定；與不淨俱，知不淨。猶若諸賢！有人若販肆客作家，持銅鉢來，滿中不淨，復以一鉢覆其上，若持至人聚中，彼多人見已，欲食欲得，不知有不淨。若彼聚人持至一處發其器，若有欲食者，便不欲食，豈復彼持者欲食之？如是，諸賢！有人智慧梵行者，作如此無量諸惡不善，與非沙門俱，為沙門行；與非智慧沙門俱，為智慧沙門；不應求上座而求上座，無有定言有定，與不淨俱而言有淨。諸賢！彼人如是於智慧梵行者，如是無量諸惡不善法。知有與非沙門俱，是非沙門；與非智慧沙門俱，是非智慧沙門；不應求上座，求上座；與不定俱，是非定；與不淨俱，是非淨。諸賢！如是彼人當莫親近、當莫恭敬、當莫承事。比丘不親近恭敬者若恭敬者，禮事者若禮事者，彼於長夜但有失、無饒益，苦與惡趣相應。是故，諸賢！如是人當莫親近，當莫恭敬、禮事。"
+  },
+  "a12b": {
+   "MA87": "「賢者！或有一人心不生如是欲：『我所犯戒，莫令他人知我犯戒。』賢者！或有他人知彼犯戒，彼因他人知犯戒故，心不生惡；若彼心無惡，心不生欲者，是二俱善。賢者！或有一人心不生如是欲：『我所犯戒，當令他人於屏處訶，莫令在眾訶我犯戒。』賢者！或有他人於眾中訶，不在屏處，彼因在眾中訶，不在屏處故，心不生惡；若彼心無惡，心不生欲者，是二俱善。賢者！或有一人心不生如是欲：『我所犯戒，令勝人訶，莫令不如人訶我犯戒。』賢者！或有不如人訶彼犯戒，非是勝人，彼因不如人訶，非勝人故，心不生惡；若彼心無惡，心不生欲者，是二俱善。「賢者！或有一人心不生如是欲：『令我在佛前坐，問世尊法，為諸比丘說，莫令餘比丘在佛前坐，問世尊法，為諸比丘說。』賢者！或有餘比丘在佛前坐，問世尊法，為諸比丘說，彼因餘比丘在佛前坐，問世尊法，為諸比丘說故，心不生惡；若彼心無惡，心不生欲者，是二俱善。「賢者！或有一人心不生如是欲：『諸比丘入內時，令我最在其前，諸比丘侍從我將入內，莫令餘比丘諸比丘入內時，最在其前，諸比丘侍從彼將入內。』賢者！或有餘比丘諸比丘入內時，最在其前，諸比丘侍從彼將入內，彼因餘比丘諸比丘入內時，最在其前，諸比丘侍從彼將入內故，心不生惡；若彼心無惡，心不生欲者，是二俱善。「賢者！或有一人心不生如是欲：『諸比丘已入內時，令我最在上坐，得第一座，第一澡水，得第一食，莫令餘比丘諸比丘已入內時，最在上坐，得第一座，第一澡水，得第一食。』賢者！或有餘比丘諸比丘已入內時，最在上坐，得第一座，第一澡水，得第一食，彼因餘比丘諸比丘已入內時，最在上坐，得第一座，第一澡水，得第一食故，心不生惡；若彼心無惡，心不生欲者，是二俱善。「賢者！或有一人心不生如是欲：『諸比丘食竟，收攝食器，行澡水已，我為諸居士說法，勸發渴仰，成就歡喜，莫令餘比丘諸比丘食竟，收攝食器，行澡水已，為諸居士說法，勸發渴仰，成就歡喜。』賢者！或有餘比丘諸比丘食竟，收攝食器，行澡水已，為諸居士說法，勸發渴仰，成就歡喜，彼因餘比丘諸比丘食竟，收攝食器，行澡水已，為諸居士說法，勸發渴仰，成就歡喜故，心不生惡；若彼心無惡，心不生欲者，是二俱善。「賢者！或有一人心不生如是欲：『諸居士往詣眾園時，令我與共會共集，共坐共論，莫令餘比丘諸居士往詣眾園時，與共會共集，共坐共論。』賢者！或有餘比丘諸居士往詣眾園時，與共會共集，共坐共論，彼因餘比丘諸居士往詣眾園時，與共會共集，共坐共論故，心不生惡；若彼心無惡，心不生欲者，是二俱善。「賢者！或有一人心不生如是欲：『令我為王者所識，及王大臣、梵志、居士、國中人民所知重，莫令餘比丘為王者所識，及王大臣、梵志、居士、國中人民所知重。』賢者！或有餘比丘為王者所識，及王大臣、梵志、居士、國中人民所知重，彼因餘比丘為王者所識，及王大臣、梵志、居士、國中人民所知重故，心不生惡；若彼心無惡，心不生欲者，是二俱善。「賢者！或有一人心不生如是欲：『令我為四眾比丘、比丘尼、優婆塞、優婆私所敬重，莫令餘比丘為四眾比丘、比丘尼、優婆塞、優婆私所敬重。』賢者！或有餘比丘為四眾比丘、比丘尼、優婆塞、優婆私所敬重，彼因餘比丘為四眾比丘、比丘尼、優婆塞、優婆私所敬重故，心不生惡；若彼心無惡，心不生欲者，是二俱善。「賢者！或有一人心不生如是欲：『令我得衣被、飲食、床褥、湯藥、諸生活具，莫令餘比丘得衣被、飲食、床褥、湯藥、諸生活具。』賢者！或餘比丘得衣被、飲食、床褥、湯藥、諸生活具，彼因餘比丘得衣被、飲食、床褥、湯藥、諸生活具故，心不生惡；若彼心無惡，心不生欲者，是二俱善。",
+   "T0049": "「此諸賢！或有人無求欲生：『有所犯，不欲令他知。』而有所犯。諸賢！可知是處，彼人所犯，若他知有犯，他人知已，此意無恚。此諸賢！意無恚已，欲有所行但有善。此諸賢！或有人無求欲生，而有所犯，向他說，不向眾，有所犯。諸賢！可知是處，謂彼人所犯，有向眾中說，不獨向他說，有所犯向眾中說，此意不恚。此諸賢！意不恚已，欲有所行但有善。「此諸賢！或有人無求欲生：『有所犯，語等已人，不語非等已人。』有所犯。諸賢！可知此處，謂彼人所犯，語非等已人，不語等已人，有所犯語非等已人，此意無恚。此諸賢！意不恚已，欲有所行但有善。「此諸賢！或有人無求欲生：『我坐世尊前已，問世尊，世尊當為諸比丘說法；不欲令他比丘坐世尊前，問世尊，世尊為諸比丘說法。』諸賢！可知是處，有異比丘在世尊前，世尊為諸比丘說法。有餘比丘在世尊前，問世尊，世尊為諸比丘說法，此意不恚。此諸賢！若意不恚已，欲有所行但有善。「此諸賢！或有人無求欲生：『比丘有所至，在前行行，令餘比丘在前在前行；彼餘比丘有所至，莫令餘比丘在前行。』諸賢！可知是處，有餘比丘，諸比丘有所至在前行。是餘比丘，比丘有所至在前行，彼意無恚。此諸賢！意不恚已，欲有所行但有善。「此諸賢！或有人無求欲生：『比丘入內已，我在前受水、受摶食；莫令餘比丘，比丘入內已，最在前坐，受水、受摶食。』諸賢！可知是處，有餘比丘，比丘入內已，最在前坐，受水、受摶食，此意無恚。此諸賢！意不恚已，欲有所行但有善。「此諸賢！或有人無求欲生：『諸比丘食已，收攝鉢器，令我為居士說法教授勸進等，教授等令歡喜；莫令餘比丘，諸比丘食已收攝鉢器，為居士說法教授勸進，等教授等令歡喜。』諸賢！可知是處，有餘比丘，諸比丘食已收攝鉢器，為居士說法勸進教授，等教授等令歡喜，此意無恚。諸賢！彼無恚意已，欲有所行但有善。「此諸賢！或有人無求欲生：『居士入園已，我共談論；莫令餘比丘，居士入園已，共談論。』諸賢！可知是處，有餘比丘，居士入園已共談論，餘比丘居士入園已共談論，此意不恚。此諸賢！彼意無恚已，欲有所行但有善。「此諸賢！或人無求欲生：『令王大臣婆羅門居士，非一人所識；莫令餘比丘，王大臣婆羅門居士，非一人所識。』諸賢！可知是處，有餘比丘，王大臣婆羅門居士非一人所識。有餘比丘，為王大臣婆羅門居士非一人所識，此意無恚。此諸賢！彼意無恚已，欲有所行但有善。「此諸賢！或有人無求欲生：『令我於四部眾，比丘、比丘尼、優婆塞、優婆夷，得供養，莫令餘比丘於四部眾，比丘、比丘尼、優婆塞、優婆夷，得供養。』諸賢！可知是處，有餘比丘，於四部眾，比丘、比丘尼、優婆塞、優婆夷，得供養，此意無恚。此諸賢！意無恚已，欲有所行但有善。「此諸賢！或有人無求欲生：『令我得衣被床臥病瘦醫藥，不欲令餘比丘得衣被床臥病瘦醫藥。』諸賢！可知是處，餘比丘得衣被床臥病瘦醫藥。餘比丘得衣被床臥病瘦醫藥，此意不恚。此諸賢！意不恚已，欲有所行但有善。"
+  },
+  "a13": {
+   "pi": "Yassa kassaci, āvuso, bhikkhuno ime pāpakā akusalā icchāvacarā pahīnā dissanti ceva sūyanti ca, kiñcāpi so hoti gāmantavihārī nemantaniko gahapaticīvaradharo, atha kho naṁ sabrahmacārī sakkaronti garuṁ karonti mānenti pūjenti. Taṁ kissa hetu? Te hi tassa āyasmato pāpakā akusalā icchāvacarā pahīnā dissanti ceva sūyanti ca. Seyyathāpi, āvuso, kaṁsapāti ābhatā āpaṇā vā kammārakulā vā parisuddhā pariyodātā. Tamenaṁ sāmikā sālīnaṁ odanaṁ vicitakāḷakaṁ anekasūpaṁ anekabyañjanaṁ racayitvā aññissā kaṁsapātiyā paṭikujjitvā antarāpaṇaṁ paṭipajjeyyuṁ. Tamenaṁ jano disvā evaṁ vadeyya: ‘ambho, kimevidaṁ harīyati jaññajaññaṁ viyā’ti? Tamenaṁ uṭṭhahitvā apāpuritvā olokeyya. Tassa saha dassanena manāpatā ca saṇṭhaheyya, appāṭikulyatā ca saṇṭhaheyya, ajegucchatā ca saṇṭhaheyya; suhitānampi bhottukamyatā assa, pageva jighacchitānaṁ. Evameva kho, āvuso, yassa kassaci bhikkhuno ime pāpakā akusalā icchāvacarā pahīnā dissanti ceva sūyanti ca, kiñcāpi so hoti gāmantavihārī nemantaniko gahapaticīvaradharo, atha kho naṁ sabrahmacārī sakkaronti garuṁ karonti mānenti pūjenti. Taṁ kissa hetu? Te hi tassa āyasmato pāpakā akusalā icchāvacarā pahīnā dissanti ceva sūyanti cā”ti.",
+   "zh-nan": "尊者！又，任何比丘，若彼被見、聞已捨離此等惡、不善、欲行，雖然彼近聚落而住、受請食、纏欲服者，彼之同行者則對彼恭敬、尊重、尊敬、崇拜。何以故？以見、聞彼尊者，已捨離惡、不善、欲行之境域故也。尊者！譬如，於此處，從市肆或打鐵店，持來一清淨皎潔之銅盤，其所有者盛以白淨米粥，加種種調味、藥味，以其他銅盤覆蓋之，而持到市肆，其有人見曰：『君！其藏何者耶？是如何殊妙之物耶？』即開其蓋而觀之，觀已，〔不但〕不起不好、不吉利、厭惡之念，雖飽滿者亦生食欲，何況飢者耶？如是，尊者！任何比丘，若彼被見、聞，已捨離此等惡、不善、欲行之境域，雖然彼近聚落而住、受請食、纏俗服者，彼之同行者則對彼恭敬、尊重、尊敬、崇拜。何以故？以見、聞彼尊者，已捨離此等惡、不善、欲行之境域故也。」",
+   "MA87": "「賢者！如是彼人若有諸智梵行者，不知彼生如是無量善心欲者，如是彼沙門非沙門想，智沙門非智沙門想，正智非正智想，正念非正念想，清淨非清淨想。賢者！如是彼人若有諸智梵行者，知彼生如是無量善心欲者，如是彼沙門沙門想，智沙門智沙門想，正智正智想，正念正念想，清淨清淨想。「賢者！猶如有人或從市肆，或從銅作家，買銅合槃來，盛滿種種淨美飲食，蓋覆其上便持而去，經過店肆，近眾人行，彼眾見已，皆不欲食，無愛樂意，甚憎惡之，生不淨想，便作是說：『即彼糞去，即彼糞去。』彼持去已，住在一處便開示之，眾人見已，則皆欲食，意甚愛樂而不憎惡，則生淨想。彼若本不用食者，見已欲食，況復其本欲得食耶？「賢者！如是彼人若有諸智梵行者，不知彼生如是無量善心欲者，如是彼沙門非沙門想，智沙門非智沙門想，正智非正智想，正念非正念想，清淨非清淨想。賢者！如是彼人若有諸智梵行者，知彼生如是無量善心欲者，如是彼沙門沙門想，智沙門智沙門想，正智正智想，正念正念想，清淨清淨想。賢者！當知如是人應親近之，恭敬禮事；若比丘應親近者便親近，應恭敬禮事者便恭敬禮事。如是彼便長夜得利得義，則得饒益安隱快樂，亦得無苦，無憂愁慼。」",
+   "EA25.6": "「目連當知，諸有比丘無此惡不善法，結使已盡，見聞念知，雖在城傍行，猶是持法之人。或受人請，或受長者供養，彼比丘無此貪欲之想。是時，四部之眾及諸梵行者，皆來供養。所以然者，以彼比丘行清淨故，皆見聞念知。猶如有人有好銅器，盛好飲食，氣味極香，復以物蓋其上，持行詣國界，眾人見已，問彼人曰：『此是何物，我等欲得觀見。』時尋發看，見是飲食，皆共取食。此亦如是，比丘見聞念知，雖在城傍行，受長者供養，彼不作是念：『使諸梵行者來供養我。』然復諸梵行者，皆來供養之。所以然者，以彼比丘惡不善行以除盡故。是故，目連！以此諸行故，名為結使。」",
+   "T0049": "「諸賢！如是彼人於智慧梵行者，樂無量諸善法行，若不知共沙門俱而言非沙門，共智慧沙門俱而言非智慧沙門，共上座俱而言不上座俱，與定俱而言無定，與淨俱而言不淨。如是，諸賢！或有人於智慧梵行者，如此無量諸善行悉當知，與沙門俱當知與沙門俱，與智慧沙門俱當知與智慧沙門俱，與定俱當知與定俱，與淨俱當知與淨俱。猶若，諸賢！有人販肆客作家，持銅鉢來，滿中飲食種種異味，以一鉢覆持至人聚中，彼多人見已，不用食不欲得，知其非，彼作是言：『故是前器，故是前器。』彼持至多人聚中已而發其器，彼不欲食者，便欲食之，豈前見者不欲食？如是，諸賢！或有人於智慧梵行者，如是無量諸善行而不能知，與沙門俱言非沙門，與智慧沙門俱言不智慧沙門，與上座俱而言非上座，與定俱而言非定，與淨俱而言非淨。如是，諸賢！或有人於智慧梵行者，有無量諸善行，然後知與沙門俱是沙門，與智慧沙門俱是智慧沙門，與上座俱知是上座，與定俱知是定，與淨俱知是淨。如是，諸賢！此人當恭敬、承事、禮事，比丘當親近，當恭敬若恭敬者，當承事若承事者，常當應行常應行者，彼於長夜但有饒益安樂。是故，諸賢！如此人者，當親近恭敬承事。」"
+  },
+  "a14": {
+   "pi": "Evaṁ vutte, āyasmā mahāmoggallāno āyasmantaṁ sāriputtaṁ etadavoca: “upamā maṁ, āvuso sāriputta, paṭibhātī”ti. “Paṭibhātu taṁ, āvuso moggallānā”ti. “Ekamidāhaṁ, āvuso, samayaṁ rājagahe viharāmi giribbaje. Atha khvāhaṁ, āvuso, pubbaṇhasamayaṁ nivāsetvā pattacīvaramādāya rājagahaṁ piṇḍāya pāvisiṁ. Tena kho pana samayena samīti yānakāraputto rathassa nemiṁ tacchati. Tamenaṁ paṇḍuputto ājīvako purāṇayānakāraputto paccupaṭṭhito hoti. Atha kho, āvuso, paṇḍuputtassa ājīvakassa purāṇayānakāraputtassa evaṁ cetaso parivitakko udapādi: ‘aho vatāyaṁ samīti yānakāraputto imissā nemiyā imañca vaṅkaṁ imañca jimhaṁ imañca dosaṁ taccheyya, evāyaṁ nemi apagatavaṅkā apagatajimhā apagatadosā suddhā assa sāre patiṭṭhitā’ti. Yathā yathā kho, āvuso, paṇḍuputtassa ājīvakassa purāṇayānakāraputtassa cetaso parivitakko hoti tathā tathā samīti yānakāraputto tassā nemiyā tañca vaṅkaṁ tañca jimhaṁ tañca dosaṁ tacchati. Atha kho, āvuso, paṇḍuputto ājīvako purāṇayānakāraputto attamano attamanavācaṁ nicchāresi: ‘hadayā hadayaṁ maññe aññāya tacchatī’ti. Evameva kho, āvuso, ye te puggalā assaddhā, jīvikatthā na saddhā agārasmā anagāriyaṁ pabbajitā, saṭhā māyāvino ketabino uddhatā unnaḷā capalā mukharā vikiṇṇavācā, indriyesu aguttadvārā, bhojane amattaññuno, jāgariyaṁ ananuyuttā, sāmaññe anapekkhavanto, sikkhāya na tibbagāravā, bāhulikā sāthalikā, okkamane pubbaṅgamā, paviveke nikkhittadhurā, kusītā hīnavīriyā muṭṭhassatī asampajānā asamāhitā vibbhantacittā duppaññā eḷamūgā, tesaṁ āyasmā sāriputto iminā dhammapariyāyena hadayā hadayaṁ maññe aññāya tacchati. Ye pana te kulaputtā saddhā agārasmā anagāriyaṁ pabbajitā, asaṭhā amāyāvino aketabino anuddhatā anunnaḷā acapalā amukharā avikiṇṇavācā, indriyesu guttadvārā, bhojane mattaññuno, jāgariyaṁ anuyuttā, sāmaññe apekkhavanto, sikkhāya tibbagāravā, na bāhulikā na sāthalikā, okkamane nikkhittadhurā, paviveke pubbaṅgamā, āraddhavīriyā pahitattā upaṭṭhitassatī sampajānā samāhitā ekaggacittā paññavanto aneḷamūgā, te āyasmato sāriputtassa imaṁ dhammapariyāyaṁ sutvā pivanti maññe, ghasanti maññe vacasā ceva manasā ca: ‘sādhu vata, bho, sabrahmacārī akusalā vuṭṭhāpetvā kusale patiṭṭhāpetī’ti. Seyyathāpi, āvuso, itthī vā puriso vā daharo yuvā maṇḍanakajātiko sīsaṁnhāto uppalamālaṁ vā vassikamālaṁ vā atimuttakamālaṁ vā labhitvā ubhohi hatthehi paṭiggahetvā uttamaṅge sirasmiṁ patiṭṭhapeyya; evameva kho, āvuso, ye te kulaputtā saddhā agārasmā anagāriyaṁ pabbajitā, asaṭhā amāyāvino aketabino anuddhatā anunnaḷā acapalā amukharā avikiṇṇavācā, indriyesu guttadvārā, bhojane mattaññuno, jāgariyaṁ anuyuttā, sāmaññe apekkhavanto, sikkhāya tibbagāravā, na bāhulikā na sāthalikā, okkamane nikkhittadhurā, paviveke pubbaṅgamā, āraddhavīriyā pahitattā upaṭṭhitassatī sampajānā samāhitā ekaggacittā paññavanto aneḷamūgā, te āyasmato sāriputtassa imaṁ dhammapariyāyaṁ sutvā pivanti maññe, ghasanti maññe vacasā ceva manasā ca: ‘sādhu vata, bho, sabrahmacārī akusalā vuṭṭhāpetvā kusale patiṭṭhāpetī’”ti.",
+   "zh-nan": "如是說時，尊者大目犍連對尊者舍利弗曰：「尊者舍利弗！我想起一譬喻。」〔舍利弗曰：〕「尊者目犍連！其說之。」〔尊者大目犍連乃曰：〕「一時，我在王舍城山圍城內，時，我晨早著衣，執持衣缽，至王舍城行乞。爾時，造車師之子三彌提正在造車輞。其時，原為造車師之弟子，為邪命外道盤陀子（裸身苦行者）立於彼前。於此處，原為造車師之弟子邪命外道盤陀子生如次念：『嗚呼！此造車師之弟子三彌提將矯正此車輞之此歪、此彎曲、此缺點，使此車輞成為不歪、不曲、無缺點、清淨、最堅牢也。』而當原為造車師弟子之邪命外道心如是念時，如是，造車師之弟子三彌提矯正彼車輞之彼歪、彼彎曲、彼缺點。如是，彼盤陀子歡喜，發如次歡喜之言曰：『其以心知心而矯正之，使不相違也。』如是，又，於此處，有無信之人，為生活故，無信心卻由在家成為出家行者，為奸詐、詭詐、欺誑，掉舉、憍傲，浮動、饒舌、雜話者，不防護根門、不知食之節制、懈怠其注意，不念願（不渴仰）真沙門、於學不專精、浪費散慢、前進於墮落，以遠離為重荷而逃避、懈怠不精進、失念、無思念（神志不清醒）、無定心、散亂心、而無智慧闇昧，對彼等，尊者舍利弗是以心知〔彼等〕心而依此法門矯正使不相違也。又，於此處，有善男子有信心，由富貴家成為出家行者，不為奸詐、詭詐、欺誑、掉舉、憍傲、浮動、饒舌、雜話者，善防護根門、於食有節制、深勤注意、念願真沙門、學專精、不浪費、散慢、以墮落為重荷而逃避、前進於遠離、勤勇精進、念確立、有思念、定心專念有智慧而無闇昧。彼等聽聞尊者舍利弗所說此法門，必定對其語及意詳細吟味，如〔渴得〕飲，如〔飢得〕食。真是善哉！使同行者從不善轉為善而安立之。尊者！恰如年青之青年男女，好裝飾，洗頭畢，或得青蓮華鬘、或雨生華鬘、或得善思華鬘，以兩手取之而如是裝飾於頭上。如是，尊者！於此處，有善男子，有信心而由在家成為出家行者，彼不奸詐……無闇昧，彼等聽聞尊者舍利弗所說此法門，必定對其語及意詳細吟味，如〔渴得〕飲，如〔飢得〕食。真是善哉！使同行者從不善轉為善而安立之。」",
+   "MA87": "爾時，尊者大目揵連在彼眾中。於是，尊者大目揵連白曰：「尊者舍梨子！我今欲為此事說喻，聽我說耶？」尊者舍梨子告曰：「賢者大目揵連！欲說喻者便可說之。」尊者大目揵連則便白曰：「尊者舍梨子！我憶一時遊王舍城，在巖山中，我於爾時過夜平旦，著衣持鉢，入王舍城而行乞食，詣舊車師無衣滿子家。時，彼比舍更有車師斫治車軸，是時，舊車師無衣滿子往至彼家。於是，舊車師無衣滿子見彼治軸，心生是念：『若彼車師執斧治軸，斫彼彼惡處者，如是彼軸便當極好。』時，彼車師即如舊車師無衣滿子心中所念，便持斧斫彼彼惡處。於是，舊車師無衣滿子極大歡喜，而作是說：『車師子！汝心如是，則知我心。所以者何？以汝持斧斫治車軸彼彼惡處，如我意故。』如是，尊者舍梨子！若有諛諂、欺誑、嫉妬、無信、懈怠，無正念正智，無定無慧，其心狂惑，不護諸根，不修沙門，無所分別。尊者舍梨子！心為知彼心故，而說此法。尊者舍梨子！若有人不諛諂，不欺誑，無嫉妬，有信，精進而無懈怠，有正念正智，修定修慧，心不狂惑，守護諸根，廣修沙門而善分別。彼聞尊者舍梨子所說法者，猶飢欲得食，渴欲得飲，口及意也。「尊者舍梨子！猶剎利女，梵志、居士、工師女，端正姝好，極淨沐浴，以香塗身，著明淨衣，種種瓔珞嚴飾其容；或復有人為念彼女，求利及饒益，求安隱快樂，以青蓮華鬘，或薝蔔華鬘；或修摩那華鬘，或婆師華鬘；或阿提牟哆華鬘，持與彼女。彼女歡喜，兩手受之，以嚴其頭。尊者舍梨子！如是，若有人不諛諂，不欺誑，無嫉妬，有信，精進而無懈怠，有正念正智，修定修慧，心不狂惑，守護諸根，廣修沙門而善分別，彼聞尊者舍梨子所說法者，猶飢欲食，渴欲得飲，口及意也。尊者舍梨子甚奇！甚特！尊者舍梨子常拔濟諸梵行者，令離不善，安立善處。」",
+   "EA25.6": "是時，尊者大目揵連歎曰：「善哉！善哉！舍利弗！所以然者，我昔遊此羅閱城迦蘭陀竹園所，到時著衣持鉢，入羅閱城乞食，至彼車師舍，在門外默然而立。是時，彼工師手執斧而斫材。是時，更有長老工師有少事緣，來至此工師舍。是時，彼工師修治材板。是時，彼老工師而生此念：『此小工師斫材如我意不？我今當觀之。』是時，彼工師所嫌之處，彼工師盡取斫之。是時，彼老工師甚懷歡喜，而作是念：『善哉！善哉！卿所斫材盡如我意。』此亦如是，諸有比丘心不柔和，捨沙門行，心懷姦偽，不從沙門之法，性行麁踈，不知慚愧，強顏耐辱，為卑賤行，無有勇猛。或喜多忘失，不憶所行，心意不定，所作錯亂，諸根不定，然今尊者舍利弗觀察性行已，而修治之。「諸有族姓子，以信堅固，出家學道，甚恭敬戒，不捨沙門賢聖之法，無有幻偽，不行卒暴，心意柔和，言常含笑，不傷人意，心恒一定，無有是非，諸根不亂。彼聞尊者舍利弗語已，便自承受，亦不忘失。猶如若男、若女，端正無雙，極自沐浴，著好新衣，用香塗身。若復有人，復加以優鉢華，持用奉上，彼人得已，即著頭上，歡喜踊躍，不能自勝。此亦如是，若有族姓子，以信堅固，出家學道，恭敬於戒，不失沙門之法，無有幻偽，不行卒暴，心意柔和，言常含笑，不傷人意，心恒一定，無有是非，諸根不亂。彼從尊者舍利弗聞是語已，甚懷歡喜，不能自勝，而受其教。如此諸族姓子說此法教。」",
+   "T0049": "彼時尊者大目乾連亦在眾中會座，於是大目乾連語尊者舍利弗曰：「尊者舍利弗！我欲說喻，當說不耶？」「當說。汝賢者目乾連！」「尊者舍利弗！昔時在羅閱祇耆闍崛山，尊者舍利弗！我晨起著衣服，與衣鉢俱詣羅閱祇乞食。遊羅閱祇乞食時，至他巧師家，我見無念滿子在他巧師家，見在斫治車軸。彼無念滿子，在巧師家作是念生：『此巧師取此軸斫治是處者，如是此軸為妨者為得除。』彼無念滿子在巧師家作是念生，彼巧師者如彼所念，便以斧斫治車軸。彼時無念滿子即作是言：『此巧師為知我意而取此軸，如其處斫治，如是此軸為增益無妨。』如是，尊者舍利弗！謂彼人諛諂、幻士、無信不有信、懈怠無精進、意念亂無有定、惡智意亂、諸根不定、於戒行緩、不分別沙門行。而尊者舍利弗知其所念而為解說。尊者舍利弗！謂彼人無諛諂、非幻士、有信信樂、行精進、意常定、智慧學、於戒恭敬、多分別沙門行。彼從尊者舍利弗聞說法已，如快飲、如快食，口及意悉受持。猶若尊者舍利弗！若剎利女、婆羅門女、居士女、工師女，沐浴塗香著白淨衣，若有人意念生慈愍，欲有饒益、欲令安隱，若持優鉢華鬘、占波華鬘、婆師華鬘、阿提摩多華鬘，授與彼已，兩手受之自冠其首。如是，尊者舍利弗！或有人無諛諂亦無幻，亦不不信有信，能行精進意常定，智慧恭敬學戒，學多分別沙門行。彼從尊者舍利弗聞法已，如快飲、如快食，口及意亦爾。此尊者舍利弗甚奇！而尊者舍利弗為諸梵行者，除其不善立於善中。善哉賢者！是為真人。」"
+  },
+  "a15": {
+   "pi": "Itiha te ubho mahānāgā aññamaññassa subhāsitaṁ samanumodiṁsūti.",
+   "zh-nan": "實如是，彼等兩高德相互善說、相互隨喜也。——",
+   "MA87": "如是二尊更相稱說，從座起去。尊者舍梨子所說如是。尊者大目揵連及諸比丘，聞尊者舍梨子所說，歡喜奉行。",
+   "EA25.6": "爾時，諸賢各各聞其所說，歡喜奉行。",
+   "T0049": "此各各所說，相樂已，從座起，各還本處。"
+  },
+  "a16": {
+   "pi": "Anaṅgaṇasuttaṁ niṭṭhitaṁ pañcamaṁ.",
+   "MA87": "穢經第一竟（五千一百九十六字）"
+  }
+ }
+}
