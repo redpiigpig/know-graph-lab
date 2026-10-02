@@ -6137,7 +6137,22 @@ _MMK_ZH = {"T1564": ("羅什本", "鳩摩羅什譯《中論》・青目釋・409
            "T1567": ("安慧釋論", "惟淨等譯《大乘中觀釋論》・安慧釋・宋")}
 
 
+_MMK_LAST: dict[int, int] = {}
+
+
+def _mmk_last(k):
+    """梵本第 k 品最後一頌的頌號（建置時才讀 GRETIL）。"""
+    if not _MMK_LAST:
+        sys.path.insert(0, str(ROOT / "scripts"))
+        from tripitaka_compare_curated import gretil_paras, sentences_with_sections
+        for l in sentences_with_sections(gretil_paras("sa_nAgArjuna-mUlamadhyamakakArikA"))[0]:
+            for a, b in re.findall(r"MMK_(\d+)\.(\d+)", l):
+                _MMK_LAST[int(a)] = max(_MMK_LAST.get(int(a), 0), int(b))
+    return _MMK_LAST[k]
+
+
 def _mmk(k, units, sa_cuts, zh, end=None, intro=""):
+    """end 已不用（改以本品末頌標記截止），保留參數相容。"""
     head = zh["T1564"][0]
     title = re.sub(r"^中論", "", head).split("（")[0]
     n = len([u for u, _ in units if u != "m0"])
@@ -6147,7 +6162,9 @@ def _mmk(k, units, sa_cuts, zh, end=None, intro=""):
                   "《般若燈論釋》（清辨釋）、《大乘中觀釋論》（安慧釋，僅前十三品）；漢譯欄自該頌起、到下一頌前的釋文止。" + intro),
         "units": units,
         "versions": [{"id": "sa", "lang": "sa", "label": "梵本", "who": "《根本中頌》・GRETIL",
-                      "src": {"gretil": "sa_nAgArjuna-mUlamadhyamakakArikA", "start": sa_cuts[0][1]} | ({"end": end} if end else {}),
+                      "src": {"gretil": "sa_nAgArjuna-mUlamadhyamakakArikA"}
+                             | ({"after": f"MMK_{k - 1}.{_mmk_last(k - 1)} //"} if k > 1 else {})
+                             | {"start": sa_cuts[0][1], "end_after": f"MMK_{k}.{_mmk_last(k)} //"},
                       "cuts": sa_cuts}]
                     + [{"id": w, "lang": "lzh", "label": _MMK_ZH[w][0], "who": _MMK_ZH[w][1],
                         "src": {"work": w, "nodes": [h], "start": cuts[0][1]}, "cuts": cuts} | ({"reorder": True} if ro else {})
@@ -6279,6 +6296,18 @@ _mmk(23, [('m01', 'MMK 23.1'), ('m02', 'MMK 23.2'), ('m03', 'MMK 23.3'), ('m04',
      {'T1564': ('中論觀顛倒品第二十三（二十四偈）', [('m01', '問曰：「從憶'), ('m02', '答曰：「若因'), ('m03', '「我法有以無'), ('m04', '「誰有此煩惱'), ('m05', '「如身見五種'), ('m06', '「淨不淨顛倒'), ('m07', '問曰：「色聲'), ('m08', '答曰：「色聲'), ('m09', '如是六種中，'), ('m10', '「不因於淨相'), ('m11', '「不因於不淨'), ('m12', '「若無有淨者'), ('m13', '問曰：經說常'), ('m14', '「若於無常中'), ('m15', '「可著著者著'), ('m16', '「若無有著法'), ('m17', '「有倒不生倒'), ('m18', '若於顛倒時，'), ('m19', '「諸顛倒不生'), ('m21', '「若常我樂淨'), ('m22', '「若常我樂淨'), ('m23', '「如是顛倒滅'), ('m24', '「若煩惱性實'), ('m25', '「若煩惱虛妄')], False), 'T1566': ('觀顛倒品第二十三', [('m01', '釋曰：今此品'), ('m02', '「愛非愛顛倒'), ('m03', '「我若有若無'), ('m04', '「誰有彼煩惱'), ('m05', '「身起煩惱見'), ('m06', '「愛非愛顛倒'), ('m07', '「色聲香味觸'), ('m08', '「色聲香味觸'), ('m09', '「若愛若非愛'), ('m10', '「若不因彼愛'), ('m11', '無不愛待愛，'), ('m12', '「無有可愛者'), ('m14', '「無常謂常者'), ('m15', '「執具起執者'), ('m16', '「執性無有故'), ('m17', '「已起者無合'), ('m19', '「無起未起者'), ('m21', '「常樂我淨等'), ('m22', '「我及常樂等'), ('m23', '「以彼無因故'), ('m24', '「若人諸煩惱')], False)},
      end='yadi śūnyam idaṃ sarvam udayo nāsti na vyayaḥ',
      intro='23.20 兩漢譯皆無；般若燈論 23.13、23.14 併作一頌，23.18、23.25 無。')
+
+_mmk(24, [('m01', 'MMK 24.1'), ('m02', 'MMK 24.2'), ('m03', 'MMK 24.3'), ('m04', 'MMK 24.4'), ('m05', 'MMK 24.5'), ('m06', 'MMK 24.6'), ('m07', 'MMK 24.7'), ('m08', 'MMK 24.8'), ('m09', 'MMK 24.9'), ('m10', 'MMK 24.10'), ('m11', 'MMK 24.11'), ('m12', 'MMK 24.12'), ('m13', 'MMK 24.13'), ('m14', 'MMK 24.14'), ('m15', 'MMK 24.15'), ('m16', 'MMK 24.16'), ('m17', 'MMK 24.17'), ('m18', 'MMK 24.18'), ('m19', 'MMK 24.19'), ('m20', 'MMK 24.20'), ('m21', 'MMK 24.21'), ('m22', 'MMK 24.22'), ('m23', 'MMK 24.23'), ('m24', 'MMK 24.24'), ('m25', 'MMK 24.25'), ('m26', 'MMK 24.26'), ('m27', 'MMK 24.27'), ('m28', 'MMK 24.28'), ('m29', 'MMK 24.29'), ('m30', 'MMK 24.30'), ('m31', 'MMK 24.31'), ('m32', 'MMK 24.32'), ('m33', 'MMK 24.33'), ('m34', 'MMK 24.34'), ('m35', 'MMK 24.35'), ('m36', 'MMK 24.36'), ('m37', 'MMK 24.37'), ('m38', 'MMK 24.38'), ('m39', 'MMK 24.39'), ('m40', 'MMK 24.40')],
+     [('m01', 'yadi śūnyam idaṃ sarvam udayo nāsti na vyayaḥ'), ('m02', 'parijñā ca prahāṇaṃ ca bhāvanā sākṣikarma ca'), ('m03', 'tadabhāvān na vidyante catvāry āryaphalāni ca'), ('m04', "saṃgho nāsti na cet santi te 'ṣṭau puruṣapudgalāḥ"), ('m05', 'dharme cāsati saṃghe ca kathaṃ buddho bhaviṣyati'), ('m06', 'śūnyatāṃ phalasadbhāvam adharmaṃ dharmam eva ca'), ('m07', 'atra brūmaḥ śūnyatāyāṃ na tvaṃ vetsi prayojanam'), ('m08', 'dve satye samupāśritya buddhānāṃ dharmadeśanā'), ('m09', "ye 'nayor na vijānanti vibhāgaṃ satyayor dvayoḥ"), ('m10', 'vyavahāram anāśritya paramārtho na deśyate'), ('m11', 'vināśayati durdṛṣtā śūnyatā mandamedhasam'), ('m12', 'ataś ca pratyudāvṛttaṃ cittaṃ deśayituṃ muneḥ'), ('m13', 'śūnyatāyām adhilayaṃ yaṃ punaḥ kurute bhavān'), ('m14', 'sarvaṃ ca yujyate tasya śūnyatā yasya yujyate'), ('m15', 'sa tvaṃ doṣān ātmanīyān asmāsu paripātayan'), ('m16', 'svabhāvād yadi bhāvānāṃ sadbhāvam anupaśyasi'), ('m17', 'kāryaṃ ca kāraṇaṃ caiva kartāraṃ karaṇaṃ kriyām'), ('m18', 'yaḥ pratītyasamutpādaḥ śūnyatāṃ tāṃ pracakṣmahe'), ('m19', 'apratītya samutpanno dharmaḥ kaścin na vidyate'), ('m20', 'yady aśūnyam idaṃ sarvam udayo nāsti na vyayaḥ'), ('m21', 'apratītya samutpannaṃ kuto duḥkhaṃ bhaviṣyati'), ('m22', 'svabhāvato vidyamānaṃ kiṃ punaḥ samudeṣyate'), ('m23', 'na nirodhaḥ svabhāvena sato duḥkhasya vidyate'), ('m24', 'svābhāvye sati mārgasya bhāvanā nopapadyate'), ('m25', 'yadā duḥkhaṃ samudayo nirodhaś ca na vidyate'), ('m26', 'svabhāvenāparijñānaṃ yadi tasya punaḥ katham'), ('m27', 'prahāṇasākṣātkaraṇe bhāvanā caivam eva te'), ('m28', 'svabhāvenānadhigataṃ yat phalaṃ tat punaḥ katham'), ('m29', 'phalābhāve phalasthā no na santi pratipannakāḥ'), ('m30', "abhāvāc cāryasatyānāṃ saddharmo 'pi na vidyate"), ('m31', 'apratītyāpi bodhiṃ ca tava buddhaḥ prasajyate'), ('m32', 'yaś cābuddhaḥ svabhāvena sa bodhāya ghaṭann api'), ('m33', 'na ca dharmam adharmaṃ vā kaścij jātu kariṣyati'), ('m34', 'vinā dharmam adharmaṃ ca phalaṃ hi tava vidyate'), ('m35', 'dharmādharmanimittaṃ vā yadi te vidyate phalam'), ('m36', 'sarvasaṃvyvahārāṃś ca laukikān pratibādhase'), ('m37', 'na kartavyaṃ bhavet kiṃcid anārabdhā bhavet kriyā'), ('m38', 'ajātam aniruddhaṃ ca kūṭaśthaṃ ca bhaviṣyati'), ('m39', 'asaṃprāptasya ca prāptir duḥkhaparyantakarma ca'), ('m40', 'yaḥ pratītyasamutpādaṃ paśyatīdaṃ sa paśyati')],
+     {'T1564': ('中論觀四諦品第二十四（四十偈）', [('m01', '問曰：破四顛'), ('m02', '以無四諦故，'), ('m03', '以是事無故，'), ('m04', '若無八賢聖，'), ('m05', '以無法僧寶，'), ('m06', '「空法壞因果'), ('m07', '答曰：「汝今'), ('m08', '「諸佛依二諦'), ('m09', '若人不能知，'), ('m10', '「若不依俗諦'), ('m11', '「不能正觀空'), ('m12', '「世尊知是法'), ('m13', '「汝謂我著空'), ('m14', '「以有空義故'), ('m15', '「汝今自有過'), ('m16', '「若汝見諸法'), ('m17', '「即為破因果'), ('m18', '「眾因緣生法'), ('m19', '未曾有一法，'), ('m20', '「若一切不空'), ('m21', '「苦不從緣生'), ('m22', '「若苦有定性'), ('m23', '「苦若有定性'), ('m24', '「苦若有定性'), ('m25', '「若無有苦諦'), ('m26', '「若苦定有性'), ('m27', '「如見苦不然'), ('m28', '「是四道果性'), ('m29', '「若無有四果'), ('m30', '「無四聖諦故'), ('m31', '問曰：汝雖破'), ('m32', '「雖復勤精進'), ('m33', '「若諸法不空'), ('m34', '「汝於罪福中'), ('m35', '問曰：離罪福'), ('m36', '「汝破一切法'), ('m37', '「若破於空義'), ('m38', '「若有決定性'), ('m39', '「若無有空者'), ('m40', '「是故經中說')], False), 'T1566': ('般若燈論釋觀聖諦品第二十四', [('m01', '釋曰：今此品'), ('m02', '「若知及若斷'), ('m03', '「聖諦無體故'), ('m04', '「若無有僧寶'), ('m05', '「若無法僧者'), ('m06', '「若因果體空'), ('m07', '「汝今自不解'), ('m08', '「諸佛依二諦'), ('m09', '「若人不能解'), ('m10', '「若不依世諦'), ('m11', '「少智愚癡者'), ('m12', '「諸佛以是故'), ('m13', '汝今若如是，'), ('m14', '「若然於空者'), ('m15', '「汝今持自過'), ('m16', '「汝若見諸法'), ('m17', '「若因果無待'), ('m18', '「從眾緣生法'), ('m19', '「未曾有一法'), ('m20', '「若一切不空'), ('m21', '「不從緣生者'), ('m22', '「苦既無自體'), ('m26', '「苦若定有性'), ('m23', '「苦若有體者'), ('m24', '苦若有定性，'), ('m25', '「若道是可修'), ('m27', '不解苦自體，'), ('m28', '「既無果自體'), ('m29', '以無有八人，'), ('m30', '「若無四聖諦'), ('m31', '「不以覺為緣'), ('m32', '佛有自體者，'), ('m33', '是法及非法，'), ('m34', '「無法非法因'), ('m35', '「若汝欲得有'), ('m36', '「一切言說事'), ('m37', '「一物不須作'), ('m38', '無生亦無滅，'), ('m39', '「未得者應得'), ('m40', '「所謂苦與集')], True)},
+     end='yadi śūnyam idaṃ sarvam udayo nāsti na vyayaḥ',
+     intro='般若燈論 24.26 在 24.23 之前（⇅）。')
+
+_mmk(25, [('m01', 'MMK 25.1'), ('m02', 'MMK 25.2'), ('m03', 'MMK 25.3'), ('m04', 'MMK 25.4'), ('m05', 'MMK 25.5'), ('m06', 'MMK 25.6'), ('m07', 'MMK 25.7'), ('m08', 'MMK 25.8'), ('m09', 'MMK 25.9'), ('m10', 'MMK 25.10'), ('m11', 'MMK 25.11'), ('m12', 'MMK 25.12'), ('m13', 'MMK 25.13'), ('m14', 'MMK 25.14'), ('m15', 'MMK 25.15'), ('m16', 'MMK 25.16'), ('m17', 'MMK 25.17'), ('m18', 'MMK 25.18'), ('m19', 'MMK 25.19'), ('m20', 'MMK 25.20'), ('m21', 'MMK 25.21'), ('m22', 'MMK 25.22'), ('m23', 'MMK 25.23'), ('m24', 'MMK 25.24')],
+     [('m01', 'yadi śūnyam idaṃ sarvam udayo nāsti na vyayaḥ'), ('m02', 'yady aśūnyam idaṃ sarvam udayo nāsti na vyayaḥ'), ('m03', 'aprahīṇam asaṃprāptam anucchinnam aśāśvatam'), ('m04', 'bhāvas tāvan na nirvāṇaṃ jarāmaraṇalakṣaṇam'), ('m05', 'bhāvaś ca yadi nirvāṇaṃ nirvāṇaṃ saṃskṛtaṃ bhavet'), ('m06', 'bhāvaś ca yadi nirvāṇam anupādāya tat katham'), ('m07', 'bhāvo yadi na nirvāṇam abhāvaḥ kiṃ bhaviṣyati'), ('m08', 'yady abhāvaś ca nirvāṇam anupādāya tat katham'), ('m09', 'ya ājavaṃjavībhāva upādāya pratītya vā'), ('m10', 'prahāṇaṃ cābravīc chāstā bhavasya vibhavasya ca'), ('m11', 'bhaved abhāvo bhāvaś ca nirvāṇam ubhayaṃ yadi'), ('m12', 'bhaved abhāvo bhāvaś ca nirvāṇam ubhayaṃ yadi'), ('m13', 'bhaved abhāvo bhāvaś ca nirvāṇam ubhayaṃ katham'), ('m14', 'bhaved abhāvo bhāvaś ca nirvāṇa ubhayaṃ katham'), ('m15', "naivābhāvo naiva bhāvo nirvāṇam iti yā 'ñjanā"), ('m16', 'naivābhāvo naiva bhāvo nirvāṇaṃ yadi vidyate'), ('m17', 'paraṃ nirodhād bhagavān bhavatīty eva nājyate'), ('m18', "tiṣṭhamāno 'pi bhagavān bhavatīty eva nājyate"), ('m19', 'na saṃsārasya nirvāṇāt kiṃcid asti viśeṣaṇam'), ('m20', 'nirvāṇasya ca yā koṭiḥ koṭiḥ saṃsaraṇasya ca'), ('m21', 'paraṃ nirodhād antādyāḥ śāśvatādyāś ca dṛṣṭayaḥ'), ('m22', 'śūnyeṣu sarvadharmeṣu kim anantaṃ kim antavat'), ('m23', 'kiṃ tad eva kim anyat kiṃ śāśvataṃ kim aśāśvatam'), ('m24', 'sarvopalambhopaśamaḥ prapañcopaśamaḥ śivaḥ')],
+     {'T1564': ('中論觀涅槃品第二十五（二十四偈）', [('m01', '問曰：「若一'), ('m02', '答曰：「若諸'), ('m03', '「無得亦無至'), ('m04', '「涅槃不名有'), ('m05', '「若涅槃是有'), ('m06', '「若涅槃是有'), ('m07', '問曰：若有非'), ('m08', '「若無是涅槃'), ('m09', '問曰：若涅槃'), ('m10', '「如佛經中說'), ('m11', '問曰：若有若'), ('m12', '「若謂於有無，合為涅槃者；'), ('m13', '「有無共合成'), ('m14', '「有無二事共'), ('m15', '問曰：若有無'), ('m16', '「分別非有無'), ('m17', '「如來滅度後'), ('m18', '如來現在時，'), ('m19', '「涅槃與世間'), ('m20', '「涅槃之實際'), ('m21', '「滅後有無等'), ('m22', '「一切法空故'), ('m23', '何者為一異，'), ('m24', '諸法不可得，')], False), 'T1566': ('觀涅槃品第二十五', [('m03', '釋曰：今此品'), ('m04', '「涅槃有自體'), ('m05', '涅槃是體者，'), ('m06', '「涅槃若有體'), ('m07', '「汝涅槃非體'), ('m08', '若涅槃無體，'), ('m09', '「涅槃非無體'), ('m10', '「大師所說者'), ('m11', '「若汝說涅槃'), ('m13', '「若汝說涅槃'), ('m15', '「汝若說涅槃'), ('m16', '「非體非非體'), ('m17', '「如來滅度後'), ('m18', '如來現在世，'), ('m19', '「生死邊涅槃'), ('m20', '「生死際涅槃'), ('m21', '「滅後有無等'), ('m22', '「諸體悉皆空'), ('m23', '何有此彼物，'), ('m24', '「有所得皆謝')], False)},
+     end='punarbhavāya saṃskārān avidyānivṛtas tridhā',
+     intro='般若燈論無 25.1、25.2（自 25.3 起），25.12、25.14 亦無。')
 
 # ── 勝鬘經：梵本已佚（僅《寶性論》等引文）、藏譯 Toh 92 無 84000 TMX；以求那跋陀羅 T0353 十五章為骨架，
 #    對菩提流志《大寶積經》第四十八會〈勝鬘夫人會〉T0310。長章（攝受、一乘、勝鬘）依問答再分。
@@ -6584,6 +6613,11 @@ def clip(whole: str, src: dict) -> str:
         if j < 0:
             raise SystemExit(f"  ✗ 找不到截止點「{src['end']}」")
         whole = whole[:j]
+    if "end_after" in src:   # 截到這個標記（含）為止：中論各品末頌的頌號標記，避免下一品首句與本品重出句撞名
+        j = whole.find(src["end_after"])
+        if j < 0:
+            raise SystemExit(f"  ✗ 找不到截止標記「{src['end_after']}」")
+        whole = whole[:j + len(src["end_after"])]
     # 挖掉中間一段（十地經梵本第九、十地的偈頌集中在經末「偈頌分」，長行與偈頌之間夾著別地的文字）
     for a, b in src.get("cut_out", []):
         i = whole.find(a)
