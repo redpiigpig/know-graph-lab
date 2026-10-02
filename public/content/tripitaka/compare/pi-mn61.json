@@ -1,0 +1,196 @@
+{
+ "slug": "pi-mn61",
+ "title": "教誡羅睺羅菴婆蘖林經（羅云經）",
+ "family": "pi",
+ "intro": "佛到菴婆蘖林看羅睺羅，洗足後以水盆為喻：留下少許的水、潑掉的水、倒覆的盆、仰起的空盆，故意妄語而無慚者的沙門性也是如此；又以王象入陣而護鼻為喻，說不護口者無惡不作，所以戲笑也不可妄語。再以鏡子為喻，教他身、口、意業在作之前、作時、作後都要省察是否自害害他，過去、未來、現在的沙門婆羅門都是這樣淨化三業。中阿含 14 把「不得戲笑妄言」放在每一個水器喻之後，象喻後與卷末各有一組偈，各立一節；它的口業只有「口業亦復如是」一句，併在身業一節。法句譬喻經〈象品〉與大智度論卷十三是節錄：前者只有洗足水、澡盤與王象之喻（結尾是羅雲得阿羅漢），後者只有覆盆注水一喻，各只收那一段。舊自動版的出曜經〈利養品〉講的是調達貪著利養，沒有教誡羅睺羅的內容，本組不收；舊版所取的法句譬喻經〈地獄品〉也不對，故事在〈象品〉。",
+ "units": [
+  {
+   "id": "h00",
+   "label": "經題"
+  },
+  {
+   "id": "h01",
+   "label": "如是我聞・佛往羅睺羅住處・為佛敷座洗足"
+  },
+  {
+   "id": "h02",
+   "label": "水盆之喻：少水、棄水、覆盆、空盆——故妄語而無慚者，沙門性亦如是"
+  },
+  {
+   "id": "h03",
+   "label": "王象入陣而護鼻之喻：不護口者無惡不作"
+  },
+  {
+   "id": "h04",
+   "label": "結：戲笑亦不妄語，當如是學"
+  },
+  {
+   "id": "h04b",
+   "label": "偈頌：妄語之過"
+  },
+  {
+   "id": "h05",
+   "label": "鏡喻：照見而後作"
+  },
+  {
+   "id": "h06",
+   "label": "身業：作前、作時、作後省察，害則捨、不害則行，已作則發露"
+  },
+  {
+   "id": "h07",
+   "label": "口業：同上"
+  },
+  {
+   "id": "h08",
+   "label": "意業：同上"
+  },
+  {
+   "id": "h09",
+   "label": "三世沙門婆羅門皆如是淨化三業・當如是學"
+  },
+  {
+   "id": "h09b",
+   "label": "偈：身口意業應常觀（中阿含）"
+  },
+  {
+   "id": "h10",
+   "label": "歡喜奉行"
+  },
+  {
+   "id": "h11",
+   "label": "尾題"
+  }
+ ],
+ "versions": [
+  {
+   "id": "pi",
+   "lang": "pi",
+   "label": "巴利 MN 61",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "zh-nan",
+   "lang": "lzh",
+   "label": "漢譯南傳",
+   "who": "元亨寺版・N10（譯自巴利）"
+  },
+  {
+   "id": "MA14",
+   "lang": "lzh",
+   "label": "中阿含 14 羅云經",
+   "who": "東晉 瞿曇僧伽提婆譯・397–398 年",
+   "work": "T0026"
+  },
+  {
+   "id": "T0211",
+   "lang": "lzh",
+   "label": "法句譬喻經〈象品〉（節錄）",
+   "who": "西晉 法炬、法立譯",
+   "work": "T0211"
+  },
+  {
+   "id": "T1509",
+   "lang": "lzh",
+   "label": "大智度論卷十三（節錄）",
+   "who": "龍樹造・後秦 鳩摩羅什譯・402–406 年",
+   "work": "T1509"
+  }
+ ],
+ "works": [
+  "T0026",
+  "T0211",
+  "T1509"
+ ],
+ "anchors": [
+  {
+   "work": "T0026",
+   "node": "（一四）中阿含業相應品羅云經第四（初一日誦）",
+   "uid": "T01n0026_p0436a12"
+  },
+  {
+   "work": "T0211",
+   "range": [
+    "T04n0211_p0599c21",
+    "T04n0211_p0600b15"
+   ]
+  },
+  {
+   "work": "T1509",
+   "range": [
+    "T25n1509_p0158a13",
+    "T25n1509_p0158a13"
+   ]
+  }
+ ],
+ "cells": {
+  "h00": {
+   "pi": "Majjhima Nikāya 61 Ambalaṭṭhikarāhulovādasutta",
+   "zh-nan": "第六十一　菴婆蘖林教誡羅睺羅經"
+  },
+  "h01": {
+   "pi": "Evaṁ me sutaṁ— ekaṁ samayaṁ bhagavā rājagahe viharati veḷuvane kalandakanivāpe. Tena kho pana samayena āyasmā rāhulo ambalaṭṭhikāyaṁ viharati. Atha kho bhagavā sāyanhasamayaṁ paṭisallānā vuṭṭhito yena ambalaṭṭhikā yenāyasmā rāhulo tenupasaṅkami. Addasā kho āyasmā rāhulo bhagavantaṁ dūratova āgacchantaṁ. Disvāna āsanaṁ paññāpesi, udakañca pādānaṁ. Nisīdi bhagavā paññatte āsane. Nisajja pāde pakkhālesi. Āyasmāpi kho rāhulo bhagavantaṁ abhivādetvā ekamantaṁ nisīdi.",
+   "zh-nan": "如是我聞。—— 一時，世尊住王舍城之竹林，迦蘭哆園。爾時，具壽羅睺羅住菴婆蘖林。世尊由晡時宴默而起，往訪菴婆蘖林具壽羅睺羅。具壽羅睺羅遙見世尊正前來，為敷坐具與備〔洗〕足水。世尊坐於施設之座，洗足已安坐；具壽羅睺羅頂禮世尊坐於一面。",
+   "MA14": "我聞如是：一時，佛遊王舍城，在竹林迦蘭哆園。爾時，尊者羅云亦遊王舍城溫泉林中。於是，世尊過夜平旦，著衣持鉢入王舍城而行乞食，乞食已竟，至溫泉林羅云住處。尊者羅云遙見佛來，即便往迎，取佛衣鉢，為敷坐具，汲水洗足，佛洗足已，坐羅云座。",
+   "T0211": "昔者羅雲未得道時，心性麤獷言少誠信。佛敕羅雲：「汝到賢提精舍中住，守口攝意勤修經戒。」羅雲奉教作禮而去，住九十日，慙愧自悔晝夜不息。佛往見之，羅雲歡喜趣前禮佛，安施繩床攝受震越，佛踞繩床告羅雲曰：「澡盤取水為吾洗足。」羅雲受教為佛洗足。洗足已訖，",
+   "T1509": "復次，如佛子羅睺羅，其年幼稚，未知慎口。人來問之：「世尊在不？」詭言：「不在。」若不在時，人問羅睺羅：「世尊在不？」詭言：「佛在。」有人語佛；"
+  },
+  "h02": {
+   "pi": "Atha kho bhagavā parittaṁ udakāvasesaṁ udakādhāne ṭhapetvā āyasmantaṁ rāhulaṁ āmantesi: “passasi no tvaṁ, rāhula, imaṁ parittaṁ udakāvasesaṁ udakādhāne ṭhapitan”ti? “Evaṁ, bhante”. “Evaṁ parittakaṁ kho, rāhula, tesaṁ sāmaññaṁ yesaṁ natthi sampajānamusāvāde lajjā”ti. Atha kho bhagavā parittaṁ udakāvasesaṁ chaḍḍetvā āyasmantaṁ rāhulaṁ āmantesi: “passasi no tvaṁ, rāhula, parittaṁ udakāvasesaṁ chaḍḍitan”ti? “Evaṁ, bhante”. “Evaṁ chaḍḍitaṁ kho, rāhula, tesaṁ sāmaññaṁ yesaṁ natthi sampajānamusāvāde lajjā”ti. Atha kho bhagavā taṁ udakādhānaṁ nikkujjitvā āyasmantaṁ rāhulaṁ āmantesi: “passasi no tvaṁ, rāhula, imaṁ udakādhānaṁ nikkujjitan”ti? “Evaṁ, bhante”. “Evaṁ nikkujjitaṁ kho, rāhula, tesaṁ sāmaññaṁ yesaṁ natthi sampajānamusāvāde lajjā”ti. Atha kho bhagavā taṁ udakādhānaṁ ukkujjitvā āyasmantaṁ rāhulaṁ āmantesi: “passasi no tvaṁ, rāhula, imaṁ udakādhānaṁ rittaṁ tucchan”ti? “Evaṁ, bhante”. “Evaṁ rittaṁ tucchaṁ kho, rāhula, tesaṁ sāmaññaṁ yesaṁ natthi sampajānamusāvāde lajjāti.",
+   "zh-nan": "於是，世尊將極少量殘餘水留於水盤，喚問具壽羅睺羅曰：「羅睺羅！汝確實見此極少量殘餘水留於水盤耶？」〔羅睺羅答曰：〕「如是，師尊！」〔世尊曰：〕「羅睺羅！彼等故意妄語而無愧者，彼等沙門性是如少量〔如殘留於水盤之水〕也。」於是，世尊將其少量殘餘水傾捨之，問具壽羅睺羅曰：「羅睺羅！汝見彼少量殘餘水傾捨耶？」〔羅睺羅曰：〕「如是！師尊！」〔世尊曰：〕「羅睺羅！故意妄語而無愧者，彼等沙門性為如是傾捨也。」於是，世尊倒置該水盤，問具壽羅睺羅曰：「羅睺羅！故意妄語而無愧者，彼等沙門性為如是顛倒也。」於是，世尊將該水盤直立之，問具壽羅睺羅曰：「羅睺羅！汝見此水盤是空、虛無耶？」〔羅睺羅曰：〕「如是，師尊！」〔世尊曰：〕「羅睺羅！故意妄語而無愧者，彼等沙門性為如是虛無、如是空虛也。」",
+   "MA14": "於是，世尊即取水器，瀉留少水已，問曰：「羅云！汝今見我取此水器，瀉留少水耶？」羅云答曰：「見也。世尊！」佛告羅云：「我說彼道少，亦復如是，謂知已妄言，不羞不悔，無慚無愧，羅云！彼亦無惡不作。是故，羅云！當作是學，不得戲笑妄言。」世尊復取此少水器，盡瀉棄已，問曰：「羅云！汝復見我取少水器，盡瀉棄耶？」羅云答曰：「見也。世尊！」佛告羅云：「我說彼道盡棄，亦復如是，謂知已妄言，不羞不悔，無慚無愧，羅云！彼亦無惡不作。是故，羅云！當作是學，不得戲笑妄言。」世尊復取此空水器，覆著地已，問曰：「羅云！汝復見我取空水器，覆著地耶？」羅云答曰：「見也。世尊！」佛告羅云：「我說彼道覆，亦復如是，謂知已妄言，不羞不悔，無慚無愧，羅云！彼亦無惡不作。是故羅云！當作是學，不得戱笑妄言。」世尊復取此覆水器，發令仰已，問曰：「羅云！汝復見我取覆水器，發令仰耶？」羅云答曰：「見也。世尊！」佛告羅云：「我說彼道仰，亦復如是，謂知已妄言，不羞不悔，不慚不愧，羅云！彼亦無惡不作。是故，羅云！當作是學，不得戲笑妄言。",
+   "T0211": "佛語羅雲：「汝見澡盤中洗足水不？」羅雲白佛：「唯然見之。」佛語羅雲：「此水可用食飲盥漱以不？」羅雲白言：「不可復用。所以者何？此水本實清淨，今以洗足受於塵垢，是以之故不可復用。」佛語羅雲：「汝亦如是，雖為吾子國王之孫，捨世榮祿得為沙門，不念精進攝身守口，三毒垢穢充滿胸懷，亦如此水不可復用。」佛語羅雲：「棄澡盤中水。」羅雲即棄。佛語羅雲：「澡盤雖空，可用盛飲食不耶？」白佛言：「不可用。所以然者，用有澡盤之名，曾受不淨故。」佛語羅雲：「汝亦如是，雖為沙門口無誠信，心性剛強不念精進，曾受惡名，亦如澡盤不中盛食。」佛以足指撥却澡盤，澡盤應時輪轉而走，自跳自墮數返乃止。佛語羅雲：「汝寧惜澡盤恐破不？」羅雲白佛：「洗足之器賤價之物，意中雖惜不大慇懃。」佛語羅雲：「汝亦如是。雖為沙門不攝身口，麤言惡說多所中傷，眾所不愛智者不惜，身死神去輪轉三塗，自生自死苦惱無量。諸佛賢聖所不愛惜，亦如汝言不惜澡盤。」羅雲聞之慚愧怖悸。",
+   "T1509": "佛語羅睺羅：「澡槃取水，與吾洗足！」洗足已，語羅睺羅：「覆此澡槃！」如勅即覆。佛言：「以水注之！」注已，問言：「水入中不？」答言：「不入！」佛告羅睺羅：「無慚愧人，妄語覆心，道法不入，亦復如是！」"
+  },
+  "h03": {
+   "pi": "Seyyathāpi, rāhula, rañño nāgo īsādanto urūḷhavā abhijāto saṅgāmāvacaro saṅgāmagato purimehipi pādehi kammaṁ karoti, pacchimehipi pādehi kammaṁ karoti, purimenapi kāyena kammaṁ karoti, pacchimenapi kāyena kammaṁ karoti, sīsenapi kammaṁ karoti, kaṇṇehipi kammaṁ karoti, dantehipi kammaṁ karoti, naṅguṭṭhenapi kammaṁ karoti; rakkhateva soṇḍaṁ. Tattha hatthārohassa evaṁ hoti: ‘ayaṁ kho rañño nāgo īsādanto urūḷhavā abhijāto saṅgāmāvacaro saṅgāmagato purimehipi pādehi kammaṁ karoti, pacchimehipi pādehi kammaṁ karoti …pe… naṅguṭṭhenapi kammaṁ karoti; rakkhateva soṇḍaṁ. Apariccattaṁ kho rañño nāgassa jīvitan’ti. Yato kho, rāhula, rañño nāgo īsādanto urūḷhavā abhijāto saṅgāmāvacaro saṅgāmagato purimehipi pādehi kammaṁ karoti, pacchimehipi pādehi kammaṁ karoti …pe… naṅguṭṭhenapi kammaṁ karoti, soṇḍāyapi kammaṁ karoti, tattha hatthārohassa evaṁ hoti: ‘ayaṁ kho rañño nāgo īsādanto urūḷhavā abhijāto saṅgāmāvacaro saṅgāmagato purimehipi pādehi kammaṁ karoti, pacchimehipi pādehi kammaṁ karoti, purimenapi kāyena kammaṁ karoti, pacchimenapi kāyena kammaṁ karoti, sīsenapi kammaṁ karoti, kaṇṇehipi kammaṁ karoti, dantehipi kammaṁ karoti, naṅguṭṭhenapi kammaṁ karoti, soṇḍāyapi kammaṁ karoti. Pariccattaṁ kho rañño nāgassa jīvitaṁ. Natthi dāni kiñci rañño nāgassa akaraṇīyan’ti. Evameva kho, rāhula, yassa kassaci sampajānamusāvāde natthi lajjā, nāhaṁ tassa kiñci pāpaṁ akaraṇīyanti vadāmi.",
+   "zh-nan": "「羅睺羅！猶如象王，有如轅之牙，壯大、良種、慣戰。而彼於戰陣時以兩前足作業，亦以兩後足作業；又以前身作業，亦以後身作業，亦以頭作業，亦以兩耳作業，亦以兩牙作業，以尾作業，唯護象鼻；於是，乘象之士作如是念：『此有如轅之牙、壯大、良種、慣戰之象王，〔彼於〕臨戰，以兩前足作業，以兩後足作業，又以前身作業，亦以後身作業，亦以頭作業，亦以兩耳作業，亦以兩牙作業，亦以尾作業，唯護象鼻。象王猶故惜命。』然，羅睺羅！若有如轅之牙，壯大、良種、慣戰之象王，〔此象〕臨戰……乃至……以尾作業、又以鼻作業；彼時，乘象之士作如是念：『此有如轅之牙、壯大、良種，慣戰之象王，〔彼於〕臨戰……乃至……以尾作業，又以鼻作業，此象王實不惜命也。今象王無有任何不用也。』如是，羅睺羅！凡任何故意妄語而無愧者，予言：『彼亦無任何惡不可作也。』是故，",
+   "MA14": "「羅云！猶如王有大象入陣鬪時，用前脚、後脚、尾、髂、脊、脇、項、額、耳、牙，一切皆用，唯護於鼻，象師見已，便作是念：『此王大象猶故惜命。所以者何？此王大象入陣鬪時，用前脚、後脚、尾、髂、脊、脇、項、額、耳、牙，一切皆用，唯護於鼻。』羅云！若王大象入陣鬪時，用前脚、後脚、尾、髂、脊、脇、項、額、耳、牙、鼻，一切盡用，象師見已，便作是念：『此王大象不復惜命。所以者何？此王大象入陣鬪時，用前脚、後脚、尾、髂、脊、脇、項、額、耳、牙、鼻，一切盡用。』羅云！若王大象入陣鬪時，用前脚、後脚、尾、髂、脊、脇、項、額、耳、牙、鼻，一切盡用，羅云！我說此王大象入陣鬪時，無惡不作。如是，羅云！謂知已妄言，不羞不悔，無慚無愧，羅云！我說彼亦無惡不作。是故，羅云！當作是學，不得戲笑妄言。」",
+   "T0211": "佛告羅雲：「聽我說喻。昔有國王有一大象，猛𭶑能戰，計其力勢勝五百小象。其王興軍欲伐逆國，被象鐵鎧象士御之，以雙矛戟繫象兩牙，復以二劍繫著兩耳，以曲刃刀繫象四脚，復以鐵撾繫著象尾，被象九兵皆使嚴利。象雖藏鼻護不用鬪，象士歡喜知象護身 。所以者何？象鼻軟脆，中箭即死，是以不出鼻鬪耳。象鬪殊久出鼻求劍，象士不與，念此猛象不惜身命，出鼻求劍欲著鼻頭，王及羣臣惜此大象，不復使鬪。」佛告羅雲：「人犯九惡，唯當護口，如此大象護鼻不鬪。所以然者，畏中箭死。人亦如是，所以護口，當畏三塗地獄苦痛。十惡盡犯不護口者，如此大象分喪身命，不計中箭出鼻鬪耳。人亦如是十惡盡犯，不惟三塗毒痛辛苦。若行十善攝口身意，眾惡不犯，便可得道長離三塗，無生死患。」"
+  },
+  "h04": {
+   "pi": "Tasmātiha te, rāhula, ‘hassāpi na musā bhaṇissāmī’ti— evañhi te, rāhula, sikkhitabbaṁ.",
+   "zh-nan": "實以汝羅睺羅！汝當作如是學：『我不得戲笑妄言。』」"
+  },
+  "h04b": {
+   "MA14": "於是，世尊即說頌曰：「人犯一法，謂妄言是， 不畏後世，無惡不作。 寧噉鐵丸，其熱如火， 不以犯戒，受世信施。 若畏於苦，不愛念者， 於隱顯處，莫作惡業。 若不善業，已作今作， 終不得脫，亦無避處。」",
+   "T0211": "於是世尊即說偈言：「我如象鬪，不恐中箭，常以誠信， 度無戒人。譬象調伏，可中王乘， 調為尊人，乃受誠信。」"
+  },
+  "h05": {
+   "pi": "Taṁ kiṁ maññasi, rāhula, kimatthiyo ādāso”ti? “Paccavekkhaṇattho, bhante”ti. “Evameva kho, rāhula, paccavekkhitvā paccavekkhitvā kāyena kammaṁ kattabbaṁ, paccavekkhitvā paccavekkhitvā vācāya kammaṁ kattabbaṁ, paccavekkhitvā paccavekkhitvā manasā kammaṁ kattabbaṁ.",
+   "zh-nan": "「羅睺羅！於意云何？鏡有何作為耶？」〔羅睺羅曰：〕「鏡是以省察為目的。」〔世尊曰：〕「羅睺羅！實如是，應省察而省察身作業也。應省察而省察口作業也。應省察而省察意作業也。」",
+   "MA14": "佛說頌已，復問羅云：「於意云何？人用鏡為？」尊者羅云答曰：「世尊！欲觀其面，見淨不淨。」「如是。"
+  },
+  "h06": {
+   "pi": "Yadeva tvaṁ, rāhula, kāyena kammaṁ kattukāmo ahosi, tadeva te kāyakammaṁ paccavekkhitabbaṁ: ‘yannu kho ahaṁ idaṁ kāyena kammaṁ kattukāmo idaṁ me kāyakammaṁ attabyābādhāyapi saṁvatteyya, parabyābādhāyapi saṁvatteyya, ubhayabyābādhāyapi saṁvatteyya— akusalaṁ idaṁ kāyakammaṁ dukkhudrayaṁ dukkhavipākan’ti? Sace tvaṁ, rāhula, paccavekkhamāno evaṁ jāneyyāsi: ‘yaṁ kho ahaṁ idaṁ kāyena kammaṁ kattukāmo idaṁ me kāyakammaṁ attabyābādhāyapi saṁvatteyya, parabyābādhāyapi saṁvatteyya, ubhayabyābādhāyapi saṁvatteyya— akusalaṁ idaṁ kāyakammaṁ dukkhudrayaṁ dukkhavipākan’ti, evarūpaṁ te, rāhula, kāyena kammaṁ sasakkaṁ na karaṇīyaṁ. Sace pana tvaṁ, rāhula, paccavekkhamāno evaṁ jāneyyāsi: ‘yaṁ kho ahaṁ idaṁ kāyena kammaṁ kattukāmo idaṁ me kāyakammaṁ nevattabyābādhāyapi saṁvatteyya, na parabyābādhāyapi saṁvatteyya, na ubhayabyābādhāyapi saṁvatteyya— kusalaṁ idaṁ kāyakammaṁ sukhudrayaṁ sukhavipākan’ti, evarūpaṁ te, rāhula, kāyena kammaṁ karaṇīyaṁ. Karontenapi te, rāhula, kāyena kammaṁ tadeva te kāyakammaṁ paccavekkhitabbaṁ: ‘yannu kho ahaṁ idaṁ kāyena kammaṁ karomi idaṁ me kāyakammaṁ attabyābādhāyapi saṁvattati, parabyābādhāyapi saṁvattati, ubhayabyābādhāyapi saṁvattati— akusalaṁ idaṁ kāyakammaṁ dukkhudrayaṁ dukkhavipākan’ti? Sace pana tvaṁ, rāhula, paccavekkhamāno evaṁ jāneyyāsi: ‘yaṁ kho ahaṁ idaṁ kāyena kammaṁ karomi idaṁ me kāyakammaṁ attabyābādhāyapi saṁvattati, parabyābādhāyapi saṁvattati, ubhayabyābādhāyapi saṁvattati— akusalaṁ idaṁ kāyakammaṁ dukkhudrayaṁ dukkhavipākan’ti, paṭisaṁhareyyāsi tvaṁ, rāhula, evarūpaṁ kāyakammaṁ. Sace pana tvaṁ, rāhula, paccavekkhamāno evaṁ jāneyyāsi: ‘yaṁ kho ahaṁ idaṁ kāyena kammaṁ karomi idaṁ me kāyakammaṁ nevattabyābādhāyapi saṁvattati, na parabyābādhāyapi saṁvattati, na ubhayabyābādhāyapi saṁvattati— kusalaṁ idaṁ kāyakammaṁ sukhudrayaṁ sukhavipākan’ti, anupadajjeyyāsi tvaṁ, rāhula, evarūpaṁ kāyakammaṁ. Katvāpi te, rāhula, kāyena kammaṁ tadeva te kāyakammaṁ paccavekkhitabbaṁ: ‘yannu kho ahaṁ idaṁ kāyena kammaṁ akāsiṁ idaṁ me kāyakammaṁ attabyābādhāyapi saṁvattati, parabyābādhāyapi saṁvattati, ubhayabyābādhāyapi saṁvattati— akusalaṁ idaṁ kāyakammaṁ dukkhudrayaṁ dukkhavipākan’ti? Sace kho tvaṁ, rāhula, paccavekkhamāno evaṁ jāneyyāsi: ‘yaṁ kho ahaṁ idaṁ kāyena kammaṁ akāsiṁ, idaṁ me kāyakammaṁ attabyābādhāyapi saṁvattati, parabyābādhāyapi saṁvattati, ubhayabyābādhāyapi saṁvattati— akusalaṁ idaṁ kāyakammaṁ dukkhudrayaṁ dukkhavipākan’ti, evarūpaṁ te, rāhula, kāyakammaṁ satthari vā viññūsu vā sabrahmacārīsu desetabbaṁ, vivaritabbaṁ, uttānīkātabbaṁ; desetvā vivaritvā uttānīkatvā āyatiṁ saṁvaraṁ āpajjitabbaṁ. Sace pana tvaṁ, rāhula, paccavekkhamāno evaṁ jāneyyāsi: ‘yaṁ kho ahaṁ idaṁ kāyena kammaṁ akāsiṁ idaṁ me kāyakammaṁ nevattabyābādhāyapi saṁvattati, na parabyābādhāyapi saṁvattati, na ubhayabyābādhāyapi saṁvattati— kusalaṁ idaṁ kāyakammaṁ sukhudrayaṁ sukhavipākan’ti, teneva tvaṁ, rāhula, pītipāmojjena vihareyyāsi ahorattānusikkhī kusalesu dhammesu.",
+   "zh-nan": "「羅睺羅！若汝欲以身作業時，則其時應省察汝身業：『我將作身業，予欲以身作此業，此予之身業可轉起自害、亦可轉起害他、亦可轉起〔自他〕兩害者也！此身業為不善，成苦果、苦報者也。』羅睺羅！若汝省察時則知如是：『我將作身業，予欲以身作此業，此我之身業可轉起自害、亦可轉起害他、亦可轉起兩害者，此身業為不善，受苦果、苦報。』羅睺羅！汝實不該作如此之身業。羅睺羅！若汝省察時則知如是：『我將作身業，予欲以身作此業，此我之身業不轉起自害、亦不轉起害他、亦不轉起兩害者，此身業為善、樂果、樂報。』羅睺羅！汝該作如此之身業。羅睺羅！汝正以身作業時，恰在其時，應省察汝之身業：『我今以身作此業，此我之身業轉起自害、亦轉起害他、亦轉起兩害也！此身業為不善、苦果、苦報也。』羅睺羅！若汝正於省察時，則知如是：『我今以身作此業，此我之身業轉起自害、亦轉起害他、亦轉起兩害者，此身業為不善、苦果、苦報者也。』羅睺羅！汝應捨如是身業。羅睺羅！又，若汝省察時則知如是：『我今以身作此業，此我之身業為不轉起自害、亦不轉起害他、亦不轉起兩害者，此之身業為善、樂果、樂報者也。』羅睺羅！汝對如是身業應續行之。羅睺羅！汝已作身業時，應省察汝之身業：『我已作身業，此我之身業為轉起自害、亦轉起害他、亦轉起兩害也！此身業為不善、苦果、苦報也。』羅睺羅！若汝正省察時，則知如是：『我已作身業，此我之身業為轉起自害、亦轉起害他、亦轉起兩害者，此身業為不善、苦果、苦報也。』羅睺羅！汝之如是身業，當對師長、智者、同梵行者懺悔之、應發露之、應顯發之；懺悔已、發露已、顯發已，應成就將來之防護也〔不再犯〕。羅睺羅！又，若汝正省察時則知如是：『我已以身作此業，此我之身業為不轉起自害、亦不轉起害他、亦不轉起兩害者，此身業為善、樂果、樂報也。』羅睺羅！如是汝當晝夜隨學善法，住喜悅中。",
+   "MA14": "羅云！若汝將作身業，即觀彼身業：『我將作身業，彼身業為淨、為不淨，為自為、為他？』羅云！若觀時則知，我將作身業，彼身業不淨，或自為，或為他，不善與苦果受於苦報。羅云！汝當捨彼將作身業。羅云！若觀時則知，我將作身業，彼身業 淨，或自為，或為他，善與樂果受於樂報。羅云！汝當受彼將作身業。「羅云！若汝現作身業，即觀此身業：『若我現作身業，此身業為淨、為不淨，為自為、為他？』羅云！若觀時則知，我現作身業，此身業不淨，或自為，或為他，不善與苦果受於苦報。羅云！汝當捨此現作身業。羅云！若觀時則知，我現作身業，此身業淨，或自為，或為他，善與樂果受於樂報。羅云！汝當受此現作身業。「羅云！若汝已作身業，即觀彼身業：『若我已作身業，彼身業已過去、滅盡、變易，為淨、為不淨，為自為、為他？』羅云！若觀時則知，我已作身業，彼身業已過去、滅盡、變易，彼身業不淨，或自為，或為他，不善與苦果受於苦報。羅云！汝當詣善知識、梵行人所，彼已作身業，至心發露，應悔過說，慎莫覆藏，更善持護。羅云！若觀時則知，我已作身業，彼身業已過去滅盡變易，彼身業 淨，或自為，或為他，善與樂果受於樂報。羅云！汝當晝夜歡喜，住正念正智，口業亦復如是。"
+  },
+  "h07": {
+   "pi": "“Yadeva tvaṁ, rāhula, vācāya kammaṁ kattukāmo ahosi, tadeva te vacīkammaṁ paccavekkhitabbaṁ: ‘yannu kho ahaṁ idaṁ vācāya kammaṁ kattukāmo idaṁ me vacīkammaṁ attabyābādhāyapi saṁvatteyya, parabyābādhāyapi saṁvatteyya, ubhayabyābādhāyapi saṁvatteyya— akusalaṁ idaṁ vacīkammaṁ dukkhudrayaṁ dukkhavipākan’ti? Sace tvaṁ, rāhula, paccavekkhamāno evaṁ jāneyyāsi: ‘yaṁ kho ahaṁ idaṁ vācāya kammaṁ kattukāmo idaṁ me vacīkammaṁ attabyābādhāyapi saṁvatteyya, parabyābādhāyapi saṁvatteyya, ubhayabyābādhāyapi saṁvatteyya— akusalaṁ idaṁ vacīkammaṁ dukkhudrayaṁ dukkhavipākan’ti, evarūpaṁ te, rāhula, vācāya kammaṁ sasakkaṁ na karaṇīyaṁ. Sace pana tvaṁ, rāhula, paccavekkhamāno evaṁ jāneyyāsi: ‘yaṁ kho ahaṁ idaṁ vācāya kammaṁ kattukāmo idaṁ me vacīkammaṁ nevattabyābādhāyapi saṁvatteyya, na parabyābādhāyapi saṁvatteyya— kusalaṁ idaṁ vacīkammaṁ sukhudrayaṁ sukhavipākan’ti, evarūpaṁ te, rāhula, vācāya kammaṁ karaṇīyaṁ. Karontenapi te, rāhula, vācāya kammaṁ tadeva te vacīkammaṁ paccavekkhitabbaṁ: ‘yannu kho ahaṁ idaṁ vācāya kammaṁ karomi idaṁ me vacīkammaṁ attabyābādhāyapi saṁvattati, parabyābādhāyapi saṁvattati, ubhayabyābādhāyapi saṁvattati— akusalaṁ idaṁ vacīkammaṁ dukkhudrayaṁ dukkhavipākan’ti? Sace pana tvaṁ, rāhula, paccavekkhamāno evaṁ jāneyyāsi: ‘yaṁ kho ahaṁ idaṁ vācāya kammaṁ karomi idaṁ me vacīkammaṁ attabyābādhāyapi saṁvattati, parabyābādhāyapi saṁvattati, ubhayabyābādhāyapi saṁvattati— akusalaṁ idaṁ vacīkammaṁ dukkhudrayaṁ dukkhavipākan’ti, paṭisaṁhareyyāsi tvaṁ, rāhula, evarūpaṁ vacīkammaṁ. Sace pana tvaṁ, rāhula, paccavekkhamāno evaṁ jāneyyāsi: ‘yaṁ kho ahaṁ idaṁ vācāya kammaṁ karomi idaṁ me vacīkammaṁ nevattabyābādhāyapi saṁvattati, na parabyābādhāyapi saṁvattati, na ubhayabyābādhāyapi saṁvattati— kusalaṁ idaṁ vacīkammaṁ sukhudrayaṁ sukhavipākan’ti, anupadajjeyyāsi tvaṁ, rāhula, evarūpaṁ vacīkammaṁ. Katvāpi te, rāhula, vācāya kammaṁ tadeva te vacīkammaṁ paccavekkhitabbaṁ: ‘yannu kho ahaṁ idaṁ vācāya kammaṁ akāsiṁ idaṁ me vacīkammaṁ attabyābādhāyapi saṁvattati, parabyābādhāyapi saṁvattati, ubhayabyābādhāyapi saṁvattati— akusalaṁ idaṁ vacīkammaṁ dukkhudrayaṁ dukkhavipākan’ti? Sace kho tvaṁ, rāhula, paccavekkhamāno evaṁ jāneyyāsi: ‘yaṁ kho ahaṁ idaṁ vācāya kammaṁ akāsiṁ idaṁ me vacīkammaṁ attabyābādhāyapi saṁvattati, parabyābādhāyapi saṁvattati, ubhayabyābādhāyapi saṁvattati— akusalaṁ idaṁ vacīkammaṁ dukkhudrayaṁ dukkhavipākan’ti, evarūpaṁ te, rāhula, vacīkammaṁ satthari vā viññūsu vā sabrahmacārīsu desetabbaṁ, vivaritabbaṁ, uttānīkattabbaṁ; desetvā vivaritvā uttānīkatvā āyatiṁ saṁvaraṁ āpajjitabbaṁ. Sace pana tvaṁ, rāhula, paccavekkhamāno evaṁ jāneyyāsi: ‘yaṁ kho ahaṁ idaṁ vācāya kammaṁ akāsiṁ idaṁ me vacīkammaṁ nevattabyābādhāyapi saṁvattati, na parabyābādhāyapi saṁvattati, na ubhayabyābādhāyapi saṁvattati— kusalaṁ idaṁ vacīkammaṁ sukhudrayaṁ sukhavipākan’ti, teneva tvaṁ, rāhula, pītipāmojjena vihareyyāsi ahorattānusikkhī kusalesu dhammesu.",
+   "zh-nan": "羅睺羅！若汝欲以口作業時，則其時應省察汝之口業：『我將作口業，我欲以口作此業，此我之口業，可轉起自害、亦可轉起害他、亦可轉起兩害者也！此口業為不善、成苦果、苦報也。』羅睺羅！若汝正省察時則知如是：『我將作口業，我欲以口作此業，此我之口業……乃至……可轉起兩害者，此口業為不善、苦果、苦報也。』羅睺羅！我實不該作如此之口業。羅睺羅！若汝省察時則知如是：『我將作口業我欲以口作此業，此我之口業為不轉起自害……乃至……不轉起兩害者，此口業為善、樂果、樂報也。』羅睺羅！汝該作如此之口業。羅睺羅！汝正以口作業時，恰在其時，應省察汝之口業：『我今以口作此業，此我之口業為轉起自害、轉起害他、轉起兩害者也！此口業為不善、苦果、苦報也。』羅睺羅！若汝正在省察時則知如是：『我今以口作此業，此我之口業……乃至……轉起兩害者，此口業為不善、苦果、苦報者也。』羅睺羅！汝應捨如是口業。羅睺羅！若汝正省察時則知如是：『予今以口作此業，予之此口業為不轉起自害……乃至……不轉起兩害者，此口業為善、樂果、樂報者也。』羅睺羅！汝對如是口業宜續行之。羅睺羅！汝已作口業時，應省察汝之口業：『我已作口業，我已以口作此業，此我之口業為轉起自害、亦可轉起害他、亦可轉起兩害也！此口業為不善、苦果、苦報也。』羅睺羅！若汝正省察時則知如是：『我己作口業，我已以口作此業，此我之口業……乃至……轉起兩害者，此口業為不善、苦果、苦報者也。』羅睺羅！汝之如是口業，當對於師長、智者、同梵行者懺悔之、應發露之、應顯發之；懺悔已、發露已、顯發已、應成就將來之防護也。羅睺羅！若汝正省察時則知如是：『我已以口作此業，此我之口業為不轉起自害……乃至……不轉起兩害者，此口業為善，樂果、樂報者也。』羅睺羅！如是，汝當晝夜，隨學善法，住喜悅中。"
+  },
+  "h08": {
+   "pi": "Yadeva tvaṁ, rāhula, manasā kammaṁ kattukāmo ahosi, tadeva te manokammaṁ paccavekkhitabbaṁ: ‘yannu kho ahaṁ idaṁ manasā kammaṁ kattukāmo idaṁ me manokammaṁ attabyābādhāyapi saṁvatteyya, parabyābādhāyapi saṁvatteyya, ubhayabyābādhāyapi saṁvatteyya— akusalaṁ idaṁ manokammaṁ dukkhudrayaṁ dukkhavipākan’ti? Sace tvaṁ, rāhula, paccavekkhamāno evaṁ jāneyyāsi: ‘yaṁ kho ahaṁ idaṁ manasā kammaṁ kattukāmo idaṁ me manokammaṁ attabyābādhāyapi saṁvatteyya, parabyābādhāyapi saṁvatteyya, ubhayabyābādhāyapi saṁvatteyya— akusalaṁ idaṁ manokammaṁ dukkhudrayaṁ dukkhavipākan’ti, evarūpaṁ te, rāhula, manasā kammaṁ sasakkaṁ na karaṇīyaṁ. Sace pana tvaṁ, rāhula, paccavekkhamāno evaṁ jāneyyāsi: ‘yaṁ kho ahaṁ idaṁ manasā kammaṁ kattukāmo idaṁ me manokammaṁ nevattabyābādhāyapi saṁvatteyya, na parabyābādhāyapi saṁvatteyya, na ubhayabyābādhāyapi saṁvatteyya— kusalaṁ idaṁ manokammaṁ sukhudrayaṁ sukhavipākan’ti, evarūpaṁ te, rāhula, manasā kammaṁ karaṇīyaṁ. Karontenapi te, rāhula, manasā kammaṁ tadeva te manokammaṁ paccavekkhitabbaṁ: ‘yannu kho ahaṁ idaṁ manasā kammaṁ karomi idaṁ me manokammaṁ attabyābādhāyapi saṁvattati, parabyābādhāyapi saṁvattati, ubhayabyābādhāyapi saṁvattati— akusalaṁ idaṁ manokammaṁ dukkhudrayaṁ dukkhavipākan’ti? Sace pana tvaṁ, rāhula, paccavekkhamāno evaṁ jāneyyāsi: ‘yaṁ kho ahaṁ idaṁ manasā kammaṁ karomi idaṁ me manokammaṁ attabyābādhāyapi saṁvattati, parabyābādhāyapi saṁvattati, ubhayabyābādhāyapi saṁvattati— akusalaṁ idaṁ manokammaṁ dukkhudrayaṁ dukkhavipākan’ti, paṭisaṁhareyyāsi tvaṁ, rāhula, evarūpaṁ manokammaṁ. Sace pana tvaṁ, rāhula, paccavekkhamāno evaṁ jāneyyāsi: ‘yaṁ kho ahaṁ idaṁ manasā kammaṁ karomi idaṁ me manokammaṁ nevattabyābādhāyapi saṁvattati, na parabyābādhāyapi saṁvattati, na ubhayabyābādhāyapi saṁvattati— kusalaṁ idaṁ manokammaṁ sukhudrayaṁ sukhavipākan’ti, anupadajjeyyāsi tvaṁ, rāhula, evarūpaṁ manokammaṁ. Katvāpi te, rāhula, manasā kammaṁ tadeva te manokammaṁ paccavekkhitabbaṁ: ‘yannu kho ahaṁ idaṁ manasā kammaṁ akāsiṁ idaṁ me manokammaṁ attabyābādhāyapi saṁvattati, parabyābādhāyapi saṁvattati, ubhayabyābādhāyapi saṁvattati— akusalaṁ idaṁ manokammaṁ dukkhudrayaṁ dukkhavipākan’ti? Sace kho tvaṁ, rāhula, paccavekkhamāno evaṁ jāneyyāsi: ‘yaṁ kho ahaṁ idaṁ manasā kammaṁ akāsiṁ idaṁ me manokammaṁ attabyābādhāyapi saṁvattati, parabyābādhāyapi saṁvattati, ubhayabyābādhāyapi saṁvattati— akusalaṁ idaṁ manokammaṁ dukkhudrayaṁ dukkhavipākan’ti, evarūpaṁ pana te, rāhula, manokammaṁ aṭṭīyitabbaṁ harāyitabbaṁ jigucchitabbaṁ; aṭṭīyitvā harāyitvā jigucchitvā āyatiṁ saṁvaraṁ āpajjitabbaṁ. Sace pana tvaṁ, rāhula, paccavekkhamāno evaṁ jāneyyāsi: ‘yaṁ kho ahaṁ idaṁ manasā kammaṁ akāsiṁ idaṁ me manokammaṁ nevattabyābādhāyapi saṁvattati, na parabyābādhāyapi saṁvattati, na ubhayabyābādhāyapi saṁvattati— kusalaṁ idaṁ manokammaṁ sukhudrayaṁ sukhavipākan’ti, teneva tvaṁ, rāhula, pītipāmojjena vihareyyāsi ahorattānusikkhī kusalesu dhammesu.",
+   "zh-nan": "羅睺羅！若汝欲以意作業時，則其時，應省察汝之意業：『我將作意業，我欲以意作此業，此我之意業為可轉起自害、亦轉起害他、轉起兩害者也！此之意業為不善、苦果、苦報者也。』羅睺羅！若汝正省察時則知如是：『我將作意業我欲以意作此業，此我之意業……乃至……可轉起兩害者，此意業為不善、苦果、苦報者也。』羅睺羅！汝實不該作如是之意業。羅睺羅！若汝正省察時，則知如是：『我將作意業，我欲以意作此業，此我之意業為不〔轉起〕自害……乃至……不轉起兩害者，此意業為善、樂果、樂報者也。』羅睺羅！汝該作如此之意業。羅睺羅！汝正以意作業時，恰在其時，應省察汝之意業：『我今以意作此業，此我之意業實為轉起自害、轉起害他、轉起兩害者也！此意業為不善、苦果、苦報者也！』羅睺羅！若汝正省察時則知如是：『我今以意作此業，此我之意業……乃至……轉起兩害者，此之意業為不善、苦果、苦報者也。』羅睺羅！汝應捨如是意業。羅睺羅！若汝省察時，則知如是：『我今以意作此業，此我之意業為不〔轉起〕自害……乃至……不轉起兩害者，此之意業為善、樂果、樂報者也。』羅睺羅！汝對如是意業宜續行之。羅睺羅！汝已作意業時，應省察汝之意業：『我已作意業，我已以意作此業，此我之意業為轉起自害、亦轉起害他、亦轉起兩害者也！此意業為不善、苦果、苦報者也。』羅睺羅！若汝正省察時，則知如是：『我已作意業，我已以意作此業，此我之意業……乃至……轉起兩害者，此意業為不善，苦果、苦報者也。』羅睺羅！對汝之意業，當煩惱之、可恥之、宜忌避之。煩惱、可恥、忌避、可成就將來之防護也。羅睺羅！若汝正省察時，則知如是：『我已以意作此業，此我之意業為不轉起自害、不轉起害他、不轉起兩害者，此意業為善、樂果、樂報者也。』羅睺羅！如是，汝當晝夜隨學善法，住喜悅中。",
+   "MA14": "「羅云！因過去行故，已生意業，即觀彼意業：『若因過去行故，已生意業，彼意業為淨、為不淨，為自為、為他？』羅云！若觀時則知，因過去行故，已生意業，彼意業已過去、滅盡、變易，彼意業不淨，或自為，或為他，不善與苦果受於苦報。羅云！汝當捨彼過去意業，羅云！若觀時則知，因過去行故，已生意業已過去、滅盡、變易，彼意業淨，或自為，或為他，善與樂果受於樂報。羅云！汝當受彼過去意業。「羅云！因未來行故，當生意業，即觀彼意業：『若因未來行故，當生意業，彼意業為淨、為不淨，為自為、為他？』羅云！若觀時則知，因未來行故，當生意業，彼意業不淨，或自為，或為他，不善與苦果受於苦報。羅云！汝當捨彼未來意業。羅云！若觀時則知，因未來行故，當生意業，彼意業 淨，或自為，或為他，善與樂果受於樂報。羅云！汝當受彼未來意業。「羅云！因現在行故，現生意業，即觀此意業：『若因現在行故，現生意業，此意業為淨、為不淨，為自為、為他？』羅云！若觀時則知，因現在行故，現生意業，此意業不淨，或自為，或為他，不善與苦果受於苦報。羅云！汝當捨此現在意業。羅云！若觀時則知，因現在行故，現生意業，此意業不淨，或自為，或為他，善與樂果受於樂報。羅云！汝當受此現在意業。"
+  },
+  "h09": {
+   "pi": "Ye hi keci, rāhula, atītamaddhānaṁ samaṇā vā brāhmaṇā vā kāyakammaṁ parisodhesuṁ, vacīkammaṁ parisodhesuṁ, manokammaṁ parisodhesuṁ, sabbe te evamevaṁ paccavekkhitvā paccavekkhitvā kāyakammaṁ parisodhesuṁ, paccavekkhitvā paccavekkhitvā vacīkammaṁ parisodhesuṁ, paccavekkhitvā paccavekkhitvā manokammaṁ parisodhesuṁ. Yepi hi keci, rāhula, anāgatamaddhānaṁ samaṇā vā brāhmaṇā vā kāyakammaṁ parisodhessanti, vacīkammaṁ parisodhessanti, manokammaṁ parisodhessanti, sabbe te evamevaṁ paccavekkhitvā paccavekkhitvā kāyakammaṁ parisodhessanti, paccavekkhitvā paccavekkhitvā vacīkammaṁ parisodhessanti, paccavekkhitvā paccavekkhitvā manokammaṁ parisodhessan”ti. Yepi hi keci, rāhula, etarahi samaṇā vā brāhmaṇā vā kāyakammaṁ parisodhenti, vacīkammaṁ parisodhenti, manokammaṁ parisodhenti, sabbe te evamevaṁ paccavekkhitvā paccavekkhitvā kāyakammaṁ parisodhenti, paccavekkhitvā paccavekkhitvā vacīkammaṁ parisodhenti, paccavekkhitvā paccavekkhitvā manokammaṁ parisodhenti. Tasmātiha, rāhula, ‘paccavekkhitvā paccavekkhitvā kāyakammaṁ parisodhessāmi, paccavekkhitvā paccavekkhitvā vacīkammaṁ parisodhessāmi, paccavekkhitvā paccavekkhitvā manokammaṁ parisodhessāmī’ti— evañhi te, rāhula, sikkhitabban”ti.",
+   "zh-nan": "羅睺羅！凡過去世諸沙門或婆羅門，淨化身業、淨化口業、淨化意業，彼等一切，如是省察，又如是省察已、而淨化身業也；省察又省察已而淨化口業也；已省察，省察已而淨化意業也。羅睺羅！凡未來世諸沙門或婆羅門，將淨化身業，將淨化口業，將淨化意業，彼等一切，如是省察，又省察已，而淨化身業；將省察又省察已而淨化口業；將省察，又省察已而淨化意業。羅睺羅！凡現在諸沙門或婆羅門，淨化身業、淨化口業、淨化意業，彼等一切，現如是省察，又省察已而淨化身業；現在省察，又省察已而淨化口業；現在省察，又省察已而淨化意業。羅睺羅！因此，實如是：『我等當省察，又省察已而淨化身業；當省察，又省察已而淨化口業；當省察，又省察已而淨化意業。』羅睺羅！汝等當如是學也。」",
+   "MA14": "「羅云！若有過去沙門、梵志，身、口、意業，已觀而觀，已淨而淨，彼一切即此身、口、意業，已觀而觀，已淨而淨。羅云！若有未來沙門、梵志，身、口、意業，當觀而觀，當淨而淨，彼一切即此身、口、意業，當觀而觀，當淨而淨，羅云！若有現在沙門、梵志，身、口、意業，現觀而觀，現淨而淨，彼一切即此身、口、意業，現觀而觀，現淨而淨。羅云！汝當如是學，我亦即此身、口、意業，現觀而觀，現淨而淨。」"
+  },
+  "h09b": {
+   "MA14": "於是，世尊復說頌曰：「身業、口業、意業，羅云！ 善不善法，汝應常觀。 知已妄言，羅云莫說， 禿從他活，何可妄言？ 覆沙門法，空無真實， 謂說妄言，不護其口。 故不妄言，正覺之子， 是沙門法，羅云當學。 方方豐樂，安隱無怖， 羅云至彼，莫為害他。」"
+  },
+  "h10": {
+   "pi": "Idamavoca bhagavā. Attamano āyasmā rāhulo bhagavato bhāsitaṁ abhinandīti.",
+   "zh-nan": "世尊說此已，悅意之具壽羅睺羅，大歡喜世尊之所說！",
+   "MA14": "佛說如是。尊者羅云及諸比丘，聞佛所說，歡喜奉行。",
+   "T0211": "羅雲聞佛懇惻之誨，感激自勵尅骨不忘，精進和柔懷忍如地，識想寂靜得羅漢道。"
+  },
+  "h11": {
+   "pi": "Ambalaṭṭhikarāhulovādasuttaṁ niṭṭhitaṁ paṭhamaṁ.",
+   "MA14": "羅云經第四竟（一千八百三十二字）"
+  }
+ }
+}
