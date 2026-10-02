@@ -1,0 +1,228 @@
+{
+ "slug": "pratimoksa-c07",
+ "title": "比丘戒本（七）四悔過",
+ "family": "pi",
+ "intro": "四波羅提提舍尼（悔過、對說，pāṭidesanīya／pratideśanīya）：犯者須向比丘說「我犯可呵法，今向大德悔過」。四條各部相同：從非親里比丘尼受食、比丘尼指示供食、學家受食、阿蘭若處受食。《僧祇戒本》與大眾說出世部梵本把阿蘭若一條置於第一（段序依原本），兩本又一次互證；《解脫戒經》稱「四悔過法」，根有戒經稱「四對說法」。",
+ "units": [
+  {
+   "id": "pd0",
+   "label": "總標：四悔過法半月半月說"
+  },
+  {
+   "id": "pd1",
+   "label": "悔過一・入聚落從非親里比丘尼自手受食"
+  },
+  {
+   "id": "pd2",
+   "label": "悔過二・白衣家食，比丘尼指示與食不呵止"
+  },
+  {
+   "id": "pd3",
+   "label": "悔過三・學家先不受請自手受食"
+  },
+  {
+   "id": "pd4",
+   "label": "悔過四・阿蘭若有疑怖處，不先告而於住處受食"
+  },
+  {
+   "id": "pdz",
+   "label": "結說・三問清淨"
+  }
+ ],
+ "versions": [
+  {
+   "id": "pi",
+   "lang": "pi",
+   "label": "巴利・上座部",
+   "who": "Theravāda Bhikkhupātimokkha・Mahāsaṅgīti 本（SuttaCentral）"
+  },
+  {
+   "id": "T1429",
+   "lang": "lzh",
+   "label": "四分戒本",
+   "who": "法藏部・後秦 佛陀耶舍譯《四分律比丘戒本》（唐 懷素集）",
+   "work": "T1429"
+  },
+  {
+   "id": "T1422a",
+   "lang": "lzh",
+   "label": "五分戒本",
+   "who": "化地部・劉宋 佛陀什等譯《彌沙塞五分戒本》",
+   "work": "T1422a"
+  },
+  {
+   "id": "sa-sarv",
+   "lang": "sa",
+   "label": "梵・說一切有部",
+   "who": "Sarvāstivāda Prātimokṣasūtra・von Simson 1986／2000（GRETIL）"
+  },
+  {
+   "id": "T1436",
+   "lang": "lzh",
+   "label": "十誦戒本",
+   "who": "說一切有部・姚秦 鳩摩羅什譯《十誦比丘波羅提木叉戒本》",
+   "work": "T1436"
+  },
+  {
+   "id": "sa-mahl",
+   "lang": "sa",
+   "label": "梵・大眾說出世部",
+   "who": "Mahāsāṃghika-Lokottaravāda Prātimokṣasūtra・Tatia 1976（GRETIL）",
+   "reorder": true
+  },
+  {
+   "id": "T1426",
+   "lang": "lzh",
+   "label": "僧祇戒本",
+   "who": "大眾部・東晉 佛陀跋陀羅譯《摩訶僧祇律大比丘戒本》",
+   "work": "T1426",
+   "reorder": true
+  },
+  {
+   "id": "T1460",
+   "lang": "lzh",
+   "label": "解脫戒經",
+   "who": "飲光部・元魏 般若流支譯",
+   "work": "T1460"
+  },
+  {
+   "id": "sa-mula",
+   "lang": "sa",
+   "label": "梵・根本說一切有部",
+   "who": "Mūlasarvāstivāda Prātimokṣasūtra・Banerjee 1954（GRETIL）"
+  },
+  {
+   "id": "T1454",
+   "lang": "lzh",
+   "label": "根有戒經",
+   "who": "根本說一切有部・唐 義淨譯《根本說一切有部戒經》",
+   "work": "T1454"
+  }
+ ],
+ "works": [
+  "T1422a",
+  "T1426",
+  "T1429",
+  "T1436",
+  "T1454",
+  "T1460"
+ ],
+ "anchors": [
+  {
+   "work": "T1429",
+   "range": [
+    "T22n1429_p1020b28",
+    "T22n1429_p1020c22"
+   ]
+  },
+  {
+   "work": "T1422a",
+   "range": [
+    "T22n1422a_p0198c05",
+    "T22n1422a_p0198c22"
+   ]
+  },
+  {
+   "work": "T1436",
+   "range": [
+    "T23n1436_p0476b28",
+    "T23n1436_p0476c23"
+   ]
+  },
+  {
+   "work": "T1426",
+   "range": [
+    "T22n1426_p0554a21",
+    "T22n1426_p0554b09"
+   ]
+  },
+  {
+   "work": "T1460",
+   "range": [
+    "T24n1460_p0663c25",
+    "T24n1460_p0664a15"
+   ]
+  },
+  {
+   "work": "T1454",
+   "range": [
+    "T24n1454_p0506b10",
+    "T24n1454_p0506c03"
+   ]
+  }
+ ],
+ "cells": {
+  "pd0": {
+   "pi": "Pāṭidesanīya Ime kho panāyasmanto cattāro pāṭidesanīyā dhammā uddesaṁ āgacchanti.",
+   "T1429": "「諸大德！是四波羅提提舍尼法，半月半月說，戒經中來。",
+   "T1422a": "「諸大德！是四波羅提提舍尼法，半月半月戒經中說。",
+   "sa-sarv": "VI. pratideśanīyā dharmāḥ PrMoSū_Pratid.0: ime punar āyuṣmantaś catvāraḥ pratideśanīyā dharmā anvardhamāsaṃ prātimokṣasūtroddeśam āgacchanti //",
+   "T1436": "「諸大德！是四波羅提提舍尼法，半月半月波羅提木叉中說。",
+   "sa-mahl": "[VI. catvāraḥ prātideśanikā dharmāḥ] ime kho punar āyuṣmanto catvāraḥ prātideśanikā dharmā anvardhamāsaṃ sūtre prātimokṣe uddeśam āgacchanti Ō",
+   "T1426": "「諸大德！是四波羅提提舍尼法，半月半月次說波羅提木叉。",
+   "T1460": "「諸大德！此四悔過法，半月半月說解脫戒經中來。",
+   "sa-mula": "catvāraḥ pratideśanīyā dharmāḥ / ime khalv āyuṣmantaś catvāraḥ pratideśanīyā dharmā anvardhamāsaṃ prātimokṣasūtroddeśam āgacchanti /",
+   "T1454": "「諸大德！此四對說波羅底提舍尼法，半月半月戒經中說。」攝頌曰：非親尼自受，舍中處分食， 不請向學家，受食於寺外。"
+  },
+  "pd1": {
+   "pi": "Pāṭidesanīya 1. Paṭhamapāṭidesanīya Yo pana bhikkhu aññātikāya bhikkhuniyā antaragharaṁ paviṭṭhāya hatthato khādanīyaṁ vā bhojanīyaṁ vā sahatthā paṭiggahetvā khādeyya vā bhuñjeyya vā, paṭidesetabbaṁ tena bhikkhunā “gārayhaṁ, āvuso, dhammaṁ āpajjiṁ asappāyaṁ pāṭidesanīyaṁ, taṁ paṭidesemī”ti.",
+   "T1429": "「若比丘！入村中，從非親里比丘尼，無病，自手取食食者，是比丘應向餘比丘悔過言：『大德！我犯可呵法，所不應為，我今向大德悔過。』是名悔過法。",
+   "T1422a": "「若比丘，無病，在街巷中從非親里比丘尼自手受食。是比丘應向諸比丘悔過：『我墮可呵法，今向諸大德悔過。』是名悔過法。",
+   "sa-sarv": "PrMoSū_Pratid.1: yaḥ punar bhikṣur aglāno 'ntargṛhaṃ piṇḍāya carantyā ajñātyā bhikṣuṇyāḥ santikāt svahastaṃ khādanīyabhojanīyaṃ pratigṛhṇīyāt tena bhikṣuṇā bhikṣ(ū)ṇām antike pratideśayitavyaṃ garhaṇīyam āyuṣmantaḥ sthānam āpanno 'smi asāṃpreyaṃ pratideśanīyaṃ taṃ dharmaṃ pratideśayāmi ayaṃ dharmaḥ pratideśanīyaḥ 1",
+   "T1436": "「若比丘，無病，白衣家內非親里比丘尼邊自手受食，是比丘應諸比丘邊出罪，如是言：『諸大德！我墮可呵法所不應作，是可出法我今出。』是第一波羅提提舍尼法。",
+   "sa-mahl": "PrMoSū(Mā-L)Pratid.2. yo puna bhikṣur anyātikāye bhikṣuṇīye antaragṛhaṃ praviṣṭāye agilāno svahastaṃ khādanīyaṃ vā bhojanīyaṃ vā pratigṛhṇitvā khādeya vā bhuṃjeya vā bhuktāvinā tena bhikṣuṇā pratideśayitavyaṃ Ō asaṃpreyaṃ me āyuṣman gārhyaṃ prātideśanikaṃ dharmam āpanno / taṃ dharmmaṃ pratideśayāmi / ayaṃ pi dharmo prātideśaniko /",
+   "T1426": "「若比丘，不病在白衣家內，從非親里比丘尼邊受食，若噉、若食，應向餘比丘悔過言：『長老！我墮可呵法。此法悔過。』",
+   "T1460": "「若比丘入村乞食，無病從非親里比丘尼自手受食食。是比丘出，至僧中，應悔過言：『大德！我犯可悔法，所不應為。我今向大德悔過。』是名悔過法。",
+   "sa-mula": "Pratid.1 (PrMoSū_Mū-Banerjee) yaḥ punar bhikṣur antagṛhaṃ piṇḍāya carantyā ajñātyā bhikṣuṇyāḥ santikāt sahastaṃ khādanīyabhojanīyaṃ pratigṛhya khāded vā bhuñjīta vā tena bhikṣuṇā bahirārāmaṃ gatvā bhikṣor antike pratideśayitavyam garhyam asmy āyuṣmantaḥ sthānam āpanno 'sātmyaṃ pratideśanīyaṃ taṃ dharmaṃ pratideśayāmīti ayam api dharmaḥ pratideśanīyaḥ /",
+   "T1454": "「若復苾芻，於村路中，從非親苾芻尼自手受食食。是苾芻應還村外住處，詣諸苾芻所，各別告言：『大德！我犯對說惡法，是不應為，今對說悔。』是名對說法。"
+  },
+  "pd2": {
+   "pi": "Pāṭidesanīya 2. Dutiyapāṭidesanīya Bhikkhū paneva kulesu nimantitā bhuñjanti, tatra ce sā bhikkhunī vosāsamānarūpā ṭhitā hoti “idha sūpaṁ detha, idha odanaṁ dethā”ti. Tehi bhikkhūhi sā bhikkhunī apasādetabbā “apasakka tāva bhagini, yāva bhikkhū bhuñjantī”ti. Ekassapi ce bhikkhuno na paṭibhāseyya taṁ bhikkhuniṁ apasādetuṁ “apasakka tāva bhagini, yāva bhikkhū bhuñjantī”ti, paṭidesetabbaṁ tehi bhikkhūhi “gārayhaṁ, āvuso, dhammaṁ āpajjimhā asappāyaṁ pāṭidesanīyaṁ, taṁ paṭidesemā”ti.",
+   "T1429": "「若比丘！至白衣家內食，是中有比丘尼指示，與某甲羹，與某甲飯。是比丘應語彼比丘尼如是言：『大姊！且止，須諸比丘食竟。』若無一比丘語彼比丘尼如是言：『大姊！且止，須諸比丘食竟者。』是比丘應向餘比丘悔過言：『大德！我犯可呵法，所不應為，我今向大德悔過。』是名悔過法。",
+   "T1422a": "「若比丘，白衣家請食。有比丘尼教益食人：『與是比丘飯、與是比丘羹。』諸比丘應語是比丘尼：『姊妹！小却待諸比丘食竟。』若眾中乃至無一人語者，是諸比丘應向諸比丘悔過：『我墮可呵法，今向諸大德悔過。』是名悔過法。",
+   "sa-sarv": "PrMoSū_Pratid.2: bhikṣavaḥ punaḥ saṃbahulāḥ kuleṣūpanimantritā bhuṃjīraṃs tatra ced bhikṣuṇī vyapadiśamānā sthitā syād ihaudanaṃ dehi iha sūpaṃ dehi iha bhūyo dehīti sā bhikṣuṇī bhikṣubhir evaṃ syād vacanīyā āgamaya tāva(t) tvaṃ (bh)aginī yāvad ime bhikṣavo bhuṃjantām ity ekabhikṣor api ce(n) na pratibhāyāt tāṃ bhikṣuṇī(m) evaṃ vaktum āgamaya tāva(t) tvaṃ (bha)ginī yā(vad i)me bhikṣ(avo bhuṃjantām iti) sarvais tair bhikṣ(u)bhir bhik(ṣū)ṇām antike pratideśayitavyaṃ garh(a)ṇ(īyam) āyuṣmantaḥ sthānam āpannā(ḥ) sma asāṃpreyaṃ pratideśanīyaṃ taṃ dharmaṃ pratide(śa)y(āma aya)ṃ dharma(ḥ) prati(d)eśanīyaḥ 2",
+   "T1436": "「有諸比丘，白衣家請食，是中一比丘尼立指示：『與是比丘飯、與是比丘羹。』諸比丘應語是比丘尼：『小住姊妹！待諸比丘食竟。』若諸比丘中乃至無一比丘能語是比丘尼：『姊妹小住！待諸比丘食竟。』是比丘應餘比丘邊出罪，如是言：『諸大德！我墮可呵法所不應作，是可出法我今出。』是第二波羅提提舍尼法。",
+   "sa-mahl": "PrMoSū(Mā-L)Pratid.3. bhikṣu kho punar antaragṛhe nimantritakā bhuñjanti / tatra ca bhikṣuṇī viśvāsamānarūpā sthitā bhavati / sā evam āha Ō iha odanaṃ dehi, iha sūpaṃ dehi, iha vyañjanaṃ dehīti vā vadeya / sarvehi tehi bhikṣuhi sā bhikṣuṇī evam asya vacanīyā Ō āgamaya tāva tvaṃ bhagini yāvad bhikṣū bhuñjantīti / ekabhikṣū pi ca tāṃ bhikṣuṇīṃ neva vadeya Ō āgamaya tāva tvaṃ bhagini yāvad bhikṣū bhuñjantīti, bhuktāvīhi tehi bhikṣūhi pratideśayitavyaṃ Ō asaṃpreyaṃ me āyuṣman gārhyaṃ prātideśanikaṃ dharmam āpanno / taṃ dharmaṃ pratideśayāmi / ayaṃ pi dharmo prātideśaniko //",
+   "T1426": "「若比丘，受白衣家請食，比丘尼在前立，指示言：『與是比丘飯，與是比丘羹、若魚、若肉。』諸比丘應語是比丘尼言：『姊妹小住！待諸比丘食竟。』若無一比丘呵者，是諸比丘應向餘比丘悔過言：『長老！我墮可呵法。此法悔過。』",
+   "T1460": "「若比丘，在白衣家食。是中有比丘尼，指示與某甲羹、與某甲飯，與已復與。諸比丘應語彼比丘尼言：『姊妹！且住，待諸比丘食竟。』若無一比丘語彼比丘尼如是言，諸比丘應悔過言：『大德！我犯可悔法，所不應為。我今向大德悔過。』是名悔過法。",
+   "sa-mula": "Pratid.2 (PrMoSū_Mū-Banerjee) saṃbahulā bhikṣavaḥ kuleṣu nimantritā bhuṃjīran tatra ced bhikṣuṇī vyapadeśamānā sthitā syād iha bhojanīyaṃ datta odanaṃ datta sūpaṃ datteti sā bhikṣuṇī bhikṣubhir evaṃ syād vacanīyā āgamayasva bhagini muhūrtaṃ yāvad bhikṣavo bhuṃjate / ekenāpi bhikṣuṇā cet tāṃ bhikṣuṇīm apasārayituṃ na vacanīyaṃ sarvair bhikṣubhiḥ bahirārāmaṃ gatvā bhikṣūṇām antike pratideśitavyaṃ garhyam āyuṣmantaḥ sthānam āpannā asātmyaṃ pratideśanīyaṃ taṃ dharmaṃ pratideśayāma iti ayam api dharmaḥ pratideśanīyaḥ /",
+   "T1454": "「若復眾多苾芻於白衣家食，有苾芻尼指授，此苾芻應可多與美好飲食。諸苾芻應語是苾芻尼言：『姊妹！且止少時，待諸苾芻食竟。』若無一人作是語者，是諸苾芻應還村外住處，詣諸苾芻所，各別告言：『大德！我犯對說惡法，是不應為，今對說悔。』是名對說法。"
+  },
+  "pd3": {
+   "pi": "Pāṭidesanīya 3. Tatiyapāṭidesanīya Yāni kho pana tāni sekkhasammatāni kulāni, yo pana bhikkhu tathārūpesu sekkhasammatesu kulesu pubbe animantito agilāno khādanīyaṁ vā, bhojanīyaṁ vā sahatthā paṭiggahetvā khādeyya vā, bhuñjeyya vā, paṭidesetabbaṁ tena bhikkhunā “gārayhaṁ, āvuso, dhammaṁ āpajjiṁ asappāyaṁ pāṭidesanīyaṁ, taṁ paṭidesemī”ti.",
+   "T1429": "「若先作學家羯磨，若比丘於如是學家，先不請，無病，自手受食食者，是比丘應向餘比丘悔過言：『大德！我犯可呵法，所不應為，我今向大德悔過。』是名悔過法。",
+   "T1422a": "「有諸學家，僧作學家羯磨。若比丘無病，先不受請，於是學家自手受食。是比丘應向諸比丘悔過：『我墮可呵法，今向諸大德悔過。』是名悔過法。",
+   "sa-sarv": "PrMoSū_Pratid.3: yāni punas tāni saṃghasya śaikṣasaṃmatāni kulāni bhavanti śaikṣasaṃvṛtisaṃmatāni yaḥ punar bhikṣus tathārūpebhyaḥ kulebhyaḥ (śai)kṣasaṃ(vṛti)s(aṃma)tebhyaḥ pūrvam animantritaḥ samānaḥ khādanīyabhojanīyaṃ pratigṛhṇīyāt tena bhikṣuṇā bhikṣūṇām antike pratideśayitavyaṃ garhaṇīyam āyuṣmantaḥ sthānam āpanno 'smi asāṃpreyaṃ pratideśanīyaṃ taṃ dharmaṃ pratideśayāmi ayaṃ dharmaḥ pratideśanīyaḥ 3",
+   "T1436": "「有諸學家中，僧作學家羯磨，若比丘知是學家中僧作學家羯磨，先不請後來自手受飯食，是比丘應餘比丘邊出罪，如是言：『大德！我墮可呵法所不應作，是可出法我今出。』是第三波羅提提舍尼法。",
+   "sa-mahl": "PrMoSū(Mā-L)Pratid.4. yāni kho punar imāni śaikṣasaṃmatāni kulāni bhavanti tatra ca bhikṣuḥ pūrve apravārito upasaṃkramitvā svahastaṃ khādanīyaṃ vā bhojanīyaṃ vā pratigṛhṇitvā khādeya vā bhuñjeya vā bhuktāvinā tena bhikṣuṇā pratideśayitavyaṃ Ō asaṃpreyaṃ me āyuṣman gārhyaṃ prātideśanikaṃ dharmam āpanno / taṃ dharmaṃ pratideśayāmi / ayaṃ pi dharmo prātideśaniko //",
+   "T1426": "「有學家，僧作學家羯磨，比丘先不請而往自手受食，若噉、若食，是比丘應向餘比丘悔過言：『長老！我墮可呵法。此法悔過。』」",
+   "T1460": "「若有諸學家，僧作學家羯磨。若比丘知是學家，先不受請，無病自手受食食。是比丘應悔過言：『大德！我犯可悔法，我今向大德悔過。』是名悔過法。",
+   "sa-mula": "Pratid.3 (PrMoSū_Mū-Banerjee) yāni tāni kulāni śikṣāsaṃvṛtisaṃmatāni yaḥ punar bhikṣus tadrūpeṣu saṃghasya śaikṣeṣu kuleṣu śikṣāsaṃvṛtisaṃmateṣu pūrvam apravāritasya khādanīyabhojanīyaṃ pratigṛhya khāded bhuñjīta vā tena bhikṣuṇā bahirārāmaṃ gatvā bhikṣūṇām antike pratideśanīyaṃ tat sthānam āpanno 'sātmyaṃ pratideśanīyaṃ taṃ dharmaṃ pratideśayāmīti ayam api dharmaḥ pratideśanīyaḥ /",
+   "T1454": "「若復苾芻，知是學家僧與作學家羯磨，苾芻先不受請，便詣彼家自手受食食。是苾芻應還村外住處，詣諸苾芻所，各別告言：『大德！我犯對說惡法，是不應為，今對說悔。』是名對說法。"
+  },
+  "pd4": {
+   "pi": "Pāṭidesanīya 4. Catutthapāṭidesanīya Yāni kho pana tāni āraññakāni senāsanāni sāsaṅkasammatāni sappaṭibhayāni, yo pana bhikkhu tathārūpesu senāsanesu pubbe appaṭisaṁviditaṁ khādanīyaṁ vā, bhojanīyaṁ vā ajjhārāme sahatthā paṭiggahetvā agilāno khādeyya vā, bhuñjeyya vā, paṭidesetabbaṁ tena bhikkhunā “gārayhaṁ, āvuso, dhammaṁ āpajjiṁ asappāyaṁ pāṭidesanīyaṁ, taṁ paṭidesemī”ti.",
+   "T1429": "「若比丘！在阿蘭若逈遠，有疑恐怖處住。若比丘在如是阿蘭若處住，先不語檀越，若僧伽藍外不受食。在僧伽藍內，無病，自手受食食者，是比丘應向餘比丘悔過言：『大德！我犯可呵法，所不應為，我今向大德悔過。』是名悔過法。",
+   "T1422a": "「若比丘，住阿鍊若處有疑恐怖，先不伺視，在僧坊內自手受食、不出外受。是比丘應向諸比丘悔過：『我墮可呵法，今向諸大德悔過。』是名悔過法。」",
+   "sa-sarv": "PrMoSū_Pratid.4: yāni punas tāni saṃghasyāraṇyakāni śayyāsanāni bhavanti sāśaṃkasaṃmatāni sabhayasaṃmatāni sapratibhayabhairavasaṃmatāni / yaḥ punar bhikṣus tathārūpeṣu saṃghasyāraṇyakeṣu śayyāsaneṣu pūrvapratisaṃvedakaḥ asaṃmataḥ saṃghena bahir ārāmasya svahastaṃ khādanīyabhojanīyaṃ apratigṛhya antar ārāme pratigṛhṇīyāt tena bhikṣuṇā bhikṣ(ū)ṇām antike pratideśayitavyaṃ garhaṇīyam āyuṣmantaḥ sthānam āpanno 'smi asāṃpreyaṃ pratideśanīyaṃ ta(ṃ) dharmaṃ pratideśayāmi ayam api dharmaḥ pratideśanīyaḥ 4 //",
+   "T1436": "「有僧阿蘭若處住，有疑怖畏。若比丘先知如是阿蘭若住處有疑怖畏，僧亦不作羯磨，不精舍外受飲食，精舍內受飲食，是比丘應餘比丘邊出罪，如是言：『大德！我墮可呵法所不應作，是可出法我今出。』是第四波羅提提舍尼法。」",
+   "sa-mahl": "PrMoSū(Mā-L)Pratid.1. yo puna bhikṣu āraṇyake śayanāsane viharanto pūrve apratisaṃveditaṃ bahirdhā apratigṛhītaṃ, antovāsavastusminn agilāno svahastaṃ khādanīyaṃ vā bhojanīyaṃ vā pratigṛhṇitvā khādeya vā bhuñjeya vā bhuktāvinā tena bhikṣuṇā pratideśayitavyaṃ Ō asaṃpreyaṃ me āyuṣman gārhyaṃ prātideśanikaṃ dharmam āpanno / taṃ dharmaṃ pratideśayāmi / ayaṃ dharmo prātideśaniko //",
+   "T1426": "「若比丘，阿練若處住，先不語不病，外不受、於內受，若噉、若食，應向餘比丘悔過言：『長老！我墮可呵法。此法悔過。』",
+   "T1460": "「若比丘，在阿蘭若有疑怖畏處，不在僧伽藍外受食，在僧伽藍內無病自手受食食。是比丘應悔過言：『大德！我犯可悔法，所不應為。我今向大德悔過。』是名悔過法。」",
+   "sa-mula": "Pratid.4 (PrMoSū_Mū-Banerjee) yāni tāni kāni śayanāsanāni sāśaṃkasaṃmatāni sabhayasaṃmatāni sapratibhayabhairavasaṃmatāni yaḥ punar bhikṣus tadrūpeṣu saṃghasyāraṇyakeṣu śayaneṣu sāśaṃkasaṃmateṣu sabhayasaṃmateṣu sapratibhayabhairavasaṃmateṣu pūrvam apratisaṃvidyate vane bahirārāmasya khādanīyabhojanīyaṃ khāded bhuṃjīta vā tena bhikṣuṇā bhikṣūṇām antike pratideśayitavyaṃ garhyam asmy āyuṣmantaḥ sthānam āpanno 'sātmyaṃ pratideśanīyaṃ taṃ dharmaṃ pratideśayāmīti ayam api dharmaḥ pratideśanīyaḥ /",
+   "T1454": "「若復苾芻，在阿蘭若恐怖處住，先無觀察險難之人，於住處外受食食者，是苾芻應還住處，詣諸苾芻所，各別告言：『大德！我犯對說惡法，是不應為，今對說悔。』是名對說法。」"
+  },
+  "pdz": {
+   "pi": "Uddiṭṭhā kho āyasmanto cattāro pāṭidesanīyā dhammā. Tatthāyasmante pucchāmi, kaccittha parisuddhā, dutiyampi pucchāmi, kaccittha parisuddhā, tatiyampi pucchāmi, kaccittha parisuddhā, parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti. Pāṭidesanīyā niṭṭhitā",
+   "T1429": "「諸大德！我已說四波羅提提舍尼法。今問諸大德！是中清淨不？（如是三說）諸大德！是中清淨，默然故，是事如是持。",
+   "T1422a": "「諸大德！已說四波羅提提舍尼法。今問，諸大德是中清淨不？」（第二、第三亦如是說）「諸大德是中清淨，默然故，是事如是持。」",
+   "sa-sarv": "uddiṣṭā mayāyuṣmantaś catvāraḥ pratideśanīyā dharmās tatrāham āyuṣmataḥ pṛcchāmi kaccid sthātra pariśuddhā dvir api t(ri)r api pṛcchāmi kaccit sthātra pariśuddhā(ḥ) pariśuddhā (a)trāyuṣmanto yasmāt tūṣṇīm evam etad dhārayāmi //",
+   "T1436": "「諸大德！已說四波羅提提舍尼法。今問諸大德是中清淨不？」（第二、第三亦如是問。）「諸大德！是中清淨，默然故，是事如是持。」",
+   "sa-mahl": "// uddānam // (1) āraṇyakam (2) antaragṛhe (3) bhikṣū ca nimantritakāḥ (4) śaikṣasaṃmatena caturthaḥ // uddiṣṭāḥ kho punar āyuṣmanto catvāraḥ prātideśanikā dharmāḥ / tatrāyuṣmanto pṛcchāmi kaccittha pariśuddhāḥ? dvitīyaṃ pi āyuṣmanto pṛcchāmi kaccittha pariśuddhāḥ? tṛtīyaṃ pi āyuṣmanto pṛcchāmi kaccittha pariśuddhāḥ? pariśuddhā atrāyuṣmanto yasmāt tūṣṇīm evam etaṃ dhārayāmi /",
+   "T1426": "「諸大德！已說四波羅提提舍尼法。今問諸大德！是中清淨不？是中清淨不？是中清淨不？」「諸大德！是中清淨，默然故，是事如是持。」",
+   "T1460": "「諸大德！我已說四悔過法。今問諸大德是中清淨不？」（如是三說）「諸大德是中清淨，默然故，是事如是持。」",
+   "sa-mula": "uddiṣṭā mayāyuṣmantaś catvāraḥ pratideśanīyā dharmāḥ / tatrāham āyuṣmantaḥ paripṛcchāmi -- kaccit sthātra pariśuddhāḥ dvir api trir api -- kaccit sthātra pariśuddhāḥ pariśuddhā āyuṣmanto yasmāt tūṣṇīm evam etad dhārayāmi /",
+   "T1454": "「諸大德！我已說四波羅底提舍尼法。今問諸大德！是中清淨不？」（如是三說）「諸大德！是中清淨，默然故，我今如是持。」"
+  }
+ }
+}
