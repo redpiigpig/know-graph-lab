@@ -1,0 +1,133 @@
+
+// ─── 古代 / ancient.ts ───
+// 論藏
+{ title_zh: '屬靈的寓意《約翰福音》註疏 【古羅馬】 俄里根（奧利振）', title_orig: '屬靈的寓意《約翰福音》註疏 【古羅馬】 俄里根（奧利振）', author: '俄里根（奧利振）', era: '古代', place: '亞歷山卓，埃及', language: '希臘語' },
+// 詩文藏
+{ title_zh: '金口若望：雕像講道詞選集', title_orig: '金口若望：雕像講道詞選集', author: '金口若望', era: 'ancient', place: '安提阿和君士坦丁堡', language: '希臘語' },
+
+// ─── 中世紀 / medieval.ts ───
+// 論藏
+{ title_zh: '宇宙間的靈智實體問題', title_orig: 'Quaestiones disputatae de spiritualibus creaturis', author: '多瑪斯‧阿奎那', era: '約 1267–1268 年', place: 'Italy', language: 'Latin (original); Chinese (this edition)' },
+// 書信藏
+{ title_zh: '不知之雲', title_orig: 'The Cloud of Unknowing', author: '', era: 'medieval', place: 'England', language: '中英語' },
+
+// ─── 近代 / early-modern.ts ───
+// 類書藏
+{ title_zh: '天學初函', title_orig: '天學初函', author: '李之藻 輯', era: '1628 年（崇禎元年）', place: 'China', language: 'Chinese' },
+// 論藏
+{ title_zh: '天主實義', title_orig: '天主實義', author: '利瑪竇（Matteo Ricci）', era: '1603 年', place: 'China (Ming)', language: 'Chinese' },
+{ title_zh: '天主降生引義', title_orig: '天主降生引義', author: '艾儒略（Giulio Aleni）', era: '1635 年', place: '上海', language: 'Chinese' },
+// 詩文藏
+{ title_zh: '光與愛的話語', title_orig: 'Dichos de luz y amor', author: '十字若望', era: '16 世紀', place: 'Spain', language: 'Chinese (translation)' },
+{ title_zh: '基督的憂傷', title_orig: 'De Tristitia Christi', author: '托馬斯‧莫爾', era: '1534–1535 年（獄中）', place: 'England', language: 'Latin (original); Chinese (this edition)' },
+{ title_zh: '靈歌', title_orig: 'Cántico espiritual', author: '十字若望', era: '1578–1586 年', place: 'Spain', language: 'Spanish (original); Chinese translation noted' },
+// 史傳藏
+{ title_zh: '中國年報 1606-1607年', title_orig: 'Annua della Cina del MDCVI 1606 e MDCVII 1607', author: '在華耶穌會士（年信編者）', era: '1606–1607 年', place: 'China', language: 'Italian' },
+{ title_zh: '李安德日記（1746–1748）', title_orig: 'Journal 1746-1748 d\'André Ly, prêtre chinois, missionnaire et notaire apostolique', author: '李安德（André Ly）', era: '1746–1748 年', place: 'China', language: '拉丁文' },
+{ title_zh: '聖女耶穌大德蘭自傳', title_orig: 'Libro de la vida', author: '亞維拉的德蘭', era: '1562–1565 年', place: 'Spain', language: 'Spanish (original); Chinese (this record)' },
+// 書信藏
+{ title_zh: '徐光啟集', title_orig: '', author: '徐光啟', era: '明末（1562–1633）', place: 'China', language: 'Chinese' },
+{ title_zh: '耶穌會士中國書簡集1-6卷', title_orig: '耶穌會士中國書簡集1-6卷', author: '', era: '早期現代（約16至17世紀）', place: '中國', language: '中文' },
+// 宣道藏
+{ title_zh: '七克', title_orig: '', author: '龐迪我（Diego de Pantoja）', era: '1614 年', place: 'China', language: 'Chinese' },
+{ title_zh: '救靈箴言', title_orig: '', author: '李杖（問漁）', era: '1890 年', place: 'unknown', language: 'Chinese' },
+{ title_zh: '新法表異', title_orig: '', author: '湯若望（Johann Adam Schall von Bell）', era: '明末（17 世紀）', place: 'China', language: 'Chinese' },
+{ title_zh: '父，隨你安排', title_orig: 'L\'Abandon à la Providence divine', author: '高薩德（Jean-Pierre de Caussade）', era: '18 世紀', place: 'France', language: 'Chinese (translation)' },
+{ title_zh: '登上嘉默羅山', title_orig: 'Subida del Monte Carmelo', author: '十字若望', era: '約 1578–1585 年', place: 'Spain', language: 'Chinese translation' },
+{ title_zh: '真誠孝愛聖母', title_orig: 'Traité de la vraie dévotion à la Sainte Vierge', author: '蒙福的路易‧瑪利（Louis-Marie Grignion de Montfort）', era: '約 1712 年', place: 'France', language: 'Chinese (Traditional)' },
+
+// ─── 現代 / modern.ts ───
+// 類書藏
+{ title_zh: '天主教百科全書（英文，16冊）', title_orig: '天主教百科全書（英文，16冊）', author: '', era: 'modern', place: 'unknown', language: 'Chinese' },
+{ title_zh: '教會社會訓導彙編', title_orig: '教會社會訓導彙編', author: '', era: '現代', place: '未知', language: '中文' },
+{ title_zh: '施安堂：天主教聖經索引 查經字典', title_orig: '施安堂：天主教聖經索引 查經字典', author: '', era: 'modern', place: 'unknown', language: 'chinese' },
+// 禮儀藏
+{ title_zh: '彌撒祭考', title_orig: '', author: '英千里（待考，見審定註）', era: '民國初年（待考）', place: 'unknown', language: 'chinese' },
+{ title_zh: '禮儀的真諦', title_orig: 'Der Geist der Liturgie', author: '若瑟‧拉辛格（後為教宗本篤十六世）', era: '2000 年', place: 'unknown', language: 'chinese' },
+{ title_zh: '禮者，履也', title_orig: '', author: '羅國輝', era: '現代', place: 'Shanghai', language: 'Chinese' },
+{ title_zh: '耶穌會團體祈禱手冊', title_orig: '', author: '耶穌會中華省', era: '1978 年', place: 'Taiwan', language: 'Chinese' },
+{ title_zh: '蔣介石手訂吳經熊譯：聖詠譯義初稿', title_orig: '蔣介石手訂吳經熊譯：聖詠譯義初稿', author: '', era: 'modern', place: 'unknown', language: 'chinese' },
+{ title_zh: '袖珍每日禮讚', title_orig: '', author: '天主教主教團禮儀委員會 編譯', era: '1991 年', place: 'unknown', language: 'Chinese' },
+// 律藏
+{ title_zh: '共議同行：第十六屆世界主教會議第一會期綜合報告', title_orig: 'Una Chiesa sinodale in missione: Relazione di sintesi', author: '世界主教代表會議', era: '2023 年', place: 'Vatican City', language: 'Chinese (translation)' },
+{ title_zh: '司鐸聖召的禮物：司鐸培育基本方案', title_orig: 'Ratio Fundamentalis Institutionis Sacerdotalis', author: '教廷聖職部', era: '2016 年', place: 'Vatican', language: 'Chinese' },
+{ title_zh: '大公指南：大公運動原則與規範之應用指南', title_orig: 'Directory for the Application of Principles and Norms on Ecumenism', author: '宗座促進基督徒合一委員會', era: '1993 年', place: '梵蒂岡/臺北', language: 'chinese' },
+{ title_zh: '天主教法典 拉丁文-中文（修正版）', title_orig: '天主教法典 拉丁文-中文（修正版）', author: '', era: 'modern', place: 'Vatican City', language: 'Latin-Chinese' },
+{ title_zh: '救贖聖事訓令', title_orig: 'Redemptionis Sacramentum', author: '教廷禮儀及聖事部', era: '2004 年', place: 'Rome', language: 'Chinese' },
+{ title_zh: '有關傳教區派遣司鐸出國並居留之訓令', title_orig: '', author: '教廷萬民福音傳播部', era: '2001 年', place: 'Vatican', language: 'Chinese' },
+{ title_zh: '權威的服務及服從', title_orig: 'Faciem tuam, Domine, requiram', author: '教廷獻身生活及使徒團體部', era: '2008 年', place: 'Vatican', language: 'Chinese (Traditional)' },
+{ title_zh: '聽告解者指南：論婚姻生活中的某些倫理問題', title_orig: 'Vademecum for Confessors: On Certain Ethical Questions in Conjugal Life', author: '宗座家庭委員會', era: '1997 年', place: 'Taiwan', language: 'Chinese' },
+{ title_zh: '論主教團之神學及法律性質', title_orig: 'Apostolos Suos', author: '教宗若望保祿二世', era: '1998 年', place: 'Vatican', language: 'Chinese (translation)' },
+// 論藏
+{ title_zh: '1990-《救主的使命》通諭', title_orig: '1990-《救主的使命》通諭', author: '若望保祿二世', era: 'modern', place: '梵蒂岡', language: 'chinese' },
+{ title_zh: '1993-《真理的光輝》通諭', title_orig: '1993-《真理的光輝》通諭', author: '若望·保祿二世', era: 'modern', place: '梵蒂岡', language: 'chinese' },
+{ title_zh: '1995-《生命的福音》通諭', title_orig: '1995-《生命的福音》通諭', author: '若望保祿二世', era: 'modern', place: '梵蒂岡', language: '拉丁語' },
+{ title_zh: '1998-《信仰與理性》通諭', title_orig: '1998-《信仰與理性》通諭', author: '若望·保祿二世', era: 'modern', place: '梵蒂岡', language: 'chinese' },
+{ title_zh: '2005-《天主是愛》通諭', title_orig: '2005-《天主是愛》通諭', author: '本篤十六世', era: '現代', place: '梵蒂岡', language: '拉丁文' },
+{ title_zh: '2013-《信德之光》通諭（中文正式版）', title_orig: '2013-《信德之光》通諭（中文正式版）', author: '', era: 'modern', place: 'unknown', language: 'chinese' },
+{ title_zh: '2016-《愛的喜樂》勸諭', title_orig: '2016-《愛的喜樂》勸諭', author: '', era: 'modern', place: '', language: 'chinese' },
+{ title_zh: '一九九九年基督降生第三個千年的司鐸', title_orig: '', author: '教廷聖職部；天主教臺灣地區主教團秘書處 編譯', era: '1999 年', place: 'Vatican / Taiwan', language: 'Chinese (Traditional)' },
+{ title_zh: '個人聖召：神操衍生的深度轉化', title_orig: '個人聖召：神操衍生的深度轉化', author: '', era: 'modern', place: 'unknown', language: 'zh' },
+{ title_zh: '創世論', title_orig: '', author: '湯漢', era: '現代', place: 'Hong Kong', language: 'Chinese' },
+{ title_zh: '唱一首新歌：梵二禮儀精神', title_orig: '唱一首新歌：梵二禮儀精神', author: '', era: 'modern', place: 'unknown', language: 'chinese' },
+{ title_zh: '基督之律', title_orig: 'Das Gesetz Christi', author: '白舍客（Bernhard Häring）', era: '1954 年', place: 'unknown', language: 'Chinese translation' },
+{ title_zh: '天主與世界', title_orig: 'Gott und die Welt', author: '若瑟‧拉辛格；彼得‧西瓦爾德 訪談', era: '2000 年', place: 'Vatican/Germany', language: 'Chinese translation' },
+{ title_zh: '從共融的觀點看教會', title_orig: 'Communionis notio', author: '教廷信理部', era: '1992 年', place: 'Vatican', language: 'Chinese (translation/summary)' },
+{ title_zh: '愛的聖事', title_orig: 'Sacramentum Caritatis', author: '教宗本篤十六世', era: '2007 年', place: 'Vatican', language: 'Chinese (translation)' },
+{ title_zh: '新編《天主教教理》教友研習本（1-3冊）', title_orig: '新編《天主教教理》教友研習本（1-3冊）', author: '', era: 'modern', place: 'unknown', language: 'chinese' },
+{ title_zh: '神的氛圍', title_orig: '神的氛圍', author: '', era: '2013年', place: 'unknown', language: 'chinese' },
+{ title_zh: '納匝肋人耶穌', title_orig: 'Jesus von Nazareth', author: '教宗本篤十六世（若瑟‧拉辛格）', era: '2007–2012 年', place: 'Vatican / Germany', language: 'Chinese (translation)' },
+{ title_zh: '耶穌基督', title_orig: 'Jesus der Christus', author: '華特‧卡斯培（Walter Kasper）', era: '1974 年', place: 'unknown', language: 'Chinese translation' },
+{ title_zh: '耶穌會第卅五屆大會文獻', title_orig: 'Documents of General Congregation 35 of The Society of Jesus', author: '耶穌會第三十五屆全體大會', era: '2008 年', place: 'unknown', language: 'Chinese (translation); original multilingual' },
+{ title_zh: '聖事論新編-從新天主教法典看聖事', title_orig: '聖事論新編-從新天主教法典看聖事', author: '', era: 'modern', place: 'unknown', language: 'chinese' },
+{ title_zh: '評基督抹殺論', title_orig: '', author: '沈嗣莊', era: '1925 年', place: 'unknown', language: 'Chinese' },
+{ title_zh: '論道成肉身', title_orig: '論道成肉身', author: '', era: 'modern', place: 'unknown', language: 'Chinese' },
+{ title_zh: '避靜、祈禱與分辨：依納爵神操101問答', title_orig: '避靜、祈禱與分辨：依納爵神操101問答', author: '拉蒙．鮑狄斯塔', era: 'modern', place: 'unknown', language: 'chinese' },
+{ title_zh: '關於祈求天主治癒的訓令', title_orig: 'Instructio De Orationibus Ad Obtinendam A Deo Sanationem', author: '教廷信理部', era: '2000 年', place: 'Vatican', language: 'Latin (original); Chinese translation' },
+{ title_zh: '闢基督抹殺論', title_orig: '', author: '殷雅各', era: '1925 年（廣學會）', place: 'unknown', language: 'chinese' },
+// 詩文藏
+{ title_zh: '沒有意外這回事', title_orig: 'There Are No Accidents', author: '葛羅謝爾（Benedict J. Groeschel）、畢夏普（John Bishop）；沈映志 譯', era: '2004 年', place: 'United States', language: 'Chinese (translation); original English' },
+{ title_zh: '聖女小德蘭二十一篇祈禱', title_orig: 'Prières de sainte Thérèse de l\'Enfant-Jésus', author: '里修的德蘭（聖女小德蘭）', era: '1893–1897 年', place: 'France', language: 'Chinese translation' },
+// 史傳藏
+{ title_zh: '中國基督教史（臺灣商務印書館 1984）', title_orig: '中國基督教史（臺灣商務印書館 1984）', author: '', era: '1984', place: 'Taiwan', language: 'Chinese' },
+{ title_zh: '中國天主教傳教史', title_orig: '', author: '德禮賢（Pasquale d\'Elia）', era: '1930 年代', place: 'China', language: 'Chinese' },
+{ title_zh: '古代基督教史', title_orig: '古代基督教史', author: 'unknown', era: 'modern', place: 'unknown', language: 'chinese' },
+{ title_zh: '基督教會史', title_orig: '基督教會史[美]威利斯頓', author: 'Williston Walker', era: '20世紀初（約1918年首次出版）', place: '美國', language: '英語' },
+{ title_zh: '基督教會史（上卷）金陵神學院編譯', title_orig: '基督教會史（上卷）金陵神學院編譯', author: '', era: 'modern', place: '中國南京（金陵）', language: 'chinese' },
+{ title_zh: '庚子教會華人流血史', title_orig: '', author: 'unknown', era: '1900 年庚子教難紀事', place: 'China', language: 'Chinese' },
+{ title_zh: '教務紀略', title_orig: '', author: '李剛己 輯', era: '1905 年', place: 'China', language: 'Chinese' },
+{ title_zh: '明末奉使羅馬教廷耶穌會士卜彌格傳', title_orig: 'Le P. Michel Boym, jésuite polonais', author: '沙不烈（Robert Chabrié）著；馮承鈞 譯', era: '1933 年（原著）', place: 'China', language: 'Chinese (translation)' },
+{ title_zh: '景教碑考', title_orig: '', author: '馮承鈞', era: '民國（20 世紀前半）', place: 'China', language: 'Chinese' },
+{ title_zh: '聖五傷方濟各行實', title_orig: 'Den hellige Frans af Assisi', author: '約翰內斯‧約根森（Johannes Jørgensen）著；何芳理 譯', era: '1907 年（原著）／1949 年（漢譯）', place: 'Denmark (original); Hong Kong (Chinese edition)', language: 'Chinese translation' },
+{ title_zh: '聖女小德蘭回憶錄', title_orig: 'Histoire d\'une âme', author: '里修的德蘭（聖女小德蘭）；張秀亞 譯', era: '1895–1897 年', place: 'France (original); Taiwan/China (translation)', language: 'Chinese translation from French original' },
+{ title_zh: '聖女瑪德肋納素非拔拉傳', title_orig: '', author: '耶穌聖心末僕 譯', era: '民國（土山灣印書館本）', place: 'France (original subject); Shanghai (publication)', language: 'Chinese' },
+{ title_zh: '聖董文學神父傳', title_orig: '', author: '佚名（公教出版社本）', era: '民國', place: 'unknown', language: 'chinese' },
+{ title_zh: '超越東西方', title_orig: 'Beyond East and West', author: '吳經熊', era: '1951 年', place: 'Hawaii (completed); New York (first published)', language: 'English (original); Chinese translation' },
+{ title_zh: '馬相伯集', title_orig: '', author: '馬相伯', era: '1840–1939', place: 'China', language: 'Chinese' },
+// 書信藏
+{ title_zh: '1987-論《社會事務關懷》通諭', title_orig: '1987-論《社會事務關懷》通諭', author: '', era: 'modern', place: '', language: 'chinese' },
+{ title_zh: '世界和平日文告集', title_orig: 'Messaggi per la Giornata Mondiale della Pace', author: '教宗若望保祿二世', era: '1979–2005 年', place: 'Vatican', language: 'Chinese (translation)' },
+{ title_zh: '主的日子', title_orig: 'Dies Domini', author: '教宗若望保祿二世', era: '1998 年', place: 'Vatican', language: 'Chinese (translation)' },
+{ title_zh: '主，請同我們一起住下罷', title_orig: 'Mane Nobiscum Domine', author: '教宗若望保祿二世', era: '2004 年', place: 'Vatican', language: 'Chinese (translation)' },
+{ title_zh: '奉獻生活勸諭', title_orig: 'Vita Consecrata', author: '教宗若望保祿二世', era: '1996 年', place: 'Vatican', language: 'Chinese translation' },
+{ title_zh: '希望的證人：教宗若望保祿二世退省神操', title_orig: '希望的證人：教宗若望保祿二世退省神操', author: '阮文順樞機主教', era: 'modern', place: 'unknown', language: 'Chinese' },
+{ title_zh: '師主篇及其默想', title_orig: '師主篇及其默想', author: '', era: 'modern', place: 'unknown', language: 'Chinese' },
+{ title_zh: '我要給你們牧者勸諭', title_orig: 'Pastores Dabo Vobis', author: '教宗若望保祿二世', era: '1992 年', place: '梵蒂岡', language: 'chinese' },
+{ title_zh: '教會在亞洲勸諭', title_orig: 'Ecclesia in Asia', author: '教宗若望保祿二世', era: '1999 年', place: 'Vatican', language: 'Chinese (translation)' },
+{ title_zh: '教會活於感恩祭通諭', title_orig: 'Ecclesia de Eucharistia', author: '教宗若望保祿二世', era: '2003 年', place: 'Vatican', language: 'Chinese (translation)' },
+{ title_zh: '敞開心靈：12堂課學會歸心祈禱', title_orig: '敞開心靈：12堂課學會歸心祈禱', author: '', era: 'modern', place: 'unknown', language: 'zh' },
+{ title_zh: '獄中書簡(朋霍費爾)', title_orig: '獄中書簡(朋霍費爾)', author: '迪特里希·朋霍費爾', era: 'modern', place: '德國', language: '德文' },
+{ title_zh: '禮物與奧蹟', title_orig: 'Dono e Mistero', author: '教宗若望保祿二世', era: '1996 年', place: 'Vatican', language: 'Chinese (translation)' },
+{ title_zh: '第三個千年將臨之際牧函', title_orig: 'Tertio Millennio Adveniente', author: '教宗若望保祿二世', era: '1994 年', place: 'unknown', language: 'chinese' },
+{ title_zh: '致全球司鐸書（1995）', title_orig: '', author: '教宗若望保祿二世', era: '1995 年', place: 'Vatican', language: 'Chinese' },
+{ title_zh: '論天主仁慈自動諭牧函', title_orig: 'Misericordia Dei', author: '教宗若望保祿二世', era: '2002 年', place: 'Taiwan', language: 'Chinese (Traditional)' },
+{ title_zh: '點滴 日常生活中的神操', title_orig: '點滴 日常生活中的神操', author: '嘉露·安·史密夫 尤真·馬斯', era: 'modern', place: 'unknown', language: 'Chinese' },
+// 宣道藏
+{ title_zh: '內心平安之道', title_orig: 'La paix intérieure', author: '雅克‧菲利普（Jacques Philippe）', era: 'modern', place: 'unknown', language: 'chinese' },
+{ title_zh: '基督之友', title_orig: '', author: '文助華', era: '現代', place: 'China', language: 'Chinese' },
+{ title_zh: '心語融入靜默', title_orig: 'Worte ins Schweigen', author: '卡爾‧拉納（Karl Rahner）', era: '1938 年', place: 'Germany', language: 'German (translated to Chinese)' },
+{ title_zh: '慕道者指南', title_orig: '', author: '李善修', era: '現代', place: 'unknown', language: 'chinese' },
+{ title_zh: '沒有人是一座孤島', title_orig: 'No Man Is an Island', author: '托馬斯‧牟敦（Thomas Merton）', era: '1955 年', place: 'United States', language: 'Chinese (Traditional)' },
+{ title_zh: '為什麼要告解', title_orig: 'Perché la confessione?', author: '布魯諾‧福爾泰（Bruno Forte）', era: 'modern', place: 'Italy', language: 'Chinese (Traditional)' },
+{ title_zh: '與主接觸', title_orig: 'Contact with God', author: '戴邁樂（Anthony de Mello）', era: 'modern', place: 'India', language: 'Chinese (translation)' },
+{ title_zh: '青蛙的禱聲', title_orig: 'The Prayer of the Frog', author: '戴邁樂（Anthony de Mello）', era: '1988 年', place: 'India', language: 'Chinese (Traditional)' },

@@ -53,10 +53,27 @@ def ses() -> requests.Session:
     return s
 
 
+PAGES = Path("c:/tmp/zlz_pages")
+
+
+def _cache_page(item_url: str, html: str) -> None:
+    """順手把條目頁（含「圖書簡介」）存成去標籤純文字，供之後離線補 record，不必再打站方。"""
+    try:
+        PAGES.mkdir(exist_ok=True)
+        t = re.sub(r"(?s)<script.*?</script>|<style.*?</style>", "", html)
+        t = re.sub(r"<[^>]+>", "\n", t)
+        t = re.sub(r"\n\s*\n+", "\n", t)
+        rid = re.search(r"/(\d+)\.html", item_url).group(1)
+        (PAGES / f"{rid}.txt").write_text(t, encoding="utf-8")
+    except Exception:  # noqa: BLE001 — 快取失敗不影響下載
+        pass
+
+
 def resolve(s: requests.Session, item_url: str) -> tuple[str, str]:
     """條目頁 → (最終下載網址, 伺服器給的檔名)。"""
     r = with_retry(lambda: s.get(item_url, timeout=60), "條目頁")
     r.encoding = r.apparent_encoding or "utf-8"
+    _cache_page(item_url, r.text)
     m = DOWNSOFT_RX.search(r.text)
     if not m:
         raise RuntimeError("條目頁找不到下載連結")
@@ -88,6 +105,9 @@ def fetch_one(s: requests.Session, item: dict, dest: Path, led: dict, dry: bool)
     title = to_traditional(item.get("title") or Path(srvname).stem)
     ext = (Path(srvname).suffix or ".pdf").lower()
     out = dest / BAD_FS.sub("_", f"{title}{ext}")[:190]
+    # 不同條目譯名相同時，不可共用一個檔名（會被當成「已存在」而靜默漏收）
+    if any(v["name"] == out.name for u, v in led.items() if u != url):
+        out = out.with_name(f"{out.stem}_{item.get('id', 'x')}{out.suffix}")
     if out.exists() and out.stat().st_size > 4096:
         print(f"  ✓ 已存在，跳過：{out.name}")
         led[url] = {"name": out.name, "size": out.stat().st_size}

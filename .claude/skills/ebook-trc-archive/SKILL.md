@@ -1,6 +1,6 @@
 ---
 name: ebook-trc-archive
-description: 把中文基督宗教檔案站系統性收進本專案 —— **兩邊平行收**：①檔案本身入電子圖書館（Drive 正本→轉錄→reader 可讀）②書目條目入《基督教大藏經》(時代×藏×正/外)。目前兩個來源：thereformedcatholic.org（TRC，改革宗／新教，已收 2,761 部）與 ziliaozhan.win（天主教在線，已收 71 部）。含站點 API、逐檔限速下載規矩、簡→繁轉換、書目比對與大藏經分類器的接法。Use when 要抓／續抓任一站的某個分類、要把書目歸入大藏經、要處理巢狀作品集結構、要新增第三個來源站，或使用者提到「改革宗那個下載站」「thereformedcatholic」「天主教在線」「資料站」。
+description: 把中文基督宗教檔案站系統性收進本專案 —— **兩邊平行收**：①檔案本身入電子圖書館（Drive 正本→轉錄→reader 可讀）②書目條目入《基督教大藏經》(時代×藏×正/外)。目前兩個來源：thereformedcatholic.org（TRC，改革宗／新教，已收 2,761 部）與 ziliaozhan.win（天主教在線，2026-10-02 全站收錄 1,878／1,957 部）。含站點 API、逐檔限速下載規矩、簡→繁轉換、書目比對與大藏經分類器的接法。Use when 要抓／續抓任一站的某個分類、要把書目歸入大藏經、要處理巢狀作品集結構、要新增第三個來源站，或使用者提到「改革宗那個下載站」「thereformedcatholic」「天主教在線」「資料站」。
 ---
 
 # 中文基督宗教檔案站收錄
@@ -8,21 +8,45 @@ description: 把中文基督宗教檔案站系統性收進本專案 —— **兩
 > **授權**：使用者已就 TRC（2026-08-24）與 ziliaozhan（2026-08-29）分別取得站方授權作**私人收藏**。新增第三個站前先確認授權。
 > **🚨 一次一個檔、檔與檔之間留間隔，絕不並發、絕不整批抓。** 使用者明確要求。
 
-## 現況（2026-08-30）
+## 現況（2026-10-02）
 
 | | 電子圖書館 | 大藏經候選 |
 |---|---:|---:|
 | TRC 改革宗檔案站 | **2,761 部** | 56 部 |
-| 天主教在線 ziliaozhan | **71 部** | 115 部 |
-| 合計 | **2,832 部** | 審定後 **88 部** |
+| 天主教在線 ziliaozhan | **1,878 部下載、1,735+ 筆 ebooks**（全站 1,957；79 筆站方 404／錯誤頁收不到） | 已下載中 1,860 筆有分類：keep 147／待審 220／剔除 1,493；審定後實收 **107 部**（待審）|
+| 合計 | **4,639 部** | 審定後 88＋107 部（兩份待審提案）|
 
-待審提案：`data/dazangjing/source-catalog/PROPOSAL_2026-08-30_trc-zlz.md`（**尚未入庫**）。
+待審提案：`PROPOSAL_2026-08-30_trc-zlz.md`（八月，88 部）與天主教在線全站版 `PROPOSAL_2026-10-02_zlz.md`（107 部，另有 36 部尚無人工判定、6 部疑似重複；皆**尚未入庫**）同在 `data/dazangjing/source-catalog/`。
 分類 ledger：同目錄 `classified-records-trc.jsonl` / `-zlz.jsonl`。
 人工審定表：同目錄 `adjudication-2026-08-30.json`（由 `dazangjing_build_adjudication.py` 產生）。
 
 🚨 **檔名要帶來源**。`PROPOSAL_2026-08-30.md` 已被另一個 session 用掉（那是跨全部
 ledger 的 310 部提案），本站這批一律寫 `_trc-zlz` 後綴。2026-08-30 曾整份覆蓋掉別人
 那份，靠 `git checkout` 才救回。
+
+---
+
+## 天主教在線全站收錄（2026-10-01～02）
+
+流程（全部序列、8 秒間隔、帳本續跑）：`zlz_catalog.py`（普查 1,957）→ `zlz_loop.py`（每輪 40 檔：
+`zlz_fetch.py` → `zlz_ingest.py --run`）→ Drive／ebooks。背景啟動用 PowerShell `Start-Process -WindowStyle Hidden`
+（python 完整路徑、`-u`），進度看 `c:/tmp/zlz_downloaded.json` 筆數；續跑＝再執行同一指令。失敗清單 `c:/tmp/zlz_failed.json`。
+- `zlz_ingest.py`：帳本 name→網址→站方分類，分流 stage 後呼叫 `trc_ingest.py --min-mb 0.02 --run --register`。
+  落點：wenxian／shenxue／shengjing／yanjiu／lingxiu／qita→神學/天主教文獻、zhexue→哲學、lishi／zhuanji→歷史學、cidian→神學/聖經與神學辭典。
+- 條目頁順手快取 `c:/tmp/zlz_pages/{id}.txt`（去標籤純文字，含「图书简介：…下载地址」），之後離線補 record，不必再打站方。
+- 80 筆首輪失敗重試：79 筆仍失敗（77 筆 `dl.ziliaozhan.win` 回 404、1 筆回 HTML、1 筆中介頁無 doaction），
+  清單與原因在 `data/dazangjing/source-catalog/zlz-unavailable-2026-10-02.json`——**站方檔案本身不在，重試無用**。
+
+### 🚨 這輪新踩的坑
+1. **站內不同條目譯名相同會共用檔名**，`fetch_one` 見檔已存在就當「已下載」→靜默漏收。已改：檔名撞到帳本內別條目就加 `_{id}`。
+2. **ingest 目的檔已存在就留在 stage 殘留、每輪重登 → 反覆 409**。實測 409 全是同一本（《中古文化與士林哲學》，與 Drive 既有檔位元組數、頁數皆同＝真重複），已移 `_stage/zhexue/_dup/`。判斷 409 先比大小＋頁數。
+3. **簡轉繁不是自動的**：`parse_worker` 不轉繁，`standardize_pdf_lite` 與 `simp_to_trad_batch.py` 才轉，而日排程（run_ocr_daily.bat）只跑 parse（`--limit 150`／次），所以新書要等 parse 後手動跑
+   `simp_to_trad_batch.py --id <ebook_id>`（對 chunks 內文，冪等）。書名／作者欄在 ingest 時已轉繁（`to_traditional`）。已轉 36 本已 parse 者，抽驗 10 本殘留簡體指示字 0。
+   🚨 **`--run-all` 會動全庫**（2026-10-02 掃描有 526 本簡體），要限本批就逐 id 跑。
+4. 子 process 的 stdout 重導到檔時是區塊緩衝，log 看起來「沒動」——以帳本筆數為準，或加 `python -u`。
+5. 停自己啟動的背景 python（Stop-Process）會被權限分類器擋；設計成可自然跑完、靠帳本續跑，不要依賴中途停止。
+6. 10-02 補分類 127 筆（新增條目＋先前 engine=none）走 gemini→nvidia，約 25 秒／筆；45 筆 engine=none 殘留（18 筆為已下載者），下輪 `once` 會自動重試。
+   record 的 key 含 title／author，加 `note` 不改 key 會被視為已分類；要補簡介重分類需改 title（繁體化）或換 ledger。八月 1,553 筆是純書名分類（無簡介），簡介快取已備（`c:/tmp/zlz_pages`，會隨 tmp 清掉，要用先備份）。
 
 ---
 
