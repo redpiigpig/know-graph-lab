@@ -104,6 +104,19 @@ commit 只 add 自己改的檔，push 後確認進遠端。一律用繁體中文
   「有對照欄」52 本 → `number_multilingual.py --apply` 50 本寫回、2 本略過（民主妙法已有段號、Gregory of Nyssa 守恆失敗）。
   `output/restructure/unrestructured.tsv` 尚未重產，裡面這 179 本的狀態是舊的。剩：稽核旗標 212、章名不連續 179、章內段落過少 79…（重 OCR／reflow 分流）。
 
+## 10-02 晚上（接手再看這段）
+
+- **A 型註腳缺口的真相**：盤點的 A 型 48,215 則裡，約 39,000 則在 **38 本中英對照書**（CCEL 的 NPNF／ANF 教父集中譯）。
+  量了欄位健康度（`output/relink/bi_health.py`）：中英字數比多在 0.02–0.2（完整譯本約 0.3–0.4）＝**中文只譯了 5–30%**，
+  同列段首節號一致率多在 20–60%＝**還有錯位**（例：2accee20 塊 40 英文是詩篇第 8 篇、中文是第 9 篇；補段號前就這樣，不是 number_multilingual 造成）。
+  → 這批不要把英文註號搬到中文（會放進不相干的段落）；要修得補譯＋重對齊，屬 /fathers 三欄那類工程，**等使用者定**。
+  「註文堆在別頁按號碼搬回」精確可配只有 1,531 則（`output/relink/orphan_probe2.py`），且多在上面那 38 本，未做。
+- **「段落沒切開」的 538 本 PDF 全是無文字層掃描**（reflow 都回 →0），只能重 OCR。已排進 `scripts/logs/reocr_ledger.json`
+  （why＝night3，神學／宗教學／世界宗教 478 本排前），由 `output/restructure/night3_relay.py`（PID 見 night3_relay.log）
+  等 GPU 空出來就跑 `requeue_reocr.py run --from-ledger --engine mineru`；20:12 起另一個 session 的 `mineru_ocr.py queue --limit 1000` 佔著 GPU，所以會排在它後面。
+  換上後由每日 postprocess（10／14／18 點，每次 40 本）自動重建一章一頁。🚨 **明早抽查**：MinerU 會丟置中獨立成行的「一二三十」節號
+  （記憶 feedback_mineru_drops_stroke_numerals），抽幾本看節號與章名有沒有少。
+
 ## 坑（這幾天實際踩過）
 - 🚨 **(N) 起頭不是註腳**：只有分隔線後才是註釋（見上）。改結構的規則一定抽樣用眼睛看。
 - 🚨 **守恆量尺會誤報**：HTML 表格標籤字母、`<[^>]+>` 跨塊誤刪、段號在 `(1)` 前導致行首 (N) 沒被剔除——三次都是量尺壞不是真丟字；
