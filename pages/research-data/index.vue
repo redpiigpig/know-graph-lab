@@ -51,6 +51,16 @@
           <span class="tool-badge bg-rose-50 text-rose-600">4 組</span>
         </NuxtLink>
 
+        <!-- 史學五百篇（史學史與名著／典範轉換／全球史／大歷史／環境史） -->
+        <NuxtLink to="/research-data/top-papers/historiography" class="tool-card group border-amber-100 hover:border-amber-300 hover:shadow-amber-100">
+          <div class="tool-icon bg-amber-50 text-amber-600">🧭</div>
+          <div class="flex-1">
+            <h2 class="tool-title">史學五百篇</h2>
+            <p class="tool-desc">近代以來最有影響力的史學研究：史學史與名著、典範轉換、全球史、大歷史、環境史五組，依研究史主題排列並標館內有無全文</p>
+          </div>
+          <span class="tool-badge bg-amber-50 text-amber-600">5 組</span>
+        </NuxtLink>
+
         <!-- 台灣衛理公會研究資料 -->
         <NuxtLink to="/research-data/taiwan-methodist" class="tool-card group border-teal-100 hover:border-teal-300 hover:shadow-teal-100">
           <div class="tool-icon bg-teal-50 text-teal-600">⛪</div>

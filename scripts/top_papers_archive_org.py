@@ -159,7 +159,10 @@ def main() -> int:
         return 0
 
     env = ao.load_env()
-    sub = data["title"]
+    # Drive 目的地：config 可指定 drive_category／drive_sub（史學放 歷史學/史學理論/…），預設照聖經首例
+    cfg = json.loads((ROOT / "data" / "research-data" / args.field / "top-papers.config.json").read_text(encoding="utf-8"))
+    category = cfg.get("drive_category", CATEGORY)
+    sub = cfg.get("drive_sub", data["title"])
     done_f = OUT / f"{args.field}-archive-done.json"
     done = json.loads(done_f.read_text(encoding="utf-8")) if done_f.exists() else {}
     new_ids = []
@@ -181,10 +184,10 @@ def main() -> int:
         name, ext, size = pick
         print(f"   選檔 {name}  {size/1024/1024:.1f} MB")
         safe = re.sub(r'[\\/:*?"<>|]+', "／", main_title(it["title"]))[:80]
-        target = ao.DRIVE_ROOT / CATEGORY / sub / f"{it['author'][:40]}，{safe}{ext}"
+        target = ao.DRIVE_ROOT / category / sub / f"{it['author'][:40]}，{safe}{ext}"
         if not ao.download_resumable(ao.DL.format(ident=p["ident"], name=urllib.parse.quote(name)), target, size):
             fail += 1; continue
-        row = {"title": it["title"], "author": it["author"], "category": CATEGORY, "sub": sub}
+        row = {"title": it["title"], "author": it["author"], "category": category, "sub": sub}
         eid = ao.insert_row(env, row, ext, target)
         done[k] = {"ident": p["ident"], "path": str(target), "ebook_id": eid}
         done_f.write_text(json.dumps(done, ensure_ascii=False, indent=1), encoding="utf-8")

@@ -89,6 +89,47 @@ pages/research-data/index.vue                        要手動加一張卡
 * 要加第五組：config 加一個 group、新開一個 jsonl 即可。
 * 要換領域：從步驟 1 起，不要動腳本與頁面；若真的要改頁面，改的是通用版，所有領域一起變。
 
+## 第二條線：引用數前 N 篇期刊論文（2026-10-02 起，每個領域都要做）
+
+使用者 2026-10-02：「我要你下載的是**引用前五百的論文**，不只是書目。」所以一個領域要交**兩份**：
+① 上面那份研究史策展清單（書與論文並收，人選）；② 一份**引用數排行的期刊論文**清單，並把全文抓下來。
+
+```
+data/research-data/<field>/top-cited.config.json     pools：每組指定期刊（sources）＋選配 concept／search、配額
+scripts/top_cited_openalex.py <field>                抓清單 → public/content/research-data/<field>/top-cited.json
+                                                     ＋ output/top-papers/<field>-top-cited-doi.json（校內用）
+scripts/top_cited_openalex.py <field> --fetch DIR    下載開放取用 PDF（依序試各收錄位置的 pdf_url，再試 oa_url）
+```
+
+🚨 三個踩過的坑（史學首例）：
+1. **只用 OpenAlex concept 會被自動標籤帶偏**：「深度歷史」抓到天文學巡天目錄、「環境史」抓到動物園生物學，
+   而 Chakrabarty〈歷史的氣候〉、Cronon〈荒野的麻煩〉這種經典反而漏掉。→ **先鎖領域專門期刊**（整本刊都算），
+   綜合期刊（AHR、P&P、CSSH…）再加 concept 限縮。期刊 ID 用 `api.openalex.org/sources?search=刊名` 查。
+2. **type=article 混著大量書評**（JSTOR 給書評發 DOI，掛的是那本書的引用數，例如 *Sweetness and Power* 書評 2,379 次）。
+   濾法：頁數 ≥ 5，或頁數不明但有摘要；標題以 Review 開頭的丟掉。仍會漏網少數，交作者比對時再刪。
+3. **OA 的 `oa_url` 常是落地頁不是 PDF**（首輪 97 篇只抓到 40）。改成先試各 location 的 `pdf_url`。
+   抓不到的留給 `doi_browser_fetch.mjs`（但校方多數西文期刊沒訂，見下節）。
+
+### 論文資料庫與全文來源一覽（新領域照這張表選）
+
+| 來源 | 用途 | 介面 | 實測狀態 |
+|---|---|---|---|
+| **OpenAlex** | 引用數排行、期刊／概念篩選、OA 連結 | 免費 REST，免金鑰，帶 `mailto` 進禮貌池 | ✅ 2026-10-02 主力（`top_cited_openalex.py`） |
+| **Crossref** | 題名→DOI、卷期頁碼核對 | 免費 REST `query.bibliographic` | ✅ `top_papers_build.py` 與補 DOI 都在用；常見題名會撞同名他書，門檻要高 |
+| **Unpaywall** | 以 DOI 查合法 OA 版本 | 免費 REST，需 email 參數 | ✅ 聖經首例實測（112 DOI 僅 4 筆 OA）；OpenAlex 已內含同類資料，通常不必另查 |
+| **archive.org** | 舊書與公有領域專著整本下載 | advancedsearch API | ✅ `top_papers_archive_org.py`；現代書多為借閱制，跳過 |
+| **z-library** | 專著 | 每日排程獵表 | ✅ 免費帳號每帳號每日 10 本，跟所有獵表分額度 |
+| Semantic Scholar | 引用數、「有影響力的引用」、相關論文 | 免費 API（有速率限制） | 未實測；可當 OpenAlex 的交叉驗證 |
+| CORE | OA 全文聚合（機構典藏） | 免費 API 需金鑰 | 未實測；OpenAlex 找不到 PDF 時的第二站 |
+| DOAJ | 開放取用期刊名錄 | 免費 API | repo 已有 `data/research-data/doaj-journals.json` |
+| Persée／OpenEdition／Cairn | 法語期刊（Persée 回溯期刊全文免費） | 網站 | 未實測；法語領域（年鑑學派等）優先查 |
+| J-STAGE／CiNii | 日文期刊與論文 | J-STAGE 有 API | 已有 `jstage_ibk_ledger`（佛教學）可照抄 |
+| 華藝 Airiti | 臺灣中文期刊 | 校內手動下載 | 見 [[research-data-airiti]]；不排程 |
+| JSTOR／SAGE／OUP／T&F | 西文期刊全文 | 對腳本 403，校方多數沒訂 | ❌ 別寫自動下載 |
+| Google Scholar | 引用數 | 無 API、會封鎖 | ❌ 不用 |
+
+首例（史學，`historiography`）：策展 486 筆（Crossref 核到 135、館內已有 52）；引用排行 493 篇（OA 97 篇）。
+
 ## 清單之後怎麼「拿到」（2026-09-26 實測）
 
 使用者想在校內把五百篇一次下載——**走不通**，三條證據：Unpaywall 112 個 DOI 只有 4 筆 OA（其中兩筆是目次／前言）；
