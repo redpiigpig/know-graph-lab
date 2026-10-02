@@ -1205,6 +1205,10 @@ B 線＝前人概論怎麼切（比較表）。一次派一個 Sonnet。
 - 第八章備料完成（`sources_ch08.md`，65 筆；必備缺 23）；新增 13 本進獵表（Johnson、Yarnold、金口約翰《洗禮講道》、慈運理 LCC 24、
   Gerrish、Jeremias、厄弗冷《樂園頌》、Osborne、Uzukwu、Chupungco、倫巴都《語錄》卷四、巴克萊《Apology》、救世軍《Handbook of Doctrine》）。
   東正教《社會理念綱要》官方英譯網上公開；《教會社會訓導彙編》館藏掃描檔文字層是亂碼；香港聖神修院系列掃描品質差。
+- 天主教在線收尾完成（2026-10-02）：全站 1,878／1,957，79 筆站方無檔；《天主教教理》中譯等要理書已收，從獵表撤除；
+  東正教專書收了幾本（福音經、神學導論、東正教史），Schmemann 中譯、《協同書》站上沒有。🚨 內文簡轉繁不會自動跑：
+  排程只 parse，`simp_to_trad_batch.py --id` 要逐本補（目前只轉了已 parse 的 34 本）。大藏經提案
+  `PROPOSAL_2026-10-02_zlz.md` 實收 107 部，36 部待人工判。
 - 補書不只 z-lib；先查站上既有（梵二 SC／DV 中拉英在 `data/creeds/ecumenical-councils/vatican-ii/`、
   奧斯堡信條與路德小教理在 `data/creeds/protestant-confessions/`、通諭中譯在 `data/encyclicals/`），
   再查 TRC／天主教在線目錄。館藏確認沒有：《天主教教理》全本中譯、《協同書》中譯、Schmemann、Bria、Brown 第二冊。

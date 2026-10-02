@@ -21,7 +21,6 @@
 {"key": "named-brown-john-xiii-xxi", "query": "The Gospel according to John XIII-XXI Raymond Brown", "expect": "Gospel According to John", "who": "Raymond E. Brown", "lang": "orig", "source": "user-named", "zh": "Brown《The Gospel according to John XIII–XXI》Anchor Bible 29A（約 14:6；館藏只有第一冊）"}
 {"key": "named-lin-hongxin-christian-thought", "query": "基督宗教思想史 林鴻信", "expect": "基督宗教思想史", "who": "林鴻信", "lang": "zh", "source": "user-named", "zh": "林鴻信《基督宗教思想史》上下（概論比較）"}
 {"key": "named-zhuo-xinping-christianity-reader", "query": "基督教知识读本 卓新平", "expect": "基督教知识读本", "who": "卓新平", "lang": "zh", "source": "user-named", "zh": "卓新平《基督教知識讀本》（概論比較）"}
-{"key": "named-catechism-catholic-church-zh", "query": "天主教教理 中文", "expect": "天主教教理", "who": "天主教", "lang": "zh", "source": "user-named", "zh": "《天主教教理》全本中譯（台灣或香港版）"}
 {"key": "named-book-of-concord-zh", "query": "协同书 路德宗 信条", "expect": "协同书", "who": "路德宗", "lang": "zh", "source": "user-named", "zh": "《協同書》中譯（路德宗信條集）"}
 {"key": "named-pliny-letters-loeb-ii", "query": "Pliny Letters Panegyricus Loeb volume II", "expect": "Letters", "who": "Pliny the Younger", "lang": "orig", "source": "user-named", "zh": "小普林尼《書信》Loeb 卷二（10.96 論基督徒聚會；第四章）"}
 {"key": "named-luthers-works-53-liturgy", "query": "Luther's Works volume 53 Liturgy and Hymns", "expect": "Liturgy and Hymns", "who": "Martin Luther", "lang": "orig", "source": "user-named", "zh": "《路德全集》英譯第 53 卷 Liturgy and Hymns（德語彌撒；第四章）"}
