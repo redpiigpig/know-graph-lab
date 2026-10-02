@@ -18,6 +18,7 @@ from __future__ import annotations
 
 import argparse
 import glob
+import hashlib
 import json
 import re
 import sys
@@ -87,7 +88,10 @@ def load_pages() -> dict[int, dict]:
             body = "\n".join(b.replace("\n", "") for b in body.split("\n\n"))
             pages[c["page_number"]] = {"header": " ".join(c.get("headers") or []),
                                        "body": body, "engine": "mineru"}
-    for f in glob.glob("c:/tmp/evo/gem/*.json"):
+    # gem1＝缺頁／批次頁數不符的頁改用單頁重跑 Gemini（gem1.py），同樣優先於 MinerU，
+    # 且優先於 gem 批次檔（單頁不會有跨頁對錯位的問題）
+    files = sorted(glob.glob("c:/tmp/evo/gem/*.json")) + sorted(glob.glob("c:/tmp/evo/gem1/*.json"))
+    for f in files:
         d = json.loads(open(f, encoding="utf-8").read())
         s, e = d["start"], d["end"]
         # 🚨 不信模型回報的 page：它常填印刷頁碼，被 ocr_pdf 換算到隔壁幾頁去
@@ -103,13 +107,30 @@ def load_pages() -> dict[int, dict]:
     return pages
 
 
+# OCR 偶爾吐出的簡體字（逐字查過全書：真簡體只有這幾個；群／里／征／占／台 等是臺灣正體，
+# 不可交給 opencc 一律轉，會把「里」轉成「裡」、把專名弄壞）
+SIMP_FIX = {"癫": "癲", "奥吉": "奧吉", "庄稼": "莊稼", "虱子": "蝨子", "夸求": "誇求", "仆倒": "僕倒"}
+
+
+def fix_simplified(p: str) -> str:
+    for a, b in SIMP_FIX.items():
+        p = p.replace(a, b)
+    return p
+
+
 def page_paras(body: str) -> list[str]:
     out = []
     for ln in body.split("\n"):
         ln = ln.strip()
-        if not ln or ln.startswith("[^") or ln.startswith("<table") or re.match(r"^\d{1,3}$", ln):
+        if not ln or ln.startswith("[^") or ln.startswith("<table") or re.match(r"^\d{1,3}$", ln)                 or re.match(r"^\^\d{1,3}\s*[:：]", ln):      # 註釋行（有的頁寫成 ^10: 沒有方括號）
             continue
+        ln = re.sub(r"\s*\^\d{1,3}\s*[:：].*$", "", ln)               # 被 unwrap 接到正文行尾的註釋
+        ln = re.sub(r"\s*\^\d{1,3}(?!\d)", "", ln)           # 正文註號另一種寫法 ^10
         ln = re.sub(r"\[\^[^\]]*\]", "", ln)           # 正文註號
+        if "【眉" in ln or "【頁" in ln:                 # 頁眉／頁碼標記混進正文
+            ln = re.sub(r"【頁[^】]*】|【眉[^】]*】\d*", "", ln).strip()
+            if not ln or ln.isascii() or len(ln) < 6:      # 剩下的只是英文書眉殘片
+                continue
         out.append(ln)
     return out
 
@@ -118,7 +139,7 @@ def is_heading(p: str) -> bool:
     return len(p) <= 22 and not _PUNCT.search(p[:-1] if p.endswith("？") else p) and not p.isascii()
 
 
-def build(pages: dict[int, dict]):
+def build(pages: dict[int, dict], proof: dict | None = None):
     starts = [(no, title, pr + OFFSET) for no, title, pr in TOC]
     chapters = []
     for i, (no, title, s) in enumerate(starts):
@@ -132,17 +153,22 @@ def build(pages: dict[int, dict]):
             if not pg:
                 missing.append(pdf)
                 continue
+            if sum(1 for c in pg["body"] if "一" <= c <= "鿿") < 0.1 * len(pg["body"]):
+                continue            # 純英文頁（末頁是 Anna's Archive 的書目後設資料，不是書的內容）
             ps = page_paras(pg["body"])
             if pdf == s:     # 章首頁：丟掉章名、英文章名、「第N章」
                 core = re.sub(r"^第\d+章　", "", title).split("　")[-1]
                 ps = [p for p in ps if not (p.isascii() or re.fullmatch(r"第\s*\d+\s*章", p)
                                             or p.replace(" ", "") in (core, title.replace("　", "")))]
             for j, p in enumerate(ps):
-                if j == 0 and paras and not paras[-1].endswith(_END) and not is_heading(paras[-1]) \
-                        and not is_heading(p):
-                    paras[-1] += p          # 跨頁續段
+                # 跨頁續段；同頁內上一段沒收尾的假斷段（Gemini 偶爾在一行中間斷開）也接回去
+                if paras and not paras[-1].endswith(_END + ("：",)) and not is_heading(paras[-1])                         and not is_heading(p) and (j == 0 or len(paras[-1]) >= 8):
+                    paras[-1] += p
                 else:
                     paras.append(p)
+        paras = [fix_simplified(p) for p in paras]
+        if proof:
+            paras = [proof.get(hashlib.sha1(p.encode("utf-8")).hexdigest(), p) for p in paras]
         chapters.append({"no": no, "title": title, "paras": paras, "missing": missing})
     return chapters
 
@@ -171,7 +197,12 @@ def main() -> int:
     eng = {k: v["engine"] for k, v in pages.items()}
     print(f"有內容的頁 {len(pages)}（gemini {sum(1 for v in eng.values() if v == 'gemini')}、"
           f"mineru {sum(1 for v in eng.values() if v == 'mineru')}）")
-    chs = build(pages)
+    proof = {}
+    pf = Path(__file__).resolve().parent.parent / "output" / "god-evolution" / "proofread.json"
+    if pf.exists():     # god_evolution_proofread.py 的校對檔：{sha1(原段): 校對後}
+        proof = json.loads(pf.read_text(encoding="utf-8"))
+        print(f"校對檔 {len(proof)} 段")
+    chs = build(pages, proof)
     for c in chs:
         n = sum(len(p) for p in c["paras"])
         print(f"  {c['no']} {c['title'][:22]:<24} {len(c['paras']):>4} 段 {n:>7,} 字"

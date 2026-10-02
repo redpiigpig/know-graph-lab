@@ -305,6 +305,25 @@ z-lib/ drop folder 的處理：
   手動換帳號前先把帳本裡該 key 的 `download-failed` 行刪掉。
 - 百 MB 級掃描本可用 `ZLIB_DL_TIMEOUT_MS=180000` 拉長等待（預設 60 秒）。
 
+### 《神的演化》朗讀檔校對（2026-10-02 第二版）
+
+資料流：`god_evolution_reocr.py`（Gemini 單頁重跑 → `c:/tmp/evo/gem1/`）→ `god_evolution_proofread.py`
+（逐段 NVIDIA 校對 → `output/god-evolution/proofread.json`，{sha1(原段): 校對後}）→ `god_evolution_read_aloud.py --out`
+（讀校正檔套用）。舊版留在 `神的演化（分章朗讀）_舊版_20261001`。
+
+- 🚨 **Gemini 缺頁不是缺 OCR，是批次被丟**：`load_pages` 在回傳頁數≠批次頁數時整批不用（041／051／346 三批），
+  那些頁就掉到 MinerU。MinerU 吃標點（約 3.4% vs Gemini 8.4%）也吃 `」`；改單頁重跑最穩。
+- 🚨 **Gemini 3.6-flash 日額度約 20 次／key**：119 頁 MinerU 頁只補到 25 頁就全 429／404。額度恢復後同一行
+  `python -X utf8 scripts/god_evolution_reocr.py` 接著補（已有檔跳過），補完重跑 proofread（校正檔以段雜湊為鍵，
+  新文字自動重校）再 `read_aloud --out`。剩 95 頁：226–300 多數、191–195、211–220、346–350 等。
+- 連 Gemini 頁也缺標點（逗號句號掉在行尾），所以全書都要校對；NVIDIA 約 20 秒／1400 字，全書約 190 次呼叫。
+- **閘**：段數與批次一致（不符就單段重送）、字數差 ≤5%、標點以外的字相似度 ≥95%、成對括號只增不減
+  （曾被刪掉 `」`）、不得含回覆用語／`<think>`／`@@@`／`^`／`【`。🚨 分隔符 `@@@` 曾外洩進 66 段，要在閘裡擋。
+- 規則層：頁眉 `【眉…】` 殘片、`^10` 無方括號註號、`^10: 註文` 被 unwrap 接到正文行尾、同頁假斷段（上一段沒收尾就接）、
+  純英文頁（末頁 526 是 Anna's Archive 書目後設資料，舊版把它當鳴謝收進去，鳴謝 4,633→1,572 字）。
+- 簡體字實測只有十幾個（癫／奥吉／庄稼／虱子／夸求／仆倒）；opencc 判出的 800 多個「簡體」其實是臺灣正體
+  （群／里／征／占／台／吃），**不要全文套 opencc**，用 `SIMP_FIX` 小表。
+
 ## z-lib 找不到時：LibGen 與 Anna's Archive（2026-10-01）
 
 - **LibGen** `libgen.li`：`index.php?req=…&topics[]=l` 查 → `edition.php?id=` → `ads.php?md5=` → `get.php?md5=&key=` 直接下載，
