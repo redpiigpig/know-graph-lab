@@ -168,8 +168,12 @@ def download(row: dict, name: str) -> Path:
     dst = DROP / f"{safe}.{row['ext']}"
     tmp = dst.with_suffix(dst.suffix + ".part")
     # 正反兩支會合時會同時抓同一本，兩邊搶同一個 .part 互鎖（WinError 32，10-02 齊澤烏拉斯那本）。
-    if dst.exists() or tmp.exists():
-        raise FileExistsError(f"另一支已在下載或已下載：{dst.name}")
+    if dst.exists():
+        # 同一本書在清單裡常有繁／簡兩個查詢，前一個已經抓到了——書在就算成功，讓呼叫端照常記帳本，
+        # 否則 z-lib 排程會再排一次（10-02 第三輪約七十筆是這種「假失敗」）。
+        return dst
+    if tmp.exists():
+        raise FileExistsError(f"另一支正在下載：{dst.name}")
     for a in range(4):
         try:
             g = fresh_link()
