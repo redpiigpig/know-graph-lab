@@ -5550,7 +5550,8 @@ def _lk(slug, title, intro, units, sa, zh):
                       "src": {"gretil": "sa_saddharmalaGkAvatArasUtra"} | sa_src, "cuts": sa_cuts}]
                     + [{"id": w, "lang": "lzh", "label": _LK_ZH[w][0], "who": _LK_ZH[w][1],
                         "src": {"work": w, "nodes": nodes or _lk_nodes(w), "start": cuts[0][1]}
-                               | ({} if nodes else {"anchor_nodes": []})
+                               # 只取節點的一段（有 end）或取整部：錨點改掛段落範圍
+                               | ({} if nodes and "end" not in (extra or {}) else {"anchor_nodes": []})
                                | {x: y for x, y in (extra or {}).items() if x != "reorder"},
                         "cuts": cuts} | ({"reorder": True} if (extra or {}).get("reorder") else {})
                        for w, nodes, cuts, extra in zh]}
@@ -5863,6 +5864,108 @@ _lk("lankavatara-c02-7", "集一切法品（七）四果・八識・一乘",
                           ("l2g-09", "大慧言：「世尊！豈不建立八種識耶"), ("l2g-10", "「復次，大慧！我今當說妄計自性差別相"),
                           ("l2g-11", "大慧菩薩摩訶薩復白佛言：「世尊！惟願為說自證聖智行相"), ("l2g-12", "大慧白佛言：「世尊！何故說有三乘")],
       {"anchor_nodes": []})])
+
+# 梵本第三品〈Anityatā〉＝實叉難陀〈無常品〉＝菩提流支〈佛心〉〈盧迦耶陀〉〈涅槃〉〈法身〉〈無常〉五品＝求那跋陀羅卷二後半至卷三。分四組。
+_LK3_SIK = ["無常品第三之一"]
+
+_lk("lankavatara-c03-1", "無常品（一）意生身・五無間・宗說二通",
+    "梵本第三品前段＝菩提流支〈佛心品〉前段。三種意生身；內外五無間；諸佛之知覺；佛說「我是過去諸佛」依四平等；"
+    "「從某夜成道至某夜涅槃，不說一字」依自證法與本住法；有無二見；宗通與說通；不實妄想從何而生。",
+    [("l3a-01", "品題・三種意生身・偈"), ("l3a-02", "五無間：愛為母、無明為父"), ("l3a-03", "外五無間・偈"), ("l3a-04", "諸佛之知覺・偈"),
+     ("l3a-05", "「我是過去諸佛」：四平等・偈"), ("l3a-06", "不說一字：自證法・本住法・偈"), ("l3a-07", "有無二見・偈"),
+     ("l3a-08", "宗通・說通・偈"), ("l3a-09", "不實妄想・偈")],
+    ({"start": "Anityatāparivarto nāma tṛtīyaḥ",
+      "end": "atha khalu mahāmatirbodhisattvo mahāsattvo bhagavantametadavocat - yatpunaretaduktaṃ bhagavatā - yathārutārtha"},
+     [("l3a-01", "Anityatāparivarto nāma tṛtīyaḥ"),
+      ("l3a-02", "atha khalu mahāmatirbodhisattvo mahāsattvaḥ punarapi bhagavantametadavocat - pañcānantaryāṇi"),
+      ("l3a-03", "punaraparaṃ mahāmate bāhyāni te ānantaryāṇy"), ("l3a-04", "punarapi mahāmatirāha - deśayatu me bhagavān buddhānāṃ"),
+      ("l3a-05", "atha khalu mahāmatirbodhisattvo mahāsattvaḥ punarapi bhagavantametadavocat - kiṃ saṃdhāya"),
+      ("l3a-06", "punarapi mahāmatirāha - yadidamuktaṃ bhagavatā - yāṃ ca rātriṃ"),
+      ("l3a-07", "atha khalu mahāmatirbodhisattvo mahāsattvaḥ punarapi bhagavantamadhyeṣate sma - deśayatu me bhagavānnāstyastitva"),
+      ("l3a-08", "atha khalu mahāmatirbodhisattvo mahāsattvaḥ punarapi bhagavantamadhyeṣate - deśayatu me bhagavān, deśayatu me sugataḥ, deśayatu me tathāgato"),
+      ("l3a-09", "atha khalu mahāmatirbodhisattvo mahāsattvaḥ punarapi bhagavantamadhyeṣate sma - deśayatu me bhagavān, deśayatu me sugataḥ abhūtaparikalpasya")]),
+    [("T0670", None, [("l3a-01", "爾時，世尊告大慧菩薩摩訶薩言：「意生身分別通相"), ("l3a-02", "爾時，大慧菩薩摩訶薩白佛言：「世尊！如世尊說，若男子女人行五無間"),
+                      ("l3a-03", "「復次，大慧！有外無間"), ("l3a-04", "爾時，大慧菩薩復白佛言：「世尊！唯願為說佛之知覺"),
+                      ("l3a-05", "爾時，大慧菩薩白佛言：「世尊！何故世尊於大眾中唱"), ("l3a-06", "大慧復白佛言：「如世尊所說：『我從某夜"),
+                      ("l3a-07", "爾時，大慧菩薩復請世尊：「唯願為說一切法有無有相"), ("l3a-08", "爾時，大慧菩薩復白佛言：「世尊！唯願為我及諸菩薩說宗通相"),
+                      ("l3a-09", "爾時，大慧菩薩白佛言：「世尊！唯願為說不實妄想相")],
+      {"end": "爾時，大慧菩薩白佛言：「世尊！如世尊所說，菩薩摩訶薩當善語義"}),
+     ("T0671", ["佛心品第四"], [("l3a-01", "爾時佛告聖者大慧菩薩言：「大慧！我今為汝說意生"), ("l3a-02", "爾時聖者大慧菩薩復白佛言：「世尊！如世尊說，善"),
+                           ("l3a-03", "「復次，大慧！我為汝等說外五種無間"), ("l3a-04", "爾時聖者大慧菩薩復白佛言：「世尊！惟願為我說諸"),
+                           ("l3a-05", "爾時聖者大慧菩薩復白佛言：「世尊！世尊何故於大"), ("l3a-06", "大慧菩薩復白佛言：「世尊！如來說言：『我何等夜"),
+                           ("l3a-07", "爾時聖者大慧菩薩，復請佛言：「惟願世尊，說一切"),
+                           ("l3a-08", "爾時聖者大慧菩薩復白佛言：「世尊！惟願如來、應、正遍知、天人師，為我及諸一切菩薩，建立修行正法"),
+                           ("l3a-09", "爾時聖者大慧菩薩復請佛言：「世尊！惟願如來、應、正遍知，為諸菩薩說不實妄想")],
+      {"end": "爾時聖者大慧菩薩復白佛言：「世尊！如來說言：『如我所說"}),
+     ("T0672", _LK3_SIK, [("l3a-01", "爾時佛告大慧菩薩摩訶薩言：「今當為汝說意成身"), ("l3a-02", "爾時大慧菩薩摩訶薩復白佛言：「世尊！如世尊說五無間"),
+                          ("l3a-03", "「復次，大慧！今為汝說外五無間"), ("l3a-04", "爾時大慧菩薩摩訶薩復白佛言：「世尊！願為我說諸佛體"),
+                          ("l3a-05", "爾時大慧菩薩摩訶薩復白佛言：「世尊！如來以何密意"), ("l3a-06", "爾時大慧菩薩摩訶薩復白佛言：「世尊！如世尊說：『我"),
+                          ("l3a-07", "爾時大慧菩薩摩訶薩復白佛言：「世尊！願說一切法有無"), ("l3a-08", "爾時大慧菩薩摩訶薩復請佛言：「世尊！惟願為說宗趣"),
+                          ("l3a-09", "爾時大慧菩薩摩訶薩復白佛言：「世尊！願為我說虛妄分")],
+      {"end": "爾時大慧菩薩摩訶薩復白佛言：「世尊！如來說言：『如"})])
+
+_lk("lankavatara-c03-2", "無常品（二）語義・智識・不立宗",
+    "梵本第三品中段＝菩提流支〈佛心品〉後段。莫依語取義；世間、出世間、出世間上上三種智與智識之別；外道九種轉變；一切法如言取義的深密執著（求那跋陀羅作「相續」）；"
+    "妄計無自性而聖智見有自性；菩薩不應立「一切法不生」之宗，應說如幻如夢；智不得境非無智；言說法與如實法（宗通說通）。",
+    [("l3b-01", "莫依語取義：何者為語、何者為義・偈"), ("l3b-02", "三種智・智與識・偈"), ("l3b-03", "外道九種轉變・偈"),
+     ("l3b-04", "如言取義的深密執著（相續）・偈"), ("l3b-05", "妄計無自性・聖智見自性"), ("l3b-06", "不應立「一切法不生」之宗・如幻如夢・偈"),
+     ("l3b-07", "智不得境非無智・偈"), ("l3b-08", "言說法與如實法・偈")],
+    ({"start": "atha khalu mahāmatirbodhisattvo mahāsattvo bhagavantametadavocat - yatpunaretaduktaṃ bhagavatā - yathārutārtha",
+      "end": "atha khalu mahāmatirbodhisattvo mahāsattvaḥ punarapi bhagavantametadavocat - uktametadbhagavaṃs"},
+     [("l3b-01", "atha khalu mahāmatirbodhisattvo mahāsattvo bhagavantametadavocat - yatpunaretaduktaṃ bhagavatā - yathārutārtha"),
+      ("l3b-02", "punaraparaṃ mahāmate jñānavijñānalakṣaṇaṃ"), ("l3b-03", "punaraparaṃ mahāmate navavidhā pariṇāmavādināṃ"),
+      ("l3b-04", "atha khalu mahāmatirbodhisattvo mahāsattvaḥ punarapi bhagavantaṃ sarvadharmasaṃdhyartha"),
+      ("l3b-05", "punarapi mahāmatirāha - yatpunaretaduktaṃ bhagavatā - yena yena vikalpena"),
+      ("l3b-06", "punaraparaṃ mahāmate anutpannāḥ sarvadharmā iti bodhisattvena"),
+      ("l3b-07", "punarapi mahāmatirāha - yatpunaridamuktaṃ bhagavatā - yadā tvālambyam"),
+      ("l3b-08", "punaraparaṃ mahāmate bālapṛthagjanā anādikāla")]),
+    [("T0670", None, [("l3b-01", "爾時，大慧菩薩白佛言：「世尊！如世尊所說，菩薩摩訶薩當善語義"), ("l3b-02", "「復次，大慧！智識相，今當說"),
+                      ("l3b-03", "「復次，大慧！外道有九種轉變論"), ("l3b-04", "爾時，大慧菩薩復白佛言：「世尊！唯願為說一切法相續義"),
+                      ("l3b-05", "大慧復白佛言：「如世尊所說，以彼彼妄想"), ("l3b-06", "復次，大慧！一切法不生者，菩薩摩訶薩不應立是宗"),
+                      ("l3b-07", "爾時，大慧菩薩白佛言：「世尊！如世尊說，如攀緣事智慧不得"), ("l3b-08", "「復次，大慧！愚癡凡夫，無始虛偽惡邪妄想之所迴轉")],
+      {"end": "爾時，大慧菩薩白佛言：「世尊！如世尊一時說言：『世間諸論"}),
+     ("T0671", ["佛心品第四"], [("l3b-01", "爾時聖者大慧菩薩復白佛言：「世尊！如來說言：『如我所說"), ("l3b-02", "「復次，大慧！我今為汝說智識相"),
+                           ("l3b-03", "「復次，大慧！諸外道有九種轉變見"),
+                           ("l3b-04", "爾時大慧菩薩摩訶薩復白佛言：「世尊！惟願如來、應、正遍知，善說一切諸法相續"),
+                           ("l3b-05", "大慧菩薩復白佛言：「如世尊說，以何等何等分別心"), ("l3b-06", "復次，大慧！菩薩不應建立諸法不生"),
+                           ("l3b-07", "爾時聖者大慧菩薩白佛言：「世尊！如世尊說，智慧觀察"), ("l3b-08", "「復次，大慧！愚癡凡夫，依無始身戲論煩惱")],
+      {"anchor_nodes": []}),
+     ("T0672", _LK3_SIK, [("l3b-01", "爾時大慧菩薩摩訶薩復白佛言：「世尊！如來說言：『如"), ("l3b-02", "「復次，大慧！我當為汝說智識相"),
+                          ("l3b-03", "「復次，大慧！諸外道有九種轉變見"), ("l3b-04", "爾時大慧菩薩摩訶薩復白佛言：「世尊！惟願如來，為我解說於一切法深密義"),
+                          ("l3b-05", "爾時大慧菩薩摩訶薩復白佛言：「世尊！如世尊說：『由種種心分別諸法"), ("l3b-06", "復次，大慧！菩薩摩訶薩不應成立一切諸法"),
+                          ("l3b-07", "爾時大慧菩薩摩訶薩復白佛言：「世尊！如佛所說，若知境界但是假名"), ("l3b-08", "「復次，大慧！愚癡凡夫無始虛偽")],
+      {"end": "爾時大慧菩薩摩訶薩復白佛言：「世尊！如來一時說盧迦耶陀"})])
+
+_lk("lankavatara-c03-3", "無常品（三）世論與外道涅槃",
+    "梵本第三品中段＝菩提流支〈盧迦耶陀品〉〈涅槃品〉。親近世論（盧迦耶陀）只得財利不得法利；佛說不來不去非世論；"
+    "佛憶世論婆羅門問「一切所作耶」等十一種世論與「頗有非世論者」；財與法二義；外道種種涅槃見。"
+    "梵本另有黑分龍王化作婆羅門問他世一段，三漢譯都沒有。",
+    [("l3c-01", "親近世論只得財利・世論之過"), ("l3c-02", "佛亦說世論？說不來不去"), ("l3c-03", "世論婆羅門問「一切所作耶」等"),
+     ("l3c-04", "再問三有因・頗有非世論者"), ("l3c-05", "婆羅門默然而去（梵本：龍王化婆羅門問他世）"), ("l3c-06", "財與法二義"),
+     ("l3c-07", "偈：調伏攝眾生"), ("l3c-08", "外道種種涅槃見"), ("l3c-09", "偈：外道涅槃見")],
+    ({"start": "atha khalu mahāmatirbodhisattvo mahāsattvaḥ punarapi bhagavantametadavocat - uktametadbhagavaṃs",
+      "end": "atha khalu mahāmatirbodhisattvo mahāsattvo bhagavantametadavocat - deśayatu me bhagavāṃstathāgato 'rhan"},
+     [("l3c-01", "atha khalu mahāmatirbodhisattvo mahāsattvaḥ punarapi bhagavantametadavocat - uktametadbhagavaṃs"),
+      ("l3c-02", "mahāmatirāha - yadi bhagavan sarvatīrthakarā"), ("l3c-03", "abhijānāmyahaṃ mahāmate"),
+      ("l3c-04", "punarapi mahāmate lokāyatiko brāhmaṇa evamāha"), ("l3c-05", "atha khalu kṛṣṇapakṣiko"),
+      ("l3c-06", "mahāmatirāha - atha dharmāmiṣamiti"), ("l3c-07", "tatredamucyate -"),
+      ("l3c-08", "atha khalu mahāmatirbodhisattvo mahāsattvaḥ punarapi bhagavantametadavocat - nirvāṇaṃ nirvāṇamiti"),
+      ("l3c-09", "tatredamucyate -")]),
+    [("T0670", None, [("l3c-01", "爾時，大慧菩薩白佛言：「世尊！如世尊一時說言：『世間諸論"), ("l3c-02", "爾時，大慧白佛言：「世尊！若外道世論"),
+                      ("l3c-03", "大慧！我念一時，於一處住"), ("l3c-04", "「復次，大慧！爾時世論婆羅門，復問我言：『癡愛業因故"),
+                      ("l3c-05", "大慧！世論婆羅門，作如是問"), ("l3c-06", "大慧白佛言：「世尊！攝受貪欲及法"), ("l3c-07", "爾時，世尊欲重宣此義而說偈言"),
+                      ("l3c-08", "爾時，大慧菩薩復白佛言：「世尊！所言涅槃者"), ("l3c-09", "爾時，世尊欲重宣此義而說偈言")],
+      {"end": "爾時，大慧菩薩白佛言：「世尊！唯願為說三藐三佛陀"}),
+     ("T0671", ["盧迦耶陀品第五", "入楞伽經涅槃品第六"],
+      [("l3c-01", "爾時聖者大慧菩薩復白佛言：「世尊！如來、應、正遍知一時說言：『盧迦耶陀"), ("l3c-02", "大慧菩薩白佛言：「世尊！若一切外道惟說盧迦耶陀"),
+       ("l3c-03", "「大慧！我念過去於一處住"), ("l3c-04", "「大慧！復有盧迦耶陀婆羅門來問我言"), ("l3c-05", "大慧！盧迦耶陀婆羅門，來詣我所問如是法"),
+       ("l3c-06", "大慧白佛言：「世尊！何者名食句義"), ("l3c-07", "爾時世尊重說偈言"), ("l3c-08", "爾時聖者大慧菩薩白佛言：「世尊！如佛所言涅槃涅槃者"),
+       ("l3c-09", "爾時世尊重說偈言")], None),
+     ("T0672", _LK3_SIK, [("l3c-01", "爾時大慧菩薩摩訶薩復白佛言：「世尊！如來一時說盧迦耶陀"), ("l3c-02", "爾時大慧白言：「世尊！若盧迦耶所造之論"),
+                          ("l3c-03", "大慧！我憶有時於一處住"), ("l3c-04", "「大慧！爾時世論婆羅門復問我言：『無明愛業"),
+                          ("l3c-05", "「大慧！世論婆羅門作如是問"), ("l3c-06", "大慧白言：「所言財、法"), ("l3c-07", "爾時世尊重說頌言"),
+                          ("l3c-08", "爾時大慧菩薩摩訶薩復白佛言：「世尊！佛說涅槃"), ("l3c-09", "爾時世尊重說頌言")],
+      {"end": "爾時大慧菩薩摩訶薩復白佛言：「世尊！願為我說如來應正等覺自覺性"})])
 
 # ── 讀原文 ──────────────────────────────────────────────────────────────────
 def read_jsonl(work: str) -> list[dict]:
