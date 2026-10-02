@@ -158,8 +158,12 @@ def check_complete(path: Path, ext: str, expect: int) -> None:
 def download(row: dict, name: str) -> Path:
     ed = get(f"https://libgen.li/edition.php?id={row['edition']}").decode("utf-8", "ignore")
     md5 = re.search(r"ads\.php\?md5=([0-9a-f]{32})", ed).group(1)
-    ads = get(f"https://libgen.li/ads.php?md5={md5}").decode("utf-8", "ignore")
-    g = re.search(r"get\.php\?md5=[0-9a-f]{32}&(?:amp;)?key=\w+", ads).group(0).replace("&amp;", "&")
+
+    def fresh_link() -> str:
+        # 🚨 get.php 的 key 用過一次就失效：重試沿用舊連結只會拿回 <!DOCTYPE 網頁（10-02 殘檔重抓整批卡在這）。
+        ads = get(f"https://libgen.li/ads.php?md5={md5}").decode("utf-8", "ignore")
+        return re.search(r"get\.php\?md5=[0-9a-f]{32}&(?:amp;)?key=\w+", ads).group(0).replace("&amp;", "&")
+
     safe = re.sub(r'[\\/:*?"<>|]', "", name)[:180]
     dst = DROP / f"{safe}.{row['ext']}"
     tmp = dst.with_suffix(dst.suffix + ".part")
@@ -168,6 +172,7 @@ def download(row: dict, name: str) -> Path:
         raise FileExistsError(f"另一支已在下載或已下載：{dst.name}")
     for a in range(4):
         try:
+            g = fresh_link()
             with urllib.request.urlopen(urllib.request.Request("https://libgen.li/" + g, headers=UA), timeout=1800) as r, open(tmp, "wb") as f:
                 expect = int(r.headers.get("Content-Length") or 0)
                 shutil.copyfileobj(r, f, 1 << 20)
