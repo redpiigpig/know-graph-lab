@@ -1,0 +1,167 @@
+{
+ "slug": "lankavatara-c02-6",
+ "title": "楞伽經・集一切法品（六）妄法與如幻",
+ "family": "sa",
+ "intro": "佛說緣起與外道因生之別；無法亦有言說（兔角、石女兒）；「常」聲依妄法而說，妄法離有無、是常；聖者於妄法不起顛倒，分別妄法生聖凡兩種種性，轉依即名真如；妄法如幻不為惑因；一切法如幻是因不實速滅如電；說無生又說如幻並不相違；名、句、文身；愚者答問以「此非正問」；四種記論（一向、反問、分別、置答）。",
+ "units": [
+  {
+   "id": "l2f-01",
+   "label": "緣起非如外道從因生"
+  },
+  {
+   "id": "l2f-02",
+   "label": "無法亦有言說・偈（2.164–165）"
+  },
+  {
+   "id": "l2f-03",
+   "label": "常聲依妄法說・妄法離有無故常"
+  },
+  {
+   "id": "l2f-04",
+   "label": "妄法真實・二種種性・轉依名真如"
+  },
+  {
+   "id": "l2f-05",
+   "label": "妄法有無・如幻不為惑因・偈（2.166–167）"
+  },
+  {
+   "id": "l2f-06",
+   "label": "一切法如幻：不實速滅如電・偈（2.168）"
+  },
+  {
+   "id": "l2f-07",
+   "label": "無生與如幻不相違・偈（2.169）"
+  },
+  {
+   "id": "l2f-08",
+   "label": "名身・句身・文身・偈（2.170）"
+  },
+  {
+   "id": "l2f-09",
+   "label": "未來愚者：此非正問"
+  },
+  {
+   "id": "l2f-10",
+   "label": "一切法不生・無自性・四種記論偈（2.171–173）"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sa",
+   "lang": "sa",
+   "label": "梵本",
+   "who": "Vaidya 校訂本（1963）・GRETIL"
+  },
+  {
+   "id": "T0670",
+   "lang": "lzh",
+   "label": "四卷本",
+   "who": "求那跋陀羅譯《楞伽阿跋多羅寶經》・443 年",
+   "work": "T0670"
+  },
+  {
+   "id": "T0671",
+   "lang": "lzh",
+   "label": "十卷本",
+   "who": "菩提流支譯《入楞伽經》・513 年",
+   "work": "T0671"
+  },
+  {
+   "id": "T0672",
+   "lang": "lzh",
+   "label": "七卷本",
+   "who": "實叉難陀譯《大乘入楞伽經》・700–704 年",
+   "work": "T0672"
+  }
+ ],
+ "works": [
+  "T0670",
+  "T0671",
+  "T0672"
+ ],
+ "anchors": [
+  {
+   "work": "T0670",
+   "range": [
+    "T16n0670_p0493a06",
+    "T16n0670_p0494c12"
+   ]
+  },
+  {
+   "work": "T0671",
+   "range": [
+    "T16n0671_p0534a23",
+    "T16n0671_p0536c23"
+   ]
+  },
+  {
+   "work": "T0672",
+   "range": [
+    "T16n0672_p0602c27",
+    "T16n0672_p0604c06"
+   ]
+  }
+ ],
+ "cells": {
+  "l2f-01": {
+   "sa": "atha khalu mahāmatirbodhisattvaḥ punarapi bhagavantametadavocat - pratītyasamutpādaṃ punarbhagavatā deśayatā kāraṇavyapadeśa eva kṛto na svanayaprakṛtyavasthānakathā / tīrthakarā api bhagavan kāraṇata utpattiṃ varṇayanti, yaduta pradhāneśvarapuruṣakālāṇupratyayebhyo bhāvānāmutpattayaḥ / kiṃ tu bhagavatā pratyayaparyāyāntareṇotpattirvarṇyate bhāvānām / na ca siddhāntaviśeṣāntaram / sadasato hi bhagavaṃstīrthakarā apyutpattiṃ varṇayanti, bhūtvā ca vināśaṃ pratyayairbhāvānām / yadapyuktaṃ bhagavatā - avidyāpratyayāḥ saṃskārā yāvajjarāmaraṇamiti, ahetuvādavyapadeśa eṣa bhagavatānuvarṇitaḥ, na sa hetuvādaḥ / yugapadvayavasthitānāṃ bhagavannetadbhavati - asmin satīdaṃ bhavatīti, na kramavṛttyapekṣāvasthitānām / kiṃ tu tīrthakaravyapadeśa eva bhagavan viśiṣyate na tvadīyam / tatkasya hetoḥ? tīrthakarāṇāṃ hiṃ bhagavan kāraṇamapratītyasamutpannaṃ kāryamabhinirvartayati / tava tu bhagavan kāraṇamapi kāryāpekṣaṃ kāryamapi kāraṇāpekṣam / hetupratyayasaṃkaraśca evamanyonyānavasthā prasajyate / ahetutvaṃ ca bhagavan lokasya - asmin satīdaṃ bruvataḥ / bhagavānāha - na mahāmate mamāhetukakāraṇavādo hetupratyayasaṃkaraśca prasajyate - asmin satīdaṃ bruvataḥ, grāhyagrāhakābhāvāt, svacittadṛśyamātrāvabodhāt / ye tu mahāmate grāhyagrāhakābhiniviṣṭāḥ svacittadṛśyamātraṃ nāvabudhyante bāhyasvaviṣayabhāvābhāvatvena, teṣāṃ mahāmate eṣa doṣaḥ prasajyate , na tu mama pratītyakāraṇavyapadeśaṃ kurvataḥ //",
+   "T0670": "爾時，大慧菩薩摩訶薩復白佛言：「世尊！佛說緣起，如是說因緣，不自說道。世尊！外道亦說因緣，謂：勝、自在、時、微塵生，如是諸性生。然，世尊所謂因緣生諸性，言說有間悉檀、無間悉檀（悉檀者，譯義或言宗、或言成、或言默）。世尊！外道亦說有無有生，世尊亦說無有生，生已滅。如世尊所說：『無明緣行，乃至老死』，此是世尊無因說，非有因說。世尊建立作如是說：『此有故彼有』，非建立漸生，觀外道說勝，非如來也。所以者何？世尊！外道說因，不從緣生而有所生。世尊說觀因有事，觀事有因。如是因緣雜亂，如是展轉無窮。」佛告大慧：「我非無因說，及因緣雜亂說。此有故彼有者，攝所攝非性，覺自心現量。大慧！若攝所攝計著，不覺自心現量，外境界性非性，彼有如是過，非我說緣起。我常說言：『因緣和合而生諸法』，非無因生。」",
+   "T0671": "爾時聖者大慧菩薩摩訶薩復白佛言：「世尊！如世尊說，十二因緣從因生果，不說自心妄想分別見力而生。世尊！若爾，外道亦說從因生果。世尊！外道說言：『從於自性、自在天、時、微塵等因生一切法。』如來亦說依於因緣而生諸法，而不說有自建立法。世尊！外道亦說：『從於有無而生諸法。』世尊說言，諸法本無，依因緣生生已還滅，世尊說從無明緣行乃至於有，依眼識等生一切法。如世尊說，亦有諸法無因而生。何以故？不從因生一時無前後生，以因此法生此法，世尊自說，因虛妄因法生此法，非次第生故。世尊！若爾外道說法勝而如來不如。何以故？世尊！外道說因無因緣能生果，如來說法因亦依果果亦依因，若爾因緣無因無果。世尊！若爾彼此因果展轉無窮。世尊說言，從此法生彼法，若爾無因生法。」佛告聖者大慧菩薩摩訶薩言：「大慧！我今當說，因此法生彼法，不同外道所立因果，無因之法亦從因生。我不如是。我說諸法從因緣生，非無因緣亦不雜亂，亦無展轉無窮之過。何以故？以無能取可取法故。大慧！外道不知自心見故，執著能取可取之法，不知不覺惟自心見內外法故。大慧！彼諸外道不知自心內境界故見有無物，是故外道有如是過，非我過也。我常說言，因緣和合而生諸法，非無因生。」",
+   "T0672": "爾時大慧菩薩摩訶薩復白佛言：「世尊！佛說緣起，是由作起非自體起。外道亦說勝性、自在、時、我、微塵生於諸法。今佛世尊，但以異名說作緣起，非義有別。世尊！外道亦說以作者故從無生有；世尊亦說以因緣故一切諸法本無而生、生已歸滅，如佛所說，無明緣行乃至老死，此說無因非說有因。世尊說言此有故彼有，若一時建立非次第相待者，其義不成。是故外道說勝，非如來也。何以故？外道說因不從緣生而有所生。世尊所說，果待於因因復待因，如是展轉成無窮過。又此有故彼有者，則無有因。」佛言：「大慧！我了諸法唯心所現，無能取所取，說此有故彼有，非是無因及因緣過失。大慧！若不了諸法唯心所現，計有能取及以所取，執著外境若有若無，彼有是過，非我所說。」"
+  },
+  "l2f-02": {
+   "sa": "punaraparaṃ mahāmatirāha - nanu bhagavan abhilāpasadbhāvātsanti sarvabhāvāḥ / yadi punarbhagavan bhāvā na syuḥ, abhilāpo na pravartate / pravartate ca / tasmādabhilāpasadbhāvādbhagavan santi sarvabhāvāḥ / bhagavānāha - asatāmapi mahāmate bhāvānāmabhilāpaḥ kriyate / yaduta śaśaviṣāṇakūrmaromavandhyāputrādīnāṃ loke dṛṣṭo 'bhilāpaḥ / te ca mahāmate na bhāvā nābhāvāḥ, abhilapyante ca / tadyadavocastvaṃ mahāmate - abhilāpasadbhāvātsanti sarvabhāvā iti, sa hi vādaḥ prahīṇaḥ / na ca mahāmate sarvabuddhakṣetreṣu prasiddho 'bhilāpaḥ / abhilāpo mahāmate kṛtakaḥ / kvacinmahāmate buddhakṣetre 'nimiṣaprekṣayā dharmo deśyate, kvacidiṅgitaiḥ, kvacidbhūvikṣepeṇa, kvacinnetrasaṃcāreṇa, kvacidāsyena, kvacidvijṛmbhitena, kvacidutkāsanaśabdena, kvacitkṣetrasmṛtyā, kvacitspanditena / yathā mahāmate animiṣāyāṃ gandhasugandhāyāṃ ca lokadhātau samantabhadrasya tathāgatasyārhataḥ samyaksaṃbuddhasya buddhakṣetre animiṣairnetraiḥ prekṣamāṇāste bodhisattvā mahāsattvā anutpattikadharmakṣāntiṃ pratilabhante anyāṃśca samādhiviśeṣān, ata evāsmātkāraṇānmahāmate nābhilāpasadbhāvātsanti sarvabhāvāḥ / dṛṣṭaṃ caitanmahāmate / iha loke kṛmimakṣikaivamādyāḥ sattvaviśeṣā anabhilāpenaiva svakṛtyaṃ kurvanti // tatredamucyate - ākāśaṃ śaśaśṛṅgaṃ ca vandhyāyāḥ putra eva ca / asanto hyabhilapyante tathā bhāveṣu kalpanā // Lank_2.164 // hetupratyayasāmagryāṃ bālāḥ kalpanti saṃbhavam / ajānānā nayamidaṃ bhramanti tribhavālaye // Lank_2.165 //",
+   "T0670": "大慧復白佛言：「世尊！非言說有性，有一切性耶？世尊！若無性者，言說不生。世尊！是故言說有性，有一切性。」佛告大慧：「無性而作言說，謂兔角龜毛等，世間現言說，大慧！非性非非性，但言說耳。如汝所說，言說自性，有一切性者，汝論則壞。大慧！非一切剎土有言說。言說者，是作 耳。或有佛剎瞻視顯法，或有作相、或有揚眉、或有動睛、或笑、或欠、或謦咳、或念剎土、或動搖。大慧！如瞻視，及香積世界，普賢如來國土，但以瞻視令諸菩薩得無生法忍，及殊勝三昧。是故，非言說有性有一切性。大慧！見此世界蚊蚋蟲蟻，是等眾生，無有言說，而各辦事。」爾時，世尊欲重宣此義而說偈言：「如虛空兔角，及與槃大子， 無而有言說，如是性妄想。 因緣和合法，凡愚起妄想， 不能如實知，輪迴三有宅。」",
+   "T0671": "大慧復言：「世尊！有言語說應有諸法。世尊！若無諸法者應不說言語。世尊！是故依言說應有諸法。」佛告大慧：「亦有無法而說言語，謂兔角龜毛石女兒等，於世間中而有言說。大慧！彼兔角非有非無而說言語。大慧！汝言以有言說應有諸法者，此義已破。大慧！非一切佛國土言語說法。何以故？以諸言語惟是人心分別說故。是故，大慧！有佛國土直視不瞬口無言語名為說法；有佛國土直爾示相名為說法；有佛國土但動眉相名為說法；有佛國土惟動眼相名為說法；有佛國土笑名說法；有佛國土欠呿名說法；有佛國土咳名說法；有佛國土念名說法；有佛國土身名說法。大慧！如無瞬世界及眾香世界，於普賢如來、應、正遍知，彼菩薩摩訶薩觀察如來目不暫瞬，得無生法忍，亦得無量勝三昧法。是故，大慧！汝不得言有言語說應有諸法。大慧！如來亦見諸世界中，一切微蟲蚊虻蠅等眾生之類，不說言語共作自事而得成辦。」爾時世尊重說偈言：「如虛空兔角，及與石女兒； 無而有言說，如是妄分別。 因緣和合法，愚癡分別生； 不知如實法，輪迴三有中。」",
+   "T0672": "大慧菩薩復白佛言：「世尊有言說，故必有諸法；若無諸法，言依何起？」佛言：「大慧！雖無諸法亦有言說，豈不現見龜毛、兔角、石女兒等，世人於中皆起言說。大慧！彼非有非非有，而有言說耳。大慧！如汝所說，有言說故有諸法者，此論則壞。大慧！非一切佛土皆有言說，言說者假安立耳。大慧！或有佛土瞪視顯法，或現異相，或復揚眉，或動目睛，或示微笑嚬呻謦欬憶念動搖，以如是等而顯於法。大慧！如不瞬世界、妙香世界及普賢如來佛土之中，但瞪視不瞬，令諸菩薩獲無生法忍及諸勝三昧。大慧！非由言說而有諸法，此世界中蠅蟻等蟲，雖無言說成自事故。」爾時世尊重說頌言：「如虛空兔角，及與石女兒； 無而有言說，妄計法如是。 因緣和合中，愚夫妄謂生； 不能如實解，流轉於三有。」"
+  },
+  "l2f-03": {
+   "sa": "atha khalu mahāmatirbodhisattvo mahāsattvaḥ punarapi bhagavantametadavocat - nityaśabdaḥ punarbhagavan kvabhihitaḥ? bhagavānāha - bhrāntau mahāmate / yasmādiyaṃ bhrāntirāryāṇāmapi khyāyate viparyāsataḥ / tadyathā mahāmate mṛgatṛṣṇālātacakrakeśoṇḍukagandharvanagaramāyāsvapnapratibimbākṣapuruṣā loke 'vidvadbhirviparyasyante, na tu vidvadbhiḥ / na ca punarna khyāyante / sā punarbhrāntirmahāmate anekaprakārā khyāyāt / na bhrānteraśāśvatatāṃ kurute / tatkasya hetoḥ? yaduta bhāvābhāvavivarjitatvāt / kathaṃ punarmahāmate bhāvābhāvavivarjitā bhrāntiḥ? yaduta sarvabālavicitragocaratvātsamudrataraṃgagaṅgodakavatpretānāṃ darśanādarśanataḥ / ata etasmātkāraṇānmahāmate bhrāntibhāvo na bhavati / yasmācca tadudakamanyeṣāṃ khyāyate, ato hyabhāvo na bhavati / evaṃ bhrāntirāryāṇāṃ viparyāsāviparyāsavarjitā / ataśca mahāmate asmātkāraṇācchāśvatā bhrāntiryaduta nimittalakṣaṇābhedatvāt / na hi mahāmate bhrāntirvividhavicitranimittavikalpena vikalpyamānā bhedamupayāti / ata etasmātkāraṇānmahāmate bhrāntiḥ śāśvatā //",
+   "T0670": "爾時，大慧菩薩摩訶薩復白佛言：「世尊！常聲者，何事說？」佛告大慧：「為惑亂。以彼惑亂，諸聖亦現，而非顛倒。大慧！如春時炎、火輪、垂髮、乾闥婆城、幻、夢、鏡像。世間顛倒，非明智也，然非不現。大慧！彼惑亂者，有種種現，非惑亂作無常。所以者何？謂離性非性故。大慧！云何離性非性惑亂？謂一切愚夫種種境界故。如彼恒河，餓鬼見不見故，無惑亂性；於餘現故，非無性。如是惑亂，諸聖離顛倒不顛倒。是故惑亂常，謂相相不壞故。大慧！非惑亂種種相妄想相壞，是故惑亂常。",
+   "T0671": "爾時聖者大慧菩薩摩訶薩復白佛言：「世尊！世尊說常語法，依何等法作如是說？」佛告聖者大慧菩薩言：「大慧！依迷惑法我說為常。何以故？大慧！聖人亦見世間迷惑法非顛倒心。大慧！譬如陽焰、火輪、毛輪、乾闥婆城、幻、夢、水中月、鏡中像，世間非智慧者見有諸像，顛倒見故；有智慧者不生分別，非不見彼迷惑之事。大慧！有智慧者見彼種種迷惑之事不生實心。何以故？離有無法故。」佛復告聖者大慧菩薩言：「大慧！云何迷惑法離於有無？謂諸愚癡凡夫見有種種境界，如諸餓鬼大海恒河見水不見。大慧！是迷惑法不得言有不得言無。大慧！餘眾生見彼是水故不得言無。大慧！迷惑之事亦復如是，以諸聖人離顛倒見故。大慧！言迷惑法常者，以想差別故。大慧！因迷惑法見種種相，而迷惑法不分別異差別。是故，大慧！迷惑法常。",
+   "T0672": "爾時大慧菩薩摩訶薩復白佛言：「世尊！所說常聲依何處說？」佛言：「大慧！依妄法說，以諸妄法聖人亦現、然不顛倒。大慧！譬如陽焰、火輪、垂髮、乾闥婆城、夢幻鏡像，世無智者生顛倒解，有智不然，然非不現。大慧！妄法現時無量差別，然非無常。何以故？離有無故。云何離有無？一切愚夫種種解故，如恒河水有見不見，餓鬼不見不可言有，餘所見故不可言無，聖於妄法離顛倒見。大慧！妄法是常，相不異故，非諸妄法有差別相，以分別故而有別異，是故妄法其體是常。"
+  },
+  "l2f-04": {
+   "sa": "kathaṃ punarmahāmate bhrāntistattvaṃ bhavati? yena punaḥ kāraṇena mahāmate āryāṇāmasyāṃ bhrāntau viparyāsabuddhirna pravartate, nāviparyāsabuddhiḥ / nānyatra mahāmate āryā asyāṃ bhrāntau yakiṃcitsaṃjñino bhavanti nāryajñānavastusaṃjñinaḥ / yatkiṃciditi mahāmate bālapralāpa eṣa nāryapralāpaḥ / sā punarbhrāntirviparyāsāviparyāsena vikalpyamānā gotradvayāvahā bhavati yaduta āryagotrasya vā bālapṛthagjanagotrasya vā / āryagotraṃ punarmahāmate triprakāramupayāti yaduta śrāvakapratyekabuddhabuddhaprabhedataḥ / tatra kathaṃ punarmahāmate bālairbhrāntirvikalpyamānā śrāvakayānagotraṃ janayati? yaduta mahāmate svasāmānyalakṣaṇābhiniveśenābhiniviśyamānā śrāvakayānagotrāya saṃvartate / evaṃ mahāmate sā bhrāntiḥ śrāvakayānagotrāvahā bhavati / tatra kathaṃ punarmahāmate saiva bhrāntirvikalpyamānā pratyekabuddhayānagotrāvahā bhavati? yaduta tasyā eva mahāmate bhrānteḥ svasāmānyalakṣaṇābhiniveśāsaṃsargataḥ pratyekabuddhayānagotrāvahā bhavati / tatra kathaṃ punarmahāmate paṇḍitaiḥ saiva bhrāntirvikalpyamānā buddhayānagotrāvahā bhavati? yaduta mahāmate svacittadṛśyamātrāvabodhādbāhyabhāvābhāvavikalpanatayā vikalpyamānā buddhayānagotrāavahā bhavati / ata eva mahāmate gotram / eṣa gotrārthaḥ / vicitravastubhāvanā punarmahāmate bālairbhrāntirvikalpyamānā saṃsārayānagotrāvahā bhavati, evamidaṃ nānyatheti / ata etasmātkāraṇānmahāmate bhrāntirvicitravastutvena kalpyate bālaiḥ / sā ca na vastu, nāvastu / saiva mahāmate bhrāntiravikalpyamānā āryāṇāṃ cittamanomanovijñānadauṣṭhulyavāsanāsvabhāvadharmaparāvṛttibhāvādbhrāntirāryāṇāṃ tathatetyucyate / ata etaduktaṃ bhavati mahāmate - tathatāpi cittavinirmukteti / asyaiva mahāmate padasyābhidyotanārthamidamuktaṃ mayā - kalpanaiśca vivarjitaṃ sarvakalpanāvirahitamiti yāvaduktaṃ bhavati //",
+   "T0670": "大慧！云何惑亂真實？若復因緣，諸聖於此惑亂，不起顛倒覺、非不顛倒覺。大慧！除諸聖，於此惑亂有少分想，非聖智事想。「大慧！凡有者，愚夫妄說，非聖言說。彼惑亂者，倒不倒妄想，起二種種性，謂：聖種性，及愚夫種性。聖種性者，三種分別。謂：聲聞乘、緣覺乘、佛乘。云何愚夫妄想，起聲聞乘種性？謂：自共相計著，起聲聞乘種性，是名妄想起聲聞乘種性。大慧！即彼惑亂妄想，起緣覺乘種性。謂：即彼惑亂自共相，不觀計著，起緣覺乘種性。云何智者？即彼惑亂想，起佛乘種性。謂：覺自心現量，外性非性，不妄想相，起佛乘種性，是名即彼惑亂起佛乘種性。又種種事性，凡夫惑想，起愚夫種性。彼非有事，非無事，是名種性義。大慧！即彼惑亂不妄想，諸聖心、意、意識過習氣自性法轉變性，是名為如。是故說如離心。我說此句顯示離想，即說離一切想。」",
+   "T0671": "大慧！云何迷惑法名之為實？以諸聖人迷惑法中不生顛倒心，亦不生實心。大慧！而諸聖人見彼迷惑法起少心想，不生聖智事相。大慧！起少想者是謂凡夫非謂聖人。大慧！分別彼迷惑法顛倒非顛倒者，能生二種性。何等二種？一者、能生凡夫性；二者、能生聖人性。大慧！彼聖人性者，能生三種差別之性，所謂聲聞辟支佛佛國土差別性故。大慧！云何毛道凡夫分別迷惑法，而能生彼聲聞乘性。大慧！所謂執著彼迷惑法自相同相，能成聲聞乘性。大慧！是名迷惑法能生能成聲聞乘性。大慧！云何愚癡凡夫分別迷惑法，而能生彼辟支佛乘性？大慧！所謂執著彼迷惑法，觀察諸法自相同相不樂憒閙，能生辟支佛乘性。大慧！是名迷惑法能生能成辟支佛乘性。大慧！云何智者即分別彼迷惑之法，能生佛乘性？大慧！所謂見彼能見可見惟是自心，而不分別有無法故。大慧！如是觀察迷惑之法，能生能成如來乘性。大慧！如是名為性義。大慧！何者一切毛道凡夫即分別彼迷惑之法見種種事，能生世間所有乘性？以觀察諸法如是如是決定不異。是故，大慧！彼迷惑法，愚癡凡夫虛妄分別種種法體。大慧！彼迷惑法非是實事非不實事。何以故？大慧！聖人觀察彼迷惑法不虛妄分別，是故聖人能轉心、意、意識身相，離煩惱習故。是故聖人轉彼迷惑法，名為真如。大慧！此名何等法？大慧！此名真如法，離分別法故。大慧！為此義故，我重宣說真如法體離分別法，彼真如中無彼虛妄分別法故。」",
+   "T0672": "大慧！云何而得妄法真實？謂諸聖者於妄法中不起顛倒，非顛倒覺；若於妄法有少分想，則非聖智；有少想者，當知則是愚夫戲論，非聖言說。「大慧！若分別妄法是倒非倒，彼則成就二種種性，謂：聖種性，凡夫種性。大慧！聖種性者，彼復三種，謂：聲聞，緣覺，佛乘別故。大慧！云何愚夫分別妄法生聲聞乘種性？所謂計著自相共相。大慧！何謂復有愚夫分別妄法成緣覺乘種性？謂即執著自共相時離於憒閙。大慧！何謂智人分別妄法而得成就佛乘種性？所謂了達一切唯是自心分別所見，無有外法。大慧！有諸愚夫分別妄法種種事物，決定如是、決定不異，此則成就生死乘性。大慧！彼妄法中種種事物，非即是物亦非非物。大慧！即彼妄法，諸聖智者，心、意、意識諸惡習氣自性法轉依故，即說此妄名為真如，是故真如離於心識，我今明了顯示此句，離分別者，悉離一切諸分別故。」"
+  },
+  "l2f-05": {
+   "sa": "mahāmatirāha - bhrāntirbhagavan vidyate neti? bhagavānāha - māyāvanmahāmate na lakṣaṇābhiniveśato bhrāntirvidyate / yadi punarmahāmate bhrāntirlakṣaṇābhiniveśena vidyate, avyāvṛtta eva mahāmate bhāvābhiniveśaḥ syāt / pratītyasamutpādavattīrthakarakāraṇotpādavadetatsyānmahāmate / mahāmatirāha - yadi bhagavan māyāprakhyā bhrāntiḥ, tenānyasyā bhrānteḥ kāraṇībhaviṣyati / bhagavānāha - na mahāmate māyā bhrāntikāraṇam / adauṣṭhulyadoṣāvahatvānna hi mahāmate māyā dauṣṭhulyadoṣamāvahati / avikalpyamānā māyā punarmahāmate parapuruṣavidyādhiṣṭhānātpravartate, na svavikalpadauṣṭhulyavāsanādhiṣṭhānataḥ / sā na doṣāvahā bhavati / cittadṛṣṭimohamātrametanmahāmate bālānāṃ yatkiṃcidabhiniveśato na tvāryāṇām // tatredamucyate - āryo na paśyati bhrāntiṃ nāpi tattvaṃ tadantare / bhrāntireva bhavettattvaṃ yasmāttattvaṃ tadantare // Lank_2.166 // bhrāntiṃ vidhūya sarvāṃ hi nimittaṃ jāyate yadi / saiva tasya bhavedbhrāntiraśuddhaṃ timiraṃ yathā // Lank_2.167 //",
+   "T0670": "大慧白佛言：「世尊！惑亂為有為無？」佛告大慧：「如幻，無計著相。若惑亂有計著相者，計著性不可滅，緣起應如外道，說因緣生法。」大慧白佛言：「世尊！若惑亂如幻者，復當與餘惑作因。」佛告大慧：「非幻惑因，不起過故。大慧！幻不起過，無有妄想。大慧！幻者從他明處生，非自妄想過習氣處生，是故不起過。大慧！此是愚夫心惑計著，非聖賢也。」爾時，世尊欲重宣此義而說偈言：「聖不見惑亂，中間亦無實， 中間若真實，惑亂即真實。 捨離一切惑，若有相生者， 是亦為惑亂，不淨猶如翳。",
+   "T0671": "大慧菩薩復白佛言：「世尊！彼迷惑法為有為無？」佛告大慧：「彼迷惑法執著種種相故名有。大慧！彼迷惑法於妄想中若是有者，一切聖人皆應不離，執著有無虛妄法故。大慧！如外道說十二因緣，有從因生不從因生，此義亦如是。」大慧言：「世尊！若迷惑法如幻見者，此迷惑法異於迷惑，以迷惑法能生法故。」佛告大慧：「大慧！非迷惑法生煩惱過。大慧！若不分別迷惑法者不生諸過。復次，大慧！一切幻法依於人功呪術而生，非自心分別煩惱而生。是故，大慧！彼迷惑法不生諸過，惟是愚癡人見迷惑法故。大慧！愚癡凡夫執著虛妄微細之事而生諸過，非謂聖人。」爾時世尊重說偈言：「聖不見迷惑，世間亦無實； 迷惑即是實，實法次迷惑。 捨離諸迷惑，若有相生者； 即彼是迷惑，不淨猶如翳。",
+   "T0672": "大慧菩薩白言：「世尊！所說妄法，為有為無？」佛言：「如幻，無執著相故，若執著相體是有者，應不可轉，則諸緣起，應如外道說作者生。」大慧又言：「若諸妄法同於幻者，此則當與餘妄作因。」佛言：「大慧！非諸幻事為妄惑因，以幻不生諸過惡故，以諸幻事無分別故。大慧！夫幻事者，從他明呪而得生起，非自分別過習力起，是故幻事不生過惡。大慧！此妄惑法，唯是愚夫心所執著，非諸聖者。」爾時世尊重說頌言：「聖不見妄法，中間亦非實； 以妄即真故，中間亦真實。 若離於妄法，而有相生者； 此還即是妄，如翳未清淨。"
+  },
+  "l2f-06": {
+   "sa": "punaraparaṃ mahāmate na māyā nāsti / sādharmyadarśanātsarvadharmāṇāṃ māyopamatvaṃ bhavati / mahāmatirāha - kiṃ punarbhagavan vicitramāyābhiniveśalakṣaṇena sarvadharmāṇāṃ māyopamatvaṃ bhavati, atha vitathābhiniveśalakṣaṇena? tadyadi bhagavan vicitramāyābhiniveśalakṣaṇena sarvadharmāṇāṃ māyopamatvaṃ bhavati, hanta bhagavan na bhāvā māyopamāḥ / tatkasya hetoḥ? yaduta rūpasya vicitralakṣaṇāhetudarśanāt / na hi bhagavan kaściddheturasti yena rūpaṃ vicitralakṣaṇākāraṃ khyāyate māyāvat / ata etasmātkāraṇādbhagavan na vicitramāyālakṣaṇābhiniveśasādharmyādbhāvā māyopamāḥ // bhagavānāha - na mahāmate vicitramāyālakṣaṇābhiniveśasādharmyātsarvadharmā māyopamāḥ, kiṃ tarhi mahāmate vitathāśuvidyutsadṛśasādharmyeṇa sarvadharmā māyopamāḥ / tadyathā mahāmate vidyullatā kṣaṇabhaṅgadṛṣṭanaṣṭadarśanaṃ punarbālānāṃ khyāyate, evameva mahāmate sarvabhāvāḥ svavikalpasāmānyalakṣaṇāḥ pravicayābhāvānna khyāyante rūpalakṣaṇābhiniveśataḥ // tatredamucyate - na māyā nāsti sādharmyādbhāvānāṃ kathyate 'stitā / vitathāśuvidyutsadṛśāstena māyopamāḥ smṛtāḥ // Lank_2.168 //",
+   "T0670": "「復次，大慧！非幻無有相似，見一切法如幻。」大慧白佛言：「世尊！為種種幻相計著，言一切法如幻？為異相計著？若種種幻相計著，言一切性如幻者，世尊！有性不如幻者。所以者何？謂色種種相非因。世尊！無有因色種種相現如幻。世尊！是故無種種幻相計著相似性如幻。」佛告大慧：「非種種幻相計著相似，一切法如幻。大慧！然不實一切法，速滅如電，是則如幻。大慧！譬如電光，剎那頃現，現已即滅，非愚夫現。如是一切性，自妄想自共相，觀察無性，非現色相計著。」爾時，世尊欲重宣此義而說偈言：「非幻無有譬，說法性如幻； 不實速如電，是故說如幻。」",
+   "T0671": "「復次，大慧！汝不得言幻是無故，一切諸法亦無如幻。」大慧言：「世尊！為執著諸法如幻相故，言諸法如幻；為執著諸法顛倒相故，言諸法如幻也。世尊！若執著諸法如幻相者，世尊不得言一切法皆如幻相；若執著諸法顛倒相故言如幻者，不得言一切法如幻。何以故？世尊！色有種種因相見故。世尊！無有異因色有諸相可見如幻。是故，世尊！不得說言執著諸法一切如幻。」佛告大慧：「非謂執著種種法相，說言諸法一切如幻。大慧！諸法顛倒速滅如電故言如幻。大慧！一切諸法譬如電光即見即滅，凡夫不見。大慧！一切諸法亦復如是，以一切法自心分別同相異相，以不能觀察故不如實見，以妄執著色等法故。」爾時世尊重說偈言：「非見色等法，說言無幻法； 故不違上下。我說一切法， 不見有本性，如幻無生體。」",
+   "T0672": "「復次，大慧！見諸法非幻無有相似，故說一切法如幻。」大慧言：「世尊！為依執著種種幻相，言一切法猶如幻耶？為異依此執著顛倒相耶？若依執著種種幻相，言一切法猶如幻者，世尊！非一切法悉皆如幻。何以故？見種種色相不無因故。世尊！都無有因令種種色相顯現如幻。是故，世尊！不可說言依於執著種種幻相，言一切法與幻相似。」佛言：「大慧！不依執著種種幻相，言一切法如幻。大慧！以一切法不實速滅如電，故說如幻。大慧！譬如電光見已即滅，世間凡愚悉皆現見，一切諸法依自分別自共相現亦復如是，以不能觀察無所有故，而妄計著種種色相。」爾時世尊重說頌言：「非幻無相似，亦非有諸法； 不實速如電，如幻應當知。」"
+  },
+  "l2f-07": {
+   "sa": "punaraparaṃ mahāmatirāha - yatpunaretaduktaṃ bhagavatā - anutpannāḥ sarvabhāvā māyopamāśceti / nanu te bhagavan evaṃ bruvataḥ pūrvottaravacanavyāghātadoṣaḥ prasajyate, anutpādaṃ bhāvānāṃ māyopamatvenābhilapataḥ / bhagavānāha - na mahāmate mamānutpādaṃ bhāvānāṃ māyopamatvenābhilapataḥ pūrvottaravacanavyāghātadoṣo bhavati / tatkasya hetoḥ? yaduta utpādānutpādasvacittadṛśyamātrāvabodhātsadasatorbāhyabhāvābhāvānutpattidarśanānna mahāmate pūrvottaravacanavyāghātadoṣaḥ prasajyate / kiṃ tu mahāmate tīrthakarakāraṇakṣotpattivyudāsārthamidamucyate - māyāvadanutpannāḥ sarvabhāvāḥ / tīrthakaramohavargā hi mahāmate sadasatorbhāvānāmutpattimicchanti na svavikalpavicitrābhiniveśapratyayataḥ / mama tu mahāmate na saṃtrāsamutpadyate / ata etasmātkāraṇānmahāmate anutpādābhidhānamevābhidhīyate / bhāvopadeśaḥ punarmahāmate saṃsāraparigrahārthaṃ ca nāstītyucchedanivāraṇārthaṃ ca / macchiṣyāṇāṃ vicitrakarmopapattyāyatanaparigrahārthaṃ bhāvaśabdaparigraheṇa saṃsāraparigrahaḥ kriyate / māyābhāvasvabhāvalakṣaṇanirdeśena mahāmate bhāvasvabhāvalakṣaṇavyāvṛttyarthaṃ bālapṛthagjanānāṃ kṛdṛṣṭilakṣaṇapatitāśayānāṃ svacittadṛśyamātrānavadhāriṇāṃ hetupratyayakriyotpattilakṣaṇābhiniviṣṭhānāṃ nivāraṇārthaṃ māyāsvapnasvabhāvalakṣaṇān sarvadharmān deśayāmi / ete bālapṛthagjanāḥ kudṛṣṭilakṣaṇāśayābhiniviṣṭā ātmānaṃ paraṃ ca sarvadharmā yathābhūtāvasthānadarśanādvisaṃvādayiṣyanti / tatra yathābhūtāvasthānadarśanaṃ mahāmate sarvadharmāṇāṃ yaduta svacittadṛśyamātrāvatāraḥ // tatredamucyate - anutpāde kāraṇābhāvo bhāve saṃsārasaṃgrahaḥ / māyādisadṛśaṃ paśyellakṣaṇaṃ na vikalpayet // Lank_2.169 //",
+   "T0670": "大慧復白佛言：「如世尊所說，一切性無生，及如幻，將無世尊前後所說自相違耶？說無生性如幻。」佛告大慧：「非我說無生性如幻前後相違過。所以者何？謂生無生，覺自心現量。有非有，外性非性，無生現。大慧！非我前後說相違過，然壞外道因生，故我說一切性無生。大慧！外道癡聚，欲令有無有生，非自妄想種種計著緣。大慧！我非有無有生，是故我以無生說而說。大慧！說性者，為攝受生死故，壞無見斷見故，為我弟子攝受種種業受生處故，以性聲說，攝受生死。大慧！說幻性自性相，為離性自性相故，墮愚夫惡見相悕望，不知自心現量。壞因所作生，緣自性相計著。說幻夢自性相一切法，不令愚夫惡見悕望，計著自及他一切法，如實處見，作不正論。大慧！如實處見一切法者，謂起自心現量。」爾時，世尊欲重宣此義而說偈言：「無生作非性，有性攝生死， 觀察如幻等，於相不妄想。",
+   "T0671": "大慧菩薩復白佛言：「世尊！如世尊說諸法不生，復言如幻，將無世尊前後所說自相違耶？以如來說一切諸法不如幻故。」佛告大慧：「我說一切法不生如幻者，不成前後有相違過。何以故？以諸一切愚癡凡夫不見生法及不生法，不能覺知自心有無、外法有無。何以故？以不能見不生法故。大慧！我如是說諸法前後無有相違。大慧！我遮外道建立因果義不相當，是故我說諸法不生。大慧！一切外道愚癡群聚作如是說，從於有無生一切法；不說自心分別執著因緣而生。大慧！我說諸法有亦不生無亦不生。是故，大慧！我說諸法不生不滅。大慧！我說一切諸法有者，護諸弟子令知二法。何等為二？一者、攝取諸世間故；二者、為護諸斷見故。何以故？以依業故有種種身攝六道生，是故我說言有諸法攝取世間。大慧！我說一切法如幻者，為令一切愚癡凡夫畢竟能離自相同相故，以諸凡夫癡心執著墮於邪見，以不能知但是自心虛妄見故，令離執著因緣生法，是故我說一切諸法如幻如夢無有實體。何以故？若不如是說者，愚癡凡夫執邪見心，欺誑自身及於他身，離如實見一切法故。大慧！云何住如實見？謂入自心見諸法故。」爾時世尊重說偈言：「如汝言諸法，一切不生者； 是則謗因果，不生如實見。 我說有生法，攝受諸世間； 見諸法同幻，不取諸見相。」",
+   "T0672": "爾時大慧菩薩摩訶薩復白佛言：「世尊！如佛先說，一切諸法皆悉無生；又言如幻，將非所說前後相違？」佛言：「大慧！無有相違。何以故？我了於生即是無生，唯是自心之所見故。若有若無一切外法，見其無性本不生故。大慧！為離外道因生義故，我說諸法皆悉不生。大慧！外道羣聚共興惡見，言從有無生一切法，非自執著分別為緣。大慧！我說諸法非有無生，故名無生。大慧！說諸法者，為令弟子知依諸業攝受生死，遮其無有斷滅見故。大慧！說諸法相猶如幻者，令離諸法自性相故。為諸凡愚墮惡見欲，不知諸法唯心所現，為令遠離執著因緣生起之相，說一切法如幻如夢。彼諸愚夫執著惡見欺誑自他，不能明見一切諸法如實住處。大慧！見一切法如實處者，謂能了達唯心所現。」爾時世尊重說頌言：「無作故無生，有法攝生死； 了達如幻等，於相不分別。"
+  },
+  "l2f-08": {
+   "sa": "punaraparaṃ mahāmate nāmapadavyañjanakāyānāṃ lakṣaṇamuddekṣyāmaḥ, yairnāmapadavyañjanakāyaiḥ sūpalakṣitairbodhisattvā mahāsattvā arthapadavyañjanānusāriṇaḥ kṣipramanuttarāṃ samyaksaṃbodhimabhisaṃbudhya tathaiva sarvasattvānavabodhayiṣyanti / tatra mahāmate kāyo nāma yaduta yadvastvāśritya nāma kriyate, sa kāyo vastu / kāyaḥ śarīramityanarthāntaram / eṣa mahāmate nāmakāyaḥ / padakāyaḥ punarmahāmate yaduta padārthakāyasadbhāvo niścayaḥ / niṣṭhā upalabdhirityanarthāntaram / eṣa mahāmate padakāyopadeśaḥ kṛto māyā / vyañjanakāyaḥ punarmahāmate yaduta yena nāmapadayorabhivyaktirbhavati / vyañjanaṃ liṅgaṃ lakṣaṇamupalabdhiḥ prajñaptirityanarthāntaram // punaraparaṃ mahāmate padakāyo yaduta padakāryaniṣṭhā / nāma punarmahāmate yaduta akṣarāṇāṃ ca nāmasvabhāvabhedo 'kārādyāvaddhakāraḥ / tatra vyañjanaṃ punarmahāmate yaduta hrasvadīrghaplutavyañjanāni / tatra padakāyāḥ punarmahāmate ye padavīthīgāmino hastyaśvanaramṛgapaśugomahiṣājaiḍakādyāḥ padakāyasaṃjñāṃ labhante / nāma ca vyañjanaṃ ca punarmahāmate catvāra arūpiṇaḥ skandhāḥ / nāmnābhilapyanta iti kṛtvā nāma, svalakṣaṇena vyajyate iti kṛtvā vyañjanam / etanmahāmate nāmapadavyañjanakāyānāṃ nāmapadābhidhānalakṣaṇam / atra te paricayaḥ karaṇīyaḥ // tatredamucyate - vyañjane padakāye ca nāmni cāpi viśeṣataḥ / bālāḥ sajjanti durmedhā mahāpaṅke yathā gajāḥ // Lank_2.170 //",
+   "T0670": "「復次，大慧！當說名句形身相。善觀名句形身菩薩摩訶薩，隨入義句形身，疾得阿耨多羅三藐三菩提。如是覺已，覺一切眾生。大慧！名身者，謂若依事立名，是名名身。句身者，謂句有義身，自性決定究竟，是名句身。形身者，謂顯示名句，是名形身（形身即字也）。又形身者，謂長短高下。又句身者，謂徑跡。如象馬人獸等所行徑跡，得句身名。大慧！名及形者，謂以名說無色四陰，故說名。自相現，故說形。是名名句形身。說名句形身相分齊，應當修學。」爾時，世尊欲重宣此義而說偈言：「名身與句身，及形身差別， 凡夫愚計著，如象溺深泥。",
+   "T0671": "復次佛告聖者大慧菩薩言：「大慧！我今為諸菩薩摩訶薩，說名句字身相，以諸菩薩善知名句字身相故，依名句字身相，速得阿耨多羅三藐三菩提，得菩提已為眾生說名句字相。」大慧菩薩白佛言：「善哉！世尊！惟願速說。」「大慧！何者名身？謂依何等何等法作名，名身事物名異義一。大慧！是名我說名身。大慧！何者是句身？謂義事決定究竟見義故。大慧！是名我說句身。大慧！何者是字身？謂文句畢竟故。大慧！復次名身者，依何等法了別名句，能了知自形相故。大慧！復次句身者，謂句事畢竟故。大慧！復次名身者，所謂諸字從名差別，從阿字乃至呵字，名為名身。大慧！復次字身者，謂聲長短音韻高下，名為字身。大慧！復次句身者，謂巷路行迹，如人象馬諸獸行迹等，得名為句。大慧！復次名字者，謂無色四陰依名而說。大慧！復次名字相者，謂能了別名字相故。大慧！是名名句字身相。大慧！如是名句字相，汝應當學為人演說。」爾時世尊重說偈言：「名身與句身，及字身差別； 凡夫癡計著，如象溺深泥。",
+   "T0672": "「復次，大慧！我當說名、句、文身相，諸菩薩摩訶薩善觀此相了達其義，疾得阿耨多羅三藐三菩提，復能開悟一切眾生。大慧！名身者，謂依事立名，名即是身，是名名身。句身者，謂能顯義決定究竟，是名句身。文身者，謂由於此能成名句，是名文身。復次，大慧！句身者，謂句事究竟。名身者，謂諸字名各各差別，如從阿字乃至呵字。文身者，謂長短高下。復次，句身者，如足跡，如衢巷中人畜等跡。名謂非色四蘊，以名說故。文謂名之自相，由文顯故。是名名、句、文身。此名、句、文身相，汝應修學。」爾時世尊重說頌言：「名身與句身，及字身差別； 凡愚所計著，如象溺深泥。"
+  },
+  "l2f-09": {
+   "sa": "punaraparaṃ mahāmate yuktihetubuddhivaikalyātkutārkikā durvidagdhamatayo 'nāgate 'dhvani pṛṣṭā vidvadbhirekatvānyatvobhayānubhayadṛṣṭilakṣaṇavinirmuktamantadvayavidhiṃ pṛcchadbhirevaṃ vakṣyanti - apraśnamidaṃ nedaṃ yoniśa iti, yaduta rūpādibhyo 'nityatā anyā ananyeti / evaṃ nirvāṇaṃ saṃskārebhyo lakṣaṇāllakṣaṇaṃ guṇebhyo guṇī bhūtebhyo bhautikaṃ dṛśyāddarśanaṃ pāṃśubhyo 'ṇavo jñānādyoginaḥ, evamādyenottarottarakramalakṣaṇavidhinā avyākṛtāni pṛṣṭāḥ sthāpanīyaṃ bhagavatā avyākṛtamiti vakṣyanti / na tu te mohapuruṣā evaṃ jñāsyanti yathā śrotṝṇāṃ buddhivaikalyāt tathāgatā arhantaḥ samyaksaṃbuddhā utrāsapadavivarjanārthaṃ sattvānāṃ na vyākurvanti / avyākṛtānyapi ca mahāmate tīrthakaradṛṣṭivādavyudāsārthaṃ nopadiśyante tathāgataiḥ / tīrthakarā hi mahāmate evaṃvādinaḥ - yaduta sa jīvastaccharīram, anyo jīvo 'nyaccharīram, ityevamādye 'vyākṛtavādaḥ / tīrthakarāṇāṃ hi mahāmate kāraṇavisaṃmūḍhānāmavyākṛtaṃ na tu matpravacane / matpravacane tu mahāmate grāhyagrāhakavisaṃyukte vikalpo na pravartate / teṣāṃ kathaṃ sthāpyaṃ bhavet? ye tu mahāmate grāhyagrāhakābhiniviṣṭāḥ svacittadṛśyamātrānavadhāritamatayasteṣāṃ sthāpyaṃ bhavati / caturvidhapadapraśnavyākaraṇena mahāmate tathāgatā arhantaḥ samyaksaṃbuddhāḥ sattvebhyo dharmaṃ deśayanti / sthāpanīyamiti mahāmate kālāntaradeśanaiṣā mayā kṛtā aparipakvendriyāṇām / na tu paripakvendriyāṇāṃ sthāpyaṃ bhavati //",
+   "T0670": "「復次，大慧！未來世智者，當以離一異、俱不俱見相，我所通義，問無智者。彼即答言：『此非正問。』謂色等常無常，為異不異？如是涅槃、諸行相所相、求那所求那造所造、見所見、塵及微塵、修與修者，如是比展轉相。如是等問，而言佛說無記止論。非彼癡人之所能知，謂聞慧不具故。如來、應供、等正覺，令彼離恐怖句故，說言無記，不為記說。又止外道見論故，而不為說。大慧！外道作如是說，謂：『命即是身。』如是等無記論。大慧！彼諸外道愚癡，於因作無記論，非我所說。大慧！我所說者，離攝所攝，妄想不生。云何止彼？大慧！若攝所攝計著者，不知自心現量，故止彼。大慧！如來、應供、等正覺，以四種記論為眾生說法。大慧！止記論者，我時時說，為根未熟，不為熟者。",
+   "T0671": "「復次，大慧！未來世中無智慧者，以邪見心不知如實法故，因世間論自言智者，有智者問如實之法，離邪見相一異俱不俱。而彼愚人作如是言：『是問非是非正念問，謂色等法常無常為一為異？如是涅槃有為，諸行為一為異？相中所有能見所見為一為異？作者所作為一為異？四大中色香味觸為一為異？能見所見為一為異？泥團微塵為一為異？智者所知為一為異？如是等上上次第相，上上無記置答，佛如是說是為謗我。』大慧！而我不說如是法者，為遮外道邪見說故。何以故？大慧！外道等說謂身即命、身異命異，如是等法外道所說是無記法。大慧！外道迷於因果義故，是故無記，非我法中名無記也。大慧！我佛法中離能見可見虛妄之想無分別心，是故我法中無有置答；諸外道等執著可取能取，不知但是自心見法，為彼人故我說言有四種問法，無記置答非我法中。大慧！諸佛、如來、應、正遍知，為諸眾生有四種說言置答者，大慧！為待時故說如是法，為根未熟非為根熟，是故我說置答之義。",
+   "T0672": "「復次，大慧！未來世中有諸邪智惡思覺者，離如實法以見一異、俱不俱相，問諸智者。彼即答言，此非正問。謂：色與無常，為異為不異？如是涅槃諸行，相所相，依所依，造所造，見所見，地與微塵，智與智者，為異為不異？如是等不可記事次第而問，世尊說此當止記答。愚夫無智非所能知，佛欲令其離驚怖處，不為記說。大慧！不記說者，欲令外道永得出離作者見故。大慧！諸外道眾計有作者，作如是說：『命即是身，命異身異。』如是等說名無記論。大慧！外道癡惑說無記論，非我教中說離能所取不起分別，云何可止？大慧！若有執著能取所取，不了唯是自心所見，彼應可止。大慧！諸佛如來以四種記論為眾生說法。大慧！止記論者我別時說，以根未熟且止說故。"
+  },
+  "l2f-10": {
+   "sa": "punaraparaṃ mahāmate kriyākārakarahitāḥ sarvadharmā notpadyante 'kārakatvāt / tenocyate 'nuptannāḥ sarvadharmāḥ / niḥsvabhāvāḥ punarmahāmate sarvabhāvāḥ kena kāraṇenaḥ? yasmānmahāmate svabuddhyā vicāryamāṇānāṃ svasāmānyalakṣaṇābhāvā nāvadhāryante, tenocyante niḥsvabhāvāḥ sarvadharmā iti / tatra anāyūhāniryūhāḥ punarmahāmate sarvadharmāḥ kena kāraṇena? yasmānmahāmate svasāmānyalakṣaṇamāyūhyamānaṃ nāyuhyate, niryūhyamānaṃ na niryūhyate / ata etasmātkāraṇānmahāmate sarvadharmā āyūhaniryūhavigatāḥ / aniruddhāḥ punarmahāmate sarvadharmāḥ kena kāraṇena? yaduta bhāvasvabhāvalakṣaṇāsattvātsarvadharmā nopalabhyante / tenocyante 'niruddhāḥ sarvadharmā iti / tatra anityāḥ punarmahāmate sarvadharmāḥ kena kāraṇenocyante? yaduta lakṣaṇotpattyanityabhāvāt / tenocyante anityāḥ sarvadharmā iti / tatra nityāḥ punarmahāmate sarvadharmāḥ kena kāraṇena? yaduta lakṣaṇotpannānutpannābhāvādanityatayā nityāḥ / tenocyante mahāmate nityāḥ sarvadharmā iti // tatredamucyate - caturvidhaṃ vyākaraṇamekāṃśaṃ paripṛcchanam / vibhajyaṃ sthāpanīyaṃ ca tīrthavādanivāraṇam // Lank_2.171 // sadasatorhyanutpādaḥ sāṃkhyavaiśeṣikaiḥ smṛtaḥ / avyākṛtāni sarvāṇi taireva hi prakāśitā // Lank_2.172 // buddhyā vivecyamānānāṃ svabhāvo nāvadhāryate / tasmādanabhilāpyāste niḥsvabhāvāśca deśitāḥ // Lank_2.173 //",
+   "T0670": "「復次，大慧！一切法，離所作因緣不生，無作者故，一切法不生。大慧！何故一切性離自性？以自覺觀時，自共性相不可得故，說一切法不生。何故一切法不可持來，不可持去？以自共相，欲持來，無所來；欲持去，無所去；是故一切法，離持來去。大慧！何故一切諸法不滅？謂性自性相無故，一切法不可得，故一切法不滅。大慧！何故一切法無常？謂相起無常性，是故說一切法無常。大慧！何故一切法常？謂相起無生性，無常常，故說一切法常。」爾時，世尊欲重宣此義而說偈言：「記論有四種，一向及詰問， 分別及止論，以制諸外道。 有及非有生，僧佉毘舍師， 一切悉無記，彼如是顯示。 正覺所分別，自性不可得， 以離於言說，故說離自性。」",
+   "T0671": "「復次，大慧！一切諸法若離作者及因不生，以無作者故，是故我說諸法不生。」佛告大慧：「一切諸法無有體相。」大慧白佛言：「世尊！何故一切諸法無實體相？」佛告大慧：「自智觀察一切諸法自相同相不見諸法，是故我說一切諸法無實體相。」佛告大慧：「一切諸法亦無取相。」大慧言：「世尊！以何義故一切諸法亦無取相？」佛告大慧：「自相同相無法可取，是故我說無法可取。」佛告大慧：「一切諸法亦無捨相。」大慧言：「世尊！何故諸法亦無捨相？」佛告大慧：「觀察自相同相法無法可捨，是故我說一切諸法亦無捨相。」佛告大慧：「諸法不滅。」大慧言：「世尊！何故一切諸法不滅？」佛告大慧：「觀一切法自相同相無體相故，是故我說諸法不滅。」佛告大慧：「諸法無常。」大慧言：「世尊！何故一切諸法無常？」佛告大慧：「一切諸法常無常想常不生相，是故我說諸法無常。復次，大慧！我說一切諸法無常。」大慧言：「世尊！何故一切諸法無常？」佛告大慧：「以相不生、以不生體相，是故常無常，是故我說諸法無常。」爾時世尊重說偈言：「記論有四種，直答反質答； 分別答置答，以制諸外道。 有及非有生，僧佉毘世師， 而說悉無記，彼作如是說。 正智慧觀察，自性不可得； 是故不可說，及說無體相。」",
+   "T0672": "「復次，大慧！何故一切法不生？以離能作所作無作者故。何故一切法無自性？以證智觀自相共相不可得故。何故一切法無來去？以自共相來無所從去無所至故。何故一切法不滅？謂一切法無性相故，不可得故。何故一切法無常？謂諸相起無常性故。何故一切法常？謂諸相起即是不起，無所有故。無常性常，是故我說一切法常。」爾時世尊重說頌言：「一向及返問，分別與置答； 如是四種說，摧伏諸外道。 數論與勝論，言有非有生； 如是等諸說，一切皆無記。 以智觀察時，體性不可得； 以彼無可說，故說無自性。」"
+  }
+ }
+}

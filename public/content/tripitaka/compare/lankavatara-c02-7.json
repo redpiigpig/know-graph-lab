@@ -1,0 +1,194 @@
+{
+ "slug": "lankavatara-c02-7",
+ "title": "楞伽經・集一切法品（七）四果・八識・一乘",
+ "family": "sa",
+ "intro": "須陀洹下中上三品與三結、斯陀含、阿那含、三種阿羅漢；觀察覺與取相分別覺；大種造色；五蘊；外道四種涅槃；既立八識，何以只說意識滅；妄計自性十二種分別；自證聖智相；何故說三乘而不說一乘。梵本、實叉難陀本到此是第二品末，菩提流支是〈集一切佛法品〉末。",
+ "units": [
+  {
+   "id": "l2g-01",
+   "label": "大慧請說須陀洹差別"
+  },
+  {
+   "id": "l2g-02",
+   "label": "須陀洹三品・三結"
+  },
+  {
+   "id": "l2g-03",
+   "label": "斷何等貪・斯陀含・阿那含"
+  },
+  {
+   "id": "l2g-04",
+   "label": "三種阿羅漢・偈（2.174–176）"
+  },
+  {
+   "id": "l2g-05",
+   "label": "觀察覺・取相分別覺"
+  },
+  {
+   "id": "l2g-06",
+   "label": "大種造色"
+  },
+  {
+   "id": "l2g-07",
+   "label": "五蘊體相"
+  },
+  {
+   "id": "l2g-08",
+   "label": "外道四種涅槃"
+  },
+  {
+   "id": "l2g-09",
+   "label": "八識：何以但說意識滅・偈"
+  },
+  {
+   "id": "l2g-10",
+   "label": "妄計自性十二種分別・偈"
+  },
+  {
+   "id": "l2g-11",
+   "label": "自證聖智相・一乘相"
+  },
+  {
+   "id": "l2g-12",
+   "label": "何故說三乘不說一乘・偈（至 2.208）"
+  },
+  {
+   "id": "l2g-13",
+   "label": "品尾題"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sa",
+   "lang": "sa",
+   "label": "梵本",
+   "who": "Vaidya 校訂本（1963）・GRETIL"
+  },
+  {
+   "id": "T0670",
+   "lang": "lzh",
+   "label": "四卷本",
+   "who": "求那跋陀羅譯《楞伽阿跋多羅寶經》・443 年",
+   "work": "T0670"
+  },
+  {
+   "id": "T0671",
+   "lang": "lzh",
+   "label": "十卷本",
+   "who": "菩提流支譯《入楞伽經》・513 年",
+   "work": "T0671"
+  },
+  {
+   "id": "T0672",
+   "lang": "lzh",
+   "label": "七卷本",
+   "who": "實叉難陀譯《大乘入楞伽經》・700–704 年",
+   "work": "T0672"
+  }
+ ],
+ "works": [
+  "T0670",
+  "T0671",
+  "T0672"
+ ],
+ "anchors": [
+  {
+   "work": "T0670",
+   "range": [
+    "T16n0670_p0494c18",
+    "T16n0670_p0497b24"
+   ]
+  },
+  {
+   "work": "T0671",
+   "range": [
+    "T16n0671_p0536c29",
+    "T16n0671_p0540a23"
+   ]
+  },
+  {
+   "work": "T0672",
+   "range": [
+    "T16n0672_p0604c12",
+    "T16n0672_p0607a29"
+   ]
+  }
+ ],
+ "cells": {
+  "l2g-01": {
+   "sa": "atha khalu mahāmatirbodhisattvo mahāsattvaḥ punarapi bhagavantametadavocat - deśayatu me bhagavān srotaāpannānāṃ srotaāpattigatiprabhedanayalakṣaṇam / yena srotaāpattigatiprabhedanayalakṣaṇena ahaṃ ca anye ca bodhisattvā mahāsattvāḥ srotaāpannānāṃ srotaāpattigatiprabhedanayalakṣaṇakuśalā uttarottarasakṛdāgāmyanāgāmyarhattvopāyalakṣaṇavidhijñāstathā sattvebhyo dharmaṃ deśayeyuḥ, yathā nairātmyalakṣaṇadvayamāvaraṇadvayaṃ ca prativiśodhya bhūmerbhūmilakṣaṇātikramagatiṃgatāstathāgatācintyagativiṣayagocaraṃ pratilabhya viśvarūpamaṇisadṛśāḥ sarvasattvopajīvyatāmadhigaccheyuḥ, sarvadharmaviṣayagatikāyopabhogyatopajīvyāḥ syuḥ // bhagavānāha - tena hi mahāmate śṛṇu, sādhu ca suṣṭhu ca manasikuru / bhāṣiṣye 'haṃ te / sādhu bhagavanniti mahāmatirbodhisattvo mahāsattvo bhagavataḥ pratyaśrauṣīt /",
+   "T0670": "爾時大慧菩薩摩訶薩復白佛言：「世尊！唯願為說諸須陀洹、須陀洹趣差別通相。若菩薩摩訶薩，善解須陀洹趣差別通相，及斯陀含、阿那含、阿羅漢方便相，分別知已，如是如是為眾生說法。謂二無我相及二障淨，度諸地相，究竟通達，得諸如來不思議究竟境界。如眾色摩尼，善能饒益一切眾生，以一切法境界無盡身財，攝養一切。」佛告大慧：「諦聽，諦聽！善思念之。今為汝說。」大慧白佛言：「善哉，世尊！唯然聽受。」",
+   "T0671": "爾時聖者大慧菩薩摩訶薩白佛言：「世尊！惟願世尊為我等說須陀洹等行差別相，我及一切菩薩摩訶薩等，善知須陀洹等修行相已，如實知須陀洹、斯陀含、阿那含、阿羅漢等，如是如是為眾生說；眾生聞已入二無我相、淨二種障，次第進取地地勝相，得如來不可思議境界修行；得修行處已，如如意寶隨眾生念，受用境界身口意行故。」佛告大慧言：「善哉！善哉！善哉大慧！諦聽！諦聽！今為汝說。」大慧白佛言：「善哉世尊！唯然聽受。」",
+   "T0672": "爾時大慧菩薩摩訶薩復白佛言：「世尊！願為我說諸須陀洹、須陀洹果行差別相，我及諸菩薩摩訶薩聞是義故，於須陀洹、斯陀含、阿那含、阿羅漢方便相，皆得善巧。如是而為眾生演說，令其證得二無我法淨除二障，於諸地相漸次通達，獲於如來不可思議智慧境界，如眾色摩尼，普令眾生悉得饒益。」佛言：「諦聽！當為汝說。」大慧言：「唯。」"
+  },
+  "l2g-02": {
+   "sa": "bhagavāṃstasyaitadavocat - traya ime mahāmate srotaāpannānāṃ srotaāpattiphalaprabhedāḥ / katame trayaḥ? yaduta hīnamadhyaviśiṣṭāḥ tatra mahāmate hīnaḥ saptajanmabhavaparamaḥ / madhyaḥ punarmahāmate tripañcabhavaparinirvāyī bhavati / uttamaḥ punarmahāmate tajjanmaparinirvāyī bhavati / eṣāṃ tu mahāmate trayāṇāṃ trīṇi saṃyojanāni mṛdumadhyādhimātrāṇyeva bhavanti / tatra mahāmate katamāni trīṇi saṃyojanāni? yaduta satkāyadṛṣṭirvicikitsā śīlavrataparāmarśaśca / etāni mahāmate trīṇi saṃyojanāni viśeṣottarottareṇa arhatāmarhatphalībhavanti / tatra mahāmate satkāyadṛṣṭirdvividhā yaduta sahajā ca parikalpitā ca, paratantraparikalpitasvabhāvavat / tadyathā mahāmate paratantrasvabhāvāśrayādvicitraparikalpitasvabhāvābhiniveśaḥ pravartate / sa ca tatra na sannāsanna sadasan, abhūtaparikalpalakṣaṇatvāt / atha ca bālairvikalpyate vicitrasvabhāvalakṣaṇābhiniveśena mṛgatṛṣṇikeva mṛgaiḥ / iyaṃ mahāmate srotaāpannasya parikalpitā satkāyadṛṣṭirajñānāccirakālābhiniveśasaṃcitā / sā ca tasya pudgalanairātmyagrahābhāvataḥ prahīṇā / sahajā punarmahāmate srotaāpannasya satkāyadṛṣṭiḥ svaparakāyasamatayā catuḥskandharūpalakṣaṇatvādrūpasyotpattibhūtabhautikatvātparasparahetulakṣaṇatvādbhūtānāṃ rūpasyāsamudaya iti kṛtvā srotaāpannasya sadasatpakṣadṛṣṭidarśanātsatkāyadṛṣṭiḥ prahīṇā bhavati / ata eva satkāyadṛṣṭiprahīṇasya rāgo na pravartate / etanmahāmate satkāyadṛṣṭilakṣaṇam // vicikitsālakṣaṇaṃ punarmahāmate yaduta prāptidharmādhigamasudṛṣṭilakṣaṇatvātpūrvaṃ satkāyadṛṣṭidvayavikalpaprahīṇatvācca vicikitsā dharmeṣu na bhavati / na cāsya anyā śāstṛdṛṣṭirbhavati śuddhāśuddhitaḥ / etanmahāmate vicikitsālakṣaṇaṃ srotaāpannasya // śīlaṃ punarmahāmate kathaṃ na parāmṛśati srotaāpannaḥ? yaduta duḥkhopapattyāyatanalakṣaṇasaṃdṛṣṭatvānna parāmṛśati / parāmṛṣṭiḥ punarmahāmate yaduta śīlavratataponiyamairbālapṛthagjanā bhogasukhābhilāṣiṇo bhavotpattiṃ prārthayante, na ca parāmṛśanti / evamanyatra svapratyātmādhigamaviśeṣagāmitāyāṃ pariṇāmayanti / nirvikalpānāsravadharmalakṣaṇākāreṇa prasajyante śīlāṅgaiḥ / etanmahāmate srotaāpannasya śīlavrataparāmarśalakṣaṇaṃ bhavati / na tu mahāmate srotaāpannasya trisaṃyojanaprahīṇasya rāgadveṣamohāḥ pravartante //",
+   "T0670": "佛告大慧：「有三種須陀洹、須陀洹果差別。云何為三？謂下中上。下者極七有生；中者三五有生而般涅槃；上者即彼生而般涅槃。此三種有三結，下中上。云何三結？謂身見、疑、戒取。是三結差別，上上昇進，得阿羅漢。大慧！身見有二種，謂：俱生及妄想。如緣起妄想，自性妄想。譬如依緣起自性，種種妄想自性，計著生。以彼非有、非無、非有無，無實妄想相故。愚夫妄想，種種妄想自性相計著。如熱時炎，鹿渴水想。是須陀洹妄想身見，彼以人無我攝受無性，斷除久遠無知計著。大慧！俱生者，須陀洹身見，自他身等四陰，無色相故。色生造及所造故，展轉相因相故，大種及色不集故。須陀洹觀有無品見，身見則斷。如是身見斷，貪則不生，是名身見相。大慧！疑相者，謂得法善見相故，及先二種身見妄想斷故，疑法不生。不於餘處起大師見，為淨不淨。是名疑相須陀洹斷。大慧！戒取者，云何須陀洹不取戒？謂善見受生處苦相故，是故不取。大慧！取者謂愚夫決定受習苦行，為眾樂具，故求受生；彼則不取，除回向自覺勝，離妄想，無漏法相行方便，受持戒支，是名須陀洹取戒相斷。須陀洹斷三結，貪癡不生。若須陀洹作是念：『此諸結我不成就者。』應有二過，墮身見，及諸結不斷。」",
+   "T0671": "佛告大慧言：「大慧！須陀洹有三種果差別。」大慧言：「何等三種？」佛告大慧：「謂下中上。大慧！何者須陀洹下？謂三有中七返受生。大慧！何者為中？謂三生五生入於涅槃。大慧！何者為上？謂即一生入於涅槃。大慧！是三種須陀洹有三種結，謂下中上。大慧！何者三結？謂身見、疑、戒取。大慧！彼三種結上上勝進得阿羅漢果。大慧！身見有二種。何等為二？一者、俱生；二者、虛妄分別而生，如因緣分別法故。大慧！譬如依諸因緣法相虛妄分別而生實相，彼因緣法中非有非無，以分別有無非實相故；愚癡凡夫執著種種法相，如諸禽獸見於陽炎取以為水。大慧！是名須陀洹分別身見。何以故？以無智故；無始世來虛妄取相故。大慧！此身見垢見人無我乃能遠離。大慧！何者須陀洹俱生身見？所謂自身他身俱見。彼二四陰無色，色陰生時，依於四大及四塵等，彼此因緣和合生色，而須陀洹知已能離有無邪見斷於身見，斷身見已不生貪心。大慧！是名須陀洹身見之相。大慧！何者須陀洹疑相？謂得證法善見相已，先斷身見及於二見分別之心，是故於諸法中不生疑心，復不生心於餘尊者以為尊相為淨不淨故。大慧！是名須陀洹疑相。大慧！何者須陀洹戒取相？謂善見受生處苦相故，是故不取戒相。大慧！戒取者，謂諸凡夫持戒精進種種善行，求樂境界生諸天中，彼須陀洹不取是相而取自身內證迴向進趣勝處，離諸妄想修無漏戒分。大慧！是名須陀洹戒取相。大慧！須陀洹斷三結煩惱離貪瞋癡。」",
+   "T0672": "佛言：「大慧！諸須陀洹、須陀洹果差別有三，謂：下、中、上。大慧！下者於諸有中極七反生，中者三生五生，上者即於此生而入涅槃。大慧！此三種人斷三種結，謂：身見、疑、戒禁取，上上勝進得阿羅漢果。大慧！身見有二種，謂俱生及分別，如依緣起有妄計性。大慧！譬如依止緣起性故，種種妄計執著性生，彼法但是妄分別相，非有非無，非亦有亦無，凡夫愚癡而橫執著，猶如渴獸妄生水想，此分別身見無智慧故久遠相應，見人無我即時捨離。大慧！俱生身見，以普觀察自他之身，受等四蘊無色相故，色由大種而得生故，是諸大種互相因故，色不集故，如是觀已，明見有無即時捨離；捨身見故貪則不生，是名身見相。大慧！疑相者，於所證法善見相故，及先二種身見分別斷故，於諸法中疑不得生，亦不於餘生大師想為淨不淨，是名疑相。大慧！何故須陀洹不取戒禁？謂以明見生處苦相，是故不取。夫其取者，謂諸凡愚於諸有中貪著世樂，苦行持戒願生於彼，須陀洹人不取是相，惟求所證最勝無漏無分別法，修行戒品，是名戒禁取相。大慧！須陀洹人捨三結故離貪瞋癡。」"
+  },
+  "l2g-03": {
+   "sa": "mahāmatirāha - rāgaḥ punarbhagavatā bahuprakāra upadiṣṭaḥ / tatkatamastasyātra rāgaḥ prahīṇo bhavati? bhagavānāha - viṣayakāmendriyaḥ strīsaṃyogarāgaḥ pratyutpannasukhaḥ āyatyāṃ duḥkhajanmahetukaḥ khaṭacapeṭaliṅgitacumbitapariṣvaktāghrātakaṭākṣekṣitaiḥ / tasya mahāmate rāgo na pravartate / tatkasya hetoḥ? yaduta samādhisukhavihāralābhitvāt / ata eṣa prahīṇo bhavati, na nirvāṇādhigamarāgaḥ // sakṛdāgāmiphalalakṣaṇaṃ punarmahāmate katamat? yaduta sakṛdrūpalakṣaṇābhāsavikalpaḥ pravartate / nimittadṛṣṭilakṣyalakṣaṇābhāvāddhyānagatilakṣaṇasudṛṣṭatvātsakṛdetaṃ lokamāgamya duḥkhasyāntakriyāyai parinirvāsyati / tenocyate sakṛdāgāmīti / tatra anāgāmīti mahāmate kathaṃ bhavati? yaduta atītānāgatapratyutpannasya rūpalakṣaṇabhāvābhāvapravṛtterdṛṣṭidoṣānuśayavikalpasya anāgāmitvādanāgāmirūpaprahīṇatvācca saṃyojanānāmanāgāmītyucyate / arhan punarmahāmate dhyānadhyeyasamādhivimokṣabalābhijñākleśaduḥkhavikalpābhāvādarhannityucyate //",
+   "T0670": "大慧白佛言：「世尊！世尊說眾多貪欲，彼何者貪斷？」佛告大慧：「愛樂女人纏綿，貪著種種方便，身口惡業，受現在樂，種未來苦，彼則不生。所以者何？得三昧正受樂故。是故彼斷，非趣涅槃貪斷。大慧！云何斯陀含相？謂頓照色相妄想生相，見相不生。善見禪趣相故，頓來此世，盡苦際，得涅槃，是故名斯陀含。大慧！云何阿那含？謂過去未來現在色相性非性，生見過患，使妄想不生故，及結斷故，名阿那含。大慧！阿羅漢者，謂諸禪、三昧、解脫、力、明，煩惱苦妄想非性故，名阿羅漢。」",
+   "T0671": "大慧白佛言：「世尊！世尊說眾多貪，須陀洹離何等貪？」佛告大慧：「須陀洹遠離與諸女人和合，不為現在樂種未來苦因，遠離打摑嗚抱眄視。大慧！須陀洹不生如是貪心。何以故？以得三昧樂行故。大慧！須陀洹遠離如是等貪，非離涅槃貪。大慧！何者斯陀含果相？謂一往見色相現前生心，非虛妄分別想見，以善見禪修行相故，一往來世間，便斷苦盡入於涅槃，是名斯陀含。大慧！何者阿那含相？謂於過去現在未來色相中生有無心，以見使虛妄分別心，諸結不生，不來故名阿那含。大慧！何者阿羅漢相？謂不生分別思惟可思惟，三昧解脫力通煩惱苦等分別心故，名阿羅漢。」",
+   "T0672": "大慧白言：「貪有多種，捨何等貪？」佛言：「大慧！捨於女色纏綿貪欲，見此現樂生來苦故，又得三昧殊勝樂故，是故捨彼非涅槃貪。大慧！云何斯陀含果？謂不了色相起色分別，一往來已善修禪行，盡苦邊際而般涅槃，是名斯陀含。大慧！云何阿那含果？謂於過未現在色相起有無見，分別過惡隨眠不起，永捨諸結更不還來，是名阿那含。大慧！阿羅漢者，謂諸禪三昧解脫力通悉已成就，煩惱諸苦分別永盡，是名阿羅漢。」"
+  },
+  "l2g-04": {
+   "sa": "mahāmatirāha - trayaḥ punarbhagavatā arhanto 'bhihitāḥ / tatkatamasyāyaṃ bhagavannarhacchabdo nipātyate? kiṃ bhagavan śamaikāyanamārgapratilambhikasya, uta bodhipraṇidhānābhyastakuśalamūlasaṃmūḍhasya, uta nirmitanairmāṇikasya? bhagavānāha - śamaikāyanamārgapratilambhikasya mahāmate śrāvakasya, na tvanyeṣām / anye punarmahāmate bodhisattvacaryācaritāvino buddhanirmitanairmāṇikāśca upāyakuśalamūlapraṇidhānapūrvakatvātparṣanmaṇḍaleṣūpapattiṃ darśayanti buddhaparṣanmaṇḍalopaśobhanārtham / vikalpagatisaṃsthānāntaravicitropadeśo 'yaṃ mahāmate yaduta phalādhigamadhyānadhyātṛdhyeyaviviktatvātsvacittadṛśyopagamātphalaprāptilakṣaṇamupadiśyate / punaraparaṃ mahāmate yadi srotaāpannasyaitadabhaviṣyat - imāni saṃyojanāni, ahamebhirna saṃyukta iti, taddvitvaprasaṅga ātmadṛṣṭipatitaḥ syādaprahīṇasaṃyojanaśca // punaraparaṃ mahāmate dhyānāpramāṇārūpyadhātusamatikramāya svacittadṛśyalakṣaṇavyāvṛttiḥ karaṇīyā / saṃjñāveditanirodhasamāpattiśca mahāmate svacittadṛśyagativyatikramastasya na yujyate cittamātratvāt // tatredamucyate - dhyānāni cāpramāṇāni ārūpyāśca samādhayaḥ / saṃjñānirodho nikhilaścittamātre na vidyate // Lank_2.174 // srotāpattiphalaṃ caiva sakṛdāgāminastathā / anāgāmiphalaṃ caiva arhattvaṃ cittavibhramaḥ // Lank_2.175 // dhyātā dhyānaṃ ca dhyeyaṃ ca prahāṇaṃ satyadarśanam / kalpanāmātramevedaṃ yo budhyati sa mucyate // Lank_2.176 //",
+   "T0670": "大慧白佛言：「世尊！世尊說三種阿羅漢，此說何等阿羅漢？世尊！為得寂靜一乘道？為菩薩摩訶薩方便示現阿羅漢？為佛化化？」佛告大慧：「得寂靜一乘道聲聞，非餘。餘者，行菩薩行，及佛化化，巧方便本願故，於大眾中示現受生，為莊嚴佛眷屬故。大慧！於妄想處，種種說法，謂得果得禪。禪者入禪，悉遠離故，示現得自心現量，得果相，說名得果。復次，大慧！欲超禪無量無色界者，當離自心現量相。大慧！受想正受，超自心現量者，不然。何以故？有心量故。」爾時，世尊欲重宣此義而說偈言：「諸禪四無量，無色三摩提， 一切受想滅，心量彼無有。 須陀槃那果，往來及不還， 及與阿羅漢，斯等心惑亂。 禪者禪及緣，斷知是真諦， 此則妄想量，若覺得解脫。",
+   "T0671": "大慧菩薩白佛言：「世尊說三種阿羅漢，此說何等羅漢名阿羅漢？世尊為說得決定寂滅羅漢？為發菩提願善根忘善根羅漢？為化應化羅漢？」佛告大慧：「為說得決定寂滅聲聞羅漢，非餘羅漢。大慧！餘羅漢者，謂曾修行菩薩行者，復有應化佛所化羅漢，本願善根方便力故，現諸佛土生大眾中莊嚴諸佛大會眾故。大慧！分別去來說種種事，遠離證果能思惟所思惟可思惟故，以見自心為見所見說得果相。復次，大慧！若須陀洹生如是心，此是三結；我離三結者。大慧！是名見三法墮於身見，彼若如是不離三結。大慧！是故須陀洹不生如是心。復次，大慧！若欲遠離禪無量無色界者，應當遠離自心見相遠離少相，寂滅定三摩跋提相故。大慧！若不如是，彼菩薩心見諸法，以惟心故。」爾時世尊重說偈言：「諸禪四無量，無色三摩提； 少相寂滅定，一切心中無。 逆流修無漏，及於一往來； 往來及不還，羅漢心迷沒。 思可思能思，遠離見真諦； 惟是虛妄心，能知得解脫。",
+   "T0672": "大慧言：「世尊！阿羅漢有三種，謂：一向趣寂，退菩提願，佛所變化。此說何者？」佛言：「大慧！此說趣寂，非是其餘。大慧！餘二種人，謂：已曾發巧方便願，及為莊嚴諸佛眾會於彼示生。大慧！於虛妄處說種種法，所謂證果禪者及禪皆性離故，自心所見得果相故。大慧！若須陀洹作如是念：『我離諸結。』則有二過，謂：墮我見及諸結不斷。復次，大慧！若欲超過諸禪無量無色界者，應離自心所見諸相。大慧！想受滅三昧，超自心所見境者不然，不離心故。」爾時世尊重說頌言：「諸禪與無量，無色三摩提， 及以想受滅，惟心不可得。 預流一來果，不還阿羅漢； 如是諸聖人，悉依心妄有。 禪者禪所緣，斷惑見真諦； 此皆是妄想，了知即解脫。"
+  },
+  "l2g-05": {
+   "sa": "punaraparaṃ mahāmate dviprakārā buddhiḥ pravicayabuddhiśca vikalpalakṣaṇagrāhābhiniveśapratiṣṭhāpikā ca / tatra mahāmate pravicayabuddhirnāma yaduta yayā buddhyā bhāvasvabhāvalakṣaṇaṃ pravicīyamānaṃ catuṣkoṭikārahitaṃ nopalabhyate, sā pravicayabuddhiḥ / tatra mahāmate catuṣkoṭikā yaduta ekatvānyatvobhayanobhayāstināstinityānityarahitāṃ catuṣkoṭikāmiti vadāmi / etayā catuṣkoṭikayā mahāmate rahitāḥ sarvadharmā ityucyate / iyaṃ mahāmate catuṣkoṭikā sarvadharmaparīkṣāyāṃ prayoktavyā / tatra mahāmate vikalpalakṣaṇagrāhābhiniveśapratiṣṭhāpikā buddhiḥ katamā? yaduta yena mahāmate cittavikalpalakṣaṇagrāhābhiniveśena uṣṇadravacalakaṭhinānabhūtaparikalpalakṣaṇān mahābhūtān pratijñāhetulakṣaṇadṛṣṭāntābhiniveśādasadbhūtasamāropeṇa samāropayati, sā vikalpalakṣaṇagrāhābhiniveśapratiṣṭhāpikā buddhiḥ / etanmahāmate buddhidvayasya lakṣaṇaṃ yena buddhidvayalakṣaṇena samanvāgatā bodhisattvā dharmapudgalanairātmyalakṣaṇagatiṃgatā nirābhāsabuddhipravicayacaryābhūmikuśalāḥ prathamāṃ bhūmiṃ pratilabhante, samādhiśataṃ ca samāpadyante / buddhabodhisattvaśataṃ ca samādhiviśeṣapratilambhena paśyanti, kalpaśataṃ ca pūrvāntāparāntato 'nupraviśanti, kṣetraśataṃ cāvabhāsayanti / kṣetraśataṃ cāvabhāsya uttarottarabhūmilakṣaṇavidhijñāḥ praṇidhānavaiśeṣikatayā vikrīḍanto dharmameghābhiṣekābhiṣiktāstathāgatapratyātmabhūmimadhigamya daśaniṣṭhāpadasunibaddhadharmāṇaḥ sattvaparipākāya vicitrairnirmāṇakiraṇairvirājante pratyātmagatisukhasamāhitāḥ //",
+   "T0670": "「復次，大慧！有二種覺，謂：觀察覺，及妄想相攝受計著建立覺。大慧！觀察覺者，謂若覺性自性相，選擇離四句不可得，是名觀察覺。大慧！彼四句者，謂離一異、俱不俱、有無非有非無、常無常，是名四句。大慧！此四句離，是名一切法。大慧！此四句觀察一切法，應當修學。大慧！云何妄想相攝受計著建立覺？謂：妄想相攝受，計著堅濕煖動不實妄想相四大種。宗因想譬喻計著，不實建立而建立，是名妄想相攝受計著建立覺。是名二種覺相。若菩薩摩訶薩，成就此二覺相，人法無我相究竟，善知方便無所有覺。觀察行地，得初地，入百三昧，得差別三昧，見百佛及百菩薩，知前後際各百劫事；光照百剎土，知上上地相，大願殊勝神力自在。法雲灌頂，當得如來自覺地，善繫心十無盡句，成熟眾生，種種變化，光明莊嚴，得自覺聖樂三昧正受故。",
+   "T0671": "「復次，大慧！有二種智。何等為二？一者、觀察智；二者、虛妄分別取相住智。大慧！何者觀察智？謂何等智觀察一切諸法體相，離於四法無法可得，是名觀察智。大慧！何者四法？謂一、異、俱、不俱，是名四法。大慧！若離四法一切法不可得。大慧！若欲觀察一切法者，當依四法而觀諸法。大慧！妄想分別取相住智者，所謂執著堅、熱、濕、動，虛妄分別四大相故，執著建立，因譬喻相故建立，非實法以為實。大慧！是名虛妄分別執著取相住持智。大慧！是名二種智相。大慧！諸菩薩摩訶薩，畢竟知此二相進趣法無我相，善知真實智地行相，知已即得初地得百三昧，依三昧力見百佛見百菩薩，能知過去未來各百劫事，照百佛世界；照百佛世界已，善知諸地上上智相，以本願力故，能奮迅示現種種神通，於法雲地中依法雨授位，證如來內究竟法身智慧地，依十無量善根願轉，為教化眾生種種應化，自身示現種種光明，以得自身修行證智三昧樂故。",
+   "T0672": "「復次，大慧！有二種覺智，謂：觀察智，及取相分別執著建立智。觀察智者，謂觀一切法，離四句不可得。四句者，謂：一異、俱不俱、有非有、常無常等。我以諸法離此四句，是故說言一切法離。大慧！如是觀法汝應修學。云何取相分別執著建立智？謂於堅、濕、煖、動諸大種性，取相執著虛妄分別，以宗、因、喻而妄建立，是名取相分別執著建立智。是名二種覺智相。菩薩摩訶薩知此智相，即能通達人、法無我，以無相智於解行地善巧觀察，入於初地得百三昧，以勝三昧力見百佛百菩薩，知前後際各百劫事，光明照曜百佛世界，善能了知上上地相，以勝願力變現自在，至法雲地而受灌頂，入於佛地十無盡願成就眾生，種種應現無有休息，而恒安住自覺境界三昧勝樂。"
+  },
+  "l2g-06": {
+   "sa": "punaraparaṃ mahāmate bodhisattvena mahāsattvena mahābhūtabhautikakuśalena bhavitavyam / kathaṃ ca mahāmate bodhisattvo mahābhūtabhautikakuśalo bhavati? tatra mahāmate bodhisattvo mahāsattva itaḥ pratisaṃśikṣate tatsatyaṃ yatra mahābhūtānāmasaṃbhavo 'saṃbhūtāni cemāni mahāmate bhūtānīti prativipaśyati / evaṃ prativipaśyan nāma vikalpamātraṃ svacittadṛśyamātrāvabodhādbāhyabhāvābhāvānnāma cittadṛśyavikalpamātramidaṃ yaduta traidhātukaṃ mahābhūtabhautikarahitaṃ prativipaśyati cātuṣkoṭikanayaviśuddhimātmātmīyarahitaṃ yathābhūtasvalakṣaṇāvasthānāvasthitamanutpādasvalakṣaṇasiddham / tatra mahāmate mahābhūteṣu kathaṃ bhautikaṃ bhavati? yaduta snehavikalpamahābhūtaṃ mahāmate abdhātuṃ niṣpādayatyadhyātmabāhyam / utsāhavikalpamahābhūtaṃ mahāmate tejodhātuṃ niṣpādayatyadhyātmabāhyam / samudīraṇavikalpamahābhūtaṃ mahāmate vāyudhātuṃ niṣpādayatyadhyātmabāhyam / rūpaparicchedavikalpamahābhūtaṃ punarmahāmate pṛthivīdhātuṃ janayatyākāśasahitamadhyātmabāhyam / mithyāsatyābhiniveśātpañcaskandhakadambakaṃ mahābhūtabhautikaṃ pravartate / vijñānaṃ punarmahāmate vicitrapadaviṣayābhiniveśābhilāṣahetutvādvijñānaṃ pravartate 'nyagatisaṃdhau / pṛthivībhūtabhautikānāṃ mahāmate kāraṇamasti mahābhūtāni, na tu mahābhūtānām / tatkasya hetoḥ? yaduta bhāvaliṅgalakṣaṇagrahaṇasaṃsthānakriyāyogavatāṃ mahāmate kriyāsaṃyogotpattirbhavati nāliṅgavatām / tasmādetanmahāmate mahābhūtabhautikalakṣaṇaṃ tīrthakarairvikalpyate na tu mayā //",
+   "T0670": "「復次，大慧！菩薩摩訶薩，當善四大造色。云何菩薩善四大造色？大慧！菩薩摩訶薩作是學，彼真諦者，四大不生。於彼四大不生，作如是觀察。觀察已，覺名相妄想分齊，自心現分齊，外性非性，是名自心現妄想分齊。謂三界觀彼四大造色性離，四句通淨，離我我所。如實相、自相分齊住，無生自相成。大慧！彼四大種云何生造色？謂津潤妄想大種生內外水界，堪能妄想大種生內外火界，飄動妄想大種生內外風界，斷截色妄想大種生內外地界。色及虛空俱，計著邪諦，五陰集聚，四大造色生。大慧！識者，因樂種種跡境界故，餘趣相續。大慧！地等四大及造色等，有四大緣，非彼四大緣。所以者何？謂性形相處所作方便無性，大種不生。大慧！性形相處所作方便和合生，非無形。是故四大造色相，外道妄想。非我。",
+   "T0671": "「復次，大慧！菩薩摩訶薩應善知四大及四塵相。大慧！云何菩薩善知四大及四塵相？大慧！菩薩摩訶薩應如是修行，所言實者，謂無四大處，觀察四大本來不生。如是觀已復作是念：『言觀察者，惟自心見虛妄覺知，以見外塵無有實物，惟是名字分別心見，所謂三界離於四大及四塵相。』見如是已離四種見，見清淨法離我我所，住於自相如實法中。大慧！住自相如實法中者，謂住建立諸法無生自相法中。大慧！於四大中云何有四塵？大慧！謂妄想分別柔軟濕潤，生內外水大。大慧！妄想分別煖增長力，生內外火大。大慧！妄想分別輕轉動相，生內外風大。大慧！妄想分別所有堅相，生內外地大。大慧！妄想分別內外共虛空生內外想，以執著虛妄內外邪見，五陰聚落四大及四塵生故。」佛告大慧：「識能執著種種境界樂求異道，取彼境界故。大慧！四大有四，謂色、香、味、觸。大慧！四大無因。何以故？謂地自體形相長短不生四大相故。大慧！依形相大小上下容貌而生諸法，不離形相大小長短而有法故。是故，大慧！外道虛妄分別四大及四塵，非我法中如此分別。",
+   "T0672": "「復次，大慧！菩薩摩訶薩當善了知大種造色。云何了知？大慧！菩薩摩訶薩應如是觀，彼諸大種真實不生，以諸三界但是分別，惟心所現無有外物。如是觀時，大種所造悉皆性離，超過四句無我我所，住如實處成無生相。大慧！彼諸大種云何造色？大慧！謂虛妄分別，津潤大種成內外水界，炎盛大種成內外火界，飄動大種成內外風界，色分段大種成內外地界，離於虛空，由執著邪諦，五蘊聚集大種造色生。大慧！識者以執著種種言說境界為因起故，於餘趣中相續受生。大慧！地等造色有大種因，非四大種為大種因。何以故？謂若有法有形相者，則是所作非無形者。大慧！此大種造色相外道分別，非是我說。"
+  },
+  "l2g-07": {
+   "sa": "punaraparaṃ mahāmate skandhānāṃ skandhasvabhāvalakṣaṇaṃ nirdekṣyāmaḥ / tatra mahāmate pañca skandhāḥ / katame? yaduta rūpavedanāsaṃjñāsaṃskāravijñānāni / tatra mahāmate catvāraḥ skandhā arūpiṇo vedanā saṃjñā saṃskārāṃ vijñānaṃ ca / rūpaṃ mahāmate cāturmahābhautikam, bhūtāni ca parasparavilakṣaṇāni / na ca mahāmate arūpiṇāṃ catuṣkasaṃkhyā bhavatyākāśavat / tadyathā mahāmate ākāśaṃ saṃkhyālakṣaṇātītam, atha ca vikalpyate evamākāśamiti, evameva mahāmate skandhāḥ saṃkhyālakṣaṇagaṇanātītā bhāvābhāvavivarjitāścātuṣkoṭikarahitāḥ saṃkhyāgaṇanānirdeśena nirdiśyante bālairna tvāryaiḥ // āryaiḥ punarmahāmate māyāvicitrarūpākṛtivadanyānanyavarjitāḥ prajñāpyante svapnabimbapuruṣavat / āśrayānanyatvādāryajñānagatisaṃmohānmahāmate skandhavikalpaḥ khyāyate / etanmahāmate skandhānāṃ skandhasvabhāvalakṣaṇam / sa ca vikalpastvayā vyāvartanīyaḥ, vyāvṛtya viviktadharmopadeśaḥ karaṇīyaḥ / sarvabuddhaparṣanmaṇḍaleṣu tīrthyadṛṣṭinivāraṇāya viviktadharmopadeśena mahāmate kriyamāṇena dharmanairātmyadarśanaṃ viśudhyate, dūraṃgamābhūmipraveśaśca bhavati / sa dūraṃgamāṃ mahābhūmimanupraviśya anekasamādhivaśavartī bhavati / manomayakāyapratilambhācca samādhiṃ māyopamaṃ pratilabhate / balābhijñāvaśitāgatiṃgataḥ sarvasattvopajīvyo bhavati pṛthivīvat / yathā mahāmate mahāpṛthivī sarvasattvopajīvyā bhavati, evameva mahāmate bodhisattvo mahāsattvaḥ sarvasattvopajīvyo bhavati //",
+   "T0670": "「復次，大慧！當說諸陰自性相。云何諸陰自性相？謂五陰。云何五？謂色受想行識。彼四陰非色，謂受想行識。大慧！色者，四大及造色，各各異相。大慧！非無色有四數，如虛空。譬如虛空，過數相，離於數，而妄想言一虛空。大慧！如是陰，過數相，離於數，離性非性，離四句。數相者，愚夫言說，所說非聖賢也。大慧！聖者如幻種種色像，離異不異施設。又如夢影士夫身，離異不異故。大慧！聖智趣，同陰妄想現。是名諸陰自性相。汝當除滅，滅已，說寂靜法，斷一切佛剎諸外道見。大慧！說寂靜時，法無我見淨，及入不動地。入不動地已，無量三昧自在，及得意生身，得如幻三昧，通達究竟，力明自在，救攝饒益一切眾生。猶如大地載育眾生。菩薩摩訶薩普濟眾生，亦復如是。",
+   "T0671": "「復次，大慧！我為汝說五陰體相。大慧！何者五陰相？謂色、受、想、行、識。大慧！四陰無色相，謂受、想、行、識。大慧！色依四大生，四大彼此不同相。大慧！無色相法同如虛空，云何得成四種數相？大慧！譬如虛空離於數相，而虛妄分別此是虛空。大慧！陰之數相離於諸相，離有無相離於四相；愚癡凡夫說諸數相，非謂聖人。大慧！我說諸相如幻種種形相離一二相依假名說，如夢鏡像不離所依。大慧！如聖人智修行分別見五陰虛妄。大慧！是名五陰無五陰體相。大慧！汝今應離如是虛妄分別之相，離如是已為諸菩薩說離諸法相寂靜之法，為遮外道諸見之相。大慧！說寂靜法得證清淨無我之相入遠行地，入遠行地已得無量三昧自在如意生身故，以得諸法如幻三昧故，以得自在神通力修行進趣故，隨一切眾生自在用如大地故。大慧！譬如大地一切眾生隨意而用。大慧！菩薩摩訶薩隨眾生用亦復如是。",
+   "T0672": "「復次，大慧！我今當說五蘊體相，謂：色、受、想、行、識。大慧！色謂四大及所造色，此各異相。受等非色。大慧！非色諸蘊，猶如虛空無有四數。大慧！譬如虛空超過數相，然分別言此是虛空，非色諸蘊亦復如是，離諸數相，離有無等四種句故。數相者，愚夫所說，非諸聖者，諸聖但說如幻所作，唯假施設離異不異，如夢如像無別所有。不了聖智所行境故，見有諸蘊分別現前，是名諸蘊自性相。大慧！如是分別汝應捨離，捨離此已說寂靜法，斷一切剎諸外道見，淨法無我入遠行地，成就無量自在三昧，獲意生身，如幻三昧力通自在皆悉具足，猶如大地普益羣生。"
+  },
+  "l2g-08": {
+   "sa": "punaraparaṃ mahāmate caturvidhaṃ nirvāṇam / katamaccaturvidham? yaduta bhāvasvabhāvābhāvanirvāṇaṃ lakṣaṇavicitrabhāvābhāvanirvāṇaṃ svalakṣaṇabhāvābhāvāvabodhanirvāṇaṃ skandhānāṃ svasāmānyalakṣaṇasaṃtatiprabandhavyucchedanirvāṇam / etanmahāmate caturvidhaṃ tīrthakarāṇāṃ nirvāṇaṃ na tu matpravacane / matpravacane punarmahāmate vikalpakasya manovijñānasya vyāvṛttirnirvāṇamityucyate //",
+   "T0670": "「復次，大慧！諸外道有四種涅槃。云何為四？謂：性自性非性涅槃、種種相性非性涅槃、自相自性非性覺涅槃、諸陰自共相相續流注斷涅槃。是名諸外道四種涅槃。非我所說法。大慧！我所說者，妄想識滅，名為涅槃。」",
+   "T0671": "「復次，大慧！外道說有四種涅槃。何等為四？一者、自體相涅槃；二者、種種相有無涅槃；三者、自覺體有無涅槃；四者、諸陰自相同相斷相續體涅槃。大慧！是名外道四種涅槃，非我所說。大慧！我所說者，見虛妄境界分別識滅名為涅槃。」",
+   "T0672": "「復次，大慧！涅槃有四種。何等為四？謂：諸法自性無性涅槃，種種相性無性涅槃，覺自相性無性涅槃，斷諸蘊自共相流注涅槃。大慧！此四涅槃是外道義，非我所說。大慧！我所說者，分別爾炎識滅名為涅槃。」"
+  },
+  "l2g-09": {
+   "sa": "mahāmatirāha - nanu bhagavatā aṣṭau vijñānāni vyavasthāpitāni? bhagavānāha - vyavasthāpitāni mahāmate / mahāmatirāha - tadyadi bhagavan vyavasthāpitāni, tatkathaṃ manovijñānasyaiva vyāvṛttirbhavati na tu saptānāṃ vijñānānām? bhagavānāha - taddhetvālambanatvānmahāmate saptānāṃ vijñānānāṃ pravṛttirbhavati / manovijñānaṃ punarmahāmate viṣayaparicchedābhiniveśena pravartamānaṃ vāsanābhirālayavijñānaṃ prapuṣṇāti / manaḥ sahitamātmātmīyagrāhābhiniveśamanyanākāreṇānupravartate / abhinnaśarīralakṣaṇamālayavijñānahetvālambanaṃ svacittadṛśyaviṣayābhiniveśāccittakalāpaḥ pravartate 'nyonyahetukaḥ / udadhitaraṃgā iva mahāmate svacittadṛśyaviṣayapavaneritāḥ pravartante nivartante ca / atastena mahāmate manovijñānena vyāvṛttena saptānāṃ vijñānānāṃ vyāvṛttirbhavati // tatredamucyate - nāhaṃ nirvāmi bhāvena kriyayā lakṣaṇena ca / vikalpahetuvijñāne nivṛtte nirvṛto hyaham // Lank_2.177 // taddhetukaṃ tadālambya manogatisamāśrayam / hetuṃ dadāti cittasya vijñānaṃ ca samāśritam // Lank_2.178 // yathā kṣīṇe mahā)odhe taraṃgāṇāmasaṃbhavaḥ / tathā vijñānavaicitryaṃ niruddhaṃ na pravartate // Lank_2.179 //",
+   "T0670": "大慧白佛言：「世尊！不建立八識耶？」佛言：「建立。」大慧白佛言：「若建立者，云何離意識，非七識？」佛告大慧：「彼因及彼攀緣故，七識不生。意識者，境界分段計著生習氣，長養藏識意俱。我我所計著思惟因緣生。不壞身相藏識，因攀緣自心現境界，計著心聚生，展轉相因。譬如海浪，自心現境界風吹，若生若滅，亦如是。是故意識滅，七識亦滅。」爾時，世尊欲重宣此義，而說偈言：「我不涅槃性，所作及與相， 妄想爾炎識，此滅我涅槃。 彼因彼攀緣，意趣等成身， 與因者是心，為識之所依。 如水大流盡，波浪則不起， 如是意識滅，種種識不生。",
+   "T0671": "大慧白佛言：「世尊！世尊可不說八種識耶？」佛告大慧：「我說八種識。」大慧言：「若世尊說八種識者，何故但言意識轉滅，不言七識轉滅？」佛告大慧：「以依彼念觀有故，轉識滅七識亦滅。復次，大慧！意識執著取境界生，生已種種熏習增長阿梨耶識，共意識故，離我我所相，著虛妄空而生分別。大慧！彼二種識無差別相，以依阿梨耶識因觀自心見境，妄想執著生種種心，猶如束竹迭共為因，如大海波，以自心見境界風吹而有生滅。是故，大慧！意識轉滅七種識轉滅。」爾時世尊重說偈言：「我不取涅槃，亦不捨作相； 轉滅虛妄心，故言得涅槃。 依彼因及念，意趣諸境界； 識與心作因，為識之所依。 如水流枯竭，波浪則不起； 如是意識滅，種種識不生。",
+   "T0672": "大慧言：「世尊！豈不建立八種識耶？」佛言：「建立。」大慧言：「若建立者，云何但說意識滅非七識滅。」佛言：「大慧！以彼為因及所緣故，七識得生。大慧！意識分別境界起執著時，生諸習氣長養藏識，由是意俱我我所執思量隨轉無別體相，藏識為因為所緣故，執著自心所現境界，心聚生起展轉為因。大慧！譬如海浪自心所現，境界風吹而有起滅，是故意識滅時七識亦滅。」爾時世尊重說頌曰：「我不以自性，及以於作相， 分別境識滅，如是說涅槃。 意識為心因，心為意境界； 因及所緣故，諸識依止生。 如大瀑流盡，波浪則不起； 如是意識滅，種種識不生。"
+  },
+  "l2g-10": {
+   "sa": "punaraparaṃ mahāmate parikalpitasvabhāvaprabhedanayalakṣaṇamupadekṣyāmo yena parikalpitasvabhāvaprabhedanayalakṣaṇena suprativibhāgaviddhena tvaṃ ca anye ca bodhisattvā mahāsattvā vikalpakalparahitāḥ pratyātmāryasvagatitīrthyanayagatisudṛṣṭabuddhayo grāhyagrāhakavikalpaprahīṇāḥ paratantravividhavicitralakṣaṇaṃ parikalpitasvabhāvākāraṃ na prativikalpayiṣyanti / tatra mahāmate katamatparikalpitasvabhāvaprabhedanayalakṣaṇam? yaduta abhilāpavikalpo 'vidheyavikalpo lakṣaṇavikalpo 'rthavikalpaḥ svabhāvavikalpo hetuvikalpo dṛṣṭivikalpo yuktivikalpa utpādavikalpo 'nutpādavikalpaḥ saṃbandhavikalpo bandhābandhavikalpaḥ / etanmahāmate parikalpitasvabhāvaprabhedanayalakṣaṇam // tatra mahāmate abhilāpavikalpaḥ katamaḥ? yaduta vicitrasvaragītamādhuryābhiniveśaḥ / eṣa mahāmate abhilāpavikalpaḥ / tatra mahāmate abhidheyavikalpaḥ katamaḥ? yaduta asti tatkiṃcidabhidheyavastu svabhāvakamāryajñānagatigamyaṃ yadāśrityābhilāpaḥ pravartate iti vikalpayati / tatra lakṣaṇavikalpaḥ katamaḥ? yaduta tasminnevābhidheye mṛgatṛṣṇākhye lakṣaṇavaicitryābhiniveśenābhiniveśate yaduta uṣṇadravacalakaṭhinalakṣaṇātsarvabhāvān vikalpayati / tatra arthavikalpaḥ katamaḥ? yaduta suvarṇarūpyavividharatnārthaviṣayābhilāpaḥ / tatra svabhāvavikalpaḥ katamaḥ? yaduta bhāvasvabhāvāvadhāraṇamidamevamidaṃ nānyatheti tīrthyavikalpadṛṣṭyā vikalpayanti / tatra hetuvikalpaḥ katamaḥ? yaduta yadyena hetupratyayena sadasatorvibhajyate hetulakṣaṇotpattitaḥ sa hetuvikalpaḥ / tatra dṛṣṭivikalpaḥ katamaḥ? yaduta nāstyastitvaikatvānyatvobhayānubhayakudṛṣṭitīrthyavikalpābhiniveśaḥ / tatra yuktivikalpaḥ katamaḥ? yaduta ātmātmīyalakṣaṇayuktivigrahopadeśaḥ / tatra utpādavikalpaḥ katamaḥ? yaduta pratyayaiḥ sadasatorbhāvasyotpādābhiniveśaḥ / tatra anutpādavikalpaḥ katamaḥ? yaduta anutpannapūrvāḥ sarvabhāvā abhūtvā pratyayairbhavantyahetuśarīrāḥ / tatra saṃbandhavikalpaḥ katamaḥ? yaduta saha saṃbadhyate suvarṇatantuvat / tatra bandhābandhavikalpaḥ katamaḥ? yaduta bandhahetubandhyābhiniveśavat / yathā puruṣaḥ pāśasaṃyogādrajjugranthiḥ kriyate mucyate ca / evaṃ mahāmate parikalpitasvabhāvaprabhedanayalakṣaṇam, yasmin parikalpitasvabhāvaprabhedanayalakṣaṇe sarvabālapṛthagjanā abhiniviśante / sadasataḥ paratantrābhiniveśābhiniviṣṭā mahāmate parikalpitasvabhāvavaicitryamabhiniviśante / māyāśrayavaicitryadarśanavadanyamāyādarśanabuddhyā bālairvikalpyante / māyā ca mahāmate vaicitryānnānyā nānanyā / yadyanyā syāt, vaicitryaṃ māyāhetukaṃ na syāt / athānanyā syāt, vaicitryānmāyāvaicitryayorvibhāgo na syāt / sa ca dṛṣṭo vibhāgaḥ / tasmānnānyā nānanyā / ata etasmātkāraṇānmahāmate tvayā anyaiśca bodhisattvairmahāsattvairmāyā nāstyastitvena nābhiniveṣṭavyā // tatredamucyate - cittaṃ viṣayasaṃbandhaṃ jñānaṃ tarke pravartate / nirābhāse viśeṣe ca prajñā vai saṃpravartate // Lank_2.180 // parikalpitasvabhāvo 'ti paratantre na vidyate / kalpitaṃ gṛhyate bhrāntyā paratantraṃ na kalpyate // Lank_2.181 // vividhāṅgābhinirvṛttyā yathā māyā na sidhyati / nimittaṃ hi tathā citraṃ kalpyamānaṃ na sidhyati // Lank_2.182 // nimittaṃ dauṣṭhulyamayaṃ bandhanaṃ cittasaṃbhavam / parikalpitaṃ hyajānānaṃ paratantrairvikalpyate // Lank_2.183 // yadetatkalpitaṃ bhāvaṃ paratantraṃ tadeva hi / kalpitaṃ hi vicitrābhaṃ paratantre vikalpyate // Lank_2.184 // saṃvṛtiḥ paramārthaśca tṛtīyaṃ nāstihetukam / kalpitaṃ saṃvṛtirhyuktā tacchedādāryagocaram // Lank_2.185 // yathā hi yogināṃ vastu citramekaṃ virājate / na hyasti citratā tatra tathā kalpitalakṣaṇam // Lank_2.186 // yathā hi taimiraiścitraṃ kalpyate rūpadarśanam / timiraṃ na rūpaṃ nārūpaṃ paratantraṃ tathābudhaiḥ // Lank_2.187 // haimaṃ syāttu yathā śuddhaṃ jalaṃ kaluṣavarjitam / gaganaṃ hi ghanābhāvāttathā śuddhaṃ vikalpitam // Lank_2.188 // nāsti vai kalpito bhāvaḥ paratantraśca vidyate / samāropāpavādaṃ hi vikalpanto vinaśyati // Lank_2.189 // kalpitaṃ yadyabhāvaṃ syātparatantrasvabhāvataḥ / vinā bhāvena vai bhāvo bhāvaścābhāvasaṃbhavaḥ // Lank_2.190 // parikalpitaṃ samāśritya paratantropalabhyate / nimittanāmasaṃbandhājjāyate parikalpitam // Lank_2.191 // atyantaṃ cāpyaniṣpannaṃ kalpitaṃ na parodbhavam / tadā prajñāyate śuddhaṃ svabhāvaṃ pāramārthikam // Lank_2.192 // parikalpitaṃ daśavidhaṃ paratantraṃ ca ṣaḍvidham / pratyātmatathatājñeyamato nāsti viśeṣaṇam // Lank_2.193 // pañca dharmā bhavettattvaṃ svabhāvā hi trayastathā / etadvibhāvayedyogī tathatāṃ nātivartate // Lank_2.194 // nimittaṃ paratantraṃ hi yannāma tatprakalpitam / parikalpitanimittaṃ tu pāratantryātpravartate // Lank_2.195 // buddhyā vivecyamānaṃ tu na tantraṃ nāpi kalpitam / niṣpanno nāsti vai bhāvaḥ kathaṃ buddhyā vikalpyate // Lank_2.196 // niṣpanno vidyate bhāvo bhāvābhāvavivarjitaḥ / bhāvābhāvavinirmukto dvau svabhāvau kathaṃ nu tau // Lank_2.197 // parikalpitasvabhāve dvau svabhāvau dvau pratiṣṭhitau / kalpitaṃ dṛśyate citraṃ viśuddhaṃ cāryagocaram // Lank_2.198 // kalpitaṃ hi vicitrābhaṃ paratantrairvikalpyate / anyathā kalpyamānaṃ hi tīrthyavādaṃ samāśrayet // Lank_2.199 // kalpanā kalpitetyuktaṃ darśanāddhetusaṃbhavat / vikalpadvayanirmuktaṃ niṣpannaṃ syāttadeva hi // Lank_2.200 //",
+   "T0670": "「復次，大慧！今當說妄想自性分別通相。若妄想自性分別通相善分別，汝及餘菩薩摩訶薩，離妄想，到自覺聖，外道通趣善見，覺攝所攝妄想斷。緣起種種相，妄想自性行，不復妄想。大慧！云何妄想自性分別通相？謂：言說妄想、所說事妄想、相妄想、利妄想、自性妄想、因妄想、見妄想、成妄想、生妄想、不生妄想、相續妄想、縛不縛妄想。是名妄想自性分別通相。大慧！云何言說妄想？謂：種種妙音歌詠之聲，美樂計著，是名言說妄想。大慧！云何所說事妄想？謂：有所說事自性，聖智所知。依彼而生言說妄想。是名所說事妄想。大慧！云何相妄想？謂：即彼所說事，如鹿渴想，種種計著而計著。謂：堅、濕、煖、動相，一切性妄想。是名相妄想。大慧！云何利妄想？謂：樂種種金銀珍寶。是名利妄想。大慧！云何自性妄想？謂：自性持此如是。不異惡見妄想。是名自性妄想。大慧！云何因妄想？謂：若因若緣，有無分別，因相生。是名因妄想。大慧！云何見妄想？謂：有無一異俱不俱惡見，外道妄想計著妄想。是名見妄想。大慧！云何成妄想？謂：我我所想，成決定論。是名成妄想。「大慧！云何生妄想？謂：緣有無性生計著。是名生妄想。大慧！云何不生妄想？謂：一切性本無生。無種因緣，生無因身。是名不生妄想。大慧！云何相續妄想？謂：彼俱相續，如金縷。是名相續妄想。大慧！云何縛不縛妄想？謂：縛因緣計著。如士夫方便，若縛若解。是名縛不縛妄想。於此妄想自性分別通相，一切愚夫計著有無。大慧！計著緣起而計著者，種種妄想計著自性。如幻示現種種之身，凡夫妄想，見種種異幻。大慧！幻與種種非異非不異。若異者，幻非種種因；若不異者，幻與種種無差別，而見差別。是故非異非不異。是故，大慧！汝及餘菩薩摩訶薩，如幻緣起妄想自性，異不異有無莫計著。」爾時，世尊欲重宣此義而說偈言：「心縛於境界，覺想智隨轉， 無所有及勝，平等智慧生。 妄想自性有，於緣起則無， 妄想或攝受，緣起非妄想。 種種支分生，如幻則不成， 彼相有種種，妄想則不成。 彼相則是過，皆從心縛生， 妄想無所知，於緣起妄想。 此諸妄想性，即是彼緣起， 妄想有種種，於緣起妄想。 世諦第一義，第三無因生， 妄想說世諦，斷則聖境界。 譬如修行事，於一種種現， 於彼無種種，妄想相如是。 譬如種種翳，妄想眾色現， 翳無色非色，緣起不覺然。 譬如鍊真金，遠離諸垢穢， 虛空無雲翳，妄想淨亦然。 無有妄想性，及有彼緣起， 建立及誹謗，悉由妄想壞。 妄想若無性，而有緣起性， 無性而有性，有性無性生。 依因於妄想，而得彼緣起， 相名常相隨，而生諸妄想。 究竟不成就，則度諸妄想， 然後知清淨，是名第一義。 妄想有十二，緣起有六種， 自覺知爾炎，彼無有差別。 五法為真實，自性有三種， 修行分別此，不越於如如。 眾相及緣起，彼名起妄想， 彼諸妄想相，從彼緣起生。 覺慧善觀察，無緣無妄想， 成已無有性，云何妄想覺？ 彼妄想自性，建立二自性， 妄想種種現，清淨聖境界。 妄想如畫色，緣起計妄想， 若異妄想者，即依外道論。 妄想說所想，因見和合生， 離二妄想者，如是則為成。」",
+   "T0671": "「復次，大慧！我為汝說虛妄分別法體差別相，汝及諸菩薩摩訶薩，善分別知虛妄法體差別之相，離分別所分別法，善知自身內修行法，遠離外道能取可取境界，遠離種種虛妄分別因緣法體相，遠離已不復分別虛妄之相。大慧！何者虛妄分別法體差別之相？大慧！虛妄分別自體差別相有十二種。何等為十二？一者、言語分別；二者、可知分別；三者、相分別；四者、義分別；五者、實體分別；六者、因分別；七者、見分別；八者、建立分別；九者、生分別；十者、不生分別；十一者、和合分別；十二者、縛不縛分別。大慧！是名分別自體相差別法相。大慧！言語分別者，謂樂著種種言語美妙音聲。大慧！是名言語分別。大慧！可知分別者，謂作是思惟應有前法實事之相，聖人修行知，依彼法而生言語。如是分別，大慧！是名可知分別。大慧！相分別者，謂即彼可知境界中熱濕動堅種種相執以為實，如空陽焰諸禽獸見生於水想。大慧！是名相分別。大慧！義分別者，謂樂金銀等種種實境界。大慧！是名義分別。大慧！自體分別者，謂專念有法自體形相，此法如是如是不異，非正見見分別。大慧！是名自體分別。大慧！因分別者，謂何等何等因，何等何等緣，有無了別因相生了別相。大慧！是名因分別。大慧！見分別者，謂有無一異俱不俱，邪見外道執著分別。大慧！是名見分別。大慧！建立分別者，謂取我我所相說虛妄法。大慧！是名建立分別。大慧！生分別者，謂依眾緣有無法中生執著心。大慧！是名生分別。大慧！不生分別者，謂一切法本來不生，以本無故依因緣有而無因果。大慧！是名無生分別。大慧！和合分別者，謂何等何等法和合，如金縷共；何等何等法和合，如金縷和合。大慧！是名和合分別。大慧！縛不縛分別者，謂縛因執著如所縛。大慧！如人方便結繩作結，結已還解。大慧！是名縛不縛分別。大慧！是名虛妄分別法體差別之相，以此虛妄分別法體差別之相，一切凡夫執著有無故，執著法相種種因緣。是故，大慧！分別法體差別之相，見種種法執著為實，如依於幻見種種事，凡夫分別知異於幻有如是法。大慧！我於種種法中不異幻說，亦非不異。何以故？若幻異於種種法者，不應因幻而生種種；若幻即是種種法者，不應異見此是幻此是種種而見差別，是故我說不異非不異。是故，大慧！汝及諸菩薩摩訶薩，莫分別幻有實無實。」爾時世尊重說偈言：「心依境界縛，知覺隨境生； 於寂靜勝處，生平等智慧。 妄想分別有，於緣法則無； 取虛妄迷亂，不知他力生。 種種緣生法，即是幻不實； 彼有種種想，妄分別不成。 彼想則是過，皆從心縛生； 愚癡人無智，分別因緣法。 此諸妄想體，即是緣起法； 妄想有種種，眾緣中分別。 世諦第一義，第三無因生； 妄想說世諦，斷則聖境界。 譬如修行者，一事見種種； 彼法無種種，分別相如是。 如目種種瞖，妄想見眾色； 瞖無色非色，無智取法爾。 如真金離垢，如水離泥濁； 如虛空離雲，真法淨亦爾。 無有妄想法，因緣法亦無； 取有及謗無，分別觀者見。 妄想若無實，因緣法若實； 離因應生法，實法生實法。 因虛妄名法，見諸因緣生； 想名不相離，如是生虛妄。 虛妄本無實，則度諸妄想； 然後知清淨，是名第一義。 妄想有十二，緣法有六種； 內身證境界，彼無有差別。 五法為真實，及三種亦爾； 修行者行此，不離於真如。 眾生及因緣，名分別彼法； 彼諸妄想相，從彼因緣生。 真實智善觀，無緣無妄想； 第一義無物，云何智分別？ 若真實有法，遠離於有無； 若離於有無，云何有二法？ 分別二法體，二種法體有； 虛妄見種種，清淨聖境界。 見妄想種種，因緣中分別； 若異分別者，則墮於外道。 妄想說妄想，因見和合生； 離二種妄想，即是真實法。」",
+   "T0672": "「復次，大慧！我今當說妄計自性差別相，令汝及諸菩薩摩訶薩善知此義，超諸妄想證聖智境，知外道法，遠離能取所取分別，於依他起種種相中，不更取著妄所計相。大慧！云何妄計自性差別相？所謂：言說分別所說分別，相分別，財分別，自性分別，因分別，見分別，理分別，生分別，不生分別，相屬分別，縛解分別。大慧！此是妄計自性差別相。云何言說分別？謂執著種種美妙音詞，是名言說分別。云何所說分別？謂執有所說事，是聖智所證境，依此起說，是名所說分別。云何相分別？謂即於彼所說事中，如渴獸想，分別執著堅、濕、煖、動等一切諸相，是名相分別。云何財分別？謂取著種種金銀等寶，而起言說，是名財分別。云何自性分別？謂以惡見如是分別此自性，決定非餘，是名自性分別。云何因分別？謂於因緣分別有無，以此因相而能生故，是名因分別。云何見分別？謂諸外道惡見，執著有無、一異、俱不俱等，是名見分別。云何理分別？謂有執著我我所相，而起言說，是名理分別。云何生分別？謂計諸法若有若無從緣而生，是名生分別。云何不生分別，謂計一切法本來不生，未有諸緣而先有體，不從因起，是名不生分別。云何相屬分別？謂此與彼遞相繫屬，如針與線，是名相屬分別。云何縛解分別？謂執因能縛而有所縛，如人以繩方便力故縛已復解，是名縛解分別。大慧！此是妄計性差別相，一切凡愚於中執著若有若無。大慧！於緣起中執著種種妄計自性，如依於幻見種種物，凡愚分別見異於幻。大慧！幻與種種非異非不異，若異者，應幻非種種因；若一者，幻與種種應無差別，然見差別，是故非異非不異。大慧！汝及諸菩薩摩訶薩於幻有無不應生著。」爾時世尊重說頌言：「心為境所縛，覺想智隨轉； 無相最勝處，平等智慧生。 在妄計是有，於緣起則無； 妄計迷惑取，緣起離分別。 種種支分生，如幻不成就； 雖現種種相，妄分別則無。 彼相即是過，皆從心縛生； 妄計者不了，分別緣起法。 此諸妄計性，皆即是緣起； 妄計有種種，緣起中分別。 世俗第一義，第三無因生； 妄計是世俗，斷則聖境界。 如修觀行者，於一種種現； 於彼無種種，妄計相如是。 如目種種翳，妄想見眾色； 彼無色非色，不了緣起然。 如金離塵垢，如水離泥濁； 如虛空無雲，妄想淨如是。 無有妄計性，而有於緣起； 建立及誹謗，斯由分別壞。 若無妄計性，而有緣起者； 無法而有法，有法從無生。 依因於妄計，而得有緣起； 相名常相隨，而生於妄計。 以緣起依妄，究竟不成就； 是時現清淨，名為第一義。 妄計有十二，緣起有六種； 自證真如境，彼無有差別。 五法為真實，三自性亦爾； 修行者觀此，不越於真如。 依於緣起相，妄計種種名； 彼諸妄計相，皆因緣起有。 智慧善觀察，無緣無妄計； 真實中無物，云何起分別？ 圓成若是有，此則離有無； 既已離有無，云何有二性？ 妄計有二性，二性是安立； 分別見種種，清淨聖所行。 妄計種種相，緣起中分別； 若異此分別，則墮外道論。 以諸妄見故，妄計於妄計； 離此二計者，則為真實法。」"
+  },
+  "l2g-11": {
+   "sa": "punarapi mahāmatirāha - deśayatu me bhagavān pratyātmāryajñānagatilakṣaṇamekayānaṃ ca, yena bhagavan pratyātmaikayānagatilakṣaṇena ahaṃ ca anye ca bodhisattvā mahāsattvāḥ pratyātmāryajñānaikayānakuśalā aparapraṇeyā bhaviṣyanti buddhadharmeṣu // bhagavānāha - tena hi mahāmate śṛṇu, sādhu ca suṣṭhu ca manasikuru / bhāṣiṣye 'haṃ te / sādhu bhagavanniti mahāmatirbodhisattvo mahāsattvo bhagavataḥ pratyaśrauṣīt / bhagavāṃstasyaitadavocat - pramāṇāptopadeśavikalpābhāvānmahāmate bodhisattvo mahāsattva ekākī rahogataḥ svapratyātmabuddhyā vicārayatyaparapraṇeyo dṛṣṭivikalpavivarjita uttarottaratathāgatabhūmipraveśanatayā vyāyamate / etanmahāmate svapratyātmāryajñānagatilakṣaṇam / tatra ekayānagatilakṣaṇaṃ katamat? yaduta ekayānamārgādhigamāvabodhādekayānamiti vadāmi / ekayānamārgādhigamāvabodhaḥ katamaḥ? yaduta grāhyagrāhakavikalpayathābhūtāvasthānādapravṛttervikalpasya ekayānāvabodhaḥ kṛto bhavati / eṣa ekayānāvabodho mahāmate nānyatīrthyaśrāvakapratyekabuddhabrahmādibhiḥ prāptapūrvo 'nyatra mayā / ata etasmātkāraṇānmahāmate ekayānamityucyate //",
+   "T0670": "大慧菩薩摩訶薩復白佛言：「世尊！唯願為說自覺聖智相及一乘，若說自覺聖智相及一乘，我及餘菩薩善自覺聖智相及一乘，不由於他，通達佛法。」佛告大慧：「諦聽，諦聽！善思念之，當為汝說。」大慧白佛言：「唯然受教。」佛告大慧：「前聖所知，轉相傳授，妄想無性，菩薩摩訶薩，獨一靜處，自覺觀察，不由於他，離見妄想，上上昇進，入如來地，是名自覺聖智相。大慧！云何一乘相？謂：得一乘道覺，我說一乘。云何得一乘道覺？謂：攝所攝妄想，如實處不生妄想，是名一乘覺。大慧！一乘覺者，非餘外道、聲聞、緣覺、梵天王等之所能得，唯除如來。以是故，說名一乘。」",
+   "T0671": "爾時大慧菩薩摩訶薩復白佛言：「世尊！惟願為說自身內證聖智修行相及一乘法，不由於他遊行一切諸佛國土通達佛法。」佛告聖者大慧菩薩言：「善哉！善哉！善哉大慧！諦聽！諦聽！當為汝說。」大慧言：「善哉世尊！唯然受教。」佛告大慧：「菩薩摩訶薩離阿含名字法諸論師所說分別法相，在寂靜處獨坐思惟，自內智慧觀察諸法不隨他教，離種種見虛妄之相，當勤修行入如來地上上證智。大慧！是名自身內證聖智修行之相。大慧！更有三界中修一乘相。大慧！何者一乘相？大慧！如實覺知一乘道故，我說名一乘。大慧！何者如實覺知一乘道相？謂不分別可取能取境界，不生如是諸法相住，以不分別一切諸法故。大慧！是名如實覺知一乘道相。大慧！如是覺知一乘道相，一切外道聲聞辟支佛梵天等未曾得知，惟除於我。大慧！故我說名一乘道相。」",
+   "T0672": "大慧菩薩摩訶薩復白佛言：「世尊！惟願為說自證聖智行相及一乘行相。我及諸菩薩摩訶薩得此善巧，於佛法中不由他悟。」佛言：「諦聽！當為汝說。」大慧言：「唯。」佛言：「大慧！菩薩摩訶薩依諸聖教無有分別，獨處閑靜觀察自覺，不由他悟離分別見，上上昇進入如來地，如是修行，名自證聖智行相。云何名一乘行相？謂得證知一乘道故。云何名為知一乘道？謂離能取所取分別，如實而住。大慧！此一乘道惟除如來，非外道二乘、梵天王等之所能得。」"
+  },
+  "l2g-12": {
+   "sa": "mahāmatirāha - kiṃ kāraṇaṃ bhagavatā yānatrayamupadiṣṭam, ekayānaṃ nopadiśyate? bhagavānāha - svayamaparinirvāṇadharmatvānmahāmate sarvaśrāvakapratyekabuddhānāmekayānaṃ na vadāmi / yasmānmahāmate sarvaśrāvakapratyekabuddhāstathāgatavinayavivekayogopadeśena vimucyante na svayam // punaraparaṃ mahāmate jñeyāvaraṇakarmavāsanāprahīṇatvātsarvaśrāvakapratyekabuddhānāṃ naikayānam / dharmanairātmyānavabodhācca acintyapariṇāmacyuteraprāptivācca yānatrayaṃ deśayāmi śrāvakāṇām / yadā teṣāṃ mahāmate sarvadoṣavāsanāḥ prahīṇā bhavanti dharmanairātmyāvabodhāt, tadā te vāsanādoṣasamādhimadābhāvādanāsravadhātau prativibudhyante / punarapi lokottarānāsravadhātuparyāpannān saṃbhārān paripūrya acintyadharmakāyavaśavartitāṃ pratilapsyante // tatredamucyate - devayānaṃ brahmayānaṃ śrāvakīyaṃ tathaiva ca / tāthāgataṃ ca pratyekaṃ yānānetān vadāmyaham // Lank_2.201 // yānānāṃ nāsti vai niṣṭhā yāvaccittaṃ pravartate / citte tu vai parāvṛtte na yānaṃ na ca yāninaḥ // Lank_2.202 // yānavyavasthānaṃ naivāsti yānabhedaṃ vadāmyaham / parikarṣaṇārthaṃ bālānāṃ yānabhedaṃ vadāmyaham // Lank_2.203 // vimuktayastathā tisro dharmanairātmyameva ca / samatājñānakleśākhyā vimuktyā te vivarjitāḥ // Lank_2.204 // yathā hi kāṣṭhamudadhau taraṃgairvipravāhyate / tathā hi śrāvako mūḍho lakṣaṇena pravāhyate // Lank_2.205 // vāsanākleśasaṃbaddhāḥ paryutthānairvisaṃyutāḥ / samādhimadamattāste dhātau tiṣṭhantyanāsrave // Lank_2.206 // niṣṭhāgatirna tasyāsti na ca bhūyo nivartate / samādhikāyaṃ saṃprāpya ā kalpānna prabudhyate // Lank_2.207 // yathā hi mattapuruṣo madyābhāvādvibudhyate / tathā te buddhadharmākhyaṃ kāyaṃ prāpsyanti māmakam // Lank_2.208 //",
+   "T0670": "大慧白佛言：「世尊何故說三乘，而不說一乘？」佛告大慧：「不自般涅槃法故，不說一切聲聞、緣覺一乘。以一切聲聞、緣覺，如來調伏，授寂靜方便，而得解脫，非自己力，是故不說一乘。「復次，大慧！煩惱障業習氣不斷，故不說一切聲聞、緣覺一乘。不覺法無我，不離分段死，故說三乘。大慧！彼諸一切起煩惱過習氣斷，及覺法無我。彼一切起煩惱過習氣斷，三昧樂味著非性，無漏界覺。覺已，復入出世間上上無漏界，滿足眾具，當得如來不思議自在法身。」爾時，世尊欲重宣此義而說偈言：「諸天及梵乘，聲聞緣覺乘， 諸佛如來乘，我說此諸乘， 乃至有心轉，諸乘非究竟。 若彼心滅盡，無乘及乘者， 無有乘建立，我說為一乘， 引導眾生故，分別說諸乘。 解脫有三種，及與法無我， 煩惱智慧等，解脫則遠離。 譬如海浮木，常隨波浪轉， 聲聞愚亦然，相風所飄蕩。 彼起煩惱滅，除習煩惱愚， 味著三昧樂，安住無漏界。 無有究竟趣，亦復不退還， 得諸三昧身，乃至劫不覺。 譬如昏醉人，酒消然後覺， 彼覺法亦然，得佛無上身。」",
+   "T0671": "大慧白佛言：「世尊！世尊何因說於三乘不說一乘？」佛告大慧：「聲聞緣覺不能自知證於涅槃，是故我說惟一乘道。大慧！以一切聲聞辟支佛，隨受佛教厭離世間，自不能得解脫，是故我說惟一乘道。復次，大慧！一切聲聞辟支佛不離智障，不離業煩惱習氣障故，是故我說惟一乘道。大慧！聲聞辟支佛未證法無我，未得離不可思議變易生，是故我為諸聲聞故說一乘道。大慧！聲聞辟支佛若離一切諸過熏習，得證法無我，爾時離於諸過，三昧無漏，醉法覺已，修行出世間無漏界中一切功德，修行已得不可思議自在法身。」爾時世尊重說偈言：「天乘及梵乘，聲聞緣覺乘， 諸佛如來乘，我說此諸乘。 以心有生滅，諸乘非究竟； 若彼心滅盡，無乘及乘者。 無有乘差別，我說為一乘； 引導眾生故，分別說諸乘。 解脫有三種，及二法無我； 不離二種障，遠離真解脫。 譬如海浮木，當隨波浪轉； 諸聲聞亦然，相風所漂蕩。 離諸隨煩惱，熏習煩惱縛； 味著三昧樂，安住無漏界。 無有究竟趣，亦復不退還； 得諸三昧身，無量劫不覺。 譬如惛醉人，酒消然後悟； 得佛無上體，是我真法身。」",
+   "T0672": "大慧白佛言：「世尊！何故說有三乘，不說一乘？」佛言：「大慧！聲聞緣覺，無自般涅槃法故，我說一乘。以彼但依如來所說調伏遠離，如是修行而得解脫，非自所得；又彼未能除滅智障及業習氣，未覺法無我，未名不思議變易死，是故我說以為三乘。若彼能除一切過習，覺法無我，是時乃離三昧所醉，於無漏界而得覺悟已，於出世上上無漏界中修諸功德，普使滿足獲不思議自在法身。」爾時世尊重說頌言：「天乘及梵乘，聲聞緣覺乘， 諸佛如來乘，諸乘我所說。 乃至有心起，諸乘未究竟， 彼心轉滅已，無乘及乘者。 無有乘建立，我說為一乘； 為攝愚夫故，說諸乘差別。 解脫有三種，謂離諸煩惱， 及以法無我，平等智解脫。 譬如海中木，常隨波浪轉； 聲聞心亦然，相風所漂激。 雖滅起煩惱，猶被習氣縛； 三昧酒所醉，住於無漏界。 彼非究竟趣，亦復不退轉， 以得三昧身，乃至劫不覺。 譬如昏醉人，酒消然後悟； 聲聞亦如是，覺後當成佛。」"
+  },
+  "l2g-13": {
+   "sa": "iti laṅkāvatāre ṣaṭtriṃśatsāhasrasarvadharmasamuccayo nāma dvitīyaḥ parivartaḥ //"
+  }
+ }
+}
