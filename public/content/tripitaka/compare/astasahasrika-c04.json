@@ -1,0 +1,206 @@
+{
+ "slug": "astasahasrika-c04",
+ "title": "八千頌般若・第4品 稱揚功德品（Guṇaparikīrtana）",
+ "family": "sa",
+ "intro": "梵本第四品＝第四會〈稱揚功德品〉＝施護〈稱讚功德品〉＝羅什〈舍利品〉前段＝第五會〈設利羅品〉前段＝大明度〈功德品〉前段；道行、鈔經在〈功德品〉中段（自「舍利滿閻浮提」起）。品末帝釋讚般若具大功德一句，道行、鈔經、羅什、第五會與下一品帝釋之問連成一段，這幾本切在問句「若有書般若波羅蜜…」之前。帝釋取般若的譬喻，梵本與各本有天座喻、負債人喻，摩尼寶另立一節；道行、大明度把「欲見十方現在佛當行般若」放在佛語中（「復次，阿難」）。",
+ "units": [
+  {
+   "id": "c04-01",
+   "label": "舍利滿閻浮提與般若經卷二分・帝釋取般若（天座、負債人喻）"
+  },
+  {
+   "id": "c04-02",
+   "label": "無價摩尼寶喻"
+  },
+  {
+   "id": "c04-03",
+   "label": "阿難問天上人間摩尼・三千界乃至恒沙界舍利亦取般若"
+  },
+  {
+   "id": "c04-04",
+   "label": "欲見十方現在佛當行般若・三世佛皆依般若成佛"
+  },
+  {
+   "id": "c04-05",
+   "label": "大波羅蜜・佛依般若知眾生心行"
+  },
+  {
+   "id": "c04-06",
+   "label": "但行般若不行餘度耶・般若為導（樹影喻）・帝釋讚般若具大功德"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sa",
+   "lang": "sa",
+   "label": "梵本",
+   "who": "Vaidya 校訂本（1960）・GRETIL"
+  },
+  {
+   "id": "T0224",
+   "lang": "lzh",
+   "label": "道行般若經",
+   "who": "後漢・支婁迦讖譯《道行般若經》・179 年",
+   "work": "T0224"
+  },
+  {
+   "id": "T0225",
+   "lang": "lzh",
+   "label": "大明度經",
+   "who": "吳・支謙譯《大明度經》（第一品夾注）・三世紀",
+   "work": "T0225"
+  },
+  {
+   "id": "T0226",
+   "lang": "lzh",
+   "label": "摩訶般若鈔經",
+   "who": "前秦・曇摩蜱共竺佛念譯《摩訶般若鈔經》（殘本）・382 年",
+   "work": "T0226"
+  },
+  {
+   "id": "T0227",
+   "lang": "lzh",
+   "label": "羅什本",
+   "who": "姚秦・鳩摩羅什譯《小品般若波羅蜜經》・408 年",
+   "work": "T0227"
+  },
+  {
+   "id": "T0220d",
+   "lang": "lzh",
+   "label": "玄奘・第四會",
+   "who": "唐・玄奘譯《大般若經》第四會（卷 538–555）・663 年",
+   "work": "T0220d"
+  },
+  {
+   "id": "T0220d-5",
+   "lang": "lzh",
+   "label": "玄奘・第五會",
+   "who": "唐・玄奘譯《大般若經》第五會（卷 556–565）・663 年",
+   "work": "T0220d"
+  },
+  {
+   "id": "T0228",
+   "lang": "lzh",
+   "label": "施護本",
+   "who": "宋・施護譯《佛母出生三法藏般若波羅蜜多經》・十世紀末",
+   "work": "T0228"
+  }
+ ],
+ "works": [
+  "T0220d",
+  "T0224",
+  "T0225",
+  "T0226",
+  "T0227",
+  "T0228"
+ ],
+ "anchors": [
+  {
+   "work": "T0220d",
+   "node": "第四分稱揚功德品第四",
+   "uid": "T07n0220d_p0781b23"
+  },
+  {
+   "work": "T0228",
+   "node": "稱讚功德品第四",
+   "uid": "T08n0228_p0601c11"
+  },
+  {
+   "work": "T0224",
+   "range": [
+    "T08n0224_p0435c02",
+    "T08n0224_p0436b20"
+   ]
+  },
+  {
+   "work": "T0225",
+   "range": [
+    "T08n0225_p0485b09",
+    "T08n0225_p0485c16"
+   ]
+  },
+  {
+   "work": "T0226",
+   "range": [
+    "T08n0226_p0517b17",
+    "T08n0226_p0518b03"
+   ]
+  },
+  {
+   "work": "T0227",
+   "range": [
+    "T08n0227_p0545a25",
+    "T08n0227_p0546a02"
+   ]
+  },
+  {
+   "work": "T0220d",
+   "range": [
+    "T07n0220d_p0877c10",
+    "T07n0220d_p0878c19"
+   ]
+  }
+ ],
+ "cells": {
+  "c04-01": {
+   "sa": "ASP_4: guṇaparikīrtanaparivartaścaturthaḥ / punaraparaṃ bhagavān śakraṃ devānāmindramāmantrayate sma - sacetkauśika ayaṃ te jambūdvīpaḥ paripūrṇaścūlikābaddhastathāgataśarīrāṇāṃ dīyeta, iyaṃ ca prajñāpāramitā likhitvopanāmyeta, tata ekatareṇa bhāgena pravāryamāṇo 'nayordvayorbhāgayoḥ sthāpitayoḥ katamaṃ tvaṃ kauśika bhāgaṃ gṛhṇīyāḥ? śakra āha - sacenme bhagavan ayaṃ jambūdvīpaḥ paripūrṇaścūlikābaddhastathāgataśarīrāṇāṃ dīyeta, iyaṃ ca prajñāpāramitā likhitvopanāmyeta, tata ekatareṇa bhāgena pravāryamāṇo 'nayordvayorbhāgayoḥ sthāpitayorimāmevāhaṃ bhagavan prajñāpāramitāṃ parigṛhṇīyām / tatkasya hetoḥ? yathāpi nāma tathāgatanetrīcitrīkāreṇa / etaddhi tathāgatānāṃ bhūtārthikaṃ śarīram / tatkasya hetoḥ? uktaṃ hyetadbhagavatā - dharmakāyā buddhā bhagavantaḥ / mā khalu punarimaṃ bhikṣavaḥ satkāyaṃ kāyaṃ manyadhvam / dharmakāyapariniṣpattito māṃ bhikṣavo drakṣyatha / eṣa ca tathāgatakāyo bhūtakoṭiprabhāvito draṣṭavyo yaduta prajñāpāramitā / na khalu punarme bhagavaṃsteṣu tathāgataśarīreṣvagauravam / gauravameva me bhagavaṃsteṣu tathāgataśarīreṣu / api tu khalu punarbhagavan itaḥ prajñāpāramitāto nirjātāni tathāgataśarīrāṇi pūjāṃ labhante / tasmāttarhi bhagavan anayaiva prajñāpāramitayā pūjitayā teṣām api tathāgataśarīrāṇāṃ paripūrṇā pūjā kṛtā bhavati / tatkasya hetoḥ? prajñāpāramitānirjātattvāttathāgataśarīrāṇām / tadyathāpi nāma bhagavan sudharmāyāṃ devasabhāyāmahaṃ yasmin samaye divye svake āsane niṣaṇṇo bhavāmi, tadā mama devaputrā upasthānāyāgacchanti / yasmin samaye na niṣaṇṇo bhavāmi, atha tasmin samaye yanmamāsanaṃ tatra devaputrā mama gauraveṇa tadāsanaṃ namaskṛtya pradakṣiṇīkṛtya punareva prakrāmanti / tatkasya hetoḥ? iha hi kila āsane niṣadya śakro devānāmindro devānāṃ trāyastriṃśānāṃ dharmaṃ deśayatīti / evameva bhagavan maheśākhyahetupratyayabhūtā prajñāpāramitā / tathāgatasyārhataḥ samyaksaṃbuddhasya sarvajñatāyā āhārikā / sarvajñatāyāś ca tathāgataśarīrāṇyāśrayabhūtāni / na tu tāni pratyayabhūtāni, na kāraṇabhūtāni jñānasyotpādāya / evameva bhagavan sarvajñajñānahetukā tathāgataśarīreṣu pūjā kṛtā bhavati / tasmāttarhi bhagavan anayordvayorbhāgayoḥ sthāpitayorimāmevāhaṃ bhagavan prajñāpāramitāṃ parigṛhṇīyām / na khalu punarme bhagavaṃsteṣu tathāgataśarīreṣvagauravam / gauravameva me bhagavaṃsteṣu tathāgataśarīreṣu / api tu khalu punarbhagavaṃstāni tathāgataśarīrāṇi prajñāpāramitāparibhāvitatvātpūjāṃ labhante / tiṣṭhatu khalu punarbhagavan ayaṃ jambūdvīpastathāgataśarīrāṇāṃ paripūrṇaścūlikābaddhaḥ / tiṣṭhatu cāturmahādvīpako lokadhātustathāgataśarīrāṇāṃ paripūrṇaścūlikābaddhaḥ / tiṣṭhatu sāhasro lokadhātustathāgataśarīrāṇāṃ paripūrṇaścūlikābaddhaḥ / tiṣṭhatu bhagavan dvisāhasro madhyamo lokadhātustathāgataśarīrāṇāṃ paripūrṇaścūlikābaddhaḥ / ayameva bhagavaṃstrisāhasramahāsāhasro lokadhātustathāgataśarīrāṇāṃ paripūrṇaścūlikābaddhaḥ, eko bhāgaḥ kṛtvā sthāpyeta, iyaṃ ca prajñāpāramitā likhitvā dvitīyo bhāgaḥ sthāpyeta / anayordvayorbhāgayoḥ sthāpitayorekatareṇa bhāgena pravāryamāṇo 'nayordvayorbhāgayoḥ sthāpitayoryaste bhāgo 'bhipretastamekaṃ bhāgaṃ gṛhāṇeti, tatra imāmevāhaṃ bhagavan prajñāpāramitāṃ parigṛhṇīyām / na khalu punarbhagavaṃsteṣu tathāgataśarīreṣvagauravam / gauravameva me bhagavaṃsteṣu tathāgataśarīreṣu / api tu khalu punarbhagavaṃstāni tathāgataśarīrāṇi prajñāpāramitāparibhāvitāni pūjāṃ labhante / tathāgataśarīrāṇi hi sarvajñajñānāśrayabhūtāni / tad api sarvajñajñānaṃ prajñāpāramitānirjātam / tasmāttarhi bhagavan anayordvayorbhāgayoḥ sthāpitayorimāmevāhaṃ bhagavan prajñāpāramitāṃ parigṛhṇīyām / na khalu punar me bhagavaṃsteṣu tathāgataśarīreṣvagauravam / gauravameva me bhagavaṃsteṣu tathāgataśarīreṣu / api tu khalu punarbhagavan itaḥ prajñāpāramitāto nirjātāni tāni tathāgataśarīrāṇi pūjāṃ labhante yaduta prajñāpāramitāparibhāvitatvāt /",
+   "T0224": "「復次，拘翼！或時閻浮利地上怛薩阿竭舍利滿其中施與，般若波羅蜜書已舉施與，欲取何所？」釋提桓因言：「寧取般若波羅蜜。何以故？我不敢不敬舍利，天中天！從中出舍利供養，般若波羅蜜中出舍利，從中得供養。如我有時與諸天共於天上坐，持異特座，乃至自我座，敢有天人來至我所承事我，我未及至座所，我不坐上時，諸天人皆為我坐，作禮繞竟已便去，是坐尊釋提桓因，於是間坐受法，忉利天上諸天人為作禮。如是，天中天！般若波羅蜜出怛薩阿竭、阿羅呵、三耶三佛舍利，薩芸若之智慧從中出生，身用是故。天中天！兩分之中取般若波羅蜜。除是閻浮利地上滿其中怛薩阿竭舍利，正使天中天三千大國土滿其中舍利為一分，般若波羅蜜經為二分，我從二分中取般若波羅蜜。何以故？從中出舍利供養所致。譬如負債人，天中天！與王相隨出入，王甚敬重之，無有問者，亦無所畏。何以故？在王邊有威力故。天中天！從般若波羅蜜中出舍利，從中出供養，是經，天中天！如王，般若波羅蜜譬如是王雄猛得供養，怛薩阿竭舍利從薩芸若中出生得供養。如是，天中天！薩芸若，怛薩阿竭、阿羅呵、三耶三佛，從般若波羅蜜中出生，當作是知，兩分中我取般若波羅蜜。",
+   "T0225": "「復次，帝釋！是天下如來舍利滿中施與，有持智度無極書施與，爾取何所？」釋言：「我取智度。何以故？我不敢不敬舍利。天中天！舍利由斯明度出，天人所尊矣。如我與諸天共坐坐，持異床。我未至，諸天子為坐作禮繞以去。是坐尊故。吾於斯受經，諸天於彼為禮。如是，天中天！明度出如來無所著正真道最正覺之舍利，一切智從中生身。用是故，兩分中取明度。正使三千復大千國土滿中舍利為一分，明度書為二分。取書。何以故？從中出舍利供養所致。譬如負債人與國王參正，無復問者，亦無所畏。何以故？在王邊有力故也。",
+   "T0226": "「復次，拘翼！或閻浮利中，滿怛薩阿竭舍利、若般若波羅蜜經，是二者，欲取何所？」釋提桓因言：「我寧取般若波羅蜜。何以故？我不敢不敬舍利。天中天！其舍利者，為從般若波羅蜜出而得供養。如我於諸天中而獨持坐，或時不在座上，敢有天人來到者，皆承事為座作禮所受教處，便即而去。般若波羅蜜出者是，如天中天出怛薩阿竭阿羅訶三耶三佛舍利，為從薩芸若智慧出生。閻浮利中滿怛薩阿竭舍利，正使，天中天！三千大千國土滿中舍利為一分，般若波羅蜜經為二分，我從二分之中取般若波羅蜜。何以故？舍利為從中出，自到得供養。譬如負債之人，天中天！與王者相知，得甚敬愛。無有問者，亦無所畏。何以故？在王邊得威力故。天中天！以從般若波羅蜜者便出舍利，而得供養般若波羅蜜。譬若如王，其住附者輒為人所敬。怛薩阿竭舍利為從薩芸若出生，便得供養是天中天薩芸若慧。怛薩阿竭阿羅訶三耶三佛為從般若波羅蜜出，當作是知。兩分之中，我取般若波羅蜜。",
+   "T0227": "爾時佛告釋提桓因言：「憍尸迦！滿閻浮提舍利以為一分，般若波羅蜜經卷以為一分。二分之中，為取何分？」釋提桓因白佛言：「世尊！我取般若波羅蜜。何以故？世尊！我於舍利非不恭敬，以舍利從般若波羅蜜生故，般若波羅蜜所熏，故得供養。世尊！我於忉利天上善法堂中，我有坐處，忉利諸天子來供養我故。若我不在座上，諸天子為我坐處，作禮恭敬，遶已而去，作是念：『釋提桓因於此處坐，為忉利諸天說法。』諸佛舍利亦如是，從般若波羅蜜生，薩婆若所依止，故得供養。是故，世尊！我於二分之中，取般若波羅蜜。世尊！置滿閻浮提舍利，若滿三千大千世界舍利以為一分，般若波羅蜜經卷以為一分。二分之中，我取般若波羅蜜。何以故？諸佛舍利，因般若波羅蜜生，故得供養。「世尊！譬如負債人，常畏債主，以得親近奉事王故，債主反更恭敬怖畏。何以故？依恃國王，其力大故。世尊！舍利亦如是，依止般若波羅蜜，故得供養。世尊！般若波羅蜜如王，舍利如親近王人。如來舍利，依止一切智慧，故得供養。世尊！諸佛一切智慧亦從般若波羅蜜生，是故我於二分之中，取般若波羅蜜。",
+   "T0220d": "「復次，憍尸迦！假使充滿此贍部洲佛設利羅以為一分，有書般若波羅蜜多甚深法門復為一分，於此二分，汝取何者？」天帝釋言：「我意寧取甚深般若波羅蜜多。所以者何？我於諸佛設利羅所，非不信樂供養恭敬，然諸佛身及設利羅，皆因般若波羅蜜多甚深法門而出生故，皆由般若波羅蜜多甚深法門功德威力所熏修故，乃為一切世間天、人、阿素洛等供養恭敬、尊重讚歎。一切菩薩摩訶薩眾皆於般若波羅蜜多甚深法門，精勤修學證得無上正等菩提。一切如來、應、正等覺，皆由般若波羅蜜多，通達真如、法界、法性及實際等成就法身。由法身故說名為佛，佛設利羅依法身故，乃為世間恭敬供養。「世尊！如我坐在三十三天善法殿中天帝座上，為諸天眾宣說正法時，有無量諸天子等，來至我所聽我所說，供養恭敬，右遶而去。我若不在彼法座時，諸天子等亦來其處，雖不見我，如我在時恭敬供養，咸言：『此處是天帝釋為諸天等說法之座，我等皆應如天主在，供養右遶禮拜而去。』甚深般若波羅蜜多亦復如是，若有書寫、受持、讀誦，廣為有情宣說流布，當知是處恒有此土及餘十方無邊世界無量無數天、龍、藥叉、阿素洛等皆來集會，設無說者，敬重法故，亦於是處供養恭敬、右遶而去。「世尊！甚深般若波羅蜜多與諸菩薩摩訶薩行，及佛所得一切智智，為因、為緣、為所依止、為能引發。是故我說：假使充滿此贍部洲佛設利羅以為一分，有書般若波羅蜜多甚深法門復為一分，於此二分，我意寧取甚深般若波羅蜜多。「復次，世尊！且置充滿此贍部洲佛設利羅以為一分。假使充滿四大洲界佛設利羅以為一分，若復充滿小千世界佛設利羅以為一分，若復充滿中千世界佛設利羅以為一分，若復充滿大千世界佛設利羅以為一分，有書般若波羅蜜多甚深法門復為一分，於此二分，我意寧取甚深般若波羅蜜多。所以者何？我於諸佛設利羅所，非不信樂供養恭敬，然諸佛身及設利羅，皆因般若波羅蜜多甚深法門而出生故，皆由般若波羅蜜多甚深法門功德威力所熏修故，乃為一切世間天、人、阿素洛等供養恭敬、尊重讚歎。「復次，世尊！若善男子、善女人等，於深般若波羅蜜多至心聽聞、受持、讀誦、精勤修學、如理思惟、書寫、解說、廣令流布，彼於當來不墮惡趣，遠離聲聞及獨覺地，不畏一切災橫、疾疫之所侵惱。如負債人怖畏債主，即便親近奉事國王，依王勢力得免怖畏。王喻般若波羅蜜多，彼負債人喻善男子、善女人等，依恃般若波羅蜜多，得離惡趣及餘怖畏。世尊！譬如有人依附王故、王攝受故，為諸世人供養恭敬、尊重讚歎。佛設利羅亦復如是，由深般若波羅蜜多所熏修故，為諸天、人、阿素洛等供養恭敬、尊重讚歎。王喻般若波羅蜜多，佛設利羅喻依王者。世尊！諸佛所得一切智智，亦依般若波羅蜜多而得成就故，我寧取甚深般若波羅蜜多。「復次，世尊！甚深般若波羅蜜多於三千界作大饒益、具大神力，隨所在處，則為有佛作諸佛事，所謂利樂一切有情。",
+   "T0220d-5": "「復次，憍尸迦！假使充滿此贍部洲佛設利羅以為一分，有書般若波羅蜜多深妙法門復為一分，於斯二分，汝取何者？」天帝釋言：「我意寧取深妙般若波羅蜜多。所以者何？我於諸佛設利羅所，非不信受供養恭敬，然諸佛身及設利羅，皆因般若波羅蜜多深妙法門而出生故，皆由般若波羅蜜多深妙法門功德威力所熏修故，乃為一切世間天、人、阿素洛等供養恭敬。「世尊！如我坐在三十三天善法殿中天帝座上，為諸天眾宣說正法時，有無量諸天子等，來至我所聽我所說，供養恭敬，右遶而去。我若不在彼法座時，諸天子等亦來其處，雖不見我如我在時供養恭敬，咸言：『此處是天帝釋為諸天等說法之座，我等皆應如天主在，供養恭敬，右遶而去。』佛設利羅亦復如是，深妙般若波羅蜜多為因引生，一切智智之所依止故，為一切世間天、人、阿素洛等供養恭敬。是故我說於二分中，我意寧取深妙般若波羅蜜多。「世尊！假使充滿三千世界佛設利羅以為一分，有書般若波羅蜜多深妙法門復為一分，於斯二分，我意寧取深妙般若波羅蜜多。所以者何？我於諸佛設利羅所，非不信受供養恭敬，然諸佛身及設利羅，皆因般若波羅蜜多深妙法門而出生故，皆由般若波羅蜜多深妙法門功德威力所熏修故，乃為一切世間天、人、阿素洛等供養恭敬。「世尊！如負債人怖畏債主，即便親近奉事國王，依王勢力得免怖畏，反為債主怖畏供養。所以者何？彼人依附國王勢力，王所攝受具威勢故。王喻般若波羅蜜多，佛設利羅喻依王者，由依般若波羅蜜多故，得世間供養恭敬。諸佛所得一切智智，亦依般若波羅蜜多而得成辦故，我寧取深妙般若波羅蜜多。",
+   "T0228": "爾時，世尊告帝釋天主言：「憍尸迦！若以滿閻浮提如來舍利而為一分，以此般若波羅蜜多書寫經卷而為一分，汝於此二分中當取何分？」帝釋天主白佛言：「世尊！若以滿閻浮提如來舍利，及般若波羅蜜多經卷，各為一分者，我於此二分中，當取般若波羅蜜多分。何以故？諸佛如來所有化相身、實義身、說法身，如是等身皆從法身所出生故，從如、實際所出現故。如、實際者，所謂般若波羅蜜多。諸佛世尊所有諸身，亦復從是般若波羅蜜多生，是故得於如來舍利瞻禮供養。雖復供養如來舍利，不如於此般若波羅蜜多尊重供養。所以者何？諸如來身，從是般若波羅蜜多所出生故。世尊！譬如我於三十三天善法堂中，我處其座，為諸天子宣說法要。若時我以因緣起離彼座，有諸天子或時來者，雖不見我，但向其座瞻禮恭敬旋繞而去。彼作是念：『帝釋天主於此座中，常為諸天宣說法要，是故我今瞻禮此座。』世尊！如來、應供、正等正覺亦復如是。如來所有一切智依如來身，是身復由一切智得。以是緣故，從如實智出生如來一切智智，是智復從般若波羅蜜多所生。世尊！是故我當於二分中，但取般若波羅蜜多分。「世尊！我非於佛舍利不生恭敬，以其如來舍利從般若波羅蜜多所生，是故我取般若波羅蜜多分，是即供養如來舍利。世尊！置是滿閻浮提如來舍利，若滿四大洲，若滿小千世界，若滿中千世界如來舍利，皆置是數。假使滿三千大千世界如來舍利以為一分，此般若波羅蜜多書寫經卷以為一分。世尊！於二分中，我亦但取般若波羅蜜多分。世尊！我於如來舍利非不恭敬，以其如來、應供、正等正覺所有舍利，從般若波羅蜜多生故。諸如來身與一切智為所依止，即此一切智復從般若波羅蜜多生。是故我於二分中，但取般若波羅蜜多分。"
+  },
+  "c04-02": {
+   "sa": "tadyathāpi nāma bhagavan anarghaṃ maṇiratnamebhirevaṃrūpairguṇaiḥ samanvāgataṃ syāt / tadyathā - tadyatra yatra sthāpyeta, tatra tatra manuṣyā vā amanuṣyā vā avatāraṃ na labheran / yatra yatra vā amanuṣyagṛhītaḥ kaścidbhavet puruṣo vā strī vā, tatra tatra tasmin maṇiratne praveśitamātre so 'manuṣyastato 'pakrāmet / vātenāpi bādhyamānasya dhamyamāne śarīre tanmaṇiratnaṃ sthāpyeta / tasya taṃ vātaṃ nigṛhṇīyāt, na vivardhayet, upaśamayet / pittenāpi dahyamāne śarīre sthāpyeta / tasya tad api pittaṃ nigṛhṇīyāt, na vivardhayet, upaśamayet / śleṣmaṇāpi parigṛddhe sarvato bādhyamāne śarīre sthāpyeta, tasya tam api śleṣmāṇaṃ nigṛhṇīyāt, na vivardhayet, upaśamayet / sāṃnipātikenāpi vyādhinā duḥkhitasya śarīre sthāpyeta, tasya tam api sāṃnipātikaṃ vyādhiṃ nigṛhṇīyāt, na vivardhayet, upaśamayet / andhakāratamisrāyāṃ ca rātrāvapyavabhāsaṃ kuryāt / uṣṇe cāpi vartamāne yasmin pṛthivīpradeśe sthāpyeta, sa pṛthivīpradeśaḥ śītalo bhavet / śīte cāpi vartamāne yasmin pṛthivīpradeśe sthāpyeta, sa pṛthivīpradeśa uṣṇo bhavet / yasmiṃś ca pṛthivīpradeśe āśīviṣā anuvicareyuḥ, tathā anye 'pi kṣudrajantavaḥ, tatrāpi pṛthivīpradeśe dhāryeta, sthāpitaṃ vā bhavet, te 'pyāśīviṣāste ca kṣudrajantavastato 'pakrāmeyuḥ / sacedbhagavan strī vā puruṣo vā āśīviṣeṇa daṣṭo bhavet, tasya tanmaṇiratnaṃ daśyeta, tasya sahadaṃśanenaiva maṇiratnasya tadviṣaṃ pratihanyeta vigacchet / ebhiścānyaiś ca bhagavan evaṃrūpairguṇaiḥ samanvāgataṃ tanmaṇiratnaṃ bhavet / yeṣām api keṣāṃcidbhagavan akṣiṣvarbudaṃ vā timiraṃ vā akṣirogo vā paṭalaṃ vā bhavet, teṣāṃ ca tanmaṇiratnamakṣiṣu sthāpyeta, teṣāṃ sthāpitamātreṇaiva te 'kṣidoṣā nirghātaṃ praśamaṃ gaccheyuḥ / etaiś ca anyaiś ca bhagavan evaṃrūpairguṇaiḥ samanvāgataṃ tanmaṇiratnaṃ bhavet / yatra codake sthāpyeta, tadapyudakamekavarṇaṃ kuryātsvakena varṇena / sacetpāṇḍareṇa vastreṇa pariveṣṭya udake prakṣipyeta, tadudakaṃ pāṇḍarīkuryāt / evaṃ sacennīlena pītena lohitena māñjiṣṭhena eteṣāmanyeṣāṃ vā nānāprakārāṇāṃ vastrāṇāmanyatamena vastreṇa tanmaṇiratnaṃ veṣṭayitvā vā baddhvā vā udake prakṣipyeta, tena tena vastrarāgeṇa tattatsvabhāvavarṇaṃ tadudakaṃ kuryāt / yo 'pi tasyodakasya kaluṣabhāvastam api prasādayet / ebhir api bhagavan evaṃrūpairguṇaiḥ samanvāgataṃ tanmaṇiratnaṃ bhavet //",
+   "T0224": "「般若波羅蜜受持者，譬如無價摩尼珠。天中天！有是寶，無有與等者。若持有所著，所著處者，鬼神不得其便，不為鬼神所中害。若男子、若女人，持摩尼珠著其身上，鬼神即走去；若中熱，持摩尼珠著身上，其熱即除去；若中風，持摩尼珠著身上，其風不增，即除去；若中寒，持摩尼珠著身上，其寒不復增，即除去；夜時持摩尼珠著冥中，即時明；熱時持摩尼珠，所著處即為涼；寒時持摩尼珠，所著處即為熱；所至處毒皆不行，餘他輩亦爾。中有為蛇所齧者，若男子、若女人持摩尼珠示之，見摩尼珠毒即去。如是，天中天！摩尼珠極尊，若有人病——若目痛、若目冥——持摩尼珠近眼，眼病即除愈。如是，天中天！摩尼珠德巍巍自在，持著何所，著水中水便隨作摩尼珠色，持繒裹著水中，水便如摩尼珠色，正使持若干種繒裹著水中，水便如摩尼珠色，水濁即為清，摩尼珠德無有比。」",
+   "T0225": "譬如無價明月珠，有是寶者，其德無等。所著處，鬼神不得其便，不為所中。若士女持明月珠所著，鬼神即去。若中熱風寒，持明月珠著身，熱風寒皆除去。夜著，冥中即明。熱涼寒溫眾毒向已，持珠示之，諸毒即滅。如是，天中天！明月珠尊。若人目痛冥，近之即愈。其德巍巍，在著何所，便隨珠色。正使持若干種繒裹珠著水中，水故如珠色，水濁即為清。是珠德無比。」",
+   "T0226": "其受般若波羅蜜持者，譬如無價摩尼珠。天中天！其有是寶，無有與等者。在所著處，鬼神不得其便，不為鬼神所害。若男子、女人，無大無小，其得邪者，持是摩尼珠著身，其鬼神即走去；若中熱者，持是摩尼珠著身上，其熱即為除；若中風者，持是摩尼珠著身上，其風即為除；若中寒者，持是摩尼珠著身上，其寒不復增，即得除去；若夜時持摩尼珠著冥中，即為悉明；若熱時持摩尼珠在所著處，即為大涼；若寒時持摩尼珠在所著處，即為大溫；在所置處，諸毒即為不行。若男子女人，無大無小，若蛇蟒所齧，持是摩尼珠著之，毒即自去。是摩尼珠，天中天！之為極尊。若有人病目痛者，若得目冥，持是摩尼珠近眼，痛即為除愈。如是，天中天！摩尼珠之德甚大巍巍。若著水中，水即如色；持若干種繒鄭重裹摩尼珠著其水中，水即隨色；若水濁者，即時為清。摩尼之德而無與比。」",
+   "T0227": "「世尊！譬如無價寶珠，有如是功德。其所住處，非人不能得其便。若男若女，若大若小，為非人所持，寶珠至其處，非人則去。若有熱病，珠能除滅。若有風病，以珠著身上，風患即除。若有冷病，以珠著身上，冷患亦除。是珠住處，夜時能為明，熱時能為涼，寒時能為溫。珠所住處，蛇毒不入。若男若女，若大若小，為毒虫所螫，以珠示之，毒即除滅。若諸目患，以珠著目上，目患即除。世尊！又是寶珠，若著水中，與水同色；若以白繒裹著水中，水色即白；若以青、黃、紫、赤種種色繒裹著水中，水即各隨其色，水濁即為清。是珠成就如是功德。」",
+   "T0220d": "世尊！譬如無價大寶神珠，具無量種勝妙威德，隨所住處有此神珠，人及非人終無惱害。設有男子或復女人，為鬼所執身心苦惱，若有持此神珠示之，由珠威力鬼便捨去。諸有熱病、或風、或痰、或熱風痰和合為病，若有繫此神珠著身，如是諸病無不除愈。此珠在闇能作照明，熱時能涼寒時能暖，隨地方所有此神珠時節調和不寒不熱。若地方所有此神珠，蛇蠍等毒無敢停止。設有男子或復女人，為毒所中楚痛難忍，若有持此神珠令見，珠威勢故毒即消滅。若諸有情身嬰癩疾、惡瘡、腫疱、目眩、瞖等眼病、耳病、鼻病、舌病、喉病、身病、諸支節病，帶此神珠眾病皆愈。若諸池沼泉井等中，其水濁穢或將枯涸，以珠投之水便盈滿，香潔澄淨具八功德。若以青黃赤白紅紫碧綠雜綺種種色衣，裹此神珠投之於水，水隨衣綵作種種色。如是無價大寶神珠，威德無邊說不能盡，若置箱篋亦令其器具足成就無邊威德。設空箱篋由曾置珠，其器仍為眾人愛重。」",
+   "T0220d-5": "「世尊！譬如無價大寶神珠，具無量種勝妙威德，隨所住處有此神珠，人非人等不能為害。設有男子或復女人，為鬼所執身心苦惱，若有持此神珠示之，由珠威力鬼便捨去。諸有熱病或風、或痰、或二、或三和合為病，若有繫此神珠著身，如是諸病無不除愈。此珠在闇能作照明，熱時能涼寒時能暖，隨地方所有此神珠，時節調和不寒不熱。若地方所有此神珠，虵蠍等毒無敢停止。設有男子或復女人，為毒所中楚痛難忍，若有持此神珠令見，珠威勢故毒即消滅。若諸有情身嬰癩疾、惡瘡、腫疱、目眩、瞖等眼病、耳病、鼻病、舌病、喉病、身病、諸支節病，帶此神珠眾病皆愈。若諸池沼泉井等中，其水濁穢或將枯涸，以珠投之水便盈滿，香潔澄淨具八功德。若以青黃赤白紅紫碧綠雜綺種種色衣，裹此神珠投之於水，水隨衣彩作種種色。如是無價大寶神珠，威德無邊說不能盡，若置箱篋亦令其器具足成就無邊威德。設空箱篋由曾置珠，其器仍為眾人愛重。」",
+   "T0228": "「世尊！譬如大摩尼寶，具諸色相有大功德，在在處處諸非人類求不得便。彼諸非人住處，若有男子、女人持是摩尼寶入其舍中，彼非人類即當出離其舍。又復此寶若人暫置身中，是人即能息諸惡毒苦惱等事。又復若有患風癀痰𤸌等病者，當以此寶置其身上，是諸病苦皆悉銷除。此摩尼寶，於夜闇中能為明照。若諸地方盛炎熱時，此摩尼寶能作清涼。若諸地方極寒冷時，此摩尼寶而能溫暖。若諸地方大毒蟲等作諸惡毒，若有是大摩尼寶處，自當遠去不能為害。又若有人為諸毒蟲所傷害者，是人若見此摩尼寶，毒即銷滅。又復若人患諸眼病，不能觀視諸境相者，當以此寶置其眼上，是人即能明照，離諸苦惱。又復若以此寶置於水中，是寶即與水同一色。若以此寶置於青黃赤白眾色水中，是寶亦能隨種種色各同其一。又復，若以此寶置於青黃赤白眾色衣中，是寶亦能隨諸衣色各同其一。若以此寶置濁水中，水即自清。世尊！彼摩尼寶具諸色相有是功德。」"
+  },
+  "c04-03": {
+   "sa": "atha khalvāyuṣmānānandaḥ śakraṃ devānāmindrametadavocat - kiṃ punaḥ kauśika devaloka eva tāni maṇiratnāni santi, uta jāmbūdvīpakānām api manuṣyāṇāṃ tāni maṇiratnāni santi? śakra āha - deveṣvāryānanda tāni maṇiratnāni santi / api tu khalu punarjāmbudvīpakānām api manuṣyāṇāṃ maṇiratnāni santi / tāni tu gurukāṇi alpāni parīttāni guṇavikalāni, na taistathārūpairguṇaiḥ samanvāgatāni / tatteṣāṃ divyānāṃ maṇiratnānāṃ śatatamīm api kalāṃ nopayānti, sahasratamīmapi, śatasahasratamīmapi, koṭītamīmapi, koṭīśatatamīmapi, koṭīsahasratamīmapi, koṭīśatasahasratamīmapi, koṭīniyutaśatasahasratamīm api kalāṃ nopayānti, saṃkhyām api kalām api gaṇanām api upamām api aupamyam api upanisām api upaniṣadam api na kṣamante nopayānti / yāni khalu punardeveṣu, tāni laghūni sarvākāraguṇaparipūrṇāni / yatra ca karaṇḍake tanmaṇiratnaṃ prakṣiptaṃ bhavati utkṣiptaṃ vā, tata uddhṛte 'pi tasmin maṇiratne karaṇḍakāt spṛhaṇīya eva sa karaṇḍako bhavati / tairmaṇiratnaguṇaiḥ parā tatra karaṇḍake spṛhotpadyate / evameva bhagavan prajñāpāramitāyā ete guṇāḥ sarvajñajñānasya ca / yena parinirvṛtasyāpi tathāgatasyārhataḥ samyaksaṃbuddhasya tāni tathāgataśarīrāṇi pūjāṃ labhante - sarvajñajñānasyemāni tathāgataśarīrāṇi bhājanabhūtānyabhūvanniti / yathā ca bhagavan sarvalokadhātuṣu buddhānāṃ bhagavatāṃ dharmadeśanā prajñāpāramitānirjātatvātpūjyā, evaṃ dharmabhāṇakasya dharmadeśanā prajñāpāramitānirjātatvātpūjyā / yathā ca bhagavan rājapuruṣo rājānubhāvānmahato janakāyasya akutobhayaḥ pūjyaḥ, evaṃ sa dharmabhāṇako dharmakāyānubhāvānmahato janakāyasya akutobhayaḥ pūjyaḥ / yathā ca dharmadeśanā dharmabhāṇakāś ca pūjāṃ labhante, evaṃ tāni tathāgataśarīrāṇi pūjāṃ labhante / tasmāttarhi bhagavan tiṣṭhatu trisāhasramahāsāhasro lokadhātustathāgataśarīrāṇāṃ paripūrṇaścūlikābaddhaḥ, ye 'pi bhagavan gaṅgānadīvālukopamā lokadhātavaḥ, te 'pi sarve tathāgataśarīrāṇāṃ paripūrṇāścūlikābaddhā eko bhāgaḥ sthāpyeta, iyaṃ ca prajñāpāramitā likhitvā dvitīyo bhāgaḥ sthāpyeta / tatra cenmāṃ bhagavan kaścideva pravārayedanyatareṇa bhāgena, pravāryamāṇo 'nayorbhāgayoḥ sthāpitayoḥ - yaste bhāgo 'bhipretaḥ tamekaṃ bhāgaṃ parigṛhṇīṣveti, tatra imāmevāhaṃ bhagavaṃstayordvayorbhāgayoḥ sthāpitayorbhāgaṃ gṛhṇīyāṃ yaduta prajñāpāramitām / na khalu punarbhagavan mama teṣu tathāgataśarīreṣvagauravam / gauravameva bhagavaṃsteṣu tathāgataśarīreṣu / api tu khalu punarbhagavan prajñāpāramitāparibhāvitā sarvajñatā, sarvajñatānirjātā ca tathāgataśarīrāṇāṃ pūjā bhavati / tasmāttarhi bhagavan prajñāpāramitāyāṃ pūjitāyāmatītānāgatapratyutpannānāṃ buddhānāṃ bhagavatāṃ pūjā kṛtā bhavati //",
+   "T0224": "阿難問釋提桓因：「云何，拘翼！天上亦有摩尼珠？閻浮利地上亦有摩尼珠？」釋提桓因語阿難言：「天上亦有摩尼珠，閻浮利地上亦有摩尼珠，不足言，如我所說，異閻浮利地上寶輕耳，不如彼珠德尊十倍百倍千倍萬倍億億萬倍，我所語摩尼珠者，有所著處，若篋中、若函中，其光明倍徹出，正使舉珠出去餘處，續明如故，般若波羅蜜、薩芸若之德，至怛薩阿竭、阿羅呵、三耶三佛般泥洹去，舍利供養如故，薩芸若、舍利遍分布天下，供養如故。",
+   "T0225": "阿難問釋：「云何獨彼有珠耶？斯土亦有乎？」釋言：「亦有，不足言。如我所說者，異天下寶輕，不如彼德尊十百千萬億倍，若以著篋函中，其明徹出，正使出去，處明如故。天中天！一切知德至如來滅度後，是一切知舍利遍布供養如故。置是三千大千國土滿中如來舍利，正使恒邊沙佛剎滿中舍利為一分，是經為二分，我於兩分取是經。」",
+   "T0226": "阿難問釋提桓因：「云何，拘翼！天上亦有摩尼，閻浮利地上亦有摩尼，俱同摩尼，能有差別？」即報阿難：「天上摩尼者，不與人間俱同。閻浮利所有，其光明自然不足言耳。如我所說即之有異，其德甚尊十倍百千倍萬億倍巨億萬倍。如我所語摩尼者，若著篋中、若著函中，其光明徹照於外；假使舉珠出去，其處續明如故。般若波羅蜜者，是薩芸若之慧，至怛薩阿竭阿羅訶三耶三佛般泥洹去後，舍利續得供養。舍利者，即為薩芸若之函器。復次，天中天！若三千大千國土滿中舍利，乃至恒邊沙佛剎滿中舍利合為一分，般若波羅蜜經為二分。我寧從二分之中取般若波羅蜜。何以故？怛薩阿竭為從薩芸若生，其舍利者，從般若波羅蜜出，自致得供養。",
+   "T0227": "爾時阿難問釋提桓因：「此是閻浮提寶？為是天上寶？」釋提桓因言：「此是天上寶。閻浮提人，亦有是寶，但功德少而重。天上寶珠，功德多而輕。人寶比天寶，算數譬喻所不能及。「世尊！若是珠在篋中，雖舉珠去，以珠功德故，其篋則貴。世尊！以般若波羅蜜薩婆若智功德故，如來滅後，舍利得供養。以如來舍利，是薩婆若智所住處故。我於二分之中，取般若波羅蜜。世尊！置是滿三千大千世界舍利，若滿如恒河沙等世界中舍利以為一分，般若波羅蜜經卷以為一分。二分之中，我取般若波羅蜜。何以故？諸佛如來薩婆若智，皆從般若波羅蜜生，薩婆若所熏，故舍利得供養。",
+   "T0220d": "爾時，慶喜問帝釋言：「如是神珠為天獨有，人亦有耶？」天帝釋言：「人中、天上俱有此珠，若在人中形小而重，若在天上形大而輕；又人中珠相不具足，在天上者其相周圓；天上神珠威德殊勝，無量倍數過人所有。」時，天帝釋復白佛言：「甚深般若波羅蜜多亦復如是，為眾德本能滅無量惡不善法，隨所在處，令諸有情身心苦惱皆悉除滅，人非人等不能為害。世尊！如來所得一切智智及餘無量無邊功德，皆由般若波羅蜜多大神呪王之所引顯，威德深廣無量無邊。佛設利羅由諸功德所熏修故，是諸功德所依器故，佛涅槃後堪受一切世間天、人、阿素洛等供養恭敬、尊重讚歎。「復次，世尊！置三千界佛設利羅。假使充滿十方各如殑伽沙界佛設利羅以為一分，有書般若波羅蜜多甚深法門復為一分，於此二分，我意寧取甚深般若波羅蜜多。所以者何？我於諸佛設利羅所，非不信樂供養恭敬，然諸佛身及設利羅，皆因般若波羅蜜多甚深法門而出生故，皆由般若波羅蜜多甚深法門功德威力所熏修故，乃為一切世間天、人、阿素洛等供養恭敬、尊重讚歎。「復次，世尊！甚深般若波羅蜜多能生如來一切智智，如來所得一切智智能生佛身及設利羅，是故供養甚深般若波羅蜜多，則為供養過去未來現在諸佛一切智智及設利羅。",
+   "T0220d-5": "爾時，慶喜問帝釋言：「如是神珠為天獨有，人亦有耶？」天帝釋言：「人中、天上俱有此珠，若在人中形小而重，若在天上形大而輕；又人中珠相不具足，在天上者其相周圓；天上神珠威德殊勝，無量倍數過人所有。」時，天帝釋復白佛言：「深妙般若波羅蜜多亦復如是，為眾德本能滅無量惡不善法，隨所在處滅諸有情身心苦惱，人非人等不能為害。如來所得一切智智及餘無量無邊功德，皆因般若波羅蜜多。佛設利羅，由諸功德所熏修故，是諸功德所依器故，佛涅槃後堪受一切世間天、人、阿素洛等供養恭敬。是故我說於二分中，我意寧取深妙般若波羅蜜多。「世尊！假使充滿十方各如殑伽沙界佛設利羅以為一分，有書般若波羅蜜多深妙法門復為一分，於斯二分，我意寧取深妙般若波羅蜜多。所以者何？我於諸佛設利羅所，非不信受供養恭敬，然諸佛身及設利羅，皆因般若波羅蜜多深妙法門而出生故，皆由般若波羅蜜多深妙法門功德威力所熏修故，乃為一切世間天、人、阿素洛等供養恭敬。「復次，世尊！深妙般若波羅蜜多能生如來一切智智，如來所得一切智智能生佛身及設利羅，是故供養如是般若波羅蜜多，則為供養三世諸佛一切智智及設利羅。",
+   "T0228": "爾時，尊者阿難謂帝釋天主言：「如汝所說，大摩尼寶具諸功德者，此為天上所有寶耶？此為人間所有寶耶？」帝釋天主白阿難言：「此是天上大摩尼寶，閻浮提人亦有是寶，但人少生尊重敬愛，唯天中寶人所愛重，具諸色相勝功德故。若或以其閻浮提寶比天寶者，百分不及一，千分不及一，百千分不及一，俱胝分不及一，百俱胝分不及一，千俱胝分不及一，百千俱胝分不及一，算分數分及譬喻分乃至烏波尼殺曇分皆不及一。是天摩尼寶圓滿一切相，若以寶凾盛此妙寶，若時取其寶去，而此寶函亦具諸功德，人所尊敬。何以故？以盛大寶殊妙器故。」爾時，帝釋天主白佛言：「世尊！般若波羅蜜多亦復如是。具足一切智智功德，所有如來、應供、正等正覺般涅盤後所有舍利，亦得瞻禮供養。何以故？一切智智依如來身，是故如來舍利同彼寶器，一切智智如所盛寶。以是義故，如來舍利得瞻禮供養。世尊！若佛如來於一切世界宣說般若波羅蜜多，有是即出生真實供養。若說法師能為人說般若波羅蜜多者，亦即出生真實供養。世尊！譬如王臣受王命出於多人聚中，不生怖畏，以依其王威德力故。諸說法師亦復如是，於一切眾中宣說法要，不生怖畏，以依大法功德力故。是故於說法師尊重供養，以供養法師故，如來舍利亦得供養。「世尊！如前所說滿三千大千世界如來舍利，假使如兢伽沙數三千大千世界滿中如來舍利以為一分，般若波羅蜜多經卷以為一分。世尊！我於是二分中，亦取般若波羅蜜多分。世尊！我非於如來舍利不生尊重，但為如來舍利從般若波羅蜜多生故，與一切智而為所依，是故我當尊重供養般若波羅蜜多。是故，世尊！若供養此般若波羅蜜多者，即同供養過去未來現在諸佛。"
+  },
+  "c04-04": {
+   "sa": "punaraparaṃ bhagavan ye 'prameyeṣvasaṃkhyeṣu lokadhātuṣu buddhā bhagavanta etarhi tiṣṭhanti dhriyante yāpayanti, tān dharmatayā draṣṭukāmena kulaputreṇa vā kuladuhitrā vā prajñāpāramitāyāṃ caritavyam, prajñāpāramitāyāṃ yogamāpattavyam / prajñāpāramitā bhāvayitavyā // evamukte bhagavān śakraṃ devānāmindrametadavocat - evametatkauśika, evam etat / ye 'pi te kauśika abhūvannatīte 'dhvani tathāgatā arhantaḥ samyaksaṃbuddhā anuttarāṃ samyaksaṃbodhimabhisaṃbuddhāḥ, te 'pi kauśika imāmeva prajñāpāramitāmāgamya anuttarāṃ samyaksaṃbodhimabhisaṃbuddhāḥ / ye 'pi te kauśika bhaviṣyantyanāgate 'dhvani tathāgatā arhantaḥ samyaksaṃbuddhāḥ, te 'pi kauśika imāmeva prajñāpāramitāmāgamya anuttarāṃ samyaksaṃbodhimabhisaṃbhotsyante / ye 'pi te kauśika etarhi aprameyeṣvasaṃkhyeyeṣu lokadhātuṣu buddhā bhagavantastiṣṭhanti dhriyante yāpayanti, te 'pi kauśika buddhā bhagavantaḥ imāmeva prajñāpāramitāmāgamya anuttarāṃ samyaksaṃbodhimabhisaṃbuddhāḥ / aham api kauśika etarhi tathāgato 'rhan samyaksaṃbuddhaḥ imāmeva prajñāpāramitāmāgamya anuttarāṃ samyaksaṃbodhimabhisaṃbuddhaḥ //",
+   "T0224": "「復次，阿難！十方無央數佛國現在諸佛欲見者，善男子、善女人當行般若波羅蜜，當守般若波羅蜜。」佛語釋提桓因：「如是，拘翼！過去時怛薩阿竭、阿羅呵、三耶三佛，皆從般若波羅蜜中出，為人中之將，自致成作佛；如是出生甫當來怛薩阿竭、阿羅呵、三耶三佛，悉從般若波羅蜜中出，為人中之將，自致成作佛；復如十方無央數佛國今現在諸佛，亦從般若波羅蜜中出，為人中之將，自致成作佛。」",
+   "T0225": "佛語釋：「過去如來皆從中出，自致成佛。甫當來及十方無數佛剎現在諸佛，亦從中出，為人中將，自致成。」",
+   "T0226": "若善男子、善女人，天中天！欲見今現在阿僧祇剎土諸佛，當承法如般若波羅蜜行，當作是念。」佛語釋提桓因言：「如是，拘翼！過去時怛薩阿竭阿羅訶三耶三佛，皆從般若波羅蜜自致成佛，甫當來怛薩阿竭阿羅訶三耶三菩，悉從般若波羅蜜當自致成作佛，今現在無央數阿僧祇剎土諸佛，亦從般若波羅蜜自致成作佛。」",
+   "T0227": "「復次，世尊！若善男子、善女人，欲如實見十方無量阿僧祇諸佛者，當行般若波羅蜜，當修般若波羅蜜。」佛言：「如是，如是！憍尸迦！過去諸佛，皆因般若波羅蜜，得阿耨多羅三藐三菩提；未來諸佛，亦因般若波羅蜜，得阿耨多羅三藐三菩提；現在十方無量阿僧祇世界諸佛，亦因般若波羅蜜，得阿耨多羅三藐三菩提。」",
+   "T0220d": "「復次，世尊！若善男子、善女人等，欲得常見十方無量無數如來、應、正等覺，當行般若波羅蜜多，當修般若波羅蜜多。」爾時，佛告天帝釋言：「如是！如是！如汝所說。憍尸迦！過去如來、應、正等覺，皆依如是甚深般若波羅蜜多，已證無上正等菩提；未來如來、應、正等覺，皆依如是甚深般若波羅蜜多，當證無上正等菩提；現在十方無邊世界一切如來、應、正等覺，皆依如是甚深般若波羅蜜多，現證無上正等菩提。今我如來、應、正等覺，亦依如是甚深般若波羅蜜多，而證無上正等菩提。」",
+   "T0220d-5": "「復次，世尊！若善男子、善女人等欲得常見十方諸佛，當行當修甚深般若波羅蜜多。」爾時，佛告天帝釋言：「如是！如是！如汝所說。憍尸迦！過去未來現在諸佛，皆依般若波羅蜜多，證得無上正等菩提，是故如來供養恭敬。」",
+   "T0228": "「復次，世尊！若善男子、善女人，樂欲見彼十方無量阿僧祇世界現住說法諸佛如來真實身者，應當於此般若波羅蜜多如法修行，於此般若波羅蜜多安住相應如實觀想。」爾時，世尊告帝釋天主言：「如是，如是！憍尸迦！所有過去如來、應供、正等正覺，皆因修習是般若波羅蜜多故，得成就阿耨多羅三藐三菩提。未來世中，所有無量無數如來、應供、正等正覺，皆因修習是般若波羅蜜多故，得成就阿耨多羅三藐三菩提。憍尸迦！我今現在如來、應供、正等正覺，亦修習是般若波羅蜜多故，得阿耨多羅三藐三菩提。」"
+  },
+  "c04-05": {
+   "sa": "evamukte śakro devānāmindro bhagavantametadavocat - mahāpāramiteyaṃ bhagavan yaduta prajñāpāramitā / sarvasattvānāṃ hi bhagavaṃstathāgato 'rhan samyaksaṃbuddhaścittacaritāni samyak prajānāti saṃpaśyati / bhagavānāha - evametatkauśika, evam etat / tathā hi kauśika bodhisattvo mahāsattvo dīrgharātraṃ prajñāpāramitāyāṃ carati, tena sarvasattvānāṃ cittacaritāni prajñāpāramitāyāṃ samyak prajānāti saṃpaśyati //",
+   "T0224": "釋提桓因白佛言：「摩訶波羅蜜，天中天！一切人民蜎飛蠕動之類心所念，怛薩阿竭、阿羅呵、三耶三佛，從般若波羅蜜悉了知。」佛言：「用是故，菩薩摩訶薩晝夜行般若波羅蜜。」",
+   "T0225": "釋言：「一切眾生心所求，如來從明度悉了知。」佛言：「用是故，闓士大士晝夜求明度。」",
+   "T0226": "釋提桓因白佛言：「摩訶波羅蜜，天中天！一切人蜎蜚蠕動，若波羅蜜悉了知之。」佛言：「菩薩摩訶薩用是知，故晝夜行般若波羅蜜。」",
+   "T0227": "釋提桓因白佛言：「世尊！摩訶波羅蜜是般若波羅蜜，佛因是般若波羅蜜，皆知一切眾生心、心所行。」佛言：「憍尸迦！菩薩摩訶薩長夜行般若波羅蜜故。」",
+   "T0220d": "天帝釋言：「甚深般若波羅蜜多是大波羅蜜多，是無上波羅蜜多，是無等等波羅蜜多。一切如來、應、正等覺，及諸菩薩摩訶薩眾，皆依如是甚深般若波羅蜜多，知諸有情心行差別。」爾時，佛告天帝釋言：「如是！如是！如汝所說。憍尸迦！諸菩薩摩訶薩長夜修行甚深般若波羅蜜多，能如實見一切有情心行差別。」",
+   "T0220d-5": "天帝釋言：「如是般若波羅蜜多是大無上波羅蜜多，一切如來皆依般若波羅蜜多知諸有情心行差別。」爾時，佛告天帝釋言：「如是！如是！如汝所說。憍尸迦！是故菩薩摩訶薩眾長夜修行甚深般若波羅蜜多，為如實知諸有情類心行差別。」",
+   "T0228": "帝釋天主白佛言：「世尊！大波羅蜜多是謂般若波羅蜜多，如來、應供、正等正覺以修習是般若波羅蜜多故，如實了知一切眾生種種心行。」佛言：「如是，如是！憍尸迦！諸菩薩摩訶薩於長夜中修行此般若波羅蜜多，而能了知一切眾生種種心行。」"
+  },
+  "c04-06": {
+   "sa": "atha khalu śakro devānāmindro bhagavantametadavocat - kiṃ bhagavan prajñāpāramitāyāmeva bodhisattvo mahāsattvaścarati nānyāsu pāramitāsu? bhagavānāha - sarvāsu kauśika ṣaṭsu pāramitāsu bodhisattvo mahāsattvaścarati / api tu khalu punaḥ kauśika prajñāpāramitaiva atra pūrvaṃgamā bodhisattvasya mahāsattvasya dānaṃ vā dadataḥ, śīlaṃ vā rakṣataḥ, kṣāntyā vā saṃpādayamānasya, vīryaṃ vā ārabhamāṇasya, dhyānaṃ vā samāpadyamānasya, dharmān vā vipaśyataḥ bodhisattvasya mahāsattvasya prajñāpāramitaivātra pūrvaṃgamā / na ca kauśika āsāṃ ṣaṇṇāṃ pāramitānāmupāyakauśalyaparigṛhītānāṃ prajñāpāramitāpariṇāmitānāṃ sarvajñatāpariṇāmitānāṃ viśeṣaḥ, na ca nānākaraṇamupalabhyate / tadyathāpi nāma kauśika jambudvīpe nānāvṛkṣā nānāvarṇā nānāsaṃsthānā nānāpatrā nānāpuṣpā nānāphalā nānārohapariṇāhasaṃpannāḥ, na ca teṣāṃ vṛkṣāṇāṃ chāyāyā viśeṣo vā nānākaraṇaṃ vā prajñāyate, api tu chāyā chāyetyevaṃ saṃkhyāṃ gacchati, evameva kauśika āsāṃ ṣaṇṇāṃ pāramitānāmupāyakauśalyaparigṛhītānāṃ prajñāpāramitāpariṇāmitānāṃ sarvajñatāpariṇāmitānāṃ na viśeṣaḥ, na ca nānākaraṇamupalabhyate / evamukte śakro devānāmindro bhagavantametadavocat - mahāguṇasamanvāgateyaṃ bhagavan yaduta prajñāpāramitā / aprameyaguṇasamanvāgateyaṃ bhagavan yaduta prajñāpāramitā / aparyantaguṇasamanvāgateyaṃ bhagavan yaduta prajñāpāramiteti // āryāṣṭasāhasrikāyāṃ prajñāpāramitāyāṃ guṇaparikīrtanaparivarto nāma caturthaḥ //",
+   "T0224": "釋提桓因言：「但行般若波羅蜜，不行餘波羅蜜耶？」佛言：「都盧六波羅蜜皆行，菩薩摩訶薩般若波羅蜜，於菩薩摩訶薩最尊，菩薩與布施，般若波羅蜜出上持戒、忍辱、精進、一心，分布諸經教人，不及菩薩摩訶薩行般若波羅蜜也。拘翼！譬如閻浮利地上種種好樹，若色種種各異，葉葉各異，華華各異，實實各異，種種枝棭其影無有異，其影如一影相類。如是，拘翼！五波羅蜜從般若波羅蜜出，般若波羅蜜出薩芸若，種種展轉相得無有異。」釋提桓因白佛言：「極大尊德般若波羅蜜，天中天！不可計德般若波羅蜜，天中天！無有極與等者般若波羅蜜，天中天！",
+   "T0225": "釋言：「惟求大明，不求餘度乎？」佛言：「六度無極皆求，闓士布施、持戒、忍辱、精進、一心分諸經，不及求明度。譬如是天下種樹若干色，種種葉花實各異，其影無異，影影相類。如是五度從明度出，一切知種種相成無異。」釋白佛言：「景明德尊，其為難等矣。天中天！」",
+   "T0226": "釋提桓因言：「所以但行般若波羅蜜，不行餘波羅蜜者何？」佛言：「菩薩摩訶薩悉行六波羅蜜，般若波羅蜜於菩薩摩訶薩為最尊。若所施與，般若波羅蜜為出其上。誡者無所犯，忍辱者為自守，精進者不懈怠，一心者而不亂，悉見諸法，是菩薩摩訶薩為行般若波羅蜜。譬若閻浮利地上，拘翼！種種樹木，若干種色，各各異葉、各各異華、各各異實、各各異種，其影者而無異，即皆悉相類。如是，拘翼！五波羅蜜為從般若波羅蜜出薩芸若，種種展轉相得，無有異。」釋提桓因白佛言：「極大尊之德，無過般若波羅蜜。天中天！不可計德，無過般若波羅蜜。天中天！無有已波羅蜜。天中天！",
+   "T0227": "釋提桓因白佛言：「世尊！菩薩但行般若波羅蜜，不行餘波羅蜜耶？」佛言：「憍尸迦！菩薩皆行六波羅蜜。若布施時，般若波羅蜜為上首；若持戒、若忍辱、若精進、若禪定、若觀諸法時，般若波羅蜜為上首。譬如閻浮提種種樹、種種形、種種色、種種葉、種種華、種種果，其陰皆一，無有差別。五波羅蜜亦如是，入般若波羅蜜中無有差別。」「世尊！是般若波羅蜜，有大功德，有無量無邊功德，有無等等功德。",
+   "T0220d": "時，天帝釋復白佛言：「諸菩薩摩訶薩為但應行般若波羅蜜多為亦應行餘五波羅蜜多耶？」爾時，佛告天帝釋言：「憍尸迦！諸菩薩摩訶薩應具行六波羅蜜多，然行布施、淨戒、安忍、精進、靜慮觀諸法時，皆以般若波羅蜜多而為上首。憍尸迦！如贍部洲所有諸樹，枝條、莖幹、華葉、果實，雖有種種形類不同，而其蔭影都無差別，具大功德眾所歸依。如是六種波羅蜜多雖各有異，而由般若波羅蜜多方便善巧，攝受迴向一切智智，諸差別相都不可得，具大功德眾所歸依。」時，天帝釋復白佛言：「甚深般若波羅蜜多成就廣大殊勝功德，成就一切殊勝功德，成就圓滿殊勝功德，成就無量殊勝功德，成就無邊殊勝功德，成就無數殊勝功德，成就無等殊勝功德，成就無盡殊勝功德。」爾時，佛告天帝釋言：「如是！如是！如汝所說。」",
+   "T0220d-5": "時，天帝釋復白佛言：「諸菩薩眾為但應行般若波羅蜜多，為亦應行餘五波羅蜜多？」爾時，佛告天帝釋言：「諸菩薩眾應具行六波羅蜜多，然行布施、淨戒、安忍、精進、靜慮觀諸法時，皆以般若波羅蜜多而為上首。憍尸迦！如贍部洲所有諸樹，枝條、莖幹、花葉、果實，雖有種種形類不同，而其蔭影都無差別。如是六種波羅蜜多雖各有異，而由般若波羅蜜多方便善巧，攝受迴向一切智智，諸相差別都不可得。」時，天帝釋復白佛言：「甚深般若波羅蜜多成就廣大圓滿無量無邊功德，",
+   "T0228": "爾時，帝釋天主復白佛言：「云何，世尊！菩薩摩訶薩但行般若波羅蜜多耶？亦行餘波羅蜜多耶？」佛言：「憍尸迦！菩薩摩訶薩皆行六波羅蜜多。「復次，憍尸迦！菩薩摩訶薩行此般若波羅蜜多，與諸波羅蜜多而為導首。所謂施波羅蜜多能捨，戒波羅蜜多能護，忍波羅蜜多能受，精進波羅蜜多能增長，禪定波羅蜜多能靜住，般若波羅蜜多能了知諸法。以了諸法故，而能開導諸波羅蜜多，善巧方便而為攝受。由般若波羅蜜多故，迴向一切智，迴向最勝清淨法界。憍尸迦！譬如閻浮提中，有種種樹，種種色相，種種莖幹，種種枝葉，種種華菓。雖復如是各各差別，而諸樹陰同一無異。憍尸迦！諸波羅蜜多亦復如是，雖復差別，而以般若波羅蜜多善巧方便，皆悉迴向彼一切智。」帝釋天主白佛言：「希有，世尊！般若波羅蜜多具大功德，般若波羅蜜多具無量功德，般若波羅蜜多具無邊功德。」"
+  }
+ }
+}
