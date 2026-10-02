@@ -174,18 +174,41 @@ def download(row: dict, name: str) -> Path:
         return dst
     if tmp.exists():
         raise FileExistsError(f"另一支正在下載：{dst.name}")
-    for a in range(4):
+    # 🚨 LibGen 的檔案伺服器常在 7／9／11 MB 這種整數處切斷連線。它支援 Range（回 206），
+    # 所以斷了就從已下載的位置續傳，不要從頭重下——否則大檔每次都斷在同一處、四次全敗。
+    total = 0
+    tries = 0
+    while tries < 12:
+        tries += 1
         try:
+            have = tmp.stat().st_size if tmp.exists() else 0
+            hdr = dict(UA)
+            if have:
+                hdr["Range"] = f"bytes={have}-"
             g = fresh_link()
-            with urllib.request.urlopen(urllib.request.Request("https://libgen.li/" + g, headers=UA), timeout=1800) as r, open(tmp, "wb") as f:
-                expect = int(r.headers.get("Content-Length") or 0)
-                shutil.copyfileobj(r, f, 1 << 20)
-            check_complete(tmp, row["ext"], expect)
+            with urllib.request.urlopen(urllib.request.Request("https://libgen.li/" + g, headers=hdr), timeout=1800) as r:
+                cr = r.headers.get("Content-Range")            # bytes 1000-1999/1314094
+                if have and r.status == 206 and cr:
+                    total = int(cr.rsplit("/", 1)[1])
+                    mode = "ab"
+                else:                                          # 伺服器不認 Range 就整檔重下
+                    total = int(r.headers.get("Content-Length") or 0)
+                    mode = "wb"
+                with open(tmp, mode) as f:
+                    shutil.copyfileobj(r, f, 1 << 20)
+            size = tmp.stat().st_size
+            if total and size < total:
+                print(f"   續傳 {size:,}／{total:,}")
+                time.sleep(3)
+                continue
+            check_complete(tmp, row["ext"], total)
             tmp.replace(dst)
             return djvu_to_pdf(dst) if row["ext"] == "djvu" else dst
         except Exception as e:  # noqa: BLE001
-            print("   重試", a, e)
-            time.sleep(15)
+            print("   重試", tries, e)
+            if "檔頭不對" in str(e) or "打不開" in str(e) or "0 頁" in str(e):
+                tmp.unlink(missing_ok=True)                    # 內容本身壞了，續傳也救不回來
+            time.sleep(10)
     tmp.unlink(missing_ok=True)
     raise RuntimeError("下載失敗")
 
