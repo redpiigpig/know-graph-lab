@@ -1,0 +1,135 @@
+{
+ "slug": "pi-sn24.8",
+ "title": "大見經（SN 24.8）",
+ "family": "pi",
+ "intro": "破巴故陀（七身論）與末伽梨（輪迴淨化論）合成的大邪見。漢譯分在兩經：雜阿含 161 只說七身論、雜阿含 163 只說十四百千生門與縷丸喻（中間的 162 說無作論，對應 SN 24.6，不收）；兩經後半都以「如是廣說，次第如上三經」略去依五蘊起見、無常故不起見、斷疑名預流三段，故放在第一個略去的節。",
+ "units": [
+  {
+   "id": "u00",
+   "label": "經題"
+  },
+  {
+   "id": "u01",
+   "label": "說法處：舍衛城"
+  },
+  {
+   "id": "u02",
+   "label": "問：依何而起此見"
+  },
+  {
+   "id": "u03",
+   "label": "七身非作・刀入七身間"
+  },
+  {
+   "id": "u04",
+   "label": "十四百千生門・輪迴定量・縷丸喻"
+  },
+  {
+   "id": "u05",
+   "label": "比丘：世尊為法根"
+  },
+  {
+   "id": "u06",
+   "label": "依五蘊起此見"
+  },
+  {
+   "id": "u07",
+   "label": "五蘊無常故不起此見"
+  },
+  {
+   "id": "u08",
+   "label": "斷疑名預流"
+  }
+ ],
+ "versions": [
+  {
+   "id": "pi",
+   "lang": "pi",
+   "label": "巴利 SN 24.8",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "zh-nan",
+   "lang": "lzh",
+   "label": "漢譯南傳",
+   "who": "元亨寺版・N15（譯自巴利）"
+  },
+  {
+   "id": "SA161",
+   "lang": "lzh",
+   "label": "雜阿含 161",
+   "who": "求那跋陀羅譯・435–443 年",
+   "work": "T0099"
+  },
+  {
+   "id": "SA163",
+   "lang": "lzh",
+   "label": "雜阿含 163",
+   "who": "求那跋陀羅譯・435–443 年",
+   "work": "T0099"
+  }
+ ],
+ "works": [
+  "T0099"
+ ],
+ "anchors": [
+  {
+   "work": "T0099",
+   "node": "（一六一）",
+   "uid": "T02n0099_p0044b16"
+  },
+  {
+   "work": "T0099",
+   "node": "（一六三）",
+   "uid": "T02n0099_p0044c12"
+  }
+ ],
+ "cells": {
+  "u00": {
+   "pi": "Saṁyutta Nikāya 24.8 1. Sotāpattivagga Mahādiṭṭhisutta",
+   "zh-nan": "〔八〕第八　（大）見 一～二"
+  },
+  "u01": {
+   "pi": "Sāvatthinidānaṁ.",
+   "zh-nan": "〔爾時，世尊〕舍衛城……乃至……",
+   "SA161": "如是我聞：一時，佛住舍衛國祇樹給孤獨園。",
+   "SA163": "如是我聞：一時，佛住舍衛國祇樹給孤獨園。"
+  },
+  "u02": {
+   "pi": "“Kismiṁ nu kho, bhikkhave, sati, kiṁ upādāya, kiṁ abhinivissa evaṁ diṭṭhi uppajjati:",
+   "zh-nan": "「諸比丘！因有何？由取於何？由現貪於何？而起如是之見：",
+   "SA161": "爾時，世尊告諸比丘：「何所有故，何所起？何所繫著，何所見我？令諸眾生作如是見、如是說：",
+   "SA163": "爾時，世尊告諸比丘：「何所有故，何所起？何所繫著，何所見我？令諸眾生作如是見、如是說："
+  },
+  "u03": {
+   "pi": "‘sattime kāyā akaṭā, akaṭavidhā, animmitā, animmātā, vañjhā, kūṭaṭṭhā, esikaṭṭhāyiṭṭhitā; te na iñjanti, na vipariṇamanti, na aññamaññaṁ byābādhenti; nālaṁ aññamaññassa sukhāya vā dukkhāya vā sukhadukkhāya vā. Katame satta? Pathavīkāyo, āpokāyo, tejokāyo, vāyokāyo, sukhe, dukkhe, jīve sattame. Ime satta kāyā akaṭā, akaṭavidhā, animmitā, animmātā, vañjhā, kūṭaṭṭhā esikaṭṭhāyiṭṭhitā; te na iñjanti, na vipariṇamanti, na aññamaññaṁ byābādhenti; nālaṁ aññamaññassa sukhāya vā dukkhāya vā sukhadukkhāya vā. Yopi tiṇhena satthena sīsaṁ chindati, na sopi kañci jīvitā voropeti; sattannaṁ tveva kāyānamantarena satthaṁ vivaramanupavisati.",
+   "zh-nan": "謂此七身非作，非作之所作，非化，非化者，非令生，如柱之立堅固而住，不動，不轉變，不相互逼迫，不能相互樂、苦，樂苦。 以何為七耶？地身、水身、火身、風身、苦、樂、命是。此七身乃非作，非作之所作，非化，非化者，非令生，如柱之立堅固而住，不動，不轉變，不相互逼迫，不能相互樂、苦，樂苦。 以利刀截其頭亦不害其命，以刀入其七身之間。",
+   "SA161": "『謂七身非作、非作所作，非化、非化所化，不殺、不動、堅實。何等為七？所謂地身、水身、火身、風身、樂、苦、命。此七種身非作、非作所作，非化、非化所化，不殺、不動、堅實、不轉、不變、不相逼迫。若福、若惡、若福惡，若苦、若樂、若苦樂，若士梟、士首，亦不逼迫世間。若命、若身、七身間間容刀往返，亦不害命，於彼無殺、無殺者，無繫、無繫者，無念、無念者，無教、無教者。』？」"
+  },
+  "u04": {
+   "pi": "Cuddasa kho panimāni yonipamukhasatasahassāni saṭṭhi ca satāni cha ca satāni pañca ca kammuno satāni pañca ca kammāni, tīṇi ca kammāni, kamme ca aḍḍhakamme ca dvaṭṭhipaṭipadā, dvaṭṭhantarakappā, chaḷābhijātiyo, aṭṭha purisabhūmiyo, ekūnapaññāsa ājīvakasate, ekūnapaññāsa paribbājakasate, ekūnapaññāsa nāgavāsasate, vīse indriyasate, tiṁse nirayasate, chattiṁsarajodhātuyo, satta saññīgabbhā, satta asaññīgabbhā, satta nigaṇṭhigabbhā, satta devā, satta mānusā, satta pesācā, satta sarā, satta pavuṭā, satta papātā, satta ca papātasatāni, satta supinā, satta supinasatāni, cullāsīti mahākappino satasahassāni, yāni bāle ca paṇḍite ca sandhāvitvā saṁsaritvā dukkhassantaṁ karissanti. Tattha natthi imināhaṁ sīlena vā vatena vā tapena vā brahmacariyena vā aparipakkaṁ vā kammaṁ paripācessāmi; paripakkaṁ vā kammaṁ phussa phussa byantīkarissāmīti hevaṁ natthi doṇamite sukhadukkhe pariyantakate saṁsāre, natthi hāyanavaḍḍhane, natthi ukkaṁsāvakaṁse. Seyyathāpi nāma suttaguḷe khitte nibbeṭhiyamānameva paleti; evameva bāle ca paṇḍite ca nibbeṭhiyamānā sukhadukkhaṁ palentī’”ti?",
+   "zh-nan": "復以百四十萬之生門為始，有七百、六百之生門。五百業、五業、三業、一業、半業、六十二道、六十二內劫、六種族、八人地、四千九百活命、四千九百出家、四千九百龍家、二千根、三千地獄、三十六塵界、七想胎、七無想胎、七節胎、七天、七人、七鬼、七池、七嶮、七百嶮、七夢、七百夢、八百四十萬大劫之間，不論愚人或賢者，流轉輪迴後，以究竟苦之邊際。 於此間，謂：無有『因我此持戒、禁戒、苦行、梵行、令熟未熟之業，繼續忍受已熟之業至滅盡。』以桀可量樂、苦，於輪迴中無有邊際，無有增減、消長。 譬如擲縷丸之散解，不論愚人或賢者，而散解樂、苦。」",
+   "SA163": "『於此十四百千生門、六十千六百五業、三業、二業、一業、半業、六十二道跡、六十二內劫、百二十泥黎、百三十根、三十六貪界、四十九千龍家、四十九千金翅鳥家、四十九千邪命外道、四十九千外道出家、七想劫、七無想劫、七阿修羅、七毘舍遮、七天、七人、七百海、七夢、七百夢、七嶮、七百嶮、七覺、七百覺、六生、十增進、八大士地，於此八萬四千大劫，若愚若智，往來經歷，究竟苦邊。』彼無有沙門、婆羅門作如是說：『我常持戒，受諸苦行，修諸梵行，不熟業者令熟，已熟業者棄捨，進退不可知。』此苦樂常住，生死定量。譬如縷丸擲著空中，漸漸來下，至地自住。如是八萬四千大劫生死定量，亦復如是。」"
+  },
+  "u05": {
+   "pi": "“Bhagavaṁmūlakā no, bhante, dhammā …pe…",
+   "zh-nan": "「大德！世尊乃我等之法根……乃至……」",
+   "SA161": "諸比丘白佛：「世尊是法根、法眼、法依……」",
+   "SA163": "諸比丘白佛：「世尊是法根、法眼、法依……」"
+  },
+  "u06": {
+   "pi": "“Rūpe kho, bhikkhave, sati, rūpaṁ upādāya, rūpaṁ abhinivissa evaṁ diṭṭhi uppajjati: ‘sattime kāyā akaṭā, akaṭavidhā …pe… sukhadukkhaṁ palentī’ti. Vedanāya sati …pe… saññāya sati … saṅkhāresu sati … viññāṇe sati, viññāṇaṁ upādāya, viññāṇaṁ abhinivissa evaṁ diṭṭhi uppajjati: ‘sattime kāyā akaṭā, akaṭavidhā …pe… sukhadukkhaṁ palentī’ti.",
+   "zh-nan": "「諸比丘！因有色，由取於色，由現貪於色，而起如是之見：謂此七身非作，非作之所作……乃至……散樂、苦。 一〇～一六 受…… 一七～二二 想…… 二三～二八 行…… 二九～三四 因有識，由取於識，由現貪於識，而起如是之見：謂此七身非作、非作之所作……乃至……散樂、苦。 三五～四〇",
+   "SA161": "如是廣說，次第如上三經。",
+   "SA163": "如是廣說，次第如上三經。"
+  },
+  "u07": {
+   "pi": "Taṁ kiṁ maññatha, bhikkhave, rūpaṁ niccaṁ vā aniccaṁ vā”ti? “Aniccaṁ, bhante” …pe… “yaṁ panāniccaṁ dukkhaṁ vipariṇāmadhammaṁ, api nu taṁ anupādāya evaṁ diṭṭhi uppajjeyya: ‘sattime kāyā akaṭā akaṭavidhā …pe… sukhadukkhaṁ palentī’”ti? “No hetaṁ, bhante”. “Yampidaṁ diṭṭhaṁ sutaṁ mutaṁ viññātaṁ pattaṁ pariyesitaṁ anuvicaritaṁ manasā tampi niccaṁ vā aniccaṁ vā”ti? “Aniccaṁ, bhante …pe… api nu taṁ anupādāya evaṁ diṭṭhi uppajjeyya: ‘sattime kāyā akaṭā akaṭavidhā …pe… nibbeṭhiyamānā sukhadukkhaṁ palentī’”ti? “No hetaṁ, bhante”.",
+   "zh-nan": "諸比丘！汝等於意如何！色是常耶？是無常耶？」 「大德！是無常……乃至……」 雖不取無常、苦而變易之法，當起如是之見耶？謂：此七身非作、非作之所作……乃至……散樂、苦。 「大德！不也。」 四一～四六 所見、所聞、所思、所知、所得、所求，意之所伺是常耶？是無常耶？ 「大德！是無常。」 「雖不取彼，當起如是之見耶？謂：此七身非作，非作之所作……乃至……而解散樂、苦……乃至……"
+  },
+  "u08": {
+   "pi": "“Yato kho, bhikkhave, ariyasāvakassa imesu ca ṭhānesu kaṅkhā pahīnā hoti, dukkhepissa kaṅkhā pahīnā hoti …pe… dukkhanirodhagāminiyā paṭipadāyapissa kaṅkhā pahīnā hoti— ayaṁ vuccati, bhikkhave, ariyasāvako sotāpanno avinipātadhammo niyato sambodhiparāyano”ti. Aṭṭhamaṁ.",
+   "zh-nan": "諸比丘！聖弟子如是於六處斷疑惑，於苦斷疑惑……乃至……於順苦滅道斷疑惑者。諸比丘！此聖弟子名為預流，有不墮法，為趣三菩提。」"
+  }
+ }
+}

@@ -1,0 +1,174 @@
+{
+ "slug": "pi-sn1.32",
+ "title": "慳吝經（SN 1.32）",
+ "family": "pi",
+ "intro": "諸天在佛前各說一偈論布施。巴利本是多位天神輪流說偈、末二偈由世尊說；別譯雜阿含 286 與雜阿含 1288 只有一位天子開頭一偈，其餘都歸世尊一口氣說完，所以各節的說話人不同、內容相同。漢譯偈常一句跨兩個巴利偈（如「此世及他世，常癡飢渴畏，死則不隨死」），切在跨界那半句。漢譯另有「如法得財而施」一偈與天子讚偈（SN 1 品常見的結偈），巴利本無。",
+ "units": [
+  {
+   "id": "u00",
+   "label": "經題"
+  },
+  {
+   "id": "u01",
+   "label": "說法處：祇園"
+  },
+  {
+   "id": "u02",
+   "label": "諸天來詣"
+  },
+  {
+   "id": "u03",
+   "label": "初偈：慳貪放逸則不施"
+  },
+  {
+   "id": "u04",
+   "label": "慳者所畏即飢渴，今世後世"
+  },
+  {
+   "id": "u05",
+   "label": "少而能施，其福千倍"
+  },
+  {
+   "id": "u06",
+   "label": "難施能施・善人惡人趣異"
+  },
+  {
+   "id": "u07",
+   "label": "拾穗養妻而施，勝千祀"
+  },
+  {
+   "id": "u08",
+   "label": "問：大祀何以不及"
+  },
+  {
+   "id": "u09",
+   "label": "答：以傷害得財而施，不及正施"
+  },
+  {
+   "id": "u10",
+   "label": "如法得財而施（漢譯）"
+  },
+  {
+   "id": "u11",
+   "label": "天子讚偈"
+  },
+  {
+   "id": "u12",
+   "label": "歡喜而去"
+  }
+ ],
+ "versions": [
+  {
+   "id": "pi",
+   "lang": "pi",
+   "label": "巴利 SN 1.32",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "zh-nan",
+   "lang": "lzh",
+   "label": "漢譯南傳",
+   "who": "元亨寺版・N13（譯自巴利）"
+  },
+  {
+   "id": "SA-2.286",
+   "lang": "lzh",
+   "label": "別譯雜阿含 286",
+   "who": "失譯（附秦錄）",
+   "work": "T0100"
+  },
+  {
+   "id": "SA1288",
+   "lang": "lzh",
+   "label": "雜阿含 1288",
+   "who": "求那跋陀羅譯・435–443 年",
+   "work": "T0099"
+  }
+ ],
+ "works": [
+  "T0099",
+  "T0100"
+ ],
+ "anchors": [
+  {
+   "work": "T0100",
+   "node": "（二八六）",
+   "uid": "T02n0100_p0473b23"
+  },
+  {
+   "work": "T0099",
+   "node": "（一二八八）",
+   "uid": "T02n0099_p0354c20"
+  }
+ ],
+ "cells": {
+  "u00": {
+   "pi": "Saṁyutta Nikāya 1.32 4. Satullapakāyikavagga Maccharisutta",
+   "zh-nan": "〔三二〕第二　慳貪"
+  },
+  "u01": {
+   "pi": "Ekaṁ samayaṁ bhagavā sāvatthiyaṁ viharati jetavane anāthapiṇḍikassa ārāme.",
+   "zh-nan": "爾時世尊住舍衛城祇樹給孤獨園。",
+   "SA-2.286": "如是我聞：一時，佛在舍衛國祇樹給孤獨園。",
+   "SA1288": "如是我聞：一時，佛住舍衛國祇樹給孤獨園。"
+  },
+  "u02": {
+   "pi": "Atha kho sambahulā satullapakāyikā devatāyo abhikkantāya rattiyā abhikkantavaṇṇā kevalakappaṁ jetavanaṁ obhāsetvā yena bhagavā tenupasaṅkamiṁsu; upasaṅkamitvā bhagavantaṁ abhivādetvā ekamantaṁ aṭṭhaṁsu.",
+   "zh-nan": "爾時甚多沙睹羅巴天神等，其勝光徧照祇園。於黎明往詣世尊處，詣已禮敬世尊，立於一面。",
+   "SA-2.286": "爾時，有天光明倍常，普照祇洹，悉皆大明，來詣佛所，頂禮佛足，却坐一面，",
+   "SA1288": "時，有天子容色絕妙，於後夜時來詣佛所，稽首佛足，退坐一面。其身光明遍照祇樹給孤獨園。"
+  },
+  "u03": {
+   "pi": "Ekamantaṁ ṭhitā kho ekā devatā bhagavato santike imaṁ gāthaṁ abhāsi: “Maccherā ca pamādā ca, evaṁ dānaṁ na dīyati; Puññaṁ ākaṅkhamānena, deyyaṁ hoti vijānatā”ti.",
+   "zh-nan": "立於一面之一天神，於世尊前，唱此偈曰： 依慳貪放逸如是不布施 因明知其果由欲功德者 而行於布施",
+   "SA-2.286": "而說偈言：「貪悋貧窮苦，皆由不惠施， 若欲求福德，智者應施與。」",
+   "SA1288": "時，彼天子而說偈言：「慳悋生於心，不能行布施， 明智求福者，乃能行其惠。」"
+  },
+  "u04": {
+   "pi": "Atha kho aparā devatā bhagavato santike imā gāthāyo abhāsi: “Yasseva bhīto na dadāti maccharī, Tadevādadato bhayaṁ; Jighacchā ca pipāsā ca, Yassa bhāyati maccharī; Tameva bālaṁ phusati, Asmiṁ loke paramhi ca. Tasmā vineyya maccheraṁ, dajjā dānaṁ malābhibhū; Puññāni paralokasmiṁ, patiṭṭhā honti pāṇinan”ti.",
+   "zh-nan": "爾時，其他之天神，於世尊前，唱此偈曰： 慳貪畏布施畏彼不施與 慳貪所恐怖乃是飢與渴 愚人此世後必然以觸此 是故滅慳貪布施勝垢穢 功德實人人後世之淺渡",
+   "SA-2.286": "爾時，世尊以偈答曰：「可怖莫過貪，貧乏恒飢渴， 恐貧不布施，不施畏甚大。 今世若後世，飢窮苦難計，",
+   "SA1288": "爾時，世尊說偈答言：「怖畏不行施，常得不施怖， 怖畏於飢渴，慳惜從怖生。 此世及他世，常癡飢渴畏，"
+  },
+  "u05": {
+   "pi": "Atha kho aparā devatā bhagavato santike imā gāthāyo abhāsi: “Te matesu na mīyanti, panthānaṁva sahabbajaṁ; Appasmiṁ ye pavecchanti, esa dhammo sanantano. Appasmeke pavecchanti, bahuneke na dicchare; Appasmā dakkhiṇā dinnā, sahassena samaṁ mitā”ti.",
+   "zh-nan": "爾時，其他之天神，於世尊前唱此偈曰： 善導曠野旅分與貧困者 滅中有不滅此為永久法 有人與貧困或人富不與 施與貧困者功德計千倍",
+   "SA-2.286": "若得少能施，得多亦能施。 生時得快樂，壽終得生天，",
+   "SA1288": "死則不隨死，獨往無資粮。 少財能施者，多財難亦捨，"
+  },
+  "u06": {
+   "pi": "Atha kho aparā devatā bhagavato santike imā gāthāyo abhāsi: “Duddadaṁ dadamānānaṁ, dukkaraṁ kamma kubbataṁ; Asanto nānukubbanti, sataṁ dhammo duranvayo. Tasmā satañca asataṁ, nānā hoti ito gati; Asanto nirayaṁ yanti, santo saggaparāyanā”ti.",
+   "zh-nan": "爾時，其他之天神，於世尊前，唱此偈曰： 難與而與之難為而為者 不善人難慣從善人法難 是故善與惡後世趣所異 惡人行地獄善人趣天堂",
+   "SA-2.286": "難施而能施，是名難作業。 孾愚不知解，諸佛賢聖法， 愚智俱命終，生處各別異。 愚者墮地獄，受於種種苦， 智者生人天，乃可得解脫。",
+   "SA1288": "難捨而能捨，是則為難施。 無知者不覺，慧者知難知，"
+  },
+  "u07": {
+   "pi": "Atha kho aparā devatā bhagavato santike etadavoca: “kassa nu kho, bhagavā, subhāsitan”ti? “Sabbāsaṁ vo subhāsitaṁ pariyāyena; api ca mamapi suṇātha— Dhammaṁ care yopi samuñjakaṁ care, Dārañca posaṁ dadamappakasmiṁ; Sataṁ sahassānaṁ sahassayāginaṁ, Kalampi nāgghanti tathāvidhassa te”ti.",
+   "zh-nan": "爾時，其他之天神，以此向世尊曰：「世尊！誰之偈為善說耶？」〔世尊曰：〕依汝等各各皆善說，然則，以聞我偈： 雖以拾落穗為生與養妻 貧困以行施是行善業法 雖千之供犧百千之供犧 斯施猶不值十六分之一",
+   "SA-2.286": "貧窮捃拾活，以用養妻子， 淨心割少施，其福無有量。 設百千大祀，供養於一切， 不及貧布施，十六分中一。",
+   "SA1288": "以法養妻子，少財淨心施。 百千耶盛會，所獲其福利， 比前如法施，十六不及一。"
+  },
+  "u08": {
+   "pi": "Atha kho aparā devatā bhagavantaṁ gāthāya ajjhabhāsi: “Kenesa yañño vipulo mahaggato, Samena dinnassa na agghameti; Kathaṁ sataṁ sahassānaṁ sahassayāginaṁ, Kalampi nāgghanti tathāvidhassa te”ti.",
+   "zh-nan": "爾時，其他之天神，向世尊說此偈曰： 如何豐供犧不值於正施 千之供犧者百千之供犧 此犧何不值十六分之一"
+  },
+  "u09": {
+   "pi": "“Dadanti heke visame niviṭṭhā, Chetvā vadhitvā atha socayitvā; Sā dakkhiṇā assumukhā sadaṇḍā, Samena dinnassa na agghameti. Evaṁ sataṁ sahassānaṁ sahassayāginaṁ, Kalampi nāgghanti tathāvidhassa te”ti.",
+   "zh-nan": "爾時，世尊以偈語其天神曰： 或人之錯誤立施於三業 傷殺又惱施淚污殺害施 不值於正施雖此千供犧 百千之供犧斯施猶不值 十六分之一",
+   "SA-2.286": "大祀有鞭打，侵掠他財寶， 種種苦惱人，以成大祀業。 以惡取財寶，眾皆不歡悅， 如是不淨施，及以小淨施， 受報有好醜，不可以相比。",
+   "SA1288": "打縛惱眾生，所得諸財物， 惠施安國土，是名有罪施。 方之平等施，稱量所不及，"
+  },
+  "u10": {
+   "SA-2.286": "如法聚財物，終不非法求， 得財捨用施，正直而施與。 具戒修禪定，正直者受取， 福聚布四方，猶如大海水。」",
+   "SA1288": "如法不行非，所得財物施。 難施而行施，是應賢聖施， 所往常獲福，壽終上生天。」"
+  },
+  "u11": {
+   "SA-2.286": "天復以偈讚言：「往昔已曾見，婆羅門涅槃， 嫌怖久捨離，能度世間愛。」",
+   "SA1288": "時，彼天子復說偈言：「久見婆羅門，逮得般涅槃， 一切怖已過，永超世恩愛。」"
+  },
+  "u12": {
+   "SA-2.286": "爾時，此天說此偈已，歡喜而去。",
+   "SA1288": "時，彼天子聞佛所說，歡喜隨喜，稽首佛足，即沒不現。"
+  }
+ }
+}

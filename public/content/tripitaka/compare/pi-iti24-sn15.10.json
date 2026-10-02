@@ -1,0 +1,227 @@
+{
+ "slug": "pi-iti24-sn15.10",
+ "title": "積骨經（SN 15.10・Iti 24）",
+ "family": "pi",
+ "intro": "「一人一劫輪迴所積之骨，若不朽壞，如毘富羅山。」SN 15.10 與 Iti 24 正文與偈頌幾乎同文，短經併一組：SN 15.10 有王舍城序分與「輪迴無始」套語，Iti 24 是如是語體。漢譯：別譯雜阿含 340、雜阿含 947 多出「見四諦斷三結、極七往返盡苦」長行；一卷本雜阿含 11 與《七處三觀經》第 30 經（積骨經）幾乎同文，骨聚喻作須彌山、無偈；本事經一法品一則（只截這一則）。毘富羅山在耆闍崛山北一偈只有巴利兩本。",
+ "units": [
+  {
+   "id": "u00",
+   "label": "經題"
+  },
+  {
+   "id": "u01",
+   "label": "序：王舍城／如是語"
+  },
+  {
+   "id": "u02",
+   "label": "一人一劫積骨如毘富羅山"
+  },
+  {
+   "id": "u03",
+   "label": "所以者何：輪迴無始・百千劫未得道"
+  },
+  {
+   "id": "u04",
+   "label": "見四諦斷三結・極七生盡苦（漢譯長行）"
+  },
+  {
+   "id": "u05",
+   "label": "偈：一劫積骨如山"
+  },
+  {
+   "id": "u06",
+   "label": "偈：毘富羅山在耆闍崛北"
+  },
+  {
+   "id": "u07",
+   "label": "偈：見四諦八道・極七返盡苦"
+  },
+  {
+   "id": "u08",
+   "label": "結語・歡喜奉行"
+  },
+  {
+   "id": "u09",
+   "label": "品攝頌"
+  }
+ ],
+ "versions": [
+  {
+   "id": "pi-sn",
+   "lang": "pi",
+   "label": "巴利 SN 15.10",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "nan-sn",
+   "lang": "lzh",
+   "label": "漢譯南傳（相應部）",
+   "who": "元亨寺版・N14（譯自巴利）"
+  },
+  {
+   "id": "pi-iti",
+   "lang": "pi",
+   "label": "巴利 ITI 24",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "nan-iti",
+   "lang": "lzh",
+   "label": "漢譯南傳（如是語）",
+   "who": "元亨寺版・N26（譯自巴利）"
+  },
+  {
+   "id": "SA-2.340",
+   "lang": "lzh",
+   "label": "別譯雜阿含 340",
+   "who": "失譯（附秦錄）",
+   "work": "T0100"
+  },
+  {
+   "id": "SA947",
+   "lang": "lzh",
+   "label": "雜阿含 947",
+   "who": "求那跋陀羅譯・435–443 年",
+   "work": "T0099"
+  },
+  {
+   "id": "SA-3.11",
+   "lang": "lzh",
+   "label": "雜阿含（一卷本）11",
+   "who": "失譯",
+   "work": "T0101"
+  },
+  {
+   "id": "T0150A-30",
+   "lang": "lzh",
+   "label": "七處三觀經 30（積骨經）",
+   "who": "安世高譯・後漢",
+   "work": "T0150A"
+  },
+  {
+   "id": "T0765",
+   "lang": "lzh",
+   "label": "本事經・一法品",
+   "who": "玄奘譯・650 年",
+   "work": "T0765"
+  }
+ ],
+ "works": [
+  "T0099",
+  "T0100",
+  "T0101",
+  "T0150A",
+  "T0765"
+ ],
+ "anchors": [
+  {
+   "work": "T0100",
+   "node": "（三四〇）",
+   "uid": "T02n0100_p0487b17"
+  },
+  {
+   "work": "T0099",
+   "node": "（九四七）",
+   "uid": "T02n0099_p0242a28"
+  },
+  {
+   "work": "T0101",
+   "node": "（一一）",
+   "uid": "T02n0101_p0496b14"
+  },
+  {
+   "work": "T0150A",
+   "node": "（三〇）佛說積骨經",
+   "uid": "T02n0150A_p0880b10"
+  },
+  {
+   "work": "T0765",
+   "range": [
+    "T17n0765_p0662c13",
+    "T17n0765_p0662c23"
+   ]
+  }
+ ],
+ "cells": {
+  "u00": {
+   "pi-sn": "Saṁyutta Nikāya 15.10 1. Paṭhamavagga Puggalasutta",
+   "nan-sn": "〔一〇〕第十　人",
+   "pi-iti": "Itivuttaka 24 Ekakanipāta Tatiyavagga Aṭṭhipuñjasutta",
+   "nan-iti": "二四（一、三、四）"
+  },
+  "u01": {
+   "pi-sn": "Ekaṁ samayaṁ bhagavā rājagahe viharati gijjhakūṭe pabbate. Tatra kho bhagavā bhikkhū āmantesi: “bhikkhavo”ti. “Bhadante”ti te bhikkhū bhagavato paccassosuṁ. Bhagavā etadavoca:",
+   "nan-sn": "〔爾時，世尊〕住王舍城耆闍崛山。 爾時，世尊曰：",
+   "pi-iti": "Vuttañhetaṁ bhagavatā vuttamarahatāti me sutaṁ:",
+   "nan-iti": "我聞應供已說，世尊說此：",
+   "SA-2.340": "如是我聞：一時佛住王舍城毘富羅山足。",
+   "SA947": "如是我聞：一時，佛住王舍城毘富羅山。",
+   "SA-3.11": "聞如是：一時佛在王舍國雞山中，",
+   "T0150A-30": "聞如是：一時，佛在王舍國雞山中，",
+   "T0765": "吾從世尊聞如是語："
+  },
+  "u02": {
+   "pi-sn": "“Anamataggoyaṁ, bhikkhave, saṁsāro …pe… ekapuggalassa, bhikkhave, kappaṁ sandhāvato saṁsarato siyā evaṁ mahā aṭṭhikaṅkalo aṭṭhipuñjo aṭṭhirāsi yathāyaṁ vepullo pabbato, sace saṁhārako assa, sambhatañca na vinasseyya.",
+   "nan-sn": "「諸比丘！輪迴乃無始…… 諸比丘！依一人於一劫之所流轉輪迴，若有此等之集骨者，集之不使毀壞，其骨之堆積，骨之累積，骨之積聚，有如毘富羅山之大。",
+   "pi-iti": "“Ekapuggalassa, bhikkhave, kappaṁ sandhāvato saṁsarato siyā evaṁ mahā aṭṭhikaṅkalo aṭṭhipuñjo aṭṭhirāsi yathāyaṁ vepullo pabbato, sace saṁhārako assa, sambhatañca na vinasseyyā”ti.",
+   "nan-iti": "「諸比丘！一人於〔一〕劫馳騁流轉者之骸骨、骨之堆積、骨之積聚，如彼毘補羅山之大。若善集彼者，且不被壞者〔可知此〕。」",
+   "SA-2.340": "佛告諸比丘：「若有一人，於一劫中，流轉受生，收其白骨，若不毀壞，積以為聚，如毘富羅山。",
+   "SA947": "爾時，世尊告諸比丘：「有一人於一劫中生死輪轉，積累白骨不腐壞者，如毘富羅山。",
+   "SA-3.11": "佛便告比丘：「人居世間，一劫中生死，取其骨藏之，不腐不消不滅，積之與須彌山等，",
+   "T0150A-30": "便告比丘：「人居世間一劫中生死，取其骨藏之不腐、不消、不滅，積之與須彌山等；",
+   "T0765": "「苾芻當知！若一有情，於一劫中流轉生死，所受身骨，假使有能積聚不爛，其聚高廣，如王舍城毘補羅山。"
+  },
+  "u03": {
+   "pi-sn": "Taṁ kissa hetu? Anamataggoyaṁ, bhikkhave, saṁsāro …pe… alaṁ vimuccitun”ti.",
+   "nan-sn": "所以者何？諸比丘！輪迴無始……足於解脫。」",
+   "SA-3.11": "人或有百劫生死者、或千劫生死者，尚未能得阿羅漢道泥洹。」",
+   "T0150A-30": "人或有百劫生死者，或有千劫生死者，尚未能得阿羅漢道泥洹。」",
+   "T0765": "況彼有情，無初後際，馳騁流轉生死長途，所受身骨而可測量。所以者何？苾芻當知！我說有情，於四聖諦不了知故、不照見故、不現觀故、不通達故、不審察故，馳騁流轉生死長途，受諸骨身。"
+  },
+  "u04": {
+   "SA-2.340": "賢聖弟子隨時聞，如實知苦聖諦，如實知苦集、知苦滅、知趣苦滅道，如是知見已，斷於三結，所謂身見、戒取、疑，名須陀洹，不墮惡趣，決定菩提，趣於涅槃，極至七生七死，得盡苦際。」",
+   "SA947": "若多聞聖弟子此苦聖諦如實知，此苦集聖諦如實知，此苦滅聖諦如實知，此苦滅道跡聖諦如實知，彼如是知、如是見，斷三結，謂身見、戒取、疑，斷此三結，得須陀洹，不墮惡趣法，決定正向三菩提，七有天人往生，究竟苦邊。」",
+   "SA-3.11": "佛告比丘：「人一劫中合會其骨，與須彌山等，我故現其本因緣。比丘！若曹皆當拔其本根、去離本根，用是故不復生死，不復生死便得度世泥洹道。」",
+   "T0150A-30": "佛告比丘：「人一劫中合會其骨與須彌山等，我故現其本因緣。比丘！若曹皆當拔其本根，去離本惡，用是故不復生死，不復生死，便得度世泥洹道。」",
+   "T0765": "是故汝等應如是學：我當云何於四聖諦，了知、照見、現觀、通達、審察、究竟？汝等苾芻，應如是學。」"
+  },
+  "u05": {
+   "pi-sn": "Idamavoca bhagavā. Idaṁ vatvāna sugato athāparaṁ etadavoca satthā: “Ekassekena kappena, puggalassaṭṭhisañcayo; Siyā pabbatasamo rāsi, iti vuttaṁ mahesinā.",
+   "nan-sn": "世尊宣說已。善逝仰此！師更作斯宣曰： （一）一人生一劫 人骨積無量 積聚等山高 斯為大仙說",
+   "pi-iti": "Etamatthaṁ bhagavā avoca. Tatthetaṁ iti vuccati: “Ekassekena kappena, puggalassaṭṭhisañcayo; Siyā pabbatasamo rāsi, iti vuttaṁ mahesinā.",
+   "nan-iti": "世尊說此義，此處如是說： 「一人一劫所積骨如山之量大仙宣",
+   "SA-2.340": "說是事已，復說偈言：「一人一劫中，流轉受生死， 積骨以為聚，集之在一處， 使不毀敗壞，猶如毘富羅。",
+   "SA947": "爾時，世尊即說偈言：「一人一劫中，積聚其身骨， 常積不腐壞，如毘富羅山。",
+   "T0765": "爾時，世尊重攝此義而說頌曰：「一有情一劫，受身骨不爛， 其聚量高廣，如毘補羅山。 況無初後際，久流轉生死， 所受諸骨身，其量而可測。"
+  },
+  "u06": {
+   "pi-sn": "So kho panāyaṁ akkhāto, vepullo pabbato mahā; Uttaro gijjhakūṭassa, magadhānaṁ giribbaje.",
+   "nan-sn": "（二）彼大仙所說 耆闍崛山北 摩揭陀山城 毘富羅山大",
+   "pi-iti": "So kho panāyaṁ akkhāto, vepullo pabbato mahā; Uttaro gijjhakūṭassa, magadhānaṁ giribbaje.",
+   "nan-iti": "摩揭陀耆梨跋提靈鷲山毘補羅山 比前者高後者大如山之量大仙宣"
+  },
+  "u07": {
+   "pi-sn": "Yato ca ariyasaccāni, sammappaññāya passati; Dukkhaṁ dukkhasamuppādaṁ, dukkhassa ca atikkamaṁ; Ariyaṁ caṭṭhaṅgikaṁ maggaṁ, dukkhūpasamagāminaṁ. Sa sattakkhattuṁparamaṁ, sandhāvitvāna puggalo; Dukkhassantakaro hoti, sabbasaṁyojanakkhayā”ti.",
+   "nan-sn": "（三）我以正慧觀 苦與苦生起 超越苦之法 唯八支聖道 （四）得見聖諦時 趣於苦之滅 七返以為極 彼人得轉生 一切結已盡 為苦之終焉",
+   "pi-iti": "Yato ca ariyasaccāni, sammappaññāya passati; Dukkhaṁ dukkhasamuppādaṁ, dukkhassa ca atikkamaṁ; Ariyañcaṭṭhaṅgikaṁ maggaṁ, dukkhūpasamagāminaṁ. Sa sattakkhattuṁ paramaṁ, sandhāvitvāna puggalo; Dukkhassantakaro hoti, sabbasaṁyojanakkhayā”ti.",
+   "nan-iti": "聖諦苦與苦之集苦滅之道超苦事 由觀聖八支之道最高七度馳騁後 其人已無一切結為滅苦者大仙宣」",
+   "SA-2.340": "若觀四真諦，正智所鑒察， 說苦因從生，苦滅八聖道， 安隱趣涅槃，流轉生死輪， 任運過七生，得盡於苦際。」",
+   "SA947": "若諸聖弟子，正智見真諦， 此苦及苦因，離苦得寂滅。 修習八道跡，正向般涅槃， 極至於七有，天人來往生， 盡一切諸結，究竟於苦邊。」",
+   "T0765": "受是大苦聚，由不見聖諦， 故應修妙智，正觀四真實， 所謂苦聖諦，苦因及苦滅， 能滅苦苦因，八支真聖道。 此補特伽羅，極七有流轉， 定斷一切結，能盡諸苦邊。」"
+  },
+  "u08": {
+   "pi-sn": "Dasamaṁ.",
+   "pi-iti": "Ayampi attho vutto bhagavatā, iti me sutanti. Catutthaṁ.",
+   "nan-iti": "我聞世尊說此義。",
+   "SA-2.340": "時諸比丘聞佛所說，歡喜奉行，頂禮而去。",
+   "SA947": "佛說此經已，諸比丘聞佛所說，歡喜奉行。",
+   "SA-3.11": "佛說如是。",
+   "T0150A-30": "佛說如是。"
+  },
+  "u09": {
+   "pi-sn": "Paṭhamo vaggo. Tassuddānaṁ Tiṇakaṭṭhañca pathavī, assu khīrañca pabbataṁ; Sāsapā sāvakā gaṅgā, daṇḍo ca puggalena cāti.",
+   "nan-sn": "此頌曰： 薪草以及地淚乳山芥子 聲聞與恒河以及杖與人",
+   "SA-2.340": "血淚及母乳土丸如豆粒 恐怖及彼愛恒沙及骨聚"
+  }
+ }
+}

@@ -1,0 +1,103 @@
+{
+ "slug": "pi-iti14",
+ "title": "無明蓋經（Iti 14）",
+ "family": "pi",
+ "intro": "「無有一蓋如無明蓋，眾生為所覆而長夜流轉。」漢譯平行是玄奘《本事經》一法品開頭一則（只截這一則）。自動版收的中阿含 141、別譯雜阿含 66、雜阿含 1239 都是「不放逸為諸善法第一」（對應 Iti 23、SN 3.17），與本經不同，不收。本事經多出「當學破無明蓋」一句，偈頌三首對巴利兩首（第二首「無明大愚闇」併入前節）。",
+ "units": [
+  {
+   "id": "u00",
+   "label": "經題"
+  },
+  {
+   "id": "u01",
+   "label": "如是語"
+  },
+  {
+   "id": "u02",
+   "label": "無一蓋如無明蓋"
+  },
+  {
+   "id": "u03",
+   "label": "當學破無明蓋（本事經）"
+  },
+  {
+   "id": "u04",
+   "label": "偈：眾生為癡所覆而流轉"
+  },
+  {
+   "id": "u05",
+   "label": "偈：破癡闇聚者不復流轉"
+  },
+  {
+   "id": "u06",
+   "label": "結語"
+  }
+ ],
+ "versions": [
+  {
+   "id": "pi",
+   "lang": "pi",
+   "label": "巴利 ITI 14",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "zh-nan",
+   "lang": "lzh",
+   "label": "漢譯南傳",
+   "who": "元亨寺版・N26（譯自巴利）"
+  },
+  {
+   "id": "T0765",
+   "lang": "lzh",
+   "label": "本事經・一法品",
+   "who": "玄奘譯・650 年",
+   "work": "T0765"
+  }
+ ],
+ "works": [
+  "T0026",
+  "T0765"
+ ],
+ "anchors": [
+  {
+   "work": "T0765",
+   "range": [
+    "T17n0765_p0662b16",
+    "T17n0765_p0662b23"
+   ]
+  }
+ ],
+ "cells": {
+  "u00": {
+   "pi": "Itivuttaka 14 Ekakanipāta Dutiyavagga Avijjānīvaraṇasutta",
+   "zh-nan": "一四（一、二、四）"
+  },
+  "u01": {
+   "pi": "Vuttañhetaṁ bhagavatā vuttamarahatāti me sutaṁ:",
+   "zh-nan": "我聞應供已說，世尊說此：",
+   "T0765": "吾從世尊聞如是語："
+  },
+  "u02": {
+   "pi": "“Nāhaṁ, bhikkhave, aññaṁ ekanīvaraṇampi samanupassāmi yena nīvaraṇena nivutā pajā dīgharattaṁ sandhāvanti saṁsaranti yathayidaṁ, bhikkhave, avijjānīvaraṇaṁ. Avijjānīvaraṇena hi, bhikkhave, nivutā pajā dīgharattaṁ sandhāvanti saṁsarantī”ti.",
+   "zh-nan": "「諸比丘！我不觀他之一蓋如無明蓋，依彼〔無明〕蓋所覆，眾生長時馳騁流轉生死。何以故？諸比丘！依無明蓋所覆眾生，長夜馳騁流轉。」",
+   "T0765": "「苾芻當知！我觀世間，無別一法，覆障群生，馳騁流轉生死長途，如無明蓋。所以者何？世間群生，由無明蓋所覆障故，馳騁流轉生死長途。"
+  },
+  "u03": {
+   "T0765": "是故汝等應如是學：我當云何修起慧明，破無明蓋，出貪愛網？汝等苾芻，應如是學。」"
+  },
+  "u04": {
+   "pi": "Etamatthaṁ bhagavā avoca. Tatthetaṁ iti vuccati: “Natthañño ekadhammopi, yenevaṁ nivutā pajā; Saṁsaranti ahorattaṁ, yathā mohena āvutā.",
+   "zh-nan": "世尊說此義，此處如是說： 「他無一法有覆羣生 日夜流轉如為癡覆",
+   "T0765": "爾時，世尊重攝此義而說頌曰：「無別有一法，覆障諸群生， 馳流生死途，如無明蓋者。 無明大愚闇，由斯久流轉， 彼此有往來，昇沈高下趣。"
+  },
+  "u05": {
+   "pi": "Ye ca mohaṁ pahantvāna, tamokhandhaṁ padālayuṁ; Na te puna saṁsaranti, hetu tesaṁ na vijjatī”ti.",
+   "zh-nan": "然如捨癡破除闇聚 更不流轉亦無他因」",
+   "T0765": "若破無明蓋，解脫貪愛網， 不處生死流，以無彼因故。」"
+  },
+  "u06": {
+   "pi": "Ayampi attho vutto bhagavatā, iti me sutanti. Catutthaṁ.",
+   "zh-nan": "我聞世尊說此義。"
+  }
+ }
+}

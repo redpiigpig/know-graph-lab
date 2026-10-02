@@ -1,0 +1,196 @@
+{
+ "slug": "pi-sn2.30",
+ "title": "外道六師天子經（SN 2.30）",
+ "family": "pi",
+ "intro": "六位外道弟子出身的天子各讚其師，魔附天子說偈，世尊識破。巴利依富蘭那、末伽梨、尼乾子、諸師的次第；兩部漢譯都先讚尼乾子（「四時自禁制」＝cātuyāma）、次末伽梨、次迦葉（富蘭那），故設 reorder。巴利由吠坦婆利天子以野干喻反駁，漢譯改由世尊說。雜阿含 1308 說法處在毘富羅山側，多出世尊說明魔加其力、諸天疑問一段；兩部漢譯末段多出諸天讚佛斷貪瞋癡慢見愛諸偈。天子人名各本不同，以所讚之師對齊。",
+ "units": [
+  {
+   "id": "u00",
+   "label": "經題"
+  },
+  {
+   "id": "u01",
+   "label": "說法處"
+  },
+  {
+   "id": "u02",
+   "label": "六天子來詣"
+  },
+  {
+   "id": "u03",
+   "label": "讚富蘭那迦葉：殺害不見罪福"
+  },
+  {
+   "id": "u04",
+   "label": "讚末伽梨：苦行厭離・離諍實語"
+  },
+  {
+   "id": "u05",
+   "label": "讚尼乾子：四禁自制・說見聞"
+  },
+  {
+   "id": "u06",
+   "label": "讚諸外道師：離羅漢不遠"
+  },
+  {
+   "id": "u07",
+   "label": "反駁：野干不同師子"
+  },
+  {
+   "id": "u08",
+   "label": "魔附天子說偈：苦行生梵世"
+  },
+  {
+   "id": "u09",
+   "label": "世尊識魔：諸色皆魔餌"
+  },
+  {
+   "id": "u10",
+   "label": "諸天疑問・世尊說明魔加其力（雜阿含）"
+  },
+  {
+   "id": "u11",
+   "label": "諸天讚佛斷諸結（漢譯）"
+  },
+  {
+   "id": "u12",
+   "label": "讚佛：毘富羅山最上・佛最勝"
+  },
+  {
+   "id": "u13",
+   "label": "歡喜還宮"
+  },
+  {
+   "id": "u14",
+   "label": "品攝頌"
+  }
+ ],
+ "versions": [
+  {
+   "id": "pi",
+   "lang": "pi",
+   "label": "巴利 SN 2.30",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "zh-nan",
+   "lang": "lzh",
+   "label": "漢譯南傳",
+   "who": "元亨寺版・N13（譯自巴利）"
+  },
+  {
+   "id": "SA-2.307",
+   "lang": "lzh",
+   "label": "別譯雜阿含 307",
+   "who": "失譯（附秦錄）",
+   "work": "T0100",
+   "reorder": true
+  },
+  {
+   "id": "SA1308",
+   "lang": "lzh",
+   "label": "雜阿含 1308",
+   "who": "求那跋陀羅譯・435–443 年",
+   "work": "T0099",
+   "reorder": true
+  }
+ ],
+ "works": [
+  "T0099",
+  "T0100"
+ ],
+ "anchors": [
+  {
+   "work": "T0100",
+   "node": "（三〇七）",
+   "uid": "T02n0100_p0477c24"
+  },
+  {
+   "work": "T0099",
+   "node": "（一三〇八）",
+   "uid": "T02n0099_p0359b22"
+  }
+ ],
+ "cells": {
+  "u00": {
+   "pi": "Saṁyutta Nikāya 2.30 3. Nānātitthiyavagga Nānātitthiyasāvakasutta",
+   "zh-nan": "〔三〇〕種種之外道師"
+  },
+  "u01": {
+   "pi": "Evaṁ me sutaṁ— ekaṁ samayaṁ bhagavā rājagahe viharati veḷuvane kalandakanivāpe.",
+   "zh-nan": "如是我聞。爾時世尊住王舍城竹林栗鼠養餌處。",
+   "SA-2.307": "如是我聞：一時，佛在王舍城迦蘭陀竹林。",
+   "SA1308": "如是我聞：一時，佛住王舍城毘富羅山側。"
+  },
+  "u02": {
+   "pi": "Atha kho sambahulā nānātitthiyasāvakā devaputtā asamo ca sahali ca nīko ca ākoṭako ca vegabbhari ca māṇavagāmiyo ca abhikkantāya rattiyā abhikkantavaṇṇā kevalakappaṁ veḷuvanaṁ obhāsetvā yena bhagavā tenupasaṅkamiṁsu; upasaṅkamitvā bhagavantaṁ abhivādetvā ekamantaṁ aṭṭhaṁsu.",
+   "zh-nan": "時，眾多之種種外道弟子之天子等，阿舍摩、舍波利、任迦、阿考吒迦、吠坦婆利、摩納婆伽彌耶，於黎明往詣世尊處，其勝光徧照竹林。詣已，禮敬世尊，立於一面。",
+   "SA-2.307": "當于爾時，有六天子，本是外道六師徒黨，一名難勝，二名自在，三名顯現，四名決勝，五名時起，六名輕弄。此六天子咸於其夜，來詣佛所，在一面坐。斯諸天光倍勝於常，遍照祇洹，赫然大明。",
+   "SA1308": "有六天子，本為外道出家，一名阿毘浮、二名增上阿毘浮、三名能求、四名毘藍婆、五名阿俱吒、六名迦藍，來詣佛所。"
+  },
+  "u03": {
+   "pi": "Ekamantaṁ ṭhito kho asamo devaputto pūraṇaṁ kassapaṁ ārabbha bhagavato santike imaṁ gāthaṁ abhāsi: “Idha chinditamārite, Hatajānīsu kassapo; Na pāpaṁ samanupassati, Puññaṁ vā pana attano; Sa ve vissāsamācikkhi, Satthā arahati mānanan”ti.",
+   "zh-nan": "立於一面之阿舍摩天子，關於富蘭那迦葉，於世尊前，唱此偈曰： 世間之割殺以及害與奪 迦葉謂非惡不見自功德 彼述實自信相應為師尊",
+   "SA-2.307": "顯現天子復說偈言：「斬截及傷害，祠祀火燒等， 皆無善惡報，迦葉之所說。」",
+   "SA1308": "能求天子復說偈言：「斷截椎打殺，供養施迦葉， 不見其為惡，亦不見為福。」"
+  },
+  "u04": {
+   "pi": "Atha kho sahali devaputto makkhaliṁ gosālaṁ ārabbha bhagavato santike imaṁ gāthaṁ abhāsi: “Tapojigucchāya susaṁvutatto, Vācaṁ pahāya kalahaṁ janena; Samosavajjā virato saccavādī, Na hi nūna tādisaṁ karoti pāpan”ti.",
+   "zh-nan": "時舍波利天子，關於末伽梨瞿舍羅，於世尊前，唱此偈曰： 苦行與厭離以善自制伏 與人語止爭離於有罪語 平等於語實何以彼如是 不為其惡耶",
+   "SA-2.307": "自在天子復說偈言：「苦行可譏毀，撿攝於己身， 斷惡口忿諍，苦樂同世尊， 於其法主所，不造作眾惡。」",
+   "SA1308": "增上阿毘浮天子復說偈言：「厭離於黑闇，心常自攝護， 永離於世間，言語諍論法。 從如來大師，稟受沙門法， 善攝護世間，不令造眾惡。」"
+  },
+  "u05": {
+   "pi": "Atha kho nīko devaputto nigaṇṭhaṁ nāṭaputtaṁ ārabbha bhagavato santike imaṁ gāthaṁ abhāsi: “Jegucchī nipako bhikkhu, Cātuyāmasusaṁvuto; Diṭṭhaṁ sutañca ācikkhaṁ, Na hi nūna kibbisī siyā”ti.",
+   "zh-nan": "時，任迦天子，關於尼乾陀若提子，於世尊前，唱此偈曰： 厭離巧比丘制御四種身 開顯被見聞彼何無罪過",
+   "SA-2.307": "爾時，難勝即說偈言：「可譏毀比丘，四時自禁制， 見聞其住已，是人離諸惡。」",
+   "SA1308": "阿毘浮天子即說偈言：「比丘專至心，常修行厭離， 於初夜後夜，思惟善自攝， 見聞其所說，不墮於地獄。」"
+  },
+  "u06": {
+   "pi": "Atha kho ākoṭako devaputto nānātitthiye ārabbha bhagavato santike imaṁ gāthaṁ abhāsi: “Pakudhako kātiyāno nigaṇṭho, Ye cāpime makkhalipūraṇāse; Gaṇassa satthāro sāmaññappattā, Na hi nūna te sappurisehi dūre”ti.",
+   "zh-nan": "時，阿考吒迦天子，關於種種之外道師，於世尊前，唱此偈曰： 據陀迦旃延乃至尼乾陀 又此末迦梨以及富蘭那 為人人之師達沙門果人 如何於彼等遠離善人焉",
+   "SA-2.307": "決勝天子復說偈言：「尼乾若提子，常說如是言， 長夜修苦行，斷除於妄語， 離羅漢不遠，墮於世尊數。」",
+   "SA1308": "毘藍婆天子復說偈言：「我說彼尼乾，外道若提子， 出家行學道，長夜修難行。 於大師徒眾，遠離於妄語， 我說如是人，不遠於羅漢。」"
+  },
+  "u07": {
+   "pi": "Atha kho vegabbhari devaputto ākoṭakaṁ devaputtaṁ gāthāya paccabhāsi: “Sahācaritena chavo sigālo, Na kotthuko sīhasamo kadāci; Naggo musāvādī gaṇassa satthā, Saṅkassarācāro na sataṁ sarikkho”ti.",
+   "zh-nan": "時，吠坦婆利天子，以偈答阿考吒迦天子曰： 號吼卑野干畢竟是野干 不管於如何難等於獅子 裸形而妄語以為眾之師 疑訝之行為難等於善人",
+   "SA-2.307": "爾時，世尊以偈答言：「從今令汝等，獨己若多眾， 我觀皆鄙穢，悉同於死尸， 云何以野干，同彼師子王？ 汝尊裸形眾，極惡喜妄語， 如斯外道等，彼去羅漢遠。」",
+   "SA1308": "爾時世尊說偈答言：「死瘦之野狐，常共師子遊， 終日小羸劣，不能為師子。 尼乾大師眾，虛妄自稱嘆， 是惡心妄語，去羅漢甚遠。」"
+  },
+  "u08": {
+   "pi": "Atha kho māro pāpimā begabbhariṁ devaputtaṁ anvāvisitvā bhagavato santike imaṁ gāthaṁ abhāsi: “Tapojigucchāya āyuttā, pālayaṁ pavivekiyaṁ; Rūpe ca ye niviṭṭhāse, devalokābhinandino; Te ve sammānusāsanti, paralokāya mātiyā”ti.",
+   "zh-nan": "時，惡魔波旬，隨從吠坦婆利天子而入，於世尊前，唱此偈曰： 苦行與厭離守遠離生活 物質入於心以樂喜天界 不導人他界彼等正教誨",
+   "SA-2.307": "時有天子復說偈言：「作彼苦行者，深為可譏毀， 雖處於閑靜，徒為勞苦事。 願當擁護彼，為其作教導， 必趣於色有，生梵世歡喜。」",
+   "SA1308": "爾時天魔波旬著阿俱吒天子而說偈言：「精勤棄闇冥，常守護遠離， 深著微妙色，貪樂於梵世。 我教化斯等，令得生梵天。」"
+  },
+  "u09": {
+   "pi": "Atha kho bhagavā “māro ayaṁ pāpimā” iti viditvā, māraṁ pāpimantaṁ gāthāya paccabhāsi: “Ye keci rūpā idha vā huraṁ vā, Ye cantalikkhasmiṁ pabhāsavaṇṇā; Sabbeva te te namucippasatthā, Āmisaṁva macchānaṁ vadhāya khittā”ti.",
+   "zh-nan": "時，世尊知此惡魔波旬，以偈答惡魔波旬曰： 此世及彼世不管任何色 光顯輝中空此等皆是實 那牟尼所讚如對魚於餌 因為是不殺而可令投棄",
+   "SA-2.307": "爾時，世尊復以偈答：「世界所有色，此處及他處， 并在虛空中，有大光明者， 如是等一切，悉入魔羂𣚦， 譬如捕魚師，以網掩眾魚。」",
+   "SA1308": "爾時，世尊作是念：「若此阿俱吒天子所說偈，此是天魔波旬加其力故，非彼阿俱吒天子自心所說，作是說言：「『精勤棄闇冥，守護於遠離， 深著微妙色，貪樂於梵世。』 當教化斯等，令得生梵天。」爾時，世尊復說偈言：「若諸所有色，於此及與彼， 或復虛空中，各別光照耀。 當知彼一切，不離魔魔縛， 猶如垂鈎餌，鉤釣於遊魚。」"
+  },
+  "u10": {
+   "SA1308": "時，彼天子咸各念言：「今日阿俱吒天子所說偈，沙門瞿曇言是魔所說。何故沙門瞿曇言是魔說？」爾時，世尊知諸天子心中所念，而告之言：「今阿俱吒天子所說偈，非彼天子自心所說，時魔波旬加其力故。」作是說言：「精勤棄闇冥，守護於遠離， 深著微妙色，貪樂於梵天。 當教化斯等，令得生梵天。 是故我說偈：「『若諸所有色，於此及與彼， 或復虛空中，各別光照耀。 當知彼一切，不離魔魔縛， 猶如垂鈎餌，鈎釣於遊魚。』」"
+  },
+  "u11": {
+   "SA-2.307": "又有一天復說偈言：「說有及欲過，并諸癡幻惡， 一切悉斷除，讚歎斷欲結。 應向彼禮拜，供養以稱讚， 所以如是者，彼即世尊故。」有一天子復說偈言：「說有及瞋過，并諸癡幻惡， 一切悉斷除，讚歎斷瞋結。 應向彼禮拜，供養以讚歎， 所以如是者，彼即世尊故。」時一天子復說偈言：「說有及癡過，并諸癡幻惡， 一切悉斷除，讚歎斷癡者。」時一天子復說偈言：「說有憍慢過，并諸慢幻惡， 一切悉斷除，讚歎斷憍慢。」時一天子復說偈言：「說有諸見過，并諸見幻惡， 一切悉斷除，讚歎斷見者。」時一天子復說偈言：「說有愛著過，并諸愛幻惡， 一切悉斷除，讚歎斷愛者。」",
+   "SA1308": "時，諸天子復作是念：「奇哉！沙門瞿曇！神力大德，能見天魔波旬，而我等不見，我等當復各各說偈讚歎沙門瞿曇。」即說偈言：「斷除於一切，有身愛貪想， 令此善護者，除一切妄語。 若欲斷欲愛，應供養大師。 斷除三有愛，破壞於妄語。 已斷於見貪，應供養大師。"
+  },
+  "u12": {
+   "pi": "Atha kho māṇavagāmiyo devaputto bhagavantaṁ ārabbha bhagavato santike imā gāthāyo abhāsi: “Vipulo rājagahīyānaṁ, giri seṭṭho pavuccati; Seto himavataṁ seṭṭho, ādicco aghagāminaṁ. Samuddo udadhinaṁ seṭṭho, nakkhattānaṁva candimā; Sadevakassa lokassa, buddho aggo pavuccatī”ti.",
+   "zh-nan": "時，摩納婆伽彌耶天子，關於世尊，於世尊前，唱此偈曰： 王舍城諸山尾布羅最勝 雪山之諸山白山為最勝 行於空中者太陽為最勝 海為水中勝月為星中勝 世界及天界云佛是第一",
+   "SA-2.307": "有一天子復說偈言：「王舍城諸山，毘富羅最上， 大地諸山中，雪山王最上。 四方諸世界，上下及四維， 一切天人中，如來最為尊。」",
+   "SA1308": "王舍城第一，名毘富羅山。 雪山諸山最，金翅鳥中名。 八方及上下，一切眾生界， 於諸天人中，等正覺最上。」"
+  },
+  "u13": {
+   "SA-2.307": "時諸天子聞佛所說，各說偈已，歡喜頂禮，還于天宮。",
+   "SA1308": "時，諸天子說偈讚佛已，聞佛所說，歡喜隨喜，稽首佛足，即沒不現。"
+  },
+  "u14": {
+   "pi": "Nānātitthiyavaggo tatiyo. Tassuddānaṁ Sivo khemo ca serī ca, Ghaṭī jantu ca rohito; Nando nandivisālo ca, Susimo nānātitthiyena te dasāti. Devaputtasaṁyuttaṁ samattaṁ.",
+   "zh-nan": "此嗢陀南： 濕婆與差摩世理並陶師 姜睹及赤馬難提毘舍羅 難陀須尸摩種種外道師 此等共為十",
+   "SA-2.307": "因陀羅問壽斷於一切結 說善稱長者尸毘問共住 速疾問邊際婆睺諮大喜大喜毘忸問般闍羅揵持 須深摩問第一　　有外道問諸見"
+  }
+ }
+}
