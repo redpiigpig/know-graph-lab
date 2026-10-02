@@ -1,0 +1,264 @@
+{
+ "slug": "manjusri-vihara",
+ "title": "文殊師利巡行經",
+ "family": "bo",
+ "intro": "梵本已佚，以藏譯 Toh 196（勝友、智軍譯）＋84000 英譯為骨架；漢譯菩提流支《文殊師利巡行經》（六世紀前半）、豆那掘多《文殊尸利行經》（隋）。三本問答次第一致。豆那掘多本開頭先有譯者歸敬，序分次第不同：文殊巡房在先、直到晨朝眾比丘出定、世尊出房說法在後，所以「世尊出房」一句落在第二節；問舍利弗入禪改在大眾中問。藏譯得益一段多「八萬色界天發心」，豆那掘多本作「八萬欲界天子」，流支本無；授記佛號流支作「法華」、豆那掘多作「法開華」、藏作 Flower。",
+ "units": [
+  {
+   "id": "w01",
+   "label": "序：耆闍崛山・世尊晡時說法"
+  },
+  {
+   "id": "w02",
+   "label": "文殊巡房・見舍利弗獨坐入禪"
+  },
+  {
+   "id": "w03",
+   "label": "問：汝入禪耶"
+  },
+  {
+   "id": "w04",
+   "label": "文殊連問：為斷煩惱、依三世、五蘊、六根六塵、三界、內外、身心入禪"
+  },
+  {
+   "id": "w05",
+   "label": "舍利弗：現法樂住、念不忘失・不見彼法・依如來為聲聞說離欲法"
+  },
+  {
+   "id": "w06",
+   "label": "何者離欲法：依三世乃至依心"
+  },
+  {
+   "id": "w07",
+   "label": "文殊破：三世真如無，無法則無依・無人令住"
+  },
+  {
+   "id": "w08",
+   "label": "說三世有依者謗如來・真如無念不退・真如外無法可說"
+  },
+  {
+   "id": "w09",
+   "label": "問：如來住真如說法耶——真如、法、如來皆不可得"
+  },
+  {
+   "id": "w10",
+   "label": "問：何人能受此法"
+  },
+  {
+   "id": "w11",
+   "label": "問：為何所知"
+  },
+  {
+   "id": "w12",
+   "label": "此法甚深・阿羅漢無住無處、不分別名色"
+  },
+  {
+   "id": "w13",
+   "label": "五百比丘捨座而去"
+  },
+  {
+   "id": "w14",
+   "label": "舍利弗問・文殊讚比丘善說：文殊不可得"
+  },
+  {
+   "id": "w15",
+   "label": "比丘還來・法界非識智所知・名真聲聞"
+  },
+  {
+   "id": "w16",
+   "label": "四百比丘解脫・一百比丘墮地獄・舍利弗責文殊"
+  },
+  {
+   "id": "w17",
+   "label": "佛告：百比丘一觸即生兜率・彌勒初會證果・聞法勝修四禪"
+  },
+  {
+   "id": "w18",
+   "label": "舍利弗讚・文殊：真如法界眾生界不增不減"
+  },
+  {
+   "id": "w19",
+   "label": "世尊印可"
+  },
+  {
+   "id": "w20",
+   "label": "世尊說偈"
+  },
+  {
+   "id": "w21",
+   "label": "得益・授五百比丘記"
+  },
+  {
+   "id": "w22",
+   "label": "流通"
+  }
+ ],
+ "versions": [
+  {
+   "id": "bo",
+   "lang": "bo",
+   "label": "藏譯",
+   "who": "勝友、智軍譯・德格版 Toh 196・84000"
+  },
+  {
+   "id": "en",
+   "lang": "en",
+   "label": "84000 英譯",
+   "who": "譯自藏譯・與藏文逐句對齊"
+  },
+  {
+   "id": "T0470",
+   "lang": "lzh",
+   "label": "流支本",
+   "who": "菩提流支譯《文殊師利巡行經》・六世紀前半",
+   "work": "T0470"
+  },
+  {
+   "id": "T0471",
+   "lang": "lzh",
+   "label": "豆那掘多本",
+   "who": "豆那掘多譯《文殊尸利行經》・隋",
+   "work": "T0471"
+  }
+ ],
+ "works": [
+  "DKtoh0196",
+  "T0470",
+  "T0471"
+ ],
+ "anchors": [],
+ "cells": {
+  "w01": {
+   "bo": "འཕགས་པ་འཇམ་དཔལ་གནས་པ་ཞེས་བྱ་བ་ཐེག་པ་ཆེན་པོའི་མདོ། སངས་རྒྱས་དང་། བྱང་ཆུབ་སེམས་དཔའ་ཐམས་ཅད་ལ་ཕྱག་འཚལ་ལོ། ། འདི་སྐད་བདག་གིས་ཐོས་པ་དུས་གཅིག་ན། བཅོམ་ལྡན་འདས་རྒྱལ་པོའི་ཁབ་ན་བྱ་རྒོད་ཀྱི་ཕུང་པོའི་རི་ལ་དགེ་སློང་ལྔ་བརྒྱ་ཙམ་གྱི་དགེ་སློང་གི་དགེ་འདུན་ཆེན་པོ་དང་། བྱང་ཆུབ་སེམས་དཔའི་དགེ་འདུན་ཆེན་པོ་དང་ཡང་ཐབས་ཅིག་ཏུ་བཞུགས་ཏེ དེ་ནས་བཅོམ་ལྡན་འདས་ཕྱེམ་རེད་ཀྱི་དུས་ཀྱི་ཚེ་ནང་དུ་ཡང་དག་འཇོག་ལས་བཞེངས་ནས་འཁོར་མང་པོས་ཡོངས་སུ་བསྐོར་ཅིང་མདུན་གྱིས་བལྟས་ནས་ཆོས་སྟོན་ཏོ། །",
+   "en": "The Noble Mahāyāna Sūtra The Dwelling Place of Mañjuśrī Homage to all buddhas and bodhisattvas! Thus did I hear at one time. The Bhagavān was staying at Rājagṛha, on Gṛdhrakūṭa Mountain, together with a large community of a full five hundred monks and a great congregation of bodhisattvas. At that time, the Bhagavān, after emerging in the late afternoon from secluded meditation,  surrounded and honored by a great assembly, taught the Dharma.",
+   "T0470": "如是我聞：一時婆伽婆，住王舍城耆闍崛山中，與大比丘眾五百人俱。爾時世尊於日晡時，從自房出，在外寬處，大眾圍遶，恭敬供養，而為說法。",
+   "T0471": "我豆那掘多，歸命大智海毘盧遮那如來。如是我聞：一時婆伽婆，住王舍城祇闍崛山中，與大比丘眾五百人俱——皆是大阿羅漢，諸漏已盡無復煩惱，三明六通具八解脫，慧心無礙具足清淨——如是等五百比丘，各於自房結加趺坐，身心寂靜三昧正受。"
+  },
+  "w02": {
+   "bo": "དེ་ནས་འཇམ་དཔལ་གཞོན་ནུར་གྱུར་པ་འཆག་ཅིང་དགེ་སློང་ལྔ་བརྒྱ་པོ་ཐམས་ཅད་ཀྱི་གནས་ཁང་ནས་གནས་ཁང་དུ་བྱུང་སྟེ། གནས་བརྟན་ཤཱ་རིའི་བུའི་གནས་ཁང་ག་ལ་བ་དེར་སོང་སྟེ་ཕྱིན་ནས། འཇམ་དཔལ་གཞོན་ནུར་གྱུར་པས་གནས་བརྟན་ཤཱ་རིའི་བུ་གཅིག་པུ་དབེན་པར་འདུག་སྟེ་ནང་དུ་ཡང་དག་བཞག་ནས་བསམ་གཏན་བྱེད་པར་མཐོང་ངོ་། །",
+   "en": "Subsequently, the youthful Mañjuśrī was walking about, going from residence to residence among all five hundred monks. When he went to the residence where the elder Śāriputra lived, Mañjuśrī saw him sitting alone in solitude, practicing concentration while in meditative seclusion.",
+   "T0470": "爾時文殊師利童子，於彼一切五百比丘行住之處，次第巡行，遂到長老舍利弗所，見長老舍利弗獨在一處端身而坐，入禪思惟。",
+   "T0471": "爾時文殊尸利童真菩薩，為欲發起自身行法，令眾聞知獲大利故，最於先起，一一次第遍觀諸房，即見尊者舍利弗，獨處一房折伏其身，結加趺坐入於三昧。爾時文殊尸利童真菩薩，見如是已，亦不發覺，更詣諸處，觀察餘房，如是展轉乃至晨朝日初出時。當於是時，舍利弗等五百比丘皆已出定，是諸比丘及餘比丘諸方來者，一切大眾皆悉雲集。爾時世尊，即於此時從坐而起，平身正直從容徐步，安諦而行如師子王，出於自房敷坐。一切大眾左右圍遶，敬念世尊不敢當前。爾時世尊處大眾中為無上首，光顏巍巍猶若金山，乘大悲雲雨諸法雨。"
+  },
+  "w03": {
+   "bo": "མཐོང་ནས་ཀྱང་གནས་བརྟན་ཤཱ་རིའི་བུ་ལ་འདི་སྐད་ཅེས་སྨྲས་སོ། ། བཙུན་པ་ཤཱ་རིའི་བུ་ཁྱོད་བསམ་གཏན་བྱེད་དམ། སྨྲས་པ། འཇམ་དཔལ་དེ་བཞིན་ནོ། །འཇམ་དཔལ་གྱིས་སྨྲས་པ།",
+   "en": "When he saw him, he said the following words to the elder Śāriputra: “Honorable Śāriputra, are you practicing concentration?” “Yes,” replied Śāriputra, “it is so, Mañjuśrī.”",
+   "T0470": "爾時文殊師利童子，既見長老舍利弗已，而語之言：「大德舍利弗！汝入禪耶？」長老舍利弗言：「如是，文殊師利！」",
+   "T0471": "爾時文殊童真菩薩，於大眾中問尊者舍利弗，作如是言：「我於向者遍觀諸房，我時見汝獨處一房，結加趺坐折伏其身，汝時為當坐禪耶、不耶？」尊者舍利弗即答文殊尸利菩薩言：「我於是時實坐禪耳。」"
+  },
+  "w04": {
+   "bo": "ཅི་བཙུན་པ་ཤཱ་རིའི་བུ་ཁྱོད་ཉོན་མོངས་པ་སྤངས་པ་རྣམས་སྤང་བའི་ཕྱིར་བསམ་གཏན་བྱེད་དམ། འོན་ཏེ་མ་སྤངས་པ་རྣམས་སྤང་བའི་ཕྱིར་བསམ་གཏན་བྱེད་དམ། ཅི་བཙུན་པ་ཤཱ་རིའི་བུ་ཁྱོད་འདས་པ་ལ་གནས་ཏེ་བསམ་གཏན་བྱེད་དམ། འོན་ཏེ་མ་འོངས་པ་ལ་གནས་ཏེ་བསམ་གཏན་བྱེད་དམ། འོན་ཏེ་ད་ལྟར་བྱུང་བ་ལ་གནས་ཏེ་བསམ་གཏན་བྱེད། ཅི་བཙུན་པ་ཤཱ་རིའི་བུ་ཁྱོད་གཟུགས་ལ་གནས་ཏེ་བསམ་གཏན་བྱེད་དམ། འོན་ཏེ་ཚོར་བ་དང་། འདུ་ཤེས་དང་། འདུ་བྱེད་རྣམས་དང་། རྣམ་པར་ཤེས་པ་ལ་གནས་ཏེ་བསམ་གཏན་བྱེད། ཅི་བཙུན་པ་ཤཱ་རིའི་བུ་ཁྱོད་མིག་ལ་གནས་ཏེ་བསམ་གཏན་བྱེད་དམ། འོན་ཏེ་རྣ་བ་དང་། སྣ་དང་། ལྕེ་དང་། ལུས་དང་། ཡིད་ལ་གནས་ཏེ་བསམ་གཏན་བྱེད། ཅི་བཙུན་པ་ཤཱ་རིའི་ བུ་ཁྱོད་གཟུགས་ལ་གནས་ཏེ་བསམ་གཏན་བྱེད་དམ། འོན་ཏེ་སྒྲ་དང་། དྲི་དང་། རོ་དང་། རེག་བྱ་དང་། ཆོས་རྣམས་ལ་གནས་ཏེ་བསམ་གཏན་བྱེད། ཅི་བཙུན་པ་ཤཱ་རིའི་བུ་ཁྱོད་འདོད་པའི་ཁམས་ལ་གནས་ཏེ་བསམ་གཏན་བྱེད་དམ། འོན་ཏེ་གཟུགས་ཀྱི་ཁམས་དང་། གཟུགས་མེད་པའི་ཁམས་ལ་གནས་ཏེ་བསམ་གཏན་བྱེད། ཅི་བཙུན་པ་ཤཱ་རིའི་བུ་ཁྱོད་ནང་ལ་གནས་ཏེ་བསམ་གཏན་བྱེད་དམ། འོན་ཏེ་ཕྱི་རོལ་ལ་གནས་ཏེ་བསམ་གཏན་བྱེད་དམ། འོན་ཏེ་ཕྱི་ནང་ལ་གནས་ཏེ་བསམ་གཏན་བྱེད། ཅི་བཙུན་པ་ཤཱ་རིའི་བུ་ཁྱོད་ལུས་ལ་གནས་ཏེ་བསམ་གཏན་བྱེད་དམ། འོན་ཏེ་སེམས་ལ་གནས་ཏེ་བསམ་གཏན་བྱེད།",
+   "en": "“Honorable Śāriputra,” said Mañjuśrī, “are you concentrating in order to abandon afflictions that have already been abandoned? Or are you concentrating in order to abandon those that have not yet been abandoned? “Honorable Śāriputra, are you concentrating while dwelling on the past? Are you concentrating while dwelling on the future? Or are you concentrating while dwelling on the present? Honorable Śāriputra, are you concentrating while dwelling on bodily form? Are you concentrating while dwelling on feelings, perceptions, volitional formations, or consciousness? Honorable Śāriputra, are you concentrating while dwelling on the eye? Or are you concentrating while dwelling on the nose, ear, tongue, body, or mind? Honorable Śāriputra, are you concentrating while dwelling on visible form? Or are you concentrating while dwelling on sound, smell, taste, touch, or other phenomena? “Honorable Śāriputra, are you concentrating while dwelling on the desire realm? Or are you concentrating while dwelling on the form realm or the formless realm? “Honorable Śāriputra, are you concentrating while dwelling on the internal? Or are you concentrating while dwelling on the external? Or are you concentrating while dwelling on the internal and external? Honorable Śāriputra, are you concentrating while dwelling on the body? Or are you concentrating while dwelling on the mind?”",
+   "T0470": "文殊師利言：「大德舍利弗！為未寂靜，欲令寂靜，汝入禪耶？為先寂靜何所寂靜，汝入禪耶？大德舍利弗！汝依何禪？為依過去、為依未來、為依現在、為依內外，汝入禪耶？又，舍利弗！為依身禪、為依心禪？」",
+   "T0471": "爾時文殊菩薩即復問於舍利弗言：「汝意云何？為當欲令有未斷者，為除故坐禪耶？欲令有已斷者，更除斷故坐禪耶？為依過、現、未來三世法故，坐禪耶？為依色、受、想、行、識等五陰法故，坐禪耶？為依眼、耳、鼻、舌、身、意等諸根、識故，坐禪耶？為依色、聲、香、味、觸、法等六塵法故，坐禪耶？為依欲、色、無色界等三有法故，坐禪耶？為依若內、若外、內外差別法故，坐禪耶？為依若身、若心、若身心名色法故，坐禪耶？如是等法，我已問汝，汝應速答，依何而坐禪乎？」"
+  },
+  "w05": {
+   "bo": "ཤཱ་རིའི་བུས་སྨྲས་པ། འཇམ་དཔལ་འདི་ལྟར་ཚེ་འདི་ལ་བདེ་བར་གནས་པར་བྱ་བ་དང་། བརྗེད་པ་མེད་པར་གནས་པར་བྱ་བའི་ཕྱིར་ཏེ་དེ་ལྟ་བུའི་ཕྱིར་བསམ་གཏན་བྱེད་དོ། ། འཇམ་དཔལ་གྱིས་སྨྲས་པ། བཙུན་པ་ཤཱ་རིའི་བུ་ཆོས་གང་དག་ཚེ་འདི་ལ་བདེ་བར་གནས་པའམ། ཚེ་འདི་མ་ཡིན་པ་ལ་བདེ་བར་གནས་པའམ། བརྗེད་པ་མེད་པའི་ཆོས་དེ་དག་དམིགས་སམ། ཤཱ་རིའི་བུས་སྨྲས་པ། འཇམ་དཔལ་བདག་གིས་ཆོས་གང་དག་ཚེ་འདི་ལ་བདེ་བར་གནས་པའམ། ཚེ་འདི་མ་ཡིན་པ་ལ་བདེ་བར་གནས་པའི་ཆོས་དེ་དག་ཡང་དག་པར་རྗེས་སུ་མི་མཐོང་ཞིང་མི་དམིགས་མོད་ཀྱི། འོན་ཀྱང་འཇམ་དཔལ་དེ་བཞིན་གཤེགས་པས་ཉན་ཐོས་རྣམས་ལ་རབ་ཏུ་དབེན་པའི་ཆོས་སུ་གསུངས་པ་གང་ཡིན་པ་དེ་ལ་བདག་རྟེན་ཅིང་གནས་སོ། །",
+   "en": "“Mañjuśrī,” replied Śāriputra, “I am practicing concentration in order to dwell in bliss for this life and to dwell in nonforgetfulness.” Mañjuśrī then asked, “Honorable Śāriputra, do you apprehend any dharmas that dwell in bliss in this life, or that dwell in bliss in what is not this life, or that are without forgetfulness?” “Mañjuśrī,” Śāriputra replied, “I truly do not observe or apprehend any dharmas that dwell in bliss in this life or that dwell in bliss in what is not this life. However, Mañjuśrī, I rely and dwell on what the Tathāgata taught to śrāvakas as the doctrine of disengagement.”",
+   "T0470": "長老舍利弗言：「文殊師利！我此禪義，諸有一切見法樂行，諸有一切心不散亂，如是正念。」文殊師利言：「大德舍利弗！汝得彼法耶？彼法是何法？為見法樂行？不見法樂行？」長老舍利弗言：「文殊師利！不得彼法，為有何者法？若見法樂行，不見法樂行。復次，文殊師利！如來為彼聲聞之人說離欲法，我依彼法如是入禪。」",
+   "T0471": "爾時，尊者舍利弗即答文殊尸利言：「仁者！我今現見諸法樂行，念不忘故而坐禪也。」文殊尸利菩薩復更問於舍利弗言：「舍利弗！實有諸法可得現見，樂行者念不忘不？」舍利弗言：「仁者文殊！如是樂行之法，我實不見。仁者文殊！如是樂行之法我雖不見，而佛、世尊曾為聲聞一切諸眾說寂定法，如是法者，我依行之。」"
+  },
+  "w06": {
+   "bo": "འཇམ་དཔལ་གྱིས་སྨྲས་པ། བཙུན་པ་ཤཱ་རིའི་བུ་གང་དེ་བཞིན་གཤེགས་པས་ཉན་ཐོས་རྣམས་ལ་རབ་ཏུ་དབེན་པའི་ཆོས་སུ་གསུངས་པ་གང་ཡིན། བཙུན་པ་ཤཱ་རིའི་བུ་གང་ལ་རྟེན་ཅིང་གནས། ཤཱ་རིའི་བུས་སྨྲས་པ། འཇམ་དཔལ་འདི་ལ་དགེ་སློང་ནི་འདས་པ་ལ་རྟེན་ཅིང་གནས་སོ། ། མ་འོངས་པ་ལ་རྟེན་ཅིང་གནས་སོ། ། ད་ལྟར་བྱུང་བ་ལ་རྟེན་ཅིང་གནས་སོ། ། དེ་བཞིན་དུ་སྦྱར་ཏེ། སེམས་ཀྱི་བར་ལ་རྟེན་ཅིང་གནས་པར་ཁོང་དུ་ཆུད་པར་བྱ་སྟེ། འཇམ་དཔལ་ཆོས་དེ་དག་ནི་དེ་བཞིན་གཤེགས་པས་ཉན་ཐོས་རྣམས་ལ་རབ་ཏུ་དབེན་པར་གསུངས་པ་ཡིན་ཏེ། བདག་ ཆོས་དེ་དག་ལ་རྟེན་ཅིང་གནས་སོ། །",
+   "en": "Mañjuśrī then asked, “Honorable Śāriputra, what is it that the Tathāgata taught to śrāvakas as the doctrine of disengagement and that you, honorable Śāriputra, rely and dwell on?” Śāriputra replied, “In this regard, Mañjuśrī, a monk relies and dwells on the past, relies and dwells on the future, and relies and dwells on the present. In brief, as mentioned before, one should understand that he relies and dwells as mentioned before all the way up to the mind. Mañjuśrī, the Tathāgata taught these śrāvakas that these dharmas are disengaged, and I rely and dwell on these dharmas.”",
+   "T0470": "文殊師利言：「大德舍利弗！何者離欲法，如來為彼聲聞人說，大德舍利弗依而行耶？」長老舍利弗言：「文殊師利！比丘如是依過去行、依未來行、依現在行，乃至依心行，如是等應知。文殊師利！如來為彼聲聞之人，說此離欲法，我隨彼法、依彼法行。」",
+   "T0471": "文殊尸利菩薩復問尊者舍利弗言：「何等諸法，如來曾為諸聲聞眾說是寂定，汝依行也？」舍利弗言：「仁者文殊！有一比丘，依於過去、未來、現在諸法而行，略說乃至依心、意等諸法如行。如彼行法，是佛、世尊為聲聞一切諸眾說是寂定，我依行也。」"
+  },
+  "w07": {
+   "bo": "འཇམ་དཔལ་གྱིས་སྨྲས་པ། བཙུན་པ་ཤཱ་རིའི་བུ་གང་གི་ཕྱིར་འདི་སྐད་ཅེས་འདས་པ་ལ་རྟེན་ཅིང་གནས། མ་འོངས་པ་ལ་རྟེན་ཅིང་གནས། ད་ལྟར་བྱུང་བ་ལ་རྟེན་ཅིང་རབ་ཏུ་དབེན་པ་ལ་གནས་པ་ནས་དེ་བཞིན་དུ་སྦྱར་ཏེ། སེམས་ཀྱི་བར་ལ་རྟེན་ཅིང་རབ་ཏུ་དབེན་པ་ལ་གནས་ཞེས་སྨྲ། བཙུན་པ་ཤཱ་རིའི་བུ་འདི་ལྟ་སྟེ། གང་འདས་པའི་དེ་བཞིན་ཉིད་དེ་ཡང་ཡོད་པ་མ་ཡིན། གང་མ་འོངས་པའི་དེ་བཞིན་ཉིད་དེ་ཡང་ཡོད་པ་མ་ཡིན། གང་ད་ལྟར་བྱུང་བའི་དེ་བཞིན་ཉིད་དེ་ཡང་ཡོད་པ་མ་ཡིན་ཏེ། དེ་ལྟར་ཆོས་དེ་དག་ནི་ཡོད་པ་མ་ཡིན་ན། ཇི་ལྟར་གནས་བརྟན་ཤཱ་རིའི་བུ་དེ་འདི་སྐད་ཅེས་འདས་པ་ལ་རྟེན་ཅིང་གནས། མ་འོངས་པ་ལ་རྟེན་ཅིང་གནས། ད་ལྟར་བྱུང་བ་ལ་རྟེན་ཅིང་གནས་ཞེས་སྨྲ། ཡོད་པ་མ་ཡིན་པའི་ཆོས་ལ་ནི་གནས་པ་མེད་དོ། ། ཡང་བཙུན་པ་ཤཱ་རིའི་བུ་འདས་པའི་དེ་བཞིན་ཉིད་དང་། མ་འོངས་པ་དང་། ད་ལྟར་བྱུང་བའི་དེ་བཞིན་ཉིད་གང་ཡིན་པ་དེ་ནི་ཅི་ཡང་མ་ཡིན། གང་གིས་ཀྱང་མ་ཡིན། གང་གི་ཡང་མ་ཡིན། གང་ལ་ཡང་མི་གནས་ཏེ། གང་མི་གནས་པ་དེའི་གནས་དམིགས་སུ་མེད་དོ། །",
+   "en": "Mañjuśrī then asked, “Honorable Śāriputra, why do you say, ‘I rely and dwell on the past, rely and dwell on the future, rely on the present, dwell in disengagement, and, in brief, rely on and dwell in disengagement as mentioned before all the way up to the mind’? It is like this, honorable Śāriputra: a true nature  of the past does not exist. A true nature of the future does not exist. A true nature of the present does not exist. In this way, if these dharmas do not exist, then how can the elder Śāriputra say, ‘I rely and dwell on the past, rely and dwell on the future, and rely and dwell on the present’? Dharmas that do not exist have no basis. “Further, honorable Śāriputra, there is nothing that is a true nature  of the past and a true nature of the future and the present. Nor are phenomena caused by anything. Nor do they belong to anything. They are not based anywhere. There is nothing apprehended as a basis of what is not based anywhere.",
+   "T0470": "文殊師利言：「大德舍利弗！若如是說，依過去行、依未來行、依現在行，乃至依心離欲而行，如是等者。大德舍利弗！若彼諸法，過去如來無、未來如來無、現在如來無，此法如是無。大德舍利弗！今者云何作如是說：『依過去行、依未來行、依現在行？』以無法故，則亦無依。「復次，大德舍利弗！過去如來、未來如來、現在如來，無人令住，無處可住。若無住者，依不可得。",
+   "T0471": "文殊尸利童真菩薩復問尊者舍利弗：「汝言『如來曾為聲聞一切諸眾說彼三世乃至心、意，我依行』者，是事不然。何以故？即彼過去現無如來，彼未來世現無如來，現在世無彼如來。若如是者，一切諸法求如來身，皆不可得。汝今云何作如是言『我依過去、未來、現在諸法而行』？唯舍利弗！過去際，未來、現在際，彼不為此、此不為彼，各各別異，不相為作，無有處所，亦無依住、無所住者，無有依處而可得也。"
+  },
+  "w08": {
+   "bo": "ཡང་བཙུན་པ་ཤཱ་རིའི་བུ་གང་འདས་པ་དང་། མ་འོངས་པ་དང་། ད་ལྟར་བྱུང་བའི་དེ་བཞིན་ཉིད་ཅེས་བརྗོད་ཅིང་ཀུན་ཏུ་གནས་ནས་སྨྲ་བ་དེ་དག་ནི་དེ་བཞིན་གཤེགས་པ་ལ་སྐུར་བ་འདེབས་པའོ། ། དེ་ཅིའི་ཕྱིར་ཞེ་ན། འདི་ལྟར་དེ་བཞིན་ཉིད་ནི་གཡོ་བ་མེད་པ་རློམ་སེམས་མེད་པའོ། ། འདི་ལྟར་དེ་བཞིན་ཉིད་ནི་ཉམས་པ་མེད་པའོ། ། འདི་ལྟར་དེ་བཞིན་ཉིད་ནི་སྟོང་པའོ། །མཚན་མ་མེད་པའོ། །སྨོན་པ་མེད་པའོ། ། ཡང་བཙུན་པ་ཤཱ་རིའི་བུ་གང་འདས་པའི་དེ་བཞིན་ཉིད་དེ་ཡང་དམིགས་སུ་མེད། གང་མ་འོངས་པའི་དེ་བཞིན་ཉིད་དེ་ཡང་དམིགས་སུ་མེད། གང་ད་ལྟར་བྱུང་བའི་དེ་བཞིན་ཉིད་དེ་ཡང་དམིགས་སུ་མེད་པ་ནས་དེ་བཞིན་དུ་སྦྱར་ཏེ། སེམས་ཀྱི་བར་གྱི་དེ་བཞིན་ཉིད་དེ་ཡང་དམིགས་སུ་མེད་དོ། ། འོན་ཀྱང་བཙུན་པ་ཤཱ་རིའི་བུ་དེ་བཞིན་ཉིད་མ་གཏོགས་པར་གང་བསྟན་པའམ། རབ་ཏུ་བཤད་པར་ནུས་པའི་ཆོས་གཞན་གང་ཡང་མི་དམིགས་སོ། །",
+   "en": "“Further, honorable Śāriputra, those who speak of a ‘true nature  of the past, the future, and the present’ and who thus propound stability deprecate the Tathāgata. Why is this? It is because a true nature is immovable and without vain imaginings. It is because a true nature is uncorrupted. It is because true nature is  empty, without signs, and wishless. “Further, honorable Śāriputra, a true nature of the past cannot be apprehended. A true nature of the future cannot be apprehended. A true nature of the present cannot be apprehended. And, in brief, the true nature of everything up to mind cannot be apprehended. However, honorable Śāriputra, besides the true nature, one does not apprehend any other dharma capable of being shown or explained.”",
+   "T0470": "「復次，大德舍利弗！若人說言：『過去、未來、現在如來有依、不依。』如是之人則謗如來。何以故？真如無念，亦無所念。真如不退，真如無相。「復次，大德舍利弗！過去真如不可得，未來真如不可得，現在真如不可得，乃至心真如不可得，如是等，應知。「復次，大德舍利弗！更無有法，在真如外而可顯說。」",
+   "T0471": "復次，舍利弗！若有人言過去、未來、現在於實際中，說有依處、說無依處者，當知彼輩誹謗如來，獲大重罪。所以者何？彼真實際無憶無念，亦無墮落；無有形色，無有相狀而可得者。唯舍利弗！真實際中，過去、未來、現在諸法實不可得，略說乃至心、意等法亦不可得；離於實際外，無一法而可得者。是故，說言名之為空，空故無法，無可顯說。」"
+  },
+  "w09": {
+   "bo": "ཤཱ་རིའི་བུས་སྨྲས་ པ། འཇམ་དཔལ་དེ་བཞིན་གཤེགས་པ་དེ་བཞིན་ཉིད་ལ་བཞུགས་ནས་ཆོས་སྟོན་ཏམ། འཇམ་དཔལ་གྱིས་སྨྲས་པ། བཙུན་པ་ཤཱ་རིའི་བུ་དེ་བཞིན་ཉིད་ཡོད་པ་མ་ཡིན་ན། ཇི་ལྟར་དེ་བཞིན་གཤེགས་པ་དེ་བཞིན་ཉིད་ལ་བཞུགས་ཏེ་ཆོས་སྟོན། བཙུན་པ་ཤཱ་རིའི་བུ་ཆོས་ཀྱང་ཡོད་པ་མ་ཡིན་ན། ཇི་ལྟར་དེ་བཞིན་གཤེགས་པ་དེ་བཞིན་ཉིད་ལ་བཞུགས་ཏེ་ཆོས་སྟོན། དེ་བཞིན་གཤེགས་པ་ཡང་ཡོད་པ་མ་ཡིན་ན། ཇི་ལྟར་དེ་བཞིན་གཤེགས་པ་དེ་བཞིན་ཉིད་ལ་བཞུགས་ཏེ་ཆོས་སྟོན། ཆོས་ཐམས་ཅད་ཀྱང་ཡོད་པ་མ་ཡིན་ཏེ་དམིགས་སུ་མེད། དེ་བཞིན་གཤེགས་པ་ཡང་ཡོད་པ་མ་ཡིན་ཏེ་དམིགས་སུ་མེད་དོ། ། དེའི་ཆོས་བསྟན་པ་ན་འདི་འདྲ་སྟེ། འདི་ལ་དམིགས་པའམ་མི་དམིགས་པ་གཉིས་ཀྱིས་རབ་ཏུ་ཕྱེ་བ་མེད་དོ། ། དེ་བཞིན་གཤེགས་པ་ནི་བརྗོད་པའམ་མི་བརྗོད་པས་རབ་ཏུ་ཕྱེ་བ་མ་ཡིན་ནོ། ། དེ་ཅིའི་ཕྱིར་ཞེ་ན། བཙུན་པ་ཤཱ་རིའི་བུ་འདི་ལྟར་དེ་བཞིན་གཤེགས་པ་ནི་བརྗོད་པ་ཡང་དག་པར་ཆད་པ། བཏགས་པ་མེད་པ། གདགས་པར་བྱ་བ་མ་ཡིན་པའོ། །",
+   "en": "Śāriputra then asked, “Mañjuśrī, does the Tathāgata teach the Dharma while residing in the true nature?” “Honorable Śāriputra,” Mañjuśrī replied, “if a true nature does not exist, then how can the Tathāgata reside in the true nature and teach the Dharma? Honorable Śāriputra, if the Dharma also does not exist, then how can the Tathāgata reside in the true nature and teach the Dharma? If the Tathāgata also does not exist, then how can the Tathāgata reside in the true nature and teach the Dharma? All dharmas do not exist and cannot be apprehended. The Tathāgata also does not exist and cannot be apprehended. When his Dharma is taught, it is like this: it is without distinction between either apprehending or not apprehending. The Tathāgata himself is not distinguished by the expressible or the inexpressible. Why is this? Because, honorable Śāriputra, the Tathāgata is completely cut off from expression, involves no designation, and is not something that can be designated.”",
+   "T0470": "長老舍利弗言：「文殊師利！諸佛如來住真如已，然後說法。」文殊師利言：「大德舍利弗！真如非有，云何如來住真如已而當說法？大德舍利弗！彼法亦無，云何如來住真如已，而當說法？如來亦無，何處如來住真如已，而當說法？一切諸法皆不可得，諸佛如來亦不可得。又此可得、不可得法，如是二種皆不可得。如來非說，亦非不說。何以故？大德舍利弗！如來無說不可說言，此是如來。」",
+   "T0471": "爾時尊者舍利弗，即問文殊尸利童真菩薩言：「如來可不住於實際而說法耶？」文殊尸利菩薩即答尊者舍利弗言：「舍利弗！真實際中有何處所，而使如來住於實際說諸法乎？舍利弗！法本自無，云何如來住實際已說於諸法？非但無法，如來亦無。既無，云何而言如來住於真實際已說諸法耶？所以者何？一切諸法皆不可得；如來亦爾，實不可得；所說法體亦復如是，時中不可得、非時中不可得、時非時中亦不可得。如來復非在說時中、不說時中，可得顯現。所以者何？舍利弗，如來一切言語道斷，無為、無作、無所安置。」"
+  },
+  "w10": {
+   "bo": "ཤཱ་རིའི་བུས་སྨྲས་པ། འཇམ་དཔལ་སུ་ཞིག་ཆོས་བསྟན་པ་འདི་ལྟ་བུ་འདིའི་སྣོད་དུ་འགྱུར། འཇམ་དཔལ་གྱིས་སྨྲས་པ། བཙུན་པ་ཤཱ་རིའི་བུ་གང་འདུས་བྱས་ཀྱི་ཁམས་རྣམ་པར་འཁྲུགས་པར་མི་འགྱུར་ཞིང་ཡོངས་སུ་མྱ་ངན་ལས་འདའ་བར་འདོད་པར་ཡང་མི་འགྱུར་བ་དེ་ནི་ཆོས་བསྟན་པ་འདི་ལྟ་བུ་འདིའི་སྣོད་དུ་འགྱུར་རོ། ། གང་འདས་པའི་ཆོས་རྣམས་མི་དམིགས་ཤིང་འདས་པའི་ཆོས་རྣམས་ཀུན་ཤེས་པར་མི་འགྱུར་བ་དང་། གང་འདས་པ་དང་། མ་འོངས་པ་དང་། ད་ལྟར་བྱུང་བའི་ཆོས་རྣམས་མི་དམིགས་ཤིང་ འདས་པ་དང་། མ་འོངས་པ་དང་། ད་ལྟར་བྱུང་བའི་ཆོས་རྣམས་ཀུན་ཤེས་པར་མི་འགྱུར་བ་དེ་ཆོས་བསྟན་པ་འདི་ལྟ་བུ་འདིའི་སྣོད་དུ་འགྱུར་རོ། ། གང་ཀུན་ནས་ཉོན་མོངས་པ་དང་། རྣམ་པར་བྱང་བ་མི་མཐོང་ཞིང་དེ་ཉེ་བར་ལེན་པར་ཡང་མི་འགྱུར་བ་དེ་ཆོས་བསྟན་པ་འདི་ལྟ་བུ་འདིའི་སྣོད་དུ་འགྱུར་རོ། ། གང་བདག་དང་བདག་མེད་པར་ཡང་སྤྱོད་པར་མི་འགྱུར་བ་དང་། གང་ལེན་པ་དང་། འདོར་བར་ཡང་སྤྱོད་པར་ཡང་མི་འགྱུར་བ་དེ་ཆོས་ བསྟན་པ་འདི་ལྟ་བུ་འདིའི་སྣོད་དུ་འགྱུར་ཏེ དེ་ནི་བཤད་པ་འདིའི་དོན་ཀུན་ཤེས་པར་འགྱུར་རོ། །",
+   "en": "Śāriputra then asked, “Mañjuśrī, who will become a recipient for a Dharma teaching such as this?” Mañjuśrī said, “Honorable Śāriputra, one who is not disturbed in the conditioned realm and who does not desire complete nirvāṇa will be a recipient for a Dharma teaching like this. One who does not apprehend dharmas of the past, does not comprehend dharmas of the past, does not apprehend dharmas of the past, present, or future, and does not comprehend dharmas of the past, present, or future will be a recipient for a Dharma teaching such as this. One who neither sees nor appropriates defilements and purifications will be a recipient for a Dharma teaching such as this. One who does not pursue either self or nonself and who does not pursue acquiring and relinquishing is a recipient for a Dharma teaching such as this. That one will comprehend the meaning of this exposition.”",
+   "T0470": "長老舍利弗言：「文殊師利！當有何人受如是法？」文殊師利言：「大德舍利弗！若人不取有為法界，不悕涅槃，如是之人，能受此法。若人不得過去之法，不知彼法，不得未來、現在之法，不知彼法，如是之人能受此法。若不見染、若不見淨，若無心取，如是之人能受此法。若非我行、非無我行，非取捨行，如是之人能受此法。如是之人，則能知此所說之義。」",
+   "T0471": "爾時尊者舍利弗復問文殊尸利菩薩言：「文殊尸利！如仁者所說，誰於此處堪為法器？」文殊尸利菩薩即答尊者舍利弗言：「舍利弗！若有人能破壞世諦，亦復不當入於涅槃，彼人於此堪為法器。若復能於過去諸法不證、不說，未來諸法不證、不說，現在諸法不證、不說，彼人於此堪為法器。無煩惱見及清淨見，無有有為、無為見者，彼於此說堪為法器。若無有我、亦無無我，於作行中不取、不捨，彼於此說，堪為法器。如是人者，雖能聽受，亦不於是所說法中，取為決定了義說也。」"
+  },
+  "w11": {
+   "bo": "ཤཱ་རིའི་བུས་སྨྲས་པ། འཇམ་དཔལ་འདི་ལ་ཅི་ཞིག་ཀུན་ཤེས་པར་འགྱུར། འཇམ་དཔལ་གྱིས་སྨྲས་པ། བཙུན་པ་ཤཱ་རིའི་བུ་བཤད་པ་འདིའི་དོན་ཤེས་པར་འགྱུར་བ་ཅི་ཞིག་ཡོད་ན། འདི་ལ་ཅི་ཞིག་ཀུན་ཤེས་པར་འགྱུར་ཞེས་དེ་སྐད་འདྲི།",
+   "en": "“Mañjuśrī, in this regard, what is comprehended?” asked Śāriputra. Mañjuśrī then asked, “Honorable Śāriputra, if there were to be something that constitutes the meaning of this exposition, then ask, ‘In this regard, what is comprehended?’ ”",
+   "T0470": "長老舍利弗言：「文殊師利！為何所知？」文殊師利言：「大德舍利弗！此無可說、亦無所問，為何所知？」",
+   "T0471": "爾時，尊者舍利弗復問文殊尸利菩薩言：「若如仁者所說，於是義中云何修行？云何教住？」文殊尸利菩薩即語尊者舍利弗言：「舍利弗！若是義中可有言說，可得問言云何教住？於是義中既無言說、斷諸心行，云何問言云何教住？」"
+  },
+  "w12": {
+   "bo": "ཤཱ་རིའི་བུས་སྨྲས་པ། འཇམ་དཔལ་ཆོས་ཟབ་མོ་བསྟན་པ་འདི་མངོན་སུམ་དུ་འགྱུར་བ་ཉུང་། འདི་ནི་ཡོངས་སུ་འཛིན་པར་འགྱུར་བ་ཉུང་ངོ་། ། འཇམ་དཔལ་དགྲ་བཅོམ་པ་དང་། སློབ་པ་དང་། མི་སློབ་པ་རྣམས་ཀྱང་ས་ཕྱོགས་འདི་ལ་སྒྱིད་ལུག་པར་འགྱུར་ན་བྱིས་པ་སོ་སོའི་སྐྱེ་བོ་རྣམས་ལྟ་ཅི་སྨོས། འཇམ་དཔལ་གྱིས་སྨྲས་པ། བཙུན་པ་ཤཱ་རིའི་བུ་དགྲ་བཅོམ་པ་རྣམས་ལ་ནི་ས་མེད་དོ། ། དེ་ཅིའི་ཕྱིར་ཞེ་ན། འདི་ལྟར་དགྲ་བཅོམ་པ་ཡང་མེད་ན་ས་གང་ལ་དགྲ་བཅོམ་པ་གནས་པར་འགྱུར། དགྲ་བཅོམ་པ་དག་ནི་གནས་མེད་པས་རབ་ཏུ་ཕྱེ་བའོ། ། དགྲ་བཅོམ་པ་དག་ནི་དམིགས་སུ་མེད་པས་རབ་ཏུ་ཕྱེ་བའོ། ། དགྲ་བཅོམ་པ་དག་ནི་བརྗོད་པ་དང་། མི་བརྗོད་པ་ཤིན་ཏུ་ཆད་པས་རབ་ཏུ་ཕྱེ་བའོ། ། དེ་ཅིའི་ཕྱིར་ཞེ་ན། འདི་ལྟར་དགྲ་བཅོམ་པ་དག་ནི་བརྗོད་པ་དང་། མི་བརྗོད་པ་ཡང་དག་པར་ཆད་པ་སྟེ་བཏགས་པ་མེད་པའོ། ། དགྲ་བཅོམ་པ་དག་ནི་སར་དབྱེ་བ་དག་དང་བྲལ་བ། འདུས་མ་བྱས་ཀྱིས་རབ་ཏུ་ཕྱེ་བ། འཇུག་པ་མེད་པ། འདུས་མ་བྱས་ཀྱིས་རབ་ཏུ་ཕྱེ་བ་སྟེ། དགྲ་བཅོམ་པ་དག་ནི་འདུས་མ་བྱས་པ་གནས་པ་མེད་པ་ཡིན་ན་ཅི་ཞིག་དགྲ་བཅོམ་པ་དག་གི་སར་འགྱུར། དགྲ་བཅོམ་པ་དག་ནི་མིང་དང་གཟུགས་ཀྱིས་རབ་ཏུ་ཕྱེ་བ་མ་ཡིན་ནོ། ། བྱིས་པ་སོ་སོའི་སྐྱེ་བོ་རྣམས་ནི་མིང་དང་གཟུགས་ལ་རྣམ་པར་རྟོག་གོ། ། མིང་དང་གཟུགས་དེ་ཡང་རྟོག་པ་མེད་ཅིང་རྣམ་པར་རྟོག་པ་མེད་པར་དགྲ་བཅོམ་པ་རྣམས་ཀྱིས་ཤེས་ཏེ། དེའི་ཕྱིར་དགྲ་བཅོམ་པ་དག་ནི་མིང་དང་གཟུགས་ཀྱིས་རབ་ཏུ་ཕྱེ་བ་མ་ཡིན་ནོ། ། བྱིས་པ་རྣམས་ཀྱང་མི་དམིགས། བྱིས་པའི་ཆོས་དང་། དགྲ་བཅོམ་པ་དང་། དགྲ་བཅོམ་པའི་ཆོས་རྣམས་ཀྱང་མི་དམིགས་སོ། ། ནམ་མི་དམིགས་པ་དེའི་ཚེ་ན་མི་རྟོག་གོ། ། ཀུན་ཏུ་མི་སྤྱོད་ དོ། ། དེ་སྤྱོད་པ་མེད། སྤྲོས་པ་མེད་ཅིང་ཉེ་བར་ཞི་བ་སྟེ། ཡོད་དོ་ཞེས་ཁས་མི་ལེན། མེད་དོ་ཞེས་ཁས་མི་ལེན། ཡོད་ཀྱང་ཡོད་ལ་མེད་ཀྱང་མེད་དོ་ཞེས་ཁས་མི་ལེན། ཡོད་པ་ཡང་མ་ཡིན། མེད་པ་ཡང་མ་ཡིན་ཞེས་དེ་སྐད་ཀྱང་ཁས་མི་ལེན་ཏོ། ། ནམ་ཁས་མི་ལེན་པ་དེ་ན་དམིགས་པ་མེད་དོ། ། དེ་དམིགས་པ་ཐམས་ཅད་དང་བྲལ་བས་སེམས་མེད་ཅིང་སེམས་དང་བྲལ་ཏེ་ གནས་མེད་པའི་ཚུལ་གྱིས་དགེ་སྦྱོང་གི་ཆོས་ལ་གནས་པ་ཞེས་བྱའོ། །",
+   "en": "“Mañjuśrī, this profound Dharma teaching is rarely directly perceived,” said Śāriputra. “It is rarely fully apprehended. Mañjuśrī, if even arhats, those in training, and those beyond training  grow discouraged regarding this location, how much more so are childish ordinary beings.” “Honorable Śāriputra,” said Mañjuśrī, “arhats do not have a dwelling place. Why is this? Because if even arhats do not exist, in what place would an arhat dwell? Arhats are thus distinguished by being without dwelling place. Arhats are distinguished by being without apprehension. Arhats are distinguished by having fully cut off the expressible and inexpressible. Why is this? Because as arhats have fully cut off the expressible and inexpressible, they are free from designation. Arhats are free from distinctions concerning places. “They are distinguished by the unconditioned. They are without engagement. They are distinguished by the unconditioned because if arhats are unconditioned and without dwelling place, what would be the dwelling place of arhats? “Arhats are not distinguished by name and form. Childish ordinary beings conceptualize name and form. Name and form are understood by arhats to be without conceptions and without conceptualizing. Therefore, arhats are not distinguished by name and form. Even childish beings are not apprehended. The qualities of childish beings, arhats, and arhat qualities are also not apprehended. At the time they are not apprehended, they are not conceived. They are not dealt with. Without being dealt with, they are unelaborated and peaceful. “One does not accept their ‘existence,’ nor does one accept their ‘nonexistence.’ One also does not accept that they are both existent while existing and nonexistent while not existing. Nor does one accept that they are neither existent nor nonexistent. When one does not accept any of these, there is no apprehension. Being free from all apprehensions—without thought and free from thought— we speak of one who dwells in the quality of spiritual practice  by way of being without dwelling place.”",
+   "T0470": "長老舍利弗言：「文殊師利！說法太深，信此法人甚為少耳。文殊師利！阿羅漢人、學無學人尚非境界，何況一切愚癡凡夫？」文殊師利言：「大德舍利弗！如是，如是！阿羅漢人亦非境界。何以故？阿羅漢者無諸境界，阿羅漢者無住無處，名阿羅漢；不可得說，名阿羅漢。以無說故，名阿羅漢。何以故？無為、無住，名阿羅漢。彼阿羅漢何處境界？阿羅漢者非名、非色，愚癡凡夫分別名色。阿羅漢者，於彼名、色不分別知，名阿羅漢。阿羅漢者，非名分別、非色分別。愚癡凡夫亦不可得，凡夫之法亦不可得；阿羅漢者亦不可得，阿羅漢法亦不可得。若不可得則不分別，若不分別則無所行，若無所行則無戲論，若無戲論是則寂靜，如是無行亦無戲論。寂靜之人，則不取有，亦不取無，非有、非無，如是不取。若不取者，則無所得，如是之人，離一切得，無心、離心住聲聞法，如是應知。」",
+   "T0471": "爾時，尊者舍利弗即白文殊尸利菩薩言：「仁者文殊！此義甚深，於是義中，少有證知者，少有受持者。何以故？一切學人諸阿羅漢等，於是地中，猶尚迷沒，況諸凡夫，豈能於是甚深義中能知能了？」文殊尸利言：「舍利弗！諸阿羅漢於是義中，無有地分，所以阿羅漢無有地分可得住者。以無住故名阿羅漢，無得故名阿羅漢，言語道斷故名阿羅漢。以言語道斷故，所有阿羅漢地分行者，無有證處。以無有證處故，所有阿羅漢地分行者，以無為法得名，以不發故則名無為，無有作者亦無住處。云何名阿羅漢有所得地？諸阿羅漢者，不以名故，名為阿羅漢；不以色故，名為阿羅漢。唯諸凡夫，於名、色中，妄作分別，如是名、色實無分別。諸阿羅漢皆如是，知不生分別，是故諸阿羅漢，不以名不以色，名為阿羅漢。無有凡夫、無有凡夫法，無有阿羅漢，亦無阿羅漢法而可得者。是故阿羅漢不作分別，以無作行故，無有行處，無有作者，即是寂定。不作為有者，不作為無者，不作為非有非無者。若無作、無為是中不可得，彼得遠離一切有，無心、無行可得，說言決定正住沙門果中。」"
+  },
+  "w13": {
+   "bo": "དེ་ནས་འཇམ་དཔལ་གཞོན་ནུར་གྱུར་པས་བསྟན་པ་འདི་བཤད་པ་ན་འཁོར་དེའི་དགེ་སློང་ལྔ་བརྒྱ་པོ་སྟན་ལས་ལངས་ནས་འདི་སྐད་ཅེས་འཇམ་དཔལ་གཞོན་ནུར་གྱུར་པ་ལ་མི་བལྟའོ། ། འཇམ་དཔལ་གཞོན་ནུར་གྱུར་པ་ལ་མི་མཉན་ཏོ། ། འཇམ་དཔལ་གཞོན་ནུར་གྱུར་པ་ཕྱོགས་གང་ན་གནས་པའི་ཕྱོགས་དེ་ཡང་སྤང་བར་བྱའོ། ། དེ་ཅིའི་ཕྱིར་ཞེ་ན། འདི་ལྟར་འཇམ་དཔལ་གཞོན་ནུར་གྱུར་པ་ནི་སྟོན་པ་མངོན་སུམ་དུ་གྱུར་བཞིན་དུ་ཀུན་ནས་ཉོན་མོངས་པ་དང་། རྣམ་པར་བྱང་བ་མཚན་ཉིད་གཅིག་ཏུ་སྟོན་པས་ཆོས་མ་ཡིན་པ་སྨྲའོ་ཞེས་བརྗོད་ནས་ དེ་དག་ཡང་འདི་སྙམ་དུ་སེམས་ཏེ། བདག་ཅག་ཇི་ལྟར་བཅོམ་ལྡན་འདས་ཀྱིས་ལེགས་པར་གསུངས་པའི་ཆོས་འདུལ་བ་ལ་ཚངས་པར་སྤྱོད་པ་སྤྱད་སྙམ་ནས་དོང་ངོ་། །",
+   "en": "Once  this teaching had been explained by the youthful Mañjuśrī, the five hundred monks of the retinue got up from their seats saying, “We do not see the youthful Mañjuśrī. We do not hear the youthful Mañjuśrī. Any location where the youthful Mañjuśrī could dwell should be abandoned. Why is that? The youthful Mañjuśrī has shown in a blatant manner that the defilements and purifications have a single characteristic.” They thought that he had thereby said something that was not Dharma, and thinking, “How can we thus train in the doctrine that is well spoken by the Bhagavān and practice pure moral conduct?” they departed.",
+   "T0470": "爾時文殊師利童子說此法已，時彼五百諸比丘眾，從坐而起捨離而去，作如是言：「我不用見文殊師利童子之身，我不用聞文殊師利童子名字。隨何方處，若有文殊師利童子住彼處者，亦應捨離。何以故？如是文殊師利童子異我梵行，是故應捨。」",
+   "T0471": "爾時文殊尸利童真菩薩如是說時，於大眾中有五百比丘從坐而起，於世尊前高聲唱言：「從今已去更不須見文殊身，亦復不須聞其名字，如是方處速應捨離，所有文殊一切住處更莫趣向。所以者何？云何文殊煩惱、解脫一相說耶？」五百比丘一時高聲唱是言已，皆各背面出眾而去。復作是念：「我等云何於佛、世尊自說法中，歡喜樂學修行梵行已，云何今日忽聞如是弊惡法乎？」"
+  },
+  "w14": {
+   "bo": "དེ་ནས་གནས་བརྟན་ཤཱ་རིའི་བུས་འཇམ་དཔལ་གཞོན་ནུར་གྱུར་པ་ལ་འདི་སྐད་ཅེས་སྨྲས་སོ། ། འཇམ་དཔལ་ཁྱོད་འདི་ལྟར་སེམས་ཅན་རྣམས་ཀྱིས་ཆོས་ཀུན་ཤེས་པར་འགྱུར་བར་བྱ་བའི་ཕྱིར་ཆོས་མི་སྟོན་ཏམ། འཇམ་དཔལ་གྱིས་སྨྲས་པ། བཙུན་པ་ཤཱ་རིའི་བུ་དེ་བཞིན་ནོ། ། ཤཱ་རིའི་བུས་སྨྲས་པ། དགེ་སློང་ལྔ་བརྒྱ་པོ་དེ་དག་སྟན་ལས་ལངས་ཏེ་འཕྱ་སྨོད། མི་སྙན་པར་ཟེར་ཞིང་དོང་ངོ་། ། འཇམ་དཔལ་གྱིས་སྨྲས་པ། བཙུན་པ་ཤཱ་རིའི་བུ་གང་གི་ཕྱིར་དགེ་སློང་ལྔ་བརྒྱ་པོ་དེ་དག་འདི་སྐད་ཅེས། འཇམ་དཔལ་གཞོན་ནུར་གྱུར་པ་ལ་མི་བལྟའོ། ། འཇམ་དཔལ་གཞོན་ནུར་གྱུར་པ་ལ་མི་མཉན་ཏོ། ། འཇམ་དཔལ་གཞོན་ནུར་གྱུར་པ་གང་ན་གནས་པའི་ས་ཕྱོགས་དེ་ཡང་སྤང་བར་བྱའོ་ ཞེས་ཟེར་བ་དེ་ནི་ལེགས་སོ་ལེགས་སོ། ། ཤཱ་རིའི་བུ་དགེ་ སློང་དེ་དག་གི་ཚིག་དེ་ནི་ལེགས་པར་སྨྲས་པའོ། ། དེ་ཅིའི་ཕྱིར་ཞེ་ན། འདི་ལྟར་འཇམ་དཔལ་གཞོན་ནུར་གྱུར་པ་ནི་ཡོད་པ་མ་ཡིན་ཏེ་དམིགས་སུ་མེད་དོ། ། གང་ཡོད་པ་མ་ཡིན་ཏེ་དམིགས་སུ་མེད་པ་དེ་ལ་བལྟ་བ་དང་མཉན་པར་མི་ནུས་སོ། ། འཇམ་དཔལ་གཞོན་ནུར་གྱུར་པ་ཕྱོགས་གང་ན་གནས་པའི་ཕྱོགས་དེ་ཡང་སྤང་བར་བྱའོ། ། དེ་ཅིའི་ཕྱིར་ཞེ་ན། འཇམ་དཔལ་གཞོན་ནུར་གྱུར་པ་ཡོད་པ་མ་ཡིན་ཏེ་དམིགས་སུ་མེད་པས་གང་དེའི་གནས་ཀྱང་ཡོད་པ་མ་ཡིན་ཏེ་དམིགས་སུ་མེད་དོ། ། གང་ཡོད་པ་མ་ཡིན་ཏེ་དམིགས་སུ་མེད་པ་དེ་ནི་བསྟེན་པར་བྱ་བ་མ་ཡིན་ནོ། །",
+   "en": "The elder Śāriputra then asked the youthful Mañjuśrī, “Mañjuśrī, do you not teach the Dharma so that sentient beings may comprehend the Dharma?” Mañjuśrī replied, “Yes, Honorable Śāriputra.” Śāriputra said, “Having arisen from their seats, those five hundred monks have spoken disparagingly and unpleasantly, and they have departed.” “Honorable Śāriputra, [it is good,]” said Mañjuśrī, “[it is good] that those five hundred monks said, ‘We do not see the youthful Mañjuśrī. We do not hear the youthful Mañjuśrī. Any location where youthful Mañjuśrī could dwell should be abandoned. [“Honorable Śāriputra,] it is good,” [said Mañjuśrī,] “it is good Śāriputra, the words of these monks are well spoken. Why is that? Because the youthful Mañjuśrī does not exist and cannot be apprehended. That which does not exist and cannot be apprehended cannot be seen and cannot be heard. Any location where the youthful Mañjuśrī could dwell should be abandoned. Why is that? Because, since the youthful Mañjuśrī does not exist and cannot be apprehended, any place he could dwell also does not exist and cannot be apprehended. And one should not try to rely on what does not exist and cannot be apprehended.”",
+   "T0470": "爾時長老舍利弗語文殊師利童子言：「文殊師利！說此法義，意豈不欲令諸眾生知法義乎？」文殊師利言：「如是，如是！大德舍利弗！」長老舍利弗言：「云何令此五百比丘，從坐而起，毀呰戲論誹謗而去？」文殊師利言：「大德舍利弗！若此諸比丘，如是說言：『我不用是文殊師利童子之身，我不用聞文殊師利童子名字，隨何方處，若有文殊師利童子住彼處者，亦應捨離。』如是說者，善哉，善哉！大德舍利弗！此諸比丘善說此語。何以故？以無文殊師利童子，故不可得。如其是無不可得者，則不可見亦不可聞，隨何方處，若有文殊師利童子住彼處者，亦應捨離。如是說者，如是文殊師利童子住處亦無，彼若無者，則不可近亦不可捨。」",
+   "T0471": "爾時尊者舍利弗見是事已，即告文殊尸利童真菩薩言：「文殊尸利！汝說是法，不欲令諸眾生輩決定了知如是法耶？」文殊尸利菩薩言：「如是，如是。」尊者舍利弗言：「文殊尸利！汝若如是者，何故此五百比丘從坐而起，毀訾、誹謗仁者所說，現於佛前高聲唱言『不須見文殊尸利，亦不須聞文殊尸利名，是方亦須捨，所有文殊一切住處皆不須往』，唱是言已出眾而去？」爾時文殊尸利童真菩薩，即歎尊者舍利弗言：「善哉善哉！汝舍利弗，快能善說彼諸比丘唱告之言。何以故？實無文殊而可得故。若實無文殊不得者，彼亦不可見、不可得聞，如是彼方亦須捨離。所以者何？所有文殊一切住處，是處及文殊皆無所有；無所有者，尚不可親近，亦可須捨。」"
+  },
+  "w15": {
+   "bo": "དེ་ནས་དགེ་སློང་ལྔ་བརྒྱ་པོ་དེ་དག་འཇམ་དཔལ་གཞོན་ནུར་གྱུར་པས་བསྟན་པ་འདི་ཐོས་པ་དང་། སླར་ས་ཕྱོགས་དེར་ལོག་ནས་འཇམ་དཔལ་གཞོན་ནུར་གྱུར་པ་ལ་འདི་སྐད་ཅེས་སྨྲས་སོ། ། འཇམ་དཔལ་བདག་ཅག་ནི་ཇི་ལྟར་ཁྱོད་ཀྱིས་བསྟན་པ་དེ་ལྟར་མི་ཤེས་སོ། ། འཇམ་དཔལ་གྱིས་སྨྲས་པ། དགེ་སློང་དག་ལེགས་སོ་ལེགས་སོ། ། དེ་ལྟ་བུ་ནི་སྟོན་པའི་ཉན་ཐོས་རྣམས་ཀྱི་བྱ་བ་སྟེ། དགེ་སློང་དག་འདི་ལ་ནི་ཀུན་ཤེས་པར་བྱ་བ་མེད། རྣམ་པར་ཤེས་པར་བྱ་བ་མེད་དོ། ། དེ་ཅིའི་ཕྱིར་ཞེ་ན། འདི་ལྟར་ཆོས་ཀྱི་དབྱིངས་འདི་ནི་གནས་མེད་པའི་ཚུལ་གྱིས་གནས་པ་ཉིད་དོ། ། ཆོས་ཀྱི་དབྱིངས་གང་ཡིན་པ་དེ་དབྱིངས་མ་ཡིན་ནོ། ། དེ་ནི་ཡོད་པ་མ་ཡིན་ཏེ་དམིགས་སུ་མེད་ཅིང་གཡོ་བ་མེད་ལ་འཆི་འཕོ་མེད་དོ། ། གང་གཡོ་བ་མེད་ཅིང་འཆི་འཕོ་མེད་པ་དེ་ཀུན་ཤེས་པར་བྱ་བ་མ་ཡིན། རྣམ་པར་ཤེས་པར་བྱ་བ་མ་ཡིན་ནོ། ། གང་ཀུན་ཤེས་པར་བྱ་བ་དང་། རྣམ་པར་ཤེས་པར་བྱ་བའི་རློམ་སེམས་མེད་པ་དེ་ནི་སྟོན་པའི་ཉན་ཐོས་ཞེས་བྱ། མཆོག་ཐོབ་པ་ཞེས་བྱ། གཙོ་བོ་ཞེས་བྱ། སྦྱིན་གནས་ཞེས་བྱའོ། །",
+   "en": "When those five hundred monks had heard this teaching by the youthful Mañjuśrī, they again returned to their places and said the following words to the youthful Mañjuśrī: “Mañjuśrī, why do we not understand what you just taught?” Mañjuśrī replied, “This is good, monks, this is good. Such are the activities of the Teacher’s hearers. In this regard, monks, there is nothing to comprehend and there is nothing to cognize. Why is this? Because this realm of reality is the very state of dwelling in the manner of being without dwelling place. That which is the realm of reality is not a realm. That which does not exist and cannot be apprehended is also immovable and without death and rebirth. That which is immovable and without death and rebirth is not something comprehensible. It is not something cognizable. Those who are without the vain imaginings of comprehension and cognition are called hearers of the Teacher. They are called those who have attained the supreme, leaders, and those worthy of offerings.”",
+   "T0470": "爾時文殊師利童子既說此法，五百比丘聞已迴面，既迴面已，後向文殊師利童子說如是言：「文殊師利說如是法，非我能解。」文殊師利言：「善哉，善哉！汝諸比丘，如來弟子聲聞之人，應如是學。諸比丘！如是法者，非識所知、非智所知。何以故？法界法爾故。法界如是無念、無退，如其彼法無念、無退，非識所知、非智所知。諸非識知、非智所知，則非所念。汝諸比丘，如來弟子聲聞之人，應如是學。若如是學，佛說彼人得最勝法，是世福田，應受供養。」",
+   "T0471": "爾時文殊尸利菩薩如是說時，五百比丘還來入眾，白文殊尸利言：「如仁者所說，非為我等，云何能知仁者所說？」爾時文殊尸利菩薩即歎諸比丘言：「善哉善哉，如是如是！如來世尊、諸聲聞眾，於是法中，應如是作，莫須知之；諸比丘於是法中，亦須如是作，莫須知之，亦非不須知。所以者何？如是法者，即是常住亦名法界。若常住、法界者，無憶、無念，無憶、無念者，一切無證、無不證，無不證者，亦非不證、不憶、不念。若如是知者，即名如來真實聲聞弟子，名為最上，得言應供者。」"
+  },
+  "w16": {
+   "bo": "བསྟན་པ་འདི་བཤད་པ་ན་དགེ་སློང་ལྔ་བརྒྱ་པོ་དེ་དག་ལས་དགེ་སློང་བཞི་བརྒྱ་ནི་ལེན་པ་མེད་པར་ཟག་པ་རྣམས་ལས་སེམས་རྣམ་པར་གྲོལ་ལོ། ། དགེ་སློང་བརྒྱ་ནི་སེམས་ཆེར་འཁྲུགས་ནས་ལུས་དེ་ཉིད་དང་སེམས་ཅན་དམྱལ་བ་ཆེན་པོ་ངུ་འབོད་དུ་ལྷུང་ངོ་། ། དེ་ནས་ཚེ་དང་ལྡན་པ་ཤཱ་རིའི་བུས་འཇམ་དཔལ་གཞོན་ནུར་གྱུར་པ་ལ་འདི་སྐད་ཅེས་སྨྲས་སོ། ། འཇམ་ དཔལ་ཁྱོད་སེམས་ཅན་རྗེས་སུ་བསྲུང་བའི་ཆོས་མི་སྟོན་པས་དགེ་སློང་བརྒྱ་པོ་དེ་དག་ཆུད་ཟོས་ཏེ་ངོ་མཚར་བྱས་སོ། །",
+   "en": "Upon explaining this teaching, among the five hundred monks the minds of four hundred monks were liberated from the pollutions without any further clinging. The minds of one hundred monks grew increasingly disturbed, and their bodily existences and mental states were plunged into the great hell of Howling. Venerable Śāriputra then said to the youthful Mañjuśrī, “Mañjuśrī, I am shocked that one hundred monks have all gone to ruin  because you did not teach a Dharma that protects sentient beings.”",
+   "T0470": "說此法時，彼諸比丘五百人中，四百比丘不受諸法，盡諸結漏，心得解脫；一百比丘起於惡心，自身將墮大地獄中。爾時長老舍利弗語文殊師利童子言：「文殊師利！仁者說法非護眾生，而失如是一百比丘。」",
+   "T0471": "爾時，文殊尸利童真菩薩說是語時，於彼五百比丘眾中，四百比丘於無漏法中心得解脫，一百比丘更增毀訾，起誹謗心，於現身中，生陷入於大地獄中。爾時尊者舍利弗，即白文殊尸利童真菩薩言：「文殊尸利！仁者何故不順眾生而說法也？令是一百比丘退失墮落。」"
+  },
+  "w17": {
+   "bo": "དེ་ནས་བཅོམ་ལྡན་འདས་ཀྱིས་གནས་བརྟན་ཤཱ་རིའི་བུ་ལ་འདི་སྐད་ཅེས་བཀའ་སྩལ་ཏོ། ། ཤཱ་རིའི་བུ་ཁྱོད་དེ་སྐད་མ་ཟེར་ཅིག ། དེ་ཅིའི་ཕྱིར་ཞེ་ན། ཤཱ་རིའི་བུ་དགེ་སློང་བརྒྱ་པོ་དེ་དག་སེམས་ཅན་དམྱལ་བ་ཆེན་པོ་ངུ་འབོད་དུ་རེག་པ་ཐང་ཅིག་རེག་ནས་དགའ་ལྡན་གྱི་ལྷ་རྣམས་དང་སྐལ་བ་མཉམ་པར་སྐྱེ་བར་འགྱུར་རོ། ། ཤཱ་རིའི་བུ་གལ་ཏེ་དགེ་སློང་དེ་དག་གིས་ཆོས་ཀྱི་རྣམ་གྲངས་འདི་མ་ཐོས་སུ་ཟིན་ན་དེ་དག་གདོན་མི་ཟ་བར་སེམས་ཅན་དམྱལ་བར་འགྲོ་བར་འགྱུར་ཏེ། ལས་དེ་ཟད་ནས་མིར་སྐྱེ་བར་འགྱུར་བ་ཞིག་ན་ དེ་དག་གིས་ཆོས་ཀྱི་རྣམ་གྲངས་འདི་ལ་བརྟེན་པས་བསྐལ་པར་སེམས་ཅན་དམྱལ་བ་མྱོང་བར་འགྱུར་བའི་ལས་དེ་ཡང་ཅུང་ཟད་ཅིག་མྱོང་བར་བྱས་སོ། ། ཤཱ་རིའི་བུ་དེའི་ཕྱིར་དགེ་སློང་བརྒྱ་པོ་དེ་དག་དེ་བཞིན་གཤེགས་པ་བྱམས་པའི་ཉན་ཐོས་ཐོག་མ་འདུས་པར་དགྲ་བཅོམ་པ་ཟག་པ་ཟད་པར་འགྱུར་རོ། ། ཤཱ་རིའི་བུ་དེ་ལྟ་བས་ན་ཆོས་ཀྱི་རྣམ་གྲངས་འདི་སོམ་ཉི་དང་བཅས་པས་ཐོས་པ་ནི་དམ་པ་ཡིན་གྱི། བསམ་གཏན་བཞི་ལ་སྙོམས་པར་ཞུགས་པས་ནི་དེ་ལྟ་མ་ཡིན། ཚད་མེད་པ་བཞིས་ནི་དེ་ལྟ་མ་ཡིན། གཟུགས་མེད་པའི་སྙོམས་པར་འཇུག་པ་བཞི་བསྒོམས་པས་ནི་དེ་ལྟ་མ་ཡིན་ནོ། ། དེ་ཅིའི་ཕྱིར་ཞེ་ན། ཆོས་ཀྱི་རྣམ་གྲངས་འདི་ལྟ་བུ་དེ་མ་ཐོས་པར་འཁོར་བ་ལས་ཡོངས་སུ་མ་གྲོལ། སྐྱེ་བ་དང་། རྒ་བ་དང་། ན་བ་དང་། འཆི་བ་དང་། མྱ་ངན་དང་། སྨྲེ་སྔགས་འདོན་པ་དང་། སྡུག་བསྔལ་བ་དང་། ཡིད་མི་བདེ་བ་དང་། འཁྲུགས་པ་རྣམས་ལས་ཡོངས་སུ་མ་གྲོལ་ཞེས་བཤད་དོ། །",
+   "en": "Thereupon the Bhagavān replied to the elder Śāriputra, “Śāriputra, do not say such things. Why? Śāriputra, those one hundred monks will come into contact with the great hell of Howling for only a moment, and they will then take rebirth together among the gods of Tuṣita heaven. Śāriputra, if these monks had not heard this Dharma discourse, they would undoubtedly have gone to hell, and having exhausted their karma,  some would have taken rebirth as humans. But since they have relied upon this Dharma discourse, even those deeds that would cause other beings to experience hell for an eon will, for them, cause that experience for only a short while. Therefore, Śāriputra, those one hundred monks will be included among the initial hearers of the tathāgata Maitreya and become arhats who have exhausted their pollutions. Since that is so, Śāriputra, for this Dharma discourse to be heard by those who have doubt is excellent indeed, in a way that is not the case for the attainment of the four meditative concentrations, in a way that is not the case for the four immeasurables, and in a way that is not the case for the cultivation of the four formless attainments. Why is that? Because without hearing such a Dharma discourse, one will not be liberated from cyclic existence, nor will one be liberated from birth, ageing, sickness, death, sorrow, lamentation, suffering, sadness, and agitation.”",
+   "T0470": "爾時世尊告長老舍利弗言：「汝舍利弗，莫如是說。何以故？舍利弗！此一百比丘墮大叫喚地獄，受一觸已，生兜率陀天同業之處，以其得聞如是法故。舍利弗！此諸比丘，若不得聞如是法門，定墮地獄。一劫盡已，乃生人中。以其得聞此法門故，應墮地獄一劫受業，得為少受。舍利弗！此百比丘，彌勒如來初會之中，得作聲聞，證阿羅漢，得盡諸漏。如是，舍利弗！聞此法門所得福勝，非修四禪、非四無量、非四無色三摩跋提。何以故？若不得聞此法門者，則於生死不可得脫。我說彼人生老病死，悲苦憂愁，號哭懊惱不可得脫。」",
+   "T0471": "爾時世尊即告尊者舍利弗言：「汝舍利弗莫作是言。所以者何？舍利弗！是一百比丘，若不聞是甚深法本者，當知彼輩必定墮大地獄中一劫受苦；從地獄出已，然後方得人身、人道。以彼諸比丘輩聞是法本甚深義故——所有惡業重罪，應墮大地獄中一劫受苦——今日入於大叫喚地獄之中一觸受已，即得上生兜率天中受諸天樂。汝舍利弗當知，是諸比丘，聞此法故，速除多罪，暫少輕受。汝舍利弗當知，是一百比丘，於彌勒菩薩下生成道，初會說法聲聞眾中，得阿羅漢果，盡諸有漏，無復煩惱，三明、六通、具八解脫，身心煩惱二餘俱盡。是故舍利弗，寧於是法本修多羅中疑心聽受，不用成就四禪定心及四無量心，亦復不用具足成就四無色定心。何以故？雖復成就如是法者，若不聞是甚深法本，於煩惱中不得解脫生、老、病、死、憂悲苦惱。我愍此輩說是法本。」"
+  },
+  "w18": {
+   "bo": "དེ་ནས་ཚེ་དང་ལྡན་པ་ཤཱ་རིའི་བུས་འཇམ་དཔལ་གཞོན་ནུར་གྱུར་པ་ལ་འདི་སྐད་ཅེས་སྨྲས་སོ། ། འཇམ་དཔལ་འདི་ལྟར་སེམས་ཅན་ཡོངས་སུ་སྨིན་པར་བྱ་བའི་ཕྱིར་ཁྱོད་ཀྱིས་ཆོས་ཀྱི་རྣམ་གྲངས་འདི་ལེགས་པར་བཤད་པ་ངོ་མཚར་ཏོ། ། འཇམ་དཔལ་གྱིས་སྨྲས་པ། བཙུན་པ་ཤཱ་རིའི་བུ་དེ་བཞིན་ཉིད་ནི་འབྲི་བ་མ་ཡིན། འཕེལ་བ་མ་ཡིན་ནོ། ། ཆོས་ཀྱི་དབྱིངས་ཀྱང་འབྲི་བ་མ་ཡིན། འཕེལ་ བ་ཡང་མ་ཡིན་ནོ། ། སེམས་ཅན་གྱི་ཁམས་ཀྱང་འབྲི་བ་མ་ཡིན། འཕེལ་བ་མ་ཡིན་ནོ། ། ཀུན་ནས་ཉོན་མོངས་པ་མ་ཡིན། རྣམ་པར་བྱང་བ་མ་ཡིན་ནོ། ། དེ་ཅིའི་ཕྱིར་ཞེ་ན། འདི་ལྟར་དེ་དག་ནི་ཡོད་པ་མ་ཡིན་ཞིང་དམིགས་སུ་མེད་དེ་ཐ་སྙད་ཙམ་དུ་ཟད་པས་ཅི་ཡང་མ་ཡིན། གང་གིས་ཀྱང་མ་ཡིན། གང་གི་ཡང་མ་ཡིན། གང་ལ་ཡང་མི་གནས་ཏེ་གནས་པ་མེད་དོ། ། བཙུན་པ་ཤཱ་རིའི་བུ་གང་འདི་ལྟ་བུའི་མི་འགག་པ་དེ་ནི་བྱང་ཆུབ་པོ། ། བྱང་ཆུབ་གང་ཡིན་པ་དེ་ནི་ཐར་པའོ། ། ཐར་པ་གང་ཡིན་པ་དེ་ནི་རྣམ་པར་མི་རྟོག་པའོ། ། གང་རྣམ་པར་མི་རྟོག་པ་དེ་ནི་མི་བྱེད་ཅིང་འགྱུར་བ་མེད་དོ། ། གང་མི་བྱེད་ཅིང་འགྱུར་བ་མེད་པ་དེ་ནི་ཡོངས་སུ་མྱ་ངན་ལས་འདས་པའོ། །",
+   "en": "The venerable Śāriputra then said to the youthful Mañjuśrī, “Mañjuśrī, it is amazing how you have matured sentient beings through your eloquent explanation of this Dharma discourse.” “Honorable Śāriputra,” replied Mañjuśrī, “the true nature does not diminish, nor does it increase. The realm of reality does not diminish , nor does it increase. The realm of sentient beings does not diminish, nor does it increase. They are not defiled, nor are they purified. Why is this? Because these things do not exist and cannot be apprehended. They are nothing at all, as they amount to nothing but mere conventions. They are not caused by anything at all. They do not dwell anywhere at all and are without dwelling place. Honorable Śāriputra, that which is uncurtailed in this way is awakening. Awakening is liberation. Liberation is nonconceptual. The nonconceptual is unfabricated and immutable. The unfabricated and immutable is wholly beyond suffering.”",
+   "T0470": "爾時長老舍利弗語文殊師利童子言：「甚為希有，文殊師利乃能善說如是法門，成就眾生。」文殊師利言：「大德舍利弗！真如不減、真如不增，法界不減、法界不增，諸眾生界不減、不增。何以故？彼唯言語，無人可依，無處可依，非依不依。大德舍利弗！如是不依即是菩提，如是菩提即是解脫。若依法者是則分別；若知非作亦非非作，即是涅槃。」",
+   "T0471": "爾時尊者舍利弗，即白文殊尸利菩薩言：「希有，希有！文殊尸利乃能善說如是法本，為欲教化諸眾生故。」文殊尸利菩薩言：「舍利弗！真實際者不增不減，法界不增不減，眾生界者亦無增減。所以者何？如是等法，但有言說無可得者，彼不為此、此不為彼，即自無自，有何依處？是故舍利弗，菩提者即是解脫也。何以故？所有法智無異處故，非作、非不作。若如是知，名為已入涅槃者。」"
+  },
+  "w19": {
+   "bo": "དེ་ནས་བཅོམ་ལྡན་འདས་ཀྱིས་གནས་བརྟན་ཤཱ་རིའི་བུ་ལ་འདི་སྐད་ཅེས་བཀའ་སྩལ་ཏོ། ། ཤཱ་རིའི་བུ་འཇམ་དཔལ་གཞོན་ནུར་གྱུར་པས་ཇི་སྐད་བསྟན་པ་དེ་བཞིན་ཏེ། དེ་བཞིན་ཉིད་ནི་འབྲི་བ་མ་ཡིན། འཕེལ་བ་མ་ཡིན་ནོ། ། ཆོས་ཀྱི་དབྱིངས་ཀྱང་འབྲི་བ་མ་ཡིན། འཕེལ་བ་མ་ཡིན་ནོ། ། སེམས་ཅན་གྱི་ཁམས་ཀྱང་འབྲི་བ་མ་ཡིན། འཕེལ་བ་མ་ཡིན་ནོ། ། ཀུན་ནས་ཉོན་མོངས་པ་མ་ཡིན། རྣམ་པར་བྱང་བ་མ་ཡིན་ནོ། ། དེ་ཅིའི་ཕྱིར་ཞེ་ན། འདི་ལྟར་དེ་དག་ཡོད་པ་མ་ཡིན་ཞིང་དམིགས་སུ་མེད་དེ་ཐ་སྙད་ཙམ་དུ་ཟད་པས་ཅི་ཡང་མ་ཡིན། གང་གིས་ཀྱང་མ་ཡིན། གང་ལའང་མི་གནས་ཏེ་གནས་པ་མེད་དོ། །",
+   "en": "Thereupon, the Bhagavān said to the elder Śāriputra, “Śāriputra, it is just as the youthful Mañjuśrī has taught. True nature does not diminish, nor does it increase. The realm of reality also does not diminish, nor does it increase. The realm of sentient beings does not diminish, nor does it increase. It is not defiled, nor is it purified. Why is this? Because these things do not exist and cannot be apprehended. They are nothing at all, as they amount to nothing more than mere conventions. They are not caused by anything at all. They do not dwell anywhere at all and are without dwelling place.”",
+   "T0470": "爾時世尊告長老舍利弗言：「如是，如是！舍利弗！如文殊師利童子所說，真如不減、真如不增，法界不減、法界不增，諸眾生界不減、不增，不染、不淨。」",
+   "T0471": "爾時世尊即告尊者舍利弗言：「舍利弗！如是如是，如文殊尸利菩薩所說。真實際中無增無減，法界眾生界亦無增減，不受煩惱、不受解脫。」"
+  },
+  "w20": {
+   "bo": "དེ་ནས་བཅོམ་ལྡན་འདས་ཀྱིས་དེའི་ཚེ་ཚིགས་སུ་བཅད་པ་འདི་དག་བཀའ་སྩལ་ཏོ། ། འདས་པ་དག་དང་མ་འོངས་དང་། །ད་ལྟར་བྱུང་ཆོས་བརྗོད་པ་ནི། ། དོན་གྱིས་མ་ཡིན་ཐ་སྙད་ཙམ། ། གཅིག་དང་སྣ་ཚོགས་མཚན་ཉིད་མིན། ། མཚན་ཉིད་མེད་པར་གང་རྟོག་པ། ། དེ་དག་ཉིད་ནི་མཚན་ཉིད་འགྱུར། ། མཚན་ཉིད་མེད་ལ་རྟོག་པ་མེད། ། རྟོག་པ་ཉིད་ཀྱང་མཚན་ཉིད་མིན། ། འདུས་མ་བྱས་ལ་གང་རྟོག་དང་། ། མྱ་ངན་འདས་ལ་གང་རྟོག་པ། ། གཉི་ག་བདུད་ཀྱི་ལས་ཡིན་ཞེས། ། དེ་ནི་མཁས་པ་རྣམས་ཀྱིས་བཤད། ། ཕུང་པོ་སྐྱེ་མཆེད་ཁམས་ཀྱི་རྣམས། ། དེ་དག་མིང་གིས་བརྗོད་པ་སྟེ། ། མིང་དང་སྐྱེ་མཆེད་གང་ཡིན་པ། ། དེ་གཉིས་མཚན་ཉིད་གཅིག་ པ་ཡིན། ། ཚུལ་བཞིན་ལ་ནི་གང་རྟོག་པ། ། དེ་ཉིད་ཚུལ་བཞིན་མ་ཡིན་ནོ། ། མཁས་པ་ཅུང་ཟད་མི་རྟོག་སྟེ། ། སྟོང་པ་ཇི་བཞིན་སྤྱོད་ཡུལ་ལོ། ། གང་དག་རྟོག་པ་དེ་དག་གཡོ། ། རྟོག་པ་མེད་པ་གཡོ་བ་མེད། ། རྟོག་པ་རྣམས་ནི་གཡོ་བར་འགྱུར། ། རྟོག་པ་མེད་པ་མྱ་ངན་འདའ། ། གང་གིས་རང་བཞིན་འདི་ཤེས་པ། ། དེ་ནི་ཡེ་ཤེས་ལྡན་ཞེས་བྱ། ། དེ་ཕྱིར་ཟག་པ་རྗེས་སུ་ཐོབ། ། དེ་ནི་རྟོག་མེད་ཡེ་ཤེས་སོ། ། ཡེ་ཤེས་ཀྱིས་ནི་ཡེ་ཤེས་བརྗོད། ། ཡེ་ཤེས་བརྗོད་པ་རྣམས་ཀྱང་གསོག ། ཡེ་ཤེས་འདི་ལྟར་གང་བཟོད་པ། ། དེ་ནི་ཡེ་ཤེས་ལྡན་ཞེས་བྱ། ། གང་གིས་སྟོང་གསུམ་འདི་དག་རྣམས། ། རིན་ཆེན་བཀང་སྟེ་བྱིན་པ་བས། ། གང་གིས་དམ་ཆོས་འདི་འདྲ་ལ། ། བཟོད་པ་དེ་ནི་བཟོད་པ་མཆོག ། བསྐལ་པ་བྱེ་བ་བསམ་ཡས་སུ། ། སྦྱིན་དང་ཚུལ་ཁྲིམས་བཟོད་པ་དང་། ། བརྩོན་འགྲུས་བསམ་གཏན་བསྙེན་པས་ནི། ། མདོ་སྡེ་འདི་དང་མཚུངས་མ་ཡིན། ། ཆོས་འདི་དང་ནི་ཐེག་པ་འདི། །ཡང་དག་རྫོགས་པའི་སངས་རྒྱས་གསུངས། ། མདོ་སྡེ་འདི་ལ་བརྟེན་བྱས་ན། ། ཐམས་ཅད་དེ་བཞིན་གཤེགས་པར་འགྱུར། །",
+   "en": "At that time, the Bhagavān uttered these verses: “We  speak of dharmas Of the past, present, and future. They are actually not so, for these are mere conventions. They do not have the characteristics of being one or many. {1} “What is conceptualized as being without characteristics Will itself become a characteristic. What is without characteristics is nonconceptual; Conceptuality is not a characteristic either. {2} “That which is conceptualized as conditioned And that which is conceptualized as nirvāṇa As the workings of Māra. {3} Are both explained by the wise “All of the aggregates, sensory media, and elements Are formulated by name. The names and the unproduced Are both of a single characteristic. {4} “What is properly conceptualized Is itself not proper. The wise do not conceptualize even a little bit— Their sphere of activity is actually empty. {5} “Those who conceptualize waver about; Those who do not conceptualize are unwavering. Concepts produce wavering; Being without concepts is nirvāṇa. {6} “Those who understand this nature Are known as wisdom bearers. On that account they have attained cessation. That is nonconceptual wisdom. {7} “With wisdom is wisdom proclaimed. Even proclamations of wisdom are vain. Those who have acceptance via such wisdom Are known as wisdom bearers. {8} Of filling the trichiliocosms with jewels as offerings. {9} Superior to the generosity “The acceptance by which one accepts a holy Dharma of this sort Is the supreme acceptance “Practicing, for incalculable millions of eons, Giving, morality, forbearance, Diligent effort, and concentration Is not equal to this sūtra. {10} “This Dharma and this vehicle Were taught by the perfectly complete Buddha. When relying on this sūtra All will become tathāgatas.” {11}",
+   "T0470": "爾時世尊為顯此義，重說偈言：「說過去未來、現在世諸法， 言說非是義，此非相無相。 若相若無相，皆無所分別， 隨分別故得，分別故無相。 若分別有為，則分別涅槃， 彼二皆魔業，黠慧如是知。 陰入界唯名，不生滅無相， 若觀察分別，彼則不觀察。 黠慧不分別，行境界如空， 若分別則取，不分別不取。 分別取則縛，不分別則脫， 若知如是法，彼人名智者。 如是人得盡，名不分別智， 有智故說智，智說二皆空。 若人如是知，彼人名智者。 寶滿三千界，布施所得福， 若人聞此法，其福過於彼。 布施持戒忍，神通無障礙， 億劫常修行，不及聞此經。 若知此法門，正遍知所說， 得聞此經已，一切得如來。」",
+   "T0471": "爾時世尊說是語已，為欲重明真實義故，復以妙偈而說頌曰：「過現未來法，唯語無真實， 彼若於實處，一相無差別。 若無相分別，是即有真相， 無相無分別，分別亦無相。 若不作分別，不了別涅槃， 是二皆魔事，智者應當知。 陰、界、諸入中，我雖名字說， 無生名字者，彼二還一相。 起心正分別，彼即成邪念， 妙智無分別，以有空行故。 分別有思量，無分別無思， 了別即是相，不了得涅槃。 若能如是知，名為大智者， 是故盡智者，得智無分別。 智能說於智，智說還自空， 是中能忍者，是名為大智。 假使滿三千，七寶持用施， 忍信是法者，其福為最上。 假使億劫中，施、戒、忍、精進， 通、辯成就福，不比持是經。 若持是經者，至真等即說， 是經功德力，彼悉當成佛。」"
+  },
+  "w21": {
+   "bo": "ཆོས་ཀྱི་རྣམ་གྲངས་འདི་བཤད་པ་ན་སྲོག་ཆགས་འབུམ་ནི་ཆོས་རྣམས་ལ་ཆོས་ཀྱི་མིག་རྡུལ་དང་བྲལ་ཞིང་དྲི་མ་མེད་པར་རྣམ་པར་དག་གོ། ། དགེ་སློང་ལྔ་བརྒྱ་ནི་ལེན་པ་མེད་པར་ཟག་པ་རྣམས་ལས་སེམས་རྣམ་པར་གྲོལ་ལོ། ། གཟུགས་ན་སྤྱོད་པའི་ལྷའི་བུ་བརྒྱད་ཁྲི་ནི་བླ་ན་མེད་པ་ཡང་དག་པར་རྫོགས་པའི་བྱང་ཆུབ་ཏུ་སེམས་བསྐྱེད་ནས་ དེ་དག་ཐམས་ཅད་བསྐལ་པ་སྐར་མ་ལྟ་བུ་ཞེས་བྱ་བ་ལ་བླ་ན་མེད་པ་ཡང་དག་པར་རྫོགས་པའི་བྱང་ཆུབ་མངོན་པར་རྫོགས་པར་འཚང་རྒྱ་བར་འགྱུར་ཏེ དེ་དག་ཐམས་ཅད་ཀྱང་འདི་ལྟར་དེ་བཞིན་གཤེགས་པ་དགྲ་བཅོམ་པ་ཡང་དག་པར་རྫོགས་པའི་སངས་རྒྱས་མེ་ཏོག་ཅེས་བྱ་བར་མིང་འཐུན་པར་འགྱུར་རོ་ ཞེས་བཅོམ་ལྡན་འདས་ཀྱིས་ལུང་བསྟན་ཏོ། །",
+   "en": "When this Dharma discourse had been explained, one hundred thousand  living beings purified the Dharma eye with regard to dharmas so that it was dustless and stainless. The minds of five hundred monks were liberated from the pollutions without any further clinging. Eighty thousand gods belonging to the form realm generated the mind set on unexcelled, perfectly complete awakening. [The Bhagavān predicted] that they would all realize unexcelled, perfectly complete awakening in the eon called Star-like and that all of them would then bear the same name: the tathāgata, arhat, perfectly complete buddha Flower. The Bhagavān predicted",
+   "T0470": "如來既說此法門已，十千眾生遠塵離垢，於諸法中得法眼淨；五百比丘發阿耨多羅三藐三菩提心。爾時世尊即授五百比丘佛記，作如是言：「汝諸比丘於星喻劫，皆當得成阿耨多羅三藐三菩提，盡同一號，名曰法華如來、正遍知。」",
+   "T0471": "爾時，世尊說是法本修多羅偈時，一萬雜類眾生遠塵離垢，得清淨法眼；五百比丘於無漏法中心得解脫；八萬欲界天子未發心者，皆得發於阿耨多羅三藐三菩提心。世尊爾時即授彼記：「皆於星宿劫中，得成阿耨多羅三藐三菩提，皆同一號名曰法開華如來、至真、等正覺。」"
+  },
+  "w22": {
+   "bo": "བཅོམ་ལྡན་འདས་ཀྱིས་དེ་སྐད་ཅེས་བཀའ་སྩལ་ནས། འཇམ་དཔལ་གཞོན་ནུར་གྱུར་པ་དང་། ཚེ་དང་ལྡན་པ་ཤཱ་རིའི་བུ་དང་། ལྷ་དང་། མི་དང་། ལྷ་མ་ཡིན་དང་། དྲི་ཟར་བཅས་པའི་འཇིག་ རྟེན་ཡི་རངས་ཏེ། བཅོམ་ལྡན་འདས་ཀྱིས་གསུངས་པ་ལ་མངོན་པར་བསྟོད་དོ།། །། འཕགས་པ་འཇམ་དཔལ་གནས་པ་ཞེས་བྱ་བ་ཐེག་པ་ཆེན་པོའི་མདོ་རྫོགས་སོ།། །། རྒྱ་གར་གྱི་མཁན་པོ་སུ་རེན་དྲ་བོ་དྷི་དང་། ཞུ་ཆེན་གྱི་ལོཙྪ་བ་བན་དེ་ཡེ་ཤེས་སྡེས་བསྒྱུར་ཅིང་ཞུས་ཏེ་གཏན་ལ་ཕབ་པ།།",
+   "en": "When the Bhagavān had said this, the youthful Mañjuśrī, the venerable Śāriputra, and the world with its gods, humans, asuras, and gandharvas rejoiced and praised the proclamation of the Bhagavān. This concludes The Noble Mahāyāna Sūtra “The Dwelling Place of Mañjuśrī.” It was translated, edited, and finalized by the Indian master Surendrabodhi and the editor-translator Bandé Yeshé Dé.",
+   "T0470": "世尊說已，文殊師利童子、長老舍利弗、天、人、阿修羅、乾闥婆等，聞佛說已歡喜奉行。",
+   "T0471": "佛說是經已，文殊尸利童子、尊者舍利弗等，五百比丘、天龍八部、諸鬼神等，聞佛所說歡喜奉行。"
+  }
+ }
+}
