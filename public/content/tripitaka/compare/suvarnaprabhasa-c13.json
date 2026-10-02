@@ -1,0 +1,149 @@
+{
+ "slug": "suvarnaprabhasa-c13",
+ "title": "金光明經・善集品（善生王）",
+ "family": "sa",
+ "intro": "梵本〈Susaṃbhava〉＝藏譯第十三章＝曇無讖、合部〈善集品〉＝義淨〈善生王品〉。佛自說本生：轉輪王善集（善生）夢見法師寶冥（寶積），請其說金光明經，聞經隨喜，持如意寶珠雨七寶供養三寶；善集即釋迦，寶冥即阿閦佛。全品是偈。",
+ "units": [
+  {
+   "id": "s13-00",
+   "label": "往昔為轉輪王捨國求法"
+  },
+  {
+   "id": "s13-01",
+   "label": "善集王夢見寶冥・詣僧尋訪"
+  },
+  {
+   "id": "s13-02",
+   "label": "禮請說法・敷座・諸天雲集"
+  },
+  {
+   "id": "s13-03",
+   "label": "寶冥說經・王隨喜雨寶供養"
+  },
+  {
+   "id": "s13-04",
+   "label": "本生結會・聞經隨喜之福"
+  },
+  {
+   "id": "s13-04x",
+   "label": "義淨：大眾願持此經"
+  },
+  {
+   "id": "s13-05",
+   "label": "品尾題"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sa",
+   "lang": "sa",
+   "label": "梵本",
+   "who": "Nobel 校訂本・GRETIL"
+  },
+  {
+   "id": "bo",
+   "lang": "bo",
+   "label": "藏譯",
+   "who": "德格版 Toh 557・84000 翻譯記憶"
+  },
+  {
+   "id": "en",
+   "lang": "en",
+   "label": "84000 英譯",
+   "who": "譯自藏譯・與藏文逐句對齊"
+  },
+  {
+   "id": "T0663",
+   "lang": "lzh",
+   "label": "曇無讖本",
+   "who": "曇無讖譯《金光明經》・五世紀初",
+   "work": "T0663"
+  },
+  {
+   "id": "T0664",
+   "lang": "lzh",
+   "label": "合部本",
+   "who": "寶貴合《合部金光明經》・597 年",
+   "work": "T0664"
+  },
+  {
+   "id": "T0665",
+   "lang": "lzh",
+   "label": "義淨本",
+   "who": "義淨譯《金光明最勝王經》・703 年",
+   "work": "T0665"
+  }
+ ],
+ "works": [
+  "T0663",
+  "T0664",
+  "T0665"
+ ],
+ "anchors": [
+  {
+   "work": "T0663",
+   "node": "金光明經善集品第十二",
+   "uid": "T16n0663_p0348a27"
+  },
+  {
+   "work": "T0664",
+   "node": "善集品第十七",
+   "uid": "T16n0664_p0391b10"
+  },
+  {
+   "work": "T0665",
+   "node": "善生王品第二十一",
+   "uid": "T16n0665_p0444a14"
+  }
+ ],
+ "cells": {
+  "s13-00": {
+   "sa": "// Susaṃbhavaparivartaḥ // sasāgarā tyakta vasuṃdharā tadā yadā babhūva nṛpa cakravartī / catvāri dvīpāni saratnapūrṇaniryāti tā pūrvajineṣu mahyam // Suv_14.1 // na cāsti tadvastu priyaṃ manāpaṃ pūrvaṃ ca mahyaṃ na va tyaktamāsīt / taṃ dharmakāyaṃ parimārgaṇārthaḥ priyajīvitaṃ tyaktamanekakalpān // Suv_14.2 //",
+   "bo": "གང་ཚེ་འཁོར་ལོས་སྒྱུར་བའི་རྒྱལ་པོར་གྱུར། །དེ་ཚེ་རྒྱ་མཚོར་བཅས་པའི་ས་རྣམས་བཏང་། ། གླིང་བཞི་རིན་ཆེན་གང་བར་བཅས་པ་ཡང་། །སྔོན་གྱི་རྒྱལ་བ་དག་ལ་ངས་ཕུལ་ལོ། ། ཆོས་ཀྱི་སྐུ་དེ་ཡོངས་སུ་བཙལ་བའི་ཕྱིར། །གང་སྔོན་ཡིད་དུ་འོང་ཞིང་ཕངས་པ་ཡི། །དངོས་པོ་དེ་དག་ངས་ནི་མ་བཏང་མེད། །བསྐལ་པ་དུ་མར་ཕངས་པའི་སྲོག་ཀྱང་བཏང་། །ཇི་ལྟར་སྔོན་གྱི་བསྐལ་པ་བསམ་ཡས་ན། །",
+   "en": "Chapter 13: Susaṃbhava  “Whenever I was a cakravartin king, I gave away the earth with its oceans. I offered the four continents Filled with jewels to the past jinas. “Because I sought the Dharma body, There was nothing in the past that was pleasant And cherished that I did not give away, And in many eons, I even gave up my cherished life.",
+   "T0663": "爾時如來復為地神，說往昔因緣，而作偈言：「我昔曾為，轉輪聖王，捨四大地， 及以大海；又於是時，以四天下， 滿中珍寶，奉上諸佛。凡所布施， 皆捨所重，不見可愛，而不捨者。 於過去世，無數劫中，求正法故， 常捨身命。",
+   "T0664": "於是，如來復為地神說往因緣而作偈言：「我昔曾為，轉輪聖王，捨四大地、 及以大海。又於是時，以四天下， 滿中珍寶，奉上諸佛。凡所布施， 皆捨所重，不見可愛，而不捨者。 於過去世，無數劫中，求正法故， 常捨身命。",
+   "T0665": "爾時，世尊為諸大眾說王法正論已，復告大眾：「汝等應聽！我今為汝說其往昔奉法因緣。」即於是時，說伽他曰：「我昔曾為轉輪王，捨此大地并大海； 四洲珍寶皆充滿，持以供養諸如來。 我於往昔無量劫，為求清淨真法身； 所愛之物皆悉捨，乃至身命心無悋。"
+  },
+  "s13-01": {
+   "sa": "yatha pūrvakalpeṣu acintiyeṣu ratnaśikhisya sugatasya śāsane / parinirvṛtasya sugatasya tasya susaṃbhavo nāma babhūva rājā // Suv_14.3 // sa cakravartī caturdvīpa īśvaraḥ samudraparyantamahī praśāsyate / jinendraghoṣāya ca rājadhānīya supto babhūvā tada rājakuñjaraḥ // Suv_14.4 // svapnāntare buddhaguṇāñca śrutvā ratnoccayaṃ paśyati dharmabhāṇakam / sthita sūryamadhye va virocamānaṃ prakāśayantaṃ ima sūtrarājam // Suv_14.5 // svapnādvibuddhaśca babhūva rājā pītisphuṭaṃ sarvaśarīramasya / abhiniṣkrarma rājakulāni dṛṣṭu upasaṃkramī śrāvakasaṃghamagram // Suv_14.6 // karoti pūjāṃ jinaśrāvakāṇāṃ ratnoccayaṃ pṛcchati dharmabhāṇakam / kva cāsti bhikṣūriha cāryasaṃghe ratnoccayo nāma guṇānvitaśca // Suv_14.7 // tenāntareṇā ratanoccayo hi anyatra gūhāntara saṃniṣaṇaḥ / vicitraratnaṃ ima sūtrarājaṃ svadhyāyamānaḥ sukha saṃniṣaṇaḥ // Suv_14.8 // deśenti rājasya tadantareṇa ratnoccayaṃ bhikṣu sa dharmabhāṇakam / anyatra gūhāntarasaṃniṣaṇaṃ / taṃ tena raśmīśriyayā jvalantam // Suv_14.9 // eṣo 'tra ratnoccaya dharmabhāṇako dhāreti gambhīrajinasya gocaram / svarṇaprabhāsottamasūtraratnaṃ sūtrendrarājaṃ satataṃ prakāśayet // Suv_14.10 //",
+   "bo": "རིན་ཆེན་གཙུག་ཏོར་ཅན་གྱི་བདེ་བར་གཤེགས། །མྱ་ངན་འདས་པའི་བདེ་བར་གཤེགས་པ་དེའི། །བསྟན་ལ་ལེགས་བྱུང་ཞེས་པའི་རྒྱལ་པོ་བྱུང་། ། དེ་ནི་གླིང་བཞིའི་དབང་བའི་འཁོར་ལོས་སྒྱུར། །རྒྱ་མཚོར་ཐུག་པའི་ས་ལ་རབ་ཏུ་སྟོན། ། རྒྱལ་དབང་གསུང་ཕྱིར་རྒྱལ་པོའི་ཕོ་བྲང་ན། །དེ་ཚེ་རྒྱལ་པོ་དམ་པ་གཉིད་ཀྱིས་ལོག ། རྨི་ལམ་དུ་ནི་སངས་རྒྱས་ཡོན་ཏན་ཐོས། །ཆོས་སྨྲ་རིན་ཆེན་སོག་པ་གཉིད་དཀྱིལ་ན། །རྣམ་པར་ལྷང་ངེར་མདོ་སྡེའི་དབང་པོ་འདི། །རབ་ཏུ་འཆད་ཅིང་འདུག་པ་མཐོང་བར་གྱུར། ། རྒྱལ་པོ་དེ་ནི་གཉིད་ཀྱིས་ལོག་ལས་སད། །དེ་ཡི་ལུས་ཀུན་དགའ་བས་ཁྱབ་པར་གྱུར། ། མགུ་ནས་རྒྱལ་པོའི་ཁབ་ནས་མངོན་བྱུང་སྟེ། །ཉན་ཐོས་དགེ་འདུན་ མཆོག་གི་གནས་སུ་སོང་། ། རྒྱལ་བའི་ཉན་ཐོས་རྣམས་ལ་མཆོད་བྱེད་ཅིང་། །འཕགས་པའི་དགེ་འདུན་འདི་ནི་རིན་ཆེན་སོག །ཡོན་ཏན་ལྡན་པའི་དགེ་སློང་གང་ཡོད་ཅེས། །ཆོས་སྨྲ་རིན་ཆེན་སོག་པ་ཀུན་ཏུ་དྲིས། ། དེ་ཡི་ཚེ་ན་རིན་ཆེན་སོག་པ་ནི། །ཕུག་གཞན་ཞིག་གི་ནང་ན་འདུག་གྱུར་ཏེ། །མདོ་སྡེའི་རྒྱལ་པོ་འདི་ནི་རྣམ་སེམས་ལ། །ཁ་ཏོན་བྱེད་ཅིང་བདེ་བར་རབ་ཏུ་འདུག ། དགེ་སློང་ཆོས་སྨྲ་རིན་ཆེན་སོག་པ་དེ། །ཕུན་སུམ་གཟི་བརྗིད་དཔལ་གྱིས་རབ་འབར་ཞིང་། །ཕུག་གཞན་ཞིག་གི་ནང་ན་འདུག་གྱུར་པ། །དེ་ཡི་ཚེ་ན་རྒྱལ་པོ་དེ་ལ་བསྟན། ། འདི་ན་ཆོས་སྨྲ་རིན་ཆེན་སོག་པ་འདི། །རྒྱལ་པོའི་སྤྱོད་ཡུལ་ཟབ་མོ་འཛིན་པ་སྟེ། །གསེར་འོད་དམ་པ་ཞེས་ནི་བྱ་བ་ཡི། །མདོ་སྡེའི་དབང་པོའི་རྒྱལ་པོ་རྟག་ཏུ་སྟོན། །",
+   "en": "“Many countless eons ago, I was King Susaṃbhava Within the teaching of the sugata Ratnaśikhin, A sugata who had passed into nirvāṇa. “He was a cakravartin who ruled the four continents, And he reigned over the land as far as the oceans. At that time, the excellent king went to sleep In the royal palace for the teaching of the lord of jinas. “In a dream, he heard the qualities of a buddha, And in the middle of his sleep, he clearly saw The dharmabhāṇaka Ratnoccaya Teaching this lord of the sūtras. “That king awoke from his sleep, His entire body filled with joy. He reverently left the royal capital And approached the excellent śrāvaka saṅgha. “He made offerings to the Jina’s śrāvakas, And he questioned this ārya saṅgha About the dharmabhāṇaka Ratnoccaya: ‘Where is Ratnoccaya, the bhikṣu with qualities?’ “At that time, Ratnoccaya Was dwelling in another cave In a state of happiness, contemplating And reciting this king of sūtras. “Just then they showed the king The dharmabhāṇaka Ratnoccaya, Shining with perfect, glorious magnificence And residing in another cave. “There the dharmabhāṇaka Ratnoccaya, Who possessed the profound range of the jinas, Was constantly teaching the lord king of sūtras That is called The Sublime Golden Light.",
+   "T0663": "又過去世，不可議劫， 有佛世尊，名曰寶勝。其佛世尊， 般涅槃後，時有聖王，名曰善集， 於四天下，而得自在，治正之勢， 盡大海際。其王有城，名水音尊， 於其城中，止住治化。夜睡夢中， 聞佛功德，及見比丘，名曰寶冥， 善能宣暢，如來正法，所謂金光， 微妙經典，明如日中，悉能遍照。 是轉輪王，夢是事已，即尋覺寤， 心喜遍身，即出宮殿，至僧坊所， 供養恭敬，諸大聖眾，問諸大德： 『是大眾中，頗有比丘，名曰寶冥， 成就一切，諸功德不？』爾時寶冥， 在一窟中，安坐不動，思惟正念， 讀誦如是，金光明經。時有比丘， 即將是王，至其所止，到寶冥所。 時此寶冥，故在窟中，形貌殊特， 威德熾然。即示王言：『是窟中者， 即是所問，寶冥比丘。能持甚深， 諸佛所行，名金光明，諸經之王。』",
+   "T0664": "又過去世，不可議劫， 有佛世尊，名曰寶勝。其佛世尊， 般涅槃後，時有聖王，名曰善集， 於四天下，而得自在，治正之勢， 盡大海際。其王有城，名水音尊， 於其城中，止住治化。夜睡夢中， 聞佛功德，及見比丘，名曰寶冥， 善能宣暢，如來正法，所謂金光， 微妙經典，明如日中，悉能遍照。 是轉輪王，夢是事已，即尋覺悟， 心喜遍身。即出宮殿，至僧坊所， 供養恭敬，諸大聖眾。問諸大德： 『是大眾中，頗有比丘，名曰寶冥， 成就一切，諸功德不？』爾時寶冥， 在一窟中，安坐不動，思惟、正念、 讀誦如是，金光明經。時有比丘， 即將是王，至其所止，到寶冥所。 時此寶冥，故在窟中，形貌殊特， 威德熾然。即示王言：『是窟中者， 即是所問，寶冥比丘。能持甚深， 諸佛所行，名金光明，諸經之王。』",
+   "T0665": "又於過去難思劫，有正遍知名寶髻； 於彼如來涅槃後，有王出世名善生。 為轉輪王化四洲，盡大海際咸歸伏； 有城名曰妙音聲，時彼輪王於此住。 夜夢聞說佛福智，見有法師名寶積； 處座端嚴如日輪，演說金光微妙典。 爾時彼王從夢覺，生大歡喜充遍身； 至天曉已出王宮，往詣苾芻僧伽處。 恭敬供養聖眾已，即便問彼諸大眾； 頗有法師名寶積，功德成就化眾生。 爾時寶積大法師，在一室中而住止； 正念誦斯微妙典，端然不動身心樂。 時有苾芻引導王，至彼寶積所居處； 見在室中端身坐，光明妙相遍其身。 白王此即是寶積，能持甚深佛行處； 所謂微妙《金光明》，諸經中王最第一。"
+  },
+  "s13-02": {
+   "sa": "vanditva pādau ratanoccayasya susaṃbhavo rāja idaṃ pravīddhi / deśe hi me pūrṇaśaśāṅka cakraṃ svarṇaprabhāsottamasūtraratnam // Suv_14.11 // adhivāsayī so ratanoccayaśca rājñaśca tasyaiva susaṃbhavasya / sarvatrisāhasrikalokadhātau praharṣitāssarvi babhūvu devatāḥ // Suv_14.12 // vasudhāpradeśe parame viśiṣṭe ratnodake gandhajalāmvusikte / puṣpāvakīrṇāṃ dharaṇīṃ sa kṛtvā tatrāsanaṃ prāpya tadā narendraḥ // Suv_14.13 // samalaṃkṛtaṃ rājña tadāsanaṃ ca cchatrairdhvajairghaṇṭasahasranekaiḥ / nānāvicitrairvarapuṣpacandrair abhyokire rājña tadāsanaṃ ca // Suv_14.14 // devāśca nāgāsurakiṃnarāśca yakṣāśca yakṣendramahoragāśca / divyaiśca māndāravapuṣpavarṣair abhyāvakīrṇāśca tadāsanaṃ ca // Suv_14.15 // acintiyānanta sahasrakoṭiyo ye āgatā devabhavāgrakāmāḥ / abhiniṣkramitvā ratanoccayaṃ hi abhyo kiranti sma ca sālapuṣpā // Suv_14.16 // so cāpi ratnoccaya dharmabhāṇakaḥ śubhābhagātraḥ śucivastraprāvṛtaḥ / upasaṃkramitvā ca tadāsanaṃ hi kṛtāñjalībhūtva namasyate ca // Suv_14.17 // devendradevāni ca devatāni māndārapuṣpaṃ ca pravarṣayanti / acintiyā tūryaśatā sahasrā pravādayanti sthita antarīkṣe // Suv_14.18 //",
+   "bo": "རིན་ཆེན་སོག་པའི་རྐང་ལ་ཕྱག་འཚལ་ཏེ། །རྒྱལ་པོ་ལེགས་པར་བྱུང་བས་འདི་སྐད་སྨྲས། །གསེར་འོད་དམ་པ་མདོ་སྡེའི་དབང་པོའི་རྒྱལ། །ཟླ་བ་ཉ་བའི་ཞལ་འདྲ་བཤད་དུ་གསོལ། ། རྒྱལ་པོ་ལེགས་པར་བྱུང་བ་དེ་ཉིད་ལ། །རིན་ཆེན་སོག་པས་ཁས་ནི་བླངས་པས་ན། །སྟོང་གསུམ་པ་ཡི་འཇིག་རྟེན་ཐམས་ཅད་དུ། །ལྷ་རྣམས་ཐམས་ཅད་རབ་ཏུ་དགའ་བར་འགྱུར། ། དེ་ཚེ་མི་ཡི་དབང་པོས་ས་ཕྱོགས་ནི། །གཙང་ཞིང་མཆོག་ཏུ་ཁྱད་པར་འཕགས་པ་དེར། །རིན་ཆེན་ཆུ་དང་སྤོས་ཆུས་ཆག་ཆག་བཏབ། །མེ་ཏོག་སིལ་མ་བཀྲམ་སྟེ་ཁྲི་བཤམས་ནས། ། རྒྱལ་པོས་ཁྲི་དེ་གདུགས་དང་རྒྱལ་མཚན་དང་། །དར་ཡུག་སྟོང་ཕྲག་དུ་མས་ལེགས་པར་བརྒྱན། ། རྒྱལ་པོས་ཁྲི་དེར་ཙན་དན་དམ་པ་དག །རྣམ་པ་སྣ་ཚོགས་དག་ཀྱང་མངོན་པར་གཏོར། ། ལྷ་དང་ཀླུ་དང་ལྷ་མིན་མི་འམ་ཅི། །གནོད་སྦྱིན་དབང་དང་མཁའ་ལྡིང་ལྟོ་འཕྱེ་ཆེས། །ལྷ་ཡི་མེ་ཏོག་མན་དཱ་ར་བའི་ཆར། །ཁྲི་དེ་ལ་ནི་མངོན་པར་རབ་ཏུ་ཕབ། ། ཆོས་འདོད་ལྷ་ནི་བྱེ་བ་ཁྲག་ཁྲིག་སྟོང་། །བསམ་གྱིས་མི་ཁྱབ་གང་དག་ལྷགས་གྱུར་པ། །རིན་ཆེན་སོག་པ་མངོན་པར་བྱུང་བ་ན། །སཱ་ལའི་མེ་ཏོག་དག་གིས་མངོན་པར་འཐོར། ། ཆོས་སྨྲ་རིན་ཆེན་སོག་པ་དེ་ཉིད་ཀྱང་། །ཤིན་ཏུ་ལུས་བཀྲུས་གཙང་མའི་གོས་བགོས་ཏེ། །ཁྲི་དེར་ཉེ་བར་སོང་བར་བྱས་ནས་ནི། །ཐལ་ མོ་སྦྱར་བ་བྱས་ཏེ་ཕྱག་ཀྱང་འཚལ། ། ལྷ་དབང་དང་ནི་ལྷ་དང་ལྷ་མོ་རྣམས། །བར་སྣང་འདུག་ནས་མེ་ཏོག་མན་དཱ་རའི། །ཆར་པ་འབེབས་ཤིང་སིལ་སྙན་བརྒྱ་སྟོང་ཕྲག །བསམ་གྱིས་མི་ཁྱབ་པ་དག་རབ་ཏུ་སྒྲོགས། །",
+   "en": "“King Susaṃbhava bowed down To the feet of Ratnoccaya and said, ‘I pray to you, who has a face like the full moon, to teach The Lord King of Sūtras, the Sublime Golden Light.’ “When Ratnoccaya promised that king, Susaṃbhava, that he would do so, All the devas throughout all the worlds In the trichiliocosm became overjoyed. “At that time, the lord of men sprinkled Precious water and scented water In a pure and superior place, Scattered flower petals, and arranged a throne. “The king adorned that throne with many thousands Of parasols, banners, and rolls of silk. The king scattered upon that throne Various kinds of excellent sandalwood. “Devas, nāgas, asuras, kinnaras, Yakṣa lords, yakṣas, and mahoragas Rained down upon that throne A shower of divine coral tree flowers. “Countless thousands of quintillions of devas Who longed for the Dharma arrived, And they scattered sal flowers When Ratnoccaya was brought forth. “The dharmabhāṇaka Ratnoccaya Washed his body and wore clean robes, And when he approached that throne With his palms together, he bowed to it. “The deva lords, the devas and devīs Residing in the sky, sent down a rain Of coral tree flowers and played Countless thousands of musical instruments.",
+   "T0663": "時善集王，即尋禮敬，寶冥比丘， 作如是言：『面如滿月，威德熾然， 惟願為我，敷演宣說，是金光明， 諸經之王。』時寶冥尊，即受王請， 許為宣說，是金光明。三千大千， 世界諸天，知當說法，悉生歡喜， 於淨微妙，鮮絜之處，種種珍寶， 廁填其地，上妙香水，持用灑之； 散諸好華，遍滿其處。王於是時， 自敷法座，懸繒幡蓋，寶飾交絡， 種種微妙，殊特末香，悉以奉散， 大法高座。一切諸天、龍及鬼神、 摩睺羅伽、緊那羅等，即雨天上， 曼陀羅華，遍散法座，滿其處所； 不可思議，百千萬億，那由他等， 無量諸天，一時俱來，集說法所。 是時寶冥，尋從窟出，諸天即時， 以娑羅華，供養奉散，寶冥比丘。 是時寶冥，淨洗身體，著淨妙衣， 至法座所，合掌敬禮，是法高座； 一切天王，及諸天人，雨曼陀羅、 大曼陀羅、摩訶曼殊、眾妙寶華， 無量百千，種種妓樂，於虛空中， 不鼓自鳴。",
+   "T0664": "時善集王，即尋禮敬，寶冥比丘， 作如是言：『面如滿月，威德照然。 唯願為我，敷演宣暢，是金光明， 諸經之王。』時寶冥尊，即受王請， 許為宣說，是金光明。三千大千， 世界諸天，知當說法，悉生歡喜。 於淨微妙，鮮潔之處，種種珍寶， 廁填其地；上妙香水，持用灑之； 散諸好華，遍滿其處。王於是時， 自敷法座，懸繒幡蓋、寶飾、挍絡、 種種微妙，殊特末香，悉以奉散。 大法高座，一切諸天、龍及鬼神、 摩睺羅伽、緊那羅等，即雨天上， 曼陀羅華，遍散法座，滿其處所。 不可思議，百千萬億，那由他等， 無量諸天，一時俱來，集說法所。 是時寶冥，尋從窟出，諸天即時， 以娑羅華，供養奉散，寶冥比丘。 是時寶冥，淨洗身體，著淨妙衣， 至法座所，合掌敬禮，是法高座。 一切天王、及諸天人，雨曼陀羅、 大曼陀華。無量百千，種種伎樂， 於虛空中，不鼓自鳴。",
+   "T0665": "時王即便禮寶積，恭敬合掌而致請； 唯願滿月面端嚴，為說金光微妙法。 寶積法師受王請，許為說此《金光明》； 周遍三千世界中，諸天大眾咸歡喜。 王於廣博清淨處，奇妙珍寶而嚴飾； 上妙香水灑遊塵，種種雜花皆散布。 即於勝處敷高座，懸繒幡蓋以莊嚴； 種種粖香及塗香，香氣芬馥皆周遍。 天龍修羅緊那羅，莫呼洛伽及藥叉； 諸天悉雨曼陀花，咸來供養彼高座。 復有千萬億諸天，樂聞正法俱來集； 法師初從本座起，咸悉供養以天花。 是時寶積大法師，淨洗浴已著鮮服； 詣彼大眾法座所，合掌虔心而禮敬。 天主天眾及天女，悉皆共散曼陀花； 百千天樂難思議，住在空中出妙響。"
+  },
+  "s13-03": {
+   "sa": "abhīruhitvā ca sa saṃniṣaṇo ratnoccayo bhikṣu sa dharmabhāṇakaḥ / anusmaritvā daśasū diśāsu acintiyā buddhasahasrakoṭyaḥ // Suv_14.19 // sarveṣa sattvāna kṛpāṃja nitya kāruṇyacittaṃ samupādayet saḥ / rājñaśca tasyāpi susaṃbhavasya prakāśitaṃ sūtramidaṃ tadantare // Suv_14.20 // kṛtāñjalībhūtva sthihitva rājā yaḥ kāyavācā manumoditaḥ saḥ / saddharmavegāśrupramuktanetraḥ pratisphaṭastasya babhūva kāyaḥ // Suv_14.21 // imasya sūtrasya ca pūjanārthaṃ susaṃbhavo rāja tadantareṇa gṛhṇitva cintāmaṇirājaratnaṃ sarvārthahetoḥ praṇidhiṃ cakāra // Suv_14.22 // varṣantu adyā iha jambudvipe sasaptaratnāṇi ca bhūṣaṇāni ye ceha sattvāḥ khalu jambudvipe sukhitāśca bheṣyanti mahādhanāśca // Suv_14.23 // caturṣu dvīpeṣu pravarṣitāni saptāni ratnāni tadantareṇa / keyūrahārā varakuṇḍalāni tathānnapāne vasanāni caiva // Suv_14.24 // dṛṣṭvā ca taṃ rāja susaṃbhavaśca ratnapravarṣaṃ khalu jambudvīpe / catvāri dvīpāni saratnapūrṇā niryātayī ratnaśikhisya śāsane // Suv_14.25 //",
+   "bo": "རིན་ཆེན་སོག་པ་དགེ་སློང་ཆོས་སྨྲ་དེས། །ཕྱོགས་བཅུ་དག་གི་སངས་རྒྱས་བྱེ་བ་སྟོང་། །བསམ་གྱིས་མི་ཁྱབ་པ་དག་དྲན་བྱས་ནས། །དེ་ནི་མངོན་པར་འཛེགས་ཏེ་འདུག་པར་གྱུར། ། སེམས་ཅན་ཀུན་ལ་སྙིང་བརྩེ་བསྐྱེད་ནས་ནི། །སྙིང་རྗེའི་སེམས་ཀྱང་ཡང་དག་བསྐྱེད་བྱས་ཏེ། །རྒྱལ་པོ་ལེགས་པར་བྱུང་བ་དེ་ལ་ནི། །དེ་ཡི་ཚེ་ན་མདོ་སྡེ་འདི་བསྟན་ཏེ། ། རྒྱལ་པོས་ཐལ་མོ་སྦྱར་བྱས་བཏུད་ནས་སུ། །ཚིག་གཅིག་གིས་ནི་རྗེས་སུ་ཡི་རང་སྟེ། ། ཆོས་ཀྱི་ཤུགས་ཀྱིས་མིག་ནས་མཆི་མ་ཕྱུང་། །དེ་ཡི་ལུས་ནི་དགའ་བས་ཁྱབ་པར་གྱུར། །མདོ་སྡེ་འདི་ལ་མཆོད་པ་བྱ་བའི་ཕྱིར། །དེ་ཚེ་རྒྱལ་པོ་ལེགས་པར་བྱུང་བ་ཡིས། ། ཡིད་བཞིན་ནོར་བུ་རིན་ཆེན་རྒྱལ་པོ་བླངས། །སེམས་ཅན་རྣམས་ཕྱིར་སྨོན་ལམ་བཏབ་པ་ནི། །རིན་ཆེན་བདུན་དང་ལྡན་པའི་རྒྱན་རྣམས་དང་། །གང་ཡང་འཛམ་བུའི་གླིང་འདིར་སེམས་ཅན་རྣམས། །བདེ་བར་འགྱུར་བའི་ནོར་ནི་ཆེན་པོ་ཡི། ། ཆར་པ་དེ་རིང་འཛམ་བུའི་གླིང་དུ་ཕོབ། །དེ་ཡི་ཚེ་ན་རིན་ཆེན་སྣ་བདུན་དང་། །དཔུང་རྒྱན་དང་ནི་དོ་ཤལ་རྣ་ཆ་མཆོག །དེ་བཞིན་ཟས་དང་སྐོམ་དང་གོས་རྣམས་ཀྱང་། །གླིང་བཞི་དག་ཏུ་རབ་ཏུ་འབབ་པར་གྱུར། ། རྒྱལ་པོ་ལེགས་པར་བྱུང་བས་འཛམ་གླིང་དུ། །རིན་ཆེན་ཆར་པ་འབབ་པ་དེ་མཐོང་ནས། །གླིང་བཞི་རིན་ཆེན་གང་བར་བཅས་པ་ནི། །རིན་ཆེན་གཙུག་ཏོར་ཅན་གྱི་བསྟན་ལ་ཕུལ། །",
+   "en": "“The dharmabhāṇaka bhikṣu Ratnoccaya, Remembering countless thousands of millions Of buddhas in the ten directions, Mounted the throne and sat upon it. “Thinking of all beings with kindness And developing a compassionate mind, At that time he taught this sūtra To that king, Susaṃbhava. “The king bowed with palms together And rejoiced in each single word. Through the Dharma’s power he shed tears, And his body was permeated with joy. “In order to make an offering to this sūtra, At that time King Susaṃbhava held up A king of precious wish-fulfilling jewels And made a prayer for the benefit of all beings:  “ ‘May there rain down on this Jambudvīpa Jewelry that contains the seven jewels And whatever great wealth that will bring Happiness to the beings in this Jambudvīpa.’ “Just then a rain of the seven jewels, Of armlets, necklaces, and excellent earrings, And similarly, food, drink, and clothing Rained down upon the four continents. “When King Susaṃbhava saw That precious rain fall on Jambudvīpa, He offered the four continents that were Filled with jewels to the teaching of Ratnaśikhin.",
+   "T0663": "寶冥比丘，能說法者， 尋上高座，結跏趺坐，即念十方， 不可思議，無量千億，諸佛世尊， 於諸眾生，興大悲心；及善集王， 所得王領，盡一日月，所照之處。 時說法者，即尋為王，敷揚宣說， 是妙經典。是時大王，為聞法故， 於比丘前，合掌而立，聞於正法， 讚言善哉，其心悲悼，涕淚交流； 尋復踊悅，心意熙怡，為欲供養， 此經典故，爾時即提，如意珠王， 為諸眾生，發大誓願：『願於今日， 此閻浮提，悉雨無量，種種珍異， 瑰琦七寶，及妙瓔珞，以是因緣， 悉令無量，一切眾生，皆受快樂。』 即於爾時，尋雨七寶，及諸寶飾， 天冠耳璫、種種瓔珞、甘饌寶座， 悉皆充滿，遍四天下。時王善集， 即持如是，滿四天下，無量七寶， 於寶勝佛，遺法之中，以用布施， 供養三寶。",
+   "T0664": "寶冥比丘， 能說法者，尋上高座，結加趺坐。 即念十方，不可思議，無量千億， 諸佛世尊。於諸眾生，興大悲心， 及善集王，所得王領，盡一日、月， 所照之處。時說法者，即尋為王， 敷暢宣說，是妙經典。「是時大王，為聞法故，於比丘前， 合掌而立。聞於正法，讚言善哉， 其心悲悼，涕淚交流，尋復踊悅， 心意熙怡。為欲供養，此經典故， 爾時即捉，如意珠玉，為諸眾生， 發大誓願：『願於今日，此閻浮提， 悉雨無量，種種珍異，瓌琦七寶、 及妙瓔珞。以是因緣，悉令無量， 一切眾生，皆受快樂。』即於爾時， 尋雨七寶、及諸寶飾、天冠、耳璫、 種種瓔珞、甘饌、寶座，悉皆充滿， 遍四天下。時善集王，即持如是， 滿四天下，無量七寶，於寶勝佛， 遺法之中，以用布施，供養三寶。",
+   "T0665": "爾時寶積大法師，即昇高座加趺坐； 念彼十方諸剎土，百千萬億大慈尊。 遍及一切苦眾生，皆起平等慈悲念； 為彼請主善生故，演說微妙《金光明》。 王既得聞如是法，合掌一心唱隨喜； 聞法希有淚交流，身心大喜皆充遍。 于時國主善生王，為欲供養此經故； 手持如意末尼寶，發願咸為諸眾生。 今可於斯贍部洲，普雨七寶瓔珞具； 所有匱乏資財者，皆得隨心受安樂。 即便遍雨於七寶，悉皆充足四洲中； 瓔珞嚴身隨所須，衣服飲食皆無乏。 爾時國主善生王，見此四洲雨珍寶； 咸持供養寶髻佛，所有遺教苾芻僧。"
+  },
+  "s13-04": {
+   "sa": "ahaṃ ca saḥ śākyamunistathāgataḥ susaṃbhavo nāma babhūva rājā / yeneha me tyakta vasuṃdharā tadā catvāri dvīpāni saratnapūrṇā // Suv_14.26 // akṣobhya āsīt sa tathāgataśca ratnoccayo bhikṣu sa dharmabhāṇakaḥ / yenāsya rājasya susaṃbhavasya prakāśitaṃ sūtramidaṃ tadāntare // Suv_14.27 // yanme śrutaṃ sūtramidaṃ tadantare ekāgravācāmanumoditaṃ ca / tenaiva mahyaṃ kuśalena karmaṇā śrotānumodena śrutena tena // Suv_14.28 // suvarṇavarṇaṃ śatapuṇyalakṣaṇaṃ labheyi kāyaṃ priyadarśanaṃ sadā / nayanābhirāmaṃ janakāntadarśanaṃ ratiṃkaraṃ devasahasrakoṭinām // Suv_14.29 // navottaraṃ notisahasrakoṭyā kalpānabhūvaṃ nṛpacakravartī / aneka kalpāna sahasrakoṭyo trailokyarājatva mayānubhūtam // Suv_14.30 // acintiyā kalpa babhūva śakraḥ tathaiva brahmendra praśāntamānasaḥ / ārāgitā me balāprameyā yeṣāṃ pramāṇaṃ na kadāci vidyate // Suv_14.31 // tathā pramāṇaṃ bahu puṇyaskandhaṃ yanme śrutaṃ sūtranumoditaṃ ca / yathābhiprāyeṇa mi bodhi prāptā saddharmakāyaśca mayā hi labdha // Suv_14.32 //",
+   "bo": "དེ་བཞིན་གཤེགས་པ་ཤཱཀྱ་ཐུབ་པ་ང་། །རྒྱལ་པོ་ལེགས་པར་བྱུང་ཞེས་བྱ་བར་གྱུར། །གླིང་བཞི་དག་ནི་རིན་ཆེན་གང་བཅས་ཀྱི། །ས་འདི་དེ་ཚེ་ང་ཡིས་ཡོངས་སུ་བཏང་། ། གང་གིས་རྒྱལ་པོ་ལེགས་པར་བྱུང་དེ་ལ། །དེ་ཚེ་མདོ་སྡེ་འདི་ནི་རབ་བསྟན་པ། །རིན་ཆེན་སོག་པ་ཆོས་སྨྲའི་དགེ་སློང་དེ། །དེ་བཞིན་གཤེགས་པ་མི་འཁྲུགས་དེར་གྱུར་ཏོ། །ངས་གང་དེ་ཚེ་མདོ་སྡེ་འདི་ཐོས་ཤིང་། །ཚིག་གཅིག་གིས་ནི་རྗེས་སུ་ཡི་རང་སྟེ། །ང་ནི་ དགེ་བའི་ལས་ནི་དེ་ཉིད་དང་། ། ཆོས་ཉན་པ་དང་རྗེས་སུ་ཡི་རང་བས། །གསེར་གྱི་མདོག་དང་བསོད་ནམས་བརྒྱ་ཡི་མཚན། །བལྟ་ན་སྡུག་ཅིང་མིག་ཏུ་མངོན་མཛེས་ལ། །ལྷ་སྟོང་བྱེ་བ་རབ་ཏུ་དགའ་བྱེད་པ། །སྐྱེ་བོས་མཐོང་ན་དགའ་ལུས་རྟག་ཏུ་ཐོབ། ། བསྐལ་པ་དག་ནི་བྱེ་བ་བརྒྱ་སྟོང་ཕྲག །དགུ་བཅུ་རྩ་དགུར་འཁོར་ལོས་སྒྱུར་རྒྱལ་གྱུར། །བསྐལ་པ་བརྒྱ་སྟོང་དུ་མ་མང་པོར་ཡང་། །ངས་ནི་ཁམས་ཀྱི་རྒྱལ་པོ་མྱོང་བར་གྱུར། ། བསྐལ་པ་བསམ་གྱིས་མི་ཁྱབ་བརྒྱ་བྱིན་གྱུར། །ཚངས་པའི་དབང་པོ་ཡིད་བཞིན་དེ་བཞིན་ནོ། །གང་དག་ཚད་ནི་ནམ་ཡང་ཡོད་མིན་པའི། །སྟོབས་བཅུ་དཔག་མེད་ངས་ནི་བརྙེས་པར་བྱས། ། ངས་གང་མདོ་ཐོས་རྗེས་སུ་ཡི་རང་བ། །བསོད་ནམས་ཕུང་པོ་དེ་ལྟར་ཚད་མེད་མང་། །བསམ་པ་ཇི་བཞིན་ངས་ནི་བྱང་ཆུབ་ཐོབ། །ཆོས་སྐུ་དམ་པ་ཡང་ནི་ངས་ཐོབ་བོ། །",
+   "en": "“I, the Tathāgata Śākyamuni, was The king named Susaṃbhava, And at that time I offered up this earth With its four continents filled with jewels. “The dharmabhāṇaka bhikṣu Ratnoccaya, Who was the one at that time who taught This sūtra to King Susaṃbhava, Became the Tathāgata Akṣobhya. “Because of the good karma from Listening at that time to this sūtra And rejoicing in each single word, Because of rejoicing and hearing the Dharma,  “I always have a body that is golden in color, Has the signs of a hundred merits, Is beautiful to behold and a pleasure for the eyes, And when seen gladdens ten billion devas and gladdens beings. “For ninety-nine trillion eons I became a cakravartin king, And for many hundreds of thousands of eons I have experienced being the king of a realm. “For countless eons I have been Śakras, and likewise I have been lords of Brahmās with peaceful minds, And I have attained the unquantifiable ten strengths, The extent of which can never be known. “Through the immeasurable accumulation of abundant merit From my hearing and rejoicing in this sūtra, I attained the enlightenment that I had aspired to, And I also attained the sublime Dharma body.”",
+   "T0663": "爾時為王，說法比丘， 於今現在，阿閦佛是；時善集王， 聽受法者，今則我身，釋迦文是。 我於爾時，捨此大地，滿四天下， 珍寶布施，得聞如是，金光明經； 聞是經已，一稱善哉，以此善根， 業因緣故，身得金色，百福莊嚴， 常為無量，百千萬億，眾生等類， 之所樂見；既得見已，無有厭足。 過去九十，九億千劫，常得作於， 轉輪聖王；亦於無量，百千劫中， 常得王領，諸小國土；不可思議， 劫中常作，釋提桓因，及淨梵王； 復得值遇，十力世尊，其數無量， 不可稱計；所得功德，無量無邊， 皆由聞經，及稱善哉。如我所願， 成就菩提，正法之身，我今已得。」",
+   "T0664": "爾時為王，說法比丘，於今現在， 阿閦佛是；時善集王，聽受法者， 今則我身，釋迦文是。我於爾時， 捨此大地，滿四天下，珍寶布施， 得聞如是，金光明經。聞是經已， 一稱善哉，以此善根、業因緣故， 身得金色，百福莊嚴。常為無量， 百千萬億，眾生等類，之所樂見， 既得見已，無有厭足。過去九十， 九億千劫，常得作於，轉輪聖王； 亦於無量，百千劫中，常得王領， 諸小國王；不可思議，劫中常作， 釋提桓因、及淨梵王；復得值遇， 十力世尊，其數無量，不可稱計。 所得功德，無量無邊，皆由聞經， 及稱善哉。如我所願，成就菩提， 正法之身，我今已得。」",
+   "T0665": "應知過去善生王，即我釋迦牟尼是； 為於昔時捨大地，及諸珍寶滿四洲。 昔時寶積大法師，為彼善生說妙法； 因彼開演經王故，東方現成不動佛。 以我曾聽此經王，合掌一言稱隨喜； 及施七寶諸功德，獲此最勝金剛身。 金光百福相莊嚴，所有見者皆歡喜； 一切有情無不愛，俱胝天眾亦同然。 過去曾經九十九，俱胝億劫作輪王； 亦於小國為人王，復經無量百千劫。 於無量劫為帝釋，亦復曾為大梵王； 供養十力大慈尊，彼之數量難窮盡。 我昔聞經隨喜善，所有福聚量難知； 由斯福故證菩提，獲得法身真妙智。」"
+  },
+  "s13-04x": {
+   "T0665": "爾時大眾聞是說已，歎未曾有，皆願奉持《金光明經》流通不絕。"
+  },
+  "s13-05": {
+   "sa": "iti śrīsuvarṇaprabhāsottamasūtrendrarāje susaṃbhavaparivarto nāma caturdaśamaḥ //",
+   "bo": "གསེར་འོད་དམ་པ་མདོ་སྡེའི་དབང་པོའི་རྒྱལ་པོ་ལས་ལེགས་པར་བྱུང་བའི་ལེའུ་ཞེས་བྱ་བ་སྟེ་བཅུ་གསུམ་པའོ།། །།",
+   "en": "This concludes “Susaṃbhava,” the thirteenth chapter of “The Lord King of Sūtras, the Sublime Golden Light.”"
+  }
+ }
+}
