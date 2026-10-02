@@ -1,0 +1,216 @@
+{
+ "slug": "abhidharmakosa-c01-1",
+ "title": "俱舍論・分別界品（1.1–1.13）",
+ "family": "sa",
+ "intro": "《阿毘達磨俱舍論》第一品〈分別界品〉頌 1.1–1.13，一頌一節（頌號依 Pradhan 本，GRETIL 標 VAkK_品.頌）。五欄：梵本頌、梵本自釋（bhāṣya）、玄奘《俱舍論本頌》、玄奘《俱舍論》、真諦《俱舍釋論》；論本欄自該頌（含引出該頌的提問句）起、到下一頌前的釋文止。玄奘《俱舍論》常把數頌合為一個「頌曰」再一併解釋，區塊中按頌切開，釋文因此都落在區塊末頌；真諦本逐句引偈、隨句解釋，與梵本自釋的節奏相近。稱友 Yaśomitra《明了義釋》Sphuṭārthā 是自釋的疏，不收。",
+ "units": [
+  {
+   "id": "v001",
+   "label": "1.1　諸一切種諸冥滅"
+  },
+  {
+   "id": "v002",
+   "label": "1.2　淨慧隨行名對法"
+  },
+  {
+   "id": "v003",
+   "label": "1.3　若離擇法定無餘"
+  },
+  {
+   "id": "v004",
+   "label": "1.4　有漏無漏法"
+  },
+  {
+   "id": "v005",
+   "label": "1.5　無漏謂道諦"
+  },
+  {
+   "id": "v006",
+   "label": "1.6　擇滅謂離繫"
+  },
+  {
+   "id": "v007",
+   "label": "1.7　又諸有為法"
+  },
+  {
+   "id": "v008",
+   "label": "1.8　有漏名取蘊"
+  },
+  {
+   "id": "v009",
+   "label": "1.9　色者唯五根"
+  },
+  {
+   "id": "v010",
+   "label": "1.10　色二或二十"
+  },
+  {
+   "id": "v011",
+   "label": "1.11　亂心無心等"
+  },
+  {
+   "id": "v012",
+   "label": "1.12　大種謂四界"
+  },
+  {
+   "id": "v013",
+   "label": "1.13　地謂顯形色"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sa",
+   "lang": "sa",
+   "label": "梵本頌",
+   "who": "《阿毘達磨俱舍論本頌》Abhidharmakośakārikā・GRETIL（參 Pradhan 1975、Gokhale 1946）"
+  },
+  {
+   "id": "sa-bhasya",
+   "lang": "sa",
+   "label": "梵本自釋",
+   "who": "《阿毘達磨俱舍論》Abhidharmakośabhāṣya・GRETIL（Pradhan 1975，Hackett／Lusthaus 校）"
+  },
+  {
+   "id": "T1560",
+   "lang": "lzh",
+   "label": "玄奘頌本",
+   "who": "玄奘譯《阿毘達磨俱舍論本頌》・唐",
+   "work": "T1560"
+  },
+  {
+   "id": "T1558",
+   "lang": "lzh",
+   "label": "玄奘論本",
+   "who": "玄奘譯《阿毘達磨俱舍論》・唐 651–654 年",
+   "work": "T1558"
+  },
+  {
+   "id": "T1559",
+   "lang": "lzh",
+   "label": "真諦釋論",
+   "who": "真諦譯《阿毘達磨俱舍釋論》・陳 563–567 年",
+   "work": "T1559"
+  }
+ ],
+ "works": [
+  "T1558",
+  "T1559",
+  "T1560"
+ ],
+ "anchors": [
+  {
+   "work": "T1560",
+   "range": [
+    "T29n1560_p0310c28",
+    "T29n1560_p0310c28"
+   ]
+  },
+  {
+   "work": "T1558",
+   "range": [
+    "T29n1558_p0001a09",
+    "T29n1558_p0003c01"
+   ]
+  },
+  {
+   "work": "T1559",
+   "range": [
+    "T29n1559_p0161c08",
+    "T29n1559_p0164a16"
+   ]
+  }
+ ],
+ "cells": {
+  "v001": {
+   "sa": "Abhidharmakośabhāṣyam prathamaṃ kośasthānam om namo buddhāya yaḥ sarvathāsarvahatāndhakāraḥ saṃsārapaṅkājjagadujjahāra / tasmai namaskṛtya yathārthaśāstre śāstraṃ pravakṣyāmyabhidharmakośam // VAkK_1.1 //",
+   "sa-bhasya": "prathamaṃ kośasthānam [001|03-001|07] oṃ namo buddhāya yaḥ sarvathāsarvahatāndhakāraḥ saṃsārapaṅkājjagadujjahāra / tasmai namaskṛtya yathārthaśāstre śāstraṃ pravakṣyāmyabhidharmakośam // VAkK_1.1 // [001|08] śāstraṃ praṇetukāmaḥ svasya śāsturmāhātmyajñāpanārthaṃ guṇākhyānapūrvakaṃ tasmai namaskāramārabhate ya iti / [001|09-001|10] buddhaṃ bhagavantamadhikṛtyāha hatamasyāndhakāramanena veti hatāndhakāraḥ / [001|10] sarveṇa prakāreṇa sarvasmin hatāndhakāraḥ sarvathāsarvahatāndhakāraḥ / [001|10-001|11] ajñānaṃ hi bhūtārthadarśanapratibandhādhakāram / [001|11-001|12] tacca bhagavato buddhasya pratipakṣalābhenātyantaṃ sarvathā sarvatra jñeye punaranutpattidharmatvāddhatam / [001|12] ato 'sau sarvathāsarvahatāndhakāraḥ / [001|13] pratyaikabuddhaśrāvakā api kāmaṃ sarvatra hatāndhakārāḥ / kliṣṭasaṃmohātyantavigamāt / [001|14] na tu sarvathā / [001|14-001|15] tatha hyeṣāṃ buddhadharmeṣvativiprakṛṣṭadeśakāleṣu artheṣu cānantaprabhedeṣu bhavatyevākliṣṭamajñānam / [001|15-001|16] ityātmahitapratipattisaṃpadā saṃstutya punastameva bhagavantaṃ parahitapratipattisaṃpadā saṃstauti saṃsārapaṅkājjagadujjahāreti / [001|17] saṃsāro hi jagadāsaṅgasthānatvāt duruttaratvācca paṅkabhūtaḥ / [001|17-001|20] tatrāvamagnaṃ jagadatrāṇamanukampamāno bhagavān saddharmadeśanāhastapradānairyathābhavyamabhyuddhṛtavān iti ya evamātmaparahitapratipattisaṃpadā yuktastasmai namaskṛtyeti śirasā praṇipatya / [001|20] yathārthamaviparītaṃ śāstīti yathārthaśāstā / [001|20-001|21] anena parahitapratipattyupāyamasyāviṣkaroti / [001|21-001|22] yathābhūtaśāsanācchāstā bhavanntasau saṃsārapaṅkājjagadujjahāra na tvṛddhivarapradānaprabhāveṇeti / [001|22-002|01] tasmai namaskṛtya kiṃ kariṣyāmī tyāha śāstraṃ pravakṣyāmi / [002|01] śiṣyaśāsanācchāstram / [002|01-002|02] katamacchāstramityāha abhidharmakośam",
+   "T1560": "諸一切種諸冥滅，拔眾生出生死泥， 敬禮如是如理師，對法藏論我當說。",
+   "T1558": "諸一切種諸冥滅，拔眾生出生死泥， 敬禮如是如理師，對法藏論我當說。論曰：今欲造論，為顯自師其體尊高超諸聖眾，故先讚德方申敬禮。諸言所表謂佛世尊，此能破闇故稱冥滅。言一切種諸冥滅者，謂滅諸境一切品冥。以諸無知能覆實義及障真見，故說為冥。唯佛世尊得永對治，於一切境一切種冥，證不生法故稱為滅。聲聞獨覺雖滅諸冥，以染無知畢竟 斷，故非一切種。所以者何？由於佛法極遠時處及諸義類無邊差別，不染無知猶未斷故。已讚世尊自利德滿，次當讚佛利他德圓。拔眾生出生死泥者，由彼生死是諸眾生沈溺處故，難可出故，所以譬泥。眾生於中淪沒無救，世尊哀愍隨授所應，正法教手拔濟令出。已讚佛德，次申敬禮。敬禮如是如理師者，稽首接足故稱敬禮。諸有具前自他利德，故云如是。如實無倒教授誡勗，名如理師。如理師言顯利他德，能方便說如理正教，從生死泥拔眾生出，不由威力與願神通。禮如理師欲何所作？對法藏論我當說者，教誡學徒故稱為論。其論者何？謂對法藏。",
+   "T1559": "一切種智滅諸冥，拔出眾生生死泥， 頂禮大師如理教，對法俱舍我當說。釋曰：若人欲正造論，當令他知大師不共功德，故說眾德為先，後頂禮大師。此偈但依佛世尊說。偈曰：一切種智滅諸暝。釋曰：滅一切暝，由一切種智。於一切法無明者，能障見真實義，故稱為暝。此無明於佛世尊，由得究竟通對治故，一切種於一切法永不生為法故，故稱為滅。獨覺及聲聞，於一切法雖除無明，由有染污無明極不生故，不由一切種。何以故？諸餘聖人，於如來不共法及於餘境，最久遠時處無邊差別，有無染污無明。顯自利行究竟。讚歎佛已，次以利他行圓滿，讚歎世尊。偈曰：拔出眾生生死泥。釋曰：生死是世間沈著處故，難可度故，故以譬泥。眾生於中沈著無救接者，唯佛世尊欲憐愍度脫，授說正法手，應理拔濟是人，與自他利益行相應。偈曰：頂禮大師如理教。釋曰：頭面接足名頂禮。立教不虛稱大師。無倒稱如理。得善離惡言稱教。說此如理教，為利他方便。由如理教，從生死泥拔濟眾生，不由通慧施恩威德等。頂禮如理教師已，欲何所作？偈曰：對法俱舍我當說。釋曰：此法通名滅濟教。別名云何？阿毘達磨俱舍。"
+  },
+  "v002": {
+   "sa": "prajñāmalā sānucarābhidharmaḥ tatprāptaye yāpi ca yacca śāstram / tasyārthato 'smin samanupraveśāt sa cā śrayo 'syetyabhidharmakośam // VAkK_1.2 //",
+   "sa-bhasya": "[002|02] ko 'yamabhidharmo nāma / [002|03] prajñā 'malā sānucarā 'bhidharmaḥ (1-2a) [002|04] tatra prajñā dharmapravicayaḥ/ amaleti anāsravā / sānucareti saparivārā / [002|04-002|05] evamanāsravaḥ pañcaskandhako 'bhidharma ityuktaṃ bhavati / [002|05] eṣa tāvat pāramārthiko 'bhidharmaḥ / [002|06] sāṃketikastu [002|07] tatprāptaye yāpi ca yacca śāstram / (1-2b) [002|08-002|09] yāpi ca śrutacintābhāvanāmayī sāsravā prajñā upapattipratilambhikā ca sānucarā / [002|09-002|10] yacca śāstramasyāḥ prāptyarthamanāsravāyāḥ prajñāyāḥ tadapi tatsaṃbhārabhāvādabhidharma ityucyate / [002|10] nirvacanaṃ tu svalakṣaṇadhāraṇād dharmaḥ / [002|10-002|11] tadayaṃ paramārthadharmaṃ vā nirvāṇaṃ dharmalakṣaṇaṃ vā pratyabhimukho dharma ityabhidharmaḥ / [002|12] ukto 'bhidharmaḥ / idaṃ tu śāstraṃ kathamabhidharmakośam / [002|13-002|14] tasyārthato 'smin samanupraveśāt sa cāśrayo syetyabhidharmakośam (1-2c-2d) // VAkK_1.2 // [002|15-002|16] sa hi śāstrasaṃjñako 'bhidharma etasminnarthato yathāpradhānamantarbhūta ityetacchāstraṃ tasya kośasthānīyaṃ bhavati / [002|16] athavā so 'bhidharma etasyāśrayabhūtaḥ śāstrasya / [002|17] tato hyetannirākṛṣṭam / ataḥ sa evāsyābhidharmaḥ kośa ityetacchāstramabhidharvarmakośam / [002|18-002|19] kimarthaṃ punarabhidharmopadeśaḥ kena cāyaṃ prathamata upadiṣṭo yaṭa ācāryo 'bhidharmakośaṃ vaktumādriyata iti //",
+   "T1560": "淨慧隨行名對法，及能得此諸慧論， 攝彼勝義依彼故，此立對法俱舍名。",
+   "T1558": "何謂對法？頌曰：淨慧隨行名對法，及能得此諸慧論。論曰：慧謂擇法，淨謂無漏，淨慧眷屬名曰隨行。如是總說無漏五蘊名為對法，此則勝義阿毘達磨。若說世俗阿毘達磨，即能得此諸慧及論。慧謂得此有漏修慧、思聞生得慧及隨行。論謂傳生無漏慧教。此諸慧論是彼資糧，故亦得名阿毘達磨。釋此名者，能持自相故名為法。若勝義法唯是涅槃，若法相法通四聖諦，此能對向或能對觀，故稱對法。已釋對法。何故此論名對法藏？頌曰：攝彼勝義依彼故，此立對法俱舍名。論曰：由彼對法論中勝義入此攝故，此得藏名。或此依彼、從彼引生，是彼所藏，故亦名藏。是故此論名對法藏。何因說彼阿毘達磨？",
+   "T1559": "何法名阿毘達磨？偈曰：淨智助伴名對法。釋曰：智謂擇法，淨謂無垢，即無流智助伴，謂因緣資糧。若爾則說無流五陰名阿毘達磨，此即真實阿毘達磨。若說假名阿毘達磨。偈曰：能得此法諸智論。釋曰：即是有流思慧聞慧生得慧及助伴論，謂能傳生無流智，是無流智資糧故，亦名阿毘達磨。因何義立此名？能持自體相，故稱達磨。或一切法中真實法涅槃為相，故稱達磨。此智對諸法，於法現前故，稱阿毘達磨。此論云何名阿毘達磨俱舍？偈曰：由義對法入此攝。釋曰：彼文句名阿毘達磨，由隨勝義入此論攝，是故此論於彼得稱為藏。復次偈曰：論依對法名俱舍。釋曰：阿毘達磨是此論依止。何以故？從彼法中引生此論故。彼於此論亦受藏名，以是義故此論名為阿毘達磨俱舍。"
+  },
+  "v003": {
+   "sa": "dharmāṇāṃ pravicayamantareṇa nāsti kleśānāṃ yata upaśāntaye 'bhyupāyaḥ / kleśaiśca bhramati bhavārṇave 'tra lokastaddhetorata uditaḥ kilaiṣa śāstrā // VAkK_1.3 //",
+   "sa-bhasya": "[002|19] āha// [002|20-002|23] dharmāṇāṃ pravicayamantareṇa nāsti kleśānāṃ yata upaśāntaye 'bhyupāyaḥ / kleśaiśca bhramati bhavārṇave 'tra lokastaddhetorata uditaḥ kilaiṣa śāstrā // VAkK_1.3 // [002|24] yato na vinā dharmapravicayenāsti kleśopaśamābhyupāyaḥ / [002|24-003|01] kleśāśca lokaṃ bhramayanti saṃsāramahārṇeve 'sminan / [003|01-003|02] atastaddhetostasya dharmapravicayasyārthe śāstrā kila buddhenābhidharma uktaḥ / [003|02] nahi vinā 'bhidharmopadeśena śiṣyaḥ śakto dharmān pravicetumiti / [003|03-003|04] sa tu prakīrṇa ukto bhagavatā bhadantakātyāyanīputra-prabhṛtibhiḥ piṇḍīkṛtya sthapitobhadanta dharmatrāto dānavargīyakaraṇavadityāhurvaibhāṣikāḥ /",
+   "T1560": "若離擇法定無餘，能滅諸惑勝方便， 由惑世間漂有海，因此傳佛說對法。",
+   "T1558": "誰復先說阿毘達磨，而今造論恭敬解釋？頌曰：若離擇法定無餘，能滅諸惑勝方便， 由惑世間漂有海，因此傳佛說對法。論曰：若離擇法，無勝方便能滅諸惑。諸惑能令世間漂轉生死大海，因此傳佛說彼對法，欲令世間得擇法故。離說對法，弟子不能於諸法相如理簡擇。然佛世尊處處散說阿毘達磨，大德迦多衍尼子等諸大聲聞結集安置。猶如大德法救所集無常品等鄔拕南頌，毘婆沙師傳說如此。",
+   "T1559": "復次此法其用云何？何人先說此法，而法師恭敬欲解說之？偈曰：離簡擇法更不有，為寂靜惑別方便，世間由惑轉有海，為此傳佛說對法。釋曰：若離擇法覺分，無別方便能除滅諸惑，諸惑能輪轉世間於生死海。由此正因，欲令弟子得簡擇法，故大師佛世尊先說阿毘達磨。若離此正諸說，弟子不能如理簡擇真法故。佛世尊處處散說此法，大德迦旃延子等諸弟子撰集安置。猶如大德達磨多羅多撰集優陀那、伽他部類，聞毘婆沙師傳說如此。何者諸法是所簡擇？為令他簡擇彼法，佛世尊說阿毘達磨。"
+  },
+  "v004": {
+   "sa": "sāsravānāsravā dharmāḥ saṃskṛtā mārgavarjitāḥ / sāsravāḥ āsravāsteṣu yasmātsamanuśerate // VAkK_1.4 //",
+   "sa-bhasya": "[003|05] katame punaste dharmā yeṣāṃ pravicayārthamabhidharmopadeśa ityāha [003|06] sāsravā 'nāsravā dharmāḥ (1-4a) [003|07] eṣa sarvadharmāṇāṃ samāsanirddeśaḥ / [003|07-003|08] tatra katame sāsravā dharmā ityāha [003|08-003|09] saṃskṛtā mārgavarjitāḥ / sāsravāḥ (1-4b-4c1) [003|10] mārgasatyaṃ varjayitvā 'nye saṃskṛtā dharmāḥ sāsravāḥ / kiṃ kāraṇam / [003|11] āsravāsteṣu yasmāt samanuśerate (1-4c2-4d) // VAkK_1.4 // [003|12-003|13] kāmaṃ nirodhamārgasatyālambanā api āsravā upajāyante na tinuśerate tatreti na tayoḥ sāsravatvaprasañgaḥ / [003|13-003|14] yathā 'tra nānuśerate tat paścādanuśayanirdeśa eva jñāpayiṣyāmaḥ / [003|14] uktāḥ sāsravāḥ / [003|15] anasravāḥ katame /",
+   "T1560": "有漏無漏法，除道餘有為， 於彼漏隨增，故說名有漏。",
+   "T1558": "何法名為彼所簡擇，因此傳佛說對法耶？頌曰：有漏無漏法，除道餘有為， 於彼漏隨增，故說名有漏。",
+   "T1559": "偈曰：有流無流法。釋曰：略說一切法，謂有流無流。此中何者有流？偈曰：有為除聖道有流。釋曰：除道聖諦，所餘有為法說名有流。何以故？偈曰：於中流由隨增眠故。釋曰：若有如此義，諸流緣滅道二諦為境起，於中不眠無隨增故，是故於中不可立有流。為反質難是不眠義，後分別惑品中當廣說。"
+  },
+  "v005": {
+   "sa": "anāsravā mārgasatyaṃ trividhaṃ cāpyasaṃskṛtam / ākāśaṃ dvau nirodhau ca tatrākāśamanāvṛtiḥ // VAkK_1.5 //",
+   "sa-bhasya": "[003|16] anāsravā mārgasatyaṃ trividhaṃ cāpyasaṃskṛtam / (1-5a-5b) [003|17] katamattri vidham / [003|18] ākāśaṃ dvau nirodhau ca (1-5c) [003|19] katamau dvau / pratisaṃkhyānirodho 'pratisaṃkhyānirodhaśca / [003|19-003|20] ityetadākāśādi trividhamasaṃskṛtaṃ mārgasatyaṃ cānāsravā dharmāḥ / [003|20] kiṃ kāraṇam / nahi teṣvāsravā anuśerata iti / [003|21] yadetat trividhamasaṃskṛtamuddiṣṭam [003|22] tatrākāśamanāvṛtiḥ (1-5d) // VAkK_1.5 // [003|23] anāvaraṇasvabhāvamākāśaṃ yatra rūpasya gatiḥ //",
+   "T1560": "無漏謂道諦，及三種無為， 謂虛空二滅，此中空無礙。",
+   "T1558": "無漏謂道諦，及三種無為， 謂虛空二滅，此中空無礙。",
+   "T1559": "說有流法已，何者無流法？偈曰：無流法聖道，及三種無為。釋曰：何者三無為？偈曰：虛空及二滅。釋曰：何者二滅？擇滅、非擇滅。如此空等三無為及聖道，說為無流法。何以故？於中諸流不能眠故。略說三無為中何者為空？偈曰：此中空無礙。釋曰：空以無障無礙為性，故色於中行。"
+  },
+  "v006": {
+   "sa": "pratisaṃkhyānirodho yo visaṃyogaḥ pṛthak pṛthak / utpādātyantavighno 'nyo nirodho 'pratisaṃkhyayā // VAkK_1.6 //",
+   "sa-bhasya": "[003|24] pratisaṃkhyānirodho yo visaṃyogaḥ (1-6a-6b1) [004|01] yaḥ sāsravairdharmairvisaṃyogaḥ sa pratisaṃkhyānirodhaḥ / [004|01-004|02] duḥkhādīnāmāryasatyānāṃ pratisaṃkhyānaṃ pratisaṃkhyā prajñāviśeṣastena prāpyo nirodhaḥ / [004|02] pratisaṃkhyānirodhaḥ / [004|02-004|03] madhyapadalopāt gorathavat / [004|04] kiṃ punareka eva sarveṣāṃ sāsravāṇāṃ dharmāṇāṃ pratisaṃkhyānirodhaḥ / netyāha / [004|05] kiṃ tarhi / [004|06] pṛthak pṛthak / (1-6b2) [004|07] yāvanti hi saṃyogadravyāṇi tāvanti visaṃyogadravyāṇi / [004|07-004|08] anyathā hi duḥkhadarśanaheyakleśanirodhasākṣātk karaṇāt sarvakleśanirodhasākṣātkriyā prasajyeta / [004|08-004|09] sati caivaṃ śeṣapratipakṣabhāvanāvaiyarthyaṃ syāt / [004|09-004|10] yattarhyuktam \"asabhāgonirodha\" ityasya ko 'rthaḥ / [004|10-004|11] nāsya kaścit sabhāgaheturasti nāsau kasyacidityayamasya vākyasyārtho na tu nāsya kaśicat sabhāgo 'stīti / [004|11] uktaḥ pratisaṃkhyānirodhaḥ // [004|12] utpādātyantavighno 'nyo nirodho 'pratisaṃkhyayā (1-6c-6d) // VAkK_1.6 // [004|13-004|14] anāgatānāṃ dharmāṇāmutpādasyātyantaṃ vighnabhūto visaṃyogād yo 'nyo nirodhaḥ so 'pratisaṃkhyānirodhaḥ / [004|14] na hyasau pratisaṃkhyayā labhyate / kiṃ tarhi / pratyayavaikalyāt / [004|14-004|16] yathaikarūpavyāsaktacakṣurmanaso yāni rūpāṇi śabdagandharasaspraṣṭavyāni cātyayante tadālambanaiḥ pañcabhirvijñānakāyairna śakyaṃ punarutpattum / [004|16-004|17] na hi te satyā atītaṃ viṣayamālambayi tulmiti / [004|17] ataḥ sa teṣāmapratisaṃkhyānirodhaḥ pratyayavaikalyāt prāpyate / [004|18] catuṣkoṭikaṃ cātra bhavati / santi te dharmā yeṣāṃ pratisaṃkhyānirodha eva labhyate / [004|19] tadyathā atitapratyutpannotpattidharmāṇāṃ sāsravāṇām / [004|19-004|20] santi yeṣāmapratisaṃkhyānirodha eva / [004|20] tadyathā 'nutpattidharmāṇāmanāsravasaṃskṛtānām / santi te yesāmubhayam / [004|21] tadyathā sāsravāṇāmanutpasttidharmāṇām / santi yeṣāṃ nobhayam / [004|21-004|22] tadyathā atītapratyutpannotpattidharmāṇāmaṇāsravāṇāmiti / [004|22] uktaṃ trividhamasaṃskṛtam // [004|23] yattūktaṃ \"saṃskṛtā mārgavarjitāḥ / [004|23-004|24] sāsravā\" iti katame te saṃskṛtāḥ /",
+   "T1560": "擇滅謂離繫，隨繫事各別， 畢竟礙當生，別得非擇滅。",
+   "T1558": "擇滅謂離繫，隨繫事各別， 畢竟礙當生，別得非擇滅。論曰：說一切法略有二種，謂有漏、無漏。有漏法云何？謂除道諦，餘有為法。所以者何？諸漏於中等隨增故。緣滅道諦，諸漏雖生而不隨增，故非有漏。不隨增義，隨眠品中自當顯說。已辯有漏。無漏云何？謂道聖諦及三無為。何等為三？虛空、二滅。二滅者何？擇、非擇滅。此虛空等三種無為及道聖諦，名無漏法。所以者何？諸漏於中不隨增故。於略所說三無為中，虛空但以無礙為性，由無障故色於中行。擇滅即以離繫為性，諸有漏法遠離繫縛證得解脫，名為擇滅。擇謂簡擇，即慧差別，各別簡擇四聖諦故。擇力所得滅名為擇滅，如牛所駕車名曰牛車，略去中言故作是說。一切有漏法同一擇滅耶？不爾。云何？隨繫事別。謂隨繫事量，離繫事亦爾。若不爾者，於證見苦所斷煩惱滅時，應證一切所斷諸煩惱滅。若如是者，修餘對治則為無用。依何義說滅無同類？依滅自無同類因義亦不與他，故作是說，非無同類。已說擇滅。永礙當生得非擇滅，謂能永礙未來法生。得滅異前，名非擇滅。得不因擇，但由闕緣。如眼與意專一色時，餘色聲香味觸等謝。緣彼境界五識身等住未來世畢竟不生，由彼不能緣過去境，緣不具故得非擇滅。於法得滅應作四句。或於諸法唯得擇滅，謂諸有漏過現生法。或於諸法唯非擇滅，謂不生法無漏有為。或於諸法俱得二滅，謂彼不生諸有漏法。或於諸法不得二滅，謂諸無漏過現生法。如是已說三種無為。前說除道，餘有為法是名有漏。",
+   "T1559": "偈曰：擇滅謂永離。釋曰：與有流法永相離說名擇滅。各數簡擇苦等聖諦名擇，即智勝因。此所得己利名為擇滅。具足應言擇所得滅，以略說故但稱擇滅，如車與牛相應名為牛車。一切有流為一擇滅、為不一？不一。云何？偈曰：各各對諸結。釋曰：如結數量，擇滅亦爾。若不爾，由證見苦所斷惑擇滅，則應一時俱證一切惑擇滅，若爾修餘對治道則空無果。佛經言：擇滅無同類。此言何義？擇滅無同類因，亦非他同類因。此是經義，非無與其同類。說擇滅已。偈曰：恒遮欲生生，別有非擇滅。釋曰：能永遮未來諸法生，異於擇滅有別滅，說名非擇滅，不由簡擇得故。云何得？因緣不具故。譬如有人，意識及眼根，緣一色塵起，是時餘色聲香味觸等悉有即謝，五識聚不能緣彼為境界更生。何以故？五識無有功能緣過去塵為境，是故識等有非擇滅，由因緣不具故。得依二滅立四句。有諸法唯有擇滅，謂過去現在定生為法皆是有流。有諸法唯有非擇滅，謂不生為法無流有為。有諸法具有二滅，謂有流定不生為法。有諸法無有二滅，謂過去現在定生為法皆是無流。"
+  },
+  "v007": {
+   "sa": "te punaḥ saṃskṛtā dharmā rūpādiskandhapañcakam / sa evādhvā kathāvastu saniḥsārāḥ savastukāḥ // VAkK_1.7 //",
+   "sa-bhasya": "[004|25] te punaḥ saṃskṛtā dhārmā rūpādiskandhapañcakam / (1-7a-7b) [004|26] rūpaskandho vedanāskandhaḥ saṃskāraskandho vijñānaskandhaścetyete saṃskṛtā dharmāḥ / [004|27] sametya saṃbhūya pratyayaiḥ kṛtāḥ iti saṃskṛtāḥ / nahyekapratyayajanitaṃ kiñcidastīti / [004|27-005|01] tajjātīyatvādanāgateṣvavirodho dugdhendhanavat / [005|02] ta evādhvā kathāvastu saniḥsārāḥ savastukāḥ (1-7c-7d) // VAkK_1.7 // [005|03] ta eva saṃskṛtā gatagacchadgamiṣyadbhāvādadhvānaḥ adyante 'nitayatyeti vā / [005|03-005|04] kathā vāvāyam tasyā vastu nāma / [005|04] sārthakavastugrahaṇāt tu saṃskṛntaṃ kathāvastūcyate / [005|04-005|05] anyathā hi urakaraṇagrantho virudhyeta / [005|05] \"kathāvastūnyaṣṭādaśabhirdhatubhiḥ saṃgṛhītāni /\" [005|05-005|06] niḥsaraṇaṃ niḥsāraḥ sarvasya saṃskṛtasya nirvāṇam / [005|06] tadeṣāmastīti saniḥsārāḥ / [005|06-005|07] sahetukatvāt savastukāḥ / [005|07] hetuvacanaḥ kila vastuśabda iti vaibhāṣicāḥ / [005|07-005|08] ityete saṃskṛtadharmauaryāyāḥ / [005|08] ta eva puyaḥ saṃskṛtā dharamāḥ /",
+   "T1560": "又諸有為法，謂色等五蘊， 亦世路言依，有離有事等。",
+   "T1558": "何謂有為？頌曰：又諸有為法，謂色等五蘊， 亦世路言依，有離有事等。論曰：色等五蘊，謂初色蘊乃至識蘊。如是五法具攝有為，眾緣聚集共所作故。無有少法一緣所生，是彼類故。未來無妨，如乳如薪。此有為法亦名世路，已行正行當行性故，或為無常所吞食故。或名言依，言謂語言，此所依者即名俱義。如是言依具攝一切有為諸法。若不爾者，應違《品類足論》所說。彼說言依十八界攝。或名有離，離謂永離，即是涅槃，一切有為有彼離故。或名有事，以有因故，事是因義。毘婆沙師傳說如此。",
+   "T1559": "說三無為已。前說有為法，除聖道名有流。何者是有為？偈曰：又諸有為法，謂色等五陰。釋曰：色陰、受陰、想陰、行陰、識陰，此五陰攝一切有為。已至聚集因緣所作，故名有為。何以故？無有法無緣及一緣所生故、是彼種類故。於未來無妨，譬如獨陀。偈曰：說世路言依，有離及有類。釋曰：是諸有為法，有已正當行，故名世路。復次無常所食故。言謂方言。是言所應義名言依，由執有義言故。佛經說有為法名言依。若不爾，則違《分別道理 論》。彼論云：言依入十八界攝，永出名離，所謂涅槃。一切有為，涅槃永出離故。有為法有離，涅槃無離故。有為法名有離，有因故名有類。類以因義。毘婆沙師作此說：如是等是有為別名。"
+  },
+  "v008": {
+   "sa": "ye sāsravā upādānaskandhāste saraṇā api / duḥkhaṃ samudayo loko dṛṣṭisthānaṃ bhavaśca te // VAkK_1.8 //",
+   "sa-bhasya": "[005|09] ye sāsravā upādānaskandhāste (1-8a-8b1) [005|10] ataḥ kiṃ diddhaṃ / [005|10-005|11] ya upādānaskandhāḥ skandhā api te syuḥ eva nopādānaskandhāḥ / [005|11] anāsravāḥ saṃskārā iti tatra upādānāni kleśāḥ / [005|11-005|12] tatsaṃbhūtatvādupādānaskandhāḥ // [005|12] truṇatupāgnivat / taddhidheyatvādvā rājapurūpavat / [005|12-005|13] upādānāni vā tebhyaḥ saṃbhavantīti upādānaskandhāḥ puṣpaphalavṛkṣavat / [005|13-005|14] ta eva sāsravā dharmā ucyante / [005|15] saraṇā api / (1-8b2) [005|16] raṇsā hi kleśāḥ / ātmapāravyāvādhanāt / stadanuśayitatvāt saraṇāḥ / sāsravavat / punaḥ [005|17] duḥkhaṃ samudayo loko dṛṣṭisthānaṃ bhavaśca te (1-8c-8d) // VAkK_1.8 // [005|18] āryāṇāṃ pratikūlatvādduḥkham / samudetyasmād duḥkhamiti samudayaḥ / [005|18-005|19] lakṣyata iti lokaḥ / [005|19] dṛṣṭirasmiṃstiṣṭhatyanuśayanāditi dṛṣṭisthānam / bhavatīti bhavaḥ [005|20] ityete sāsravāṇasaṃ dharmāṇāmānvarthaparyāyāḥ [005|21] pañca rūpādayaḥ skandhā ityuktam / tatra",
+   "T1560": "有漏名取蘊，亦說為有諍， 及苦集世間，見處三有等。",
+   "T1558": "如是等類是有為法差別眾名，於此所說有為法中。頌曰：有漏名取蘊，亦說為有諍， 及苦集世間，見處三有等。論曰：此何所立？謂立取蘊亦名為蘊。或有唯蘊而非取蘊，謂無漏行。煩惱名取，蘊從取生故名取蘊，如草穅火。或蘊屬取故名取蘊，如帝王臣。或蘊生取故名取蘊，如花果樹。此有漏法亦名有諍，煩惱名諍，觸動善品故、損害自他故、諍隨增故，名為有諍。猶如有漏亦名為苦，違聖心故。亦名為集，能招苦故。亦名世間，可毀壞故、有對治故。亦名見處，見住其中隨增眠故。亦名三有，有因有依三有攝故。如是等類是有漏法。隨義別名，如上所言。色等五蘊名有為法。",
+   "T1559": "復次是有為法，偈曰：有流名取陰。釋曰：此何所顯？是有取可說名陰有。但陰非取，謂無流有為，此中以惑為取，陰從取生故名取陰，譬如草木糠火。復次隨逐取故，譬如王人。復次諸取從彼生故名取陰，譬如花樹果樹。是有流諸法。偈曰：或說有鬪爭。釋曰：諸惑名鬪爭，能動諸善法，及損害自他。故鬪爭所隨眠故，故說有鬪爭。譬如有流。復次偈曰：苦集諦世間。釋曰：違聖人意故名苦。苦從諸見生故名集。破壞故名世間，有對治故。偈曰：見處及三有。釋曰：諸見依中住，由隨順增長故，故是見處。但有令有故名有。如此說有流法，如義別名已。前已說色等五陰。"
+  },
+  "v009": {
+   "sa": "rūpaṃ pañcendriyāṇyarthāḥ pañcāvijñaptireva ca / tadvijñānāśrayā rūpaprasādāścakṣurādayaḥ // VAkK_1.9 //",
+   "sa-bhasya": "[005|22] rūpaṃ pañcendriyāṇyarthāḥ pañcāvijñaptireva ca / (1-9a-9b) [005|23] pañcendriyāṇi cakṣuḥśtrotragrhāṇajihvākāyendariyā ṇa / [005|23-005|24] pañcārthāsteṣāmevacakṣurādīnāmindriyāṇāṃ yathāsvaṃ ye pañca viṣayāḥ rūpaśabdagandharasaspraṣṭavyākhyāḥ / [005|25] avijñaptiśceti / etāvān rūpaskandhaḥ [005|26] tatra ya ete pañca rūpādayo 'rthā uktāḥ / [005|27] tadvijñānāśrayā rūpaprasādāścakṣurādayaḥ (1-9c-9d) // VAkK_1.9 // [006|01-006|02] rūpaśabdagandharasaspraṣṭavyavijñānānāmāśrayabhūtā ye pañca rūpātmakāḥ prasādāste yathākramaṃ cakṣuḥśrotraghrāṇajihvākāyā veditavyāḥ / [006|02-006|03] yathoktaṃ bhagavatā \"cakṣurbhikṣo ādhyātmikamāyatanaṃ catvāri mahābhūtānyupādāya\" rūpa prasāda iti vistaraḥ / [006|03-006|04] yānyetāni cakṣurādīnyuktani tadvijñānāśrayā rūpaprasādāścakṣurādayaḥ / [006|04-006|05] cakṣurvijñānādyāśrayā ityarthaḥ / [006|05] evaṃ kṛtvā prakaraṇagraṇtho 'pyanuvṛtto bhavati / \"cakṣuḥ katamat / [006|05-006|06] cakṣurvijñānāśrayo rūpaprasāda\" iti vistaraḥ / [006|06] nirddiṣṭāni pañcendriyāṇi / [006|07] arthāḥ pañcā nirddeśyāḥ / tatra tāvat]",
+   "T1560": "色者唯五根，五境及無表， 彼識依淨色，名眼等五根。",
+   "T1558": "色蘊者何？頌曰：色者唯五根，五境及無表。論曰：言五根者，所謂眼、耳、鼻、舌、身根。言五境者，即是眼等五根境界，所謂色、聲、香、味、所觸。及無表者，謂無表色。唯依此量立色蘊名。此中先應說五根相。頌曰：彼識依淨色，名眼等五根。論曰：彼謂前說色等五境，識即色、聲、香、味、觸識。彼識所依五種淨色，如其次第，應知即是眼等五根。如世尊說：苾芻當知，眼謂內處，四大所造淨色為性。如是廣說。或復彼者，謂前所說眼等五根，識即眼、耳、鼻、舌、身識。彼識所依五種淨色，名眼等根，是眼等識所依止義。如是便順《品類足論》。如彼論說：云何眼根？眼識所依淨色為性。如是廣說。已說五根。",
+   "T1559": "此中偈曰：色陰謂五根，五塵及無教。釋曰：五根謂眼耳鼻舌身；五塵是眼等五根境，謂色、聲、香、味、觸；及無教，如此量名色陰。此中是前說色等五塵。偈曰：此識依淨色，說名眼等根。釋曰：色聲香味觸，識所依止五種淨色類，次第應知是眼耳鼻舌身根。如佛世尊言：比丘！眼是內入，合四大成，是淨色性類，如此廣說。復次前已說眼等五根，此識依淨色說名眼等根。眼根等識依止，其義如此。若立此義，則順《分別道理論》。彼論云：何者為眼根？謂眼識依止清淨色。說五根已，次應說五塵。"
+  },
+  "v010": {
+   "sa": "rūpaṃ dvidhā viṃśatidhā śabdastvaṣṭavidhaḥ rasaḥ / ṣoḍhā caturvidho gandhaḥ spṛśyamekādaśātmakam // VAkK_1.10 //",
+   "sa-bhasya": "[006|08] rūpaṃ dvidhā [006|09] varṇaḥ saṃsthānaṃ ca / tatra varṇaścaturvidho nīlādiḥ / tadbhedā anye / [006|09-006|10] samsthānamaṣṭavidhaṃ dīrghadi visātāntam / [006|10] tadeva rūpāyatanaṃ punarucyate / [006|11] vimśatidhā [006|12-006|13] tadyathā nīlaṃ pītaṃ lohitamavadātaṃ dīrghaṃ hrasvaṃ vṛttaṃ parimaṇḍalaṃ unnatamavanataṃ sātaṃ visātaṃ abhraṃ dhūmo rajo mahikā cchāyā ātapaḥ ālokaḥ andhakāramiti / [006|13-006|14] kecinnabhaścaikavarṇamiti ekaviṃśatiṃ saṃpaṭhanti / [006|14] tatra sātaṃ samasthānam / visātaṃ viṣama sthānaml mahikā nīhāraḥ / ātapaḥ sūryaprabhā / [006|14-006|15] ālokaḥ candratārakāgnyoṣadhimaṇīnaṃ prabhā / [006|16] chāyā yatra rūpāṇāṃ darśanam / viparyayādandhakāram / [006|16-006|17] śeṣaṃ sugamatvānna vipañcitam / [006|17] asti rūpāyatanaṃ varṇato vidyate na saṃsthānataḥ [006|17-006|18] nīlapītalohitavadātacchāyātapālokāndhakārākhyam / [006|18] asti saṃsthānato na varṇataḥ / [006|18-006|19] ghādīnāṃ pradeṣaḥ kāyavijñaptisvabhāvaḥ / [006|19] astyubhayathā / pariśiṣṭaṃ rūpāyatanam / [006|19-006|20] ātapālokāveva varṇato vidyete ityapare / [006|20] \"dṛśyate hi nīlādīnaṃ dīrghādipariccheda\" iti / [006|21] kathaṃ punarekaṃ dravyamubhayathā vidyate / astyubhayasya tatra prajñānāt / [006|21-006|22] jñānārtho hyeṣa vidirna sattārthaḥ / [006|22] kāyavijñaptāvapi tarhi prasaṅgaḥ / uktaṃ rūpāyatanaṃ // [006|23] śabdastvaṣṭavidhaḥ / [006|24] upāttānupāttamahābhūtahetukaḥ sattvāsattvākhyaśceti caturvidhaḥ / [006|24-006|25] punarmanojñāmanojñabhedādaṣṭavidho bhavati / [006|25-006|26] tatropāttamahābhūtahetuko yathā hastavākchabdaḥ / [006|26] anupāttamahābhutahetuko yathā vāyuvanaspatinadīśabdaḥ / [006|26-006|27] sattvākhyo vāgvijñaptiṣabdaḥ / [006|27] asattvākhyo 'nyaḥ [006|27-006|28] upāttānupāttamahābhūtahetuko 'pyasti śabda ityapare / [006|28] tadyathā hastamṛdaṅgasaṃyogaja iti / [006|28-007|01] sa tu yathaikau varṇaparamāṇurna bhūtacatuṣkadvayamupādāyeṣyate tathā naivaiṣṭavya iti / [007|01] uktaḥ śabdaḥ // [007|02] rasaḥ / [007|03] ṣoḍha [007|04] madhurāmlalavaṇakaṭukatittakaṣāyabhedāt / [007|05] caturvidho gandhaḥ [007|06] sugandhadurgandhayoḥ samaviṣamagandhatvāt / trividhastu śāstre / [007|06-007|07] \"sugandho durgandhaḥ samagandha\" iti / [007|08] spṛśyamekādaśātmadkam // VAkK_1.10 // [007|09] spraṣṭavyamekādaśadravyasvabhāvam / [007|09-007|10] catvāri mahābhūtāni ślakṣṇatvaṃ karkaśatvaṃ gurutvaṃ laghutvaṃ śītaṃ jighatsā pipāsā ceti / [007|10] tatra bhūtāni paścādvakṣyāmḥ / [007|10-007|11] ślakṣṇatvaṃ mṛdutā / [007|11] karkaśatvaṃ paruṣatā / gurutvaṃ yena bhāvāstulyante / laghutvaṃ viparyayāt / [007|11-007|12] śītamuṣṇābhilāṣakṛt / [007|12] jighatsā bhojanābhilāṣakṛt / kāraṇe kāryopacārāt / yathā [007|13-007|14] \"buddhānāṃ sukha utpādaḥ sukhā dharmasya deśanā / sukhā saṅghasya sāmagrī samagrāṇāṃ tapaḥ sukhaṃ\" // iti / [007|15] tatra rūpadhātau jighatsāpipāse na staḥ / śeṣamasti [007|15-007|16] yadyapi tatra vastrāṇyekaśo na tulyante sañcitāni punastulyante / [007|16] śītamupaghātakaṃ nāsti / [007|16-007|17] anugrāhakaṃ kilāsti / [007|18-007|19] yadetadbahuvidhaṃ rūpamuktaṃ tatra kadācidekena dravyeṇa cakṣurvijñānamutpadyate yadā tatprakāravyavacchedo bhavati / [007|19] kadācid bahubhiryadā na vyavacchedaḥ / [007|19-007|20] tadyathā senāvyūhamanekavarṇasaṃsthānaṃ maṇisamūhaṃ ca dūrāt paśyataḥ / [007|20] evaṃ śrotrādivijñānaṃ veditavyaṃ / [007|21] kāyavijñānaṃ tu paraṃ pañcabhiḥ spraṣṭavyairutpadyata ityeke / [007|21-007|22] caturbhirmahābhūtairekena ca ślakṣṇatvādinā / [007|22] sarvairekādaśabhirityapare / [007|22-007|23] nanu caivaṃ samastālambanatvāt sāmānyaviṣayāḥ pañca vijñānakāyāḥ prāpnuvanti na svalakṣaṇaviṣayāḥ / [007|23-007|24] āyatanasvalakṣaṇaṃ pratyete svalakṣaṇaviṣayā iṣyante na dravyasvalakṣaṇamityadoṣaḥ / [007|25] idaṃ vicāryate / [007|25-007|26] kāyajihvendriyayoryugapad viṣayaprāptau satyāṃ katarad vijñānaṃ pūrvamutpadyate / [007|26] yasya viṣayaḥ paṭīyān / [007|26-007|27] samaprāpte tu viṣaye jihvāvijñānaṃ pūrvamutpadyate / [007|27] bhoktukāmatāvarjitatvātsasntateḥ / [007|27-007|28] uktāḥ pañācendriyārthāḥ yathā ca teṣāṃ grahaṇaṃ /",
+   "T1560": "色二或二十，聲唯有八種， 味六香四種，觸十一為性。",
+   "T1558": "次說五境。頌曰：色二或二十，聲唯有八種， 味六香四種，觸十一為性。論曰：言色二者，一顯、二形。顯色有四：青、黃、赤、白，餘顯是此四色差別。形色有八，謂長為初不正為後。或二十者，即此色處復說二十，謂青、黃、赤、白、長、短、方、圓、高、下、正、不正、雲、煙、塵、霧、影、光、明、闇。有餘師說，空一顯色，第二十一。此中正者謂形平等，形不平等名為不正，地水氣騰說之為霧，日焰名光，月星火藥寶珠電等諸焰名明，障光明生於中餘色可見名影，翻此為闇。餘色易了故今不釋。或有色處有顯無形，謂青、黃、赤、白、影、光、明、闇。或有色處有形無顯。謂長等一分身表業性。或有色處有顯有形，謂所餘色。有餘師說：唯光明色有顯無形，現見世間青等色處有長等故。如何一事具有顯形？由於此中俱可知故。此中有者是有智義，非有境義。若爾，身表中亦應有顯智。已說色處，當說聲處。聲唯八種，謂有執受或無執受大種為因，及有情名、非有情名差別為四，此復可意及不可意差別成八。執受大種為因聲者，謂言手等所發音聲。風林河等所發音聲，名無執受大種為因。有情名聲謂語表業，餘聲則是非有情名。有說：有聲通有執受及無執受大種為因，如手鼓等合所生聲。如不許一顯色極微二四大造，聲亦應爾。已說聲處，當說味處。味有六種，甘、醋、醎、辛、苦、淡別故。已說味處，當說香處。香有四種：好香、惡香、等不等香，有差別故。本論中說香有三種：好香、惡香及平等香。已說香處，當說觸處。觸有十一，謂四大種、滑性、澁性、重性、輕性及冷、飢、渴。此中大種後當廣說。柔軟名滑。麁強為澁。可稱名重。翻此為輕。煖欲名冷。食欲名飢。飲欲名渴。此三於因立果名故，作如是說。如有頌言：諸佛出現樂，演說正法樂， 僧眾和合樂，同修勇進樂。於色界中無飢渴觸，有所餘觸。彼界衣服，別不可稱，聚則可稱。冷煖於彼雖無能損而有能益。傳說如此。此中已說多種色處。有時眼識緣一事生，謂於爾時各別了別。有時眼識緣多事生，謂於爾時不別了別，如遠觀察軍眾山林、無量顯形珠寶聚等。應知耳等諸識亦爾。有餘師說：身識極多緣五觸起，謂四大種，滑等隨一。有說：極多總緣一切十一觸起。若爾，五識總緣境故，應五識身取共相境非自相境。約處自相，許五識身取自相境非事自相，斯有何失？今應思擇，身舌二根兩境俱至，何識先起？隨境強盛彼識先生；境若均平舌識先起，食飲引身令相續故。",
+   "T1559": "此中偈曰：色二。釋曰：一顯色、二形色。顯色有四種，謂青、黃、赤、白，餘色是此四色未異。形色有八種，謂長等耶。後是重說色入。偈曰：或二十。釋曰：謂青、黃、赤、白、長、短、方、圓、高、下、正、邪、雲、烟、塵、霧、影、光、明、闇。有餘師說：空為一色，故有二十一色。此中形平等為正。不平等名邪。地氣名霧。日焰名光。月星火藥寶珠電焰名明。於中若色顯現名影，翻此名闇。餘色易解故今不釋。有色入有顯無形，謂青、黃、赤、白、影、光、明、闇。有色入有形無顯，謂有長等一分，即有教身業為相。有色入有顯有形，謂所餘諸色。有餘師說：有色入無形無顯，謂無教色。有餘師說：唯光及明有顯無形。何以故？恒見青等諸色有長等差別。云何一物二知所緣？此二色於一塵中現故。是義不然。於有教身業則成反質難故。說色入已。偈曰：聲塵有八種。釋曰：有執依、非執依四大為因，有眾生名、非眾生名，是名四聲。此聲由可愛、非可愛差別，故成八種。此中有執依為因者，謂言手等聲。非執依為因者，謂風樹浪等聲。有眾生名者，謂有義言聲，異此為非眾生名。有餘師說：有別聲有執依、非執依四大為因，謂手鼓合生。譬如一顯色隣虛不許依二四大生，此聲亦應爾。說聲已。偈曰：味六。釋曰：謂甜、酢、醎、辛、苦、淡差別故。偈曰：香有四。釋曰：謂香、臭、平等、不平等差別故。阿毘達磨中說香有三種，謂香、臭、平等。偈曰：觸塵十一種。釋曰：觸有十一種應知，謂四大、滑、澁、重、輕、冷、飢、渴。此中四大後當說。柔軟名滑。麁燥為澁。可稱名重，翻此為輕。熱愛為冷。食愛為飢。飲愛為渴。於因立果名，故說如此。如佛伽陀中說：「諸佛生現樂，說正法亦樂， 大眾和合樂，聚集出家樂。」於色界中無飢渴觸，有所餘諸觸。於中彼衣若不可各稱，四大聚集所造故亦可得稱。於彼無能損冷觸、有能益冷觸。他說如此。前已說色有多種，此中有時由一物眼識得生，若是時中分別一類。有時由多物眼識得生，若是時中無所分別。譬如軍眾有無量顯形色，及遠見眾寶應知。耳等識亦爾。身識若極多由五觸生，謂四大、觸。諸觸中滑等隨一，有師作如此執。復有餘師說：具足十一觸生身識。若爾，則總緣塵。通境為塵，五識應成，不但緣別境，五識對入別相為境故。許彼以別相為境，非對物別相，斯有何失？應思此義。身舌二根，一時塵至，何識先生？隨強塵先發識。若平等塵至？舌識先生？食欲所引相續故。如此說五根、五塵及如取塵已。今當說無教色。"
+  },
+  "v011": {
+   "sa": "vikṣiptācittakasyāpi yo 'nubandhaḥ śubhāśubhaḥ / mahābhūtānyupādāya sa hyavijñaptirucyate // VAkK_1.11 //",
+   "sa-bhasya": "[007|29] avijñaptiridānīṃ vaktavyā / seyamucyate [008|01-008|02] vikṣiptācittakasyāpi yo 'nubaṇdhaḥ śubhāśubhaḥ / mahābhūtānyupādāya sa hyavijñaptirucyate // VAkK_1.11 // [008|03] vikṣiptacittakasyeti tadanyacittasyāpi // [008|03-008|04] acittakasyāpītyasaṃjñinirodhasamāpattisamāpannasyāpi / [008|04] apiśabdenāvikṣiptasacittasyāpīti vijñāyate / [008|05] yo 'nu bandha iti yaḥ pravāhaḥ / śubhāśubha iti kuśalākuśalaḥ / [008|05-008|06] kuśalākuśale prāptivāho 'pyastīdṛśa iti tadviśeṣaṇārthamucyate mahābhūtānyupādāyeti / [008|07] hetvartha upādāyārtha iti vaibhāṣikāḥ / jananādihetubhāvāt / [008|07-008|08] sa hyavijñaptiriti hiśabdastannāmakaraṇavijñāpanārthaḥ / [008|08-008|09] rūpakriyāsvabhāvāpi satī vijñaptivat paraṃ na vijñāpayatītyavijñaptiḥ / [008|09-008|09 ucyata iti ācāryavacanaṃ darśayati / [008|09-008|10] samāsatastu vijñaptisamādhisaṃbhūtaṃ kuśalākuśalaṃ rūpamavijñaptiḥ / [008|11] mahābhūtānyupādāyetyuktāni katamāni bhūtāni /",
+   "T1560": "亂心無心等，隨流淨不淨， 大種所造性，由此說無表。",
+   "T1558": "已說根境及取境相，無表色相今次當說。頌曰：亂心無心等，隨流淨不淨， 大種所造性，由此說無表。論曰：亂心者，謂此餘心。無心者，謂入無想及滅盡定。等，言顯示不亂有心。相似相續說名隨流。善與不善名淨不淨。為簡諸得相似相續，是故復言大種所造。毘婆沙說：造是因義，謂作生等五種因故。顯立名因，故言由此。無表雖以色業為性如有表業，而非表示令他了知，故名無表。說者顯此是師宗言，略說表業及定所生善不善色名為無表。",
+   "T1559": "偈曰：亂心無心耶，隨流淨不淨，依止於四大，何無教色說。釋曰：異緣名亂心，入無想定及滅心定名無心，顯非亂心及有心故言耶。是似相續或俱或後故名隨流。善名淨，惡名不淨，至得相續亦爾。為簡此異彼，故說依止於四大。毘婆沙師說：依止以因為義。四大為無教，生等五因故。欲顯立名因故言何。此法雖以有色業為性，不如有教色可令他知，故名無教。顯是餘師說故言說。若略說有教色，三摩提所生善惡性色名無教。"
+  },
+  "v012": {
+   "sa": "bhūtāni pṛthividhāturaptejovāyudhātavaḥ / dhṛtyādikarmasaṃsiddhā kharasnehoṣṇateraṇāḥ // VAkK_1.12 //",
+   "sa-bhasya": "[008|12] bhūtāni pṛthivīdhāturaptejovāyudhātavaḥ [008|13] ityete catvāraḥ svalakṣaṇopādāyarūpadhāraṇād dhātavaścatvāri mahābhūtāny ucyante / [008|14] mahattvameṣāṃ sarvānyarūpāśrayatvenaudārikatvāt / [008|14-008|15] atha vā tadudbhūtavṛttiṣu pṛthivyaptejovāyuskandheṣveṣāṃ mahāsṇniveśatvāt / [008|15-008|16] te punahete dhātavaḥ kasmin karmaṇi saṃsidhāḥ kiṃsvabhāvāścetyāha [008|17] dhṛtyādikarmasaṃsiddhāḥ [008|18] dhṛtisaṃgrahapaktivyūhanakarmasvete yathākramaṃ saṃsiddhāḥ pṛthivyaptejovāyudhātavaḥ / [008|18-008|19] vyūhanaṃ punarvṛddhiḥ prasarpaṇaṃ ca veditavyam / [008|19] idameṣāṃ karma / svabhāvastu yathākramaṃ [008|20] kharasnehosṇateraṇāḥ // VAkK_1.12 // [008|21] kharaḥ pṛthivīdhātuḥ / sneho 'bdhātuḥ / uṣṇatā tejodhātuḥ / [008|22] īraṇā vāyudhātuḥ / īryate 'nayā bhūtasroto deśāntarotpādanāt pradīperaṇavaditīraṇā / [008|23] \"vāyudhātuḥ katamo laghusamudīraṇatvam\" iti prakāraṇeṣu nirdiṣṭaṃ sūtre ca / [008|23-008|24] tattu laghutvamupādāya rūpamapyuktaṃ prakaraṇeṣu / [008|24-008|25] ato ya īraṇāsvabhāvo dharmaḥ sa vāyuriti karṃaṇā 'sya svabhāvo 'bhivyaktaḥ / [008|26] kaḥ punaḥ pṛthivyādināṃ pṛthivīdhātvādīnāṃ ca viśeṣaḥ /",
+   "T1560": "大種謂四界，即地水火風， 能成持等業，堅濕煖動性。",
+   "T1558": "既言無表大種所造，大種云何？頌曰：大種謂四界，即地水火風， 能成持等業，堅濕煖動性。論曰：地、水、火、風能持自相及所造色，故名為界，如是四界亦名大種，一切餘色所依性故、體寬廣故。或於地等增盛聚中形相大故，或起種種大事用故。此四大種能成何業？如其次第能成持、攝、熟、長四業，地界能持，水界能攝，火界能熟，風界能長。長謂增盛或復流引。業用既爾，自性云何？如其次第即用堅、濕、煖、動為性，地界堅性，水界濕性，火界煖性，風界動性。由此能引大種造色，令其相續生至餘方，如吹燈光，故名為動。《品類足論》及契經言：云何名風界？謂輕等動性。復說輕性為所造色，故應風界動為自性，舉業顯體故亦言輕。云何地等？",
+   "T1559": "前說依止四大，何者四大？偈曰：諸大謂地界，及水火風界。釋曰：如此四大，能持自相及所造色故名界。云何四界名大？一切餘色依止故、於彼成麁故，故名為大。復次極遍滿起，地水火風聚中形量大故。復次能增廣一切有色物生，及於世間能作大事故名大。復次此地等界，於何業中成？何為自性？偈曰：於持等業成。釋曰：勝持和攝成熟引長，於四業中次第成就，地水火風界轉移增益，故名引長是名四大業。自性者次第。偈曰：堅濕熱動性。釋曰：地界以堅為性，水界以濕為性，火界以熱為性，風界以動為性。引諸大相續令生異處，如吹燈光名動。《分別道理論》云：何者風界？所謂輕觸。經說亦爾，或說輕觸為所造色，此法以動為定性故，說動為風界。即以業顯風自性。"
+  },
+  "v013": {
+   "sa": "pṛthivī varṇasaṃsthānamucyate lokasaṃjñayā / āpastejaśca vāyustu dhātureva tathāpi ca // VAkK_1.13 //",
+   "sa-bhasya": "[009|01] pṛthivī varṇasaṃsthānamucyate lokasaṃjñayā / [009|02] tathā hi pṛthivīṃ darśayanto varṇaṃ saṃsthānaṃ ca darśayanti / yathā pṛthivī evaṃ [009|03] āpastejaśca [009|04] varṇasaṃsthānamevocyate lokasaṃjñayā / [009|05] vāyustu dhātureva [009|06] ya eva tu vāyudhātuḥ sa eva loke vāyuarityucyate / [009|07] tathapi ca // VAkK_1.13 // [009|08] yathā pṛthivī varṇasaṃsthānamucyate lokasaṃjñayā tatha vāyuarapi / [009|08-009|09] nīlikā vātyā maṇḍalikā vātyeti // [009|10] kasmāt punarayamavijñaptiparyanto rūpaskandha ityucyate / raupaṇāt / [009|10-009|11] uktaṃ bhagavatā \"rūpyate rupyata iti bhikṣavastasmādrūpopādānasdandha ityucyate // [009|11-009|12] kena rupyate / [009|12] pāṇisparśenāpi spṛṣṭo rūpyata\" iti vistaraḥ / rūpyate bādhyata ityarthaḥ / [009|13] tathā hyarthavargīyeṣūktam [009|14-009|15] \"tasya cet kāmayānasya cchandajātasya dehinaḥ / te kāmā na samṛdhyanti śalyaviddha iva rūpyate //\" [009|16] rūpasya punaḥ kā badhanā / vipariṇāmotpādanā / [009|16-009|17] pratighāto rūpeṇetyapare / [009|17] paramāṇurūpaṃ tarhi rūpaṃ na prāpnotyarūpaṇāt / [009|17-009|18] na vai paramāṇurūpamekaṃ pṛthag bhūtamasti / [009|18] sañghātasthaṃ tu tad rūpyata eva / [009|18-009|19] atītānāgataṃ tarhi rūpaṃ na prāpnoti / [009|19] tadapi rūpitaṃ rūpayiṣyamāṇaṃ tajjātīyaṃ ceti rūpamindhanavat / [009|19-009|20] avijñaptistarhi na prāpnoti / [009|20] sāpi vijñaptirūpaṇād rūpitā bhavati / [009|20-009|21] vṛkṣapracalane cchāyāpracalanavat / [009|21] nāvikārāt / [009|21-009|22] vijñaptinivṛttau cāvijñaptinivṛttiḥ syād vṛkṣābhāve cchāyā 'bhāvavat / [009|22-009|23] āśrayabhūtarūpaṇādityapare evaṃ tarhi cakṣurvijñānādīnāmapyāśrayarūpaṇāt rūpatvaprasaṅgaḥ / [009|23] viṣamo 'yamupanyāsaḥ / [009|23-009|24] avijñaptirhi cchāyeva vṛkṣaṃ prabheva maṇiṃ bhūtānyāśrtya varttate / [009|24-009|25] na tvevaṃ cakṣurādīnyāśritya varttante cakṣurvijñānādīni kevalaṃ tūtpattinimiktamātraṃ tāni teṣāṃ bhavantīti / [009|25-009|26] idaṃ tāvadavaibhāṣikīyaṃ vṛkṣamāśritya cchāyā varttate maṇiṃ cāśritya prabheti / [009|26-010|01] cchāyādivarṇaparamāṇūnāṃ pratyekaṃ svabhūtacatuṣkāśritatvābhyupagamāt / [010|01] satyapi ca tadāśritatve cchāyāprabhayornāvijñaptistathaivāśritā / yujyate / [010|02] niruddheṣvapi avijña ptyāśayeṣu mahābhūteṣu tasyā anirodho 'bhyupagamyate / [010|02-010|03] ato na bhavatyeṣa parihāraḥ / [010|03-010|04] anye punaratra parihāramāhuḥ cakṣurvijñānādīnāmāśrayo bhedaṃ gataḥ / [010|04] kaṣcidrūpyate cakṣurādiḥ kaścinna rūpyate yathā manaḥ / [010|05] na tvevamavijñaptiḥ / [010|05-010|06] tasmādasamānaḥ prasaṅgaḥ ityata upapannametadāśraya rūpaṇādrūpamiti / [010|07] ya eva rūpaskandhasvabhāvā uktāḥ",
+   "T1560": "地謂顯形色，隨世想立名， 水火亦復然，風即界亦爾。",
+   "T1558": "地等界別。頌曰：地謂顯形色，隨世想立名； 水火亦復然，風即界亦爾。論曰：地謂顯形，色處為體，隨世間想假立此名。由諸世間相示地者，以顯形色而相示故。水火亦然。風即風界，世間於動立風名故。或如地等隨世想名，風亦顯形，故言亦爾。如世間說黑風團風，此用顯形表示風故。何故此蘊無表為後說為色耶？由變壞故。如世尊說：苾芻當知，由變壞故名色取蘊。誰能變壞？謂手觸故即便變壞。乃至廣說。變壞即是可惱壞義，故義品中作如是說：趣求諸欲人，常起於希望， 諸欲若不遂，惱壞如箭中。色復云何？欲所惱壞，欲所擾惱變壞生故。有說：變礙故名為色。若爾，極微應不名色，無變礙故。此難不然。無一極微各處而住，眾微聚集變礙義成。過去未來應不名色，此亦曾當有變礙故；及彼類故，如所燒薪，諸無表色應不名色。有釋：表色有變礙故，無表隨彼亦受色名。譬如樹動影亦隨動。此釋不然，無變礙故。又表滅時無表應滅，如樹滅時影必隨滅。有釋：所依大種變礙，故無表業亦得色名。若爾，所依有變礙故，眼識等五應亦名色。此難不齊。無表依止大種轉時，如影依樹光依珠寶。眼等五識依眼等時則不如是，唯能為作助生緣故。此影依樹光依寶言，且非符順毘婆沙義。彼宗影等顯色極微，各自依止四大種故。設許影光依止樹寶，而無表色不同彼依，彼許所依大種雖滅，而無表色不隨滅故。是故所言未為釋難。復有別釋彼所難言：眼識等五所依不定，或有變礙謂眼等根，或無變礙謂無間意，無表所依則不如是，故前所難定為不齊，變礙名色理得成就。",
+   "T1559": "復次地等及地界等，異義云何？偈曰：說地顯形色，由世立名想；水火亦復然。釋曰：若世人示現他地大，但示顯形色。如示現地大，示現水火大亦爾。但示顯形色，故依世假名想，說色入為地等三大。偈曰：唯風界。釋曰：是風界世人說為風。偈曰：亦爾。釋曰：如世人假說顯形色為地，說風亦爾，或說黑風、或說團風。云何說無教為後此陰名色？顯現變壞故。佛世尊說：比丘！由此法變壞，變壞故說色取陰。何法能變壞？由手等觸故變壞，廣說如經。有對礙故可變壞。復次義部經中說：「求得欲塵人，愛渴所染著， 若所求不遂，喜彼如被刺。」復次餘師說：此色欲界變壞生，對礙故名色。若爾，隣虛色應不成色，不可變壞故。此言非難。隣虛色無獨住，不和合故；若和合住則可變壞。若爾，過去未來色不應成色，此亦已變壞、應變壞，變壞性類故，如所燒薪。若爾，無教不應成色，此亦由有教變壞故，其同變壞，如樹動影動。是義不然，無教無變壞故。若爾，有教謝滅，無教亦應謝滅，如樹滅影滅。復有餘師說：依止變壞故，無教亦變壞。是義不然。若爾，眼識等由依止變壞，亦應成色。是故汝執不平。雖然，有異。何以故？無教依四大生，如影依樹生、光依寶生。眼等識不爾，依眼等根生，諸根一向唯為眼等識作生因。此執非毘婆沙義，謂依樹影生、依寶光生。彼師說：影等顯色隣虛，各各依止自四大故。若實如此，影光依樹寶生，無教不應同此依止。何以故？無教所依止四大已謝。彼師不許無教隨滅，是故此執不成救義。復有餘師別立救義言：眼等諸識依止各有差別，有依止變壞如眼等，有依止不變壞如意識等。無教依止既不爾，此難則不平，是故此義應然，由可變壞故名色陰。是法前已說，色陰為性。"
+  }
+ }
+}
