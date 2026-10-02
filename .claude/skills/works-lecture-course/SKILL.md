@@ -1214,6 +1214,10 @@ B 線＝前人概論怎麼切（比較表）。一次派一個 Sonnet。
   是最大單一地區、不是多數；《共同宣言：論稱義》不在 `_corpus\ecumenical`。
 - **第四關（逐章備料）九章全部完成（2026-10-02）**：清單在 `output/christianity-intro/sources_ch0{1..9}.md`（第三章分 03a／03b）。
   序不另備料（術語與兩序的材料沿用第一章、第四章清單）。各章重要級缺書與作者判斷事項都記「暫定」待確認。
+- **第六關試寫（2026-10-02）作者定**：人稱不用「我／筆者」，必要時「本書」；第一序用「福音書記載」框住敘事，不加懷疑也不辯護；
+  四福音合讀（合參、經課表本身就是第一序傳統），差異放進階；每節 2,500–4,000 字、每章 1.5–2.5 萬、全書約 15–20 萬字。
+  試寫第一章第 2 節〈福音書中的生平〉：`output/christianity-intro/draft_ch01_s2.md`（約 3,200 字，七小節走十五場景；
+  經文全由 `course_quote_bible.bible()` 取；教父四處轉述標「待核」）。待作者看稿。
 - 補書不只 z-lib；先查站上既有（梵二 SC／DV 中拉英在 `data/creeds/ecumenical-councils/vatican-ii/`、
   奧斯堡信條與路德小教理在 `data/creeds/protestant-confessions/`、通諭中譯在 `data/encyclicals/`），
   再查 TRC／天主教在線目錄。館藏確認沒有：《天主教教理》全本中譯、《協同書》中譯、Schmemann、Bria、Brown 第二冊。
