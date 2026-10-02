@@ -120,6 +120,41 @@ def pick(rows: list[dict]) -> dict | None:
                                        -int(r["year"]) if r["year"].isdigit() else 0))[0]
 
 
+def check_complete(path: Path, ext: str, expect: int) -> None:
+    """下載完整才放行，否則丟例外讓外層重試。
+
+    🚨 只驗檔頭是不夠的：LibGen 的伺服器會在半途切斷連線，copyfileobj 照樣正常結束，
+    於是存下一個「檔頭正確、只有前 9／11／13 MB」的殘檔。10-01～02 那一輪 566 本裡有
+    54 本是這樣（結尾都沒有 %%EOF），入庫時才被當壞檔隔離。
+    """
+    size = path.stat().st_size
+    if expect and size != expect:
+        raise ValueError(f"只下載到 {size:,}／{expect:,} bytes")
+    head = path.read_bytes()[:8]
+    ok = {"pdf": head.startswith(b"%PDF"), "epub": head.startswith(b"PK"), "djvu": head.startswith(b"AT&TFORM")}[ext]
+    if not ok:
+        raise ValueError(f"檔頭不對 {head!r}")
+    if ext == "pdf":
+        try:
+            import fitz
+            with fitz.open(str(path)) as d:
+                if d.page_count < 1:
+                    raise ValueError("PDF 0 頁")
+        except ImportError:
+            with open(path, "rb") as f:
+                f.seek(max(0, size - 2048))
+                if b"%%EOF" not in f.read():
+                    raise ValueError("PDF 結尾沒有 %%EOF（可能被截斷）")
+        except ValueError:
+            raise
+        except Exception as e:  # noqa: BLE001  頁面樹壞掉：page_count 會丟 RuntimeError
+            raise ValueError(f"PDF 打不開：{e}")
+    if ext == "epub":
+        import zipfile
+        if not zipfile.is_zipfile(path):
+            raise ValueError("EPUB 不是完整的 zip")
+
+
 def download(row: dict, name: str) -> Path:
     ed = get(f"https://libgen.li/edition.php?id={row['edition']}").decode("utf-8", "ignore")
     md5 = re.search(r"ads\.php\?md5=([0-9a-f]{32})", ed).group(1)
@@ -134,11 +169,9 @@ def download(row: dict, name: str) -> Path:
     for a in range(4):
         try:
             with urllib.request.urlopen(urllib.request.Request("https://libgen.li/" + g, headers=UA), timeout=1800) as r, open(tmp, "wb") as f:
+                expect = int(r.headers.get("Content-Length") or 0)
                 shutil.copyfileobj(r, f, 1 << 20)
-            head = tmp.read_bytes()[:8]
-            okhead = {"pdf": head.startswith(b"%PDF"), "epub": head.startswith(b"PK"), "djvu": head.startswith(b"AT&TFORM")}[row["ext"]]
-            if not okhead:
-                raise ValueError(f"檔頭不對 {head!r}")
+            check_complete(tmp, row["ext"], expect)
             tmp.replace(dst)
             return djvu_to_pdf(dst) if row["ext"] == "djvu" else dst
         except Exception as e:  # noqa: BLE001
@@ -251,6 +284,37 @@ def main() -> int:
     print(f"\n分母 {len(items)}｜對得上 {hit}｜已下載 {got}")
     return 0
 
+
+def retry_corrupt() -> None:
+    """帳本記為 LibGen 下載、但檔案被 ingest 隔離到 z-lib/_corrupt/ 的，照原 edition 重抓（完整才算）。"""
+    corrupt = DROP / "_corrupt"
+    rows = []
+    for line in LEDGER.read_text(encoding="utf-8").splitlines():
+        try:
+            r = json.loads(line)
+        except json.JSONDecodeError:
+            continue
+        if (r.get("pick") or {}).get("via") == "libgen" and r.get("file") and (corrupt / r["file"]).exists():
+            rows.append(r)
+    print(f"分母：{len(rows)} 本殘檔要重抓")
+    ok = 0
+    for i, r in enumerate(rows, 1):
+        p = Path(r["file"])
+        row = {"edition": r["pick"]["edition"], "ext": r["pick"].get("extension") or p.suffix.lstrip(".")}
+        try:
+            got = download(row, p.stem)
+            (corrupt / r["file"]).unlink(missing_ok=True)
+            ok += 1
+            print(f"[{i}] ✓ {got.name}")
+        except Exception as e:  # noqa: BLE001
+            print(f"[{i}] ✗ {p.name}：{e}")
+        time.sleep(2)
+    print(f"\n分母 {len(rows)}｜重抓成功 {ok}")
+
+
+if __name__ == "__main__" and len(__import__("sys").argv) > 1 and __import__("sys").argv[1] == "--retry-corrupt":
+    retry_corrupt()
+    raise SystemExit(0)
 
 if __name__ == "__main__" and len(__import__("sys").argv) > 1 and __import__("sys").argv[1] == "--convert-djvu":
     for f in sorted(DROP.glob("*.djvu")):

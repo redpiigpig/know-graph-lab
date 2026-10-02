@@ -317,3 +317,7 @@ z-lib/ drop folder 的處理：
   （expect 是書名子字串＋作者姓吻合）就下載進 z-lib/ 並在帳本記 `status: downloaded, pick.via: libgen`，z-lib 排程即跳過。
   同一份清單可再開一支 `--reverse` 從尾端倒著跑、會合時自停。10-01 首輪：cw30 中譯本 22/109、三套全集 11/107、
   代表作約 41/153、譜系學命中率最高（前 46 筆對上 35）。🚨 要 `python -u` 否則紀錄檔一直是空的（輸出被緩衝）。
+- 🚨 **LibGen 會半途切斷連線、留下「檔頭正確的殘檔」**（10-02：566 本裡 54 本只下到 9／11／13 MB，入庫時被隔離；
+  另 17 本被 PyMuPDF 修復後打得開、**已入庫上 Drive** 才查出來）。`libgen_wanted.check_complete()` 現在核對
+  Content-Length、PDF 要開得起來；`--retry-corrupt` 照帳本的 edition 重抓 `_corrupt/` 裡的殘檔。
+  稽核已入庫的：看 PDF 結尾 4KB 有沒有 `%%EOF`，大小剛好是整數 MB 的幾乎都是殘檔。
