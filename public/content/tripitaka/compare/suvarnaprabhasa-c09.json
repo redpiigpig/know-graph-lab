@@ -1,0 +1,156 @@
+{
+ "slug": "suvarnaprabhasa-c09",
+ "title": "金光明經・功德天品（大吉祥天女）",
+ "family": "sa",
+ "intro": "梵本〈Śrīmahādevī〉＝藏譯第九章＝曇無讖〈功德天品〉＝合部〈功德天品〉＝義淨〈大吉祥天女品〉＋〈大吉祥天女增長財物品〉。吉祥天女願資給說法者衣食，自說昔於寶華功德海佛所種善根；說其宮殿所在與增長財物、請召之法及灌頂章句。合部並錄新舊兩譯呪。",
+ "units": [
+  {
+   "id": "s9-00",
+   "label": "吉祥天願資給說法者"
+  },
+  {
+   "id": "s9-01",
+   "label": "昔於寶華功德海佛所種善根"
+  },
+  {
+   "id": "s9-02",
+   "label": "稱經名供養・地味增長"
+  },
+  {
+   "id": "s9-03",
+   "label": "吉祥天宮殿・增長財物之法"
+  },
+  {
+   "id": "s9-04",
+   "label": "請召吉祥天之呪"
+  },
+  {
+   "id": "s9-05",
+   "label": "灌頂章句・持呪之法與功德"
+  },
+  {
+   "id": "s9-06",
+   "label": "品尾題"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sa",
+   "lang": "sa",
+   "label": "梵本",
+   "who": "Nobel 校訂本・GRETIL"
+  },
+  {
+   "id": "bo",
+   "lang": "bo",
+   "label": "藏譯",
+   "who": "德格版 Toh 557・84000 翻譯記憶"
+  },
+  {
+   "id": "en",
+   "lang": "en",
+   "label": "84000 英譯",
+   "who": "譯自藏譯・與藏文逐句對齊"
+  },
+  {
+   "id": "T0663",
+   "lang": "lzh",
+   "label": "曇無讖本",
+   "who": "曇無讖譯《金光明經》・五世紀初",
+   "work": "T0663"
+  },
+  {
+   "id": "T0664",
+   "lang": "lzh",
+   "label": "合部本",
+   "who": "寶貴合《合部金光明經》・597 年",
+   "work": "T0664"
+  },
+  {
+   "id": "T0665",
+   "lang": "lzh",
+   "label": "義淨本",
+   "who": "義淨譯《金光明最勝王經》・703 年",
+   "work": "T0665"
+  }
+ ],
+ "works": [
+  "T0663",
+  "T0664",
+  "T0665"
+ ],
+ "anchors": [
+  {
+   "work": "T0663",
+   "node": "金光明經功德天品第八",
+   "uid": "T16n0663_p0345a04"
+  },
+  {
+   "work": "T0664",
+   "node": "金光明經功德天品第十三",
+   "uid": "T16n0664_p0388a08"
+  },
+  {
+   "work": "T0665",
+   "node": "金光明最勝王經大吉祥天女品第十六",
+   "uid": "T16n0665_p0438c25"
+  },
+  {
+   "work": "T0665",
+   "node": "金光明最勝王經大吉祥天女增長財物品第十七",
+   "uid": "T16n0665_p0439b04"
+  }
+ ],
+ "cells": {
+  "s9-00": {
+   "sa": "// Śrīmahādevīparivartaḥ // atha khalu śrīrmahādevī bhagavantaṃ praṇamyaitadavocat / ahamapi bhadanta bhagavanbhagavatī śrīrmahādevī tasya dharmabhāṇakasya bhikṣorautsukyatāṃ kariṣyāmi / yadidaṃ cīvarapiṇḍapātaśayanāsanaglānapratyayabhaiṣajyapariṣkārairanyaiścopakaraṇairyathā sa dharmabhāṇakaḥ sarvopakaraṇasaṃpanno bhaviṣyati / avaikalpatāṃ ca pratilapsyate / svasthacitto bhaviṣyati / sukhacitto rātriṃ divā pratināmayiṣyati / itaśca suvarṇaprabhāsottamātsūtrendrarājānnānāvidhāni padavyañjanānyupanāmayiṣyati / vyupaparīkṣiṣyati / yenāyaṃ suvarṇaprabhāsottamaḥ sūtrendrarājasteṣāṃ buddhasahasrāvaruptakuśalamūlānāṃ sattvānāmarthāya ciraṃ jambudvīpe pracatiṣyati / na ca kṣipramantardhāsyati / santi sattvāḥ suvarṇaprabhāsottamaṃ sūtrendrarājaṃ śṛṇuyuḥ / anekāni ca kalpakoṭīniyutaśatasahasrāṇyacintyāni divyamānuṣyakāni sukhāni pratyanubhaveyuḥ / durbhikṣaścāntardhāpayet / subhikṣaśca prādurbhavet / sattvāśca manuṣyasukhopadhānena sukhitā bhaveyuḥ / tathāgatasamavadhānagatāśca bhaveyuḥ / anāgate 'dhvati cānuttarāṃ samyaksaṃbodhimabhisaṃbodhayeyuḥ / sarvanarakatiryagyoniyamalokaduḥkhānyatyantasamucchinnāni bhaveyuriti //",
+   "bo": "སངས་རྒྱས་བརྒྱ་སྟོང་དག་ལ་དགེ་བའི་རྩ་བ་བསྐྲུན་པའི་སེམས་ཅན་དེ་དག་གི་དོན་གྱི་སླད་དུ། གསེར་འོད་དམ་པ་མདོ་སྡེའི་དབང་པོའི་རྒྱལ་པོ་འདི་འཛམ་བུའི་གླིང་དུ་ཡུན་རིང་དུ་གནས་པར་འགྱུར་ཞིང་། མྱུར་དུ་ནུབ་པར་མི་འགྱུར་བ་དང་། སེམས་ཅན་རྣམས་ཀྱང་གསེར་འོད་དམ་པ་མདོ་སྡེའི་དབང་པོའི་རྒྱལ་པོ་འདི་ཉན་པར་འགྱུར་བ་དང་། བསྐལ་པ་བྱེ་བ་ཁྲག་ཁྲིག་བརྒྱ་སྟོང་ཕྲག་དུ་མར་ལྷ་དང་མིའི་བདེ་བ་མྱོང་བར་འགྱུར་བ་དང་། མུ་གེ་མ་མཆིས་པར་འགྱུར་བ་དང་། ལོ་ལེགས་པར་འགྱུར་བ་དང་། སེམས་ཅན་རྣམས་ཀྱང་བདེ་བར་སྦྱར་བ་ཐམས་ཅད་ཀྱིས་བདེ་བར་འགྱུར་བ་དང་། དེ་བཞིན་གཤེགས་པ་དང་འགྲོགས་པར་འགྱུར་བ་དང་། མ་འོངས་པའི་དུས་ན་བླ་ན་མེད་པ་ཡང་དག་པར་རྫོགས་པའི་བྱང་ཆུབ་མངོན་པར་རྫོགས་པར་འཚང་རྒྱ་བར་འགྱུར་བ་དང་། སེམས་ཅན་དམྱལ་བ་དང་། དུད་འགྲོའི་སྐྱེ་གནས་དང་། གཤིན་རྗེའི་འཇིག་རྟེན་གྱི་སྡུག་བསྔལ་ཐམས་ཅད་ཤིན་ཏུ་ཆད་པར་འགྱུར་བ་གང་འདི་གོས་དང་། ཟས་དང་། མལ་ཆ་དང་། ན་བའི་གསོས་སྨན་དང་། ཡོ་བྱད་དང་། འཚོག་ཆས་གཞན་དག་གིས་ཀྱང་དགེ་སློང་ཆོས་སྨྲ་བ་དེ་སྤྲོ་བར་བགྱིའོ། །",
+   "en": "Chapter 9: The Great Goddess Śrī  Then the great goddess Śrī said to the Bhagavat, “Venerable Bhagavat, I, the great goddess Śrī, will also, in whatever way, bring a perfection of requisites to those dharmabhāṇaka bhikṣus so that they will gain freedom from deprivation; will have a resolute mind; will day and night have happiness of mind; will learn, understand, and correctly recite all the different words and letters in this Lord King of Sūtras, the Sublime Golden Light, so that, for the sake of those beings who have planted good roots with hundreds of thousands of buddhas, this Lord King of Sūtras, the Sublime Golden Light will remain for a long time in Jambudvīpa and will not disappear, and so that beings will hear this Lord King of Sūtras, the Sublime Golden Light and will experience the happiness of devas and humans for many hundreds of thousands of quintillions of eons, and so that there will be no famine and instead excellent harvests. Beings will become happy through being endowed with every kind of happiness. They will be in the company of tathāgatas, and in a future time will attain the highest, most complete enlightenment of buddhahood. This will end all the suffering in the hells, in the lives of animals, and in the world of Yama. Robes, food, bedding, medicine while ill, requisites, and other necessities will be brought to those dharmabhāṇaka bhikṣus.",
+   "T0663": "爾時功德天白佛言：「世尊！是說法者，我當隨其所須之物，衣服飲食臥具醫藥及餘資產，供給是人無所乏少，令心安住晝夜歡樂，正念思惟是經章句分別深義。若有眾生於百千佛所種諸善根，是說法者為是等故，於閻浮提廣宣流布是妙經典令不斷絕，是諸眾生聽是經已，於未來世無量百千那由他劫，常在天上人中受樂，值遇諸佛，速成阿耨多羅三藐三菩提，三惡道苦悉畢無餘。",
+   "T0664": "爾時，功德天白佛言：「世尊！是說法者，我當隨其所須之物——衣服、飲食、臥具、醫藥——及餘資產供給是人，無所乏少，令心安住，晝夜歡樂，正念思惟是經章句，分別深義。若有眾生於百千佛所種諸善根，是說法者為是等故，於閻浮提廣宣流布是妙經典，令不斷絕。是諸眾生聽是經已，於未來世無量百千那由他劫常在天上人中受樂值遇諸佛，速成阿耨多羅三藐三菩提，三惡道苦悉畢無餘。",
+   "T0665": "爾時，大吉祥天女即從座起，前禮佛足，合掌恭敬，白佛言：「世尊！我若見有苾芻、苾芻尼、鄔波索迦、鄔波斯迦，受持讀誦，為人解說是《金光明最勝王經》者，我當專心恭敬供養此等法師，所謂飲食、衣服、臥具、醫藥，及餘一切所須資具，皆令圓滿無有乏少。若晝若夜於此經王所有句義，觀察思量，安樂而住，令此經典於贍部洲廣行流布，為彼有情已於無量百千佛所種善根者，常使得聞，不速隱沒。復於無量百千億劫，當受人天種種勝樂，常得豐稔，永除飢饉，一切有情恒受安樂，亦得值遇諸佛世尊，於未來世速證無上大菩提果，永絕三塗輪迴苦難。世尊！我念過去有琉璃金山寶花光照吉祥功德海如來、應、正等覺，十號具足，我於彼所種諸善根，由彼如來慈悲愍念威神力故，令我今日隨所念處、隨所視方、隨所至國，能令無量百千萬億眾生受諸快樂，乃至所須衣服飲食資生之具，金銀、琉璃、車𤦲、瑪瑙、珊瑚、虎珀、真珠等寶悉令充足；若復有人至心讀誦是《金光明最勝王經》，亦當日日燒眾名香及諸妙花，為我供養彼琉璃金山寶花光照吉祥功德海如來、應、正等覺，復當每日於三時中稱念我名，別以香花及諸美食供養於我，亦常聽受此妙經王，得如是福。」而說頌曰："
+  },
+  "s9-01": {
+   "sa": "raktakusumaguṇasāgaravaiḍūryakanakagirisuvarṇakāñcanaprabhāsaśrīrnāma tathāgato 'rhan samyaksaṃbuddhaḥ / yatra śriyā mahādevyā mayā kuśalamūlamavaruptam / yenaitarhi yāṃ yāṃ diśaṃ sattvānāṃ viharati / yāṃ yāṃ diśaṃ sattvānyavalokayati / yāṃ yāṃ diśamupasaṃkramati / tasyāṃ tasyāṃ diśyanekāni sattvakoṭīniyutaśatasahasrāṇi sarvasukhopadhānena sukhitāni bhaviṣyanti / avaikalpatāṃ ca pratilapsyante / annena vā pānena vā dhanena vā dhānyena vā hiraṇyasuvarṇamaṇimuktavaiḍūryaśaṅkhaśilāpravālajātarūparajatādibhiranyaiścopakaraṇaiḥ sarvopakaraṇasamṛddhāni sattvāni bhaviṣyanti śriyo mahādevyāḥ prabhāvena / tasya ca tathāgatasya pūjā kartavyā / gandhāśca puṣpāśca dhūpāśca dīpāśca dātavyāḥ / śriyo devyāstriṣkṛto nāmadheyamuccārayitavyam / tasyāśca gandhaṃ puṣpaṃ dhūpaṃ dīpaṃ dātavyam / rasavihārā nikṣeptavyāni / tasya mahādravyarāśirvivardhate / tatredamucyate //",
+   "bo": "དེ་བཞིན་གཤེགས་པ་དགྲ་བཅོམ་པ་ཡང་དག་པར་རྫོགས་པའི་སངས་རྒྱས་རིན་ཆེན་མེ་ཏོག་ཡོན་ཏན་རྒྱ་མཚོ་བཻ་ཌཱུརྱ་དང་། གསེར་གྱི་རི་ཁ་དོག་བཟང་པོ་གསེར་དུ་སྣང་བའི་དཔལ་ཞེས་བྱ་བ་དེ་ལ་ལྷ་མོ་ཆེན་མོ་དཔལ་གྱིས་དགེ་བའི་རྩ་བ་བསྐྱེད་དེ། དེས་ད་ལྟར་ཕྱོགས་གང་དང་གང་དུ་སེམས་པ་དང་། ཕྱོགས་གང་དང་གང་དུ་ལྟ་བ་དང་། ཕྱོགས་གང་དང་གང་དུ་འགྲོ་བའི་ཕྱོགས་དེ་དང་དེར་སེམས་ཅན་བྱེ་བ་ཁྲག་ཁྲིག་བརྒྱ་སྟོང་ཕྲག་དུ་མ་དག་བདེ་བར་སྦྱར་བ་ཐམས་ཅད་ཀྱིས་བདེ་བར་འགྱུར། ཟས་དང་། སྐོམ་དང་། ནོར་དང་། འབྲུ་དང་། འགྲོན་བུ་དང་། གསེར་དང་། ནོར་བུ་དང་། མུ་ཏིག་དང་། བཻ་ཌཱུརྱ་དང་། དུང་དང་། མན་ཤེལ་དང་། བྱི་རུ་དང་། དངུལ་དང་། ས་ལེ་སྦྲམ་དང་། ཡོ་བྱད་གཞན་དག་གིས་ཀྱང་མི་ཕོངས་པར་འགྱུར། སེམས་ཅན་དེ་དག་ཡོ་ བྱད་ཐམས་ཅད་ཀྱང་འབྱོར་པར་འགྱུར་རོ། ། ལྷ་མོ་ཆེན་མོ་དཔལ་གྱི་མཐུས་དེ་བཞིན་གཤེགས་པ་དེ་ལ་མཆོད་པར་བྱ། སྤོས་དང་མེ་ཏོག་དང་བདུག་པ་ཡང་དབུལ་བར་བྱ། ལྷ་མོ་ཆེན་མོ་དཔལ་གྱི་མིང་ནས་ལན་གསུམ་བརྗོད་ཅིང་དེ་ལ་སྤོས་དང་། བདུག་པ་དང་མེ་ཏོག་ཀྱང་བྱིན་ལ་རོ་བྲོ་བ་སྣ་ཚོགས་ཀྱང་བྱིན་ན་དེའི་འབྲུའི་ཕུང་པོ་ཆེན་པོ་རྣམ་པར་འཕེལ་བར་འགྱུར་རོ། །",
+   "en": "“I, the great goddess Śrī, developed good roots with the tathāgata arhat samyaksaṃbuddha Ratnakusumaguṇasāgaravaiḍūryakanakagirisuvarṇakāñcanaprabhāsaśrī. In the present, wherever I direct my mind, wherever I look, wherever I go, many hundreds of thousands of quintillions of beings become happy; they become endowed with every kind of happiness. They do not lack food, drink, wealth, grain, cowries, gold, jewels, pearls, beryl, conchs, crystals, coral, silver, unwrought gold, or other requisites. Those beings are endowed with all requisites. Through the power of the great goddess Śrī, they make offerings to that tathāgata. They make offerings of perfumes, flowers, and incense. They recite the name ‘the great goddess Śrī’ three times and offer him perfume, incense, and flowers. They also offer him a variety of flavors, and then their great accumulations of grain increase.",
+   "T0663": "「世尊！我已於過去寶華功德海琉璃金山照明如來、應供、正遍知、明行足、善逝、世間解、無上士、調御丈夫、天人師、佛、世尊所種諸善根，是故我今隨所念方、隨所視方、隨所至方，能令無量百千眾生受諸快樂，若衣服飲食資生之具、金銀七寶、真珠琉璃、珊瑚琥珀、壁玉珂貝，悉無所乏。若有人能稱金光明微妙經典，為我供養諸佛世尊，三稱我名燒香供養；供養佛已，別以香華種種美味，供施於我灑散諸方，當知是人即能聚集資財寶物。以是因緣增長地味，地神諸天悉皆歡喜，所種穀米牙莖枝葉果實滋茂，樹神歡喜出生無量種種諸物。我時慈念諸眾生故，多與資生所須之物。",
+   "T0664": "「世尊！我已於過去寶華功德海琉璃金山照明如來、應、正遍知、明行足、善逝、世間解、無上士、調御丈夫、天人師、佛、世尊所種諸善根。是故，我今隨所念方、隨所視方、隨所至方，令無量百千眾生受諸快樂，若衣服、飲食、資生之具、金、銀七寶、真珠、琉璃、珊瑚、虎魄、璧玉、珂貝悉無所乏。若有人能稱金光明微妙經典，為我供養諸佛世尊，三稱我名燒香供養，供養佛已，別以華香、種種美味供施於我，灑散諸方，當知是人即能集聚資財寶物。以是因緣增長地味，地神、諸天悉得歡喜，所種穀米牙、莖、枝葉、果實滋茂，樹神歡喜出生無量種種諸物。我時慈念諸眾生故，多與資生所須之物。"
+  },
+  "s9-02": {
+   "sa": "vivardhata dharaṇī raso dharaṇyā praharṣitā / (Bagchi 61) bhonti ca devatā sadā phalaśasyacitopamam / vṛkṣadevatā rohanti śasyāni sucitrabhāvāḥ // Suv_9.1 // suvarṇaprabhāsottamasya sūtrendrarājasya nāmadheyamuccārayitavyam / tānsattvāñchrīrmahādevīsamanvāhariṣyati / teṣāṃ ca mahatīṃ śriyaṃ kariṣyati //",
+   "bo": "དེ་ལ་འདི་སྐད་ཅེས་བྱ་སྟེ། ས་ལ་ས་ཡི་བཅུད་དག་རྣམ་པར་འཕེལ། ། ལྷ་རྣམས་རྟག་པར་རབ་ཏུ་དགའ་བར་འགྱུར། ། འབྲས་བུ་ལོ་ཏོག་ལྡུམ་སྡོང་ལྗོན་ལྷ་རྣམས། །ལོ་ཏོག་ཤིན་ཏུ་སྣ་ཚོགས་རྣམས་ཀྱང་བསྐྱེད། ། གསེར་འོད་དམ་པ་མདོ་སྡེའི་དབང་པོའི་རྒྱལ་པོའི་མིང་བརྗོད་པའི་སེམས་ཅན་དེ་དག་ལ་ལྷ་མོ་ཆེན་མོ་དཔལ་སེམས་པར་འགྱུར། དེ་དག་ལ་དཔལ་ཆེན་པོར་བྱེད་པར་འགྱུར་རོ། །",
+   "en": "It is said concerning this:  “The fertility of the earth increases in the earth. The devas will be constantly, perfectly happy. The deities of fruits, harvests, plants, and trees Cause a great variety of harvests to arise. “I, the great goddess Śrī, will direct my mind toward those beings who say the name of The Lord King of Sūtras, the Sublime Golden Light and I will create a great splendor for them.",
+   "T0665": "「由能如是持經故，自身眷屬離諸衰； 所須衣食無乏時，威光壽命難窮盡。 能令地味常增長，諸天降雨隨時節； 令諸天眾咸歡悅，及以園林穀果神。 叢林果樹並滋榮，所有苗稼咸成就； 欲求珍財皆滿願，隨所念者遂其心。」佛告大吉祥天女：「善哉！善哉！汝能如是憶念昔因，報恩供養，利益安樂無邊眾生，流布是經，功德無盡。」"
+  },
+  "s9-03": {
+   "sa": "alakāvatyāṃ rājadhānyāṃ puṇyakusumaprabhodyānavane suvarṇavarṇadhvajanāmni saptaratnaprabhavane śrīrmahādevī prativasati sma / yaḥ kaścitpuruṣo dhānyarāśiṃ vivardhayitukāmo bhavet / tena svagṛhaṃ suśodhayitavyam / śuciśvetavasraprāvṛtena sugandhavasanadhāriṇā bhavitavyam / namastasya bhagavato ratnakusumaguṇasāgaravaiḍūryakanakagirisuvarṇakāñcanaprabhāsaśriyastathāgatasyārhataḥ samyaksambuddhasya triṣkṛtvo nāmadheyamuccārayitavyam / śriyā mahādevyā hastena tasya pūjā kartavyā / puṣpadhūpagandhāśca dātavyāḥ / nānārasavihārāśca nikṣeptavyāḥ / tasya ca suvarṇaprabhāsottamasya sūtrendrarājasyānubhāvena tena kālena śrīrmahādevī tasya gṛha samanvāhariṣyati / tasya ca mahādhānyarāśiṃ vivardhayiṣyati /",
+   "bo": "ལྷ་མོ་ཆེན་མོ་དཔལ་ནི་ལྕང་ལོ་ཅན་གྱི་ཕོ་བྲང་འཁོར་ན་སྐྱེད་མོས་ཚལ་དམ་པ་བསོད་ནམས་ཀྱི་མེ་ཏོག་འོད་ཅེས་བྱ་བ་ན་རིན་པོ་ཆེ་སྣ་བདུན་ལས་བྱས་པའི་ཁང་པ་དམ་པ་གསེར་གྱི་རྒྱལ་མཚན་ཞེས་བྱ་བ་ན་གནས་ཏེ། མི་གང་ལ་ལ་འབྲུའི་ཕུང་པོ་སྤེལ་བར་འདོད་པ་དེས་རང་གི་ཁྱིམ་ཕྱག་དར་ལེགས་པར་བྱ། ཁྲུས་ལེགས་པར་བྱ། གོས་དཀར་པོ་གཙང་མ་བགོ་བར་བྱ། གོས་དྲི་རབ་ཏུ་ཞིམ་པ་བགོ་བར་བྱའོ། །དེ་བཞིན་གཤེགས་པ་དགྲ་བཅོམ་པ་ཡང་དག་པར་རྫོགས་པའི་སངས་རྒྱས་རིན་ཆེན་མེ་ཏོག་ཡོན་ཏན་རྒྱ་མཚོ་བཻ་ཌཱུརྱ་དང་། གསེར་གྱི་རི་ཁ་དོག་བཟང་པོ་གསེར་དུ་སྣང་བའི་དཔལ་དེ་ལ་ཕྱག་འཚལ་ཞིང་མཚན་ནས་ཀྱང་ལན་གསུམ་བརྗོད། ལྷ་མོ་ཆེན་མོ་དཔལ་གྱི་ལག་ནས་དེ་བཞིན་གཤེགས་པ་ལ་མཆོད་པར་བྱེད། མེ་ཏོག་དང་བདུག་པ་དང་སྤོས་ཀྱང་དབུལ། རོ་བྲོ་བ་སྣ་ཚོགས་ཀྱང་དབུལ། གསེར་འོད་དམ་པ་མདོ་སྡེའི་དབང་པོའི་རྒྱལ་པོའི་མིང་ཡང་ལན་གསུམ་བརྗོད། བདེན་པའི་ཚིག་ཀྱང་བརྗོད། ལྷ་མོ་ཆེན་མོ་དཔལ་ལ་ཡང་མཆོད་ཅིང་མེ་ཏོག་དང་བདུག་པ་ཡང་འབུལ། རོ་བྲོ་བ་སྣ་ཚོགས་ཀྱང་འབུལ་ན་གསེར་འོད་དམ་པ་མདོ་སྡེའི་དབང་པོའི་རྒྱལ་པོ་འདིའི་མཐུས། དེའི་ཚེ་ལྷ་མོ་ཆེན་མོ་དཔལ་ཁྱིམ་དེ་ལ་སེམས་པར་འགྱུར། དེའི་འབྲུའི་ཕུང་པོ་ཆེན་པོ་ཡང་འཕེལ་ བར་འགྱུར་རོ། །",
+   "en": "“The great goddess Śrī dwells in a palace called Suvarṇadhvaja that is made of the seven precious materials in the sublime park called Puṇyakusumaprabha in the environs of the palace of Alakāvati. Any person who wishes to increase their accumulation of grain should clean their house well, wash well, wear clean white clothes, wear clothes that have been perfumed, bow down to the tathāgata arhat samyaksaṃbuddha Ratnakusumaguṇasāgaravaiḍūryakanakagirisuvarṇakāñcanaprabhāsaśrī, and say his name three times. Then the great goddess Śrī will make an offering with her own hands. Flowers, incense, and perfume should also be offered. Various kinds of flavors should also be offered. The name of The Lord King of Sūtras, the Sublime Golden Light should be recited three times and words of truth recited. Also, offerings should be made to the great goddess Śrī. When flowers and incense are offered, and various kinds of flavors are offered, at that time, through the power of this lord king of sūtras, the great goddess Śrī will turn her mind toward that house and its great accumulation of grain will increase.",
+   "T0663": "「世尊！於此北方，毘沙門天王有城名曰阿尼曼陀，其城有園名功德華光，於是園中有最勝園，名曰金幢七寶極妙，此即是我常止住處。若有欲得財寶增長，是人當於自所住處，應淨掃灑洗浴其身，著鮮白衣妙香塗身，為我至心三稱彼佛寶華琉璃世尊名號，禮拜供養燒香散華；亦當三稱金光明經至誠發願，別以香華種種美味，供施於我散灑諸方，爾時當說如是章句：",
+   "T0664": "「世尊！於此北方毘沙門王，有城名曰阿尼曼陀，其城有園名功德華光，於是園中有最勝園名曰金幢，七寶極妙，此即是我常止住處。若有欲得財寶增長，是人當於自所住處應淨掃灑、洗浴其身、著鮮白衣、妙香塗身，為我至心三稱彼佛寶華琉璃世尊名號，禮拜、供養、燒香、散華，亦當三稱金光明經，至誠發願，別以香華、種種美味供施於我，散灑諸方。爾時當說如是章句：",
+   "T0665": "爾時，大吉祥天女復白佛言：「世尊！北方薜室羅末拏天王城名有財，去城不遠，有園名曰妙華福光，中有勝殿，七寶所成。世尊！我常住彼。若復有人欲求五穀日日增多、倉庫盈溢者，應當發起敬信之心，淨治一室，瞿摩塗地，應畫我像，種種瓔珞周匝莊嚴；當洗浴身，著淨衣服，塗以名香，入淨室內，發心為我每日三時稱彼佛名及此經名號而申禮敬：『南謨琉璃金山寶花光照吉祥功德海如來！』持諸香花及以種種甘美飲食，至心奉獻，亦以香花及諸飲食供養我像；復持飲食，散擲餘方，施諸神等，實言邀請大吉祥天，發所求願：『若如所言是不虛者，於我所請，勿令空爾。』于時吉祥天女，知是事已，便生愍念，令其宅中財穀增長。即當誦呪請召於我，先稱佛名及菩薩名字，一心敬禮："
+  },
+  "s9-04": {
+   "sa": "tena śrīrmahādevīmāvāhayitukāmeneme vidyāmantrāḥ smarayitavyāḥ / tadyathā / namaḥ sarvabuddhānāmatītānāgatapratyutpannānām / namaḥ sarvabuddhabodhisattvānām / namo maitreyaprabhṛtīnāṃ bodhisattvānām / teṣāṃ namaskṛtya vidyāṃ prayojayāmi iyaṃ me vidyā samṛdhyatu / syādyathedam / pratipūrṇavare samantagate / mahākāryapratiprāpaṇe sattvārthasamatānuprapure / āyānadharmitā mahābhāgine / mahātejopamaṃ hite / ṛṣisaṃgṛhīte / samayānupālane //",
+   "bo": "ལྷ་མོ་ཆེན་མོ་དཔལ་དགུག་པར་འདོད་པ་དེས་རིག་པའི་གསང་སྔགས་འདི་དག་དྲན་པར་བྱའོ། །འདས་པ་དང་། མ་བྱོན་པ་དང་། ད་ལྟར་བྱུང་བའི་སངས་རྒྱས་ཐམས་ཅད་ལ་ཕྱག་འཚལ་ལོ། ། སངས་རྒྱས་དང་བྱང་ཆུབ་སེམས་དཔའ་ཐམས་ཅད་ལ་ཕྱག་འཚལ་ལོ། ། བྱམས་པ་ལ་སོགས་པ་བྱང་ཆུབ་སེམས་དཔའ་རྣམས་ལ་ཕྱག་འཚལ་ལོ། ། དེ་དག་ལ་ཕྱག་འཚལ་ནས། རིག་པ་འདི་དག་ལ་སྦྱོར་བར་བྱ་སྟེ། རིག་སྔགས་འདི་རྣམས་བདག་ལ་འབྱོར་བར་གྱུར་ཅིག །སྱཱད་ཡ་ཐེ་དན། པྲ་ཏི་པཱུ་ར་ཎ་བཱ་རེ། ས་མནྟ་དར་ཤ་ནེ། མ་ཧཱ་བི་ཧ་ར་ག་ཏེ། ས་མནྟ། བེ་ད་ན་ག་ཏེ། མ་ཧཱ་ཀཱརྱཾ་པྲ་ཏི་པྲ་བ་ཎེ། སཏྭ་ཨརྠ་ས་མཾ་ཏཱ་ནུ་པྲ་པཱུ་རེ། ཨཱ་ཡཱ་ན་དྷརྨ་ཏཱ་མ་ཧཱ་བྷོ་གི་ནེ། མ་ཧཱ་མཻ་ཏྲེ་ཨུ་པ་སཾ་ཧི་ཧེ། ཧེ་ཏཻ་ཥི།",
+   "en": "“Those who wish to invoke the great goddess Śrī should remember these mantras:  “ ‘I pay homage to all the buddhas of the past, the future, and the present. “ ‘I pay homage to all the buddhas and bodhisattvas. “ ‘I pay homage to the bodhisattvas such as Maitreya. “ ‘Having paid homage to them, I will practice this mantra. “ ‘This vidyāmantra will bring me wealth:  syād yathedam pratipūrṇavare samantavedanagate mahākāryapratiprāpaṇe sattvārthasamatānuprapūre ayānadharmatā mahābhogine mahāmaitre upasaṃhihe saṃgṛhīte samarthānupālane |  “These are words with an infallible meaning.",
+   "T0663": "「波利富樓那遮利　三曼陀達舍尼羅佉　摩訶毘呵羅伽帝　三曼陀毘陀那伽帝　摩訶迦梨波帝　波婆禰　薩婆哆㖃　三曼陀　脩鉢梨富隷　阿夜那達摩帝　摩訶毘鼓畢帝　摩訶彌勒簸僧祇帝　醯帝簁三博祇悕帝　三曼陀阿咃　阿㝹婆羅尼",
+   "T0664": "「婆梨富樓那遮利　三曼陀達舍尼　摩訶毘呵羅伽帝　三曼陀毘那伽帝　摩訶伽梨波帝　波娑彌　薩婆哆三曼陀　修鉢梨富隷　阿夜那達摩帝　摩訶毘鼓畢帝　摩訶彌勒簸僧祇帝　醯帝簁三博祇悕帝三曼陀阿咃　阿㝹娑羅尼「（此下呪八行新飜出，還是功德天說，與舊呪不同，不知何者是非，故並寫出之）南無一切三世佛　南無一切諸菩薩　南無彌勒菩薩等。「我今當欲說神呪：「哆姪咃　波梨富樓那遮利　三曼陀達舍尼　摩訶毘呵羅伽帝　三曼陀毘陀那伽帝摩訶迦葉梨耶　波利波羅波禰薩婆利陀三曼多修鉢利帝　富隷那阿夜那達摩多摩訶俱畢帝　摩訶彌勒帝盧簸僧祇帝帝醯帝簁僧祇晞帝　三曼陀遏咃何㝹波羅尼　莎波呵",
+   "T0665": "「南謨一切十方三世諸佛　南謨寶髻佛　南謨無垢光明寶幢佛　南謨金幢光佛　南謨百金光藏佛　南謨金蓋寶積佛　南謨金花光幢佛　南謨大燈光佛　南謨大寶幢佛　南謨東方不動佛　南謨南方寶幢佛　南謨西方無量壽佛　南謨北方天鼓音王佛　南謨妙幢菩薩　南謨金光菩薩　南謨金藏菩薩　南謨常啼菩薩　南謨法上菩薩　南謨善安菩薩「敬禮如是佛菩薩已，次當誦呪請召我大吉祥天女。由此呪力，所求之事皆得成就。」即說呪曰：「南謨室唎莫訶天女　怛姪他　鉢唎脯𠷈拏折囇　三曼䫂　達喇設泥（去聲，下皆同爾）莫訶毘訶囉揭諦　三曼哆毘曇末泥　莫訶迦哩也　鉢喇底瑟侘鉢泥　薩婆頞　他娑彈泥　蘇鉢喇底晡囇　㢌耶娜達摩多莫訶毘俱比諦　莫訶迷咄嚕　鄔波僧呬羝　莫訶頡唎使　蘇僧近（入聲）哩呬羝　三曼多頞他　阿奴波喇泥　莎訶"
+  },
+  "s9-05": {
+   "sa": "ime mūrdhābhiṣekadharmatā mantrapadāḥ / ekā śaśipadā avisaṃvādanā mantrapadāḥ / samavadhāribhiravaruptakuśalamūlaiḥ prāvṛtadhārayamāṇaiḥ sa saptavarṣā aṣṭāṅgopetā sapañcāsina pūrvāhṇe / aparāhṇe / sarvabuddhānāṃ bhagavatāṃ puṣpadhūpagandhapūjāṃ kṛtvātmanaśca sarvasattvānāṃ ca sarvajñajñānasya paripūraṇāya / tena sarve cābhiprāyāḥ samṛdhyantu // kṣipraṃ samṛdhyantu / tadgṛhaṃ sa caukṣaṃ kṛtvā vihāraṃ cāraṇyāyatanaṃ vāṃ gomayena maṇḍalakaṃ kṛtvā gandhapuṣpadhūpaṃ ca dātavyam / caukṣamāsanaṃ (Bagchi 62) prajñapayitavyam / puṣpā avakīrṇantu mitavyam / tatastatkṣaṇaṃ śrīrmahādevī praviśitvā tatra sthāsyati / tadupādāya tatra gṛhe vā grāme vā nagare vā nigame vā vihāre vāraṇyāyatane vā na jātu kenacidvaikalpaṃ kariṣyati / hiraṇyena vā suvarṇena vā ratnena vā dhanena vā dhānyādisarvopakaraṇasamṛddhābhioḥ sarvasukhopadhānena sukhitāni bhaviṣyanti / kuśalamūlaśca dhriyate / tena sarvaṃ śriyo mahādevyāḥ premaprabhāvapreṣaṇaṃ dātavyaṃ yāvajjīvaṃ tatropasthāsyati na vilambiṣyati / sarvābhiprāyāṃścaiṣāṃ paripūrayiṣyatīti //",
+   "bo": "སཾ་གྲ་ཧི་ཏེ་ཏེ་ས་མར་ཐཱ་ནུ་པཱ་ལཱ་ནི། འདི་དག་ནི་སྤྱི་བོ་ནས་དབང་བསྐུར་བའི་ཆོས་ཉིད་ཀྱི་གསང་སྔགས་ཀྱི་ཚིག་གཅིག་ཏུ་དེ་ཁོ་ན་ཡང་དག་པར་སྒྲུབ་པར་སྦྱིན་པ་མི་སླུ་བའི་དོན་གྱི་ཚིག་སྟེ། སེམས་ཅན་བར་མ་ལ་སྦྱོར་བ་རྣམས་དགེ་བའི་རྩ་བ་ཁ་ན་མ་ཐོ་བ་མེད་པ་དག་གིས་ལོ་བདུན་དུ་འདོན་ཅིང་འཛིན་པ་དག་ཡན་ལག་བརྒྱད་པའི་བསྙེན་པར་གནས་པ་ལ་བསྙེན་ཏེ། བདག་དང་སེམས་ཅན་ཐམས་ཅད་མཁྱེན་པའི་ཡེ་ཤེས་ཡོངས་སུ་རྫོགས་པར་བྱ་བའི་ཕྱིར་སྔ་དྲོ་དང་ཕྱི་དྲོ་སངས་རྒྱས་ཐམས་ཅད་ལ་མེ་ཏོག་དང་སྤོས་རྣམས་ཀྱིས་མཆོད་ནས། དེས་བདག་གི་བསམ་པ་འདི་འབྱོར་པར་གྱུར་ཅིག །མྱུར་དུ་འབྱོར་པར་གྱུར་ཅིག ། གཙུག་ལག་ཁང་ངམ་དགོན་པའི་གནས་ཀྱང་རུང་སྟེ། ཁྱིམ་དེ་ཤིན་ཏུ་གཙང་མར་བྱས་ལ་ལྕི་བས་དཀྱིལ་འཁོར་བྱས་ཏེ། སྤོས་དང་བདུག་པ་ཡང་དབུལ་བར་བྱ། སྟན་གཙང་མ་ཡང་གདིང་བར་བྱའོ། །ས་ལ་མེ་ཏོག་སིལ་མ་བཀྲམ་ནས་བསྡད་པར་བྱའོ། ། དེ་ནས་སྐད་ཅིག་དེ་ཉིད་ལ་དཔལ་འོངས་ནས་དེར་གནས་པར་འགྱུར་རོ། །དེ་ཕྱིན་ཅད་ཁྱིམ་མམ། གྲོང་ངམ། གྲོང་ཁྱེར་རམ། གྲོང་རྡལ་ལམ། གཙུག་ལག་ཁང་ངམ། དགོན་པའི་གནས་སུ་ནམ་ཡང་བྲེལ་ཅིང་ཕོངས་པ་མེད་པར་བྱེད་དོ། །འགྲོན་བུ་དང་། གསེར་དང་། རིན་པོ་ཆེ་དང་། ནོར་དང་། འབྲུ་དང་། ཡོ་བྱད་ཐམས་ཅད་འབྱོར་པ་དང་། བདེ་ བར་སྦྱར་བ་ཐམས་ཅད་ཀྱིས་བདེ་བར་འགྱུར་རོ། ། དགེ་བའི་རྩ་བ་གང་དག་བྱེད་པ་དེ་དག་ཐམས་ཅད་ལས་ལྷ་མོ་ཆེན་མོ་དཔལ་ལ་ཤས་ཀྱི་མཆོག་སྦྱིན་པར་བྱ་སྟེ། དེས་ན་དེ་ཇི་སྲིད་འཚོའི་བར་དུ་དེ་ན་གནས་པར་འགྱུར། ཕོངས་པར་མི་འགྱུར། དེ་དག་གི་བསམ་པ་ཐམས་ཅད་ཡོངས་སུ་རྫོགས་པར་འགྱུར་རོ། །",
+   "en": "That single-sentence mantra has the nature of an empowerment bestowed upon the crown of the head and bestows the valid accomplishment of the true nature. “The practice for beings of middling capacity is to possess and recite this while keeping the eight vows for seven years without transgressions but only roots of merit. In order for themselves and others to perfect omniscient wisdom, morning and afternoon make offerings of flowers and incense to all buddhas, and pray, ‘May I fulfill this wish of mine, may I fulfill it quickly.’ “In a temple or in a solitary place, clean the building and make a circle of dung. Offer perfume and incense. Arrange a clean seat, scatter flower petals on the ground, and then sit on it. “Then, in that instant, the great goddess Śrī will come and reside there. From then on, that house, village, town, market town, temple, or place of solitude will never be disturbed and never be in need. Everyone will obtain cowries, gold, jewels, wealth, grain, and all utensils; they will become happy through all that brings happiness. “Whatever good actions have been done, give the supreme part to the great goddess Śrī, and because of that she will remain with you for as long as you live and will never abandon you. All your aspirations will be completely fulfilled.”",
+   "T0663": "「是灌頂章句，必定吉祥真實不虛。等行眾生及中善根，應當受持讀誦通利，七日七夜受持八戒，朝暮淨心，香華供養十方諸佛，常為己身及諸眾生，迴向具足阿耨多羅三藐三菩提，作是誓願：『令我所求皆得吉祥。』自於所居房舍屋宅淨潔掃除。若自住處、若阿蘭若處，以香泥塗地、燒微妙香、敷淨好座，以種種華香布散其地以待於我；我於爾時如一念頃，入其室宅即坐其座，從此日夜令此所居，若村邑、若僧坊、若露地，無所乏少，若錢若金銀若珍寶、若牛羊若穀米，一切所須即得具足悉受快樂。若能以己所作善根最勝之分迴與我者，我當終身不遠其人，於所住處至心護念，隨其所求令得成就。「應當至心禮如是等諸佛世尊，其名曰：寶勝如來、無垢熾寶光明王相如來、金焰光明如來、金百光明照藏如來、金山寶蓋如來、金華焰光相如來、大炬如來、寶相如來；亦應敬禮：信相菩薩、金光明菩薩、金藏菩薩、常悲菩薩、法上菩薩；亦應敬禮：東方阿閦如來、南方寶相如來、西方無量壽佛、北方微妙聲佛。」",
+   "T0664": "「是灌頂章句畢定吉祥，真實不虛，等行眾生及中善根應當受持、讀誦、通利，七日七夜受持八戒，朝暮淨心，香華供養十方諸佛，常為己身及諸眾生迴向具足阿耨多羅三藐三菩提，作是誓願：『令我所求皆得吉祥。』自於所居房舍屋宅淨潔掃除，若自住處、若阿蘭若處，以香泥塗地、燒微妙香、敷淨好座，以種種華香布散其地以待於我。我於爾時如一念頃入其室宅即坐其座，從此日夜令此居家，若村邑、若僧坊、若露處，無所乏少——若錢、若金銀、若珍寶、若牛羊、若穀米——一切所須即得具足，悉受快樂。若能以己所作善根最勝之分迴與我者，我當終身不遠其人，於所住處至心護念，隨其所求令得成就。應當至心禮如是等諸佛世尊，其名曰：寶勝如來、無垢熾寶光明王相如來、金焰光明如來、金百光明照藏如來、金山寶蓋如來、金華焰光相如來、大炬如來、寶相如來；亦應敬禮信相菩薩、金光明菩薩、金藏菩薩、常悲菩薩、法上菩薩；亦應禮敬東方阿閦如來、南方寶相如來、西方無量壽佛、北方微妙聲佛。」",
+   "T0665": "「世尊！若人誦持如是神呪請召我時，我聞請已，即至其所，令願得遂。世尊！是灌頂法句，定成就句，真實之句，無虛誑句，是平等行，於諸眾生是正善根。若有受持讀誦呪者，應七日七夜受八支戒，於晨朝時先嚼齒木淨澡漱已，及於晡後香花供養一切諸佛，自陳其罪。當為己身及諸含識迴向發願，令所悕求速得成就。淨治一室，或在空閑阿蘭若處，瞿摩為壇，燒栴檀香，而為供養。置一勝座，幡蓋莊嚴，以諸名花布列壇內，應當至心誦持前呪，悕望我至。我於爾時即便護念觀察是人，來入其室，就座而坐，受其供養。從是以後，當令彼人於睡夢中得見於我，隨所求事以實告知。若聚落空澤及僧住處，隨所求者，皆令圓滿，金銀財寶、牛羊穀麥、飲食衣服，皆得隨心受諸快樂。既得如是勝妙果報，當以上分供養三寶，及施於我，廣修法會，設諸飲食，布列香花。既供養已，所有供養貨之取直，復為供養。我當終身常住於此，擁護是人，令無闕乏，隨所悕求，悉皆稱意。亦當時時給濟貧乏，不應慳惜，獨為己身。常讀是經，供養不絕，當以此福普施一切，迴向菩提，願出生死，速得解脫。」爾時，世尊讚言：「善哉！吉祥天女！汝能如是流布此經，不可思議，自他俱益。」"
+  },
+  "s9-06": {
+   "sa": "iti śrīsuvarṇaprabhāsottamasūtrendrarāje śrīmahādevīparivarto nāma navamaḥ //",
+   "bo": "གསེར་འོད་དམ་པ་མདོ་སྡེའི་དབང་པོའི་རྒྱལ་པོ་ལས། ལྷ་མོ་ཆེན་མོ་དཔལ་གྱི་ལེའུ་ཞེས་བྱ་བ་སྟེ་དགུ་པའོ།། །།",
+   "en": "This concludes “The Great Goddess Śrī,” the ninth chapter of “The Lord King of Sūtras, the Sublime Golden Light.”"
+  }
+ }
+}
