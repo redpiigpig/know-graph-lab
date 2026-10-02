@@ -7098,6 +7098,12 @@ SETS["sarvadharmapravrtti"] = {
 }
 
 
+# 各部另檔：scripts/tripitaka_compare_sets/<部>.py，以本檔全域（SETS、_bo、_z…）執行。
+# 並行的 session／agent 各寫各的檔，不必同改這支七千行的檔。
+for _f in sorted((Path(__file__).parent / "tripitaka_compare_sets").glob("*.py")):
+    exec(compile(_f.read_text(encoding="utf-8"), str(_f), "exec"), globals())
+
+
 # ── 讀原文 ──────────────────────────────────────────────────────────────────
 def read_jsonl(work: str) -> list[dict]:
     return [json.loads(l) for l in (TRIP / f"{work}.jsonl").read_text(encoding="utf-8").splitlines() if l.strip()]
