@@ -1,0 +1,1596 @@
+{
+ "slug": "pratimoksa-c08",
+ "title": "比丘戒本（八）眾學法",
+ "family": "pi",
+ "intro": "眾學法（應當學、sekhiya／śaikṣa）：不定條數的威儀規定，犯者心念悔即可。各部條數差距最大：巴利七十五、四分一百、五分一百、十誦一百一十三（說一切有部梵本一百一十三）、僧祇六十六（大眾說出世部梵本六十七）、根本說一切有部梵本一百零八，解脫戒經九十六；根有戒經把同類數條併成一句（「不太高、不太下、不象鼻…著裙」），只有四十三句。節以巴利七十五條為骨架、依內容配對：他部把巴利一條細分為數條的（十誦、五分、解脫戒經與兩部有部梵本的「不高、不下、不參差、不如多羅葉、不如象鼻…著內衣」），整串歸巴利那一條；根有戒經一句併數條的，整句歸句首那一條，其餘各節該本空著。他部有而巴利無的單列（標題後括注出處），排在內容相近的巴利條目之後；四分戒本關於佛塔、佛像的二十六條（不得在佛塔中止宿…不得安佛像在下房）合為一節。各本次第除巴利外都與骨架不同（段序依原本）：僧祇與大眾說出世部先列入白衣舍諸條、再列白衣舍坐諸條，兩本次第幾乎一致；十誦、說一切有部梵本與五分的入／坐成對出現。配對有判斷成分的幾處：大眾說出世部梵本的 osaktikā 對僧祇「抱膝」（歸巴利 pallatthika，26／65），其 pallatthikā 反而對僧祇「交脚」「翹脚」（歸白衣舍坐法、翹脚兩節）；十誦「胡跪」對說一切有部梵本 utkuṭuka（歸巴利 25 蹲行），十誦「躄行」對梵本 viḍaṅgikā（單列）；四分「蹲坐」歸 25，「跳行」與解脫戒經「跳身」單列；說一切有部梵本 C.6 stūpyavaguṇṭhīkṛta 暫與十誦「鉢中擇好食」同節。",
+ "units": [
+  {
+   "id": "sk0",
+   "label": "總標：眾學法半月半月說"
+  },
+  {
+   "id": "sk1",
+   "label": "眾學1・齊整著內衣（涅槃僧）"
+  },
+  {
+   "id": "sk2",
+   "label": "眾學2・齊整披上衣（三衣）"
+  },
+  {
+   "id": "sk3",
+   "label": "眾學3・好覆身入白衣舍"
+  },
+  {
+   "id": "sk4",
+   "label": "眾學4・好覆身白衣舍坐"
+  },
+  {
+   "id": "sk5",
+   "label": "眾學5・善攝身（庠序、正直）入白衣舍"
+  },
+  {
+   "id": "sk6",
+   "label": "眾學6・善攝身白衣舍坐"
+  },
+  {
+   "id": "sk7",
+   "label": "眾學7・視下（不左右顧視）入白衣舍"
+  },
+  {
+   "id": "sk8",
+   "label": "眾學8・視下白衣舍坐"
+  },
+  {
+   "id": "x-guseeing",
+   "label": "不左右顧視入白衣舍（五分另列）"
+  },
+  {
+   "id": "x-sniff",
+   "label": "不嗅入白衣舍（十誦）"
+  },
+  {
+   "id": "x-proud",
+   "label": "不自大（自傲）入白衣舍"
+  },
+  {
+   "id": "sk9",
+   "label": "眾學9・不反抄衣入白衣舍"
+  },
+  {
+   "id": "sk10",
+   "label": "眾學10・不反抄衣白衣舍坐"
+  },
+  {
+   "id": "x-lr-robe",
+   "label": "不左右反抄衣（披衣於兩肩）入白衣舍"
+  },
+  {
+   "id": "x-neck",
+   "label": "不衣纏頸入白衣舍（四分）"
+  },
+  {
+   "id": "x-shoulder",
+   "label": "不通肩被衣入白衣舍（解脫戒經）"
+  },
+  {
+   "id": "x-trail",
+   "label": "不放衣掉入白衣舍（十誦）"
+  },
+  {
+   "id": "x-chest",
+   "label": "不現胸入白衣舍"
+  },
+  {
+   "id": "x-flank",
+   "label": "不現脇（叉脇）入白衣舍"
+  },
+  {
+   "id": "sk11",
+   "label": "眾學11・不戲笑入白衣舍"
+  },
+  {
+   "id": "sk12",
+   "label": "眾學12・不戲笑白衣舍坐"
+  },
+  {
+   "id": "sk13",
+   "label": "眾學13・靜默（小聲）入白衣舍"
+  },
+  {
+   "id": "sk14",
+   "label": "眾學14・靜默白衣舍坐"
+  },
+  {
+   "id": "sk15",
+   "label": "眾學15・不搖身入白衣舍"
+  },
+  {
+   "id": "sk16",
+   "label": "眾學16・不搖身白衣舍坐"
+  },
+  {
+   "id": "sk17",
+   "label": "眾學17・不掉臂入白衣舍"
+  },
+  {
+   "id": "sk18",
+   "label": "眾學18・不掉臂白衣舍坐"
+  },
+  {
+   "id": "sk19",
+   "label": "眾學19・不搖頭入白衣舍"
+  },
+  {
+   "id": "sk20",
+   "label": "眾學20・不搖頭白衣舍坐"
+  },
+  {
+   "id": "x-shrug",
+   "label": "不搖肩入白衣舍"
+  },
+  {
+   "id": "x-hand",
+   "label": "不携手入白衣舍"
+  },
+  {
+   "id": "x-hide",
+   "label": "不隱人入白衣舍（五分）"
+  },
+  {
+   "id": "x-cheek",
+   "label": "不拄頰（掌扶頰）白衣舍坐"
+  },
+  {
+   "id": "sk21",
+   "label": "眾學21・不叉腰入白衣舍"
+  },
+  {
+   "id": "sk22",
+   "label": "眾學22・不叉腰白衣舍坐"
+  },
+  {
+   "id": "sk23",
+   "label": "眾學23・不覆頭入白衣舍"
+  },
+  {
+   "id": "sk24",
+   "label": "眾學24・不覆頭白衣舍坐"
+  },
+  {
+   "id": "x-turban",
+   "label": "不裹頭入白衣舍"
+  },
+  {
+   "id": "sk25",
+   "label": "眾學25・不蹲行（足指行、胡跪）入白衣舍"
+  },
+  {
+   "id": "x-jump",
+   "label": "不跳行入白衣舍"
+  },
+  {
+   "id": "x-limp",
+   "label": "不躄行入白衣舍"
+  },
+  {
+   "id": "x-lean",
+   "label": "不倚足、倚身、肩相倚入白衣舍（解脫戒經）"
+  },
+  {
+   "id": "sk26",
+   "label": "眾學26・不抱膝白衣舍坐"
+  },
+  {
+   "id": "x-invite",
+   "label": "白衣舍未請不坐（待請而入）"
+  },
+  {
+   "id": "x-sit",
+   "label": "白衣舍坐法：觀床而坐、不放身重坐、不累脚交脚等"
+  },
+  {
+   "id": "x-fidget",
+   "label": "白衣舍坐不動手足"
+  },
+  {
+   "id": "sk27",
+   "label": "眾學27・用意受食"
+  },
+  {
+   "id": "sk28",
+   "label": "眾學28・繫鉢想受食"
+  },
+  {
+   "id": "sk29",
+   "label": "眾學29・平鉢受羹（羹飯等受）"
+  },
+  {
+   "id": "sk30",
+   "label": "眾學30・平鉢受食（不溢鉢）"
+  },
+  {
+   "id": "x-reach",
+   "label": "食未至不預伸鉢（舒手索）"
+  },
+  {
+   "id": "x-bowltop",
+   "label": "不安鉢在食上"
+  },
+  {
+   "id": "sk31",
+   "label": "眾學31・用意食"
+  },
+  {
+   "id": "sk32",
+   "label": "眾學32・繫鉢想食"
+  },
+  {
+   "id": "sk33",
+   "label": "眾學33・次第食"
+  },
+  {
+   "id": "x-pick",
+   "label": "不鉢中擇好食"
+  },
+  {
+   "id": "sk34",
+   "label": "眾學34・羹飯等食"
+  },
+  {
+   "id": "sk35",
+   "label": "眾學35・不挑鉢中央食（不作塔形食）"
+  },
+  {
+   "id": "sk36",
+   "label": "眾學36・不以飯覆羹更望得"
+  },
+  {
+   "id": "sk37",
+   "label": "眾學37・無病不為己索羹飯"
+  },
+  {
+   "id": "sk38",
+   "label": "眾學38・不嫌心視比坐鉢"
+  },
+  {
+   "id": "sk39",
+   "label": "眾學39・不大摶飯食"
+  },
+  {
+   "id": "sk40",
+   "label": "眾學40・摶飯圓整"
+  },
+  {
+   "id": "sk41",
+   "label": "眾學41・飯未至不張口待"
+  },
+  {
+   "id": "sk42",
+   "label": "眾學42・不滿手內口中（滿手食）"
+  },
+  {
+   "id": "sk43",
+   "label": "眾學43・不含食語"
+  },
+  {
+   "id": "sk44",
+   "label": "眾學44・不摶飯遙擲口中"
+  },
+  {
+   "id": "sk45",
+   "label": "眾學45・不齧半食"
+  },
+  {
+   "id": "sk46",
+   "label": "眾學46・不脹頰食"
+  },
+  {
+   "id": "sk47",
+   "label": "眾學47・不振手食"
+  },
+  {
+   "id": "sk48",
+   "label": "眾學48・不遺落飯食"
+  },
+  {
+   "id": "x-scatter",
+   "label": "不手把散飯食（四分）"
+  },
+  {
+   "id": "sk49",
+   "label": "眾學49・不吐舌食"
+  },
+  {
+   "id": "sk50",
+   "label": "眾學50・不嚼食作聲"
+  },
+  {
+   "id": "sk51",
+   "label": "眾學51・不吸食作聲"
+  },
+  {
+   "id": "x-blow",
+   "label": "不吹食"
+  },
+  {
+   "id": "x-gulp",
+   "label": "不全吞食"
+  },
+  {
+   "id": "x-smell",
+   "label": "不嗅食食"
+  },
+  {
+   "id": "x-spit",
+   "label": "不食上唾（解脫戒經）"
+  },
+  {
+   "id": "x-nose",
+   "label": "不縮鼻食（五分）"
+  },
+  {
+   "id": "x-arm",
+   "label": "不舒臂取食（五分）"
+  },
+  {
+   "id": "x-scorn",
+   "label": "不嫌呵食（五分）"
+  },
+  {
+   "id": "x-click",
+   "label": "不彈舌食（根本說一切有部梵本）"
+  },
+  {
+   "id": "x-leaf",
+   "label": "不捏作葉食（解脫戒經）"
+  },
+  {
+   "id": "sk52",
+   "label": "眾學52・不舐手食"
+  },
+  {
+   "id": "sk53",
+   "label": "眾學53・不舐鉢食"
+  },
+  {
+   "id": "x-weigh",
+   "label": "不手稱食、不稱鉢食、不拉餅食（解脫戒經）"
+  },
+  {
+   "id": "sk54",
+   "label": "眾學54・不舐唇食"
+  },
+  {
+   "id": "sk55",
+   "label": "眾學55・不污手捉水器"
+  },
+  {
+   "id": "x-splash",
+   "label": "不以污水灒比坐"
+  },
+  {
+   "id": "sk56",
+   "label": "眾學56・不棄有飯洗鉢水於白衣舍"
+  },
+  {
+   "id": "x-bowlcare",
+   "label": "護鉢：不置鉢無敷地、不立洗鉢、不危處置鉢洗鉢"
+  },
+  {
+   "id": "sk57",
+   "label": "眾學57・不為持蓋者說法"
+  },
+  {
+   "id": "sk58",
+   "label": "眾學58・不為持杖者說法"
+  },
+  {
+   "id": "sk59",
+   "label": "眾學59・不為持刀者說法"
+  },
+  {
+   "id": "sk60",
+   "label": "眾學60・不為持兵器（弓箭）者說法"
+  },
+  {
+   "id": "sk61",
+   "label": "眾學61・不為著屐者說法"
+  },
+  {
+   "id": "sk62",
+   "label": "眾學62・不為著革屣者說法"
+  },
+  {
+   "id": "sk63",
+   "label": "眾學63・不為騎乘者說法"
+  },
+  {
+   "id": "sk64",
+   "label": "眾學64・人臥己坐不為說法"
+  },
+  {
+   "id": "sk65",
+   "label": "眾學65・不為抱膝坐者說法"
+  },
+  {
+   "id": "sk66",
+   "label": "眾學66・不為裹頭者說法"
+  },
+  {
+   "id": "sk67",
+   "label": "眾學67・不為覆頭者說法"
+  },
+  {
+   "id": "xs-robe",
+   "label": "不為反抄衣（偏抄、雙抄）者說法"
+  },
+  {
+   "id": "xs-akimbo",
+   "label": "不為叉腰者說法"
+  },
+  {
+   "id": "xs-chest",
+   "label": "不為現胸者說法"
+  },
+  {
+   "id": "xs-flank",
+   "label": "不為現脇者說法"
+  },
+  {
+   "id": "xs-trail",
+   "label": "不為放衣掉者說法（十誦）"
+  },
+  {
+   "id": "xs-crown",
+   "label": "不為戴帽、著冠、花鬘者說法"
+  },
+  {
+   "id": "x-lift",
+   "label": "不為翹脚坐者說法"
+  },
+  {
+   "id": "sk68",
+   "label": "眾學68・人在座己在非座（地）不為說法"
+  },
+  {
+   "id": "sk69",
+   "label": "眾學69・人在高坐己在下坐不為說法"
+  },
+  {
+   "id": "sk70",
+   "label": "眾學70・人坐己立不為說法"
+  },
+  {
+   "id": "sk71",
+   "label": "眾學71・人在前己在後不為說法"
+  },
+  {
+   "id": "sk72",
+   "label": "眾學72・人在道己在非道不為說法"
+  },
+  {
+   "id": "x-walk",
+   "label": "人在高經行處、己在下經行處不為說法（四分）"
+  },
+  {
+   "id": "sk73",
+   "label": "眾學73・不立大小便"
+  },
+  {
+   "id": "sk74",
+   "label": "眾學74・不生草上大小便涕唾"
+  },
+  {
+   "id": "sk75",
+   "label": "眾學75・不水中大小便涕唾"
+  },
+  {
+   "id": "x-tree",
+   "label": "不上過人樹，除因緣"
+  },
+  {
+   "id": "x-roadhand",
+   "label": "不携手在道行（四分）"
+  },
+  {
+   "id": "x-staff",
+   "label": "不絡囊盛鉢貫杖頭著肩上行（四分）"
+  },
+  {
+   "id": "x-stupa",
+   "label": "佛塔二十六條（四分獨有）"
+  },
+  {
+   "id": "skz",
+   "label": "結說・三問清淨"
+  }
+ ],
+ "versions": [
+  {
+   "id": "pi",
+   "lang": "pi",
+   "label": "巴利・上座部",
+   "who": "Theravāda Bhikkhupātimokkha・Mahāsaṅgīti 本（SuttaCentral）"
+  },
+  {
+   "id": "T1429",
+   "lang": "lzh",
+   "label": "四分戒本",
+   "who": "法藏部・後秦 佛陀耶舍譯《四分律比丘戒本》（唐 懷素集）",
+   "work": "T1429",
+   "reorder": true
+  },
+  {
+   "id": "T1422a",
+   "lang": "lzh",
+   "label": "五分戒本",
+   "who": "化地部・劉宋 佛陀什等譯《彌沙塞五分戒本》",
+   "work": "T1422a",
+   "reorder": true
+  },
+  {
+   "id": "sa-sarv",
+   "lang": "sa",
+   "label": "梵・說一切有部",
+   "who": "Sarvāstivāda Prātimokṣasūtra・von Simson 1986／2000（GRETIL）",
+   "reorder": true
+  },
+  {
+   "id": "T1436",
+   "lang": "lzh",
+   "label": "十誦戒本",
+   "who": "說一切有部・姚秦 鳩摩羅什譯《十誦比丘波羅提木叉戒本》",
+   "work": "T1436",
+   "reorder": true
+  },
+  {
+   "id": "sa-mahl",
+   "lang": "sa",
+   "label": "梵・大眾說出世部",
+   "who": "Mahāsāṃghika-Lokottaravāda Prātimokṣasūtra・Tatia 1976（GRETIL）",
+   "reorder": true
+  },
+  {
+   "id": "T1426",
+   "lang": "lzh",
+   "label": "僧祇戒本",
+   "who": "大眾部・東晉 佛陀跋陀羅譯《摩訶僧祇律大比丘戒本》",
+   "work": "T1426",
+   "reorder": true
+  },
+  {
+   "id": "T1460",
+   "lang": "lzh",
+   "label": "解脫戒經",
+   "who": "飲光部・元魏 般若流支譯",
+   "work": "T1460",
+   "reorder": true
+  },
+  {
+   "id": "sa-mula",
+   "lang": "sa",
+   "label": "梵・根本說一切有部",
+   "who": "Mūlasarvāstivāda Prātimokṣasūtra・Banerjee 1954（GRETIL）",
+   "reorder": true
+  },
+  {
+   "id": "T1454",
+   "lang": "lzh",
+   "label": "根有戒經",
+   "who": "根本說一切有部・唐 義淨譯《根本說一切有部戒經》",
+   "work": "T1454",
+   "reorder": true
+  }
+ ],
+ "works": [
+  "T1422a",
+  "T1426",
+  "T1429",
+  "T1436",
+  "T1454",
+  "T1460"
+ ],
+ "anchors": [
+  {
+   "work": "T1429",
+   "range": [
+    "T22n1429_p1020c25",
+    "T22n1429_p1022a20"
+   ]
+  },
+  {
+   "work": "T1422a",
+   "range": [
+    "T22n1422a_p0198c23",
+    "T22n1422a_p0199c05"
+   ]
+  },
+  {
+   "work": "T1436",
+   "range": [
+    "T23n1436_p0476c26",
+    "T23n1436_p0478a29"
+   ]
+  },
+  {
+   "work": "T1426",
+   "range": [
+    "T22n1426_p0554b11",
+    "T22n1426_p0555a24"
+   ]
+  },
+  {
+   "work": "T1460",
+   "range": [
+    "T24n1460_p0664a17",
+    "T24n1460_p0665a02"
+   ]
+  },
+  {
+   "work": "T1454",
+   "range": [
+    "T24n1454_p0506c06",
+    "T24n1454_p0507b02"
+   ]
+  }
+ ],
+ "cells": {
+  "sk0": {
+   "pi": "Sekhiya Ime kho panāyasmanto sekhiyā dhammā uddesaṁ āgacchanti.",
+   "T1429": "「諸大德！此眾學戒法，半月半月說，戒經中來。",
+   "T1422a": "「諸大德！是眾學法，半月半月戒經中說。",
+   "sa-sarv": "VII. śaikṣā dharmāḥ ime punar āyuṣmantaḥ saṃbahulāḥ śaikṣā dharmā anvardhamāsaṃ prātimokṣasūtroddeśam āgacchanti //",
+   "T1436": "「諸大德！是眾學法，半月半月波羅提木叉中說。",
+   "sa-mahl": "[VII. sātirekapañcāśac chaikṣā dharmāḥ] ime kho punar āyuṣmanto sātirekapañcāśac chaikṣā dharmā anvardhamāsaṃ sūtre prātimokṣe uddeśam āgacchanti Ō",
+   "T1426": "「諸大德！是眾學法，半月半月次說波羅提木叉。",
+   "T1460": "「諸大德！此眾學法，半月半月說解脫戒經中來。",
+   "sa-mula": "saṃbahulāḥ śaikṣā dharmāḥ / ime khalv āyuṣmantaḥ saṃbahulāḥ śaikṣā dharmā anvardhamāsaṃ prātimokṣasūtroddeśam āgacchanti /",
+   "T1454": "「諸大德！是眾學法，半月半月戒經中說。」總攝頌曰：衣食形齊整，俗舍善容儀， 護鉢除病人，草水過人樹。"
+  },
+  "sk1": {
+   "pi": "Chapter 1. Parimaṇḍala Sekhiya 1. Parimaṇḍala Parimaṇḍalaṁ nivāsessāmīti sikkhā karaṇīyā.",
+   "T1429": "「當齊整著涅槃僧，應當學。",
+   "T1422a": "「不高著內衣，應當學。「不下著內衣，應當學。「不參差著內衣，應當學。「不如多羅葉著內衣，應當學。「不如象鼻著內衣，應當學。「不如圓㮈著內衣，應當學。「不細攝著內衣，應當學。",
+   "sa-sarv": "A PrMoSū_Śai.A.1: nātyutkṛṣṭaṃ cīvaraṃ nivāsayiṣyāma iti śikṣā karaṇīyā 1 PrMoSū_Śai.A.2: nātyavakṛṣṭaṃ cīvaraṃ nivāsayiṣyāma iti śikṣā karaṇīyā 2 PrMoSū_Śai.A.3: na vikīrṇaṃ cīvaraṃ nivāsayiṣyāma iti śikṣā karaṇīyā 3 PrMoSū_Śai.A.4: na vāsijhaḍakaṃ cīvaraṃ nivāsayiṣyāma iti śikṣā karaṇīyā 4 PrMoSū_Śai.A.5: na tālapatraṃ cīvaraṃ nivāsayiṣyāma iti śikṣā karaṇīyā 5 PrMoSū_Śai.A.6: na hastiśuṇḍaṃ cīvaraṃ nivāsayiṣyāma iti śikṣā karaṇīyā 6 PrMoSū_Śai.A.7: na kunmāṃsapiṇḍaṃ cīvaraṃ nivāsayiṣyāma iti śikṣā karaṇīyā 7 PrMoSū_Śai.A.8: na kalāpakaṃ cīvaraṃ nivāsayiṣyāma iti śikṣā karaṇīyā 8 PrMoSū_Śai.A.9: na dundumaṃ cīvaraṃ nivāsayiṣyāma iti śikṣā karaṇīyā 9 PrMoSū_Śai.A.10: na milimaṃ cīvaraṃ nivasayiṣyāma iti śi(kṣā karaṇīyā) 10 PrMoSū_Śai.A.11: na cūrṇasūtraṃ cī(varaṃ nivāsayiṣyāma iti śikṣā kara)ṇīyā 11 PrMoSū_Śai.A.12: parimaṇḍalaṃ cīvaraṃ nivāsay(i)ṣyāma iti śikṣā karaṇīyā 12",
+   "T1436": "「不高著內衣，應當學。「不下著內衣，應當學。「不參差著內衣，應當學。「不如釿頭著內衣，應當學。「不如多羅葉著內衣，應當學。「不如象鼻著內衣，應當學。「不如[麩-夫+少]團著內衣，應當學。「不細襵著內衣，應當學。「不如兩耳著內衣，應當學。「不生起著內衣，應當學。「不細生踈著內衣，應當學。「周齊著內衣，應當學。",
+   "sa-mahl": "PrMoSū(Mā-L)Śai.1. parimaṇḍalaṃ nivasanaṃ nivāsayiṣyāmīti śikṣā karaṇīyā /",
+   "T1426": "「齊整著內衣，應當學。",
+   "T1460": "「不高著內衣，應當學。「不下著內衣，應當學。「齊整著內衣，應當學。「不象鼻著內衣，應當學。「不多羅葉著內衣，應當學。「不[麩-夫+少]團著內衣，應當學。",
+   "sa-mula": "Śai.1 (PrMoSū_Mū-Banerjee) parimaṇḍalaṃ nivāsanaṃ nivāsayiṣyāma iti śikṣā karaṇīyā / Śai.2 (PrMoSū_Mū-Banerjee) nātyutkṛṣṭaṃ nivāsanaṃ nivāsayiṣyāma iti śikṣā karaṇīyā / Śai.3 (PrMoSū_Mū-Banerjee) nātyavakṛṣṭaṃ nivāsanaṃ nivāsayiṣyāma iti śikṣā karaṇīyā / Śai.4 (PrMoSū_Mū-Banerjee) na hastiśuṇḍakaṃ nivāsanaṃ nivāsayiṣyāma iti śikṣā karaṇīyā / Śai.5 (PrMoSū_Mū-Banerjee) na tālapatraṃ nivāsanaṃ nivāsayiṣyāma iti śikṣā karaṇīyā / Śai.6 (PrMoSū_Mū-Banerjee) na kulmāṣapiṇḍakaṃ nivāsanaṃ nivāsayiṣyāma iti śikṣā karaṇīyā / Śai.7 (PrMoSū_Mū-Banerjee) na nāgaśīrṣakaṃ nivāsanaṃ nivāsayiṣyāma iti śikṣā karaṇīyā /",
+   "T1454": "「齊整著裙，應當學。「不太高、不太下、不象鼻、不蛇頭、不多羅葉、不豆團形著裙，應當學。"
+  },
+  "sk2": {
+   "pi": "Sekhiya 2. Parimaṇḍalaṁ pārupissāmīti sikkhā karaṇīyā.",
+   "T1429": "「當齊整著三衣，應當學。",
+   "T1422a": "「不高披衣，應當學。「不下披衣，應當學。「不參差披衣，應當學。",
+   "sa-sarv": "PrMoSū_Śai.A.13: nātyutkṛṣṭaṃ cīvaraṃ prāvariṣyāma iti śikṣā karaṇīyā 13 PrMoSū_Śai.A.14: nātyavakṛṣṭaṃ cīvaraṃ (prā)variṣyāma iti śikṣā karaṇīyā 14 PrMoSū_Śai.A.15: na vikīrṇaṃ cīvaraṃ prāvariṣyāma iti śikṣā karaṇ(ī)y(ā) 15 PrMoSū_Śai.A.16: parimaṇḍalaṃ cīvaraṃ prāvariṣyāma iti śikṣā karaṇīy(ā) 16 //",
+   "T1436": "「不高被衣，應當學。「不下被衣，應當學。「不參差被衣，應當學。「齊整被衣，應當學。",
+   "sa-mahl": "PrMoSū(Mā-L)Śai.2. parimaṇḍalaṃ cīvaraṃ prāvariṣyāmīti śikṣā karaṇīyā /",
+   "T1426": "「齊整被衣，應當學。",
+   "T1460": "「不高著三衣，應當學。「不下著三衣，應當學。「齊整著三衣，應當學。「不左右觀衣，除為齊整，應當學。",
+   "sa-mula": "Śai.8 (PrMoSū_Mū-Banerjee) parimaṇḍalaṃ cīvaraṃ nivāsayiṣyāma iti śikṣā karaṇīyā / Śai.9 (PrMoSū_Mū-Banerjee) nātyutkṛṣṭaṃ cīvaraṃ nivāsayiṣyāma iti śikṣā karaṇīyā / Śai.10 (PrMoSū_Mū-Banerjee) nātyupakṛṣṭaṃ cīvaraṃ nivāsayiṣyāma iti śikṣā karaṇīyā /",
+   "T1454": "「齊整披三衣，應當學。"
+  },
+  "sk3": {
+   "pi": "Sekhiya 3. Suppaṭicchanna Suppaṭicchanno antaraghare gamissāmīti sikkhā karaṇīyā.",
+   "T1429": "「好覆身入白衣舍，應當學。",
+   "T1422a": "「好覆身入白衣舍，應當學。",
+   "sa-sarv": "PrMoSū_Śai.B.3: supraticchannā antargṛhaṃ pra(vekṣyā)ma i(ti śikṣā karaṇīyā 3)",
+   "T1436": "「好覆身入白衣舍，應當學。",
+   "T1426": "「好覆身入家內，應當學。",
+   "T1460": "「好覆身入白衣舍，應當學。",
+   "sa-mula": "Śai.12 (PrMoSū_Mū-Banerjee) supraticchannā antargṛhe gamiṣyāma iti śikṣā karaṇīyā /",
+   "T1454": "「不太高、不太下，好正披、好正覆，少語言、不高視，入白衣舍，應當學。"
+  },
+  "sk4": {
+   "pi": "Sekhiya 4. Suppaṭicchanno antaraghare nisīdissāmīti sikkhā karaṇīyā.",
+   "T1429": "「好覆身入白衣舍坐，應當學。",
+   "T1422a": "「好覆身入白衣舍坐，應當學。",
+   "sa-sarv": "PrMoSū_Śai.B.4: (su)prati(c)channā antargṛhe niṣatsyāma iti śikṣā karaṇīyā 4",
+   "T1436": "「好覆身白衣舍坐，應當學。",
+   "T1426": "「好覆身家內坐，應當學。"
+  },
+  "sk5": {
+   "pi": "Sekhiya 5. Susaṁvuta Susaṁvuto antaraghare gamissāmīti sikkhā karaṇīyā.",
+   "T1422a": "「庠序入白衣舍，應當學。",
+   "sa-sarv": "B PrMoSū_Śai.B.1: susaṃvṛtā antargṛhaṃ pravekṣyām(a iti śikṣā) karaṇīy(ā) 1",
+   "T1436": "「善好入白衣舍，應當學。",
+   "sa-mahl": "PrMoSū(Mā-L)Śai.3. susaṃvṛto antaragṛham upasaṃkramiṣyāmīti śikṣā karaṇīyā /",
+   "T1460": "「正直入白衣舍，應當學。",
+   "sa-mula": "Śai.11 (PrMoSū_Mū-Banerjee) susaṃvṛtā antargṛhe gamiṣyāma iti śikṣā karaṇīyā /"
+  },
+  "sk6": {
+   "pi": "Sekhiya 6. Susaṁvuto antaraghare nisīdissāmīti sikkhā karaṇīyā.",
+   "T1422a": "「庠序白衣舍坐，應當學。",
+   "sa-sarv": "PrMoSū_Śai.B.2: (susa)ṃvṛtā (a)ntargṛhe niṣatsyāma iti (śikṣā karaṇīyā) 2",
+   "T1436": "「善好白衣舍坐，應當學。",
+   "sa-mahl": "PrMoSū(Mā-L)Śai.14. susaṃvṛto antaragṛhe niṣīdiṣyāmīti śikṣā karaṇīyā /"
+  },
+  "sk7": {
+   "pi": "Sekhiya 7. Okkhittacakkhu Okkhittacakkhu antaraghare gamissāmīti sikkhā karaṇīyā.",
+   "T1429": "「不得左右顧視行入白衣舍，應當學（二十）。",
+   "T1422a": "「不高視入白衣舍，應當學。",
+   "sa-sarv": "PrMoSū_Śai.B.5: notkṣiptacakṣuṣo 'ntargṛ(haṃ) pravekṣyāma iti śikṣ(ā) karaṇīyā 5",
+   "T1436": "「不眄視入白衣舍，應當學。",
+   "sa-mahl": "PrMoSū(Mā-L)Śai.4. na utkṣiptacakṣur antaragṛham upasaṃkramiṣyāmīti śikṣā karaṇīyā /",
+   "T1426": "「諦視入家內，應當學。",
+   "T1460": "「不左右顧視入白衣舍，應當學。",
+   "sa-mula": "Śai.14 (PrMoSū_Mū-Banerjee) anutkṣiptacakṣuṣo 'ntargṛhe gamiṣyāma iti śikṣā karaṇīyā / Śai.15 (PrMoSū_Mū-Banerjee) yugamātradarśino 'ntargṛhe gamiṣyāma iti śikṣā karaṇīyā /"
+  },
+  "sk8": {
+   "pi": "Sekhiya 8. Okkhittacakkhu antaraghare nisīdissāmīti sikkhā karaṇīyā.",
+   "T1429": "「不得左右顧視行入白衣舍坐，應當學。",
+   "T1422a": "「不高視白衣舍坐，應當學。",
+   "sa-sarv": "PrMoSū_Śai.B.6: notkṣiptacakṣuṣo 'ntargṛhe niṣatsy(ā)ma iti śikṣā karaṇīyā 6",
+   "T1436": "「不眄視白衣舍坐，應當學。",
+   "sa-mahl": "PrMoSū(Mā-L)Śai.15. na utkṣiptacakṣu antaragṛhe niṣīdiṣyāmīti śikṣā karaṇīyā /",
+   "T1426": "「諦視家內坐，應當學。",
+   "T1460": "「不左右顧視入白衣舍坐，應當學。"
+  },
+  "x-guseeing": {
+   "T1422a": "「不左右顧視入白衣舍，應當學。「不左右顧視白衣舍坐，應當學。"
+  },
+  "x-sniff": {
+   "T1436": "「不嗅入白衣舍，應當學。「不嗅白衣舍坐，應當學。"
+  },
+  "x-proud": {
+   "T1436": "「不自大入白衣舍，應當學。「不自大白衣舍坐，應當學。",
+   "T1460": "「不自傲入白衣舍，應當學。"
+  },
+  "sk9": {
+   "pi": "Sekhiya 9. Ukkhittaka Na ukkhittakāya antaraghare gamissāmīti sikkhā karaṇīyā.",
+   "T1429": "「不得反抄衣，行入白衣舍，應當學。",
+   "T1422a": "「不反抄衣著右肩上入白衣舍，應當學。「不反抄衣著右肩上白衣舍坐，應當學。「不反抄衣著左肩上入白衣舍，應當學。「不反抄衣著左肩上白衣舍坐，應當學。「不左右反抄衣著兩肩上入白衣舍，應當學。「不左右反抄衣著兩肩上入白衣舍坐，應當學。",
+   "sa-sarv": "PrMoSū_Śai.B.19: notkṛṣṭikākṛtā (a)ntargṛhaṃ pravekṣyāma iti śikṣā karaṇīyā 19",
+   "T1436": "「不反抄衣入白衣舍，應當學。",
+   "sa-mahl": "PrMoSū(Mā-L)Śai.8. na utkṣiptikāya antaragṛham upasaṃkramiṣyāmīti śikṣā karaṇīyā /",
+   "T1426": "「不反抄衣入家內，應當學。",
+   "T1460": "「不反抄衣入白衣舍，應當學。",
+   "sa-mula": "Śai.17 (PrMoSū_Mū-Banerjee) notkṛṣṭikayā antargṛhaṃ gamiṣyāma iti śikṣā karaṇīyā / Śai.18 (PrMoSū_Mū-Banerjee) notsaktikayā antargṛhaṃ gamiṣyāma iti śikṣā karaṇīyā / Śai.19 (PrMoSū_Mū-Banerjee) na vyastikayā antargṛhaṃ gamiṣyāma iti śikṣā karaṇīyā / Śai.20 (PrMoSū_Mū-Banerjee) na paryastikayā antargṛhaṃ gamiṣyāma iti śikṣā karaṇīyā / Śai.21 (PrMoSū_Mū-Banerjee) nolambikayā antargṛhaṃ gamiṣyāma iti śikṣā karaṇīyā / Śai.22 (PrMoSū_Mū-Banerjee) noṭṭambikayā antargṛhaṃ gamiṣyāma iti śikṣā karaṇīyā /"
+  },
+  "sk10": {
+   "pi": "Sekhiya 10. Na ukkhittakāya antaraghare nisīdissāmīti sikkhā karaṇīyā. Parimaṇḍalavaggo paṭhamo",
+   "T1429": "「不得反抄衣，入白衣舍坐，應當學。",
+   "sa-sarv": "PrMoSū_Śai.B.20: notkṛṣṭikākṛtā (a)ntargṛhe niṣatsyāma iti śikṣā karaṇīyā 20",
+   "T1436": "「不反抄衣白衣舍坐，應當學。",
+   "sa-mahl": "PrMoSū(Mā-L)Śai.19. na utkṣiptikāya antaragṛhe niṣīdiṣyāmīti śikṣā karaṇīyā /",
+   "T1426": "「不反抄衣家內坐，應當學。"
+  },
+  "x-lr-robe": {
+   "sa-sarv": "PrMoSū_Śai.B.21: nātyastikākṛtā (a)ntargṛhaṃ pravekṣyāma iti śikṣā karaṇīyā 21 PrMoSū_Śai.B.22: nātyastikākṛtā antargṛhe niṣatsyāma iti śikṣā karaṇīyā 22 PrMoSū_Śai.B.23: na vinyastikākṛtā antargṛhaṃ pravekṣyāma iti śikṣā karaṇīyā 23 PrMoSū_Śai.B.24: na vinyastikākṛtā antargṛhe niṣatsyāma iti śikṣā karaṇīyā 24 PrMoSū_Śai.B.25: na vikṣiptikākṛtā antargṛhaṃ pravekṣyāma iti śikṣā karaṇīyā 25 PrMoSū_Śai.B.26: na vikṣiptikākṛtā antargṛhe niṣatsyāma iti śikṣā karaṇīyā 26",
+   "T1436": "「不左右抄衣入白衣舍，應當學。「不左右抄衣白衣舍坐，應當學。"
+  },
+  "x-neck": {
+   "T1429": "「不得衣纏頸，入白衣舍，應當學。「不得衣纏頸，入白衣舍坐，應當學。"
+  },
+  "x-shoulder": {
+   "T1460": "「不通肩被衣入白衣舍，應當學。"
+  },
+  "x-trail": {
+   "T1436": "「不放衣掉入白衣舍，應當學。「不放衣掉白衣舍坐，應當學。"
+  },
+  "x-chest": {
+   "T1436": "「不現胸入白衣舍，應當學。「不現胸白衣舍坐，應當學。"
+  },
+  "x-flank": {
+   "T1436": "「不現脇入白衣舍，應當學。（四十）「不現脇白衣舍坐，應當學。",
+   "T1460": "「不叉脇入白衣舍，應當學。"
+  },
+  "sk11": {
+   "pi": "Chapter 2. Ujjagghika Sekhiya 11. Ujjagghika Na ujjagghikāya antaraghare gamissāmīti sikkhā karaṇīyā.",
+   "T1429": "「不得戲笑行入白衣舍，應當學。",
+   "T1422a": "「不戲笑入白衣舍，應當學。",
+   "sa-sarv": "PrMoSū_Śai.B.9: noccagghikayā antargṛhaṃ pravekṣyāma iti śikṣā karaṇīyā 9",
+   "sa-mahl": "PrMoSū(Mā-L)Śai.6. na uccagghikāya antaragṛham upasaṃkramiṣyāmīti śikṣā karaṇīyā /",
+   "T1426": "「不笑入家內，應當學。",
+   "T1460": "「不戲笑入白衣舍，應當學。"
+  },
+  "sk12": {
+   "pi": "Sekhiya 12. Na ujjagghikāya antaraghare nisīdissāmīti sikkhā karaṇīyā.",
+   "T1429": "「不得戲笑行入白衣舍坐，應當學。",
+   "T1422a": "「不戲笑白衣舍坐，應當學。",
+   "sa-sarv": "PrMoSū_Śai.B.10: noccagghikay(ā a)ntargṛhe niṣatsyāma iti śikṣā karaṇīy(ā) 10",
+   "sa-mahl": "PrMoSū(Mā-L)Śai.17. na uccagghikāya antaragṛhe niṣīdiṣyāmīti śikṣā karaṇīyā /",
+   "T1426": "「不笑家內坐，應當學。"
+  },
+  "sk13": {
+   "pi": "Sekhiya 13. Uccasadda Appasaddo antaraghare gamissāmīti sikkhā karaṇīyā.",
+   "T1429": "「靜默入白衣舍，應當學。",
+   "T1422a": "「不高聲入白衣舍，應當學。",
+   "sa-sarv": "PrMoSū_Śai.B.7: alpaśabdā (a)ntargṛhaṃ pravekṣyāma iti śikṣā karaṇīy(ā) 7",
+   "T1436": "「小聲入白衣舍，應當學。",
+   "sa-mahl": "PrMoSū(Mā-L)Śai.5. alpaśabdo antaragṛham upasaṃkramiṣyāmīti śikṣā karaṇīyā /",
+   "T1426": "「小聲入家內，應當學。",
+   "T1460": "「靜默入白衣舍，應當學。",
+   "sa-mula": "Śai.13 (PrMoSū_Mū-Banerjee) alpaśabdā antargṛhe gamiṣyāma iti śikṣā karaṇīyā /"
+  },
+  "sk14": {
+   "pi": "Sekhiya 14. Appasaddo antaraghare nisīdissāmīti sikkhā karaṇīyā.",
+   "T1429": "「靜默入白衣舍坐，應當學。",
+   "T1422a": "「不高聲白衣舍坐，應當學。",
+   "sa-sarv": "PrMoSū_Śai.B.8: alpaśabdā (a)ntarg(ṛ)he niṣatsyāma iti śikṣā karaṇīy(ā) 8",
+   "T1436": "「小聲白衣舍坐，應當學。",
+   "sa-mahl": "PrMoSū(Mā-L)Śai.16. alpaśabdo antaragṛhe niṣīdiṣyāmīti śikṣā karaṇīyā /",
+   "T1426": "「小聲家內坐，應當學。"
+  },
+  "sk15": {
+   "pi": "Sekhiya 15. Kāyappacālaka Na kāyappacālakaṁ antaraghare gamissāmīti sikkhā karaṇīyā.",
+   "T1429": "「不得搖身行入白衣舍，應當學。",
+   "T1422a": "「不搖身入白衣舍，應當學。",
+   "sa-sarv": "PrMoSū_Śai.B.35: na kāyapracālakā antargṛhaṃ pravekṣyāma iti śikṣā karaṇīyā (35)",
+   "T1436": "「不搖身入白衣舍，應當學。",
+   "sa-mahl": "PrMoSū(Mā-L)Śai.11. na kāyapracālakam antaragṛham upasaṃkramiṣyāmīti śikṣā karaṇīyā /",
+   "T1426": "「不搖身入家內，應當學。",
+   "T1460": "「不搖身入白衣舍，應當學。",
+   "sa-mula": "Śai.26 (PrMoSū_Mū-Banerjee) na kāyapracālakaṃ antargṛhaṃ gamiṣyāma iti śikṣā karaṇīyā /",
+   "T1454": "「不搖身、不掉臂、不搖頭、不肩排、不連手，入白衣舍，應當學。"
+  },
+  "sk16": {
+   "pi": "Sekhiya 16. Na kāyappacālakaṁ antaraghare nisīdissāmīti sikkhā karaṇīyā.",
+   "T1429": "「不得搖身行入白衣舍坐，應當學。",
+   "T1422a": "「不搖身白衣舍坐，應當學。",
+   "sa-sarv": "PrMoSū_Śai.B.36: na kāyapracālakā antargṛhe niṣatsyāma iti śikṣā karaṇīyā 36",
+   "T1436": "「不搖身白衣舍坐，應當學。"
+  },
+  "sk17": {
+   "pi": "Sekhiya 17. Bāhuppacālaka Na bāhuppacālakaṁ antaraghare gamissāmīti sikkhā karaṇīyā.",
+   "T1429": "「不得掉臂行入白衣舍，應當學。",
+   "T1422a": "「不掉臂入白衣舍，應當學。",
+   "sa-sarv": "PrMoSū_Śai.B.29: na bāhupracālakā antargṛhaṃ pravekṣyāma iti śikṣā karaṇīyā (29)",
+   "T1436": "「不掉臂入白衣舍，應當學。",
+   "sa-mahl": "PrMoSū(Mā-L)Śai.13. na bāhuvikṣepakam antaragṛham upasaṃkramiṣyāmīti śikṣā karaṇīyā / // uddānam // (1) nivasanaṃ (2) prāvaraṇaṃ (3) susaṃvṛto (4) cakṣuḥ (5) śabda (6) noccagghikā (7) na oguṇṭhikā (8) notkṣiptikā (9) na utkuṭukā (10) na khambha (11) na kāya (12) na śīrṣa (13) na bāhukena // prathamo vargaḥ //",
+   "T1426": "「不掉臂入家內，應當學。",
+   "T1460": "「不掉臂入白衣舍，應當學。",
+   "sa-mula": "Śai.27 (PrMoSū_Mū-Banerjee) na bāhupracālakaṃ antargṛhaṃ gamiṣyāma iti śikṣā karaṇīyā /"
+  },
+  "sk18": {
+   "pi": "Sekhiya 18. Na bāhuppacālakaṁ antaraghare nisīdissāmīti sikkhā karaṇīyā.",
+   "T1429": "「不得掉臂行入白衣舍坐，應當學。",
+   "T1422a": "「不掉臂白衣舍坐，應當學。",
+   "sa-sarv": "PrMoSū_Śai.B.30: na bāhupracālakā antargṛhe niṣatsyāma iti śikṣā karaṇīyā 30",
+   "T1436": "「不掉臂白衣舍坐，應當學。"
+  },
+  "sk19": {
+   "pi": "Sekhiya 19. Sīsappacālaka Na sīsappacālakaṁ antaraghare gamissāmīti sikkhā karaṇīyā.",
+   "T1422a": "「不搖頭入白衣舍，應當學。",
+   "sa-sarv": "PrMoSū_Śai.B.33: na śīrṣapracālakā antargṛhaṃ pravekṣyāma iti śikṣā karaṇīyā 3(3)",
+   "T1436": "「不搖頭入白衣舍，應當學。",
+   "sa-mahl": "PrMoSū(Mā-L)Śai.12. na śīrṣapracālakam antaragṛham upasaṃkramiṣyāmīti śikṣā karaṇīyā /",
+   "T1426": "「不搖頭入家內，應當學。",
+   "T1460": "「不搖頭入白衣舍，應當學。",
+   "sa-mula": "Śai.28 (PrMoSū_Mū-Banerjee) na śīrṣapracālakaṃ gamiṣyāma iti śikṣā karaṇīyā / /"
+  },
+  "sk20": {
+   "pi": "Sekhiya 20. Na sīsappacālakaṁ antaraghare nisīdissāmīti sikkhā karaṇīyā. Ujjagghikavaggo dutiyo",
+   "T1422a": "「不搖頭白衣舍坐，應當學。",
+   "sa-sarv": "PrMoSū_Śai.B.34: na śīrṣapracālakā antargṛhe niṣatsyāma iti śikṣā karaṇīyā (34)",
+   "T1436": "「不搖頭白衣舍坐，應當學。"
+  },
+  "x-shrug": {
+   "T1422a": "「不搖肩入白衣舍，應當學。「不搖肩白衣舍坐，應當學。",
+   "sa-sarv": "PrMoSū_Śai.B.31: na cāṃsapracālakā antargṛhaṃ pravekṣyāma iti śikṣā karaṇīyā 31 PrMoSū_Śai.B.32: na cāṃsapracālakā antargṛhe niṣatsyāma iti śikṣā karaṇīyā 3(2)",
+   "T1436": "「不搖肩入白衣舍，應當學。（五十）「不搖肩白衣舍坐，應當學。",
+   "sa-mula": "Śai.29 (PrMoSū_Mū-Banerjee) nāṃsotphatikayā antargṛhaṃ gamiṣyāma iti śikṣā karaṇīyā /"
+  },
+  "x-hand": {
+   "T1422a": "「不携手入白衣舍，應當學。「不携手白衣舍坐，應當學。",
+   "sa-sarv": "PrMoSū_Śai.B.37: na hastasaṃlagnikayāntargṛhaṃ pravekṣyāma iti śikṣā karaṇīyā (37) PrMoSū_Śai.B.38: na hastasaṃlagnikayāntargṛhe niṣatsyāma iti śikṣā karaṇīyā 38",
+   "T1436": "「不携手入白衣舍，應當學。「不携手白衣舍坐，應當學。",
+   "T1460": "「不携手入白衣舍，應當學。",
+   "sa-mula": "Śai.30 (PrMoSū_Mū-Banerjee) na hastasaṃlagnikayā antargṛhaṃ gamiṣyāma iti śikṣā karaṇīyā /"
+  },
+  "x-hide": {
+   "T1422a": "「不隱人入白衣舍，應當學。「不隱人白衣舍坐，應當學。"
+  },
+  "x-cheek": {
+   "T1422a": "「不拄頰入白衣舍，應當學。「不拄頰白衣舍坐，應當學。",
+   "sa-sarv": "PrMoSū_Śai.B.43: na pāṇau hanum upādāyāntargṛhe niṣatsyāmo gṛhiṇo hāsyaprekṣiṇa iti śikṣā karaṇīyā 43 //",
+   "T1436": "「不掌扶頰白衣舍坐，為白衣笑故，應當學。"
+  },
+  "sk21": {
+   "pi": "Chapter 3. Khambhakata Sekhiya 21. Khambhakata Na khambhakato antaraghare gamissāmīti sikkhā karaṇīyā.",
+   "T1429": "「不得叉腰行入白衣舍，應當學。",
+   "T1422a": "「不叉腰入白衣舍，應當學。",
+   "sa-sarv": "PrMoSū_Śai.B.17: na kambhākṛtā (a)ntargṛhaṃ pravekṣyāma iti śikṣā karaṇīy(ā) 17",
+   "T1436": "「不扠腰入白衣舍，應當學。",
+   "sa-mahl": "PrMoSū(Mā-L)Śai.10. na khambhakṛto antaragṛham upasaṃkramiṣyāmīti śikṣā karaṇīyā /",
+   "T1426": "「不叉腰入家內，應當學。（十事）",
+   "T1460": "「不叉腰入白衣舍，應當學。",
+   "sa-mula": "Śai.25 (PrMoSū_Mū-Banerjee) na skambhākṛtā antargṛhaṃ gamiṣyāma iti śikṣā karaṇīyā /"
+  },
+  "sk22": {
+   "pi": "Sekhiya 22. Na khambhakato antaraghare nisīdissāmīti sikkhā karaṇīyā.",
+   "T1429": "「不得叉腰入白衣舍坐，應當學。",
+   "T1422a": "「不叉腰白衣舍坐，應當學。",
+   "sa-sarv": "PrMoSū_Śai.B.18: na kambhākṛtā antargṛhe niṣatsyāma iti śikṣā karaṇīyā 18",
+   "T1436": "「不扠腰白衣舍坐，應當學。",
+   "sa-mahl": "PrMoSū(Mā-L)Śai.22. na khambhakṛto antaragṛhe niṣīdiṣyāmīti śikṣā karaṇīyā /",
+   "T1426": "「不叉腰家內坐，應當學。"
+  },
+  "sk23": {
+   "pi": "Sekhiya 23. Oguṇṭhita Na oguṇṭhito antaraghare gamissāmīti sikkhā karaṇīyā.",
+   "T1429": "「不得覆頭入白衣舍，應當學。",
+   "T1422a": "「不覆頭入白衣舍，應當學。",
+   "sa-sarv": "PrMoSū_Śai.B.15: nāva(gu)ṇḍikākṛtā antargṛhaṃ (prav)ekṣyāma iti śikṣā karaṇīy(ā)15",
+   "T1436": "「不覆頭入白衣舍，應當學。",
+   "sa-mahl": "PrMoSū(Mā-L)Śai.7. na oguṇṭhikāya antaragṛham upasaṃkramiṣyāmīti śikṣā karaṇīyā /",
+   "T1426": "「不覆頭入家內，應當學。",
+   "T1460": "「不覆頭面入白衣舍，應當學。",
+   "sa-mula": "Śai.16 (PrMoSū_Mū-Banerjee) nodguṇṭhikā antargṛhaṃ gamiṣyāma iti śikṣā karaṇīyā /",
+   "T1454": "「不覆頭、不偏抄衣、不雙抄衣、不叉腰、不拊肩，入白衣舍，應當學。"
+  },
+  "sk24": {
+   "pi": "Sekhiya 24. Na oguṇṭhito antaraghare nisīdissāmīti sikkhā karaṇīyā.",
+   "T1429": "「不得覆頭入白衣舍坐，應當學。",
+   "T1422a": "「不覆頭白衣舍坐，應當學。",
+   "sa-sarv": "PrMoSū_Śai.B.16: nāvaguṇḍikākṛtā antargṛhe niṣatsyāma iti śikṣā karaṇīyā 16",
+   "T1436": "「不覆頭白衣舍坐，應當學。",
+   "sa-mahl": "PrMoSū(Mā-L)Śai.18. na oguṇṭhikāya antaragṛhe niṣīdiṣyāmīti śikṣā karaṇīyā /",
+   "T1426": "「不覆頭家內坐，應當學。"
+  },
+  "x-turban": {
+   "sa-sarv": "PrMoSū_Śai.B.13: na veṣṭitaśiraso 'ntargṛhaṃ pravekṣyāma iti śikṣā karaṇīyā (13) PrMoSū_Śai.B.14: na veṣṭitaśiraso 'ntargṛhe niṣatsyāma iti śikṣā karaṇīyā 14",
+   "T1436": "「不襆頭入白衣舍，應當學。「不襆頭白衣舍坐，應當學。"
+  },
+  "sk25": {
+   "pi": "Sekhiya 25. Ukkuṭika Na ukkuṭikāya antaraghare gamissāmīti sikkhā karaṇīyā.",
+   "T1429": "「不得白衣舍內蹲坐，應當學。",
+   "T1422a": "「不蹲行入白衣舍，應當學。「不蹲行白衣舍坐，應當學。「不企行入白衣舍，應當學。「不企行白衣舍坐，應當學。",
+   "sa-sarv": "PrMoSū_Śai.B.11: notkuṭukā (a)ntargṛhaṃ pravekṣyāma iti śikṣā karaṇīyā 11 PrMoSū_Śai.B.12: notkuṭukā (a)ntargṛhe niṣatsyāma iti śikṣā karaṇīy(ā) 12",
+   "T1436": "「不胡跪入白衣舍，應當學。「不胡跪白衣舍坐，應當學。",
+   "sa-mahl": "PrMoSū(Mā-L)Śai.9. na utkuṭukāya antaragṛham upasaṃkramiṣyāmīti śikṣā karaṇīyā /",
+   "T1426": "「不脚指行入家內，應當學。",
+   "T1460": "「不蹲入白衣舍，應當學。",
+   "sa-mula": "Śai.23 (PrMoSū_Mū-Banerjee) notkuṭakayā antargṛhaṃ gamiṣyāma iti śikṣā karaṇīyā / Śai.24 (PrMoSū_Mū-Banerjee) na nikaṭotkuṭakayā antargṛhaṃ gamiṣyāma iti śikṣā karaṇīyā /",
+   "T1454": "「不蹲行、不足指行、不跳行、不庂足行、不努身行，入白衣舍，應當學。"
+  },
+  "x-jump": {
+   "T1429": "「不得跳行入白衣舍，應當學。「不得跳行入白衣舍坐，應當學（一十）。",
+   "T1460": "「不跳身入白衣舍，應當學。"
+  },
+  "x-limp": {
+   "sa-sarv": "PrMoSū_Śai.B.39: na viḍaṅgikayāntargṛhaṃ pravekṣyāma iti śikṣā karaṇīyā (39) PrMoSū_Śai.B.40: na viḍaṅgikayāntargṛhe niṣatsyāma iti śikṣā karaṇīyā (40)",
+   "T1436": "「不躄行入白衣舍，應當學。「不躄行白衣舍坐，應當學。"
+  },
+  "x-lean": {
+   "T1460": "「不倚足入白衣舍，應當學。「不倚身入白衣舍，應當學。「不肩相倚入白衣舍，應當學。"
+  },
+  "sk26": {
+   "pi": "Sekhiya 26. Pallatthika Na pallatthikāya antaraghare nisīdissāmīti sikkhā karaṇīyā.",
+   "sa-sarv": "PrMoSū_Śai.B.27: na pallatthikākṛtā antargṛhaṃ pravekṣyāma iti śikṣā karaṇīyā 27 PrMoSū_Śai.B.28: na pallatthikākṛtā antargṛhe niṣatsyāma iti śikṣā karaṇīyā 28",
+   "sa-mahl": "PrMoSū(Mā-L)Śai.20. na osaktikāya antaragṛhe niṣīdiṣyāmīti śikṣā karaṇīyā /",
+   "T1426": "「不抱膝家內坐，應當學。（二十事）"
+  },
+  "x-invite": {
+   "T1460": "「待請而入，應當學。",
+   "sa-mula": "Śai.31 (PrMoSū_Mū-Banerjee) nānujñātā antargṛhe āsane niṣatsyāma iti śikṣā karaṇīyā /",
+   "T1454": "「在白衣舍，未請坐，不應坐，應當學。"
+  },
+  "x-sit": {
+   "sa-sarv": "PrMoSū_Śai.B.41: na pāde pādam ādhāyāntargṛhe niṣatsyāma iti śikṣā karaṇīyā 41 PrMoSū_Śai.B.42: na sakthni sakthy āropyāntargṛhe niṣatsyāma iti śikṣā karaṇīyā 42",
+   "T1436": "「不累脚入白衣舍，應當學。「不累脚白衣舍坐，應當學。",
+   "sa-mahl": "PrMoSū(Mā-L)Śai.21. na pallatthikāya antaragṛhe niṣīdiṣyāmīti śikṣā karaṇīyā /",
+   "T1426": "「不交脚家內坐，應當學。",
+   "T1460": "「不偃臥，應當學。「觀床而坐，應當學。「不縱身重坐，應當學。「不荷髀坐，應當學。「不懸脚坐，應當學。「不寬脚坐，應當學。「不𮠃（區消反）脚坐，應當學。",
+   "sa-mula": "Śai.32 (PrMoSū_Mū-Banerjee) nāprativekṣyāsanaṃ antargṛhe āsane niṣatsyāma iti śikṣā karaṇīyā / Śai.33 (PrMoSū_Mū-Banerjee) na sarvakāyaṃ samavadhāyāntargṛhe āsane niṣatsyāma iti śikṣā karaṇīyā / Śai.34 (PrMoSū_Mū-Banerjee) na pāde pādam ādhāyāntargṛhe āsane niṣatsyāma iti śikṣā karaṇīyā / Śai.35 (PrMoSū_Mū-Banerjee) na gulphe gulpham ādhāyāntargṛhe āsane niṣatsyāma iti śikṣā karaṇīyā / Śai.36 (PrMoSū_Mū-Banerjee) na sakthani sakthi ādhāyāntargṛhe āsane niṣatsyāma iti śikṣā karaṇīyā / Śai.37 (PrMoSū_Mū-Banerjee) na saṃkṣipya pādau antargṛhe āsane niṣatsyāma iti śikṣā karaṇīyā / Śai.38 (PrMoSū_Mū-Banerjee) na vikṣipya pādau antargṛhe āsane niṣatsyāma iti śikṣā karaṇīyā / Śai.39 (PrMoSū_Mū-Banerjee) na vyataṅgikayā antargṛhe āsane niṣatsyāma iti śikṣā karaṇīyā /",
+   "T1454": "「在白衣舍，不善觀察，不應坐，應當學。「在白衣舍，不放身坐，應當學。「在白衣舍，不壘足、不重內踝、不重外踝、不急斂足、不長舒足、不露身，應當學。"
+  },
+  "x-fidget": {
+   "sa-mahl": "PrMoSū(Mā-L)Śai.23. na antaragṛhe niṣaṇṇo hastakaukṛtyaṃ pādakaukṛtyaṃ vā kariṣyāmīti śikṣā karaṇīyā / // uddānaṃ // (14) susaṃvṛto (15) cakṣuḥ (16) śabda (17) noccagghikā (18) na oguṇṭhikā (19) notkṣiptikā (20) nosaktikā (21) na pallatthikā (22) na khambha (23) na hastapādakaukṛtyena // dvitīyo vargaḥ //",
+   "T1426": "「不動手足家內坐，應當學。"
+  },
+  "sk27": {
+   "pi": "Sekhiya 27. Sakkaccapaṭiggahaṇa Sakkaccaṁ piṇḍapātaṁ paṭiggahessāmīti sikkhā karaṇīyā.",
+   "T1429": "「用意受食，應當學。",
+   "T1422a": "「一心受食，應當學。",
+   "sa-sarv": "C PrMoSū_Śai.C.1: satkṛtyaudanaṃ pratigṛhīṣyāma iti śikṣā karaṇīyā 1",
+   "T1436": "「一心受飯，應當學。",
+   "sa-mahl": "PrMoSū(Mā-L)Śai.24. satkṛtya piṇḍapātaṃ pratigṛhṇiṣyāmīti śikṣā karaṇīyā /",
+   "T1426": "「一心受食，應當學。",
+   "T1460": "「正意受食，應當學。",
+   "sa-mula": "Śai.40 (PrMoSū_Mū-Banerjee) satkṛtya piṇḍapātaṃ pratigrahīṣyāma iti śikṣā karaṇīyā /",
+   "T1454": "「恭敬受食，應當學。"
+  },
+  "sk28": {
+   "pi": "Sekhiya 28. Pattasaññīpaṭiggahaṇa Pattasaññī piṇḍapātaṁ paṭiggahessāmīti sikkhā karaṇīyā."
+  },
+  "sk29": {
+   "pi": "Sekhiya 29. Samasūpakapaṭiggahaṇa Samasūpakaṁ piṇḍapātaṁ paṭiggahessāmīti sikkhā karaṇīyā.",
+   "T1429": "「平鉢受羹，應當學。",
+   "sa-sarv": "PrMoSū_Śai.C.2: satkṛtya sūpaṃ pratigṛhīṣyāma iti śikṣā karaṇīyā 2",
+   "T1436": "「一心受羹，應當學。",
+   "T1460": "「正意受羹，應當學。「正鉢受羹，應當學。",
+   "sa-mula": "Śai.42 (PrMoSū_Mū-Banerjee) samasūpikaṃ piṇḍapātaṃ pratigrahīṣyāma iti śikṣā karaṇīyā /"
+  },
+  "sk30": {
+   "pi": "Sekhiya 30. Samatittika Samatittikaṁ piṇḍapātaṁ paṭiggahessāmīti sikkhā karaṇīyā. Khambhakatavaggo tatiyo",
+   "T1429": "「平鉢受食，應當學。",
+   "T1422a": "「不溢鉢受食，應當學。",
+   "sa-sarv": "PrMoSū_Śai.C.3: na stūpākāraṃ piṇḍapātaṃ paribhokṣyāma iti śikṣā karaṇīyā 3 PrMoSū_Śai.C.4: samatittik(aṃ pi)ṇḍapātaṃ paribhokṣyāma it(i śikṣā kara)ṇīy(ā) 4",
+   "T1436": "「不溢鉢受飯食，應當學。",
+   "T1460": "「不溢鉢食，應當學。",
+   "sa-mula": "Śai.41 (PrMoSū_Mū-Banerjee) samatīrthikaṃ piṇḍapātaṃ pratigrahīṣyāma iti śikṣā karaṇīyā /",
+   "T1454": "「不得滿鉢受飯，更安羹菜，令食流溢於鉢緣邊，應留屈指用意受食，應當學。"
+  },
+  "x-reach": {
+   "T1460": "「食未至不舒手索，應當學。",
+   "sa-mula": "Śai.44 (PrMoSū_Mū-Banerjee) na anāgate khādanīyabhojanīye pātram upanāmayiṣyāma iti śikṣā karaṇīyā /",
+   "T1454": "「行食未至不預伸鉢，應當學。"
+  },
+  "x-bowltop": {
+   "sa-mula": "Śai.47 (PrMoSū_Mū-Banerjee) nopari khādanīyabhojanīyasya pātraṃ dhārayiṣyāma iti śikṣā karaṇīyā /",
+   "T1454": "「不安鉢在食上，應當學。"
+  },
+  "sk31": {
+   "pi": "Chapter 4. Sakkacca Sekhiya 31. Sakkaccabhuñjana Sakkaccaṁ piṇḍapātaṁ bhuñjissāmīti sikkhā karaṇīyā.",
+   "sa-mula": "Śai.48 (PrMoSū_Mū-Banerjee) satkṛtya piṇḍapātaṃ paribhokṣyāma iti śikṣā karaṇīyā /",
+   "T1454": "「恭敬而食，應當學。"
+  },
+  "sk32": {
+   "pi": "Sekhiya 32. Pattasaññībhuñjana Pattasaññī piṇḍapātaṁ bhuñjissāmīti sikkhā karaṇīyā.",
+   "T1429": "「當繫鉢想食，應當學。",
+   "T1422a": "「諦視鉢食，應當學。",
+   "sa-sarv": "PrMoSū_Śai.C.27: pātrasaṃjñinaḥ piṇḍapātaṃ paribhokṣyāma iti śikṣā karaṇī(yā 27)",
+   "T1436": "「一心觀鉢食，應當學。",
+   "sa-mahl": "PrMoSū(Mā-L)Śai.44. na pātrasaṃjñī piṇḍapātaṃ pari[bhuṃji]ṣyāmīti śikṣā karaṇīyā /",
+   "T1426": "「端心視鉢食，應當學。"
+  },
+  "sk33": {
+   "pi": "Sekhiya 33. Sapadāna Sapadānaṁ piṇḍapātaṁ bhuñjissāmīti sikkhā karaṇīyā.",
+   "T1429": "「以次食，應當學（三十）。",
+   "T1422a": "「不於鉢中處處食，應當學。",
+   "sa-sarv": "PrMoSū_Śai.C.28: sāvadānaṃ piṇḍapātaṃ paribhokṣyāma iti śikṣā karaṇīyā 28",
+   "T1436": "「次第食，應當學。",
+   "sa-mula": "Śai.43 (PrMoSū_Mū-Banerjee) sāvadānaṃ piṇḍapātaṃ pratigrahīṣyāma iti śikṣā karaṇīyā /"
+  },
+  "x-pick": {
+   "sa-sarv": "PrMoSū_Śai.C.6: na stūpyavaguṇṭhīkṛtaṃ piṇḍapātaṃ paribhokṣyāma iti śikṣā karaṇīyā 6",
+   "T1436": "「不鉢中擇好飯食，應當學。"
+  },
+  "sk34": {
+   "pi": "Sekhiya 34. Samasūpaka Samasūpakaṁ piṇḍapātaṁ bhuñjissāmīti sikkhā karaṇīyā.",
+   "T1429": "「羹飯等食，應當學。",
+   "T1422a": "「羹飯俱食，應當學。",
+   "sa-sarv": "PrMoSū_Śai.C.5: samasūpikaṃ piṇḍapātaṃ paribhokṣyāma iti śikṣā karaṇīy(ā) 5",
+   "T1436": "「羹飯等食，應當學。",
+   "sa-mahl": "PrMoSū(Mā-L)Śai.25. samasūpaṃ piṇḍapātaṃ paribhuṃjiṣyāmīti śikṣā karaṇīyā /",
+   "T1426": "「羹飯等食，應當學。"
+  },
+  "sk35": {
+   "pi": "Sekhiya 35. Nathūpakata Na thūpakato omadditvā piṇḍapātaṁ bhuñjissāmīti sikkhā karaṇīyā.",
+   "T1429": "「不得挑鉢中而食，應當學。",
+   "T1422a": "「不刳中央食，應當學。",
+   "sa-sarv": "PrMoSū_Śai.C.7: na vyutkaṇṭhaśaḥ piṇḍapātaṃ paribhokṣyāma iti śikṣā karaṇīyā 7",
+   "T1436": "「不偏刳食，應當學。",
+   "sa-mahl": "PrMoSū(Mā-L)Śai.26. na stūpakārakaṃ piṇḍapātaṃ paribhuṃjiṣyāmīti śikṣā karaṇīyā / PrMoSū(Mā-L)Śai.27. nāvakīrṇakārakaṃ piṇḍapātaṃ paribhuṃjiṣyāmīti śikṣā karaṇīyā /",
+   "T1426": "「不偏刳食，應當學。",
+   "T1460": "「不作塔形食，應當學。",
+   "sa-mula": "Śai.68 (PrMoSū_Mū-Banerjee) na stūpākṛtim avagṛhya piṇḍapātaṃ paribhokṣyāma iti śikṣā karaṇīyā /"
+  },
+  "sk36": {
+   "pi": "Sekhiya 36. Odanappaṭicchādana Na sūpaṁ vā byañjanaṁ vā odanena paṭicchādessāmi bhiyyokamyataṁ upādāyāti sikkhā karaṇīyā.",
+   "T1429": "「不得以飯覆羹更望得，應當學。",
+   "T1422a": "「不以飯覆羹更望得，應當學。",
+   "sa-sarv": "PrMoSū_Śai.C.25: naudanena sūpaṃ praticchādayiṣyāmo bhūyaskāmatām upādāya iti śikṣā karaṇī(yā) 25",
+   "T1436": "「不得以飯覆羹更望得，應當學。",
+   "sa-mahl": "PrMoSū(Mā-L)Śai.46. na dinnadinnāni vyaṃjanāni odanena pracchādayiṣyāmi bhūyo āgamanakarmatām upādāyeti śikṣā karaṇīyā /",
+   "T1426": "「不以飯覆羹上更望得，應當學。",
+   "T1460": "「不以飯覆羹更望得，應當學。「不以羹覆飯，應當學。",
+   "sa-mula": "Śai.45 (PrMoSū_Mū-Banerjee) nodanena sūpikaṃ praticchādayiṣyāma iti śikṣā karaṇīyā / Śai.46 (PrMoSū_Mū-Banerjee) sūpikena vā odanaṃ bhūyaskāmatām upādāya iti śikṣā karaṇīyā /",
+   "T1454": "「不得以飯覆羹菜、不將羹菜覆飯，更望多得，應當學。"
+  },
+  "sk37": {
+   "pi": "Sekhiya 37. Sūpodanaviññatti Na sūpaṁ vā odanaṁ vā agilāno attano atthāya viññāpetvā bhuñjissāmīti sikkhā karaṇīyā.",
+   "T1429": "「若比丘無病，不得為己索羹飯，應當學。",
+   "T1422a": "「不為己索益食，應當學。",
+   "sa-sarv": "PrMoSū_Śai.C.24: nātmārtham aglānā odanaṃ vā sūpaṃ vā vijñāpayiṣyāma i(ti śikṣā karaṇīyā) 24",
+   "T1436": "「不病不得為身索羹飯，應當學。",
+   "sa-mahl": "PrMoSū(Mā-L)Śai.45. na agilāno odanaṃ vā sūpaṃ vā vyañjanaṃ vā ātmārthāya kulehi vijñāpetvā vā vijñāpāyetvā vā piṇḍapātaṃ paribhuṃjiṣyāmīti śikṣā karaṇīyā /",
+   "T1426": "「不病不得為己索食，應當學。",
+   "T1460": "「無病不得為己索食，應當學。"
+  },
+  "sk38": {
+   "pi": "Sekhiya 38. Ujjhānasaññī Na ujjhānasaññī paresaṁ pattaṁ olokessāmīti sikkhā karaṇīyā.",
+   "T1429": "「不得視比坐鉢中食，應當學。",
+   "T1422a": "「不嫌心視比坐鉢，應當學。",
+   "sa-sarv": "PrMoSū_Śai.C.26: nāvadhyānaprekṣiṇa anantarikasya pātraṃ vyavalokayiṣyāma (i)ti (śikṣā karaṇ)īyā 26",
+   "T1436": "「不得嫉心看比坐鉢中，應當學。",
+   "sa-mahl": "PrMoSū(Mā-L)Śai.43. nātivelaṃ parasya pātraṃ nidhyāyiṣyāmi odhyāyanakarmatām upādāyeti śikṣā karaṇīyā /",
+   "T1426": "「不嫌心看比坐鉢食，應當學。",
+   "T1460": "「不視比坐鉢起慊心，應當學。",
+   "sa-mula": "Śai.69 (PrMoSū_Mū-Banerjee) nāvadhyānaprekṣiṇo 'ntarikasya bhikṣoḥ pātram avalokayiṣyāma iti śikṣā karaṇīyā /",
+   "T1454": "「不輕慢心觀比座鉢中食，應當學。"
+  },
+  "sk39": {
+   "pi": "Sekhiya 39. Kabaḷa Nātimahantaṁ kabaḷaṁ karissāmīti sikkhā karaṇīyā.",
+   "T1429": "「不得大摶飯食，應當學。",
+   "sa-sarv": "PrMoSū_Śai.C.8: nātimahāntam ālopaṃ kariṣyāma iti śikṣā karaṇīyā 8",
+   "T1436": "「不大摶飯食，應當學。",
+   "sa-mahl": "PrMoSū(Mā-L)Śai.30. nātimahantehi kavaḍehi piṇḍapātaṃ paribhuṃjiṣyāmīti śikṣā karaṇīyā /",
+   "T1426": "「不大團飯食，應當學。",
+   "T1460": "「不大團食，應當學。「不小團食，應當學。",
+   "sa-mula": "Śai.49 (PrMoSū_Mū-Banerjee) nātikhuṇḍakaṃ piṇḍapātaṃ paribhokṣyāma iti śikṣā karaṇīyā / Śai.50 (PrMoSū_Mū-Banerjee) nātimahāntaṃ piṇḍapātaṃ paribhokṣyāma iti śikṣā karaṇīyā / Śai.51 (PrMoSū_Mū-Banerjee) parimaṇḍalaṃ ālopam ālopayiṣyāma iti śikṣā karaṇīyā /",
+   "T1454": "「不極小摶、不極大摶，圓整而食，應當學。"
+  },
+  "sk40": {
+   "pi": "Sekhiya 40. Ālopa Parimaṇḍalaṁ ālopaṁ karissāmīti sikkhā karaṇīyā. Sakkaccavaggo catuttho",
+   "sa-sarv": "PrMoSū_Śai.C.9: parimaṇḍalam ālopaṃ kariṣyāma iti śikṣā karaṇīyā 9",
+   "T1436": "「摶飯可口食，應當學。"
+  },
+  "sk41": {
+   "pi": "Chapter 5. Kabaḷa Sekhiya 41. Anāhaṭa Na anāhaṭe kabaḷe mukhadvāraṁ vivarissāmīti sikkhā karaṇīyā.",
+   "T1429": "「不得大張口待食，應當學。",
+   "T1422a": "「不大張口食，應當學。「飯未至不大張口待，應當學。",
+   "sa-sarv": "PrMoSū_Śai.C.10: nānāgate ālope mukhadvāraṃ vivariṣyāma iti śikṣā karaṇīyā 10",
+   "T1436": "「不張口待飯食，應當學。",
+   "sa-mahl": "PrMoSū(Mā-L)Śai.31. nānāgate kavaḍe mukhadvāraṃ vivariṣyāmīti śikṣā karaṇīyā /",
+   "T1426": "「不張口待食，應當學。（三十事）",
+   "T1460": "「不張口待飯食，應當學。",
+   "sa-mula": "Śai.52 (PrMoSū_Mū-Banerjee) na anāgate ālope mukhadvāraṃ vivariṣyāma iti śikṣā karaṇīyā /",
+   "T1454": "「若食未至不張口待，應當學。"
+  },
+  "sk42": {
+   "pi": "Sekhiya 42. Bhuñjamāna Na bhuñjamāno sabbahatthaṁ mukhe pakkhipissāmīti sikkhā karaṇīyā.",
+   "T1422a": "「不滿手食，應當學。"
+  },
+  "sk43": {
+   "pi": "Sekhiya 43. Sakabaḷa Na sakabaḷena mukhena byāharissāmīti sikkhā karaṇīyā.",
+   "T1429": "「不得含飯語，應當學。",
+   "T1422a": "「不含食語，應當學。",
+   "sa-sarv": "PrMoSū_Śai.C.11: na sālopena mukhadvāreṇa vyāhariṣyāma iti śikṣā karaṇīyā 11",
+   "T1436": "「不含食語，應當學。",
+   "sa-mahl": "PrMoSū(Mā-L)Śai.34. na sakavaḍena mukhena vācaṃ bhāṣiṣyamīti śikṣā karaṇīyā / // uddānaṃ // (24) satkṛtya (25) samasūpa (26) na stūpa (27) nāvakīrṇa (28) nāvagaṇḍa (29) na jihvā (30) nātimahantaṃ (31) nānāgataṃ (32) na kavaḍotkṣepaka (33) na kavaḍacchedaka (34) na sakavaḍena mukhena vācaṃ // tṛtīyo vargaḥ //",
+   "T1426": "「不含食語，應當學。",
+   "T1460": "「不含食語，應當學。",
+   "sa-mula": "Śai.53 (PrMoSū_Mū-Banerjee) na sālopena mukhena vācaṃ pravyāhariṣyāma iti śikṣā karaṇīyā /",
+   "T1454": "「不含食語，應當學。"
+  },
+  "sk44": {
+   "pi": "Sekhiya 44. Piṇḍukkhepaka Na piṇḍukkhepakaṁ bhuñjissāmīti sikkhā karaṇīyā.",
+   "T1429": "「不得摶飯遙擲口中，應當學。",
+   "T1422a": "「不摶飯遙擲口中，應當學。",
+   "sa-mahl": "PrMoSū(Mā-L)Śai.32. na kavaḍotkṣepakaṃ piṇḍapātaṃ paribhuṃjiṣyāmīti śikṣā karaṇīyā /",
+   "T1426": "「不挑團食，應當學。"
+  },
+  "sk45": {
+   "pi": "Sekhiya 45. Kabaḷāvacchedaka Na kabaḷāvacchedakaṁ bhuñjissāmīti sikkhā karaṇīyā.",
+   "T1422a": "「不齧半食，應當學。",
+   "sa-sarv": "PrMoSū_Śai.C.12: na kabaḍacchedakaṃ piṇḍapātaṃ paribhokṣyāma iti śikṣā karaṇīyā 12",
+   "T1436": "「不嚙半食，應當學。",
+   "sa-mahl": "PrMoSū(Mā-L)Śai.33. na kavaḍacchedakaṃ piṇḍapātaṃ paribhuṃjiṣyāmīti śikṣā karaṇīyā /",
+   "T1426": "「不齧半食，應當學。",
+   "T1460": "「不嚙半食，應當學。",
+   "sa-mula": "Śai.63 (PrMoSū_Mū-Banerjee) na kavalacchedakaṃ piṇḍapātaṃ paribhokṣyāma iti śikṣā karaṇīyā /"
+  },
+  "sk46": {
+   "pi": "Sekhiya 46. Avagaṇḍakāraka Na avagaṇḍakārakaṁ bhuñjissāmīti sikkhā karaṇīyā.",
+   "T1429": "「不得頰食食，應當學。",
+   "T1422a": "「不脹頰食，應當學。",
+   "sa-mahl": "PrMoSū(Mā-L)Śai.28. nāvagaṇḍakārakaṃ piṇḍapātaṃ paribhuṃjiṣyāmīti śikṣā karaṇīyā /",
+   "T1426": "「不口中頰食食，應當學。",
+   "sa-mula": "Śai.61 (PrMoSū_Mū-Banerjee) na gallāpahārakaṃ piṇḍapātaṃ paribhokṣyāma iti śikṣā karaṇīyā /"
+  },
+  "sk47": {
+   "pi": "Sekhiya 47. Hatthaniddhunaka Na hatthaniddhunakaṁ bhuñjissāmīti sikkhā karaṇīyā.",
+   "T1429": "「不得振手食，應當學。",
+   "T1422a": "「不振手食，應當學。",
+   "sa-sarv": "PrMoSū_Śai.C.21: na hastāvadhūnakaṃ piṇḍapātaṃ paribhokṣyāma iti śikṣā karaṇīyā 21",
+   "T1436": "「不振手食，應當學。",
+   "sa-mahl": "PrMoSū(Mā-L)Śai.41. na hastanirdhūnakaṃ piṇḍapātaṃ paribhuṃjiṣyāmīti śikṣā karaṇīyā / {Ed. hastanirdhūtakaṃ}",
+   "T1426": "「不振手食，應當學。",
+   "sa-mula": "Śai.66 (PrMoSū_Mū-Banerjee) na hastasaṃdhūnakaṃ piṇḍapātaṃ paribhokṣyāma iti śikṣā karaṇīyā / Śai.67 (PrMoSū_Mū-Banerjee) na pātrasaṃdhūnakaṃ piṇḍapātaṃ paribhokṣyāma iti śikṣā karaṇīyā /"
+  },
+  "sk48": {
+   "pi": "Sekhiya 48. Sitthāvakāraka Na sitthāvakārakaṁ bhuñjissāmīti sikkhā karaṇīyā.",
+   "T1429": "「不得遺落飯食，應當學（四十）。",
+   "T1422a": "「不棄飯食，應當學。",
+   "sa-sarv": "PrMoSū_Śai.C.22: na śistavikiraṃ piṇḍapātaṃ paribhokṣyāma iti śikṣā karaṇīyā 22",
+   "T1436": "「不棄飯食，應當學。",
+   "sa-mahl": "PrMoSū(Mā-L)Śai.42. na sitthāpakārakaṃ piṇḍapātaṃ paribhuṃjiṣyāmīti śikṣā karaṇīyā /",
+   "T1426": "「不落飯食，應當學。（四十事）",
+   "sa-mula": "Śai.59 (PrMoSū_Mū-Banerjee) na sikthapṛthakkārakaṃ piṇḍapātaṃ paribhokṣyāma iti śikṣā karaṇīyā / Śai.60 (PrMoSū_Mū-Banerjee) nāvaraṇakārakaṃ piṇḍapātaṃ paribhokṣyāma iti śikṣā karaṇīyā /"
+  },
+  "x-scatter": {
+   "T1429": "「不得手把散飯食，應當學。"
+  },
+  "sk49": {
+   "pi": "Sekhiya 49. Jivhānicchāraka Na jivhānicchārakaṁ bhuñjissāmīti sikkhā karaṇīyā.",
+   "T1422a": "「不吐舌食，應當學。",
+   "sa-sarv": "PrMoSū_Śai.C.18: na jihvāniścārakaṃ piṇḍapātaṃ paribhokṣyāma iti śikṣā karaṇīyā (1)8",
+   "T1436": "「不吐舌食，應當學。",
+   "sa-mahl": "PrMoSū(Mā-L)Śai.29. na jihvānicārakaṃ piṇḍapātaṃ paribhuṃjiṣyāmīti śikṣā karaṇīyā /",
+   "T1426": "「不吐舌食，應當學。",
+   "T1460": "「不出舌食，應當學。",
+   "sa-mula": "Śai.58 (PrMoSū_Mū-Banerjee) na jihvāniścārakaṃ piṇḍapātaṃ paribhokṣyāma iti śikṣā karaṇīyā /"
+  },
+  "sk50": {
+   "pi": "Sekhiya 50. Capucapukāraka Na capucapukārakaṁ bhuñjissāmīti sikkhā karaṇīyā. Kabaḷavaggo pañcamo",
+   "T1429": "「不得嚼飯作聲食，應當學。",
+   "T1422a": "「不嚼食作聲食，應當學。",
+   "sa-sarv": "PrMoSū_Śai.C.14: na cucukkārakaṃ piṇḍapātaṃ paribhokṣyāma iti śikṣā karaṇīyā (1)4",
+   "T1436": "「不嚼食作聲食，應當學。",
+   "sa-mahl": "PrMoSū(Mā-L)Śai.38. na cuccukāraṃ piṇḍapātaṃ paribhuṃjiṣyāmīti śikṣā karaṇīyā /",
+   "T1426": "「不㗘㗱作聲食，應當學。",
+   "T1460": "「不嚼食作聲，應當學。",
+   "sa-mula": "Śai.54 (PrMoSū_Mū-Banerjee) na cuccatkārakaṃ piṇḍapātaṃ paribhokṣyāma iti śikṣā karaṇīyā /",
+   "T1454": "「不彈舌食、不㗘㗱食、不呵氣食、不吹氣食、不散手食、不毀訾食、不填頰食、不齧半食、不舒舌食、不作窣堵波形食，應當學。"
+  },
+  "sk51": {
+   "pi": "Chapter 6. Surusuru Sekhiya 51. Surusurukāraka Na surusurukārakaṁ bhuñjissāmīti sikkhā karaṇīyā.",
+   "T1429": "「不得大噏飯食，應當學。",
+   "T1422a": "「不吸食食，應當學。",
+   "sa-sarv": "PrMoSū_Śai.C.13: na śuśukkārakaṃ piṇḍapātaṃ paribhokṣyāma iti śikṣā karaṇīyā 13",
+   "T1436": "「不味咽食食，應當學。",
+   "sa-mahl": "PrMoSū(Mā-L)Śai.39. na surusurukāraṃ piṇḍapātaṃ paribhuṃjiṣyāmīti śikṣā karaṇīyā / PrMoSū(Mā-L)Śai.40. na gulugulukārakaṃ piṇḍapātaṃ paribhuṃjiṣyāmīti śikṣā karaṇīyā /",
+   "T1426": "「不吸食食，應當學。",
+   "T1460": "「不吒食，應當學。",
+   "sa-mula": "Śai.55 (PrMoSū_Mū-Banerjee) naśuśaśutkārakaṃ piṇḍapātaṃ paribhokṣyāma iti śikṣā karaṇīyā / Śai.56 (PrMoSū_Mū-Banerjee) na thutyutkārakaṃ piṇḍapātaṃ paribhokṣyāma iti śikṣā karaṇīyā /"
+  },
+  "x-blow": {
+   "sa-sarv": "PrMoSū_Śai.C.15: na phuphukkārakaṃ piṇḍapātaṃ paribhokṣyāma iti śi(kṣā) karaṇī y(ā) 15",
+   "T1460": "「不口吹飯食，應當學。",
+   "sa-mula": "Śai.57 (PrMoSū_Mū-Banerjee) na phuphphuphkārakaṃ piṇḍapātaṃ paribhokṣyāma iti śikṣā karaṇīyā /"
+  },
+  "x-gulp": {
+   "T1422a": "「不全吞食，應當學。",
+   "sa-sarv": "PrMoSū_Śai.C.16: na gṛṣmahārakaṃ piṇḍapātaṃ paribhokṣyāma iti śikṣā karaṇīyā (16)",
+   "T1436": "「不全吞食食，應當學。",
+   "T1426": "「不全吞食，應當學。"
+  },
+  "x-smell": {
+   "T1422a": "「不嗅食食，應當學。",
+   "sa-sarv": "PrMoSū_Śai.C.17: nojjighranta(ḥ) piṇḍapātaṃ pari(bhokṣyāma iti śikṣā karaṇīyā 17)",
+   "T1436": "「不嗅食食，應當學。",
+   "T1460": "「不嗅食食，應當學。"
+  },
+  "x-spit": {
+   "T1460": "「不食上唾，應當學。"
+  },
+  "x-nose": {
+   "T1422a": "「不縮鼻食，應當學。"
+  },
+  "x-arm": {
+   "T1422a": "「不舒臂取食，應當學。"
+  },
+  "x-scorn": {
+   "T1422a": "「不嫌呵食，應當學。"
+  },
+  "x-click": {
+   "sa-mula": "Śai.62 (PrMoSū_Mū-Banerjee) na jihvāsphoṭakaṃ piṇḍapātaṃ paribhokṣyāma iti śikṣā karaṇīyā /"
+  },
+  "x-leaf": {
+   "T1460": "「不捏作葉食，應當學。"
+  },
+  "sk52": {
+   "pi": "Sekhiya 52. Hatthanillehaka Na hatthanillehakaṁ bhuñjissāmīti sikkhā karaṇīyā.",
+   "T1429": "「不得舌舐食，應當學。",
+   "T1422a": "「不舐取食，應當學。",
+   "sa-sarv": "PrMoSū_Śai.C.19: na hastāvalehakaṃ piṇḍapātaṃ paribhokṣyāma iti śikṣā karaṇīyā (19)",
+   "T1436": "「不舐手食，應當學。",
+   "sa-mahl": "PrMoSū(Mā-L)Śai.36. na hastanirlehakaṃ piṇḍapātaṃ paribhuṃjiṣyāmīti śikṣā karaṇīyā / PrMoSū(Mā-L)Śai.37. nāṅgulinirlehakaṃ piṇḍapātaṃ paribhuṃjiṣyāmīti śikṣā karaṇīyā /",
+   "T1426": "「不舐手食，應當學。「不𠲿指食，應當學。",
+   "T1460": "「不舐手食，應當學。",
+   "sa-mula": "Śai.64 (PrMoSū_Mū-Banerjee) na hastāvalehakaṃ piṇḍapātaṃ paribhokṣyāma iti śikṣā karaṇīyā /",
+   "T1454": "「不舐手、不舐鉢、不振手、不振鉢，常看鉢食，應當學。"
+  },
+  "sk53": {
+   "pi": "Sekhiya 53. Pattanillehaka Na pattanillehakaṁ bhuñjissāmīti sikkhā karaṇīyā.",
+   "T1422a": "「不曲指抆鉢食，應當學。",
+   "sa-sarv": "PrMoSū_Śai.C.20: na pātrāvalehakaṃ piṇḍapātaṃ paribhokṣyāma iti śikṣā karaṇīyā 20",
+   "T1436": "「不指抆鉢食，應當學。",
+   "sa-mahl": "PrMoSū(Mā-L)Śai.35. na pātranirlehakaṃ piṇḍapātaṃ paribhuṃjiṣyāmīti śikṣā karaṇīyā /",
+   "T1426": "「不指抆鉢食，應當學。",
+   "T1460": "「不舐鉢食，應當學。",
+   "sa-mula": "Śai.65 (PrMoSū_Mū-Banerjee) na pātrāvalehakaṃ piṇḍapātaṃ paribhokṣyāma iti śikṣā karaṇīyā /"
+  },
+  "x-weigh": {
+   "T1460": "「不手稱食，應當學。「不稱鉢食，應當學。「不拉餅食，應當學。"
+  },
+  "sk54": {
+   "pi": "Sekhiya 54. Oṭṭhanillehaka Na oṭṭhanillehakaṁ bhuñjissāmīti sikkhā karaṇīyā."
+  },
+  "sk55": {
+   "pi": "Sekhiya 55. Sāmisa Na sāmisena hatthena pānīyathālakaṁ paṭiggahessāmīti sikkhā karaṇīyā.",
+   "T1429": "「不得污手捉飲器，應當學。",
+   "T1422a": "「不以食手捉淨飯器，應當學。",
+   "sa-sarv": "PrMoSū_Śai.C.23: na sāmiṣeṇa pāṇinā pānīyasthālakaṃ pratigṛhīṣyāma iti śikṣā karaṇīyā 23",
+   "T1436": "「不污手受食器，應當學。",
+   "sa-mahl": "PrMoSū(Mā-L)Śai.48. na sasitthena pāṇinā pānīyasthālakaṃ pratigṛhṇiṣyāmīti śikṣā karaṇīyā / // uddānam // (35-7) trayo nirlehāḥ (38) cuccu (39) surusuru (40) na gulugulu (41) na hasta (42) na sittha (43) na odhyāyana (44) na pātrasaṃjñī (45) vijñaptiḥ (46) cchādayati (47) pātrodaka (48) sasitthena // caturtho vargaḥ //",
+   "T1426": "「不以膩手受飯器，應當學。",
+   "T1460": "「不污手捉水器，應當學。",
+   "sa-mula": "Śai.70 (PrMoSū_Mū-Banerjee) na sāmiṣeṇa pāṇinā udakasthālakaṃ grahīṣyāma iti śikṣā karaṇīyā /",
+   "T1454": "「不以污手捉淨水瓶，應當學。"
+  },
+  "x-splash": {
+   "T1460": "「不灒污比坐，應當學。",
+   "sa-mula": "Śai.71 (PrMoSū_Mū-Banerjee) na sāmiṣeṇodakenāntarikaṃ bhikṣuṃ sekṣyāma iti śikṣā karaṇīyā /"
+  },
+  "sk56": {
+   "pi": "Sekhiya 56. Sasitthaka Na sasitthakaṁ pattadhovanaṁ antaraghare chaḍḍessāmīti sikkhā karaṇīyā.",
+   "T1429": "「不得洗鉢水棄白衣舍內，應當學。",
+   "T1422a": "「不以鉢中有食水灑白衣屋內，應當學。",
+   "sa-sarv": "PrMoSū_Śai.C.29: na sāmiṣaṃ pātrodakam antargṛhe chorayiṣyāmo gṛhiṇam anavalokyeti śikṣā karaṇīyā (29) //",
+   "T1436": "「不應洗鉢水棄白衣舍內，除語檀越，應當學。",
+   "sa-mahl": "PrMoSū(Mā-L)Śai.47. na sasitthaṃ pātrodakaṃ pṛthivyāṃ niṣiñciṣyāmīti śikṣā karaṇīyā /",
+   "T1426": "「不以鉢中殘食棄地，應當學。",
+   "T1460": "「不以污水棄白衣舍，除問主人，應當學。",
+   "sa-mula": "Śai.72 (PrMoSū_Mū-Banerjee) na sāmiṣam udakam antargṛhe chorayiṣyāma iti śikṣā karaṇīyā / Śai.73 (PrMoSū_Mū-Banerjee) na pātreṇa vighasaṃś chorayiṣyāma iti śikṣā karaṇīyā /",
+   "T1454": "「在白衣舍不棄洗鉢水，除問主人，應當學。「不得以殘食置鉢水中，應當學。"
+  },
+  "x-bowlcare": {
+   "T1460": "「不以鉢置地，應當學。「不立洗鉢，應當學。「不置鉢墮處險處，應當學。「不在危處洗鉢，應當學。",
+   "sa-mula": "Śai.74 (PrMoSū_Mū-Banerjee) anāstīrṇe pṛthivīpradeśe pātraṃ sthāpayiṣyāma iti śikṣā karaṇīyā / Śai.75 (PrMoSū_Mū-Banerjee) na taṭe na prapāte na prāgbhāre pātraṃ sthāpayiṣyāma iti śikṣā karaṇīyā / Śai.76 (PrMoSū_Mū-Banerjee) notthitāḥ pātraṃ nirmādayiṣyāma iti śikṣā karaṇīyā / Śai.77 (PrMoSū_Mū-Banerjee) na taṭe na prapāte na prāgbhāre pātraṃ nirmādayiṣyāma iti śikṣā karaṇīyā / Śai.78 (PrMoSū_Mū-Banerjee) na nadyāḥ kāryakāriṇyā pratisrotaḥ pātrodakaṃ grahīṣyāma iti śikṣā karaṇīyā /",
+   "T1454": "「地上無替不應安鉢，應當學。「不立洗鉢，應當學。「不於危險岸處置鉢，亦不逆流酌水，應當學。"
+  },
+  "sk57": {
+   "pi": "Sekhiya 57. Chattapāṇi Na chattapāṇissa agilānassa dhammaṁ desessāmīti sikkhā karaṇīyā.",
+   "T1429": "「人持蓋，不應為說法，除病，應當學（一百）。",
+   "T1422a": "「不為持蓋覆身人說法，除病，應當學。",
+   "sa-sarv": "PrMoSū_Śai.D.18: na cchatrapāṇer aglānasya dharmaṃ deśayiṣyāma iti śikṣā karaṇīyā (18)",
+   "T1436": "「人捉蓋，不應為說法，除病，應當學。",
+   "sa-mahl": "PrMoSū(Mā-L)Śai.61. na cchatrapāṇisya agilānasya dharmaṃ deśayiṣyāmīti śikṣā karaṇīyā /",
+   "T1426": "「不為捉蓋人說法，除病，應當學。（六十事）",
+   "T1460": "「不得為持蓋人說法，除病，應當學。",
+   "sa-mula": "Śai.100 (PrMoSū_Mū-Banerjee) na chatrapāṇaye āglānāya dharmaṃ deśayiṣyāma iti śikṣā karaṇīyā /",
+   "T1454": "「不為持蓋者說法，除病，應當學。"
+  },
+  "sk58": {
+   "pi": "Sekhiya 58. Daṇḍapāṇi Na daṇḍapāṇissa agilānassa dhammaṁ desessāmīti sikkhā karaṇīyā.",
+   "T1429": "「人持杖，不恭敬，不應為說法，除病，應當學。",
+   "T1422a": "「不為拄杖人說法，除病，應當學。",
+   "sa-sarv": "PrMoSū_Śai.D.17: na daṇḍapāṇer aglānasya dharmaṃ deśayiṣyāma iti (śikṣā kara)ṇīyā (17)",
+   "T1436": "「人捉杖，不應為說法，除病，應當學。",
+   "sa-mahl": "PrMoSū(Mā-L)Śai.60. na daṇḍapāṇisya agilānasya dharmaṃ deśayiṣyāmīti śikṣā karaṇīyā /",
+   "T1426": "「不為捉杖人說法，除病，應當學。",
+   "T1460": "「不得為持杖人說法，除病，應當學。",
+   "sa-mula": "Śai.99 (PrMoSū_Mū-Banerjee) na daṇḍapāṇaye āglānāya dharmaṃ deśayiṣyāma iti śikṣā karaṇīyā /"
+  },
+  "sk59": {
+   "pi": "Sekhiya 59. Satthapāṇi Na satthapāṇissa agilānassa dhammaṁ desessāmīti sikkhā karaṇīyā.",
+   "T1429": "「人持劍，不應為說法，除病，應當學。",
+   "T1422a": "「不為捉刀人說法，除病，應當學。",
+   "sa-sarv": "PrMoSū_Śai.D.19: na śastrapāṇeḥ sarvathā dharmaṃ deśayiṣyāma iti ś(i)kṣā karaṇīy(ā) 19 PrMoSū_Śai.D.20: na khaḍgapā(ṇeḥ sa)rvathā (dha)rmaṃ deśayiṣ(y)ā(ma iti śikṣ)ā karaṇīyā 20",
+   "T1436": "「人捉五尺刀，不應為說法，除病，應當學。「人捉小刀，不應為說法，除病，應當學。",
+   "sa-mahl": "PrMoSū(Mā-L)Śai.58. na śastrapāṇisya agilānasya dharmaṃ deśayiṣyāmīti śikṣā karaṇīyā /",
+   "T1426": "「不為捉刀人說法，除病，應當學。",
+   "T1460": "「不得為持刀人說法，除病，應當學。",
+   "sa-mula": "Śai.101 (PrMoSū_Mū-Banerjee) na śastrapāṇaye āglānāya dharmaṃ deśayiṣyāma iti śikṣā karaṇīyā / Śai.102 (PrMoSū_Mū-Banerjee) na khaḍgapāṇaye āglānāya dharmaṃ deśayiṣyāma iti śikṣā karaṇīyā /"
+  },
+  "sk60": {
+   "pi": "Sekhiya 60. Āvudhapāṇi Na āvudhapāṇissa agilānassa dhammaṁ desessāmīti sikkhā karaṇīyā. Surusuruvaggo chaṭṭho",
+   "T1429": "「人持鉾，不應為說法，除病，應當學。「人持刀，不應為說法，除病，應當學。",
+   "T1422a": "「不為捉弓箭人說法，除病，應當學。",
+   "sa-sarv": "PrMoSū_Śai.D.21: nāyudhapāṇeḥ sarvathā dharma(ṃ) deśayiṣyāma iti śik(ṣ)ā kar(aṇ)īy(ā 21)",
+   "T1436": "「人捉弓箭種種器杖，不應為說法，除病，應當學。",
+   "sa-mahl": "PrMoSū(Mā-L)Śai.59. nāyudhapāṇisya agilānasya dharmaṃ deśayiṣyāmīti śikṣā karaṇīyā /",
+   "T1426": "「不為捉弓箭人說法，除病，應當學。",
+   "sa-mula": "Śai.103 (PrMoSū_Mū-Banerjee) nāyudhapāṇaye āglānāya dharmaṃ deśayiṣyāma iti śikṣā karaṇīyā / Śai.104 (PrMoSū_Mū-Banerjee) saṃnaddhāyāglānāya dharmaṃ deśayiṣyāma iti śikṣā karaṇīyā /"
+  },
+  "sk61": {
+   "pi": "Chapter 7. Pāduka Sekhiya 61. Pāduka Na pādukāruḷhassa agilānassa dhammaṁ desessāmīti sikkhā karaṇīyā.",
+   "T1429": "「不得為著木屐者說法，除病，應當學。",
+   "T1422a": "「人著屐，不應為說法，除病，應當學。",
+   "sa-sarv": "PrMoSū_Śai.D.16: na sapādukasyāglānasya dharmaṃ deśayiṣyāma iti śikṣā karaṇīyā (16)",
+   "T1436": "「人著屐，不應為說法，除病，應當學。",
+   "sa-mahl": "PrMoSū(Mā-L)Śai.53. na pādukārūḍhasya agilānasya dharmaṃ deśayiṣyāmīti śikṣā karaṇīyā /",
+   "T1426": "「不為著屐人說法，除病，應當學。",
+   "T1460": "「不得為著屐人說法，除病，應當學。",
+   "sa-mula": "Śai.98 (PrMoSū_Mū-Banerjee) na pādukārūḍhāya āglānāya dharmaṃ deśayiṣyāma iti śikṣā karaṇīyā /",
+   "T1454": "「不為著屐靴鞋及履屨者說法，除病，應當學。"
+  },
+  "sk62": {
+   "pi": "Sekhiya 62. Upāhana Na upāhanāruḷhassa agilānassa dhammaṁ desessāmīti sikkhā karaṇīyā.",
+   "T1429": "「不得為著革屣者說法，除病，應當學。",
+   "T1422a": "「不為著革屣人說法，除病，應當學。",
+   "sa-sarv": "PrMoSū_Śai.D.15: na sopānahakasyāglānasya dharmaṃ deśayiṣyāma iti śikṣā karaṇīyā 15",
+   "T1436": "「人著革屣，不應為說法，除病，應當學。",
+   "sa-mahl": "PrMoSū(Mā-L)Śai.52. na upānahārūḍhasya agilānasya dharmaṃ deśayiṣyāmīti śikṣā karaṇīyā /",
+   "T1426": "「不為著革屣人說法，除病，應當學。",
+   "T1460": "「不得為著履人說法，除病，應當學。"
+  },
+  "sk63": {
+   "pi": "Sekhiya 63. Yāna Na yānagatassa agilānassa dhammaṁ desessāmīti sikkhā karaṇīyā.",
+   "T1429": "「不得為騎乘者說法，除病，應當學。",
+   "T1422a": "「不為騎乘人說法，除病，應當學。",
+   "sa-sarv": "D PrMoSū_Śai.D.1: na yānādhirūḍhasyāglānasya dharmaṃ deśayiṣyāma iti śikṣā karaṇīyā 1",
+   "T1436": "「人騎馬不應為說法，除病，應當學。",
+   "sa-mahl": "PrMoSū(Mā-L)Śai.64. na pādena gacchanto yānena gacchantasya agilānasya dharmaṃ deśayiṣyāmīti śikṣā karaṇīyā /",
+   "T1426": "「不為騎乘人說法，除病，應當學。",
+   "T1460": "「不為騎乘人說法，除病，應當學。「不得為乘輿人說法，除病，應當學。",
+   "sa-mula": "Śai.94 (PrMoSū_Mū-Banerjee) na hastyārūḍhāya āglānāya dharmaṃ deśayiṣyāma iti śikṣā karaṇīyā / Śai.95 (PrMoSū_Mū-Banerjee) na aśvārūḍhāya āglānāya dharmaṃ deśayiṣyāma iti śikṣā karaṇīyā / Śai.96 (PrMoSū_Mū-Banerjee) na śivikārūḍhāya āglānāya dharmaṃ deśayiṣyāma iti śikṣā karaṇīyā / Śai.97 (PrMoSū_Mū-Banerjee) na yānāruḍhāya āglānāya dharmaṃ deśayiṣyāma iti śikṣā karaṇīyā /",
+   "T1454": "「不為乘象者，不為乘馬、不為乘輿、不為乘車者說法，除病，應當學。"
+  },
+  "sk64": {
+   "pi": "Sekhiya 64. Sayana Na sayanagatassa agilānassa dhammaṁ desessāmīti sikkhā karaṇīyā.",
+   "T1429": "「人臥，己坐，不得為說法，除病，應當學。",
+   "T1422a": "「人臥、比丘坐，不應為說法，除病，應當學。",
+   "sa-sarv": "PrMoSū_Śai.D.6: na ni(ṣa)ṇṇā nipannasyāglānasya dharmaṃ deśayiṣyā(ma iti śikṣā karaṇīyā 6)",
+   "T1436": "「人臥、比丘坐，不應為說法，除病，應當學。",
+   "sa-mahl": "PrMoSū(Mā-L)Śai.50. na niṣaṇṇo niṣaṇṇasya agilānasya dharmaṃ deśayiṣyāmīti śikṣā karaṇīyā /",
+   "T1426": "「己坐不為臥人說法，除病，應當學。",
+   "T1460": "「人臥己立，不應為說法，除病，應當學。「人臥己坐，不應為說法，除病，應當學。",
+   "sa-mula": "Śai.80 (PrMoSū_Mū-Banerjee) na niṣaṇṇā nipaṇṇāyāglānāya dharmaṃ deśayiṣyāma iti śikṣā karaṇīyā /",
+   "T1454": "「人臥己坐不為說法，除病，應當學。"
+  },
+  "sk65": {
+   "pi": "Sekhiya 65. Pallatthika Na pallatthikāya nisinnassa agilānassa dhammaṁ desessāmīti sikkhā karaṇīyā.",
+   "sa-sarv": "PrMoSū_Śai.D.14: na pallatthikākṛtasyāglānasya dharmaṃ deśayiṣyāma iti śikṣā karaṇīyā (14)",
+   "sa-mahl": "PrMoSū(Mā-L)Śai.56. na osaktikāya niṣaṇṇasya agilānasya dharmaṃ deśayiṣyāmīti śikṣā karaṇīyā /",
+   "T1426": "「不為抱膝蹲人說法，除病，應當學。"
+  },
+  "sk66": {
+   "pi": "Sekhiya 66. Veṭhita Na veṭhitasīsassa agilānassa dhammaṁ desessāmīti sikkhā karaṇīyā.",
+   "T1429": "「不得為裹頭者說法，除病，應當學。",
+   "sa-sarv": "PrMoSū_Śai.D.7: na veṣ(ṭ)itaśirasa aglānasya dharma(ṃ deśayiṣyāma iti śikṣā karaṇīyā 7)",
+   "T1436": "「人襆頭，不應為說法，除病，應當學。",
+   "sa-mahl": "PrMoSū(Mā-L)Śai.55. na saṃmukhāveṣṭitasya agilānasya dharmaṃ deśayiṣyāmīti śikṣā karaṇīyā /",
+   "T1426": "「不為纏頭人說法，除病，應當學。",
+   "T1460": "「不得為裹頭人說法，除病，應當學。",
+   "sa-mula": "Śai.93 (PrMoSū_Mū-Banerjee) na veṣṭitaśirase āglānāya dharmaṃ deśayiṣyāma iti śikṣā karaṇīyā /"
+  },
+  "sk67": {
+   "pi": "Sekhiya 67. Oguṇṭhita Na oguṇṭhitasīsassa agilānassa dhammaṁ desessāmīti sikkhā karaṇīyā.",
+   "T1429": "「不得為覆頭者說法，除病，應當學。",
+   "T1422a": "「不為覆頭人說法，除病，應當學。",
+   "sa-sarv": "PrMoSū_Śai.D.8: nāvaguṇḍikākṛtasyāglānasy(a dharmaṃ deśayiṣyāma) iti (śikṣā karaṇīyā) 8",
+   "T1436": "「人覆頭，不應為說法，除病，應當學。",
+   "sa-mahl": "PrMoSū(Mā-L)Śai.54. na oguṇṭhikākṛtasya agilānasya dharmaṃ deśayiṣyāmīti śikṣā karaṇīyā /",
+   "T1426": "「不為覆頭人說法，除病，應當學。",
+   "T1460": "「不得為覆頭人說法，除病，應當學。",
+   "sa-mula": "Śai.84 (PrMoSū_Mū-Banerjee) nodguṇṭhikākṛtāyāglānāya dharmaṃ deśayiṣyāma iti śikṣā karaṇīyā /",
+   "T1454": "「不為覆頭者、不為偏抄衣、不為雙抄衣、不為叉腰者、不為拊肩者說法，除病，應當學。"
+  },
+  "xs-robe": {
+   "T1429": "「不得與反抄衣不恭敬人說法，除病，應當學。「不得為衣纏頸者說法，除病，應當學。",
+   "T1422a": "「不為反抄衣人說法，除病，應當學。「不為左右反抄衣人說法，除病，應當學。",
+   "sa-sarv": "PrMoSū_Śai.D.10: notkṛṣṭikākṛtasyāglānasya dharmaṃ deśayiṣyāma iti śikṣa karaṇīyā 10 PrMoSū_Śai.D.11: nātyastikākṛtasyāglānasya dharmaṃ deśayiṣyāma iti śikṣā karaṇīyā 11 PrMoSū_Śai.D.12: na vinyastikākṛtasyāglānasya dharmaṃ deśayiṣyāma iti śikṣā karaṇīyā 12 PrMoSū_Śai.D.13: na vikṣiptikākṛtasyāglānasya dharmaṃ deśayiṣyāma iti śikṣā karaṇīyā 13",
+   "T1436": "「人反抄衣，不應為說法，除病，應當學。「人左右反抄衣，不應為說法，除病，應當學。",
+   "sa-mula": "Śai.85 (PrMoSū_Mū-Banerjee) notkṛṣṭikākṛtāyāglānāya dharmaṃ deśayiṣyāma iti śikṣā karaṇīyā / Śai.86 (PrMoSū_Mū-Banerjee) notsaktikākṛtāyāglānāya dharmaṃ deśayiṣyāma iti śikṣā karaṇīyā / Śai.87 (PrMoSū_Mū-Banerjee) na vyastikākṛtāyāglānāya dharmaṃ deśayiṣyāma iti śikṣā karaṇīyā / Śai.88 (PrMoSū_Mū-Banerjee) na paryastikākṛtāyāglānāya dharmaṃ deśayiṣyāma iti śikṣā karaṇīyā /"
+  },
+  "xs-akimbo": {
+   "T1429": "「不得為叉腰者說法，除病，應當學。",
+   "sa-sarv": "PrMoSū_Śai.D.9: na kaṃbhākṛtasyāglānasya dharmaṃ deśayiṣyāma iti śikṣā karaṇīyā 9",
+   "T1436": "「人扠腰，不應為說法，除病，應當學。"
+  },
+  "xs-chest": {
+   "T1422a": "「人現胸，不應為說法，除病，應當學。",
+   "T1436": "「人現胸，不應為說法，除病，應當學。"
+  },
+  "xs-flank": {
+   "T1436": "「人現脇，不應為說法，除病，應當學。（一百）"
+  },
+  "xs-trail": {
+   "T1436": "「人放衣掉，不應為說法，除病，應當學。"
+  },
+  "xs-crown": {
+   "T1460": "「不得為著帽人說法，除病，應當學。「不得為著花鬘人說法，除病，應當學。「不得為著寶冠人說法，除病，應當學。",
+   "sa-mula": "Śai.89 (PrMoSū_Mū-Banerjee) noṣṇīṣaśirase āglānāya dharmaṃ deśayiṣyāma iti śikṣā karaṇīyā / Śai.90 (PrMoSū_Mū-Banerjee) na kholāśirase āglānāya dharmaṃ deśayiṣyāma iti śikṣā karaṇīyā / Śai.91 (PrMoSū_Mū-Banerjee) na mauliśirase āglānāya dharmaṃ deśayiṣyāma iti śikṣā karaṇīyā / Śai.92 (PrMoSū_Mū-Banerjee) na mālāśirase āglānāya dharmaṃ deśayiṣyāma iti śikṣā karaṇīyā /",
+   "T1454": "「不為戴帽著冠及作佛頂髻者，不為纏頭、不為冠花者說法，除病，應當學。"
+  },
+  "x-lift": {
+   "sa-mahl": "PrMoSū(Mā-L)Śai.57. na pallatthikāya niṣaṇṇasya agilānasya dharmaṃ deśayiṣyāmīti śikṣā karaṇīyā / // uddānam // (49) na sthito (50) na niṣaṇṇo (51) uccāsana (52) upānaha (53) pādukā (54) oguṇṭhikā (55) na saṃmukha (56) na osaktikā (57) na pallatthikāya // pañcamo vargaḥ /",
+   "T1426": "「不為翹脚人說法，除病，應當學。"
+  },
+  "sk68": {
+   "pi": "Sekhiya 68. Chamā Na chamāyaṁ nisīditvā āsane nisinnassa agilānassa dhammaṁ desessāmīti sikkhā karaṇīyā.",
+   "T1429": "「人在座，己在非座，不得為說法，除病，應當學。",
+   "T1460": "「人在坐己在非坐，不得為說法，除病，應當學。"
+  },
+  "sk69": {
+   "pi": "Sekhiya 69. Nīcāsana Na nīce āsane nisīditvā ucce āsane nisinnassa agilānassa dhammaṁ desessāmīti sikkhā karaṇīyā.",
+   "T1429": "「人在高坐，己在下坐，不得為說法，除病，應當學。",
+   "T1422a": "「人在高坐、比丘在下，不應為說法，除病，應當學。",
+   "sa-sarv": "PrMoSū_Śai.D.5: na nīcāsan(e) niṣaṇṇā uccāsane niṣaṇṇasyāglānasya dharmaṃ deśayiṣyāma iti śikṣā ka(raṇīyā) 5",
+   "T1436": "「人在高、比丘在下，不應為說法，除病，應當學。",
+   "sa-mahl": "PrMoSū(Mā-L)Śai.51. na nīcāsane niṣaṇṇo uccāsane niṣaṇṇasya agilānasya dharmaṃ deśayiṣyāmīti śikṣā karaṇīyā /",
+   "T1426": "「己在下不為高床上人說法，除病，應當學。（五十事）",
+   "sa-mula": "Śai.81 (PrMoSū_Mū-Banerjee) na nīcatarake āsane niṣaṇṇā uccatarake āsane niṣaṇṇāyāglānāya dharmaṃ deśayiṣyāma iti śikṣā karaṇīyā /",
+   "T1454": "「人在高座己在下座不為說法，除病，應當學。"
+  },
+  "sk70": {
+   "pi": "Sekhiya 70. Ṭhita Na ṭhito nisinnassa agilānassa dhammaṁ desessāmīti sikkhā karaṇīyā.",
+   "T1429": "「人坐，己立，不得為說法，除病，應當學。",
+   "T1422a": "「人坐、比丘立，不應為說法，除病，應當學。",
+   "sa-sarv": "PrMoSū_Śai.D.4: na sthitā niṣaṇṇasyāglānasya dharmaṃ deśayiṣyāma iti śikṣā (kara)ṇīy(ā) 4",
+   "T1436": "「人坐、比丘立，不應為說法，除病，應當學。",
+   "sa-mahl": "PrMoSū(Mā-L)Śai.49. na sthito niṣaṇṇasya agilānasya dharmaṃ deśayiṣyāmīti śikṣā karaṇīyā /",
+   "T1426": "「己立不為坐人說法，除病，應當學。",
+   "T1460": "「人坐己立，不應為說法，除病，應當學。",
+   "sa-mula": "Śai.79 (PrMoSū_Mū-Banerjee) na utthitā niṣaṇṇāyāglānāya dharmaṃ deśayiṣyāma iti śikṣā karaṇīyā /",
+   "T1454": "「人坐己立不為說法，除病，應當學。"
+  },
+  "sk71": {
+   "pi": "Sekhiya 71. Pacchatogamana Na pacchato gacchanto purato gacchantassa agilānassa dhammaṁ desessāmīti sikkhā karaṇīyā.",
+   "T1429": "「人在前行，己在後，不得為說法，除病，應當學（九十）。",
+   "T1422a": "「人在前、比丘在後，不應為說法，除病，應當學。",
+   "sa-sarv": "PrMoSū_Śai.D.2: na purato gacchataḥ pṛṣṭhato 'nugacchanta aglānasya dharmaṃ deśayiṣyāma iti śikṣā karaṇīy(ā) 2",
+   "T1436": "「人在前、比丘在後，不應為說法，除病，應當學。",
+   "sa-mahl": "PrMoSū(Mā-L)Śai.63. na pṛṣṭhato gacchanto purato gacchantasya agilānasya dharmaṃ deśayiṣyāmīti śikṣā karaṇīyā /",
+   "T1426": "「在後不為在前人說法，除病，應當學。",
+   "T1460": "「人在前己在後，不得為說法，應當學。「人前行己在後，不得為說法，應當學。",
+   "sa-mula": "Śai.82 (PrMoSū_Mū-Banerjee) na pṛṣṭhato gacchantaḥ purato gacchate aglānāya dharmaṃ deśayiṣyāma iti śikṣā karaṇīyā /",
+   "T1454": "「人在前行己在後行不為說法，除病，應當學。"
+  },
+  "sk72": {
+   "pi": "Sekhiya 72. Uppathenagamana Na uppathena gacchanto pathena gacchantassa agilānassa dhammaṁ desessāmīti sikkhā karaṇīyā.",
+   "T1429": "「人在道，已在非道，不得為說法，除病，應當學。",
+   "T1422a": "「人在道中、比丘在道外，不應為說法，除病，應當學。",
+   "sa-sarv": "PrMoSū_Śai.D.3: na mārgaṃ gacchato hy amārg(aṃ ga)cchanta aglānasya dharmaṃ deśayiṣyāma iti śikṣā karaṇīyā 3",
+   "T1436": "「人在道中、比丘在道外，不應為說法，除病，應當學。",
+   "sa-mahl": "PrMoSū(Mā-L)Śai.62. na utpathena gacchanto pathena gacchantasya agilānasya dharmaṃ deśayiṣyāmīti śikṣā karaṇīyā /",
+   "T1426": "「在道外不為道中人說法，除病，應當學。",
+   "T1460": "「人在道己在非道，不得為說法，應當學。",
+   "sa-mula": "Śai.83 (PrMoSū_Mū-Banerjee) nonmārgeṇa gacchanto mārgeṇa gacchate āglānāya dharmaṃ deśayiṣyāma iti śikṣā karaṇīyā /",
+   "T1454": "「人在道己在非道不為說法，除病，應當學。"
+  },
+  "x-walk": {
+   "T1429": "「人在高經行處，己在下經行處，不得為說法，除病，應當學。"
+  },
+  "sk73": {
+   "pi": "Sekhiya 73. Ṭhitouccāra Na ṭhito agilāno uccāraṁ vā passāvaṁ vā karissāmīti sikkhā karaṇīyā.",
+   "T1429": "「不得立大、小便，除病，應當學。",
+   "T1422a": "「不立大小便，除病，應當學。",
+   "sa-sarv": "PrMoSū_Śai.D.24: na sthi(t)ā aglān(ā) uc(c)āraprasrāvaṃ kariṣyāma iti (śikṣā karaṇīyā 24)",
+   "T1436": "「不應立大小便，除病，應當學。",
+   "sa-mahl": "PrMoSū(Mā-L)Śai.67. na sthito uccāraṃ vā prasrāvaṃ vā agilāno kariṣyāmīti śikṣā karaṇīyā /",
+   "T1426": "「不立大小便，除病，應當學。」（眾學六十六事竟）",
+   "T1460": "「不得立大小便，除病，應當學。",
+   "sa-mula": "Śai.105 (PrMoSū_Mū-Banerjee) nāglānā utthitā uccāraprasrāvaṃ kariṣyāma iti śikṣā karaṇīyā /",
+   "T1454": "「不立大小便，除病，應當學。"
+  },
+  "sk74": {
+   "pi": "Sekhiya 74. Hariteuccāra Na harite agilāno uccāraṁ vā passāvaṁ vā kheḷaṁ vā karissāmīti sikkhā karaṇīyā.",
+   "T1429": "「不得生草葉上大、小便、涕、唾，除病，應當學。",
+   "T1422a": "「不大小便生草菜上，除病，應當學。",
+   "sa-sarv": "PrMoSū_Śai.D.22: n(a) harita uccāraprasrāvaṃ khe(ṭaṃ śiṅghā)ṇakaṃ kariṣyāma iti (śikṣā karaṇīyā 22)",
+   "T1436": "「不應生草上大小便涕唾，除病，應當學。",
+   "sa-mahl": "PrMoSū(Mā-L)Śai.65. na harite tṛṇe uccāraṃ vā prasrāvaṃ vā kheṭaṃ vā siṃhāṇaṃ vā agilāno kariṣyāmīti śikṣā karaṇīyā /",
+   "T1426": "「不生草上大小便涕唾，除病，應當學。",
+   "T1460": "「不得生草上大小便涕唾歐吐𧗕（奴東反）血，應當學。",
+   "sa-mula": "Śai.107 (PrMoSū_Mū-Banerjee) nāglānā saharite pṛthivīpradeśe uccāraprasrāvaṃ kheṭaṃ siṃghāṇakaṃ vāntaṃ viriktaṃ chorayiṣyāma iti śikṣā karaṇīyā /",
+   "T1454": "「不得青草上棄大小便及洟唾，除病，應當學。"
+  },
+  "sk75": {
+   "pi": "Sekhiya 75. Udakeuccāra Na udake agilāno uccāraṁ vā passāvaṁ vā kheḷaṁ vā karissāmīti sikkhā karaṇīyā. Pādukavaggo sattamo",
+   "T1429": "「不得水中大、小便、涕、唾，除病，應當學（五十）。",
+   "T1422a": "「不大小便淨水中，除病，應當學。",
+   "sa-sarv": "PrMoSū_Śai.D.23: na kalpika udake pāribhogīye uccāraprasrāvaṃ kheṭaṃ śiṅghāṇakaṃ kariṣyāma iti śikṣā kara(ṇīyā 23)",
+   "T1436": "「不應淨用水中大小便涕唾，除病，應當學。",
+   "sa-mahl": "PrMoSū(Mā-L)Śai.66. na udake uccāraṃ vā prasrāvaṃ vā kheṭaṃ vā siṃhāṇakaṃ vā agilāno kariṣyāmīti śikṣā karaṇīyā /",
+   "T1426": "「不水中大小便涕唾，除病，應當學。",
+   "T1460": "「不得水中大小便涕唾，除病，應當學。",
+   "sa-mula": "Śai.106 (PrMoSū_Mū-Banerjee) nāglānāḥ udake uccāraprasrāvaṃ kheṭaṃ siṃghāṇakaṃ vāntaṃ viriktaṃ chorayiṣyāma iti śikṣā karaṇīyā /",
+   "T1454": "「不得水中大小便洟唾，除病，應當學。"
+  },
+  "x-tree": {
+   "T1429": "「不得上樹過人頭，除時因緣，應當學。",
+   "T1422a": "「樹過人不得上，除大因緣，應當學。」",
+   "sa-sarv": "PrMoSū_Śai.D.25: na sādhikapauruṣaṃ vṛkṣam ārokṣyāmo 'nyatra praty(ayād it)i śikṣā karaṇīyā 25 / /",
+   "T1436": "「樹過人不應上，除大因緣，應當學。」",
+   "T1460": "「不得上過人樹，除怖畏因緣，應當學。」",
+   "sa-mula": "Śai.108 (PrMoSū_Mū-Banerjee) nāsādhikapauruṣaṃ vṛkṣam adhirokṣyāmo 'nyatrāpada iti śikṣā karaṇīyā /",
+   "T1454": "「不得上過人樹，除有難緣，應當學。」"
+  },
+  "x-roadhand": {
+   "T1429": "「不得携手在道行，應當學。"
+  },
+  "x-staff": {
+   "T1429": "「不得絡囊盛鉢貫杖頭，著肩上而行，應當學。"
+  },
+  "x-stupa": {
+   "T1429": "「不得在佛塔中止宿，除為守護故，應當學（六十）。「不得藏財物置佛塔中，除為堅牢故，應當學。「不得著革屣入佛塔中，應當學。「不得手捉革屣入佛塔中，應當學。「不得著革屣繞佛塔行，應當學。「不得著富羅入佛塔中，應當學。「不得手捉富羅入佛塔中，應當學。「不得佛塔下坐食，留草，及食污地，應當學。「不得擔死屍從佛塔下過，應當學。「不得在佛塔下埋死屍，應當學。「不得在佛塔下燒死屍，應當學（七十）。「不得向佛塔燒死屍，應當學。「不得佛塔四邊燒死屍，使臭氣來入，應當學。「不得持死人衣，及床，從佛塔下過，除浣、染、香薰，應當學。「不得佛塔下大、小便，應當學。「不得向佛塔大、小便，應當學。「不得繞佛塔四邊大、小便，使臭氣來入，應當學。「不得持佛像至大、小便處，應當學。「不得在佛塔下嚼楊枝，應當學。「不得向佛塔嚼楊枝，應當學。「不得佛塔四邊嚼楊枝，應當學（八十）。「不得在佛塔下涕唾，應當學。「不得向佛塔涕唾，應當學。「不得佛塔四邊涕唾，應當學。「不得向佛塔舒脚坐，應當學。「不得安佛像在下房，己在上房住，應當學。"
+  },
+  "skz": {
+   "pi": "Uddiṭṭhā kho āyasmanto sekhiyā dhammā. Tatthāyasmante pucchāmi, kaccittha parisuddhā, dutiyampi pucchāmi, kaccittha parisuddhā, tatiyampi pucchāmi, kaccittha parisuddhā, parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti. Sekhiyā niṭṭhitā",
+   "T1429": "「諸大德！我已說眾學戒法。今問諸大德！是中清淨不？（如是三說）諸大德！是中清淨，默然故，是事如是持。",
+   "T1422a": "「諸大德！已說眾學法。今問，諸大德是中清淨不？」（第二、第三亦如是說）「諸大德是中清淨，默然故，是事如是持。」",
+   "sa-sarv": "uddiṣṭā mayāyuṣmantaḥ saṃbahu(lāḥ śaikṣā) dharmās tatrāham āyuṣmataḥ pṛcchāmi ka(cc)i(t sth)ā(tra) pariśudd(ā dvir api) tr(i)r api pṛcchāmi kaccit sthātra pariśu(ddhāḥ) pariśu(ddhā atrāy)uṣm(anto yasmāt tūṣṇīm evam etad dhārayāmi //)",
+   "T1436": "「諸大德！已說眾學法，今問諸大德是中清淨不？」（第二、第三亦如是問。）「諸大德！是中清淨，默然故，是事如是持。」",
+   "sa-mahl": "// uddānam // (58-59) na śastrāyudha (60) daṇḍa (61) cchatra (62) utpatha (63) pṛṣṭhato (64) yānaṃ (65) haritaṃ (66) udaka (67) sthitena / ṣaṣṭho vargaḥ // uddiṣṭāḥ kho punar āyuṣmanto sātirekapañcāśac chaikṣā dharmāḥ / tatrāyuṣmanto pṛcchāmi kaccittha pariśuddhāḥ? dvitīyaṃ pi āyuṣmanto pṛcchāmi kaccittha pariśuddhāḥ? tṛtīyaṃ pi āyuṣmanto pṛcchāmi kaccittha pariśuddhāḥ? pariśuddhā atrāyuṣmanto yasmāt tūṣṇīm evam etaṃ dhārayāmi /",
+   "T1426": "「諸大德！已說眾學法。今問諸大德！是中清淨不？是中清淨不？是中清淨不？」「諸大德！是中清淨，默然故，是事如是持。」",
+   "T1460": "「諸大德！我已說眾學法。今問諸大德是中清淨不？」（如是三說）「諸大德是中清淨，默然故，是事如是持。」",
+   "sa-mula": "uddiṣṭā me āyuṣmantaḥ saṃbahulāḥ śaikṣā dharmāḥ / tatrāham āyuṣmataḥ paripṛcchāmi -- kaccit sthātra pariśuddāḥ dvir api trir api paripṛcchāmi -- kaccit sthātra pariśuddhāḥ pariśuddhā āyuṣmanto yasmāt tūṣṇīm evam etad dhārayāmi //",
+   "T1454": "「諸大德！我已說眾多學法。今問諸大德！是中清淨不？」（如是三說）「諸大德！是中清淨，默然故，我今如是持。」"
+  }
+ }
+}
