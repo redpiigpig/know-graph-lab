@@ -1,0 +1,309 @@
+{
+ "slug": "madhyantavibhaga-c03",
+ "title": "辯中邊論・真實品",
+ "family": "sa",
+ "intro": "彌勒《中邊分別頌》（Madhyāntavibhāga）連同世親釋。骨架＝長尾雅人校本頌號（MAV 品.頌；論體頌不計號，另列一節），一頌一節；梵本頌本（GRETIL，Pandeya 本）另有自己的頌號，第一品多計論體頌、第四五品後段差半頌，頌本欄一律依長尾本頌界切。另收世親釋梵本（GRETIL，長尾本）。漢譯三本：真諦《中邊分別論》、玄奘《辯中邊論》（皆頌連同世親釋）與玄奘《辯中邊論頌》；釋論欄自該頌起、至下一頌前的釋文止，頌前「…頌曰：」「故說偈言：」一類引導句歸下一頌。漢譯一頌常合梵本兩頌或跨梵本頌界，只能在頌中下刀，釋文因而全落在後一頌。梵本頌本 3.22 後多出的半頌（nimittāt praśamāt sārthāt…）屬長尾本 3.22。真諦本諦義一頌（3.21）的偈文在釋文中重出兩次，皆在本節。玄奘頌「如次四三種，依根本真實」不見於梵本頌文，隨 3.8。",
+ "units": [
+  {
+   "id": "v01",
+   "label": "MAV 3.1　十種真實（一）"
+  },
+  {
+   "id": "v02",
+   "label": "MAV 3.2　十種真實（二）"
+  },
+  {
+   "id": "v03",
+   "label": "MAV 3.3　根本真實：三自性"
+  },
+  {
+   "id": "v04",
+   "label": "MAV 3.4　相真實"
+  },
+  {
+   "id": "v05",
+   "label": "MAV 3.5　相真實（結）；無顛倒真實：無常"
+  },
+  {
+   "id": "v06",
+   "label": "MAV 3.6　無常、苦"
+  },
+  {
+   "id": "v07",
+   "label": "MAV 3.7　空、無我"
+  },
+  {
+   "id": "v08",
+   "label": "MAV 3.8　自相無我；因果真實：苦、集"
+  },
+  {
+   "id": "v09",
+   "label": "MAV 3.9　滅諦、道諦"
+  },
+  {
+   "id": "v10",
+   "label": "MAV 3.10　麁細真實：世俗諦"
+  },
+  {
+   "id": "v11",
+   "label": "MAV 3.11　勝義諦"
+  },
+  {
+   "id": "v12",
+   "label": "MAV 3.12　極成真實、淨所行真實"
+  },
+  {
+   "id": "v13",
+   "label": "MAV 3.13　攝受真實：五事"
+  },
+  {
+   "id": "v14",
+   "label": "MAV 3.14　差別真實：七真如"
+  },
+  {
+   "id": "v15",
+   "label": "MAV 3.15　善巧真實：十我見"
+  },
+  {
+   "id": "v16",
+   "label": "MAV 3.16　蘊等各具三義"
+  },
+  {
+   "id": "v17",
+   "label": "MAV 3.17　蘊義、界義"
+  },
+  {
+   "id": "v18",
+   "label": "MAV 3.18　處義、緣起義"
+  },
+  {
+   "id": "v19",
+   "label": "MAV 3.19　處非處義"
+  },
+  {
+   "id": "v20",
+   "label": "MAV 3.20　根義、世義"
+  },
+  {
+   "id": "v21",
+   "label": "MAV 3.21　諦義"
+  },
+  {
+   "id": "v22",
+   "label": "MAV 3.22　乘義、有為無為義"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sa",
+   "lang": "sa",
+   "label": "梵本頌",
+   "who": "彌勒《中邊分別頌》Madhyāntavibhāgakārikā・GRETIL（Pandeya 1971）"
+  },
+  {
+   "id": "sa-vasubandhu",
+   "lang": "sa",
+   "label": "世親釋（梵）",
+   "who": "世親 Vasubandhu《中邊分別論釋》Madhyāntavibhāgabhāṣya・GRETIL（長尾雅人 1964）"
+  },
+  {
+   "id": "T1599",
+   "lang": "lzh",
+   "label": "真諦本",
+   "who": "真諦譯《中邊分別論》・天親（世親）釋・陳",
+   "work": "T1599"
+  },
+  {
+   "id": "T1600",
+   "lang": "lzh",
+   "label": "玄奘本",
+   "who": "玄奘譯《辯中邊論》・世親釋・661 年",
+   "work": "T1600"
+  },
+  {
+   "id": "T1601",
+   "lang": "lzh",
+   "label": "玄奘頌本",
+   "who": "玄奘譯《辯中邊論頌》・661 年",
+   "work": "T1601"
+  }
+ ],
+ "works": [
+  "T1599",
+  "T1600",
+  "T1601"
+ ],
+ "anchors": [
+  {
+   "work": "T1599",
+   "node": "真實品第三",
+   "uid": "T31n1599_p0455a24"
+  },
+  {
+   "work": "T1600",
+   "node": "辯真實品第三",
+   "uid": "T31n1600_p0468c04"
+  },
+  {
+   "work": "T1601",
+   "node": "辯真實品第三",
+   "uid": "T31n1601_p0478c01"
+  }
+ ],
+ "cells": {
+  "v01": {
+   "sa": "Tattvaparicchedastṛtīyaḥ mūlalakṣaṇatattvamaviparyāsalakṣaṇam / phalahetumayaṃ tattvaṃ sūkṣmaudārikameva ca // Mvk_3.1 //",
+   "sa-vasubandhu": "[CHAPTER III. TATTVAPARICCHEDA] tatvam adhikṛtyāha / mūlalakṣaṇatatvaṃ aviparyāsalakṣaṇaṃ / phalahetumayan tatvaṃ sūkṣmaudārikam eva ca // III. 1",
+   "T1599": "此品真實應說。何者真實？根本相真實，無顛倒真實， 果因俱真實，細麁等真實，",
+   "T1600": "已辯其障，當說真實。頌曰：真實唯有十，謂根本與相、 無顛倒、因果，及麁細真實、",
+   "T1601": "真實唯有十，謂根本與相、 無顛倒、因果，及麁細真實、"
+  },
+  "v02": {
+   "sa": "prasiddhaṃ śuddhiviṣayaṃ saṅgrāhyaṃ bhedalakṣaṇam / kauśalyatattvaṃ daśadhā ātmadṛṣṭivipakṣataḥ // Mvk_3.2 //",
+   "sa-vasubandhu": "prasiddhaṃ śuddhiviṣayaṃ saṃgrāhyaṃ bhedalakṣaṇaṃ / kauśalyatatvaṃ daśadhā ātmadṛṣṭivipakṣataḥ // III.2 ity etad daśavidhaṃ tatvaṃ yad uta mūlatatvaṃ lakṣaṇatatvaṃ / aviparyāsatatvaṃ / phalahetutatvaṃ / audārikasūkṣmatatvaṃ / prasiddhatatvaṃ / viśuddhigocaratatvaṃ / saṃgrahatatvaṃ] prabhedatatvaṃ / kauśalyatatvañ ca / tat punar daśavidhaṃ daśavidhātmagrāhapratipakṣeṇa veditavyaṃ / tad yathā skandhakauśalyaṃ / dhātukauśalyam āyatanakauśalyaṃ / pratītyasamutpādakauśalyaṃ / sthānāsthānakauśalyam indriyakauśalyaṃ adhvakauśalyaṃ satyakauśalyaṃ yānakauśalyaṃ / saṃskṛtāsaṃskṛtakauśalyaṃ ca /",
+   "T1599": "成就清淨境，攝取分破實， 勝智實十種，為對治我見。如是十種真實。何者為十？一根本真實、二相真實、三無顛倒真實、四果因真實、五細麁真實、六成就真實、七清淨境界真實、八攝取真實、九分破真實、十勝智真實。勝智又十種真實，為對治十種我執應知。何者為十？一陰勝智、二界勝智、三入勝智、四生緣勝智、五處非處勝智、六根勝智、七世勝智、八諦勝智、九乘勝智、十有為無為勝智。",
+   "T1600": "極成、淨所行、攝受并差別， 十善巧真實，皆為除我見。論曰：應知真實唯有十種，一根本真實、二相真實、三無顛倒真實、四因果真實、五麁細真實、六極成真實、七淨所行真實、八攝受真實、九差別真實、十善巧真實。此復十種，為欲除遣十我見故。十善巧者，一蘊善巧、二界善巧、三處善巧、四緣起善巧、五處非處善巧、六根善巧、七世善巧、八諦善巧、九乘善巧、十有為無為法善巧。",
+   "T1601": "極成、淨所行、攝受并差別， 十善巧真實，皆為除我見。"
+  },
+  "v03": {
+   "sa": "svabhāvastrividho 'sacca nityaṃ saccāpyatattvataḥ / sadasattattvataśceti svabhāvatrayamiṣyate // Mvk_3.3 //",
+   "sa-vasubandhu": "[1. Mūlatattva] tatra mūlatatvaṃ / svabhāvas trividhaḥ parikalpitaḥ paratantraḥ pariniṣpannaś ca / tatrānyatatvavyavasthāpanāt / kim atra svabhāvatraye tatvam iṣyate / asac ca nityaṃ sac cāpy atatvataḥ sadasattatvataś ceti svabhāvatraya iṣyate // III.3 parikalpitalakṣaṇaṃ nityam asad ity etat parikalpitasvabhāve tatvam aviparītatvāt [/] paratantralakṣaṇaṃ sac ca na ca tatvato bhrāntatvād ity etat paratantrasvabhāve tatvaṃ / pariniṣpannalakṣaṇaṃ sadasattatvataś cety etat (/) pariniṣpannasvabhāve tatvaṃ /",
+   "T1599": "此中何者根本真實？三種自性，一分別自性、二依他自性、三真實自性。一切餘真實，此中所立故。三性中何法名真實可信受？性三一恒無，二有不真實， 三有無真實，此三本真實。分別性相者，恒常不有。此相分別性中是真實，無顛倒故。依他性相者，有不實，唯有散亂執起故。此相依他性中是真實性。真實性相者，有無真實。此相真實性中是真實。",
+   "T1600": "此中云何根本真實？謂三自性，一遍計所執自性、二依他起自性、三圓成實自性，依此建立餘真實故。於此所說三自性中，許何義為真實？頌曰：許於三自性，唯一常非有， 一有而不真，一有無真實。論曰：即於如是三自性中：遍計所執相常非有。唯常非有，於此性中許為真實，無顛倒故。依他起相有而不真。唯有非真，於依他起許為真實，有亂性故。圓成實相亦有非有。唯有非有，於此性中許為真實，有空性故。",
+   "T1601": "許於三自性，唯一常非有， 一有而不真，一有無真實。"
+  },
+  "v04": {
+   "sa": "samāropāpavādasya dharmapudgalayoriha / grāhyagrāhakayoścāpi bhāvābhāve ca darśanam // Mvk_3.4 //",
+   "sa-vasubandhu": "[2. Laksaṇatattva] lakṣaṇatatvaṃ katamat / samāropāpavādasya dharmapudgalayor iha / grāhyagrāhakayoś cāpi bhāvābhāve ca darśanaṃ // III.4",
+   "T1599": "何者相真實？增益損減謗，於法於人中， 所取及能取，有無中諸見，",
+   "T1600": "云何相真實？頌曰：於法數取趣，及所取能取， 有非有性中，增益損減見；",
+   "T1601": "於法數取趣，及所取能取， 有非有性中，增益損減見；"
+  },
+  "v05": {
+   "sa": "yajjñānānna pravarteta taddhi tattvasya lakṣaṇam / asadartho hyanityārtha utpādadavyayalakṣaṇaḥ // Mvk_3.5 //",
+   "sa-vasubandhu": "yajjñānān na pravarteta tad dhi tatvasya lakṣaṇaṃ / pudgaladharmayoḥ samāropāpavādadarśanaṃ yasya jñānān na pravartate / tat parikalpitasvabhāve tatvalakṣaṇaṃ / grāhyagrāhakayoḥ samāropāpavādadarśanaṃ yasya jñānān na pravartate / tat paratantrasvabhāve tatvalakṣaṇaṃ / bhāvābhāvasamāropāpavādadarśanaṃ yasya jñānān na pravartate / tat pariniṣpannasvabhāve tatvalakṣaṇaṃ / etan mūlatatve lakṣaṇam aviparītaṃ lakṣaṇatatvam ity ucyate / [3. Aviparyāsatattva] aviparyāsatatvaṃ nityādiviparyāsapratipakṣeṇānityaduḥkhaśūnyānātmatā mūlatatve yathākramaṃ [/] kathaṃ ca tatrānityatāditā veditavyā / asadartho hy anityārtha utpādavyayalakṣaṇaḥ // III.5",
+   "T1599": "知常見不生，是真實寂相。人等及法等，有增益謗見、有損減謗見不得起，為知見此法故。此法分別性中是真實相，能執所執增益損減謗見不得起，為知見此法故。此法依他性中是真實相，有中無中增益損減見不得起，為知見此法故。此法真實性中是真實相，如是根本真實相說名相真實、無顛倒真實。無顛倒真實者，為對治常等顛倒故。有四種，一無常、二苦、三空、四無我。此四云何？根本真實所立。此中無常云何應知？無常義有三，無義、生滅義、",
+   "T1600": "知此故不轉，是名真實相。論曰：於一切法補特伽羅所有增益及損減見，若知此故彼便不轉，是遍計所執自性真實相。於諸所取能取法中所有增益及損減見，若知此故彼便不轉，是名依他起自性真實相。於有非有所有增益及損減見，若知此故彼便不轉，是名圓成實自性真實相。此於根本真實相中無顛倒故，名相真實。無顛倒真實者，謂無常、苦、空、無我性，由此治彼常等四倒。云何應知此無常等依彼根本真實立耶？頌曰：無性與生滅、",
+   "T1601": "知此故不轉，是名真實相。 無性與生滅、"
+  },
+  "v06": {
+   "sa": "samalāmalabhāvena mūlatattve yathākramam / duḥkhamādānalakṣmākhyaṃ sambandhenāparaṃ matam // Mvk_3.6 //",
+   "sa-vasubandhu": "samalāmalabhāvena mūlatatve yathākramaṃ / trayo hi svabhāvā mūlatatvaṃ [/] teṣu yathākramam asadartho hy anityārtha utpādavyayārthaḥ samalāmalatārthaś ca / duḥkham ādānalakṣmākhyaṃ saṃbandhenāparaṃ mataṃ // III.6 mūlatatve yathākramaṃ duḥkham upādānataḥ pudgaladharmābhiniveśopādānāt / lakṣaṇatas triduḥkhatālakṣaṇatvāt / saṃbandhataś ca duḥkhasaṃbandhāt [/] tatraiva mūlatatve yathākramaṃ veditavyam /",
+   "T1599": "有垢無垢義，本實中次第。根本真實中有三種性，此性中次第應知三種無常義：一無有物為義，故說無常；二生滅為義；三有垢無垢為義。苦三，一取苦、二相、三相應。根本真實中次第三種苦，一取苦，人法執著所取故；相苦者，三受三苦為相故。相應苦者；與有為相應故。為有為法通相故，此三苦於次第性中應立。",
+   "T1600": "垢淨三無常； 所取及事相、和合苦三種；",
+   "T1601": "垢淨三無常； 所取及事相、和合苦三種；"
+  },
+  "v07": {
+   "sa": "abhāvaścāpyatadbhāvaḥ prakṛtiḥ śūnyatā matā / alakṣaṇañca nairātmyaṃ tadvilakṣaṇameva ca // Mvk_3.7 //",
+   "sa-vasubandhu": "abhāvaś cāpy atadbhāvaḥ prakṛtiḥ śūnyatā matā / parikalpitalakṣaṇaṃ na kenacit prakāreṇāstīty abhāva evāsya śūnyatā paratantralakṣaṇaṃ tathā nāsti yathā parikalpyate na tu sarvathā nāstīti tasyātadbhāvaḥ (/) śūnyatā [/] pariniṣpannalakṣaṇaṃ śūnyatāsvabhāvam eveti prakṛtir evāsya śūnyatā / alakṣaṇaṃ ca nairātmyaṃ tadvilakṣaṇam eva ca // III.7",
+   "T1599": "無空不如空，性空合三種。分別性者，無別道理令有無有物是其空。依他性相者，無有如所分別，不一向無此法，不如有是空。真實性相者，二空自性，是故說名自性空。無相及異相、",
+   "T1600": "空亦有三種，謂無、異、自性； 無相及異相、",
+   "T1601": "空亦有三種，謂無、異、自性； 無相及異相、"
+  },
+  "v08": {
+   "sa": "svalakṣaṇañca nirdiṣṭaṃ duḥkhasatyamato matam / vāsanātha samutthānamavisaṃyoga eva ca // Mvk_3.8 //",
+   "sa-vasubandhu": "svalakṣaṇañ ca nirdiṣṭaṃ / parikalpitasya svabhāvasya lakṣaṇam eva nāstīty alakṣaṇam evāsya nairātmyaṃ [/] paratantrasyāsti lakṣaṇaṃ na tu yathā parikalpyata iti tadvilakṣaṇam asya lakṣaṇan nairātmyaṃ / pariniṣpannas tu svabhāvo nairātmyam eveti prakṛtir evāsya nairātmyam iti trividhe mūlatatve trividhānityatā paridīpitā asadarthānityatā utpādabhaṅgānityatā samalanirmalānityatā ca / trividhā duḥkhatā upādānaduḥkhatā lakṣaṇaduḥkhatā saṃbandhaduḥkhatā (Mvbh 40) ca / trividhā śūnyatā abhāvaśūnyatā atadbhāvaśūnyatā svabhāvaśūnyatā ca trividhaṃ nairātmyaṃ alakṣaṇanairātmyaṃ / vilakṣaṇanairātmyaṃ svalakṣaṇanairātmyaṃ ca / [4. Phalahetutattva] phalahetumayan tatvaṃ tatraiva mūlatatve duḥkhasamudayanirodhamārgasatyatvaṃ [/] kathaṃ trividhaṃ mūlatatvaṃ duḥkhādisatyatvaṃ [/] yatas tad anityādilakṣaṇaṃ / duḥkhasatyam ato mataṃ trividhena samudayārthena samudayasatyaṃ [/] trividhaḥ samudayārthaḥ / vāsanātha samutthānam avisaṃyoga eva ca // III.8 vāsanāsamudayaḥ parikalpitasvabhāvābhiniveśavāsanā samutthānasamudayaḥ karmakleśāḥ / avisaṃyogasamudayaḥ / tathatāyā āvaraṇāvisaṃyogaḥ /",
+   "T1599": "自相三無我。分別性者，相體無有，是故此無相是其無我。依他性者，有相不如所分別，不如相者是其無我。真實性者，是二無我，是故自體是其無我。如是三種根本真實中顯說有三種無常：一無物無常、二生滅無常、三有垢無垢無常。三種苦：一取苦、二相苦、三相應苦。三種空：一無有空、二不如空、三自性空。三種無我：一無相無我、二異相無我、三自性無我。果因真實，此根本真實中應立何者果因？苦諦、集諦、滅諦、道諦。云何根本真實得立？苦相等已說，苦諦如前說。無倒真實中如三苦、三無常等，因此四無倒應知苦諦。三種集諦應知。何者為三？集諦復有三，熏習與發起， 及不相離等。熏習集諦者，執著分別性。熏習發起集諦者，煩惱及業。不相離集諦者，如如與惑障不相離。",
+   "T1600": "自相三無我。 如次四三種，依根本真實。論曰：無常三者，一無性無常，謂遍計所執，此常無故；二生滅無常，謂依他起，有起盡故；三垢淨無常，謂圓成實，位轉變故。苦三種者，一所取苦，謂遍計所執，是補特伽羅法執所取故；二事相苦，謂依他起，三苦相故；三和合苦，謂圓成實，苦相合故。空有三者，一無性空，謂遍計所執，此無理趣可說為有，由此非有說為空故；二異性空，謂依他起，如妄所執不如是有，非一切種性全無故；三自性空，謂圓成實，二空所顯為自性故。無我三者，一無相無我，謂遍計所執，此相本無故名無相，即此無相說為無我；二異相無我，謂依他起，此相雖有而不如彼遍計所執故名異相，即此異相說為無我；三自相無我，謂圓成實，無我所顯以為自相，即此自相說為無我。如是所說無常、苦、空、無我四種，如其次第依根本真實各分為三種，四各三種如前應知。因果真實謂四聖諦，云何此依根本真實？頌曰：苦三相已說，集亦有三種， 謂習氣、等起，及相未離繫。",
+   "T1601": "自相三無我。 如次四三種，依根本真實。 苦三相已說，集亦有三種， 謂習氣、等起，及相未離繫。"
+  },
+  "v09": {
+   "sa": "svabhāvadvayanotpattirmalaśāntidvayaṃ matam / parijñāyāṃ prahāṇe ca prāptisākṣātkṛtāvayam // Mvk_3.9 //",
+   "sa-vasubandhu": "trividhena nirodhena nirodhasatyaṃ [/] trividho nirodhaḥ / svabhāvadvayanotpattir malaśāntidvayaṃ mataṃ / svabhāvānutpattir grāhyagrāhakayor anutpattir malaśāntidvayaṃ ca pratisaṃkhyānirodhatathatākhyam ity eṣa trividho nirodho yad uta svabhāvanirodho dvayanirodhaḥ / prakṛtinirodhaś ca / mārgasatyaṃ trividhe mūlatatve kathaṃ vyavasthāpyate / parijñāyāṃ prahāṇe ca prāptisākṣātkṛtāv ayaṃ [//] III.9",
+   "T1599": "三種滅義故應知滅諦。何者為三？體滅二種滅，垢淨前後滅。自性無生，能執所執二法不生。垢寂滅二種，一數緣滅、二法如如。是三種滅，一無體滅、二二滅、三自性滅。道諦有三，於三根本真實中云何得安立？觀智及除滅、證至道有三。說道諦如是，一者觀察分別性、二為觀察除滅依他性、三為觀察證至真實性。如是此中為觀察、為除滅、為證至故，安立道諦應知。",
+   "T1600": "自性、二不生、垢寂二三滅。 遍知及永斷、證得三道諦。論曰：苦諦有三，謂無常等四各三相，如前已說。集諦三者，一習氣集，謂遍計所執自性執習氣；二等起集，謂業煩惱；三未離繫集，謂未離障真如。滅諦三者，一、自性滅，謂自性不生故；二、二取滅，謂所取能取二不生故；三、本性滅，謂垢寂二，即擇滅及真如。道諦三者，一遍知道、二永斷道、三證得道。應知此中於遍計所執唯有遍知，於依他起有遍知及永斷，於圓成實有遍知及證得，故依此三建立道諦。",
+   "T1601": "自性、二不生、垢寂二三滅， 遍知及永斷、證得三道諦。"
+  },
+  "v10": {
+   "sa": "mārgasatyaṃ samākhyātaṃ prajñaptipratipattitaḥ / tathodbhāvanayaudāraṃ paramārthantu ekataḥ // Mvk_3.10 //",
+   "sa-vasubandhu": "mārgasatyaṃ samākhyātaṃ / parikalpitasya parijñāne paratantrasya parijñāne prahāṇe ca / pariniṣpannasya parijñāne prāptisākṣātkaraṇe ca evam atra parijñāprahāṇasākṣātkriyāyāṃ mārgasatyavyavasthānam iti veditavyaṃ [/] [5. Audārikasūkṣmatattva] audārikasūkṣmatatvaṃ punaḥ saṃvṛtiparamārthasatyaṃ tan mūlatatve kathaṃ veditavyaṃ / prajñaptipratipattitas tathodbhāvanayodāraṃ / trividhā hi saṃvṛtiḥ prajñaptisaṃvṛtiḥ / pratipattisaṃvṛtiḥ / udbhāvanāsaṃvṛtiś ca / tayā saṃvṛtisatyatvaṃ mūlatatve yathākramaṃ veditavyaṃ / paramārthan tu ekataḥ // III.10 paramārthasatyaṃ / ekasmāt pariniṣpannād eva svabhāvād veditavyaṃ /",
+   "T1599": "麁細真實者，俗諦及真諦。此二諦根本真實中云何得立？麁義有三種，立名及取行、 顯了名俗諦。俗諦有三種，一立名俗諦、二取行俗諦、三顯了俗諦。因此三義，根本真實中應安立三種俗諦，次第應知。真諦三中一，勝境諦者，一真實性中應知此勝境。",
+   "T1600": "麁細真實，謂世俗勝義諦。云何此依根本真實？頌曰：應知世俗諦，差別有三種， 謂假、行、顯了，如次依本三。",
+   "T1601": "應知世俗諦，差別有三種， 謂假、行、顯了，如次依本三。"
+  },
+  "v11": {
+   "sa": "arthaprāptiprapattyā hi paramārthastridhā mataḥ / nirvikārāviparyāsapariniṣpattito dvayam // Mvk_3.11 //",
+   "sa-vasubandhu": "sa punaḥ kathaṃ paramārthaḥ / arthaprāptiprapattyā hi paramārthas tridhā mataḥ / arthaparamārthas tathatā paramasya jñānasyārtha iti kṛtvā / prāptiparamārtho nirvāṇaṃ paramo 'rtha iti kṛtvā pratipattiparamārtho mārgaḥ paramo 'syārtha iti kṛtvā [/] katham asaṃskṛtaṃ ca (/) saṃskṛtaṃ ca (/) pariniṣpannaḥ (/) svabhāva ucyate / nirvikarāviparyāsapariniṣpattito dvayaṃ // III.11 asaṃskṛtam avikārapariniṣpattyā pariniṣpannaṃ / saṃskṛtaṃ mārgasatyasaṃgṛhītam aviparyāsapariniṣpattyā punar jñeyavastuny (Mvbh 42) aviparyāsāt /",
+   "T1599": "云何真實？一義、二正修、三至得真實。義真實者，法如如真實智境界故。至得真實者，涅槃功德究竟故。正行真實者，聖道無勝境故。云何有為、無為法共得真實性所攝？答：無變異、無倒，成就二真實。無為法者，無變異成就，得入真實性攝。一切有為法，道所攝，無顛倒成就故、境界品類中無顛倒故。",
+   "T1600": "勝義諦亦三，謂義、得、正行， 依本一無變，無倒二圓實。論曰：世俗諦有三種，一假世俗、二行世俗、三顯了世俗。此三世俗如其次第，依三根本真實建立。勝義諦亦三種，一義勝義，謂真如勝智之境名勝義故；二得勝義，謂涅槃，此是勝果亦義利故；三正行勝義，謂聖道，以勝法為義故。此三勝義，應知但依三根本中圓成實立。此圓成實總有二種，無為、有為有差別故。無為總攝真如涅槃，無變異故，名圓成實。有為總攝一切聖道，於境無倒故，亦名圓成實。",
+   "T1601": "勝義諦亦三，謂義、得、正行， 依本一無變，無倒二圓實。"
+  },
+  "v12": {
+   "sa": "lokaprasiddhamekasmāt trayād yuktiprasiddhakam / viśuddhagocaraṃ dvedhā ekasmādeva kīrtitam // Mvk_3.12 //",
+   "sa-vasubandhu": "[6. Prasiddhatattva] prasiddhatatvaṃ mūlatatve kathaṃ vyavasthāpyate / dvividhaṃ hi prasiddhatatvaṃ / lokaprasiddhaṃ yuktiprasiddhaṃ ca / tatra / lokaprasiddham ekasmāt parikalpitasvabhāvāt / yasmin vastuni saṃketasaṃstavānupraviṣṭayā buddhyā sarveṣāṃ laukikānāṃ darśanatulyatā bhavati / pṛthivy eveyaṃ nāgnī rūpam evedaṃ na śabda ity evamādi / trayād yuktiprasiddhakaṃ / yat satāṃ yuktārthapaṇḍitānāṃ tārkikāṇāṃ pramāṇatrayaṃ niśrityopapattisādhanayuktyā prasiddhaṃ vastu / [7. Viśuddhigocaratattva] viśuddhigocaratatvaṃ dvividhaṃ kleśāvaraṇaviśuddhijñānagocaraṃ / jñeyāvaraṇaviśuddhijñānagocaraṃ ca / tad etat / viśuddhigocaraṃ dvedhā ekasmād eva kīrtitaṃ // III.12 pariniṣpannād eva svabhāvān na hy anyasvabhāvo viśuddhijñānadvayagocaro bhavati /",
+   "T1599": "成就真實者，於根本真實中云何？安立成就者，一處世俗成。分別性中得立，是物處共立印定數習故，因此所立印定起世智。一切世間人一處同一世智，如此物是地非火、此物是色非聲，如是等此俗成就屬一性。離名無體故，三處道理成。即三性，上品諸人於義於理中聰明，在於覺觀地中依三量、四道理中依一道理，若物若事得成就，此二名道理成就。清淨境真實有二種，一清淨煩惱障智境、二清淨智障智境，如是清淨智境真實。清淨境二種，攝在於一處。一處者，真實性。云何如此？無別性作清淨智境故。",
+   "T1600": "極成真實略有二種，一者世間極成真實、二者道理極成真實。云何此二依彼根本真實立耶？頌曰：世極成依一，理極成依三。論曰：若事世間共所安立，串習隨入覺慧所取，一切世間同執此事是地非火、色非聲等，是名世間極成真實。此於根本三真實中，但依遍計所執而立。若有理義聰叡賢善能尋思者，依止三量證成道理施設建立，是名道理極成真實。此依根本三真實立。淨所行真實亦略有二種，一煩惱障淨智所行真實、二所知障淨智所行真實。云何此二依彼根本真實而立？頌曰：淨所行有二，依一圓成實。論曰：煩惱、所知二障，淨智所行真實，唯依根本三真實中圓成實立，餘二非此淨智境故。",
+   "T1601": "世極成依一，理極成依三。 淨所行有二，依一圓成實。"
+  },
+  "v13": {
+   "sa": "nimittasya vikalpasya nāmnaśca dvayasaṅgrahaḥ / samyagjñānasatattvasya ekenaiva ca saṅgrahaḥ // Mvk_3.13 //",
+   "sa-vasubandhu": "[8. Saṃgrahatattva] kathaṃ trividhe mūlatatve saṃgrahatatvaṃ veditavyaṃ / nimittasya vikalpasya nāmnaś ca dvayasaṃgrahaḥ / yathāyogaṃ pañca vastūny ārabhya nimittavikalpayoḥ paratantreṇa (Mvbh 43) saṃgrahaḥ nāmnaḥ parikalpitena / samyagjñānasatatvasya ekenaiva ca saṃgrahaḥ // III.13 tathatāsamyagjñānayoḥ pariniṣpannena svabhāvena saṃgrahaḥ /",
+   "T1599": "三種根本真實性中，五攝真實云何安立？相及於分別，名字二性攝。如義相應，依五種攝品類。根本性中云何得立相及分別依他性中攝？名者，分別性中攝。聖智與如如，此二一性攝。如如及聖智，依真實性中攝。",
+   "T1600": "云何應知相名分別真如正智攝在根本三真實耶？頌曰：名遍計所執，相分別依他， 真如及正智，圓成實所攝。論曰：相等五事，隨其所應，攝在根本三種真實，謂名攝在遍計所執，相及分別攝在依他，圓成實攝真如正智。",
+   "T1601": "名遍計所執，相分別依他， 真如及正智，圓成實所攝。"
+  },
+  "v14": {
+   "sa": "pravṛttitattvaṃ dvividhaṃ sanniveśakupannatā / ekaṃ lakṣaṇavijñaptiśuddhisamyakprapannatā // Mvk_3.14 //",
+   "sa-vasubandhu": "[9. Prabhedatattva] prabhedatatvaṃ mūlatatve kathaṃ veditavyaṃ / saptavidhaṃ prabhedatatvaṃ pravṛttitatvaṃ / lakṣaṇatatvaṃ / vijñaptitatvaṃ sanniveśatatvaṃ / mithyāpratipattitatvaṃ / viśuddhitatvaṃ samyakpratipattitatvañ ca / (tatra pravṛttitatvāditrividhaṃ / anavarāgreṣv eti saṃsāraḥ tathatācittasaṃkleśāt satvāḥ saṃkliśyanta iti sarvaṃ duḥkhādisatyaṃ ca yathāsaṃkhyaṃ) yaiva ca sandhinirmocanasūtre saptavidhā tathatā nirdiṣṭā / tatra / pravṛttitatvaṃ dvividhaṃ / mūlatatvaṃ veditavyaṃ / parikalpitaparatantralakṣaṇaṃ / yathā pravṛttitatvaṃ tathā / sanniveśakupannatā / sanniveśamithyāpratipattitatve api tathaiva dvividhaṃ mūlatatvaṃ / ekaṃ lakṣaṇavijñaptiśuddhisamyakprapannatā // III.14 lakṣaṇatatvādīni catvāry ekaṃ mūlatatvaṃ pariniṣpannalakṣaṇaṃ /",
+   "T1599": "三種根本性中分破真實云何得立？分破真實有七種。何者為七？生實二性攝，處、邪行亦爾， 相、識及清淨、正行真性攝。一者生起真實、二相真實、三識真實、四依處真實、五邪行真實、六清淨真實、七正行真實。此中生起真實者，於根本真實中在二處應知，分別、依他性處。如生起真實，依處及邪行真實亦如是，根本性中二性攝。相、識、清淨、正行四法，一真實性攝。此四種云何一性攝？聖境聖智所顯故。",
+   "T1600": "差別真實略有七種：一流轉真實、二實相真實、三唯識真實、四安立真實、五邪行真實、六清淨真實、七正行真實。云何應知此七真實依三根本真實立耶？頌曰：流轉與安立，邪行依初二， 實相唯識淨，正行依後一。論曰：流轉等七，隨其所應，攝在根本三種真實，謂彼流轉安立邪行依根本中遍計所執及依他起，實相唯識清淨正行依根本中圓成實立。",
+   "T1601": "流轉與安立，邪行依初二， 實相唯識淨，正行依後一。"
+  },
+  "v15": {
+   "sa": "ekahetutvabhoktṛtvakartṛtvavaśavartane / ādhipatyārthanityatve kleśaśuddhyāśraye 'pi ca // Mvk_3.15 //",
+   "sa-vasubandhu": "[10. Kauśalyatattva] kauśalyatatvaṃ darśanapratipakṣeṇety uktaṃ / katham eṣu skandhādiṣu daśavidham ātmadarśanam / ekahetutvabhoktṛtvakartṛtvavaśavartane / ādhipatyārthanityatve kleśaśuddhyāśraye 'pi ca // III.15",
+   "T1599": "勝智真實者，為對治十種我見故說。何者陰等處十種我見？一、因及食者，作者及自在， 增上義及常，垢染清淨依，",
+   "T1600": "善巧真實，謂為對治十我見故，說有十種。云何於蘊等起十我見耶？頌曰：於蘊等我見，執、一、因、受者、 作者、自在轉、增上義及常、 雜染清淨依、",
+   "T1601": "於蘊等我見，執、一、因、受者、 作者、自在轉、增上義及常、 雜染清淨依、"
+  },
+  "v16": {
+   "sa": "yogitvāmuktamuktatve ātmadarśanameṣu hi / parikalpavikalpārthadharmatārthena teṣu te // Mvk_3.16 //",
+   "sa-vasubandhu": "yogitvāmuktamuktatve ātmadarśanam eṣu hi / eṣa daśavidha ātmāsadgrāhaḥ skandhādiṣu pravartate / yasya pratipakṣeṇa daśavidhaṃ kauśalyaṃ yad utaikatvagrāho hetutvagrāho bhoktṛtvagrāhaḥ / kartṛtvagrāhaḥ / svatantragrāhaḥ i adhipatitvagrāho nityatvagrāhaḥ / saṃkliṣṭavyavadānatvagrāho yogitvagrāhaḥ / amuktamuktatvagrāhaś ca / katham idaṃ daśavidhaṃ kauśalyatatvaṃ mūlatatve 'ntarbhavati / yatas triṣu svabhāveṣu te skandhādayo 'ntarbhūtāḥ / katham antarbhūtāḥ / parikalpavikalpārthadharmatārthena teṣu te // III.16 trividhaṃ rūpaṃ parikalpitaṃ rūpaṃ yo rūpasya parikalpitaḥ svabhāvaḥ / vikalpitaṃ rūpaṃ yo rūpasya paratantraḥ (/) svabhāvas tatra hi rūpavikalpaḥ kriyate / dharmatārūpaṃ yo rūpasya pariniṣpannaḥ svabhāvaḥ / yathā rūpam evaṃ vedanādayaḥ skandhāḥ dhātvāyatanādayaś ca yojyāḥ / evan triṣu svabhāveṣu skandhādīnām antarbhāvād daśavidhaṃ kauśalyatatvaṃ mūlatatva eva draṣṭavyaṃ / uktam idaṃ yathā daśavidhātmadarśanapratipakṣeṇa skandhādikauśalyaṃ [/]",
+   "T1599": "觀者及縛解，此處生我見。如是十種我邪執，於陰等諸法中起。為對治十種邪執故，說十種勝智。何者十種我邪執？一者一執、二因執、三者受者執、四作者執、五自在執、六增上執、七常住執、八染者淨者執、九觀者執、十縛解作者執。云何十種勝智根本真實中得立？三種性中五陰等諸法，如義道理被攝故。云何得在三性中？分別、種類色，法然色等三。色陰有三種：一分別色，色處分別性？二種類色，色處依他性種類。云何名依他？此立五法中，體性不同故，立別種類名色。三法然色，色處真實性，色通相故。如色，受等諸陰亦如是，及界、入諸法如是。三性中應等被攝故，十種勝智真實、根本真實中應知如是。",
+   "T1600": "觀、縛解者性。論曰：於蘊等十法起十種我見，一執一性、二執因性、三執受者性、四執作者性、五執自在轉性、六執增上義性、七執常性、八執染淨所依性、九執觀行者性、十執縛解者性。為除此見，修十善巧。云何十種善巧真實依三根本真實建立？以蘊等十無不攝在三種根本自性中故。如何攝在三自性中？頌曰：此所執分別，法性義在彼。論曰：此蘊等十各有三義。且色蘊中有三義者，一所執義色，謂色之遍計所執性；二分別義色，謂色之依他起性，此中分別以為色故；三法性義色，謂色之圓成實性。如色蘊中有此三義，受等四蘊、界等九法各有三義，隨應當知。如是蘊等由三義別，無不攝入彼三性中，是故當知十善巧真實皆依根本三真實而立。",
+   "T1601": "觀、縛解者性。 此所執分別，法性義在彼。"
+  },
+  "v17": {
+   "sa": "anekatvābhisaṅkṣepaparicchedārtha āditaḥ / grāhakagrāhyatadgrāhabījārthaścāparo mataḥ // Mvk_3.17 //",
+   "sa-vasubandhu": "skandhādyarthas tu noktaḥ / sa idānīm ucyate/ [a. Skandhārtha] anekatvābhisaṃkṣepaparicchedārtha āditaḥ / āditas tāvat skandhās te trividhenārthena veditavyāḥ / anekatvārthena yat kiñcid rūpam atītānāgatapratyutpannam iti vistaraḥ / abhisaṃkṣepārthena tat sarvam aikadhyam abhisaṃkṣipyeti / paricchedārthena ca rūpādilakṣaṇasya pṛthaktvavyavasthānāt / rāśyartho hi skandhārtha evaṃ ca loke rāśyartho dṛṣṭa iti / [b. Dhātvartha] grāhakagrāhyatadgrāhabījārthaś cāparo mataḥ // III. 17 katamo 'paro dhātus tatra grāhakabījārthaḥ cakṣurdhātvādayaḥ [/] grāhyabījārtho rūpadhātvādayas [/] tadgrāhabījārthaś cakṣurvijñānadhātvādayaḥ /",
+   "T1599": "已說為對治十種我見五陰等勝智。五陰等義未說，此義今說。不一及總舉，差別是陰義。立陰義有三：初立義者，是陰名字有三義，一道路義、二燒熱義、三重擔義。復有聚義是陰義。聚有三義，一者多義，如經中說：若色過去現在未來、若遠若近、若麁若細等，經中廣說。此色多故名聚。如是等色攝在一處。此言顯總舉色等諸陰，體相種種故、更互無相攝故，說有差別。此三義，一多、二總、三異，是名聚義。聚即是陰義，因此義相似世間中聚。能取、所取、取，種子是界義。復有別攝名界。界名顯何義？顯種子義。能取種子者，名眼等諸界。所取種子者，色等諸界。取種子者，識等諸界。",
+   "T1600": "如是雖說為欲對治十種我見故修蘊等善巧，而未說此蘊等別義。且初蘊義云何應知？頌曰：非一及總略、分段義名蘊。論曰：應知蘊義，略有三種：一、非一義，如契經言：諸所有色等，若過去若未來若現在、若內若外、若麁若細、若劣若勝、若遠若近。二、總略義，如契經言：如是一切略為一聚。三、分段義，如契經言：說名色蘊等，各別安立色等相故，由斯聚義蘊義得成。又見世間聚義名蘊。已說蘊義，界義云何？頌曰：能所取、彼取，種子義名界。論曰：能取種子義，謂眼等六內界。所取種子義，謂色等六外界。彼取種子義，謂眼識等六識界。",
+   "T1601": "非一及總略、分段義名蘊。 能所取、彼取，種子義名界。"
+  },
+  "v18": {
+   "sa": "veditārthaparicchedabhogāyadvārato 'param / punarhetuphalāyāsānāropānapavādataḥ // Mvk_3.18 //",
+   "sa-vasubandhu": "[c. Āyatanārtha] veditārthaparicchedabhogāyadvārato 'paraṃ / kim aparaṃ āyatanaṃ / tatra veditopabhogāyadvārārthena ṣaḍ ādhyātmikāny āyatanāni / arthaparicchedopabhogāyadvārārthena ṣaḍ bāhyāni / [d. Pratītyasamutpādārtha] pratītyasamutpādārthaḥ / punar hetuphalāyāsānāropānapavādataḥII III.18 hetuphalakriyāṇām asamāropānapavādārthaḥ pratītyasamutpādārthaḥ / tatra hetu sa nāropaḥ saṃskārādīnāṃ viṣamahetukalpanāt / (Mvbh 46) hetvapavādo nirhetukatvakalpanāt phalasamāropaḥ sātmakānāṃ saṃskārādīnām avidyādipratyayapravṛttikalpanāt / phalāpavādo na santy avidyādipratyayāḥ saṃskārādaya iti kalpanāt / kriyāsamāropo 'vidyādīnāṃ saṃskārādyutpattau vyāpārakalpanāt kriyāpavādo niḥsāmarthyakalpanāt tadabhāvād asamāropānapavādo veditavyaḥ /",
+   "T1599": "受塵分別用，入門故名入。復有別法名入，此中三受為受用，三受門故說六內入；分別塵境及受用門故，六種說外入。何者十二因緣義？因果及作事，不增損為義。因果及事業，不增益、不損減義，是名十二因緣義。增益因者，行等諸分別立不平等因故。損減因者，分別立無因義故。增益果者，行等諸分別有我，依無明得生，如是分別。損減果者，無行等諸法從無明生。增益事者，無明等諸因，生行等諸果，時節分別有作意事。損減事者，分別無功用故。因果事中離此二執，此義無增益、無損減，應知十二因緣義。",
+   "T1600": "已說界義，處義云何？頌曰：能受、所了境，用門義名處。論曰：此中能受受用門義，謂六內處。若所了境受用門義，是六外處。已說處義，緣起義云何？頌曰：緣起義於因、果、用無增減。論曰：於因、果、用若無增益及無損減，是緣起義。應知此中增益因者，執行等有不平等因。損減因者，執彼無因。增益果者，執有我行等緣無明等生。損減果者，執無明等無行等果。增益用者，執無明等於生行等有別作用。損減用者，執無明等於生行等全無功能。若無如是三增減執，應知彼於緣起善巧。",
+   "T1601": "能受、所了境，用門義名處。 緣起義於因、果、用無增減。"
+  },
+  "v19": {
+   "sa": "aniṣṭeṣṭaviśuddhīnāṃ samotpattyādhipatyayoḥ / samprāptisamudācārapāratantryārthato 'param // Mvk_3.19 //",
+   "sa-vasubandhu": "[e. Sthānāsthānārtha] aniṣṭeṣṭaviśuddhīnāṃ samotpattyādhipatyayoḥ / saṃprāptisamudācārapāratantryārthato 'paraṃ // III. 19 sthānāsthānaṃ saptavidhapāratantryārthena veditavyaṃ / tatrāniṣṭe pāratantryaṃ duścaritenānicchato 'pi durgatigamanād iṣṭe pāratantryaṃ sucaritena sugatigamanāt / viśuddhau pāratantryaṃ pañca nivaraṇāny aprahāya yāvat saptabodhyaṅgāny abhāvayitvā duḥkhasyāntākaraṇāt samotpattau pāratantryaṃ dvayor apūrvācaramayos tathāgatayoś cakravartinoś caikasmin lokadhātāv anutpādād ādhipatye pāratantryaṃ striyāś cakravartitvādyakaraṇāt saṃprāptau pāratantryaṃ striyāḥ pratyekānuttarabodhyanabhisaṃbodhāt samudācāre pāratantryaṃ dṛṣṭisaṃpannasya vadhādyupakramāsamudācārāt pṛthagjanasya ca samudācārād vistareṇa bahudhātukasūtrānusārād anugantavyaṃ /",
+   "T1599": "不欲欲清淨，同生及增上， 至得及起行，繫屬他為義。處非處有七種，繫屬他義故。應知此中，一不欲繫屬他者，因惡行若不欲決入惡道。二欲繫屬他者，因善行入善道，若不欲決入善道。三清淨繫屬他者，不離滅五蓋，不修七覺分，不得至苦邊際。四同生繫屬他者，兩如來無前後、兩轉輪王一世界中不得共生。五及增上繫屬他者，女人不得作轉輪王。六至得繫屬他者，女人不得作辟支佛及佛。七起行繫屬他者，已見四諦人不得造殺等諸行，凡夫能造行故。如《多界經》中廣說，如是隨思擇。",
+   "T1600": "已說緣起義，處非處義云何？頌曰：於非愛、愛、淨、俱生及勝主、 得、行不自在，是處非處義。論曰：處非處義略由七種不得自在，應知其相。一於非愛不得自在，謂由惡行雖無愛欲而墮惡趣。二於可愛不得自在，謂由妙行雖無愛欲而昇善趣。三於清淨不得自在，謂不斷五蓋、不修七覺支，決定不能作苦邊際。四於俱生不得自在，謂一世界無二如來、二轉輪王俱時出現。五於勝主不得自在，謂女不作轉輪王等。六於證得不得自在，謂女不證獨覺無上正等菩提。七於現行不得自在，謂見諦者必不現行害生等事。諸異生類容可現行，《多界經》中廣說此等，應隨決了是處非處。",
+   "T1601": "於非愛、愛、淨、俱生及勝主、 得、行不自在，是處非處義。"
+  },
+  "v20": {
+   "sa": "grahaṇasthānasandhānabhogaśuddhidvayārthataḥ / phalahetūpayogārthanopayogāttathāparam // Mvk_3.20 //",
+   "sa-vasubandhu": "[f. Indriyārtha] indriyaṃ punar dvāviṃśatividhaṃ / grahaṇasthānasaṃdhānabhogaśuddhidvayārthataḥ / grahaṇārthena yāvad viśuddhidvayārthena teṣu tadādhipatyād rūpādiviṣayagrahaṇe hi cakṣurādīnāṃ ṣaṇṇām ādhipatyaṃ sthāne jīvitendriyasya tadādhipatyenāmaraṇāt / kulasandhāne strīpuruṣendriyayor apatyaprasavādhipatyād upabhoge vedanendriyāṇāṃ kuśalākuśalakarmaphalopabhogāt / laukikaviśuddhau śraddhādīnāṃ / lokottaraviśuddhau anājñātamājñāsyāmīndriyādīnāṃ / [g. Adhvārtha] phalahetūpayogārthanopayogāt tathāparaṃ // III.20 kim aparam adhvatrayaṃ yathāyogaṃ phalahetūpayogārthenātīto 'dhvā phalahetvanupayogārthenānāgato 'dhvā hetūpayogaphalānupayogārthena pratyutpanno 'dhvā veditavyaḥ /",
+   "T1599": "根者二十二種，因六義，佛立二十二根。復有六義。何者為六？取住及相接，受用二清淨。能取為義故，乃至二種清淨為義故，此六事中為增上故，說二十二法名根。為能取六塵事增上故，眼等六法說為根。為攝相續令住增上，乃至生死，說壽命為根。為處世相接續增上，說男女二根。受用增上故，五受說為根。意等業被受用故，世間清淨增上故，說信等五法為根。為出世清淨增上故，說未知欲知等三無漏為根。果因已受用，有用及未用。復有別，名三世，如義相應。果因已用故，立過去世。果因未用故，立未來世。因已用謝、果未謝故，立現在世。",
+   "T1600": "如是已說處非處義，根義云何？頌曰：根於取、住、續、用、二淨增上。論曰：二十二根依於六事，增上義立，謂於取境眼等六根有增上義，命根於住一期相續有增上義，男女二根於續家族有增上義，於能受用善惡業果樂等五根有增上義，於世間淨信等五根有增上義，於出世淨未知等根有增上義。已說根義，世義云何？頌曰：因果已未用，是世義應知。論曰：應知因果已未受用，隨其所應三世義別。謂於因果俱已受用，是過去義；若於因果俱未受用，是未來義；若已受用因、未已受用果，是現在義。",
+   "T1601": "根於取、住、續、用、二淨增上。 因果已未用，是世義應知。"
+  },
+  "v21": {
+   "sa": "vedanāsanimittārthatannimittaprapattitaḥ / tacchamapratipakṣārthayogādaparamiṣyate // Mvk_3.21 //",
+   "sa-vasubandhu": "[h. Catuḥsatyārtha] vedanāsanimittārthatannimittaprapattitaḥ / tacchamapratipakṣārthayogād aparam iṣyate // III.21 kim aparaṃ satyacatuṣṭayaṃ / tatra duḥkhasatyaṃ vedanāsanimittārthena yat kiñcid veditam idam atra duḥkhasyeti kṛtvā vedanānimittaṃ punar vedanāsthānīyā dharmā veditavyāḥ / tannimittapratipattitaḥ samudayasatyaṃ duḥkhasatyanimittaṃ yā pratipattiḥ / tayoḥ śamārthena nirodhasatyaṃ / pratipakṣārthena mārgasatyaṃ /",
+   "T1599": "受及受資糧，為生彼行因， 滅彼及對治，為此不淨淨。復有別，名四諦。何者為四？一者苦諦。何法名苦？受及受資糧。如經中說：一切諸受皆是苦。受資糧、受生緣、根塵等諸法應知。為生彼行因。何者集諦？為感諸苦一切邪行。滅彼及對治，為此不淨淨。為此因果二法寂滅，故說滅諦。為對治此二，名道諦。因此世諦說不淨，因此真諦說淨。",
+   "T1600": "已說世義，諦義云何？頌曰：受及受資糧，彼所因諸行， 二寂滅對治，是諦義應知。論曰：應知諦者即四聖諦。一苦聖諦，謂一切受及受資糧。契經中說：諸所有受皆是苦故。受資糧者，謂順受法。二集聖諦，謂即彼苦所因諸行。三滅聖諦，謂前二種究竟寂滅。四道聖諦，謂即苦集能對治道。",
+   "T1601": "受及受資糧，彼所因諸行， 二寂滅對治，是諦義應知。"
+  },
+  "v22": {
+   "sa": "guṇadoṣāvikalpena jñānena parataḥ svayam / niryāṇādaparaṃ jñeyaṃ saprajñaptisahetukāt // Mvk_3.22 // nimittāt praśamāt sārthāt paścimaṃ samudāhṛtam // // iti tattvaparicchedastṛtīyaḥ //",
+   "sa-vasubandhu": "[i. Yānatrayārtha] guṇadoṣāvikalpena jñānena parataḥ svayaṃ [/] niryāṇād aparaṃ jñeyaṃ / yānatrayaṃ yathāyogaṃ / tatra nirvāṇasaṃsārayor guṇadoṣajñānena parataḥ (/) śrutvā niryāṇārthena śrāvakayānaṃ / tenaiva svayam aśrutvā parato niryāṇārthena pratyekabuddhayānaṃ / avikalpena jñānena svayaṃ niryāṇārthena mahāyānaṃ veditavyaṃ // [j. Saṃskṛtāsaṃskṛtārtha] saprajñaptisahetukāt / nimittāt praśamāt sārthāt paścimaṃ samudāhṛtaṃ // III.22 saṃskṛtāsaṃskṛtaṃ tatra saprajñaptir nāmakāyādayaḥ hetur bījasaṃgṛhītam ālayavijñānaṃ / nimittaṃ pratiṣṭhādehabhogasaṃgṛhītaṃ / pravṛttivijñānasaṃgṛhītāś ca manaudgrahavikalpaḥ / etat saprajñaptisahetukaṃ nimittaṃ sasaṃprayogaṃ saṃskṛtaṃ veditavyaṃ / tatra mano yan nityaṃ manyanākāraṃ / udgrahaḥ pañcavijñānakāyāḥ vikalpo manovijñānaṃ (/) tasya vikalpakatvād asaṃskṛtaṃ punaḥ praśamaś ca nirodhaḥ / praśamārthaś ca tathatā tatra praśamo nirodho mārgaś ca yaś ca praśamo yena ceti kṛtvā praśamārthaḥ tathatā praśamasyārtha iti kṛtvā tathatāyā mārgālambanatvāt / mārgasya praśamatvan tena praśamanāt / ity etenārthena skandhādiṣu jñānaṃ skandhādikauśalyaṃ veditavyaṃ / [Tattvapiṇḍārtha] tatvasya piṇḍārthaḥ / samāsato dvividhaṃ tatvaṃ / ādarśatatvaṃ / dṛśyatatvaṃ ca tatrādarśatatvaṃ mūlatatvaṃ tatra śeṣāṇāṃ darśanāt / (Mvbh 49) dṛśyatatvaṃ navavidhaṃ nirabhimānadṛśyatatvaṃ / aviparyāsadṛśyatatvaṃ / śrāvakayānaniryāṇadṛśyatatvaṃ / mahāyānaniryāṇadṛśyatatvaṃ / audārikeṇa paripācanāt / sūkṣmeṇa ca vimocanāt paravādinigrahadṛśyatatvaṃ / dṛṣṭāntasanniśrayeṇa yuktyā nigrahāt / mahāyānābhidyotanadṛśyatatvaṃ / sarvākārajñeyapraveśadṛśyatatvaṃ / avitathatathatābhidyotanadṛśyatatvaṃ / ātmagrāhavastusarvābhisandhipraveśadṛśyatatvaṃ ca // ḥ // madhyāntavibhāgaśāstre tatvaparicchedas tṛtīyaḥ // ḥ //",
+   "T1599": "得失無分別，智依他出離， 因智自出離。復有別，名三乘，如義相應應知。涅槃及生死、功德過失觀智，從他聞、依他得出離因果故，立名聲聞乘。因此智慧如前說，自不從他、不依他行出離因果，名辟支佛乘。依無分別智自出離因果，是名大乘應知。有言說有因，有相有為法， 寂靜義及境，後說無為法。有別名有為、無為。言說者，名句味等。因者，種子所攝阿黎耶識。相者，世器身及所受用，生起識所攝心及取分別。如此等法，有言說、有因、有相、有相應法，是名說有為法。此中說心者，是法恒起識相解相。取者，五識分別意識，此有三分別故。無為法者，寂靜義及寂靜境。寂靜義者，滅諦。寂靜境者，道諦如如。此中道諦云何得寂靜名？此法若緣境界，若顯果依寂靜。因此義，五陰等十處，聖智及聖智方便，說名十種勝智應知。此十名真實。合真實義者，若略說真實有二種：一能顯真實，譬如鏡；二所顯真實，譬如影。何者能顯真實？三根本真實，所餘真實得顯現故。所顯真實有九種，一無增上慢所顯真實；二對治顛倒所顯真實；三聲聞乘出離所顯真實；四辟支乘出離所顯真實；五大乘出離所顯真實。因此麁真實成就眾生及法，微細真實者解脫眾生及法；六諸說墮負處所顯真實者，依正譬喻、依正道理，能令諸說墮下負處；七顯了大乘所顯真實；八一切種所知攝一切法所顯真實；九顯了不如及如所顯真實；十我執依處法一切義意入所顯真實。中邊分別大乘論真實品說竟。",
+   "T1600": "已說諦義，乘義云何？頌曰：由功德過失，及無分別智， 依他自出離，是乘義應知。論曰：應知乘者，謂即三乘，此中如應顯示其義。若從他聞涅槃功德、生死過失而起此智，由斯智故得出離者，是聲聞乘。不從他聞涅槃功德、生死過失自起此智，由斯智故得出離者，是獨覺乘。若自然起無分別智，由斯智故得出離者，名無上乘。已說乘義，云何有為、無為法義？頌曰：有為、無為義，謂若假、若因、 若相；若寂靜、若彼所觀義。論曰：應知此中假謂名等；因謂種子所攝藏識；相謂器身并受用具，及轉識攝意取思惟；意謂恒時思量性識；取謂五識取現境故；思惟即是第六意識，以能分別一切境故。如是若假、若因、若相及相應法，總名有為。若寂靜者，謂所證滅及能證道，能寂靜故。彼所觀義，謂即真如，是寂靜道所緣境故。如是所說若諸寂靜、若所觀義，總名無為。應知此中緣蘊等十義所起正知，名蘊等善巧。真實總義略有二種，謂即能顯、所顯真實。能顯真實，謂即最初三種根本，能顯餘故。所顯真實，謂後九種，是初根本所顯示故。所顯九者，一離增上慢所顯真實；二對治顛倒所顯真實；三聲聞乘出離所顯真實；四無上乘出離所顯真實，由麁能成熟細能解脫故；五能伏他論所顯真實，依喻導理降伏他故；六顯了大乘所顯真實；七入一切種所知所顯真實；八顯不虛妄真如所顯真實；九入我執事一切祕密所顯真實。",
+   "T1601": "由功德過失，及無分別智， 依他自出離，是乘義應知。 有為、無為義，謂若假、若因、 若相，若寂靜、若彼所觀義。"
+  }
+ }
+}

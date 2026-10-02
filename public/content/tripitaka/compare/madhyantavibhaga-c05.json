@@ -1,0 +1,397 @@
+{
+ "slug": "madhyantavibhaga-c05",
+ "title": "辯中邊論・無上乘品",
+ "family": "sa",
+ "intro": "彌勒《中邊分別頌》（Madhyāntavibhāga）連同世親釋。骨架＝長尾雅人校本頌號（MAV 品.頌；論體頌不計號，另列一節），一頌一節；梵本頌本（GRETIL，Pandeya 本）另有自己的頌號，第一品多計論體頌、第四五品後段差半頌，頌本欄一律依長尾本頌界切。另收世親釋梵本（GRETIL，長尾本）。漢譯三本：真諦《中邊分別論》、玄奘《辯中邊論》（皆頌連同世親釋）與玄奘《辯中邊論頌》；釋論欄自該頌起、至下一頌前的釋文止，頌前「…頌曰：」「故說偈言：」一類引導句歸下一頌。漢譯一頌常合梵本兩頌或跨梵本頌界，只能在頌中下刀，釋文因而全落在後一頌。長尾本 5.6–5.29 頌界多在漢譯頌中（如 5.12 自「矯示」、5.28 自「印內持」起）。玄奘本 5.22 後的「十金剛句」二引頌、卷末迴向頌，真諦本卷末「空涅槃一路」「我今造此論」二首結頌，皆留在所屬節。真諦本釋論名一段在 5.30 頌前，歸 5.30。",
+ "units": [
+  {
+   "id": "v01",
+   "label": "MAV 5.1　三種無上；正行六種"
+  },
+  {
+   "id": "v02",
+   "label": "MAV 5.2　六種正行；最勝十二"
+  },
+  {
+   "id": "v03",
+   "label": "MAV 5.3　十二最勝（一）"
+  },
+  {
+   "id": "v04",
+   "label": "MAV 5.4　十二最勝（二）；名波羅蜜多"
+  },
+  {
+   "id": "v05",
+   "label": "MAV 5.5　十波羅蜜多"
+  },
+  {
+   "id": "v06",
+   "label": "MAV 5.6　十度業用"
+  },
+  {
+   "id": "v07",
+   "label": "MAV 5.7　作意正行"
+  },
+  {
+   "id": "v08",
+   "label": "MAV 5.8　三慧功德；十法行助伴"
+  },
+  {
+   "id": "v09",
+   "label": "MAV 5.9　十法行"
+  },
+  {
+   "id": "v10",
+   "label": "MAV 5.10　法行福聚無量；隨法正行"
+  },
+  {
+   "id": "v11",
+   "label": "MAV 5.11　隨法行二種；六散亂（一）"
+  },
+  {
+   "id": "v12",
+   "label": "MAV 5.12　六散亂（二）"
+  },
+  {
+   "id": "v13",
+   "label": "MAV 5.13　十種無倒"
+  },
+  {
+   "id": "v14",
+   "label": "MAV 5.14　於文無倒"
+  },
+  {
+   "id": "v15",
+   "label": "MAV 5.15　於義無倒"
+  },
+  {
+   "id": "v16",
+   "label": "MAV 5.16　於作意無倒"
+  },
+  {
+   "id": "v17",
+   "label": "MAV 5.17　於不動無倒"
+  },
+  {
+   "id": "v18",
+   "label": "MAV 5.18　於自相無倒"
+  },
+  {
+   "id": "v19",
+   "label": "MAV 5.19　於共相無倒"
+  },
+  {
+   "id": "v20",
+   "label": "MAV 5.20　於染淨無倒"
+  },
+  {
+   "id": "v21",
+   "label": "MAV 5.21　於客無倒"
+  },
+  {
+   "id": "v22",
+   "label": "MAV 5.22　於無怖無高無倒；十金剛句"
+  },
+  {
+   "id": "v23",
+   "label": "MAV 5.23　離二邊正行（一）"
+  },
+  {
+   "id": "v24",
+   "label": "MAV 5.24　離二邊正行（二）"
+  },
+  {
+   "id": "v25",
+   "label": "MAV 5.25　七種分別二邊（一）"
+  },
+  {
+   "id": "v26",
+   "label": "MAV 5.26　七種分別二邊（二）"
+  },
+  {
+   "id": "v27",
+   "label": "MAV 5.27　差別無差別正行；所緣無上（一）"
+  },
+  {
+   "id": "v28",
+   "label": "MAV 5.28　所緣無上（二）"
+  },
+  {
+   "id": "v29",
+   "label": "MAV 5.29　修證無上"
+  },
+  {
+   "id": "v30",
+   "label": "MAV 5.30　釋論名"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sa",
+   "lang": "sa",
+   "label": "梵本頌",
+   "who": "彌勒《中邊分別頌》Madhyāntavibhāgakārikā・GRETIL（Pandeya 1971）"
+  },
+  {
+   "id": "sa-vasubandhu",
+   "lang": "sa",
+   "label": "世親釋（梵）",
+   "who": "世親 Vasubandhu《中邊分別論釋》Madhyāntavibhāgabhāṣya・GRETIL（長尾雅人 1964）"
+  },
+  {
+   "id": "T1599",
+   "lang": "lzh",
+   "label": "真諦本",
+   "who": "真諦譯《中邊分別論》・天親（世親）釋・陳",
+   "work": "T1599"
+  },
+  {
+   "id": "T1600",
+   "lang": "lzh",
+   "label": "玄奘本",
+   "who": "玄奘譯《辯中邊論》・世親釋・661 年",
+   "work": "T1600"
+  },
+  {
+   "id": "T1601",
+   "lang": "lzh",
+   "label": "玄奘頌本",
+   "who": "玄奘譯《辯中邊論頌》・661 年",
+   "work": "T1601"
+  }
+ ],
+ "works": [
+  "T1599",
+  "T1600",
+  "T1601"
+ ],
+ "anchors": [
+  {
+   "work": "T1599",
+   "node": "無上乘品第七",
+   "uid": "T31n1599_p0460b07"
+  },
+  {
+   "work": "T1600",
+   "node": "辯無上乘品第七",
+   "uid": "T31n1600_p0473c06"
+  },
+  {
+   "work": "T1601",
+   "node": "辯無上乘品第七",
+   "uid": "T31n1601_p0479c04"
+  }
+ ],
+ "cells": {
+  "v01": {
+   "sa": "5 Yānānuttaryaparicchedaḥ pañcamaḥ ānuttaryaṃprapattau hi punarālambane matam / samudāgama uddiṣṭaṃ pratipattistu ṣaḍ vidhā // Mvk_5.1 //",
+   "sa-vasubandhu": "[CHAPTER V. YĀNĀNUTTARYAPARICCHEDA] [1. Trividhānuttarya] yānānuttaryam idānīṃ vaktavyaṃ / tad ucyate / ānuttaryaṃ prapattau hi punar ālambane mataṃ / samudāgama uddiṣṭaṃ / trividham ānuttaryaṃ mahāyāne yenaitad anuttaraṃ yānaṃ pratipattyānuttaryaṃ / ālambanānuttaryaṃ / samudāgamānuttaryañ ca / [2. Pratipattyānuttarya] tatra pratipattyānuttaryaṃ daśapāramitāpratipattito veditavyaṃ / pratipattis tu ṣaḍvidhā // V.1 tāsu pāramitāsu /",
+   "T1599": "無上乘今當說。無上乘三處，修行及境界， 亦說聚集起。無上有三種，大乘中因此三義乘成無上。何者三義？一修行無上、二境界無上、三集起得無上。此中何者名修行無上？十波羅蜜修行中應知。修行復六種。",
+   "T1600": "已辯得果，無上乘今當說。頌曰：總由三無上，說為無上乘， 謂正行、所緣，及修證無上。論曰：此大乘中總由三種無上義故名無上乘。三無上者，一正行無上、二所緣無上、三修證無上。此中正行無上者，謂十波羅蜜多行。此正行相云何應知？頌曰：正行有六種，",
+   "T1601": "總由三無上，說為無上乘， 謂正行、所緣，及修證無上。 正行有六種，"
+  },
+  "v02": {
+   "sa": "paramātha manaskāre anudharme 'ntavarjane / viśiṣṭā cāviśiṣṭā ca paramā dvādaśātmikā // Mvk_5.2 //",
+   "sa-vasubandhu": "paramātha manaskāre anudharme 'ntavarjane / viśiṣṭā cāviśiṣṭā ca / ity eṣā ṣaḍvidhā pratipattir yad uta paramā pratipattiḥ / manaskārapratipattir anudharmapratipattiḥ / antadvayavarjitā pratipattiḥ viśistā pratipattiḥ / aviśiṣṭā ca pratipattiḥ / [a. Paramā pratipattiḥ] tatra / paramā dvādaśātmikā // V.2",
+   "T1599": "此十波羅蜜中隨一有六種。何者六？無比及思擇，隨法與離邊， 別及通六修。如是六修，一無比修、二思擇修、三隨法修、四離邊修、五別修、六通修。",
+   "T1600": "謂最勝、作意、 隨法、離二邊、差別、無差別。論曰：即於十種波羅蜜多隨修差別有六正行，一最勝正行、二作意正行、三隨法正行、四離二邊正行、五差別正行、六無差別正行。最勝正行，其相云何？頌曰：最勝有十二，",
+   "T1601": "謂最勝、作意、 隨法、離二邊、差別、無差別。 最勝有十二，"
+  },
+  "v03": {
+   "sa": "audāryamāyatatvañca adhikaro 'kṣayātmatā / nairantaryamakṛcchratvaṃ vittatvañca parigrahaḥ // Mvk_5.3 //",
+   "sa-vasubandhu": "audāryam āyatatvaṃ ca adhikāro 'kṣayātmatā / nairantaryam akṛcchratvaṃ vittatvaṃ ca parigrahaḥ // V.3",
+   "T1599": "此中無比十二種。何者為十二？廣大及長時，增上、體無盡， 無間及無難，自在及攝治，",
+   "T1600": "謂廣大、長時、 依處及無盡、無間、無難性、 自在、攝、",
+   "T1601": "謂廣大、長時、 依處及無盡、無間、無難性、 自在、攝、"
+  },
+  "v04": {
+   "sa": "ārambhaprāptiniṣyandaniṣpattiḥ paramā matā / tataśca paramārthena daśa pāramitā matāḥ // Mvk_5.4 //",
+   "sa-vasubandhu": "ārambhaprāptiniṣyandaniṣpattiḥ paramā matā / ity eṣā dvādaśavidhā paramā matā / yad utaudāryaparamatā āyatatvaparamatā adhikāraparamatā akṣayatvaparamatā nairantaryaparamatā akṛcchratvaparamatā / vittatvaparamatā parigrahaparamatā / ārambhaparamatā pratilambhaparamatā niṣyandaparamatā niṣpattiparamatā ca / tatraudāryaparamatā sarvalaukikasaṃpattyanarthitvenotkṛṣṭatayā ca veditavyā / āyatatvaparamatā trikalpāsaṃkhyeyaparibhāvanāt / adhikāraparamatā sarvasatvārthakriyādhikārāt / akṣayatvaparamatā mahābodhipariṇāmanayātyantam aparyādānān nairantaryaparamatātmaparasamatādhimokṣāt sarvasatvadānādibhiḥ pāramitāparipūraṇād akṛcchratvaparamatānumodanāmātreṇa paradānādīnāṃparamitāparipūraṇāt / vittatvaparamatā / gaganagañjasamādhyādibhir dānādiparipūraṇāt parigrahaparamatā nirvikalpajñānaparigṛhītatvāt / ārambhaparamatādhimukticaryābhūmāv adhimātrāyāṃ kṣāntau pratilambhaparamatā prathamāyāṃ bhūmau / niṣyandaparamatā / tadanyāsv aṣṭāsu bhūmiṣu / niṣpattiparamatā daśamyāṃ bhūmau tathāgatyāṃ ca / bodhisatvaniṣpattyā buddhaniṣpattyā ca / tataś ca paramārthena daśa pāramitā matāḥ // V.4 yata eṣā dvādaśavidhā paramatā etāsu saṃvidyate / tataḥ paramā (Mvbh 62) ity anenārthena daśa pāramitāḥ /",
+   "T1599": "極作、至得、流，究竟無比知， 此處無比義，知十波羅蜜。如是十二種無比修行：一廣大無比、二長時無比、三增上、四無盡、五無間、六無難、七自在、八攝治、九極作、十至得、十一勝流、十二究竟。何者廣大無比？不欲樂一切世間及出世富樂故，是故廣大無比應知。何者長時無比？一一處三阿僧祇劫修習得成故。何者增上無比？一切眾生遍滿利益事故。何者無盡無比？由迴向無上菩提故，最極無窮無盡故。何者無間修無比？由得自他平等樂修故，因一切眾生施等功德能圓滿成就十波羅蜜故。何者無難無比？隨喜他所行諸波羅蜜，自波羅蜜得圓滿故。何者自在無比？由破虛空等諸禪定力故，施等波羅蜜得滿足成就。何者攝治無比？由一切波羅蜜無分別智所攝治護故。何者極作無比？地前方便願樂行地中最上法忍及道品隨一所成故。何者至得無比？於初地中得未曾見出世法故。何者勝流無比？離初地應知，餘八種上地中。何者究竟無比？第十地及佛地中應知。何以故？菩薩道及佛果圓滿故。此處無比義知十波羅蜜者，如是十二無比義，於十法中皆悉具有，是故十法通得名波羅蜜多。",
+   "T1600": "發起、得、等流、究竟， 由斯說十度，名波羅蜜多。論曰：最勝正行有十二種，一廣大最勝、二長時最勝、三依處最勝、四無盡最勝、五無間最勝、六無難最勝、七自在最勝、八攝受最勝、九發起最勝、十至得最勝、十一等流最勝、十二究竟最勝。此中廣大最勝者，終不欣樂一切世間富樂自在，志高遠故。長時最勝者，三無數劫熏習成故。依處最勝者，普為利樂一切有情為依處故。無盡最勝者，迴向無上正等菩提無窮盡故。無間最勝者，由得自他平等勝解，於諸有情發起施等波羅蜜多速圓滿故。無難最勝者，於他有情所修善法但深隨喜，令自施等波羅蜜多速圓滿故。自在最勝者，由虛空藏等三摩地力，令所修施等速圓滿故。攝受最勝者，無分別智之所攝受，能令施等極清淨故。發起最勝者，在勝解行地最上品忍中。至得最勝者，在極喜地。等流最勝者，在次八地。究竟最勝者，在第十地及佛地中，菩薩如來因果滿故。由施等十波羅蜜多皆有如斯十二最勝，是故皆得到彼岸名。",
+   "T1601": "發起、得、等流、究竟， 由斯說十度，名波羅蜜多。"
+  },
+  "v05": {
+   "sa": "dānaṃ śīlaṃ kṣamā vīryaṃ dhyānaṃ prajñā upāyatā / praṇidhānaṃ balaṃ jñānametāḥ pāramitā daśa // Mvk_5.5 //",
+   "sa-vasubandhu": "katamā daśety ekeṣāṃ tannāmavyutpādanārtham ucyate / dānaṃ śīlaṃ kṣamā vīryaṃ dhyānaṃ prajñā upāyatā / praṇidhānaṃ balaṃ jñānam etāḥ pāramitā daśeti // V.5",
+   "T1599": "何者名十波羅蜜？為顯此十法別名，故說偈言：施、戒、忍、精進、定、般若、方便、 願、力及闍那，此十無比度。",
+   "T1600": "何等名為十到彼岸？頌曰：十波羅蜜多，謂施、戒、安忍、 精進、定、般若、方便、願、力、智。論曰：此顯施等十度別名。",
+   "T1601": "十波羅蜜多，謂施、戒、安忍、 精進、定、般若、方便、願、力、智。"
+  },
+  "v06": {
+   "sa": "anugraho 'vighātaśca karma tasya ca marṣaṇam / guṇavṛddhiśca sāmarthyamavatāravimocane // Mvk_5.6 // akṣayatvaṃ sadā vṛttirniyataṃ bhogapācane /",
+   "sa-vasubandhu": "kim āsāṃ pratyekaṃ karma / anugraho 'vighātaś ca karma tasya ca marṣaṇaṃ / guṇavṛddhiś ca sāmarthyam avatāravimocane / akṣayatvaṃ sadā vṛttir niyataṃ bhogapācane // V.6 ity etad āsāṃ karma yathākramaṃ / dānena hi bodhisatvaḥ satvān anugṛhṇāti / śīlenopaghātaṃ pareṣāṃ na karoti / kṣāntyā paraiḥ kṛtam upaghātaṃ marṣayati / vīryeṇa guṇān vardhayati / dhyānena rddhyādibhir āvarjyāvatārayati / prajñayā samyagavavādadānād vimocayati / upāyakauśalyapāramitayā mahābodhipariṇāmanād dānādīn akṣayān karoti / praṇidhānapāramitayānukūlopapattiparigrahāt / sarvajanmasu buddhotpādārāgaṇato dānādiṣu sadā pravartate balapāramitayā pratisaṃkhyānabhāvanābalābhyāṃ niyataṃ dānādiṣu pravartate / vipakṣānabhibhavāt / jñānapāramitayā yathārutadharmasaṃmohāpagamād dānādyādhipateyadharmasaṃbhogañ ca pratyanubhavati / satvāṃś ca paripācayati / uktā paramā pratipattiḥ /",
+   "T1599": "此十波羅蜜別事云何？財利不損害，安受增功德， 除惡及令入，解脫與無盡， 常起及決定，樂法成熟事。如是十波羅蜜次第事應知。由施故菩薩能利益眾生。由持戒故不損害眾生壽命財物及眷屬等。由忍辱故若他起損惱等事安心忍受。由精進故生長他功德、損滅他罪障等。由禪定故因神通等諸功德，令他眾生背惡歸善得入正位。由般若故顯說正教令他解脫。由方便故迴向善根趣大菩提，施等功德令流無盡。由願力故能受住捨隨樂生處，於彼生中能事諸佛及聞正法，於施等中恒行不息利益眾生，由思擇修習力故伏滅對治，決定能行施等諸度利益眾生。由智故滅離如言法無明，施等諸行及施等增上緣法得共受用。此二菩薩能成熟眾生。",
+   "T1600": "施等云何各別作業？頌曰：饒益、不害、受、增德、能入、脫、 無盡、常起、定、受用成熟他。論曰：此顯施等十到彼岸各別事業，如次應知。謂諸菩薩由布施波羅蜜多故，於諸有情普能饒益。由淨戒波羅蜜多故，於諸有情不為損害。由安忍波羅蜜多故，他損害時深能忍受。由精進波羅蜜多故，增長功德。由靜慮波羅蜜多故，起神通等能引有情令入正法。由般若波羅蜜多故，能正教授教誡有情令得解脫。由方便善巧波羅蜜多故，迴向無上正等菩提，能令施等功德無盡。由願波羅蜜多故，攝受隨順施等勝生，一切生中恒得值佛，恭敬供養常起施等。由力波羅蜜多故，具足思擇、修習二力伏滅諸障，能令施等常決定轉。由智波羅蜜多故，離如聞言諸法迷謬，受用施等增上法樂，無倒成熟一切有情。",
+   "T1601": "饒益、不害、受、增德、能入、脫、 無盡、常起、定、受用成熟他。"
+  },
+  "v07": {
+   "sa": "yathāprajñaptito dharmamahāyānamanaskriyā // Mvk_5.7 // bodhisattvasya satataṃ prajñayā triprakārayā /",
+   "sa-vasubandhu": "[b. Manasikārapratipatti] manasikārapratipattiḥ katamā / yathāprajñaptito dharmamahāyānamanaskriyā / bodhisatvasya satataṃ prajñayā triprakārayā // V.7 dānādīny adhikṛtya yathāprajñaptānāṃ sūtrādidharmāṇāṃ mahāyāne manasikaraṇam abhīkṣṇaṃ śrutacintābhāvanāmayyā prajñayā manasikārapratipattiḥ /",
+   "T1599": "無比修行已說。何者思量修行？如言說正法，思量大乘義， 是菩薩常事，依三種般若。依十種施等波羅蜜，如諸佛所安立所說修多羅等諸法，大乘中如理思惟、數數聽聞、思量修習故，聞思修慧恒思惟行。",
+   "T1600": "如是已說最勝正行，作意正行其相云何？頌曰：菩薩以三慧，恒思惟大乘， 如所施設法，名作意正行。論曰：若諸菩薩以聞思修所成妙慧，數數作意思惟大乘，依布施等如所施設契經等法，如是名為作意正行。",
+   "T1601": "菩薩以三慧，恒思惟大乘， 如所施設法，名作意正行。"
+  },
+  "v08": {
+   "sa": "dhātupuṣṭayaipraveśāya cārthasiddhyai bhavatyasau // Mvk_5.8 // saṃyuktā dharmacaritaiḥ sā jñeyā daśabhiḥ punaḥ /",
+   "sa-vasubandhu": "sā triprakārayā prajñayā manasikriyā kaṃ guṇaṃkaroti / dhātupuṣṭyai praveśāya cārthasiddhyai bhavaty asau / śrutamayyā prajñayā manasikurvato dhātupuṣṭir bhavati / cintāmayyā tasya śrutasyārthaṃ bhāvena praviśati / bhāvanāmayyārthasiddhiṃ prāpnoti bhūmipraveśapariśodhanāt / saṃyuktā dharmacaritaiḥ sā jñeyā daśabhiḥ punaḥ // V.8 sā punar manasikārapratipattiḥ / daśabhir dharmacaritaiḥ parigṛhītā veditavyā",
+   "T1599": "若因三慧修行思惟生何功德？為長養界入，為得事究竟。若人因聞慧修行思惟者，一切善根界性得增長。若因思慧修行思惟者，如所聞名句義，此理得入意，得生顯現故。若因修慧修行思惟者，如所求正事得成就，為入地、為治淨故。此修行思惟有伴應知。十種正行法，共相應應知。此思惟修行者，十種正法行所攝持應知。",
+   "T1600": "此諸菩薩以三妙慧思惟大乘有何功德？頌曰：此增長善界，入義及事成。論曰：聞所成慧思惟大乘，能令善根界得增長。思所成慧思惟大乘，能正悟入所聞實義。修所成慧思惟大乘，能令所求事業成滿，謂能趣入修治地故。作意正行有何助伴？頌曰：此助伴應知，即十種法行。論曰：應知如是作意正行，由十法行之所攝受。",
+   "T1601": "此增長善界，入義及事成。 此助伴應知，即十種法行。"
+  },
+  "v09": {
+   "sa": "lekhanā pūjanā dānaṃ śravaṇaṃ vācanod grahaḥ // Mvk_5.9 // prakāśanātha svādhyāyaścintanā bhāvanā ca tat /",
+   "sa-vasubandhu": "katamad daśadhā dharmacaritaṃ / lekhanā pūjanā dānaṃ śravaṇaṃ vācanodgrahaḥ / prakāśanātha svādhyāyaś cintanā bhāvanā ca tat // V.9 mahāyānasya lekhanaṃ pūjanaṃ parebhyo dānaṃ pareṇa vācyamānasya śravaṇaṃ / svayaṃ ca vācanaṃ / udgrahaṇaṃ / parebhyo deśanaṃ granthasyārthasya vā svādhyāyanaṃ / cintanaṃ bhāvanañ ca /",
+   "T1599": "何者十種法行？書寫、供養、施，聽、讀及受持， 廣說及讀誦，思惟及修習。大乘法修行有十：一書寫、二供養、三施與他、四若他讀誦一心聽聞、五自讀、六自如理取名句味及義、七如道理及名句味顯說、八正心聞誦、九空處如理思量、十已入意為不退失故修習。",
+   "T1600": "何等名為十種法行？頌曰：謂書寫、供養、施他、聽、披讀、 受持、正開演、諷誦及思、修。論曰：於此大乘有十法行，一書寫、二供養、三施他、四若他誦讀專心諦聽、五自披讀、六受持、七正為他開演文義、八諷誦、九思惟、十修習行。",
+   "T1601": "謂書寫、供養、施他、聽、披讀、 受持、正開演、諷誦及思、修。"
+  },
+  "v10": {
+   "sa": "ameyapuṇyaskandhaṃ hi caritaṃ tad daśātmakam // Mvk_5.10 // viśeṣādakṣayatvācca parānugrahato 'śamāt /",
+   "sa-vasubandhu": "ameyapuṇyaskandhaṃ hi caritan tad daśātmakaṃ / kasmān mahāyāna eva dharmacaritam atyarthaṃ mahāphalan deśyate sūtreṣu na punaḥ śrāvakayāne / dvābhyāṃ kāraṇābhyāṃ / viśeṣād akṣayatvāc ca / kathaṃ viśeṣāt / katham akṣayatvāt / parānugrahato 'śamāt // V.10 parānugrahavṛttitvād viśiṣṭatvaṃ / parinirvāṇe 'py aśamāt / anuparamād akṣayatvaṃ veditavyaṃ / uktā manasikārapratipattiḥ /",
+   "T1599": "無量功德聚，是十種正行。此十種正行有三種功德：一無量功德道、二行方便功德道、三清淨功德道。云何大乘中佛說最極大果報，聲聞乘等法不如是說？云何如此？有二種因。最勝無盡故，利他不息故。最勝者，小乘經但為自利故，大乘自利利他平等，是故最勝。第一為自利故，第二為利他故，是故有下有上，是故說勝。大菩提者，至無餘涅槃。他利益事，如因地中無息故，故說無盡，無盡故勝小乘。",
+   "T1600": "十法行獲幾所福？頌曰：行十法行者，獲福聚無量。論曰：修行如是十種法行，所獲福聚其量無邊。何故但於大乘經等說修法行獲最大果，於聲聞乘不如是說？頌曰：勝故、無盡故，由攝他不息。論曰：於此大乘修諸法行，由二緣故獲最大果，一最勝故、二無盡故。由能攝益他諸有情，是故大乘說為最勝。由雖證得無餘涅槃，利益他事而恒不息，是故大乘說為無盡。",
+   "T1601": "行十法行者，獲福聚無量。 勝故、無盡故，由攝他不息。"
+  },
+  "v11": {
+   "sa": "avikṣiptāviparyāsapraṇatā cānudhārmikī // Mvk_5.11 // vyutthānaṃ viṣaye sārastathāsvādalayoddhavaḥ /",
+   "sa-vasubandhu": "[c. Anudharmapratipatti] anudharmapratipattiḥ katamā / avikṣiptāviparyāsapraṇatā cānudhārmikī / ity eṣā dvividhānudharmapratipattiḥ / yad utāvikṣiptā cāviparyāsapariṇatā ca / [Avikṣepapariṇatā] tatra ṣaḍvidhavikṣepābhāvād avikṣiptā / tatra ṣaḍvidho vikṣepaḥ / prakṛtivikṣepaḥ / bahirdhāvikṣepaḥ / adhyātmavikṣepaḥ nimittavikṣepaḥ dauṣṭhulyavikṣepaḥ manasikāravikṣepaś ca / sa eṣa kiṃlakṣaṇo veditavya ity ata āha / vyutthānaṃ viṣaye sāras tathāsvādalayoddhataḥ / V.11",
+   "T1599": "思惟修行已說。何者隨法修行？隨法有二種，不散動顛倒。隨法修行者如是二種：一無散動修行、二無顛倒變異修行。此中散動有六種，滅除此六種散動故，說無散動。何者六種散動？一自性散動、二外緣散動、三內散動、四相散動、五麁惑散動、六思惟散動。此六散動何者為相應知，故說：起觀行六塵，貪味下掉起，",
+   "T1600": "如是已說作意正行，隨法正行其相云何？頌曰：隨法行二種，謂諸無散亂、 無顛倒轉變，諸菩薩應知。論曰：隨法正行略有二種，一無散亂轉變、二無顛倒轉變，菩薩於此應正了知。此中六種散亂無故，名無散亂。六散亂者，一自性散亂、二外散亂、三內散亂、四相散亂、五麁重散亂、六作意散亂。此六種相云何應知？頌曰：出定、於境流、味沈掉、",
+   "T1601": "隨法行二種，謂諸無散亂、 無顛倒轉變，諸菩薩應知。 出定、於境流、味沈掉、"
+  },
+  "v12": {
+   "sa": "sambhāvanābhisandhiśca manaskāre 'pyahaṃkṛtiḥ // Mvk_5.12 // hīnacittañca vikṣepaḥ parijñeyo hi dhīmatā /",
+   "sa-vasubandhu": "saṃbhāvanābhisandhiś ca manaskāre 'py ahaṃkṛtiḥ / hīnacittaṃca vikṣepaḥ parijñeyo hi dhīmatā // V.12 ity evaṃlakṣaṇaḥ ṣaḍvidho vikṣepo yo bodhisatvena parijñeyaḥ / tatra vyutthānaṃ samādhitaḥ pañcabhir vijñānakāyaiḥ prakṛtivikṣepaḥ viṣaye visāro bahirdhāvikṣepaḥ / samādher āsvādanā layauddhatyaṃ cādhyātmavikṣepaḥ / saṃbhāvanābhisandhiḥ nimittavikṣepaḥ / tan nimittaṃ kṛtvā prayogāt / sāhaṃkāramanaskāratā dauṣṭhulyavikṣepaḥ / dauṣṭhulyavaśenāsmimānasamudācārāt / hīnacittatvaṃ / manasikāravikṣepaḥ hīnayānamanasikārasamudācārāt /",
+   "T1599": "無決意於定，思量處我慢， 下劣心散亂，智者應當知。如是為相六種散動，菩薩應知應離。何者六相？一從禪定起散動，由五識故，是名性散動。六塵中若心行動，是名外散動。是禪定貪味憂悔掉起，是名內散動。下地意未決未息，是名相散動，因此相入定故。有我執思惟定中所起，名麁散動，因此麁思惟生我慢起行故。下劣品思惟，名思惟散動，下乘思惟起行故。前兩散動未得令不得，次兩已得令退。第五令不得解脫，第六令不得無上菩提應知。",
+   "T1600": "矯示、 我執、心下劣，諸智者應知。論曰：此中出定由五識身，當知即是自性散亂。於境流者，馳散外緣，即外散亂。味沈掉者，味著等持惛沈掉舉，即內散亂。矯示者，即相散亂，矯現相已修定加行故。我執者，即麁重散亂，由麁重力我慢現行故。心下劣者，即作意散亂，依下劣乘起作意故。菩薩於此六散亂相，應遍了知當速除滅。",
+   "T1601": "矯示、 我執、心下劣，諸智者應知。"
+  },
+  "v13": {
+   "sa": "vyañjanārthamanaskāre 'visāre lakṣaṇadvaye // Mvk_5.13 // aśuddhaśuddhāvāgantukatve 'trāsitānunnatau /",
+   "sa-vasubandhu": "[Aviparyāsapariṇatā] tatrāviparyāso daśavidhe vastuni veditavyaḥ / yad uta / vyañjanārthamanaskāre 'visāre lakṣaṇadvaye / aśuddhaśuddhāv āgantukatve 'trāsitānunnatau // V.13 tatra /",
+   "T1599": "此中無倒十種處應知。何者十？言辭義思惟，不動二相處， 不淨及淨客，無畏及無高。此中何法名無倒？無倒者，如理如量知見。此無倒十種處，",
+   "T1600": "如是已說無散亂轉變，無顛倒轉變云何應知？頌曰：智見於文義，作意及不動， 二相染淨客，無怖高無倒。論曰：依十事中如實智見，應知建立十無倒名。",
+   "T1601": "智見於文義，作意及不動， 二相染淨客，無怖高無倒。"
+  },
+  "v14": {
+   "sa": "saṃyogāt saṃstavāccaiva viyogādapyasaṃstavāt // Mvk_5.14 // arthasattvamasattvañca vyañjane so 'viparyayaḥ /",
+   "sa-vasubandhu": "saṃyogāt saṃstavāc caiva viyogād apy asaṃstavāt / arthasatvam asatvañ ca vyañjane so 'viparyayaḥ /] V.14 saṃyoge sati vyañjanānām avicchinnoccāraṇatayā asya cedaṃ nāmeti saṃstavāt sārthakatvaṃ viparyayān nirarthakatvam iti / yad evandarśanaṃ so 'viparyāso vyañjane veditavyaḥ /",
+   "T1599": "一者名句味無倒。如偈說：聚集數習故，有義及無義， 是言辭無倒。若名句味若有相應，名言無間不相離說故，此物是其名。數數習故，名句等有義。若翻此三無義。若有如此知見，名名句味無倒。",
+   "T1600": "此中云何於文無倒？頌曰：知但由相應、串習或翻此， 有義及非有，是於文無倒。論曰：若於諸文能無間斷次第宣唱，說名相應。共 許此名唯目此事，展轉憶念名為串習。但由此二，成有義文；與此相，違文成無義。如實知見此二文者，應知是名於文無倒。",
+   "T1601": "知但由相應、串習或翻此， 有義及非有，是於文無倒。"
+  },
+  "v15": {
+   "sa": "dvayena pratibhāsatvaṃ tathā cāvidyamānatā // Mvk_5.15 // arthe sa cāviparyāsaḥ sadasattvena varjitaḥ /",
+   "sa-vasubandhu": "katham arthe 'viparyāsaḥ / dvayena pratibhāsatvaṃ tathā cāvidyamānatā j arthe sa cāviparyāsaḥ sadasatvena varjitaḥ // V.15 dvayena grāhyagrāhakatvena pratibhāsate tadākarotpattitaḥ / tathā (Mvbh 66) ca na vidyate / yathā pratibhāsata iti / arthe yad darśanaṃ sa tatrāviparyāsaḥ arthasya satvena varjito grāhyagrāhakābhāvād asatvena varjitaḥ / tatpratibhāsabhrāntisadbhāvāt /",
+   "T1599": "何者義無倒？顯現似二種，如顯不實有， 是名義無倒，遠離有無邊。諸義顯現有二：一顯所執、二顯能執，由二相生故。如是無所有，如所顯現義中若生如此知見，是名義無倒。云何？如此義者，遠離有相，能執所執無有故；遠離無相，似能似所散亂有故。",
+   "T1600": "於義無倒其相云何？頌曰：似二性顯現，如現實非有， 知離有非有，是於義無倒。論曰：似二性顯現者，謂似所取能取性現，亂識似彼行相生故。如現實非有者，謂如所顯現，實不如是有。離有者，謂此義所取能取性非有故。離非有者，謂彼亂識現似有故。如實知見此中義者，應知是名於義無倒。",
+   "T1601": "似二性顯現，如現實非有， 知離有非有，是於義無倒。"
+  },
+  "v16": {
+   "sa": "tajjalpabhāvito jalpamanaskārastadāśrayaḥ // Mvk_5.16 // manaskāre 'viparyāso dvayaprakhyānakāraṇe /",
+   "sa-vasubandhu": "tajjalpabhāvito jalpamanaskāras tadāśrayaḥ manaskāre 'viparyāso dvayaprakhyānakāraṇe // V.16 grāhyagrāhakajalpaparibhāvito jalpamanaskāras tasya grāhyagrāhakavikalpasyāśrayo bhavatīty ayaṃ manaskāre 'viparyāsaḥ / katamasmin manaskāre grāhyagrāhakasaṃprakhyānakāraṇe sa hy asau jalpamanaskāro 'bhilāpasaṃjñāparibhāvitatvāt grāhyagrāhakavikalpāśrayo veditavyaḥ /",
+   "T1599": "何者思惟無倒？此言熏言思，彼依思無倒， 為顯二種因。所執能執言、所熏習言語思惟，是能執所執虛妄分別依處。若起如此知見，一切處是名思惟無倒。何者思惟？為能執所執虛妄作顯現。因此思惟，言語、名句味兩法所生故，為二法作依處。離此思惟，無倒境故。",
+   "T1600": "於作意無倒者，頌曰：於作意無倒，知彼言熏習， 言作意彼依，現似二因故。論曰：所取能取言所熏習名言作意，即此作意是所能取分別所依，是能現似二取因故。由此作意是戲論想之所熏習名言作意，如實知見此作意者，應知是於作意無倒。",
+   "T1601": "於作意無倒，知彼言熏習， 言作意彼依，現似二因故。"
+  },
+  "v17": {
+   "sa": "māyādivadasattvañca sattvañcārthasya tanmatam // Mvk_5.17 // so 'visāre 'viparyāso bhāvābhāvāvisārataḥ /",
+   "sa-vasubandhu": "māyādivad asatvañ ca satvaṃ cārthasya tan mataṃ [/] so 'visāre 'viparyāso bhāvābhāvāvisārataḥ // V.17 yat tad arthasyāsatvaṃ satvaṃ cānantaram uktaṃ / tan māyādivan mataṃ yathā māyā na hastyādibhāvenāsti na ca naivāsti / tadbhrāntimātrāstitvāt / evam artho 'pi na cāsti yathā saṃprakhyāti grāhyagrāhakatvena na ca naivāsti tadbhrāntimātrāstitvāt / ādiśabdena marīcisvapnodakacandrādayo dṛṣṭāntā yathāyogaṃ veditavyā iti yan māyādyupamārthe darśanād avisāraṃ cetasaḥ paśyati so 'visāre 'viparyāsas tena bhāvābhāvayoś cittasyāvisaraṇāt /",
+   "T1599": "何者不動無倒？如幻等不有，亦有義應知， 是不動無倒，有無不散故。是義亦有亦無，如前已說。此有無，譬如幻化。幻化者，為象馬等實體故無有，非無，唯似象等，散亂有故。義亦如是不有，如所顯現能執所執故。非不有，唯相似散亂相有故。等者，如野馬、夢、幻、水月等譬。如是道理應知。已見幻等譬義，故心不僻行，是名不動無倒。因此無倒心，有無執中心不散動故。",
+   "T1600": "於不動無倒者，頌曰：於不動無倒，謂知義非有， 非無如幻等，有無不動故。論曰：前說諸義離有非有。此如幻等非有無故。謂如幻作諸象馬等彼非實有，象馬等性亦非全無，亂識似彼諸象馬等而顯現故。如是諸義無如現似所取能取定實有性亦非全無，亂識似彼所取能取而顯現，故等聲顯示陽焰夢境及水月等，如應當知。以能諦觀義如幻等，於有無品心不動散，如實知見此不動者，應知是於不動無倒。於二相無倒者，謂於自相及共相中俱無顛倒。",
+   "T1601": "於不動無倒，謂知義非有， 非無如幻等，有無不動故。"
+  },
+  "v18": {
+   "sa": "sarvasya nāmamātratvaṃ sarvakalpāpravṛttaye // Mvk_5.18 // svalakṣaṇe 'viparyāsaḥ paramārthe svalakṣaṇe /",
+   "sa-vasubandhu": "sarvasya nāmamātratvaṃ sarvakalpāpravṛttaye / svalakṣaṇe 'viparyāsaḥ / sarvam idaṃ nāmamātraṃ / yad idaṃ cakṣūrūpaṃ yāvan manodharmā iti yaj jñānaṃ sarvavikalpānāṃ pratipakṣeṇa ayaṃ svalakṣaṇe 'viparyāsaḥ / katamasmin svalakṣaṇe / paramārthe svalakṣaṇe // V.18 saṃvṛtyā tu nedaṃ nāmamātram iti gṛhyate /",
+   "T1599": "何者二相無倒？一切唯有名，為分別不起， 是別相無倒。一切諸法唯有名言。何者名？一切眼及色乃至心及法。如此知見。一切虛妄分別，為對治故，說名別相無倒。何者名別相？為虛妄、為真實？此相名真實，真實別相中是無倒。云何如此？若為俗諦故，一切諸法不但有名，如是執故。",
+   "T1600": "於自相無倒者，頌曰：於自相無倒，知一切唯名， 離一切分別，依勝義自相。論曰：如實知見一切眼色乃至意法皆唯有名，即能對治一切分別，應知是於自相無倒。此依勝義自相而說。若依世俗非但有名可取，種種差別相故。",
+   "T1601": "於自相無倒，知一切唯名， 離一切分別，依勝義自相。"
+  },
+  "v19": {
+   "sa": "dharmadhātuvinirmukto yasmād dharmo na vidyate // Mvk_5.19 // sāmānyalakṣaṇantasmāt sa ca tatrāviparyayaḥ /",
+   "sa-vasubandhu": "dharmadhātuvinirmukto yasmād dharmo na vidyate / sāmānyalakṣaṇaṃ tasmāt sa ca tatrāviparyayaḥ // V.19 na hi dharmanairātmyena vinā kaścid dharmo vidyate / tasmād dharmadhātuḥ sarvadharmāṇāṃ sāmānyaṃ lakṣaṇam iti / yad evaṃjñānam ayaṃ sāmānyalakṣaṇe 'viparyāsaḥ /",
+   "T1599": "何者通相無倒？出離於法界，更無有一法； 故法界通相，此智是無倒。無有別法離無我真實有體，是故法界，一切通相，體平等故。如是知見，是名通相無倒。",
+   "T1600": "於共相無倒者，頌曰：以離真法界，無別有一法， 故通達此者，於共相無倒。論曰：以無一法離法無我者故，真法界諸法共相攝。如實知見此共相者，應知是於共相無倒。",
+   "T1601": "以離真法界，無別有一法， 故通達此者，於共相無倒。"
+  },
+  "v20": {
+   "sa": "viparyastamanaskārāvihāniparihāṇitaḥ // Mvk_5.20 // tadaśuddhirviśuddhiśca sa ca tatrāviparyayaḥ /",
+   "sa-vasubandhu": "viparyastamanaskārāvihāniparihāṇitaḥ / tadaśuddhir viśuddhiś ca sa ca tatrāviparyayaḥ // V.20 viparyastasmanaskārāprahāṇan tasya dharmadhātor aviśuddhis tatprahāṇaṃ viśuddhir iti yad evaṃjñānam ayam aviśuddhau viśuddhau cāviparyāso yathākramaṃ /",
+   "T1599": "何者淨不淨無倒？顛倒邪思惟，未滅及已滅， 此不淨及淨，是彼不顛倒。顛倒不正思惟在及未盡，是名法界不清淨。若不在及盡，是名法界清淨。若有此知見，是名不淨及淨無倒，如次第。",
+   "T1600": "於染淨無倒者，頌曰：知顛倒作意，未滅及已滅， 於法界雜染，清淨無顛倒。論曰：若未斷滅顛倒作意，爾時法界說為雜染，已斷滅時說為清淨。如實知見此染淨者，如次是於染淨無倒。",
+   "T1601": "知顛倒作意，未滅及已滅， 於法界雜染，清淨無顛倒。"
+  },
+  "v21": {
+   "sa": "dharmadhātorviśuddhatvāt prakṛtyā vyomavatpunaḥ // Mvk_5.21 // dvayasyāgantukatvaṃ hi sa ca tatrāviparyayaḥ /",
+   "sa-vasubandhu": "dharmadhātor viśuddhatvāt prakṛtyā vyomavat punaḥ / dvayasyāgantukatvaṃ hi sa ca tatrāviparyayaḥ // V.21 dharmadhātoḥ punar ākāśavat / prakṛtiviśuddhatvāt / dvayam apy etad āgantukam aviśuddhiru viśuddhiś ca paścād iti / yad evaṃjñānam ayam āgantukatve 'viparyāsaḥ /",
+   "T1599": "何者客無倒？法界性淨故，譬之如虛空， 此二種是客，是彼不顛倒。復有法界、如、真、虛空，自性淨故。是二種法，非舊法故名客，先不淨後及淨。若有此知見，是名客相無倒。",
+   "T1600": "於客無倒，其相云何？頌曰：知法界本性，清淨如虛空， 故染淨非主，是於客無倒。論曰：法界本性淨若虛空，由此應知先染後淨二差別相是客非主。如實知見此客相者，應知是名於客無倒。",
+   "T1601": "知法界本性，清淨如虛空， 故染淨非主，是於客無倒。"
+  },
+  "v22": {
+   "sa": "saṃkleśaśca viśuddhiśca dharmapudgalayorna hi // Mvk_5.22 // asattvāt trāsatāmānau nātaḥ so 'trāviparyayaḥ /",
+   "sa-vasubandhu": "saṃkleśaś ca viśuddhiś ca dharmapudgalayor na hi / asatvāt trāsatāmānau nātaḥ so 'trāviparyayaḥ // V.22 na hi pudgalasya saṃkleśo na viśuddhir nāpi dharmasya / yasmān na pudgalo 'sti na dharmo yataś ca na kasyacit saṃkleśo na vyavadānaṃ ato na saṃkleśapakṣe kasyacid dhāniḥ na vyavadānapakse kasyacid viśeṣaḥ / yatas trāso vā syād unnatir vety ayam atrāse 'nunnatau cāviparyāsaḥ / [Daśa vajrapadāni] ete ca daśāviparyāsā daśasu vajrapadeṣu yathākramaṃ yojayitavyāḥ / daśa vajrapadāni / sadasattā aviparyasaḥ / āśrayo māyopamatā avikalpanatā prakṛtiprabhāsvaratā saṃkleśo vyavadānaṃ / ākāśopamatā ahīnatā aviśiṣṭatā ca / vajrapadānāṃ śarīravyavasthānaṃ / svabhāvataḥ / ālambanataḥ / avikalpanataḥ / codyaparihārataś ca / tatra svabhāvataḥ trayaḥ svabhāvāḥ / pariniṣpannaparikalpitaparatantrākhyā ādyais tribhiḥ padair yathākramaṃ / ālambanataḥ / ta eva avikalpanato yena ca na vikalpayati nirvikalpena jñānena yac ca na vikalpayati prakṛtiprabhāsvaratāṃ / tad anena jñeyajñānavyavasthānaṃ yathākramaṃ veditavyaṃ / yad uta tribhiḥ svabhāvair avikalpanatayā ca / codyaparihārataḥ / śiṣṭāni padāni tatredaṃ codyaṃ / yady ete parikalpitaparatantralakṣaṇā dharmā na saṃvidyante / katham upalabhyante / atha saṃvidyante dharmāṇāṃ prakṛtiprabhāsvaratā na (Mvbh 69) yujyate / tan māyopamatayā pariharati / yathā māyākṛtaṃ na vidyata upalabhyate ca yadi prakṛtiprabhāsvaratā dharmāṇāṃ tat kathaṃ pūrvaṃ saṃkleśaḥ paścād vyavadānaṃ / asya parihāraḥ / saṃkleśavyavadānam ākāśopamatayā veditavyaṃ / yathākāśaṃ prakṛtipariśuddhaṃ saṃkliśyate / vyavadāyate ceti / yady aprameyabuddhotpāde saty aprameyāṇāṃ satvānāṃ kleśāpaśamaḥ / tat kathaṃ na saṃsārasamucchedo na nirvāṇavṛddhir bhavati / tasyāhīnāviśiṣṭatayā parihāraḥ / aprameyatvāt satvadhātor vyavadānapakṣasya ca / dvitīyaṃ śarīravyavasthānam / yatra yā ca yato bhrāntir abhrāntir yā ca yatra ca / bhrāntyabhrāntiphale caiva paryantaś ca tayor iti // sadasattāviparyāsaḥ āśrayo māyayopamā / akalpanā prakṛtyā ca bhāsvaratvaṃ sadaiva hi // saṃkleśo vyavadānaṃ cākāśopamatā tathā / ahīnānadhikatvañ ca daśa vajrapadāni hi // uktānudharmapratipattiḥ /",
+   "T1599": "何者無怖及無高無倒？染污及清淨，法人二俱無， 無故無怖慢，是二處無倒。人者，無染污、無清淨。法亦如是，先無染污，後無清淨。云何如此？人及法非實有故，是故二中無有一物是淨品及不淨品。不淨品時，無有一法被損減；清淨品時，無有一物被增益。為此二法生怖畏生高慢，若有如此知見，是名無怖畏無高慢無倒。如是十種無倒，十種金剛足中如次第應安立。何者名十種金剛足？一有無無倒、二依處無倒、三幻化譬無倒、四無分別無倒、五自性清淨無倒、六不淨無倒、七淨無倒、八如真空譬無倒、九不減無倒、十不增無倒。",
+   "T1600": "於無怖無高俱無顛倒者，頌曰：有情法無故，染淨性俱無， 知此無怖高，是於二無倒。論曰：有情及法俱非有故，彼染淨性亦俱非有。以染淨義俱不可得，故染淨品無減無增，由此於中無怖無慢。如實知見無怖高者，應知是名於二無倒。無倒行總義者，謂由文無倒，能正通達止觀二相；由義無倒，能正通達諸顛倒相；由作意無倒，於倒因緣能正遠離；由不動無倒，善取彼相；由自相無倒，修彼對治無分別道；由共相無倒，能正通達本性清淨；由染淨無倒，了知未斷及已斷障；由客無倒，如實了知染淨二相；由無怖無高二種無倒，諸障斷滅得永出離。此十無倒如次安立於彼十種金剛句中。何等名為十金剛句？謂有非有無顛倒。所依幻等喻無分別。本性清淨雜染清淨。虛空喻無減無增。為攝如是十金剛句，有二頌言：「應知有非有，無顛倒所依， 幻等無分別，本性常清淨， 及雜染清淨，性淨喻虛空， 無減亦無增，是十金剛句。」且初安立十金剛句。自性者，謂自性故、所緣故，無分別故、釋難故。自性故者，謂三自性，即圓成實、遍計所執及依他起。是初三句，如次應知。所緣故者，即三自性。無分別故者，謂由此無分別，即無分別智；及於此無分別，即本性清淨。如次應知安立境智，謂三自性及無分別。釋難故者，謂所餘句。且有難言：遍計所執、依他起相，若實是無，云何可得？若實是有，不應諸法本性清淨。為釋此難，說幻等喻，如幻事等雖實是無而現可得。復有難言：若一切法本性清淨，如何得有先染後淨？為釋此難，說有染淨及虛空喻，謂如虛空雖本性淨，而有雜染及清淨時。復有難言：有無量佛出現於世，一一能度無量有情，令出生死入於涅槃。云何生死無斷滅失、涅槃界中無增益過？為釋此難，說染及淨無減無增。又有情界及清淨品俱無量故。第二安立彼自性者，如有頌言：「亂境自性因，無亂自性境， 亂無亂二果，及彼二邊際。」",
+   "T1601": "有情法無故，染淨性俱無， 知此無怖高，是於二無倒。"
+  },
+  "v23": {
+   "sa": "pṛthaktvaikatvamantaśca tīrthyaśrāvakayorapi // Mvk_5.23 // samāropāpavādānto dvidhā pudgaladharmayoḥ /",
+   "sa-vasubandhu": "[d. Antadvayavarjane pratipattiḥ] antadvayavarjane pratipattiḥ katamā yā ratnakūṭe madhyamā pratipattir upadiṣṭā / kasyāntasya varjanād asau veditavyā / pṛthaktvaikatvam antaś ca tirthyaśrāvakayor api / samāropāpavādānto dvidhā pudgaladharmayoḥ // V.23",
+   "T1599": "已說隨法修行。何者遠離二邊修行？如《寶頂經》中佛為迦葉等說無相中道。何者二邊？為遠離此故，此中道應知。別異邊一邊，外道及聲聞， 增益與損減，二種人及法，",
+   "T1600": "如是已說隨法正行。離二邊正行云何應知？如《寶積經》所說中道行。此行遠離何等二邊？頌曰：異性與一性，外道及聲聞， 增益損減邊，有情法各二。",
+   "T1601": "異性與一性，外道及聲聞， 增益損減邊，有情法各二。"
+  },
+  "v24": {
+   "sa": "vipakṣapratipakṣāntaḥ śāśvatocchedasaṃjñitaḥ // Mvk_5.24 // grāhyagrāhakasaṃkleśavyavadāne dvidhā tridhā /",
+   "sa-vasubandhu": "vipakṣapratipakṣāntaḥ śāśvatocchedasaṃjñitaḥ / grāhyagrāhakasaṃkleśavyavadāne dvidhā tridhā // V.24",
+   "T1599": "非助對治邊，斷常名有邊， 能取及所取，染淨有二三。",
+   "T1600": "所治及能治，常住與斷滅， 所取能取邊，染淨二三種。",
+   "T1601": "所治及能治，常住與斷滅， 所取能取邊，染淨二三種。"
+  },
+  "v25": {
+   "sa": "vikalpadvayatāntaśca sa ca saptavidho mataḥ // Mvk_5.25 // bhāvābhāve praśāmye 'tha śamane trāsyatadbhaye /",
+   "sa-vasubandhu": "vikalpadvayatāntaś ca sa ca saptavidho mataḥ / bhāvābhāve praśāmye 'tha śamane trāsyantadbhaye // V.25",
+   "T1599": "分別二種邊，應知有七種， 有無及應止，能止可畏畏，",
+   "T1600": "分別二邊性，應知復有七， 謂有非有邊，所能寂怖畏，",
+   "T1601": "分別二邊性，應知復有七， 謂有非有邊，所能寂怖畏，"
+  },
+  "v26": {
+   "sa": "grāhyagrāhe 'tha samyaktvamithyātve vyāpṛtau na ca // Mvk_5.26 // ajanmasamakālatve sa vikalpadvayāntatā /",
+   "sa-vasubandhu": "grāhyagrāhe 'tha samyaktvamithyātve vyāpṛtau na ca / ajanmasamakālatve sa vikalpadvayāntatā // V.26 tatra rūpādibhyaḥ / pṛthaktvam ātmana ity antaḥ / ekatvam ity antaḥ tatparivarjanārthaṃ madhyamā pratipat / yā nātmapratyavekṣā / yāvan na mānavapratyavekṣā ātmadarśane hi jīvas tac charīraṃ / anyo jīvo 'nyac charīram iti bhavati darśanaṃ / nityaṃ rūpam iti tīrthikāntaḥ / anityam iti śrāvakāntaḥ / tatparivarjanārthaṃ madhyamā pratipad yā rūpādīnāṃ na nityapratyavekṣā nānityapratyavekṣā / ātmeti pudgalasamāropāntaḥ nairātmyam ity apavādāntaḥ prajñaptisato 'py apavādāt / tatparivarjanārthaṃ madhyamā pratipad yad ātmanairātmyayor madhyaṃ nirvikalpaṃ jñānaṃ / bhūtaṃ cittam iti dharmasamāropāntaḥ abhūtam ity apavādāntaḥ / tatparivarjanārthaṃ madhyamā pratipad yatra na cittaṃ na cetanā na mano na vijñānaṃ / akuśalādayo dharmāḥ saṃkleśa iti vipakṣāntaḥ / kuśalādayo vyavadānam iti pratipakṣāntas tatparivarjanārthaṃ madhyamā pratipad yo 'syāntadvayasyānupagamo 'nudāhāro 'pravyāhāraḥ / astīti śāśvatāntas tayor eva pudgaladharmayor nāstīty ucchedāntas tatparivarjanārthaṃ madhyamā pratipad yad anayor dvayor antayor madhyaṃ / avidyā grāhyā grāhakā cety antaḥ / evaṃ vidyā saṃskārā asaṃskṛtaṃ ca tatpratipakṣaḥ / yāvaj jarāmaraṇaṃ grāhyaṃ grāhakaṃ cety antas tannirodho grāhyo grāhako vety anto yena mārgeṇa tan nirudhyate / evaṃ grāhyagrāhakānto (Mvbh 71) dvidhā kṛṣṇaśuklapakṣabhedena tatparivarjanārthaṃ madhyamā pratipad vidyā cāvidyā cādvayam etad iti vistareṇa vidyāvidyādīnāṃ grāhyagrāhakatvābhāvāt / trividhaḥ saṃkleśaḥ / kleśasaṃkleśaḥ / karmasaṃkleśaḥ / janmasaṃkleśaś ca / tatra kleśasaṃkleśas trividhaḥ / dṛṣṭiḥ rāgadveṣamohanimittaṃ punarbhavapraṇidhānaṃ ca / yasya pratipakṣo jñānaśūnyatā jñānānimittaṃ jñānāpraṇihitaṃ ca / karmasaṃkleśaḥ / śubhāśubhakarmābhisaṃskāraḥ yasya pratipakṣo jñānānabhisaṃskāraḥ / janmasaṃkleśaḥ / punarbhavajātiḥ jātasya cittacaittānāṃ pratikṣaṇotpādaḥ / punarbhavaprabandhaś ca yasya pratipakṣo jñānājātiḥ jñānānutpādo jñānāsvabhāvatā ca / etasya trividhasya saṃkleśasyāpagamo vyavadānaṃ / tatra jñānaśūnyatādibhiḥ / jñeyaśūnyatādayo dharmā etena trividhena saṃkleśena yathāyogaṃ yāvan na śūnyatādayaḥ kriyante / prakṛtyaiva śūnyatādayo dharmadhātoḥ prakṛtyasaṃkliṣṭatvāt tena yadi dharmadhātuḥ saṃkliśyate vā viśudhyate veti kalpayaty ayam antaḥ / prakṛtyasaṃkliṣṭasya saṃkleśaviśuddhyabhāvād etasyāntasya parivarjanārthaṃ / madhyamā pratipat / yan na śūnyatayā dharmāñ chūnyāṃ karoti / api tu dharmā eva śūnyā ity evamādi / aparaḥ saptavidho vikalpadvayāntas tad yathā bhāve 'pi vikalpo 'ntaḥ/ abhāve 'pi pudgalo 'sti yasya vināśāya śūnyatā (Mvbh 72) nairātmyam api vā nāstīti kalpanāt / tad etasya vikalpadvayāntasya parivarjanārtham iyaṃ madhyamā pratipat / na khalu pudgalavināśāya śūnyatā api tu śūnyataiva śūnyā pūrvāntaśūnyatā / aparāntaśūnyatā ity evamādivistaraḥ / śāmye 'pi vikalpo 'ntaḥ / śamane 'pi vikalpo 'nataḥ praheyaprahāṇakalpanayā śūnyatāyās trasanād etasya vikalpadvayāntasya parivarjanārtham ākāśadṛṣṭāntaḥ / trāsye 'pi vikalpo 'ntas tataś ca trāsyād bhaye 'pi parikalpitarūpāditrasanāt (/) duḥkhabhīrutayā etasya vikalpadvayāntasya parivarjanārthaṃ citrakaradṛṣṭāntaḥ / pūrvako dṛṣṭāntaḥ śrāvakān ārabhyāyaṃ tu bodhisatvān / grāhye 'pi vikalpo 'ntaḥ grāhake 'pi etasya vikalpadvayāntasya parivarjanārthaṃ māyākāradṛṣṭāntaḥ / vijñaptimātrajñānakṛtaṃ hy arthābhāvajñānaṃ / tac cārthābhāvajñānaṃ / tad eva vijñaptimātrajñānaṃ nivartayati / arthābhāve vijñaptyasaṃbhavād ity etad atra sādharmyaṃ / samyaktve 'pi vikalpo 'ntaḥ mithyātve 'pi bhūtapratyavekṣāṃ samyaktvena kalpayato mithyātvena vā etasyāntadvayasya parivarjanārthaṃ / kāṣṭhadvayāgnidṛṣṭāntaḥ / yathākāṣṭhadvayād (Mvbh 73) anagnilakṣaṇād agnir jāyate / jātaś ca tad eva kāṣṭhadvayaṃ dahaty evam asamyaktvalakṣaṇāyā yathābhūtapratyavekṣāyāḥ samyaktvalakṣaṇam āryaṃ prajñendriyaṃ jāyate jātaṃ ca tām eva bhūtapratyavekṣāṃ vibhāvayatīty etad atra sādharmyaṃ na cāsamyaktvalakṣaṇāpi bhūtapratyavekṣā mithyātvalakṣaṇā samyaktvānukūlyāt / vyāpṛtāv api vikalpo 'ntaḥ / avyāpṛtāv api jñānasya buddhipūrvāṃ kriyāṃ niḥsāmarthyaṃ vā kalpayataḥ / etasya vikalpadvayāntasya parivarjanārthaṃ / tailapradyotadṛṣṭāntaḥ / ajanmatve 'pi vikalpo 'ntaḥ samakālatve 'pi yadi pratipakṣasyānutpattiṃ vā kalpayati saṃkleśasyaiva vā dīrghakālatvam etasya vikalpadvayāntasya parivarjanārthaṃ dvitīyas tailapradyotadṛṣṭāntaḥ / uktāntadvayaparivarjane pratipattiḥ /",
+   "T1599": "能取所取邊，正邪事無事， 不生及俱時，有無分別邊。色等諸陰，立我別異一邊，立我與色一一邊，為離此二邊，佛說中道，不見我、不見人、不見眾生及不見壽者。云何如此？若人執我見者，不離此二邊，壽者別異、身亦別異。若不取執，異即是壽，名即是身。此二見決定有，為此中道，此二執不得起。色等常住是外道邊，無常是聲聞邊。為離此二邊，故佛說中道，色等諸法不觀常及無常故，是名中道。有我者增益邊毀謗，無我者損減邊毀謗，有假名人故。為離此二邊，故佛說中道，有我無我二，彼中間非二，所觸無分別故。心實有是增益法邊，不實有損減法邊。為離此二邊，故佛說中道，此處無意無心無識無作意。一切不善法名不淨品、名非助道，一切善法等是淨品，名對治邊。為離此二邊，故佛說中道，佛說此二種邊不去不來、無譬無言。有者名常邊人及法，無者名斷邊人及法。離此二邊故，佛說中道，是二種中間名中道，如前說。無明者所取一邊，能取第二邊；如無明，明亦如是。一切有為法，所取一邊，能取一邊；無為法亦如是。如無明，乃至老死所取能取。老死滅所取一邊，能取第二邊。是滅道者所取能取，如是所取能取二邊，由黑分白分別異故。為離此二邊，故佛說中道。佛說無明及明，此二無二無，如經廣說。云何如此？無明及明等，所取能取體無故。染污有三種：一煩惱、二業、三生染污。煩惱染污復有三，一者諸見、二者欲瞋癡起相、三更有生願。為對治此三，佛說知空解脫門、知無相解脫門、知無願解脫門。業染污者，善惡造作。為對治此業，佛說智慧無造作。生染污者，更有中生已生意心及心法念念生，有生相續不斷。為對治此，佛說智慧無生、智慧無起、智慧無自性。如是三種染污滅除，名清淨。知空等者及染污空等，是名境界清淨智。及一切對治，名行清淨。因此行，煩惱除，不更起，名果清淨。此三種清淨染污空等，如三種清淨所作空等，諸法自性無故、法界自性無別異故。復有智慧空等諸法，非染污所造及非智所造作。云何？如是空等諸法，自性有故。法界自性無染污故。若人思惟分別法界有時染污有時清淨是邊，自性無染污法自體無染淨故，此執成邊。為遠離此邊故，佛說此中道非二空作空令諸法空，諸法自體空。如是等如《寶頂經》廣說。復有七種分別二邊。何者七？一有中分別一邊，二無中分別一邊。有真實人，為滅此人，是故立空。有真實無我，為滅此法，是故立不空。因此二分別，起有執無執。為離此二邊，故佛說中道。空者不滅人等。何所為？無所為，一切諸法自然性故，如經廣說。一切無明等諸惑應止令滅，明等諸法道應生，能令止滅。如此分別應止及能止故，空中生怖畏。為離此二種分別邊，佛說空譬。可怖畏分別一邊，因此可畏起怖畏復是一邊，分別所作色等諸塵，起怖畏及起苦怖畏。為離此二種怖畏分別邊，佛說畫師譬。前譬者依小乘人說，今譬依菩薩說。所取分別一邊，能取分別一邊。為離此二邊，佛說幻師譬。云何如此？唯識智所作無塵智。無塵智者，滅除唯識智。塵無體故，識亦不生。此中是相似正位分別一邊，邪位分別一邊。分別真實見為正位分別邪位。為離此二邊，佛說兩木截火譬。譬如兩木無火相，從此起火，火起成還燒兩木。如是不正位相及正位相，真實見正通達為相。聖智根起成已，是真實見相正位。復有了滅，此中譬與其相似，真實見邪位相無有邪位相，邪位亦無，隨順真實位故。分別有事一邊，分別無事一邊。有事者，智慧先分別作意，復有分別無功用。為離此二種功德邊，佛說燈光譬。分別無生一邊，分別等時一邊。若分別對治道無生，分別煩惱長時。為離此二邊，佛說第二燈光譬。",
+   "T1600": "所能取正邪，有用并無用， 不起及時等，是分別二邊。論曰：若於色等執我有異、或執是一，各為一邊；為離此執說中道行，謂觀無我乃至儒童，見有我者定起此執，我異於身、或即身故。若於色等執為常住是外道邊，執無常者是聲聞邊；為離此執說中道行，謂觀色等非常無常。定執有我是增益有情邊，定執無我是損減有情邊，彼亦撥無假有情故；為離此執說中道行，謂我無我二邊中智。定執心有實是增益法邊，定執心無實是損減法邊；為離此執說中道行，謂於是處無心無思無意無識。執有不善等諸雜染法是所治邊，執有善等諸清淨法是能治邊；為離此執說中道行，謂於二邊不隨觀說。於有情法定執為有是常住邊，定執非有是斷滅邊；為離此執說中道行，謂即於此二邊中智。執有無明所取能取各為一邊，若執有明所取能取各為一邊。如是執有所治諸行、能治無為，乃至老死及能滅彼諸對治道所取能取各為一邊。此所能治所取能取，即是黑品白品差別。為離此執說中道行，謂明與無明無二無二分，乃至廣說，明無明等所取能取皆非有故。雜染有三，謂煩惱雜染、業雜染、生雜染。煩惱雜染復有三種：一諸見、二貪瞋癡相、三後有願。此能對治，謂空智、無相智、無願智。業雜染，謂所作善惡業。此能對治，謂不作智。生雜染有三種：一後有生、二生已心心所念念起、三後有相續。此能對治，謂無生智、無起智、無自性智。如是三種雜染除滅，說為清淨。空等智境，謂空等法。三種雜染隨其所應，非空等智令作空等，由彼本性是空性等，法界本來性無染故。若於法界或執雜染或執清淨各為一邊，本性無染，非染淨故。為離此執說中道行，謂不由空能空於法，法性自空，乃至廣說。復有七種分別二邊。何等為七？謂分別有、分別非有各為一邊。彼執實有補特伽羅以為壞滅，立空性故。或於無我分別為無，為離如是二邊分別說中道行，謂不為滅補特伽羅方立空性，然彼空性本性自空，前際亦空、後際亦空、中際亦空，乃至廣說。分別所寂、分別能寂各為一邊。執有所斷及有能斷，怖畏空故。為離如是二邊分別，說虛空喻。分別所怖、分別從彼所生可畏各為一邊。執有遍計所執色等可生怖故，執有從彼所生苦法可生畏故。為離如是二邊分別，說畫師喻。前虛空喻為聲聞說，今畫師喻為菩薩說。分別所取、分別能取各為一邊。為離如是二邊分別，說幻師喻。由唯識智無境智生，由無境智生復捨唯識。智境既非有，識亦是無，要託所緣識方生故。由斯所喻與喻同法。分別正性、分別邪性各為一邊。執如實觀為正為邪，二種性故。為離如是二邊分別，說兩木生火喻。謂如兩木雖無火相，由相鑽截而能生火，火既生已還燒兩木。此如實觀亦復如是，雖無聖道正性之相，而能發生正性聖慧。如是正性聖慧生已，復能除遣此如實觀。由斯所喻與喻同法。然如實觀雖無正性相，順正性故亦無邪性相。分別有用、分別無用各為一邊。彼執聖智要先分別方能除染，或全無用。為離如是二邊分別，說初燈喻。分別不起、分別時等各為一邊。彼執能治畢竟不起，或執與染應等時長。為離如是二邊分別，說後燈喻。",
+   "T1601": "所能取正邪，有用并無用， 不起及時等，是分別二邊。"
+  },
+  "v27": {
+   "sa": "viśiṣṭā cāviśiṣṭā ca jñeyā daśasu bhūmiṣu // Mvk_5.27 // vyavasthānantato dhātuḥ sādhyasādhanadhāraṇā /",
+   "sa-vasubandhu": "[e. Viśisṭā cāviśiṣṭā ca pratipattiḥ] viśiṣṭā cāviśiṣṭā ca pratipattiḥ / katamā / viśiṣṭā cāviśiṣṭā ca jñeyā daśasu bhūmiṣu / yasyāṃ bhūmau yā pāramitātiriktatarā sā tatra viśiṣṭā sarvāsu ca sarvatra samudāgacchatīty aviśiṣṭā / uktaṃ pratipattyānuttaryaṃ / [3. Ālambanānuttarya] ālambanānuttaryaṃ / katamat / vyavasthānaṃ tathā dhātuḥ sādhyasādhanadhāraṇā // V.27",
+   "T1599": "離十四二邊修行已說。云何勝有等修行？勝有等修行，應知於十地。何者勝有等修行？十地中隨一此中波羅蜜最勝無比，此波羅蜜名勝修行。若一切處同無差別，是名有等修行。修行無上已說。何者境界無上？安立及性界，所成能成就， 持",
+   "T1600": "如是已說離二邊正行。差別、無差別正行云何？頌曰：差別無差別，應知於十地， 十波羅蜜多，增上等修集。論曰：於十地中十到彼岸隨一增上而修集者，應知說為差別正行。於一切地皆等修集布施等十波羅蜜多，如是正行名無差別。六正行總義者，謂即如是品類最勝，由此思惟如所施設大乘法等，由如是品無亂轉變修奢摩他，及無倒轉變修毘鉢舍那，為如是義修中道行而求出離，於十地中修習差別無差別行。如是已說正行無上。所緣無上其相云何？頌曰：所緣謂安、界、所能立、任持、",
+   "T1601": "差別無差別，應知於十地， 十波羅蜜多，增上等修集。 所緣謂安、界、所能立、任持、"
+  },
+  "v28": {
+   "sa": "avadhārapradhārā ca prativedhaḥ pratānatā // Mvk_5.28 // pragamaḥ praśaṭhatvañca prakarṣālambanammatam /",
+   "sa-vasubandhu": "avadhārapradhārā ca prativedhaḥ pratānatā / pragamaḥ praśaṭhatvaṃ ca prakarṣālambanaṃ mataṃ // V.28 ity etat / dvādaśavidham ālambanaṃ / yad uta dharmaprajñaptivyavasthānālambanaṃ dharmadhātvālambanaṃ sādhyālambanaṃ sādhanālambanaṃ / dhāraṇālambanaṃ avadhāraṇālambanaṃ / pradhāraṇālambanaṃ / prativedhālambanaṃ / pratānatālambanaṃ / pragamālambanaṃ / praśaṭhatvālambanaṃ prakarṣālambanaṃ ca / tatra prathamaṃ ye pāramitādayo dharmā vyavasthāpyante / dvitīyan tathatā tṛtīyacaturthe te eva yathākramaṃ dharmadhātuprativedhena pāramitādidharmādhigamāt / pañcamaṃ śrutamayajñānālambanaṃ / ṣaṣṭhaṃ / cintāmayasyāvagamya dhāraṇāt / saptamaṃ bhāvanāmayasya pratyātmaṃ dhāraṇāt / aṣṭamaṃ prathamāyāṃ bhūmau darśanamārgasya / navamaṃ bhāvanāmārgasya yāvat saptamyāṃ bhūmau / daśamaṃ tatraiva laukikalokottarasya mārgasya / prakāraśo dharmādhigamāt / ekādaśam aṣṭamyāṃ bhūmau dvādaśaṃ navamyādibhūmitraye tad eva hi prathamadvayaṃ / tasyān tasyām avasthāyāṃ tattadālambanaṃ nāma labhate / uktam ālambanaṃ //",
+   "T1599": "決定依止，通達及廣大， 品行及生界，最勝等應知。如是境界有十二。何者十二？一安立法名境界、二法性境界、三所成就境界、四能成境界、五持境界、六決持境界、七定依止境界、八通達境界、九相續境界、十勝得境界、十一生境界、十二最勝境界。此中第一者，波羅蜜等諸法，如佛所安立。第二法如如。第三第四此二如前次第，通達法界故、得行波羅蜜等諸法故。第五聞慧境界。第六思慧境界。云何名決持？已知此法能持故。第七修慧境界，依內依體得持故。第八初地中見境界。第九修道境界乃至七地中。第十是七種地中世及出世道，如品類諸法得成故。第十一八地中。第十二九地等三處是第一第二境界，如前說處處位中平等境界。所餘境界者，前二所顯差別。",
+   "T1600": "印內持、通達，增、證、運、最勝。論曰：如是所緣有十二種，一安立法施設所緣、二法界所緣、三所立所緣、四能立所緣、五任持所緣、六印持所緣、七內持所緣、八通達所緣、九增長所緣、十分證所緣、十一等運所緣、十二最勝所緣。此中最初謂所安立到彼岸等差別法門；第二謂真如；第三第四如次應知，即前二種到彼岸等差別法門，要由通達法界成故；第五謂聞所成慧境，任持文故；第六謂思所成慧境，印持義故；第七謂修所成慧境，內別持故；第八謂初地中見道境；第九謂修道中乃至七地境；第十謂即七地中世出世道品類差別分分證境；第十一謂第八地境；第十二謂第九第十如來地境。應知此中即初第二，隨諸義位得彼彼名。",
+   "T1601": "印內持、通達、增、證、運、最勝。"
+  },
+  "v29": {
+   "sa": "avaikalyāpratikṣepo 'vikṣepaśca prapūraṇā // Mvk_5.29 // samutpādo nirūḍhiśca karmaṇyatvāpratiṣṭhitā / nirāvaraṇatā tasyāpraśrabdhisamudāgamaḥ // Mvk_5.30 //",
+   "sa-vasubandhu": "[4. Samudāgamānuttarya] samudāgamaḥ katamaḥ / avaikalyāpratikṣepo 'vikṣepaś ca prapūraṇā / samutpādo nirūḍhiś ca karmaṇyatvāpratiṣṭhitā / nirāvaraṇatā tasyāprasrabdhisamudāgamaḥ // V.29 ity eṣa daśavidhaḥ samudāgamaḥ / tatra pratyayāvaikalyaṃ / gotrasamudāgamaḥ / (Mvbh 75) mahāyānāpratikṣepo 'dhimuktisamudāgamaḥ / hīnayānāvikṣepaś cittotpādasamudāgamaḥ / pāramitāparipūraṇā pratipattisamudāgamaḥ / āryamārgotpādo niyāmāvakrāntisamudāgamaḥ / kuśalamūlanirūḍhiḥ dīrghakālaparicayāt satvaparipākasamudāgamaḥ [/] cittakarmaṇyatvaṃ kṣetrapariśuddhisamudāgamaḥ / saṃsāranirvāṇāpratiṣṭhatā avinivartanīyabhūmivyākaraṇalābhasamudāgamaḥ saṃsāranirvāṇābhyām avinivartanāt / nirāvaraṇatā buddhabhūmisamudāgamaḥ / tadaprasrabdhir bodhisaṃdarśanasamudāgamaḥ [//]",
+   "T1599": "境界已說。何者習起？具足及不毀，避離令圓滿， 生起及堅固，隨事無住處， 無障及不捨，十習起應知。如是習起有十種。此中因緣具足，名性習起。不毀謗大乘法，是名願樂習起。避下乘法，是名發心習起。修行圓滿波羅蜜，名修行習起。生起聖道，名入正位習起。堅固善根長時數習故，名成熟眾生習起。心隨事得成，名淨土習起。不住生死涅槃中，得不退位授記，不退墮生死涅槃故，滅盡諸障，名佛地習起。不捨此等事，名顯菩薩習起。",
+   "T1600": "如是已說所緣無上。修證無上其相云何？頌曰：修證謂無闕、不毀動、圓滿、 起、堅固、調柔、不住、無障息。論曰：如是修證總有十種，一種性修證，緣無闕故。二信解修證，不謗毀大乘故。三發心修證，非下劣乘所擾動故。四正行修證，波羅蜜多得圓滿故。五入離生修證，起聖道故。六成熟有情修證，堅固善根長時集故。七淨土修證，心調柔故。八得不退地受記修證，以不住著生死涅槃，非此二種所退轉故。九佛地修證，無二障故。十示現菩提修證，無休息故。無上乘總義者，略有三種無上乘義，謂正行無上故、正行持無上故、正行果無上故。",
+   "T1601": "修證謂無闕、不毀動、圓滿、 起、堅固、調柔、不住、無障息。"
+  },
+  "v30": {
+   "sa": "śāstraṃ madhyavibhāgaṃ hi gūḍhasārārthameva ca / mahārthañcaiva sarvārthaṃ sarvānarthapraṇodanam // Mvk_5.31 // // iti yānānuttarya paricchedaḥ pañcamaḥ // samāptā madhyāntavibhāgakārikāḥ",
+   "sa-vasubandhu": "[Śāstranāmavyākhyāna] ity etac chāstraṃ madhyavibhāgaṃ hi madhyamāpratipatprakāśanāt madhyāntavibhāgam apy etan madhyasyāntayoś ca prakāśanāt / ādyaparavarjitasya madhyasya vā / gūḍhasārārtham eva ca / tarkasyāgocaratvāt paravādibhir abhedyatvāc ca yathākramaṃ / mahārthaṃ caiva / svaparādhikārāt / sarvārthaṃ / yānatrayādhikārāt / sarvānarthapraṇodanaṃ // V.30 kleśajñeyāvaraṇaprahāṇāvāhanāt / [Yānānuttaryapiṇḍārtha] ānuttaryasya piṇḍārthaḥ / samāsatas trividham ānuttaryaṃ pratipattiḥ (/) pratipattyādhāraḥ pratipattiphalaṃ caiva / sā ca pratipattir yādṛśī paramā / yena ca yathāprajñaptito dharmamahāyānamanaskriyā (V. 7ab) ity evamādinā / yathā yena prakāreṇāvikṣepapariṇatā ca śamathabhāvanayā aviparyāsapariṇatā ca vipaśyanābhāvanayā/ yadarthaṃ ca madhyamayā pratipadā niryāṇārthaṃ / yatra ca daśasu bhūmiṣu (V. 27b) / viśiṣṭā cāviśiṣṭā ca (V. 27a) / aviparyāsānāṃ piṇḍārthaḥ / vyañjanāviparyāsena śamathanimittaṃ pratividhyati / arthāviparyāsena vipaśyanānimittaṃ pratividhyati / manaskārāviparyāsena viparyāsanidānaṃ parivarjayati / avisārāviparyāsena tannimittaṃ sugṛhītaṃ karoti / svalakṣaṇāviparyāsena tatpratipakṣeṇāvikalpaṃ mārgaṃ bhāvayati / sāmānyalakṣaṇāviparyāsena vyavadānaprakṛtiṃ pratividhyati / aśuddhiśuddhimanaskārāviparyāsena tadāvaraṇaprahīṇāprahīṇatāṃ prajānāti / tadāgantukatvāviparyāsena saṃkleśavyavadānaṃ yathābhūtaṃ prajānāti / atrāsānunnatyaviparyāsena nirāvaraṇe niryāti / ānuttaryaparicchedaḥ pañcamaḥ // // samāpto madhyāntavibhāgaḥ // // vyākhyām imām upanibadhya yad asti puṇyaṃ puṇyodayāya mahato jagatas tad astu / jñānodayāya ca yato 'bhyudayaṃ mahāntaṃ bodhitrayaṃ ca na cirāj jagad aśnuvīta // iti // madhyāntavibhāgakārikābhāṣyaṃ samāptam // // kṛtir ācāryabhadantavasubandhoḥ /",
+   "T1599": "如是此論名「中邊分別」，了中道故。復有分別中道及二邊故，是中兩邊能現故；離初後此中兩處不著，如理分別顯現故。故名中邊分別論。此論分別中，甚深真實義， 大義一切義，除諸不吉祥。此中邊分別論，名義如前說。甚深祕密義，非覺觀等境界故。真實堅義，諸說不可破故；無上菩提果故，大義；自他利益事為義故，一切義。因此論三乘義得顯現故，能除一切不吉祥。不吉祥者，三品煩惱及三品生死，能離滅此生死及煩惱不吉祥故。能滅四德障故、能攝持四德故，故說除不吉祥。無上眾義者，略說無上有三種：一正行、二正依持、三正行果。此修行，如品類無比、如方便、如佛所立諸法大乘中思惟等，如前說。如道理無散動、無倒，若修奢摩他無散動，若修毘婆舍那無顛倒變異。如所為，為出離，隨中道故。如處十地中，如勝有等行。無倒眾義者，名句無倒故。通達禪定相，義無倒故。通達智慧相，思惟無倒故、得遠離顛倒因緣故、無不散動顛倒故。是中道相分明所得，令成就別相無倒故。依此起對治，得生死分別道。通相無倒故，得通達淨品。自性不淨及淨無倒故，惑障未滅及滅。得智各無倒故，不淨及淨如實見。無怖畏無高慢無倒故，滅除諸障，得出離故。空涅槃一路，佛日言光照， 聖眾行純熟，盲者不能見。 已知佛正教，壽命在喉邊， 諸惑力盛時，求道莫放逸。此中邊分別論無上乘品究竟。婆藪槃豆釋迦道人大乘學所造。我今造此論，為世福慧行， 普令一切眾，如願得菩提。",
+   "T1600": "何故此論名「辯中邊」？頌曰：此論辯中邊，深密堅實義， 廣大一切義，除諸不吉祥。論曰：此論能辯中邊行故，名辯中邊，即是顯了處中二邊能緣行義。又此能辯中邊境故，名辯中邊，即是顯了處中二邊所緣境義。或此正辯離初後邊中道法故，名辯中邊。此論所辯是深密義，非諸尋思所行處故。是堅實義，能摧他辯非彼伏故。是廣大義，能辯利樂自他事故。是一切義，普能決了三乘法故。又能除滅諸不吉祥，永斷煩惱所知障故。我辯此論諸功德，咸持普施群生類， 令獲勝生增福慧，疾證廣大三菩提。",
+   "T1601": "此論辯中邊，深密堅實義， 廣大一切義，除諸不吉祥。"
+  }
+ }
+}
