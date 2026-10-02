@@ -1,0 +1,91 @@
+{
+ "slug": "lankavatara-c09",
+ "title": "楞伽經・陀羅尼品",
+ "family": "sa",
+ "intro": "梵本第九品〈Dhāraṇī〉＝菩提流支〈陀羅尼品〉＝實叉難陀〈陀羅尼品〉；求那跋陀羅四卷本無此品。佛說兩段楞伽經呪，持誦者不為天龍夜叉羅剎等所得便。",
+ "units": [
+  {
+   "id": "l9-01",
+   "label": "品題・第一呪"
+  },
+  {
+   "id": "l9-02",
+   "label": "持誦功德"
+  },
+  {
+   "id": "l9-03",
+   "label": "第二呪"
+  },
+  {
+   "id": "l9-04",
+   "label": "持誦功德・持此呪即受持全經"
+  },
+  {
+   "id": "l9-05",
+   "label": "品尾題"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sa",
+   "lang": "sa",
+   "label": "梵本",
+   "who": "Vaidya 校訂本（1963）・GRETIL"
+  },
+  {
+   "id": "T0671",
+   "lang": "lzh",
+   "label": "十卷本",
+   "who": "菩提流支譯《入楞伽經》・513 年",
+   "work": "T0671"
+  },
+  {
+   "id": "T0672",
+   "lang": "lzh",
+   "label": "七卷本",
+   "who": "實叉難陀譯《大乘入楞伽經》・700–704 年",
+   "work": "T0672"
+  }
+ ],
+ "works": [
+  "T0671",
+  "T0672"
+ ],
+ "anchors": [
+  {
+   "work": "T0671",
+   "node": "入楞伽經陀羅尼品第十七",
+   "uid": "T16n0671_p0564c11"
+  },
+  {
+   "work": "T0672",
+   "node": "大乘入楞伽經陀羅尼品第九",
+   "uid": "T16n0672_p0624c19"
+  }
+ ],
+ "cells": {
+  "l9-01": {
+   "sa": "dhāraṇīparivarto nāma navamaḥ / atha khalu bhagavān mahāmatiṃ bodhisattvaṃ mahāsattvamāmantrayate sma - udgṛhṇa tvaṃ mahāmate laṅkāvatāre mantrapadāni yānyatītānāgatapratyutpannairbuddhairbhagavadbhirbhāṣitāni, bhāṣante, bhāṣiṣyante ca / ahamapyetarhi bhāṣiṣye dharmabhāṇakānāṃ parigrahārtham / tadyathā / tuṭṭe 2 / vuṭṭe 2 / paṭṭe 2 / kaṭṭe 2 / amale 2 / vimale 2 / nime 2 / hime 2 / vame 2 / kale 2 / kale 2 / aṭṭe maṭṭe / vaṭṭe tuṭṭe / jñeṭṭe spuṭṭe / kaṭṭe 2 / laṭṭe paṭṭe / dime 2 / cale 2 / pace pace / bandhe 2 / añce mañce / dutāre 2 / patāre 2 / akke 2 / sarkke 2 / cakre 2 / dime 2 / hime 2 / ṭu ṭu ṭu ṭu / 4 / ḍu ḍu ḍu ḍu / 4 / ru ru ru ru / 4 / phu phu phu phu / 4 / svāhā //",
+   "T0671": "爾時世尊告聖者大慧菩薩摩訶薩言：「大慧！汝應諦聽，受持我楞伽經呪，是呪過去未來現在諸佛，已說今說當說。大慧！我今亦說，為諸法師受持讀誦楞伽經者，而說呪曰：「兜諦兜諦　祝諦祝諦　蘇頗諦蘇頗諦　迦諦迦諦　阿摩利　阿摩諦　毘摩梨毘摩梨　尼彌尼彌　奚彌奚彌　婆迷婆迷　歌梨歌梨　歌羅歌梨　阿䶩摩䶩　遮䶩兜䶩　讓䶩　蘇弗䶩　葛弟葛弟　波弟波弟　奚咪奚咪地咪地咪　羅制羅制　波制波制　槃弟槃弟　阿制彌制　竹荼梨兜荼弟　波羅弟　遏計遏計　斫計斫計梨利　爾𡱝咪　屎咪　奚咪奚咪　晝晝晝晝　抽畜抽畜　紬紬紬紬　除除除除　蘇婆呵",
+   "T0672": "爾時佛告大慧菩薩摩訶薩言：「大慧！過去未來現在諸佛，為欲擁護持此經者，皆為演說楞伽經呪，我今亦說，汝當受持。」即說呪曰：怛姪他（一）　覩吒覩吒（都騃反，下同）（二）　杜吒杜吒（三）　鉢吒鉢吒（四）　葛吒葛吒（五）　阿麼隷阿麼隷（六）　毘麼隷毘麼隷（七）　儞謎儞謎（八）　呬謎呬謎（九）　縛（扶可反）謎縛謎（十）　葛隷葛隷（十一）　揭囉葛隷（十二）　阿吒末吒（十三）　折吒咄吒（十四）　耆若（攘舸反，二合）吒薩普（二合）吒（十五）　葛地（雜計反，下同）剌地（十六）　鉢地（十七）　呬謎呬謎（十八）　第謎（十九）　折隷折隷（二十）　鉢利鉢利（二十一）　畔第毘第（二十二）　案制滿制（二十三）　𪐴（胝戶反，下同）茶（去聲，下同）㘑（二十四）　杜茶㘑（二十五）　鉢茶㘑（二十六）　遏計遏計（二十七）　末計末計（二十八）　斫結斫結㘑（二合）（二十九）　地（依字呼）謎地謎（三十）　呬謎呬謎（三十一）　𪐴𪐴𪐴𪐴（三十二）　楮（笞矩反）楮楮楮（三十三）　杜杜杜（三十四）　杜虎（二合）杜虎杜虎杜虎（三十五）　莎婆訶（三十六）"
+  },
+  "l9-02": {
+   "sa": "imāni mahāmate mantrapadāni laṅkāvatāre mahāyānasūtre / yaḥ kaścinmahāmate kulaputro vā kuladuhitā vā imāni mantrapadānyudgrahīṣyati dhārayiṣyati vācayiṣyati paryavāpsyati, na tasya kaścidavatāraṃ lapsyate devo vā devī vā nāgo vā nāgī vā yakṣo vā yakṣī vā asuro vā asurī vā garuḍo vā garuḍī vā kinnaro vā kinnarī vā mahorago vā mahoragī vā gandharvo vā gandharvī vā bhūto vā bhūtī vā kumbhāṇḍo vā kumbhāṇḍī vā piśāco vā piśācī vā ostārako vā austārakī vā apasmāro vā apasmārī vā rākṣaso vā rākṣasī vā ḍāko vā ḍākinī vā ojohāro vā ojohārī vā kaṭapūtano vā kaṭapūtanī vā amanuṣyo vā amanuṣyī vā, sarve te 'vatāraṃ na lapsyate / sa cedviṣamagraho bhaviṣyati, so 'syāṣṭottaraśatābhimantritena rodan krandanto kaṃ diśaṃ dṛṣṭvā yāsyati //",
+   "T0671": "「大慧！是名楞伽大經中呪文句。善男子、善女人，比丘、比丘尼、優婆塞、優婆夷等，能受持讀誦此文句為人演說，無有人能覓其罪過，若天天女，若龍龍女，若夜叉夜叉女，阿修羅阿修羅女，迦樓羅迦樓羅女，緊那羅緊那羅女，摩睺羅伽摩睺羅伽女，浮多浮多女，鳩槃荼鳩槃荼女，毘舍闍毘舍闍女，嗚多羅嗚多羅女，阿波羅阿波羅女，羅剎羅剎女，荼伽荼伽女，嗚周何羅嗚周何羅女，伽吒福多羅伽吒福多羅女，若人非人，若人女非人女，不能覓其過，若有惡鬼神損害人，欲速令彼惡鬼去者，一百遍轉此陀羅尼呪，彼諸惡鬼驚怖號哭疾走而去。」",
+   "T0672": "「大慧！未來世中，若有善男子、善女人，受持讀誦為他解說此陀羅尼，當知此人，不為一切人與非人諸鬼神等之所得便；若復有人卒中於惡，為其誦念一百八遍，即時惡鬼疾走而去。"
+  },
+  "l9-03": {
+   "sa": "punaraparāṇi mahāmate mantrapadāni bhāṣiṣye / tadyathā - padme padmadeve / hine hini hine / cu cule culu cule / phale phula phule / yule ghule yula yule / ghule ghula ghule / pale pala pale / muñce 3 / chinde bhinde bhañje marde pramarde dinakare svāhā //",
+   "T0671": "佛復告大慧：「大慧！我為護此護法法師，更說陀羅尼。」而說呪：「波頭彌　波頭彌提婢　奚尼奚尼奚禰諸梨　諸羅　諸麗　侯羅　侯麗　由麗　由羅　由麗　波麗　波羅　波麗　聞制　瞋迭頻迭槃逝末迭遲那　迦梨蘇波呵",
+   "T0672": "大慧！我更為汝說陀羅尼。」即說呪曰：怛姪他（一）　鉢頭摩第鞞（二）　鉢頭迷（三）　醯（去聲，下同）泥醯禰醯泥（四）　隷主羅主隷（五）　虎隷虎羅虎隷（六）　庾隷庾隷（七）　跛隷跛羅跛隷（八）　嗔（上聲，呼）第臏第（九）　畔逝末第（十）　尼羅迦隷（十一）　莎婆訶（十二）"
+  },
+  "l9-04": {
+   "sa": "imāni mahāmate mantrapadāni yaḥ kaścitkulaputro vā kuladuhitā vā udgrahīṣyati dhārayiṣyati vācayiṣyati paryavāpsyati, tasya na kaścidavatāraṃ lapsyate devo vā devī vā nāgo vā nāgī vā yakṣo vā yakṣī vā asuro vā asurī vā garuḍo vā garuḍī vā kinnaro vā kinnarī vā mahorago vā mahoragī vā gandharvo vā gandharvī vā bhūto vā bhūtī vā kumbhāṇḍo vā kumbhāṇḍī vā piśāco vā piśācī vā ostārako vā ostārakī vā, apasmāro vā apasmārī vā, rākṣaso vā rākṣasī vā, ḍāko vā ḍākinī vā, ojoharo vā ojoharī vā, kaṭapūtano vā kaṭapūtanī vā, manuṣyo vā manuṣyī vā, sarve te 'vatāraṃ na lapsyate / ya imāni mantrapadāni paṭhiṣyati, tena laṅkāvatārasūtraṃ paṭhitaṃ bhaviṣyati / imāni bhagavatā mantrapadāni bhāṣitāni rākṣasānāṃ nivāraṇārtham //",
+   "T0671": "「大慧！是陀羅尼呪文句，若善男子、善女人，受持讀誦為人演說，無人能得與作過失，若天若天女，若龍若龍女，夜叉夜叉女，阿修羅阿修羅女，迦樓羅迦樓羅女，緊那羅緊那羅女，摩睺羅伽摩睺羅伽女，乾闥婆乾闥婆女，浮多浮多女，鳩槃荼鳩槃荼女，毘舍闍毘舍闍女，嗚多羅嗚多羅女，阿拔摩羅阿拔摩羅女，羅叉羅叉女，嗚闥阿羅嗚闥阿羅女，伽吒福單那伽吒福單那女，若人若非人，若人女非人女，彼一切不能得其過失。大慧！若有人能受持讀誦此呪文句，彼人得名誦一切楞伽經，是故我說此陀羅尼句，為遮一切諸羅剎，護一切善男子善女人護持此經者。」",
+   "T0672": "「大慧！若有善男子、善女人，受持讀誦為他解說此陀羅尼，不為一切天龍夜叉人非人等諸惡鬼神之所得便；我為禁止諸羅剎故說此神呪，若持此呪則為受持入楞伽經，一切文句悉已具足。」"
+  },
+  "l9-05": {
+   "sa": "iti laṅkāvatāre dhāraṇīparivarto nāma navamaḥ //"
+  }
+ }
+}
