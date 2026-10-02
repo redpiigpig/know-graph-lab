@@ -1,0 +1,70 @@
+{
+ "slug": "samadhiraja-c15",
+ "title": "月燈三昧經・第15品 說微笑品（Smitavyākaraṇa）",
+ "family": "sa",
+ "intro": "梵本〈Smitavyākaraṇa〉＝藏譯第十五章。佛以偈答彌勒：月光童子往昔已見多佛、末世護持此三昧，授記成佛（SRS 15.1–10）；童子聞記歡喜讚佛，願佛摩頂（15.11–17）。那連提耶舍本 16 頌。",
+ "units": [
+  {
+   "id": "c15-1",
+   "label": "佛答彌勒：授月光童子記（15.1–10）"
+  },
+  {
+   "id": "c15-2",
+   "label": "月光童子聞記讚佛・願摩頂（15.11–17）"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sa",
+   "lang": "sa",
+   "label": "梵本",
+   "who": "Vaidya 校訂本（1961）・GRETIL"
+  },
+  {
+   "id": "bo",
+   "lang": "bo",
+   "label": "藏譯",
+   "who": "德格版 Toh 127・84000 翻譯記憶"
+  },
+  {
+   "id": "en",
+   "lang": "en",
+   "label": "84000 英譯",
+   "who": "譯自藏譯・與藏文逐句對齊"
+  },
+  {
+   "id": "T0639",
+   "lang": "lzh",
+   "label": "那連提耶舍本",
+   "who": "那連提耶舍譯《月燈三昧經》・557 年",
+   "work": "T0639"
+  }
+ ],
+ "works": [
+  "DKtoh0127",
+  "T0639"
+ ],
+ "anchors": [
+  {
+   "work": "T0639",
+   "range": [
+    "T15n0639_p0567b05",
+    "T15n0639_p0567b07"
+   ]
+  }
+ ],
+ "cells": {
+  "c15-1": {
+   "sa": "15 Smitavyākaraṇaparivartaḥ | atha khalu bhagavāṃstasyāṃ velāyāṃ maitreyaṃ bodhisattvaṃ mahāsattvamābhiḥ sārūpyābhirgāthābhiḥ pratyabhāṣata - candraprabho eṣa kumārabhūtaḥ saṃstutya buddhamatulīya prītiyā / bhāṣitva buddhāna viśiṣṭa varṇaṃ praśaṃsanīyaḥ sada kāli bheṣyati // SRS_15.1 // ihaiva co rājagṛhasmi pūrvaṃ dṛṣṭvaiva buddhāna sahasrakoṭayaḥ / sarveṣa cānena jināna antike ayaṃ varaḥ śāntasamādhi pṛcchitaḥ // SRS_15.2 // sarvatra co eṣa mamāsi putro imāṃ caranto varabodhicārikām / sarvatra cāsīt pratibhānavantaḥ sarvatra cāsīt sada brahmacārī // SRS_15.3 // sa paścime kāli mahābhayānake tvameva sākṣī ajitā mamātra / sthihitva śuddhe sada brahmacarye vaistārikaṃ eṣa samādhi kāhite // SRS_15.4 // samādhimeṣantu idaṃ praṇītaṃ etena mārgeṇa sa bodhi lapsyate / parigṛhīto bahubuddhakoṭibhiḥ pūjāṃ varāṃ kāhiti nāyakānām // SRS_15.5 // jñāne sthihitvā ahu vyākaromi candraprabhasyācaritaṃ viśiṣṭam / na paścakāle 'sya bhave 'ntarāyo na brahmacaryasya na jīvitasya // SRS_15.6 // haste yathā āmalakāni pañca prajānāti buddhasahasrakoṭayaḥ / taduttare yāttika gaṅgavālikā anāgatā yeṣviya pūjanā hoti // SRS_15.7 // devāna nāgāna aśītikoṭayaḥ yakṣāṇa co koṭisahasra saptatiḥ / autsukyameṣanti ya paścakāle pūjāṃ karontā dvipadottamānām // SRS_15.8 // sa pūja kṛtvā dvipadāna uttamān samudācari jñānamimaṃ niruttaram / sa paścime cocchrayi lokanātho vimalaprabho nāma jino bhaviṣyati // SRS_15.9 // idaṃ svakaṃ vyākaraṇaṃ śrutitvā prītisphuṭo āsi kumārabhūtaḥ / candraprabho udgata sapta tāla udānudāneti nabhe sthihitvā // SRS_15.10 //",
+   "bo": "།འཛུམ་པ་བསྟན་པའི་ལེའུ་སྟེ་བཅུ་བཞི་པའོ།། །། དེ་ནས་དེའི་ཚེ་བཅོམ་ལྡན་འདས་ཀྱིས་བྱང་ཆུབ་སེམས་དཔའ་བྱམས་པ་ལ་འཐུན་པའི་ཚིགས་སུ་བཅད་པ་འདི་དག་གིས་སླར་བཀའ་སྩལ་པ། ཟླ་འོད་གཞོན་ནུར་གྱུར་པ་འདི་ཉིད་ཀྱིས། །མཚུངས་པ་མེད་པའི་དགའ་བས་སངས་རྒྱས་བསྟོད། །སངས་རྒྱས་ཡོན་ཏན་བྱེ་བྲག་འཕགས་བརྗོད་པ། །རྟག་ཏུ་ཁོར་མོར་ཤིན་ཏུ་བསྔགས་པར་འགྱུར། །སྔོན་ཡང་རྒྱལ་པོའི་ཁབ་ཀྱི་གྲོང་ཁྱེར་འདིར། །སངས་རྒྱས་དག་ཀྱང་བྱེ་བ་ཕྲག་སྟོང་མཐོང་། །རྒྱལ་བ་དེ་དག་ཀུན་གྱི་དྲུང་དུ་འདིས། །ཏིང་འཛིན་ཞི་མཆོག་འདི་ཡང་རབ་ཏུ་དྲིས། །བྱང་ཆུབ་སྤྱོད་པ་མཆོག་འདི་སྤྱད་པ་ན། །འདི་ནི་ཀུན་ཏུ་ང་ཡི་བུར་གྱུར་ཏེ། །ཐམས་ཅད་དུ་ཡང་སྤོབས་དང་ལྡན་པར་གྱུར། །ཀུན་ཏུ་རྟག་པར་ཚངས་པར་སྤྱོད་པ་སྤྱད། །དེ་ནི་ ཕྱི་དུས་འཇིགས་པ་ཆེན་པོ་ལ། །འདི་ལ་མ་ཕམ་ཁྱོད་ཉིད་ང་ཡི་དཔང་། །རྟག་ཏུ་ཚངས་སྤྱོད་གཙང་ལ་གནས་ནས་ནི། །ཏིང་ངེ་འཛིན་འདི་ཤིན་ཏུ་རྒྱས་བྱེད་འགྱུར། །ཏིང་འཛིན་དམ་པ་འདི་ནི་རབ་ཚོལ་ཞིང་། །ལམ་འདིར་ཞུགས་པས་བྱང་ཆུབ་ངེས་ཐོབ་འགྱུར། །སངས་རྒྱས་བྱེ་བ་མང་པོས་ཡོངས་བཟུང་སྟེ། །འདྲེན་པ་རྣམས་ལ་མཆོད་པ་མཆོག་བྱེད་འགྱུར། །ང་ནི་ཡེ་ཤེས་ལ་ཡང་རབ་གནས་ཏེ། །ཟླ་འོད་སྤྱོད་པ་ཁྱད་ཞུགས་ལུང་བསྟན་ཅིང་། །འདི་ཡི་སྲོག་དང་ཚངས་པར་སྤྱོད་པ་དག །ཕྱི་མའི་དུས་ལ་བར་ཆད་མེད་པར་བྱ། །ལག་མཐིལ་སྐྱུ་རུ་འབྲུ་ལྔ་བཀོད་པ་བཞིན། །མ་འོངས་པ་ན་གང་ལ་མཆོད་འགྱུར་བ། །སངས་རྒྱས་བྱེ་བ་དག་ནི་ཕྲག་སྟོང་དང་། །དེ་ལས་ལྷག་པར་གང་གཱའི་བྱེ་སྙེད་ཤེས། །ལྷ་དང་ཀླུ་རྣམས་བྱེ་བ་བརྒྱད་ཅུ་དང་། །གནོད་སྦྱིན་བྱེ་བ་སྟོང་ཕྲག་བདུན་ཅུ་དག །ཕྱི་མའི་དུས་ལ་བརྩོན་པ་བྱེད་པར་འགྱུར། །རྐང་གཉིས་གཙོ་བོ་ལ་ཡང་མཆོད་པ་བྱེད། །རྐང་གཉིས་གཙོ་ལ་མཆོད་པ་མཆོག་བྱས་ཏེ། །ཡེ་ཤེས་བླ་མེད་འདི་ནི་རབ་བསྒྲུབས་ནས། །ཕྱི་མའི་དུས་ལ་དེ་ནི་འཇིག་རྟེན་མགོན། །རྒྱལ་བ་དྲི་མེད་འོད་ཅེས་བྱ་བར་འགྱུར། །ཟླ་འོད་གཞོན་ནུར་གྱུར་པས་བདག་ཉིད་ཀྱི། །ལུང་བསྟན་འདི་ཐོས་དགའ་བས་རྒྱས་གྱུར་ཏེ། །ཏ་ལ་བདུན་སྲིད་དུ་ནི་མངོན་འཕགས་ནས། །མཁའ་ལ་འདུག་སྟེ་ཆེད་དུ་བརྗོད་པ་བརྗོད།",
+   "en": "Conclusion of the fourteenth chapter, “The Buddha’s Smile.”  The Elucidation of the Buddha’s Smile Chapter 15 At that time the Bhagavān spoke these appropriate verses to Bodhisattva Maitreya: “This youth, Candraprabha, Has praised the Buddha with unequaled joy. He described the unique superior qualities of the buddhas. All the time he is reciting their praises. {1} “In this very city of Rājagṛha in the past He has seen ten thousand million buddhas. In the presence of all those jinas He asked about this supreme samādhi of peace. {2}  “He has always been my son, Practicing this supreme bodhisattva conduct. He has always had the confidence of speech, And always he has been practicing celibacy. {3} “In the very fearful future times You, Ajita, will be my witness. Always remaining in a state of celibacy, He will make this samādhi widespread. {4} “Those who seek entry into this sublime samādhi, Through that path will attain enlightenment. He will be adopted by many millions of buddhas And he will make supreme offerings to those guides. {5} “I prophesy that, remaining in wisdom, Candraprabha’s conduct will be exceptional. In the future times there will be no obstacle To his celibacy or to his life. {6}  “He will know millions of buddhas as clearly As five myrobalan plums in the palm of the hand. And he will make offerings in the future to even more, As numerous as sand grains in the Ganges. {7} “Eight hundred million devas and nāgas, And seven hundred billion yakṣas, In future times will be zealous And make offerings to the supreme among humans. {8} “He will make offerings to the supreme human And will practice this unsurpassable wisdom. In a future time he will become a Lord of the World, A jina by the name of Vimalaprabha.” {9} The young man was overjoyed On hearing this prophecy about himself. Candraprabha floated up to the height of seven palm trees And remaining in the sky he made this declaration: {10}",
+   "T0639": "爾時，世尊即於是時以其偈頌答彌勒菩薩摩訶薩曰：「如是月光童子者，讚歎如來愛無比； 如是讚歎如來已，後還為世所稱美。 昔日於此王舍城，已曾覩見多億佛， 於彼佛所常請問，如是勝妙寂滅定。 修行菩提道行時，於一切世為我子， 常能具足無礙辯，恒常安住於梵行。 彼人末代可怖時，惟是彌勒所證知， 一切時中住梵行，能廣分別是三昧。 若欲求是勝三昧，稱道所行則能得， 無量億佛所攝受，供養最勝大導師。 我住智中故記說，於此月光勝妙行， 末代世時無障礙，於其梵行及壽命， 知於千億諸如來，如觀掌中菴羅果。 又復過彼恒沙數，能於未來修供養， 諸天及龍有八億、夜叉眾有七千億， 未來供養兩足尊，是等悉能相佐助。」 得聞如是授記已，歡喜愛樂而充滿， 月光踊身七多樹，住空發於希有言："
+  },
+  "c15-2": {
+   "sa": "aho jinā uttamadharmadeśakā vimuktijñānādhipatībale sthitā / suniścite uttamajñāni tiṣṭhasi anābhibhūto 'si parapravādibhiḥ // SRS_15.11 // vivarjitā saṅga vimukti sparśitā vibhāvitaṃ vastu bhave na sajjasi / prapañca sarve sakalā na bhonti te asaṅgajñānaṃ tribhave 'bhivartate // SRS_15.12 // sarvaprapañcebhiranopaliptā dṛṣṭiḥ prapañcāḥ sakalāḥ prahīṇāḥ / subhāviate mārga niketu nāsti anābhibhūtā aviruddha kenacita // SRS_15.13 // niketu traidhātuki nāsti tubhyaṃ oghāśca granthāśca prahīṇa sarve / tṛṣṇālatābandhana sarvi chinnā bhava prahīṇo bhavasaṃghi nāsti // SRS_15.14 // svabhāvu dharmāṇamabhāvu jānase anābhilapyā gira saṃprabhāṣase / siṃhena vā kroṣṭuka tīrtha nāśitā ye te viparyāsasthitā avidvasu // SRS_15.15 // nidhāna śreṣṭhaṃ mayi labdhamadya dharmaṃ nidhānaṃ sugatena deśitam / prahīṇa sarvā vinipātu durgati kāṅkṣā na mehāsti bhaviṣya nāyakaḥ // SRS_15.16 // mūrdhasmi pāṇiṃ pratisthāpayitvā suvarṇavarṇaṃ ruciraṃ prabhāsvaram / abhiṣiñca bodhāya nararṣabhastaṃ sadevakaṃ loka sthapetva sākṣiṇam // SRS_15.17 // iti śrīsamādhirāje smitavyākaraṇaparivarto nāma pañcadaśaḥ || 15 ||",
+   "bo": "།ཨེ་མ་རྒྱལ་བ་ཆོས་མཆོག་སྟོན་མཛད་པ། །རྣལ་གྲོལ་ཡེ་ཤེས་བདག་པོ་སྟོབས་ལ་གནས། །ཤིན་ཏུ་ངེས་པའི་ཡེ་ཤེས་མཆོག་གནས་པས། །ཕ་རོལ་རྒོལ་བ་དག་གིས་ཟིལ་མི་ནོན། །ཆགས་པ་སྤངས་ཤིང་རྣམ་པར་གྲོལ་ལ་རེག །དངོས་པོ་རྣམ་བཤིག་སྲིད་པར་ཆགས་མི་མཛད། །ཁྱོད་ལ་སྤྲོས་པ་མཐའ་དག་ཀུན་མི་མངའ། །སྲིད་པ་གསུམ་ལ་ཆགས་མེད་ཡེ་ཤེས་འཇུག །སྤྲོས་པ་ཐམས་ཅད་ཀྱིས་ཀྱང་མི་གོས་ཤིང་། །ལྟ་བ་སྤྲོས་པ་མཐའ་དག་རབ་ཏུ་སྤངས། །ལམ་ཡང་ཤིན་ཏུ་བསྒོམས་ཤིང་གནས་མེད་པ། །ཟིལ་གྱིས་མ་ནོན་སུ་དང་མི་འཕྲོད་མེད། །ཁྱོད་ནི་ཁམས་གསུམ་དག་ལ་གནས་མེད་དེ། །ཆུ་བོ་དང་ནི་མདུད་པ་ཐམས་ཅད་སྤངས། །སྲིད་པའི་འཁྲི་ ཤིང་འཆིང་བ་མཐའ་དག་བཅད། །སྲིད་པ་སྤངས་ཤིང་སྲིད་པར་མཚམས་སྦྱོར་མེད། །ཆོས་ཀྱི་རང་བཞིན་དངོས་མེད་རབ་མཁྱེན་ཅིང་། །བརྗོད་དུ་མེད་པའི་ཚིག་ཀྱང་ཐུགས་སུ་ཆུད། །མུ་སྟེགས་ཕྱིན་ཅི་ལོག་ལ་གནས་པ་དག །མི་མཁས་དེ་བཞིན་སེང་གེས་ཝ་བཞིན་བཤིག །བདེ་བར་གཤེགས་པས་བསྟན་པའི་ཆོས་ཀྱི་གཏེར། །གཏེར་མཆོག་དམ་པ་བདག་གིས་དེང་ཐོབ་སྟེ། །ངན་འགྲོ་ལོག་པར་ལྟུང་བ་ཐམས་ཅད་སྤངས། །འདྲེན་པར་མི་འགྱུར་སྙམ་པའི་ཐེ་ཚོམ་མེད། །གསེར་གྱི་ཁ་དོག་མཛེས་ཤིང་འོད་གསལ་བ། །ཕྱག་བརྐྱང་དེ་ཡི་མགོ་ལ་རབ་བཞག་ནས། །ལྷར་བཅས་འཇིག་རྟེན་དག་ཀྱང་དཔང་བཀོད་དེ། །མི་ཡི་ཁྱུ་མཆོག་བྱང་ཆུབ་དབང་བསྐུར་མཛད།",
+   "en": "“O Jina, you who teach the supreme Dharma, You have the power of a lord of liberating wisdom. You remain in the certainty of supreme wisdom And cannot be defeated by adversaries. {11} “You have abandoned attachment and reached liberation. You have no attachment to existence, which is devoid of things. You have no conceptualization whatsoever. You have the wisdom of nonattachment toward the three existences. {12}  “You are unstained by any conceptualization. You are free of all conceptualized views. You have meditated perfectly on the path that has no location. You cannot be defeated or hindered by anyone. {13} “You have no residence in the three realms. You are free from the floods and the knots. You have cut through the bondage of the creepers of craving. You are free of existence and are devoid of existence. {14} “You know the nonexistence that is the nature of phenomena. You make understood in words that which cannot be described. Just as the lion destroys the jackal, You defeat the unwise tīrthikas. {15} “I have obtained today the highest treasure, The treasure of the Dharma taught by the Sugata. I am freed from falling into any of the lower existences. I will never have doubts that you are my guide. {16}  “He placed upon my head his hand, Which was shining, beautiful, the color of gold. He gave me the consecration to be a supreme leader of humans, With the world and its devas as witnesses.” {17}",
+   "T0639": "「嗚呼！佛說最無上，安住解脫智神通， 安住決定勝智故，一切異論莫能壞。 遠離二邊證解脫，觀察於事不著事， 於三界中智無礙，悉無一切諸戲論。 一切戲論而不染，諸見覺觀悉斷除， 善修於道無所依，不為他壞、不違他。 又於三界無所依，斷除諸結所行淨， 愛縛枝蔓悉捨離，諸有相續皆盡滅。 悟解非有自體性，離言說法悉了知， 於其顛倒無智者，如師子吼摧野干。 佛今為現妙法藏，我今獲得妙寶聚， 斷除一切諸惡趣，我今得佛定無疑。 百福金色莊嚴手，願此寶掌摩我頂， 對於天人大眾前，惟願人尊灌我頂。」"
+  }
+ }
+}
