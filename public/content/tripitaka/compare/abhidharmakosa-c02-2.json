@@ -1,0 +1,216 @@
+{
+ "slug": "abhidharmakosa-c02-2",
+ "title": "俱舍論・分別根品（2.22–2.34）",
+ "family": "sa",
+ "intro": "《阿毘達磨俱舍論》第二品〈分別根品〉頌 2.22–2.34，一頌一節（頌號依 Pradhan 本，GRETIL 標 VAkK_品.頌）。五欄：梵本頌、梵本自釋（bhāṣya）、玄奘《俱舍論本頌》、玄奘《俱舍論》、真諦《俱舍釋論》；論本欄自該頌（含引出該頌的提問句）起、到下一頌前的釋文止。玄奘《俱舍論》常把數頌合為一個「頌曰」再一併解釋，區塊中按頌切開，釋文因此都落在區塊末頌；真諦本逐句引偈、隨句解釋，與梵本自釋的節奏相近。稱友 Yaśomitra《明了義釋》Sphuṭārthā 是自釋的疏，不收。",
+ "units": [
+  {
+   "id": "v022",
+   "label": "2.22　欲微聚無聲"
+  },
+  {
+   "id": "v023",
+   "label": "2.23　心心所必俱"
+  },
+  {
+   "id": "v024",
+   "label": "2.24　受想思觸欲"
+  },
+  {
+   "id": "v025",
+   "label": "2.25　信及不放逸"
+  },
+  {
+   "id": "v026",
+   "label": "2.26　癡逸怠不信"
+  },
+  {
+   "id": "v027",
+   "label": "2.27　忿覆慳嫉惱"
+  },
+  {
+   "id": "v028",
+   "label": "2.28　欲有尋伺故"
+  },
+  {
+   "id": "v029",
+   "label": "2.29　於不善不共"
+  },
+  {
+   "id": "v030",
+   "label": "2.30　有覆有十八"
+  },
+  {
+   "id": "v031",
+   "label": "2.31　初定除不善"
+  },
+  {
+   "id": "v032",
+   "label": "2.32　無慚愧不重"
+  },
+  {
+   "id": "v033",
+   "label": "2.33　尋伺心麁細"
+  },
+  {
+   "id": "v034",
+   "label": "2.34　心意識體一"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sa",
+   "lang": "sa",
+   "label": "梵本頌",
+   "who": "《阿毘達磨俱舍論本頌》Abhidharmakośakārikā・GRETIL（參 Pradhan 1975、Gokhale 1946）"
+  },
+  {
+   "id": "sa-bhasya",
+   "lang": "sa",
+   "label": "梵本自釋",
+   "who": "《阿毘達磨俱舍論》Abhidharmakośabhāṣya・GRETIL（Pradhan 1975，Hackett／Lusthaus 校）"
+  },
+  {
+   "id": "T1560",
+   "lang": "lzh",
+   "label": "玄奘頌本",
+   "who": "玄奘譯《阿毘達磨俱舍論本頌》・唐",
+   "work": "T1560"
+  },
+  {
+   "id": "T1558",
+   "lang": "lzh",
+   "label": "玄奘論本",
+   "who": "玄奘譯《阿毘達磨俱舍論》・唐 651–654 年",
+   "work": "T1558"
+  },
+  {
+   "id": "T1559",
+   "lang": "lzh",
+   "label": "真諦釋論",
+   "who": "真諦譯《阿毘達磨俱舍釋論》・陳 563–567 年",
+   "work": "T1559"
+  }
+ ],
+ "works": [
+  "T1558",
+  "T1559",
+  "T1560"
+ ],
+ "anchors": [
+  {
+   "work": "T1560",
+   "range": [
+    "T29n1560_p0312a07",
+    "T29n1560_p0312a07"
+   ]
+  },
+  {
+   "work": "T1558",
+   "range": [
+    "T29n1558_p0018b16",
+    "T29n1558_p0021c21"
+   ]
+  },
+  {
+   "work": "T1559",
+   "range": [
+    "T29n1559_p0177c17",
+    "T29n1559_p0180c15"
+   ]
+  }
+ ],
+ "cells": {
+  "v022": {
+   "sa": "kāme 'ṣṭadravyako 'śabdaḥ paramāṇuranindriyaḥ / kāyendriyī navadravyaḥ daśadravyo 'parendriyaḥ // VAkK_2.22 //",
+   "sa-bhasya": "[052|23] kāme 'ṣṭadravyako 'śabdaḥ paramāṇuranindriyaḥ / [052|24] sarvasūkṣmo hi rūpasaṃghātaḥ paramāṇur ity ucyāte / yato nānyataro vijñāyeta / [052|24-052|25] sa kāma ghātāvaśabdako 'nindriyaścāṣṭadravyaka utpadyate nānyatamena hīnaḥ/ [052|25-053|01] aṣṭo dravyāṇicatvāri mahābhūtāni catvāri copādāyarūpāṇi rūpagandharasaspraṣṭavyāni / [053|01-053|02] sendriyastu paramāṇuraśabdako navadravyaka utpadyate daśadravyako vā / [053|02] tatra tāvat [053|03] kāyendriyī navadravyaḥ [053|04] kāyendriyamatrāstīti so 'yaṃ kāyendriyī / tatra navadravyāṇi / tāni cāṣṭau kāyendriyaṃ ca / [053|05] daśadravyo 'parendriyaḥ // VAkK_2.22 // [053|06] aparamindriyaṃ yatra paramāṇau tatra daśa dravyāṇi / [053|06-053|07] tānyeva nava cakṣuḥśrotraghrāṇajihvendriyāṇāṃ cānyatamam / [053|07-053|08] saśabdā punarete paramāṇava utpadyamānā yathākramaṃ navadaśaikādaśa dravyakā utpadyante / [053|08-053|09] asti hīndriyāvinirbhāgī śabdo 'pi ya upāttamahābhūtahetukaḥ / [053|09-053|10] kathamihāvinirbhāge bhūtānāṃ kaścideva saṃghātaḥ kaṭhina utpadyate kaścideva drava uṣṇo vā samudīraṇo vā / [053|10-053|11] yadyatra paṭutamaṃ prabhāvata udbhūtaṃ tasya tatropalabdhiḥ / [053|11] sūcītūnī kalāpasparśavat saktulavaṇacūrṇarasavacca / [053|11-053|12] kathaṃ punasteṣu śeṣāstitvaṃ gamyate / [053|12] karmataḥ saṃgrahaghṛtipaktivyūhanāt / [053|12-053|13] pratyayalābhe ca sati kaṭhinādīnāṃ dravaṇā dibhāvāt apsu śaityātiśayādauṣṇyaṃ gamyata ityapare / [053|13-053|14] avyati bhede 'pi tu syācchaityātiśayaḥ / [053|14] śabdavedanātiśayavat / [053|14-053|15] bījatas teṣu teṣāṃ bhāvo na svarūpata ityapare / [053|15] \"santyasmin dāruskandhe vividhā dhātava\"iti vacanāt / [053|15-053|16] kathaṃ vāyau varṇasadbhāvaḥ / [053|16] śraddhānīya eṣo 'rtho nānumānīyaḥ / [053|16-053|17] saṃspandato gandhagrahaṇāt tasya varṇāvyabhicārāt / [053|17-053|18] rūpadhātau gandharasayorabhāva uktastena tatratyāḥ paramāṇavaḥ ṣaṭsaptāṣṭadravyakā ityuktarūpatvāt na punarucyante / [053|19] kiṃ punaratra dravyameva dravyaṃ gṛhyate āhosvidāyatanam / kiṃ cātaḥ / [053|19-053|20] yadi dravyameva dravyaṃ gṛhyate atyalpamidamucyate aṣṭadravyako navadaśādravyaka iti / [053|20-053|21] avaśyaṃ hi taddravyasaṃsthānenāpi bhavitavyam / [053|21] tasyāpi paramāṇusaṃcitatvāt / [053|21-053|22] gurutvalaghutvayoścānyatareṇa ślakṣṇatvakarkaśatvayośca / [053|22-053|23] śītenāpi kvacit jighatsayā pipāsayā ca / [053|23] athāpyāyatanadravyaṃ gṛhyate ayivahṇidamucyate aṣṭadravyaka iti / [053|23-053|24] caturdravyako hi vaktavyo yāvatā bhūtānyapi spraṣṭavyāyatanam / [053|24-053|25] kiñcidatra dravyameva dravyaṃ gṛhyate yadāśrayabhūtaṃ kiñcidatrāyatanaṃ dravyaṃ gṛhyate yadāśritabhūtam / [053|25-053|26] evamapi bhūyāṃsi bhūtadravyāṇi bhavantyupādāyarūpāṇāṃ pratyekaṃ bhūtacatuṣkāśritatvāt / [054|01] atra punarjātidravyaṃ gṛhyate / bhūtacatuṣkāntarāṇāṃ svajātyanatikramāt / [054|01-054|02] kaḥ punaryatsa evaṃ vikalpena vaktum / [054|02] cchandato 'pi hi vācāṃ pravṛttirarthastu parīkṣyaḥ / [054|03] ukto rūpiṇāṃ sahotpādaniyamaḥ / śeṣāṇāṃ vaktavyastatra tāvat /",
+   "T1560": "欲微聚無聲，無根有八事， 有身根九事，十事有餘根。",
+   "T1558": "今先辯色決定俱生。頌曰：欲微聚無聲，無根有八事， 有身根九事，十事有餘根。論曰：色聚極細立微聚名，為顯更無細於此者。此在欲界無聲無根，八事俱生隨一不減。云何八事？謂四大種及四所造色、香、味、觸。無聲有根諸極微聚，此俱生事或九或十。有身根聚九事俱生，八事如前，身為第九。有餘根聚十事俱生，九事如前，加眼等一。眼耳鼻舌必不離身，展轉相望處各別故。於前諸聚若有聲生，如次數增九十十一，以有聲處不離根生，謂有執受大種因起。若四大種不相離生，於諸聚中堅濕煖動，云何隨一可得非餘？於彼聚中勢用增者明了可得，餘體非無。如覺針鋒與籌合觸，如甞鹽味與[麩-夫+少]合味。云何於彼知亦有餘？由有攝熟長持業故。有說：遇緣堅等便有流等相故，如水聚中由極冷故有煖相起，雖不相離而冷用增，如受及聲用有勝劣。有餘師說：於此聚中餘有種子未有體相，故契經說：於木聚中有種種界。界謂種子。如何風中知有顯色？此義可信，不可比知。或所合香現可取故，香與顯色不相離故。前說色界香味並無，故彼無聲有六七八，有聲有七八九俱生。此可准知，故不別說。此中言事為依體說、為依處說？若爾何過？二俱有過。若依體說，八九十等便為太少，由諸微聚必有形色，有多極微共積集故。重性輕性定隨有一，滑性澁性隨一亦然。或處有冷有飢有渴，是則所言有太少過。若依處說，八九十等便為太多，由四大種觸處攝故應說四等，是則所言有太多失。二俱無過。應知此中所言事者，一分依體說，謂所依大種；一分依處說，謂能依造色。若爾，大種事應成多，造色各別，依一四大種故。應知此中依體類說，諸四大種類無別故。何用分別如是語為？語隨欲生，義應思擇。如是已辯色定俱生。",
+   "T1559": "偈曰：於欲界八物，無聲根隣虛。釋曰：極細色聚說名隣虛，欲令知無餘物細於彼者。此隣虛若在欲界，離聲亦非根，則八物俱生，隨一不減。八物謂地等四大及四大所造色香味觸。若有根隣虛無聲，則九物俱生，或十物俱生。此中偈曰：有身根九物。釋曰：若身根隣虛，此中有九物。八如前，身根為第九。偈曰：十物有餘根。釋曰：此隣虛中若有餘根，則有十物。九如前，眼等五根中隨一為第十。此隣虛若有聲俱生，如次第九物十物十一物俱生。何以故？有聲與根不相離，謂執依四大為因聲。若四大不相離，云何有聚？或見唯堅實，或見唯流濕，或見唯暖熱，或見唯輕動。此聚中隨一偏多，或功力最勝故，見一明了。譬如針鋒及綿觸，又如[麩-夫+少]鹽末味。若爾云何？於彼應知所餘亦有，由事故可知，事謂持攝熟引。復次餘師說：若得別緣，堅等成軟濕等故；於水中由極冷故，或得熱觸，雖不相離，有冷勝別德，如聲及受有勝別德。復有餘師說：於聚中由種子，彼有不由自體相。如經言：於木聚中有種種諸界。由此言故知，由種子故有。若爾，云何於風知有顯色？此義但可信，不可比。何以故？由相雜能持香故。於風四塵不定故。色界香味不有，此義於前已說。是故由此說，於色界有別隣虛。復有由此說隣虛有六物七物八物。此義已顯，不須更說。此中為約物說物、為約入說物？若爾何為？若約物說物，此說則少，謂八物九物十物。何以故？此中必有形色，是隣虛滋長故。輕重觸隨一，滑澁觸隨一，有處有冷觸，有處有飢渴觸。若約入說物，此說則多，謂八物等。何以故？應但說四物，四大亦是觸入。是義不然。此中有處約物說物，謂所依止物。有處約入說物，謂能依止物。雖復如此，四大物轉成多，能依止物隨一依具四大故。此中復有執取物類為物，雖別類四大，不過自性故，何須作此功用為分別說？如此義語言如意生起，唯義應思量。說色決定俱起已，所餘品生起今當說。"
+  },
+  "v023": {
+   "sa": "cittaṃ caittāḥ sahāvaśyaṃ sarva saṃskṛtalakṣaṇaiḥ / prāptyā vā pañcadhā caittā mahābhūmyādibhedataḥ // VAkK_2.23 //",
+   "sa-bhasya": "[054|04] cittaṃ caittāḥ sahavaśyaṃ / [054|05] nahyete vinā 'nyonyaṃ bhavitumutsahante / [054|06] sarvaṃ saṃskṛtalakṣaṇaiḥ / [054|07] sahāvaśyamiti varttate / [054|07-054|08] yatkiṃ cidutpadyate rūpaṃ cittaṃ caitasikā viprayuktā vā sarvaṃ saṃskṛtalakṣaṇaiḥ sārdhamutpadyate / [054|09] prāptyā vā / [054|10-054|410] prāptyā saha satvākhyamevotpadyate nānyaditi vikalpārtho vāśabdaḥ / [054|11] caittā ityucyante / ka ime caittāḥ / [054|12] pañcadhā caittā mahābhūmyādibhedataḥ // VAkK_2.23 // [054|13-054|14] pañca prakārāścaittā mahābhūmikāḥ kuśalamahābhūmikāḥ kleśamahābhūmikāḥ akuśalamahābhūmikāḥ parīttakleśamahābhūmikāśca / [054|14] bhūmirnāma gativiśayaḥ / [054|14-054|15] yo hi yasya gativiśayaḥ sa tasya bhūmirityucyate / [054|15-054|16 tatra mahatī bhūmireśāmiti mahābhūmikāḥ ye sarvatra cetasi bhavanti /",
+   "T1560": "心心所必俱，諸行相或得， 心所且有五，大地法等異。",
+   "T1558": "餘定俱生今次當辯。頌曰：心心所必俱，諸行相或得。論曰：心與心所必定俱生，隨闕一時餘則不起。諸行即是一切有為，謂色、心、心所、心不相應行。前必俱言流至於此，謂色心等諸行生時，必與有為四相俱起。言或得者，謂諸行內唯有情法與得俱生；餘法不然，是故言或。向言心所，何者是耶？頌曰：心所且有五，大地法等異。論曰：諸心所法且有五品。何等為五？一、大地法；二、大善地法；三、大煩惱地法；四、大不善地法；五、小煩惱地法。地謂行處，若此是彼所行處，即說此為彼法地。大法地故名為大地，此中若法大地所有名大地法，謂法恒於一切心有。",
+   "T1559": "此中偈曰：心心法必俱。釋曰：何以故？此心及心法更互相離則不得生。偈曰：一切共行相。釋曰：必言流，不但心及心法必定俱起。一切有為中，若有應生，或色心及心法等，是名一切，若起必共有為相俱起。偈曰：與得。釋曰：若眾生名是法，必與至得俱起，餘法不爾，是故別立是法。所說名心法。何者是耶？偈曰：心法五，大地等別故。釋曰：心法有五品，一大地、二善大地、三惑大地、四惡大地、五小分惑地。何法名地？是所行處。若法此法行處，是法說為此法地。此中諸法地大故名大地。"
+  },
+  "v024": {
+   "sa": "vedanā cetanā saṃjñā cchandaḥ sparśo matiḥ smṛtiḥ / manaskāro 'dhimokṣaśca samādhiḥ sarvacetasi // VAkK_2.24 //",
+   "sa-bhasya": "[054|16] ke punaḥ sarvatra cetasi / [054|17-054|18] vedanā cetanā saṃjñā cchandaḥ sparśo matiḥ smṛtiḥ / manaskāro 'dhimokṣaśca samādhiḥ sarvacetasi // VAkK_2.24 // [054|19] ime kila daśa dharmāḥ sarvatra cittakṣaṇe samagrā bhavanti / tatra vedanā trividho 'nubhavaḥ / [054|20] sukho duḥkho 'duḥkhā sukhaśca / cetanā cittābhisaṃskāro manaskarma / [054|20-054|21] saṃjñā saṃjñānaṃ viṣayanimittodrūha / [054|21] cchandaḥ karttṛkāmatā / [054|21-054|22] sparśa indriyaviṣayavijñānasannipātajā spṛṣṭiḥ / [054|22] matiḥ prajñā dharmapravicayaḥ / [054|22-054|23] smṛtirālambanāsaṃpramoṣaḥ / [054|23] manaskāraścetasa ābhogaḥ / adhimokṣo 'dhimuktiḥ / [054|23-054|24] samādhiścittasyaikāgratā / [054|24] sūkṣmo hi cittacaittānāṃ viśeṣaḥ / [054|24-054|25] sa eva duḥparicchedaḥ pravāheṣvapi tāvat kiṃ punaḥ kṣaṇeṣu / [054|25-055|02] rūpiṇīnāmapi tāvadoṣadhīnāṃ bahurasānāṃ kāsaṃcidindriyagrāhyā rasaviśeṣā duravadhārā bhavanti kiṃ punarye dharmā arūpiṇo buddhigrāhyāḥ / [055|02-055|03] kuśalā mahābhūmireṣāṃ ta ime kuśala mahābhūmikā ye sarvadā kuśale cetasibhavanti /",
+   "T1560": "受想思觸欲，慧念與作意， 勝解三摩地，遍於一切心。",
+   "T1558": "彼法是何？頌曰：受想思觸欲，慧念與作意， 勝解三摩地，遍於一切心。論曰：傳說：如是所列十法，諸心剎那和合遍有。此中受謂三種領納：苦、樂、俱非，有差別故。想謂於境取差別相。思謂能令心有造作。觸謂根境識和合生，能有觸對。欲謂希求所作事業。慧謂於法能有簡擇。念謂於緣明記不忘。作意謂能令心警覺。勝解謂能於境印可。三摩地謂心一境性。諸心心所異相微細，一一相續分別尚難，況一剎那俱時而有。有色諸藥色根所取，其味差別尚難了知，況無色法唯覺慧取。如是已說十大地法。大善法地名大善地，此中若法大善地所有名大善地法，謂法恒於諸善心有。",
+   "T1559": "若法於一切心有，何法於一切心有？偈曰：受作意想欲、觸慧念思惟，相了定十法，遍於一切心。釋曰：彼說此十法，於一切心剎那皆聚集生。此中受謂三種，隨領樂、苦、非樂非苦。作意謂心故為事。想謂心執境差別相。欲謂求作。觸謂根塵識和合所生異法。慧謂般若，即是擇法。念謂不忘所緣境。思惟謂心迴向。相了謂於所緣相有法能令心明了。定謂心一心。心法差別最細難可分別，於相續尚難知，何況剎那中。有色藥草，有多種味，於中有藥其味差別，可以根證亦難分別，何況此法無色、智慧所了。"
+  },
+  "v025": {
+   "sa": "śraddhāpramādaḥ praśrabdhirupekṣā hrīrapatrapā / mūladvayamahiṃsā ca vīryaṃ ca kuśale sadā // VAkK_2.25 //",
+   "sa-bhasya": "[055|03] ke punasta iti / [055|04-055|05] śraddhā 'pramādaḥ praśrabdhirupekṣā hrīrapatrapā / mūladvayamahiṃsā ca vīryaṃ ca kuśale sadā // VAkK_2.25 // [055|06] ime daśa dharmā kuśale cetasi nityaṃ bhavanti / tatra śraddhā cetasaḥ prasādaḥ / [055|06-055|07] satyaratna karmaphalābhisaṃpratyaya ityapare / [055|07] apramādaḥ duśalānāṃ dharmāṇāṃ bhāvanāḥ / [055|07-055|08] kā punaste bhyo 'nyā bhāvanā / [055|08] yā teṣvavahitatā / [055|08-055|09] cetasa ārakṣeti nikāyāntarītāḥ sūtre paṭhanti / [055|09] praśrabdhiścittakarmaṇyatā / nanu ca sūtre kāyapraśrabdhirapyuktā / [055|09-055|10] na khalu noktā / [055|10] sā tu yathā kāyikī vedanā tathā veditavyā / [055|10-055|11] kathaṃ sā bodhyaṅgeṣu yokṣyate / [055|11] tatra tarhi kāyakarmaṇyataiva kāyikī praśrabdhirveditavyā / [055|11-055|12] kathaṃ sā bodhyaṅgamitayucyate / [055|12] bodhyaṅgānukūlyāt / [055|12-055|13] sā hi kāyakarmaṇyatā cittakarmaṇyatā bodhyaṅgamāvahati / [055|13] asti punaḥ svacit anyatrāpyevaṃ dṛśyate / astītyāha / [055|13-055|14] tadyathā prītiḥ prītisthānīyāśca dharmāḥ prītisaṃbodhyaṅgamuktaṃ bhagavatā / [055|14-055|15] pratighaḥ pratighanimittaṃ ca vyāpādanivaraṇamuktam / [055|15-055|16] samyakdṛṣṭisaṃkalpavyāyāmāśca prajñāskandha uktāḥ / [055|16-055|17] naca saṃkalpavyāyāmau prajñāsvabhāvau tasyāstvanuguṇāviti tāsyātvanuguṇāviti tācchaydyaṃ labhete / [055|17-055|18] evaṃ kāyapraśrabdhirapi bodhyaṅgānuguṇyādvodhyaṅgaśabdaṃ labhate / [055|18] upekṣā cittasamatā cittānābhogatā / kathamidānīmetadyokṣyate / [055|18-055|19] \"tatraiva citte ābhogātmako manaskāro 'nābhogātmikā copekṣe\"ti / [055|19-055|20] nanu coktaṃ \"durjñāna eṣāṃ viśeṣa\" iti / [055|20] asti hi nāma durjñānamapi jñāyate / [055|20-055|21] idam tu khalvatidurjñānaṃ yadvirodhe 'pyavirodha iti / [055|21] anyatrābhogo 'nyatrānābhoga iti ko 'tra virodhaḥ / [055|21-055|22] na tarhīdānīmekālambanāḥ sarve saṃprayuktāḥ prāpnuvanti / [055|22-055|23] evañjātīyakamatrānyadapyāyāsyatīti yastasya nayaḥ so 'syāpi veditavyaḥ / [055|23] hrīrapatrāpyaṃ ca paścādvakṣyate / [055|23-055|24] mūladvayaṃ dve kuśalamūle alobhādveṣau / [055|24] amoho 'pyasti sa tu prajñātmakaḥ / [055|24-055|25] prajñā ca mahābhūmiketi nāsau kuśalamahābhūmika evocyate / [055|25] avihiṃsā aviheṭhanā / vīryaṃ cetaso 'bhyutsāhaḥ / [056|01] uktāḥ kuśalā mahābhūmikāḥ / [056|02] mahatī bhūmirmahābhūmiḥ / [056|02-056|03] kleśā mahābhūmireṣāṃ ta ime kleśamahābhūmikā ye dharmāḥ sadaiva kliṣṭe cetasi bhavanti /",
+   "T1560": "信及不放逸，輕安捨慚愧， 二根及不害，勤唯遍善心。",
+   "T1558": "彼法是何？頌曰：信及不放逸，輕安捨慚愧， 二根及不害，勤唯遍善心。論曰：如是諸法唯遍善心。此中信者令心澄淨。有說：於諦寶業果中現前忍許故名為信。不放逸者，修諸善法離諸不善法。復何名修？謂此於善專注為性。餘部經中有如是釋。能守護心名不放逸。輕安者謂心堪任性。豈無經亦說有身輕安耶？雖非無說，此如身受應知亦爾，如何可立此為覺支？應知此中身輕安者身堪任性。復如何說此為覺支？能順覺支故無有失。以身輕安能引覺支心輕安故。於餘亦見有是說耶？有，如經說：喜及順喜法名喜覺支。瞋及瞋因緣名瞋恚蓋。正見、正思惟、正勤名慧蘊。思惟及勤雖非慧性，隨順慧故亦得慧名，故身輕安順覺支故得名無失。心平等性、無警覺性說名為捨。如何可說於一心中有警覺性、無警覺性？作意與捨二相應起。豈不前說諸心心所其相微細難可了知。有雖難了，由審推度而復可知。此最難知，謂相違背而不乖反。此有警覺於餘則無，二既懸殊有何乖反？若爾，不應同緣一境，或應一切皆互相應。如是種類所餘諸法，此中應求，如彼理趣，今於此中應知亦爾。慚、愧二種如後當釋。二根者，謂無貪、無瞋，無癡善根慧為性，故前已說在大地法中，不重說為大善地法。言不害者，謂無損惱。勤謂令心勇悍為性。如是已說大善地法。大煩惱法地名大煩惱地，此中若法大煩惱地所有名大煩惱地法，謂法恒於染污心有。",
+   "T1559": "是諸法善為大地，說名善大地，若諸法恒於善心中起。何者為諸法？偈曰：信不放逸安、捨羞及慚愧、二根非逼惱、精進恒於善。釋曰：如是等法恒於善心中起。此中信謂心澄淨。有餘師說：於諦實業果中心決了故名信。不放逸謂修習善法。有何修習異於善法？恒在善法，名不放逸。於餘部經中說：是心護名不放逸。安謂心於事有能。此義可不如此。於餘經說：身於事有能名安，非不說如身受，應知此亦爾。若爾云何於助覺立為分？何以故？於中是身於事有能，說名身安應知。若爾云何說此為覺分？由隨順覺分故得覺分名。何以故？此身安能引心安覺分令生故。於餘處曾見有，如此說不曾有。猶如經言：喜及助喜法，世尊說名喜覺分。復有別說：瞋及瞋因名害蓋。復有正見、正思惟、正精進，此三說名般若分，此資糧由隨順故得彼名，如此身安隨順心安覺分故得彼名。捨謂心平等、無所偏對。今此言云何相應？何者？前說思惟於心迴向為體，今說捨於心無迴向為體。此言云何相應？為前不說耶！謂心法義理難知，有難知後方可知，此最難可知。謂於相違立不相違，有餘處迴向、有餘處不迴向，此中有何相違？若爾，一切相應法不應共緣一境，如此種類所餘諸法此中應來。此法道理，汝等必應須知。羞及慚愧後當釋。二根謂無貪、無瞋二種善根。無癡亦是善根，此善根以智慧為體，前已立為大地故，於善大地中不復重說。非逼惱謂不欲違損他。精進謂勇猛。"
+  },
+  "v026": {
+   "sa": "mohaḥ pramādaḥ kauśīdyamāśraddhayaṃ styānamuddhavaḥ / kliṣṭe sadaiva akuśale tvāhrīkyamanapatrapā // VAkK_2.26 //",
+   "sa-bhasya": "[056|03] ke punaste sadaiva kliṣṭe cetasi bhavanti / [056|04] mohaḥ pramādaḥ kauśīdyamā śraddhyaṃ styānmuddhavaḥ / [056|05] kliṣṭe sadaiva [056|06] tatra moho nāmāvidyā 'jñānamasaṃprakhyānam / [056|06-056|07] pramādaḥ kuśalānāṃ dharmāṇāmabhāvanā 'pramāda vipakṣo dharmaḥ / [056|07] kauśīdyaṃ cetaso nābhyutsāhho vīryavipakṣaḥ / [056|07-056|08] āśraddhyaṃ cetaso 'prasādaḥ śraddhāvipakṣaḥ / [056|08] styānaṃ katamat / [056|08-056|09] yā kāyagurutā cittagurutā kāyākarmaṇyatā cittākarmaṇyatā / [056|09] kāyikaṃ satyānaṃ caitasikaṃ styānamityuktamabhidharme / [056|10] kathaṃ caitasiko dharmaḥ kāyika ityucyate / yathā kāyikī vedanā / [056|10-056|11] auddhatyaṃ punaścetaso 'vyupaśamaḥ / [056|11] itīme ṣaṭ kleśamahābhūmikāḥ / [056|11-056|12] nanu cābhidharme daśa kleśamahābhūmikāḥ paṭhyante / [056|12-056|13] \"āśraddhyaṃ kauśīdyaṃ muṣitasmṛtitā cetaso vikṣepaḥ avidyā asaṃprajanyamayoniśomanaskāro mithyādhimokṣa auddhatyaṃ pramādaśce\" ti / [056|14] praptijño devānāṃ priyo na tviṣṭijñaḥ / kā punaratreṣṭiḥ / [056|14-056|16] muṣitasmṛtivikṣepāsaṃprajanyāyoniśomanasikāramithyādhimokṣā mahābhūmikatvāt na kleśamahābhūmikā evāvadhāryante / [056|16] yathivāmohaḥ kuśalamahābhūmiko nāvadhāryate prajñāsvabhāvatvāt / [056|17] smṛtireva hi kliṣṭā muṣitasmṛtitā / samādhireva kliṣṭo vikṣepa ityevamādi / [056|18-056|19] ata evocyate \"ye mahābhūmikāḥ kleśamahābhūmikā api ta\" iti / [056|19] catuṣkoṭikaḥ / prathamā koṭirvedanā cetanā saṃjñā cchandaḥ sparśaśca / [056|19-056|20] dvitīyā 'śrāddhyaṃ kauśīdyamavidyā auddhatyaṃ pramādaśca / [056|20-056|21] tṛtīyā muṣitasmṛtyādayaḥ pañca kliṣṭā yaṭhoktāḥ / [056|21] caturthyetānākārān sthāpayitveti / [056|21-056|22] kecittu mithyāsamādheranyacetaso vikṣepamicchanti / [056|22] teṣāmanyathā catuṣkoṭikaḥ / [056|22-056|23] styānaṃ punariṣyate sarvakleśasaṃprayogīti kleśamahābhūmikeṣu tasyāpāṭhe kasyāparādhaḥ / [056|23-056|24] evaṃ tvāhuḥ paṭhitavyaṃ bhavetsamādhyanuguṇatvāttu na paṭhitam / [056|24-056|25] kṣiprataraṃ kila styānacaritaḥ samādhimutpādayennauddhatyacarita iti / [056|25-056|26] kaḥ punaḥ styānacarito yo nauddhatyacaritaḥ ko vā auddhatyacarito yo na styānacaritaḥ / [056|26] nahyete jātu sahacariṣṇutāṃ jahītaḥ / [056|26-056|27] tathāpi yadyasyādhimātraṃ sa taccarito jñātavyaḥ / [056|27] ataḥ ṣaḍeva kleśamahābhūmikāḥ siddhyanti / [056|28] ete hi sadā kleṣṭa eva cetasi bhavanti nānyatra // [057|01] akuśale tvāhrīkyamanapatrapā // VAkK_2.26 // [057|02-057|03] akuśale tu cetasyāhrīkyamanapatrāpyaṃ ca nityaṃ bhavata ityetau dvau dharmāvakuśalamahābhūmikāvucyete / [057|03] tayośca paścāllakṣaṇaṃ vakṣyate /",
+   "T1560": "癡逸怠不信，惛掉恒唯染， 唯遍不善心。無慚及無愧，",
+   "T1558": "彼法是何？頌曰：癡逸怠不信，惛掉恒唯染。論曰：此中癡者所謂愚癡，即是無明無智無顯。逸謂放逸，不修諸善，是修諸善所對治法。怠謂懈怠，心不勇悍，是前所說勤所對治。不信者謂心不澄淨，是前所說信所對治。惛謂惛沈。對法中說：云何惛沈？謂身重性、心重性，身無堪任性、心無堪任性，身惛沈性、心惛沈性，是名惛沈。此是心所。如何名身？如身受言，故亦無失。掉謂掉舉，令心不靜。唯有如是六種，名大煩惱地法。豈不根本阿毘達磨中說有十種大煩惱地法，又於彼論不說惛沈。何者十？謂不信、懈怠、失念、心亂、無明、不正知、非理作意、邪勝解、掉舉、放逸。天愛！汝今但知言，至不閑意旨。意旨者何？謂失念、心亂、不正知、非理作意、邪勝解，已說彼在大地法中，不應重立為大煩惱地法。如無癡善根慧為體故，非大善地法，彼亦應爾。即染污念名為失念，染污等持名為心亂，諸染污慧名不正知，染污作意勝解名為非理作意及邪勝解故說。若是大地法亦大煩惱地法耶？應作四句。第一句，謂受、想、思、觸、欲。第二句，謂不信、懈怠、無明、掉舉、放逸。第三句，謂如前說念等五法。第四句，謂除前相。有執邪等持非即是心亂，彼作四句與此不同。又許惛沈通與一切煩惱相應，不說在大煩惱地法。於誰有過？有作是言：應說在此，而不說者順等持故。彼謂諸有惛沈行者速發等持，非掉舉行。誰惛沈行非掉舉行？誰掉舉行非惛沈行？此二未嘗不俱行故。雖爾，應知隨增說行。雖知說行隨用偏增，而依有體建立地法，故此地法唯六義成，此唯遍染心俱起非餘故。如是已說大煩惱地法。大不善法地名大不善地，此中若法大不善地所有名大不善地法，謂法恒於不善心有。彼法是何？頌曰。唯遍不善心，無慚及無愧。論曰：唯二心所但與一切不善心俱，謂無慚、愧，故唯二種名此地法。此二法相如後當辯。如是已說大不善地法。小煩惱法地名小煩惱地，此中若法小煩惱地所有名小煩惱地法，謂法少分染污心俱。",
+   "T1559": "說十善大地已，是地大故名大地。惑是彼大地故，說彼為惑大地，是諸法恒於染污心起。何者為諸法？偈曰：癡放逸懈怠、無信無安掉，恒在染。釋曰：此中癡謂無明，無智無顯。放逸謂不修習善法，此是修習善法對治。懈怠謂心無勝能。無信謂心無澄淨，此是信對治法。無安謂身重心重，身心於事無能。阿毘達磨藏中說：無安有二種，謂身無安、心無安。云何心法說名身法？如說受為身受。掉謂心不靜。如此六法是名染污大地。於阿毘達磨藏中不說十法為惑大地耶？彼中亦不說無安。何者為十？無信、懈怠、忘念、心亂、無明、不了別、不正思惟、邪相了、掉、放逸。天愛！汝知至，不知術。此中何者為術？忘念、心亂、不了別、不正思惟、邪相了，此法已屬大地，不可重安立為惑大地。如無癡於善大地，彼亦如此。若念彼染污，說為忘念。定被染污，說為心亂。所餘亦爾，是故作如此說。是大地法可即立為惑大地不？此中有四句。第一句謂受、想、作意、欲、觸。第二句謂無信、懈怠、無明、掉、放逸。第三句謂念等五法。第四句謂除前三句所餘諸法。復有諸師，欲、心亂、異邪定，於彼所說四句異此。有餘師執無安與一切惑相應，於惑大地中不說。於誰有失？彼答應說由隨順定故是故不說。何以故？若人無安為行，修觀速能得定，掉行人不爾。以無安為行、非掉為行，此人何相？以掉為行、非無安為行，此人何相？何以故？此二法隨便不捨，共生事故。雖然，此二法於人，隨重成此人行，是故立六法為惑大地。何以故？此六法恒於染污心起，餘處則不起。偈曰：若惡，及無羞無慚。釋曰：於一切惡心，無羞及無慚恒生起故，立此二法為惡大地。此二法相後當說。"
+  },
+  "v027": {
+   "sa": "krodhopanāhaśāṭhyerṣyāpradāsamrakṣamatsarāḥ / māyāmadavihiṃsāśca parīttakleśabhūmikāḥ // VAkK_2.27 //",
+   "sa-bhasya": "[057|04-057|05] krodhopanāhaśāṭhyerṣyāpradāsamrakṣamatsarāḥ / māyāmada vihiṃsāśca parīttakleśbhūmikāḥ // VAkK_2.27 // [057|06-057|07] parīttakleśā bhūmireṣāṃ ta ime parīttakleśabhūmikā avidyāmātreṇa bhāvanāheyena manobhūmikenaiva ca saṃprayogāt / [057|07] eṣāṃ tu nirdekśa upakleśeṣu kariṣyate / [057|08] uktā ime pañcaprakārāścaittāḥ / [057|08-057|09] anye 'pi cāniyatāḥ santi vitarkavicārakaukṛtyamiddhādayaḥ / [057|09] tatra vaktavyaṃ kasmiṃścitte kati caittā avaśyaṃ bhavantīti / [057|10] kāmāvacaraṃ tāvat pañcavidhaṃ cittam / kuśalamakuśalam / [057|10-057|11] tatrākuśalaṃ dvividhamāveṇikamanyakleśasaṃprayuktaṃ ca / [057|11-057|12] avyākṛtaṃ dvividhaṃ nivṛtāvyākṛtam anivṛtāvyākṛtaṃ ca / [057|12] tatra tāvat kāmāvacaracittamavaśyaṃ savitarkaṃ savicāram / ato 'tra",
+   "T1560": "忿覆慳嫉惱，害恨諂誑憍， 如是類名為，小煩惱地法，",
+   "T1558": "彼法是何？頌曰：忿覆慳嫉惱，害恨諂誑憍， 如是類名為，小煩惱地法。論曰：如是類法唯修所斷，意識地起、無明相應、各別現行，故名為小煩惱地法。此法如後隨煩惱中當廣分別。如是已說五品心所。復有此餘不定心所，惡作、睡眠、尋、伺等法，此中應說。",
+   "T1559": "偈曰：嫌恨諂嫉妬、佷覆及慳悋、誑醉并逼惱，是十小惑地。釋曰：以小惑為彼地故，說彼為小惑地。唯與修道所滅、依心地所起，無明相應故。此十惑於小分煩惱中當釋。說五品心法已。有餘心法不定，謂覺觀、惡作、睡等，於中應說何處心幾心法必定俱起。於欲界中有五種心，善心有一；惡心有二，謂獨行及與餘惑相應；無記心有二，謂有覆無覆。此中欲界心必有覺有觀。"
+  },
+  "v028": {
+   "sa": "savitarkavicāratvāt kuśale kāmacetasi / dvāṃviṃśatiścaitasikāḥ kaukṛtyamadhikaṃ kvacit // VAkK_2.28 //",
+   "sa-bhasya": "[057|13] savitarkavicāratvāt kuśale kāmacetasi / [057|14] dvāviṃśatiścaitasikāḥ [057|15] avaśyaṃ bhavanti / daśa mahābhūmikā daśa kuśalamahābhūmikā vitarko vicāraśca / [057|16] kaukṛtyamadhikaṃ kvacit // VAkK_2.28 // [057|17] nahi sarvatra kuśale cetasi kaukṛtyamasti / [057|17-057|18] yatra tvasti tatra tadevādhikaṃ kṛtvā trayoviṃśatiścaittā bhavanti / [057|18] kimidaṃ kaukṛtyaṃ nāma / kukṛtasya bhāvaḥ kaukṛtyam / [057|19] iha tu punaḥ kaukṛtyālambano dharmaḥ kaukṛtyamucyate cetaso vipratisāraḥ / [057|19-057|21] tadyathā śūnyatālalmvanaṃ vimokṣamukhṃ śūnyatetyucyate aśubhālambanaścālobho 'śubha iti / [057|21-057|22] loke 'pi ca dṛṣṭaḥ sthānena sthānināmatideśaḥ sarvo grāma āgataḥ sarvo deśa āgata iti / [057|22] sthānabhūtaṃ ca kaukṛtyaṃ vipratisārasya / [057|22-057|23] phale vā hetūpacāro 'yam / [057|23-057|24] yathoktaṃ \"ṣaḍimāni sparśāyatanāni paurāṇaṃ karma veditavyami\"ti / [057|24] yattarhi akṛtālambanaṃ tat kathaṃ kaukṛtyam / akṛte 'pi kṛtākhyā bhavati / [058|01] na mayā sādhu kṛtaṃ yanna kṛtamiti / katamat kaukṛtyaṃ kuśalam / [058|01-058|02] yatkuśalamakṛtvātapyate akuśalaṃ ca kṛtvā / [058|02] viparyayādakuśalaṃ kaukṛtyam / [058|02-058|03] tadetadubhayamapyubhayādhiṣṭānam /",
+   "T1560": "欲有尋伺故。於善心品中， 二十二心所，有時增惡作，",
+   "T1558": "於何心品有幾心所決定俱生？頌曰：欲有尋伺故，於善心品中， 二十二心所，有時增惡作。",
+   "T1559": "是故於中，偈曰：有覺有觀故，於欲界善心，二十二心法。釋曰：必定俱起，何者二十二？十大地、十善大地并覺觀。偈曰：或處長惡作。釋曰：非於一切善心皆有惡作。是處若有，於中為長，則心法成二十三。何法名惡作？於所作惡心生後燋，此心法緣惡作起，故名惡作，此法即是後燋。譬如緣空為境解脫門，說名空解脫門。又如無貪觀緣不淨相起，說名不淨觀。於世間亦曾見此事，由處說有處，如言一切縣郡來、一切土地來。此惡作是後燋處，或於果假立因名，如說六種觸入名宿業。若爾，此後燋若緣所未作事，云何名惡作？於未作假立作名。如經言：若我不作，非我好作。何者？後燋名善，由不作善及已作惡故後生燋，是善後燋；翻此名惡後燋。此二各緣二境起。"
+  },
+  "v029": {
+   "sa": "āveṇike tvakuśale dṛṣṭiyukte ca viṃśatiḥ / kleśaiścaturbhiḥ krodhādyaiḥ kaukṛtyenaikaviṃśatiḥ // VAkK_2.29 //",
+   "sa-bhasya": "[058|04] āveṇike tvakuśale dṛṣṭiyukte ca viṃśātiḥ / [058|05] yadakuśalaṃ cittamāveṇikaṃ tatra viṃśatiścaittāḥ / [058|05-058|06] daśa mahābhūmikāḥ ṣaṭ kleāśamahābhūmikā dvāvakuśalamahābhūmikau vitarkovicāraśca / [058|06-058|07] āveṇikaṃ nāma cittaṃ yatrāvidyaiva kevalā nānyaḥ kleśo 'sti rāgādiḥ / [058|07-058|08] dṛṣṭiyukte 'pyakuśale viṃśatirya evāveṇike / [058|08] nanu ca dṛṣṭyadhikatvādeka viṃśatirbhavanti / na bhavanti / [058|08-058|09] yasmānmahābhūmika eva kaścit prajñāviśeṣo dṛṣṭirityucyate / [058|09-058|10] tatrākuśalaṃ dṛṣṭiyuktaṃ yatra mithyādṛṣṭirvā dṛṣṭiparāmarśo vā śīlavrataparāmarśo vā / [058|11] kleśaiścaturbhiḥ krodhādyaiḥ kaukṛtyenaikaviṃśatiḥ // VAkK_2.29 // [058|12-058|13] yatra punaścaturbhiḥ kleśaiḥ saṃprayuktamakuśalaṃ cittaṃ rāgeṇa va pratighena vā mānena vā vicikitsayā vā tatraikaviṃśatirbhavanti / [058|13-058|14] sa ca kleśaḥ āveṇikoktāśca viṃśatiḥ / [058|14-058|15] krodhādibhirapyupakleśairyathoktaiḥ saṃprayukte citte ete ca viṃśatiḥ sa copakleśa ityekaviṃśatirbhavanti / [058|15] kaukṛtyenāpyekaviṃśatiḥ / [058|15-058|16] tadeva kaukṛtyamekaviṃśatitamaṃ bhavati / [058|16] samāsata āveṇike cetasyakuśale dṛṣṭiyukte ca viṃśatiḥ / [058|16-058|17] anyakleśopakleśasaṃprayukte tvekaviṃśatiḥ /",
+   "T1560": "於不善不共，見俱唯二十。 四煩惱忿等，惡作二十一，",
+   "T1558": "於不善不共，見俱唯二十， 四煩惱忿等，惡作二十一，",
+   "T1559": "偈曰：於獨行惡心，見相應二十。釋曰：於獨行欲界惡心，有二十心法俱起，謂十大地、六惑大地、二惡大地并覺觀。獨行心者，此中唯一獨行無明，無有欲等餘惑。不但獨行惡心，若與見相應惡心中亦有二十心法，如獨行惡心中諸法。若爾，由長見故，云何不立二十一？不然，是大地所攝智慧差別說名見故。此中與見相應惡心，於此心中若有邪見、見取、戒執取。偈曰：與四惑嫌等，惡作二十一。釋曰：此惡心與四惑相應，謂欲、瞋、慢、疑。此心中有二十一心法，此惑隨一，并獨行惡心中所說二十。若與嫌等小分惑相應心中亦有二十一心法，小惑隨一并前二十。若與惡作相應心中亦有二十一心法，惡作為一并前二十。若略說於獨行惡心及與見相應惡心但有二十，若與餘惑及小分惑相應有二十一。"
+  },
+  "v030": {
+   "sa": "nivṛte 'ṣṭādaśa anyatra dvādaśāvyākṛte matāḥ / middhaṃ sarvāvirodhitvādyatra syādadhikaṃ hi tat // VAkK_2.30 //",
+   "sa-bhasya": "[058|18] nivṛte 'ṣṭadaśa [058|19-058|18] satkāyāntagrāhadṛṣṭisaṃprayuktaṃ cittaṃ kāmadhātau nivṛtāvyākṛtam / [058|19-058|20] tatrāṣṭādaśa caittāḥ / [058|20] daśa mahābhūmikāḥ ṣaṭ kleśamahābhūmikāḥ vitarkavicārau ca / [058|20-058|21] dṛṣṭiḥ pūrvavadeva nādhikā bhavati / [058|22] aynatra dvādaśāvyākṛte matāḥ / [058|23] nivṛtādanyadavyākṛtamanivṛtāvyākṛtam / tatra dvādaśa caittā iṣṭāḥ / [058|23-058|24] daśa mahābhūmikā vitarkavicārau ca / [058|24] bahirdeśakā avyākṛtamapi kaukṛtyamicchanti / [058|24-058|25] teṣāṃ tatsaṃprayukte cetasi trayodaśa bhavanti / [058|26] middhaṃ sarvāvirodhitvādyatra syādadhikam hi tat // VAkK_2.30 // [058|27] sarvairebhiryathoktai ścaitairmiddhamaviruddhaṃ kuśalākuśalāvyākṛtatvāt / [058|27-059|01] ato tatra tatsyāt tatrādhikaṃ tadveditavyam / [059|01-059|02] yatra dvāviṃśatistatra trayoviṃśatiryatra trayoviṃśatistatra caturviṃśatirityevamādi / [059|02] ya eva kāmadhātau caittānāṃ niyama uktaḥ",
+   "T1560": "有覆有十八，無覆許十二。 睡眠遍不違，若有皆增一，",
+   "T1558": "有覆有十八，無覆許十二， 睡眠遍不違，若有皆增一。論曰：且欲界中心品有五，謂善唯一。不善有二，謂不共無明相應及餘煩惱等相應。無記有二，謂有覆無記及無覆無記。然欲界心定有尋伺故，善心品必二十二心所俱生，謂十大地法、十大善地法，及不定二，謂尋與伺。非諸善心皆有惡作，有時增數至二十三。惡作者何？惡所作體名為惡作。應知此中緣惡作法說名惡作，謂緣惡作心追悔性，如緣空解脫門說名為空，緣不淨無貪說為不淨。又見世間約所依處說能依事，如言一切村邑國土皆來集會。惡作即是追悔所依，故約所依說為惡作。又於果體假立因名，如說此六觸處應知名宿作業。若緣未作事，云何名惡作？於未作事亦立作名，如追悔言我先不作如是事業，是我惡作。何等惡作說名為善？謂於善惡不作作中心追悔性。與此相違名為不善。此二各依二處而起，若於不善不共心品，必有二十心所俱生，謂十大地法、六大煩惱地法、二大不善地法，并二不定，謂尋與伺。何等名為不共心品？謂此心品唯有無明，無有所餘貪煩惱等。於不善見相應心品，亦有二十心所俱生，名即如前不共品說。非見增故有二十一，以即於十大地法中慧用差別說為見故。言不善見相應心者，謂此心中或有邪見、或有見取、或戒禁取。於四不善貪、瞋、慢、疑煩惱心品，有二十一心所俱生，二十如不共，加貪等隨一。於前所說忿等相應隨煩惱品，亦二十一心所俱生，二十如不共，加忿等隨一。不善惡作相應心品，亦二十一心所俱生，謂即惡作第二十一。略說不善不共及見相應品中唯有二十，餘四煩惱及隨煩惱相應品中有二十一。若於無記有覆心品唯有十八心所俱生，謂十大地法、六大煩惱地法，并二不定，謂尋與伺。欲界無記有覆心者，謂與薩迦耶見及邊執見相應，此中見不增，應知如前釋。於餘無記無覆心品，許唯十二心所俱生，謂十大地法并不定尋伺。外方諸師欲令惡作亦通無記，此相應品便有十三心所俱起。應知睡眠與前所說一切心品皆不相違，通善不善無記性故。隨何品有即說此增，謂二十二至二十三，若二十三至二十四。不善無記如例應知。",
+   "T1559": "偈曰：有覆心十八。釋曰：於欲界與身見、邊見相應，名有覆無記。此中有十八心法，大地十、惑大地六并覺觀。此二見如前所釋故無長。偈曰：餘無記十二。釋曰：與有覆無記異，即是無覆無記。此中有十二心法，大地十并覺觀。罽賓國外諸師欲惡作無記，於此諸師若心與惡作相應有十三心法。偈曰：睡遍不違故，若有唯此長。釋曰：睡與如前所說一切心法不相違，由是善惡無記性故，於五品心中隨若有此應知為長。若二十二，并睡成二十三；若二十三，并睡成二十四。如此等於欲界中是所說心法定量。"
+  },
+  "v031": {
+   "sa": "kaukṛtyamiddhākuśalānyādye dhyāne na santyataḥ / dhyānāntare vitarkaśca vicāraścāpyataḥ param // VAkK_2.31 //",
+   "sa-bhasya": "[059|03] kaukṛtyamiddhākuśalānyādye dhyāne na santyataḥ / [059|04] ato yathoktāt kaukṛtyaṃ middhaṃ ca sarvathā nāsti prathame dhyāne yat kiñcidakuśalam / [059|05] pratighaḥ śāṭhyamadamāyāvarjyāśca krodhādaya āhrīkyānapatrāpye ca / anyatsarva tathaiva / [059|06] ya eva prathame dhyāne na santi ta eva [059|07] dhyānāntare vitarkaśca [059|08] nāsti / śeṣaṃ tathaiva / [059|09] vicāraścāpyataḥ param // VAkK_2.31 // [059|10-059|11] dhyānāntarāt pareṇa dvitīyādiṣu dhyāneṣvārūpyeṣu ca yathāpratiṣiddhaṃ nāsti vicāraśca / [059|11] māyā śāṭhyaṃ cetyapiśabdāt / śeṣaṃ tathaiva / [059|11-059|12] brahmaṇo hi yāvacchāṭhyaṃ paṭhyate parṣatsambandhatvānnordhvam / [059|12-059|13] sa hi svasyāṃ parṣadyaśvajitā bhikṣuṇā praśnaṃ pṛṣṭaḥ \"kutremāni brahman catavāri mahābhūtānyapariśeṣaṃ nirudhyante\" iti / [059|13-059|14] aprajānan kṣepamakārṣīt / [059|14-059|15] \"ahamasmin brahmā īśvaraḥ kartā nirmātā sraṣṭā sṛjaḥ pitṛbhūto bhūtānāmi\"ti / [059|15] uktametadyasyāṃ bhūmau yatra citte yāvantaścaittāḥ // [059|16] idānīṃ keṣāñcideva caittānāṃ tantravihitaṃ nānākāraṇaṃ vakṣyate /",
+   "T1560": "初定除不善，及惡作睡眠。 中定又除尋，上兼除伺等，",
+   "T1558": "已說欲界心所俱生諸品定量，當說上界。頌曰：初定除不善，及惡作睡眠， 中定又除尋，上兼除伺等。論曰：初靜慮中於前所說諸心所法，除唯不善、惡作、睡眠，餘皆具有。唯不善者，謂瞋煩惱，除諂、誑、憍所餘忿等及無慚愧。餘皆有者，如欲界說。中間靜慮除前所除，又更除尋，餘皆具有。第二靜慮以上乃至無色界中除前所除，又除伺等。等者顯除諂、誑，餘皆如前具有。經說：諂誑極至梵天，眾相依故，上地無有。以大梵王處自梵眾，忽被馬勝苾芻問言：此四大種當於何位盡滅無餘？梵王不知無餘滅位，便矯亂答：我於此梵眾是大梵，自在作者、化者、生者、養者，是一切父。作是語已，引出眾外諂言愧謝，令還問佛。如是已說於諸界地諸心品中心所數量，今次當說於前所辯諸心所中少分差別。",
+   "T1559": "偈曰：惡作睡諸惡，於初定皆無。釋曰：於如前所說中惡作及睡，初定一向無諸惡隨一，譬如瞋離諂醉誑，謂嫌等及無慚無羞悉無所餘，一切皆有此諸法；於初定不有。偈曰：於中定無覺。釋曰：此法及覺，於中間定亦如此無，所餘亦如此有。偈曰：過此又無觀。釋曰：度中間定以上，於第二定等乃至無色界，如所遮皆無觀，及諂誑亦無，所餘皆有。何以故？此諂曲，佛說乃至極大梵處與梵眾相應故，上去則無。此梵王於自大集中，阿輸實比丘問：是四大何處滅無餘？梵王不解，作詭言答：我是大梵自在，作者化者起者，一切所有我為本因。"
+  },
+  "v032": {
+   "sa": "ahrīragurutā avadye bhayādarśitva matrapā / prema śraddhā gurutvaṃ hrīḥ te punaḥ kāmarūpayoḥ // VAkK_2.33 //",
+   "sa-bhasya": "[059|16-059|17] āhrīkyasyānapatrāpyasya ca kiṃ nānākāraṇam / [059|18] ahrīragurutā [059|19-059|20] guṇeṣu guṇavatsu cāgauravatā apratīśatā abhayamavaśavartitā āhrīkyaṃ gauravapratidvandvo dharmaḥ // [059|21] avadye bhayādarśitvamatrapā / [059|22] avadyaṃ nāma yadvigarhitaṃ sadbhiḥ / tatrābhayadarśitā 'napatrāpyam / [059|22-059|23] bhayamatrāniṣṭaṃ phalaṃ bhīyate 'smāditi / [059|23-059|24] kathamidaṃ vijñātavyam abhayasya darśanamabhayadarśitā āhosvit bhayasyādarśanam / [059|24] kiṃ cātaḥ / [059|24-059|25] abhayasya darśanaṃ cet prajñā vijñāsyate bhayasyādarśanaṃ cedavidyā vijñāsyate / [059|25] naiva hi darśanaṃ darśitā nāpyadarśanamadarśitā / kiṃ tarhi / [059|25-059|26] yastayornimittamupakleśastaccānapatrāpyamiti / [059|26] anye punarāhuḥ / [059|26-060|01] ātmāpekṣayā doṣairalajjana māhrīkyaṃ parāpekṣayā 'napatrāpyamiti / [060|01] evamapi dve apekṣe yugapat kathaṃ setsyataḥ / [060|01-060|03] na khalūcyate yugapadātmānaṃ paraṃ cāpekṣata ityapi tvastyasau kadācidalajjā yā ātmānamapekṣamāṇasyāpi pravartate sā āhrīkyam / [060|03-060|04] asti yā paramapekṣamāṇasya pravarttate sā 'napatrāpyam / [060|04] viparyayeṇa hrīrapatrāpyaṃ ca veditavyam / [060|04-060|05] pratahamena tāvat kalpena sagauravatā sapratīśatā na bhayavaśavrtitā hrīḥ / [060|05] avadyeṣvabhayadarśiatā 'patrāpyam / [060|06] dvitīyena kalpenātmaparāpekṣābhyāṃ lajjane / [060|07] premṇo gauravasya ca kiṃ nānākāraṇam / [060|08] prema śraddhā / [060|09] dvividhaṃ hi prema kliṣāṭamakliṣṭaṃ ca / tatra kliṣṭaṃ tṛṣṇā yathā putradārādiṣu / [060|09-060|10] akliṣṭaṃ śraddhā śāstṛguruguṇānviteṣu / [060|10] syācchraddhā naprema / [060|10-060|11] duḥdhasamudayālambanā śraddhā / [060|11] syāt prema na śraddhā / kliṣṭaṃ prema / [060|11-060|12] ubhayaṃ nirodhamārgālambanā śraddhā / [060|12] nobhayametānākārān sthāpayitvā / [060|12-060|13] pudgaleṣu tu prema na gauravaṃ putradārasārdhaṃ vihāryantevāsiṣu / [060|13] gauravaṃ na prema anyaguruṣu / ubhayaṃ svaguruṣu / [060|13-060|14] nobhayam etānākārān sthāpayitvā / [060|14] śraddhā hi nāma guṇasaṃbhāvanā / tatpūrvikā ca priyatā prema / [060|15] tasmānna saiva premetyapare / [060|16] gurutvaṃ hrīḥ / [060|17] gauravaṃ hi nāma sapratīśatā / tatpūrvikā ca lajjā hrīḥ / [060|17-060|18] ato na gauravameva hlīrityapare / [060|19] te punaḥ kāmarūpayoḥ // VAkK_2.32 // [060|20] ārūpyadhātau premagaurave na staḥ / [060|20-060|21] nanu ca śraddhā hrīśca kuśalamahābhūmikatvāttatrāpi vidyete / [060|21] dvividhā hi śraddhā dharmeṣu pudgaleṣu ca / evaṃ sapratīśatā 'pi / [060|21-060|22] tatra ye pudgalālambane śraddhāhriyau te tatra na staḥ / [060|22] te ceha premagaurave abhiprete /",
+   "T1560": "無慚愧不重，於罪不見怖。 愛敬謂信慚，唯於欲色有，",
+   "T1558": "無慚無愧、愛之與敬差別云何？頌曰：無慚愧不重，於罪不見怖， 愛敬謂信慚，唯於欲色有。論曰：此中無慚無愧別者，於諸功德及有德者，無敬無崇、無所忌難、無所隨屬，說名無慚，即是恭敬所敵對法。為諸善士所訶厭法說名為罪，於此罪中不見怖畏說名無愧。此中怖言，顯非愛果能生怖故。不見怖言欲顯何義？為見而不怖名不見怖、為不見彼怖名不見怖？若爾何失？二俱有過。若見而不怖應顯智慧，若不見彼怖應顯無明。此言不顯見與不見，何所顯耶？此顯有法是隨煩惱為彼二因，說名無愧。有餘師說：於所造罪自觀無恥名曰無慚，觀他無恥說名無愧。若爾，此二所觀不同，云何俱起？不說此二一時俱起別觀自他。然有無恥，觀自時勝說名無慚。復有無恥，觀他時增說為無愧。慚愧差別翻此應知，謂翻初釋有敬有崇、有所忌難、有所隨屬說名為慚，於罪見怖說名為愧。翻第二釋，於所造罪自觀有恥說名為慚，觀他有恥說名為愧。已說無慚無愧差別。愛敬別者，愛謂愛樂，體即是信。然愛有二：一有染污、二無染污。有染謂貪，如愛妻子等。無染謂信，如愛師長等。有信非愛，謂緣苦集信。有愛非信，謂諸染污愛。有通信愛，謂緣滅道信。有非信愛，謂除前三相。有說：信者忍許有德，由此為先方生愛樂，故愛非信。敬謂敬重，體即是慚，如前解慚謂有敬等。有慚非敬，謂緣苦集慚。有通慚敬，謂緣滅道慚。有說：敬者有所崇重，由此為先方生慚恥，故敬非慚。望所緣境補特伽羅，愛敬有無應作四句。有愛無敬，謂於妻子共住門人等。有敬無愛，謂於他師有德貴人等。有愛有敬，謂於自師父母伯叔等。無愛無敬，謂除前三相。如是愛敬欲色界有，無色界無。豈不信慚大善地法無色亦有？愛敬有二，謂緣於法補特伽羅，緣法愛敬通三界有。此中意說緣補特伽羅者，故欲色有，無色界無。如是已說愛敬差別。",
+   "T1559": "說隨地如心法數量義已。如毘婆沙中所立，心法及異相今當說。無羞與無慚異相云何？偈曰：無羞不重德。釋曰：於功德及有德人不尊重，於他無自在心、無敬畏心、無隨屬他心，說名無羞。此心對治尊重。偈曰：非讚不見怖，無慚。釋曰：非讚謂若事善人所訶，是名非讚。於中不見怖，是名無慚。此中怖謂非所愛果，能生怖畏故。云何得知？如此為不見怖名不見怖、為見不怖名不見怖？若爾何為？若不見怖應成無明，若見不怖應成智慧。不見怖者，我不說不見，亦不說見。何者為是？有小惑為此二因，說名無慚。有餘師說：觀自身由過失不恥名無羞，觀他名無慚。若爾，二觀一時云何得成？不說如此一時觀自觀他。何者有非恥類？若觀自身生起，說名無羞，有非恥類。若觀他生起，說名無慚。翻此名慚羞。由第一解，顯有尊重、有自在、有敬畏、有隨屬名有羞，於非讚見有怖名有慚。由第二解，顯觀自他生起恥心說名慚羞。愛樂及信此二異相云何？偈曰：樂名信。釋曰：愛樂有二種，一有染污、一無染污。此中若有染污名愛樂，如於妻子等。若無染污名信，如於自師尊長及有德人處有信非愛樂，是信緣苦集起。有愛樂非信，謂有染污愛樂。有具二，謂緣滅道生信。有非二，謂除前三句。有餘師說。信謂於德決期，以此為先後則生愛，故信非愛。復有餘師說。偈曰：重羞。釋曰：如前說，以重為羞。此何相？不即重名羞。於他起自在心名重，以此為先後則生恥，說恥為羞，是故尊重異羞。偈曰：欲色有。釋曰：於無色界無愛樂及尊重。此義云何？信及羞是善大地故。於彼既有前二，云何無羞？信有二種，一信法、二信人，尊重亦爾。信及羞，若緣人起，彼處則無，此二名愛及重。"
+  },
+  "v033": {
+   "sa": "vitarkacārā vaudāryasūkṣmate māna unnatiḥ / madaḥ svadharme raktasya paryādānaṃ tu cetasaḥ // VAkK_2.33 //",
+   "sa-bhasya": "[060|23] vitarkavicārayoḥ kiṃ nānākāraṇam / [060|24] vitarkacārā vaudāryasūkṣmate / [060|25] kasya / cetasa iti paścādvakṣyati / cittaudārikatā vitarkaḥ / cittasūkṣmatā vicāraḥ / [060|25-060|26] kathaṃ punaḥ anayorekatra citte yogaḥ / [060|26] kecidāhuḥ / [060|26-061|01] yathā 'pyasuniṣṭhyūtaṃ sarpiḥ sūryaraśmibhirūpariṣṭātspṛṣṭaṃ nātiśyāyate nātivilīyate evaṃvitarkavicārayogāccittaṃ nātisūkṣmaṃ bhavati nātyodārika mityubhayorapi tatrāsti vyāpāraḥ / [061|01-061|03] evaṃ tarhi nimiṭtabhūtau vitarkavicārāvaudārika sūkṣmatayoḥ prāpnuto yathā payaścā tapaścasarpiṣaḥ śyānatva vilīnatvayornatu punastatsvabhāvau / [061|03-061|04] āpekṣikī caudārikasūkṣmatā bhūmiprakārabhedādityābhavāgrādvitarkavicārau syātām / [061|04-061|05] nacaudārikasūkṣmātayā jātibhedo yukataḥ // [061|05] anye punarāhuḥ / [061|05-061|06] vāksaṃskārā vitrkavicārāḥ sūtra uktāḥ / [061|06] \"vitarkya vicārya vācaṃ bhāṣate nāvitasryāvicārye\"ti / [061|06-061|07] tatra ye audārikāste vitarkāḥ ye sūkṣmāste vicārāḥ / [061|07-061|08] yadi caikatra citte 'nyo dharma audāriko 'nyaḥ sūkṣmaḥ ko 'tra virodha iti / [061|08-061|09] na syādvirodho yadi jātibhedaḥ syādvedanāsaṃjñāvat / [061|09] ekasyāṃ jātau mṛdvadhimātratā yugapanna saṃbhavati / [061|10] jātibhedo /pyasti / sa tarhi vaktavyaḥ / durvaco hyasāvato mṛdvadhimātratayā vyajyate / [061|11] naivaṃ vyakto bhavati / pratyekaṃ jātīnāṃ mṛdvadhimātratavāt / [061|11-061|12] naiva hi vitarkavicārāvekatra citte bhavata ityapare / [061|12] kathamidānīṃ prathamaṃ dhyānaṃ pañcāṅgayuktam / [061|13] bhūmitastat pañcāṅgayukataṃ na kṣaṇataḥ // [061|14] mānamadayoḥ kiṃ nānākāraṇam / [061|15-061|16] māna unnatiḥ / madaḥ svadharme raktasya paryādānaṃ tu cetasaḥ // VAkK_2.33 // [061|17] yena kenacit parato viśeṣaparikalpena cetasa unnatiḥ mānaḥ / [061|17-061|18] madastu svadharmeṣveva raktasya yaccetasaḥ paryādānam / [061|18] yathā madyaja evaṃ rāgajaḥ / [061|18-061|19] saṃprahaṛśaṇaviśeṣo mada ityapare / [061|20] uktāḥ saha cittena caittāḥ prakāraśa steṣāṃ punarimāḥ saṃjñāḥ paribhāṣyante / [061|21] pravacana etābhiḥ sadvyavahārāt /",
+   "T1560": "尋伺心麁細，慢對他心舉， 憍由染自法，心高無所顧。",
+   "T1558": "尋、伺、慢、憍差別云何？頌曰：尋伺心麁細，慢對他心舉， 憍由染自法，心高無所顧。論曰：尋伺別者，謂心麁細，心之麁性名尋，心之細性名伺。云何此二一心相應？有作是釋：如冷水上浮以熟酥，上烈日光之所照觸，酥因水日非釋非凝。如是一心有尋有伺，心由尋伺不遍細麁，故於一心俱有作用。若爾，尋伺是麁細因，非麁細體，如水日光是凝釋，日體非凝釋。又麁細性相待而立，界地品別上下相形，乃至有頂應有尋伺。又麁細性無別體類，不可依之以別尋伺。復有釋言：尋伺二法是語言行，故契經言：要有尋伺方有語言，非無尋伺此語言行。麁者名尋，細者名伺，於一心內別法是麁、別法是細，於理何違？若有別體類，理實無違；然無別體類，故成違理，一體類中無容上下俱時起故。若言體類亦有差別，應說體類別相云何。此二體類別相難說，但由上下顯其別相，非由上下能顯別相，一一類中有上下故。由是應知，尋伺二法定不可執一心相應。若爾，云何契經中說：於初靜慮具足五支。具五支言就一地說，非一剎那，故無有過。如是已說尋伺差別。慢憍別者，慢謂對他心自舉性，稱量自他德類差別，心自舉恃𣣋蔑於他故名為慢。憍謂染著自法為先，令心傲逸無所顧性。有餘師說：如因酒生欣舉差別說名為醉，如是貪生欣舉差別說名為憍。是謂慢憍差別之相。如是已說諸心心所品類不同俱生異相。",
+   "T1559": "覺與觀異相云何？偈曰：覺觀謂麁細。釋曰：麁細屬何法？謂心麁細，心麁名覺，心細名觀。此二於一心云何俱起？此中有餘師說：譬如酥浮水上，於上為日光所觸，非凝非釋。如此由覺觀相應故，心不過細亦不過麁，是故此二於一心中俱有事用。若爾，此覺觀但是麁細因，非自麁細。譬如水及日光是酥凝釋因，非自凝釋。麁細由觀他成，由地品類差別故，乃至有頂應有覺觀。復次同類生，以麁細為差別。此義不應成，是故不可由麁細分別覺觀性異。有餘師說：言語行名覺觀。如經言：已覺已觀方有言說，非未覺未觀。此中若麁名覺、若細名觀。若於一心中，有別法名麁、有別法名細，此有何妨？無妨。若有種類差別，於一生類中下上二品不得俱起，種類亦有異。若爾，汝今應說。此不可說，是故由上下品種類異則可顯示。若爾則不可顯示，各各自種類有上下故。有餘師說：覺觀於一心不並起。若爾，云何初定說具五分？約地說五分，不由剎那。慢與醉異相云何？偈曰：心高說為慢，醉愛著自法，心起變異亂。釋曰：由隨類所分別勝德，心高於他說名慢。醉者此人於自法起愛著，其心亂昧，如飲酒惛迷，心歡喜差別，從貪欲生說名醉。餘師說如此。"
+  },
+  "v034": {
+   "sa": "cittaṃ mano 'tha vijñānamekārthaṃ cittacaitasāḥ / sāśrayā lambanākārāḥ saṃprayuktāśca pañcadhā // VAkK_2.34 //",
+   "sa-bhasya": "[061|22] cittaṃ mano 'tha vijñānamekārthaṃ [061|23] cinotīti cittam / manuta iti manaḥ / vijānātīti vijñānam / [061|23-062|01] cittaṃ śubhāśubhairdhātubhiriti cittam / [062|01] tadevāśrayabhutaṃ manaḥ / āśritabhūtaṃ vijñānamityapare / [062|01-062|02] yathā cittaṃ mano vijñānamityeko 'rthaḥ / [062|02] evaṃ / [062|03] cittacaitasāḥ / [062|04] sāśrayā lambanākārāḥ saṃparayuktāśca / [062|05] eko 'rthaḥ / ta eva hi cittacaittāḥ sāśrayā ucyante indriyāśritatvāt / [062|05-062|06] sālambanā viṣayagrahaṇāt / [062|06] sākārāstasyaivālambanasya prakāraśa ākaraṇāt / [062|06-062|07] samprayuktāḥ samaṃ prayuktatvāt / [062|07] kena prakāreṇa samaṃ parayuktā ityāha [062|08] pañcadhā // VAkK_2.34 // [062|09] pañcabhiḥ samatāprākārairāśrayālambanākārakāladravyasamatābhiḥ / keyaṃ samatā / [062|09-062|10] yathaiva hyekaṃ cittamevaṃ caittā apyekaikā iti / [062|10] nirdiṣṭāścittacaittāḥ savistaraprabhedāḥ /",
+   "T1560": "心意識體一，心心所有依， 有緣有行相，相應義有五。",
+   "T1558": "然心心所於契經中隨義建立種種名想，今當辯此名義差別。頌曰：心意識體一，心心所有依， 有緣有行相，相應義有五。論曰：集起故名心，思量故名意，了別故名識。復有釋言：淨不淨界種種差別故名為心，即此為他作所依止故名為意，作能依止故名為識。故心、意、識三名所詮，義雖有異而體是一。如心意識三名所詮義異體一，諸心心所名有所依所緣、行相相應亦爾，名義雖殊而體是一。謂心心所皆名有所依，託所依根故。或名有所緣，取所緣境故。或名有行相，即於所緣品類差別等起行相故。或名相應，等和合故。依何義故名等和合？有五義故，謂心心所五義平等故說相應，所依所緣行相時事皆平等故。事平等者，一相應中如心體一，諸心所法各各亦爾。已說心心所廣分別義。",
+   "T1559": "說心法與心共別異已。如是等法，佛世尊假立眾名，於正法中由此說教故。云何釋異？偈曰：心意識一義。釋曰：心以增長為義，能解故名意，能別故名識。善惡諸界所增長故名心。或能增長彼故名心，此心為他作依止說名意，若能依止說名識。如心意識三名一義如此。偈曰：心及餘心法，有依、境界、相、相應。釋曰：此四種名亦通一義。此心及心法或說有依，由依根起故。或說有境，皆能取境故。或說有相，是所緣境隨類差別能分別故。或說相應，平等聚集故。云何平等聚集名相應？偈曰：義有五。釋曰：有五種平等類為相應義，謂依止境界取相時物平等等。何法為物平等？如心一物，如此心法亦各各一物。說心及心法廣義及差別義已。"
+  }
+ }
+}

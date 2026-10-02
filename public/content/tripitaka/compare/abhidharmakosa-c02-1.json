@@ -1,0 +1,304 @@
+{
+ "slug": "abhidharmakosa-c02-1",
+ "title": "俱舍論・分別根品（2.1–2.21）",
+ "family": "sa",
+ "intro": "《阿毘達磨俱舍論》第二品〈分別根品〉頌 2.1–2.21，一頌一節（頌號依 Pradhan 本，GRETIL 標 VAkK_品.頌）。五欄：梵本頌、梵本自釋（bhāṣya）、玄奘《俱舍論本頌》、玄奘《俱舍論》、真諦《俱舍釋論》；論本欄自該頌（含引出該頌的提問句）起、到下一頌前的釋文止。玄奘《俱舍論》常把數頌合為一個「頌曰」再一併解釋，區塊中按頌切開，釋文因此都落在區塊末頌；真諦本逐句引偈、隨句解釋，與梵本自釋的節奏相近。稱友 Yaśomitra《明了義釋》Sphuṭārthā 是自釋的疏，不收。",
+ "units": [
+  {
+   "id": "v001",
+   "label": "2.1　傳說五於四"
+  },
+  {
+   "id": "v002",
+   "label": "2.2　了自境增上"
+  },
+  {
+   "id": "v003",
+   "label": "2.3　於同住雜染"
+  },
+  {
+   "id": "v004",
+   "label": "2.4　未當知已知"
+  },
+  {
+   "id": "v005",
+   "label": "2.5　心所依此別"
+  },
+  {
+   "id": "v006",
+   "label": "2.6　或流轉所依"
+  },
+  {
+   "id": "v007",
+   "label": "2.7　身不悅名苦"
+  },
+  {
+   "id": "v008",
+   "label": "2.8　餘處此名喜"
+  },
+  {
+   "id": "v009",
+   "label": "2.9　見修無學道"
+  },
+  {
+   "id": "v010",
+   "label": "2.10　命唯是異熟"
+  },
+  {
+   "id": "v011",
+   "label": "2.11　意餘受信等"
+  },
+  {
+   "id": "v012",
+   "label": "2.12　欲色無色繫"
+  },
+  {
+   "id": "v013",
+   "label": "2.13　意三受通三"
+  },
+  {
+   "id": "v014",
+   "label": "2.14　欲胎卵濕生"
+  },
+  {
+   "id": "v015",
+   "label": "2.15　正死滅諸根"
+  },
+  {
+   "id": "v016",
+   "label": "2.16　漸四善增五"
+  },
+  {
+   "id": "v017",
+   "label": "2.17　十一阿羅漢"
+  },
+  {
+   "id": "v018",
+   "label": "2.18　若成就樂身"
+  },
+  {
+   "id": "v019",
+   "label": "2.19　二無漏十一"
+  },
+  {
+   "id": "v020",
+   "label": "2.20　極少八無善"
+  },
+  {
+   "id": "v021",
+   "label": "2.21　極多成十九"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sa",
+   "lang": "sa",
+   "label": "梵本頌",
+   "who": "《阿毘達磨俱舍論本頌》Abhidharmakośakārikā・GRETIL（參 Pradhan 1975、Gokhale 1946）"
+  },
+  {
+   "id": "sa-bhasya",
+   "lang": "sa",
+   "label": "梵本自釋",
+   "who": "《阿毘達磨俱舍論》Abhidharmakośabhāṣya・GRETIL（Pradhan 1975，Hackett／Lusthaus 校）"
+  },
+  {
+   "id": "T1560",
+   "lang": "lzh",
+   "label": "玄奘頌本",
+   "who": "玄奘譯《阿毘達磨俱舍論本頌》・唐",
+   "work": "T1560"
+  },
+  {
+   "id": "T1558",
+   "lang": "lzh",
+   "label": "玄奘論本",
+   "who": "玄奘譯《阿毘達磨俱舍論》・唐 651–654 年",
+   "work": "T1558"
+  },
+  {
+   "id": "T1559",
+   "lang": "lzh",
+   "label": "真諦釋論",
+   "who": "真諦譯《阿毘達磨俱舍釋論》・陳 563–567 年",
+   "work": "T1559"
+  }
+ ],
+ "works": [
+  "T1558",
+  "T1559",
+  "T1560"
+ ],
+ "anchors": [
+  {
+   "work": "T1560",
+   "range": [
+    "T29n1560_p0312a07",
+    "T29n1560_p0312a07"
+   ]
+  },
+  {
+   "work": "T1558",
+   "range": [
+    "T29n1558_p0013b12",
+    "T29n1558_p0018b16"
+   ]
+  },
+  {
+   "work": "T1559",
+   "range": [
+    "T29n1559_p0173a06",
+    "T29n1559_p0177c13"
+   ]
+  }
+ ],
+ "cells": {
+  "v001": {
+   "sa": "dvitīyaṃ kośasthānam caturṣvartheṣu pañcānāmādhipatyaṃ dvayoḥ kila / caturṇṇāṃ pañcakāṣṭānāṃ saṃkleśavyavadānayoḥ // VAkK_2.1 //",
+   "sa-bhasya": "dvitīyaṃ kośasthānam ===================================================================== [038|02] oṃ namo buddhāya / ===================================================================== [038|03] uktānīndriyāṇi / kaḥ punarindriyārthaḥ / \"idi paramaiśvarye\" / [038|03-038|04] tasya indantīti indriyāṇi / [038|04] ata ādhipatyārtha indriyārthaḥ / kasya caiṣāṃ kvādhipatyam / [038|05] caturṣvartheṣu pañcānāmādhipatyaṃ [038|06] cakṣuḥśrotrayostāvat pratyekaṃ caturṣvarthevādhipatyam / [038|06-038|07] ātmabhāvaśobhāyāmandhabadhirayorakāntarūpatvāt / [038|07] ātmabhāvaparikarṣaṇe dṛṣṭvā śrutvā ca viṣamaparivarjanāt / [038|08] cakṣuḥśrotravijñānayoḥ sasaṃprayogayorutpattau / [038|08-038|09] rūpadarśanaśabdaśāravaṇayoścāsādhāraṇakāraṇatve / [038|09] ghrāṇajihvākāyānāmātmabhāvaśobhāyāṃ pūrvavat / [038|09-038|10] ātmabhāvaparikarṣaṇe taiḥ kavaḍīkārāhāraparibhogāt / [038|10] ghrāṇādivijñānānāṃ sasaṃprayogāṇāmutpattau / [038|11] gandhaghrāṇarasāsvādanaspraṣṭavyaspaṛśanānāṃ cāsādhāraṇakāraṇatva iti / [038|12] dvayoḥ kila / [038|13] caturṇāṃ [038|14] strīpuruṣajīvitamanaindriyāṇāṃ / dvayorarthayoḥ pratyekamādhipatyam / [038|14-038|15] strī puruśendriyayyostāvatsattvabhedavikalpayoḥ / [038|15] tatra sattvabhedaḥ stri puruṣa iti / [038|15-038|16] sattvavikalpaḥ stanādisaṃsthānasvarācārānyathātvam / [038|16] saṃsleśavyavadānayorityapare / [038|17-038|18] tathā hi tadviprayuktavikalpānāṃ ṣaṇḍha paṇḍakobhayavyañjanānāmasaṃvarānantāryakuāśalamulasamucchedā na bhavanti saṃvaraphalaprāptivairāgyāṇi ceti / [038|19] jīvitendriyasya nikāyasabhāgasaṃbandhasādhāraṇayoḥ / [038|19-038|20] manaindriyasya punarbhavasaṃbandhavaśibhāvānuvarttanayoḥ / [038|20-038|22] tatra punrbhavasaṃbandhe yathoktaṃ \"gandharvasya tasmin samaye dvayościttayoranyatarānyataracittaṃ saṃmukhībhūtaṃ bhavatyanunayasahagataṃ vā pratighasahagataṃ ve\"ti / [038|22] vaśibhāvānuvarttane yathoktaṃ \"cittenāyaṃ loko nīyata\" iti vistaraḥ / [038|22-038|23] yat punaḥ sukhādīndriyapañcakaṃ yāni cāṣṭau śraddhādīni teṣāṃ [038|24] pañcakāṣṭānaṃ saṃkleśavyavadānayoḥ // VAkK_2.1 // [038|25] ādhipatyaṃ yathākramaṃ pañcānāṃ sukhādīnāṃ saṃkleśe / rāgādīnāṃ tadanuśāyitvāt / [038|25-039|01] śraddhādīnāṃ vyavadāne / [039|01] tai rvyavadāyate / vyavadāne 'pi sukhādīnāmādhipatyamityapare / [039|01-039|02] \"yasmāt sukhitasya cittaṃ samādhīyate\" / [039|02-039|03] duḥdhupaniṣacchraddhāṣaṇnaiṣkramyāśritāḥ saumanasyādaya iti vaibhāṣikāḥ / [039|03] apare punarāhuḥ / [039|03-039|04] naiva cakṣuḥśrītrābhyāmātmabhāvaparikaṛṣaṇaṃ vijñāya viṣamaparihārāt / [039|04] vijñāne tu tayorādhipatyam / [039|04-039|05] nāpi vijñānādanyadrūpadarśanaṃ śabdaśravaṇaṃ vā 'sti / [039|05] yatastayorasādhāraṇakāraṇatve pṛthagādhipatyaṃ yujyeta / [039|05-039|06] tasmānnaivameṣāmindriyatvam /",
+   "T1560": "傳說五於四，四根於二種， 五八染淨中，各別為增上。",
+   "T1558": "如是因界已列諸根，即於此中根是何義？最勝自在光顯名根，由此總成根增上義。此增上義誰望於誰？頌曰：傳說五於四，四根於二種， 五八染淨中，各別為增上。論曰：眼等五根各於四事能為增上：一莊嚴身、二導養身、三生識等、四不共事。且眼耳根莊嚴身者，謂若盲聾身醜陋故。導養身者，謂因見聞避險難故。生識等者，謂發二識及相應故。不共事者，謂能見色聞聲別故。鼻舌身根莊嚴身者，如眼耳說。導養身者，謂於段食能受用故。生識等者，謂發三識及相應故。不共事者，謂嗅甞覺香味觸故。女、男、命、意各於二事能為增上。且女、男根二增上者，一有情異、二分別異。有情異者，由此二根令諸有情女男類別。分別異者，由此二根形相言音乳房等別。有說：此於染淨增上故言於二。所以者何？本性損壞。扇搋半擇及二形人無不律儀無間斷善諸雜染法，亦無律儀得果離染諸清淨法。命根二者，謂於眾同分能續及能持。意根二者，謂能續後有及自在隨行。能續後有者，如契經言：時健達縛於二心內隨一現前，謂或愛俱、或恚俱等。自在隨行者，如契經言：心能導世間，心能遍攝受， 如是心一法，皆自在隨行。樂等五受、信等八根，於染淨中如次增上。樂等五受染增上者，貪等隨眠所隨增故。信等八根淨增上者，諸清淨法隨生長故。有餘師說：樂等於淨亦為增上。如契經說：「樂故心定」、「苦為信依」，亦「出離依喜及憂、捨」。毘婆沙師傳說如此。有餘師說：能導養身非眼等用，是識增上，識了方能避於險難，受段食故。見色等用亦非異識，故不共事於眼等根，不可立為別增上用，故非由此眼等成根。",
+   "T1559": "說二十二根已。根義云何？最勝自在為義，於自事用中增上自在故。復以光飾為義，於身中最明顯故。是故以最勝自在、光飾為義。於中何根何處自在？偈曰：於四義五根，增上。釋曰：眼耳二根隨一，於四義中增上：一於光飾自身增上，若人盲聾，形相則醜陋故。二於引護自身增上，若見若聞，能離不安吉處故。三於生眼耳識及共相應法中增上，由識及相應法隨其增損有明昧故。四於見色聞聲不共因增上，非意識他識因故。鼻舌身根，光飾自身，如前二根；二於引護自身增上，由此三能用段食故；三於生鼻等三識及共相應法中增上；四於嗅香嘗味覺觸不共因增上。偈曰：於二二四根。釋曰：女根男根命根意根，於二於二隨一增上。女根男根於眾生差別及相貌不同增上。差別謂分別，男女相貌不同，謂乳等形狀、音聲威儀各異。復有餘師說：於染污清淨增上。何以故爾？自性黃門，故作黃門。及二根人，不護無間業，斷善根等不有守護，至果離欲亦不有。此二但於男女有。命根於聚同分相應及執持中增上，意根於託後有相應及隨從自在中增上。此中後有相應者，如經言：是時乾闥婆於二意中隨一現前，或與欲相應、或與瞋相應。隨從者如偈言：「意引將世間，意轉令變異， 是意根一法，一切法隨行。」樂受等五根及信等八根增上云何？偈曰：五及八，於染污清淨。釋曰：次第應知彼增上。樂受等五根，於染污增上。欲等諸惑，於彼隨眼故。信等八根，於清淨增上。何以故？一切清淨皆由彼成故。有餘師說：樂受等於清淨亦有增上，由安樂故，心則得定。佛說：信以苦為資糧。復次有六喜等受，是出離所依。毘婆沙師作如此說。復有餘師說：不由眼耳二根引護自身，由先已知得離不安吉處故。此二但於識是增上，無有見色聞聲異於識，是故眼耳二根於不共因中不應更立增上，是故眼等不應有如此增上。"
+  },
+  "v002": {
+   "sa": "svārthopalabdhyādhipatyāt sarvasya ca ṣaḍindriyam / strītvapuṃstvādhipatyāttu kāyāt strīpuruṣendriye // VAkK_2.2 //",
+   "sa-bhasya": "[039|06] kathaṃ tarhi / [039|07] svārthopalabdhyādhipatyāt sarvasya ca ṣaḍindriyam / [039|08] cakṣurādīnāṃpañcānāṃ svasyasvasyārthasyopalabdhādhipatyam / [039|08-039|09] manasaḥ punaḥ sarvārthopalabdhāvādhipatyam / [039|09] ata etāni ṣaṭ pratyekamindriyam / [039|09-039|10] nanu cārthānāmapyatrādhipatyam / [039|10] nādhipatyam / adhikaṃ hi prabhutvamādhipatyam / [039|10-039|11] cakṣuṣaścakṣūrūpopalabdhāvadhikamaiśvaryam / [039|11-039|12] sarvarūpopalabdhau sāmānyakāraṇatvāttatpaṭumandatādyanuvidhānāccopalabdheḥ / [039|12] na rūpasya / tadvi paryayāt / evaṃ yāvat manaso dharmeṣu yojyam / [039|13] srītva puṃstvādhipatyāttu kāyāt strīpuruṣendriye // VAkK_2.2 // [039|14] kāyendriyādeva strīpuruṣendriye pṛthak vyavasthāpyete / nārthantarabhūte / [039|14-039|15] kaścidasau kāyendriyabhāga upastha pradeśo yaḥ strīpuruṣendriyākhyāṃ paratilabhate / [039|15-039|16] yathākramaṃ strītvapuṃstvayyorādhipatyāt / [039|16] tatra strībhāvaḥ striyākṛtiḥ svaraceṣṭā abhiprāyāḥ / [039|16-039|17] etaddhi striyā strītvam / [039|17] puṃbhāvaḥ puruṣākṛtiḥ svaraceṣṭā abhiprāyāḥ / etaddhi puṃsaḥ puṃstvam /",
+   "T1560": "了自境增上，總立於六根， 從身立二根，女男性增上。",
+   "T1558": "若爾，云何？頌曰：了自境增上，總立於六根， 從身立二根，女男性增上，",
+   "T1559": "若爾，彼增上云何？偈曰：得自塵增上，得一切六根。釋曰：眼等五根於得自塵中增上，意根於得一切塵中增上，是故此六一一皆立為根。若爾，諸塵於此中有增上，云何不立？為根無增上。何以故？為最勝主故名增上。眼於得色中為主最勝，是得一切色通因故。由其增損，識隨明昧故，色則不爾。反此二義故。如此乃至意根及法，應知亦爾。偈曰：女男性增上，從身立二根。釋曰：復從身根更立女男二根。此二與身根不異，是身根中有一分，於下門處次第得女男根名，於女男性為增上故。女男性謂女相聲行欲樂，是名女性。男相聲行欲樂，是名男性。由此身分二性得成就及可了別，於此二性是增上，故立為根。"
+  },
+  "v003": {
+   "sa": "nikāyasthitisaṃkleśavyavadānādhipatyataḥ / jīvitaṃ vedanāḥ pañca śraddhādyāścendriyaṃ matāḥ // VAkK_2.3 //",
+   "sa-bhasya": "[039|18-039|19] nikāyasthitisaṃkleśavyavadānādhipatyataḥ / jīvitaṃ vedanāḥ pañca śraddhādyāścendriyaṃ matāḥ // VAkK_2.3 // [039|20] nikāyasabhāgasthitau jīvitendriyasyādhipatyaṃ saṃkleśe vedanānām / [039|20-039|21] tathāhi sukhāyāṃ vedanāyāṃ rāgo 'nuśete duḥkhāyāṃ pratigho 'duḥkhāsukhāyāmavidyetyuktaṃ sūtre / [039|21-039|22] vyavadāne śraddhādīnāṃ pañcānām / [039|22] tathāhi taiḥ kleśāśca viṣkabhyante mārgaścāvāhyate / [039|23] ata ete 'pi pratyekamindriyamiṣṭāḥ /",
+   "T1560": "於同住雜染，清淨增上故， 應知命五受，信等立為根。",
+   "T1558": "於同住雜染，清淨增上故。 應知命五受，信等立為根，",
+   "T1559": "偈曰：住同分染污，於清淨增上，壽命及五受，信等立為根。釋曰：住聚同分中，壽命為增上，於染污五受為增上。云何如此？於樂受欲隨眠、於苦受瞋、於不樂不苦受無明。經中說如此。於清淨信等五為增上。云何如此？諸惑是彼所伏不能上起，聖道由彼引生，是故許立彼一一為根。"
+  },
+  "v004": {
+   "sa": "ājñāsyāmyākhyamājñākhyamājñātāvīndriyaṃ tathā / uttarottarasaṃprāptinirvāṇādyādhipatyataḥ // VAkK_2.4 //",
+   "sa-bhasya": "[040|01] ājñāsyā myākhyamājñākhyamājñātāvīndriyaṃ tathā / [040|02] uttarottarasaṃprāptinirvāṇādyādhipatyataḥ // VAkK_2.4 // [040|03] pratyekamindrimityupadarśanārthaṃ tathāśabdaḥ / [040|03-040|04] tatrājñāsyāmīndriyasyājñendriyasya prāptāvādhipatyam / [040|04] ājñendraiyasyājñātāvīndriyaprāptau ājñātāvīndriyasya parinirvāṇe / [040|05] nahyavimuktacittasyāsti parinirvāṇamiti / ādiśabdo 'nyaparyāyadyotanārthaḥ / [040|06] katamo 'nyaḥ pāryāyaḥ / darśnaheyakleśaparihāṇam pratyājñāsyāmīndriyasyādhipatyam / [040|07] bhāvanāheyakleāśaprahāṇaṃ pratyājñendriyasya / dṛṣṭadharmasukhavihāraṃ pratyājñātāvīndriyasya / [040|08] vimuktiprītisukhasaṃvedanāditi / [040|08-040|09] ādhipātyādindriyatve 'vidyādīnāmupasaṃkhyānaṃ karttavyam / [040|09-040|10] avidyādīnāmapi hi saṃskārādiṣvādhipatyamata eṣāmapīndriyatvamupasaṃkhyātavyam / [040|10] vāgādīnāṃ ca / vākyāṇipādapāyūpasthānāmapi cendriyatvamupasaṃkhyātavyam / [040|11] vacanādānaviharaṇotsargānandeṣvādhipatyāt / na khalūpasaṃkhyātavyam / yasmādiheṣṭam",
+   "T1560": "未當知已知，具知根亦爾， 於得後後道，涅槃等增上。",
+   "T1558": "未當知已知，具知根亦爾， 於得後後道，涅槃等增上。論曰：了自境者，謂六識身。眼等五根於能了別各別境識有增上用，第六意根於能了別一切境識有增上用，故眼等六各立為根。豈不色等於能了識亦有增上應立為根？境於識中無增上用。夫增上用謂勝自在，眼於所發了色識中最勝自在故名增上，於了眾色為通因故，識隨眼根有明昧故。色則不然，二相違故。乃至意根於法亦爾。從身復立女男根者，女男性中有增上故。女男根體不離身根，身一分中立此名故。如其次第，女男性中，此女男根有增上用，此處少異餘處身根，故從身根別立為二。女身形類音聲作業志樂差別，名為女性。男身形類音聲作業志樂不同，名為男性。二性差別由女男根，故說女男根於二性增上，於眾同分住中命根有增上用，於雜染中樂等五受有增上用。所以者何？由契經說：於樂受貪隨增，於苦受瞋隨增，於不苦不樂受無明隨增故。於清淨中信等五根有增上用。所以者何？由此勢力伏諸煩惱引聖道故。言應知者，勸許一一各能為根，三無漏根於得後後道涅槃等有增上用。言亦爾者，類顯一一各能為根，謂未知當知根於得已知根道有增上用，已知根於得具知根道有增上用，具知根於得涅槃有增上用，非心未解脫能般涅槃故。等言為顯復有異門。云何異門？謂見所斷煩惱滅中未知當知根有增上用，於修所斷煩惱滅中已知根有增上用，於現法樂住中具知根有增上用，由此能領受解脫喜樂故。若增上故立為根者，無明等性應立為根，無明等因於行等果各各別有增上用故。又語具等應立為根，語具手足大小便處，於語執行棄樂事中如其次第有增上故。",
+   "T1559": "偈曰：未知欲知、知、知已立根爾，至得後後道，涅槃等增上。釋曰：三中一一應立為根，為顯此義故言爾。未知欲知於至得知中增上，故立為根。知於至得知已中增上，知已於至得涅槃增上，故立為根。何以故？若人心未解脫，無得涅槃義。等言為顯別類義。何者別義？於見諦應除惑滅中，未知欲知根為增上。於修道應除惑滅中，知根為增上。於現世安樂住中，知已為增上，能證受解脫喜樂故。若由增上義立根，無明等惑亦應立為根。何以故？無明等諸分於行等中亦有增上，是故應立無明等為根。能言等亦爾，謂舌手脚穀道男女陰皆應立為根，於言說執捉離向棄捨戲樂中增上，是故應立為根。不可立為根。何以故？由根用如此。"
+  },
+  "v005": {
+   "sa": "cittāśrayastadvikalpaḥ sthitiḥ saṃkleśa eva ca / saṃbhāro vyavadānaṃ ca yāvatā tāvadindriyam // VAkK_2.5 //",
+   "sa-bhasya": "[040|12-040|13] cittāśrayastadvikalpaḥ sthitiḥ saṃkleśa eva ca / saṃbhāro vyavadānaṃ ca yāvatā tāvadindriyam // VAkK_2.5 // [040|14] tatra cittāśrayaḥ ṣaḍindriyāṇi / etacca ṣaḍāyatanaṃ maulaṃ saṭtvadravyam / [040|14-040|16] tasya strīpuruṣavikalpaḥ strīpuruṣendraiyābhyāṃ sthitirjīvitendriyeṇa saṃkleśo vedanā bhiḥ / [040|16] vyavadānasaṃbharaṇaṃ pañcabhirvyavadānaṃ tribhiḥ / [040|16-040|17] ato nāvidyādīnāmindriyatvamiṣṭam /",
+   "T1560": "心所依此別，此住此雜染， 此資糧此淨，由此量立根。",
+   "T1558": "如是等事不應立根，由所許根有如是相。頌曰：心所依此別，此住此雜染， 此資糧此淨，由此量立根。論曰：心所依者，眼等六根。此內六處是有情本，此相差別由女男根，復由命根此一期住。此成雜染由五受根，此淨資糧由信等五，此成清淨由後三根，由此立根事皆究竟。是故不應許無明等及語具等亦立為根，彼無此中增上用故。",
+   "T1559": "偈曰：心依此差別，其住及染污，資糧并清淨，如此量立根。釋曰：此中心依謂眼等六根，眾生類以六入為根本故。此六種依差別由女男二根，此一期住由命根，此染污由五受根，清淨資糧由信等五根。實清淨由三無流根，是故不許立無明等為根。"
+  },
+  "v006": {
+   "sa": "pravṛtterāśrayotpattisthitipratyupabhogataḥ / caturdaśa tathānyāni nivṛtterindriyāṇi vā // VAkK_2.6 //",
+   "sa-bhasya": "[040|18-040|19] pravṛtterāśrayotpattisthitipratyupabhogataḥ / caturdaśa tathā 'nyāni nivṛtterindriyāṇi vā // VAkK_2.6 // [040|20] matavikalpārtho vāśabdaḥ / apare punarāhuḥ / pravṛtteraśrayaḥ ṣaḍindriyāṇi / [040|20-040|21] utpattiḥ strīpuruṣendriye / [040|21] tata utpatteḥ / sthitirjīvitendriyam / tenāvasthānāt / [040|21-040|22] upabhogo vedanābhiḥ / [040|22] ata etāni caturdaśendriyāṇi / tenaiva prakāreṇa nivṛtteranyāni / [040|22-040|23] śraddhadīni hi nivṛtterāśrayāḥ / [040|23-040|24] ājñāsyāmīndriyaṃ prabhavaḥ sthitirājñendriyam upabhoga ājñātāvīndriyeṇetyata etāvantyevendriyāṇi / [040|24] ata eva caīṣāmeṣo 'nukramaḥ / [040|25] vācastu nendriyatvaṃ vacane śikṣāviśeṣāpekṣatvāt / [040|25-040|26] pāṇipādasya cādānaviharaṇādananyatvāt / [040|26-040|27] tadeva hi tadanyathā 'nyatra cotpannamādānaṃ viharaṇaṃ cocyate / [040|27] vināpi ca pāṇipādenādānaviharaṇāduragaprabhṛtīṇām / [040|27-040|28] pāyorapi nendriyatvamutsarge gurudravyasyākāśe sarvatra patanāt / [040|28] vāyunā ca tatpreraṇāt / [041|01] upasthasyāpi nendriyatvamānande strīpuruṣendriyakṛtaṃ hi tat saukhyamiti / [041|01-041|03] kaṇṭhadantākṣivartmaparvaṇāmapi cābhyavaharaṇacarvaṇonmeṣanimeṣākuñcanavikāśana kriyāsvindriyatvaṃ prasajyeta / [041|03-041|04] sarvasya vā kāraṇabhūtasya svasyāṃ kariyāyāmityayukataṃ vāgādīnāmindriyatvam // [041|05] tatra cakṣurādīnāṃ puruṣendriyaparyantānāṃ kṛto nirdeśaḥ / [041|05-041|06] jīvitendriyasya viprayuktatvādviprayukteṣveva karisyate nirdeśaḥ / [041|06] śraddhādīnāṃ caitteṣu kariṣyate / [041|06-041|07] sukhādīnāmājñāsyāmīndriyādīnāṃ ca karttavyaḥ / [041|07] so 'yaṃ kriyate /",
+   "T1560": "或流轉所依，及生住受用， 建立前十四，還滅後亦然。",
+   "T1558": "復有餘師別說根相。頌曰：或流轉所依，及生住受用， 建立前十四，還滅後亦然。論曰：或言顯此是餘師意，約流轉還滅立二十二根。流轉所依謂眼等六，生由女男從彼生故。住由命根，仗彼住故。受用由五受因，彼領納故。約此建立前十四根。還滅位中即約此四義類別故立後八根。還滅所依謂信等五，於三無漏由初故生，由次故住，由後受用，根量由此無減無增。即由此緣經立次第，不應語具於語為根，待學差別語方成故。手足不應於執行事各立為根，無異性故，謂即手足異處異相差別生時名執行故。又離手足亦有執行，如腹行類。是故手足不可於彼建立為根。出大便處於能棄事不應立根，重物於空遍墮落故，又由風力引令出故。出小便處於生樂事不應立根，即女男根起此樂故。又諸喉齒眼瞼支節應立為根，於能吞嚼開閉屈申有力用故。或一切因於自所作有力用故皆應立根，彼雖有用非增上故。不立根者，此語具等亦非增上不應立根。此中眼等乃至男根如前已說。命根體是不相應故，不相應中自當廣辯。信等體是心所法故，心所法中亦當廣辯。",
+   "T1559": "偈曰：復有生依生，生住生受用，立十四後八，約解脫立根。釋曰：復言為顯諸部別執。餘部說：生死依者，所謂六根。此依生由何法？由女男二根。此住由命根，隨命根相續故。受用由五受。為顯此義故，立十四根。依此四義，約解脫所餘亦立為根。信等五是解脫依，未知欲知是生，知是住，知已是受用，是故根量如此不增不減，是故次第亦爾不可顛倒。舌不可於言說中立為根。何以故？觀學勝能故。手脚不應於執捉及離向中立為根，無異故。此物由異相於餘處生，說名執捉及離向離手離脚。蛇等亦能執捉，能離向故。手脚於此二，不可立為根。穀道不可於棄捨立為根。重物在空中一切處落，又由風引故出。女男陰不可於戲樂中立為根，女男戲樂不由自陰成，互相發起故。喉齒眼臉節解於吞嚼開閉屈申事中增上故，應立為根。一切因緣於其自事增上，皆應立為根。若不許如此舌等根義，此亦不成。此中眼根為初，男根為後，前已廣釋。命根是不相應行，於不相應法中當廣釋。信等五根於心法中當廣釋。樂受等、未知欲知等，今當釋之。即如次第釋。"
+  },
+  "v007": {
+   "sa": "duḥkhendriyamaśātā yā kāyikī vedanā sukham / śātā dhyāne tṛtīye tu caitasī sā sukhendriyam // VAkK_2.7 //",
+   "sa-bhasya": "[041|08] duḥkhendriyamaśātā yā kāyikī vedanā [041|09] aśātetyupadhātikā duḥkhetyarthaḥ / [041|10] sukham / [041|11] śātā [041|12] sukhendriyaṃ kāyikī śāta vedanā / śātetyanugrāhikā sukhetyarthaḥ / [041|13] dhyāne tṛtīye tu caitasī sā sukhendriyam // VAkK_2.7 // [041|14] tṛtīye tu dhyāne saiva śātā vedanā caitasī sukhendriyam / [041|14-041|15] nahi tatra kāyikī vedanā 'sti / [041|15] pañcavijñānakāyābhāvāt /",
+   "T1560": "身不悅名苦，即此悅名樂， 及三定心悅，",
+   "T1558": "樂等五受、三無漏根，更無辯處故今應釋。頌曰：身不悅名苦，即此悅名樂， 及三定心悅，",
+   "T1559": "偈曰：苦根非所愛，身受。釋曰：非所愛謂能損惱由苦故。偈曰：樂根者，所愛。釋曰：樂根謂所愛身受，能為利益故。偈曰：第三定，心受名樂根。釋曰：於第三定是可愛受，依心地起名樂根。何以故？於第三定中無有身受，以無五識故。"
+  },
+  "v008": {
+   "sa": "anyatra sā saumanasyaṃ aśātā caitasī punaḥ / daurmanasyamupekṣā tu madhyā ubhayī avikalpanāt // VAkK_2.8 //",
+   "sa-bhasya": "[041|16] anyatra sā saumanasyaṃ [041|17-041|18] tṛtīyāddhyānādanyatra kāmadhātau prathame dvitīye ca dhyāne sā caiatasikī śātā vedanā saumanasyendriyam / [041|18-041|19] tṛtīye tu dhyāne prītivītarāgatvāt sukhendriyameva sā na saumanasyendriyam / [041|19] prītirhi saumanasyam / [041|20] aśātā caitasī punaḥ / [041|21] daurmanasyamupekṣā tu madhyā [041|22] naivaśātānāśātā aduḥkhāsukhā vedanā madhyetyucyate / sopekṣendriyam / [041|22-041|23] kiṃ kāyikī caitasikītyāha / [041|24] ubhayī [041|25] kiṃ punaḥ kāraṇamiyamabhisamasyai kamindriyaṃ kriyate / [042|01] avikalpanāt // VAkK_2.8 // [042|02] caitasikaṃ hi sukhaduḥkhaṃ prāyeṇa vikalpanādutpadyate na tu kāyikam / [042|02-041|03] viṣayavaśādarhatāmapyutpatteḥ / [042|03] atastayorindriyatvena bhedaḥ / [042|03-042|04] upekṣā tu svarasenāvikalpayata evotpadyate kāyikī caitasikī ce tyekamindriyam kriyate / [042|04-042|05] anyathā ca kāyikam sukhamanugṛhṇātyanyathā caitasikam / [042|05] evam duḥkhamanyathā kāyikamupahantyanyathā caitasikam / [042|05-042|06] upekṣāyāṃ tveṣa vikalpo nāstyata upekṣaṇaṃ pratyavikalpanādabhedaḥ /",
+   "T1560": "餘處此名喜。 心不悅名憂，中捨二無別，",
+   "T1558": "餘處此名喜， 心不悅名憂，中捨二無別，",
+   "T1559": "偈曰：此樂於餘處，喜根。釋曰：除第三定於餘處，謂欲界及初定二定中，若在心地，立名喜根。於第三定由離欲喜故，但成樂根，不成喜根。何以故？喜麁濁故，但得喜根名。偈曰：心地苦憂根。釋曰：非所愛受，若在心地名憂根。偈曰：捨根者。中。釋曰：非所愛、非非所愛，謂非樂非苦受，故名中立為捨根。此為是身受、為是心受？偈曰：二。釋曰：或身受或心受。何因為合此二受立為一根？偈曰：無別故。釋曰：心地苦樂多從分別生，身受則不爾，但隨塵生，於阿羅漢生亦如此，是故此二為根有差別。捨受者，若人不分別，由自性生，或在身或在心地，故合二為一根。身樂利益有異，心樂亦爾，苦亦如此。身苦損害有異，心苦亦爾。此分別於捨受中無對捨，無此分別故，是故不分為二根。"
+  },
+  "v009": {
+   "sa": "dṛgbhāvanāśaikṣapathe nava trīṇi amalaṃ trayam / rūpīṇi jīvitaṃ duḥkhe sāsravāṇi dvidhā nava // VAkK_2.9 //",
+   "sa-bhasya": "[042|07] dṛgbhāvanā 'saikṣapathe nava trīṇi [042|08] manaḥ sukhasaumanasyopekṣāḥ sraddhādīni ca pañca / [042|08-042|09] tāni navendriyāṇi triṣu mārgeṣu trīṇīndriyāṇyucyante / [042|09-042|10] darśanamārge anājñātamājñāsyāmīndriyaṃ bhāvanāmārge ājñendriyam aśaikṣamārge ājñātāvīndriyamiti / [042|10] kiṃ kāraṇam / [042|10-042|11] darśanamārge hyanājñātamājñātuṃ pravṛttaḥ / [042|11-042|12] bhāvanāmārge nāstyapūrvamājñeyaṃ tadeva tvājānāti śeṣānuśayaprahāṇārtham / [042|12] aśaikṣamārge tvājñātmityavagama ājñātāvaḥ / [042|12-042|13] so 'syāstīti ājñātāvī / [042|13] ājñātamavituṃ śīlamasyeti vā / kṣayānutpādijñānalābhāt / [042|14] \"duḥkhaṃ me parijñātaṃ na punaḥ parijñātavyamiti\" tathābhūtasyenriyamājñātāvīnriyam / [042|15-042|16] svabhāvanirdeśāṃ kṛtvā prakārabhedo vaktavya kati sāsravāṇi katyanāsravāṇi inriyāṇityevamādi / [042|16-042|17] tatra tāvadyadetadanantaroktamājñāsyāmīnriyādikametat / [042|18] amalaṃ trayam / [042|19] anāsravamityarthaḥ / malānāmāsravaparyāyatvāt / [042|20] rūpīṇi jīvitaṃ duḥkhe sāsravāṇi [042|21] rūpīṇi saptendriyāṇi jīvitendriyaṃ dukhaḥdaurmanasyendriye caikāntasāsravāṇi / [042|22] rūpīṇi punaḥ sapta cakṣuḥ śrotraghrāṇajihvākāyastripuruṣendriyāṇi rūpaskandhasaṃgrahāt / [042|23] dvidhā nava // VAkK_2.9 // [042|24-042|25] manaḥsukhasaumanasyopekṣāḥ śraddhādīni ca pañca etāni navendriyāṇi sāsravāṇyanāsravāṇyapi / [042|25] anāsravāṇyeva śraddhādīnītyeke / [042|25-042|27] uktaṃ hi bhagavatā \"yasyemāni pañcendriyāṇi sarveṇa srvaṃ na santi tamahaṃ bāhyaṃ pṛthagjanapakṣāvasthitaṃ vadāmī\"ti / [042|27] nedaṃ jñāpakamanāsravāṇyadhikṛtya vacanāt / [042|27-042|28] tathā hyāryapudgalavyavasthānaṃ kṛtvā yasyemānītyāha / [042|28] pṛthagjano vā dvividhaḥ / [043|01] ābhyantarakaścāsamucchinna kuśalamūlo bāhyakaśca samucchinnakuśalamūlaḥ / [043|02] tamadhikāṛtyāha \"bāhyaṃ pṛthagjanapakṣāvasthitaṃ vadāmī\"ti / [043|02-032|04] uktaṃ ca sūtre \"santi ca sattvā loke jātā loke vṛddhāstīkṣṇendriyā api madhyendriyā api mṛdvindriyā apī\" tyapravarttita eva dharmacakre / [043|04] tasmātsantyeva sāsravāṇi śraddhādīni / [043|05-043|07] punaścoktaṃ \"yāvacchāhameṣāṃ pañcānāmindriyāṇāṃ samudayaṃ cāstagamaṃ ca svādaṃ cādīnavaṃ ca niḥsaraṇaṃ ca yathābhūtaṃ nādhyajñāsiṣaṃ na tāvadahamasmātsadevakāllokādi\"ti vistaraḥ / [043|07] na cānāsravāṇāṃ dharmāṇāmeṣa parīkṣāprakāraḥ //",
+   "T1560": "見修無學道，依九立三根。 唯無漏後三，有色命憂苦， 當知唯有漏，通二餘九根。",
+   "T1558": "見修無學道，依九立三根。論曰：身謂身受，依身起故，即五識相應受。言不悅者是損惱義，於身受內能損惱者名為苦根。所言悅者是攝益義，即身受內能攝益者名為樂根。及第三定心相應受能攝益者亦名樂根，第三定中無有身受，五識無故心悅名樂。即此心悅除第三定，於下三地名為喜根。第三靜慮心悅安靜，離喜貪故唯名樂根。下三地中心悅麁動有喜貪故，唯名喜根。意識相應能損惱受，是心不悅，名曰憂根。中謂非悅非不悅，即是不苦不樂受，此處中受名為捨根。如是捨根為是身受、為是心受？應言通二。何因此二總立一根？此受在身心，同無分別故。在心苦樂多分別生，在身不然，隨境力故。阿羅漢等亦如是生，故此立根，身心各別，捨無分別任運而生，是故立根，身心合一。又苦樂受在身在心為損為益，其相各異，故別立根。捨在身心同無分別，非損非益其相無異，故總立根。意樂喜捨信等五根，如是九根在於三道，如次建立三無漏根。謂在見道依意等九立未知當知根，若在修道即依此九立已知根，在無學道亦依此九立具知根。如是三名因何而立？謂在見道有未曾知當知行轉故，說彼名未知當知。若在修道無未曾知，但為斷除餘隨眠故，即於彼境復數了知，是故說彼名為已知。在無學道知己已知故名為知，有此知者名為具知。或習此知已成性者名為具知，謂得盡智、無生智故如實自知：我遍知苦，不復遍知。乃至廣說。彼所有根名為未知當知根等，如是已釋根體不同，當辯諸門義類差別。此二十二根中幾有漏、幾無漏？頌曰：唯無漏後三，有色命憂苦， 當知唯有漏，通二餘九根。論曰：次前所說最後三根，體唯無漏是無垢義。垢之與漏名異體同。七有色根及命憂苦一向有漏。七有色者，眼等五根及女男根，色蘊攝故。意樂喜捨信等五根，此九皆通有漏無漏。有餘師說：信等五根亦唯無漏，故世尊說：若全無此信等五根，我說彼住外異生品。此非誠證，依無漏根說此言故。云何知然？先依無漏信等五根建立諸聖位差別已說此言故。或諸異生略有二種：一內、二外。內謂不斷善根，外謂善根已斷。依外異生作如是說：若全無此信等五根，我說彼住外異生品。又契經說：有諸有情處在世間，或生或長，有上中下諸根差別。是佛猶未轉法輪時，故知信等亦通有漏。又世尊說：我若於此信等五根，未如實知是集沒味過患出離，未能超此天人世間及魔梵等，乃至未能證得無上正等菩提。乃至廣說。非無漏法可作如是品類觀察故，信等五根通有漏無漏。如是已說有漏無漏。",
+   "T1559": "偈曰：見修無學道，九三。釋曰：意樂喜捨、信等五，是九根於三道中說名三根，於見道中名未知欲知根，於修道中名知根，於無學道中名知已根。云何如此？於見道中為知所未曾知實境是故修行。於修道中無境先未曾知即方應知，是前所知今重知之，為除所餘煩惱故。於無學道中，已知如此知。復次能護已知故，說已知護。何以故？由已得盡智、無生智故。苦我已離，不應更離。若人在此位所得根，或名已知知根、或名已知護根。釋體性已，根類差別今當說。幾根有流、幾根無流？如是等，此中是根無間已說，謂未知欲知等是根。偈曰：無垢三。釋曰：無流是無垢義，垢者是流別名故。偈曰：有色命二苦，有流。釋曰：有色七根、命根、苦根憂根，一向有流。何以故？眼等有色七根，色陰攝故，故是有流。偈曰：九二種。釋曰：意樂喜捨根及信等五根，此九根或有流或無流。有餘師說：信等一向無流。何以故？佛世尊說：若人一切種，無有信等五根，我說此人在正法外，住凡夫眾類中。此經不足為證依無流說。此經云何知佛世尊安立聖人已方說此經：若人一切種，無信等五根，廣說如經。凡夫有二種：一在正法內不斷善根、二在正法外斷善根。佛依此人故說此言。謂我說此人在正法外住凡夫眾類中。於經中佛說：有諸眾生，生於世間、長於世間，若利根、中根、軟根，未轉無上法輪時。是故知有有流信等五根。佛復於經中說：乃至我未如實知信等五根，集生及滅滋味過失及出離，我未能從此世間有天有梵，廣說如經。若諸法無流，無如此簡擇品類。幾根是果報？幾根非果報？"
+  },
+  "v010": {
+   "sa": "vipāko jīvitaṃ dvedhā dvādaśa antyāṣṭakādṛte / daurmanasyācca tattvekaṃ savipākaṃ daśa dvidhā // VAkK_2.10 //",
+   "sa-bhasya": "[043|08] katīndriyāṇi vipākaḥ kati na vipākaḥ / ekāntena tāvat [043|09] vipāko jīvitaṃ [043|10] atha yadarhan bhikṣurāyuḥsaṃskārān sthāpayati tajjīvitendriyaṃ kasya vipākaḥ / [043|11] śāstra ukthaṃ \"kathamāyuḥsaṃskārān sthāpayati / [043|11-043|13] arhan bhikṣuḥ ṛddhimāṃścetovaśitvaṃ prāptaḥ saṃghāya va pudgalāya vā pātraḥ vā cīvaraṃ vā anyatamānyatamaṃ vā śrāmaṇakaṃ jīvitapariṣkāraṃ vā dattvā tat praṇidhāya prantakoṭikam caturthaṃ dhyānaṃ samāpadyate / [043|14-043|15] sa tasmāt vyutthāya cittamutpādayati vācaṃ ca bhāṣate yanme bhogavipākaṃ tadāyurvipākaṃ bhavatviti / [043|15] tasya yat bhogavipākaṃ tadāyurvipākaṃ bhavati / [043|15-043|16 yeṣāṃ punarayamabhiprāyo vipākoccheṣaṃ vipacyata iti / [043|16-043|17] ta āhuḥ pūrvajātikṛtasya karmaṇo vipākoccheṣaṃ / [043|17] sa bhāvanābalenākṛṣya pratisaṃvedayata\" iti / [043|17-043|18] kathamāyuḥsaṃskārā nutsṛjati / [043|18] tathaīva dānaṃ dattvā praṇidhāya prantakoṭikaṃ caturthaṃ dhyānaṃ samāpadyate/ [043|19] yanme āyurvipākaṃ tat bhogavipākaṃ bhavatviti tasya tathā bhavati / [043|20] bhadantaghoṣakastvāha / [043|20-043|21] tasminneva āśraye rūpāvacarāṇi mahābhūtāni dhyānabalena saṃmudhakarotyāyuṣo 'nukūlāni vaihodhikāni ca / [043|21-043|22] evamāyuḥsaṃskārān sthāpayatyevamutsṛjatīti / [043|22] evaṃ tu bhavitavyam / [043|22-043|24] samādhiprabhāva eva sa teṣāṃ tadṛśo yena pūrvakarmajaṃ ca sthitikālāvedhamindriyamahābhūtānāṃ vyāvrttayantyapūrvaṃ ca samādhijamāvedhamākṣipanti / [043|24] tasmānna tajjīvitendriyaṃ vipākaṃ tato 'nyattu vipākaḥ / [043|25] praśnāt praśnāntaramupajāyate / kimarthamāyuḥsaṃskārānadhitiṣṭhanti / [043|25-043|26] parahitārthaṃ śāsansthityarthaṃ vā / [043|26] te hyātmanaḥ kṣīṇamāyuḥ paśyanti / [043|27] na ca tatrānyaṃ śaktaṃ paśyanti / atha kimarthamutsṛjanti / [044|01] alpaṃ ca parahitaṃ jīvite paśyanti rogābhibhūtaṃ cātmabhāvam / yathoktaṃ [044|02-044|03] \"sucīrṇe brahmacarye 'smin mārge caiva subhāvite / tuṣṭa āyuḥkṣayāt bhavati rogasyāpagame yathā //\" [044|04] iti / athaitadāyuḥ saṃskārāṇāṃ sthāpanārthamutsarjanaṃ vā kva kasya vā veditavyam / [044|05] manuṣyeṣvevatriṣu dvīpeṣu strīpuruṣayorasamayavimuktasyārhataḥ prāntakoṭikadhyānalābhinaḥ / [044|06] tasya hi samādhau vaśitvam / kleśaiścānupastabdhā santatiḥ / [044|06-044|07] sūtra uktam \"bhagavān jīvitasaṃskārānadhiṣṭhāyāyuḥsaṃskārānustsṛṣṭavān\" / [044|07-044|08] teṣāṃ ko viśeṣaḥ / [044|08] na kaścidityeke / tathā hyuktam \"jīvitendriyaṃ katamat / [044|08-044|09] traidhātukamāyuri\"ti / [044|09] pūrvakarmaphalamāyuḥsaṃskārāḥ pratyutpannakarmaphalaṃ jīvitasaṃskārā ityapare / [044|10] yairvā nikāyasabhāgasthitista āyuḥsaṃskārāḥ / [044|10-044|11] yaistu kālāntaraṃ jīvati te jīvitasaṃskārā iti / [044|11-044|12] bahuvacanaṃ bahūnāmāyurjīvitasaṃskārakṣaṇānāmutsarjanā dhiṣṭhānāt / [044|12] nahyekasya kṣaṇasyotsarjanamadhiṣṭhanaṃ cāsti / [044|12-044|13] na ca kālāntarasthāvaramekamāyurdravyamiti dyotanārthamityeke / [044|13-044|14] bahuśveva saṃskāreṣvāyurākhyā nāstyekamāyurdravyam / [044|14] anyathā naiva saṃskāragrahaṇamakariṣyadityapare / [044|14-044|15] kimarthaṃ punarbhagavatā āyuhsaṃskārā utsṛṣṭāścādhiṣṭitāśca / [044|15-044|16] maraṇavaśitvajñāpanārthamutsṛṣṭājīvitavaśitvajñāpanārthamadhiṣṭitāḥ / [044|16] traimāsyameva nodhrvam vineyakāryābhāvāt / [044|17-044|18] yaccāpi tat pratijñātam \"evaṃbhāvitairahaṃ caturbhirṛddhi pādairākāṅkṣankalpamapi tiṣṭheyaṃ kalpāvaśeṣamapī\"ti / [044|18] tasyāpi saṃpādanārtham / [044|18-044|19] skandhamaraṇamārayornirjayārthamiti vaibhaṣikāḥ / [044|19] bodhimūle kleśadevaputramārau nirjitāviti / [044|19-044|20] niṣṭhitamānuṣaṅgikam // [044|21] prakṛtamevārabhyate / [044|22] dvedhā dvādaśa [044|23] katamāni dvādaśa / [044|24] antyāṣṭakādṛte / [044|25] daurmanasyācca [044|26] antyamaṣṭakaṃ śraddhādīni daurmanasyaṃ ca varjayitvā / [044|27-045|01] jīvitendriyādanyāni dvādaśa dvividhāni vipākaścāvipākaśca / [045|01] tatra cakṣurādīni saptaupacayikāni avipākaḥ / śeṣāṇi vipākaḥ / [045|02] manoduḥkhasukhasaumanasyopekṣendriyāṇi kuśalakliṣṭānya vipākaḥ / [045|02-045|03] airyāpathikaśāilpasthānikanairmāṇikāni ca yathāyogam / [045|03] śeṣāṇi vipākaḥ / [045|03-045|04] jīvitendriyaṃ cakṣurādīni dvādaśa hitvā śeṣāṇyavipāka iti siddham / [045|04-045|05] yadi dauarmanasyendriyaṃ na vipāka iti sūtraṃ kathaṃ nīyate \"trīṇi kāryāṇi / [045|05-045|06] saumanasyavedanīyaṃ karma daurmanasyavedanīyaṃ karma upekṣā vedanīyaṃ karme\"ti saṃprayogavedanīyatāmadhikṛtyoktam / [045|06-045|07] daurmasyena saṃprayuktaṃ karma daurmanasyavedanīyam / [045|07] yathā sukhasaṃparayuktaḥ sparśaḥ sukhavedanīyaḥ / [045|07-045|08] saumanasyopekṣāvedanīye api tarhi karmaṇī evaṃ bhaviṣyataḥ / [045|08] yathecchasi tathā 'stu / [045|08-045|09] saṃprayoge 'pi na doṣaḥ vipāke 'pi na doṣaḥ / [045|09] agatyā hyetadevaṃ gamyeta / [045|09-045|10] kā punratra yuktirdaurmanasyaṃ na vipāka iti / [045|10] daurmanasyaṃ hi parikalpaviśeṣairutpādyate ca vyupaśāmyate ca / [045|10-045|11] nacaivam vipākaḥ / [045|11] saumanasyamapyevaṃ na syādvipākaḥ / [045|11-045|12] yadi tarhi daumanasyaṃ vipākaḥ syādānantaryakāriṇāṃ tannimittaṃ daurmanasyotpādāttatkarma vipakvaṃ syāt / [045|13] saumanasyamapyevam / [045|13-045|14] yadi saumanasyaṃ vipākaḥ syāt puṇyakāriṇāṃ tannimittaṃ saumanasyotpādāttatkarma vipakvaṃ syāt / [045|14] vītarāgāṇāṃ tarhi daurmanasyāsaṃbhavāt / [045|14-045|15] na caivaṃ vipākaḥ / [045|15] saumanasyamapyeṣāmavyākṛtaṃ kodṛśaṃ vipākaḥ syāt / yādṛśaṃ tādṛśamastu / [045|16] sati tu saṃbhave saumanasyasyāsti vipākāvakāśī na dauarmanasyasya / [045|16-045|17] sarvathā 'samudācārāditi nāstyevaṃ daurmanasyaṃ vipāka iti vaibhāṣikāḥ / [045|17-045|18] tatra jīvitendriyāṣṭamāni sugatau kuśalasya vipāko durgatāvakuśalasya / [045|18] manaindriyamubhayorubhayasya / [045|18-045|19] sukhasaumanasyopekṣendriyāṇi kuśalasya / [045|19] duḥkhendriyamakuśalasya / [045|19-045|20] sugatābubhayavyañjanasyākuśalenatatsthānapratilambhaḥ / [045|20] natvindriyasya kuśalākṣepāt / gatametad / [045|21] idaṃ nu vaktavyam / katīndriyāṇi savipākāni katyavipākāni / [045|21-045|22] yadetat daurmanasyamanantaroktaṃ [045|23] tattvekaṃ savipākaṃ / [045|24] tadekaṃ savipākameva / tuśabda evakārārtho bhinnakramaśca veditavyaḥ / [045|24-045|25] nahi tadavyākṛtamasti nāpyanāsravamasamāhitatvāt / [045|25] ato nāstyavipākaṃ daurmanasyam / [045|26] daśa dvidhā // VAkK_2.10 // [045|27] savipākānyavipākāni ca / katamāni daśa /",
+   "T1560": "命唯是異熟，憂及後八非， 色意餘四受，一一皆通二。 憂定有異熟，前八後三無，",
+   "T1558": "二十二根中幾是異熟、幾非異熟？頌曰：命唯是異熟，憂及後八非， 色意餘四受，一一皆通二。論曰：唯一命根定是異熟。若如是者，諸阿羅漢留多壽行此即命根，如是命根誰之異熟？如本論說：云何苾芻留多壽行？謂阿羅漢成就神通得心自在。若於僧眾、若於別人以諸命緣衣鉢等物隨分布施，施已發願，即入第四邊際靜慮，從定起已心念口言：諸我能感富異熟業，願皆轉招壽異熟果。時彼能感富異熟業，則皆轉招壽異熟果。復有欲令引取宿業殘異熟果。彼說前生曾所受業有殘異熟，由今所修邊際定力引取受用。云何苾芻捨多壽行？謂阿羅漢成就神通得心自在，於僧眾等如前布施，施已發願，即入第四邊際靜慮，從定起已心念口言：諸我能感壽異熟業，願皆轉招富異熟果。時彼能感壽異熟業，則皆轉招富異熟果。尊者妙音作如是說：彼起第四邊際定力，引色界大種令身中現前，而彼大種或順壽行或違壽行，由此因緣或留壽行或捨壽行。應如是說，彼阿羅漢由此自在三摩地力，轉去曾得宿業所生諸根大種住時勢分，引取未曾定力所起諸根大種住時勢分，故此命根非是異熟，所餘一切皆是異熟。因論生論，彼阿羅漢有何因緣留多壽行？謂為利益安樂他故，或為聖教久住世故，觀知自身壽行將盡，觀他無此二種堪能。復何因緣捨多壽行？彼阿羅漢自觀住世於他利益安樂事少，或為病等苦逼自身。如有頌言：梵行妙成立，聖道已善修， 壽盡時歡喜，猶如捨眾病。此中應知，依何處所誰能如是留捨壽行？謂三洲人女男相續，不時解脫得邊際定諸阿羅漢，由彼身中有自在定無煩惱故。經說：世尊留多命行、捨多壽行。命壽何別？有言：無別。如本論言：云何命根？謂三界壽。有餘師說：先世業果名為壽行，現在業果名為命行。有說：由此眾同分住名為壽行，由此暫住名為命行。多言為顯留捨多念，命行壽行非一剎那，命行壽行有留捨故。有說：此言為遮有一命壽實體經多時住。有說：此言為顯無一實命壽體，但於多行假立如是命壽二名。若謂不然，不應言行。世尊何故捨多壽行留多命行？為顯於死得自在故捨多壽行，為顯於活得自在故留多命行。唯留三月不增減者，越此更無所化事故，減此利生不究竟故。又為成立先自稱言我：善修行四神足故，欲住一劫或一劫餘，如心所期則便能住。毘婆沙師作如是說：顯今能伏蘊死二魔。世尊先於菩提樹下，已伏天魔煩惱魔故。傍論已竟，正論應辯。憂根及後信等八根皆非異熟，是有記故，餘皆通二。義准已成。謂七色意根除憂餘四受，十二一一皆通二類。七有色根若所長養則非異熟，餘皆異熟。意及四受若善染污。若威儀路及工巧處并能變化，隨其所應亦非異熟，餘皆異熟。若說憂根非異熟者，此經所說當云何通？如契經言。：有三種業：順喜受業、順憂受業、順捨受業。依受相應言順無過，謂業與憂相應故名順憂受業，如觸與樂相應說名順樂受觸。若爾，順喜順捨受業亦應如是，一經說故。隨汝所欲，於我無違，異熟相應理皆無失，無逃難處。作此通經理實何因？憂非異熟，以憂分別差別所生，止息亦然；異熟不爾。若爾，喜根應非異熟，亦由分別生及止息故。若許憂根是異熟者，造無間業已因即生憂，此業爾時應名果已熟。亦應如是徵難喜根，若許喜根是異熟者，造勝福業已因即生喜，此業爾時應名果已熟。毘婆沙師咸作是說：已離欲者無憂根故，異熟不然，故非異熟。若爾，應說離欲有情異熟喜根。何相知有？隨彼有相此相亦然，謂善喜根此位容有，無記異熟應類非無。於此位中憂一切種無容有故定非異熟，眼等八根若在善趣是善異熟，若在惡趣是惡異熟，意根隨在善趣惡趣是俱異熟，喜樂捨根隨在何趣是善異熟，苦根隨在善趣惡趣是惡異熟。於善趣中有二形者唯根處所，不善業招善趣色根，善業引故。如是已說是異熟等。二十二根中幾有異熟、幾無異熟？頌曰：憂定有異熟，前八後三無，",
+   "T1559": "一向是果報者，偈曰：命果報。釋曰：若爾，阿羅漢比丘引命行，令住此命行，亦是命根。是何法果報？於阿毘達磨藏中說：云何引命行？令住阿羅漢比丘，有聖如意成通慧，至得心自在位，或於大眾、或於一人，捨施若鉢若袈裟，或隨一沙門命資糧。因此發願，入第四定遠際三摩提觀。從此定起，作如是心、說如是言：凡是我業應熟感富樂，願此業熟生我壽命。是時此阿羅漢業應感富樂，轉生壽命。復有餘師執，殘業果報轉熟。彼說宿生所作業，有殘果報，由修習力引取受用。云何棄捨命行？如此捨施發願，入第四定遠際三摩提觀。從此定起，作如是心、說如是言：凡是我業應熟感壽命，願此業熟生我富樂，如彼欲樂。如此轉熟。大德瞿沙說：於自依止中，由定力引色界四大令現前，能隨順壽命，或相違四大。由如此方便，引命行令住及以棄捨，應如此成。諸阿羅漢有如此定自在力，由此力宿業所生諸根四大，引住時量皆悉迴轉。先未曾有三摩提引住時量，今則引接，是故如此壽命非果報。異此名果報。從問更起別問：阿羅漢人何因發願引命行令住？或為利益他？或為令正法久住？是諸阿羅漢已見自身壽命將盡，於此二中不見他有此能。復以何因棄捨壽命？於有命時，見利益他事少，自身疾苦所逼，如偈言：「修梵行已竟，聖道已善修， 由捨命歡喜，如人病得差。」若爾，此引壽行命住及棄捨，應知何處何人能為此事？於人道中於三洲，於男女非時解脫阿羅漢俱解脫人得遠際三摩提。何以故？此人於諸定有自在，其相續非惑所熏。經中說：世尊願留諸命行、捨諸壽行。命壽二行差別云何？餘師說：無有差別。云何知？經中說：何者為命根？謂三界壽。復有餘師說：宿業果報名壽行，現世業果名命行。復有師說：若由此得住聚同分中名壽行，若由此得暫時住名命行。諸言者，由願留多壽命行生起故。何以故？於一剎那生起無願留能故。復有餘師說：無有一物名壽命得暫時住，為顯此義故有諸言。復有餘師說：於多行中假立壽命名，無別一物名壽命。若不爾，佛不應說行。問：云何世尊捨棄壽行願留命行？為顯於死有自在故棄捨，為顯於壽命有自在故願留。云何但三月不過？受化弟子利益事畢竟故。復次世尊建立義言，若比丘修習數行四如意足，若欲住可得一劫、或過一劫。為顯所建立義故，留捨命壽。毘婆沙師說：於五陰及死，為顯自勝能故，先於菩提樹下已破煩惱魔及天魔得勝能。隨應論且止，所依本義今應說。偈曰：十二二種。釋曰：何者為十二？偈曰：除後八，及憂根。釋曰：又除命根，所餘十二有二種，有是果報、有非果報。此中眼等七根，若是增長果，非果報，所餘皆是果報。意苦樂喜捨根，若善若染污，非果報，若威儀、工巧、變化相應，亦非果報，所餘是果報。除命根及眼等十二根，所餘非果報，此義至得成。若憂根非果報，此經云何將？經言：有業於喜受好，有業於憂受好，有業於捨受好。依相應好，故說此言。若業與憂受相應，名於憂受好。譬如觸與樂受相應，說觸於樂受好。若爾，業於喜受捨受好，亦應成如此。如汝所欲，我亦許之，於相應無失，於果報亦無失。若爾，由無能故皆許如此，有何別道理能立憂非果報？憂受由分別差別所生，及分別所息，果報則不然。若爾，於喜受亦應然，不應立喜為果報。若憂是果報，作無間業人因無間業生憂受故，此業應熟。喜亦應爾，若喜是果報，作福業人因福業生喜受故，是福業應熟。是義不然。復有別證，諸離欲人無憂受故，果報則不爾。諸離欲人亦無無記喜根。若爾，果報有何相？隨其相，若有宿業應位。雖復如此，喜根可有殘果報，憂根則無，餘一切種不行起故。故毘婆沙師說：憂非果報。以命根為第八，於善道中善業果報，於惡道中惡業果報，意根於二道二業果報。樂喜捨三根是善業果報，苦根是惡業果報。於善道二根人由惡業得。如此位此論已說，所餘應說。幾根有果報？幾根無果報？此中憂根，於前無間已說。偈曰：一定有報。釋曰：此一憂根有果報。定言為決。憂根異於餘法，此根無無記亦無無流，在散動地故，是故憂根無無果報。偈曰：十，二種。釋曰：二種，謂有報、無報。"
+  },
+  "v011": {
+   "sa": "mano 'nyavittiśraddhādīni aṣṭakaṃ kuśalaṃ dvidhā / daurmanasyaṃ mano 'nyā ca vittistredhā anyadekadhā // VAkK_2.11 //",
+   "sa-bhasya": "[046|01] mano 'nyavittiśraddhādīni [046|02] anyavittigrahaṇāt daurmanasyādanyat veditaṃ gṛhyate / [046|02-046|03] śraddhādīni śraddhāvīryasmṛtisamāchiprajñāḥ / [046|03-046|04] tatra manaḥsukhasaumanasyopekṣā akuāśalāḥ kuśalāḥ sāsravāśca savipākāḥ / [046|04] anāsravā avyākṛtāścāvipākāḥ / [046|04-046|05] duḥkhendriyaṃ kuśalākuāśalaṃ savipākamavyākṛtamavipākam / [046|05] śraddhādīni sasravāṇi savipākānyanāsravāṇyavipākāni / [046|06] anyadavipākamiti siddham / [046|07] kati kuśalāni katyakuśalāni katyavyākṛtāni / ekāntena tāvat / [046|08] aṣṭakaṃ kuśalaṃ [046|09] pañcaśraddhādīni trīṇi cājñāsyāmīndriyādīni / [046|10] dvidhā / [046|11] daurmanasyaṃ / [046|12] kuśalaṃ cākuśalaṃ ca / [046|13] mano 'nyā ca vittistredhā [046|14] kuśalākuśalāvyākṛtāni / [046|15] anyadekadhā // VAkK_2.11 // [046|16] kiñcidanyat / jīvitāṣṭamaṃ cakṣurādi / etadavyākṛtameva //",
+   "T1560": "意餘受信等，一一皆通二。 唯善後八根，憂通善不善， 意餘受三種，前八唯無記。",
+   "T1558": "意餘受信等，一一皆通二。論曰：如前所諍，憂根當知定有異熟，依唯越義頌說定聲，謂顯憂根唯有異熟兼具二義故越次說。具二義者，憂非無記，強思起故；亦非無漏，唯散地故。由此越次先說，憂根定有異熟。眼等前八及最後三定無異熟，八無記故，三無漏故，餘皆通二。義准已成，謂意根餘四受信等言等取精進等四根，此十一一皆通二類。意樂喜捨若不善善有漏有異熟，若無記無漏無異熟。苦根若善不善有異熟，若無記無異熟。信等五根若有漏有異熟，若無漏無異熟。如是已說有異熟等。二十二根中幾善、幾不善、幾無記？頌曰：唯善後八根，憂通善不善， 意餘受三種，前八唯無記。論曰：信等八根一向是善，數次雖居後，乘前故先說。憂根唯通善不善性，意及餘受一一通三，眼等八根唯無記性。如是已說善不善等。",
+   "T1559": "何者為十？偈曰：意餘受信等。釋曰：餘受者，應知異憂根、信精進念定慧根。此中意樂喜捨，若是惡若善有流則有果報，苦根若善若惡有果報，若無記無果報。信等五根若有流有果報，無流無果報。所餘無果報，義至自成。幾根是善？幾根是惡？幾根無記？此中若一向善。偈曰：八根善。釋曰：信等五、未知欲知等三。偈曰：二種憂。釋曰：或善或惡。偈曰：意及餘受，三種。釋曰：此五根有三種，善、惡、無記。偈曰：餘一種。釋曰：何者為餘？眼根為第一，命根為第八，此八一向無記。何根何界相應？於二十二根中。"
+  },
+  "v012": {
+   "sa": "kāmāptamamalaṃ hitvā rūpāptaṃ strīpumindriye / duḥkhe ca hitvā ārūpyāptaṃ sukhe cāpohya rūpi ca // VAkK_2.12 //",
+   "sa-bhasya": "[046|17] katamadindriyaṃ katamadhātvāptameṣāmindriyāṇām / [046|18] kāmāptamamalaṃ hitvā / [046|19] kāmapratisaṃyuktaṃ tāvadindriyaṃ veditavyam / [046|19-046|20] ekāntānāsravamājñāsyāmīndriyāditrayaṃ hitvā / [046|20] taddhyapratisaṃyuktameva / [046|21] rūpāptaṃ strīpumindriye / [046|22] duḥkhe ca hitvā [046|23] amalaṃ ceti varttate / duḥkhe iti duḥkhadaurmanasye / [046|23-046|24] tatra maithunadharmavairāgyādaśobhākaratvācca rūpadhātau strīpuruṣendriye na staḥ / [046|24] kathamidānīṃ puruṣāsta ucyante / [046|25] kvocyante / sūtre / [046|25-046|26] \"asthānamanavakāśo yat strī brahmatvaṃ kārayiṣyati / [046|26] nedaṃ sthānaṃ vidyate / sthānametat vidyate yat puruṣa\" iti / [046|26-046|27] anyaḥ puruṣabhāvo yaḥ kāmachātau puruṣāṇāṃ bhavati / [046|27-046|28] duḥkhendriyaṃ nāstyāśrayasyācchatvādakuśalā bhāvāccha / [046|28] daurmanasyendriyaṃ nāsti śamathasnigdhasantānatvādāghātavastvabhāvācca / [047|01-047|01] ārūpyāptaṃ sukhe cāpohya rūpi ca // VAkK_2.12 // [047|02] strīpuruṣendriye duḥkhe cāmalaṃ hitveti varttate / kimavaśāiṣyate / [047|02-047|03] manojīvitopekṣendriyāṇi śraddhādīni ca pañca / [047|03] etānyārūpyapratisaṃyuktāni santi nānyāni /",
+   "T1560": "欲色無色繫，如次除後三， 兼女男憂苦，并餘色喜樂。",
+   "T1558": "二十二根中幾欲界繫、幾色界繫、幾無色界繫？頌曰：欲色無色界，如次除後三， 兼女男憂苦，并除色喜樂。論曰：欲界除後三無漏根，由彼三根唯不繫故，准知欲界繫唯有十九根。色界如前，除三無漏兼除男、女、憂、苦四根，准知十五根亦通色界繫。除女男者，色界已離婬欲法故、由女男根身醜陋故。若爾，何故說彼為男？於何處說？契經中說。如契經言：無處無容女身為梵，有處有容男身為梵。別有男相，謂欲界中男身所有。無苦根者，身淨妙故，又彼無有不善法故。無憂根者，由奢摩他潤相續故，又彼定無惱害事故。無色如前，除三無漏、女、男、憂、苦，并除五色及喜、樂根，准知餘八根通無色界繫，謂意、命、捨、信等五根。如是已說欲界繫等。",
+   "T1559": "偈曰：欲界有除淨。釋曰：於欲界相應相應知，除一向無流未知欲知等三根。何以故？此三決定非三界相應故。偈曰：色有除女男，二苦。釋曰：如前除無流，二苦謂苦憂二根，於色界人離欲婬欲法故、又令依止非可愛故，是故彼無女男二根。若爾，云何說彼為丈夫？何處說？如經言：無處無理女人作梵，有處有理丈夫作梵。於彼別有丈夫相，於欲界但是丈夫所得。於彼無苦根，依止淨妙故。又無惡業故，亦無憂根，奢摩他軟滑相續故。又無限類境界故。偈曰：無色有，除二樂及色。釋曰：除女男二根，除二苦根及無流根，所餘幾根？意命捨、信等五根。如此多根，應知於無色界相應，無餘根。"
+  },
+  "v013": {
+   "sa": "manovittitrayaṃ tredhā dviheyā durmanaskatā / nava bhavanayā pañca tvaheyānyapi na trayam // VAkK_2.13 //",
+   "sa-bhasya": "[047|04] katīndriyāṇi darśanaprahātavyāni kati bhāvanāprahātavyāni katyaprahātavyāni / [047|05] manovittitrayaṃ tredhā [047|06] katamad vittitrayam / sukhasaumanasyopekṣāḥ / [047|07] dviheyā durmanaskatā / [047|08] dauarmanasyaṃ dvābhyāṃ praheyaṃ darśanabhāvanābhyām / [047|09] nava bhāvanayā / [047|10] heyānītyadhikāraḥ / jīvitāṣṭamāni cakṣurādīni duḥkhendriyaṃ ca bhāvanāheyānyeva / [047|11] pañca tvaheyānyapi [047|12] śraddhādīni pañca bhāvanāheyānyapyaheyānyapi / sāsravānāsravatvāt / [047|13] na trayam // VAkK_2.13 // [047|14] trayaṃ naiva praheyamājñāsyāmīndriyādikamanāsravatvāt / nahi nirdoṣaṃ prahāṇārham / [047|15] uktaḥ prakārabhedaḥ / [047|16] lābha idānīṃ vaktavyaḥ / [047|16-047|17] katīndriyāṇi kasmindhātau vipākaḥ prathamato labhyante /",
+   "T1560": "意三受通三，憂見修所斷， 九唯修所斷，五修非三非。",
+   "T1558": "二十二根中幾見所斷、幾修所斷、幾非所斷？頌曰：意三受通三，憂見修所斷， 九唯修所斷，五修非三非。論曰：意、喜、樂、捨一一通三，皆通見、修、非所斷故。憂根唯通見修所斷，非無漏故。七色、命、苦唯修所斷，不染污故、非六生故、皆有漏故。信等五根，或修所斷、或非所斷，非染污故、皆通有漏及無漏故。最後三根唯非所斷，皆無漏故、非無過法是所斷故。已說諸門義類差別。",
+   "T1559": "幾根見諦滅？幾根修道滅？幾根非所滅？偈曰：意三受三種。釋曰：何者三受？樂、喜、捨根。偈曰：見修滅憂根。釋曰：憂根二道滅，見道、修道所滅故。偈曰：九修道滅。釋曰：眼根為第一，命根為第八，及苦根由修道滅。偈曰：五或非滅。釋曰：信等五根，或修道滅、或非所滅，有有流、無流故。偈曰：三非。釋曰：未知欲知等三根，非見道修道所滅，以無流故。無過失法，不可除故。"
+  },
+  "v014": {
+   "sa": "kāmeṣvādau vipāko dve labhyate nopapādukaiḥ / teḥ ṣaḍ vā sapta vā aṣṭau vā ṣaḍ rūpeṣu ekamuttare // VAkK_2.14 //",
+   "sa-bhasya": "[047|18] kāmeṣvādau vipāko dve labhyate [047|19] kāyendriyaṃ jīvitendriyaṃ ca / te punaḥ [047|20] nopapādukaiḥ / [047|21] upapādukapratiṣedhādaṇḍajajarāyujasaṃsvedajaīriti veditavyam / kasmānna manaupekṣendriye / [047|22] pratisandhikāle tayoravaśyaṃ kliṣṭatvāt / athopapādukaiḥ kati labhyante / [047|23] taiḥ ṣaḍa vā [047|24] yadyavyañjanā bhavanti / yathā prāthamakalpikāḥ / katamāni ṣaṭ / [047|24-047|25] cakṣuḥśrotraghrāṇajihvākāyajīvitendriyāṇi / [048|01] sapta vā [048|02] yadyekavyañjanā bhavanti / [048|02-048|92] yathā devādiṣu / [048|03] aṣṭau vā [048|04] yadyubhayavyañjanā bhavanti / kiṃ punarubhayavyañjanā apyupapādukā bhavanti / [048|04-048|05] bhavantyapāyeṣu [048|05] evaṃ tāvat kāmadhātau / atha rūpadhātāvārūpyadhātau ca kathamityāha / [048|06] ṣaḍ rūpeṣu [048|07] kāmapradhānatvāt kāmadhātuḥ kāmā iti nirdiśyate / [048|07-048|08] rūpapradhānatvād rūpadhātū rūpāṇīti / [048|08-048|09] sūtre 'pyuktaṃ \"ye 'pi te bhikṣavaḥ śāntā vimokṣā atikramya rūpāṇyārupyā\" iti / [048|09] tatra rūpadhātau ṣaḍḍindriyāṇi vipākaḥ parathamato labhyante / [048|09-048|10] yānyeva kāmadhātāvavyañjanaiarupapādukaiḥ [048|11] ekamuttare // VAkK_2.14 // [048|12] rūpadhātorārūpyadhāturuttaraḥ / samāpattitaśca paratvādupapattitaśca pradhānataratvāt / [048|13] tasmin ekameva jīvitendriyaṃ vipākaḥ prathamato labhyate nānyat / [048|14] ukto lābhaḥ / [048|15] tyāga idānīṃ vaktavyaḥ / kasmindhātau mriyamāṇaḥ katīndriyāṇi nirodhayatīti",
+   "T1560": "欲胎卵濕生，初得二異熟， 化生六七八，色六上唯命。",
+   "T1558": "何界初得幾異熟根？頌曰：欲胎卵濕生，初得二異熟， 化生六七八，色六上唯命。論曰：欲胎、卵、濕生初受生位，唯得身與命二異熟根，由此三生根漸起故。彼何不得意、捨二根？此續生時定染污故。化生初位得六七八，謂無形者初得六根，如劫初時。何等為六？所謂眼、耳、鼻、舌、身、命。若一形者初得七根，如諸天等。若二形者初得八根。豈有二形受化生者？惡趣容有二形化生。說欲界中初得根已。今次當說色無色界。欲界欲勝故但言欲，色界色勝故但言色。契經亦言：寂靜解脫，過色無色。色界初得六異熟根，如欲化生無形者說。上唯命者，謂無色界定勝生勝，故說上言。無色界中最初所得異熟根者，唯命非餘。說異熟根最初得已。",
+   "T1559": "說諸根品類差別已。諸根至得今當說。幾根於何界果報先所得？偈曰：欲中初得二果報。釋曰：身根命根是果報故，正託胎時先得此二。偈曰：非化生。釋曰：四生中由除化生，胎、卵、濕三生應知已許。云何不說意捨二根；正受生時，此二根必是染污故。若化生初得果報有幾根？偈曰：彼得六。釋曰：若彼無女男根，如劫初生。何者為六？眼耳鼻舌身命根。偈曰：七。釋曰：若彼生一根，如於天等生。偈曰：八。釋曰：若彼生二根。化生人可有二根耶？若於惡道可有。於欲界初得如此，於色界無色界云何？偈曰：色中六。釋曰：由欲勝故名欲界，或但名欲。由色勝故名色界，或但名色。經中說：是寂靜解脫過於色非色。於色界中初所得果報有六根，彼根同欲界，無二根化生所得。偈曰：餘一。釋曰：無色界異色界故名餘，由三摩跋提異故、由生勝故。此中初得果報，但有一命根，餘根則非。"
+  },
+  "v015": {
+   "sa": "nirodhayatyuparamānnārūpye jīvitaṃ manaḥ / upekṣāṃ caiva rūpe 'ṣṭau kāme daśa navāṣṭau vā // VAkK_2.15 //",
+   "sa-bhasya": "[048|16] nirodhayatyuparamānnārūpye jīvitam manaḥ / [048|17] upekṣāṃ caiva rūpe 'ṣṭau [048|18] rūpadhātau mriyalmāṇo 'ṣṭau nirodhayati / tāni ca trīṇi cakṣurādīni pañca / [048|18-048|19] sarve hyupapādukāḥ samagrendriyā upapadyante mriyante ca / [048|20] kāme daśa navāṣṭau vā // VAkK_2.15 // [048|21] kāmadhātau mriyamāṇa ubhayavyañjanī daśendriyāṇi nirodhayati / [048|21-048|22] tāni cāṣṭau strī puruṣendriye ca / [048|22] ekavyañjano nava / avyañjano 'ṣṭau / sakṛnmaraṇa eṣa nyāyaḥ /",
+   "T1560": "正死滅諸根，無色三色八， 欲頓十九八，",
+   "T1558": "何界死位幾根後滅？頌曰：正死滅諸根，無色三色八， 欲頓十九八，",
+   "T1559": "說至得已，棄捨今當說。於何界正死棄捨幾根？偈曰：正死人棄捨，於無色命、意、捨根。釋曰：若人在無色界正死，於最後心棄捨命、意、捨三根。偈曰：於色八。釋曰：若人在色界正死，於最後心棄捨八根，三如前，又眼等五根。何以故？一切化生眾生，具根受生、具根死墮故。偈曰：欲界十九八。釋曰：若人在欲界正死，於最後心，若具二根人棄捨十根，八如前，又女男根。若一根人則棄捨九根。若無根人但捨八根。若一時死，道理則然。"
+  },
+  "v016": {
+   "sa": "kramamṛtyau tu catvāri śubhe sarvatra pañca ca / navāptirantyaphalayoḥ saptāṣṭanavabhirdvayoḥ // VAkK_2.16 //",
+   "sa-bhasya": "[048|23] kramamṛtyau tu catvāri / [048|24] krameṇa tu mriyamāṇaścatvārīndriyāṇi nirodhayati / kāyajīvitamanaupekṣendriyāṇi / [048|25] nahyeṣāṃ pṛthagnirodhaḥ / eṣa ca nyāyaḥ kliṣṭāvyākṛtacittasya maraṇe veditavyaḥ / [048|26] yadā tu kuśale cetasi sthito mriyate tadā [049|01] ṣubhe sarvatra pañca ca / [049|02] kuśale cetasi mriyamāṇaḥ sarvatra yathoktamindriyāṇi nirodhayati / [049|02-049|03] śraddhādīni ca pañcādhikāni / [049|03] eṣāṃ kuśale cetasyavaśyaṃbhāvaḥ / [049|03-049|04] evamārūpyeṣvaṣṭau nirodhayati rūpeṣu trayodaśāeti vistareṇa gaṇanīyam / [049|05] indriyaprakaraṇe sarva indriyadharmā vicāryante / [049|05-049|06] atha katamacchrāmaṇyaphalaṃ katibhirindriyaiḥ prāpyate / [049|07] navāptirantya phalayoḥ [049|08] navabhirindriyaiḥ praptirantyaphalayoḥ / ke punarantye / srota āpattiphalamarhattvaṃ ca / [049|09] ke madhye / sakṛdāgāmiphalamanāgāmiphalaṃ ca / [049|09-049|10] tatra srota āpattiphalasya śraddhādibhirājñātāvīndriyavarjyairmanaupekṣendriyābhyāṃ ceti navabhiḥ / [049|10-049|11] ājñāsyāmīndriyamānantaryamārge veditavyamājñendriyaṃ ca vimuktimārge / [049|11-049|12] ubhābhyāṃ hi tasya prāptirvisaṃyiogaprāpterāvāhakasanniśrayatvādyathākramam / [049|12-049|13] arhattvamasya punaḥ śraddhādibhirājñāsyāmīndriyavarjyairmanaindriyeṇa sukhasaumanasyopekṣendriyāṇāṃ cānyatameneti navabhiḥ / [049|14] saptāṣṭnavabhirdvayoḥ // VAkK_2.16 // [049|15] sakṛdāgāmyanāgāmiphalayoḥ pratyekaṃ saptabhiraṣṭabhirnavabhiṣcendriyaiḥ prāptiḥ / [049|15-049|16] kathaṃ kṛtvā / [049|16-049|17] sakṛdāgāmiphalaṃ tāvadyadyānupūrvikaḥ prāpnoti sa ca laukikena mārgeṇa tasya saptabhirindriyaiḥ prāptiḥ / [049|17] pañcabhiḥ śraddhādibhirupekṣāmanaindriyābhyāṃ ceti / [049|17-049|18] atha lokottareṇa mārgeṇa tasyāṣṭabhirindriyai praptiḥ / [049|18] ājñendriyamaṣṭamaṃ bhavati / [049|18-049|19] atha bhūyovītarāgaḥ prāpnoti tasya navabhiryeneva srota āpattiphalasya / [049|19-049|20] anāgāmiphalaṃ yadyānupūrvikaḥ prāpnoti sa ca laukikena mārgeṇa tasya saptabhirindriyaiḥ prāptiḥ / [049|21] yathā sakṛdāgāmiphalasya / [049|21-049|22] atha lokottareṇa mārgeṇa tasyāṣṭabhistathaiva / [049|22] atha vītarāgaḥ prāpnoti tasya navabhiḥ / [049|22-049|23] yathā srota āpattiphalasya / 04923-04923] ayaṃ tu viśeṣaḥ / [049|23-049|24] sukhasaumanasyopekṣendriyāṇāmanyatamaṃ bhavati / [049|24] niśrayaviśeṣāt / [049|24-049|26] yadāpyayamānupūrviko navame vimūktimārge tīkṣṇenriyatvā ddhyānaṃ praviśāti laukikena mārgeṇa tadāpyaṣṭābhirindriyairanāgāmiphalaṃ prāpnoti / [049|26] tatrahi navame vimuktimārge saumanasyendriyamaṣṭamaṃ / [049|26-049|27] bhavatyānantaryamārge tūpekṣendriyameva nityamubhābhyāṃ ca tasya prāptiḥ / [049|27-049|28] atha lokottareṇa praviśāti tasya navabhirindriyaiḥ prāptiḥ / [049|28] ājñenriyaṃ navamaṃ bhavati / [049|28-050|01] yattarhyabhidharma uktaṃ \"katibhirindriyairarhattvaṃ prapnotītyāha ekādaśbhhiriti\" / [050|01-050|02] tat kathaṃ navabhirityucyate / [050|02] navabhireva tat prāpnoti /",
+   "T1560": "漸四善增五。 九得邊二果，七八九中二，",
+   "T1558": "漸四善增五。論曰：在無色界將命終時，命、意、捨三於最後滅。若在色界將命終時，即前三根及眼等五，如是八種於最後滅。一切化生必具諸根而生死故。若在欲界頓命終時，十九八根於最後滅，謂二形者後滅十根，即女男根并前八種。若一形者後滅九根，於女男中隨除一種。若無形者後滅八根，謂無女男，唯有前八。如是所說依頓命終。若漸命終後唯捨四，謂在欲界漸命終時，身、命、意、捨於最後滅，此四必無前後滅義。如是所說，應知但依染無記心而命終者。若在三界善心死時，信等五根必皆具有，故於前說一切位中其數皆應加信等五，謂於無色增至八根，乃至欲界漸終至九，中間多少如理應知。分別根中一切根法皆應思擇，二十二根幾能證得何沙門果？頌曰：九得邊二果，七八九中二，",
+   "T1559": "偈曰：次第死捨四。釋曰：若人次第死，於最後心一時棄捨四根，謂身、命、意、捨根。何以故？此四無相離盡故。若染污心及無記心死，應知道理如此。若人於善心死，是時偈曰：於善諸處五。釋曰：若人於善心死，一切處如前說，若棄捨根復捨信等五根。何以故？此信等五根於善心必具足生。如此於無色界棄捨八根，於色界棄捨十三根。如此依前次第應更廣數。於根伽蘭他中，簡擇一切根法，應如此知。復次何沙門若果？由幾根能得？偈曰：九得邊二果。釋曰：由九根至得前後際沙門若果。何者為邊？須陀洹果及阿羅漢果，前後際所得故。幾果在中際？斯陀含果、阿那含果。此中須陀洹果信等，除知已根并意根捨根，由此九根得前際果。未知欲知根在次第道，知根在解脫道，由此二根得須陀洹果，次第能引擇滅至得及能作彼依止故。復有阿羅漢果信等，除未知欲知根、意根，樂、喜、捨根中隨一，由此九根得後際果。偈曰：七八九中二。釋曰：斯陀含果、阿那含果，觀前後故名中。此二果一一至得，由七八九根。云何如此？斯陀含果，若人次第修方得。若依世間道，此果由七根得，信等五根并捨意二根。若依出世道，此果由八根得，七如前，知根為第八。若先多離欲人方得此果，由九根得，如得須陀洹果。阿那含果若人次第修方得。若依世間道，此果由七根得，如前所說。得斯陀含果，若依出世道，此果由八根得，亦如前所說。得斯陀含果，若先已離欲人方得此果，由九根得，亦如前所說。得斯陀含果，此果與前果有異，謂樂、喜、捨隨一根相應，由依止差別故。若次第修人，於第九解脫道。若入根本定，依世間道，是時由八根得阿那含果。何以故？於第九解脫道中喜根為第八，於次第道則用捨根定，由此二根得阿那含果。若人依出世道，入第九解脫道，是人則由九根得阿那含果，此中知根為第九。若爾，阿毘達磨藏中云何說如此？彼藏中說：由幾根能得阿羅漢果？彼中答由十一根。云何此中說由九根得？定由九根。"
+  },
+  "v017": {
+   "sa": "ekādaśabhirarhattvamuktaṃ tvekasya saṃbhavāt / upekṣajīvitamanoyukto 'vaśyaṃ trayānvitaḥ // VAkK_2.17 //",
+   "sa-bhasya": "[050|03] ekādaśabhirarhattavamuktaṃ tvekasya saṃbhavāt / [050|04-050|05] asti saṃbhavo yadekaḥ pudgalaḥ parihāya parihāya sukhasaumanasyīpekṣābhirarhattvaṃ prāpnuyādata ekādaśabhirityuktam / [050|05-050|06] natu khalu saṃbhavo 'sti sukhādīnāmekasmin kāle / [050|06] kathamanāgābhino 'pyeṣa prasaṅgo na bhavati / [050|06-050|07] nahyasau parihīṇaḥ kadācitsukhendriyeṇa prāpnnoti na ca vītarāgapūrvī parihīyate / [050|07-050|08] tadvairāgyasya dvimārgaprāpaṇāt / [050|09] idaṃ vicāryate/ katamenendriyeṇa samanvāgataḥ katibhiḥ avaśyaṃ samanvāgato bhavati / [050|10] tatra [050|11] upekṣājīvitamanoyukto 'vaśyaṃ trayānvitaḥ // VAkK_2.17 // [050|12-050|13] ya eṣāmupekṣādīnāmanyatamena samanvāgataḥ so 'vaśyaṃ tribhirindriyaiḥ samanvāgato bhavatyebhireva / [050|13] nahyeṣāmanyo 'ynena vinā samanvāgamaḥ / śeṣaistvaniyamaḥ / [050|13-050|14] syātsamanvāgataḥ syādasamanvāgataḥ / [050|14-050|15] tatra tāvaccakṣuḥśrotraghrāṇajihvendriyai rārūpyopapanno na samanvāgataḥ / [050|15] kāmadhātau ca yenāpratilabdhavihīnāni / [050|15-050|16] kāyendriyeṇārūpyopapanno na samanvāgataḥ / [050|16] strīndriyeṇa rūpārūpyopapannaḥ / kāmadhatau yenāpratilabdhavihīnam / [050|16-050|17] evaṃ puruṣendriyeṇa / [050|17] sukhendriyeṇa caturdhyānārūpyopapannaḥ pṛthagjano na samanvāgataḥ / [050|18] saumanasyendriyeṇa tṛtīyacaturthadhyānārūpyopapannaḥ pṛthagjana eva / [050|18-050|19] duḥkhendriyeṇa rūpārūpyopapannaḥ / [050|19] daurmanasyena kāmavītarāgaḥ / [050|19-050|20] śraddhādibhiḥ samucchinnakuśalamūlaḥ / [050|20] ājñāsyāmīndriyeṇa pṛthagjanaphalathānasamanvāgatāḥ / [050|20-050|21] ājñendriyeṇa pṛthagjanadarśanāśaikṣamārgasthāḥ / [050|21] ājñātāvīndriyeṇa pṛthagjanaśaikṣaikṣyā asamanvāgatāḥ / [050|22] apratipiddhāsvavasthāsu yathoktasamanvāgato veditavyaḥ /",
+   "T1560": "十一阿羅漢，依一容有說。 成就命意捨，各定成就三，",
+   "T1558": "十一阿羅漢，依一容有說。論曰：邊謂預流、阿羅漢果，於沙門果居初後故。中謂一來及不還果，此觀初後在中間故。初預流果由九根得，謂意及捨、信等五根、未知當知、已知為九。未知根在無間道，已知根在解脫道，此二相資得最初果。如其次第，於離繫得能為引因，依因性故。阿羅漢果亦九根得，謂意、信等五、已知、具知，及喜、樂、捨中隨一為九。已知根在無間道，具知根在解脫道，此二相資得最後果。如其次第，於離繫得能為引因，依因性故。中間二果，隨其所應，各為七八九根所得。所以者何？且一來果次第證者，依世間道由七根得，謂意及捨、信等五根；依出世道由八根得，謂即前七根、已知根第八。倍離欲貪超越證者，如預流果由九根得；若不還果次第證者，依世間道由七根得，依出世道由八根得。如前次第得一來果。全離欲貪超越證者，由九根得，如前超越得一來果。總說雖然而有差別，謂此依地有差別故，樂、喜、捨中可隨取一。前果超越唯一捨根。又次第證不還果者，若於第九解脫道中入根本地，依世間道由八根得。彼無間道捨受相應，解脫道中復有喜受，此二相資得第三果。於離繫得二因如前，依出世道由九根得，八根如前，已知第九，無間解脫此俱有故。豈不根本阿毘達磨問：由幾根得阿羅漢？答：十一根。云何乃言由九根得？實得第四，但由九根。而本論言十一根者，依一身中容有故說。謂容有一補特伽羅從無學位數數退已，由樂、喜、捨隨一現前，數復證得阿羅漢果。由斯本論說十一根，然無一時三受俱起，是故今說定由九根。於不還果中何不如是說？以無樂根證不還果，而於後時得有退義。亦無退已，由樂復得，非先離欲超證第三有還退義。此離欲果二道所得，極堅牢故。今應思擇，成就何根？彼諸根中幾定成就？頌曰：成就命意捨，各定成就三，",
+   "T1559": "偈曰：十一得羅漢，說依一人成。釋曰：有如此道理，是一人已退，已退由樂喜捨根更得阿羅漢果，是故說由十一根。無有是處、樂受等三根於一時中俱得生。云何於阿那含人不論如此義？此阿那含不得如此。何以故？無先已退後時由樂根更證本果故。復次若先離欲人無退墮義，此人離欲二道所證故。此義應當思量：與何根共相應？有幾根必定共相應？此中偈曰：捨命意相應，必與三相應。釋曰：若人與捨等根隨一相應，此人必與三根相應。三根者，謂捨命意。何以故？此三更互無離相應故。與餘根相應則不定，或相應或不相應。此中生無色界人，與眼耳鼻舌根不相應，於欲界亦爾。謂若人未得及已失，生無色界人，與身根不相應。生色無色界人，與女根不相應，於欲界亦爾。謂若未得及已失，與男根亦爾。若凡夫人生第四定第二定處及無色界，與樂根不相應。若凡夫生第三定第四定及無色界，與喜根不相應。若凡夫生色無色界，與苦根不相應。若離欲人，與憂根不相應。若斷善根人，與信等根不相應。凡夫及至得果人，與未知欲知根不相應。凡夫及見道人無學道人，與知根不相應。凡夫及有學人，與知已根不相應。於非遮位中如前所說，應知與餘根相應。"
+  },
+  "v018": {
+   "sa": "caturbhiḥ sukhakāyābhyāṃ pañcabhiścakṣurādimān / saumanasyī ca duḥkhī tu saptabhiḥ strīndriyādimān // VAkK_2.18 //",
+   "sa-bhasya": "[050|23] caturbhiḥ sukha kāyābhyāṃ [050|24-050|25] yaḥ sukhendriyeṇa samanvāgataḥ so 'vaśyaṃ caturbhirindriyaistaiśca tribhirupekṣādibhiḥ sukhendriyeṇa ca / [050|25] yaḥ kāyendriyeṇa so 'pi caturbhistaiśca tribhiḥ kāyendriyeṇa ca / [051|01] pañcabhiścakṣurādimān / [051|02] yaścakṣurindriyeṇa so 'vaśyaṃ pañcabhirupekṣājīvitamanaḥ kāyendriyaistena ca/ [051|02-051|03] evaṃ śrotraghrāṇajihvendriyairveditavyam / [051|04] saumanasyī ca [051|05] yaścāpi saumanasyendriyeṇa so 'vaśyaṃ pañcabhirupekṣājīvitamanaḥsukhasaumanasyaiḥ / [051|06] dvitīyadhyānajastṛtīyadhyānālābhī katamena sukhendriyeṇa samanvāgato bhavati / [051|07] kliṣṭena tṛtīyadhyānabhūmikena / [051|08] duḥkhī tu saptabhiḥ / [051|09] yo duḥkhendriyeṇa so 'vaśyaṃ saptabhiḥ kāyajīvitamanobhiścaturbhirvedanendriyaiḥ / [051|10] strīndriyādimān // VAkK_2.18 //",
+   "T1560": "若成就樂身，各定成就四， 成眼等及喜，各定成五根， 若成就苦根，彼定成就七， 若成女男憂，信等各成八。",
+   "T1558": "若成就樂身，各定成就四， 成眼等及喜，各定成五根， 若成就苦根，彼定成就七， 若成女男憂，信等各成八，",
+   "T1559": "偈曰：與四有樂身。釋曰：若人與樂根相應，此人必與四根相應，謂捨等三根及樂根。若人與身根相應，此人必與四根相應，三如前并身根。偈曰：與五有眼等。釋曰：若人與眼根相應，此人必與五根相應，謂捨命意身及眼根。與耳鼻舌相應，應知亦爾。偈曰：有喜亦。釋曰：若人與喜根相應，此人必與五根相應，謂捨命意樂及喜根。若人生第二定未得第三定，與何樂根相應？與第三定染污樂根相應。偈曰：有苦與七。釋曰：若人與苦根相應，此人必與七根相應，謂身命意及餘四受相應。偈曰：有女等與八。釋曰：若人與女根相應，此人必與八根相應，七如前，及女根。等言七者，攝男根。憂根及信等根，若人得如此根，隨一一皆與八根相應，七如前，男根為第八。若人與憂根相應，七如前，憂根為第八。若人與信等根相應，此人必與信等五根，及與捨命意根相應。"
+  },
+  "v019": {
+   "sa": "aṣṭābhiḥ ekādaśabhistvājñājñāte ndriyānvitaḥ / ājñāsyāmīndriyopetastrayodaśabhiranvitaḥ // VAkK_2.19 //",
+   "sa-bhasya": "[051|11] aṣṭābhiḥ [051|12] yaḥ strīndriyeṇa samanvāgataḥ so 'vaśyamaṣṭabhiḥ taiśca saptabhiḥ strīndriyeṇaca / [051|13] ādiśabdena puruṣendriyadaurmanasyaśaraddhādīnāṃ saṃgrahaḥ / [051|13-051|14] tadvānapi pratyekamaṣṭābhiḥ samanvāgato bhavati / [051|14] taiśca saptabhiraṣṭamena ca puruṣendriyeṇa / evaṃ daurmanasyendriyeṇa / [051|14-051|15] śraddhādimāṃstu taiśca pañcabhirupekṣājīvitamanobhiśca / [051|16] ekādaśabhistvājñājñātendriyānvitaḥ / [051|17] ājñāta indriyamājñātendriyam / [051|17-051|18] ya ājñātendriyeṇa samanvāgataḥ so 'vaśyamekādaśabhiḥ sukhasaumanasyopekṣājīvitamanaśraddhādibahirājñendriyeṇa ca / [051|19] evamājñā tāvīndriyeṇāpi / taireva daśabhirājñātāvīndriyeṇa ca / [051|20] ājñāsyāmīndriyopetastrayodaśabhiranvitaḥ // VAkK_2.19 // [051|21] katamaistrayodaśabhiḥ / [051|21-051|22] manojīvitakāyendriyaiḥ catasṛbhirvedanābhiḥ śraddhādibhirājñāsyāmīndriyeṇa ca // [051|23] atha yaḥ srvālpaiḥ samanvāgataḥ sa kiyadbhirindriyaiḥ /",
+   "T1560": "二無漏十一，初無漏十三，",
+   "T1558": "二無漏十一，初無漏十三。論曰：命、意、捨中隨成就一，彼定成就如是三根，非此三中隨有所闕可有成就。所餘根者，除此三根餘皆不定，謂或成就或不成就。此中眼耳鼻舌四根，生無色界定不成就，若生欲界未得已失亦不成就。身根，唯有生無色界定不成就。女男二根，生上二界定不成就，若生欲界未得已失亦不成就。樂根，異生生第四定及無色界定不成就。喜根，異生生三四定及無色界定不成就。苦根，若生色無色界定不成就。憂根，一切離欲貪者定不成就。信等五根，善根斷者定不成就。初無漏根，一切異生及已住果定不成就。次無漏根，一切異生見道無學定不成就。後無漏根，一切異生及有學位定不成就。於非遮位應知如前，所說諸根皆定成就。若成樂根定成就四，謂命、意、捨及此樂根。若成身根亦定成四，謂命、意、捨及此身根。若成眼根定成就五，謂命、意、捨、身根、眼根。耳鼻舌根應知亦五，前四如眼，第五自根。若成喜根亦定成五，謂命、意、捨、樂根、喜根。第二靜慮地生未得第三靜慮，捨下未得上，此成何樂根？當言成就第三靜慮染污樂根，餘未得故。若成苦根定成就七，謂身、命、意、四受除憂。若成女根定成就八，七如苦說，第八女根。若成男根亦定成八，七如苦說，第八男根。若成憂根亦定成八，七如苦說，第八憂根。若成信等亦各成八，謂命、意、捨、信等五根。若成具知根定成就十一，謂命與意、樂、喜、捨根、信等五根及具知根。若成已知根亦定成十一，十根如上及已知根。若成未知根定成就十三，謂身、命、意、苦、樂、喜、捨、信等五根及未知根。",
+   "T1559": "偈曰：與十一，有知知已根。釋曰：若人與知根相應，此人必與十一根相應，謂樂喜捨命意五根，又信等五根，知根為第十一。與知已根相應亦爾，十根如前，知已根為第十一。偈曰：未知欲知根，與十三相應。釋曰：何者為十三？謂意命身根女男根隨一，及三受根、信等五根，未知欲知根為第十三。"
+  },
+  "v020": {
+   "sa": "sarvālpairniḥśubho 'ṣṭābhirvinmanaḥkāyajīvitaiḥ / yuktaḥ bālastathārūpye upekṣāyurmanaḥśubhaiḥ // VAkK_2.20 //",
+   "sa-bhasya": "[051|24] sarvālpairniḥśubho 'ṣṭābhirvinmanaḥkāyajīvitaiḥ / [051|25] yuktaḥ [051|26] samucchinnakuśamūlo niḥśubhaḥ / sa sarvālpairaṣṭābhirindriyaiḥ samanvāgataḥ / [051|26-052|01] pañcabhirvedanādibhiḥ kāyamanojīvitaiśca / [052|01] vedanā hi vit vedayata iti kṛtvā / vedanaṃ vā vit / [052|02] yathā saṃpadanaṃ saṃpat / yathā ca niḥśāubhaḥ sarvālpairaṣṭābhirindriyairyuktaḥ [052|03] bālastathārūpye [052|04] bāla iti pṛthagjanasyākhyā / katamairaṣṭābhiḥ / [052|05] upekṣāyurmanaḥśubhaiḥ // VAkK_2.20 // [052|06] upekṣājīvitamanobhiḥ śraddhādibhiśca // [052|06-052|07] ekāntakuśalatvāt śraddhādīni śubhagrahaṇena gṛhyante / [052|07] ājñāsyāmīndriyādīnāmapi grahaṇaprasaṅgaḥ / na / [052|07-052|08] aṣṭādhikārād dvālādhikārācca // [052|09] atha yaḥ sarvabahubhirindriyaiḥ samanvāgataḥ sa kiyadbhiḥ /",
+   "T1560": "極少八無善，成受身命意。 愚生無色界，成善命意捨，",
+   "T1558": "諸極少者成就幾根？頌曰：極少八無善，成受身命意， 愚生無色界，成善命意捨。論曰：已斷善根名為無善。彼若極少成就八根，謂五受根及身、命、意。受謂能受，能領納故。或是受性故名為受，如圓滿性立圓滿名。如斷善根極少成八，愚生無色亦成八根。愚謂異生，未見諦故。何等為八？謂信等五、命、意、捨根。信等五根，一向善故總名為善。若爾，應攝三無漏根。不爾，此中依八根故，又說愚生無色界故。",
+   "T1559": "復次若人與極少根相應，與幾根相應？偈曰：極少無善八，受意身命應。釋曰：若人斷善根，說名無善，極少與八根相應，謂五受根及身意命根。如斷善根人，與極少根相應。偈曰：凡夫無色爾。釋曰：若凡夫生無色界，與八根相應。偈曰：捨命意信等。釋曰：捨命意三根及信等五根，信等一向善故。除斷善根人，一切處皆通。若爾，未知欲知等根，於彼亦應立。此難不然，由立八根故、依凡夫故。"
+  },
+  "v021": {
+   "sa": "bahubhiryukta ekānnaviṃśatyāmalavarjitaiḥ / dviliṅgaḥ āryo rāgī ekaliṅgadvayamalavarjitaiḥ // VAkK_2.21 //",
+   "sa-bhasya": "[052|10] bahubhiryukta ekānnaviṃāśatyā 'malavarjitaiḥ / [052|11] anā sravaṇi trīṇi varjayitvā / sa punaḥ / [052|12] dviliṅgaḥ [052|13] dvivyañjano yaḥ samagrendriyaḥ ekānnaviṃśatyā samanvāgataḥ / kaścāparaḥ / [052|14] āryo rāgī [052|15] avītarāgo 'pi śaikṣaḥ sarvabahubhirekānnaviṃśatyā samanvāgataḥ / [052|16] ekaliṅgadvayamalavarjitaiḥ // VAkK_2.21 // [052|17] ekaṃ vyañjanaṃ dve cānāsrave varjayitvā / ājñātāvīndriyaṃ dvayośācānyatarat / [052|17-052|18] ukta indriyāṇāṃ dhātuprabhedaprasaṅgenāgatānāṃ vistareṇa prabhedaḥ / [052|19] idamidānīṃ vicāryate / [052|19-052|20] kimete saṃskṛtā dharmā yathā bhinnalakṣaṇā evaṃ bhinnotpādā utāho niyatasahotpādā api kecitsanti / [052|20] santītyāha / [052|20-052|21 sarva ime dharmāḥ pañca bhavanti / [052|21] rūpaṃ cittaṃ caitasikāścttaviprayuktāḥ saṃskārā asaṃskṛtaṃ ca / [052|22] tatrāsaṃskṛtaṃ naivotpadyate / rūpiṇāṃ tu dharmāṇāmayaṃ niyamaḥ /",
+   "T1560": "極多成十九，二形除三淨， 聖者未離欲，除二淨一形。",
+   "T1558": "諸極多者成就幾根？頌曰：極多成十九，二形除三淨， 聖者未離欲，除二淨一形。論曰：諸二形者具眼等根，除三無漏成餘十九。無漏名淨，離二縛故。二形必是欲界異生，未離欲貪故有十九。唯此具十九、為更有耶？聖者未離欲亦具十九，謂聖有學未離欲貪，成就極多亦具十九，除二無漏及除一形。若住見道，除已知根及具知根。若住修道，除未知根及具知根。女男二根隨除一種，以諸聖者無二形故。因分別界根非根差別，乘茲廣辯二十二根竟。今應思擇，一切有為如相不同，生亦各異，為有諸法決定俱生、有定俱生。謂一切法略有五品：一色、二心、三心所、四心不相應行、五無為。無為無生，此中不說。",
+   "T1559": "若人極多與幾根相應？偈曰：極多與十九，離三無流根，二根。釋曰：除三無流根，若人具女男根及具餘根，則與十九根相應。復有何別人與極多根相應？偈曰：有欲聖。釋曰：若未離欲有學聖人，若與極多根相應，亦與十九根相應。偈曰：一根除二淨。釋曰：除一根及除二無流根，謂除知已根，前二隨除一根。諸根由分別界差別義，所引來依廣分別義已說。復次，此義應當思量：是諸有為法，如彼自相更互不同，為如此彼生亦不同、為有諸法決定俱生亦有。何以故？一切法有五品，一色、二心、三心法、四不相應、五無為，此中無為法無生，有色諸法今當決判。"
+  }
+ }
+}
