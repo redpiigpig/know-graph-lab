@@ -1,0 +1,308 @@
+{
+ "slug": "pratimoksa-c10",
+ "title": "比丘戒本（十）結文與七佛略說戒偈",
+ "family": "pi",
+ "intro": "戒本結分：先總結「已說戒經序、四波羅夷…七滅諍，此是佛所說戒經，半月半月說」，次誦過去七佛各自所說的略戒偈（「忍辱第一道」「諸惡莫作」等，《法句經》亦收），末以讚戒、迴向偈作結。巴利本沒有七佛偈，總結後即「比丘波羅提木叉竟」；《解脫戒經》的七佛偈在篇首誦過（見第一組），這裡只有「東北方世界」等結偈。《僧祇戒本》與大眾說出世部梵本在七滅諍之後還有「隨順法」（dharmo anudharmaś ca）一段，單列一節。節依偈文內容而不依佛名：同一首偈各部歸屬的佛不同。四分、五分、十誦、僧祇以「不謗（不惱）不說過」屬第三佛毘舍浮、「蜂採華」連同「不觀作不作」屬拘留孫、「心莫放逸」屬拘那含、「諸惡莫作」屬迦葉、「護身口意」屬釋迦；根有戒經與根本說一切有部梵本把「不觀作不作」獨立屬羯諾迦（拘那含），「心莫放逸」屬迦攝波，「諸惡莫作」與「護身口意」同屬釋迦；大眾說出世部梵本以 anopavādī 屬尸棄、adhicetasi 屬毘舍浮、sarvapāpa 屬拘留孫、「蜂採華」「不觀作不作」屬拘那含，迦葉佛另有「無慧無禪」「親近善友」數頌（單列），釋迦佛為「眼根律儀善」等頌（歸護身口意一節），段序依原本；該本無「明眼人」一偈。說一切有部梵本只有偈、不記佛名。末節收各本卷末題記：《僧祇戒本》附〈摩訶僧祇戒〉讚戒偈；《五分戒本》卷末高麗藏校記，說明國本、宋本誤以《十誦戒本》重寫為《五分戒本》，丹本才是正本（即本對讀所收 T1422a，故 T1422b 不收）；大眾說出世部梵本的寫經題記（āryamahāsāṃghikānāṃ lokottaravādināṃ madhyoddeśikānāṃ pāṭha）。",
+ "units": [
+  {
+   "id": "z0",
+   "label": "隨順法（僧祇戒本、大眾說出世部梵本）"
+  },
+  {
+   "id": "z1",
+   "label": "總結：已說戒經序乃至七滅諍，此是佛所說戒經，皆共和合應當學"
+  },
+  {
+   "id": "v1",
+   "label": "七佛偈・忍辱第一道，涅槃佛稱最"
+  },
+  {
+   "id": "v2",
+   "label": "七佛偈・譬如明眼人，能避險惡道"
+  },
+  {
+   "id": "v3",
+   "label": "七佛偈・不謗（不惱）不說過，如戒所說行，飲食知止足"
+  },
+  {
+   "id": "v4",
+   "label": "七佛偈・譬如蜂採華，不壞色與香"
+  },
+  {
+   "id": "v5",
+   "label": "七佛偈・不違戾他事，不觀作不作"
+  },
+  {
+   "id": "v6",
+   "label": "七佛偈・心莫作放逸，聖法當勤學"
+  },
+  {
+   "id": "v7",
+   "label": "七佛偈・一切惡莫作，當奉行諸善"
+  },
+  {
+   "id": "v7b",
+   "label": "七佛偈・無慧則無禪，親近善知識（大眾說出世部梵本迦葉佛偈）"
+  },
+  {
+   "id": "v8",
+   "label": "七佛偈・善護於口言，護身口意（釋迦牟尼佛）"
+  },
+  {
+   "id": "v9",
+   "label": "卷末偈：七佛為世尊，讚戒、迴向"
+  },
+  {
+   "id": "v10",
+   "label": "說戒竟，僧一心布薩"
+  },
+  {
+   "id": "v11",
+   "label": "卷末附偈與題記"
+  }
+ ],
+ "versions": [
+  {
+   "id": "pi",
+   "lang": "pi",
+   "label": "巴利・上座部",
+   "who": "Theravāda Bhikkhupātimokkha・Mahāsaṅgīti 本（SuttaCentral）"
+  },
+  {
+   "id": "T1429",
+   "lang": "lzh",
+   "label": "四分戒本",
+   "who": "法藏部・後秦 佛陀耶舍譯《四分律比丘戒本》（唐 懷素集）",
+   "work": "T1429"
+  },
+  {
+   "id": "T1422a",
+   "lang": "lzh",
+   "label": "五分戒本",
+   "who": "化地部・劉宋 佛陀什等譯《彌沙塞五分戒本》",
+   "work": "T1422a"
+  },
+  {
+   "id": "sa-sarv",
+   "lang": "sa",
+   "label": "梵・說一切有部",
+   "who": "Sarvāstivāda Prātimokṣasūtra・von Simson 1986／2000（GRETIL）"
+  },
+  {
+   "id": "T1436",
+   "lang": "lzh",
+   "label": "十誦戒本",
+   "who": "說一切有部・姚秦 鳩摩羅什譯《十誦比丘波羅提木叉戒本》",
+   "work": "T1436"
+  },
+  {
+   "id": "sa-mahl",
+   "lang": "sa",
+   "label": "梵・大眾說出世部",
+   "who": "Mahāsāṃghika-Lokottaravāda Prātimokṣasūtra・Tatia 1976（GRETIL）",
+   "reorder": true
+  },
+  {
+   "id": "T1426",
+   "lang": "lzh",
+   "label": "僧祇戒本",
+   "who": "大眾部・東晉 佛陀跋陀羅譯《摩訶僧祇律大比丘戒本》",
+   "work": "T1426"
+  },
+  {
+   "id": "T1460",
+   "lang": "lzh",
+   "label": "解脫戒經",
+   "who": "飲光部・元魏 般若流支譯",
+   "work": "T1460"
+  },
+  {
+   "id": "sa-mula",
+   "lang": "sa",
+   "label": "梵・根本說一切有部",
+   "who": "Mūlasarvāstivāda Prātimokṣasūtra・Banerjee 1954（GRETIL）"
+  },
+  {
+   "id": "T1454",
+   "lang": "lzh",
+   "label": "根有戒經",
+   "who": "根本說一切有部・唐 義淨譯《根本說一切有部戒經》",
+   "work": "T1454"
+  }
+ ],
+ "works": [
+  "T1422a",
+  "T1426",
+  "T1429",
+  "T1436",
+  "T1454",
+  "T1460"
+ ],
+ "anchors": [
+  {
+   "work": "T1429",
+   "range": [
+    "T22n1429_p1022b06",
+    "T22n1429_p1022c13"
+   ]
+  },
+  {
+   "work": "T1422a",
+   "range": [
+    "T22n1422a_p0199c14",
+    "T22n1422a_p0200b08"
+   ]
+  },
+  {
+   "work": "T1436",
+   "range": [
+    "T23n1436_p0478b15",
+    "T23n1436_p0479a01"
+   ]
+  },
+  {
+   "work": "T1426",
+   "range": [
+    "T22n1426_p0555b11",
+    "T22n1426_p0556a08"
+   ]
+  },
+  {
+   "work": "T1460",
+   "range": [
+    "T24n1460_p0665a14",
+    "T24n1460_p0665a21"
+   ]
+  },
+  {
+   "work": "T1454",
+   "range": [
+    "T24n1454_p0507b20",
+    "T24n1454_p0507c29"
+   ]
+  }
+ ],
+ "cells": {
+  "z0": {
+   "sa-mahl": "[IX. duve dharmāḥ] ime kho punar āyuṣmanto duve dharmāḥ Ō dharmo anudharmaś ca anvardhamāsaṃ sūtre prātimokṣe uddeśam āgacchanti / tatra dharmo nāma yam ubhayato vinayo / anudharmo nāma yā atra pratipattiḥ / uddiṣṭāḥ kho punar āyuṣmanto duve dharmāḥ dharmo anudharmaś ca / tatrāyuṣmanto pṛcchāmi Ō kaccittha pariśuddhāḥ? dvitīyaṃ pi āyuṣmanto pṛcchāmi kaccittha pariśuddhāḥ? tṛtīyaṃ pi āyuṣmanto pṛcchāmi kaccittha pariśuddhāḥ? pariśuddhā atrāyuṣmanto yasmāt tūṣṇīm evam etaṃ dhārayāmi /",
+   "T1426": "「諸大德！是隨順法，半月半月次說波羅提木叉。二部比尼隨順者，隨順行此法。」「諸大德！已說隨順法。今問諸大德！是中清淨不？是中清淨不？是中清淨不？」「諸大德！是中清淨，默然故，是事如是持。」"
+  },
+  "z1": {
+   "pi": "Uddiṭṭhaṁ kho āyasmanto nidānaṁ, uddiṭṭhā cattāro pārājikā dhammā, uddiṭṭhā terasa saṅghādisesā dhammā, uddiṭṭhā dve aniyatā dhammā, uddiṭṭhā tiṁsa nissaggiyā pācittiyā dhammā, uddiṭṭhā dvenavuti pācittiyā dhammā, uddiṭṭhā cattāro pāṭidesanīyā dhammā, uddiṭṭhā sekhiyā dhammā, uddiṭṭhā satta adhikaraṇasamathā dhammā. Ettakaṁ tassa bhagavato suttāgataṁ suttapariyāpannaṁ anvaddhamāsaṁ uddesaṁ āgacchati. Tattha sabbeheva samaggehi sammodamānehi avivadamānehi sikkhitabbanti.",
+   "T1429": "「諸大德！我已說戒經序，已說四波羅夷法，已說十三僧伽婆尸沙法，已說二不定法，已說三十尼薩耆波逸提法，已說九十波逸提法，已說四波羅提提舍尼法，已說眾學戒法，已說七滅諍法，此是佛所說戒經，半月半月說，戒經中來。「若更有餘佛法，是中皆共和合，應當學。",
+   "T1422a": "「諸大德！已說戒經序、已說四波羅夷法、已說十三僧伽婆尸沙法、已說二不定法、已說三十尼薩耆波逸提法、已說九十一波逸提法、已說四波羅提提舍尼法、已說眾學法、已說七滅諍法。是法入佛戒經中，半月半月波羅提木叉中說，及餘隨道戒法。是中諸大德一心和合歡喜不諍，如水乳合，安樂行，應當學。」",
+   "sa-sarv": "(SCHLUSSTEIL) I (Prosa) udd(i)ṣṭ(a)ṃ mayāyuṣmantaḥ prātimokṣasūtrasya / / nidānaṃ uddiṣṭāś catvāraḥ pārājikā dharmā uddiṣṭās trayodaśa saṃghāvaśeṣā dharmā uddiṣṭau dvāv aniyatau dharmau uddiṣṭās triṃśa(n n)iḥsargikāḥ pātayantikā dharmā uddiṣṭā navati pātayantikā dharmā uddiṣṭāś catvāraḥ prat(i)deśanīyā dha(r)m(ā) u(ddi)ṣṭ(āḥ) saṃbahulā(ḥ) śaikṣā dharmā uddiṣṭāḥ saptādhikaraṇaśamathā dharmāḥ / etāvat tasya bhagavataḥ sūtragataṃ sūtraparyāpannam (a)nvardhamāsaṃ prātimokṣasūtroddeśam āg(acchati) iti yo (v)ā (pu)nar anyo 'p(y āga)cched dharmasyānudharmas tatra vaḥ sahitaiḥ samagraiḥ saṃmodamānair avivadamānair ekāgr(ai)r ekoddeśair ekakṣīrodakībhūtai(ḥ) sukhaṃ phā(ṣaṃ) v(iha)rtavyam iti śikṣā karaṇīyā //",
+   "T1436": "「諸大德已說戒序、已說四波羅夷法、已說十三僧伽婆尸沙法、已說二不定法、已說三十尼薩耆波夜提法、已說九十波夜提法、已說四波羅提提舍尼法、已說眾學法、已說七滅諍法，是事入佛戒經中半月半月波羅提木叉中說，及餘隨道戒法中。是中諸大德！一心歡喜不諍，如水乳合安樂行，應當學。」",
+   "sa-mahl": "uddiṣṭaṃ kho punar āyuṣmanto prātimokṣasya vastu / uddiṣṭaṃ nidānaṃ / uddiṣṭāś catvāraḥ pārājikā dharmāḥ / uddiṣṭāḥ trayodaśa saṃghātiśeṣā dharmāḥ / uddiṣṭāḥ duve aniyatā dharmāḥ / uddiṣṭāḥ triṃśan nissargikapācattikā dharmāḥ / uddiṣṭā dvānavati śuddhapācatti[kā] dharmāḥ / uddiṣṭāś catvāraḥ prātideśanikā dharmāḥ / uddiṣṭāḥ sātirekapañcāśac chaikṣā dharmāḥ / uddiṣṭāḥ saptādhikaraṇaśamathā dharmāḥ / uddiṣṭā duve dharmāḥ, dharmo anudharmaś ca / etako 'yaṃ punas tasya bhagavato tathāgatasyārhataḥ samyaksaṃbuddhasya dharmavinayo prātimokṣasūtrāgato sūtraparyāpanno / yo vā anyo 'pi kaścid dharmasya anudharmo tatra samagrehi sarvehi sahitehi saṃmodamānehi avivadamānehi ekuddeśehi kṣīrodakībhūtehi śāstuḥ śāsanaṃ dīpayamānehi sukhaṃ ca phāsuṃ ca viharantehi anadhyācārāya śikṣā karaṇīyā /",
+   "T1426": "「諸大德！已說戒經序法已、說四波羅夷法已、說十三僧伽婆尸沙法已、說二不定法已、說三十尼薩耆波夜提法已、說九十二波夜提法已、說四波羅提提舍尼法已、說眾學法已、說七滅諍法已、說法隨順法，是名如來、應供、正遍知法比尼法，入《波羅提木叉經》中，是法隨順法，一切學莫犯。」",
+   "T1460": "「諸大德！我已說解脫戒經序、已說四波羅夷法、已說十三僧殘法、已說二不定法、已說三十捨墮法、已說九十墮法、已說四悔過法、已說眾學法、已說七滅諍法。此是釋迦牟尼如來、阿羅呵、三藐三佛陀所說戒經，半月半月說解脫戒經中來。若更有餘佛法，皆共隨順，和合歡喜無諍，應當學。」",
+   "sa-mula": "For the prose and verses see Klaus T. Schmidt: Der Schlußteil des Prātimokṣasūtra der Sarvāstivādins, Text in Sanskrit und Tocharisch A verglichen mit den Parallelversionen anderer Schulen, Auf Grund von Turfan-Handschriften hrsg., Göttingen 1989 (Sanskrittexte aus den Turfanfunden, 13). uddiṣṭaṃ me āyuṣmantaḥ prātimokṣasūtroddeśasya nidānaṃ // uddiṣṭāś catvāraḥ pārājikā dharmās trayodaśa saṃghāvaśeṣā dharmā dvāv aniyatau dharmau | triṃśan naiḥsargikapāyantikā dharmāḥ navati pāyantikā dharmāś catvāraḥ pratideśanīyā dharmāḥ saṃbahulā śaikṣā dharmāḥ saptādhikaraṇaśamathā dharmā etāvat tasya bhagavatas tathāgatasyārhataḥ samyaksaṃbuddhasya sūtragataṃ sūtraparyāpannam iti yo vā punar anyo 'py āgacched dharmasyānudharmaḥ tatra sahitaiḥ samagraiḥ saṃmodamānair avivadamānais tīvraś cetasa ārakṣāsmṛtyapramāde yogaḥ karaṇīyaḥ // //",
+   "T1454": "「諸大德！我已說戒經序、已說四波羅市迦法、十三僧伽伐尸沙法、二不定法、三十泥薩祇波逸底迦法、九十波逸底迦法、四波羅底提舍尼法、眾學法、七滅諍法，此是如來、應、正等覺戒經中所說所攝。若更有餘法之隨法與此相應者，皆當修學。仁等共集，歡喜無諍，一心一說如水乳合，應勤光顯大師聖教，令安樂住，勿為放逸，應當修學。」"
+  },
+  "v1": {
+   "T1429": "「忍辱第一道，佛說無為最， 出家惱他人，不名為沙門。「此是毘婆尸如來、無所著、等正覺，說是戒經。",
+   "T1422a": "比婆尸如來、應、正遍知，為寂靜僧略說波羅提木叉：「『忍辱第一道，涅盤佛稱最， 出家惱他人，不名為沙門。』",
+   "sa-sarv": "II (Verse) PrMoSū_Schluss_V.1: kṣānti(ḥ) paramaṃ tapas titīkṣā nirvāṇaṃ paramaṃ vadanti buddhāḥ na hi pravrajita(ḥ pa)ropat(āp)ī (ś)ramaṇo bhavati parā(n) viheṭhayānaḥ 1",
+   "T1436": "毘婆尸佛如來、無所著、等正覺，為六百二十萬比丘前後圍遶，說是戒經：「忍辱第一道，涅槃佛稱最； 出家惱他人，不名為沙門。」",
+   "sa-mahl": "PrMoSū(Mā-L)Schlußv.1. kṣāntiḥ paramaṃ tapo titikṣā nirvāṇaṃ paramaṃ vadanti buddhāḥ / na hi pravrajitaḥ paropatāpī śravaṇo bhoti parān viheṭhayānaḥ // idaṃ tasya bhagavato vipaśyisya tathāgatasyārhataḥ samyaksaṃbuddhasya acirābhisaṃbuddhasya nirarbude bhikṣusaṃghe saṃkṣiptena prātimokṣaṃ subhāṣitaṃ /",
+   "T1426": "「佛言：『毘婆尸佛如來、應供、正遍知，為寂靜僧，略說波羅提木叉：「『「忍辱第一道，涅槃佛稱最； 出家惱他人，不名為沙門。」",
+   "sa-mula": "kṣāntiḥ paramaṃ tapas titikṣā nirvāṇaṃ paramaṃ vadanti buddhāḥ / na hi pravrajitaḥ paropatāpī śramaṇo bhavati parān viheṭhayānaḥ // 1",
+   "T1454": "忍是勤中上，能得涅槃處； 出家惱他人，不名為沙門。此是毘鉢尸如來等正覺說是戒經。"
+  },
+  "v2": {
+   "T1429": "「譬如明眼人，能避嶮惡道， 世有聰明人，能遠離諸惡。「此是尸棄如來、無所著、等正覺，說是戒經。",
+   "T1422a": "「尸棄如來、應、正遍知，為寂靜僧略說波羅提木叉：「『譬如明眼人，能避險惡道， 世有聰明人，能遠離諸惡。』",
+   "sa-sarv": "PrMoSū_Schluss_V.2: cakṣuṣmān viṣamānī(va) vidyamāne parākrame paṇḍito jīvaloke 'smi(n) pāpāni (parivarjayet 2)",
+   "T1436": "尸棄佛如來、無所著、等正覺，為八十萬比丘前後圍遶，說是戒經：「譬如明眼人，能避險惡道； 世有聰明人，能遠離諸惡。」",
+   "T1426": "「『尸棄佛如來、應供、正遍知，為寂靜僧，略說波羅提木叉：「『「譬如明眼人，能避嶮惡道； 世有聰明人，能遠離諸惡。」",
+   "sa-mula": "cakṣuṣmān viṣamāṇīva vidyamāne parākrame / paṇḍito jīvaloke 'smin pāpāni parivarjayet // 2",
+   "T1454": "明眼避險途，能至安隱處； 智者於生界，能遠離諸惡。此是尸棄如來等正覺說是戒經。"
+  },
+  "v3": {
+   "T1429": "「不謗亦不嫉，當奉行於戒， 飲食知止足，常樂在空閑， 心定樂精進，是名諸佛教。「此是毘葉羅如來、無所著、等正覺，說是戒經。",
+   "T1422a": "「比葉婆如來、應、正遍知，為寂靜僧略說波羅提木叉：「『不惱不說過，如戒所說行， 飯食知節量，常樂在閑處， 心寂樂精進，是名諸佛教。』",
+   "sa-sarv": "PrMoSū_Schluss_V.3: (nopavā)d(ī) nopaghātī prātimokṣe ca saṃvaraḥ mātrajñatā ca bhakteṣu prāntaṃ ca śayanāsanam adhicitte samāyoga etad buddhasya ś(āsa)nam 3",
+   "T1436": "毘鉢施佛如來、無所著、等正覺，為十萬比丘前後圍遶，說是戒經：「不惱不說過，如戒所說行， 飯食知節量，常樂在閑處， 心淨樂精進，是名諸佛教。」",
+   "sa-mahl": "PrMoSū(Mā-L)Schlußv.2. anopavādī aparopaghātī prātimokṣe ca saṃvaro / mātrajñatā ca bhaktasmiṃ prāntaṃ ca śayanāsanaṃ / adhicitte cāyogo etaṃ buddhānuśāsanaṃ // idaṃ tasya bhagavato śikṣisya tathāgatasyārhataḥ samyaksaṃbuddhasya acirābhisaṃbuddhasya nirarbude bhikṣusaṃghe saṃkṣiptena prātimokṣaṃ subhāṣitaṃ //",
+   "T1426": "「『毘葉婆佛如來、應供、正遍知，為寂靜僧，略說波羅提木叉：「『「不惱不說過，如戒所說行； 飯食知節量，常樂在閑處； 心淨樂精進，是名諸佛教。」",
+   "sa-mula": "anopavādī nopaghātī prātimokṣe ca saṃvaraḥ {B: anupavādo 'nupaghātaḥ} / mātrajñatā ca bhakte 'smin prāntaṃ ca śayanāsanam* adhicitte samāyoga etad buddhānuśāsanam* // 3",
+   "T1454": "不毀亦不害，善護於戒經； 飲食知止足，受用下臥具； 勤修增上定，此是諸佛教。此是毘舍浮如來等正覺說是戒經。"
+  },
+  "v4": {
+   "T1429": "「譬如蜂採華，不壞色與香， 但取其味去，比丘入聚然。 不違戾他事，不觀作不作， 但自觀身行，若正若不正。「此是拘樓孫如來、無所著、等正覺，說是戒經。",
+   "T1422a": "「拘留孫如來、應、正遍知，為寂靜僧略說波羅提木叉：「『譬如蜂採花，不壞色與香， 但取其味去。比丘入聚落， 不破壞他事，不觀作不作， 但自觀身行，諦視善不善。』",
+   "sa-sarv": "PrMoSū_Schluss_V.4: yath(ā)pi bhramaraḥ puṣpād varṇagandhāv aheṭhayan paraiti rasam ādāya tathā grāmāṃ muniś caret 4",
+   "T1436": "拘留孫佛如來、無所著、等正覺，為四萬比丘前後圍遶，說是戒經：「譬如蜂採花，不壞色與香， 但取其味去；比丘入聚落， 不破壞他事，不觀作不作， 但自觀身行，諦視善不善。」",
+   "sa-mahl": "PrMoSū(Mā-L)Schlußv.5. yathā hi bhramaro puṇyaṃ varṇagandham aheṭhayaṃ / paraiti rasam ādāya evaṃ grāme muniś caret //",
+   "T1426": "「『拘留孫佛如來、應供、正遍知，為寂靜僧，略說波羅提木叉：「『「譬如蜂採華，不壞色與香， 但取其味去；比丘入聚落， 不破壞他事，不觀作不作， 但自觀身行，諦視善不善。」",
+   "sa-mula": "yathāpi bhramaraḥ puṣpād varṇagandhāv aheṭhayan* [yathā hi] / ḍayate rasam ādāya evaṃ grāme muniś caret* // 4",
+   "T1454": "譬如蜂採花，不壞色與香； 但取其味去，苾芻入聚然。此是俱留孫如來等正覺說是戒經。"
+  },
+  "v5": {
+   "sa-sarv": "PrMoSū_Schluss_V.5: na pareṣāṃ vilomāni na pareṣāṃ kṛtākṛtam ātmanas tu samīkṣeta samāni viṣamāni ca 5",
+   "sa-mahl": "PrMoSū(Mā-L)Schlußv.6. na pareṣāṃ vilomāni na pareṣāṃ kṛtākṛtaṃ / ātmano tu samīkṣeta kṛtāny akṛtāni ca // idaṃ tasya bhagavato konākamunisya tathāgatasyārhataḥ samyaksaṃbuddhasya acirābhisaṃbuddhasya nirarbude bhikṣusaṃghe saṃkṣiptena prātimokṣaṃ subhāṣitam /",
+   "sa-mula": "na pareṣāṃ vilomāni na pareṣāṃ kṛtākṛtam* / ātmanas tu samīkṣeta samāni viṣamāṇi ca // 5",
+   "T1454": "不違逆他人，不觀作不作； 但自觀身行，若正若不正。此是羯諾迦如來等正覺說是戒經。"
+  },
+  "v6": {
+   "T1429": "「心莫作放逸，聖法當勤學， 如是無憂愁，心定入涅槃。「此是拘那含牟尼如來、無所著、等正覺，說是戒經。",
+   "T1422a": "「拘那含牟尼如來、應、正遍知，為寂靜僧略說波羅提木叉：「『欲得好心莫放逸，聖人善法當勤學， 若有知寂一心人，爾乃無復憂愁患。』",
+   "sa-sarv": "PrMoSū_Schluss_V.6: adhicet(a)s(i) mā p(ra)madyata pratataṃ maunapadeṣu śikṣata śokā na bhavanti tāyino hy upaśāntasya sadā smṛtātmanaḥ 6",
+   "T1436": "拘那含佛如來、無所著、等正覺，為三萬比丘前後圍遶，說是戒經：「欲得好心莫放逸，聖人善法當懃學； 若有知寂一心人，乃能無復憂愁患。」",
+   "sa-mahl": "PrMoSū(Mā-L)Schlußv.3. adhicetasi mā pramādyato munino maunapadeṣu śikṣataḥ / śokā na bhavanti tāyino upaśāntasya sadā smṛtīmataḥ // idaṃ tasya bhagavato viśvabhuvasya tathāgatasyārhataḥ samyaksaṃbuddhasya acirābhisaṃbuddhasya nirarbude bhikṣusaṃghe saṃkṣiptena prātimokṣaṃ subhāṣitaṃ //",
+   "T1426": "「『拘那含牟尼佛如來、應供、正遍知，為寂靜僧，略說波羅提木叉：「『「欲得好心莫放逸，聖人善法當懃學； 若有知寂一心人，爾乃無復憂愁患。」",
+   "sa-mula": "adhicetasi mā pramādyato munino maunapadeṣu śikṣataḥ {B:prāmodyato; maunipadeṣu} / śokā na bhavanti tāyina upaśāntasya sadā smṛtimataḥ // 6 dadataḥ puṇyaṃ pravardhate vairaṃ saṃyamato na cīyate / kuśalī prajahāti pāpakaṃ kleśānāṃ kṣayatas tu nirvṛtiḥ {B: kṣayitas} // 7",
+   "T1454": "勿著於定心，勤修寂靜處； 能救者無憂，常令念不失。 若人能惠施，福增怨自息； 修善除眾惡，惑盡至涅槃。此是迦攝波如來等正覺說是戒經。"
+  },
+  "v7": {
+   "T1429": "「一切惡莫作，當奉行諸善， 自淨其志意，是則諸佛教。「此是迦葉如來、無所著、等正覺，說是戒經。",
+   "T1422a": "「迦葉如來、應、正遍知，為寂靜僧略說波羅提木叉：「『一切惡莫作，當具足善法， 自淨其志意，是則諸佛教。』",
+   "sa-sarv": "PrMoSū_Schluss_V.7: sarvapāpasyākaraṇaṃ kuśalasyopasaṃpadaḥ svacittaparyavadanam etad buddhasya śāsanaṃ 7",
+   "T1436": "迦葉佛如來、無所著、等正覺，為二萬比丘前後圍遶，說是戒經：「一切惡莫作，當具足善法， 自淨其志意，是名諸佛教。」",
+   "sa-mahl": "PrMoSū(Mā-L)Schlußv.4. sarvapāpasyākaraṇaṃ kuśalasyopasaṃpadā / svacittaparyodapanaṃ etaṃ buddhānuśāsanam // idaṃ tasya bhagavato krakucchandasya tathāgatasyārhataḥ samyaksaṃbuddhasya acirābhisaṃbuddhasya nirarbude bhikṣusaṃghe saṃkṣiptena prātimokṣaṃ subhāṣitaṃ //",
+   "T1426": "「『迦葉佛如來、應供、正遍知，為寂靜僧，略說波羅提木叉：「『「一切惡莫作，當具足善法； 自淨其志意，是則諸佛教。」",
+   "sa-mula": "sarvapāpasyākaraṇaṃ kuśalasyopasaṃpadā / svacittaparidamanam etad buddhānuśāsanam* // 8",
+   "T1454": "一切惡莫作，一切善應修； 遍調於自心，是則諸佛教。"
+  },
+  "v7b": {
+   "sa-mahl": "PrMoSū(Mā-L)Schlußv.7. nāsti dhyānam aprajñasya prajñā nāsti adhyāyato / yasya dhyānaṃ ca prajñā ca sa vai nirvāṇasya antike // PrMoSū(Mā-L)Schlußv.8. tatrāyam ādi bhavati ihaprajñasya bhikṣuṇo / indriyai guptiḥ saṃtuṣṭiḥ prātimokṣe ca saṃvaro // PrMoSū(Mā-L)Schlußv.9. mitraṃ bhajeta kalyāṇaṃ śuddhājīvīm atandritaṃ / pratisaṃstaravartī ca ācārakuśalo siyā / tataḥ prāmodya bahulo bhikṣu nirvāṇasyaiva antike // idaṃ tasya bhagavataḥ kāśyapasya tathāgatasyārhataḥ samyaksaṃbuddhasya acirābhisaṃbuddhasya nirarbude bhikṣusaṃghe saṃkṣiptena prātimokṣaṃ subhāṣitam //"
+  },
+  "v8": {
+   "T1429": "「善護於口言，自淨其志意， 身莫作諸惡，此三業道淨， 能得如是行，是大仙人道。「此是釋迦牟尼如來、無所著、等正覺，於十二年中，為無事僧說是戒經。從是已後，廣分別說。諸比丘自為樂法、樂沙門者，有慚有愧，樂學戒者，當於中學。」",
+   "T1422a": "「釋迦牟尼如來、應、正遍知，為寂靜僧略說波羅提木叉：「『護身為善哉，能護口亦善， 護意為善哉，護一切亦善， 比丘護一切，便得離眾苦。 比丘守口意，身不犯眾惡， 是三業道淨，得聖所得道。 若人打罵不還報，於嫌恨人心不恨， 於瞋人中心常靜，見人為惡自不作。』」",
+   "sa-sarv": "PrMoSū_Schluss_V.8: kāyena saṃvaraḥ sādhu sādhu vācā ca saṃvaraḥ manasā saṃvaraḥ sādhu sādhu sarvatra saṃvaraḥ sarvatra saṃvṛto bhikṣu(ḥ) sarvaduḥkhāt pramucyate 8 PrMoSū_Schluss_V.9: vācānurakṣī manasā susaṃvṛtaḥ kāyena caivākuśalaṃ na kuryāt etāṃ śubhāṃ karmapathāṃ viśodhaya(nn) ā(rādhay)en (mārga)m ṛṣipraveditam 9",
+   "T1436": "我釋迦牟尼佛如來、無所著、等正覺，為千二百五十未曾有僧前後圍遶，說是戒經：「護身為善哉，能護口亦善； 護意為善哉，護一切亦善。 比丘護一切，便得離眾惡； 比丘守口意，身不犯眾惡， 是三業道淨，得聖所得道。」「若人撾罵不還報，於嫌恨人心不恨， 於瞋人中心常淨，見人為惡自不作。」",
+   "sa-mahl": "PrMoSū(Mā-L)Schlußv.10. cakṣuṣā saṃvaraḥ sādhuḥ sādhuḥ śrotreṇa saṃvaraḥ / ghrāṇena saṃvaraḥ sādhuḥ sādhuḥ jihvāya saṃvaraḥ // PrMoSū(Mā-L)Schlußv.11. kāyena saṃvaraḥ sādhuḥ manasā sādhu saṃvaraḥ / sarvatra saṃvṛto bhikṣuḥ sarvaduḥkhāt pramucyate // idaṃ tasya bhagavataḥ śākyamuneḥ śākyādhirājasya tathāgatasyārhataḥ samyaksambuddhasya acirābhisaṃbuddhasya nirarbude bhikṣusaṃghe saṃkṣiptena prātimokṣaṃ subhāṣitam /",
+   "T1426": "「『釋迦牟尼佛如來、應供、正遍知，為寂靜僧，略說波羅提木叉：「『「護身為善哉！能護口亦善； 護意為善哉！護一切亦善。 比丘護一切，便得離眾苦； 比丘守口意，身不犯諸惡， 是三業道淨，得聖所得道。 若人打罵不還報，於嫌恨人心不恨， 於瞋人中心常淨，見人為惡自不作。」",
+   "sa-mula": "kāyena saṃvaraḥ sādhu sādhu vācātha saṃvaraḥ {B: vācā ca} / manasā saṃvaraḥ sādhu sādhu sarvatra saṃvaraḥ / sarvatra saṃvṛto bhikṣuḥ sarvaduḥkhāt pramucyate // 9 vācānurakṣī manasā susaṃvṛtaḥ kāyena caivākuśalaṃ na kuryāt* / etāṃs trīn karmapathān viśodhya nārāgayen mārgam ṛṣipraveditam* // 10",
+   "T1454": "護身為善哉！能護語亦善； 護意為善哉！盡護最為善。 苾芻護一切，能解脫眾苦； 善護於口言，亦善護於意。 身不作諸惡，常淨三種業； 是則能隨順，大仙所行道。此是釋迦如來等正覺說是戒經。"
+  },
+  "v9": {
+   "T1429": "明人能護戒，能得三種樂， 名譽及利養，死得生天上。 當觀如是處，有智勤護戒， 戒淨有智慧，便得第一道。 如過去諸佛，及以未來者， 現在諸世尊，能勝一切憂， 皆共尊敬戒，此是諸佛法。 若有自為身，欲求於佛道， 當尊重正法，此是諸佛教。 七佛為世尊，滅除諸結使， 說是七戒經，諸縛得解脫。 已入於涅槃，諸戲永滅盡， 尊行大仙說，聖賢稱譽戒， 弟子之所行，入寂滅涅槃。 世尊涅槃時，興起於大悲， 集諸比丘眾，與如是教誡。 莫謂我涅槃，淨行者無護， 我今說戒經，亦善說毘尼。 我雖般涅槃，當視如世尊， 此經久住世，佛法得熾盛， 以是熾盛故，得入於涅槃。 若不持此戒，如所應布薩， 喻如日沒時，世界皆闇冥。 當護持是戒，如𤛆牛愛尾， 和合一處坐，如佛之所說。 我已說戒經，眾僧布薩竟， 我今說戒經，所說諸功德， 施一切眾生，皆共成佛道。",
+   "T1422a": "「七佛為世尊，能救護世間， 所可說戒經，我已廣說竟。 諸佛及弟子，恭敬是戒經， 恭敬戒經已，各各相恭敬， 慚愧得具足，能得無為道。」",
+   "sa-sarv": "PrMoSū_Schluss_V.10: kṣiptaḥ kṣipen naiva hato na hanyād vairaprasaṃgeṣu bhaved avair(aḥ duṣṭe)ṣu ca syāt satataṃ prasanna(ḥ) (s)v(a)y(aṃ) na kuryāt paragarhitaṃ yat 10 PrMoSū_Schluss_V.11: saptabhir lokanāyakair buddhavīrair mahātmabhiḥ prātimokṣaḥ samuddiṣṭo nirdiṣṭaś ca maharṣiṇā 11 PrMoSū_Schluss_V.12: atra sagauravā buddhā buddhānāṃ śrāvakāś ca ye atra sagauravā bhūtvā tathānyonyasagauravā hrīravatrāpyasaṃpannā(ḥ) prāpnuvanti hy asaṃskṛtam 12 PrMoSū_Schluss_V.13: ārabhadhvaṃ niṣkramadhvaṃ yujyadhvaṃ buddhaśāsane / dhunadhvaṃ mṛtyunaḥ sainyaṃ naḍāgāram iva kuñjaraḥ 13 PrMoSū_Schluss_V.14: yo hy asmiṃ dharmavinaye apramatto bhaviṣyati prahāya jātisaṃsāraṃ duḥkhasyāntaṃ sa (y)āsyati 14 PrMoSū_Schluss_V.15: yasyārth(e) sūtram uddiṣṭaṃ yasyārthe poṣathaḥ kṛtaḥ tac chīlam anurakṣadhvaṃ vālāgra(ṃ) ca(ma)ro yathā 15",
+   "T1436": "「七佛為世尊，能救護世間； 所可說戒經，我已廣說竟。 諸佛及弟子，恭敬是戒經； 恭敬戒經已，各各相恭敬。 慚愧得具足，能得無為道；",
+   "sa-mahl": "PrMoSū(Mā-L)Schlußv.12. etāni prātimokṣāṇi saṃbuddhānāṃ śirīmatāṃ / kīrtitāny aprameyāṇi ........... tiṣṭam a ......... ṇāś ca // PrMoSū(Mā-L)Schlußv.13. kṣāntivādī ca bhagavān vipaśyī anopavadyaṃ ca śikhī prakāśayati / adhicittaṃ ca viśvabhūḥ akaraṇaṃ ca pāpānāṃ krakucchandaḥ / caryāṃ ca konākamuniḥ dhyānāni ca kāśyapo prakāśayati / saṃvaraṃ śākyamuniḥ // ete sapta daśabalā mahāprajñā amitabuddhī saptānāṃ samyaksaṃbuddhānām abhinnān .... lokākhyādhipatīnāṃ dharmākhyānāni uktāni /",
+   "T1426": "七佛為世尊，能救護世間； 所可說戒經，我已廣說竟。 諸佛及弟子，恭敬是戒經； 恭敬戒經已，各各相恭敬。 慚愧得具足，能得無為道。』」",
+   "T1460": "「東北方世界，最勝兩足尊， 難見難遇值，說此解脫戒： 財富非久伴，愚者所喜樂； 智慧能滅苦，命終常安樂。 是七佛世尊，說解脫戒經， 心能敬重者，則獲無上法。 所以說戒經、何故淨布薩？ 為隨順學戒，如𤛆牛愛尾。 說此戒經已，所有諸功德， 願三界群生，一切皆安隱。 豐樂常憺怕，隨時降甘雨， 修行供養佛，令正法久住。 我今說戒經，誰能聞受行， 謂四眾眷屬，安隱度善濟。 世尊天中天，一切無與等， 合十指爪掌，敬心頭面禮。",
+   "sa-mula": "buddho vipaśyī ca śikhī ca viśvabhu krakutsundaḥ kanakamuniś ca kāśyapaḥ {B: krakutsandaḥ} / anuttaraḥ śākyamuniś ca gautamo devātidevo naradamyasārathiḥ // 11 saptānāṃ buddhavīrāṇāṃ lokanāthāgratāyināṃ / uddiṣṭaḥ prātimokṣo 'yaṃ vistareṇa yaśasvinām* // 12 asmin sagauravā buddhā buddhānāṃ śrāvakāś ca ye / asmin sagauravā bhūtvā prāpnumadhvam asaṃskṛtam* {B: prāptamadhvam} // 13 ārabhadhvaṃ niṣkrāmata yujyadhvaṃ buddhaśāsane / dhunīta mṛtyunaḥ sainyaṃ naḍāgāram iva kuñjaraḥ // 14 yo hy asmin dharmavinaye apramattaś cariṣyati / prahāya jātisaṃsāraṃ duḥkhasyāntaṃ kariṣyati // 15 anyonyaṃ śīlaguptyarhaṃ śāsanasya ca vṛddhaye / uddiṣṭaḥ prātimokṣo 'yaṃ kṛtaḥ saṃghena poṣadhaḥ // 16 yasyārthe sūtram uddiṣṭaṃ yasyārthe poṣadhaḥ kṛtaḥ / tac chīlam anurakṣadhvaṃ bālāgraṃ camaro yathā // 17 prātimokṣasamuddeśād yat puṇyaṃ samupārjitaṃ / aśeṣas tena loko 'yaṃ maunīndraṃ padam āpnuyāt // 18",
+   "T1454": "毘鉢尸式棄、毘舍俱留孫、 羯諾迦牟尼、迦攝釋迦尊， 如是天中天，無上調御者， 七佛皆雄猛，能救護世間。 具足大名稱，咸說此戒法； 諸佛及弟子，咸共尊敬戒， 恭敬戒經故，獲得無上果。 汝當求出離，於佛教勤修； 降伏生死軍，如象摧草舍。 於此法律中，常為不放逸； 能竭煩惱海，當盡苦邊際。 所為說戒經，和合作長淨； 當共尊敬戒，如犛牛愛尾。"
+  },
+  "v10": {
+   "pi": "Vitthāruddeso pañcamo. Bhikkhupātimokkhaṁ niṭṭhitaṁ Namo tassa bhagavato arahato sammāsambuddhassa",
+   "T1422a": "「諸大德！已說波羅提木叉竟，僧一心得布薩。」",
+   "sa-sarv": "uddiṣṭa(ḥ) prātimokṣaḥ kṛtaḥ samagreṇa saṃghena poṣatha iti // prātimokṣasūtraṃ samāpta(m) //",
+   "T1436": "已說戒經竟，僧一心布薩。」",
+   "sa-mahl": "uddistaṃ prātimokṣasūtraṃ / kṛtaṃ saṃghena poṣadhaṃ / āryāḥ śikṣāṃ ciraṃ pālayantu / śāsanaṃ .... santu saṃsthātu /",
+   "T1426": "已說波羅提木叉經竟。僧一心得布薩。",
+   "T1460": "說解脫戒經，眾僧布薩竟， 若為眾請者，疾辯為宣說。」",
+   "sa-mula": "/// prātimokṣaḥ samāptaḥ ///",
+   "T1454": "我已說戒經，眾僧長淨竟， 福利諸有情，皆共成佛道。"
+  },
+  "v11": {
+   "T1422a": "按此戒本，國本同於宋本，丹本獨異。如何去取？今以本律撿之，此丹本乃正也。彼國、宋兩本，即此「隨」函中十誦比丘波羅提木叉戒本，鳩摩羅什譯者。錯重寫為五分戒本，而云佛陀什譯。其間雖有小不同處，但是寫筆之錯耳，故今取此丹本入藏。",
+   "sa-mahl": "samāptaṃ prātimokṣasūtraṃ āryamahāsāṃghikānāṃ lokottaravādināṃ madhyoddeśikānāṃ pāṭha iti // ye dharmā hetuprabhavā hetuṃ pi teṣāṃ tathāgato hy avadat* / teṣāṃ ca yo nirodha evaṃvādī mahāśravaṇaḥ / yo dharmo 'yaṃ pravaramahāyānayayisya śākyabhikṣuloka śrī[dharasya] / śākyabhikṣuśrīvijayabhadralikhitam idam //",
+   "T1426": "摩訶僧祇戒「持戒淨身口，攝心正憶念； 多聞生實智，斯由戒為本。 戒為妙寶藏，亦為七財寶； 戒為大船師，能渡生死海。 戒為清涼池，澡浴諸煩惱； 戒為無畏術，消伏邪毒害。 戒為究竟伴，能過嶮惡道； 戒為甘露門，眾聖之所由。 持戒心不動，專精不放逸； 不毀正戒相，亦無邪命心。 是名清淨戒，諸佛之所讚； 是故歡喜持，清淨之戒身。」"
+  }
+ }
+}
