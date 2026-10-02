@@ -1240,6 +1240,8 @@ B 線＝前人概論怎麼切（比較表）。一次派一個 Sonnet。
   講新約形成時再介紹；第一章只用書名（〈馬可〉〈路加〉），不把書當成人來寫，也不說〈馬可〉「最早寫成」（那是學界判斷）。
 - ✅ 體例（2026-10-02 作者）：**希臘文、希伯來文一律先寫原文字母，再括號轉寫**：εὐαγγέλιον（euangelion）、מָשִׁיחַ（māšîaḥ）、
   Χριστός（Christos）、λόγος（logos）。不要只寫拉丁轉寫。
+  🚨 希伯來文是由右至左的文字，夾在中文裡時雙向排版會把後面的括號轉寫甩到左邊（看起來像「（māšîaḥ）מָשִׁיחַ」）。
+  檔案裡順序是對的，是顯示問題：純文字／markdown 在希伯來字前後加 U+200E（LRM）；HTML 一律包 `<span lang="he" dir="rtl">…</span>`。
 - 補書不只 z-lib；先查站上既有（梵二 SC／DV 中拉英在 `data/creeds/ecumenical-councils/vatican-ii/`、
   奧斯堡信條與路德小教理在 `data/creeds/protestant-confessions/`、通諭中譯在 `data/encyclicals/`），
   再查 TRC／天主教在線目錄。館藏確認沒有：《天主教教理》全本中譯、《協同書》中譯、Schmemann、Bria、Brown 第二冊。
