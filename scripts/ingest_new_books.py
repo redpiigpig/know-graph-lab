@@ -491,7 +491,10 @@ def gemini_classify(title: str, author: str) -> dict:
             "responseMimeType": "application/json",
         },
     }
-    base_url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent"
+    # 🚨 gemini-2.5-flash 對多數 key 已 404 下架（2026-10-02 一整輪入庫每本都退回本地分類器）；
+    # 跟翻譯引擎一樣用 flash-latest，可用 GEMINI_MODEL 覆寫。
+    model = os.environ.get("GEMINI_MODEL", "gemini-flash-latest")
+    base_url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent"
     # Per-key budget: 4 attempts with short backoff (transient spike). On
     # persistent 429 advance to next key and reset attempts.
     last_err: str | None = None
