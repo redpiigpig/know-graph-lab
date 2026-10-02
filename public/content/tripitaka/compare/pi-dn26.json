@@ -1,0 +1,369 @@
+{
+ "slug": "pi-dn26",
+ "title": "轉輪聖王修行經",
+ "family": "pi",
+ "intro": "巴利 DN 26〈轉輪聖王師子吼經〉（Cakkavatti）＋漢譯南傳＋長阿含 6〈轉輪聖王修行經〉＋中阿含 70〈轉輪王經〉。以自洲法洲開頭與結尾，中間是堅念王以下七代轉輪王、末王不給貧窮而盜、殺、妄語等惡法相生、壽命由八萬減到十歲、七日刀兵劫後修善而壽命漸增、蠰佉（螺）王與彌勒出世，最後說比丘的壽、色、樂、財、力。壽命遞減的各級，三本發生惡法的位置不同（巴利：四萬歲時妄語、二萬兩舌、一萬邪婬；中阿含：盜竊時已減到四萬、二萬歲時妄語；長阿含：先減到一萬才有妄語），所以「壽命始減・盜者妄語」與「惡法相繼增長」各合為一節，不逐級切。長阿含彌勒出世在蠰佉王之前（設 reorder）；中阿含只寫兩代轉輪王，七寶與巡行四方以「如前說」帶過，沒有彌勒、蠰佉王出家，也沒有比丘之「財」（四無量）一項；中阿含把「行自境界」直接說成四念處，與巴利重說自洲法洲同節。說法處：巴利在摩揭陀摩偷羅，長阿含在摩羅醯搜、摩樓國，中阿含在摩兜麗剎利。",
+ "units": [
+  {
+   "id": "c00",
+   "label": "經題"
+  },
+  {
+   "id": "c01",
+   "label": "如是我聞・說法處"
+  },
+  {
+   "id": "c02",
+   "label": "自洲法洲：修四念處・行自境界魔不得便"
+  },
+  {
+   "id": "c03",
+   "label": "堅念王為轉輪聖王・七寶千子"
+  },
+  {
+   "id": "c04",
+   "label": "輪寶移處・王付國出家"
+  },
+  {
+   "id": "c05",
+   "label": "出家七日輪寶隱沒・新王問父轉輪聖王之法"
+  },
+  {
+   "id": "c06",
+   "label": "新王行聖法・布薩日輪寶現"
+  },
+  {
+   "id": "c07",
+   "label": "輪寶轉行四方・諸王歸服・教以五戒"
+  },
+  {
+   "id": "c08",
+   "label": "歷代轉輪王相承"
+  },
+  {
+   "id": "c09",
+   "label": "末王輪寶隱沒不問父法・國衰・群臣勸問"
+  },
+  {
+   "id": "c10",
+   "label": "王問聖法而不給貧窮"
+  },
+  {
+   "id": "c11",
+   "label": "貧窮增長・盜者得王賜財"
+  },
+  {
+   "id": "c12",
+   "label": "眾人競盜・王斬盜首"
+  },
+  {
+   "id": "c13",
+   "label": "盜者持刀劫殺"
+  },
+  {
+   "id": "c14",
+   "label": "壽命始減・盜者妄語"
+  },
+  {
+   "id": "c15",
+   "label": "惡法相繼增長・壽命遞減至百歲"
+  },
+  {
+   "id": "c16",
+   "label": "人壽十歲時：五歲出嫁、美味消失、十善不聞"
+  },
+  {
+   "id": "c17",
+   "label": "十歲時無尊卑・相見如獵者見鹿"
+  },
+  {
+   "id": "c18",
+   "label": "七日刀兵劫"
+  },
+  {
+   "id": "c19",
+   "label": "避難者七日後相見"
+  },
+  {
+   "id": "c20",
+   "label": "發心離殺・漸修善法壽至八萬"
+  },
+  {
+   "id": "c21",
+   "label": "人壽八萬歲時：五百歲嫁、病少、閻浮提豐盛"
+  },
+  {
+   "id": "c22",
+   "label": "蠰佉（螺）轉輪王出世"
+  },
+  {
+   "id": "c23",
+   "label": "彌勒佛出世"
+  },
+  {
+   "id": "c24",
+   "label": "蠰佉王捨寶幢出家證果"
+  },
+  {
+   "id": "c25",
+   "label": "自洲法洲・行自境界（重說）"
+  },
+  {
+   "id": "c26",
+   "label": "比丘之壽：四神足"
+  },
+  {
+   "id": "c27",
+   "label": "比丘之色：戒具足"
+  },
+  {
+   "id": "c28",
+   "label": "比丘之樂：四禪"
+  },
+  {
+   "id": "c29",
+   "label": "比丘之財：四無量"
+  },
+  {
+   "id": "c30",
+   "label": "比丘之力：漏盡"
+  },
+  {
+   "id": "c31",
+   "label": "魔力難勝・歡喜奉行"
+  }
+ ],
+ "versions": [
+  {
+   "id": "dn26",
+   "lang": "pi",
+   "label": "巴利 DN 26",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "nan-dn26",
+   "lang": "lzh",
+   "label": "漢譯南傳 DN 26",
+   "who": "元亨寺版（譯自巴利）"
+  },
+  {
+   "id": "DA6",
+   "lang": "lzh",
+   "label": "長阿含 6 轉輪聖王修行經",
+   "who": "佛陀耶舍、竺佛念譯・413 年",
+   "work": "T0001",
+   "reorder": true
+  },
+  {
+   "id": "MA70",
+   "lang": "lzh",
+   "label": "中阿含 70 轉輪王經",
+   "who": "瞿曇僧伽提婆譯・397–398 年",
+   "work": "T0026"
+  }
+ ],
+ "works": [
+  "T0001",
+  "T0026"
+ ],
+ "anchors": [
+  {
+   "work": "T0001",
+   "node": "（六）佛說長阿含第二分轉輪聖王修行經第二",
+   "uid": "T01n0001_p0039a21"
+  },
+  {
+   "work": "T0026",
+   "node": "（七〇）中阿含王相應品轉輪王經第六（第二小土城誦）",
+   "uid": "T01n0026_p0520b17"
+  }
+ ],
+ "cells": {
+  "c00": {
+   "dn26": "Dīgha Nikāya 26 Cakkavattisutta",
+   "nan-dn26": "二六　轉輪聖王師子吼經"
+  },
+  "c01": {
+   "dn26": "1. Attadīpasaraṇatā Evaṁ me sutaṁ— ekaṁ samayaṁ bhagavā magadhesu viharati mātulāyaṁ. Tatra kho bhagavā bhikkhū āmantesi: “bhikkhavo”ti. “Bhaddante”ti te bhikkhū bhagavato paccassosuṁ. Bhagavā etadavoca:",
+   "nan-dn26": "如是我聞。 爾時，世尊住摩揭陀國之摩偷羅。其時，世尊告諸比丘曰：「諸比丘！」彼等諸比丘應諾世尊：「世尊！」世尊如次說：",
+   "DA6": "如是我聞：一時，佛在摩羅醯搜人間遊行，與千二百五十比丘漸至摩樓國。",
+   "MA70": "我聞如是：一時，佛遊摩兜麗剎利，在㮈林駛河岸。"
+  },
+  "c02": {
+   "dn26": "“Attadīpā, bhikkhave, viharatha attasaraṇā anaññasaraṇā, dhammadīpā dhammasaraṇā anaññasaraṇā. Kathañca pana, bhikkhave, bhikkhu attadīpo viharati attasaraṇo anaññasaraṇo, dhammadīpo dhammasaraṇo anaññasaraṇo? Idha, bhikkhave, bhikkhu kāye kāyānupassī viharati ātāpī sampajāno satimā vineyya loke abhijjhādomanassaṁ. Vedanāsu vedanānupassī …pe… citte cittānupassī …pe… dhammesu dhammānupassī viharati ātāpī sampajāno satimā vineyya loke abhijjhādomanassaṁ. Evaṁ kho, bhikkhave, bhikkhu attadīpo viharati attasaraṇo anaññasaraṇo, dhammadīpo dhammasaraṇo anaññasaraṇo. Gocare, bhikkhave, caratha sake pettike visaye. Gocare, bhikkhave, carataṁ sake pettike visaye na lacchati māro otāraṁ, na lacchati māro ārammaṇaṁ. Kusalānaṁ, bhikkhave, dhammānaṁ samādānahetu evamidaṁ puññaṁ pavaḍḍhati.",
+   "nan-dn26": "「自作洲！自作歸依處！勿作其他歸依處；以法為洲，法為歸依處，勿為其他歸依處。 諸比丘！然者，如何是比丘自作洲，自作歸依處，勿作其他歸依處；以法為洲，以法為歸依處，勿為其他歸處而住耶？ 於是，諸比丘！於身觀身而住，精勤、自覺、憶念者，於世間應得調伏貪欲、愚癡。於受……乃至……於心……乃至……於法……〔乃至〕……如是，諸比丘！即為比丘自作洲，自作歸依處，勿作其他歸依處；以法為洲，法為歸依處，勿為其他歸依處而作。 諸比丘！為行乞而往自己祖、父之地。諸比丘！為行乞而往自己祖、父之地者，惡魔應無機可乘。又惡魔不得其根據。諸比丘！依攝持善法之因緣，如是，增長其他之福德。",
+   "DA6": "爾時，世尊告諸比丘：「汝等當自熾燃，熾燃於法，勿他熾燃；當自歸依，歸依於法，勿他歸依。云何比丘當自熾燃，熾燃於法，勿他熾燃？當自歸依，歸依於法，勿他歸依？於是，比丘內身身觀，精勤無懈，憶念不忘，除世貪憂；外身身觀、內外身身觀，精勤無懈，識念不忘，除世貪憂。受、意、法觀，亦復如是，是為比丘自熾燃，熾燃於法，不他熾燃；自歸依，歸依於法，不他歸依。「如是行者，魔不能嬈，功德日增，所以者何？",
+   "MA70": "爾時，世尊告諸比丘：「諸比丘！當自然法燈，自歸己法，莫然餘燈，莫歸餘法。諸比丘！若自然法燈，自歸己法，不然餘燈，不歸餘法者，便能求學得利，獲福無量。所以者何？"
+  },
+  "c03": {
+   "dn26": "2. Daḷhanemicakkavattirājā Bhūtapubbaṁ, bhikkhave, rājā daḷhanemi nāma ahosi cakkavattī dhammiko dhammarājā cāturanto vijitāvī janapadatthāvariyappatto sattaratanasamannāgato. Tassimāni satta ratanāni ahesuṁ seyyathidaṁ— cakkaratanaṁ hatthiratanaṁ assaratanaṁ maṇiratanaṁ itthiratanaṁ gahapatiratanaṁ pariṇāyakaratanameva sattamaṁ. Parosahassaṁ kho panassa puttā ahesuṁ sūrā vīraṅgarūpā parasenappamaddanā. So imaṁ pathaviṁ sāgarapariyantaṁ adaṇḍena asatthena dhammena abhivijiya ajjhāvasi.",
+   "nan-dn26": "諸比丘！往昔，有國王名為堅固念。為轉輪聖王征服四天下，成就七寶而善統治其國土。彼有其次之七寶。即：金輪寶、白象寶、紺馬寶、神珠寶、玉女寶、居士寶、第七為主兵寶等。又彼之千子，雄猛勇健而善擊破外敵。彼由此地以至四海之彼，不用刀杖，以正法制御、統治。",
+   "DA6": "乃往過去久遠世時，有王名堅固念，剎利水澆頭種，為轉輪聖王，領四天下。時，王自在以法治化，人中殊特，七寶具足，一者金輪寶，二者白象寶，三者紺馬寶，四者神珠寶，五者玉女寶，六者居士寶，七者主兵寶。千子具足，勇健雄猛，能伏怨敵，不用兵杖，自然太平。",
+   "MA70": "比丘！昔時有王名曰堅念，為轉輪王，聰明智慧，有四種軍整御天下，由己自在，如法法王，成就七寶，得人四種如意之德。云何成就七寶，得人四種如意之德？如前所說成就七寶，得人四種如意之德。"
+  },
+  "c04": {
+   "dn26": "Atha kho, bhikkhave, rājā daḷhanemi bahunnaṁ vassānaṁ bahunnaṁ vassasatānaṁ bahunnaṁ vassasahassānaṁ accayena aññataraṁ purisaṁ āmantesi: ‘yadā tvaṁ, ambho purisa, passeyyāsi dibbaṁ cakkaratanaṁ osakkitaṁ ṭhānā cutaṁ, atha me āroceyyāsī’ti. ‘Evaṁ, devā’ti kho, bhikkhave, so puriso rañño daḷhanemissa paccassosi. Addasā kho, bhikkhave, so puriso bahunnaṁ vassānaṁ bahunnaṁ vassasatānaṁ bahunnaṁ vassasahassānaṁ accayena dibbaṁ cakkaratanaṁ osakkitaṁ ṭhānā cutaṁ, disvāna yena rājā daḷhanemi tenupasaṅkami; upasaṅkamitvā rājānaṁ daḷhanemiṁ etadavoca: ‘yagghe, deva, jāneyyāsi, dibbaṁ te cakkaratanaṁ osakkitaṁ ṭhānā cutan’ti. Atha kho, bhikkhave, rājā daḷhanemi jeṭṭhaputtaṁ kumāraṁ āmantāpetvā etadavoca: ‘dibbaṁ kira me, tāta kumāra, cakkaratanaṁ osakkitaṁ ṭhānā cutaṁ. Sutaṁ kho pana metaṁ— yassa rañño cakkavattissa dibbaṁ cakkaratanaṁ osakkati ṭhānā cavati, na dāni tena raññā ciraṁ jīvitabbaṁ hotīti. Bhuttā kho pana me mānusakā kāmā, samayo dāni me dibbe kāme pariyesituṁ. Ehi tvaṁ, tāta kumāra, imaṁ samuddapariyantaṁ pathaviṁ paṭipajja. Ahaṁ pana kesamassuṁ ohāretvā kāsāyāni vatthāni acchādetvā agārasmā anagāriyaṁ pabbajissāmī’ti. Atha kho, bhikkhave, rājā daḷhanemi jeṭṭhaputtaṁ kumāraṁ sādhukaṁ rajje samanusāsitvā kesamassuṁ ohāretvā kāsāyāni vatthāni acchādetvā agārasmā anagāriyaṁ pabbaji.",
+   "nan-dn26": "時，諸比丘！彼堅固念王，數十百千年之後，告一臣下言： 『噫！臣汝！若見天之輪寶，將離去其本處者，其時，即來告我。』 諸比丘！彼臣答轉輪聖王曰：『唯然，大王！』 諸比丘！彼臣數十百千年之後，見天之輪寶離其本處而去，見已，至彼堅固念王之處，告大王曰： 『大王！大王天之輪寶不見離其本處而去耶！』 其時堅固念王呼其太子，以此告之曰： 『太子！汝說我天之輪寶離其本處而去，聽聞我此事：「若轉輪聖王之天輪寶，離其本處而去者，彼王之壽命，沒多久將盡矣。」我已享受人界之欲樂，今當求天界之欲樂時。來！太子！汝統治此四天下！我將剃除鬚髮，著袈裟衣，由在家而出家。』 其時，諸比丘！堅固念王，令太子善統治其國土，自剃除鬚髮，著袈裟衣，由在家而出家。",
+   "DA6": "堅固念王久治世已，時，金輪寶即於虛空忽離本處，時，典輪者速往白王：『大王！當知今者輪寶離於本處。』時，堅固王聞已念言：『我曾於先宿耆舊所聞，若轉輪聖王輪寶移者，王壽未幾。我今已受人中福樂，宜更方便受天福樂，當立太子領四天下，別封一邑與下髮師，命下鬚髮，服三法衣，出家修道。』「時，堅固念王即命太子而告之曰：『卿為知不？吾曾從先宿耆舊所聞，若轉輪聖王金輪離本處者，王壽未幾。吾今已受人中福樂，當更方便遷受天福，今欲剃除鬚髮，服三法衣，出家為道，以四天下委付於汝，宜自勉力，存恤民物。』是時，太子受王教已，時，堅固念王即剃除鬚髮，服三法衣，出家修道。",
+   "MA70": "「於是，堅念王而於後時，天輪寶移，忽離本處。有人見之，詣堅念王白曰：『天王！當知天輪寶移離於本處。』堅念王聞已，告曰：『太子！我天輪寶移離於本處。太子！我自曾從古人聞之，若轉輪王天輪寶移離本處者，彼王必不久住，命不久存。太子！我已得人間之欲，今當復求於天上欲。太子，我欲剃除鬚髮，著袈裟衣，至信、捨家、無家、學道。太子！我今以此四天下付授於汝，汝當如法治化，莫以非法，無令國中有諸惡業、非梵行人。太子！汝後若見天輪寶移離本處者，汝亦當復以此國政授汝太子，善教勅之。授太子國已，汝亦當復剃除鬚髮，著袈裟衣，至信、捨家、無家、學道於是。』堅念王授太子國，善教勅已，便剃除鬚髮，著袈裟衣，至信、捨家、無家、學道。"
+  },
+  "c05": {
+   "dn26": "Sattāhapabbajite kho pana, bhikkhave, rājisimhi dibbaṁ cakkaratanaṁ antaradhāyi. Atha kho, bhikkhave, aññataro puriso yena rājā khattiyo muddhābhisitto tenupasaṅkami; upasaṅkamitvā rājānaṁ khattiyaṁ muddhābhisittaṁ etadavoca: ‘yagghe, deva, jāneyyāsi, dibbaṁ cakkaratanaṁ antarahitan’ti. Atha kho, bhikkhave, rājā khattiyo muddhābhisitto dibbe cakkaratane antarahite anattamano ahosi, anattamanatañca paṭisaṁvedesi. So yena rājisi tenupasaṅkami; upasaṅkamitvā rājisiṁ etadavoca: ‘yagghe, deva, jāneyyāsi, dibbaṁ cakkaratanaṁ antarahitan’ti. Evaṁ vutte, bhikkhave, rājisi rājānaṁ khattiyaṁ muddhābhisittaṁ etadavoca: ‘mā kho tvaṁ, tāta, dibbe cakkaratane antarahite anattamano ahosi, mā anattamanatañca paṭisaṁvedesi, na hi te, tāta, dibbaṁ cakkaratanaṁ pettikaṁ dāyajjaṁ. Iṅgha tvaṁ, tāta, ariye cakkavattivatte vattāhi. Ṭhānaṁ kho panetaṁ vijjati, yaṁ te ariye cakkavattivatte vattamānassa tadahuposathe pannarase sīsaṁnhātassa uposathikassa uparipāsādavaragatassa dibbaṁ cakkaratanaṁ pātubhavissati sahassāraṁ sanemikaṁ sanābhikaṁ sabbākāraparipūran’ti. 2.1. Cakkavattiariyavatta ‘Katamaṁ pana taṁ, deva, ariyaṁ cakkavattivattan’ti? ‘Tena hi tvaṁ, tāta, dhammaṁyeva nissāya dhammaṁ sakkaronto dhammaṁ garuṁ karonto dhammaṁ mānento dhammaṁ pūjento dhammaṁ apacāyamāno dhammaddhajo dhammaketu dhammādhipateyyo dhammikaṁ rakkhāvaraṇaguttiṁ saṁvidahassu antojanasmiṁ balakāyasmiṁ khattiyesu anuyantesu brāhmaṇagahapatikesu negamajānapadesu samaṇabrāhmaṇesu migapakkhīsu. Mā ca te, tāta, vijite adhammakāro pavattittha. Ye ca te, tāta, vijite adhanā assu, tesañca dhanamanuppadeyyāsi. Ye ca te, tāta, vijite samaṇabrāhmaṇā madappamādā paṭiviratā khantisoracce niviṭṭhā ekamattānaṁ damenti, ekamattānaṁ samenti, ekamattānaṁ parinibbāpenti, te kālena kālaṁ upasaṅkamitvā paripuccheyyāsi pariggaṇheyyāsi: “kiṁ, bhante, kusalaṁ, kiṁ akusalaṁ, kiṁ sāvajjaṁ, kiṁ anavajjaṁ, kiṁ sevitabbaṁ, kiṁ na sevitabbaṁ, kiṁ me karīyamānaṁ dīgharattaṁ ahitāya dukkhāya assa, kiṁ vā pana me karīyamānaṁ dīgharattaṁ hitāya sukhāya assā”ti? Tesaṁ sutvā yaṁ akusalaṁ taṁ abhinivajjeyyāsi, yaṁ kusalaṁ taṁ samādāya vatteyyāsi. Idaṁ kho, tāta, taṁ ariyaṁ cakkavattivattan’ti.",
+   "nan-dn26": "然，國王之出家後七日，天之輪寶，突然消滅。 其時，諸比丘！有一大臣至剎帝利灌頂王之處，告其王曰：『大王！不知彼天之輪寶突然消滅耶？』時，諸比丘！彼剎帝利灌頂王，見天之輪寶突然消滅，心中憫憫不喜悅，即至彼父王之處，告父王曰： 『大王！知天之輪寶突然消滅耶？』 諸比丘！如是告已，父王告剎帝利灌頂王曰： 『噫！我子！汝對天之輪寶突然消滅勿悲傷，勿抱憂愁之念。我子！此天之輪寶，實非汝祖父之遺產，汝正唯轉聖之輪寶。汝若奉行轉輪聖王之職責，十五日滿月之時，沐浴頭髮，行齋戒，昇登莊嚴之殿堂時，天之輪寶會突然出現。輪有千輻，具足車輞、車轂及一切附件。』 『然者！大王！轉輪聖王之職責者何耶？』 『我子！汝當依彼法，恭敬、尊重法，為法幢、法幟、以法為首，善守護正法，又應護視庶民、軍隊、剎帝利、群臣、婆羅門、居士、農商、沙門婆羅門等乃至禽獸，而且，於汝之國土中，勿留有任何惡法。若於汝之國土，有貧窮者，將與彼財寶；若於汝國土之沙門、婆羅門，已離去憍慢懈怠、獨修忍辱仁愛、調御自己、靜止自己、寂靜自己者，汝應時往彼處，作如是問：「賢者！如何是善、如何是不善、如何是罪、如何是無罪、如何是可以行、如何是不可以行？又行何法者，於長夜應受不利益及痛苦；行何法者，於長夜應受利益與安樂？」聞之，不善者離去，善者當受持。我子！此為轉輪聖王之職責。』",
+   "DA6": "「時，王出家過七日已，彼金輪寶忽然不現，其典輪者往白王言：『大王！當知今者輪寶忽然不現。』時王不悅，即往詣堅固念王所，到已白王：『父王！當知今者輪寶忽然不現。』時，堅固念王報其子曰：『汝勿懷憂以為不悅，此金輪寶者非汝父產，汝但勤行聖王正法，行正法已，於十五日月滿時，沐浴香湯，婇女圍遶，昇正法殿上，金輪神寶自然當現，輪有千輻，光色具足，天匠所造，非世所有。』「子白父王：『轉輪聖王正法云何？當云何行？』王告子曰：『當依於法，立法具法，恭敬尊重，觀察於法，以法為首，守護正法；又當以法誨諸婇女，又當以法護視教誡諸王子、大臣、群寮、百官及諸人民、沙門、婆羅門，下至禽獸，皆當護視。』「又告子曰：『又汝土境所有沙門、婆羅門履行清真，功德具足，精進不懈，去離憍慢，忍辱仁愛，閑獨自修，獨自止息，獨到涅槃，自除貪欲，化彼除貪；自除瞋恚，化彼除瞋；自除愚癡，化彼除癡。於染不染，於惡不惡，於愚不愚，可著不著，可住不住，可居不居。身行質直，口言質直，意念質直；身行清淨，口言清淨，意念清淨，正念清淨，仁慧無厭，衣食知足，持鉢乞食，以福眾生。有如是人者，汝當數詣，隨時諮問，凡所修行，何善何惡？云何為犯？云何非犯？何者可親？何者不可親？何者可作？何者不可作？施行何法，長夜受樂？汝諮問已，以意觀察，宜行則行，宜捨則捨。國有孤老，當拯給之；貧窮困劣，有來取者，慎勿違逆。國有舊法，汝勿改易，此是轉輪聖王所修行法，汝當奉行。』」",
+   "MA70": "「時，堅念王出家學道七日之後，彼天輪寶即沒不現，失天輪已，剎利頂生王便大憂惱，愁慼不樂，剎利頂生王即詣父堅念王仙人所。到已，白曰：『天王！當知天王學道七日之後，彼天輪寶便沒不現。』父堅念王仙人告子剎利頂生王曰：『汝莫以失天輪寶故而懷憂慼。所以者何？汝不從父得此天輪。』剎利頂生王復白父曰：『天王！我今當何所為？』「父堅念王仙人告其子曰：『汝當應學相繼之法，汝若學相繼之法者，於十五日說從解脫時，沐浴澡洗，昇正殿已，彼天輪寶必從東方來，輪有千輻，一切具足，清淨自然，非人所造，色如火㷿，光明昱爍。』剎利頂生王復白父曰：『天王！云何相繼之法欲令我學？令我學已，於十五日說從解脫時，沐浴澡洗，昇正殿已，彼天輪寶從東方來，輪有千輻，一切具足，清淨自然，非人所造，色如火㷿，光明昱爍。』「父堅念王仙人復告子曰：『汝當觀法如法，行法如法，當為太子、后妃、婇女，及諸臣民、沙門、梵志，乃至蜫蟲奉持法齋，月八日、十四日、十五日修行布施，施諸窮乏沙門、梵志、貧窮、孤獨、遠來乞者，以飲食、衣被、車乘、華鬘、散華、塗香、屋舍、床褥、氍𭯫、綩綖、給使、明燈。若汝國中有上尊、名德、沙門、梵志者，汝當隨時往詣彼所，問法受法：「諸尊！何者善法？何者不善法？何者為罪？何者為福？何者為妙？何者非妙？何者為黑？何者為白？黑白之法從何而生？何者現世義？何者後世義？云何作行受善不受惡？」從彼聞已，行如所說。若汝國中有貧窮者，當出財物，以給恤之。子！是謂相繼之法，汝當善學。汝善學已，於十五日說從解脫時，沐浴澡洗，昇正殿已，彼天輪寶必從東方來，輪有千輻，一切具足，清淨自然，非人所造，色如火焰，光明昱爍。』"
+  },
+  "c06": {
+   "dn26": "2.2. Cakkaratanapātubhāva ‘Evaṁ, devā’ti kho, bhikkhave, rājā khattiyo muddhābhisitto rājisissa paṭissutvā ariye cakkavattivatte vatti. Tassa ariye cakkavattivatte vattamānassa tadahuposathe pannarase sīsaṁnhātassa uposathikassa uparipāsādavaragatassa dibbaṁ cakkaratanaṁ pāturahosi sahassāraṁ sanemikaṁ sanābhikaṁ sabbākāraparipūraṁ. Disvāna rañño khattiyassa muddhābhisittassa etadahosi: ‘sutaṁ kho pana metaṁ—yassa rañño khattiyassa muddhābhisittassa tadahuposathe pannarase sīsaṁnhātassa uposathikassa uparipāsādavaragatassa dibbaṁ cakkaratanaṁ pātubhavati sahassāraṁ sanemikaṁ sanābhikaṁ sabbākāraparipūraṁ, so hoti rājā cakkavattīti. Assaṁ nu kho ahaṁ rājā cakkavattī’ti.",
+   "nan-dn26": "『唯然，大王！』諸比丘！剎帝利灌頂王，承父王之意，奉行轉輪聖王之職責。彼奉行轉輪聖王之職責已，於十五日滿月之時，沐浴頭髮，行齋戒，昇登莊嚴之殿堂時，天之輪寶突然出現，於輪有千輻，具足車輞、車轂及一切附件。見此已，剎帝利灌頂王，自謂曰：『我曾聞：若剎帝利灌頂王，於十五日滿月之時，沐浴頭髮，行齋戒，昇登莊嚴之殿堂時，天之輪寶，突然出現，於輪有千輻，具足車輞、車轂及一切附件者，此即為轉輪聖王也。我今正是轉輪聖王。』",
+   "DA6": "佛告諸比丘：「時，轉輪聖王受父教已，如說修行，後於十五日月滿時，沐浴香湯，昇高殿上，婇女圍遶，自然輪寶忽然在前，輪有千輻，光色具足，天匠所造，非世所有，真金所成，輪徑丈四。時，轉輪王默自念言：『我曾從先宿耆舊所聞，若剎利王水澆頭種，以十五日月滿時，沐浴香湯，昇寶殿上，婇女圍遶，自然金輪忽現在前，輪有千輻，光色具足，天匠所造，非世所有，真金所成，輪徑丈四，是則名為轉輪聖王。今此輪現，將無是耶？今我寧可試此輪寶。』",
+   "MA70": "「剎利頂生王便於後時觀法如法，行法如法，而為太子、后妃、婇女及諸臣民、沙門、梵志，乃至蜫蟲奉持法齋，月八日、十四日、十五日修行布施，施諸窮乏沙門、梵志、貧窮、孤獨、遠來乞者，以飲食、衣被、車乘、華鬘、散華、塗香、屋舍、床褥、氍𭯫、綩綖，給使、明燈。若其國中有上尊、名德、沙門、梵志者，便自隨時往詣彼所，問法受法：『諸尊！何者善法？何者不善法？何者為罪？何者為福？何者為妙？何者非妙？何者為黑？何者為白？黑白之法從何而生？何者現世義？何者後世義？云何作行受善不受惡？』從彼聞已，行如所說。若其國中有貧窮者，即出財物，隨時給恤。剎利頂生王於後十五日說從解脫時，沐浴澡洗，昇正殿已，彼天輪寶從東方來，輪有千輻，一切具足，清淨自然，非人所造，色如火㷿，光明昱爍，彼亦得轉輪王，亦成就七寶，亦得人四種如意之德。云何成就七寶、得人四種如意之德？亦如前說。"
+  },
+  "c07": {
+   "dn26": "Atha kho, bhikkhave, rājā khattiyo muddhābhisitto uṭṭhāyāsanā ekaṁsaṁ uttarāsaṅgaṁ karitvā vāmena hatthena bhiṅkāraṁ gahetvā dakkhiṇena hatthena cakkaratanaṁ abbhukkiri: ‘pavattatu bhavaṁ cakkaratanaṁ, abhivijinātu bhavaṁ cakkaratanan’ti. Atha kho taṁ, bhikkhave, cakkaratanaṁ puratthimaṁ disaṁ pavatti, anvadeva rājā cakkavattī saddhiṁ caturaṅginiyā senāya. Yasmiṁ kho pana, bhikkhave, padese cakkaratanaṁ patiṭṭhāsi, tattha rājā cakkavattī vāsaṁ upagacchi saddhiṁ caturaṅginiyā senāya. Ye kho pana, bhikkhave, puratthimāya disāya paṭirājāno, te rājānaṁ cakkavattiṁ upasaṅkamitvā evamāhaṁsu: ‘ehi kho, mahārāja, svāgataṁ te mahārāja, sakaṁ te, mahārāja, anusāsa, mahārājā’ti. Rājā cakkavattī evamāha: ‘pāṇo na hantabbo, adinnaṁ nādātabbaṁ, kāmesumicchā na caritabbā, musā na bhāsitabbā, majjaṁ na pātabbaṁ, yathābhuttañca bhuñjathā’ti. Ye kho pana, bhikkhave, puratthimāya disāya paṭirājāno, te rañño cakkavattissa anuyantā ahesuṁ. Atha kho taṁ, bhikkhave, cakkaratanaṁ puratthimaṁ samuddaṁ ajjhogāhetvā paccuttaritvā dakkhiṇaṁ disaṁ pavatti …pe… dakkhiṇaṁ samuddaṁ ajjhogāhetvā paccuttaritvā pacchimaṁ disaṁ pavatti, anvadeva rājā cakkavattī saddhiṁ caturaṅginiyā senāya. Yasmiṁ kho pana, bhikkhave, padese cakkaratanaṁ patiṭṭhāsi, tattha rājā cakkavattī vāsaṁ upagacchi saddhiṁ caturaṅginiyā senāya. Ye kho pana, bhikkhave, pacchimāya disāya paṭirājāno, te rājānaṁ cakkavattiṁ upasaṅkamitvā evamāhaṁsu: ‘ehi kho, mahārāja, svāgataṁ te, mahārāja, sakaṁ te, mahārāja, anusāsa, mahārājā’ti. Rājā cakkavattī evamāha: ‘pāṇo na hantabbo, adinnaṁ nādātabbaṁ, kāmesumicchā na caritabbā, musā na bhāsitabbā, majjaṁ na pātabbaṁ, yathābhuttañca bhuñjathā’ti. Ye kho pana, bhikkhave, pacchimāya disāya paṭirājāno, te rañño cakkavattissa anuyantā ahesuṁ. Atha kho taṁ, bhikkhave, cakkaratanaṁ pacchimaṁ samuddaṁ ajjhogāhetvā paccuttaritvā uttaraṁ disaṁ pavatti, anvadeva rājā cakkavattī saddhiṁ caturaṅginiyā senāya. Yasmiṁ kho pana, bhikkhave, padese cakkaratanaṁ patiṭṭhāsi, tattha rājā cakkavattī vāsaṁ upagacchi saddhiṁ caturaṅginiyā senāya. Ye kho pana, bhikkhave, uttarāya disāya paṭirājāno, te rājānaṁ cakkavattiṁ upasaṅkamitvā evamāhaṁsu: ‘ehi kho, mahārāja, svāgataṁ te, mahārāja, sakaṁ te, mahārāja, anusāsa, mahārājā’ti. Rājā cakkavattī evamāha: ‘pāṇo na hantabbo, adinnaṁ nādātabbaṁ, kāmesumicchā na caritabbā, musā na bhāsitabbā, majjaṁ na pātabbaṁ, yathābhuttañca bhuñjathā’ti. Ye kho pana, bhikkhave, uttarāya disāya paṭirājāno, te rañño cakkavattissa anuyantā ahesuṁ. Atha kho taṁ, bhikkhave, cakkaratanaṁ samuddapariyantaṁ pathaviṁ abhivijinitvā tameva rājadhāniṁ paccāgantvā rañño cakkavattissa antepuradvāre atthakaraṇapamukhe akkhāhataṁ maññe aṭṭhāsi rañño cakkavattissa antepuraṁ upasobhayamānaṁ.",
+   "nan-dn26": "其時，諸比丘！彼剎帝利灌頂，由王座起立，偏露一肩，左手持金瓶，右手捫摩金輪而告曰： 『汝，輪寶轉之，征服〔一切而轉〕！』其時，諸比丘！彼輪寶向東方而轉，時，轉輪聖王，具四兵常隨〔其後。〕又諸比丘！其輪寶停住之處，不論任何國土，轉輪聖王，與俱四兵皆止駕。諸比丘！東方敵國之諸王，皆來轉輪王之處告曰： 『大王！善來！一切皆為王所有。大王！請統治之。』 轉輪王告曰：『勿殺生、勿偷盜、勿邪淫、勿妄語、勿飲酒，應為適當之食。』 如是，諸比丘！東方敵國之諸王，皆服轉輪王之統治。 其時，彼輪寶由東海沒，再現身於南方。……〔乃至〕……於西方……〔乃至〕……於北方……〔乃至〕……皆服轉輪王之統治。 其時，諸比丘！彼輪寶超越海，平定徧四天下，由彼國都還，如懸掛於轉輪王之宮闕樓門上，照耀轉輪王之內宮。",
+   "DA6": "「時，轉輪王即召四兵，向金輪寶偏露右臂，右膝著地，復以右手摩捫金輪，語言：『汝向東方，如法而轉，勿違常則。』輪即東轉。時，王即將四兵隨從其後，金輪寶前有四神導，輪所住處，王即止駕。爾時，東方諸小國王見大王至，以金鉢盛銀粟，銀鉢盛金粟，來趣王所，拜首白言：『善來，大王！今此東方土地豐樂，人民熾盛，志性仁和，慈孝忠順，唯願聖王於此治正，我等當給使左右，承受所當。』時，轉輪大王語小王言：『止！止！諸賢！汝等則為供養我已，但當以正法治，勿使偏枉，無令國內有非法行，此即名曰我之所治。』「時，諸小王聞此教已，即從大王巡行諸國，至東海表，次行南方、西方、北方，隨輪所至，其諸國王各獻國土，亦如東方諸小國比。時，轉輪王既隨金輪，周行四海，以道開化，安慰民庶，已還本國。時，金輪寶在宮門上虛空中住，時，轉輪王踊躍而言：『此金輪寶真為我瑞，我今真為轉輪聖王，是為金輪寶成就。』"
+  },
+  "c08": {
+   "dn26": "3. Dutiyādicakkavattikathā Dutiyopi kho, bhikkhave, rājā cakkavattī …pe… tatiyopi kho, bhikkhave, rājā cakkavattī … catutthopi kho, bhikkhave, rājā cakkavattī … pañcamopi kho, bhikkhave, rājā cakkavattī … chaṭṭhopi kho, bhikkhave, rājā cakkavattī … sattamopi kho, bhikkhave, rājā cakkavattī bahunnaṁ vassānaṁ bahunnaṁ vassasatānaṁ bahunnaṁ vassasahassānaṁ accayena aññataraṁ purisaṁ āmantesi: ‘yadā tvaṁ, ambho purisa, passeyyāsi dibbaṁ cakkaratanaṁ osakkitaṁ ṭhānā cutaṁ, atha me āroceyyāsī’ti. ‘Evaṁ, devā’ti kho, bhikkhave, so puriso rañño cakkavattissa paccassosi. Addasā kho, bhikkhave, so puriso bahunnaṁ vassānaṁ bahunnaṁ vassasatānaṁ bahunnaṁ vassasahassānaṁ accayena dibbaṁ cakkaratanaṁ osakkitaṁ ṭhānā cutaṁ. Disvāna yena rājā cakkavattī tenupasaṅkami; upasaṅkamitvā rājānaṁ cakkavattiṁ etadavoca: ‘yagghe, deva, jāneyyāsi, dibbaṁ te cakkaratanaṁ osakkitaṁ ṭhānā cutan’ti? Atha kho, bhikkhave, rājā cakkavattī jeṭṭhaputtaṁ kumāraṁ āmantāpetvā etadavoca: ‘dibbaṁ kira me, tāta kumāra, cakkaratanaṁ osakkitaṁ, ṭhānā cutaṁ, sutaṁ kho pana metaṁ— yassa rañño cakkavattissa dibbaṁ cakkaratanaṁ osakkati, ṭhānā cavati, na dāni tena raññā ciraṁ jīvitabbaṁ hotīti. Bhuttā kho pana me mānusakā kāmā, samayo dāni me dibbe kāme pariyesituṁ, ehi tvaṁ, tāta kumāra, imaṁ samuddapariyantaṁ pathaviṁ paṭipajja. Ahaṁ pana kesamassuṁ ohāretvā kāsāyāni vatthāni acchādetvā agārasmā anagāriyaṁ pabbajissāmī’ti. Atha kho, bhikkhave, rājā cakkavattī jeṭṭhaputtaṁ kumāraṁ sādhukaṁ rajje samanusāsitvā kesamassuṁ ohāretvā kāsāyāni vatthāni acchādetvā agārasmā anagāriyaṁ pabbaji.",
+   "nan-dn26": "諸比丘！第二……第三……第四……第五……第六……第七之轉輪王亦數十百千年之後，告其他大臣曰： 『噫！臣汝！若見天之輪寶離去其本處者，其時，即來告我！』 諸比丘！彼大臣答轉輪王曰：『唯然，大王！』 諸比丘！彼大臣數十百千年之後，見天之輪寶突然離其本處而去。如是見已，至轉輪王之處，告轉輪王曰： 『大王！知天之輪寶，突然離其本處而去耶？』 其時，諸比丘！轉輪王召太子而告此曰： 『太子汝！說我天之輪寶離其本處而去。我曾聞：「若轉輪王之天輪寶突然離其本處而去者，彼王之壽命，即不久矣！」我已享受人界之欲樂。今乃求天界欲樂之時。來！我太子！汝統治此四天下！我將剃除鬚髮，著袈裟衣，由在家而出家。』 其時，諸比丘！轉輪王令太子善統治其國土，自剃除鬚髮！著袈裟衣，由在家而出家。",
+   "DA6": "「其王久治世已，時，金輪寶即於虛空忽離本處，其典輪者速往白王：『大王！當知今者輪寶離於本處。』時，王聞已即自念言：『我曾於先宿耆舊所聞，若轉輪聖王輪寶移者，王壽未幾。我今已受人中福樂，宜更方便受天福樂，當立太子領四天下，別封一邑與下髮師，令下鬚髮，服三法衣，出家修道。』「時，王即命太子而告之曰：『卿為知不？吾曾從先宿耆舊所聞，若轉輪聖王金輪寶離本處者，王壽未幾。吾今已受人中福樂，當設方便遷受天樂，今欲剃除鬚髮，服三法衣，出家修道，以四天下委付於汝，宜自勉力，存恤民物。』爾時，太子受王教已，王即剃除鬚髮，服三法衣，出家修道。",
+   "MA70": "「彼轉輪王而於後時，天輪寶移，忽離本處。有人見之，詣轉輪王白曰：『天王！當知天輪寶移離於本處。』轉輪王聞已，告曰：『太子！我天輪寶移離本處。太子！我曾從父堅念王仙人聞之：若轉輪王天輪寶移離本處者，彼王必不久住，命不久存。太子！我已得人間之欲，今當復求於天上欲。太子！我欲剃除鬚髮，著袈裟衣，至信、捨家、無家、學道。太子！我今以此四天下付授於汝，汝當如法治化，莫以非法，無令國中有諸惡業、非梵行人。太子！汝後若見天輪寶移離本處者，汝亦當復以此國政授汝太子，善教勅之。授太子國已，汝亦當復剃除鬚髮，著袈裟衣，至信、捨家、無家、學道於是。』轉輪王授太子國，善教勅已，便剃除鬚髮，著袈裟衣，至信、捨家、無家、學道。"
+  },
+  "c09": {
+   "dn26": "Sattāhapabbajite kho pana, bhikkhave, rājisimhi dibbaṁ cakkaratanaṁ antaradhāyi. Atha kho, bhikkhave, aññataro puriso yena rājā khattiyo muddhābhisitto tenupasaṅkami; upasaṅkamitvā rājānaṁ khattiyaṁ muddhābhisittaṁ etadavoca: ‘yagghe, deva, jāneyyāsi, dibbaṁ cakkaratanaṁ antarahitan’ti? Atha kho, bhikkhave, rājā khattiyo muddhābhisitto dibbe cakkaratane antarahite anattamano ahosi. Anattamanatañca paṭisaṁvedesi; no ca kho rājisiṁ upasaṅkamitvā ariyaṁ cakkavattivattaṁ pucchi. So samateneva sudaṁ janapadaṁ pasāsati. Tassa samatena janapadaṁ pasāsato pubbenāparaṁ janapadā na pabbanti, yathā taṁ pubbakānaṁ rājūnaṁ ariye cakkavattivatte vattamānānaṁ. Atha kho, bhikkhave, amaccā pārisajjā gaṇakamahāmattā anīkaṭṭhā dovārikā mantassājīvino sannipatitvā rājānaṁ khattiyaṁ muddhābhisittaṁ etadavocuṁ: ‘na kho te, deva, samatena sudaṁ janapadaṁ pasāsato pubbenāparaṁ janapadā pabbanti, yathā taṁ pubbakānaṁ rājūnaṁ ariye cakkavattivatte vattamānānaṁ. Saṁvijjanti kho te, deva, vijite amaccā pārisajjā gaṇakamahāmattā anīkaṭṭhā dovārikā mantassājīvino mayañceva aññe ca ye mayaṁ ariyaṁ cakkavattivattaṁ dhārema. Iṅgha tvaṁ, deva, amhe ariyaṁ cakkavattivattaṁ puccha. Tassa te mayaṁ ariyaṁ cakkavattivattaṁ puṭṭhā byākarissāmā’ti.",
+   "nan-dn26": "然而，國王出家後七日，諸比丘！天之輪寶突然消滅。 其時，諸比丘！有一大臣，至剎帝利灌頂王之處，告彼王曰： 『大王！知彼天輪寶突然消滅耶？』時！諸比丘！彼剎帝利灌頂王，見天之輪寶突然消滅，心中憫憫不喜悅。然而，不往彼父王之處，問關於聖轉輪寶事。彼治其國，不及往昔諸王公正之治國，又不如往昔諸王轉聖輪寶，不統治其國。 其時，諸比丘！參集大臣、侍臣、主計、近侍、巫祝官等，至剎帝灌頂王之處告曰：『大王！今治國土，不及往昔諸王公正治其國，又不如往昔諸王轉聖輪寶，不統治其國。大王！有聰明而智慧之大臣、侍臣、主計、近侍、巫祝官等，我等及其他者，受持聖轉輪。大王！若向我等詢問聖轉輪者，我等當謹解所問之聖轉輪。』",
+   "DA6": "時，王出家過七日已，其金輪寶忽然不現，典金輪者往白王言：『大王！當知今者輪寶忽然不現。』時王聞已，不以為憂，亦復不往問父王意。時，彼父王忽然命終。「自此以前，六轉輪王皆展轉相承，以正法治，唯此一王自用治國，不承舊法，其政不平，天下怨訴，國土損減，人民凋落。時，有一婆羅門大臣往白王言：『大王！當知今者國土損減，人民凋落，轉不如常。王今國內多有知識，聰慧博達，明於古今，備知先王治政之法，何不命集問其所知，彼自當答？』",
+   "MA70": "「彼轉輪王出家學道七日之後，彼天輪寶即沒不現，失天輪已，剎利頂生王而不憂慼，但染欲著欲，貪欲無厭，為欲所縛，為欲所觸，為欲所使，不見灾患，不知出要，便自出意治國，以自出意治國故，國遂衰減，不復增益，猶如昔時諸轉輪王學相繼法，國土人民轉增熾盛，無有衰減。剎利頂生王亦復如是，自出意治國，以自出意治國故，國遂衰減，不復增益。「於是，國師梵志案行國界，見國人民轉就衰減，不復增益，便作是念：『剎利頂生王自出意治國，以自出意治國故，國土人民轉就衰減，不復增益，猶如昔時諸轉輪王學相繼法，國土人民轉增熾盛，無有衰減。此剎利頂生王亦復如是，自出意治國，以自出意治國故，國土人民轉就衰減，不復增益。』「國師梵志即共往詣剎利頂生王，白曰：『天王！當知天王自出意治國，以自出意治國故，國土人民轉就衰減，不復增益，猶如昔時諸轉輪王學相繼法，國土人民轉增熾盛，無有衰減。今天王亦復如是，自出意治國，以自出意治國故，國土人民轉就衰減，不復增益。』剎利頂生王聞已告曰：『梵志！我當云何？』國師梵志白曰：『天王！國中有人聰明智慧，明知算數，國中有大臣眷屬學經明經，誦習受持相繼之法，猶如我等一切眷屬。天王！當學相繼之法。學相繼法已，於十五日說從解脫時，沐浴澡洗，昇正殿已，彼天輪寶必從東方來，輪有千輻，一切具足，清淨自然，非人所造，色如火㷿，光明昱爍。』"
+  },
+  "c10": {
+   "dn26": "4. Āyuvaṇṇādiparihānikathā Atha kho, bhikkhave, rājā khattiyo muddhābhisitto amacce pārisajje gaṇakamahāmatte anīkaṭṭhe dovārike mantassājīvino sannipātetvā ariyaṁ cakkavattivattaṁ pucchi. Tassa te ariyaṁ cakkavattivattaṁ puṭṭhā byākariṁsu. Tesaṁ sutvā dhammikañhi kho rakkhāvaraṇaguttiṁ saṁvidahi, no ca kho adhanānaṁ dhanamanuppadāsi.",
+   "nan-dn26": "其時，諸比丘！彼剎帝利灌頂王，招集大臣、侍臣、言計、近侍、巫祝官等，以詢問聖轉輪。彼等對所問聖轉輪，謹答之。聞之而令擁護、守護正法。然，猶不與財寶給貧困者，",
+   "DA6": "時，王即召群臣，問其先王治政之道。時，諸智臣具以事答，王聞其言，即行舊政，以法護世，而由不能拯濟孤老，施及下窮。",
+   "MA70": "「剎利頂生王復問曰：『梵志！云何相繼之法欲令我學？令我學已，於十五日說從解脫時，沐浴澡洗，昇正殿已，彼天輪寶必從東方來，輪有千輻，一切具足，清淨自然，非人所造，色如火㷿，光明昱爍。』國師梵志白曰：『天王！當觀法如法，行法如法，當為太子、后妃、婇女及諸臣民、沙門、梵志乃至蜫蟲奉持法齋，月八日、十四日、十五日修行布施，施諸窮乏沙門、梵志、貧窮、孤獨、遠來乞者，以飲食、衣被、車乘、華鬘、散華、塗香、屋舍、床褥、氍𭯫、綩綖，給使、明燈。若王國中有上尊、名德、沙門、梵志者，當自隨時往詣彼所，問法受法：「諸尊！何者善法？何者不善法？何者為罪？何者為福？何者為妙？何者非妙？何者為黑？何者為白？黑白之法從何而生？何者現世義？何者後世義？云何作行受善不受惡？」從彼聞已，行如所說。若王國中有貧窮者，當出財物，用給恤之。天王！是謂相繼之法，當善取學。善取學已，於十五日說從解脫時，沐浴澡洗，昇正殿已，彼天輪寶必從東方來，輪有千輻，一切具足，清淨自然，非人所造，色如火㷿，光明昱爍。』「剎利頂生王便於後時觀法如法，行法如法，而為太子、后妃、婇女及諸臣民、沙門、梵志乃至蜫蟲奉持法齋，月八日、十四日、十五日修行布施，施諸窮乏沙門、梵志、貧窮、孤獨、遠來乞者，以飲食、衣被、車乘、華鬘、散華、塗香、屋舍、床褥、氍𭯫、綩綖，給使、明燈。若其國中有上尊、名德、沙門、梵志者，便自隨時往詣彼所，問法受法：『諸尊！何者善法？何者不善法？何者為罪？何者為福？何者為妙？何者非妙？何者為黑？何者為白？黑白之法從何而生？何者現世義？何者後世義？云何作行受善不受惡？』從彼聞已，行如所說。"
+  },
+  "c11": {
+   "dn26": "Adhanānaṁ dhane ananuppadiyamāne dāliddiyaṁ vepullamagamāsi. Dāliddiye vepullaṁ gate aññataro puriso paresaṁ adinnaṁ theyyasaṅkhātaṁ ādiyi. Tamenaṁ aggahesuṁ. Gahetvā rañño khattiyassa muddhābhisittassa dassesuṁ: ‘ayaṁ, deva, puriso paresaṁ adinnaṁ theyyasaṅkhātaṁ ādiyī’ti. Evaṁ vutte, bhikkhave, rājā khattiyo muddhābhisitto taṁ purisaṁ etadavoca: ‘saccaṁ kira tvaṁ, ambho purisa, paresaṁ adinnaṁ theyyasaṅkhātaṁ ādiyī’ti? ‘Saccaṁ, devā’ti. ‘Kiṁ kāraṇā’ti? ‘Na hi, deva, jīvāmī’ti. Atha kho, bhikkhave, rājā khattiyo muddhābhisitto tassa purisassa dhanamanuppadāsi: ‘iminā tvaṁ, ambho purisa, dhanena attanā ca jīvāhi, mātāpitaro ca posehi, puttadārañca posehi, kammante ca payojehi, samaṇabrāhmaṇesu uddhaggikaṁ dakkhiṇaṁ patiṭṭhāpehi sovaggikaṁ sukhavipākaṁ saggasaṁvattanikan’ti. ‘Evaṁ, devā’ti kho, bhikkhave, so puriso rañño khattiyassa muddhābhisittassa paccassosi. Aññataropi kho, bhikkhave, puriso paresaṁ adinnaṁ theyyasaṅkhātaṁ ādiyi. Tamenaṁ aggahesuṁ. Gahetvā rañño khattiyassa muddhābhisittassa dassesuṁ: ‘ayaṁ, deva, puriso paresaṁ adinnaṁ theyyasaṅkhātaṁ ādiyī’ti. Evaṁ vutte, bhikkhave, rājā khattiyo muddhābhisitto taṁ purisaṁ etadavoca: ‘saccaṁ kira tvaṁ, ambho purisa, paresaṁ adinnaṁ theyyasaṅkhātaṁ ādiyī’ti? ‘Saccaṁ, devā’ti. ‘Kiṁ kāraṇā’ti? ‘Na hi, deva, jīvāmī’ti. Atha kho, bhikkhave, rājā khattiyo muddhābhisitto tassa purisassa dhanamanuppadāsi: ‘iminā tvaṁ, ambho purisa, dhanena attanā ca jīvāhi, mātāpitaro ca posehi, puttadārañca posehi, kammante ca payojehi, samaṇabrāhmaṇesu uddhaggikaṁ dakkhiṇaṁ patiṭṭhāpehi sovaggikaṁ sukhavipākaṁ saggasaṁvattanikan’ti. ‘Evaṁ, devā’ti kho, bhikkhave, so puriso rañño khattiyassa muddhābhisittassa paccassosi.",
+   "nan-dn26": "貧困者不得財寶之惠，因此，貧困者日益增加。因貧困者之增加，人人亙相以盜心而取不與之物，人人捕捉彼，彼被捕捉，以示剎帝利灌頂王，告言： 『大王！此人以盜心而取他所不與之物。』 諸比丘！如是告已，剎帝利灌頂王告彼男子曰： 『汝實以盜心而取他所不與之物，為真實耶？』 『大王！真實！』 『何故而為耶？』 『大王！我不得生活也。』 其時，諸比丘！剎帝利灌頂王，財寶與彼男子，曰：『汝！汝以此財寶可自生活，並且可養父母、蓄妻子。勤勞事業，對沙門、婆羅門行福利之供養，以此，得天上安樂之果報，可生於天界。』 彼男子答剎帝利灌頂王曰：『唯然，大王！』 諸比丘！又有一男子以盜心而取他所不與之物，人人捕捉彼人，彼被捕捉，以示剎帝利灌頂王，告言： 『大王！此人，以盜心而取他所不與之物。』 諸比丘！如是告已，剎帝利灌頂王問彼男子曰： 『汝！汝以盜心而取他所不與之物，為真實耶？』 『實然！大王！』 『何故而為耶？』 『大王！我不得生活也。』 其時，諸比丘！剎帝利灌頂王，財寶與彼男子，曰：『汝！汝依此等之財寶，可自生活，並且可養父母、蓄妻子。勤勞事業，對沙門、婆羅門，行有福利之供養，以此，得天上安樂之果報，可生於天界。』 彼男子答剎帝利灌頂王：『唯然，大王！』",
+   "DA6": "「時，國人民轉至貧困，遂相侵奪，盜賊滋甚，伺察所得，將詣王所白言：『此人為賊，願王治之。』王即問言：『汝實為賊耶？』答曰：『實爾！我貧窮飢餓，不能自存，故為賊耳。』時，王即出庫物以供給之，而告之曰：『汝以此物供養父母，并恤親族，自今已後，勿復為賊。』餘人轉聞有作賊者，王給財寶，於是復行劫盜他物，復為伺察所得，將詣王所白言：『此人為賊，願王治之。』王復問言：『汝實為賊耶？』答曰：『實爾！我貧窮飢餓，不能自存，故為賊耳。』時，王復出庫財以供給之，復告之曰：『汝以此物供養父母，并恤親族，自今已後，勿復為賊。』",
+   "MA70": "「然國中民有貧窮者，不能出物，用給恤之，是為困貧無財物者不能給恤，故人轉窮困，因窮困故，便盜他物；因偷盜故，其主捕伺收縛，送詣剎利頂生王，白曰：『天王！此人盜我物，願天王治。』剎利頂生王問彼人曰：『汝實盜耶？』彼人白曰：『天王！我實偷盜。所以者何？天王！以貧困故，若不盜者，便無以自濟。』剎利頂生王即出財物而給與之，語盜者曰：『汝等還去，後莫復作。』"
+  },
+  "c12": {
+   "dn26": "Assosuṁ kho, bhikkhave, manussā: ‘ye kira, bho, paresaṁ adinnaṁ theyyasaṅkhātaṁ ādiyanti, tesaṁ rājā dhanamanuppadetī’ti. Sutvāna tesaṁ etadahosi: ‘yannūna mayampi paresaṁ adinnaṁ theyyasaṅkhātaṁ ādiyeyyāmā’ti. Atha kho, bhikkhave, aññataro puriso paresaṁ adinnaṁ theyyasaṅkhātaṁ ādiyi. Tamenaṁ aggahesuṁ. Gahetvā rañño khattiyassa muddhābhisittassa dassesuṁ: ‘ayaṁ, deva, puriso paresaṁ adinnaṁ theyyasaṅkhātaṁ ādiyī’ti. Evaṁ vutte, bhikkhave, rājā khattiyo muddhābhisitto taṁ purisaṁ etadavoca: ‘saccaṁ kira tvaṁ, ambho purisa, paresaṁ adinnaṁ theyyasaṅkhātaṁ ādiyī’ti? ‘Saccaṁ, devā’ti. ‘Kiṁ kāraṇā’ti? ‘Na hi, deva, jīvāmī’ti. Atha kho, bhikkhave, rañño khattiyassa muddhābhisittassa etadahosi: ‘sace kho ahaṁ yo yo paresaṁ adinnaṁ theyyasaṅkhātaṁ ādiyissati, tassa tassa dhanamanuppadassāmi, evamidaṁ adinnādānaṁ pavaḍḍhissati. Yannūnāhaṁ imaṁ purisaṁ sunisedhaṁ nisedheyyaṁ, mūlaghaccaṁ kareyyaṁ, sīsamassa chindeyyan’ti. Atha kho, bhikkhave, rājā khattiyo muddhābhisitto purise āṇāpesi: ‘tena hi, bhaṇe, imaṁ purisaṁ daḷhāya rajjuyā pacchābāhaṁ gāḷhabandhanaṁ bandhitvā khuramuṇḍaṁ karitvā kharassarena paṇavena rathikāya rathikaṁ siṅghāṭakena siṅghāṭakaṁ parinetvā dakkhiṇena dvārena nikkhamitvā dakkhiṇato nagarassa sunisedhaṁ nisedhetha, mūlaghaccaṁ karotha, sīsamassa chindathā’ti. ‘Evaṁ, devā’ti kho, bhikkhave, te purisā rañño khattiyassa muddhābhisittassa paṭissutvā taṁ purisaṁ daḷhāya rajjuyā pacchābāhaṁ gāḷhabandhanaṁ bandhitvā khuramuṇḍaṁ karitvā kharassarena paṇavena rathikāya rathikaṁ siṅghāṭakena siṅghāṭakaṁ parinetvā dakkhiṇena dvārena nikkhamitvā dakkhiṇato nagarassa sunisedhaṁ nisedhesuṁ, mūlaghaccaṁ akaṁsu, sīsamassa chindiṁsu.",
+   "nan-dn26": "諸比丘！人人如是聞：『猶人人以盜心而取他所不與之物，但大王以財寶與人人。』聞此已，彼謂：『然，我等亦以盜心取他所不與之物耶？』 其時，諸比丘！有一男子，以盜心而取他所不與之物，人人捕捉彼，彼被捕捉，以示剎帝利灌頂王，告言： 『大王！此人，以盜心而取他所不與之物。』 諸比丘！如是告已，剎帝利灌頂王，問彼男子曰： 『汝！汝以盜心而取他所不與之物，是真實耶？』 『實然，大王！』 『何故而為耶？』 『大王！我不得生活也。』 其時，諸比丘！剎帝利灌頂王曰：『如果我對於以盜心而取他所不與之物者，給與財寶，如是，不與取（偷盜）增長。然，我將此男子處於重刑，截斷彼頭而根絕此。』 如是，諸比丘！剎帝利灌頂王令諸臣曰：『然者，諸臣，以粗繩將此男子之手堅縛於後，剃除頭髮、唱令擊鼓，牽引行於諸街已，由南門出，至都城之南方，懲彼之重刑，截斷彼頭而根絕此。』 諸比丘！彼等諸臣，聞剎帝利灌頂王之命，曰：『大王！實然。』即以粗繩將彼男子之手堅縛於後，剃除彼頭髮，唱令擊鼓，牽引行於諸街巷已，由南門出，至都城之南方，懲彼之重刑，截斷彼頭而根絕此。",
+   "DA6": "「復有人聞有作賊者，王給財寶，於是復行劫盜他物，復為伺察所得，將詣王所白言：『此人為賊，願王治之。』王復問言：『汝實為賊耶？』答曰：『實爾！我貧窮飢餓，不能自存，故為賊耳。』時王念言：『先為賊者，吾見貧窮，給其財寶，謂當止息，而餘人聞，轉更相効，盜賊日滋，如是無已，我今寧可杻械其人，令於街巷，然後載之出城，刑於曠野，以誡後人耶！』「時，王即勅左右：『使收繫之，聲鼓唱令，遍諸街巷，訖已載之出城，刑於曠野。』國人盡知彼為賊者，王所收繫，令於街巷，刑之曠野。",
+   "MA70": "於是，國中人民聞剎利頂生王若國中人有行盜者，王便出財物而給與之。由斯之故，人作是念：『我等亦應盜他財物。』於是，國人各各競行盜他財物。是為困貧無財物者，不能給恤，故人轉窮困；因窮困故，盜轉滋甚。因盜滋甚故，彼人壽轉減，形色轉惡。彼壽轉減色轉惡已，比丘！父壽八萬歲，子壽四萬歲。比丘！彼人壽四萬歲時，有人便行盜他財物，其主捕伺收縛，送詣剎利頂生王，白曰：『天王！此人盜我物，願天王治。』剎利頂生王問彼人曰：『汝實盜耶？』彼人白曰：『天王！我實偷盜。所以者何？以貧困故，若不盜者，便無以自濟。』剎利頂生王聞已，便作是念：『若我國中有盜他物，更出財物盡給與者，如是唐空竭國藏，盜遂滋甚。我今寧可作極利刀，若我國中有偷盜者，便收捕取，坐高標下，斬截其頭。』「於是，剎利頂生王後便勅令，作極利刀：『若國中有盜他物者，即勅捕取，坐高標下，斬截其頭。』"
+  },
+  "c13": {
+   "dn26": "Assosuṁ kho, bhikkhave, manussā: ‘ye kira, bho, paresaṁ adinnaṁ theyyasaṅkhātaṁ ādiyanti, te rājā sunisedhaṁ nisedheti, mūlaghaccaṁ karoti, sīsāni tesaṁ chindatī’ti. Sutvāna tesaṁ etadahosi: ‘yannūna mayampi tiṇhāni satthāni kārāpessāma, tiṇhāni satthāni kārāpetvā yesaṁ adinnaṁ theyyasaṅkhātaṁ ādiyissāma, te sunisedhaṁ nisedhessāma, mūlaghaccaṁ karissāma, sīsāni tesaṁ chindissāmā’ti. Te tiṇhāni satthāni kārāpesuṁ, tiṇhāni satthāni kārāpetvā gāmaghātampi upakkamiṁsu kātuṁ, nigamaghātampi upakkamiṁsu kātuṁ, nagaraghātampi upakkamiṁsu kātuṁ, panthaduhanampi upakkamiṁsu kātuṁ. Yesaṁ te adinnaṁ theyyasaṅkhātaṁ ādiyanti, te sunisedhaṁ nisedhenti, mūlaghaccaṁ karonti, sīsāni tesaṁ chindanti.",
+   "nan-dn26": "諸比丘！人人如是聞：『若以盜心而取他所不與之物者，大王為膺懲、根絕而截首。』聞已，彼等曰：『然，各自作利刀，各自作利刀已，以盜心而取彼等人人所不與之物，並且膺懲、根絕彼等人人而截其首。』 彼等自作利刀，作利刀已，便劫掠村落、劫掠鄉鎮、劫掠都市及為路上之劫掠。 如是，以盜心而取彼等人人所不與之物，並且膺懲、根絕彼等人人而截斷其首。",
+   "DA6": "時，人展轉自相謂言：『我等設為賊者，亦當如是，與彼無異。』於是，國人為自防護，遂造兵杖、刀劍、弓矢，迭相殘害，攻劫掠奪。",
+   "MA70": "國中人民聞剎利頂生王勅作利刀，若國中有盜他物者，即便捕取，坐高標下，斬截其頭。『我亦寧可效作利刀，持行劫物，若從劫物者，捉彼物主而截其頭。』於是，彼人則於後時効作利刀，持行劫物，捉彼物主，截斷其頭。是為困貧無財物者，不能給恤故，人轉窮困；因窮困故，盜轉滋甚；因盜滋甚故，刀殺轉增。因刀殺增故，彼人壽轉減，形色轉惡。彼壽轉減，色轉惡已，比丘！父壽四萬歲，子壽二萬歲。"
+  },
+  "c14": {
+   "dn26": "Iti kho, bhikkhave, adhanānaṁ dhane ananuppadiyamāne dāliddiyaṁ vepullamagamāsi, dāliddiye vepullaṁ gate adinnādānaṁ vepullamagamāsi, adinnādāne vepullaṁ gate satthaṁ vepullamagamāsi, satthe vepullaṁ gate pāṇātipāto vepullamagamāsi, pāṇātipāte vepullaṁ gate tesaṁ sattānaṁ āyupi parihāyi, vaṇṇopi parihāyi. Tesaṁ āyunāpi parihāyamānānaṁ vaṇṇenapi parihāyamānānaṁ asītivassasahassāyukānaṁ manussānaṁ cattārīsavassasahassāyukā puttā ahesuṁ. Cattārīsavassasahassāyukesu, bhikkhave, manussesu aññataro puriso paresaṁ adinnaṁ theyyasaṅkhātaṁ ādiyi. Tamenaṁ aggahesuṁ. Gahetvā rañño khattiyassa muddhābhisittassa dassesuṁ: ‘ayaṁ, deva, puriso paresaṁ adinnaṁ theyyasaṅkhātaṁ ādiyī’ti. Evaṁ vutte, bhikkhave, rājā khattiyo muddhābhisitto taṁ purisaṁ etadavoca: ‘saccaṁ kira tvaṁ, ambho purisa, paresaṁ adinnaṁ theyyasaṅkhātaṁ ādiyī’ti? ‘Na hi, devā’ti sampajānamusā abhāsi.",
+   "nan-dn26": "如是，諸比丘！因對貧窮者不給與財寶，貧窮者即越增多，由於貧窮者之增多，偷盜便益滋增；由於偷盜之滋增，刀杖便滋增；由於刀杖之滋增，殺害便頻發；由於殺害之增多而屢行妄語，由於妄語橫行，彼等眾生之壽命縮短、顏色衰退。由彼等壽命之縮短、顏色之衰退，人壽由八萬歲，至其子成為四萬歲。 諸比丘！人壽四萬歲時，有人以盜心而竊取他所不與之物。人人捕捉彼，以示剎帝利灌頂王，曰：『大王！此男子，以盜心而竊取他所不與之物。』 如是告已，諸比丘！剎帝利灌頂王告彼男子曰： 『汝！汝以盜心而竊取他所不與之物，為事實耶？』 於故意妄語，言：『大王！〔我〕沒竊取。』",
+   "DA6": "自此王來始有貧窮，有貧窮已始有劫盜，有劫盜已始有兵杖，有兵杖已始有殺害，有殺害已則顏色憔悴，壽命短促。時，人正壽四萬歲，其後轉少，壽二萬歲，然其眾生有壽、有夭、有苦、有樂。彼有苦者，便生邪婬、貪取之心，多設方便，圖謀他物。是時，眾生貧窮劫盜，兵杖殺害，轉轉滋甚，人命轉減，壽一萬歲。「一萬歲時，眾生復相劫盜，為伺察所得，將詣王所白言：『此人為賊，願王治之。』王問言：『汝實作賊耶？』答曰：『我不作！』便於眾中故作妄語。",
+   "MA70": "「比丘！人壽二萬歲時，有人盜他財物，其主捕伺收縛，送詣剎利頂生王，白曰：『天王！此人盜我財物，願天王治。』剎利頂生王問彼人曰：『汝實盜耶？』時，彼盜者便作是念：『剎利頂生王若知其實，或縛鞭我，或拋或擯，或罰錢物，或種種苦治，或貫標上，或梟其首，我寧可以妄言欺誑剎利頂生王耶？』念已，白曰：『天王！我不偷盜，是為困貧無財物者，不能給恤故。』人轉窮困，因窮困故，盜轉滋甚；因盜滋甚故，刀殺轉增；因刀殺增故，便妄言、兩舌轉增。因妄言、兩舌增故，彼人壽轉減，形色轉惡。彼壽轉減，色轉惡已，比丘！父壽二萬歲，子壽一萬歲。"
+  },
+  "c15": {
+   "dn26": "Iti kho, bhikkhave, adhanānaṁ dhane ananuppadiyamāne dāliddiyaṁ vepullamagamāsi. Dāliddiye vepullaṁ gate adinnādānaṁ vepullamagamāsi, adinnādāne vepullaṁ gate satthaṁ vepullamagamāsi. Satthe vepullaṁ gate pāṇātipāto vepullamagamāsi, pāṇātipāte vepullaṁ gate musāvādo vepullamagamāsi, musāvāde vepullaṁ gate tesaṁ sattānaṁ āyupi parihāyi, vaṇṇopi parihāyi. Tesaṁ āyunāpi parihāyamānānaṁ vaṇṇenapi parihāyamānānaṁ cattārīsavassasahassāyukānaṁ manussānaṁ vīsativassasahassāyukā puttā ahesuṁ. Vīsativassasahassāyukesu, bhikkhave, manussesu aññataro puriso paresaṁ adinnaṁ theyyasaṅkhātaṁ ādiyi. Tamenaṁ aññataro puriso rañño khattiyassa muddhābhisittassa ārocesi: ‘itthannāmo, deva, puriso paresaṁ adinnaṁ theyyasaṅkhātaṁ ādiyī’ti pesuññamakāsi. Iti kho, bhikkhave, adhanānaṁ dhane ananuppadiyamāne dāliddiyaṁ vepullamagamāsi. Dāliddiye vepullaṁ gate adinnādānaṁ vepullamagamāsi, adinnādāne vepullaṁ gate satthaṁ vepullamagamāsi, satthe vepullaṁ gate pāṇātipāto vepullamagamāsi, pāṇātipāte vepullaṁ gate musāvādo vepullamagamāsi, musāvāde vepullaṁ gate pisuṇā vācā vepullamagamāsi, pisuṇāya vācāya vepullaṁ gatāya tesaṁ sattānaṁ āyupi parihāyi, vaṇṇopi parihāyi. Tesaṁ āyunāpi parihāyamānānaṁ vaṇṇenapi parihāyamānānaṁ vīsativassasahassāyukānaṁ manussānaṁ dasavassasahassāyukā puttā ahesuṁ. Dasavassasahassāyukesu, bhikkhave, manussesu ekidaṁ sattā vaṇṇavanto honti, ekidaṁ sattā dubbaṇṇā. Tattha ye te sattā dubbaṇṇā, te vaṇṇavante satte abhijjhāyantā paresaṁ dāresu cārittaṁ āpajjiṁsu. Iti kho, bhikkhave, adhanānaṁ dhane ananuppadiyamāne dāliddiyaṁ vepullamagamāsi. Dāliddiye vepullaṁ gate …pe… kāmesumicchācāro vepullamagamāsi, kāmesumicchācāre vepullaṁ gate tesaṁ sattānaṁ āyupi parihāyi, vaṇṇopi parihāyi. Tesaṁ āyunāpi parihāyamānānaṁ vaṇṇenapi parihāyamānānaṁ dasavassasahassāyukānaṁ manussānaṁ pañcavassasahassāyukā puttā ahesuṁ. Pañcavassasahassāyukesu, bhikkhave, manussesu dve dhammā vepullamagamaṁsu— pharusāvācā samphappalāpo ca. Dvīsu dhammesu vepullaṁ gatesu tesaṁ sattānaṁ āyupi parihāyi, vaṇṇopi parihāyi. Tesaṁ āyunāpi parihāyamānānaṁ vaṇṇenapi parihāyamānānaṁ pañcavassasahassāyukānaṁ manussānaṁ appekacce aḍḍhateyyavassasahassāyukā, appekacce dvevassasahassāyukā puttā ahesuṁ. Aḍḍhateyyavassasahassāyukesu, bhikkhave, manussesu abhijjhābyāpādā vepullamagamaṁsu. Abhijjhābyāpādesu vepullaṁ gatesu tesaṁ sattānaṁ āyupi parihāyi, vaṇṇopi parihāyi. Tesaṁ āyunāpi parihāyamānānaṁ vaṇṇenapi parihāyamānānaṁ aḍḍhateyyavassasahassāyukānaṁ manussānaṁ vassasahassāyukā puttā ahesuṁ. Vassasahassāyukesu, bhikkhave, manussesu micchādiṭṭhi vepullamagamāsi. Micchādiṭṭhiyā vepullaṁ gatāya tesaṁ sattānaṁ āyupi parihāyi, vaṇṇopi parihāyi. Tesaṁ āyunāpi parihāyamānānaṁ vaṇṇenapi parihāyamānānaṁ vassasahassāyukānaṁ manussānaṁ pañcavassasatāyukā puttā ahesuṁ. Pañcavassasatāyukesu, bhikkhave, manussesu tayo dhammā vepullamagamaṁsu— adhammarāgo visamalobho micchādhammo. Tīsu dhammesu vepullaṁ gatesu tesaṁ sattānaṁ āyupi parihāyi, vaṇṇopi parihāyi. Tesaṁ āyunāpi parihāyamānānaṁ vaṇṇenapi parihāyamānānaṁ pañcavassasatāyukānaṁ manussānaṁ appekacce aḍḍhateyyavassasatāyukā, appekacce dvevassasatāyukā puttā ahesuṁ. Aḍḍhateyyavassasatāyukesu, bhikkhave, manussesu ime dhammā vepullamagamaṁsu. Amatteyyatā apetteyyatā asāmaññatā abrahmaññatā na kule jeṭṭhāpacāyitā. Iti kho, bhikkhave, adhanānaṁ dhane ananuppadiyamāne dāliddiyaṁ vepullamagamāsi. Dāliddiye vepullaṁ gate adinnādānaṁ vepullamagamāsi. Adinnādāne vepullaṁ gate satthaṁ vepullamagamāsi. Satthe vepullaṁ gate pāṇātipāto vepullamagamāsi. Pāṇātipāte vepullaṁ gate musāvādo vepullamagamāsi. Musāvāde vepullaṁ gate pisuṇā vācā vepullamagamāsi. Pisuṇāya vācāya vepullaṁ gatāya kāmesumicchācāro vepullamagamāsi. Kāmesumicchācāre vepullaṁ gate dve dhammā vepullamagamaṁsu, pharusā vācā samphappalāpo ca. Dvīsu dhammesu vepullaṁ gatesu abhijjhābyāpādā vepullamagamaṁsu. Abhijjhābyāpādesu vepullaṁ gatesu micchādiṭṭhi vepullamagamāsi. Micchādiṭṭhiyā vepullaṁ gatāya tayo dhammā vepullamagamaṁsu, adhammarāgo visamalobho micchādhammo. Tīsu dhammesu vepullaṁ gatesu ime dhammā vepullamagamaṁsu, amatteyyatā apetteyyatā asāmaññatā abrahmaññatā na kule jeṭṭhāpacāyitā. Imesu dhammesu vepullaṁ gatesu tesaṁ sattānaṁ āyupi parihāyi, vaṇṇopi parihāyi. Tesaṁ āyunāpi parihāyamānānaṁ vaṇṇenapi parihāyamānānaṁ aḍḍhateyyavassasatāyukānaṁ manussānaṁ vassasatāyukā puttā ahesuṁ.",
+   "nan-dn26": "如是，諸比丘！因對貧窮者不給與財寶，貧窮者便益增多……〔廣說如第十四節〕……壽命縮短，顏色衰退，由人壽四萬歲，至其子成為二萬歲。 諸比丘！人壽二萬歲時，有人以盜心而竊取他所不與之物，他人以此告灌頂王，言：『大王！如斯、如斯之人，以盜心而竊取他所不與之物。』並為惡口。 諸比丘！如是，因對貧窮者不給與財寶，貧窮便益增多，……〔廣說如第十四節〕……顏色衰退，人壽由二萬，至其子成為一萬歲。 諸比丘！人壽一萬歲時，有人美麗、有人醜陋。彼等醜陋者，對美麗者，生起嫉妒，對他人之妻女行邪淫。 諸比丘！如是，因對貧窮者不給與財寶，貧窮者便益增多……〔廣說如第十四節〕……顏色衰退，人壽由一萬歲，至其子成為五千歲。 諸比丘！人壽五千歲時，有二法增長，即：麤語及綺語也。二法增長故，彼眾生之壽命縮短、顏色衰退。彼等之壽命縮短、顏色衰退，人壽由五千歲，至其子有成為二千五百歲，有成為二千歲。 諸比丘！人壽二千五百歲時，貪恚之念增長……〔乃至〕……人壽由二千五百歲，其子成為一千歲。 諸比丘！人壽一千歲時，邪見增長……〔乃至〕……人壽由一千歲其子成為五百歲。 諸比丘！人壽五百歲時，有三法增長，即：非法欲、非理貪、邪見法也。三法增長……〔乃至〕……人壽由五百歲，其子有成為二百五十歲，有成為二百歲。 諸比丘！人壽二百五十歲時，此等之諸法增長，即：不敬母，不敬父，不恭敬沙門、婆羅門，不恭敬同族之耆宿。 諸比丘！如是，因對貧窮者不給與財寶，貧窮者便益增多……〔乃至〕……偷盜……〔乃至〕……刀杖……〔乃至〕……殺生……〔乃至〕……妄語……〔乃至〕……惡口……〔乃至〕……邪淫……〔乃至〕……麤語……〔乃至〕……綺語……〔乃至〕……貪恚……〔乃至〕……邪見……〔乃至〕……非法欲……〔乃至〕……非理貪……〔乃至〕……邪見法……〔乃至〕……不敬母，不敬父，不恭敬沙門、婆羅門，不恭敬同族之耆宿。此等諸法之增長，而彼等眾生之壽命縮短、顏色衰退。壽命縮短、顏色衰退，人壽由二百五十歲，至其子成為百歲。",
+   "DA6": "時，彼眾生以貧窮故便行劫盜，以劫盜故便有刀兵，以刀兵故便有殺害，以殺害故便有貪取、邪婬，以貪取、邪婬故便有妄語，有妄語故其壽轉減，至于千歲；千歲之時，便有口三惡行始出于世，一者兩舌，二者惡口，三者綺語，此三惡業展轉熾盛，人壽稍減至五百歲；五百歲時，眾生復有三惡行起，一者非法婬，二者非法貪，三者邪見，此三惡業展轉熾盛，人壽稍減，三百、二百，我今時人，乃至百歲，少出多減。",
+   "MA70": "「比丘！人壽萬歲時，人民或有德，或無德，若無德者，彼為有德人起嫉妬意而犯其妻。是為困貧無財物者，不能給恤故，人轉窮困；因窮困故，盜轉滋甚；因盜滋甚故，刀殺轉增；因刀殺增故，便妄言，兩舌轉增；因妄言、兩舌增故，便嫉妬、邪婬轉增。因嫉妬、邪婬增故，彼人壽轉減，形色轉惡。彼壽轉減，色轉惡已，比丘！父壽萬歲，子壽五千歲。「比丘！人壽五千歲時，三法轉增，非法、欲、惡貪、邪法。因三法增故，彼人壽轉減，形色轉惡。彼壽轉減，色轉惡已，比丘！父壽五千歲，子壽二千五百歲。比丘！人壽二千五百歲時，復三法轉增，兩舌、麤言、綺語。因三法增故，彼人壽轉減，形色轉惡。彼壽轉減，色轉惡已，比丘！父壽二千五百歲，子壽千歲。比丘！人壽千歲時，一法轉增，邪見是也。因一法增故，彼人壽轉減，形色轉惡。彼壽轉減，色轉惡已，比丘！父壽千歲，子壽五百歲。「比丘！人壽五百歲時，彼人盡壽不孝父母，不能尊敬沙門、梵志，不行順事，不作福業，不見後世罪。彼因不孝父母，不能尊敬沙門、梵志，不行順事，不作福業，不見後世罪故，比丘！父壽五百歲，子壽或二百五十、或二百歲。比丘！今若有長壽，或壽百歲，或不啻者。」"
+  },
+  "c16": {
+   "dn26": "5. Dasavassāyukasamaya Bhavissati, bhikkhave, so samayo, yaṁ imesaṁ manussānaṁ dasavassāyukā puttā bhavissanti. Dasavassāyukesu, bhikkhave, manussesu pañcavassikā kumārikā alaṁpateyyā bhavissanti. Dasavassāyukesu, bhikkhave, manussesu imāni rasāni antaradhāyissanti, seyyathidaṁ— sappi navanītaṁ telaṁ madhu phāṇitaṁ loṇaṁ. Dasavassāyukesu, bhikkhave, manussesu kudrūsako aggaṁ bhojanānaṁ bhavissati. Seyyathāpi, bhikkhave, etarahi sālimaṁsodano aggaṁ bhojanānaṁ; evameva kho, bhikkhave, dasavassāyukesu manussesu kudrūsako aggaṁ bhojanānaṁ bhavissati. Dasavassāyukesu, bhikkhave, manussesu dasa kusalakammapathā sabbena sabbaṁ antaradhāyissanti, dasa akusalakammapathā atibyādippissanti. Dasavassāyukesu, bhikkhave, manussesu kusalantipi na bhavissati, kuto pana kusalassa kārako. Dasavassāyukesu, bhikkhave, manussesu ye te bhavissanti amatteyyā apetteyyā asāmaññā abrahmaññā na kule jeṭṭhāpacāyino, te pujjā ca bhavissanti pāsaṁsā ca. Seyyathāpi, bhikkhave, etarahi matteyyā petteyyā sāmaññā brahmaññā kule jeṭṭhāpacāyino pujjā ca pāsaṁsā ca; evameva kho, bhikkhave, dasavassāyukesu manussesu ye te bhavissanti amatteyyā apetteyyā asāmaññā abrahmaññā na kule jeṭṭhāpacāyino, te pujjā ca bhavissanti pāsaṁsā ca.",
+   "nan-dn26": "諸比丘！此等人人之子，壽命有成為十歲之時，諸比丘！人壽十歲之時，童女至五歲而婚嫁。諸比丘！人壽十歲之時，消失此等之諸味，即：酥、酪、油、砂糖、鹽也。諸比丘！今日如以硬米飯為最上之食糧，諸比丘！人壽十歲之時，草莠便成為最上之食糧。諸比丘！人壽十歲之時，十善法則皆消滅，十不善法，明顯出現。諸比丘！人壽十歲之時，為善者完全無有，何況有善之所行乎？諸比丘！人壽十歲之時，彼等不敬母、父，不尊敬沙門、婆羅門，不恭敬同族之耆宿，以為是尊敬讚美，如同今日之恭敬母、父，尊敬沙門、婆羅門，恭敬同族耆宿者，被尊敬讚美也。如是，諸比丘！人壽十歲之時，不恭敬母、父，不尊敬沙門、婆羅門，不恭敬同耆宿者，當被尊敬讚美。",
+   "DA6": "「如是展轉，為惡不已，其壽稍減，當至十歲，十歲時人，女生五月便行嫁。是時世間酥油、石蜜、黑石蜜，諸甘美味不復聞名，粳粮、禾稻變成草莠，繒、絹、錦、綾、劫貝、白㲲，今世名服，時悉不現，織麤毛縷以為上衣。是時，此地多生荊棘，蚊、虻、蠅、虱、蛇、蚖、蜂、蛆，毒蟲眾多，金、銀、琉璃、珠璣、名寶，盡沒於地，遂有瓦石砂礫出於地上。「當於爾時，眾生之類永不復聞十善之名，但有十惡充滿世間。是時，乃無善法之名，其人何由得修善行？是時，眾生能為極惡，不孝父母，不敬師長，不忠不義，返逆無道者便得尊敬。如今能修善行，孝養父母，敬順師長，忠信懷義，順道修行者便得尊敬。",
+   "MA70": "佛復告曰：「比丘！未來久遠時，人壽十歲。比丘！人壽十歲時，女生五月，即便出嫁。比丘！人壽十歲時，有穀名稗子，為第一美食，猶如今人，粳粮為上饌。比丘！如是人壽十歲時，有穀名稗子，為第一美食。比丘！人壽十歲時，若今日所有美味，酥油、鹽、蜜、甘蔗、糖，彼一切盡沒。比丘！人壽十歲時，若行十惡業道者，彼便為人所敬重，猶如今日若行十善業道者，彼便為人所敬重。比丘！人壽十歲時亦復如是，若行十惡業道者，彼便為人之所敬重。比丘！人壽十歲時都無有善名，況復有行十善業道？"
+  },
+  "c17": {
+   "dn26": "Dasavassāyukesu, bhikkhave, manussesu na bhavissati mātāti vā mātucchāti vā mātulānīti vā ācariyabhariyāti vā garūnaṁ dārāti vā. Sambhedaṁ loko gamissati yathā ajeḷakā kukkuṭasūkarā soṇasiṅgālā. Dasavassāyukesu, bhikkhave, manussesu tesaṁ sattānaṁ aññamaññamhi tibbo āghāto paccupaṭṭhito bhavissati tibbo byāpādo tibbo manopadoso tibbaṁ vadhakacittaṁ. Mātupi puttamhi puttassapi mātari; pitupi puttamhi puttassapi pitari; bhātupi bhaginiyā bhaginiyāpi bhātari tibbo āghāto paccupaṭṭhito bhavissati tibbo byāpādo tibbo manopadoso tibbaṁ vadhakacittaṁ. Seyyathāpi, bhikkhave, māgavikassa migaṁ disvā tibbo āghāto paccupaṭṭhito hoti tibbo byāpādo tibbo manopadoso tibbaṁ vadhakacittaṁ; evameva kho, bhikkhave, dasavassāyukesu manussesu tesaṁ sattānaṁ aññamaññamhi tibbo āghāto paccupaṭṭhito bhavissati tibbo byāpādo tibbo manopadoso tibbaṁ vadhakacittaṁ. Mātupi puttamhi puttassapi mātari; pitupi puttamhi puttassapi pitari; bhātupi bhaginiyā bhaginiyāpi bhātari tibbo āghāto paccupaṭṭhito bhavissati tibbo byāpādo tibbo manopadoso tibbaṁ vadhakacittaṁ.",
+   "nan-dn26": "諸比丘！人壽十歲之時，母、伯母、叔母、師長之妻女皆無區別，如同羊、鷄、豕、犬、豺、狠狼，世間成為雜無倫次。諸比丘！人壽十歲之時，彼等眾生成為互相生起激烈之害心、激烈之瞋恚、激烈之惡意、激烈之殺意。母於子、子於母，父於子，子於父，兄弟於兄弟、兄弟於姊妹，姊妹於兄弟，生起激烈之害心、激烈之瞋恚、激烈之惡意、激烈之殺意。諸比丘！猶如獵師之見群鹿，生起激烈之害心、激烈之瞋恚、激烈之惡意、激烈之殺意。如是，諸比丘！人壽十歲之時，彼等眾生，互相生起激烈之害心……〔乃至〕……生起激烈之殺意。",
+   "DA6": "爾時，眾生多修十惡，多墮惡道，眾生相見，常欲相殺，猶如獵師見於群鹿。時，此土地多有溝坑，溪㵎深谷，土曠人希，行來恐懼。",
+   "MA70": "「比丘！人壽十歲時，有人名彈罰，周行遍往，家家彈罰。比丘！人壽十歲時，母於其子極有害心，子亦於母極有害心，父子、兄弟、姉妹、親屬，展轉相向，有賊害心，猶如獵師見彼鹿已，極有害心。比丘！人壽十歲時亦復如是，母於其子極有害心，子亦於母極有害心，父子、兄弟、姉妹、親屬，展轉相向，有賊害心。"
+  },
+  "c18": {
+   "dn26": "Dasavassāyukesu, bhikkhave, manussesu sattāhaṁ satthantarakappo bhavissati. Te aññamaññamhi migasaññaṁ paṭilabhissanti. Tesaṁ tiṇhāni satthāni hatthesu pātubhavissanti. Te tiṇhena satthena ‘esa migo esa migo’ti aññamaññaṁ jīvitā voropessanti.",
+   "nan-dn26": "諸比丘！人壽十歲之時，七日間生刀杖之劫。彼等互相領受鹿想（誤認為野獸）。彼等各自手持利刀而現，依其利刀，互相剝奪各個之生命：『此是鹿也，此是鹿也。』",
+   "DA6": "爾時，當有刀兵劫起，手執草木，皆成戈鉾，於七日中，展轉相害。",
+   "MA70": "比丘！人壽十歲時，當有七日刀兵劫，彼若捉草，即化成刀，若捉樵木，亦化成刀，彼以此刀各各相殺，彼於七日刀兵劫，過七日便止。"
+  },
+  "c19": {
+   "dn26": "Atha kho tesaṁ, bhikkhave, sattānaṁ ekaccānaṁ evaṁ bhavissati: ‘mā ca mayaṁ kañci, mā ca amhe koci, yannūna mayaṁ tiṇagahanaṁ vā vanagahanaṁ vā rukkhagahanaṁ vā nadīviduggaṁ vā pabbatavisamaṁ vā pavisitvā vanamūlaphalāhārā yāpeyyāmā’ti. Te tiṇagahanaṁ vā vanagahanaṁ vā rukkhagahanaṁ vā nadīviduggaṁ vā pabbatavisamaṁ vā pavisitvā sattāhaṁ vanamūlaphalāhārā yāpessanti. Te tassa sattāhassa accayena tiṇagahanā vanagahanā rukkhagahanā nadīviduggā pabbatavisamā nikkhamitvā aññamaññaṁ āliṅgitvā sabhāgāyissanti samassāsissanti: ‘diṭṭhā, bho, sattā jīvasi, diṭṭhā, bho, sattā jīvasī’ti.",
+   "nan-dn26": "然，諸比丘！此等之眾生，有生起如次之念：『我等不傷害任何人，任何人亦不得傷害我等。然，我等依倚於叢林樹木之坑坎，隱避於河洞巖窟，食樹根菓實以保身！』彼等便依倚於叢林樹木之坑坎，隱避於河洞巖窟，食樹根菓以保身。彼等經過七日後，由叢林樹木之坑坎，河洞巖窟而出，互相擁抱相集慶賀曰：『慶哉！汝亦生存！汝亦生存！』",
+   "DA6": "「時，有智者遠逃叢林，依倚坑坎，於七日中懷怖畏心，發慈善言：『汝不害我，我不害汝。』食草木子以存性命，過七日已，從山林出。時有存者，得共相見，歡喜慶賀言：『汝不死耶？汝不死耶？』猶如父母唯有一子，久別相見，歡喜無量。彼人如是各懷歡喜，迭相慶賀，然後推問其家，其家親屬死亡者眾，復於七日中悲泣號咷，啼哭相向。",
+   "MA70": "「爾時，亦有人生慙耻羞愧，厭惡不愛，彼人七日刀兵劫時，便入山野，在隱處藏，過七日已，則從山野於隱處出，更互相見，生慈愍心，極相愛念。猶如慈母，唯有一子，與久離別，從遠來還，安隱歸家，相見喜歡，生慈愍心，極相愛念。"
+  },
+  "c20": {
+   "dn26": "6. Āyuvaṇṇādivaḍḍhanakathā Atha kho tesaṁ, bhikkhave, sattānaṁ evaṁ bhavissati: ‘mayaṁ kho akusalānaṁ dhammānaṁ samādānahetu evarūpaṁ āyataṁ ñātikkhayaṁ pattā. Yannūna mayaṁ kusalaṁ kareyyāma. Kiṁ kusalaṁ kareyyāma? Yannūna mayaṁ pāṇātipātā virameyyāma, idaṁ kusalaṁ dhammaṁ samādāya vatteyyāmā’ti. Te pāṇātipātā viramissanti, idaṁ kusalaṁ dhammaṁ samādāya vattissanti. Te kusalānaṁ dhammānaṁ samādānahetu āyunāpi vaḍḍhissanti, vaṇṇenapi vaḍḍhissanti. Tesaṁ āyunāpi vaḍḍhamānānaṁ vaṇṇenapi vaḍḍhamānānaṁ dasavassāyukānaṁ manussānaṁ vīsativassāyukā puttā bhavissanti. Atha kho tesaṁ, bhikkhave, sattānaṁ evaṁ bhavissati: ‘mayaṁ kho kusalānaṁ dhammānaṁ samādānahetu āyunāpi vaḍḍhāma, vaṇṇenapi vaḍḍhāma. Yannūna mayaṁ bhiyyoso mattāya kusalaṁ kareyyāma. Kiṁ kusalaṁ kareyyāma? Yannūna mayaṁ adinnādānā virameyyāma … kāmesumicchācārā virameyyāma … musāvādā virameyyāma … pisuṇāya vācāya virameyyāma … pharusāya vācāya virameyyāma … samphappalāpā virameyyāma … abhijjhaṁ pajaheyyāma … byāpādaṁ pajaheyyāma … micchādiṭṭhiṁ pajaheyyāma … tayo dhamme pajaheyyāma— adhammarāgaṁ visamalobhaṁ micchādhammaṁ … yannūna mayaṁ matteyyā assāma petteyyā sāmaññā brahmaññā kule jeṭṭhāpacāyino, idaṁ kusalaṁ dhammaṁ samādāya vatteyyāmā’ti. Te matteyyā bhavissanti petteyyā sāmaññā brahmaññā kule jeṭṭhāpacāyino, idaṁ kusalaṁ dhammaṁ samādāya vattissanti. Te kusalānaṁ dhammānaṁ samādānahetu āyunāpi vaḍḍhissanti, vaṇṇenapi vaḍḍhissanti. Tesaṁ āyunāpi vaḍḍhamānānaṁ vaṇṇenapi vaḍḍhamānānaṁ vīsativassāyukānaṁ manussānaṁ cattārīsavassāyukā puttā bhavissanti … cattārīsavassāyukānaṁ manussānaṁ asītivassāyukā puttā bhavissanti … asītivassāyukānaṁ manussānaṁ saṭṭhivassasatāyukā puttā bhavissanti … saṭṭhivassasatāyukānaṁ manussānaṁ vīsatitivassasatāyukā puttā bhavissanti … vīsatitivassasatāyukānaṁ manussānaṁ cattārīsachabbassasatāyukā puttā bhavissanti. Cattārīsachabbassasatāyukānaṁ manussānaṁ dvevassasahassāyukā puttā bhavissanti … dvevassasahassāyukānaṁ manussānaṁ cattārivassasahassāyukā puttā bhavissanti … cattārivassasahassāyukānaṁ manussānaṁ aṭṭhavassasahassāyukā puttā bhavissanti … aṭṭhavassasahassāyukānaṁ manussānaṁ vīsativassasahassāyukā puttā bhavissanti … vīsativassasahassāyukānaṁ manussānaṁ cattārīsavassasahassāyukā puttā bhavissanti … cattārīsavassasahassāyukānaṁ manussānaṁ asītivassasahassāyukā puttā bhavissanti …",
+   "nan-dn26": "諸比丘！其時，彼等眾生起如是念：『我等因行不善法，長久親滅亡之法。然，我等當行善法。當行如何之善法耶？於是，我等禁止殺生，我等受持此善法。』彼等便遠離殺生，受持此善法。彼等因受持此善法，壽命增長，並增顏色之美。彼等由壽命之增長，顏色之增美，人壽十歲之人，其子之壽成為二十歲。 其時，諸比丘！彼等眾生起如是念：『我等因受持善法，而壽命增長，顏色增美。然，我等應益為善事。於是，我等遠離偷盜，遠離邪淫，遠離妄語，遠離惡口，遠離麤語，遠離綺語，斷滅貪念，斷滅瞋恚，斷滅邪見，滅盡三法，即：非法欲、非理貪、邪見法。於是，我等應恭敬母、父，尊敬沙門、婆羅門，尊敬同族之耆宿等，受持此善法。』 諸比丘！〔如是〕，彼等恭敬母、父，尊敬沙門、婆羅門，尊崇同族耆宿，受持此等之善法。彼等由受持善法，壽命增長，顏色增美。彼等由壽命增長、顏色增美，人壽二十歲之時，其子壽命成為四十歲；人壽四十歲之時，其子之壽命成為八十歲；人壽八十歲之時，其子之壽命成為百六十歲；人壽百六十歲之時，其子之壽命成為三百二十歲；人壽三百二十歲之時，其子之壽命成為六百四十歲；人壽六百四十歲之時，其子之壽命成為二千歲；人壽二千歲之時，其子之壽命成為四千歲；人壽四千歲之時，其子之壽命成為八千歲；人壽八千歲之時，其子之壽命成為二萬歲；人壽二萬歲之時，其子之壽命成為四萬歲；人壽四萬之時，其子之壽命成為八萬歲。",
+   "DA6": "過七日已，復於七日中共相慶賀，娛樂歡喜，尋自念言：『吾等積惡彌廣，故遭此難，親族死亡，家屬覆沒，今者宜當少共修善，宜修何善？當不殺生。』「爾時，眾生盡懷慈心，不相殘害，於是眾生色壽轉增，其十歲者壽二十歲。二十時人復作是念：『我等由少修善行，不相殘害故，壽命延長至二十歲，今者寧可更增少善，當修何善？已不殺生，當不竊盜。』已修不盜，則壽命延長至四十歲。四十時人復作是念：『我等由少修善，壽命延長，今者寧可更增少善，何善可修？當不邪婬。』於是，其人盡不邪婬，壽命延長至八十歲。「八十歲人復作是念：『我等由少修善，壽命延長，今者寧可更增少善，何善可修？當不妄語。』於是，其人盡不妄語，壽命延長至百六十。百六十時人復作是念：『我等由少修善，壽命延長，我今寧可更增小善，何善可修？當不兩舌。』於是，其人盡不兩舌，壽命延長至三百二十歲。三百二十歲時人復作是念：『我等由少修善故，壽命延長，今者寧可更增少善，何善可修？當不惡口。』於是，其人盡不惡口，壽命延長至六百四十。「六百四十時人復作是念：『我等由修善故，壽命延長，今者寧可更增少善，何善可修？當不綺語。』於是，其人盡不綺語，壽命延長至二千歲。二千歲時人復作是念：『我等由修善故，壽命延長，今者寧可更增少善，何善可修？當不慳貪。』於是，其人盡不慳貪而行布施，壽命延長至五千歲。五千歲時人復作是念：『我等由修善故，壽命延長，今者寧可更增少善，何善可修？當不嫉妬，慈心修善。』於是，其人盡不嫉妬，慈心修善，壽命延長至於萬歲。「萬歲時人復作是念：『我等由修善故，壽命延長，今者寧可更增少善，何善可修？當行正見，不生顛倒。』於是，其人盡行正見，不起顛倒，壽命延長至二萬歲。二萬歲時人復作是念：『我等由修善故，壽命延長，今者寧可更增少善，何善可修？當滅三不善法，一者非法婬，二者非法貪，三者邪見。』於是，其人盡滅三不善法，壽命延長至四萬歲。四萬歲時人復作是念：『我等由修善故，壽命延長，今者寧可更增少善，何善可修？當孝養父母，敬事師長。』於是，其人即孝養父母，敬事師長，壽命延長至八萬歲。",
+   "MA70": "如是彼人過七日後，則從山野於隱處出，更互相見，生慈愍心，極相愛念，共相見已，便作是語：『諸賢！我今相見，今得安隱，我等坐生不善法故，今值見此，親族死盡，我等寧可共行善法。云何當共行善法耶？我等皆是殺生之人，今寧可共離殺、斷殺，我等應共行是善法。』彼便共行如是善法。行善法已，壽便轉增，形色轉好。彼壽轉增，色轉好已，比丘！壽十歲人生子壽二十。比丘！壽二十歲人復作是念：『若求學善者，壽便轉增，形色轉好，我等應共更增行善。云何當共更增行善？我等已共離殺、斷殺，然故共行不與而取。我等寧可離不與取、斷不與取，我等應共行是善法。』彼便共行如是善法。行善法已，壽便轉增，形色轉好。彼壽轉增，色轉好已，比丘！壽二十歲人生子壽四十。「比丘！壽四十歲人亦作是念：『若求學善者，壽便轉增，形色轉好，我等應共更增行善。云何當共更增行善？我等已離殺、斷殺，離不與取、斷不與取，然故行邪婬。我等寧可離邪婬、斷邪婬，我等應共行是善法。』彼便共行如是善法。行善法已，壽便轉增，形色轉好。彼壽轉增，色轉好已，比丘！壽四十歲人生子壽八十。「比丘！壽八十歲人亦作是念：『若求學善者，壽便轉增，形色轉好，我等應共更增行善。云何當共更增行善？我等已離殺、斷殺，離不與取、斷不與取，離邪婬、斷邪婬，然故行妄言。我等寧可離妄言、斷妄言，我等應共行是善法。』彼便共行如是善法。行善法已，壽便轉增，形色轉好。彼壽轉增，色轉好已，比丘！壽八十歲人生子壽百六十。「比丘！壽百六十歲人亦作是念：『若求學善者，壽便轉增，形色轉好，我等應共更增行善。云何當共更增行善？我等已離殺、斷殺，離不與取、斷不與取，離邪婬、斷邪婬，離妄言、斷妄言，然故行兩舌。我等寧可離兩舌、斷兩舌，我等應共行是善法。』彼便共行如是善法。行善法已，壽便轉增，形色轉好。彼壽轉增，色轉好已，比丘！壽百六十歲人生子壽三百二十歲。「比丘！壽三百二十歲人亦作是念：『若求學善者，壽便轉增，形色轉好，我等應共更增行善。云何當共更增行善？我等已離殺、斷殺，離不與取、斷不與取，離邪婬、斷邪婬，離妄言、斷妄言，離兩舌、斷兩舌，然故行麤言。我等寧可離麤言、斷麤言，我等應共行是善法。』彼便共行如是善法。行善法已，壽便轉增，形色轉好。彼壽轉增，色轉好已，比丘！壽三百二十歲人生子壽六百四十。「比丘！壽六百四十歲人亦作是念：『若求學善者，壽便轉增，形色轉好，我等應共更增行善。云何當共更增行善？我等已離殺、斷殺，離不與取、斷不與取，離邪婬、斷邪婬，離妄言、斷妄言，離兩舌、斷兩舌，離麤言、斷麤言，然故行綺語。我等寧可離綺語、斷綺語，我等應共行是善法。』彼便共行如是善法。行善法已，壽便轉增，形色轉好。彼壽轉增，色轉好已，比丘！壽六百四十歲人生子壽二千五百。「比丘！壽二千五百歲人亦作是念：『若求學善者，壽便轉增，形色轉好，我等應共更增行善。云何當共更增行善？我等已離殺、斷殺，離不與取、斷不與取，離邪婬、斷邪婬，離妄言、斷妄言，離兩舌、斷兩舌，離麤言、斷麤言，離綺語、斷綺語，然故行貪嫉。我等寧可離貪嫉、斷貪嫉，我等應共行是善法。』彼便共行如是善法。行善法已，壽便轉增，形色轉好。彼壽轉增，色轉好已，比丘！壽二千五百歲人生子壽五千。「比丘！壽五千歲人亦作是念：『若求學善者，壽便轉增，形色轉好，我等應共更增行善。云何當共更增行善？我等已離殺、斷殺，離不與取、斷不與取，離邪婬、斷邪婬，離妄言、斷妄言，離兩舌、斷兩舌，離麤言、斷麤言，離綺語、斷綺語，離貪嫉、斷貪嫉，然故行瞋恚。我等寧可離瞋恚、斷瞋恚，我等應共行是善法。』彼便共行如是善法。行善法已，壽便轉增，形色轉好。彼壽轉增，色轉好已，比丘！壽五千歲人生子壽一萬。「比丘！壽萬歲人亦作是念：『若求學善者，壽便轉增，形色轉好，我等應共更增行善。云何當共更增行善？我等已離殺、斷殺，離不與取、斷不與取，離邪婬、斷邪婬，離妄言、斷妄言，離兩舌、斷兩舌，離麤言、斷麤言，離綺語、斷綺語，離貪嫉、斷貪嫉，離瞋恚、斷瞋恚，然故行邪見。我等寧可離邪見、斷邪見，我等應共行是善法。』彼便共行如是善法。行善法已，壽便轉增，形色轉好。彼壽轉增，色轉好已，比丘！壽萬歲人生子壽二萬。「比丘！壽二萬歲人亦作是念：『若求學善者，壽便轉增，形色轉好，我等應共更增行善。云何當共更增行善？我等已離殺、斷殺，離不與取、斷不與取，離邪婬、斷邪婬，離妄言、斷妄言，離兩舌、斷兩舌，離麤言、斷麤言，離綺語、斷綺語，離貪嫉、斷貪嫉，離瞋恚、斷瞋恚，離邪見、斷邪見，然故有非法、欲惡、貪行邪法。我等寧可離此三惡不善法、斷三惡不善法，我等應共行是善法。』彼便共行如是善法。行善法已，壽便轉增，形色轉好。彼壽轉增，色轉好已，比丘！壽二萬歲人生子壽四萬。「比丘！人壽四萬歲時孝順父母，尊重恭敬沙門、梵志，奉行順事，修習福業，見後世罪。彼因孝順父母，尊重恭敬沙門、梵志，奉行順事，修習福業，見後世罪故，比丘！壽四萬歲人生子壽八萬。"
+  },
+  "c21": {
+   "dn26": "asītivassasahassāyukesu, bhikkhave, manussesu pañcavassasatikā kumārikā alaṁpateyyā bhavissanti. 7. Saṅkharājauppatti Asītivassasahassāyukesu, bhikkhave, manussesu tayo ābādhā bhavissanti, icchā, anasanaṁ, jarā. Asītivassasahassāyukesu, bhikkhave, manussesu ayaṁ jambudīpo iddho ceva bhavissati phīto ca, kukkuṭasampātikā gāmanigamarājadhāniyo. Asītivassasahassāyukesu, bhikkhave, manussesu ayaṁ jambudīpo avīci maññe phuṭo bhavissati manussehi, seyyathāpi naḷavanaṁ vā saravanaṁ vā. Asītivassasahassāyukesu, bhikkhave, manussesu ayaṁ bārāṇasī ketumatī nāma rājadhānī bhavissati iddhā ceva phītā ca bahujanā ca ākiṇṇamanussā ca subhikkhā ca. Asītivassasahassāyukesu, bhikkhave, manussesu imasmiṁ jambudīpe caturāsītinagarasahassāni bhavissanti ketumatīrājadhānīpamukhāni.",
+   "nan-dn26": "諸比丘！於人壽八萬歲之時，童女五百歲而婚嫁。諸比丘！於人壽八萬歲之時，有三種病，即：欲、斷食、老也。諸比丘！於人壽八萬歲之時，此閻浮提隆盛繁榮，於都邑王城，鷄鳴相聞；諸比丘！於人壽八萬歲之時，從彼阿鼻地獄，思惟為閻浮提，當人人徧滿如蘆草之叢林；諸比丘！於人壽八萬歲之時，彼波羅奈，便成為契睹摩提王都，人民旺盛群集，土地肥沃；諸比丘！於人壽八萬歲之時，此閻浮提雖有八萬四千之都城，但契睹摩提當為最上之王都。",
+   "DA6": "「八萬歲時人，女年五百歲始出行嫁。時，人當有九種病，一者寒，二者熱，三者飢，四者渴，五者大便，六者小便，七者欲，八者饕餮，九者老。時，此大地坦然平整，無有溝坑、丘墟、荊棘，亦無蚊、虻、蛇、蚖、毒蟲，瓦石、沙礫變成琉璃，人民熾盛，五穀平賤，豐樂無極。是時，當起八萬大城，村城隣比，雞鳴相聞。",
+   "MA70": "比丘！人壽八萬歲時，此閻浮洲極大豐樂，多有人民，村邑相近，如雞一飛。比丘！人壽八萬歲時，女年五百乃當出嫁。比丘！人壽八萬歲時，唯有如是病，寒熱、大小便、欲、不食、老，更無餘患。"
+  },
+  "c22": {
+   "dn26": "Asītivassasahassāyukesu, bhikkhave, manussesu ketumatiyā rājadhāniyā saṅkho nāma rājā uppajjissati cakkavattī dhammiko dhammarājā cāturanto vijitāvī janapadatthāvariyappatto sattaratanasamannāgato. Tassimāni satta ratanāni bhavissanti, seyyathidaṁ— cakkaratanaṁ hatthiratanaṁ assaratanaṁ maṇiratanaṁ itthiratanaṁ gahapatiratanaṁ pariṇāyakaratanameva sattamaṁ. Parosahassaṁ kho panassa puttā bhavissanti sūrā vīraṅgarūpā parasenappamaddanā. So imaṁ pathaviṁ sāgarapariyantaṁ adaṇḍena asatthena dhammena abhivijiya ajjhāvasissati.",
+   "nan-dn26": "諸比丘！人壽八萬歲之時，於此契睹摩提王城，有名山伽王出現而為轉輪法王，統治四天下，成就七寶，為人民之保護者。於彼具足此等之七寶，即：金輪寶、白象寶、紺馬寶、神珠寶、玉女寶、居士寶、於第七為主兵寶也。尚且彼王有千子，勇猛雄健，善退卻外敵；彼越此地，及至大海之彼岸，不用刀杖，以正法統治而住。",
+   "DA6": "「彼時，有王名曰儴伽，剎利水澆頭種轉輪聖王，典四天下，以正法治，莫不靡伏，七寶具足，一金輪寶、二白象寶、三紺馬寶、四神珠寶，五玉女寶、六居士寶、七主兵寶。王有千子，勇猛雄烈，能却外敵，四方敬順，不加兵杖，自然太平。",
+   "MA70": "「比丘！人壽八萬歲時有王名螺，為轉輪王，聰明智慧，有四種軍整御天下，由己自在。如法法王，成就七寶，彼七寶者，輪寶、象寶、馬寶、珠寶、女寶、居士寶、主兵臣寶，是謂為七。千子具足，顏貌端正，勇猛無畏，能伏他眾，彼必統領此一切地，乃至大海，不以刀杖，以法教令，令得安樂。"
+  },
+  "c23": {
+   "dn26": "8. Metteyyabuddhuppāda Asītivassasahassāyukesu, bhikkhave, manussesu metteyyo nāma bhagavā loke uppajjissati arahaṁ sammāsambuddho vijjācaraṇasampanno sugato lokavidū anuttaro purisadammasārathi satthā devamanussānaṁ buddho bhagavā. Seyyathāpāhametarahi loke uppanno arahaṁ sammāsambuddho vijjācaraṇasampanno sugato lokavidū anuttaro purisadammasārathi satthā devamanussānaṁ buddho bhagavā. So imaṁ lokaṁ sadevakaṁ samārakaṁ sabrahmakaṁ sassamaṇabrāhmaṇiṁ pajaṁ sadevamanussaṁ sayaṁ abhiññā sacchikatvā pavedessati, seyyathāpāhametarahi imaṁ lokaṁ sadevakaṁ samārakaṁ sabrahmakaṁ sassamaṇabrāhmaṇiṁ pajaṁ sadevamanussaṁ sayaṁ abhiññā sacchikatvā pavedemi. So dhammaṁ desessati ādikalyāṇaṁ majjhekalyāṇaṁ pariyosānakalyāṇaṁ sātthaṁ sabyañjanaṁ kevalaparipuṇṇaṁ parisuddhaṁ brahmacariyaṁ pakāsessati; seyyathāpāhametarahi dhammaṁ desemi ādikalyāṇaṁ majjhekalyāṇaṁ pariyosānakalyāṇaṁ sātthaṁ sabyañjanaṁ kevalaparipuṇṇaṁ parisuddhaṁ brahmacariyaṁ pakāsemi. So anekasahassaṁ bhikkhusaṅghaṁ pariharissati, seyyathāpāhametarahi anekasataṁ bhikkhusaṅghaṁ pariharāmi.",
+   "nan-dn26": "諸比丘！人壽八萬歲之時，名為彌勒應供、等正覺、明行足、善逝、世間解、無上士、調御丈夫、天人師、佛、世尊之如來出現於世；猶如我今於此世界、為應供、……〔乃至〕……佛、世尊之出現。彼亦含括此天界、魔界、梵天界及此世界、沙門、婆羅門，獨自證悟而說示。猶如我含括此天界、魔界、梵天界及此世界、沙門、婆羅門，獨自證悟而說示。宣示初善、中善、後亦善之法、並說示文義具足，一切圓滿清淨之梵行；猶如我今說示初善、中善、後亦善之法，並說文義具足，一切圓滿清淨之梵行。彼受無量數千之比丘僧伽所圍繞；猶如我今受無量數千之比丘僧伽所圍繞。",
+   "DA6": "當於爾時，有佛出世，名為彌勒如來、至真、等正覺，十號具足，如今如來十號具足，彼於諸天、釋、梵、魔、若魔、天、諸沙門、婆羅門、諸天、世人中，自身作證，亦如我今於諸天、釋、梵、魔、若魔、天、沙門、婆羅門、諸天、世人中，自身作證。彼當說法，初言亦善，中下亦善，義味具足，淨修梵行，如我今日說法，上中下言，皆悉真正，義味具足，梵行清淨。彼眾弟子有無數千萬，如我今日弟子數百。彼時，人民稱其弟子號曰慈子，如我弟子號曰釋子。"
+  },
+  "c24": {
+   "dn26": "Atha kho, bhikkhave, saṅkho nāma rājā yo so yūpo raññā mahāpanādena kārāpito. Taṁ yūpaṁ ussāpetvā ajjhāvasitvā taṁ datvā vissajjitvā samaṇabrāhmaṇakapaṇaddhikavaṇibbakayācakānaṁ dānaṁ datvā metteyyassa bhagavato arahato sammāsambuddhassa santike kesamassuṁ ohāretvā kāsāyāni vatthāni acchādetvā agārasmā anagāriyaṁ pabbajissati. So evaṁ pabbajito samāno eko vūpakaṭṭho appamatto ātāpī pahitatto viharanto nacirasseva—yassatthāya kulaputtā sammadeva agārasmā anagāriyaṁ pabbajanti, tadanuttaraṁ—brahmacariyapariyosānaṁ diṭṭheva dhamme sayaṁ abhiññā sacchikatvā upasampajja viharissati.",
+   "nan-dn26": "諸比丘！其時，有名為山伽王，其王之宮殿是大波那王之所造；其宮殿甚莊嚴，讓與己而住此，對沙門、婆羅門、貧民、流浪者、乞食者行布施，然後，於彌勒如來、應供、等正覺者之處，剃除鬚髮，著袈裟衣，由在家而出家；彼如是出家已，獨住遠離，修道苦行，專心堅固而住，不久彼善男子為其目的，由在家而出家，成就無上梵行，於現世獨住證悟而止住。",
+   "DA6": "爾時，聖王建大寶幢，圍十六尋，上高千尋，千種雜色嚴飾其幢；幢有百觚，觚有百枝，寶縷織成，眾寶間廁。於是，聖王壞此幢已，以施沙門、婆羅門、國中貧者，然後剃除鬚髮，服三法衣，出家修道，修無上行，於現法中自身作證，生死已盡，梵行已立，所作已辦，不受後有。」"
+  },
+  "c25": {
+   "dn26": "Attadīpā, bhikkhave, viharatha attasaraṇā anaññasaraṇā, dhammadīpā dhammasaraṇā anaññasaraṇā. Kathañca, bhikkhave, bhikkhu attadīpo viharati attasaraṇo anaññasaraṇo dhammadīpo dhammasaraṇo anaññasaraṇo? Idha, bhikkhave, bhikkhu kāye kāyānupassī viharati ātāpī sampajāno satimā vineyya loke abhijjhādomanassaṁ. Vedanāsu vedanānupassī …pe… citte cittānupassī …pe… dhammesu dhammānupassī viharati ātāpī sampajāno satimā vineyya loke abhijjhādomanassaṁ. Evaṁ kho, bhikkhave, bhikkhu attadīpo viharati attasaraṇo anaññasaraṇo dhammadīpo dhammasaraṇo anaññasaraṇo. 9. Bhikkhunoāyuvaṇṇādivaḍḍhanakathā Gocare, bhikkhave, caratha sake pettike visaye. Gocare, bhikkhave, carantā sake pettike visaye āyunāpi vaḍḍhissatha, vaṇṇenapi vaḍḍhissatha, sukhenapi vaḍḍhissatha, bhogenapi vaḍḍhissatha, balenapi vaḍḍhissatha.",
+   "nan-dn26": "諸比丘！自作洲、自作歸依處，勿以他為歸依處。以法為洲、法為歸依處，勿以他為歸依處。諸比丘！如何自作洲、自作歸依處，勿以他為歸依處，以法為洲、法為歸依處，勿以他為歸依處而住耶？諸比丘！於此有比丘，於身觀身而住，精勤、自覺、憶念者，於世間當得調伏貪欲、愚癡。於受……於心……於法……〔乃至〕……。諸比丘！如是，即是比丘自作洲、自作歸依處，……〔乃至〕……勿於他為歸依處而住。 諸比丘！於汝自己祖、父之地行乞，諸比丘！行乞於祖、父之地而行者，壽命延長，顏色增美，安穩快樂，財寶豐饒，威力具足。",
+   "DA6": "佛告諸比丘：「汝等當勤修善行，以修善行，則壽命延長，顏色增益，安隱快樂，財寶豐饒，威力具足，猶如諸王順行轉輪聖王舊法，則壽命延長，顏色增益，安隱快樂，財寶豐饒，威力具足。比丘亦如是，當修善法，壽命延長，顏色增益，安隱快樂，財寶豐饒，威力具足。",
+   "MA70": "比丘！諸剎利頂生王得為人主，整御天下，行自境界，從父所得，彼因行自境界，從父所得，壽不轉減，形色不惡，未曾失樂，力亦不衰。諸比丘！汝等亦應如是，剃除鬚髮，著袈裟衣，至信、捨家、無家、學道，行自境界，從父所得。諸比丘！汝等因行自境界，從父所得，壽不轉減，形色不惡，未曾失樂，力亦不衰。「云何比丘行自境界，從父所得？此比丘觀內身如身，觀內覺、心、法如法，是謂比丘行自境界，從父所得。"
+  },
+  "c26": {
+   "dn26": "Kiñca, bhikkhave, bhikkhuno āyusmiṁ? Idha, bhikkhave, bhikkhu chandasamādhipadhānasaṅkhārasamannāgataṁ iddhipādaṁ bhāveti, vīriyasamādhipadhānasaṅkhārasamannāgataṁ iddhipādaṁ bhāveti, cittasamādhipadhānasaṅkhārasamannāgataṁ iddhipādaṁ bhāveti, vīmaṁsāsamādhipadhānasaṅkhārasamannāgataṁ iddhipādaṁ bhāveti. So imesaṁ catunnaṁ iddhipādānaṁ bhāvitattā bahulīkatattā ākaṅkhamāno kappaṁ vā tiṭṭheyya kappāvasesaṁ vā. Idaṁ kho, bhikkhave, bhikkhuno āyusmiṁ.",
+   "nan-dn26": "諸比丘！然者，如何比丘之壽命延長？諸比丘！於此，有比丘具備欲定、精勤、圓滿修習神足，具備精進定……乃至……意定……思惟定、精勤、圓滿修習神足。彼修習、多修習此等之四神足，從其所欲，〔住〕一劫或一劫有餘。諸比丘！此謂比丘之壽命延長也。",
+   "DA6": "「云何比丘壽命延長？如是比丘修習欲定，精勤不懈，滅行成就，以修神足；修精進定、意定、思惟定，精勤不懈，滅行成就，以修神足，是為壽命延長。",
+   "MA70": "云何比丘壽？此比丘修欲定如意足，依遠離，依無欲，依滅盡，趣向出要；修精進定，修心定，修思惟定如意足，依遠離，依無欲，依滅盡，趣向出要，是謂比丘壽。"
+  },
+  "c27": {
+   "dn26": "Kiñca, bhikkhave, bhikkhuno vaṇṇasmiṁ? Idha, bhikkhave, bhikkhu sīlavā hoti, pātimokkhasaṁvarasaṁvuto viharati ācāragocarasampanno, aṇumattesu vajjesu bhayadassāvī, samādāya sikkhati sikkhāpadesu. Idaṁ kho, bhikkhave, bhikkhuno vaṇṇasmiṁ.",
+   "nan-dn26": "諸比丘！如何為比丘之顏色增美耶？諸比丘！於此，比丘有戒德，依波羅提木叉而攝護，威儀具足，於小罪見怖畏以學習諸戒。諸比丘！此乃為比丘之顏色增美也。",
+   "DA6": "何謂比丘顏色增益？於是比丘戒律具足，成就威儀，見有小罪，生大怖畏，等學諸戒，周滿備悉，是為比丘顏色增益。",
+   "MA70": "云何比丘色？此比丘修習禁戒，守護從解脫，又復善攝威儀禮節，見纖介罪，常懷畏怖，受持學戒，是謂比丘色。"
+  },
+  "c28": {
+   "dn26": "Kiñca, bhikkhave, bhikkhuno sukhasmiṁ? Idha, bhikkhave, bhikkhu vivicceva kāmehi vivicca akusalehi dhammehi savitakkaṁ savicāraṁ vivekajaṁ pītisukhaṁ paṭhamaṁ jhānaṁ upasampajja viharati. Vitakkavicārānaṁ vūpasamā …pe… dutiyaṁ jhānaṁ … tatiyaṁ jhānaṁ … catutthaṁ jhānaṁ upasampajja viharati. Idaṁ kho, bhikkhave, bhikkhuno, sukhasmiṁ.",
+   "nan-dn26": "諸比丘！如何為比丘之安穩快樂耶？諸比丘！於此，有比丘斷諸欲，去不善法，有念思有遠離之心而生喜、樂，達初禪而住。又滅除思、念，內心安靜，心成專一，無念、無思，由定生喜、樂，達第二禪……第三禪……第四禪而住。諸比丘！此為比丘之安穩快樂。",
+   "DA6": "何謂比丘安隱快樂？於是比丘斷除婬欲，去不善法，有覺、有觀，離生喜、樂，行第一禪；除滅覺、觀，內信歡悅，撿心專一，無覺、無觀，定生喜、樂，行第二禪；捨喜守護，專心不亂，自知身樂，賢聖所求，護念、樂行，行第三禪；捨滅苦樂，先除憂喜，不苦不樂，護念清淨，行第四禪，是為比丘安隱快樂。",
+   "MA70": "云何比丘樂？此比丘離欲、離惡不善之法，乃至得第四禪成就遊，是謂比丘樂。"
+  },
+  "c29": {
+   "dn26": "Kiñca, bhikkhave, bhikkhuno bhogasmiṁ? Idha, bhikkhave, bhikkhu mettāsahagatena cetasā ekaṁ disaṁ pharitvā viharati tathā dutiyaṁ. Tathā tatiyaṁ. Tathā catutthaṁ. Iti uddhamadho tiriyaṁ sabbadhi sabbattatāya sabbāvantaṁ lokaṁ mettāsahagatena cetasā vipulena mahaggatena appamāṇena averena abyāpajjena pharitvā viharati. Karuṇāsahagatena cetasā …pe… muditāsahagatena cetasā …pe… upekkhāsahagatena cetasā ekaṁ disaṁ pharitvā viharati. Tathā dutiyaṁ. Tathā tatiyaṁ. Tathā catutthaṁ. Iti uddhamadho tiriyaṁ sabbadhi sabbattatāya sabbāvantaṁ lokaṁ upekkhāsahagatena cetasā vipulena mahaggatena appamāṇena averena abyāpajjena pharitvā viharati. Idaṁ kho, bhikkhave, bhikkhuno bhogasmiṁ.",
+   "nan-dn26": "諸比丘！如何為比丘之財寶耶？諸比丘！於此，有比丘以慈俱之心，徧滿一方而住。如是徧滿二方、三方、四方，如是徧滿上、下、橫、徧一切處，於一切世界廣大、廣博、無量、無恚、無害之慈心而住。以悲俱之心……以喜俱之心……以捨俱之心徧滿而住。諸比丘！此比丘之財寶也。",
+   "DA6": "「何謂比丘財寶豐饒？於是比丘修習慈心，遍滿一方，餘方亦爾，周遍廣普，無二無量，除眾結恨，心無嫉惡，靜默慈柔，以自娛樂，悲、喜、捨心亦復如是，是為比丘財寶豐饒。"
+  },
+  "c30": {
+   "dn26": "Kiñca, bhikkhave, bhikkhuno balasmiṁ? Idha, bhikkhave, bhikkhu āsavānaṁ khayā anāsavaṁ cetovimuttiṁ paññāvimuttiṁ diṭṭheva dhamme sayaṁ abhiññā sacchikatvā upasampajja viharati. Idaṁ kho, bhikkhave, bhikkhuno balasmiṁ.",
+   "nan-dn26": "諸比丘！如何為比丘之威力耶？諸比丘！於此，有比丘滅盡有漏、無漏、心解脫、慧解脫、於現世獨自證悟而住。諸比丘！此比丘之威力也。",
+   "DA6": "何謂比丘威力具足？於是比丘如實知苦聖諦，習、盡、道諦亦如實知，是為比丘威力具足。」",
+   "MA70": "云何比丘力？此比丘諸漏已盡，得無漏，心解脫、慧解脫，於現法中自知自覺，自作證成就遊，生已盡，梵行已立，所作已辦，不更受有，知如真，是謂比丘力。"
+  },
+  "c31": {
+   "dn26": "Nāhaṁ, bhikkhave, aññaṁ ekabalampi samanupassāmi yaṁ evaṁ duppasahaṁ, yathayidaṁ, bhikkhave, mārabalaṁ. Kusalānaṁ, bhikkhave, dhammānaṁ samādānahetu evamidaṁ puññaṁ pavaḍḍhatī”ti. Idamavoca bhagavā. Attamanā te bhikkhū bhagavato bhāsitaṁ abhinandunti. Cakkavattisuttaṁ niṭṭhitaṁ tatiyaṁ.",
+   "nan-dn26": "諸比丘！我不見有其他魔力般難征服之威力。諸比丘！由受持善法，得如是福德之增長。」 世尊如是說已，彼等諸比丘，聞世尊之所說，歡喜信受。",
+   "DA6": "佛告比丘：「我今遍觀諸有力者無過魔力，然漏盡比丘力能勝彼。」爾時，諸比丘聞佛所說，歡喜奉行。",
+   "MA70": "「比丘！我不更見有力不可降伏如魔王力，彼漏盡比丘則以無上聖慧之力而能降伏。」佛說如是。彼諸比丘聞佛所說，歡喜奉行。轉輪王經第六竟（六千三百一十三字）"
+  }
+ }
+}
