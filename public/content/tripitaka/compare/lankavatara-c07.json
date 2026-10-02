@@ -1,0 +1,100 @@
+{
+ "slug": "lankavatara-c07",
+ "title": "楞伽經・變化品",
+ "family": "sa",
+ "intro": "梵本第七品〈Nairmāṇika〉＝菩提流支〈化品〉＝實叉難陀〈變化品〉＝求那跋陀羅卷四一段。大慧連問：為何授阿羅漢記、不說一字、常在定、佛事皆化作、諸識剎那、金剛神衛護、本際不可知、現有魔業與旃遮女等餘報？佛答：為無餘涅槃密勸二乘，授記者是化佛；二乘與佛同斷煩惱障而未斷智障；愚夫見六（七）識滅起斷見，不了藏識起常見。",
+ "units": [
+  {
+   "id": "l7-01",
+   "label": "品題・大慧連問授記、不說一字、魔業餘報"
+  },
+  {
+   "id": "l7-02",
+   "label": "佛答：化佛授記・二障・斷常二見"
+  },
+  {
+   "id": "l7-03",
+   "label": "偈（7.1–5）"
+  },
+  {
+   "id": "l7-04",
+   "label": "品尾題"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sa",
+   "lang": "sa",
+   "label": "梵本",
+   "who": "Vaidya 校訂本（1963）・GRETIL"
+  },
+  {
+   "id": "T0670",
+   "lang": "lzh",
+   "label": "四卷本",
+   "who": "求那跋陀羅譯《楞伽阿跋多羅寶經》・443 年",
+   "work": "T0670"
+  },
+  {
+   "id": "T0671",
+   "lang": "lzh",
+   "label": "十卷本",
+   "who": "菩提流支譯《入楞伽經》・513 年",
+   "work": "T0671"
+  },
+  {
+   "id": "T0672",
+   "lang": "lzh",
+   "label": "七卷本",
+   "who": "實叉難陀譯《大乘入楞伽經》・700–704 年",
+   "work": "T0672"
+  }
+ ],
+ "works": [
+  "T0670",
+  "T0671",
+  "T0672"
+ ],
+ "anchors": [
+  {
+   "work": "T0671",
+   "node": "入楞伽經化品第十五",
+   "uid": "T16n0671_p0560b14"
+  },
+  {
+   "work": "T0672",
+   "node": "變化品第七",
+   "uid": "T16n0672_p0622b07"
+  },
+  {
+   "work": "T0670",
+   "range": [
+    "T16n0670_p0513a05",
+    "T16n0670_p0513b13"
+   ]
+  }
+ ],
+ "cells": {
+  "l7-01": {
+   "sa": "nairmāṇikaparivarto nāma saptamaḥ / atha khalu mahāmatirbodhisattvo mahāsattvaḥ punarapi bhagavantametadavocat - arhantaḥ punarbhagavatā vyākṛtā anuttarāyāṃ samyaksaṃbodhau / aparinirvāṇadharmakāśca sattvāstathāgatatve / yasyāṃ ca rātrau tathāgato 'nuttarāṃ samyaksaṃbodhimabhisaṃbuddho yasyāṃ ca rātrau parinirvṛtaḥ, etasminnantare bhagavatā ekamapyakṣaraṃ nodāhṛtaṃ na pravyāhṛtam / sadā samāhitāśca tathāgatā na vitarkayanti na vyavacārayanti / nirmāṇāni ca nirmāya taistathāgatakṛtyaṃ kurvanti / kiṃ kāraṇaṃ ca vijñānānāṃ kṣaṇaparaṃparābhedalakṣaṇaṃ nirdiśyate? vajrapāṇiśca satatasamitaṃ nityānubaddhaḥ / pūrvā ca koṭirna prajñāyate / nirvṛtiśca prajñāpyate / mārāśca mārakarmāṇi ca karmaplotayaśca / cañcāmāṇavikā sundarikā pravrājikā yathā dhautapātrādīni ca bhagavan karmāvaraṇāni dṛśyante / tatkathaṃ bhagavatā sarvākārajñatā prāptā aprahīṇairdoṣaiḥ? bhagavānāha - tena hi mahāmate śṛṇu, sādhu ca suṣṭhu ca manasikuru / bhāṣiṣye 'haṃ te / sādhu bhagavanniti mahāmatirbodhisattvo mahāsattvo bhagavataḥ pratyaśrauṣīt /",
+   "T0670": "爾時，大慧菩薩復白佛言：「世尊！世尊記阿羅漢得成阿耨多羅三藐三菩提，與諸菩薩等無差別。一切眾生法不涅槃，誰至佛道？從初得佛，至般涅槃，於其中間不說一字，亦無所答。如來常定故，亦無慮，亦無察，化佛化作佛事。何故說識剎那展轉壞相。金剛力士，常隨侍衛。不施設本際。現魔魔業，惡業果報，旃遮摩納、孫陀利女、空鉢而出。惡業障現。云何如來得一切種智，而不離諸過？」佛告大慧：「諦聽，諦聽！善思念之，當為汝說。」大慧白佛：「善哉，世尊！唯然受教。」",
+   "T0671": "爾時聖者大慧菩薩摩訶薩復白佛言：「世尊！如佛世尊與諸羅漢授阿耨多羅三藐三菩提記；如來復說諸佛如來不入涅槃；復說如來、應、正遍知，何等夜證大菩提，何等夜入般涅槃，於其中間不說一字；如來復說諸佛如來，常入無覺無觀無分別定；復言作諸種種應化度諸眾生；世尊復說諸識念念差別不住，金剛密迹常隨侍衛；復說世間本際難知；復言眾生入般涅槃，若入涅槃，應有本際；復說諸佛無有怨敵而見諸魔；復說如來斷一切障，而見旃遮摩那、毘孫陀梨等謗，佛入娑梨那村竟不得食空鉢而出。世尊！若如是者如來便有無量罪業。云何如來不離一切諸罪過惡，而得阿耨多羅三藐三菩提一切種智？」佛告聖者大慧菩薩言：「善哉！善哉！善哉大慧！汝今諦聽，當為汝說。」大慧白佛言：「善哉世尊！唯然受教。」",
+   "T0672": "爾時大慧菩薩摩訶薩復白佛言：「世尊！如來何故授阿羅漢阿耨多羅三藐三菩提記？何故復說無般涅槃法眾生得成佛道？又何故說從初得佛至般涅槃，於其中間不說一字？又言如來常在於定無覺無觀；又言佛事皆是化作；又言諸識剎那變壞；又言金剛神常隨衛護；又言前際不可知而說有般涅槃；又現有魔及以魔業；又有餘報，謂：旃遮婆羅門女，孫陀利外道女，及空鉢而還等事，世尊既有如是業障，云何得成一切種智？既已成於一切種智，云何不離如是諸過？」佛言：「諦聽！當為汝說。"
+  },
+  "l7-02": {
+   "sa": "bhagavāṃstasyaitadavocat - nirupadhiśeṣaṃ nirvāṇadhātuṃ saṃdhāya bodhisattvacaryāṃ ca caritavatāṃ protsāhanārtham / santi hi mahāmate bodhisattvacaryācāriṇaḥ iha anyeṣu ca buddhakṣetreṣu / yeṣāṃ śrāvakayānanirvāṇābhilāṣasteṣāṃ śrāvakayānarucivyāvartanārthaṃ mahāyānagatiprotsāhanārthaṃ ca tannirmitaśrāvakānnirmāṇakāyairvyākaroti, na ca dharmatābuddhaiḥ / etatsaṃdhāya mahāmate śrāvakavyākaraṇaṃ nirdiṣṭam / na hi mahāmate śrāvakapratyekabuddhānāṃ kleśāvaraṇaprahāṇaviśeṣo vimuktyekarasatayā / nātra jñeyāvaraṇaprahāṇam / jñeyāvaraṇaṃ punarmahāmate dharmanairātmyadarśanaviśeṣādviśudhyate / kleśāvaraṇaṃ tu pudgalanairātmyadarśanābhyāsapūrvakaṃ prahīyate, manovijñānanivṛtteḥ / dharmāvaraṇavinirmuktiḥ punarālayavijñānavāsanāvinivṛtterviśudhyati / pūrvadharmasthititāṃ saṃdhāya apūrvacaramasya cābhāvātpūrvaprahiṇairevākṣaraistathāgato na vitarkya na vicārya dharmaṃ deśayati / saṃprajānakāritvādamuṣitasmṛtitvācca na vitarkayati na vicārayati, caturvāsanābhūmiprahīṇatvāccyutidvayavigamātkleśajñeyāvaraṇadvayaprahāṇācca // sapta mahāmate manomanovijñānacakṣurvijñānādayaḥ kṣaṇikāḥ vāsanāhetutvātkuśalānāsravapakṣarahitāḥ na saṃsāriṇaḥ / tathāgatagarbhaḥ punarmahāmate saṃsarati nirvāṇasukhaduḥkhahetukaḥ / na ca bālapṛthagjanā avabudhyante śūnyatāvikṣiptamatayaḥ / nirmitanairmāṇikānāṃ mahāmate tathāgatānāṃ vajrapāṇiḥ pārśvānugato na maulānāṃ tathāgatānāmarhatāṃ samyaksaṃbuddhānām / maulo hi mahāmate tathāgataḥ sarvapramāṇendriyavinivṛttaḥ sarvabālaśrāvakapratyekabuddhatīrthyānām / dṛṣṭadharmasukhavihāriṇastamāgacchantyabhisamayadharmajñānakṣāntyā / ato vajrapāṇistānnānubadhnāti / sarve hi nirmitabuddhā na karmaprabhavāḥ / na teṣu tathāgato na cānyatra tebhyastathāgataḥ / kumbhakārālambanādiprayogeṇeva sattvakṛtyāni karoti, lakṣaṇopetaṃ ca deśayati, na tu svanayapratyavasthānakathāṃ svapratyātmāryagatigocaram / punaraparaṃ mahāmate ṣaṇṇāṃ vijñānakāyānāṃ nirodhāducchedadṛṣṭimāśrayanti bālapṛthagjanāḥ, ālayānavabodhācchāśvatadṛṣṭayo bhavanti / svamativikalpasya mahāmate pūrvā koṭirna prajñāyate / svamativikalpasyaiva vinivṛttermokṣaḥ prajñāyate / caturvāsanāprahāṇātsarvadoṣaprahāṇam //",
+   "T0670": "佛告大慧：「為無餘涅槃故說，誘進行菩薩行者故。此及餘世界修菩薩行者，樂聲聞乘涅槃，為令離聲聞乘，進向大乘，化佛授聲聞記，非是法佛。大慧！因是故，記諸聲聞與菩薩不異。大慧！不異者，聲聞、緣覺、諸佛如來，煩惱障斷，解脫一味，非智障斷。大慧！智障者，見法無我，殊勝清淨。煩惱障者，先習見人無我，斷七識滅，法障解脫，識藏習滅，究竟清淨。因本住法故，前後非性。無盡本願故。如來無慮無察，而演說法；正智所化故，念不忘故，無慮無察。四住地、無明住地習氣斷故，二煩惱斷，離二種死，覺人法無我，及二障斷。大慧！心、意、意識、眼識等七，剎那習氣因離，善無漏品離，不復輪轉。大慧！如來藏者，輪轉、涅槃苦樂因。空亂意。大慧！愚癡凡夫所不能覺。大慧！金剛力士所隨護者，是化佛耳，非真如來。大慧！真如來者，離一切根量。一切凡夫、聲聞、緣覺及外道根量悉滅，得現法樂住，無間法智忍故，非金剛力士所護。一切化佛不從業生。化化佛者，非佛，不離佛。因陶家輪等眾生所作相而說法，非自通處說自覺境界。「復次，大慧！愚夫依七識身滅，起斷見。不覺識藏故，起常見。自妄想故，不知本際。自妄想慧滅，故解脫。四住地、無明住地習氣斷故，一切過斷。」",
+   "T0671": "佛告大慧：「我為曾行菩薩行諸聲聞等依無餘涅槃而與授記。大慧！我與聲聞授記者，為怯弱眾生生勇猛心。大慧！此世界中及餘佛國，有諸眾生行菩薩行，而復樂於聲聞法行，為轉彼取大菩提，應化佛為應化聲聞授記，非報佛法身佛而授記莂。大慧！聲聞辟支佛涅槃無差別。何以故？斷煩惱無差異故，斷煩惱障非斷智障。復次，大慧！見法無我斷於智障，見人無我斷煩惱障。大慧！轉意識故斷法障業障，以轉意阿梨耶識熏習故究竟清淨。大慧！我常依本法體而住更不生法，依本名字章句，不覺不思而說諸法。大慧！如來常如意知常不失念，是故如來無覺無觀，諸佛如來離四種地已，遠離二種死、二種障、二種業故。大慧！七種識意意識眼耳鼻舌身念念不住，因虛妄熏習離於無漏諸善法故。大慧！如來藏世間不生不死，不來不去，常恒清涼不變。復次，大慧！依如來藏故有世間涅槃苦樂之因，而諸凡夫不覺不知，而墮於空虛妄顛倒。大慧！金剛密迹常隨侍衛應化如來前後圍遶，非法佛報佛根本如來、應、正遍知。大慧！根本如來遠離諸根大小諸量，遠離一切凡夫聲聞辟支佛等。大慧！如實修行，得彼真如樂行境界者，知根本佛，以得平等法忍故，是故金剛密迹隨應化佛。大慧！應化佛者無業無謗，而應化佛不異法佛報佛如來而亦不一，如陶師鹽等作所作事，應化佛作化眾生事，異真實相說法，不說內所證法聖智境界。復次，大慧！一切凡夫外道聲聞辟支佛等，見六識滅墮於斷見，不見阿梨耶識墮於常見。復次，大慧！不見自心分別本際，是故世間名無本際。大慧！遠離自心分別見者，名為解脫得涅槃證。大慧！諸佛如來遠離四種熏習氣故，是故無過。」",
+   "T0672": "大慧！我為無餘涅槃界故，密勸令彼修菩薩行，此界他土有諸菩薩，心樂求於聲聞涅槃，令捨是心進修大行，故作是說。又變化佛與化聲聞而授記別，非法性佛。大慧！授聲聞記是祕密說。大慧！佛與二乘無差別者，據斷惑障解脫一味，非謂智障，智障要見法無我性乃清淨故。煩惱障者，見人無我，意識捨離，是時初斷；藏識習滅，法障解脫，方得永淨。大慧！我依本住法作是密語，非異前佛，後更有說，先具如是諸文字故。大慧！如來正知無有妄念，不待思慮然後說法，如來久已斷四種習，離二種死、除二種障。大慧！意及意識眼識等七，習氣為因是剎那性，離無漏善非流轉法。大慧！如來藏者，生死流轉及是涅槃苦樂之因，凡愚不知妄著於空。大慧！變化如來，金剛力士常隨衛護，非真實佛。真實如來離諸限量，二乘外道所不能知，住現法樂成就智忍，不假金剛力士所護。一切化佛不從業生，非即是佛亦非非佛，譬如陶師眾事和合而有所作，化佛亦爾，眾相具足而演說法，然不能說自證聖智所行之境。「復次，大慧！諸凡愚人見六識滅起於斷見，不了藏識起於常見。大慧！自心分別是其本際，故不可得，離此分別即得解脫，四種習斷離一切過。」"
+  },
+  "l7-03": {
+   "sa": "tatredamucyate - trīṇi yānānyayānaṃ ca buddhānāṃ nāsti nirvṛtiḥ / buddhatve vyākṛtāḥ sarve vītadeṣāśca deśitāḥ // Lank_7.1 // abhisamayāntikaṃ jñānaṃ nirupādigatistathā / protsāhanā ca līnānāmetatsaṃghāya deśitam // Lank_7.2 // buddhairutpāditaṃ jñānaṃ mārgastaireva deśitaḥ / yānti tenaiva nānyena atasteṣāṃ na nirvṛtiḥ // Lank_7.3 // bhavakāmarūpadṛṣṭīnāṃ vāsanā vai caturvidhā / manovijñānasaṃbhūtā ālayaṃ ca manaḥsthitāḥ // Lank_7.4 // manovijñānanetrādyairucchedaścāpyanityataḥ / śāśvataṃ ca anādyena nirvāṇamatidṛṣṭinām // Lank_7.5 //",
+   "T0670": "爾時，世尊欲重宣此義而說偈言：「三乘亦非乘，如來不磨滅， 一切佛所說，說離諸過惡。 為諸無間智，及無餘涅槃， 誘進諸下劣，是故隱覆說。 諸佛所起智，即分別說道， 諸乘非為乘，彼則非涅槃。 欲色有及見，說是四住地， 意識之所起，識宅意所住。 意及眼識等，斷滅說無常， 或作涅槃見，而為說常住。」",
+   "T0671": "爾時世尊重說偈言：「三乘及非乘，諸佛無量乘； 一切記佛地，說諸煩惱斷。 內身證聖智，及無餘涅槃； 誘進怯眾生，是故隱覆說。 如來得證智，亦說於彼道； 眾生依入道，二乘無涅槃。 見欲色及有，及四種熏地； 意識亦所生，見意識共住。 見意眼識等，常無常斷滅； 常見依意等，而起涅槃見。」",
+   "T0672": "爾時世尊重說頌言：「三乘及非乘，無有佛涅槃； 悉授如來記，說離眾過惡。 成就究竟智，及無餘涅槃； 誘進怯劣人，依此密意說。 諸佛所得智，演說如是道； 惟此更非餘，故彼無涅槃。 欲色有諸見，如是四種習； 意識所從生，藏意亦在中。 見意識眼等，無常故說斷； 迷意藏起常，邪智謂涅槃。」"
+  },
+  "l7-04": {
+   "sa": "iti laṅkāvatārasūtre nairmāṇikaparivartaḥ saptamaḥ //"
+  }
+ }
+}
