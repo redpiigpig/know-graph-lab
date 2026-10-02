@@ -71,7 +71,14 @@ def _validate_pdf(path: Path) -> Verdict:
     try:
         if doc.needs_pass:
             return Verdict(False, "pdf_encrypted", "password-protected")
-        if doc.page_count < 1:
+        # 🚨 頁面樹壞掉的 PDF 在 open 時不報錯，讀 page_count 才丟
+        # RuntimeError("Invalid number of pages")——不接住的話整批 ingest 就停在這一本
+        # （2026-10-02：梅延多夫帕拉馬斯研究的 LibGen 檔，後面五百多本全沒入庫）。
+        try:
+            n = doc.page_count
+        except Exception as e:  # noqa: BLE001
+            return Verdict(False, "pdf_unreadable", f"page_count: {type(e).__name__}: {e}")
+        if n < 1:
             return Verdict(False, "pdf_no_pages", "0 pages")
     finally:
         doc.close()
