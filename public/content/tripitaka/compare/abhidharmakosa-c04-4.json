@@ -1,0 +1,304 @@
+{
+ "slug": "abhidharmakosa-c04-4",
+ "title": "俱舍論・分別業品（4.45–4.65）",
+ "family": "sa",
+ "intro": "《阿毘達磨俱舍論》第四品〈分別業品〉頌 4.45–4.65，一頌一節（頌號依 Pradhan 本，GRETIL 標 VAkK_品.頌）。五欄：梵本頌、梵本自釋（bhāṣya）、玄奘《俱舍論本頌》、玄奘《俱舍論》、真諦《俱舍釋論》；論本欄自該頌（含引出該頌的提問句）起、到下一頌前的釋文止。玄奘《俱舍論》常把數頌合為一個「頌曰」再一併解釋，區塊中按頌切開，釋文因此都落在區塊末頌；真諦本逐句引偈、隨句解釋，與梵本自釋的節奏相近。稱友 Yaśomitra《明了義釋》Sphuṭārthā 是自釋的疏，不收。",
+ "units": [
+  {
+   "id": "v045",
+   "label": "4.45　安不安非業"
+  },
+  {
+   "id": "v046",
+   "label": "4.46　欲善業名福"
+  },
+  {
+   "id": "v047",
+   "label": "4.47　順樂苦非二"
+  },
+  {
+   "id": "v048",
+   "label": "4.48　餘說下亦有"
+  },
+  {
+   "id": "v049",
+   "label": "4.49　順受總有五"
+  },
+  {
+   "id": "v050",
+   "label": "4.50　此有定不定"
+  },
+  {
+   "id": "v051",
+   "label": "4.51　餘師說四句"
+  },
+  {
+   "id": "v052",
+   "label": "4.52　堅於離染地"
+  },
+  {
+   "id": "v053",
+   "label": "4.53　欲中有能造"
+  },
+  {
+   "id": "v054",
+   "label": "4.54　由重惑淨心"
+  },
+  {
+   "id": "v055",
+   "label": "4.55　由田意殊勝"
+  },
+  {
+   "id": "v056",
+   "label": "4.56　於佛上首僧"
+  },
+  {
+   "id": "v057",
+   "label": "4.57　諸善無尋業"
+  },
+  {
+   "id": "v058",
+   "label": "4.58　心狂唯意識"
+  },
+  {
+   "id": "v059",
+   "label": "4.59　說曲穢濁業"
+  },
+  {
+   "id": "v060",
+   "label": "4.60　惡色欲界善"
+  },
+  {
+   "id": "v061",
+   "label": "4.61　四法忍離欲"
+  },
+  {
+   "id": "v062",
+   "label": "4.62　離欲四靜慮"
+  },
+  {
+   "id": "v063",
+   "label": "4.63　有說地獄受"
+  },
+  {
+   "id": "v064",
+   "label": "4.64　無學身語業"
+  },
+  {
+   "id": "v065",
+   "label": "4.65　惡身語意業"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sa",
+   "lang": "sa",
+   "label": "梵本頌",
+   "who": "《阿毘達磨俱舍論本頌》Abhidharmakośakārikā・GRETIL（參 Pradhan 1975、Gokhale 1946）"
+  },
+  {
+   "id": "sa-bhasya",
+   "lang": "sa",
+   "label": "梵本自釋",
+   "who": "《阿毘達磨俱舍論》Abhidharmakośabhāṣya・GRETIL（Pradhan 1975，Hackett／Lusthaus 校）"
+  },
+  {
+   "id": "T1560",
+   "lang": "lzh",
+   "label": "玄奘頌本",
+   "who": "玄奘譯《阿毘達磨俱舍論本頌》・唐",
+   "work": "T1560"
+  },
+  {
+   "id": "T1558",
+   "lang": "lzh",
+   "label": "玄奘論本",
+   "who": "玄奘譯《阿毘達磨俱舍論》・唐 651–654 年",
+   "work": "T1558"
+  },
+  {
+   "id": "T1559",
+   "lang": "lzh",
+   "label": "真諦釋論",
+   "who": "真諦譯《阿毘達磨俱舍釋論》・陳 563–567 年",
+   "work": "T1559"
+  }
+ ],
+ "works": [
+  "T1558",
+  "T1559",
+  "T1560"
+ ],
+ "anchors": [
+  {
+   "work": "T1560",
+   "range": [
+    "T29n1560_p0316a09",
+    "T29n1560_p0316a09"
+   ]
+  },
+  {
+   "work": "T1558",
+   "range": [
+    "T29n1558_p0080b22",
+    "T29n1558_p0084a29"
+   ]
+  },
+  {
+   "work": "T1559",
+   "range": [
+    "T29n1559_p0237a14",
+    "T29n1559_p0240a28"
+   ]
+  }
+ ],
+ "cells": {
+  "v045": {
+   "sa": "kṣemākṣemetaratkarma kuśalākuśaletarat / puṇyāpuṇyamaniñjaṃ ca sukhevedyādi ca trayam // VAkK_4.45 //",
+   "sa-bhasya": "[227|06] kṣemākṣemetaratkarma kuśalākuśaletarat / [227|07] idaṃ kuśalādīnāṃ lakṣaṇam / [227|07-227|08] kṣemaṃ karma kuśalaṃ yadiṣṭavipākaṃ nirvāṇaprāpakaṃ ca duḥkhaparitrāṇāt / [227|08-227|09] tatkālamatyantaṃ ca akṣemamakuśalaṃ kṣemapratidvandvabhāvena yasyāniṣṭo vipākaḥ / [227|09-227|10] tābhyāmitaratkarma naiva kṣemaṃ nākṣemaṃ yattatkuśalākuśalābhyāmitarat veditavyam / [227|10] avyākṛtamityarthaḥ / punaḥ [227|11] puṇyāpuṇyamaviñjaṃ ca sukhavedyādi ca trayam // VAkK_4.45 // [227|12] trīṇī karmāṇi puṇyamapuṇyamāneñjaṃ ca / punaḥ trīṇi / [227|12-227|13] sukhavedanīyaṃ karma duḥkhavedanīyamaduḥkhāsukhavedanīyaṃ ca / [227|13] tatra tāvat",
+   "T1560": "安不安非業，名善惡無記， 福非福不動，",
+   "T1558": "其相云何？頌曰：安不安非業，名善惡無記。論曰：如是名為善等業相，謂安隱業說名為善，能得可愛異熟涅槃，暫永二時濟眾苦故。不安隱業名為不善，由此能招非愛異熟，與前安隱性相違故。非前二業立無記名，不可記為善不善故。又經中說：業有三種，福非福等。其相云何？頌曰：福非福不動，",
+   "T1559": "此中偈曰：平不平異業，善不善異二。釋曰：此是善等相，若業平安立為善。若果報可愛，若能令至涅槃，是名平安，暫永二時能救濟苦故。若不平安，說名不善，為對治平安故。若業果報非可愛及能障解脫，異前二業，非平安非非平安故，是故應知非善非非善。此言何義？以無記為義。復次偈曰：福、非福、不動，苦受等復三。釋曰：復有三業，謂福德業、非福德業、不動業。復有三業，謂有樂受業、有苦受業、有不樂不苦受業。"
+  },
+  "v046": {
+   "sa": "kāmadhātau śubhaṃ karma puṇyamāneñjamūrdhvajam / tadbhūmiṣu yataḥ karmavipākaṃ prati neñjati // VAkK_4.46 //",
+   "sa-bhasya": "[227|14] kāmadhātau śubhaṃ karma puṇyamāneñjamūrdhvajam / [227|15] śubhamiti vartate / rūpārūpyāvacaraṃ kuśalaṃ karmāneñjam / [227|15-227|16] nanu ca trīṇi dhyānāni señjitānyuktāni bhagavatā / [227|16-227|17] \"yadatra vitarkitaṃ vicāritamidamatrāryā iñjitamityāhurityevamādi / [227|17] samādau sāpakṣālatāṃ teṣāmadhikṛtyaivamuktam / [227|18] āniñjānyapi tu tānyuktānyāniñjasūtre / [227|18-227|19] āniñjasaṃpreyagāminīṃ pratipadamārabhya / [227|19] kiṃ punaḥ kāraṇaṃ señjitamevānyatrāniñjamuktam / [227|20] tadbhūmiṣu yataḥ karmavipākaṃ prati neñjati // VAkK_4.46 // [227|21] kāmāvacaraṃ hi vipākaṃ prati kampate / kathaṃ kampate / avyavasthānāt / [227|21-227|22] anyagati kamapi hyanyasyāṃ gatau vipacyate / [227|22] anyadevanaikāyikaṃ cānya devanikāye / [227|22-227|24] yadeva hi pramāṇabalavarṇakarmānyabhūmika sukhabhogādi saṃvartanīyaṃ karma deveṣu vipacyate tadeva kadācidanyapratyayavaśānmanuṣyatiryakapreteṣu vipacyate / [227|24-227|25] rūpārūpyāvacaraṃ tu karmānyabhūmikamanyasyāṃ bhūmau vipaktuṃ na jātūtsahate / [227|25-228|01] tasmādvyavasthitavipākatvādāneñjamityucyate / [228|01] apuṇyaṃ tu karmākuśalamiti prasiddhaṃ loke / [228|02] yaśca lokato 'rthaḥ prasiddhaḥ kiṃ tatra yatnena / kṛtaḥ puṇyādīnāṃ karmaṇāṃ nirdeśaḥ / [228|03] sukhavedanīyādīnāṃ kartavyaḥ / sa eṣa kriyate /",
+   "T1560": "欲善業名福， 不善名非福。上界善不動， 約自地處所，業果無動故。",
+   "T1558": "欲善業名福， 不善名非福，上界善不動， 約自地處所，業果無動故。論曰：欲界善業說名為福，招可愛果益有情故。諸不善業說名非福，招非愛果損有情故。上二界善說名不動。豈不世尊說下三定皆名有動？聖說此中有尋伺等名為動故。由下三定有尋伺等，災患未息故立動名；不動經中據能感得不動異熟說名不動。如何有動定招無動異熟？雖此定中有災患動，而業對果非如欲界有動轉故，立不動名。謂欲界中餘趣處業，由別緣力異趣處受。以或有業能感外內財位形量色力樂等，於天等中此業應熟；由別緣力所引轉故，於人等中此業便熟。色無色界餘地處業，無容轉令異地處受，業果處定立不動名。又經中說：業有三種，順樂受等。",
+   "T1559": "此中偈曰：欲善業福德。釋曰：於欲界善業，由能清淨故、由能數引可愛報故，說名福德。偈曰：上界善不動。釋曰：色界無色界善業，說名不動。為不爾耶？佛世尊說：三定有動，於中是覺是觀，所餘諸行，諸聖說名動，廣說如經。約彼定有過失，故說如此。是三定等，於不動經中約能成不動善緣道，或說名不動。復有何因，此定實有動，有時說為不動？偈曰：由業於自地，約報不可動。釋曰：若欲界業，約果報有動義。云何動報？於處無定故。是業已感別道，於餘道亦得熟。復有業，已感別天聚同分，於餘天聚同分亦得熟。何以故？是業能感量力色樂欲塵等，於天上應熟。此業有時，由隨別緣，於人畜生鬼神道中熟。若色無色界業，於餘地無因緣得熟，由果報於處定故，是故說名不動。非福業者，於世間明了，謂非善。若義世間所成，於中何須作功用？分別說福德等業已，有樂受等業今當說。"
+  },
+  "v047": {
+   "sa": "sukhavedyaṃ śubhaṃ dhyānādātṛtīyāt ataḥ param / aduḥkhāsukhavedyaṃ tu duḥkhavedyamihāśubham // VAkK_4.47 //",
+   "sa-bhasya": "[228|04] sukhavedyaṃ śubhaṃ dhyānādātṛtīyāt [228|05] kuśalaṃ karma sukhavedanīyaṃ yāvat tṛtīyāddhyānāt / [228|05-228|06] eṣā hi bhūmiḥ sukhāyā vedanāyā yaduta kāmadhātustrīṇi ca dhyānāni / [228|07] ataḥ param [228|08] aduḥkhāsukhavedyaṃ tu [228|09] śubhamiti vartate / [228|09-228|10] tṛtīyadhyānāt pareṇa kuśalaṃ karmāduḥkhāsukhavedanīyaṃ sukhaduḥkhavedanā 'bhāvāt / [228|11] duḥkhavedyamihāśubham // VAkK_4.47 // [228|12] akuśalaṃ karma duḥkhavedanīyam / ihagrahaṇaṃ kāmadhātāveva tadbhāvajñāpanārtham / [228|12-228|13] na caiṣāṃ vedanaiva phalam /",
+   "T1560": "順樂苦非二，善至三順樂， 諸不善順苦，上善順非二，",
+   "T1558": "其相云何？頌曰：順樂苦非二，善至三順樂， 諸不善順苦，上善順非二，",
+   "T1559": "偈曰：樂善至三定。釋曰：若業是善，說於樂受好。此業乃至三定。何以故？樂受地但極於此，是故欲界及三定是彼地。過此，偈曰：向上善非二。釋曰：過第三定向上一切善業，於不苦不樂好，於中無苦樂果報故。偈曰：於欲界惡業，立名有苦受。釋曰：欲界言，為顯唯於欲界有，餘處定無。此等業不但受為果報，受資糧亦是果報。"
+  },
+  "v048": {
+   "sa": "adho 'pi madhyamastyeke dhyānāntaravipākataḥ / apūrvācaramaḥ pākastrayāṇāṃ ceṣyate yataḥ // VAkK_4.48 //",
+   "sa-bhasya": "[228|13] kiṃ tarhi / sasaṃbhārā / [228|14] adho 'pi madhyamastyeke / [228|15] anye punarāhuḥ tadetanmadhyamaduḥkhāsukhavedanīyaṃ karmoktametaccaturthadhyānādadho 'pyasti / [228|16] kiṃ kāraṇam / [228|17] dhyānāntaravipākataḥ / [228|18] itarathā hi dhyānāntarakarmaṇo vipāko na syāddhyānāntaraṃ vā kasyacitkarmaṇaḥ / [228|18-228|19] tatra sukhaduḥkhayorabhāvāt / [228|19] dhyānāntarakarmaṇo dhyāna eva sukhendrīyaṃ vipāka ityeke / [228|19-228|20] naiva tasya vedanā vipāka ityapare / [228|20] tadetaducchāstram / [228|20-228|21] śāstre hi paṭhitaṃ \"syātkarmaṇaścaitasikyeva vedanā vipāko vipacyeta / [228|21] syātkuśalasyāvitarkasya karmaṇa\" iti / [228|22] apurvācaramaḥ pākastrayāṇāṃ ceṣyate yataḥ // VAkK_4.48 // [228|23] yataścoktaṃ sūtre \"syāttrayāṇāṃ karmaṇāmapūrvācaramo vipāko vipacyeta / [228|23-228|24] syātsukhavedanīyasya rūpaṃ duḥkhavedanīyasya cittacaittā dharmāḥ / [228|24-228|25] aduḥkhāsukhavedanīyasya cittaviprayuktā\" ityato 'pyastyaduḥkhāsukhavedanīyaṃ karmādhastāt / [228|25-229|01] nahi kāmadhātoranyatrāsti yugapatkarmatrayasya vipāke saṃyogaḥ / [229|01] kimidānīṃ tatkukśalamāhosvidakuśalaṃ / [229|01-229|02] durbalaṃ tu tat / [229|02-229|03] evaṃ tarhi \"sukhavedyaṃ śubhaṃ dhyānādātṛtīyā\" \"diṣṭa-vipākaṃ ca kuśala\" mityasya virodhaḥ / [229|03] bāhulika eṣa nirdeśo draṣṭavyaḥ / [229|03-229|04] kathaṃ punaravedanāsvabhāvaṃ karma sukhādivedinīyamityucyate / [229|04-229|05] sukhavedanāyai hitaṃ sukhavedanoyaṃ sukho 'sya vedanīya iti vā / [229|05] kaśca vedanīyaḥ / yo vipākaḥ / [229|05-229|06] sa hyasau vidyate sukhasya vā vedanīyaṃ yena sukhaṃ vedayate / [229|06] snānīyakapāyavat / [229|06-229|07] evaṃ duḥkhavedanīyamaduḥkhāsukhavedanīyaṃ ca draṣṭavyam / [229|07] api ca /",
+   "T1560": "餘說下亦有，由中招異熟。 又許此三業，非前後熟故。",
+   "T1558": "餘說下亦有，由中招異熟。 又許此三業，非前後熟故，",
+   "T1559": "偈曰：餘說下有中。釋曰：有師說，是中業能感不苦不樂受，從第四定以上有，於下地亦有。何因知有？偈曰：中間定報故。釋曰：若不爾，中間定業應無果報。或於中間定有別類業，於中無苦無樂故。中間定業，於定樂根是其報，餘師說如此。復有餘師說：此業決無定為報。此執與阿毘達磨藏相違。何以故？於彼藏有如此文。文言：為有如此不，由此業以心法為體受？為此業熟果報不？有，謂無覺善業。偈曰：無前後報熟，由佛說三業。釋曰：於經中由說此文：有三業果報熟無前無後不？有。有樂受業色熟為果報，有苦受業心及心法熟為果報，有不苦不樂受業非心相應法熟為果報。是故於下地有不苦不樂業。若離欲界，於餘處此三業無一時俱熟。此業為善、為非善？是善而體羸弱。若爾，前說樂善至三定，復說若果報可愛、若能令至涅槃，是名善。則與此言相違。此說應知從多。此業不以受為性，云何說有樂受等？於樂受等好故，說有樂受等。復次是此業樂必應受。此受受何法？是樂報應受報，樂於此業中有故。復次由此業應受樂報故，說此業有樂受，譬如欲散有苦受業。有不苦不樂受業，應知亦爾。"
+  },
+  "v049": {
+   "sa": "svabhāvasaṃprayogābhyāmālambanavipākataḥ / saṃmukhībhāvataśceti pañcadhā vedanīyatā // VAkK_4.49 //",
+   "sa-bhasya": "[229|08-229|09] svabhāvasaṃprayogābhyāmālambanavipākataḥ / saṃmukhībhāvataśceti pañcadhā vedanīyatā // VAkK_4.49 // [229|10] svabhāvavedanīyatā vedanānām / svabhāvenaiva vedanīyatvāt / [229|10-229|11] saṃprayogavedanīyatā sparśasya / [229|11] \"sukhavedanīyaḥ sparśaḥ\" iti / ālambanavedanīyatā viṣayāṇām / [229|11-229|13] yathoktaṃ \"cakṣuṣā rūpāṇi dṛṣṭvā rūpapratisaṃvedī bhavati notu rūparāgapratisaṃvedī\"tyevamādi / [229|13] vedanayā hi tāmālambamānaḥ pratisaṃvedayate / [229|13-229|14] vipākavedanīyatā karmaṇaḥ / [229|14] \"dṛṣṭadharmavedanīyaṃ karme\"ti vistaraḥ / saṃmukhībhāvavedanīyatā / [229|15-229|16] yathoktaṃ \"yasmin samaye sukhāṃ vedanāṃ vedayate dve asya vedane tasminsamaye niruddhe bhavata\" iti / [229|16-229|17] nahi yasminsamaye sukhā vedanā vartate tasminpunaranyā vedanā 'sti sa yāṃ tāṃ vedayate / [229|17] saṃmukhīkurvastu tāṃ vedayata ityucyate / [229|17-229|18] ato vipākasya vedanīyatvāt karmāpyucyate sukhavedanīyamityevamādi /",
+   "T1560": "順受總有五，謂自性相應， 及所緣異熟，現前差別故。",
+   "T1558": "順受總有五，謂自性相應， 及所緣異熟，現前差別故。論曰：諸善業中始從欲界至第三靜慮名順樂受業，以諸樂受唯至此故。諸不善業名順苦受。過三靜慮上地諸善業，說名為順不苦不樂受，此上都無苦樂受故。非此諸業唯感受果，應知亦感彼受資糧，受及資糧此中名受。有餘師說：下諸地中亦有第三順非二業，由中定業招異熟故。若異此者，中間定業應無異熟；或應無業，以無苦樂異熟果故。有餘師說：此業能感根本地中樂根異熟。有說：此業不感受果。二說俱與本論相違。故本論言：頗有業感心受異熟非身耶？曰：有，謂善無尋業。又本論說：頗有三業非前非後受異熟耶？曰：有，謂順樂受業色，順苦受業心心所法，順不苦不樂受業心不相應行，乃至廣說。由此證知，下地亦有順非二業，非離欲界有此三業俱時熟故。此業為善、為不善耶？是善而劣。若爾，便與所說相違，謂善至三名順樂受，得可愛果名為善業。應知彼據多分為言。此業與受體性既殊，如何說為順樂受等？業與樂受體性雖殊，而能為因利益樂受。或復此業是樂所受。彼樂如何能受於業？樂是此業異熟果故。或復彼樂是業所受，由此能受樂異熟故。如順浴散，此亦應然。是故名為順樂受業。順餘二業，應知亦爾。總說順受略有五種：一自性順受，謂一切受，如契經說：受樂受時如實了知受於樂受，乃至廣說。二相應順受，謂一切觸，如契經說：順樂受觸，乃至廣說。三所緣順受，謂一切境，如契經說：眼見色已，唯受於色不受色貪，乃至廣說，由色等是受所緣故。四異熟順受，謂感異熟業，如契經說：順現受業，乃至廣說。五現前順受，謂正現行受，如契經言：受樂受時二受便滅，乃至廣說。非此樂受現在前時有餘受能受此樂受，但據樂受自體現前即說名為受於樂受。此中但說異熟順受，由業能招受異熟故。雖業與受體性有殊，而得名為順樂受等。",
+   "T1559": "偈曰：自性及相應，境界與果報，或由令現前，受義有五種。釋曰：受若約義有五種：一自性受，謂苦樂等。二相應受，謂觸。如經言：應受樂觸。三境界受，謂六塵。如經言：由眼見色，是人受色不受色欲。如此等。何以故？由受故緣此境界，故說受此境。四果報受，謂業受。如經言：現法受業、生受業、後受業、不定受業。五現前受，謂隨與一相應。如經言：是時受樂受，是時中二受皆滅離。何以故？是時樂受生，餘受不得生。由彼應受此受，若現前可說能受此受。是故由應受果報，說應受樂業，苦等亦爾。"
+  },
+  "v050": {
+   "sa": "niyatāniyataṃ tacca niyataṃ trividhaṃ punaḥ / dṛṣṭadharmādivedyatvāt pañcadhā karma kecana // VAkK_4.50 //",
+   "sa-bhasya": "[229|19] niyatāniyataṃ tacca [229|20] taccaitatsukhavedanīyādi trividhaṃ karma niyataṃ cāniyataṃ ca veditavyam / [229|20-229|21] nāvaśyavedanīyamaniyatam / [229|22] niyataṃ trividhaṃ punaḥ / [229|23] dṛṣṭadharmādivedyatvāt [229|24-229|25] dṛṣṭadharmavedanīyamupapadyavedanīyamaparaparyāyavedanīyaṃ cetyetattrividhaṃ karma niyatamityetaccaturvidhaṃ karma bhavati sahāniyatavedanīyena / [229|26] pañcadhā karma kecana // VAkK_4.50 // [229|27] apare punaḥ pañcavidhaṃ karmecchanti / aniyatavedanīyaṃ dvidhā kṛtvā / [229|27-230|01] vipākena niyatamaniyataṃ ceti / [230|01] tatra dṛṣṭadharmavedanīyaṃ yatra janmani kṛtaṃ tatraiva vipacyate / [230|01-230|02] upapadyavedanīyaṃ dvitīye janmani / [230|02] aparaparyāyavedanīyaṃ tasmātpareṇa / [230|02-230|04] janmāntare 'pyasti dṛṣṭadharmavedanīyasya karmaṇo vipāka ārambhavaśāttannāmavyavasthānamityapare / [230|04] mā bhūdyadevamiṣṭakarma tasyālpiṣṭho vipākaḥ iti / [230|04-230|05] tadevaṃ necchanti vaibhāṣikāḥ / [230|05-230|06] asti hi karma saṃnikṛṣṭaphalaṃ na viprakṛṣṭaphalamasti viparyayādbāhyabījavat / [230|06-230|07] yathā tripakṣā suvarcalā tribhiḥ pakṣaiḥ phalaṃ dadhāti yavagodhūmādayaḥ ṣaḍbhirmāsairiti /",
+   "T1560": "此有定不定，定三順現等。 或說業有五，",
+   "T1558": "如是三業有定不定，其相云何？頌曰：此有定不定，定三順現等， 或說業有五，",
+   "T1559": "偈曰：此或定不定。釋曰：此應受樂受等三業，應知各有定不定，由此不必應受故。偈曰：復定受有三，現等受報故。釋曰：定業有三，謂現法應受、生應受、後應受。此三種定業，合不定受業，故成四種。偈曰：復有五種業。釋曰：復有餘師說，業有五種。不定受業分為二，謂於報或定、於報或不定。此中現法應受業者，於此生造業，即於此生熟。生應受業者，於此生造業，於第二生熟。後應受業者，於此生造業，從第二生後熟。有餘師說：現法應受業，果報於餘生亦有，由隨此功力立名故。勿最強力業果報劣薄，毘婆沙師不許此義。何以故？彼說有業果報親近果報非勝，有業翻此。譬如外種子，葵三月半結實，麥等六月結實。"
+  },
+  "v051": {
+   "sa": "catuṣkoṭikamityanye nikāyākṣepaṇaṃ tribhiḥ / sarvatra caturākṣepaḥ śubhasya narake tridhā // VAkK_4.51 //",
+   "sa-bhasya": "[230|08] catuṣkoṭikamityanye [230|09] dārṣṭāntikāstu catuṣkoṭikaṃ kurvanti / asti karmāvasthāniyataṃ na vipāke niyatam / [230|10] yatkarma dṛṣṭadharmādivedanīyaṃ vipāke 'nīyatam / asti vipāke niyataṃ nāvasthāyām / [230|11] yatkarmāniyatavedanīyaṃ vipāke niyatam / [230|11-230|12] astyubhayaniyataṃ yadṛṣṭadharmādivedanīyaṃ vipāke niyatam / [230|12] asti nobhayaniyataṃ yatkarmāniyatavedanīyaṃ vipāke aniyatam / [230|13] teṣāṃ tatkarmāṣṭavidhaṃ dṛṣṭadharmavedanīyaṃ niyatamaniyataṃ ca / evaṃ yāvadaniyatavedanīyam / [230|14] niyatameva tu dṛṣṭadharmādivedanīyamaniyataṃ caturthamiti varṇayanti / [230|14-230|15] syādekasmin kṣaṇe caturvidhaṃ karmākṣipet / [230|15-230|16] syāttriṣu paraṃ prayojya kāmamithyācāre svayaṃ prayuktasteṣāṃ yugapatsamāptau / [230|16] eṣāṃ ca punaścaturṇāṃ karmaṇāṃ / [230|17] nikāyākṣepaṇaṃ tribhiḥ / [230|18] nahi dṛṣṭadharmavedanīyena karmaṇā nikāyasabhāga ākṣipyate / [230|19] katamasmindhātau katividhaṃ karmākṣipyate kasyāṃ vā gatau / [230|20] sarvatra caturākṣepaḥ / [230|21-230|22] sarveṣu triṣu dhātuṣu sarvāsu ca gatiṣu caturṇāṃ karmaṇāmākṣepaḥ kuśalānāmakuśalānāṃ ca yathāsaṃbhavam / [230|22] asyotsargasyāyamapavādaḥ / [230|23] śubhasya narake tridhā // VAkK_4.51 // [230|24] narakeṣu kuśalasya karmaṇastrividhasyā kṣepo na dṛṣṭadharmavedanīyasya / [230|24-230|25] tatreṣṭavipākābhāvāt /",
+   "T1560": "餘師說四句， 四善容俱作，引同分唯三。 諸處造四種，地獄善除現，",
+   "T1558": "餘師說四句。論曰：此上所說順樂受等，應知各有定不定異，非定受故立不定名。定復有三：一順現法受、二順次生受、三順後次受。此三定業并前不定總成四種。或有欲令不定受業復有二種，謂於異熟有定不定，并定業三合成五種順現法受者，謂此生造即此生熟。順次生受者，謂此生造第二生熟。順後次受者，謂此生造從第三生後次第熟。有餘師說：順現法受業，餘生亦得熟。隨初熟位建立業名為順現等，勿強力業異熟果少。毘婆沙師不許此義，以或有業果近非勝或有相違。譬如外種經三半月葵便結實，要經六月麥方結實。譬喻者說業有四句：一者有業於時分定、異熟不定，謂順現等三非定得異熟。二者有業於異熟定、時分不定，謂不定業定得異熟。三者有業於二俱定，謂順現等定得異熟。四者有業於二俱不定，謂不定業非定得異熟。彼說諸業總成八種，謂順現受有定不定，乃至不定亦有二種。於此所說業差別中，頌曰：四善容俱作，引同分唯三， 諸處造四種，地獄善除現。",
+   "T1559": "偈曰：餘師說四句。釋曰：譬喻部師說有四句，有業於位定於報不定，若業現報於報不定，有業於報定於位不定，有業二處皆定。若現報等，於報亦定。有業於二處皆不定，若業不必應受，於報亦不定。於彼人，此業成八種：現報有二種，定不定，乃至定不定亦爾。彼說現報等為定，第四不定，於一剎那中得引四業，俱起不得。云何得？於三教他自行邪婬，此四若一時究竟。是四業中，偈曰：引聚同分三。釋曰：何以故此現報業不能引聚同分？現有同分故。於何界何道中，幾種業可引？偈曰：一切處四引。釋曰：於三界及一切道中，四種業皆有引義。此四或善或惡，此引如相應。此開，今更立遮。偈曰：地獄引善三。釋曰：於地獄中三種善業有引，現報無引，於中無可愛報故。"
+  },
+  "v052": {
+   "sa": "yadviraktaḥ sthiro bālastatra notpadyavedyakṛt / nānyavedyakṛdapyāryaḥ kāme 'gre vāsthiro 'pi na // VAkK_4.52 //",
+   "sa-bhasya": "[230|26] yadviraktaḥ sthiro bālastatra notpadyavedyakṛt / [230|27-230|28] yato bhūmeḥ vītarāgapṛthagjano bhavatyasau ca sthiro bhavatyaparihāṇadharmā sa tatropapadyavedanīyaṃ karma na karoti / [230|28] kimanyatkaroti / [231|01] nānyavedyakṛdapyāryaḥ [231|02] thara iti vartate / [231|02-231|03] āryapudgalastu yato vītarāgo na ca parihāṇadharmā sa tatropapadyadanīyaṃ cāparaparyāyavedanīyaṃ ca karma na karoti / [231|03-231|04] na hyasau bhavyaḥ punarādhastanīṃ bhūmimāyātumaniyataṃ kuryāddṛṣṭadharmavedanīyaṃ cātropapannaḥ / [231|05] kāme 'gre vā 'sthiro 'pi na // VAkK_4.52 // [231|06-231|07] parihāṇadharmāpi tvāryapudgalaḥ kāmadhātorbhavāgrā dvītarāgaḥ tayorūpapadyāparaparyāyavedanīyaṃ karmābhavyaḥ karttum / [231|07] kiṃ kāraṇam / phalāddhi sa parihīṇo bhavati / [231|07-231|08] na cāsti laparihīṇasya kālakriyeti paścātpravedayiṣyāmaḥ /",
+   "T1560": "堅於離染地，異生不造生。 聖不造生後，并欲有頂退，",
+   "T1558": "堅於離染地，異生不造生， 聖不造生後，并欲有頂退。論曰：順現法受等三業，唯定并不定為四。是說為善，此中唯顯時定不定，釋經所說四業相故。頗有四業俱時作耶？容有。云何？遣三使已，自行邪欲俱時究竟。幾業能引眾同分耶？能引唯三，除順現受，現身同分先業引故。何界何趣能造幾業？諸界諸趣或善或惡，隨其所應皆容造四。總開如是，若就別遮，於地獄中善除順現，無愛果故，餘皆得造。不退姓名堅，彼於離染地。若異生類，除順生受可造餘三。聖者雙除順生順後，可造餘二。異生不退，無次更生後還生下，不退聖者必無還生下諸地故。隨所生地容造順現受，造不定業一切處無遮。然諸聖者若於欲界及有頂處已得離染，雖有退墮而亦不造順生後業，從彼退者必退果故。諸退果已必不命終，如後當辯。住中有位亦造業耶？亦造。",
+   "T1559": "偈曰：凡於離欲處，堅不引生報。釋曰：凡夫人若於此地已得離欲，若堅住無退失，於此下地中不得造生報業，能造餘三。偈曰：聖不造餘報。釋曰：堅言流至此句。若聖人於此地已得離欲，無復退墮，不能造二業，謂生報及後報。何以故？此人不能更感下地生故，但能造現報業及不定報業，於隨現生處。偈曰：欲頂退不造。釋曰：若聖人有退墮，已離欲界及有頂，於此二界不得造生報及後報業。何以故？此人已退果，無捨壽義。此義後當廣說。於中陰有引業義不？有。"
+  },
+  "v053": {
+   "sa": "dvāviṃśatividhaṃ kāmeṣvākṣipatyantarābhavaḥ / dṛṣṭadharmaphalaṃ tacca nikāyo hyeka eva saḥ // VAkK_4.53 //",
+   "sa-bhasya": "[231|09] kimantarābhave 'pyasti karmaṇa ākṣepaḥ / astītyāha / [231|10] dvāviṃśatividhaṃ kāmeṣvākṣipatyantarābhavaḥ / [231|11] gāmāvacaro hyantarābhavo dvāviṃśatividhaṃ karmākṣipati / kathaṃ kṛtvā / [231|11-231|12] pañca hi garbhāvasthāḥ / [231|12] kalalārvudapeśīghanapraśākhāvasthāḥ / pañca jātāvasthāḥ / [231|12-231|13] bālakumāravamadhyavṛddhāvasthāḥ / [231|13] tatrāntarābhavaḥ kalalavedanīyaṃ karmākṣipatyaniyataṃ niyataṃ ca / [231|14] evaṃ yāvadvṛddhavedanīyamantarābhavavedanīyaṃ ca / [231|15] dṛṣṭadharma phalaṃ tacca [231|16] taccaitadantarābhavikaṃ karma yanniyatamekādaśavidhamuktaṃ dṛṣṭadharmavedanīyaṃ tadveditavyam / [231|17] kiṃ kāraṇam / [231|18] nikāyo hyeka eva saḥ // VAkK_4.53 // [231|19-231|20] eka eva hyasau nikāyasabhāga ekakarmākṣipto yaścāntarābhavo yāśca tadanvayā daśāvasthāḥ / [231|20] ata evānyadantarābhavavedanīyaṃ karma noktam / [231|20-231|21] upapadyavedanīyena ca tasyākṣepāt /",
+   "T1560": "欲中有能造，二十二種業， 皆順現受攝，類同分一故。",
+   "T1558": "云何？頌曰：欲中有能造，二十二種業， 皆順現受攝，類同分一故。論曰：於欲界中住中有位，容有能造二十二業。謂中有位及處胎中、出胎以後各有五位。胎中五者：一羯剌藍、二頞部曇、三閉尸、四鍵南、五鉢羅奢佉。胎外五者：一嬰孩、二童子、三少年、四中年、五老年。住中有位能造中有乃至老年定不定業。應知如是中有所造十一種定業，皆順現受攝，由類同分無差別故。謂此中有位與自類十位，一眾同分一業引故。由此不別說順中有受業，即順生等業所引故。",
+   "T1559": "偈曰：二十二種業，於欲中陰引。釋曰：若欲界中陰，能引二十二種業。此云何？胎位有五，謂柯羅邏、頞浮陀、俾尸、伽訶那、波羅捨佉。已生位有五，謂嬰兒、童子、少壯、中、老。於此位中，中陰眾生有時引柯羅邏受業，或不定或定，乃至老位應受，及中陰中應受。偈曰：此業但現報。釋曰：此中陰所引業定有十一種，應知必是現報。何以故？偈曰：彼是一果報。釋曰：此聚同分唯有一一業所引故。是中陰聚同分，及中陰後類十位，是故不說別業感中陰，由此二同生報業所引故。"
+  },
+  "v054": {
+   "sa": "tīvrakleśaprasādena sātatyena ca yatkṛtam / guṇakṣetre ca niyataṃ tatpitrorghātakaṃ ca yat // VAkK_4.54 //",
+   "sa-bhasya": "[231|22] kīdṛśaṃ karma niyataṃ veditavyam / [231|23-231|24] tīvrakleśaprasādena sātatyena ca yatkṛtam / guṇakṣetre ca niyataṃ tatpitrorghātakaṃ ca yat // VAkK_4.54 // [231|25-232|01] yaddhi karma tīvreṇa kleśena kṛtaṃ yacca tīvreṇa prasādena yacca sātatyena gunakṣetre ca tanniyataṃ veditavyam / [232|01] tatra guṇakṣetraṃ trīṇi ratnāni / [232|01-232|02] pudgalaviśeṣo vā kaścitphalasamāpattiviśeṣaprāptaḥ / [232|02-232|03] tatra hyantareṇāpi tīvrakleśaprasādānāṃ sātatyaṃ ca kuśalamakuśalaṃ ca karma niyataṃ saṃpadyate / [232|03] pitarau punarmātā ca pitā ca / [232|04] tayoścāpi yatra ghātikaṃ karma yathā tathā vā tanniyataṃ saṃpadyate nānyat /",
+   "T1560": "由重惑淨心，及是恒所造， 於功德田起，害父母業定，",
+   "T1558": "諸定受業其相云何？頌曰：由重惑淨心，及是恒所造， 於功德田起，害父母業定。論曰：若所造業，由重煩惱、或淳淨心、或常所作、或於增上功德田起。功德田者，謂佛法僧，或勝補特伽羅，謂得勝果勝定。於此田所，雖無重惑及淳淨心亦非常行，若善不善所起諸業，或於父母隨輕重心行損害事，如是一切皆定業攝，餘非定受。",
+   "T1559": "復有何相應，知此業是定？偈曰：重惑及淨心，或是恒所行，於功德田定，能損自父母。釋曰：是業由重惑所造、或由重善心所造、或恒時所行、或於有功德田所起，應知此業必定。此中有功德田，謂三寶或人差別。人差別者，若人至果勝類、或定勝類。此中若無重惑心及重善心，此業或善或惡，必成定業，若恒所行亦爾。復次若依自父母，以率爾心造隨類違損業，此業亦必定受報，餘業則不定。"
+  },
+  "v055": {
+   "sa": "dṛṣṭadharmaphalaṃ karma kṣetrāśayaviśeṣataḥ / tadbhūmyatyantavairāgyāt vipāke niyataṃ hi yat // VAkK_4.55 //",
+   "sa-bhasya": "[232|05] atha dṛṣṭadharmavedanīyaṃ karma kīdṛśaṃ veditavyam / [232|06] dṛṣṭadharmaphalaṃ karma kṣetrāśayaviśeṣataḥ / [232|07] dṛṣṭadharmavedanīyaṃ karma kṣetraviśeṣādvā bhavati / [232|07-232|08] yathā saṃghastrīvādasamudācārādvyañjanaparivṛttiḥ śrūyate / [232|08] āśayaviśeṣādvā / [232|08-232|09] yathā śaṇḍhasya gavāmapuṃstvapratimokṣaṇātpumbhāvaḥ / [232|09] athavā [232|10] tadbhūmyatyantavairāgyāt [232|11-232|12] tasya vā karmaṇo yā bhūmiḥ kuśalasyākuśalasya vā tato 'tyantavairāgyāttatkarma dṛṣṭadharmavedanīyaṃ karma saṃpadyate / [232|12] tasyāṃ bhūmau jātasya kīdṛśaṃ karmetyāha [232|13] vipāke niyataṃ hi yat // VAkK_4.55 // [232|14] yaddhi karma niyataṃ vipāke na tvavasthāyāṃ nāpyaniyataṃ tatyaiṣa niyamaḥ / [232|14-232|15] yatpunaravasthāntaraniyataṃ tasya tatraiva niyato vipākastadvato 'tyantavairāgyāsaṃbhavāt / [232|15-232|16] yaccāniyataṃ tasyāvipāka evātyantavairāgyāt / [232|17] kīdṛśaṃ punaḥ kṣetraṃ yatrāvaśyaṃ dṛṣṭadharmavedanīyaṃ karma saṃpadyate / āha / [232|17-232|18] buddhapramukho bhikṣusaṃghaḥ pudgalāstu pañca /",
+   "T1560": "由田意殊勝，及定招異熟， 得永離地業，定招現法果。",
+   "T1558": "現法果業其相云何？頌曰：由田意殊勝，及定招異熟， 得永離地業，定招現法果。論曰：由田勝者，聞有苾芻於僧眾中作女人語，彼於現世轉作女人。此等傳聞其類非一。由意勝者，聞有黃門救脫諸牛黃門事故，彼於現世轉作丈夫。此等傳聞事亦非一。或生此地永離此地染，於此地中諸善不善業。於異熟定位不定者，此業必能招現法果。若有餘位順定受業，彼必定無永離染義，必於餘位受異熟果。若於異熟亦不定者，永離染故不受異熟。",
+   "T1559": "復次現法應受業，其相云何？偈曰：此業成現報，由田意勝異。釋曰：現報業者，或由田勝異成。如傳說，有一比丘於大眾中行女人言故，現身即轉根成女。此傳有文。由故意勝異者，如傳說，有一黃門，由解脫牛黃門事故，現身即轉根成男。復次偈曰：永離欲地故。釋曰：若業或善或惡，依此地生，由永離欲，此地此業則成現報業。此業何相？偈曰：若業於報定。釋曰：若業於果報定、於位不定，此業是所說現報業。若業於餘位中定，此業定於餘位中與報，有此業人無離欲故。若不定云何？此業無報，由永離欲故。此田何相？於中所造業，必定得現報。若總說，大比丘眾以佛為現前上首，若約人差別有五。"
+  },
+  "v056": {
+   "sa": "ye nirodhāraṇāmaitrīdarśanārhatphalotthitāḥ / teṣu kārāpakārāsya phalaṃ sadyo 'nubhūyate // VAkK_4.56 //",
+   "sa-bhasya": "[232|19-232|20] ye nirodhāraṇāmaitrīdarśanārhatphalotthitāḥ / teṣu kārāpakārasya phalaṃ sadyo 'nubhūyate // VAkK_4.56 // [232|21] nirodhasamāpattivyutthitaḥ parāṃ cittaśāntiṃ labhate / nirvāṇasadṛśatvātsamāpatteḥ / [232|22] sa hi gatapratyāgata eva nirvāṇādbhavati / [232|22-232|23] araṇāvyutthitasyāpramāṇasattvāraṇāhitādhyāśayānugatātyudagrāpramāṇapuṇyaparibhāvanānugatā ca saṃtatirvartate / [232|23-232|25] maitrīvyutthitasyāpramāṇasattvasukhādhyāśayānugatātyudagrāpramāṇapuṇyaparibhāvanānugatā ca saṃtativartate / [232|25-232|26] darśanamārgavyutthitasyāśeṣadarśanaprahātavyaprahāṇāt pratyagrāśrayaparivṛttinirmalā saṃtatirvartate / [232|26-232|27] arhatphalavyutthitasyāśeṣabhāvanāprahātavyaprahāṇātpratyagrāśrayaparivṛttiśuddhā saṃtatirvartate / [232|27-233|01] ata eteṣu kṛtānāṃ kārāpakārāṇāṃ phalaṃ dṛṣṭa eva dharme niyataṃ prāpyate / [233|01-233|03] śeṣasya tu bhāvanāmārgasyāparipūrṇasvabhāvaphalatvācca tadvyutthitānāṃ na tathā pratyagrāśrayaparivṛttiśuddhāśayasaṃtatirvartata iti na te tathā puṇyakṣetraṃ bhavati / [233|04] vipākaḥ punarvedanāpradhānaḥ / tadidānīṃ vicāryate / [233|04-233|05] syāt karmaṇaścaitasikyeva vedanā vipāko vipacyeta na kāyikī /",
+   "T1560": "於佛上首僧，及滅定無諍， 慈見修道出，損益業即受。",
+   "T1558": "何田起業定即受耶？頌曰：於佛上首僧，及滅定無諍， 慈見修道出，損益業即受。論曰：於如是類功德田中，為善惡業定即受果。功德田者，謂佛上首僧。約補特伽羅差別有五：一從滅定出，謂此定中得心寂靜，此定寂靜似涅槃故。若從此定初起心時，如入涅槃還復出者。二從無諍出，謂此定中有緣無量有情為境，增上利益意樂隨逐。出此定時，有為無量最勝功德所熏修身相續而轉。三從慈定出，謂此定中有緣無量有情為境，增上安樂意樂隨逐。出此定時，有為無量最勝功德所熏修身相續而轉。四從見道出，謂此道中永斷一切見所斷惑得勝轉依，從此出時淨身續起。五從修道出，謂此道中永斷一切修所斷惑得勝轉依，從此出時淨身續起。故說此五名功德田。若有於中為損益業，此業必定能招即果。若從餘定餘果出時，由前所修定非殊勝，修所斷惑未畢竟盡，故彼相續非勝福田。異熟果中受最為勝，今應思擇，於諸業中頗有唯招心受異熟，或招身受非心受耶？亦有。",
+   "T1559": "偈曰：滅定無諍慈，見羅漢果起，於彼損益業，果於現法受。釋曰：若人出無心定觀，即得最極心寂靜，由此定似涅槃故。此人因此定，如往還於涅槃。若人出無諍三摩提，觀無量眾生，無諍利益善意所隨逐最猛盛，無量福德熏修所變相續正起。若人出無量慈觀，無量眾生安樂善意所隨逐最猛盛，無量福德薰修所變相續正起。若人出四諦觀，見諦所破惑滅盡無餘，故新得轉依，清淨相續即起。若人出阿羅漢果觀，修道所破惑滅盡無餘，故新得轉依清淨相續即起。是故於此五人，或作善利益事、或作惡損惱事，此業果報於現世必定應得。餘人所修得道未究竟故，若出未圓滿自性果觀，新得轉依清淨不爾，是故彼不及前人福田。若果報受為勝，是故此義應思：有業但以心受為果報非身受不？有業但以身受為果報非心受不？說有。"
+  },
+  "v057": {
+   "sa": "kuśalasyāvitarkasya karmaṇo vedanā matā / vipākaścaitasikyeva kāyikyevāśubhasya tu // VAkK_4.57 //",
+   "sa-bhasya": "[233|05-233|06] syāt kāyikyeva na caitasikī syādityāha [233|07-233|08] kukśalasyāvitarkasya karmaṇo vedanā matā / vipākaścaitasikyeva [233|09] avitarkaṃ karma dhyānāntarāt prabhṛti yāvat bhavāgre / [233|09-233|10] tasyāvitarkasya kuśalasya karmaṇaścaitasikyeva vedanā vipākaḥ / [233|10] kasmānna kāyikī / [233|10-233|11] tasyā avaśyaṃ savitarkavicāratvāt / [233|12] kāyikyevāśubhasya tu // VAkK_4.57 // [233|13] akuśalasya karmaṇaḥ kāyikyeva vedanā vipākaḥ / kasmānna caitasikī / [233|13-233|15] tasya hi duḥkhā vedanā vipākaścaitasikī ca duḥkhā vedanā daurmanasyaṃ na ca daurmanasyaṃ vipāka iti vyākhyātametat /",
+   "T1560": "諸善無尋業，許唯感心受， 惡唯感身受，是感受業異。",
+   "T1558": "云何？頌曰：諸善無尋業，許唯感心受， 惡唯感身受，是感受業異。論曰：善無尋業，謂從中定乃至有頂所有善業，於中能招受異熟者，應知但感心受非身，身受必與尋伺俱故。諸不善業能感受者，應知但感身受非心，以不善因苦受為果，心俱苦受。決定名憂，憂非異熟，如前已辯。",
+   "T1559": "偈曰：若善業無覺，許受為果報，此受是心法。釋曰：無覺業者，從中間定乃至有頂，此無覺善業唯以心受為果報。云何非身受？此身受必與覺觀俱起故。偈曰：若惡唯身受。釋曰：若惡業，定以身受為果報。云何心受非彼報？此業以苦受為報。若苦受在心地則成憂根，此憂根非果報，於前已說。"
+  },
+  "v058": {
+   "sa": "cittakṣepo manaścitte sa ca karmavipākajaḥ / bhayopaghātavaiṣamyaśokaiśca akurukāminām // VAkK_4.58 //",
+   "sa-bhasya": "[233|16] yattarhi sattvānāṃ cittakṣepo bhavati / katamasminnasau citte bhavati kena vā kāraṇena / [233|17] cittakṣepo manaścitte / [233|18] manovijñāna ityarthaḥ / nahi pañcasu vijñānakāyeṣu cittaṃ kṣipyate / avikalpakatvāt / [233|19] sa ca karmavipākajaḥ / [233|20] sa caiṣa cittakṣepaḥ sattvānāṃ karmajaḥ / [233|20-233|23] ye hi dravyamantraprayogeṇa vā pareṣāṃ cittaṃ kṣepayanti akāmakaṃ vā viṣaṃ madyaṃ vā pāyayanti trāsayanti vā mṛgayādiṣvagnim vā dāveṣutsṛjanti prapātādvā pātayantyanyena vā kenacitpareṣāṃ smṛtiṃ bhraṃśayanti teṣāṃ tasya karmaṇo vipākenāyatyāṃ cittaṃ kṣipyate / [233|24] bhayopaghātavaiṣamyaśokaiśca [233|25] kathaṃ tāvadbhayena / [233|25-233|26] amanuṣyādayo manuṣyānvirūpeṇa rūpeṇopasaṃkrāmanti / [233|26] tebhyo bhītānāṃ cittaṃ kṣīpyate / kathamupaghātena / [233|26-234|01] amanuṣyā eva kupitā manuṣyāṇāṃ marmasu praharanti / [234|01] kathaṃ mahābhūtavaiṣamyeṇa / [234|01-234|02] vātapittaśleṣmāṇaḥ prakopamāpadyante / [234|02] kathaṃ śokena / yathā vāsiṣṭhīprabhṛtīnām / [234|02-234|03] yadi mano vikṣipyate karmavipākajaśca cittakṣepaḥ / [234|03] kathaṃ na caitasikī vedanā vipākaḥ prāpnoti / [234|03-234|04] nahi brūmastadeva cittavipāka ityapi tu yo mahābhūtānāṃ prakopaḥ sa vipākaḥ / [234|04-234|05] tasmājjātamato vipākajam / [234|05-234|06] karmajena hi dhātunā vaiṣamyeṇa vyākulamavaśaṃ bhraṣṭasmṛtikaṃ cittaṃ vartata iti kṣiptamityucyate / [234|06] evaṃ cedaṃ catuṣkoṭikaṃ yujyate / [234|06-234|07] asti cittaṃ kṣiptaṃ na vikṣiptamiti vistaraḥ / [234|07] kṣiptaṃ tāvanna kṣiptaṃ vikṣiptacittasya / [234|07-234|08] kliṣṭaṃ cittaṃ vikṣiptaṃ na kṣiptaṃ svasthacittasya kliṣṭam / [234|08] ubhayaṃ kṣiptacittasya kliṣṭam / [234|09] nobhayaṃ svasthacittasyākliṣṭam / [234|10] katameṣāṃ punaḥ sattvānāṃ cittaṃ kṣipyate / [234|11] akurukāminām // VAkK_4.58 // [234|12] akuruṇāṃ kāminām / deveṣvapi hi deva / unmattāḥ santi prāgeva manuṣyatiryakpreteṣu / [234|13] nārakāstu nityaṃ kṣiptacittā eva / [234|13-234|15] te hi vividhayātanāsahasravyatibhinnamarmāṇastīrvābhirvedanābhirabhitunnā ātmānamapi tāvannābhicetayanti kiṃ punaḥ kāryamakāryaṃ vā / [234|15] hācittaparidevakaścātra nāraka udāhāryaḥ / [234|15-234|16] āryāṇāmapi cittaṃ kṣipyate bhūtavaiṣamyeṇānyatra buddhāt / [234|16-234|17] na karmaṇā niyatasya pūrvaṃ vipākādaniyatasyāvipākāt / [234|17] na bhayena / pañcabhayasamatikramāt / nopaghātena / [234|17-234|18] manuṣyaprakopakāraṇasyāprāsādikasyākaraṇāt / [234|18] na śokena / dharmatābhijñatvāt / [234|19] punastrayo vaṅkā uktāḥ sūtre / kāyavaṅkok vāgvaṅko manovaṅkaḥ / trayo doṣāḥ / [234|20] kāyadoṣo vāgdoṣo manodoṣaḥ / trayaḥ kaṣāyāḥ / [234|20-234|21] kāyakaṣāyo vākkaṣāyo manaḥ kaṣāyaḥ iti / [234|21] tatra yathākramaṃ veditavyāḥ /",
+   "T1560": "心狂唯意識，由業異熟生， 及怖害違憂，除北洲在欲。",
+   "T1558": "有情心狂，何識因處？頌曰：心狂唯意識，由業異熟生， 及怖害違憂，除北洲在欲。論曰：有情心狂唯在意識，若在五識必無心狂，以五識身無分別故。由五因故有情心狂：一由有情業異熟起，謂由彼用藥物呪術令他心狂，或復令他飲非所欲若毒若酒，或現威嚴怖禽獸等，或放猛火焚燒山澤，或作坑穽陷墜眾生，或餘事業令他失念，由此業因，於當來世感別異熟能令心狂。二由驚怖，謂非人等現可怖形來相逼迫，有情見已遂致心狂。三由傷害，謂因事業惱非人等，由彼瞋故傷其支節遂致心狂。四由乖違，謂由身內風熱痰界互相違反，大種乖適故致心狂。五由愁憂，謂因喪失親愛等事，愁毒纏懷心遂發狂，如婆私等。若在意識方有心狂，復許心狂業異熟起，如何心受非異熟耶？不說心狂是業異熟，但言是業異熟所生。謂惡業因感不平等異熟大種，依此大種心便失念，故說為狂。如是心狂對於心亂應作四句，謂有心狂而非心亂，乃至廣說。狂非亂者，謂諸狂者不染污心。亂非狂者，謂不狂者諸染污心。狂亦亂者，謂諸狂者諸染污心。非狂亂者，謂不狂者不染污心。除北俱盧，所餘欲界諸有情類容有心狂。謂欲天心尚有狂者，況人惡趣得離心狂？地獄恒狂，多苦逼故。謂諸地獄恒為種種異類苦具傷害末摩猛利難忍，苦受所逼尚不自識，況了是非。故地獄中怨心傷歎，猖狂馳叫世傳有文。欲界聖中唯除諸佛，大種乖適容有心狂，無異熟生。若有定業，必應先受後方得聖。若非定業，由得聖故，能令無果亦無驚怖，超五畏故。亦無傷害，以諸聖者無非人等憎嫌事故，亦無愁憂證法性故。又經中說：業有三種，謂曲、穢、濁。",
+   "T1559": "若爾，眾生有癲狂，此癲狂於何心有？復由何因生？偈曰：心癲於心心。釋曰：心心謂意識。何以故？若人在於五識，則無癲亂事，五識無分別故。偈曰：此從業報生。釋曰：此心癲亂，從眾生業報生。若人以物呪及增加所作散壞他心，或不求欲眾生令飲毒飲酒，或恐怖眾生，於獵等時，或在曠野等處縱火焚燒，又以坑穽陷墜眾生，或由餘業令眾生失念。因此業報，此眾生於未來世心則癲亂。復有別因。偈曰：怖打不平憂。釋曰：怖者，諸鬼神作可畏形相來逼，此人見即驚怖。打者，諸鬼神因人惡行起憎恚心，於此人末摩作打拍事。不平者，風熱淡互相違反，令身四大皆不調適。憂者，如婆師絺等。若意識癲亂，此心癲亂從業報生，云何言心受非果報？我等不說此心是果報。何為四大違損是果報？從此心起故，說心從果報生。由業所生四大不平等故心狂亂、不自在、失念，說此心名癲狂。若作如此，四句得成。有心狂故亂非散故亂，廣說應知。狂亂非散亂者，心不自在無染污。散亂非狂亂者，心自在有染污。狂亂亦散亂者，心不自在有染污。無狂亂亦無散亂者，心自在無染污。何眾生有狂亂心？偈曰：欲界除鳩婁。釋曰：於欲界中有，唯除北鳩婁。何以故？於天中亦有狂天，何況於人、畜生、鬼神道中。地獄眾生皆恒狂亂，是彼眾生萬種損惱恚害，末摩最重難忍，苦受所逼，於自身亦不了別，何況能識是非等事。何心何啼天地獄傳此中應說。於聖人亦有心狂亂，由四大不平等故，除佛世尊。若約先定業受報已畢，若約不定業則無果報。不由怖畏，已度五怖畏故。不由損害，永無惡行能生鬼神憎恚心故。不由憂惱，證見法如實性故。復次於經中說有三曲：身曲、口曲、意曲。復有三麁：身麁、口麁、意麁。復有三澁：身澁、口澁、意澁。此中次第應知。"
+  },
+  "v059": {
+   "sa": "vaṅkadoṣakaṣāyoktiḥ śāṭhyadveṣajarāgaje / kṛṣṇaśuklādibhedena punaḥ karma caturvidham // VAkK_4.59 //",
+   "sa-bhasya": "[234|22] vaṅkadoṣakaṣāyoktiḥ śāṭhyadveṣajarāgaje / [234|23] śaṭhyajaṃ kāyakarma kāyavaṅka ityuktam / kuṭilānvayatvāt / evaṃ vāṅmanovaṅkau / [234|24] dveṣajaṃ kāyakarma kāyadoṣa ityuktam / cittapradoṣānvayatvāt / evaṃ vāṅmanodoṣau / [234|25] rāgajaṃ kāyakarma kāyakaṣāya ityuktam / rāñjanānvayatvāt / evaṃ vāṅmanaḥkaṣāyau / [234|26] kṛṣṇaśuklādibhedena punaḥḥ karma caturvidham // VAkK_4.59 // [235|01] \"asti karma kṛṣṇaṃ kṛṣṇavipākam / asti karma śuklaṃ śuklavipākam / [235|01-235|02] asti karma kṛṣṇaśuklaṃ kṛṣṇaśuklavipākam / [235|02-235|03] asti karmākṛṣṇamaśuklamavipākam / [235|03] yattatkarma karmakṣayāya saṃvartata\" iti / tatra",
+   "T1560": "說曲穢濁業，依諂瞋貪生， 依黑黑等殊，所說四種業。",
+   "T1558": "其相云何？頌曰：說曲穢濁業，依諂瞋貪生。論曰：身語意三各有三種，謂曲、穢、濁。如其次第，應知依諂、瞋、貪所生。謂依諂生身語意業名為曲業，諂曲類故。若依瞋生身語意業名為穢業，瞋穢類故。若依貪生身語意業名為濁業，貪濁類故。又經中說，業有四種，謂或有業黑黑異熟、或復有業白白異熟、或復有業黑白黑白異熟、或復有業非黑非白無異熟能盡諸業。其相云何？頌曰：依黑黑等殊，所說四種業，",
+   "T1559": "偈曰：說曲麁澁業，諂曲瞋欲生。釋曰：若身業從諂曲生，說名身曲業，邪曲性類故，口意曲業亦爾。若身業從瞋恚生，說名身麁業，忿怒性類故，口意麁業亦爾。若身業從貪欲生，說名身澁業，染污性類故，口意澁業亦爾。偈曰：黑白等差別，復說業四種。釋曰：有黑業黑果報；有白業白果報；有黑白業黑白果報；有不黑不白業不黑不白果報，生能滅盡餘諸業故。"
+  },
+  "v060": {
+   "sa": "aśubhaṃ rūpakāmāptaṃ śubhaṃ caiva yathākramam / kṛṣṇaśuklobhayaṃ karma tatkṣayāya nirāsravam // VAkK_4.60 //",
+   "sa-bhasya": "[235|04-235|05] aśubhaṃ rūpakāmāptaṃ śubhaṃ caiva yathākramam / kṛṣṇaśuklobhayaṃ karma tatkṣayāya nirāsravam // VAkK_4.60 // [235|06] aśubhaṃ karma ekāntena kṛṣṇaṃ kliṣṭatvāt kṛṣṇavipākaṃ cāmanojñavipākatvāt / [235|07] rūpāptaṃ śubhamekāntena śuklamakuśalenāvyatibhedāt / [235|07-235|08] śuklavipākaṃ ca manojñavipākatvāt / [235|08] ārupyāptaṃ kasmānnocyate / [235|08-235|09] yatra kila dvividho 'sti vipāka āntarābhavika aupapattibhavikaśca / [235|09-235|10] trividhasya kāyavāṅmanaskarmaṇo yatraiva saṃbhavastatraivoktamiti / [235|10] tadapi tūktaṃ sūtrāntare / [235|10-235|11] \"kāmāptaṃ śubhaṃ karma kṛṣṇaśuklamakuśalavyavakīrṇatvat kṛṣṇaśuklavipākaṃ vyavakīrṇavipākatvāt\" / [235|11-235|12] saṃtānata etadvyavasthāpitaṃ na svabhāvataḥ / [235|12-235|13] na hyevañjātīyakamekaṃ karmāsti vipāko vā yat kṛṣṇaṃ ca syāt śuklaṃ cānyonyavirodhāt / [235|13-235|14] nanu caivamakuśalasyāpi karmaṇaḥ kuśalavyavakīrṇatvāt kṛṣṇaśuklatvaṃ prāpnoti / [235|14] nāvaśyamakuśalaṃ kuśalena vyavakīryate / [235|15] kāmadhātau tasya balavattvāt / kukśalaṃ tu vyavakīryate / durbalatvāditi / [235|16] anasravaṃ karmaiṣāṃ trayāṇāṃ karmaṇāṃ kṣayāya prahāṇāya saṃvartate / [235|16-235|17] taddhyakṛṣṇamakliṣṭatvādaśuklaṃ vipākaśuklatā 'bhāvāt / [235|17-235|18] ābhiprāyiko hyeṣo 'śukla śabdaḥ / [235|18-235|19] uktaṃ tu bhagavatā mahatyāṃ śunyatāyā maśaikṣān dharmānārabhya \"ime te ānanda dharmā ekāntakuśalā ekāntānavadyā\" iti / [235|19] śāstre ca / [235|19-235|20] \"śuklā dharmāḥ katame / [235|20] kuśalā dharmā anivṛtāvyākṛtāśce\"ti / [235|20-235|21] avipākaṃ dhātvapatitatvāt pravṛttivirodhācca / [235|22] kiṃ punaḥ sarvamanāsravaṃ karma sarvasyāsya trividhasya karmaṇaḥ kṣayāya saṃvartate /",
+   "T1560": "惡色欲界善，能盡彼無漏， 應知如次第，名黑白俱非。",
+   "T1558": "惡色欲界善，能盡彼無漏， 應知如次第，名黑白俱非。論曰：佛依業果性類不同，所治能治殊，說黑黑等四。諸不善業一向名黑，染污性故，異熟亦黑，不可意故。色界善業一向名白，不雜惡故，異熟亦白，是可意故。何故不言無色界善？傳說若處有二異熟謂中生有，具三種業謂身語意，則說非餘，然契經中有處亦說。欲界善業名為黑白，惡所雜故，異熟亦黑白，非愛果雜故。此黑白名依相續立，非據自性。所以者何？以無一業及一異熟是黑亦白，互相違故。豈不惡業果善業果雜故，是則亦應名為白黑。不善業果非必應為善業果雜，欲善業果必定應為惡業果雜，以欲界中惡勝善故。諸無漏業能永斷盡前三業者名為非黑，不染污故，亦名非白，以不能招白異熟故。此非白言是密意說，以佛於彼《大空經》中告阿難陀：諸無學法純善純白一向無罪。本論亦言：云何白法？謂諸善法無覆無記無異熟者，不墮界故、與流轉法性相違故。諸無漏業為皆能盡前三業不？不爾。",
+   "T1559": "偈曰：非善欲色有，善次第應知，黑白有二業，能滅彼無流。釋曰：非善業者，一向名黑，本性黑故。果報亦黑，果報非可愛故。此業唯欲界。有色界善業一向白，非黑所雜故。果報亦白，果報可愛故。云何不說無色界業？若是處有二種果報，謂中陰、生陰。有三種業，謂身口意。此中說黑白業，餘處不說。有餘師云：此亦於餘經中說。欲界善業名黑白業，非善所雜故。果報亦黑白，果報相雜故。若分別此業，須約相續，不得約性。何以故？無一業如此種類及果報，此業是黑即是白。無如此義，互相違故。若爾，惡業為善業所雜故，應成白黑業。惡為善所雜，此義不成，於欲界中惡力強故；唯善可雜，由力弱故。無流業者，若起能滅盡此三。何以故？此業非黑，無染污故。非白，無白果報故。此不白言，是不了義說，有別意故。佛世尊於《大空經》中，依無學法說：阿難！如此法，一向白、一向善、一向無訶。於阿毘達磨藏中說：何者為白法？善法及無覆無記法。無果報者，不墮於界故，與生死相違故。"
+  },
+  "v061": {
+   "sa": "dharmakṣāntiṣu vairāgye cānantaryapathāṣṭake / yā cetanā dvādaśadhā karma kṛṣṇakṣayāya tat // VAkK_4.61 //",
+   "sa-bhasya": "[235|23] netyucyate / kiṃ tarhi / [236|01-236|02] dharmakṣāntiṣu vairāgye cānantaryapathāṣṭake / yā cetanā dvādaśadhā karma kṛṣṇakṣayāya tat // VAkK_4.61 // [236|03-236|04] darśanamārge catasṛṣu dharmajñānakṣāntiṣu kāmavairāgye cāṣṭāsvānantaryamārgeṣu yā cetanā seyaṃ dvādaśavidhā cetanā kṛṣṇasya karmaṇaḥ prahāṇāya karma /",
+   "T1560": "四法忍離欲，前八無間俱， 十二無漏思，唯盡純黑業。",
+   "T1558": "云何？頌曰：四法忍離欲，前八無間俱， 十二無漏思，唯盡純黑業，",
+   "T1559": "一切無流業為悉能滅白等三業不？不。此云何？偈曰：於法忍離欲，於八次第道，十二種故意，此能滅黑業。釋曰：於見諦道中有四法忍，於離欲欲界中有八次第道，於此中是故意有十二種，此業一向能滅黑業。"
+  },
+  "v062": {
+   "sa": "navame cetanā yā sā kṛṣṇaśuklakṣayāya ca / śuklasya dhyānavairāgyeṣvantyānantaryamārgajā // VAkK_4.62 //",
+   "sa-bhasya": "[236|05] navame cetanā yā sā kṛṣṇaśuklakṣayāya ca / [236|06-236|07] navame kāmavairāgyānantaryamārge yā cetanā sā kṛṣṇaśuklasya kuśalasya karmaṇaḥ kṛṣṇasya cākuśalasya navamasya prakārasya prahāṇāya / [236|08] śuklasya dhyānavairāgyeṣvantyānantaryamārgajā // VAkK_4.62 // [236|09-236|10] dhyānādvyānādvairāgyaṃ kurvato yo 'ntyo navama ānantaryamārgastatra yā cetanā iyaṃ caturvidhā cetanā śuklasya karmaṇaḥ prahāṇāya / [236|10-236|11] kiṃ punaḥ kāraṇamantyenaivānantaryamārgeṇa kuśalasya karmaṇaḥ prahāṇaṃ nānyena / [236|11-236|12] nahhi tasya svabhāvaprahāṇaṃ prahīṇasyāpi saṃmukhībhāvāt / [236|12] kiṃ tarhi / tadālambanakleśaprahāṇāt / [236|12-236|13] ato yāvadeko 'pi tadālambanakleśaprakāra āste tāvadasya prahāṇaṃ nopapadyate /",
+   "T1560": "離欲四靜慮，第九無間思， 一盡雜純黑，四令純白盡。",
+   "T1558": "離欲四靜慮，第九無間思， 一盡雜純黑，四令純白盡。論曰：於見道中四法智忍及於修道離欲染位前八無間聖道俱行有十二思唯盡純黑，離欲界染第九無間聖道俱行一無漏思，雙令黑白及純黑盡，此時總斷欲界善故，亦斷第九不善業故。離四靜慮一一地染，第九無間道俱行無漏思，此四唯令純白業盡。何緣諸地有漏善法唯最後道能斷非餘？以諸善法非自性斷，已斷有容現在前故。然由緣彼煩惱盡時方說名為斷彼善法，爾時善法得離繫故。",
+   "T1559": "偈曰：於第九故意，能滅黑白業。釋曰：於第九離欲，欲界次第道故意，能滅黑白業及黑業。偈曰：白業離欲定，後次第道生。釋曰：若人定定作離欲，是第九次第道。此中有四種故意，一向能滅白業。云何但第九次第道能滅白業，不由餘？此善非自性滅，已滅可更現前故。雖然，緣彼為境惑滅故，故說彼滅。是故乃至餘一品惑，猶以彼為境未滅，未可說彼已滅。"
+  },
+  "v063": {
+   "sa": "anye narakavedyānyakāmavedyaṃ dvayaṃ viduḥ / dṛgdheyaṃ kṛṣṇamanye anyatkṛṣṇaśuklaṃ tu kāmajam // VAkK_4.63 //",
+   "sa-bhasya": "[236|14] anye narakavedyānyakāmavedyaṃ dvayaṃ viduḥ / [236|15-236|16] anye punarācāryāḥ paśyanti narakavedanīyaṃ narakāccānyakāmadhātuvedanīyaṃ karma yathākrama kṛṣṇaṃ kṛṣṇaśuklaṃ ceti / [236|16-236|18] narake hyakuśalasyaiva karmaṇo vipākastena tadvedanīyaṃ kṛṣṇamityucyate ato 'nya kāmadhātau kuśalākuśalasya karmaṇo vipākastena tadvedanīyaṃ kṛṣṇaśuklamityuktam / [236|19] dṛgdheyaṃ kṛṣṇamanye [236|20] anye punarāhurdarśanaprahātavyaṃ karma kṛṣṇa kuśalenāmiśratvāt / [236|21] anyatkṛṣṇaśuklaṃ tu kāmajam // VAkK_4.63 // [236|22] anyattu kāmāvacaraṃ karma kṛṣṇaśuklam / kiṃ tadanyat / bhāvanāprahātavyam / [236|22-236|23] taddhi kuśalaṃ cākuśalaṃ ceti / [236|23-236|24] sūtra uktaṃ trīṇi mauneyāni kāyamauneyaṃ vāṅmauneyaṃ manomauneyaṃ ca / [236|24] tatra",
+   "T1560": "有說地獄受，餘欲業黑雜， 有說欲見滅，餘欲業黑俱。",
+   "T1558": "由此乃至緣彼煩惱餘一品在，斷義不成，善法爾時未離繫故。頌曰：有說地獄受，餘欲業黑雜， 有說欲見滅，餘欲業黑俱。論曰：有餘師說：順地獄受及欲界中順餘受業，如次名為純黑雜業。謂地獄異熟唯不善業感，故順彼受名純黑業。唯除地獄，餘欲界中異熟皆通善惡業感，故順彼受名黑白業。有餘師說：欲見所斷及欲界中所有餘業，如次名為純黑俱業。謂見所斷無善雜故名純黑業，欲修所斷有善不善故名俱業。又經中說有三牟尼，又經中言有三清淨，俱身語意。",
+   "T1559": "偈曰：餘說地獄報，及欲受報二。釋曰：有餘師見，應受地獄報業，離地獄於欲界餘道應受報業，次第應知是黑業是黑白業。何以故？唯地獄定是惡業報故，說受地獄報業名黑業。離地獄於欲界餘道中，有善惡業報，是故受彼報業名黑白業。偈曰：餘說見滅黑。釋曰：有餘師說：見諦所滅業名黑業，與善不相雜故。偈曰：餘欲業黑白。釋曰：欲界業異見諦所滅業，名黑白業。此異云何？謂修道所滅。何以故？此業有善有惡。於經中說：有三牟那，謂身牟那、口牟那、意牟那。"
+  },
+  "v064": {
+   "sa": "aśaikṣaṃ kāyavākkarma manaścaiva yathākramam / maunatrayam tridhā śaucaṃ sarva sucaritatrayam // VAkK_4.64 //",
+   "sa-bhasya": "[237|01-237|02] aśaikṣaṃ kāyavākkarma manaścaiva yathākramam / maunatrayam [237|03] aśaikṣe kāyavākkarmaṇī kāyavāṅmauneye / [237|03-237|04] aśaikṣaṃ tu mana eva manomauneyaṃ na manaskarmeti / [237|04] kiṃ kāraṇam / cittaṃ hi paramārthamuniḥ / [237|04-237|05] tat kila kāyavākkarmabhyāmanumīyata iti / [237|05] api khalu kāyavākkarmaṇī viratisvabhāvena na manaskarma / [237|05-237|06] cittā vijñaptyabhāvāt / [237|06] viramārthena ca maunam / ato mana eva virataṃ maunamityucyate / [237|07] kasmādaśaikṣameva nānyat / arhataḥ parmārthamunitvāt / [237|07-237|08] sarvakleśajalpoparateḥ / [237|08] trīṇi śauceyāni uktāni sūtre / kāyaśauceyaṃ vākśauceyaṃ manaḥsauceyaṃ ca / [237|09] tadetat / [237|10] tridhā śaucaṃ sarvaṃ sucaritatrayam // VAkK_4.64 // [237|11] sarvaṃ kāyasucaritaṃ kāyaśaucam / sarvaṃ vāṅmanaḥ sucaritaṃ vāṅmanaḥ śaucam / [237|11-237|12] duścaritamalāpakarṣaṇāttāvatkālamatyantaṃ vā / [237|12-237|13] eṣā ca deśanā mithyāmauna śaucādhimuktikānāṃ vivecānārtham / [237|13] trīṇi duścaritānyuktāni / tatra",
+   "T1560": "無學身語業，即意三牟尼， 三清淨應知，即諸三妙行。",
+   "T1558": "相各云何？頌曰：無學身語業，即意三牟尼， 三清淨應知，即諸三妙行。論曰：無學身語業，名身語牟尼，意牟尼即無學意非意業。所以者何？勝義牟尼唯心為體，謂由身語二業比知。又身語業是遠離體，意業不然，無無表故。由遠離義建立牟尼，是故即心由身語業能有所離，故名牟尼。何故牟尼唯在無學？以阿羅漢是實牟尼，諸煩惱言永寂靜故。諸身語意三種妙行，名身語意三種清淨。暫永遠離一切惡行煩惱垢故名為清淨。說此二者為息有情計邪牟尼，邪清淨故。又經中說有三惡行，又經中言有三妙行，俱身語意。",
+   "T1559": "此中偈曰：無學身口業，意應知次第，三牟那。釋曰：無學身口二業，名身口牟那。無學心名意牟那，非意業。何以故？心是真實聖者，此由身口故定可比量。復次此身口二業離惡為性，意業但思，非有教故不能比量為離，故說牟那。是故唯心能離故，說名牟那。云何說無學不說餘？阿羅漢是真實聖者故。一切，或言分別滅故。偈曰：三淨。釋曰：於經中說：有三種清淨，謂身清淨、口清淨、意清淨。此三種清淨，偈曰：一切三善行。釋曰：一切身善行，名身清淨。一切口意善行，名口意清淨。能除遮惡行及惑污故，或暫或永。此正說何？為眾生信樂邪牟那及邪清淨，為令思量遠離故。經中復說有三種惡行。"
+  },
+  "v065": {
+   "sa": "aśubhaṃ kāyakarmādi mataṃ duścarita trayam / akarmāpi tvabhidhyādimanoduścaritaṃ tridhā // VAkK_4.65 //",
+   "sa-bhasya": "[237|14] aśubhaṃ kāyakarmādi mataṃ duścarita trayam / [237|15] akuśalaṃ kāyavāṅmanaskarma yathākramaṃ kāyavāṅmanoduścaritam / [237|16] akarmāpi tvabhidhyādimanoduścaritaṃ tridhā // VAkK_4.65 // [237|17-237|18] akarmasvabhāvamapyasti trividhaṃ manoduścaritaṃ cetanārthāntarabhūtamabhidhyā vyāpādo mithyādṛṣṭiśca / [237|18] abhidhyādaya eva manaskarmeti dārṣṭāntikāḥ / [237|18-237|19] saṃcetanīyasūtre vacanāt / [237|19] evaṃ tu sati karmakleśayoraikyaṃ syāt / [237|19-237|20] kim syādyadi kaścit kleśo 'pi karma syāt / [237|20] naitadasti / sūtraṃ viruddhaṃ syāt / [237|20-237|21] sūtre tu cetanāyāstanmukhena pravṛttestaistāṃ darśayatīti vaibhāṣikāḥ / [237|21-237|22] aniṣṭaphalatvātkuṭsitaḥ kāyavāṅmanaścāro duścaritam /",
+   "T1560": "惡身語意業，說名三惡行， 及貪瞋邪見，",
+   "T1558": "相各云何？頌曰：惡身語意業，說名三惡行， 及貪瞋邪見，",
+   "T1559": "偈曰：惡身口意業，說名三惡行。釋曰：身口意業若不善，次第應知名身口意惡行。偈曰：非業貪瞋等，說意惡行三。釋曰：亦有惡行非業性，謂三意惡行別類，非故意故。譬喻部說：貪等名意業，於故心作。經中說：若執如此，惑業成一性。若爾，何有若惑成業？無如此義。於經中由故意因此門起故，大師由彼顯故意，毘婆沙師說如此。若不爾，惑業成一體，十二緣生分則不成就故。不許如此，由此於果報非可愛，聰慧人所訶故，說身口意行名惡行。"
+  }
+ }
+}

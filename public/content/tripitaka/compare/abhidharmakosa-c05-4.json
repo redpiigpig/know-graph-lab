@@ -1,0 +1,205 @@
+{
+ "slug": "abhidharmakosa-c05-4",
+ "title": "俱舍論・分別隨眠品（5.59–5.70）",
+ "family": "sa",
+ "intro": "《阿毘達磨俱舍論》第五品〈分別隨眠品〉頌 5.59–5.70，一頌一節（頌號依 Pradhan 本，GRETIL 標 VAkK_品.頌）。五欄：梵本頌、梵本自釋（bhāṣya）、玄奘《俱舍論本頌》、玄奘《俱舍論》、真諦《俱舍釋論》；論本欄自該頌（含引出該頌的提問句）起、到下一頌前的釋文止。玄奘《俱舍論》常把數頌合為一個「頌曰」再一併解釋，區塊中按頌切開，釋文因此都落在區塊末頌；真諦本逐句引偈、隨句解釋，與梵本自釋的節奏相近。稱友 Yaśomitra《明了義釋》Sphuṭārthā 是自釋的疏，不收。",
+ "units": [
+  {
+   "id": "v059",
+   "label": "5.59　蓋五唯在欲"
+  },
+  {
+   "id": "v060",
+   "label": "5.60　遍知所緣故"
+  },
+  {
+   "id": "v061",
+   "label": "5.61　對治有四種"
+  },
+  {
+   "id": "v062",
+   "label": "5.62　遠性有四種"
+  },
+  {
+   "id": "v063",
+   "label": "5.63　諸惑無再斷"
+  },
+  {
+   "id": "v064",
+   "label": "5.64　斷遍知有九"
+  },
+  {
+   "id": "v065",
+   "label": "5.65　餘五順下分"
+  },
+  {
+   "id": "v066",
+   "label": "5.66　未至果一切"
+  },
+  {
+   "id": "v067",
+   "label": "5.67　俗果二聖九"
+  },
+  {
+   "id": "v068",
+   "label": "5.68　得無漏斷得"
+  },
+  {
+   "id": "v069",
+   "label": "5.69　住見諦位無"
+  },
+  {
+   "id": "v070",
+   "label": "5.70　越界得果故"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sa",
+   "lang": "sa",
+   "label": "梵本頌",
+   "who": "《阿毘達磨俱舍論本頌》Abhidharmakośakārikā・GRETIL（參 Pradhan 1975、Gokhale 1946）"
+  },
+  {
+   "id": "sa-bhasya",
+   "lang": "sa",
+   "label": "梵本自釋",
+   "who": "《阿毘達磨俱舍論》Abhidharmakośabhāṣya・GRETIL（Pradhan 1975，Hackett／Lusthaus 校）"
+  },
+  {
+   "id": "T1560",
+   "lang": "lzh",
+   "label": "玄奘頌本",
+   "who": "玄奘譯《阿毘達磨俱舍論本頌》・唐",
+   "work": "T1560"
+  },
+  {
+   "id": "T1558",
+   "lang": "lzh",
+   "label": "玄奘論本",
+   "who": "玄奘譯《阿毘達磨俱舍論》・唐 651–654 年",
+   "work": "T1558"
+  },
+  {
+   "id": "T1559",
+   "lang": "lzh",
+   "label": "真諦釋論",
+   "who": "真諦譯《阿毘達磨俱舍釋論》・陳 563–567 年",
+   "work": "T1559"
+  }
+ ],
+ "works": [
+  "T1558",
+  "T1559",
+  "T1560"
+ ],
+ "anchors": [
+  {
+   "work": "T1560",
+   "range": [
+    "T29n1560_p0319a11",
+    "T29n1560_p0319a11"
+   ]
+  },
+  {
+   "work": "T1558",
+   "range": [
+    "T29n1558_p0110b19",
+    "T29n1558_p0113b14"
+   ]
+  },
+  {
+   "work": "T1559",
+   "range": [
+    "T29n1559_p0263c29",
+    "T29n1559_p0265c28"
+   ]
+  }
+ ],
+ "cells": {
+  "v059": {
+   "sa": "kāme nivaraṇāni ekavipakṣāhārakṛtyataḥ / dvayaketā pañcatā skandhavighātavicikitsanāt // VAkK_5.59 //",
+   "sa-bhasya": "[318|12] kāme nivaraṇāni [318|13] nānyatra dhātau / [318|13-318|14] kiṃ punaḥ kāraṇaṃ dve styānamiddhe ekaṃ nivaraṇamuktaṃ dve cauddhatyakaukṛtye ekam / [318|15] ekavipakṣāhārakṛtyataḥ / [318|16] dvyekatā [318|17] dvayorekatā dvyekatā / vipakṣaḥ pratipakṣo 'nāhāra ityeko 'rthaḥ / [318|17-318|18] styānamiddhayoreka āhāraḥ sūtre 'nāhāraśca / [318|18] kaḥ styānamiddhanivaraṇasyāhāraḥ / pañca dharmāḥ / [318|19] tandrā aratirvijṛmbhikā bhakte 'samatā cetaso līnatvamiti / [318|19-318|20] atha styānamiddhanivaraṇasyānāhāraḥ ālokasaṃjñeti / [318|20] kṛtyamanayorapyekam / [318|20-319|01] ubhe api hyete cittaṃ layaṃ codayataḥ / [319|01] auddhatyakaukṛtyayorapyeka āhāra uktaḥ ekonāhāraḥ / [319|02] kaścauddhatyakaukṛtyanivaraṇasyāhāraḥ / catvāro dharmāḥ / [319|02-319|03] jñātivitarko janapadavitarko 'maravitarkaḥ paurāṇasya ca hasitakriḍitaramitaparibhāvitasyānusmartā bhavatīti / [319|04] kaścauddhatyakaukṛtyanivaraṇasyānāhāraḥ / śamatha iti / kṛtyamapyanayorekam / [319|04-319|05] ubhe api hyete cittamavyupaśāntaṃ vartayataḥ / [319|05-319|06] ata ekavipakṣāhārakṛtyatvāt dvayorapyekatvamuktam / [319|06] yadi sarvakleśā nivaraṇaṃ kasmāt pañcaivoktāni / [319|07] pañcatā skandhavidhātavicikitsanāt // VAkK_5.59 // [319|08] kāmacchandavyāpādābhyāṃ śīlaskandhavidhātaḥ / [319|08-319|10] styānamiddhena prajñāskandhasyauddhatyakaukṛtyena samādhiskandhasya samādhiprajñayorabhāve satyeṣu vicikitsako bhavatītyataḥ pañcoktāni / [319|10-319|11] etasyāṃ tu kalpanāyāṃ samādhiskandhavirodhina auddhatyakaukṛtyanivaraṇasya pūrva grahaṇaṃ prāpnoti / [319|11] ato yathāsaṃkhyametābhyāṃ samādhiprajñāskandhopaghāta ityapare / [319|12] samādhiprayuktasya hi styānamiddhādbhayam / dharmapravicayaprayuktasyauddhatyakaukṛtyāditi / [319|13] anye tvanyathā varṇayanti / kathaṃ varṇayanti / [319|13-319|15] cāragatasya priyāpriyarūpeṣu viṣayeṣu nimittagrāhādvihāragatasya tatpūrvakau kāmacchandavyāpādau samādhipraveśasyādito 'ntarāyaṃ kurutaḥ / [319|15-319|17] tataḥ samādhipraviṣṭasyāprayogeṇa śamathavipaśyanā sevanāt styānamiddhamauddhatyakaukṛtyaṃ vicikitsā ca yathākramaṃ śamathavipaśyanayorantarāyaṃ kurutaḥ / [319|17] vyutthitasyāpi dharmanidhyānakāle vicikitsāntarāyaṃ karoti / [319|18] ataḥ pañca nivaraṇānyuktāni / [319|19] idaṃ vicāryate / [319|19-319|20] visabhāgadhātusarvatragāṇāṃ nirodhamārgadarśanaprahātavyānāṃ ca sāsravālambanānāṃ yadālambanaṃ parijñāyate tadā na prahīyante / [319|20-319|21] yadā prahīyante tadālambanaṃ na parijñāyate iti kathameṣāṃ prahāṇam / [319|21-319|22] nāvaśyamālambanaparijñānāt kleśānāṃ kṣayo bhavati / [319|22] kim tarhi / caturbhiḥ prakāraiḥ / katamaiścaturbhiḥ / [319|22-319|23] darśanaheyānāṃ tāvat",
+   "T1560": "蓋五唯在欲，食治用同故， 雖二立一蓋，障蘊故唯五，",
+   "T1558": "蓋相云何？頌曰：蓋五唯在欲，食治用同故， 雖二立一蓋，障蘊故唯五。論曰：佛於經中說蓋有五，一欲貪蓋、二瞋恚蓋、三惛眠蓋、四掉悔蓋、五疑蓋。此中所說惛掉及疑，為如欲貪瞋恚眠悔唯在欲界？通三界耶？應知此三亦唯在欲，以契經說如是五種純是圓滿不善聚故。色無色界無有不善，然此五種純不善故，唯在欲界非色無色。何故惛眠、掉悔二蓋各有二體合立一耶？食、治、用同，故合立一。食謂所食，亦名資糧。治謂能治，亦名非食。用謂事用，亦名功能。由此經中作如是說。惛眠雖二，食非食同。何等名為惛眠蓋食？謂五種法：一𧄼瞢、二不樂、三頻申、四食不平性、五心昧劣性。何等名為此蓋非食？謂光明想。如是二種事用亦同，謂俱能令心性沈昧。掉悔雖二，食非食同。何等名為掉悔蓋食？謂四種法：一親里尋、二國土尋、三不死尋、四隨念昔種種所更戲笑歡娛承奉等事。何等名為此蓋非食？謂奢摩他。如是二種事用亦同，謂俱能令心不寂靜。由此說食、治、用同，故惛眠、掉悔二合為一。諸煩惱等皆有蓋義，何故如來唯說此五？唯此於五蘊能為勝障故。謂貪恚蓋能障戒蘊，惛沈睡眠能障慧蘊，掉舉惡作能障定蘊，定慧無故於四諦疑，疑故能令乃至解脫解脫智見皆不得起，故唯此五建立為蓋。若作如是解釋經意，掉悔理應惛眠前說，以必依定方有慧生，定障亦應先慧障故。依如是理，有餘師言：此五蓋中，惛眠、掉悔如次能障定蘊慧蘊，由此契經作如是說。修等持者怖畏惛眠，修擇法者怖畏掉悔。有餘別說：唯立五因。彼說云何？謂在行位，先於色等種種境中，取可愛憎二種相故，後在住位由先為因，便起欲貪、瞋恚二蓋。此二能障將入定心，由此後時正入定位，於止及觀不能正習。由此便起惛眠、掉悔，如其次第障奢摩他、毘鉢舍那令不得起。由此於後出定位中思擇法時疑復為障，故建立蓋唯有此五。今應思擇，他界遍行及見滅道斷有漏緣，諸惑於彼斷位不知彼所緣，知彼所緣時而彼不斷。如是諸惑斷由何因？非要遍知所緣故斷。若爾，斷惑總由幾因？由四種因。",
+   "T1559": "偈曰：欲界中五蓋。釋曰：於餘界不立五蓋，故唯欲界中有五蓋。復有何因，立睡、弱二小惑為一蓋？合掉悔亦爾。偈曰：一對治食事，合二一。釋曰：此二雙同一對治故、同食故、同一事故，故合為一。經中說：睡弱一食一非食。何法是睡弱蓋食？有五種法，謂惓、不安、頻申、不節食、心沈下。何法非睡弱蓋食？謂光明想。彼事亦一，謂此二小惑能令心沈下。掉悔二小惑亦說同一食同一非食。何法是掉悔蓋食？有四法，親屬覺、國土覺、不死覺、數憶昔所更事，謂遊戲安樂給侍。何法非掉悔蓋食？謂奢摩他。此二亦同一事。何以故？此二同能令心不寂靜，是故同一對治食事故合二立一蓋。若一切惑皆是蓋，云何唯說五為蓋？偈曰：能破法聚起，疑故。釋曰：由貪欲、瞋恚蓋，戒法聚破壞。由睡弱蓋，慧法聚破壞。由掉悔蓋，定法聚破壞。若定慧無則於四諦起疑惑心故，解脫、解脫知見破壞。由此義故，說五為蓋。於此執中與定法聚相違，掉悔蓋應在慧障前。是故餘師說：如其次第能破定聚及慧聚。何以故？經中說：若人修行定觀，怖畏睡弱；若人修行簡擇法，怖畏掉悔。有餘師釋蓋義有異。云何釋？若人在六識行位，於可愛可憎相塵中，由執相故，若在住位，是貪欲、瞋恚以彼為先因故起障。初正欲入定相心、次若已入定，不如理修奢摩他毘鉢舍那故，起睡弱、掉悔、疑，如次第障奢摩他毘鉢舍那，故解脫、解脫知見不得成。是故說五為蓋。今應思此義，是遍行不同分界惑，見滅道所滅，緣有流法為境，諸惑是時若觀察彼境，是時彼不滅。是彼滅時，彼境不可觀察。由此義，彼云何可滅？非必定，唯由了別境界，諸惑得滅。何為？由四種因，諸惑得滅。何者為四？若約見諦所滅惑，由三因。"
+  },
+  "v060": {
+   "sa": "ālambanaparijñānāttadālambanasaṃkṣayāt / ālambanaprahāṇācca pratipakṣodayāt kṣayaḥ // VAkK_5.60 //",
+   "sa-bhasya": "[319|24] ālambanaparijñānāttadālambanasaṃkṣayāt / [319|25] ālambanagrahāṇācca [319|26-319|27] tatrālambanaparijñānād duḥkhasamudayadarśanaheyānāṃ svabhūmyālambanānāmanāsravālambanānāṃ ca / [319|27] tadālambanasaṃkṣayād visabhāgadhātusarvatragāṇām / [319|27-320|01] tadālambanā hi sabhāgadhātusarvatragāḥ / [320|01] teṣu prahīṇeṣu te 'pi prahīṇā bhavanti / [320|01-320|02] ālambanaprahāṇānnirodhamārgaheyānāṃ sāsravālambanānām / [320|02-320|03] te hyanāsravālambanāsteṣāmālambanam / [320|03] atasteṣu prahīṇeṣu te 'piprahīṇā bhavanti / bhāvanāheyānāṃ punaḥ [320|04] pratipakṣodayāt kṣayaḥ // VAkK_5.60 // [320|05] yasya hi kleśaprakārasya pratipakṣo mārga utpadyate sa prahīyate / [320|05-320|06] kasya punaḥ kaḥ pratipakṣaḥ / [320|06] adhimātrādhimātrasya mṛdumṛduriti vistāreṇa paścāt pravedayiṣyāmaḥ /",
+   "T1560": "遍知所緣故，斷彼能緣故， 斷彼所緣故，對治起故斷。",
+   "T1558": "何等為四？頌曰：遍知所緣故，斷彼能緣故， 斷彼所緣故，對治起故斷。論曰：且見所斷惑，斷由前三因：一由遍知所緣故斷，謂見苦集斷自界緣，及見滅道斷無漏緣。二由斷彼能緣故斷，謂見苦集斷他界緣，以自界緣能緣於彼，能緣若斷彼隨斷故。三由斷彼所緣故斷，謂見滅道斷有漏緣，以無漏緣能為彼境，所緣若斷彼隨斷故。若修所斷惑，斷由後一因，謂但由第四對治起故斷。以若此品對治道生，則此品中諸惑頓斷。何品諸惑誰為對治？謂上上品所有諸惑，下下品道能為對治；至下下品所有諸惑，上上品道能為對治。如是義門後當廣辯。",
+   "T1559": "偈曰：由了別彼境，能緣境滅故，境界惑滅故。釋曰：此中由了別彼境者，謂見苦集所滅惑，能緣自地起，及緣無流法為境。能緣境滅故者，謂遍行不同分界惑。何以故？遍行同分界惑是彼境。若所緣為境，惑滅能緣亦同滅，境界惑滅故。彼滅者謂見滅。道所滅惑，緣有流境起。何以故？緣無流境起惑是彼境界，此惑若滅，彼亦同滅。修道所滅惑，云何得滅？偈曰：對治起故盡。釋曰：此惑品若是對治道起，此惑即滅。何惑是所對治？何道是能對治？最上上品惑是所對治，最下下品道是能對治。此義後當廣說。"
+  },
+  "v061": {
+   "sa": "prahāṇādhārabhūtattva dūṣaṇākhyaścaturvidhaḥ / pratipakṣaḥ prahātavyaḥ kleśa ālambanāt mataḥ // VAkK_5.61 //",
+   "sa-bhasya": "[320|07] katividhaśca pratipakṣa ityāha [320|08] prahāṇādhārabhūtatvadūṣaṇāruyaścaturvidhaḥ / [320|09] pratipakṣaḥ [320|10] prahāṇapratipakṣaḥ ānantaryamārgaḥ / [320|10-320|11] ādhārapratipakṣastasmātpareṇāryo mārgo yena tatprāpitaṃ prahāṇamādhāryate / [320|11-320|12] dūrībhāvapratipakṣo vimuktimārgātpareṇa yo mārgaśchinnaprāptidūrīkaraṇāt / [320|12] vimuktimārgo 'pītyapare / so 'pi hi tāṃ prāpti dūrīkaroti / [320|13] vidūṣaṇāpratipakṣo yena mārgeṇa taṃ dhātum doṣato darśanādvidūṣayati / [320|13-320|14] api tveṣāmiyamātupūrvīṃ sādhvī bhavet / [320|14] vidūṣaṇāpratipakṣo duḥkhasamudayālambanaḥ prayogamārgaḥ / [320|15] prahāṇapratipakṣaḥ sarva ānantaryamārgaḥ / ādhārapratipakṣo vimuktimārgaḥ / [320|15-320|16] dūrībhāvapratipakṣo viśeṣamārga iti / [320|17] prahīyamāṇaḥ kleśaḥ kutaḥ prahātavyaḥ / [320|18] prahātavyaḥ kleśa ālambanāt mataḥ // VAkK_5.61 // [320|19] na hi saṃprayogāt kleśo vivecayituṃ śakyate ālambanācca śakyate / [320|19-320|20] yasmānna punastadālambyotpadyate / [320|20-320|21] anāgatastāvacchakyetālambanādvivecayitum / [320|21] atītastu katham / athālambana parijñānātprahātavya ityayamasyārthaḥ / [321|01] eṣo 'pi naikāntaḥ / tasmādvaktavyametat / kiyatā kleśaḥ prahīṇo vaktavyaḥ / [321|01-321|02] svāsaṃtānikaḥ prāpticchedāt / [321|02-321|03] pārasāṃtānikastu kleśaḥ sarvaṃ ca rūpamakliṣṭaśca dharmastadālambanasvāsāṃtānikakleśaprahāṇāt /",
+   "T1560": "對治有四種，謂斷持遠厭， 應知從所緣，可令諸惑斷。",
+   "T1558": "所言對治總有幾種？頌曰：對治有四種，謂斷持遠厭。論曰：諸對治門總有四種：一斷對治，謂無間道。二持對治，謂此後道，由彼能持此斷得故。三遠分對治，謂解脫道後所有道，由彼道能令此所斷惑得更遠故。有餘師說：亦解脫道，以解脫道如彼能令此所斷惑得更遠故。四厭患對治，謂若有道見此界過失深生厭患。然此對治若欲善說，理實應為如是次第：一厭患對治，謂緣苦集起加行道。二斷對治，謂緣一切起無間道。三持對治，謂緣一切起解脫道。四遠分對治，謂緣一切起勝進道。諸惑永斷為定從何？頌曰：應知從所緣，可令諸惑斷。論曰：應知諸惑得永斷時，不可令其離相應法，但可令彼遠離所緣，令於所緣不復生故。斷未來惑理且可然，容令於境不復生故。過去諸惑云何說斷？若謂頌說從所緣言，意顯遍知所緣故斷。此亦非理，不決定故。由此應說，煩惱等斷定何所從，自相續中煩惱等斷由得斷故。他相續中諸煩惱等，及一切色不染法斷，由能緣彼自相續中所有諸惑究竟斷故。",
+   "T1559": "此對治有幾種？偈曰：滅持能遠離，厭惡對治四，說次異。釋曰：一滅對治，謂無間道。二持對治，謂次此後道，由此道能持前道所得滅。三遠離對治，謂解脫道後所有諸道，能令已斷滅惑至得遠相離故。有餘師說：此即是解脫，此道能令惑至得最遠相離。四厭惡對治，謂由此道觀察諸界所有過患，於中起厭離心。復次四對治應如此次第。一厭惡對治，謂緣苦集所修方便道。二滅對治，即是前無間道。三持對治，即是解脫道。四遠離對治，謂勝德道。若惑正滅，何處可滅？偈曰：應除惑於自境界。釋曰：何以故？諸惑若正滅，不可令與相續相離相應，處不可知故。可令與境界相離，由此惑不能更緣境生。若爾，未來煩惱可令與境相離。若已過去，云何可令與境相離？若汝言由了別境界，此惑可令相離。此義不必可定，是故應說此義。有幾量應說此惑已滅？若惑依自相續生，由至得斷絕。若惑依他相續生，一切色及一切無染污法能緣彼等為境，自相續惑滅故，說彼永所遠離。"
+  },
+  "v062": {
+   "sa": "vailakṣaṇyādvipakṣatvāddeśavicchedakālataḥ / bhūtaśīlapradeśādhvadvayānāmiva dūratā // VAkK_5.62 //",
+   "sa-bhasya": "[321|04] dūrībhāva ityucyate / katividhho dūrībhāvaḥ / caturvidhā kila dūratā / [321|05-321|06] vailakṣaṇyādvipakṣatvāddeśavicchedakālataḥ / bhūtaśīlapradeśādhvadvayānāmiva dūratā // VAkK_5.62 // [321|07] vilakṣaṇadūratā yathā mahābhūtānām / vailakṣaṇyātsahajānāmapi dūratā / [321|07-321|08] vipakṣadūratā yathā śīlasya dauḥśīlyam / [321|08-321|09] deśavicchedadūratā yathā viprakṛṣṭadeśānāṃ deśavicchedāt pūrvapaścimasamudravat / [321|09] kāladūratā yathā atītānāgatadūramucyate / dutastaddūram / [321|10] vartamānāt / yadanantarātamutpadyamānaṃ vā tat kathaṃ dūram / [321|10-321|11] adhvanānātvena taddūraṃ na cirabhūtabhāvitvena / [321|11] vartamānamapyevaṃ dūraṃ prāpnoti / akāritrā ttarhi taddūram / [321|12] asaṃskṛtasya kathamantikatvaṃ sidhyati / sarvatra tatprāpteḥ / [321|12-321|13] atītānāgate 'pi tatprasaṅgaḥ / [321|13] ākāśaṃ ca katham / [321|13-321|14] evaṃ tarhyatītānāgatamanyo 'nyaṃ varttamānavyavahitatvād dūram / [321|14] varttamānamubhayo rāsannatvādantikam / [321|14-321|15] asaṃskṛtaṃ cāpyavyavahitatvāditi / [321|15] evamapyatītānāgataṃ varttamānasyāntikatvādubhayaṃ prāpnoti / [321|15-321|16] evaṃ tu yuktaṃ syāt / [321|16] dharmasvalakṣaṇādanāgataṃ dūramasaṃprāptatvāt / atītaṃ ca pracyutatvāditi / [321|17] kim mārgaviśeṣagamanāt kleśānāṃ punaḥ prahāṇaviśeṣo bhavati / naitadasti / [321|18] sarveṣāṃ hi kleśānāṃ",
+   "T1560": "遠性有四種，謂相治處時， 如大種尸羅，異方二世等。",
+   "T1558": "所言遠分，遠性有幾？頌曰：遠性有四種，謂相治處時， 如大種尸羅，異方二世等。論曰：傳說遠性總有四種：一相遠性，如四大種，雖復俱在一聚中生，以相異故亦名為遠。二治遠性，如持犯戒，雖復俱在一身中行，以相治故亦名為遠。三處遠性，如東西海，雖復俱在一世界中，方處隔故亦名為遠。四時遠性，如過未世，雖復俱依一法上立，時分隔故亦名為遠。望何說遠？望現在世。無間已滅及正生時與現相隣，如何名遠？由世性別故得遠名，非久曾當方得名遠。若爾，現在亦應得遠名，以望去來世性亦別故。若謂去來法無作用，離作用故名為遠者，諸無為法作用說無，云何名近？若謂由現遍得無為故名近者，去來二世例亦應然。虛空無為如何名近？若謂過未更互相望，由隔現在故名為遠。現望二世俱極相隣，無為無隔故皆近者，則應去來隣現在世，相望有隔故具二名，不應一向說名為遠。若依正理，應說去來離法自相故名為遠，未來未得法自相故、過去已捨法自相故。等言為明舉事未盡，前言惑斷由治道生，道勝進時所斷諸惑為再斷不？",
+   "T1559": "若爾，遠義有幾種？偈曰：相異對治故，各處別時故，四大戒處所，世二如遠義。釋曰：相遠者，譬如四大，由相不同故，雖共生說互相遠。對治遠者，譬如戒於破戒，破戒於戒亦爾。處遠者，最相去遠法，由處各別故說名遠，譬如東西海。時遠者，譬如說過去未來為遠。此二於何世遠？於現世。若無間已滅及向生，於現世云何遠？由世別異故遠，不由久已滅及久方生。若爾，亦應立現世為遠。不爾，由約功能故說遠。若爾，無為近義云何成？於一切世中有至得故。若爾，於過去未來亦應如此，虛空復云何？若爾，過去未來更互遠，現世所隔故，現世於二近故成近，無為法無隔故近。若爾，過去未來於現世近故，應具二義。若作此執，是義可然。於法自體相未來世遠，未得至故；過去已謝滅故遠。"
+  },
+  "v063": {
+   "sa": "sakṛt kṣayaḥ visaṃyogalābhasteṣāṃ punaḥ pūnaḥ / pratipakṣodayaphalaprāptīndriyavivṛddhiṣu // VAkK_5.63 //",
+   "sa-bhasya": "[321|19] sakṛt kṣayaḥ [321|20] yasya yaḥ prahāṇamārgastenaiva tasya kṣayaḥ / [321|21] visaṃyogalābhasteṣāṃ punaḥ punaḥ / [322|01] katiṣu kāleṣvityāha ṣaṭsu kāleṣu / [322|02] pratipakṣodayaphalaprāptīndriyavivṛddhiṣu // VAkK_5.63 // [322|03] pratipakṣo vimuktimārga etasminnabhipretaḥ / phalāni catvāri śrāmaṇyaphalāni / [322|04] indriyavivṛddhirindriyasaṃcāraḥ / eteṣu kāleṣu kleśasya visaṃyogalābhaḥ / [322|04-322|05] sa punareṣa yathāyogaṃ draṣṭavyaḥ / [322|05] keṣāñcit ṣaṭsu kāleṣu keṣāñcid yāvaddvayoḥ / [322|06] sa eva visaṃyogastāsu tāsvavasthāsu parijñāsaṃjñāṃ labhate / [322|06-322|07] dve hi parijñe jñānaparijñā prahāṇaparijñā ca / [322|07] tatra jñānaparijñā sāsravaṃ jñānam / [322|07-322|08] prahāṇaparijñā tu prahāṇameva /",
+   "T1560": "諸惑無再斷，離繫有重得， 謂治生得果，練根六時中。",
+   "T1558": "所得離繫有重得耶？頌曰：諸惑無再斷，離繫有重得， 謂治生得果，練根六時中。論曰：諸惑若得彼能斷道，即由彼道此惑頓斷，必無後時再斷惑義。所得離繫雖無隨道漸勝進理，而道進時容有重起彼勝得義。所言重得總有幾時？總有六時。何等為六？謂治道起得果練根。治道起時，謂解脫道。得果時者，謂得預流、一來、不還、阿羅漢果。練根時者，謂轉根時。此六時中，諸惑離繫隨道勝進重起勝得。然諸離繫隨應當知，有具六時起勝得者，乃至亦有唯具二時。謂欲界繫見四諦斷，及色無色見三諦斷，所有離繫具六時得；色無色界見道諦斷，所有離繫唯五時得，由治生時即得果故。不應於此分為二時，欲界修斷五品離繫亦五時得，除預流果。第六離繫唯四時得，謂於前五又除一時，得果、治生時無異故。第七八品亦四時得，得果四中除前二故。第九離繫唯三時得，謂於前四又除一時，亦治生時即得果故。色無色界修所斷中，唯除有頂第九離繫；所餘離繫亦三時得，得果四中除前三故。有頂第九唯二時得，謂前三內又除一時，亦治生時即得果故。如是且說容有理說。以利根者前諸位中一一皆除練根得故，諸有超越入聖道者，隨應有除預流等故，即諸離繫彼彼位中得遍知名。遍知有二：一智遍知、二斷遍知。智遍知者，謂無漏智。斷遍知者，謂即諸斷，此於果上立因名故。為一切斷立一遍知？不爾。",
+   "T1559": "由急恒修故，進勝道諸惑滅，亦漸漸轉勝，為不爾？無如此。何以故？偈曰：諸惑同一滅。釋曰：彼惑若應滅，此道若是彼滅道，由此道彼則同一滅。偈曰：重得彼永離。釋曰：有幾時中重得說於六時？何者為六？偈曰：對治生、得果、練根六時中。釋曰：對治生者，此義中謂解脫道。得果者，謂四沙門果。練根者，謂修增勝根道。於此六時中，數得諸惑永離。此得應如理知。有餘人於六時得，有餘人乃至二時得。此永離於別別位中得永斷智名。永斷有二種，一智永斷、二滅永斷。智永斷謂無流智，滅永斷唯滅，合此名永斷智，於果說因故。"
+  },
+  "v064": {
+   "sa": "parijñā nava kāmādyaprakāradvayasaṃkṣayaḥ / ekā dvayoḥ kṣaye dve te tathordhvaṃ tisra eva tāḥ // VAkK_5.64 //",
+   "sa-bhasya": "[322|08] phale hetūpacārāt / kimekaiva parijñā sarvaprahāṇam / netyāha / kiṃ tarhi / [322|09] parijñā nava [322|10] tatra tāvat [322|11] kāmādyaprakāradvayasaṃkṣayaḥ / [322|12] ekā [322|13-322|14] kāmadhātāvādyasya prakāradvayasya duḥkhasamudayadarśanaheyasya prahāṇamekā parijñā / [322|15] dvayoḥ kṣaye dve te [322|16] kāmadhātāveva nirodhadarśanaheyasya prakārasyaprahāṇamekā parijñā / [322|16-322|17] mārgadarśanaheyasyaikā / [322|17] yathā kāmāvacarāṇāṃ darśanaprahātavyānāṃ prahāṇaṃ tisraḥ parijñāḥ [322|18] tathordhvaṃ nisra eva tāḥ // VAkK_5.64 // [322|19] rūpārūpyāvacarāṇāṃ darśanaprahātavyānāṃ prahāṇaṃ tathaiva tisraḥ parijñā bhavanti / [322|19-322|21] duḥkhasamudayadarśanaprahātavyānāṃ prahāṇamekā nirodhadarśanaheyānāṃ prahāṇaṃ dvitīyā mārgadarśanaheyānāṃ prahāṇaṃ tṛtīyeti traidhātukānāṃ darśanaheyānāṃ prahāṇaṃ ṣaṭ parijñā bhavanti /",
+   "T1560": "斷遍知有九，欲初二斷一， 二各一合三，上界三亦爾。",
+   "T1558": "云何？頌曰：斷遍知有九，欲初二斷一， 二各一合三，上界三亦爾，",
+   "T1559": "為一切滅悉是永斷智不？說云何為？偈曰：永斷九。釋曰：云何九？此中偈曰：欲界、初二部惑滅一。釋曰：於欲界中初二部惑滅離，謂見苦集諦所滅惑為一永斷智。偈曰：後二滅離二。釋曰：於欲界見滅所滅惑滅離為二，見道所滅惑滅離為三。如欲界相應見諦所滅惑，有三永斷智。偈曰：上三亦爾。釋曰：色無色界相應見諦所滅惑滅離，立三永斷智亦如此。見苦集所滅惑滅離為一，見滅所滅惑滅離為二，見道所滅惑滅離為三。如此三界見諦所滅惑滅離，成六永斷智。"
+  },
+  "v065": {
+   "sa": "anyā avarabhāgīyarūpasarvāsravakṣayāḥ / tisraḥ parijñāḥ ṣaṭ kṣāntiphalaṃ jñānasya śeṣitāḥ // VAkK_5.65 //",
+   "sa-bhasya": "[323|01] anyā avarabhāgīyarūpasarvāsravakṣayāḥ / [323|02] tisraḥ parijñāḥ [323|03] avarabhāgīyaprahāṇamekā parijñā / rūpāsravaprahāṇamekā rūparāgakṣayaparijñā / [323|04] ārūpyāptānāṃ sarvāsravaprahāṇamekā sarvasaṃyojanaparyādāna parijñā / [323|04-323|05] kasmādrūpārūpyāvacarāṇāṃ bhāvanāheyānāṃ prahāṇaṃ pṛthak parijñā na darśanaheyānām / [323|05-323|06] bhāvanāheyānāmatulyapratipakṣatvāt / [323|06] ityetā nava parijñāḥ / āsāṃ pūrvikāḥ [323|07] ṣaṭ kṣāntiphalaṃ [323|08] yā eva darśanaheyaprahāṇasvabhāvāḥ / [323|09] jñānasya śeṣitāḥ // VAkK_5.65 // [323|10] avarabhāgīyaprahāṇādiparijñā bhāvanāmārgaphalatvāt / [323|11] kathaṃ kṣāntiphalaṃ parijñā bhavanti / kṣāntīnāṃ jñānaparivāratvāt / [323|11-323|12] rājaparivāre rājopacāravat / [323|12] jñānaikaphalatvācca /",
+   "T1560": "餘五順下分，色一切斷三， 於中忍果六，餘三是智果。",
+   "T1558": "餘五順下分，色一切斷三。論曰：諸斷總立九種遍知，謂三界繫見諦所斷煩惱等斷立六遍知，所餘三界修道所斷煩惱等斷立三遍知。且三界繫見諦所斷煩惱等斷立六云何？謂欲界繫初二部斷立一遍知，初二部言即顯見苦見集所斷。次二部斷各立一遍知，次二部言顯見滅道斷。如是欲界見諦所斷煩惱等斷立三遍知。如欲界三上界亦爾，謂色無色二界所繫，亦初二斷一二各一合三，是見苦集見滅見道所斷法斷合立三義。如是名為三界見諦所斷法斷六種遍知。餘三界繫修道所斷煩惱等斷立三云何？謂欲界繫修道所斷煩惱等斷立一遍知，應知即是五順下分結盡遍知，并前立故。色界所繫修道所斷煩惱等斷立一遍知，應知此即是色愛盡遍知。無色界繫修道所斷煩惱等斷立一遍知，即一切結永盡遍知。此亦并前合立一故。如是名為三界修道所斷法斷三種遍知。以何因緣色無色界修道所斷煩惱等斷別立遍知非見所斷？以修所斷治不同故。如是所立九種遍知，應辯於中幾何道果？頌曰：於中忍果六，餘三是智果，",
+   "T1559": "偈曰：所餘下分色，一切惑滅盡，更三永斷智。釋曰：下分惑滅離為一，色流滅離為二，謂色欲永斷；一切流滅離為三，謂一切結滅盡永斷。云何色無色界修道所滅惑滅離立為別永斷智，見諦所滅不爾？修道所滅惑對治不同故。如此九永斷智，於前，偈曰：六忍果。釋曰：見諦所滅惑滅離為性，是八忍果。偈曰：餘智果。釋曰：下分惑滅離等三永斷智，是修道果，故說名智果。若爾，云何說為忍果？由忍是智伴類故，是故約忍說智事，譬如於王伴類說王事。復次與智同果故。"
+  },
+  "v066": {
+   "sa": "anāgamyaphalaṃ sarvā dhyānānāṃ pañca vāthavā / aṣṭau sāmantakasyaikā maulārūpyatrayasya ca // VAkK_5.66 //",
+   "sa-bhasya": "[323|13] anāgamyaphalaṃ sarvā dhyānānāṃ pañca vāthavā / [323|14] aṣṭau [323|15-323|16] vaibhāṣikamatena mauladhyānaphalaṃ pañca parijñā yā rūpārūpyāvacarakleśaprahāṇa svabhāvāḥ / [323|16] kāmāvacarakleśaprahāṇasyānāgamyaphalatvāt bhadantaghoṣakasya matenāṣṭau / [323|17] sa hi vītarāgasyāpi kāmāvacarāṇāṃ darśanaheyānāṃ prahāṇaṃ darśanamārgaphalamicchanti / [323|18] anāsravavisaṃyogaprāptilābhāt / avarabhāgīyaprahāṇaparijñā tvanāgamyaphalameva / [323|19] dhyānāntaraṃ dhyānavaddraṣṭavyam / ārupyāṇāṃ tu [323|20] sāmantakasyaikā [323|21] ākāśānantyāyatanasāmantakasyaikā rūparāgakṣayaparijñā phalam / [324|01] maulārūpyatrayasya ca // VAkK_5.66 // [324|02] maulānāṃ ca trayāṇāmārūpyāṇāmekaiva sarvasaṃyojanaparyādānaparijñā phalam /",
+   "T1560": "未至果一切，根本五或八， 無色邊果一，三根本亦爾。",
+   "T1558": "未至果一切，根本五或八， 無色邊果一，三根本亦爾，",
+   "T1559": "偈曰：非至果一切，本定五或八。釋曰：若約毘婆沙意判，一切九品永斷智是非至定果。何以故？依此地能滅三界見修所滅二部惑故。若論根本定果有五，謂色無色界相應惑滅離為性，一切欲界惑滅離是非至定果故。大德瞿沙意云：八永斷智是根本定果。何以故？此師意明，已離欲人若入四諦觀，一切欲界見諦惑滅離，是見道果。依此定成因，此定得無流相離果故，此永斷智屬此地果。下分惑滅離但是非至定果，中間定應知如定。若約無色定，偈曰：無色定果一。釋曰：空遍入道果，是一永斷智，謂離欲色界永斷智。偈曰：本三無色一。釋曰：根本三無色定，唯一永斷智為果，謂一切結滅盡為果。"
+  },
+  "v067": {
+   "sa": "āryamārgasya sarvāḥ dve laukikasya anvayasya ca / dharmajñānasya tisrastu ṣaṭ tatpakṣasya pañca ca // VAkK_5.67 //",
+   "sa-bhasya": "[324|03] āryamārgasya sarvāḥ [324|04] nava parijñāḥ phalam / [324|05] dve laukikasya [324|06] laukisya mārgasya dve avarabhāgīyarūparāgakṣayaparijñe phalam / [324|07] anvayasya ca / [324|08] anvayajñānasyāpi dveparijñe phalaṃ paścime / [324|09] dharmajñānasya tisrastu [324|10] paścimā eva tridhātukabhāvanāheya pratipakṣatvāt / [324|11] ṣaṭ tatpakṣasya pañca ca // VAkK_5.67 // [324|12] dharmajñānapakṣasya ṣaṭ parijñāḥ phalaṃ yā eva dharmajñāna kṣantijñānānām / [324|12-324|13] anvayajñānapakṣasya pañca yā evānvayakṣāntijñānānām / [324|13] pakṣagrahaṇena hi kṣāntijñānāni gṛhyante / [324|14] kasmānnaikaikaṃ prahāṇaṃ parijñā vyavasthāpyate / [324|14-324|15] yasmāt kṣāntiphalaṃ tāvat prahāṇaṃ vyavasthāpyate /",
+   "T1560": "俗果二聖九，法智三類二， 法智品果六，類智品果五。",
+   "T1558": "俗果二聖九，法智三類二， 法智品果六，類智品果五。論曰：於此九中且應先辯與忍智道為果差別。忍果有六，謂三界繫見斷法斷六種遍知。智果有三，謂順下分色愛一切結盡遍知，由此三遍知是修道果故。如何忍果說為遍知？諸忍皆是智眷屬故，如王眷屬假立王名。或忍與智同一果故。今次應辯與靜慮地眷屬根本為果差別。未至靜慮果具有九，謂此為依能斷三界見修所斷煩惱等故。根本靜慮果五或八。所言五者，毘婆沙師說根本地唯能永斷色無色攝煩惱等故，欲界所繫煩惱等斷彼唯許是未至果故。所言八者，尊者妙音說根本地亦與欲界諸煩惱等為斷對治。諸有先離欲界染者，依根本地入見諦時，於欲界繫見斷法斷，許別道引無漏得故，由此亦是彼見道果。除順下分結盡遍知，以彼唯是未至果故，無容修彼斷對治故。中間靜慮如根本說。今次應辯與無色地眷屬根本為果差別。無色邊地果唯有一，謂依空處近分地道得色愛盡遍知果故。前三根本果亦唯一，謂依無色前三根本得一切盡遍知果故。今次應辯與世俗道及諸聖道為果差別。俗道果二，謂俗道力唯能獲得順下分盡及色愛盡遍知果故。聖道果九，謂聖道力遍能永斷三界法故。今次應辯與法類智為果差別。法智果三，謂法智力能斷三界修所斷故，得後三果。類智果二，謂類智力但能永斷色無色界修所斷故，得後二果。今次應辯與法類智同品諸道為果差別。法智品果六，謂即是前法智、法忍所得六果。類智品果五，謂即是前類智、類忍所得五果。品言通攝智及忍故。",
+   "T1559": "偈曰：聖道果一切。釋曰：九永斷智皆是聖道果。偈曰：世道二。釋曰：若約世道論，下分惑及色界惑滅離，此二永斷智但是世道果。偈曰：類爾。釋曰：類智果亦有二，謂最後二。偈曰：法智三。釋曰：法智由通能對治三界修道所滅惑故，以最後三永斷智為果。偈曰：二類，六五永斷智。釋曰：法智類道以六永斷智為果，謂法忍法智果類智類道以五為果，謂類忍類智果。由說類故，通攝忍及智。云何不立一滅離為永斷智？由安立忍果為滅故。"
+  },
+  "v068": {
+   "sa": "anāsravaviyogāpterbhavāgravikalīkṛteḥ / hetudvayasamudghātāt parijñā dhātvatikramāt // VAkK_5.68 //",
+   "sa-bhasya": "[324|16] anāsravaviyogāpterbhavāgravikalīkṛteḥ / [324|17] hetudvayasamudghātāt parijñā [324|18] yatraitāni trīṇi kāraṇāni bhavanti tat prahāṇaṃ parijñocyate / [324|18-325|01] pṛthagjanasya tāvadanāsravā visaṃyogaprāptirnāsti bhavāgravikalīkaraṇaṃ ceti nāsya prahāṇaṃ parijñākhyāṃ labhate / [325|01] āryasyāpi yat kṣāntiphalaṃ tāvat prahāṇam / [325|01-325|02] tatra yāvat duḥkhe 'nvayajñānakṣāntāvanāsravā visaṃyogaprāptirasti na tu bhavāgravikalīkṛṭam / [325|02-325|03] duḥkhe 'nvayajñāne ubhayamasti na tu hetudvayasamudghātaḥ / [325|03-325|04] samudayadarśanaprahātavyasya sarvatragahetoraprahīṇatvāt / [325|04] anyeṣu dharmānvayajñāneṣu sarvaṃ trayamasti / [325|04-325|05] atastāsvavasthāsu prahāṇaṃ parijñākhyāṃ labhate / [325|05] jñānaphalaṃ tu prahāṇam / ataśca kāraṇatrayāt parijñākhyāṃ labhate / [325|06] caturthācca [325|07] dhātvatikramāt // VAkK_5.68 // [325|08] yadā dhātuṃ samatikrāmati / [325|08-325|09] kṛtsnadhātuverāgyāt ubhayasaṃyogaviyogaṃ pañcamaṃ kāraṇamāhurapare / [325|09-325|10] yaḥ prakāraḥ prahīṇo yadi tatrānyena tadālambanena kleśena visaṃyukto bhavatīti / [325|10-325|11] sa tu nāsya ubhayahetusamudghātāt dhātusamatikramācceti na brūmaḥ /",
+   "T1560": "得無漏斷得，及缺第一有， 滅雙因越界，故立九遍知。",
+   "T1558": "何故一一斷不別立遍知，唯就如前九位建立？頌曰：得無漏斷得，及缺第一有， 滅雙因越界，故立九遍知。論曰：有漏法斷雖多體位，而四緣故立九遍知，且由三緣立六忍果，謂得無漏離繫得故、缺有頂故、滅雙因故。諸斷要具如是三緣立遍知名，闕則不爾。如異生位有滅雙因，無無漏斷得，未缺有頂故，雖亦得斷不名遍知。若聖位中從入見諦至苦類忍現行以前，雖有已得無漏斷得，未缺有頂、未滅雙因，至苦類智集法忍位，雖亦缺有頂猶未滅雙因，未滅見集斷諸遍行因故。至後法智類智位中諸所得斷，三緣具故，於一一位建立遍知，具由四緣立三智果，謂於前三加越界故。言越界者，謂此界中煩惱等法皆全離故。有立離俱繫亦是一緣故，立遍知緣總有五種。離俱繫者，謂此雖斷未立遍知，要離所餘緣此境或方可建立。此離俱繫與滅雙因及越界緣，用無別故，雖義有異而不別說。雖諸越界位皆滅雙因，而滅雙因時非皆越界故，滅雙因外別立越界緣，滅三地雙因未立遍知故。",
+   "T1559": "是故偈曰：得無流離故、損有頂分故、拔除二因故，斷智。釋曰：若於滅中具有三因，可說為永斷智。凡夫無有由無流得滅離，亦無損有頂分，是故凡夫所得滅不名永斷智。若聖人有忍果滅，於此滅中乃至在苦類忍有無流永離至得，未有損有頂分。於苦類智具有此二義，無拔除二因義，見集所滅遍行因未滅故，於餘法類智中具有三義，是故於此位中所有滅離得永斷智名。此滅是智果，由前三因及第四因，說名永斷智。偈曰：過界故。釋曰：若人出離界，由離欲一切界故，得二結相離，彼說是第五因。若於中與能緣彼為境別惑相離，此義可然。此出離界不異拔除二因故，是故不須立出離界義為第五因。"
+  },
+  "v069": {
+   "sa": "naikayā pañcabhiryāvaddarśanasthaḥ samanvitaḥ / bhāvanāsthaḥ punaḥ ṣaḍibharekayā vā dvayena vā // VAkK_5.69 //",
+   "sa-bhasya": "[325|12] kaḥ katibhiḥ parijñābhiḥ samanvāgataḥ / [325|13] naikayā pañcabhiryāvaddarśanasthaḥ samanvitaḥ / [325|14] pṛthagjanastāvannaiva samanvāgataḥ / [325|14-325|15] āryo 'pi darśanamārgastho yāvatsamudayadharmajñānakṣāntiṃ naiva samanvāgataḥ / [325|15] samudaye dharmajñāna ekayā samanvāgataḥ / [325|15-325|16] samudaye 'nvayajñāne dvābhyām / [325|16-325|17] nirodhe dharmajñāne tisṛbhhirnirodhānvayajñāne catasṛbhirmārgadharmajñāne pañcabhiḥ / [325|18] bhavanāsthaḥ punaḥ ṣaṅbhirekayā vā dvayena vā // VAkK_5.69 // [325|19-325|20] bhāvanāmārgasthaḥ punarāryapudgalo mārgānvayajñāne ṣaḍibhiḥ parijñābhiḥ samanvāgato yāvat kāmavairāgyaṃ na prāptaḥ / [325|20-325|21] parihīṇo vā tataḥ kāmavairāgyaṃ prāptaḥ pūrvaṃ paścād vā ekayā 'varabhāgīyaprahāṇaparijñayā / [325|21-325|22] arhattvaṃ prāpta ekayaiva sarvasaṃyojanaparyādānaparijñayā / [325|22-325|23] parihīṇo 'pi rūpāvacareṇa paryavasthānenaikayā 'varabhāgīyaprahāṇaparijñayā / [325|23-325|24] rūpavairāgyaṃ prāpto dvabhyāmavarabhāgīyaprahāṇarūparāgakṣayaparijñābhyām / [325|24] prahīṇo 'pyārūpyāvacareṇa paryavasthānenābhyāmeva / [325|24-325|25] kiṃ punaḥ kāraṇamanāgāmyarhatorekaiva parijñā vyavasthāpyate na bhūyasyaḥ / [325|25-325|01] yasmāt",
+   "T1560": "住見諦位無，或成一至五， 修成六一二，無學唯成一。",
+   "T1558": "誰成就幾遍知？頌曰：住見諦位無，或成一至五， 修成六一二，無學唯成一。論曰：異生定無成遍知理。若諸聖者住見諦位，從初乃至集法忍時，於諸遍知亦未成就。至集法智、集類忍時唯成就一。至集類智、滅法忍時便成就二。至滅法智、滅類忍時便成就三。至滅類智、道法忍時便成就四。至道法智、道類忍時便成就五。住修道位道類智為初，乃至未得全離欲界染及離欲退皆成就六。至全離欲色愛未盡，或先離欲從道類智未起色盡勝果道前，唯成一遍知，謂順下分盡。從色愛盡及無學位起色纏退亦一如前。有色愛者從色愛永盡，先離色者從起色盡道至未全離無色愛前成下分盡色愛盡二。從無學退起無色纏成二遍知，名如前說。住無學位唯成就一，謂一切結永盡遍知。",
+   "T1559": "何人得幾永斷智相應？偈曰：無與一至五，在見位相應。釋曰：凡夫人與永斷智無相應。若聖人在見諦道中，乃至在集法忍，亦不與此相應。於集法智與一相應，於集類智與二相應，於滅法智與三相應，於滅類智與四相應，於道法智與五相應，於道類忍亦與五相應，未離見位故。偈曰：住修復與六，乃至與一二。釋曰：若聖人在修位中，謂道類智等與六相應，乃至未離欲欲界及已退，次從此位若至離欲欲界位，或前或後，與一下分惑滅離永斷智相應。若至阿羅漢果，更與一相應，謂一切結永斷智相應。若退由色界上心惑，但與一下分惑永斷智相應。若至離欲色界位，與二相應，謂與下分惑及色界惑永斷智相應。若退，由無色界上心惑，亦但與此二相應。何因唯阿那含及阿羅漢安立與一一永斷智相應，不立與多相應？"
+  },
+  "v070": {
+   "sa": "tāsāṃ saṃkalanaṃ dhātuvairāgyaphalalābhataḥ / ekāṃ dve pañca ṣaṭ kaścijjahātyāpnoti pañca na // VAkK_5.70 // samāptaḥ parijñāprasaṅgaḥ // abhidharmakośe 'nuśayanirddeśo nāma pañcamaṃ kośasthānaṃ samāptamiti // śrīlāmāvākasya yadatra puṇyam /",
+   "sa-bhasya": "[326|01] tāsāṃ saṃkalanaṃ dhātuvairāgyaphalalābhataḥ / [326|02-326|03] dvābhyāṃ kāraṇābhyāṃ parijñānāṃ saṃkalanaṃ bhavatyekatvena vyavasthāpanaṃ dhātuvairāgyāt phalaprāptitaśca / [326|03] tayoścāvasthayoretadubhayaṃ bhavati / [326|03-326|04] ataḥ sarvaṃ prahāṇaṃ saṃkalayyaikā parijñocyate / [326|05] atha kaḥ kati parijñāstyajati labhate vā / [326|06] ekāṃ dve pañca ṣaṭ kaścijjahātyāpnoti pañca na // VAkK_5.70 // [326|07] ekāṃ tyajati arhattvāt kāmavairāgyād vā parihīyamāṇaḥ / [326|07-326|08] dve parijñe tyajatyanāgāmī rūpavītarāgaḥ kāmavairāgyāt parihīyamāṇaḥ / [326|08-326|09] pañca tyajati vītarāgapūrvī mārgānvayajñāne / [326|09-326|10] sa hyavarabhāgīyaprahāṇaparijñālābhe pūrvikāḥ pañca parijñāstyajati / [326|10] ṣaṭ parijñāstyajatyānupoūrvikaḥ kāmavairāgyāt / lābhe 'pyevameva / [326|10-326|11] kaścidekāṃ parijñāṃ labhate / [326|11] yaḥ kaścidapūrvā labhate / [326|11-326|12] kaścid dve yaḥ kevalādārūpyadhātuvairāgyāt parihīyate / [326|12] kaścit ṣaṭ yo 'nāgāmiphalāt parihīyate / [326|12-326|13] pañca tu nai kaścillabhate / [326|14] samāptaḥ parijñāprasaṅgaḥ // ===================================================================== [326|15-326|16] abhidharmakośabhāṣye 'nuśayanirddeśo nāma pañcamaṃ kośasthānaṃ samāptmiti // [326|17] śrīlāmāvākasya yadatra puṇyam /",
+   "T1560": "越界得果故，二處集遍知， 捨一二五六，得亦然除五。",
+   "T1558": "何緣不還、阿羅漢果總集諸斷立一遍知？頌曰：越界得果故，二處集遍知。論曰：具二緣故，於一切斷總集建立為一遍知：一者越界、二者得果。唯彼兩位具足二緣，故彼遍知總集為一。誰捨誰得幾種遍知？頌曰：捨一二五六，得亦然除五。論曰：言捨一者，謂從無學及色愛盡全離欲退。言捨二者，謂諸不還從色愛盡起欲纏退，及彼獲得阿羅漢時。言捨五者，謂先離欲後入見諦道類智時，得下分盡捨前五故。言捨六者，謂未離欲所有聖者得離欲時。得亦然者，謂有得一得二得六，唯除得五。言得一者，謂得未得，及從無學起色纏退。言得二者，謂從無學起無色界諸纏退時。言得六者，謂退不還。因辯隨眠，分別斷竟。",
+   "T1559": "由此義。偈曰：算彼由離界，及至沙門果。釋曰：由二種因計算，永斷智安立為一。何者為二？由離欲諸界及得沙門果此二位中具有二因，是故合一切滅離立為一一永斷智。復次何人捨幾永斷智及得亦爾？偈曰：有人捨一二五六，無得五。釋曰：捨一者，若從阿羅漢果退，及從離欲欲界退。捨二者，阿那含人離欲色界已，後退離欲欲界。捨五者，若人先已離欲欲界，後在道類智位。何以故？此人得下分惑滅離時捨前五永斷智。捨六者，若人次第修，由離欲欲界，如捨得亦爾。有人得一，若人得未曾得。有得二，若人退無色界離欲。有得六，若人退阿那含果。無退六還得五。論永斷智竟。"
+  }
+ }
+}

@@ -1,0 +1,227 @@
+{
+ "slug": "abhidharmakosa-c04-2",
+ "title": "俱舍論・分別業品（4.13–4.26）",
+ "family": "sa",
+ "intro": "《阿毘達磨俱舍論》第四品〈分別業品〉頌 4.13–4.26，一頌一節（頌號依 Pradhan 本，GRETIL 標 VAkK_品.頌）。五欄：梵本頌、梵本自釋（bhāṣya）、玄奘《俱舍論本頌》、玄奘《俱舍論》、真諦《俱舍釋論》；論本欄自該頌（含引出該頌的提問句）起、到下一頌前的釋文止。玄奘《俱舍論》常把數頌合為一個「頌曰」再一併解釋，區塊中按頌切開，釋文因此都落在區塊末頌；真諦本逐句引偈、隨句解釋，與梵本自釋的節奏相近。稱友 Yaśomitra《明了義釋》Sphuṭārthā 是自釋的疏，不收。",
+ "units": [
+  {
+   "id": "v013",
+   "label": "4.13　無表三律儀"
+  },
+  {
+   "id": "v014",
+   "label": "4.14　初律儀八種"
+  },
+  {
+   "id": "v015",
+   "label": "4.15　受離五八十"
+  },
+  {
+   "id": "v016",
+   "label": "4.16　俱得名尸羅"
+  },
+  {
+   "id": "v017",
+   "label": "4.17　八成別解脫"
+  },
+  {
+   "id": "v018",
+   "label": "4.18　未至九無間"
+  },
+  {
+   "id": "v019",
+   "label": "4.19　住別解無表"
+  },
+  {
+   "id": "v020",
+   "label": "4.20　不律儀亦然"
+  },
+  {
+   "id": "v021",
+   "label": "4.21　住定道成中"
+  },
+  {
+   "id": "v022",
+   "label": "4.22　住律不律儀"
+  },
+  {
+   "id": "v023",
+   "label": "4.23　表正作成中"
+  },
+  {
+   "id": "v024",
+   "label": "4.24　有覆及無覆"
+  },
+  {
+   "id": "v025",
+   "label": "4.25　成表非無表"
+  },
+  {
+   "id": "v026",
+   "label": "4.26　定生得定地"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sa",
+   "lang": "sa",
+   "label": "梵本頌",
+   "who": "《阿毘達磨俱舍論本頌》Abhidharmakośakārikā・GRETIL（參 Pradhan 1975、Gokhale 1946）"
+  },
+  {
+   "id": "sa-bhasya",
+   "lang": "sa",
+   "label": "梵本自釋",
+   "who": "《阿毘達磨俱舍論》Abhidharmakośabhāṣya・GRETIL（Pradhan 1975，Hackett／Lusthaus 校）"
+  },
+  {
+   "id": "T1560",
+   "lang": "lzh",
+   "label": "玄奘頌本",
+   "who": "玄奘譯《阿毘達磨俱舍論本頌》・唐",
+   "work": "T1560"
+  },
+  {
+   "id": "T1558",
+   "lang": "lzh",
+   "label": "玄奘論本",
+   "who": "玄奘譯《阿毘達磨俱舍論》・唐 651–654 年",
+   "work": "T1558"
+  },
+  {
+   "id": "T1559",
+   "lang": "lzh",
+   "label": "真諦釋論",
+   "who": "真諦譯《阿毘達磨俱舍釋論》・陳 563–567 年",
+   "work": "T1559"
+  }
+ ],
+ "works": [
+  "T1558",
+  "T1559",
+  "T1560"
+ ],
+ "anchors": [
+  {
+   "work": "T1560",
+   "range": [
+    "T29n1560_p0316a09",
+    "T29n1560_p0316a09"
+   ]
+  },
+  {
+   "work": "T1558",
+   "range": [
+    "T29n1558_p0072b07",
+    "T29n1558_p0074b16"
+   ]
+  },
+  {
+   "work": "T1559",
+   "range": [
+    "T29n1559_p0229b25.2",
+    "T29n1559_p0231c15"
+   ]
+  }
+ ],
+ "cells": {
+  "v013": {
+   "sa": "avijñaptistridhā jñeyā saṃvarāsaṃvaretarā / saṃvaraḥ prātimokṣākhyo dhyānajo 'nāsravastathā // VAkK_4.13 //",
+   "sa-bhasya": "[205|13] avijñaptistridhā jñeyā saṃvarāsaṃvaretarā / [205|14] saṃvaraścāsaṃvaraśca / tābhyāṃ cetaro naivasaṃvaro nāsaṃvaraḥ / [205|14-205|15] dauḥśīlyaprasarasya saṃvaraṇaṃ saṃrodhaḥ saṃvaraḥ / [205|15] tatra punaḥ [205|16] saṃvaraḥ prātimokṣākhyo dhyānajo 'nāsravastathā // VAkK_4.13 // [205|17] trividhaḥ saṃvaraḥ / prātimokṣasaṃvara ihatyānāṃ kāmāvacaraṃ śīlam / [205|17-205|18] dhyānasaṃvaro rūpāvacaraṃ śīlam / [205|18] anāsravasaṃvaro 'nāsravaṃ śīlam / tatra punaḥ",
+   "T1560": "無表三律儀，不律儀非二。 律儀別解脫，靜慮及道生，",
+   "T1558": "傍論已了，復應辯前表無表相。頌曰：無表三律儀，不律儀非二。論曰：此中無表，略說有三：一者律儀、二不律儀、三者非二謂非律儀非不律儀。能遮能滅惡戒相續故名律儀。如是律儀差別有幾？頌曰：律儀別解脫，靜慮及道生。論曰：律儀差別，略有三種：一別解脫律儀，謂欲纏戒；二靜慮生律儀，謂色纏戒；三道生律儀，謂無漏戒。",
+   "T1559": "偈曰：無教應知三，護不護異二。釋曰：此無教，一名護；二名不護；三異此二，謂非護非非護。能遮能滅破戒相續，故說名護。偈曰：護波羅提木叉，定生及無流。釋曰：此護有三品：波羅提木叉護者，若生此界，謂欲界戒；定護者，謂色界戒；無流護者，謂無流戒。"
+  },
+  "v014": {
+   "sa": "aṣṭadhā prātimokṣākhyaḥ dravyatastu caturvidhaḥ / liṅgato nāmasaṃcārāt pṛthak te cāvirodhinaḥ // VAkK_4.14 //",
+   "sa-bhasya": "[205|19] aṣṭadhā prātimokṣākhyaḥ [205|20-205|21] bhikṣusaṃvaro bhikṣuṇīsaṃvaraḥ śikṣamāṇāsaṃvara śrāmaṇerasaṃvaraḥ śrāmaṇerīsaṃvaraḥ upāsakasaṃvara upāsikāsaṃvara upavāsasaṃvaraśca / [205|21-205|22] eṣo 'ṣṭavidhasaṃvaraḥ prātimokṣasaṃvara ityākhyāyate / [205|22] nāmata eṣo 'ṣṭavidhaḥ / [205|23] dravyatastu caturvidhaḥ / [205|24] bhikṣusaṃvaraḥ śramaṇerasaṃvara upāsakasaṃvara upavāsasaṃvaraśca / [205|24-205|25] ityeṣa caturvidhaḥ prātimokṣasaṃvarastu dravyataḥ / [205|25] pratiniyatalakṣaṇatvāt / [205|25-205|26] bhikṣusaṃvarādbhikṣuṇīsaṃvaro nānyaḥ śrāmaṇerasaṃvarācca śikṣamāṇāśrāmaṇerīsaṃvarau / [205|26-205|27] upāsakasaṃvarādupāsikāsaṃvaro nānyaḥ / [205|27] kathaṃ jñāyate / [206|01] liṅgato nāmasaṃcārāt [206|02] liṅgamiti vyañjanasyākhyā yena strīpuruṣau liṅgyete / [206|02-206|03] liṅgato hi bhikṣubhikṣuṇyādīnāṃ nāmasaṃcāro bhavati / [206|03] kathaṃ kṛtvā / [206|03-206|04] parivṛtte hi vyañjane bhikṣurbhikṣuṇītyucyate bhikṣuṇī ca punarbhikṣuḥ / [206|04-206|05] śrāmaṇerītyucyate śrāmaṇerī ca punaḥ śikṣamāṇā ca śrāmaṇeraḥ / [206|05] upāsaka upāsiketyucyate upāsikā ca punarūpāsaka iti / [206|05-206|06] na ca vyañjanaparivṛttau pūrvasaṃvaratyāge kāraṇamasti nāpyapūrvasaṃvarapratilambhe / [206|06-206|07] tasmādabhinna eṣāṃ caturṇā saṃvarāṇāṃ tribhyaḥ svabhāvaḥ / [206|08-206|10] ya upāsakasaṃvarācchrāmaṇerasaṃvaraṃ samādatte tasmācca punarbhikṣusaṃvaraṃ kiṃ te saṃvarā virativṛddhiyogādanyo 'nya ucyante pañcadaśa viṃśativat dīnāraśateravacca āhosvit pṛthageva te sakalā jāyante / [206|10] āha / [206|11] pṛthak [206|12] avyāmiśrā eva te pṛthaglakṣaṇā upajāyante / [206|12-206|13] triṣu saṃvareṣu tisraḥ prāṇātipātaviratayo yāvanmadyapānaviratayaḥ / [206|13] evaṃ śeṣāḥ / ko nu tāsāṃ viśeṣaḥ / [206|13-206|14] nidānaviśeṣādviśeṣaḥ / [206|14] kathaṃ kṛtvā / [206|14-206|17] yathā yathā hi vahutarāṇi śikṣāpadāni samāditsate tathā tathā bahutarebhyo maddapramādapadebhyo nivartamāno bahutarebhyaḥ prāṇātipātādīnāṃ nidānebhyo nivartate viratīnāṃ ca nidāneṣu pravartata iti nidānaviśeṣādviratīnāṃ viśeṣaḥ / [206|17-206|18] evaṃ cāsati bhikṣusaṃvaraṃ pratyācakṣāṇastrīnapi saṃvarānvijahyāddayorapi tatrāntarbhāvāt / [206|18] na caitadiṣṭam / tasmāt pṛthageva te saṃvarāḥ / [206|19] te cāvirodhinaḥ // VAkK_4.14 // [206|20] te ca trayo 'pi saha vartante / nottarasaṃvarasamādānāt purvakasya tyāgaḥ / [206|20-206|21] mā bhūt bhikṣusaṃvaraparityāgādanupāsaka eveti /",
+   "T1560": "初律儀八種，實體唯有四。 形轉名異故，各別不相違，",
+   "T1558": "初律儀相差別云何？頌曰：初律儀八種，實體唯有四， 形轉名異故，各別不相違。論曰：別解脫律儀，相差別有八：一苾芻律儀、二苾芻尼律儀、三正學律儀、四勤策律儀、五勤策女律儀、六近事律儀、七近事女律儀、八近住律儀。如是八種律儀相差別，總名第一別解脫律儀。雖有八名，實體唯四：一苾芻律儀、二勤策律儀、三近事律儀、四近住律儀。唯此四種別解律儀皆有體實，相各別故。所以者何？離苾芻律儀，無別苾芻尼律儀；離勤策律儀，無別正學、勤策女律儀；離近事律儀，無別近事女律儀。云何知然？由形改轉，體雖無捨得，而名有異故。形謂形相，即男女根。由此二根男女形別，但由形轉，令諸律儀名為苾芻、苾芻尼等，謂轉根位，令本苾芻律儀名苾芻尼律儀，或苾芻尼律儀名苾芻律儀；令本勤策律儀名勤策女律儀，或勤策女律儀及正學律儀名勤策律儀；令本近事律儀名近事女律儀，或近事女律儀名近事律儀。非轉根位有捨先得得先未得律儀因緣，故四律儀非異三體。若從近事律儀受勤策律儀，復從勤策律儀受苾芻律儀，此三律儀為由增足遠離方便立別別名。如隻雙金錢及五十二十，為體各別具足頓生。三種律儀體不相雜，其相各別具足頓生。三律儀中具三離殺，乃至具足三離飲酒，餘數多少隨其所應。既爾相望同類何別？由因緣別，相望有異。其事云何？如如求受多種學處，如是如是能離多種憍逸處時，即離眾多殺等緣起。以諸遠離依因緣發，故因緣別遠離有異。若無此事，捨苾芻律儀，爾時則應三律儀皆捨，前二攝在後一中故。既不許然，故三各別。然此三種互不相違，於一身中俱時而轉，非由受後捨前律儀，勿捨苾芻戒便非近事等。",
+   "T1559": "偈曰：木叉戒八種。釋曰：何者為八？比丘戒、比丘尼戒、式叉摩那戒、沙彌戒、沙彌尼戒、優婆塞戒、優婆夷戒、優波婆娑戒。此八種護說名波羅提木叉戒，由名此護有八。若約實物，其數云何？偈曰：由實物有四。釋曰：四者謂比丘戒、沙彌戒、優婆塞戒、優波婆娑戒。此波羅提木叉護，若約實物唯有此四，體相定同故。比丘尼戒與比丘戒不異，式叉摩那戒、沙彌尼戒與沙彌戒不異，優婆夷戒與優婆塞戒不異。何以知然？偈曰：由根名異故。釋曰：根者是相，能別男女異故。由此根故，比丘、比丘尼等立有別名。云何如此？若轉根比丘成比丘尼、比丘尼成比丘、沙彌成沙彌尼，若沙彌尼、式叉摩那成沙彌，優婆塞成優婆夷、優婆夷成優婆塞，於轉根時無有因緣為捨前戒、無有因緣更得新戒，是故四種護體性不異於三。若人從優婆塞戒受沙彌戒、從沙彌戒受比丘戒，為此護由遠離增長故，說各各不同。譬如五十、二十，及如陀那羅婆底羅等，為諸護各各具生。偈曰：彼各。釋曰：此三種戒不相雜，各有別相生起。於三戒中有三種離殺生護，乃至三種離飲酒護，所餘亦爾。三種遠離有何差別？由緣起異故，遠離有差別。如如求欲受持多種學處，如此如此，遠離醉亂放逸處，能遠離最多殺生等因緣，於遠離緣起恒能得住。是故由緣起異，遠離有差別。若無如此義，若人捨比丘戒，應即捨三戒，前二入第三攝故。此義非所許，是故三護各有別體。偈曰：不相違。釋曰：此三共生，不由受後護棄捨前護。何以故？勿由捨比丘所受護即非優婆塞。"
+  },
+  "v015": {
+   "sa": "pañcāṣṭadaśasarvebhyo varjyebhyo viratigrahāt / upāsakopavāsasthaśramaṇoddeśabhikṣutā // VAkK_4.15 //",
+   "sa-bhasya": "[206|22] kathaṃ cāyamupāsako bhavati kathamupavāsastho yāvat bhikṣuḥ / [206|23-206|24] pañcāṣṭadaśasarvebhyo varjyebhyo viratigrahāt / upāsakopavāsasthaśramaṇoddeśabhikṣutā // VAkK_4.15 // [206|25] yathāsaṃkhyamanudeśo veditavyaḥ / [206|25-207|01] pañccabhyo varjanīyebhyo dharmebhyo viratisamādānādupāsakasaṃvarastho bhavati / [207|01-207|02] prāṇātipātādadattādānātkāmamithyācārāt mṛṣāvādātsurāmaireyamadyapānācca / [207|02-207|03] aṣṭābhyo viratisamādānādupavāsasthaḥ / [207|03-207|04] prāṇātipātādattādānābrahmacaryamṛṣāvādamadyapānebhyo gandhamālyavilepananṛtyagītavāditrāduccaśayanamahāśayanādakālabhojanācca / [207|04-207|05] daśabhyo viratisamādānācchrāmaṇero bhavati / [207|05] ebhya eva jātarūparajatapratigrahācca / [207|05-207|06] nṛtyagitavāditragandhamālyavilepanaṃ cātra dvayīkṛtya daśa bhavanti / [207|06-207|07] sarvebhya eva varjanīyebhyaḥ kāyavākkarmabhyaḥ viratisamādānāt bhikṣurityucyate / [207|07] sa eṣa prātimokṣasaṃvaraḥ /",
+   "T1560": "受離五八十，一切所應離。 立近事近住，勤策及苾芻，",
+   "T1558": "近事、近住、勤策、苾芻四種律儀云何安立？頌曰：受離五八十，一切所應離， 立近事近住，勤策及苾芻。論曰：應知此中如數次第，依四遠離立四律儀。謂受離五所應遠離，安立第一近事律儀。何等名為五所應離？一者殺生、二不與取、三欲邪行、四虛誑語、五飲諸酒。若受離八所應遠離，安立第二近住律儀。何等名為八所應離？一者殺生、二不與取、三非梵行、四虛誑語、五飲諸酒、六塗飾香鬘舞歌觀聽、七眠坐高廣嚴麗床座、八食非時食。若受離十所應遠離，安立第三勤策律儀。何等名為十所應離？謂於前八塗飾香鬘舞歌觀聽開為二種，復加受畜金銀等寶以為第十。若受離一切應離身語業，安立第四苾芻律儀。",
+   "T1559": "云何成優婆塞？云何成優波婆娑？乃至云何成比丘？偈曰：五八十一切，惡處受離故，優婆塞布薩，沙彌及比丘。釋曰：此說應知如次第於五種所應遠離法受持遠離故，是人即住優婆塞護。五所應遠離者，謂殺生、不與取、邪婬行、妄語、飲酒類醉處。於八種所應遠離法受持遠離故，是人即住優波婆娑護。八所應遠離者，謂殺生、不與取、非梵行、妄語、令醉飲、著香花觀聽舞歌等、眠坐高勝臥處、非時食。於十種所應遠離法受持遠離故，是人即住沙彌護。十所應遠離者，是前所說八，又受畜金銀等、著香花觀聽舞歌等，分為二故成十。一切所應遠離身口二業，由受持遠離故，是人即住比丘護。"
+  },
+  "v016": {
+   "sa": "śīlaṃ sucaritaṃ karma saṃvaraścocyate punaḥ / ādye vijñaptyavijñapto prātimokṣakriyāpathaḥ // VAkK_4.16 //",
+   "sa-bhasya": "[207|08] śīlaṃ sucaritaṃ karma saṃvaraścocyate [207|09] viṣamakarmaṇāṃ viratisamādānācchīlam / śītalatvāditi niruktiḥ / [207|10] \"sukhaśīlasamādānaṃ kāyo na paridahyata\" iti [207|11] gāthāvacanāt / vidvatpraśastatvātsucaritam / kriyāsvabhāvatvātkarma / [207|11-207|12] nanu cāvijñaptirakriyetyucyate / [207|12] sā kathaṃ kriyā bhāti / [207|12-207|13] na kurvanti tayā samāttayā lajjinaḥ pāpamityakriyetyucyate / [207|13] sāpi tu vijñapticittābhyāṃ kriyata iti kriyā bhavati / [207|14] kriyāhetutvāt kriyāphalatvāccetyapare / saṃvara iti kāyavācoḥ saṃvaraṇāt / [207|14-207|15] evaṃ tāvadaviśeṣeṇa prātimokṣasaṃvaraḥ saṃśabdyate / [207|16] punaḥ / [207|17] ādye vijñaptyavijñaptī prātimokṣakiyāpathaḥ // VAkK_4.16 // [207|18] saṃvarasamādānasya prathame vijñaptyavijñaptī prātimokṣa ityucyate / [207|18-207|19] pāpasya tena prātimokṣaṇādutsarjanādityarthaḥ / [207|19] svārthe vṛddhividhānādvaikṛtavaiśasavat / [207|19-207|20] prātimokṣasaṃvara ityapi kāyavāksaṃvaraṇāt karmapatha ityucyate / [207|20] maulasaṃgṛhītatvāt / [207|20-207|21] dvitīyādiṣu kṣaṇeṣui prātimokṣasaṃvara eva na prātimokṣaḥ / [207|21] pṛṣṭhaṃ ca na maulaḥ karmapathaḥ / [207|22] athaiṣāṃ saṃvarāṇāṃ kena kaḥ samanvāgataḥ / [207|23] prātimokṣānvitā aṣṭau [207|24] prātimokṣasaṃvareṇāṣṭau nikāyāḥ samanvāgatā bhikṣurbhikṣuṇī yāvadupavāsastho 'ṣṭamaḥ / [208|01] kiṃ khalu bāhyakānāṃ samādānaśīlaṃ nāsti / asti natu prātimokṣasaṃvaraḥ / [208|01-208|02] kiṃ kāraṇam / [208|02] nahi tadatyantaṃ pāpasya pratimokṣaṇāya saṃvartate / bhavasaṃniśritatvāt /",
+   "T1560": "俱得名尸羅，妙行業律儀。 唯初表無表，名別解業道，",
+   "T1558": "別解律儀名差別者，頌曰：俱得名尸羅，妙行業律儀， 唯初表無表，名別解業道。論曰：能平險業故名尸羅。訓釋詞者，謂清涼故。如伽他言：受持戒樂，身無熱惱，故名尸羅。智者稱揚，故名妙行。所作自體，故名為業。豈不無表亦名不作，如何今說所作自體？有慚恥者受無表力不造眾惡，故名不作。表思所造，得所作名。有餘釋言：是作因故、是作果故，名作無失。能防身語，故名律儀。如是應知，別解脫戒通初後位無差別名，唯初剎那表及無表，得別解脫及業道名。謂受戒時初表無表，別別棄捨種種惡故。依初別捨義，立別解脫名。即於爾時所作究竟，依業暢義立業道名，故初剎那名別解脫，亦得名曰別解律儀，亦得名為根本業道。從第二念乃至未捨，不名別解脫，名別解律儀；不名業道，名為後起。",
+   "T1559": "此波羅提木叉戒，偈曰：尸羅善行業，或說守護等。釋曰：能平不平等事故名尸羅。若《依尼六多論》，由冷故名尸羅。如佛說偈：「受持戒最樂，名色無燒熱。」聰慧人所稱讚故名善行。所造為性故名業。於前為不說耶？無教者稱無作，云何名業？由善受此有慚羞人，約惡法說名無作，此故意教業所作故說名業。餘師說：是業因業果，故說名業。如此由通義，立波羅提木叉護等別名。復次偈曰：初有教無教，波木叉業道。釋曰：若人正善受戒，初剎那有教無教，說名波羅提木叉，能受者因此解脫眾惡故。解脫者，棄捨為義。此亦名波羅提木叉護，從初乃至後時皆能遮防身口惡業故。從第二剎那以去，但名波羅提木叉護，不得名波羅提木叉。根本業名波羅提木叉，非後分業，業道亦爾。"
+  },
+  "v017": {
+   "sa": "prātimokṣānvitā aṣṭau dhyānajena tadanvitaḥ / anāsraveṇāryasattvāḥ antyau cittānuvartinau // VAkK_4.17 //",
+   "sa-bhasya": "[208|03] dhyānajena tadanvitaḥ / [208|04] dhyānāddhyāne vā jāto dhyānajaḥ / yo dhyānena samanvāgataḥ so 'vaśyaṃ dhyānasaṃvareṇa / [208|05] sāmantakamapyatra dhyānaṃ kṛtvocyate / yathā grāmasāmantakamapi grāma ityucyate / [208|06] astyasmin grāme śāleyaṃ kṣetramasti vraiheyamiti / [208|07] anāsraveṇāryasattvāḥ [208|08] āryapudgalā anāsraveṇa saṃvareṇa samanvāgatāḥ / te punaḥ śaikṣāśaikṣāḥ / [208|08-208|09] yaduktaṃ \"sahabhūhetāvucyamāne dvau saṃvarau cittānuvartināvi\"ti / [208|10] katamo tau / eṣāmeva trayāṇām [208|11] antyau cittānuvartinau // VAkK_4.17 // [208|12] dhyānasaṃvaro 'nāsravasaṃvaraśca / na prātimokṣasaṃvaraḥ / kiṃ kāraṇam / [208|12-208|13] anyacittācittakasyāpyanuvṛtteḥ / [208|13] punastāveva dhyānānāsravasaṃvarau prahāṇasaṃvarākhyāṃ labhete /",
+   "T1560": "八成別解脫，得靜慮聖者， 成靜慮道生，後二隨心轉。",
+   "T1558": "誰成就何律儀？頌曰：八成別解脫，得靜慮聖者， 成靜慮道生，後二隨心轉。論曰：八眾皆成就別解脫律儀，謂從苾芻乃至近住。外道無有所受戒耶？雖有，不名別解脫戒。由彼所受無有功能永脫諸惡依著有故。靜慮生者，謂此律儀從靜慮生、或依靜慮。若得靜慮者，定成此律儀。諸靜慮邊亦名靜慮，如近村邑得村邑名故。有說言於此村邑有稻田等，此亦應然。道生律儀聖者成就，此復有二：謂學、無學。於前分別俱有因中說二律儀是隨心轉，於此三內其二者何？謂靜慮生及道生二，非別解脫。所以者何？異心無心亦恒轉故。靜慮、無漏二種律儀，亦名斷律儀。",
+   "T1559": "復次如此等護，何護何人互相應？偈曰：應波木叉八。釋曰：與波羅提木叉護相應有八部，謂比丘比丘尼乃至優波婆娑住為第八。外道為無所受戒耶？有戒，非波羅提木叉護。何以故？彼戒非一向為解脫眾惡起，愛著三有故。偈曰：定生護得定。釋曰：從定生，於定生是護，名定生護。若人與定相應，是人必與定生護相應。此中近分定立為定，故說定生，譬如郭邑近處亦名郭邑。如世言：於此郭邑有舍利田，有餘穀田。偈曰：無流護聖人。釋曰：一切聖人與無流護相應。聖人謂有學無學。於前俱有因中，已說二護隨心生滅。於彼說何二護？於三中。偈曰：後二隨心起。釋曰：定護、無流護，隨心生住滅。波羅提木叉護則不爾。何以故？若異緣心人，此亦得生，後二不爾。"
+  },
+  "v018": {
+   "sa": "anāgamye prahāṇākhyau tāvānantaryamārgajau / saṃprajñānasmṛtī dve tu manaindriyasaṃvarau // VAkK_4.18 //",
+   "sa-bhasya": "[208|14] kasyāmavasthāyāmityāha [208|15] anāgamye prahāṇākhyau tāvānantaryamārgajau / [208|16] anāgamye tau dhyānānāsravasaṃvarau navasvānantaryamārgeṣu prahāṇasaṃvarāvityucyete / [208|17] tābhyāṃ dauḥśīlyasya tatsamutthāpakānāṃ ca kleśānāṃ prahāṇāt / [208|17-208|18] ata eva syāddhyānasaṃvaro na prahāṇasaṃvara iti catuṣkoṭikaṃ kriyate // [208|18-208|19] prathamā koṭiranāgamyānantaryamārgavarjyaḥ sāsravo dhyānasaṃvaraḥ / [208|19] dvitīyā anāgamyānantaryamārgeṣvanāsravaḥ / [208|20] tṛtīyā anāgamyānantaryamārgeṣu sāsravaḥ / [208|20-208|21] caturthī anāgamyānantaryamārgavarjyo 'nāsravasaṃvaraḥ / [208|21-208|22] evaṃ syādanāsravasaṃvaro na prahāṇasaṃvara iti catuṣkoṭikaṃ yathāyogaṃ veditavyam / [208|22] yattarhi bhagavatoktaṃ [208|23-208|24] \"kāyena saṃvaraḥ sādhu sādhu vācā 'tha saṃvaraḥ / manasā saṃvaraḥ sādhu sādhu sarvatra saṃvaraḥ / iti / [208|25] yaccoktaṃ \"cakṣurindriyeṇa saṃvarasaṃvṛto viharatī\"ti / [208|25-208|26] etau manaindriyasaṃvarau kiṃsvabhāvau / [208|26] naitāvavijñaptiśīlasvabhāvau / kiṃ tarhi / [209|01] saṃprajñānasmṛtī dve tu manaindriyasaṃvarau // VAkK_4.18 // [209|02-209|03] pratyekaṃ dvisvabhāvajñapanārthaṃ punardvigrahaṇaṃ mā yathāsaṃkhyaṃ vijñāyīti manaḥsaṃvaro 'pi smṛtisaṃprajñānasvabhāva iti / [209|03] indriyasaṃvaro 'pi / [209|04] idaṃ vicāryate / [209|04-209|05] kaḥ katamayā vijñaptyā 'vijñaptyā vā kiyantaṃ kālaṃ samanvāgata iti / [209|05] tatra",
+   "T1560": "未至九無間，俱生二名斷， 正知正念合，名意根律儀。",
+   "T1558": "依何位建立？頌曰：未至九無間，俱生二名斷。論曰：未至定中九無間道，俱生靜慮無漏律儀，以能永斷欲纏惡戒及能起惑名斷律儀。由此或有靜慮律儀非斷律儀，應作四句。第一句者，除未至定九無間道有漏律儀，所餘有漏靜慮律儀。第二句者，依未至定九無間道無漏律儀。第三句者，依未至定九無間道有漏律儀。第四句者，除未至定九無間道無漏律儀，所餘一切無漏律儀。如是或有無漏律儀非斷律儀，應作四句，准前四句如應當知。若爾，世尊所說略戒：身律儀善哉，善哉語律儀， 意律儀善哉，善哉遍律儀。又契經說：應善守護、應善安住眼根律儀。此意根律儀，以何為自性？此二自性非無表色。若爾，是何？頌曰：正知正念合，名意根律儀。論曰：為顯如是二種律儀，俱以正知正念為體，故列名已復說合言，謂意律儀慧念為體，即合二種為根律儀。故離合言顯勿如次。今應思擇，表及無表誰成就何？齊何時分？",
+   "T1559": "復次此二或名滅護。此名在何位？偈曰：於未來二滅，九次第道生。釋曰：於未來定中，定護無流護。若在九次第道中，說名滅護。何以故？此二能滅破戒，及能滅發起破戒諸惑故。是故有定護非滅護，此有四句。第一句者，除未來定及無間道有流定護。第二句者，非至定及無間道無流護。第三句者，非至定及無間道有流護。第四句者，除非至定及無間道無流護。如此有無流護非滅護亦有四句，如理應知。若爾，佛世尊所說偈：「由身護善哉，口護亦善哉， 依意護善哉，一切護善哉。」復有別說：比丘！眼根善護所守護住。此意護、根護自性云何？此二非無教戒性。云何？偈曰：合善慧正念，各說意根護。釋曰：為顯二護各具二性故合離說。欲顯次第，意護以善慧正念為性，根護亦爾。此義今應思：何人與何有教無教，幾時得相應？"
+  },
+  "v019": {
+   "sa": "prātimokṣasthito nityamatyāgā dvartamānayā / avijñaptyānvitaḥ pūrvāt kṣaṇādūrdhvamatītayā // VAkK_4.19 //",
+   "sa-bhasya": "[209|06] prātimmokṣasthito nityamatyāgādvartamānayā / [209|07] avijñaptyā 'nvitaḥ [209|08-209|09] yaḥ prātimokṣāsaṃvarasthaḥ pudgala uktaḥ sa yāvattāmavijñaptir na tyajati tāvattayā vartamānayā nityaṃ samanvāgataḥ / [209|10] pūrvāt kṣaṇādūrdhvamatītayā // VAkK_4.19 // [209|11][ prathamāt kṣaṇādūrdhvamatītayā 'pi samanvāgataḥ / [209|11-209|12] atyāgāditi sarvatrādhikṛtaṃ veditavyam / [209|12] yathā prātimokṣasaṃvarastha uktaḥ",
+   "T1560": "住別解無表，未捨恒成現， 剎那後成過，",
+   "T1558": "且辯成無表律儀不律儀。頌曰：住別解無表，未捨恒成現， 剎那後成過，",
+   "T1559": "此中偈曰：若住波木叉，與現應至捨，與無教相應。釋曰：若人住波羅提木叉護，乃至未捨無教，於中間恒與現世無教相應。偈曰：前念後與過。釋曰：從初剎那後，與過去無教亦得相應，乃至棄捨，此句應知一切處。"
+  },
+  "v020": {
+   "sa": "tathaivāsaṃvarastho 'pi dhyānasaṃvaravān sadā / atītājātayā āryastu prathame nābhyatītayā // VAkK_4.20 //",
+   "sa-bhasya": "[209|13] tathaivāsaṃvarastho 'pi [209|14-209|15] asaṃvarastho 'pi yāvadasaṃvaraṃ na tyajati tāvannityamavijñaptyā vartamānayā samanvāgataḥ / [209|15] kṣaṇādūrdhvamatītayā 'pi / [209|16] dhyānasaṃvaravān sadā / [209|17] atītājātayā [209|18-209|19] dhyānasaṃvarasya lābhī nityamatītānāgatābhyāmavijñaptibhyāṃ samanvāgataḥ ātyāgāt / [209|19] prathame hi kṣaṇe sa janmāntaratyaktaṃ dhyānasaṃvaramatītaṃ labhate / [209|20] āryastu prathame nābhyatītayā // VAkK_4.20 // [209|21] āryastu pudgalo 'pyevamanāsravyā / ayaṃ tu viśeṣaḥ / [209|21-209|22] sa prathame kṣaṇe nātītayā samanvāgato mārgasya pūrvamanutpāditatvāt /",
+   "T1560": "不律儀亦然。 得靜慮律儀，恒成就過未， 聖初除過去，",
+   "T1558": "不律儀亦然。 得靜慮律儀，恒成就過未， 聖初除過去，",
+   "T1559": "如說住波羅提木叉護人。偈曰：住不護亦爾。釋曰：若人住於不護，乃至未捨不護，於中恒與現世不護無教相應。從初剎那後，亦與過去相應。偈曰：有定護相應，與過去未來。釋曰：若得定生護，恒與過去未來無教相應，乃至未棄捨。何以故？若過去生中所棄捨過去定生護，於初剎那中即得。偈曰：聖初非與過。釋曰：若聖人與無流護亦爾。此是聖人差別，謂若初得無流護，則不與過去相應，於前世未曾得無流道故。"
+  },
+  "v021": {
+   "sa": "samāhītāryamārgasthau tau yuktau vartamānayā / madhyasthasyāsti cedādau madhyayā ūrdhvaṃ dvikālayā // VAkK_4.21 //",
+   "sa-bhasya": "[210|01] samāhitāryamārgasthau tau yuktau vartamānayā / [210|02-210|03] tau dhyānānāsravasaṃvarānvitau samāhitaryamārgasamāpannau vartamānayā avijñaptyā samanvāgatau yathākramaṃ na tu vyutthitau / [210|03-210|04] saṃvarāsaṃvarasthānāṃ tāvadeṣa vṛttāntaḥ / [210|05] athedānīṃ madhyasthasya / [210|06] madhyasthasyāsti cedādau madhyayā [210|07] yo naiva saṃvare nāsaṃvare sthitaḥ sa madhyasthaḥ / [210|07-210|08] tasya nāvaśyamavijñaptirasti / [210|08] yasya tvasti dauḥśīlyaśīlāṅgādisaṃgṛhītā sa ādau madhyayā samanvāgataḥ / [210|09] vartamānā hyavijñaptiratītānāgatayormadhyād [210|10] ūrdhvaṃ dvikālayā // VAkK_4.21 // [210|11] prathamāt kṣaṇādūrdhvamatītayā vartamānayā ca / ātyāgāditi vartate / [210|11-210|12] kimasaṃvarasthaḥ kadācitkuśalayā vijñaptyā samanvāgato bhavati saṃvarastho vā punarakuśalayā bhavati /",
+   "T1560": "住定道成中。 住中有無表，初成中後二，",
+   "T1558": "住定道成中。論曰：住別解脫補特伽羅，未捨以來恒成現世，此別解脫律儀無表。初剎那後亦成過去，前未捨言遍流至後，無散無表有成未來，不隨心色勢微劣故。如說安住別解律儀，住不律儀應知亦爾，謂至未捨惡戒以來恒成現世，惡戒無表初剎那後亦成過去。諸有獲得靜慮律儀，乃至未捨恒成過未，餘生所失過去定律儀，今初剎那必還得彼故。一切聖者無漏律儀，過去未來亦恒成就，有差別者，謂初剎那必成未來非成過去，此類聖道先未起故。若有現住靜慮彼道，如次成現在靜慮道律儀，非出觀時有成現在。已辯安住善惡律儀，住中云何？頌曰：住中有無表，初成中後二。論曰：言住中者，謂非律儀非不律儀，彼所起業未必一切皆有無表。若有無表，即是善戒或是惡戒種類所攝，彼初剎那但成現在。然現在世處過未中，故以成中說成現在。初剎那後未捨以來，恒成過現二世無表。若有安住律不律儀，亦有成惡善無表不。",
+   "T1559": "偈曰：住定及聖道，與現世相應。釋曰：若人與定護、無流護相應，若入定觀及聖道觀，是人次第與現世無教相應，若出觀則不爾。若人住於護不護，此事已說。若約中住人云何？偈曰：中住若有二，初中。釋曰：若人不住於護不護，說此人名中住，此人不必定有無教。若有惡戒及戒分所攝無教，於初與中相應，此現世在過去未來中故名中。偈曰：後二時。釋曰：從初剎那後，則與過去相應，又與現世相應，乃至棄捨。"
+  },
+  "v022": {
+   "sa": "asaṃvarasthaḥ śubhayāśubhayā saṃvare sthitaḥ / avijñaptyānvito yāvat prasādakleśavegavān // VAkK_4.22 //",
+   "sa-bhasya": "[210|13] bhavan kadā kiyantaṃ vā kālamityāha [210|14-210|15] asaṃvarasthaḥ śubhayā 'śubhayā saṃvare sthitaḥ / avijñaptyānvito yāvat prasādakleśavegavān // VAkK_4.22 // [210|16-210|18] yena prasādavegenāsaṃvarasthasya kuśalā 'vijñaptirutpadyate stavavandanādikriyāṃ kurvataḥ yena ca kleśavegena saṃvarasthasyākuśalā 'vijñaptirutpadyate vadhabandhanatāḍanādikriyāṃ kurvataḥ tau yāvadanuvartete tāvatte apyavijñaptī / [210|18-210|19] sa ādye kṣaṇe vartamānayaivāvijñaptyā samanvāgato bhavatyanyeṣvatītayā 'pi / [210|19] avijñaptyadhikāraḥ samāptaḥ /",
+   "T1560": "住律不律儀，起染淨無表， 初成中後二，至染淨勢終。",
+   "T1558": "設有成就，為經幾時？頌曰：住律不律儀，起染淨無表， 初成中後二，至染淨勢終。論曰：若住律儀，由勝煩惱作殺縛等諸不善業，由此便發不善無表；住不律儀，由淳淨信作禮佛等諸勝善業，由此亦發諸善無表。乃至此二心未斷來，所發無表恒時相續，然其初念唯成現在，自茲以後通成過現。",
+   "T1559": "若人住於不護，為有時與善無教相應不？若人住於護，為有時與惡無教相應不？若相應，復幾時？偈曰：住不護與善，住護復與惡，與無教相應，乃至淨污疾。釋曰：若人住於不護，由善信心強疾作禮塔等事，則生善無教。若人住於護，由煩惱心強疾作打縛他等事，則生惡無教。此二乃至相續未斷，無教於此時恒相續生。此人於初剎那與現世無教相應，於餘剎那與過去亦相應。分別說無教已。"
+  },
+  "v023": {
+   "sa": "vijñaptyā tu punaḥ sarve kurvanto madhyayānvitāḥ / atītayā kṣaṇādūrdhvamātyāgāt nāstyajātayā // VAkK_4.23 //",
+   "sa-bhasya": "[210|20] vijñaptyā tu punaḥ sarve kurvanto madhyayānvitāḥ / [210|21] sarve saṃvarāsaṃvaramadhyasthā yāvadijñaptiṃ kurvanti tāvattayā vartamānayā samanvāgatāḥ / [210|22] atītayā kṣaṇādūrdhvamātyāgāt [210|23] prathamāt kṣaṇādūrdhvamātyāgādatītayā vijñaptyā samanvāgato bhavati / [210|24] nāstyajātayā // VAkK_4.23 // [211|01] anāgatayā tu vijñaptyā na kaścit samanvāgataḥ /",
+   "T1560": "表正作成中，後成過非未，",
+   "T1558": "已辯無表，成表云何？頌曰：表正作成中，後成過非未，",
+   "T1559": "偈曰：復一切與教，正作與中應。釋曰：一切人於護不護及中住，乃至造有教業未竟，是時中與現世有教相應。偈曰：剎那後與過，至捨。釋曰：從初剎那後乃至捨，與過去有教相應。偈曰：非來應。釋曰：無人與未來有教相應。"
+  },
+  "v024": {
+   "sa": "nivṛtānivṛtābhyāṃ ca nātītābhyāṃ samanvitaḥ / asaṃvaro duścaritaṃ dauḥśīlyaṃ karma tatpathaḥ // VAkK_4.24 //",
+   "sa-bhasya": "[211|02] nivṛtānivṛtābhyāṃ ca nātītābhyāṃ samanvitaḥ / [211|03] atītābhyāmapi nivṛtānivṛtāvyākṛtābhyāṃ vijñaptibhyāṃ na kaścitsamanvāgataḥ / [211|04] durbalasya hi dharmasya prāptirapi durbalā nānubandhībhavati / kiṅkṛtaṃ tasyā daurbalyam / [211|05] cittakṛtam / cittasyāpi tarhi nivṛtāvyākṛtasya mā bhūt / naitadevam / [211|05-211|06] jaḍā hi vijñaptiḥ paratantrā ca / [211|06] na caivaṃ cittam / [211|06-211|07] sā hi vijñaptirdurbalenotthāpitā durbalatarā bhavati / [211|08] asaṃvarastha ityuktam / ko 'yamasaṃvaro nāma / [211|09] asaṃvaro duścaritaṃ dauḥśīlyaṃ karmaṃ tatpathaḥ // VAkK_4.24 // [211|10] asaṃvarasyeme paryāyaśabdāḥ / tatra kāyavācorasaṃvaraṇādasaṃvaraḥ / [211|10-211|11] sadbhiḥ kutsitatvādaniṣṭaphalatvād duścaritam / [211|11] śīlavipakṣāddauḥśīlyam / kāyavākkarmatvātkarma / [211|12] maulasaṃgṛhītatvātkarmapathaḥ / syādvijñaptyā samanvāgato nāvijñaptyeti catuṣkoṭikam / [211|13] tatra tāvat /",
+   "T1560": "有覆及無覆，唯成就現在。 惡行惡戒業，業道不律儀，",
+   "T1558": "有覆及無覆，唯成就現在。論曰：諸有安住律不律儀及住中者，乃至正作諸表業來恒成現表。初剎那後至未捨來恒成過去，必無成就未來表者，如無表釋。有覆無覆二無記表，定無有能成就過未，法力既劣得力亦微，是故無能逆追成者。此法力劣誰之所為？是心所為。若爾，有覆無記心等勿成過未。此責非理，表昧鈍故、依他起故；心等不然，無記表業從劣心起，其力倍劣彼能起心，故表與心成有差別。如前所說住不律儀，此不律儀名差別者，頌曰：惡行惡戒業，業道不律儀。論曰：此惡行等五種異名，是不律儀名之差別，是諸智者所訶厭故、果非愛故立惡行名。障淨尸羅故名惡戒、身語所造故名為業。根本所攝故名業道。不禁身語名不律儀。然業道名唯目初念，通初後位立餘四名，或成表業非無表等，應作四句。",
+   "T1559": "偈曰：與有覆無覆，過去不相應。釋曰：若有教或有覆或無覆，與過去不相應，未來亦爾。若法勢力弱，至得亦弱，不得相續。此勢力弱，何法所作？心所作。若爾，心所作有覆無記，勿勢力弱。是義不然，身口業昧鈍故、依他成故，心則不爾。此無覆有教，亦由弱力故意所起，是故其力最弱。於前已說，有人住於不護。何法名不護？偈曰：不護及惡行，惡戒或業道。釋曰：如此等是不護眾名。此中不能禁制惡中身口，故名不護。聰慧人所訶故、得非可愛果報故，故名惡行。善戒對治故，故名惡戒。身口所造故名業。根本所攝故名業道。有人與有教相應，不與無教相應，此義有四句。"
+  },
+  "v025": {
+   "sa": "vijñaptyaivānvitaḥ kurvanmadhyastho mṛducetanaḥ / tyaktānutpannavijñaptiravijñaptyāryapudgalaḥ // VAkK_4.25 //",
+   "sa-bhasya": "[211|14] vijñaptyaivānvitaḥ kurvanmadhyastho mṛducetanaḥ / [211|15-211|17] mṛdvyā cetanayā kuśalamakukśalaṃ vā kurvannaivasaṃvaranāsaṃvarasthito vijñaptyaiva samanvāgato bhavati nāvijñaptyā prāgevāvyākṛte anyatraupadhikapuṇyakriyāvastukarmapathebhyaḥ / [211|18] tyaktānutpannavijñaptiravijñaptyāryapudgalaḥ // VAkK_4.25 // [211|19-211|20] avijñaptyaiva samanvāgato na vijñaptyā yenāryapudgalena janmāntaraparivṛttau na tāvadvijñaptaṃ vā punarvihīnam / [211|20-211|21] uktaṃ saṃvarāsaṃvaramadhyasthānāṃ vijñaptyavijñaptisamanvāgamanavyavasthānam /",
+   "T1560": "成表非無表，住中劣思作。 捨未生表聖，成無表非表，",
+   "T1558": "其事云何？頌曰：成表非無表，住中劣思作， 捨未生表聖，成無表非表。論曰：唯成就表非無表者，謂住非律儀非不律儀，以微劣思造善造惡，唯發表業尚無無表，況無記思所發表業，除有依福及成業道。唯成無表非表業者，謂易生聖補特伽羅，表業未生或生已捨，俱成非句如應當知。",
+   "T1559": "此中偈曰：但與教相應，中住下心作。釋曰：若故意弱，或作善或作惡，此人住於非護非不護，但與有教相應，不與無教相應，何況作無記，除有攝福德業處及業道。偈曰：捨未生有教，餘無教聖人。釋曰：但與無教相應不與有教相應者，若聖人已易生，若未作身口業、或已捨身口業。與二相應者，若人住波羅提木叉護，起身口業，或住非護非非護，由最上品故意，或作善或作惡。與二不相應者，除前三句。"
+  },
+  "v026": {
+   "sa": "dhyānajo dhyānabhūmyaiva labhyate anāsravastayā / āryayā prātimokṣākhyaḥ paravijñapanādibhiḥ // VAkK_4.26 //",
+   "sa-bhasya": "[211|22] athaite saṃvarāḥ kathaṃ labhyante / [211|23] dhyānajo dhyanabhūmyaiva labhyate [211|24-211|25] yadā dhyānabhūmikaṃ cittaṃ pratilabhyate maulīyaṃ sāmantakīyaṃ vā sāsravaṃ tadā dhyānasaṃvaro 'pi sahabhūtatvāt / [211|26] anāsravastayā / [211|27] āryayā [211|28] tayaiva dhyānabhūmyā 'nāsravayā labhyamānayā 'nāsravaḥ saṃvaro labhyate / [211|28-211|30] tatra ṣaṭ dhyānabhūmayo 'nāsravā bhavanti catvāri dhyānāni anāgamyasyānantaraṃ ceti paścātpravedayiṣyāmaḥ / [212|01] prātimokṣākhyaḥ paravijñapanādibhiḥ // VAkK_4.26 // [212|02] prātimokṣasaṃvarastu paravijñaptito labhyate / yadyenaṃ paro vijñapayati asau ca param / [212|03] sa punaḥ saṃghādvā pudgalādvā / saṃdhādbhīkṣubhikṣuṇīśikṣamāṇāsaṃvarāḥ pudgalāddanye / [212|04] daśavidhā upasaṃpaditi vinayavibhāṣikāḥ / tasya ūpasaṃgrahaṇārthamādiśabdaḥ / [212|04-212|09] svayaṃbhūtvena buddhānāṃ pratyekabuddhānāṃ ca niyāmāvakrāntyā pañcakānām ehibhikṣukayā yaśaḥprabhṛtīnām śāsturabhyupagamānmahākāśyapasya praśnārādhanena sodāyinaḥ gurudharmābhyupagamena mahāprajāpatyāḥ dūtena dharmadinnāyāḥ vinayaddharapañcamena pratyantimeṣu janapadeṣu daśavargeṇa madhyeṣu janapadeṣu śaraṇagamanaṃ traivācikena ṣaṣṭibhadravargapūgopasaṃpāditānāmiti teṣāṃ nāvaśyaṃ vijñaptyadhīnaḥ prātimokṣasaṃvaraḥ / [212|09-212|10] sa punareṣa prātimokṣāsaṃvaraḥ samādīyamānaḥ kiyantaṃ kālaṃ samādātavyaḥ /",
+   "T1560": "定生得定地，彼聖得道生。 別解脫律儀，得由他教等，",
+   "T1558": "說住律儀不律儀等成就表業無表業已，此諸律儀由何而得？頌曰：定生得定地，彼聖得道生， 別解脫律儀，得由他教等。論曰：靜慮律儀由得有漏根本近分靜慮地心，爾時便得，與心俱故。無漏律儀由得無漏根本近分靜慮地心，爾時便得，亦心俱故。彼聲為顯前靜慮心。復說聖言簡取無漏，六靜慮地有無漏心，謂未至、中間及四根本定，非三近分，如後當辯。別解脫律儀由他教等得，能教他者說名為他，從如是他教力發戒，故說此戒由他教得。此復二種，謂從僧伽、補特伽羅有差別故。從僧伽得者，謂苾芻苾芻尼及正學戒。從補特伽羅得者，謂餘五種戒。諸毘柰耶毘婆沙師，說有十種得具戒法，為攝彼故復說等言。何者為十？一由自然，謂佛獨覺。二由得入正性離生，謂五苾芻。三由佛命善來苾芻，謂耶舍等。四由信受佛為大師，謂大迦葉。五由善巧酬答所問，謂蘇陀夷。六由敬受八尊重法，謂大生主。七由遣使，謂法授尼。八由持律為第五人，謂於邊國。九由十眾，謂於中國。十由三說歸佛法僧，謂六十賢部共集受具戒。如是所得別解律儀，非必定依表業而發。",
+   "T1559": "說住護不護及中人安立至得有教無教義已，云何能得此護？偈曰：定生由定地得。釋曰：是時若得有流定地心，或根本定或近分定，是時即得定生護，以一時俱起故。偈曰：由聖依此無流。釋曰：若得此定地無流所依，即得無流護。此中有六定地，或皆無流，謂四定、非至、中間，此義後當說。偈曰：波木叉，由互令他等。釋曰：波羅提木叉護者，由令他方得，若他令彼，彼亦令他。此或從大眾得，或從一人得。從大眾得者，謂比丘、比丘尼、式叉摩那護。從一人得者，謂所餘諸護。有毘那耶，毘婆沙師說：受大戒有十種，為攝此故說等。何者為十？一由自然得大戒，如佛婆伽婆及獨覺。二由入正定聚得大戒，如憍陳如等五比丘得苦法智忍時。三由呼善來比丘得大戒，如耶舍等。四由信受大師得大戒，如摩訶迦葉。五由答問難得大戒，如須陀夷。六由信受八尊法得大戒，如大瞿耽彌。七由遣使得大戒，如達摩陳那比丘尼。八由能持毘那耶為第五，於邊地國得大戒。九由十部於中國得大戒。十由三說三歸得大戒，如六十賢部共集受戒。是諸人波羅提木叉護，非定隨有教。"
+  }
+ }
+}

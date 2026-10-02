@@ -1,0 +1,216 @@
+{
+ "slug": "abhidharmakosa-c04-6",
+ "title": "俱舍論・分別業品（4.95–4.107）",
+ "family": "sa",
+ "intro": "《阿毘達磨俱舍論》第四品〈分別業品〉頌 4.95–4.107，一頌一節（頌號依 Pradhan 本，GRETIL 標 VAkK_品.頌）。五欄：梵本頌、梵本自釋（bhāṣya）、玄奘《俱舍論本頌》、玄奘《俱舍論》、真諦《俱舍釋論》；論本欄自該頌（含引出該頌的提問句）起、到下一頌前的釋文止。玄奘《俱舍論》常把數頌合為一個「頌曰」再一併解釋，區塊中按頌切開，釋文因此都落在區塊末頌；真諦本逐句引偈、隨句解釋，與梵本自釋的節奏相近。稱友 Yaśomitra《明了義釋》Sphuṭārthā 是自釋的疏，不收。",
+ "units": [
+  {
+   "id": "v095",
+   "label": "4.95　一業引一生"
+  },
+  {
+   "id": "v096",
+   "label": "4.96　三障無間業"
+  },
+  {
+   "id": "v097",
+   "label": "4.97　三洲有無間"
+  },
+  {
+   "id": "v098",
+   "label": "4.98　僧破不和合"
+  },
+  {
+   "id": "v099",
+   "label": "4.99　能破者唯成"
+  },
+  {
+   "id": "v100",
+   "label": "4.100　苾芻見淨行"
+  },
+  {
+   "id": "v101",
+   "label": "4.101　贍部洲九等"
+  },
+  {
+   "id": "v102",
+   "label": "4.102　初後皰雙前"
+  },
+  {
+   "id": "v103",
+   "label": "4.103　棄壞恩德田"
+  },
+  {
+   "id": "v104",
+   "label": "4.104　打心出佛血"
+  },
+  {
+   "id": "v105",
+   "label": "4.105　破僧虛誑語"
+  },
+  {
+   "id": "v106",
+   "label": "4.106　污母無學尼"
+  },
+  {
+   "id": "v107",
+   "label": "4.107　破壞窣堵波"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sa",
+   "lang": "sa",
+   "label": "梵本頌",
+   "who": "《阿毘達磨俱舍論本頌》Abhidharmakośakārikā・GRETIL（參 Pradhan 1975、Gokhale 1946）"
+  },
+  {
+   "id": "sa-bhasya",
+   "lang": "sa",
+   "label": "梵本自釋",
+   "who": "《阿毘達磨俱舍論》Abhidharmakośabhāṣya・GRETIL（Pradhan 1975，Hackett／Lusthaus 校）"
+  },
+  {
+   "id": "T1560",
+   "lang": "lzh",
+   "label": "玄奘頌本",
+   "who": "玄奘譯《阿毘達磨俱舍論本頌》・唐",
+   "work": "T1560"
+  },
+  {
+   "id": "T1558",
+   "lang": "lzh",
+   "label": "玄奘論本",
+   "who": "玄奘譯《阿毘達磨俱舍論》・唐 651–654 年",
+   "work": "T1558"
+  },
+  {
+   "id": "T1559",
+   "lang": "lzh",
+   "label": "真諦釋論",
+   "who": "真諦譯《阿毘達磨俱舍釋論》・陳 563–567 年",
+   "work": "T1559"
+  }
+ ],
+ "works": [
+  "T1558",
+  "T1559",
+  "T1560"
+ ],
+ "anchors": [
+  {
+   "work": "T1560",
+   "range": [
+    "T29n1560_p0316a09",
+    "T29n1560_p0316a09"
+   ]
+  },
+  {
+   "work": "T1558",
+   "range": [
+    "T29n1558_p0092a14",
+    "T29n1558_p0094c04"
+   ]
+  },
+  {
+   "work": "T1559",
+   "range": [
+    "T29n1559_p0246c23",
+    "T29n1559_p0249a09"
+   ]
+  }
+ ],
+ "cells": {
+  "v095": {
+   "sa": "ekaṃ janmākṣipatyekam anekaṃ paripūrakam / nākṣepike samāpattī acitte prāptayo na ca // VAkK_4.95 //",
+   "sa-bhasya": "[258|13] ekaṃ janmākṣīpatyekam [258|14] ekameva janmākṣipatyekameva ca karma nānekaṃ janmeti nikāyasabhāgasyākhyā / [258|14-258|15] tatra hi labdhe jāta ityucyate / [258|15-258|16] yattarhi sthavirāniruddhenoktaṃ \"so 'haṃ tasyaikapiṇḍapātasya vipākena saptakṛtvastrayastriṃśeṣu deveṣūpapanno yāvadetahyrādye śākyakule jāta\" iti / [258|17] tena hyasau samṛdviṃ labdvā jātismaraḥ punaranyat puṇyaṃ kṛtavān / [258|17-258|18] tata utthānaṃ darśayati sma / [258|18-258|19] yathā manuṣyo dīnārottho 'nena sahasraṃ nirviśyāha ekena dīnāreṇāhamaita dīśvaryaṃ prāpta iti / [258|19] apare tvāhuḥ / [258|19-258|20] tasya taṃ piṇḍapātamadhiṣṭhānaṃ kṛtvā dānacetanānāṃ pravāho mahānutpannaḥ kayācit kiñcitphalaṃ parigṛhītamiti / [258|20-258|21] anekenāpyekamākṣipyate mā bhūt khaṇḍaśo nikāyasabhāgasyākṣepa iti / [258|22] ekena tu karmaṇā kliṣṭasya nikāyasabhāgasyeṣyate karma / [258|23] anekaṃ paripūrakam / [258|24] yathā citrakara ekayā vartyā rūpamālikhya vahvībhiḥ paripūrayati / [258|24-258|26] tathā hi tulye mānuṣye kaścit sakalendriyāṅgapratyaṅgo bhavativarṇakṛtipramāṇabalasaṃpadā vibhrājamānaḥ kaścideṣāṃ kenacidvikalaḥ / [258|26] na ca kevalaṃ karmaivākṣepakaṃ janmanaḥ / kiṃ tarhi / [258|27] anyadapi savipākam / sarvathā tu [259|01] nākṣepike samāpattī acitte prāptayo na ca // VAkK_4.95 // [259|02] avipākābhyāmapyacittasamāpattibhyāṃ nikāyasabhāgo nākṣipyate / [259|02-259|03] karmāsahabhūtatvāt / [259|03] prāptibhiśca karmaṇo 'nekaphalatvāt / [259|04] triṇyāvaraṇānyuktāni bhagavatā / karmāvaraṇaṃ kleśāvaraṇaṃ vipākāvaraṇaṃ ca / [259|04-259|05] teṣāṃ kaḥ svabhāvaḥ /",
+   "T1560": "一業引一生，多業能圓滿， 二無心定得，不能引餘通，",
+   "T1558": "又為一生但一業引、為多業引？頌曰：一業引一生，多業能圓滿。論曰：依我所宗應作是說：但由一業唯引一生，此一生言顯一同分，以得同分方說名生。若爾，何緣尊者無滅自言：我憶昔於一時於殊勝福田一施食異熟，便得七返生三十三天，七生人中為轉輪聖帝，最後生在大釋迦家豐足珍財多受快樂。彼由一業感一生中大貴多財及宿生智，乘斯更造感餘生福，如是展轉至最後身生富貴家得究竟果，顯由初力故作是言。譬如有人持金錢一，展轉貿易得千金錢。唱如是言：我本由有一金錢故獲大富樂。復有說者：彼於昔時一施食為依，起多勝思願，有感天上、有感人中，剎那不同熟有先後，故非一業能引多生，亦無一生多業所引。勿眾同分分分差別。雖但一業引一同分，而彼圓滿許由多業。譬如畫師先以一色圖其形狀後填眾彩。是故雖有同稟人身，而於其中有具支體諸根形量色力莊嚴，或有於前多缺減者，非唯業力能引滿生。一切不善善有漏法有異熟故皆容引滿，以業勝故但標業名。然於其中業俱有者能引能滿，隨業勝故。若不與業為俱有者，能滿非引，勢力劣故。如是二類其體是何？頌曰：二無心定得，不能引餘通。論曰：二無心定雖有異熟，而無勢力引眾同分，以與諸業非俱有故。得亦無力引眾同分，以與諸業非一果故。所餘一切皆通引滿。薄伽梵說：重障有三，謂業障、煩惱障、異熟障。",
+   "T1559": "偈曰：一業引一生。釋曰：但一生唯一業能引，不能引多生。生者是聚同分名，若得彼說名生。若爾，大德阿尼婁馱云何說言：我今由昔時所施一食果報故，七反生三十三天，七反作轉輪王已，乃至今猶於大富釋迦家生。由此業果報得大富果，及得憶持宿住事，更生別業。欲顯功能故說此言。譬如有人由一金錢作功力得千金錢，方說此言：我今由一金錢故得大富。復說此人，以此時施食為依止，諸故意相續最長大起。於中有諸故意，能引攝果報。不得多業感一生，勿分分所引聚同分成此聚同分，由一業所引許餘業。偈曰：多業能圓滿。釋曰：譬如畫師，由一色畫人形貌，以多色圓滿。何以故？於世間中有眾生同人聚同分，有具足根身及身分色形貌量力端正等相圓滿故，於人聚中最分明可愛。有餘人於中不具分，不但唯業能引生。何為所餘有果報法？若一切種。偈曰：二定非能引，無心及至得。釋曰：二無心定亦有果報，不能引聚同分，與業不俱起故。至得亦爾，與業不同果故。"
+  },
+  "v096": {
+   "sa": "ānantaryāṇi karmāṇi tīvrakleśo 'tha durgatiḥ / kauravāsaṃjñittvāśca matamāvaraṇatrayam // VAkK_4.96 //",
+   "sa-bhasya": "[259|06-259|07] ānantaryāṇi karmāṇi tīvrakleśo 'tha durgatiḥ / kauravāsaṃjñisattvāśca matamāvaraṇatrayam // VAkK_4.96 // [259|08] pañcānantaryāṇi karmāvaraṇam / [259|08-259|09] tadyathā mātṛvadhaḥ pitṛvadho 'rhadvadhaḥ saṃghabhedaḥ tathāgataśrīre duṣṭacittarudhirotpādanam / [259|09] tīvrakleśatā kleśāvaraṇam / dvividho hi kleśaḥ / [259|10] tivraśca ya abhikṣṇikaḥ tīkṣṇaśca yo 'dhimātraḥ / tatra yastīvraḥ sa āvaraṇam / [259|11] yathā śaṇṭhādīnām / [259|11-259|12] śakto hyadhimatravego 'pi kleśaḥ kādācitko nihantuṃ natu samūho 'pyājasrikaḥ / [259|12-259|13] ājasrike he kleśe tannirghātāya parākramakālaṃ na labhate / [259|13] tasya mṛduṃ pratītya madhya upajāyate / madhyaṃ pratītyādhimātraḥ / [259|14-259|15] tasmāt evāvaraṇaṃ trividhā durgatiḥ vipākāvaraṇaṃ sugateśca pradeśaḥ auttarakauravā asaṃjñisattvāśca / [259|15] kasyaitānyāvaraṇāni / [259|15-259|17] āryamārgasyāryamārgaprāyogikāṇāṃ ca kuśalamūlānām anyānyapi hyapāyādiniyatāni aṇḍajasaṃsvedajastrītvāṣṭamabhavayatāni karmāṇi vaktavyāni syuḥ / [259|17-259|19] yānyeva tu pañcabhiḥkāraṇaiḥ sudarśakāni pajñakāni adhiṣṭhānataḥ phalato gatitaḥ upapattitaḥ pudgalataśca tānyevoktāni nānyāni / [259|19] kleśāvaraṇaṃ caiṣāṃ sarvajaghanyam / tataḥ karmāvaraṇam / [259|19-259|20] tāmyāṃ hi dvitīye 'pi janmanyacikitso bhavatyuttarottarāvāhanāditi vaibhāṣikāḥ / [259|21] ānantaryāṇīti ko 'rthaḥ / [259|21-259|22] nāntarāyituṃ śakyāni vipākaṃ prati janmāntaraphalena karmāntareṇetyānantaryāṇi / [259|22] na tiraskartumityarthaḥ / [259|22-259|23] na vā tatkāriṇaḥ pudgalasyetaścyutasyāntaramasti narakopapattigamanaṃ pratītyanantaraḥ / [259|23] tadbhāva ānantaryam / [259|24] yasya dharmasya yogātso 'nantaro bhavati / śrāmaṇyavat /",
+   "T1560": "三障無間業，及數行煩惱， 并一切惡趣，北洲無想天。",
+   "T1558": "如是三障其體是何？頌曰：三障無間業，及數行煩惱， 并一切惡趣，北洲無想天。論曰：言無間業者，謂五無間業。其五者何？一者害母、二者害父、三者害阿羅漢、四者破和合僧、五者惡心出佛身血。如是五種名為業障。煩惱有二：一者數行，謂恒起煩惱。二者猛利，謂上品煩惱。應知此中唯數行者名煩惱障。如扇搋等，煩惱數行難可伏除，故說為障。上品煩惱雖復猛利，非恒起故易可伏除。於下品中數行煩惱雖非猛利而難伏除，由彼恒行難得便故。謂從下品為緣生中，中品為緣復生上品，令伏除道無便得生。故煩惱中隨品上下，但數行者名煩惱障。全三惡趣、人趣、北洲及無想天名異熟障。此障何法？謂障聖道及障聖道加行善根。又業障中理亦應說餘決定業，謂餘一切定感惡趣卵生濕生及女人身第八有等。然若有業，由五因緣易見易知，此中偏說，謂處、趣、生、果及補特伽羅。於諸業中唯五無間，具此五種易見易知，餘業不然故此不說。餘障廢立如應當知。此三障中煩惱與業二障皆重，以有此者第二生內亦不可治。毘婆沙師作如是釋：由前能引後，故後輕於前。此無間名為目何義？約異熟果決定更無餘業餘生能為間隔，故此唯目無間隔義。或造此業補特伽羅，從此命終定墮地獄中無間隔，故名無間。彼有無間，得無間名。與無間法合故名無間，如與沙門合故名沙門。",
+   "T1559": "佛世尊說：障有三種，謂業障、煩惱障、果報障。此三障體性云何？偈曰：無間等重業，染住惑惡道，北洲無想天，說此名三障。釋曰：有五無間業等，是名業障。謂殺母、殺父、殺阿羅漢、破僧和合、於如來身有害意出血，是名業障。染住惑，名煩惱障。惑有二種：一染住，謂恒行；二強利，謂重品。此中染住惑名煩惱障，譬如黃門等，惑強利，惑非障。何以故。若惑由重品故強利，此惑有時起不恒故，有時可滅。非輕品惑恒起。何以故？若惑恒起為滅，此不得人功時，此惑依輕品成中品，依中品成上品故。此惑是正障。三種惡道名果報障，善道一分亦爾，謂北洲人及無想天。此三障障何法？能障聖道及障聖道加行善根。復有餘業於惡道等報定，謂於卵生濕生、生女人身、生第八有中定，亦應說為業障。若業由五種因可了可說，立此業為障。何者為五？一由依、二由果、三由道、四由生、五由人，故但說五。於中惑障最麁，業障次麁。何以故？由此二於第二生，是人不可治。毘婆沙師說：後後能乘故，故次第說。無間者何義？於生果報中，無別業及別生果能遮礙。復次作此業人，若捨壽命，無間生地獄果，無法能礙。是人由與此法相應，於生地獄中無間故，說為無間，譬如沙門。復次此三種障，應知於何道中有。"
+  },
+  "v097": {
+   "sa": "triṣu dvipeṣvānantarya śaṇḍhā dīnāṃ tu neṣyate / alpopakārālajjitvāt śeṣe gatiṣu pañcasu // VAkK_4.97 //",
+   "sa-bhasya": "[259|25] athaiṣāmāvaraṇānāṃ katamat kasyāṃ gatau veditavyam / ekāntena tāvat [260|01] triṣu dvīpeṣvānantarya [260|02] nottarakurau nānyāsu gatiṣu / kuta evānyatra dhātau / tetṣvapi stripuruṣāṇāmeva / [260|03] śaṇḍā dīnāṃ tu neṣyate / [260|04] kiṃ kāraṇaṃ / tadevāsaṃvarābhāve kāraṇamuddiṣṭam / api ca [260|05] alpopakārālajjitvāt [260|06] yathākramaṃ mātāpitrosteṣāṃ ca / alpopakārau kilaiṣāṃ mātāpitarau / [260|06-260|07] vikalātmabhāvādhipatitvādalpasnehatvācca / [260|07-260|08] teṣāmapi na tīvraṃ hyapatrāpyaṃ mātāpitrorantike pratyupasthitaṃ yadvipādanādānantaryeṇa spṛśyeran / [260|08] ata eva tiryavapretānāmapi neṣyate / [260|09] paṭubuddhīnāṃ syādaśvājāneyavaditi bhadantaḥ / [260|09-260|10] manuṣyasyāpyamānuṣau mātāpitarau mārayato na syādānantaryam // [260|10] uktaṃ karmāvaraṇam // [260|11] śeṣe gatiṣu pañcasu // VAkK_4.97 // [260|12] ke punaḥ śeṣe / kleśavipākāvaraṇe / manuṣyeṣu vipākāvaraṇam / [260|12-260|13] kauravā deveṣvasaṃjñisattvāḥ / [260|13] kiṃsvabhāvānyānantaryāṇi / [260|13-260|14] catvāri kāyakarma ekaṃ vākkarma trīṇi prāṇātipāta ekaṃ mṛṣāvādaḥ ekaṃ prāṇātipātaprayogaḥ / [260|14-260|15] anupakramadharmāṇo hi tathāgatāḥ / [260|15] hetau phalopacārātsaṃghabheda ānantaryamuktam / [260|15-260|16] bhidyate vā 'neneti kṛtvā / [260|17] saṃghabhedastvasāmagrīsvabhāvo viprayuktakaḥ / [260|18] akliṣṭāvyākṛto dharmaḥ [260|19] asāmagrī nāna cittaviprayuktaḥ saṃskāro 'nivṛtāvyākṛtaḥ saṃghabhedaḥ / [260|19-260|20] sa kimānantaryaṃ bhaviṣyati naiva ca tena bhettā samanvāgataḥ /",
+   "T1560": "三洲有無間，非餘扇搋等， 少恩少羞恥，餘障通五趣。 此五無間中，四身一語業， 三殺一誑語，一殺生加行。",
+   "T1558": "三障應知何趣中有？頌曰：三洲有無間，非餘扇搋等， 少恩少羞恥，餘障通五趣。論曰：且無間業唯人三洲，非北俱盧餘趣餘界。於三洲內，唯女及男造無間業，非扇搋等。所以者何？即前所說彼無斷善不律儀因，即是此中無逆所以。又彼父母及彼己身，如次少恩少羞恥故。謂彼父母於彼少恩，為彼缺身增上緣故、又由於彼少愛念故。彼於父母慚愧心微，以無現前增上慚愧可言壞故觸無間罪。由此已釋，鬼及傍生雖害母等而非無間。然大德說：若覺分明亦成無間，如聰慧馬。若有人害非人父母不成逆罪，心境劣故。已辯業障唯人三洲，餘障應知五趣皆有。然於人趣唯北俱盧，在天趣中唯無想處。於前所辯三重障中，說五無間為業障體。五無間業其體是何？頌曰：此五無間中，四身一語業， 三殺一誑語，一殺生加行。論曰：五無間中四是身業、一是語業、三是殺生、一虛誑語根本業道、一是殺生業道加行，以如來身不可害故。破僧無間是虛誑語。既是虛誑語，何緣名破僧？因受果名，或能破故。若爾，僧破其體是何？",
+   "T1559": "若決定者，偈曰：於三洲無間。釋曰：於北洲及餘道皆無，何況餘界。於人道中男女二人能作此業。偈曰：黃門等不許。釋曰：何因是彼無？護因即是此因。復有別因。偈曰：少恩少慚羞。釋曰：次第父母於某、某於父母。父母於某恩少，由不具身分為增上故、愛念少故。某於父母不起重品慚羞，由破此慚羞，為無間罪所觸。由此因故，畜生鬼神道中不許有無間業。大德說：若智慧明了，有五無間，譬如聰慧馬故。若人殺非人父母，無無間業。說業障已。偈曰：餘障於五道。釋曰：何者為餘？謂惑障、果報障。果報障者，於人道中北洲人，於天道中無想天。此無間業體性云何？四身業為體，一口業為體，三殺生為性，一妄語為性，一殺生前分為性。諸佛如來不可殺害為法，於因立果名故，說僧和合破為無間業。僧由此因破，故因得破名。"
+  },
+  "v098": {
+   "sa": "saṃghabhedastvasāmagrīsvabhāvo viprayuktakaḥ / akliṣṭāvyākṛto dharmaḥ saṃghastena samanvitaḥ // VAkK_4.98 //",
+   "sa-bhasya": "[260|20] kiṃ tarhi / [260|21] saṃghastena samanvitaḥ // VAkK_4.98 //",
+   "T1560": "僧破不和合，心不相應行， 無覆無記性，所破僧所成，",
+   "T1558": "能所破人誰所成就？頌曰：僧破不和合，心不相應行， 無覆無記性，所破僧所成。論曰：僧破體是不和合性，無覆無記心不相應行蘊所攝，豈成無間？如是僧破因誑語生，故說破僧是無間果。非能破者成此僧破，但是所破僧眾所成。此能破人何所成就？",
+   "T1559": "此破其義云何？偈曰：僧破非和合，性非相應法，無染無記法。釋曰：和合者，謂與心不相應行無覆無記，僧破亦爾。此云何成無間業？能破人與此不相應，何為？偈曰：眾與此相應。釋曰：何以故？是破屬所破，不屬能破。"
+  },
+  "v099": {
+   "sa": "tadavadya mṛṣāvādastena bhettā samanvitaḥ / avīcau pacyate kalpam adhikairadhikā rujaḥ // VAkK_4.99 //",
+   "sa-bhasya": "[260|22] yo hi bhinnastasya bhedo na bhettuḥ / atha bhettā kena samanvāgataḥ / [260|23] sadavadyamṛṣāvādastena bhettā samanvitaḥ / [260|24] saṃghabhedāvadyena bhettā samanvāgataḥ / tat punarmṛṣāvādaḥ / [260|24-260|25] sa punaḥ saṃghabhedasahaje vāgvijñaptyavijñaptī / [260|25] sa ca tenāvadyena samanvāgato bhettā / [261|01] avīcau pacyate kalpan [261|02] antarakalpamavīcau mahānarake vipacyate / anyaistu nāvaśyamavīcau / [261|02-261|03] atha yena bahunyānantaryāṇi kṛtāni bhavanti anantarameva tāni vipacyante / [261|03-261|04] kiṃ tu taistasya bhavati / [261|05] adhhikairadhikā rujaḥ // VAkK_4.99 // [261|06-261|07] sahi bhūyobhirānantaryaistasminnavīcau ghanataraṃ sukumārataraṃ cāśrayaṃ labhate kāraṇāśca bahutarāstīvratarāśca yena dvitricatuṣpañcaguṇāṃ vedanāṃ vedayate / [261|07-261|08] kaḥ punareṣa saṃghaṃ bhanatti /",
+   "T1560": "能破者唯成，此虛誑語罪， 無間一劫熟，隨罪增苦增。",
+   "T1558": "破僧異熟何處幾時？頌曰：能破者唯成，此虛誑語罪， 無間一劫熟，隨罪增苦增。論曰：能破僧人成破僧罪，此破僧罪誑語為性，即僧破俱生語表無表業，此必無間大地獄中經一中劫受極重苦。餘逆不必生於無間，若作多逆罪皆於次生熟，如何多逆同感一生？隨彼罪增苦還增劇，謂由多逆感地獄中大柔軟身多猛苦具，受二三四五倍重苦。誰於何處能破於誰？破在何時？",
+   "T1559": "若爾，能破與何法相應？偈曰：依此妄語罪，能破與相應。釋曰：能破人與破僧和合罪相應，此罪謂妄語。復次此妄語，與僧和合破俱起有教無教，能破與此罪相應。偈曰：毘指一劫熟。釋曰：一別劫果報，於阿毘指大地獄熟，所餘無間業不決定於阿毘指大地獄熟。若人作多無間業，此多業悉無間熟，由此業是人何所得？偈曰：如增苦受增。釋曰：此人由多無間業熟，於阿毘指地獄得最大最厚柔軟依止，是苦惱事最多種最難忍。起由此二因，所受苦受二三四五分增。"
+  },
+  "v100": {
+   "sa": "bhikṣurdṛk carito vṛttī bhinatti anyatra bāliśān / śāstṛmārgāntarakṣāntau bhinnaḥ na vivasatyasau // VAkK_4.100 //",
+   "sa-bhasya": "[261|09] bhikṣurdu kvacarito vṛttī bhinatti / [261|10] bhikṣurbhinatti na gṛhī na bhikṣuṇyādayaḥ / sa ca dṛṣṭicarita eva na tṛṣṇācaritaḥ / [261|11] ṛtastho na bhinnavṛttastasyānādeyavākyatvāt / kva bhinatti / [261|12] atra bhagavān saṃnihitastataḥ / [261|13] anyatra [261|14] nahi śāstureva saṃnidhau śakyo bhettum / tathāgatānāṃ duṣprasahatvādādeyavākyatvācca / [261|15] kān bhinatti / [261|16] bāliśān / [261|17] pṛthagjanāneva nāryān pratyakṣadharmatvāt / tānapi na kṣāntilābhina ityapare / [261|17-261|18] kiyatā bhinnaḥ saṃgho bhavati / [261|19] śāstṛmārgāntarakṣāntau bhinnaḥ [261|20-261|21] yadā tebhyastathāgatādanyaḥ śāstā kṣamate tadupadiṣṭācca mārgādanyo mārga iyatā bhinnaḥ saṃgho vaktavyaḥ / [261|21] kiyantaṃ kālaṃ bhinna āste / tāmeva rātriṃ [261|22] na vivasatyasau // VAkK_4.100 // [261|23] aparyuṣita eva hi saṃghabhede saṃgho 'vaśyaṃ pratisaṃdhīyate / yo 'yaṃ saṃghabheda uktaḥ",
+   "T1560": "苾芻見淨行，破異處愚夫， 忍異師道時，名破不經宿。",
+   "T1558": "經幾時破？頌曰：苾芻見淨行，破異處愚夫， 忍異師道時，名破不經宿。論曰：能破僧者要大苾芻，必非在家、苾芻尼等。唯見行者，非愛行人。住淨行人，非犯戒者，以犯戒者言無威故。要異處破，非對大師，以諸如來不可輕逼，言詞威肅對必無能。唯破異生非破聖者，以諸聖者證法性故。有說：得忍亦不可破。為含二義說愚夫言，要所破僧忍師異佛，忍異佛說有餘聖道。應說僧破在如是時，此夜必和不經宿住。如是名曰破法輪僧，能障聖道輪、壞僧和合故。何洲人幾破法輪僧？",
+   "T1559": "何人能破僧和合？偈曰：比丘見好行，破。釋曰：在家不能破比丘，尼等亦不能破。是比丘多見行，非貪愛行，住於正行，由行不可訶，邪行不能破。何以故？此人教不可信受故。何處得破？偈曰：餘處。釋曰：若世尊在此處，異此處故得破。不得親對世尊，諸佛如來不可輕逼故、言教最可信受故。若破何人？偈曰：凡夫。釋曰：但破凡夫僧和合，不能破聖人，自證見正理法故。是凡夫未得忍前，餘師說如此。由幾量僧得破？偈曰：別師道忍時，已破。釋曰：是時彼僧忍受別師異如來，及信受別道異如來所說正道，由此量應說僧已破。破已，幾時得住？此夜。偈曰：不宿住。釋曰：大眾已破，不度此夜，必定更和合，是所說破僧和合。"
+  },
+  "v101": {
+   "sa": "cakrabhedaḥ sa ca mataḥ jambūdvīpe navādibhiḥ / karmabhedastriṣu dvipeṣu aṣṭabhiradhikaiśca saḥ // VAkK_4.101 //",
+   "sa-bhasya": "[261|24] cakrabhedaḥ sa ca mataḥ [261|25] dharmacakraṃ hi tadā bhagavato bhinnaṃ bhavati / mārgapravṛttiviṣṭhāpanāt / [261|25-261|26] ata eva cakrādaścocyate saṃghabhedaśca / [261|26] kva punaścakrabhedo bhavati / [262|01] jambūdvīpe [262|02] nānyeṣu dvīpeṣu / katibhirbhikṣubhiḥ / [262|03] navādibhiḥ / [262|04] navādiṃ kṛtvā / pareṇāniyamaḥ / aṣṭau bhikṣayaḥ saṃgho bhavati / navamo bhettā / [262|04-262|05] avaśyaṃ hi saṃghena dvayoḥpakṣayoḥ sthātavyam / [262|05] evaṃ bhinno bhavati / [262|05-262|06] anyastu saṃghabhedaḥ karmabhedād bhavati / [262|06] yadyekasīmāyāṃ vyagrāḥ karma kurvanti / sa caiṣa [262|07] karmabhedastriṣu dvīpeṣu [262|08] yeṣveva śāsanam / katibhirbhikṣubhiḥ [262|09] aṣṭābhiradhikaiśca saḥ // VAkK_4.101 // [262|10] cakrabhedastu ṣaṭsu kāleṣu na bhavati / katameṣu /",
+   "T1560": "贍部洲九等，方破法輪僧， 唯破羯磨僧，通三洲八等。",
+   "T1558": "破羯磨僧何洲人幾？頌曰：贍部洲九等，方破法輪僧； 唯破羯磨僧，通三洲八等。論曰：唯贍部洲，人少至九或復過此，能破法輪。非於餘洲，以無佛故。有世尊處方有異師。要八苾芻分為二眾，以為所破，能破第九，故眾極少猶須九人。等言為明過此無限。唯破羯磨通在三洲，極少八人，多亦無限。通三洲者，有聖教故。要一界中僧分二部別作羯磨，故須八人，過此無遮故亦言等。",
+   "T1559": "偈曰：說此名破輪。釋曰：何以故？是時佛世尊法輪已破，能障礙聖道生起故，故名輪破，或說僧破。此輪破何處得成？偈曰：剡浮洲。釋曰：但於剡浮洲破，餘處則無。由幾人得破？偈曰：九等。釋曰：定取九為破，過此無定。八比丘是名僧，第九為能破。何以故？僧必定應於二聚二助中住，若爾得破。別有僧破，從羯磨破成。若於一別住不和合作羯磨，是名羯磨破。此破，偈曰：三洲有破業。釋曰：於三洲等，若有如來正教。此由幾比丘成？偈曰：此由八及餘。釋曰：此中但作羯磨，不立十四破類法故，以八為定。是破輪，於六時不得成。"
+  },
+  "v102": {
+   "sa": "ādāvante 'rbudāt pūrvaṃ yugāccoparate munau / sīmāyāṃ cāpyabaddhāyāṃ cakrabhedo na jāyate // VAkK_4.102 //",
+   "sa-bhasya": "[262|11-262|12] ādāvante 'rbudāt pūrvaṃ yugāccoparate munau / sīmāyāṃ cāpyabaddhāyāṃ cakrabhedo na jāyate // VAkK_4.102 // [262|13] ādāvacirapravartite dharmacakre / ante parinirvāṇakāle bhagavataḥ / [262|13-262|14] etayorhi dvayoravasthayoḥ saṃgha ekaraso bhavati / [262|14-262|15] madhye 'pyarbudāt pūrvaṃ na bhidyate yāvacchāsane śīlārbudaṃ dṛṣṭyarbudaṃ ca notpannaṃ bhavati / [262|15-262|16] yugācca pūrvaṃ na bhidyate yāvacchrāvakāgrayugaṃ notpannaṃ bhavati / [262|16] bhinnanyāyaparivāsāttena ca pratisaṃdhānīyatvāt / [262|16-262|17] uparate munau śāstari parinirvṛte pratidvandvābhāvāt / [262|17-262|18] sīmāyāmabaddhāyāṃ yāvat sīmā na baddhā bhavati / [262|18-262|19] ekasīmāyāṃ hi pakṣadvayāvasthānātsaṃghabheda ityeṣu kālesu cakrabhedona bhavati / [262|19] na ca punaḥ sarveṣāṃ baddhānāṃ cakrabhedaḥ / karmādhīnatvāt /",
+   "T1560": "初後皰雙前，佛滅未結界， 於如是六位，無破法輪僧。",
+   "T1558": "於何時分無破法輪？頌曰：初後皰雙前，佛滅未結界， 於如是六位，無破法輪僧。論曰：初謂世尊轉法輪未久，後謂善逝將般涅槃時，此二時中僧一味故。於正戒見皰未起時，要二皰生方可破故。未立止觀第一雙時，法爾由彼速還合故。佛滅後時，無真大師為敵對故。未結界時，無一界中分二部故。於此六位無破法輪。非破法輪諸佛皆有，必依宿業有此事故。",
+   "T1559": "偈曰：初後頞浮前，雙前師滅時，未結別住時，破輪不得成。釋曰：初者轉法輪未久，後者世尊將般涅槃時，此二時中大眾恭敬，修同一味故無破。於中間，在頞浮陀前僧不破。於正法中，乃至戒頞浮陀、見頞浮陀未起時，於雙前亦不破，乃至二弟子奢摩他毘鉢舍那雙未起時，由已破不經宿故，由二更和合故。若大師已般涅槃時，無相對立故無破。乃至未結別住時亦無破。何以故？若共一別住安立二助，則名僧破。於此六時破輪不成。非一切佛皆有此破輪，此事依業成故。"
+  },
+  "v103": {
+   "sa": "upakāriguṇakṣetranirākṛtivipādanāt / vyañjanāntarito 'pi syāt mātā yacchoṇitodbhavaḥ // VAkK_4.103 //",
+   "sa-bhasya": "[262|20] kasmāt mātṛvadhādiṣvānantaryaṃ nānyatra / [262|21] upakāriyuṇakṣetranirākṛtivipādanāt / [262|22] mātāpitṛvadhe tāvadupakāriṇo nirākaraṇāt / kathaṃ tāvupakāriṇau / [262|22-262|23] ātmabhāvasya tatprabhavatvāt / [262|23] kiṃ tayornirākaraṇam / parityāgaḥ / guṇakṣetratvādarhadvadhād ānantaryam / [262|24-262|25] yadi punarmāturvyañjanaṃ parivṛttaṃ syāt piturvā tatraikasminnāmnāyo [263|01] vyañjanāntarito 'pi syāt [263|02] ata evocyate \"syāt puruṣaṃ jīvitādvacyaparopayenna pitaraṃ nārhantam / [263|02-263|03] ānantaryāvadyena ca spṛśyeta / [263|03] syānmāturvyañjanaṃ parivṛttaṃ syāditi / [263|03-263|04] syāt strīṃ jīvitādvyaparopayenna mātaraṃ nārhantīm ānantaryāvadyena ca spṛśyeta / [263|04-263|05] syāt piturvyañjanaṃ parivṛttaṃ syādi\"ti / [263|05] anyasyāḥ striyāḥ kalalaṃ prasrutamanyayā yonyā pītam / [263|05-263|06] katarā tasya mātā yāṃ ghnataḥ syādānantaryam / [263|07] mātā yacchoṇitodbhavaḥ // VAkK_4.103 // [263|08] yasyāḥ śoṇitādasāvudbhūtaḥ sattvaḥ sā 'sya mātā dvitīyā tu sarvakṛtyeṣvavalokyā / [263|09] sā hyāpāyikā poṣikā saṃvardhikā ca / [263|09-263|10] yadi mātari prayogaṃ kṛtvā 'nyāṃ mārayenna syādānantaryam / [263|10] amātṛprayogeṇa mārayettathāpi na syāt / [263|10-263|11] mañcatalāvalīnamātṛmāraṇaṃ cātrodāhārya dhāvakasya ca putreṇa masaka prayogeṇa piturmāraṇaṃ ca / [263|11-263|12] ekena prahāreṇa mātaramanyāṃ ca mārayato dve avijñaptī bhavataḥ / [263|12] vijñaptistvānantaryameva / [263|13] tasya karmaṇo balīyastvāt / paramāṇusaṃcitatvādvijñaptirapi dvidheti bhadantaghoṣakaḥ / [263|14-263|15] anarhatsaṃjñayā 'pi arhadghāte bhavatyānantaryam aham hanmītyāśrayāvadhāraṇāt / [263|15] yaḥ pitaramarhantaṃ hiṃsyāttasyāpyekameva syādānantaryamāśrayaikatvāt / [263|16] idamavadānaṃ kathaṃ nīyate \"gaccha śikhaṇḍinaṃ brūhi dve ānantarye bhavatā kṛte / [263|16-263|17] yacca pitā jīvitādvyaparopito yaccārhanni\"ti / [263|17] dvābhyāṃ kāraṇābhyāmiti vaktavyam / [263|18] dvābhyāṃ vā mukhābhyāṃ paribhāṣitaḥ / [263|18-263|19] kimavaśyaṃ tathāgatasyāsti kuṭuṣṭacittarudhirotpādanādānantaryam / [263|19] vadhābhiprāyasya syāt /",
+   "T1560": "棄壞恩德田，轉形亦成逆， 母謂因彼血，誤等無或有。",
+   "T1558": "且止傍論，應辯逆緣。頌曰：棄壞恩德田，轉形亦成逆， 母謂因彼血，誤等無或有，",
+   "T1559": "云何殺母等事中有無間業，於餘處無？偈曰：有恩功德田，由捨離除故。釋曰：於殺父母中，由捨有恩人。云何彼有恩？是自身生本故。云何捨彼？謂除彼命根。功德田者，謂阿羅漢。阿羅漢身是三界惑擇滅，及戒等陰器故，故名功德田。由除此身，故成無間業。若父母轉根，於此一依止中，偈曰：別根障亦有。釋曰：是故經中說云：為有如此不令男人離命根，非父非阿羅漢，而為無間罪所觸不？有，若母轉根。令女人離命根，非母非阿羅漢，而為無間罪所觸不？有，若父轉根。有女人柯羅邏墮，有別女人即取安置產門中，此人以何女為母？若殺於何女成無間業？偈曰：從血生是母。釋曰：若從此女人血成此人身，此女是其生母。於第二女人，一切事中皆應問聽。何以故？此女能飲此兒，及能長養教訓是非。若人於母行殺害方便，誤殺餘人，無無間業。不於自母行殺害方便，誤殺自母，亦無無間業。因子欲殺方便，母隱床中，父走餘處故死，此人成無間業。若人行一害事，殺母及殺餘人，二無教業並起，有教唯無間業，由此無間業力強故。大德瞿沙說：隣虛所成故，有教亦有二種。若不想是阿羅漢，殺阿羅漢，有無間業，謂我今必殺，於此依止意決定故。若人殺父，父是阿羅漢，此人但得一無間業，由依止一故。若爾，此《阿婆陀那經》云何將？經云：汝去語始看持，汝今造二無間業。由汝令父離命根，亦令阿羅漢離命根。顯此無間業由二因緣所成，故說此言。復次由此二門訶責彼人，故說此言。為決定於如來邊起惡心出血故，有無間業為不？若由殺意故，有無間業。"
+  },
+  "v104": {
+   "sa": "buddhe na tāḍanecchasya prahārānnordhvamarhati / nānantaryaprayuktasya vairāgyaphalasaṃbhavaḥ // VAkK_4.104 //",
+   "sa-bhasya": "[263|20] buddhe na tāḍanecchasya [263|21] yadi tāḍanābhitrāya utpādayenna syāt / yadyanarhati praharetsa ca prahārādūrdhvamarhan syāt [263|22] prahārānnordhvamarhati / [263|23] syādānantaryamiti vartate / nahi tena tatra prayogaḥ kṛtaḥ / [263|23-263|24] kimānantarye prayogaṃ kṛtvā tasminnavyāvartite vairāgyaṃ phalaṃ vā na prāpnuyāt / [263|25] nānantaryaprayuktasya vairāgyaphalasaṃbhavaḥ // VAkK_4.104 // [264|01-264|02] anyakarmaphalapathaprayogaṃ tu kṛtvāryamārgotpattau na punaḥ karmapathotpattirāśrayasyātyantaṃ tadviruddhatvāt /",
+   "T1560": "打心出佛血，害後無學無， 造逆定加行，無離染得果。",
+   "T1558": "打心出佛血，害後無學無。論曰：何緣害母等成無間非餘？由棄恩田、壞德田故。謂害父母是棄恩田。如何有恩？身生本故。如何棄彼？謂捨彼恩。德田謂餘阿羅漢等，具諸勝德及能生故。壞德所依，故成逆罪。父母形轉殺成逆耶？逆罪亦成，依止一故。由如是義，故有問言：頗有令男離命根，非父阿羅漢，而為無間罪觸不？曰：有，謂母轉形。頗有令女離命根，非母阿羅漢，而為無間罪觸不？曰：有，謂父轉形。設有女人羯剌藍墮，餘女收取置產門中生子。殺，何成害母逆？因彼血者身生本故。諸有所作應諮後母，能飲能養能長成故。若於父母起殺加行，誤殺餘人無無間罪。於非父母起殺加行，誤殺父母亦不成逆。如子執杖擊父身蚊，母隱在床謂餘而殺。若一加行害母及餘，二無表生，表唯逆罪，以無間業勢力強故。尊者妙音說有二表，表是積集極微成故。若害阿羅漢無阿羅漢想，於彼依止起定殺心，無簡別故亦成逆罪。若有害父，父是阿羅漢，得一逆罪，以依止一故。若爾，喻說當云何通？佛告始欠持：汝已造二逆，所謂害父、殺阿羅漢。彼顯一逆由二緣成，或以二門訶責彼罪。若於佛所惡心出血，一切皆得無間罪耶？要以殺心方成逆罪，打心出血無間則無。若殺加行時，彼非阿羅漢，將死方得阿羅漢果，能殺彼者有逆罪耶？無，於無學身無殺加行故。若造無間加行不可轉，為有離染及得聖果耶？頌曰：造逆定加行，無離染得果。論曰：無間加行若必定成，中間決無離染得果。餘惡業道加行中間，若聖道生，業道不起，依止與彼定相違故。於諸惡行無間業中何罪最重？",
+   "T1559": "偈曰：於佛打意無。釋曰：若人唯有打故意出佛血，則無無間業。若人於非阿羅漢行殺害事，害後成阿羅漢，得無間業不？偈曰：害後無學無。釋曰：於此人無無間業。何以故？此殺方便不於阿羅漢起故。若人已作無間方便，未轉方便時，為先得離欲及聖果不？偈曰：行無間前人，無離欲及果。釋曰：若人作無間業，方便必定應成。是方便時中，無離欲及得聖果，若不定則不如。若人於餘業道，作前方便道生時，得離欲及聖果，後業道不生。何以故？是今依止與彼業一向相違故。"
+  },
+  "v105": {
+   "sa": "saṃghabhede mṛṣāvādo mahāvadyatamo mataḥ / bhavāgracetanā loke mahāphalatamā śubhe // VAkK_4.105 //",
+   "sa-bhasya": "[264|03] eṣāmānantaryāṇāṃ katamat mahāsāvadyam / [264|04] saṃghamede mṛṣāvādo mahāvadyatamo mataḥ / [264|05-264|06] yaḥ saṃghabhedanimittaṃ mṛṣāvādo dharmādharmajñasya viparyayadyotanāt sa sarveṣāṃ duścaritānāṃ mahāvadyatamaḥ / [264|06] kiṃ kāraṇam / [264|06-264|07] tathāgatadharmaśarīraprahāritatvāt lokānāṃ ca svargāpavargamārgāntarāyakatvāt / [264|07-264|10] saṃghe hi bhinne lokasya niyāmāvakrantiphalaprāptivairāgyāsravakṣayāḥ pratibadhyante dhyānādhyayanasvādhyāyacintākarmāṇyapi na pravartante sadevanāgamanuṣyaṃ jagaccākulaṃ vimanaskaṃ vartate yāvat punarna pratisaṃdhito bhavatiyasmāccāvicau kalpaṃ vipākaḥ / [264|10-264|11] śeṣāṇāmānantaryāṇāṃ yathākramaṃ pañcamatṛtīyaprathamāni gurutarāṇi sarvalaghuḥ pitṛvadhaḥ / [264|11-264|13] yattarhi bhagavatā trayāṇāṃ daṇḍānāṃ manodaṇḍo mahāsāvadya uktaḥ punarmithyādṛṣṭiḥ paramavadyānāmityuktam ānantaryāṇi niyamasya saṃghabhedo mahāsāvadya uktaḥ / [264|13-264|14] trīṇi karmāṇi niyamayya manodaṇdaḥ dṛṣṭīrniyamayya mithyādṛṣṭiḥ / [264|14-264|15] athavā vipākavistaraṃ mahājanavyāpādanaṃ kuśalamūlasamucchedaṃ cādhikṛtya yathākramam / [264|16] sucaritānāṃ punaḥ katamat mahāphalatamam / [264|17] bhavāgracetanā loke mahāphalatamā śubhe // VAkK_4.105 // [264|18] kuśale punaḥ karmaṇi bhavāgracetanā sarveṣāṃ mahāphalatamā / [264|18-264|19] tasyā aśītikalpasahasrāṇyatipraśānto vipākaḥ / [264|19] vipākaphalaṃ cādhikṛtyaitaduktam / [264|19-264|21] visaṃyogaphalaṃ tvadhikṛtya vajropamasamādhicetanā sarveṣāṃ mahāphalā sarvasamyojanaparyādānaphalatvāt / [264|21] ata eva loka ityuktam / [264|22] kimānantaryairevāvaśyaṃ narakeṣūpapadyate / ānantaryasabhāgairapyavaśyamupapadyate /",
+   "T1560": "破僧虛誑語，於罪中最大， 感第一有思，世善中大果。",
+   "T1558": "於諸妙行世善業中何最大果？頌曰：破僧虛誑語，於罪中最大； 感第一有思，世善中大果。論曰：雖了法非法，為欲破僧而起虛誑語顛倒顯示，此無間中為最大罪，由此傷毀佛法身故、障世生天解脫道故。謂僧已破乃至未合，一切世間入聖得果離染盡漏皆悉被遮，習定溫誦思等業息，大千世界法輪不轉，天人龍等身心擾亂，故招無間一劫異熟。由此破僧罪為最重，餘無間罪如其次第，第五三一後後漸輕。第二最輕，恩等少故。若爾，何故三罰業中，佛說意罰為最大罪，又說罪中邪見最大？據五無間說破僧重，約三罰業說意罪大，就五僻見說邪見重。或依大果害多有情斷諸善根，如次說重。感第一有異熟果思，於世善中為最大果，感八萬大劫極靜異熟故。約異熟果故說此言。據離繫果，則金剛喻定相應思能得大果，諸結永斷為此果故。為簡此故，說世善言。為唯無間罪定生地獄、諸無間同類亦定生彼？有餘師說：非無間生。",
+   "T1559": "於五無間中，何無間業罪最重？偈曰：破僧和妄語，許最大重罪。釋曰：了別法非法人妄語，是僧和合破，因顯翻倒理故，於一切邪行是最大重罪。何以故？能害諸如來法身故、能障礙世間天道及涅槃道故。何以故？大眾正破時，世間入正定聚證果、離欲流盡等悉皆被遮，修定讀誦一切正思事並不得起，一切世間及人天皆紛擾生憂惱亂心，此事乃至僧未更和合。復次由此業報，於阿毘指地獄熟具滿一劫，故言大重。所餘無間業次第應知。第五第三第一為重，一切中第二最輕。若爾，佛世尊說：於三種治罰中，意治罰最重。復說：一切罪中，邪見最勝。於無間業中，定判破僧為最重罪。此言云何？若約無間一劫果報，無勝破僧妄語。若決判三業，意治罰最重，餘治罰隨此故。若決判諸見，邪見最重，非撥彼境界故。復次依大果報、依殺害多眾生、依斷除善根，故說此言，次第應知。於善行中何善行果報最大？偈曰：世有頂故意，善中最大果。釋曰：於善業中，非想非非想故意果報最大。何以故？於八萬大劫微妙寂靜是其果報故。此言約果報果說。若約相離果，金剛三摩提故意於一切中為最大果，一切結滅盡為果故。是故說於世間，為由無間業於地獄得無間生、為亦由無間同類？由二種。有餘師說：唯由無間業，必定得無間生，由同類不定。"
+  },
+  "v106": {
+   "sa": "dūṣaṇaṃ māturarhantyā niyatisthasya māraṇam / bodhisattvasya śaikṣasya saṃghāyadvārahārikā // VAkK_4.106 //",
+   "sa-bhasya": "[264|23] natvanantaramevetyapare / katamāni tānītyāha [264|24-264|25] dūṣaṇaṃ māturarhantyā niyatisthasya māraṇam / bodhisattvasya śaikṣasya saṃghāyadvārahārikā // VAkK_4.106 //",
+   "T1560": "污母無學尼，殺住定菩薩， 及有學聖者，奪僧和合緣，",
+   "T1558": "同類者何？頌曰：污母無學尼，殺住定菩薩， 及有學聖者，奪僧和合緣，",
+   "T1559": "何者為無間同類？偈曰：污母阿羅漢，殺定地菩薩，及有學聖人，奪僧和合緣，"
+  },
+  "v107": {
+   "sa": "ānantaryasabhāgāni pañcamaṃ stūpabhedanam / kṣāntyanāgāmitārhattvaprāptau karmātivighnakṛt // VAkK_4.107 //",
+   "sa-bhasya": "[265|01] ānantaryasabhāgāni pañcamaṃ stūpabhedanam / [265|02] etāni pañca pañcānāmānatnaryāṇāṃ yathākramam sabhāgāni / [265|02-265|04] yadi mātaramarhantīṃ dūṣayatyabrahmacaryakaraṇāt niyatipatītaṃ bodhisattvaṃ mārayati śaikṣaṃ mārayati saṃghasya sukhāyadvārikaṃ harati stūpabhedaṃ karoti / [265|04-265|05] anyadapi tu karma savipākaṃ triṣu kāleṣvatyarthaṃ vighnayati / [265|05] katameṣu trisu / [265|06] kṣāntyanāgāmitārhattvaprāptau karmātivighnakṛt // VAkK_4.107 // [265|07] mūrdhabhyaḥ kṣāntimākirata āpāyikāni karmāṇi vighnāyopatiṣṭhante / [265|07-265|08] tadvipākabhūmyatikramāt / [265|08] yathā puruṣasya deśatyāgaṃ kurvato dhanikā upatiṣṭhante / [265|08-265|10] anāgāmiphalaṃ prāpnuvataḥ kāmāvacarāṇi vighnāyopatiṣṭhante tathaiva sthāpayitvā dṛṣṭadharmavedanīyaṃ karma / [265|10] arhattvaṃ prāpnuvato rūpārūpyāvacarāṇi tathaiva / [265|10-265|11] yaduktaṃ \"bodhisattvasya māraṇa\"miti",
+   "T1560": "破壞窣堵波，是無間同類， 將得忍不還，無學業為障。",
+   "T1558": "破壞窣堵波，是無間同類。論曰：如是五種隨其次第，是五無間同類業體。謂有於母阿羅漢尼行極污染謂非梵行，或有殺害住定菩薩，或殺學聖者，或奪僧合緣，或破窣堵波，是五逆同類。有異熟業於三時中極能為障。言三時者，頌曰：將得忍不還，無學業為障。論曰：若從頂位將得忍時，感惡趣業皆極為障，以忍超彼異熟地故。如人將離本所居國，一切債主皆極為障。若有將得不還果時，欲界繫業皆極為障，唯除隨順現法受業。若有將得無學果時，色無色業皆極為障，亦除順現。二喻如前。如上所言住定菩薩，為從何位得住定名？",
+   "T1559": "是無間同類，五破佛支提。釋曰：如此五業與五無間業，應知次第同類。若人污壞自母阿羅漢，由行非梵行故。若人殺至住定地菩薩，若殺有學聖人，若奪大眾和合因緣，若起佛支提想，破佛藪斗波，此業說名無間同類。有餘業若有果報，於三時中最急起障。何者三時？偈曰：忍那含羅漢，位中業起障。釋曰：若人從頂思想忍，是時一切引惡道果報業悉起為障，由應過彼果報地故。譬如有人應捨離自國土，一切債主皆起，諸業亦爾。若人應至阿那含果，一切欲界雜業悉起為障，唯除現報業。若人應至阿羅漢果，一切色界無色界業悉起為障，於前已說。"
+  }
+ }
+}

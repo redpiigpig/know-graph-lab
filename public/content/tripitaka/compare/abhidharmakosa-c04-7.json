@@ -1,0 +1,293 @@
+{
+ "slug": "abhidharmakosa-c04-7",
+ "title": "俱舍論・分別業品（4.108–4.127）",
+ "family": "sa",
+ "intro": "《阿毘達磨俱舍論》第四品〈分別業品〉頌 4.108–4.127，一頌一節（頌號依 Pradhan 本，GRETIL 標 VAkK_品.頌）。五欄：梵本頌、梵本自釋（bhāṣya）、玄奘《俱舍論本頌》、玄奘《俱舍論》、真諦《俱舍釋論》；論本欄自該頌（含引出該頌的提問句）起、到下一頌前的釋文止。玄奘《俱舍論》常把數頌合為一個「頌曰」再一併解釋，區塊中按頌切開，釋文因此都落在區塊末頌；真諦本逐句引偈、隨句解釋，與梵本自釋的節奏相近。稱友 Yaśomitra《明了義釋》Sphuṭārthā 是自釋的疏，不收。",
+ "units": [
+  {
+   "id": "v108",
+   "label": "4.108　從修妙相業"
+  },
+  {
+   "id": "v109",
+   "label": "4.109　贍部男對佛"
+  },
+  {
+   "id": "v110",
+   "label": "4.110　各百福嚴飾"
+  },
+  {
+   "id": "v111",
+   "label": "4.111　但由悲普施"
+  },
+  {
+   "id": "v112",
+   "label": "4.112　讚歎底沙佛"
+  },
+  {
+   "id": "v113",
+   "label": "4.113　由此捨名施"
+  },
+  {
+   "id": "v114",
+   "label": "4.114　為益自他俱"
+  },
+  {
+   "id": "v115",
+   "label": "4.115　主異由信等"
+  },
+  {
+   "id": "v116",
+   "label": "4.116　財異由色等"
+  },
+  {
+   "id": "v117",
+   "label": "4.117　田異由趣苦"
+  },
+  {
+   "id": "v118",
+   "label": "4.118　父母病法師"
+  },
+  {
+   "id": "v119",
+   "label": "4.119　後起田根本"
+  },
+  {
+   "id": "v120",
+   "label": "4.120　由審思圓滿"
+  },
+  {
+   "id": "v121",
+   "label": "4.121　制多捨類福"
+  },
+  {
+   "id": "v122",
+   "label": "4.122　離犯戒及遮"
+  },
+  {
+   "id": "v123",
+   "label": "4.123　非犯戒因壞"
+  },
+  {
+   "id": "v124",
+   "label": "4.124　戒修勝如次"
+  },
+  {
+   "id": "v125",
+   "label": "4.125　法施謂如實"
+  },
+  {
+   "id": "v126",
+   "label": "4.126　諸如理所起"
+  },
+  {
+   "id": "v127",
+   "label": "4.127　善無漏名妙"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sa",
+   "lang": "sa",
+   "label": "梵本頌",
+   "who": "《阿毘達磨俱舍論本頌》Abhidharmakośakārikā・GRETIL（參 Pradhan 1975、Gokhale 1946）"
+  },
+  {
+   "id": "sa-bhasya",
+   "lang": "sa",
+   "label": "梵本自釋",
+   "who": "《阿毘達磨俱舍論》Abhidharmakośabhāṣya・GRETIL（Pradhan 1975，Hackett／Lusthaus 校）"
+  },
+  {
+   "id": "T1560",
+   "lang": "lzh",
+   "label": "玄奘頌本",
+   "who": "玄奘譯《阿毘達磨俱舍論本頌》・唐",
+   "work": "T1560"
+  },
+  {
+   "id": "T1558",
+   "lang": "lzh",
+   "label": "玄奘論本",
+   "who": "玄奘譯《阿毘達磨俱舍論》・唐 651–654 年",
+   "work": "T1558"
+  },
+  {
+   "id": "T1559",
+   "lang": "lzh",
+   "label": "真諦釋論",
+   "who": "真諦譯《阿毘達磨俱舍釋論》・陳 563–567 年",
+   "work": "T1559"
+  }
+ ],
+ "works": [
+  "T1558",
+  "T1559",
+  "T1560"
+ ],
+ "anchors": [
+  {
+   "work": "T1560",
+   "range": [
+    "T29n1560_p0316a09",
+    "T29n1560_p0316a09"
+   ]
+  },
+  {
+   "work": "T1558",
+   "range": [
+    "T29n1558_p0094c04",
+    "T29n1558_p0098b04"
+   ]
+  },
+  {
+   "work": "T1559",
+   "range": [
+    "T29n1559_p0249a15",
+    "T29n1559_p0252b20"
+   ]
+  }
+ ],
+ "cells": {
+  "v108": {
+   "sa": "bodhisattvaḥ kuto yāvat yato lakṣaṇa karmakṛt / sugatiḥ kulajo 'vyakṣaḥ pumān jātismaro 'nivṛt // VAkK_4.108 //",
+   "sa-bhasya": "[265|12] bodhisattvaḥ kuto yāvat [265|13] kuta upādāya bodhisattvovaktavyaḥ / [265|14] yato lakṣaṇa karmakṛt / [265|15-265|16] yataḥ prabhṛti lakṣaṇavipākāni karmāṇyārabhate kartuṃ sa hi tadānīṃ niyatipatito bhavati / [265|16] kathaṃ kṛtvā / sa hi tasmāt kālāt prabhṛti nityaṃ bhavati / [265|17] sugatiḥ kulajo 'vyakṣaḥ pumān jātismaro 'nivṛt // VAkK_4.108 // [265|18] praśastā gatirasyeti sugatirdevamanuṣyopapatteḥ / [265|18-265|19] tasyāṃ ca sugatau kṣatriyabrāhmaṇagṛhapatimahāśālakulajo bhavati nānyaḥ kulīnaḥ / [265|19] vikalānyakṣāṇyasyeti vyakṣaḥ / [265|20] na vyakṣo 'vyakṣaḥ avikalendriyaḥ ityarthaḥ / puruṣa eva na strī kuta eva śaṇḍhādiḥ / [265|21] jātismaraśca bhavati / sarvasyāṃ jātau nivartata iti nivṛt / na nivṛdanivṛt / [265|22] anivartaka ityarthaḥ / [265|22-265|23] sattvahitārthaṃ sarvaduḥkhaprakāraiḥ sarvasattvavipratipattibhiścākheditatvāt / [265|23] yattalloka ucyate \"apaṇakrīto dāsa\" iti / [265|23-265|26] bodhisattvāste te hi mahātmānaḥ sarvasaṃpatprakarṣaviśeṣaprāptā api santo niṣkāraṇakaruṇāpāratantryātsarvasattveṣu caṇḍālakumārakasadṛśamātmānaṃ nirmānatayā vyavasthāpya sattvebhyaḥ sarvakadarthānāṃ soḍhāro bhavanti sarvaśramayantraṇānāṃ codvoḍhāraḥ / [265|26-265|27] yaccaitallakṣaṇavipākaṃ karmetyuktam /",
+   "T1560": "從修妙相業，菩薩得定名， 生善趣貴家，具男念堅固。",
+   "T1558": "彼復於何說名為定？頌曰：從修妙相業，菩薩得定名， 生善趣貴家，具男念堅故。論曰：從修能感妙三十二大丈夫相異熟果業，菩薩方得立住定名，以從此時乃至成佛常生善趣及貴家等。生善趣者，謂生人天，趣妙可稱故名善趣。於善趣內常生貴家，謂婆羅門或剎帝利、巨富長者大婆羅家。於貴家中根有具缺，然彼菩薩恒具勝根，恒受男身尚不為女，何況有受扇搋等身。生生常能憶念宿命，所作善事常無退屈。謂於利樂有情事中，眾苦逼身皆能堪忍。雖他種種惡行違逆，而彼菩薩心無厭倦。如世傳有無價䭾娑，當知此言目彼菩薩。由彼大士雖已成就一切殊勝圓滿功德，而由久習無緣大悲，任運恒時繫屬他故。普於一切有情類中，以無慢心皆攝同己。或常觀己如彼僕使，故於一切難求事中皆能堪忍，及於一切勞迫事中皆能荷負。",
+   "T1559": "若人殺定地菩薩，偈曰：菩薩從何位？釋曰：取何位應說此是菩薩？偈曰：從作相業時。釋曰：從修行能感三十二相八十隨相果報業時。何以故？此人於此時中已入菩薩正定位。云何如此？此人從此時，向後恒爾。偈曰：善道貴家具，男憶宿不退。釋曰：善道者，最勝可讚故名善道，由生於人天道中故。復於善道中，生剎帝利種姓、婆羅門種姓、大長者種姓。於中生摩訶婆羅家，此人已生貴家。有貴家人具根、有不具根。此根有二種，謂色根、法根。若不具此，是從明向闇；若具此，是從明向明。恒得丈夫身，非女人身，何況作黃門等。此人憶一切生中一切宿住事，由聞思二慧圓滿故。於安樂利益眾生事中，由一切苦品類、由一切他違逆惡事不厭極故。是世間所說，非直買得陀婆，應知是菩薩。何以故？是諸大士已至一切勝德最上上品位，無餘因緣，唯由繫屬大悲故，於一切眾生，安立自身似彼僕使。由無憍慢故，於一切眾生，能忍受一切最難求，欲恒荷負一切苦行事。由礙他故，不立自事，是故說非直買得是所說。"
+  },
+  "v109": {
+   "sa": "jambūdvīpe pumāneva saṃmukhaṃ buddhacetanaḥ / cintāmayaṃ kalpaśate śeṣa ākṣipate hi tat // VAkK_4.109 //",
+   "sa-bhasya": "[266|01-266|02] jambūdvīpe pumāneva saṃmukhaṃ buddhacetanaḥ / cintāmayaṃ kalpaśate śeṣa ākṣipate hi tat // VAkK_4.109 // [266|03] jambūdvīpa eva bodhisattvo lakṣaṇavipākaṃ karmākṣipati / nānyatra / [266|03-266|04] jāmbūdvīpakānāṃ tīkṣṇabuddhitvāt / [266|04] puruṣa eva na strī / [266|04-266|05] saṃmukhībhūta eva śāstari buddhālambanayaiva cetanayā cintāmayaṃ tatkarma na śrutamayaṃ na bhāvanāmayam / [266|05-266|06] kalpaśate ca śeṣa ākṣipati na bahubhavesu / [266|06-266|07] bhagavatā tu śākyamuninottaptavīryatayā nava kalpā apāvartitā ekanavatyā kalpairākṣiptam / [266|07-266|09] ata eva cokta \"mito 'haṃ grāmaṇīrekanavataṃ kalpamupādāya na samanusmarāmi nābhijānāmi yadekakulamapi pakṣabhikṣāpradānahetoḥ kṣataṃ vā syādupahataṃ ve\"ti / [266|09-266|11] tataḥ prabhṛti prakṛtijātismaratvāt prathamakalpāsaṃkhyeyaniryāta eva bodhisattva etāṃścaturo doṣān vyāvartayati dvau ca guṇo pratilabhata iti pūrvācāryāḥ / [266|11] teṣāṃ ca lakṣaṇānām",
+   "T1560": "贍部男對佛，佛思思所成， 餘百劫方修，",
+   "T1558": "修妙相業其相云何？頌曰：贍部男對佛，佛思思所成， 餘百劫方修，",
+   "T1559": "能感相果報業者，偈曰：剡浮洲丈夫，對佛佛故意，思慧類百劫，於餘得引此。釋曰：唯於剡浮洲菩薩修引相報業，非餘洲。何以故？剡浮洲人智根最利故。唯丈夫非女人，過女人位故。此修於何時？大師在現前時，由緣佛為境故意故。此業思慧為類，非聞修慧。於餘時謂百大劫量，非於多餘。一切佛皆爾，唯釋迦牟尼世尊，正勤最熾盛故，能超九劫，於九十一劫引所餘相業。是故如來說：土主！我從此生前所經九十一劫，不憶不見，昔時於一家生中，因施一熟食有間有損，何況大事，從此時自性念宿住故。已出初阿僧祇菩薩，除滅四種過失，恒得二種最勝德，宿舊師說如此。於菩薩諸相中，偈曰，一一百福生。釋曰，此福量云何？除近行菩薩，一切十方眾生，能感富樂業為量，餘師說如此。如眾生業增上緣，能感三千大千世界生，如此量，毘婆沙師說如此。有餘師說：唯諸佛能知此業數量。復次今世尊，昔在菩薩位中，事幾諸佛？於初阿僧祇事七十五千佛，於第二阿僧祇事七十六千佛，於第三阿僧祇事七十七千佛。一一阿僧祇最後時，何佛世尊出？由逆時，應知次第。"
+  },
+  "v110": {
+   "sa": "ekaikaṃ puṇyaśatajam asaṃkhyeyatrayāntyajāḥ / vipaśyī dīpakṛdatnaśikhī śākyamuniḥ purā // VAkK_4.110 //",
+   "sa-bhasya": "[266|12] ekaikaṃ puṇyaśatajam [266|13] kiṃ puṇyasya parimāṇam / [266|13-266|14] saṃnikṛṣṭabodhisattvaṃ sthāpayitvā yāvat sarvasattvānāṃ bhogaphalamityeke / [266|14-266|15] yāvat sarvasattvānāṃ karmādhipatyena trisāhasramahāsāhasrako loko 'bhinivartata ityapare / [266|15] buddhā eva ca tatparimāṇajñā ityapare / [266|15-266|16] atha bodhisattvabhūto bhagavān kiyato buddhān paryupāsayāmāsa / [266|16-266|17] pratheme kalpāsaṃkhyeye pañcasaptatisahasrāṇi dvitīye ṣaṭsaptatiṃ tṛtīye saptasaptatim / [266|18] atha kasya kalpāsaṃkhyeyasyānte katamo buddha āsīt / [266|18-266|19] pratilomānukrameṇa yathākramam / [266|20] asaṃkhyeyatrayāntyajāḥ / [266|21] vipaśyī dīpakṛdratnaśikhī [266|22] ratnaśikhini samyaksaṃbuddhe prathamo 'saṃkhyeyaḥ samāptaḥ / dīpaṅkare bhagavati dvitīyaḥ / [266|23] vipaśyini tathāgate tṛtīyaḥ / sarveṣāṃ tu teṣāṃ [266|24] śāsyamuniḥ purā // VAkK_4.110 // [266|25] śākyamunirnāma samyaksaṃbuddhaḥ pūrvaṃ vabhūva / [266|25-267|02] yatra bhagavatā bodhisattvabhūtenādyaṃ praṇidhānaṃ kṛtam evaṃprakāra evāhaṃ buddho bhaveyamiti no 'pyevaṃ kaliyuga evotpannavānāryavattasyāpyevaṃ varṣa sahasrāntaṃ śāsanaṃ babhūva / [267|03] atha kasyāmavasthāvāṃ bodhisattvaḥ kāṃ pāramitāṃ paripūrayate /",
+   "T1560": "各百福嚴飾。 於三無數劫，各供養七萬， 又如次供養，五六七千佛。 三無數劫滿，逆次逢勝觀， 然燈寶髻佛，初釋迦牟尼。",
+   "T1558": "各百福嚴飾。論曰：菩薩要在贍部洲中，方能造修引妙相業，此洲覺慧最明利故。唯是男子非女等身，爾時已超女等位故。唯現對佛，緣佛起思是思所成，非聞修類。唯餘百劫造修非多，諸佛因中法應如是。唯薄伽梵釋迦牟尼，精進熾然能超九劫，九十一劫妙相業成。是故如來告聚落主：我憶九十一劫以來，不見一家因施我食有少傷損，唯成大利。從此自性恒憶宿生，是故但言九十一劫。宿舊師說：菩薩出初無數劫來，離四過失、得二功德。如前所辯，一一妙相百福莊嚴，何等名為一一福量？有說：唯除近佛菩薩，所餘一切有情所修富樂果業名一福量。有說：世界將欲成時，一切有情感大千土業增上力為一福量。有說：此量唯佛乃知。今我大師，昔菩薩位於三無數劫供養幾佛耶？頌曰：於三無數劫，各供養七萬， 又如次供養，五六七千佛。論曰：初無數劫中供養七萬五千佛，次無數劫中供養七萬六千佛，後無數劫中供養七萬七千佛。三無數劫一一滿時，及初發心，各逢何佛？頌曰：三無數劫滿，逆次逢勝觀， 然燈寶髻佛，初釋迦牟尼。論曰：言逆次者，自後向前。謂於第三無數劫滿所逢事佛名為勝觀，第二劫滿所逢事佛名曰然燈，第一劫滿所逢事佛名為寶髻，最初發心位逢釋迦牟尼。謂我世尊昔菩薩位最初逢一佛號釋迦牟尼，遂對其前發弘誓願：願我當作佛，一如今世尊。彼佛亦於末劫出世，滅後正法亦住千年。故今如來一一同彼。",
+   "T1559": "偈曰：三僧祇後出，毘婆尸、燃燈、寶光。釋曰：於剌那尸棄佛世尊，第一阿僧祇究竟。於燃燈佛世尊，第二阿僧祇究竟。於毘婆尸佛世尊，第三阿僧祇究竟。於一切佛，偈曰：先釋迦。釋曰：有佛世尊號釋迦牟尼，昔已出世。於此世尊所，今佛世尊求修菩薩行，初發菩提願：願我成佛，皆同如此相。昔時世尊，如今末世時生，乃至世尊正法住唯一千年內。"
+  },
+  "v111": {
+   "sa": "sarvatra sarva dadataḥ kārūṇyāddānapūraṇam / aṅgacchede 'pyakopāttu rāgiṇaḥ kṣāntiśīlayoḥ // VAkK_4.111 //",
+   "sa-bhasya": "[267|04] sarvatra sarvaṃ dadataḥ kāruṇyāddānapūraṇam / [267|05-267|06] yadā sarvasmai sarvaṃ dadāti ā akṣṇaḥ ā majjāyāḥ kāruṇyānnābhyudayaviśeṣaṃ lipsamānaḥ iyatā dānapāramitā paripūrṇā bhavati / [267|07] aṅgacchede 'pyakopāttu rāgiṇaḥ kṣāntiśīlayoḥ // VAkK_4.111 // [267|08-267|09] yadā 'yamavītarāgo 'pi cchidyamāneṣvaṅgeṣu nālpamapi kupyati tadā 'sya kṣāntiśīlapāramite paripūrṇe bhavataḥ /",
+   "T1560": "但由悲普施，被析身無忿，",
+   "T1558": "我釋迦菩薩於何位中何波羅蜜多修習圓滿？頌曰：但由悲普施，被析身無忿，",
+   "T1559": "菩薩在於何位圓滿何波羅蜜？偈曰：遍處施一切，由大悲施滿。釋曰：是時於一切眾生平等，一切所應施類，若施財乃至眼及骨髓，若施法無師祕密，若施無畏現在未來二世救濟。唯有大悲無所求，為由此量施波羅蜜得圓滿。偈曰：分斫身無怪，有欲戒忍成。釋曰：若是時菩薩未得離欲法，若被斬斫身分分斷，於自他無愛憎故，最輕怪心亦不起，是時戒忍波羅蜜二俱圓滿。"
+  },
+  "v112": {
+   "sa": "tiṣyastotreṇa vīryasya dhīsamādhyoranantaram / puṇyaṃ kriyātha tadvastu trayaṃ karmapathā yathā // VAkK_4.112 //",
+   "sa-bhasya": "[267|10] tiṣyastotreṇa vīryasya [267|11-267|12] tiṣyaṃ tathāgataratnaguhāyāṃ tejodhātusamāpannadṛṣṭyā bhagavān bodhisattvabhūta ekena pādena sthitvā sapta divasān stutavānekagāthayā [267|13-267|16] \"na divi bhuvi vā nāsmin loke na vaiśravaṇālaye / na marubhavane divye sthāne na dikṣu vidikṣu vā // caratu vasudhāṃ sphītāṃ kṛtsnāṃ saparvatakānanām / puruṣavṛṣabhastvattulyo 'nyo mahāśramaṇaḥ kuta\" iti // [267|17] tadā kila vīryapāramitā paripūrṇā nava ca kalpāḥ pratyudāvartitāḥ / [267|18] dhīsamādhyoranantaram / [267|19-267|20] bodheḥ pūrvasamanantaraṃ dhyānaprajñāpāramitayoḥ paripūrirvajropamasamādhau svasyāḥ saṃpadaḥ pāragamanāt pāramitāḥ / [267|21] sūtra uktaṃ \"trīṇi puṇyakriyāvastūni / [267|21-267|22] dānamayaṃ puṇyakriyāvastu śīlamayaṃ bhāvanāmayami\"ti / [267|22] kathametattrayaṃ puṇyakriyāvastu / [267|23] puṇyaṃ kriyā 'tha tadvastu trayaṃ karmapathā yathā // VAkK_4.112 // [267|24] puṇyamapyetattrayaṃ kriyā 'pi vastvapi yathāyogamiti puṇyakriyāvastu / [267|24-268|01] tadyathā karma ca te panthānaśca panthāna eva ca karmaṇa iti karmaṃpathā uktāḥ / [268|01-268|02] tatra dānamaye tāvat puṇyakriyāvastuni kāyavākkarma tridhā bhavati / [268|02-268|03] tatsamutthāpikā cetanā puṇyaṃ ca kriyā ca / [268|03] tatsahabhuvo dharmāḥ puṇyameva / śīlamayaṃ tu kāyavākkarmaiveti tridhā bhavati / [268|04] bhāvanāmayo maitrī puṇyaṃ ca puṇyakriyāyāśca vastu / [268|04-268|06] tatsaṃprayuktāyāścetanāyā maitrīmukhenābhisaṃskaraṇāt tatsahabhuvaścetanā śīlaṃ ca puṇyaṃ ca kriyā ca / [268|06-268|07] anye tatsahabhuvaḥ puṇyameva puṇyasya vā kāraṇaṃ puṇyakriyā puṇyaprayogastasyā etāni trīṇi vastūni / [268|07] eṣāṃ saṃpādanārthaṃ puṇyaprayogārambhāditi / [268|07-268|08] kuśalacetanāparamārthena puṇyakriyā / [268|08] tasyā etāni vastūnītyapare /",
+   "T1560": "讚歎底沙佛，次無上菩提， 六波羅蜜多，於如是四位， 一二又一二，如次修圓滿。 施戒修三類，各隨其所應， 受福業事名，差別如業道。",
+   "T1558": "讚歎底沙佛，次無上菩提， 六波羅蜜多，於如是四位， 一二又一二，如次修圓滿。論曰：若時菩薩普於一切能施一切乃至眼髓，所行惠捨但由悲心，非自希求勝生差別，齊此布施波羅蜜多修習圓滿。若時菩薩被析身支，雖未離欲貪而心無少忿，齊此戒忍波羅蜜多修習圓滿。若時菩薩勇猛精進因行，遇見底沙如來坐寶龕中入火界定威光赫奕特異於常，專誠瞻仰忘下一足，經七晝夜無怠，淨心以妙伽他讚彼佛曰：天地此界多聞室，逝宮天處十方無， 丈夫牛王大沙門，尋地山林遍無等。如是讚已便超九劫，齊此精進波羅蜜多修習圓滿。若時菩薩處金剛座，將登無上正等菩提，次無上覺前住金剛喻定，齊此定慧波羅蜜多修習圓滿。能到自所往圓德彼岸，故此六名曰波羅蜜多。契經說：有三福業事，一施類福業事、二戒類福業事、三修類福業事。此云何立福業事名？頌曰：施戒修三類，各隨其所應， 受福業事名，差別如業道。論曰：三類皆福，或業或事，隨其所應如業道說。謂如分別十業道中，有業亦道有道非業，此中有福亦業亦事、有福業非事、有福事非業、有唯是福非業非事。且施類中身語二業具福業事三種義名，彼等起思唯名福業，思俱有法唯受福名，戒類既唯身語業性故皆具受福業事名。修類中慈唯名福事，業之事故。慈相應思，以慈為門而造作故，慈俱思戒唯名福業，餘俱有法唯受福名。或福業名顯作福義，謂福加行事顯所依，謂施戒修是福業之事，為成彼三起福加行故。有說：唯思是真福業。福業之事謂施戒修，以三為門福業轉故。何法名施？",
+   "T1559": "偈曰：讚底沙精進。釋曰：昔有如來號底沙，於寶山巖中入火界定。今佛世尊昔在菩薩位，以別意行遇見此如來，一脚著地一脚未下。於七日七夜，誦一偈讚歎已方坐。偈曰：「地天梵靜處皆無，三世十方未曾有， 遍行尋此地山林，何人等尊由三德。」是時精進波羅蜜已圓滿，九大劫已超究竟。偈曰：定慧覺無間。釋曰：先無上菩提，持訶那波羅蜜、般若波羅蜜已圓滿，於金剛三摩提位。此六云何名波羅蜜多？由至自圓德際故。復次波羅摩者，謂菩薩最上品故，是彼正行，名波羅美（眠履反）；是彼正行聚，名波羅美多，互不相離故。經中說：有三福業類，一施性福業類、二戒性福業類、三修性福業類。此三云何名福業類？偈曰：福業福業類，此三如業道。釋曰：此施等三，亦福亦業亦類，如應次第。譬如業道，彼亦業亦道。但業家道非業，故說業道。此三亦爾。於施性福業類中，身口業有三種，能發起故。意有二，亦福亦業，餘諸法共彼俱起，但福非業非類。於戒性中但身口業故，唯有三種。於修性中慈無量修，但福亦是福業類，與此相應故意，由慈門所生起故、與此觀俱起故。意及戒亦福亦業。所餘信等相應法，但福非餘。復次造作福名福業，謂福前分行，此三是前分依止類。為成就此三，是故作福真實福業唯是故意。此三是故意所緣福業類，餘師說如此。施者是何法？或說所施名施。"
+  },
+  "v113": {
+   "sa": "dīyate yena taddānaṃ pūjānugrahakāmyayā / kāyavākkarma sotthānaṃ mahābhogyaphalaṃ ca tat // VAkK_4.113 //",
+   "sa-bhasya": "[268|09] kimidaṃ dānaṃ nāma / yadapi dīyate daddānam / iha tu [268|10] dīyate yena daddānaṃ [268|11] bhavati sma / rāgādibhirapi dīyate / na cātra tadiṣṭam / ato viśeṣaṇārthamāha [268|12] pūjānugrahakāmyayā / [268|13] pareṣāṃ pūjānugrahakāmatābhyāṃ yena dīyate / kiṃ punastatsyādyena dīyate / [268|14] kāyavākkarma sotthānaṃ [268|15] kiṃ punastadutthānam / yena kalāpena tadutthāpyate / āha cātra [268|16-268|17] śubhena manasā dravyaṃ svaṃ dadāti yadā pumān / tat kṣaṇaṃ kuśalāḥ skandhāḥ dānamityabhidhīyate //\" iti / [268|18] mahābhogyaphalaṃ ca tat // VAkK_4.113 // [268|19] taccaitaddānamayaṃ puṇyakriyāvastu mahābhogyaphalam / svabhāve caiṣa mayaḍveditavyaḥ / [268|20] tadyathā tṛṇamayaṃ gṛhaṃ parṇamayaṃ bhājanamiti / tat khalvetaddānaṃ",
+   "T1560": "由此捨名施，謂為供為益， 身語及能發，此招大富果，",
+   "T1558": "施招何果？頌曰：由此捨名施，謂為供為益， 身語及能發，此招大富果。論曰：雖所捨物亦得施名，而於此中捨具名施，謂由此具捨事得成，故捨所由是真施體。或由怖畏希求貪等捨事亦成，非此意說，簡彼故說為供益言。謂為於他供養饒益而有所捨，此具名施。具名何謂？謂身語業及此能發。能發謂何？謂無貪俱能起此聚。如有頌曰：若人以淨心，輟己而行施， 此剎那善蘊，總立以施名。應知如是施類福業事，能招當現大財富為果。言施類福者，顯施為體義，如葉類器草類舍等。戒修類言准此應釋。",
+   "T1559": "此三中，偈曰：由此施是施。釋曰：若由此因施事得成，說此因為施。由怖畏求得愛欲等，施事亦成，此中不許彼為施因，為簡別彼故說此言。偈曰：欲供養利意。釋曰：於他，由欲作供養及利益事故施，是故此二是施因。若爾，則施但因非業。雖然，若正由此法起，故施得成，此正是施。此法何相？偈曰：身口及緣起。釋曰：緣起是何法？是法聚能生起身口業，此名緣起。此中說偈：「慧人由善心，若捨財於他， 此剎那善陰，說此名施業。」偈曰：此大富為果。釋曰：是施性福業類，能得大富樂果報。"
+  },
+  "v114": {
+   "sa": "svaparārthobhayārthāya nobhayārthāya dīyate / tadviśeṣaḥ punardātṛvastukṣetraviśeṣataḥ // VAkK_4.114 //",
+   "sa-bhasya": "[268|21] svaparārthobhayārthāya nobhayārthāya dīyate / [268|22-268|23] tatra yadavītarāgaḥ āryaḥ pṛthagjano vā vītarāgaścaitye dānaṃ dadāti tadasyātmana evārthāya / [268|23] pareṣāṃ tenānugrahābhāvāt / [268|23-269|01] yadāryo vītarāgaḥ parasattvebhyo dānaṃ dadāti sthāpayitvā dṛṣṭadharmavedanīyaṃ tatra dānaṃ pareṣāmarthāya / [269|01-269|02] tena teṣāmanugrahāt / [269|02] nātmano 'rthāya / tadvipākabhūmeratyantasamatikrāntatvāt / [269|02-269|03] yadavītarāgaḥ pṛthagjano vā vītarāgaḥ parasattvebhyo dadāti taddānamubhayeṣāmarthāya / [269|03-269|04] yadāryo vītarāgaścaitye dadāti sthāpayitvā dṛṣṭadharmavedanīyaṃ taddānamubhayeṣāṃ nārthāya / [269|04-269|05] taddhi kevalaṃ gauravaṃ kṛtjñābhyāṃ dīyate / [269|05] sāmānyena dānaṃ mahābhogyaphalamuktam / [269|06] tadviśeṣaḥ punardātṛvastukṣetraviśeṣataḥ // VAkK_4.114 // [269|07] tatra tāvat",
+   "T1560": "為益自他俱，不為二行施。 由主財田異，故施果差別，",
+   "T1558": "為何所益而行施耶？頌曰：為益自他俱，不為二行施。論曰：此中一切未離欲貪及離欲貪諸異生類，持己所有奉施制多，此施名為唯為自益，非他由此有獲益故。若諸聖者已離欲貪，施諸有情除順現受，此施名曰唯為益他，以他由此獲饒益故，非為自益，超果地故。若彼一切未離欲貪及離欲貪諸異生類，持己所有施諸有情，此施名為為二俱益。若彼聖者已離欲貪，奉施制多除順現受，此施名曰不為益二，以此唯為恭敬報恩。前已總明施招大富，今次當辯施果別因。頌曰：由主財田異，故施果差別。論曰：施有差別，由三種因，謂主、財、田有差別故，施差別故，果有差別。",
+   "T1559": "此施復何為？偈曰：為利自他二，不為二故施。釋曰：此中若未離欲聖人，及未離欲凡夫，於支提施物，此施唯利益自身，不為利他，他由此無利益故。若已離欲聖人，以物施他眾生，除現報業，此施但為利他，他由此得利益故；不為自身，此業果報地永已過故。若未離欲聖人，及未離欲凡夫，以物施他眾生，此施為二利，謂自、他。若已離欲聖人，於支提施物，除現報業，此業不為二利，謂自、他，此施唯為恭敬知恩故施。若約通義說，此施以大富樂為果報。偈曰：勝別由能施，施類由勝故。釋曰：此中能施勝者。"
+  },
+  "v115": {
+   "sa": "dātā viśiṣṭaḥ śraddhādyaiḥ satkṛtyādi dadāti ataḥ / satkārodārarucitā kālānācchedyalābhitā // VAkK_4.115 //",
+   "sa-bhasya": "[269|08] dātā viśiṣṭaḥ śraddhādyaiḥ [269|09] śraddhāśīlaśrutādiguṇayukto dātā viśiṣṭo bhavati / [269|09-269|10] tasya taddānadātṛviśeṣeṇa phaladānaṃ prativiśiṣyate / [269|10] sa ca tādṛśo dātā [269|11] satkṛtyādi dadāti [269|12] satkṛtya svahastaṃ kāle parānupahatya dadāti / [269|13] ataḥ / [269|14] satkārodārarucitā kālānācchedyalābhitā // VAkK_4.115 // [269|15] ato 'sya dātustattādṛśaṃ dānaṃ dattvā yathākramaṃ catvāro viśeṣā bhavanti / [269|15-269|16] satkāralābhī bhavati / [269|16] udāreṣu ca bhogeṣu ruciṃ labhate / [269|16-269|17] kālelna ca bhogān labhate nātikrāntikālena / [269|17] anācchedyāṃśca bhogān labhate / [269|17-269|18] nāsya bhogāḥ parairācchādyante nāpyagnyādibhirvināśyante / [269|18-269|19] uktaṃ yathā dātā viśiṣyate tadviśeṣācca dānaviśeṣaḥ /",
+   "T1560": "主異由信等，行敬重等施， 得尊重廣愛，應時難奪果。",
+   "T1558": "且由施主差別云何？頌曰：主異由信等，行敬重等施， 得尊重廣愛，應時難奪果。論曰：由施主成信、戒、聞等差別功德，故名主異；由主異故，施成差別；由施差別，與果有異。諸有施主具如是德，能如法行敬重等四施，如次便得尊重等四果。謂若施主行敬重施，便感常為他所尊重。若自手施，便能感得於廣大財愛樂受用。若應時施，感應時財，所須應時不過時故。若無損施，便感資財，不為他侵及火等壞。",
+   "T1559": "偈曰：由信等人勝。釋曰：由信、戒、聞等德相應故為勝。此人所行施，由施主有勝德，於與果最勝。若施主有如此德，偈曰：以敬重等施。釋曰：若敬重心行施、自手行施、應時行施、不損惱行施。是故，偈曰：得尊重大樂，應時及難奪。釋曰：若施主能行四德施，次第得四種可愛勝果，謂得他恭敬尊重；於大勝可愛塵起受用意樂；應受用時即得財物，不過受用時；所得財物不可侵奪，謂怨親水火等。"
+  },
+  "v116": {
+   "sa": "varṇādisampadā vastu surūpatvaṃ yaśasvi vā / priyatā sukumārartusukhasparśāṅgatā tataḥ // VAkK_4.116 //",
+   "sa-bhasya": "[269|20] atha vastu kathaṃ viśiṣyate / [269|21] varṇādisampadā vastu [269|22] viśiṣṭamiti vartate / [269|22-269|23] yadi yaddīyate dadvarṇagandharasasparśānāmanyatamenāpi saṃpannaṃ bhavati / [269|23] evaṃ vastu viśiṣyate / tādṛśaṃ vastu dattvā kiṃ bhavati / yathākramam [269|24-269|25] surūptvaṃ yaśasvi vā / priyatā sukumārartusukhasparśāṅtā tataḥ // VAkK_4.116 // [269|26] varṇasampannaṃ dattvā surūpo bhavati / gandhasaṃpannaṃ dattvā yaśasvī bhavati / [269|26-270|01] gandhavadyaśaso dikṣu vidhāraṇāt / [270|01] rasasaṃpannaṃ dattvā priyo bhavati / rasa iva svāduḥ / [270|01-270|03] sparśasaṃpannaṃ dattvā sukumārāṅgāśca bhavati ṛtusukhasparśāni cāsyāṅgāni bhavanti yathā strīratnasya /",
+   "T1560": "財異由色等，得妙色好名， 眾愛柔軟身，有隨時樂觸，",
+   "T1558": "由所施財差別云何？頌曰：財異由色等，得妙色好名， 眾愛柔軟身，有隨時樂觸。論曰：由所施財或闕或具色香味觸，如次便得或闕或具妙色等果。謂所施財色具足故便感妙色。香具足故便感好名，如香芬馥遍諸方故。味具足故便感眾愛，如味美妙眾所愛故。觸具足故感柔軟身及有隨時生樂受觸，如女寶等。果有減者，由因闕故，如是亦由具色香等故名財異。由財異故，施體及果皆有差別。",
+   "T1559": "說施主勝德義已。由施主有勝德故，施有勝類。復次所施物有勝德。云何？偈曰：色等德物勝。釋曰：若所施物色香味觸等德隨一相應，此物由此德勝。若施如此有德物，此施何有？次第應知。偈曰：妙色好名聞，可愛相軟滑，隨時樂觸身。釋曰：若施有色德物，得端正可愛色報。若施有香德物，得大好名聞，如香於四方名聞遍覆。若施有味德物，得報如美味，為一切世間所愛。若施有觸德物，得柔軟細滑身，復得隨時安樂觸身，譬如寶女身。"
+  },
+  "v117": {
+   "sa": "gatiduḥkhopakāritvaguṇaiḥ kṣetraṃ viśiṣyate / agraṃ muktasya muktāya bodhisattvasya ca aṣṭamam // VAkK_4.117 //",
+   "sa-bhasya": "[270|04] atha kṣetraṃ kathaṃ viśipyate / [270|05] gatiduḥkhopakāritvaguṇaiḥ kṣetraṃ viśiṣyate / [270|06] gativiśeṣātāvadviśiṣyate / [270|06-270|07] tathā hyuktaṃ bhagavatā \"tiryagyonigatāya dānaṃ dattvā śataguṇo vipākaḥ pratikāṅkṣitavyaḥ / [270|07-270|08] duḥśīlāya manuṣyabhūtāya dānaṃ dattvā sahasraguṇa\" iti / [270|08] duḥkhaviśeṣā dviśiṣyate / tathā hyaupadhikeṣu puṇyakriyāvastuṣu / [270|09] glāne dānaṃ glānopasthāpake dānam / [270|09-270|11] śītalikādiṣu ca dānamuktvoktame\" bhiḥ saptabhiḥ auṣadhikaiḥ puṇyakriyāvastubhiḥsamanvāgatasya śrāddhasya kulaputrasya vā kuladuhiturvā na labhyaṃ puṇyānāṃ pramāṇamudgrahītumi\"ti / [270|12-270|13] upakāritvaviśeṣādyathā mātāpitroranyeṣāṃ copakāriṇām ṛṣyamṛgajātakādyudāharaṇāt / [270|13] guṇaviśeṣādyathā\" śīlavate dattvā śatasahasraguṇo vipāka\" ityevamādi / [270|14] sarveṣāṃ tu dānānām [270|15] agraṃ muktasya muktāya [270|16] \"yadvītarāgo vītarāgāya dattvā 'tidānamidaṃ śreṣṭhamāmiṣadāneṣu dānamityuktaṃ bhagavatā / [270|17] bodhisattvasya ca [270|18] yadvā dānaṃ bodhisattve dadāti sarvasattvahitahetostadamuktasyāpyamukte 'bhyādānamagram / [270|19] tat sthāpayitvā yāni bhagavato 'nyānyaṣṭau dānānyuktāni teṣām [270|20] aṣṭamam // VAkK_4.117 // [270|21] agramiti vartate / katamānyaṣṭau / [270|21-270|24] āsādya dānaṃ bhayadānam adānme dānaṃ dāsyati me dānaṃ dattpūrvaṃ me dānaṃ pitṛbhiśca pitāmahaiśceti dānaṃ dadāti svargārthaṃ dānaṃ kīrtyarthaṃ dānaṃ cittālaṅkārārthaṃ dānaṃ cittapariṣkārārthaṃ yiogasaṃbhārārthamuttamārthasya prāptaye dānaṃ dadāti / [270|24] tatrāsādya dānaṃ yat āsannebhya upagatebhyo dānaṃ dadātīti paurāṇāḥ / [270|25] bhayadānaṃ yadvināśābhimukhaṃ dṛṣṭvā varaṃ dadāmīti dadāti / [270|25-270|26] śeṣaṃ sugamatvānna vibhaktam / [270|26] srota āpattiphalapratipannakāya dānaṃ dattvā 'prameyavipākaḥ / [270|27] tato 'prameyataraḥ srota āpannāyeti vistareṇoktaṃ sūtre / apitu",
+   "T1560": "田異由趣苦，恩德有差別。 脫於脫菩薩，第八施最勝，",
+   "T1558": "由所施田差別云何？頌曰：田異由趣苦，恩德有差別。論曰：由所施田趣、苦、恩德各有差別，故名田異，由田異故施果有殊。由趣別者，如世尊說：若施傍生受百倍果，施犯戒人受千倍果。由苦別者，如七有依福業事中，先說應施客行病侍、園林常食及寒風熱隨時食等。復說若有具足淨信男子女人，成此所說七種有依福業事者，所獲福德不可取量。由恩別者，如父母、師及餘有恩。如熊鹿等，《本生經》說諸有恩類。由德別者，如契經言：若施持戒人，受億倍果等。於諸施福最勝者何？頌曰：脫於勝菩薩，第八施最勝。論曰：薄伽梵說：若離染者，於離染者施諸資財，於財施中此為最勝。若諸菩薩所行惠施，是普利樂諸有情因。雖不名為脫施於脫，而於施福亦為最勝。除此更有八種施中，第八施福亦為最勝。八施者何？一隨至施、二怖畏施、三報恩施、四求報施、五習先施、六希天施、七要名施、八為莊嚴心為資助心為資瑜伽為得上義而行惠施。隨至施者，宿舊師言：隨近己至方能施與。怖畏施者，謂見此財壞相現前，寧施不失。習先施者，謂習先人父祖家法而行惠施。餘施易了，故不別釋。如契經說：施預流向其果無量，施預流果果量更增，乃至廣說。",
+   "T1559": "田何德為勝？偈曰：由道苦恩德，施田有勝德。釋曰：如世尊說：若施物於畜生，應受百倍果報。若施物於人道破戒眾生，應受千倍果報。由苦差別田有勝德者，如有攝福業類中說：一於病人行施，二於看治病人行施，三於寒時行施，說如此等施。復說：若與此有攝七種福業類相應，有信善男子善女人，所得福德不可校量。由恩差別田有勝德者，如父母及餘有恩人，譬如熊鹿本生經說。由德差別田有勝德者，如經言：若施物於有戒人，應受百千倍果報。如此等。於一切施中，偈曰：脫人施脫勝。釋曰：若離欲人施物於離欲人，此施於一切財施中，佛世尊說最勝。偈曰：菩薩。釋曰：菩薩所行施，此施是一切眾生安樂利益事因故，此施若非離欲人所行，及不於離欲人施，此施於一切施最勝，除菩薩施。是佛世尊所說八種施，於中，偈曰：及第八。釋曰：最勝。何者為八？一已至施；二怖畏施；三已施我施；四當施我施；五昔已施施，謂父及先亡等；六為得天道施；七為得好名聞施；八為莊嚴心施，為心資糧施，為應眾理施，為得最上品己利施。已至施者，先舊師解：於已至及親近人所行施。怖畏施者，此人見財物現前向滅壞，若施勝自滅壞，由此意故行施。所餘易解，故不分別。若施物於須陀洹向人，此施果報不可稱量。若施物於須陀洹，百倍無量。如此廣說，應知如經。"
+  },
+  "v118": {
+   "sa": "mātṛpitṛglānadhārmakathikebhyo 'ntyajanmane / bodhisattvāya cāmeyā anāryebhyo 'pi dakṣiṇā // VAkK_4.118 //",
+   "sa-bhasya": "[271|01-271|02] mātṛpitṛglānadhārmakathikebhyo 'ntyajanmane / bodhisattvāya cāmeyā anāryebhyo 'pi dakṣiṇā // VAkK_4.118 // [271|03] ebhyaḥ pañcabhyaḥ pṛthagjanabhūtebhyo 'pyaprameyā phalato dakṣiṇā bhavati / [271|03-271|04] tatrāntyajanmā bodhisattvaścaramabhavikaḥ / [271|04-271|05] dharmakathikaścaturvidhe kṣetraviśeṣe katamasmin pakṣe dikṣeptavyaḥ / [271|05] upakāripakṣe / [271|05-271|07] sa hi mahākalyāṇamitram avidyāndhāyāṃ prajāyāṃ prajñācakṣuṣo dātā samaviṣamasya prakāśayitā anāsravasya dharmakāyasyātinivartayitā samāsato buddhakṛtyasya kartā / [271|08] karmaṇāṃ tu gurulaghutvaṃ jñātukāmena samāsataḥ ṣaṭ kāraṇāni jñeyāni / tadyathā",
+   "T1560": "父母病法師，最後身菩薩， 設非證聖者，施果亦無量。",
+   "T1558": "頗有施非聖果亦無量耶？頌曰：父母病法師，最後生菩薩， 設非證聖者，施果亦無量。論曰：如是五種設是異生，但施亦能招無量果。住最後有，名最後生。法師四田中，是何田所攝？是恩田攝。所以者何？為諸世間大善友故、無明所盲者能施慧眼故、開示世間安危事故、令有情生起無漏法身故。以要說者，善說法師乃至能為佛所作事故，於彼行施便招無量果。欲知諸業輕重相者，應知輕重略由六因。",
+   "T1559": "復次偈曰：父母病說法，人後生菩薩，雖凡夫中施，果報無數量。釋曰：此五人若皆是凡夫，於彼行施，約果報無數無量。於中最後生菩薩說法人，於四種勝田中，安立在何田？入恩田攝。何以故？此人是善知識，世間無明所闇能施慧眼，能顯示平等不平等，能生起無流法身。若略說，此人能作佛所應作事。若人欲知諸業輕重相，略說應知有六種因。"
+  },
+  "v119": {
+   "sa": "pṛṣṭhaṃ kṣetramadhiṣṭhānaṃ prayogaścetanāśayaḥ / eṣāṃ mṛdvadhimātratvāt karmamṛdvadhimātratā // VAkK_4.119 //",
+   "sa-bhasya": "[271|09-271|10] pṛṣṭhaṃ kṣetramadhiṣṭhānaṃ prayiogaścetanāśayaḥ / eṣāṃ mṛdvadhimātratvāt karmamṛdvadhimātratā // VAkK_4.119 // [271|11] pṛṣṭhaṃ nāma yatkṛtasya punaranukriyā / kṣetraṃ nāma yatra kārāpakārāḥ kriyante / [271|12] adhiṣṭhānaṃ karmapathaḥ / prayogastadarthaṃ kāyavākkarma / [271|12-271|13] cetanā yayā karmapathaṃ niṣṭhāpayati / [271|13-271|14] āśayastadabhiprāya evaṃ caivaṃ ca kuryāmevaṃ caivaṃ ca na kariṣyāmīti / [271|14] kasyacit pṛṣṭhaparigraheṇaiva tatkarma guru saṃpadyate / [271|14-271|15] vipākanaiyamyenāvasthānāt / [271|15] kasyacit kṣetravaśenaiva / [271|15-271|16] tatraiva kṣetre punaradhiṣṭhānavaśāt guru saṃpadyate nānyathā / [271|16] yathā mātāitroḥ prāṇātipātāt na tvevamadattādānādikāt / [271|16-271|17] evamanyadapi yojyam / [271|17-271|18] yasya tu sarvāṇyadhimātrāṇi bhavanti tasyātyarthamadhimātraṃ guru karma veditavyam / [271|18] yasya mṛdūni tasyātyarthaṃ mṛdu veditavyam //",
+   "T1560": "後起田根本，加行思意樂， 由此下上故，業成下上品。",
+   "T1558": "其六者何？頌曰：後起田根本，加行思意樂， 由此下上故，業成下上品。論曰：後起者，謂作已隨作。田，謂於彼作損作益。根本者，謂根本業道。加行者，謂引彼身語。思，謂由彼業道究竟。意樂者，謂所有意趣，我應造作如是如是、我當造作如是如是。或有諸業唯由後起所攝受故得成重品，定安立彼異熟果故。或有諸業由田成重，或有於田由根本力成重非餘，如父母田行殺罪重，非盜等業由餘成重。例此應思。若有六因皆是上品，此業最重。翻此最輕，除此中間非最輕重。如契經說：有二種業，一造作業、二增長業。何因說業名增長耶？由五種因。",
+   "T1559": "偈曰：後分田及依，前分故意願，此下上品故，故業有下上。釋曰：後分者，若作此業已，復更數數隨作。田者，是處行損行益。依者，謂業道。前分者，為得業道，身口故意，若由此業道究竟。故意者，如此如此我應作，如此如此我正作。願者，謂求當來用。有人由屬後分故，成重品業，定安立果報故。復有人由屬田故，業成重品，於田由屬依止，此業成重品，不由餘因。依止謂業道，譬如父母及餘眾生。由殺生依止重，不由偷盜等重，所餘應知亦爾。若人作業，此六因一切皆是上品，應知此業是最重品。若人作業，此六因一切皆是下品，應知此業是最輕品。經中說：業有二種，一所作、二所長。云何業是所長？由五種因。"
+  },
+  "v120": {
+   "sa": "saṃcetanasamāptibhyāṃ niṣkraukṛtya vipakṣataḥ / parivārādvipākācca karmopacittamucyate // VAkK_4.120 //",
+   "sa-bhasya": "[271|19] kṛtaṃ copacitaṃ ca karmocyate / kathaṃ karmopacitaṃ bhavati / pañcabhiḥ karaṇaiḥ / [271|20-271|21] saṃcetanasamāptibhyāṃ niṣkaukṛtya vipakṣataḥ / parivārādvipākācca karmopacitamucyate // VAkK_4.120 // [271|22] kathaṃ saṃcenataḥ / saṃcintya kṛtaṃ bhavati nābuddhipūrvaṃ na sahasā kṛtam / [271|22-271|23] kathaṃ samāpattitaḥ / [271|23] kaścidekena duścaritenāpāyānyātikaścidyāvattribhiḥ / [271|23-271|24] kaścidekena karmapathena kaścidyāvaddaśabhiḥ / [271|24-271|25] tatra yo yāvatā gacchati tasminnasamāpte kṛtaṃ tatkarma nopacitam samāpte tūpacitam / [271|25] kathaṃ niṣkaukṛtyavipakṣataḥ / [271|25-272|01] nirvipratisāraṃ ca tat karma bhavati niṣpratipakṣaṃ ca / [272|01] kathaṃ parivārataḥ / [272|01-272|02] akuśalaṃ cākuśalaparivāraṃ ca bhavati / [272|02] kathaṃ vipākataḥ / vipākadāna niyataṃ bhavati / [272|03] evaṃ kuśalamapi yojyam / ato 'nyathā karma kṛtaṃ bhavati nopacitam / [272|04] caitye sarāgasyātmārthaṃ dānamityuktam / [272|04-272|05] tatrāsatyupabhoktari kathaṃ puṇyaṃ bhavati / [272|05-272|06] dvividhaṃ hi puṇyaṃ tyāgānvayaṃ tyāgādeva yadupapadyate paribhogānvayaṃ ca deyadharmaparibhogādyadutpadyate /",
+   "T1560": "由審思圓滿，無惡作對治， 有伴異熟故，此業名增長。",
+   "T1558": "何等為五？頌曰：由審思圓滿，無惡作對治， 有伴異熟故，此業名增長。論曰：由審思故者，謂彼所作業，非先全不思、非率爾思作。由圓滿故者，謂諸有情中，或由一惡行便墮惡趣，或乃至三；或由一業道便墮惡趣，或乃至十。此中若有齊此量業應墮惡趣，未圓滿時但名造作不名增長，若此已圓滿亦得增長名。由無惡作對治故者，謂無追悔無對治業。由有伴故者，謂作不善業，不善為助伴。由異熟故者，謂定與異熟，善翻此應知。異此諸業唯名造作，如前所明。未離欲等持己所有奉施制多，此施名為唯為自益。",
+   "T1559": "偈曰：故意作圓滿，無憂悔對治，由伴類果報，說業所增長。釋曰：云何由故意作？此業故意所作，非無意為先、非怱促所作，熟研尋簡擇然後方作。云何由圓滿？有人由一邪行墮惡道，有人乃至由三。有人由一業道墮惡道，乃至有人由十墮惡道。此中若人由此業量應墮惡道，此量未圓滿，此業但是所作未是所長，若已圓滿方是所長。云何由無憂悔對治？若人作業於中無憂悔心，不受善行為對治。云何由伴類？惑作惡，以惡為伴類。云何由果報？此業已定，能與果報。善業亦應如此思。若異此相所作業，但作非長。前已說，未離欲人於支提施物，此施但為自利不為利他。此中若無能受用施物，云何此業成福？福業有二種：一棄捨為類，若由捨物此福業生；二受用為類，若由受用所施物此福業生。"
+  },
+  "v121": {
+   "sa": "caitye tyāgānvayaṃ puṇyaṃ maitryādivadagṛṇhati / kukṣetre 'pīṣṭaphalatā phalabījāviparyayāt // VAkK_4.121 //",
+   "sa-bhasya": "[272|07] caitye tyāgānvayaṃ puṇyaṃ [272|08] paribhogānvyaṃ puṇyaṃ nāsti / kathaṃ tatrāpratigṛhṇati kasmiṃścit puṇyam / [272|08-272|09] kiṃ punaḥ kāraṇaṃ sati pratigrahītari bhavitavyaṃ nāsatīti / [272|09] kasyacidapyanugrahābhāvāt / idamakāraṇam / [272|10] yadi hi puṇyaṃ parānugrahādeva syāt maitryādyapramāṇasamyagdṛṣṭibhāvanāyāṃ na syāt / [272|11] tasmādeṣṭavyaṃ caityai 'pi puṇyam / [272|12] maitryādivadagṛhṇati / [272|13-272|14] yathā maitryādiṣvantareṇāpi pratigrāhakaṃ parānugrahaṃ vā puṇyaṃ bhavati svacittaprabhavaṃ tathābhyatīte 'pi guṇavati tadbhaktikṛtaṃ svacittāt puṇyaṃ bhavati / [272|14-272|15] dānamānakriyā tarhi vyarthā prāpnoti / [272|15] na / tatkarmasamutthāpikāyā bhakteḥ prakṛṣṭataratvāt / [272|15-272|16] yathā hi śatruvadhābhiprāyasya tatsamutthāpitaṃ kāyavākkarma / [272|16-272|17] śatrusaṃjñayā tasminmṛte 'pi kurvato bahutaramapuṇyaṃ jāyate / [272|17] nābhiprāyamātreṇa / [272|17-272|18] tathābhyatīte śāstari tadbhaktisamutthāṃ dānamānakriyāṃ kurvato bahutaraṃ puṇyaṃ jāyate / [272|19] na bhaktimātreṇa / [272|19-272|20] yadi svakṣetre dānakriyāvījamiṣṭaphalaṃ bhavati tatkṣetre tarhyaniṣṭaphalaṃ bhaviṣyati / [272|21] kukṣetre 'pīṣṭaphalatā phalabījāviparyayāt // VAkK_4.121 // [272|22-272|23] kukṣetre 'pi phalasya bījādaviparyayo dṛṣṭo mṛdvīkābījānmṛdvīkāphalamevotpadyate madhuraṃ nimbavījānnimbameva tiktam / [272|23-272|24] evaṃ kukṣetre 'pi parahitādhyāśayapravṛttasya dānabījasyeṣṭameva phalaṃ nirvartate nāniṣṭam / [272|24-273|01] kṣetradoṣāttu tadvījamalpaphalaṃ vā bhavatyaphalaṃ vā / [273|01] gataṃ dānamayapuṇyakriyāvastu saprasaṅgam //",
+   "T1560": "制多捨類福，如慈等無受， 惡田有愛果，種果無倒故。",
+   "T1558": "既無受者，福如何成？頌曰：制多捨類福，如慈等無受。論曰：福有二類，一捨、二受。捨類福者，謂由善心但捨資財施福便起。受類福者，謂所施田受用施物施福方起。於制多所奉施供具，雖無受類，有捨類福。彼既不受，福由何生？復以何因知福生者要由彼受不受不生？不受於他，無攝益故。此非定證，若福要由攝益他成，則修慈等及正見等應不生福。是故應許供養制多有多福生，如修慈等。謂如有一修慈等定，雖無受者及攝益他，而從自心生無量福。如是有德者，雖已滅過去，而追伸敬養，福由自心生。豈不唐捐此施敬業？不爾，發業心方勝故。謂如有一欲害怨家，彼命雖終猶懷怨想，發起種種惡身語業，生多非福非但起心。如是大師雖已過去，追伸敬養起身語業，方生多福非但起心。若於善田殖施業種可招愛果，若於惡田雖施但應招非愛果。此不應爾。所以者何？頌曰：惡田有愛果，種果無倒故。論曰：現見田中種果無倒，從末度迦種末度迦果生，其味極美。從賃婆種賃婆果生，其味極苦。非由田力，種果有倒。如是施主雖於惡田，而益他心殖諸施種，但招愛果不招非愛。然由田過，令所殖種或生果少或果全無。",
+   "T1559": "此中偈曰：支提捨類福。釋曰：於中無受用類福。彼若不受，云何有福？何因為證？若有能受必有福，若無能受則無福，隨一無利益故。此因不成證。何以故？若福由利他故，成修慈等無量及正見應無福，是故應許此義，於支提福唯捨為類。偈曰：如慈雖不受。釋曰：譬如於慈悲等觀中，雖無能受及利益他事，有無量福生從自心起。如此若有德人已滅，敬事心所作，從自心起福。若爾，施恭敬等業，應成無果。是義不然。何以故？業生緣敬事，心最勝故。譬如有人欲殺怨家，怨家先已死，此人猶想怨家起故意，造身口業生多非福，不但由欲殺意。如此大師已去世，若人由敬事心起恭敬施等事，最生多福，不但由敬事心。若於善田行施，及起恭敬等業種子，得可愛報。若於惡田，應得不可愛報。偈曰：惡田有好菓，菓種不倒故。釋曰：於惡田見果，從種子無倒。謂從蒲桃種子，唯蒲桃子生，其味甘美。從絍婆種子，唯絍婆子生，其味薟苦。如此於惡田，由安樂利益他意所生施業種子，唯可愛果報生，非不可愛。惡行亦爾，由田過失，此種子或少果或無果。說施性福業類及有立破已，戒性今當說。"
+  },
+  "v122": {
+   "sa": "dauḥśīlyamaśubhaṃ rūpaṃ śīlaṃ tadviratiḥ dvidhā / pratikṣiptācca buddhena viśuddhaṃ tu caturguṇam // VAkK_4.122 //",
+   "sa-bhasya": "[273|02] śīlamayaṃ vaktavyam / taducyate [273|03] dauḥśītlamaśubhaṃ rūpaṃ śīlaṃ tadviratiḥ [273|04] akuśalaṃ hi rūpaṃ dauḥśīlyamucyate / tasmādviratiḥ śīlam / sā punarviratiḥ [273|05] dvidhā / [273|06] yayā ca viramyate vijñaptyā yacca tadviramaṇam avijñaptiḥ / [273|06-273|07] na ca kevalaṃ dauḥśīlyādviratiḥ śīlam / [273|07] kiṃ tarhi / [273|08] pratikṣiptācca buddhena [273|09-273|10] yadapi na prakṛtyā dauḥśīlayaṃ bhagavatā ca buddhena pratikṣiptamakālabhojanādikaṃ tasmādapi dvidhā viratiḥ śīlam / [273|10] samāttaśikṣasya tu tadadhyācārāddauḥśīlyaṃ jāyate // [273|10-273|11] uktaṃ tamāsena śīlam // [273|12] viśuddhaṃ tu caturguṇam // VAkK_4.122 //",
+   "T1560": "離犯戒及遮，名戒各有二，",
+   "T1558": "施類福業事傍論已了，今次應辯戒類福業事。頌曰：離犯戒及遮，名戒各有二，",
+   "T1559": "偈曰：邪戒謂惡色，正戒離此二。釋曰：惡性色，謂身口業說名惡戒，遠離此業說名善戒。此遠離戒有二種，有教身口業，能遠離惡，說名有教戒。但是遠離性類，說名無教戒。不但遠離惡戒名善戒。何者？偈曰：及是佛遮制。釋曰：此業雖非自性惡戒，為守人及正法故，佛世尊立遮制戒。如非時食等，遠離所遮制名善戒。此戒有二種，謂有教、無教。若人受此戒，由犯事故得破戒罪。若由略義，戒性已說。偈曰：此清淨四德。釋曰：若具四德名清淨戒，若翻四德名染污戒。"
+  },
+  "v123": {
+   "sa": "dauḥśīlyataddhetvahataṃ tadvipakṣaśamāśritam / samāhitaṃ tu kuśalaṃ bhāvanā cittavāsanāt // VAkK_4.123 //",
+   "sa-bhasya": "[273|13] tattu śīlaṃ caturguṇaṃ bhavati / viparyayādaviśuddham / atha kathaṃ caturguṇamityāha [273|14] dauḥśīlyataddhetvahataṃ tadvipakṣaśamāśritam / [273|15] dauḥśītyena tāvadanupahataṃ bhavati yathoktena dauḥśīlyena / hetunā 'pyanupahataṃ bhavati / [273|16] lobhādibhiḥ kleśopakleśaiḥ dauḥśīlyavipakṣāśritaṃ ca bhavati / [273|16-273|17] smṛtyupasthānasaṃniśritatvāt samāśritaṃ ca bhavati / [273|17] nopapattiviśeṣāśritam / [273|17-273|18] nirvāṇapariṇāmitavāt / [273|18] pañcabhiḥ kāraṇaiḥ ityapare / [273|18-273|19] maulaiḥ karmapathairviśuddhaṃ bhavati sāmantakairviśuddhaṃ vitarkairanupahataṃ smṛtyā 'nuparigahītaṃ nirvāṇapariṇāmitaṃ ceti / [273|19-273|20] caturvidhaṃ śīlamityapare / [273|20] bhayaśīlaṃ yadā jīvikāślokadaṇḍadurgatibhayāt pālyate / [273|20-273|21] āśāstiśīlaṃ yadbhavabhogasatkāratṛṣṇākṛtam / [273|21-273|22] bodhyaṅgānulomaṃ śīlaṃ yanmokṣārthaṃ samyagdṛṣṭikāṇām / [273|22] pariśuddhaṃ śīlamanāsravaśīlaṃ nirmalatvāditi // gataṃ śīlam // [273|23] samāhitaṃ tu kuśalaṃ bhāvanā [273|24] kimidaṃ samāhitaṃ nāma / samādhisvabhāvaṃ sahabhū yat / kimarthametat bhāvanetyucyate / [274|01] cittavāsanāt // VAkK_4.123 // [274|02] taddhi samāhitaṃ kuśalamatyarthaṃ cittaṃ vāsayati / guṇaistanmayīkaraṇātsaṃtateḥ / [274|02-274|03] puṣpaistilabhāvanāvat / [274|03] dānaṃ tāvanmahābhogatāyai saṃvartata ityuktam / [274|03-274|04] atha śīlaṃ bhāvanā ca",
+   "T1560": "非犯戒因壞，依治滅淨等。 等引善名修，極能熏心故，",
+   "T1558": "非犯戒因壞，依治滅淨等。論曰：諸不善色名為犯戒，此中性罪立犯戒名。遮謂所遮非時食等，雖非性罪而佛為護法及有情別意遮止，受戒者犯亦名犯戒，簡性罪故但立遮名。離性及遮，俱說名戒。此各有二，謂表、無表，以身語業為自性故。已略辯戒自性差別。若具四德得清淨名，與此相違名不清淨。言四德者，一者不為犯戒所壞，犯戒謂前諸不善色。二者不為彼因所壞，彼因謂貪等煩惱隨煩惱。三者依治，謂依念住等，此能對治犯戒及因故。四者依滅，謂依涅槃迴向涅槃非勝生故。等言為顯復有異說。有說：戒淨由五種因，一根本淨、二眷屬淨、三非尋害、四念攝受、五迴向寂。有餘師說：戒有四種，一怖畏戒，謂怖不活、惡名、治罰、惡趣畏故，受護尸羅。二希望戒，謂貪諸有勝位、多財、恭敬、稱譽受持淨戒。三順覺支戒，謂為求解脫及正見等受持淨戒。四清淨戒，謂無漏戒，彼能永離業惑垢故。已辯戒類，修類當辯。頌曰：等引善名修，極能熏心故。論曰：言等引善，其體是何？謂三摩地，自性俱有。修名何義？謂熏習心，以定地善於心相續極能熏習令成德類，如花熏苣蕂。是故獨名修。",
+   "T1559": "云何具四德？偈曰：非邪戒因污，依對治寂滅。釋曰：非邪戒所污者，如前所說，破戒相隨一所不毀犯，貪等諸煩惱及利等染污皆所不觸。此戒依止破戒對治，謂依念處等故。此戒依止寂滅起，不依止善道生勝類起，為得涅槃所迴向故。有餘師說：由五因故得清淨，一由根本業道清淨、二由前分清淨、三非邪覺觀所侵觸、四四念處所攝持、五於涅槃所迴向。有餘師說：戒有四種：一怖畏戒，由無資糧憂惱重罰惡道怖畏所得。二望得戒，謂生死樂具及他恭敬利養好名貪欲所得。三順覺分戒，謂能引解脫。有正見人厭患生死，求出離所得。四無流戒，能對治諸惑，是無垢清淨。說戒性已，修性福業類今當說。偈曰：寂靜地善業修。釋曰：寂靜者何法？業與定地自性法俱起。云何說此法名修？偈曰：能薰心故。釋曰：云何薰習？此寂靜地善業最極能薰習心，能令心與德成一性故，及相續亦爾。譬如以花熏麻。"
+  },
+  "v124": {
+   "sa": "svargāya śīlaṃ prādhānyāt visaṃyogāya bhāvanā / caturṇāṃ brāhmapuṇyatvaṃ kalpaṃ svargeṣu modanāt // VAkK_4.124 //",
+   "sa-bhasya": "[274|05] svargāya śīlaṃ prādhānyāt visaṃyogāya bhāvanā / [274|06] dānamapi svargāya śīlaṃ prādhānyāt / śīlamapi visaṃyogāya / bhāvanā tu prādhānyāt / [274|07] sutra uktaṃ \"catvāraḥ pudgalā brāhmaṇyaṃ puṇyaṃ prasavantī\"ti / [274|07-274|08] katamat tad brāhmapuṇyam / [274|08] yattallakṣaṇavipākasya karmaṇaḥ parimāṇajñāpanāyoktam iti vaibhāṣikāḥ / [274|09] pūrvācāryās tu vyācakṣate / [274|10] caturṇāṃ brāhmapuṇyatvaṃ kalpaṃ svargeṣu modanāt // VAkK_4.124 // [274|11] yāvatā puṇyena kalpaṃ svargeṣu modate idaṃ brāhmaṃ puṇyam / [274|11-274|12] brahmapurohitānāṃ kalpāyuṣkatvāt / [274|12] nikāyāntare gāthāṃ paṭhanti [274|13] \"brāhmaṃ puṇyaṃ prasavati kalpaṃ svargeṣu modata\" iti /",
+   "T1560": "戒修勝如次，感生天解脫， 感劫生天等，為一梵福量。",
+   "T1558": "前辯施福能招大富，戒修二類所感云何？頌曰：戒修勝如次，感生天解脫。論曰：戒感生天，修感解脫。勝言為顯就勝為言，謂施亦能感生天果，就勝說戒。持戒亦能感離繫果，就勝說修。經說四人能生梵福：一為供養如來䭾都建窣堵波於未曾處，二為供養四方僧伽造寺施園四事供給，三佛弟子破已能和，四於有情普修慈等。如是梵福其量云何？頌曰：感劫生天等，為一梵福量。論曰：先軌範師作如是說：隨福能感一劫生天受諸快樂是一福量，由彼所感受快樂時同梵輔天一劫壽故。以於餘部有伽他言：有信正見人，修十勝行者， 便為生梵福，感劫天樂故。毘婆沙師作如是說：即於分別妙相業中，所辯福量此即同彼。等言為顯如是異說。財施已說。",
+   "T1559": "前已說，此施以大富樂為果報。戒修云何？偈曰：由勝戒感天，修感相離果。釋曰：施亦能感天道，戒由勝能能感天道，亦能感相離果等，修由勝能能感相離果，亦能感天道等。經中說：有四人能生梵福業。何法名梵福？毘婆沙師說：為校量能感相報業故，說梵福業。隨一業菩薩所修，能令得諸相中一相，此業量說名梵福。先舊諸師說，偈曰：四業名梵福，劫生天樂故。釋曰：隨福業量，能感一劫天道生及樂報，此業名梵福。說此業有四種。何者為四？一若此地處未經建立如來支提，於中造立如來藪斗波。二若此地處未經建立僧伽藍，於中造立僧伽藍。三世尊弟子眾已破，能更引攝令和合。四於十方眾生，修四無量心觀。此四種人，如梵先行壽量，於天道中生，受喜樂報。梵先行天壽量一劫故，佛說此人業同彼福業。於別部中，彼師說此偈：「有信正見人，若修十勝行， 即生梵福業，劫生天樂故。」說財施已，法施今當說。"
+  },
+  "v125": {
+   "sa": "dharmadānaṃ yathābhūta sūtrādyakliṣṭadeśanā / puṇyanirvāṇanirvedhabhāgīyaṃ kuśalaṃ tridhā // VAkK_4.125 //",
+   "sa-bhasya": "[274|14] āmiṣadānamuktam / dharmadānaṃ vaktavyam / tadidamucyate / [274|15] dharmadānaṃ yathābhūta sūtrādyakliṣṭadeśanā / [274|16] sūtrādīnāṃ yathābhūtamakliṣṭadeśanā dharmadānam / [274|16-274|17] ato mahatīṃ ta ātmanaḥ puṇyajyāniṃ kurvanti ye viparītadharmaṃ deśayanti / [274|17-274|18] kliṣṭacittā vā lābhasatkāra yaśāṃsi vāñchantaḥ / [274|18] uktaṃ puṇyakriyāvastubhedena trividhaṃ kuśalaṃ punaḥ [274|19] puṇyanirvāṇanirvedhabhāgīyaṃ kuśalaṃ tridhā // VAkK_4.125 // [274|20-274|21] puṇyabhāgīyaṃ yadiṣṭavipākaṃ mokṣabhāgīyaṃ yasminnutpanne niyataṃ parinirvāṇadharmā bhavati / [274|21-274|23] yasya saṃsārādīnavanairātmyanirvāṇaguṇadyotikāṃ kathāṃ śrutvā romaharṣāśrūpātau bhavatastasyāsti mokṣabhāgīyaṃ kuśalamūlamityavaseyaṃ pravṛṣīvāṅkuraprarohāt khalavileṣu bījāstitvam / [274|23-274|24] nirvedhabhāgīyamuṣmādi caturvidhaṃ paścādvyākhyāsyāmaḥ / [275|01] yadidaṃ loka ucyate lipimudrāgaṇanā kāvyaṃ saṃkhyeti ka eṣāṃ svabhāvaḥ /",
+   "T1560": "法施謂如實，無染辯經等， 順福順解脫，順決擇分三， 感愛果涅槃，聖道善如次。",
+   "T1558": "法施云何？頌曰：法施謂如實，無染辯經等。論曰：若能如實為諸有情以無染心辯契經等令生正解，名為法施。故有顛倒或染污心求利名譽恭敬辯者，是人便損自他大福。前已別釋三福業事，今釋經中順三分善。頌曰：順福順解脫，順決擇分三， 感愛果涅槃，聖道善如次。論曰：言順福分者，謂感世間可愛果善。順解脫分者，謂定能感涅槃果善。此善生已，令彼有情名為身中有涅槃法。若有聞說生死有過、諸法無我、涅槃有德，身毛為竪悲泣墮淚，當知彼已殖順解脫分善。如見得雨場有芽生，知其穴中先有種子。順決擇分者，謂近能感聖道果善，即煖等四，後當廣說。",
+   "T1559": "偈曰：法施如實理，無染說經等。釋曰：修多羅等十二部正教如實道理，無染污心顯釋文義，是名法施。是故此人自作最廣大，自福減失及損他福，若人顛倒說法，或有染污心，為求利養恭敬名聞故說法。此人亦爾。說福業類差別已，復有三種業類差別。偈曰：福解脫決擇，能感善有三。釋曰：復有別三種業類差別：一福德分能，若此業能感人天可愛報。二解脫分能，若業已起，此人後時必定以涅槃為法。若人聽聞生死過失、諸法無我涅槃功德、諸佛恩德相應正說，毛竪淚落悲讚等事起，此人昔已有解脫分能善根，應如此決。譬如於夏月由見芽生，知地坎坼中先有種子。三決擇分能，於暖等位有四種，後當說。"
+  },
+  "v126": {
+   "sa": "yogapravartitaṃ karma sasamutthāpakaṃ tridhā / lipimudre sagaṇanaṃ kāvyaṃ saṃkhyā yathākramam // VAkK_4.126 //",
+   "sa-bhasya": "[275|02-275|03] yogapravartitaṃ karma sasamutthāpakaṃ tridhā / lipimudre sagaṇanaṃ kāvyaṃ saṃkhyā yathākramam // VAkK_4.126 // [275|04] yogapravartitamiti upāyaviśeṣapravartitam / tridhā karmeti kāyavāṅmanaskarma / [275|04-275|05] tatra lipimudre tāvadyogapravartitaṃ kāyakarma samutthāpanam / [275|05] gaṇanā kāvyaṃ ca vākkarma / [275|06] ityetāni pañcaskandhasvabhāvāni / saṃkhyā manaskarma / yanmanasā saṃkalanaṃ dharmāṇām / [275|07] dharmāṇāmidānīṃ kecit paryāyā ucyante /",
+   "T1560": "諸如理所起，三業并能發， 如次為書印，算文數自體。",
+   "T1558": "如世間所說書、印、算、文、數，此五自體云何應知？頌曰：諸如理所起，三業并能發， 如次為書印、算文數自體。論曰：如理起者，正加行生。三業，應知即身語意。能發，即是能起此三，如其所應受想等法。此中書印以前身業及彼能發五蘊為體，次算及文以前語業及彼能發五蘊為體，後數應知以前意業及彼能發四蘊為體，但由意思能數法故。",
+   "T1559": "是世間所說，謂字印算量文章數，此五體相云何？偈曰：如理所成業，共緣起有三，字印及算量，文章數次第。釋曰：如理所成者，正方便所生。有三者，謂身口意業。此中字印，若勝方便所作屬身業，此共緣起。算量文章，若勝方便所作，屬口業，亦共緣起，此四五陰為性。數若勝方便所作，屬意業，亦共緣起，四陰為性，此數即是心思。諸法眾名今當說。"
+  },
+  "v127": {
+   "sa": "sāvadyā nivṛtā hīnāḥ kliṣṭāḥ dharmāḥ śubhāmalāḥ / praṇītāḥ saṃskṛtaśubhā sevyāḥ mokṣastvanuttaraḥ // VAkK_4.127 // abhidharmakośe karmanirddeśo nāma caturtha kośasthānamiti //",
+   "sa-bhasya": "[275|08] sāvadyā nivṛtā hīnāḥ kliṣṭā dharmāḥ [275|09] kliṣṭānāṃ dharmāṇāṃ sāvadyā nivṛtā hīnā iti paryāyāḥ / [275|10] śubhāmalāḥ / [275|11] praṇītāḥ [275|12] kuśalānāsravāṇāṃ praṇītā iti paryāyaḥ / [275|12-275|13] hīnapraṇītebhyo 'nye madhyā iti siddhaṃ bhavati / [275|14] saṃskṛtaśubhāḥ sevyāḥ [275|15] kusalasaṃskṛtānāṃ sevitavyā iti paryāyaḥ / śeṣā asevitavyā iti siddhaṃ bhavati / [275|16] kasmādasaṃskṛtaṃ na sevyam / anabhyasanīyatvādaphalatvācca / phalarthaṃ hi sevā bhavati / [275|17] sottarā anye sarvadharmāḥ / [275|18] mokṣastvanuttaraḥ // VAkK_4.127 // [275|19] nahi nirvāṇādviśiṣṭataramasti / tacca sarvebhyo viśiṣṭaṃ kuśalanityatvāt / ===================================================================== [275|20-275|21] abhidharmakośabhāṣye karmanirddeśo nāma caturthaṃ kośasthānamiti //",
+   "T1560": "善無漏名妙，染有罪覆劣， 善有為應習。解脫名無上。",
+   "T1558": "今應略辯諸法異名。頌曰：善無漏名妙，染有罪覆劣， 善有為應習，解脫名無上。論曰：善無漏法亦名為妙。諸染污法亦名有罪有覆及劣。准此妙劣，餘中已成，故頌不辯。諸有為善亦名應習，餘非應習義准已成。何故無為不名應習？不可數習令增長故。又習為果，此無果故。解脫涅槃亦名無上，以無一法能勝涅槃，是善是常超眾法故。餘法有上，義准已成。",
+   "T1559": "偈曰：有訶覆下性，染污。釋曰：若法有染污，有時說名有訶，或說為有覆，或說為下劣性。偈曰：善無，流美妙。釋曰：若善無流，說名美妙。異下性及美妙法，應知此名中。偈曰：有為善，應事。釋曰：若善有為，說此名應事。所餘不應事，此義自成。云何無為不應事？不可數習增長故，又無果故，一切事皆為得果。一切餘法皆有上，何法獨無上？偈曰：脫無上。釋曰：涅槃是出離一切生死法，故名解脫。此法於一切法無等。何以故？善真實常住故。尚無法等涅槃，何況有上。"
+  }
+ }
+}

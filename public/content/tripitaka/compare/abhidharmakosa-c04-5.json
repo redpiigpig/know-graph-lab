@@ -1,0 +1,392 @@
+{
+ "slug": "abhidharmakosa-c04-5",
+ "title": "俱舍論・分別業品（4.66–4.94）",
+ "family": "sa",
+ "intro": "《阿毘達磨俱舍論》第四品〈分別業品〉頌 4.66–4.94，一頌一節（頌號依 Pradhan 本，GRETIL 標 VAkK_品.頌）。五欄：梵本頌、梵本自釋（bhāṣya）、玄奘《俱舍論本頌》、玄奘《俱舍論》、真諦《俱舍釋論》；論本欄自該頌（含引出該頌的提問句）起、到下一頌前的釋文止。玄奘《俱舍論》常把數頌合為一個「頌曰」再一併解釋，區塊中按頌切開，釋文因此都落在區塊末頌；真諦本逐句引偈、隨句解釋，與梵本自釋的節奏相近。稱友 Yaśomitra《明了義釋》Sphuṭārthā 是自釋的疏，不收。",
+ "units": [
+  {
+   "id": "v066",
+   "label": "4.66　三妙行翻此"
+  },
+  {
+   "id": "v067",
+   "label": "4.67　惡六定無表"
+  },
+  {
+   "id": "v068",
+   "label": "4.68　加行定有表"
+  },
+  {
+   "id": "v069",
+   "label": "4.69　彼無間生故"
+  },
+  {
+   "id": "v070",
+   "label": "4.70　殺麁語瞋恚"
+  },
+  {
+   "id": "v071",
+   "label": "4.71　邪見癡究竟"
+  },
+  {
+   "id": "v072",
+   "label": "4.72　俱死及前死"
+  },
+  {
+   "id": "v073",
+   "label": "4.73　殺生由故思"
+  },
+  {
+   "id": "v074",
+   "label": "4.74　欲邪行四種"
+  },
+  {
+   "id": "v075",
+   "label": "4.75　由眼耳意識"
+  },
+  {
+   "id": "v076",
+   "label": "4.76　染心壞他語"
+  },
+  {
+   "id": "v077",
+   "label": "4.77　餘說異三染"
+  },
+  {
+   "id": "v078",
+   "label": "4.78　憎有情瞋恚"
+  },
+  {
+   "id": "v079",
+   "label": "4.79　唯邪見斷善"
+  },
+  {
+   "id": "v080",
+   "label": "4.80　人三洲男女"
+  },
+  {
+   "id": "v081",
+   "label": "4.81　業道思俱轉"
+  },
+  {
+   "id": "v082",
+   "label": "4.82　不善地獄中"
+  },
+  {
+   "id": "v083",
+   "label": "4.83　雜語通現成"
+  },
+  {
+   "id": "v084",
+   "label": "4.84　無色無想天"
+  },
+  {
+   "id": "v085",
+   "label": "4.85　皆能招異熟"
+  },
+  {
+   "id": "v086",
+   "label": "4.86　貪生身語業"
+  },
+  {
+   "id": "v087",
+   "label": "4.87　斷道有漏業"
+  },
+  {
+   "id": "v088",
+   "label": "4.88　餘無漏無記"
+  },
+  {
+   "id": "v089",
+   "label": "4.89　中有二三四"
+  },
+  {
+   "id": "v090",
+   "label": "4.90　過於三各四"
+  },
+  {
+   "id": "v091",
+   "label": "4.91　同地有四果"
+  },
+  {
+   "id": "v092",
+   "label": "4.92　無學一三二"
+  },
+  {
+   "id": "v093",
+   "label": "4.93　見所斷業等"
+  },
+  {
+   "id": "v094",
+   "label": "4.94　後有一二四"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sa",
+   "lang": "sa",
+   "label": "梵本頌",
+   "who": "《阿毘達磨俱舍論本頌》Abhidharmakośakārikā・GRETIL（參 Pradhan 1975、Gokhale 1946）"
+  },
+  {
+   "id": "sa-bhasya",
+   "lang": "sa",
+   "label": "梵本自釋",
+   "who": "《阿毘達磨俱舍論》Abhidharmakośabhāṣya・GRETIL（Pradhan 1975，Hackett／Lusthaus 校）"
+  },
+  {
+   "id": "T1560",
+   "lang": "lzh",
+   "label": "玄奘頌本",
+   "who": "玄奘譯《阿毘達磨俱舍論本頌》・唐",
+   "work": "T1560"
+  },
+  {
+   "id": "T1558",
+   "lang": "lzh",
+   "label": "玄奘論本",
+   "who": "玄奘譯《阿毘達磨俱舍論》・唐 651–654 年",
+   "work": "T1558"
+  },
+  {
+   "id": "T1559",
+   "lang": "lzh",
+   "label": "真諦釋論",
+   "who": "真諦譯《阿毘達磨俱舍釋論》・陳 563–567 年",
+   "work": "T1559"
+  }
+ ],
+ "works": [
+  "T1558",
+  "T1559",
+  "T1560"
+ ],
+ "anchors": [
+  {
+   "work": "T1560",
+   "range": [
+    "T29n1560_p0316a09",
+    "T29n1560_p0316a09"
+   ]
+  },
+  {
+   "work": "T1558",
+   "range": [
+    "T29n1558_p0084a29",
+    "T29n1558_p0092a14"
+   ]
+  },
+  {
+   "work": "T1559",
+   "range": [
+    "T29n1559_p0240a19.4",
+    "T29n1559_p0246c21"
+   ]
+  }
+ ],
+ "cells": {
+  "v066": {
+   "sa": "viparyayātsucaritam tadaudārikasaṃgrahāt / daśa karmapathā uktā yathāyogaṃ śubhāśubhāḥ // VAkK_4.66 //",
+   "sa-bhasya": "[237|23] viparyayātsucaritam [237|24] iṣṭaṃ kuśalaṃ kāyavāṅmanaskarmānabhidhyā 'vyāpādasamyagdṛṣṭayaśca / [237|24-238|02] parānugrahopaghātābhisaṃdhyabhāve kathaṃ samyagdṛṣṭimithyādṛṣṭavyoḥ kuśalākuśalatvam / [238|02] tanmūlatvāt / yāni caitāni duścaritasucaritānyuktāni [238|03-238|04] tadaudārikasaṃgrahāt / daśa karmapathā uktā yathāyogaṃ śubhāśubhāḥ // VAkK_4.66 // [238|05-238|06] teṣāmeva sucaritaduścaritānāṃ caudārikasaṃgraheṇa daśa karmapathāḥ sūtra uktāḥ yathāyogaṃ kuśalāḥ sucaritebhyo 'kuśalā duścaritebhyaḥ / [238|06-238|07] kimatra duścaritamasaṃgṛhītaṃ kiṃ vā sucaritam / [238|07-238|08] akukśaleṣu tatkarmapathesu kāyaduścaritasya pradeśo na saṃgṛhītaḥ prayogapṛṣṭhabhūtaḥ kliṣṭaścānyo 'pi bandhānādiḥ / [238|08] tasya nātyaudārikatvāt / [238|08-238|09] yaddhi kāyaduścaritaṃ pareṣāṃ jīvitabhogadārebhyaścyāvakaṃ tatkarmapatha uktaṃ tato vivecanārtham / [238|10] vāgduścaritamapi yadeva praśādaṃ tatkarmapatha uktaṃ tadarthameva / [238|10-238|11] manoduścaritasya ca pradeśacetanā / [238|11-238|12] kuśaleṣvapi kāyasucaritasya pradeśaḥ prayogapṛṣṭhamadyādiviratidānejyādiko vāksucaritasya priyavacanādiko manaḥ sucaritasya cetanā / [238|13] eṣāṃ ca karmapathānām",
+   "T1560": "三妙行翻此。 所說十業道，攝惡妙行中， 麁品為其性，如應成善惡。",
+   "T1558": "三妙行翻此。論曰：一切不善身語意業，如次名身語意惡行。然意惡行復有三種，謂非意業貪、瞋、邪見，貪等離思別有體故。譬喻者言：貪瞋邪見即是意業，故《思經》中說此三種為意業故。若爾，則應業與煩惱合成一體。許有煩惱即是意業，斯有何失？毘婆沙師說彼非理。若許爾者，便與眾多理教相違，成大過失。然契經說是意業者，顯思以彼為門轉故、由此能感非愛果故、是聰慧者所訶厭故。此行即惡，故名惡行。三妙行者，翻此應知。謂身語意一切善業。非業無貪、無瞋、正見。正見邪見既無故思欲益他損他，如何成善惡？能與損益為根本故。又經中言：有十業道，或善或惡。其相云何？頌曰：所說十業道，攝惡妙行中， 麁品為其性，如應成善惡。論曰：於前所說惡妙行中，若麁顯易知，攝為十業道。如應若善攝前妙行，不善業道攝前惡行。不攝何等惡妙行耶？且不善中身惡業道，於身惡行不攝一分，謂加行後起餘不善身業，即飲諸酒執打縛等，以加行等非麁顯故。若身惡行令他有情失命失財失妻妾等，說為業道，令遠離故。語惡業道於語惡行，不攝加行後起及輕。意惡業道於意惡行，不攝惡思及輕貪等。善業道中身善業道，於身妙行不攝一分，謂加行後起及餘善身業，即離飲酒施供養等。語善業道於語妙行不攝一分，謂愛語等。意善業道於意妙行不攝一分，謂諸善思。十業道中前七業道為皆定有表無表耶？不爾。",
+   "T1559": "偈曰：翻此名善行。釋曰：由翻惡行應許為善行，謂善身口意業，及無貪無瞋正見，無利益損惱他事故。云何正見邪見得成？善惡性為損益根本故。是所說惡行及善行，此中偈曰：由攝彼麁品，故說十業道，如理謂善惡。釋曰：前所說惡行及善行中，由攝明了易知善惡二業，是故經中說十業道，如理應知，若善從善行出，若惡從惡行出。於中何惡行及善行非所攝？於惡業道中，是身惡行一分非所攝，謂前分後分，所餘染污亦爾，此非麁顯故。若身惡行，能令他失離壽命財物妻妾，說名業道，欲令他分別離此故。於惡行別立意惡行一分名故意。於善業道中，是身善行一分非所攝，謂前後分，及離飲酒等、布施供養等。口善行如愛語等，意善行如故意。"
+  },
+  "v067": {
+   "sa": "aśubhāḥ ṣaḍavijñaptiḥ dvidhaikaḥ te 'pi kurvataḥ / dvividhāḥ sapta kuśalāḥ avijñaptiḥ samādhijāḥ // VAkK_4.67 //",
+   "sa-bhasya": "[238|14] aśubhāḥ ṣaḍavijñaptiḥ [238|15-238|16] akuśalāḥ ṣaṭ karmapathā avaśyamavijñaptisvabhāvāḥ prāṇātipātādattādānamṛṣāvādapaiśunyapārupyasaṃbhinnapralāpāḥ / [238|16] pareṇa kārayato maulavijñaptyabhāvāt / [238|17] dvidhaikaḥ [238|18-238|19] kāmamithyācāro nityaṃ vijñaptyavijñaptisvabhāvastasya svayeva niṣṭhāpanāt / [238|19] nahi taṃ pareṇa kārayatastādṛśī prītirbhavatīti / [238|20] te 'pi kurvataḥ / [238|21-238|22] te 'pi ṣaṭ karmapathāḥ svayaṃ kurvato dvividhā bhavanti vijñaptiravijñaptiśca tatkālamaraṇe paścāt maraṇe tvavijñaptireva / [238|23] kuśalānāṃ punaḥ karmapathānāṃ [238|24] dvividhāḥ sapta kuśalāḥ [238|25] kuśalāḥ sapta rūpiṇaḥ karmapathā avaśyaṃ dviprakārā vijñaptiravijñaptiśca / [238|25-238|26] vijñaptyadhīnatvātsamādānaśīlasya / [239|01] avijñaptiḥ samādhijāḥ // VAkK_4.67 // [239|02] dhyānānāsravasaṃvarasaṃgṛhītāḥ samādhijāḥ ucyante / [239|02-239|03] te hyavijñaptireva cittamātrādhīnatvāt /",
+   "T1560": "惡六定無表，彼自作婬二， 善七受生二，定生唯無表。",
+   "T1558": "云何？頌曰：惡六定無表，彼自作婬二， 善七受生二，定生唯無表。論曰：七惡業道中，六定有無表，謂殺生、不與取、虛誑語、離間語、麁惡語、雜穢語。如是六種若遣他為，根本成時自表無故。若有自作彼六業道，則六皆有表無表二，謂起表時彼便死等；後方死等與遣使同，根本成時唯無表故。唯欲邪行必具二種，要是自身所究竟故，非遣他作，如自生喜。七善業道若從受生，必皆具二，謂表、無表，受生尸羅必依表故。靜慮無漏所攝律儀名為定生，此唯無表，但依心力而得生故。加行後起如根本耶？不爾。",
+   "T1559": "如此業道中，偈曰：六惡有無教。釋曰：唯六不善業道，定以無教為性，謂殺、盜、妄語、兩舌、惡口、無義語。若教他作，無根本有教故。偈曰：一二種。釋曰：邪婬恒以有教無教為性。何以故？此自身所成就故。若令他作歡喜，不如自作故。偈曰：自作。釋曰：是六種業道，若自作亦各二種，謂有教無教。若正起有教時彼即死，則具有教無教；若起有教後方死，但是無教。若善業道，偈曰：七二種唯善。釋曰：善有色七業道，必定二種，謂有教無教，受所得戒依屬有教故。偈曰：無教從定生。釋曰：定所生定無流所攝諸護，說名定生，彼唯無教，但依屬心故。"
+  },
+  "v068": {
+   "sa": "sāmantakāstu vijñaptiḥ avijñaptirbhavenna vā / viparyayeṇa pṛṣṭhāni prayogastu trimūlajaḥ // VAkK_4.68 //",
+   "sa-bhasya": "[239|04] sāmantakāstu vijñaptiḥ [239|05] karmapathasāmantakāstu vijñaptisvabhāvā avaśyam / [239|06] avijñaptirbhavenna vā / [239|07-239|08] yadi tīvreṇa paryavasthānena pramādena vā ghanarasena prayogamārabheta syādavijñaptiranyathā na syāt / [239|09] viparyayeṇa pṛṣṭhāni [239|10] sāmantakebhyo viparyayeṇa karmapathānāṃ pṛṣṭhāni veditavyāti / [239|10-239|11] tāni avaśyamavijñaptisvabhāvāni / [239|11] vijñaptistu bhavenna vā / [239|11-239|12] yadi karmapathaṃ kṛṭvā punastasyānudharmaṃ ceṣṭeta tasya syāt vijñaptiranyathā na syāt / [239|12-239|13] atha kuto yāvadeṣāṃ prayogamaulapṛṣṭhānāṃ vyavasthānam / [239|13-239|16] yadā tāvadiha kaścit paśuṃ hantukāmo mañcakāduttiṣṭhati mūlyaṃ gṛhlāti gacchatyāmṛśati paśuṃ krīṇātyānayati puṣṇāti praveśayati nihantuṃ śāstramādatte prahāramekaṃ dadāti dvau vā yāvanna jīvitā dvacyaparopayati tāvat prayogaḥ / [239|16-239|17] yena tu prahāreṇa jīvitādvyaparopayati tatra yā vijñaptistatkṣaṇikā vā 'vijñaptirayaṃ maulaḥ karmapathaḥ / [239|17-239|18] dvābhyāṃ hi kāraṇābhyāṃ prāṇātipātāvadyena spṛśyate prayogataḥ mṛte sati phalaparipūritaśca / [239|18-239|19] tata ūrdhvamavijñaptikṣaṇāḥ pṛṣṭhaṃ bhavanti / [239|19-239|21] yāvacca taṃ paśuṃ kuṣṇāti śodhayati vikrīṇīte pacati khādayatyanukīrtayati vā tāvadasya vijñaptikṣaṇā api pṛṣṭhaṃ bhavanti / [239|21] evamanyeṣvapi yathāsaṃbhavaṃ yojyam / [239|21-239|22] abhidhyādīnāṃ nāsti prayogo na pṛṣṭhaṃ saṃmukhībhāvamātrātkarmapathaḥ / [239|23] idamatra vaktavyam / [239|23-239|24] kiṃ tāvat maraṇabhavasthe tasmin prāṇini ye vijñaptyavijñaptī te karmapatha āhosvinmṛte / [239|24] kiṃ cātaḥ / [239|24-239|25] yadi tāvanmaraṇabhavasthe sahamṛṭasyāpio anturghātayiturvā prāṇātipātāvadyena yogaḥ prāpnoti / [239|25-240|01] na ceṣa siddhāntaḥ / [240|01] atha mṛte / [240|01-240|02] yaduktaṃ \"yena tu prahāreṇa jīvitādvacyaparopayati tatra yā vijñaptistatkṣaṇikā vā 'vijñaptirayaṃ maulaḥ karmapatha\" iti tanā vaktavyam / [240|03] yaccāpīdaṃ śāstra uktaṃ \"syāt prāṇī hataḥ prāṇātipātaścāniruddhaḥ / [240|03-240|06] syādyathā hi tatprāṇī jīvitādvyaparopito bhavati prayogaścāpratiprasragdha\" ityatra pṛṣṭhaṃ prayogaśabdenoktamiti vaibhāṣikīyo 'rthavirodho maulasyaiva tadānīmaniruddhatvāt / [240|06] yathā na doṣastathā 'stu / kathaṃ ca na doṣaḥ / [240|06-240|07] maula evātra prayogaśabdenokta iti / [240|07] vijñaptistarhi tadā kathaṃ maulaḥ karmapatho bhavati / [240|07-240|08] kathaṃ ca na bhavitavyam / [240|08] asāmarthyat / avijñaptiridānīṃ kathaṃ bhavati / [240|08-240|10] tasmāt prayogaphalaparipūrikāle tadubhayaṃ karmapathaḥ syāt karmatpatho 'pyanyasya prayogaḥ pṛṣṭhaṃ ca bhavati / [240|10] prāṇātipātasya daśāpi karmapathāḥ prayogaḥ / [240|10-240|14] yathā ca śatrorvadhārthaṃ kṛtyaṃ samupasthāpayan paśunā valiṃ kuryāt parakīyaṃ kṛtvā dāreṣu cāsya vipratipadyeta taireva tadghātanārtham anṛtapiśunaparuṣasāntavaiścāsya mitrabhedaṃ kuryādyānyasya paritrāṇāya kalperan abhidhyāṃ ca tatsva kuryāttatraiva ca vyāpādaṃ tadvadhārthaṃ ca mithyādṛṣṭiṃ vṛṃhayediti / [240|14] evamanyeṣvapi yathāyogaṃ yojyam / [240|14-240|15] na tvabhidhyādayaḥ prayogā yujyante / [240|15] nahi cittotpādamātreṇa prayukto bhavati / kriyānārambhāt / [240|16-240|17] sūtra uktaṃ \"prāṇātipāto bhikṣavastrividho lobhajo dveṣajo mohajo yāvanmithyādṛṣṭi\"riti / [240|17-240|18] tatra kīdṛśaḥ prāṇātipāto lobhaja ityevamādi vaktavyam / [240|18] nātra sarveṣāṃ karmapathānāṃ lobhādibhirniṣṭhā / [240|19] prayogastu trimūlajaḥ // VAkK_4.68 // [240|20] prayogasteṣāmakuśalamūlatrayājjāta ityādisamutthānavacanādevamuktaḥ / [240|20-240|22] tatra lobhajapraṇātipāto yathā taccharīrāvayavārthamarthārthaṃ krītārthaṃ ca prāṇinaṃ jīvitādvyaparopayati ātmasuhṛtparitrāṇāya / [240|22] dveṣajo yathā vairanipīḍanārtham / [240|22-240|23] mohajo yathā yājñikānāṃ dharmabuddhyā rājñāṃ ca dharmapāṭhakaprāmāṇyāddhiṃsatām / [240|23-240|24] duṣṭānāṃ kila nigrahaṃ kurvanto rājānaḥ puṇyabhājo bhavantīti / [240|24] pārasīkānāṃ ca / te hyevamāhuḥ / [240|25] \"mātāpitarau jīrṇau vā glānau vā hantavyā\"viti / [240|25-241|01] ye cānye 'pyevamāhurahivṛścikatryamvukādayo manuṣyāṇāmupaghātāpakā hantavyāḥ mṛgapaśupakṣimahiṣādayaścopabhogārthatvāditi / [241|01-241|02] yaśca mithyādṛṣṭipravartitaḥ prāṇātipātaḥ / [241|02-241|03] lobhajamadattādānaṃ yo yenārthi sa tadvarati anyalābhasatkārayaśo 'rthaṃ vā ātmasukṛtaparitrāṇāya vā / [241|03] dveṣajaṃ yadvairanipīḍanārtham / [241|03-241|04] mohajaṃ yathā rājñāṃ dharmapāṭhakaprāmāṇyāt / [241|04-241|05] duṣṭanigrahārthaṃ yathā brāhmaṇā āhuḥ \"sarvamidaṃ brahmaṇā brāhmaṇebhyo dattaṃ brāhmaṇānāṃ daurbalyādvṛṣlāḥ paribhuñjate / [241|05-241|06] tasmādapaharan brāhmaṇaḥ sumādatte svameva brāhmaṇo bhuṅkte svaṃ vaste svaṃ dadāti ce\" ti / [241|07] na caiśāmaparasvasaṃjñā bhavati / yacca mithyādṛṣṭipravarttitam / [241|07-241|08] lobhajaḥ kāmamithyācāraḥ dārādiṣu tatsaṃrāgādabrahmacaryaṃ lābhasatkārārthamātmasuhṛtparitrāṇāya / [241|08-241|09] dveṣajo vairanipīḍanārtham / [241|09] mohajo yathā pārasīkānāṃ mātrādigamanaṃ gosave ca yajñe / [241|10] yothoktaṃ \"brāhmaṇo gosaveneṣṭyā saṃvatsaragovratī bhavati / [241|10-241|11] upahā udakaṃ cūṣati tṛṇāni cchinatti upaiti mātaramupasvasāramupa sagotrā\"miti / [241|11-241|12] ye cāhu \"rudūkhalapuṇyaphalapakvānnatīrthamārgaprakhyo mātṛgrāma\" iti / [241|12-241|13] mṛṣāvādādayo lobhajā dveṣajāścapūrvavat / [241|13] mohajo mṛṣāvādo yathāha / [241|14-241|17] \"na narmayuktamanṛtaṃ hi nāsti na strīṣu rājanna vivāhakāle / prāṇātyaye sarvadhanāpahāre pañcānṛtānyāhurapātakānī\"ti / [241|18] yaṣca mithyādṛṣṭipravartito mṛṣāvādaḥ / paiśunyādayastu mithyādṛṣṭipravartitā mohajāḥ / [241|19] yaṣcaca vedādyasacchāstrapralāpaḥ /",
+   "T1560": "加行定有表，無表或有無， 後起此相違，加行三根起。",
+   "T1558": "云何？頌曰：加行定有表，無表或有無， 後起此相違。論曰：業道加行必定有表，此位無表或有或無。若猛利纏淳淨心起則有無表，異此則無。後起翻前，定有無表，此位表業或有或無。謂若後時起隨前業則有表業，異此便無。於此義中如何建立加行根本後起位耶？且不善中最初殺業，如屠羊者將行殺時，先發殺心從床而起，執持價直趣賣羊廛，㨊觸羊身酬價捉取，牽還養飯將入屠坊，手執杖刀若打若刺，或一或再至命未終，如是皆名殺生加行。隨此表業彼正命終，此剎那頃表無表業，是謂殺生根本業道。由二緣故，令諸有情根本業道殺罪所觸：一由加行、二由果滿。此剎那後殺無表業隨轉不絕，名殺後起。及於後時剝截治洗，若稱若賣或煮，或食讚述其美表業剎那，如是亦名殺生後起。餘六業道隨其所應三分不同，准例應說。貪瞋邪見纔現在前，即說名為根本業道，故無加行後起差別。此中應說。為所殺生住死有時，能殺生者彼剎那頃表無表業即成業道？為死後耶？若爾何失？二俱有過。若所殺生正住死有，能殺生者業道即成，即能殺者與所殺生，俱時命終應成業道。然宗不許彼業道成。若所殺生命終以後，能殺生者業道方成，是則不應先作是說：隨此表業彼正命終。此剎那頃表無表業，是謂殺生根本業道。又應違害毘婆沙師釋本論中加行未息，謂本論說：頗有已害生殺生未滅耶？曰：有，如已斷生命彼加行未息。毘婆沙者釋此文言：此中於後起，以加行聲說。應言於根本說加行聲，許命終後根本未息故。如無有過此中應說。此中說何名為無過？謂於根本說加行聲。若爾，于時所有表業如何可成根本業道？何為不成？以無用故。無表於此有何用耶？故業道成非由有用，但由加行果圓滿時，此二俱成根本業道。又諸業道展轉相望，容有互為加行後起。今且應說殺生業道以十業道為起加行。謂如有人欲害怨敵，設諸謀計合搆殺緣，或殺眾生祈請助力，或盜他物以資殺事，或婬彼婦令殺其夫，或為乖離彼親友故起語四過令生猜阻。設有勢力無救護心，或於彼財心生貪著，或即於彼起瞋恚心，或起邪見長養殺業然後方殺，如是名為以十業道為殺加行。殺怨敵已，復於後時誅其所親，收其財物婬彼所愛，乃至復起貪瞋邪見次第現前，此十名為殺生後起。所餘業道如應當知。貪等不應能為加行，非唯心起加行即成，唯起心時未作事故。又經中說：苾芻當知，殺有三種：一從貪生、二從瞋生、三從癡生。乃至邪見有三亦爾。此中應說：何相殺生？名從貪生。問餘亦爾。非諸業道一切皆由三根究竟，然其加行不與彼同。云何不同？頌曰：加行三根起，",
+   "T1559": "偈曰：近方便有教。釋曰：業道前方便，必有教為性。偈曰：無教或有無。釋曰：若最重上心、惑所污惑蜜味心，清淨作方便加行，則有無教；若異此則無。偈曰：後分則翻此，前分三根生。釋曰：翻前分方便義，應知是業道後分。何以故？此後分必無教為性，有教或有或無。若人已作業道，後更起同類法，則有有教；異此悉無。復次此業道前分、根本後分，從何位可得安立？譬如有人欲殺禽獸，從床起捉直行往彼所，揣觸其身即買牽還，將入屠所欲就殺之，即便捉仗與一下手或再下手，乃至未令命斷，名殺前分。是事能令命斷，此中是有教無教身業共一剎那起，是名根本業道。何以故？由二種因緣，是人為殺生罪所觸，由作加行及果究竟故。從此剎那後，無教剎那悉是業道後分。乃至治洗販賣，或煮自食稱讚其美，如此等有教剎那悉成後分。如此於餘六業道中，前分、根本、後分義，如理應知。不平貪等三無前後分，由現前起即成業道。汝今應說，此為是眾生正在死有有教無教成業道、為已死成業道？若爾，何有？若所殺眾生正在死有，能殺及令殺人若共一時死，應有犯殺生罪。悉檀義不爾，若已死成業道，是悉檀所說，謂若由此害事，能令彼離壽命，是有教身業；及共一剎那起無教，是名業道，此言不應說。復次於阿毘達磨藏中說：為有如此義不？是眾生已被殺，是人未離殺生事？有，譬如已令此眾生離命根，能殺加行未捨未息，此中後分由前分名說。此文句與毘婆沙義相違。是根本此時中未滅故，是故如無失道理，應許如此。云何無失？此中用前分名說根本，此則無失。若爾，如此相有教，云何成根本業道？云何不成？無能故。若爾，無教云何成業道？是故加行果成就時，此二成業道。業道者，有時是餘業道前分，或是餘業道後分。是殺生事位，有時成業道，有時成前分。譬如有人欲殺怨家，作惡方術殺禽獸祠鬼神，或由偷他物，或於彼婦作邪婬，共彼人欲殺怨家，或說妄語兩舌惡口軟語，破彼親友隨多少能為救護者，或於彼起不平貪，或於彼生瞋，或為殺彼增長邪見。如此於餘業道，如理應思，貪等不應成前分。何以故？若由唯發起心，是人正行前分，無如此義，若離行事。經中說：比丘！殺生有三種：一從貪欲生，二從瞋恚生，三從無明生，乃至邪見亦爾。此經中如此殺生相云何？殺從貪生者，若為得彼身分、為得物、為戲樂等事，令他失命，或為救濟自身及自眷屬。從瞋生者，如為報怨。從癡生者，如大祠捨施人，由行善法意故。又如諸王，隨法文句量故，行重罰怨家及惡人，諸王得生大福德。又波尸國人殺業亦從癡生。何以故？彼說如此言：若二親老困及有重疾，必應為捨命。有頻那柯外道說：蛇蜈蚣嚙毒等恒能傷害人，此必應殺；鹿羊鳥牛等，為供人庖廚故受生，若殺無失。若殺生從邪見生，亦是從癡生。盜從貪生者，隨其所求不與而取，或為得別利養愛重好名，為救濟自身及自眷屬。從瞋生者，如為報怨。從癡生者，如諸王由隨法文句量，為罰惡人故奪其物。又如婆羅門言：一切物梵王已捨與婆羅門，由婆羅門力弱，諸蠻謾取受用。是故若婆羅門奪取，奪取自物；若食，食自物；若衣，衣自物；若施，施自物，於彼無非他財想。若盜從邪見生，亦是從癡生。邪婬從貪生者，於他妻妾先起貪愛方行邪婬，及為得利養愛重，為救濟自身及自眷屬。從瞋生者，如為報怨。從癡生者，如波尸國人娶母等事。又如於瞿娑婆祠中，有餘女吸水嚙草，是人行著其親，或著姑姨姊妹同姓等。又如頻那柯外道說：女人如臼花菓熟食水渚道路等。妄語等從貪瞋生如前。妄語從癡生者，如皮陀言：「戲笑及女人，娶婦并救命， 救財故妄語，梵王說無害。」若妄語從邪見生，亦是從癡生。兩舌等若從邪見生，亦是從癡生。一切從四皮陀所出邪論言，皆是無義語。"
+  },
+  "v069": {
+   "sa": "tadanantarasaṃbhūterabhidhyādyāstrimūlajāḥ / kuśalāḥ saprayogāntā alobhadveṣamohajāḥ // VAkK_4.69 //",
+   "sa-bhasya": "[241|20] abhidhyādayaḥ kathaṃ lobhajāḥ / [241|21] tadanantarasaṃbhūterabhidhyādyāstrimūlajāḥ / [241|22] lobhādanantaramutpannā lobhajāḥ dveṣādanantaraṃ dveṣajā mohādanantaraṃ mohajāḥ / [241|22-241|23] uktā kuśalāḥ karmapathāḥ / [241|24] kuśalāḥ kathamityāha [241|25] kuśalāḥ saprayogāntā alobhadveṣamohajāḥ // VAkK_4.69 // [241|26] saprayogapṛṣṭhāḥ kuśalāḥ karmapathā alobhadveṣamohajāḥ / [241|26-241|27] kuṣalacittasamutthitatvāt / [241|27-242|01] tasya ca avaśya malobhādibhiḥ saṃprayogāt tatrākuśala karmapathaprayogādviratiḥ kuśalakarmapathaprayogaḥ / [242|01] maulādviratiḥ maulaḥ / [242|01-242|02] pṛṣṭhād viratiḥ pṛṣṭhaḥ / [242|02-242|03] tadyathā śrāmaṇera upasaṃpādyamāno nānāvāsaṃ praviśati bhikṣūnvandate upādhyāyaṃ yācate yāvadekaṃ karmavācanaṃ kriyate dvitīyaṃ ca / [242|03] ayaṃ prayogaḥ / [242|03-242|04] tṛtīya karmavācane yā vijñaptistatkṣaṇikā cāvijñaptirayaṃ maulaḥ karmapathaḥ / [242|04-242|05] tata ūrdhvaṃ yāvanniśrayā ārocyante tadadhiṣṭhānaṃ ca vijñapayati avijñaptica yāvadatuvartate idaṃ pṛṣṭham /",
+   "T1560": "彼無間生故，貪等三根生， 善於三位中，皆三善根起。",
+   "T1558": "彼無間生故， 貪等三根生。論曰：不善業道加行生時，一一由三不善根起，依先等起故作是說。殺生加行由貪起者，如有為欲得彼身分、或為得財、或為戲樂、或為拔濟親友自身，從貪引起殺生加行。從瞋起者，如為除怨，發憤恚心起殺加行。從癡起者，如有祠中謂是法心起殺加行，又諸王等依世法律誅戮怨敵除剪凶徒，謂成大福起殺加行。又波剌私作如是說：父母老病，若令命終得免困苦便生勝福。又諸外道有作是言：蛇蠍蜂等為人毒害，若能殺者便生勝福。羊鹿水牛及餘禽獸，本擬供食故殺無罪。又因邪見殺害眾生，此等加行皆從癡起。偷盜加行從貪起者，謂隨所須起盜加行、或為別利恭敬名譽、或為救拔自身親友，從貪引起偷盜加行。從瞋起者，謂為除怨，發憤恚心起盜加行。從癡起者，謂諸王等依世法律奪惡人財，謂法應爾無偷盜罪。又婆羅門作如是說：世間財物於劫初時，大梵天王施諸梵志，於後梵志勢力微劣，為諸卑族侵奪受用。今諸梵志於世他財若奪若偷，充衣充食或充餘用或轉施他，皆用己財無偷盜罪。然彼取時有他物想，又因邪見盜他財物，皆名從癡起盜加行。邪婬加行從貪起者，謂於他妻等起染著心、或為求他財名位恭敬、或為救拔自身他身，從貪著心起婬加行。從瞋生者，謂為除怨，發憤恚心起婬加行。從癡生者，如波剌私讚於母等行非梵行。又諸梵志讚牛祠中有諸女男受持牛禁，吸水齧草或住或行，不簡親踈隨遇隨合。又諸外道作如是言：一切女人如臼花果熟食階隥道路橋船，世間眾人應共受用。此等加行從癡所生。虛誑語等語四業道從貪瞋生，類前應說。然虛誑語所有加行從癡生者，如外論言：若人因戲笑，嫁娶對女王， 及救命救財，虛誑語無罪。又因邪見起虛誑語、離間語等所有加行，當知一切從癡所生。又諸吠陀及餘邪論，皆雜穢語攝，加行從癡生。貪瞋等三既無加行，如何可說從貪等生？以從三根無間生故，可說貪等從三根生。謂或有時從貪無間生貪業道，從二亦然。瞋及邪見從三亦爾。已說不善從三根生。善復云何？頌曰：善於三位中，皆三善根起。論曰：諸善業道所有加行根本後起，皆從無貪無瞋無癡善根所起，以善三位皆是善心所等起故、善心必與三種善根共相應故。此善三位其相云何？謂遠離前不善三位離惡加行即善加行，離惡根本即善根本，離惡後起即善後起。且如勤策受具戒時，來入戒壇禮苾芻眾，至誠發語請親教師，乃至一白二羯磨等，皆名為善業道加行。第三羯磨竟一剎那中，表無表業名根本業道。從此以後至說四依，及餘依前相續隨轉表無表業，皆名後起。",
+   "T1559": "不平貪等，云何從貪等生？偈曰：從彼次第生，貪等三根生。釋曰：從貪次第生故，說彼從貪生。從瞋次第生故，說彼從瞋生。從癡次第生故，說彼從癡生。說惡業道已，善業道云何？偈曰：善業道前後，無貪瞋癡生。釋曰：共前分後分，一切善業道，從無貪無瞋無癡生，善故意所生故。此善故意，必定與無貪等三善根相應故。前分等三，其相云何？此中若遠離惡業道前分即是善業道前分，若遠離根本即是根本，若遠離後分即是後分。譬如沙彌欲受大戒，入不共住禮拜比丘請優波陀訶，乃至說一羯磨及第二羯磨，此名前分。第三羯磨竟時，是有教業共一剎那無教，是根本業道。從此後乃至說四依，依此根本所有有教業及無教業，乃至相續未斷，是名後分。"
+  },
+  "v070": {
+   "sa": "vadhavyāpādapāruṣyaniṣṭhā dveṣeṇa lobhataḥ / parastrīgamanābhidhyādattādānasamāpanam // VAkK_4.70 //",
+   "sa-bhasya": "[242|06] yaduktaṃ \"na sarveṣāṃ karmapathānāṃ lobhādibhirniṣṭhe\"tyatha kasya kena niṣṭhā / [242|07] vadhavyāpādapāruṣyaniṣṭhā dveṣeṇa [242|08] eṣāṃ prāṇātipātavyāpādapāruṣpāṇāṃ dveṣeṇa samāptiḥ / [242|08-242|09] parityāgaparuṣacittasaṃmukhī bhāvāt / [242|10] lobhataḥ / [242|11] parastrīgamanābhidhyā 'dattādānasamāpanam // VAkK_4.70 // [242|12] lobhena kāmamithyācārābhidhyā 'dattādānānāṃ samāptiḥ /",
+   "T1560": "殺麁語瞋恚，究竟皆由瞋， 盜邪行及貪，皆由貪究竟，",
+   "T1558": "如先所說，非諸業道一切皆由三根究竟，何根究竟何業道耶？頌曰：殺麁語瞋恚，究竟皆由瞋， 盜邪行及貪，皆由貪究竟，",
+   "T1559": "是所說言，非一切業道由貪等究竟。此中何業道，由何惡根得究竟？偈曰：殺生瞋惡口，成就皆由瞋。釋曰：殺生瞋恚惡口，必由瞋得究竟。捨心澁心現前，此三得成故。偈曰：邪婬貪欲盜，由貪故究竟。釋曰：由貪欲現前故，邪婬貪欲偷盜得成就。"
+  },
+  "v071": {
+   "sa": "mithyādṛṣṭestu mohena śeṣāṇāṃ tribhiriṣyate / sattvabhogāvadhiṣṭhānaṃ nāmarūpaṃ ca nāma ca // VAkK_4.71 //",
+   "sa-bhasya": "[242|13] mithyādṛṣṭestu mohena [242|14] adhimātrabhūto hi tāṃ niṣṭhāpayati / [242|15] śeṣāṇāṃ tribhiriṣyate / [242|16] ke punaḥ śeṣāḥ / mṛṣāvādapaiśunyasaṃbhinnapralāpāḥ / [242|16-242|17] eṣāṃ tribhirapi niṣṭhā lobhena dveṣeṇa mohena vā [242|18-242|19] ya ete karmapathāścaturbhiḥ kāṇḍairuktāstrayastraya ekastrayaśca eṣāṃ yathākramaṃ [242|20] sattvabhogāvadhiṣṭhānaṃ nāmarūpaṃ ca nāma ca // VAkK_4.71 // [242|21] sattvādhiṣṭhānā vadhādayaḥ / bhogādhiṣṭhānāṃ parastrīgamanādayaḥ / [242|21-242|22] nāmarūpādhiṣṭhāmithyādṛṣṭiḥ / [242|22] nāmakāyādhiṣṭhānā mṛṣāvādādayaḥ /",
+   "T1560": "邪見癡究竟，許所餘由三。 有情具名色，名身等處起，",
+   "T1558": "邪見癡究竟，許所餘由三。論曰：惡業道中殺生、麁語、瞋恚業道，由瞋究竟，要無所顧極麁惡心現在前時此三成故。諸不與取、欲邪行、貪，此三業道由貪究竟，要有所顧極染污心現在前時此三成故。邪見究竟要由愚癡，由上品癡現前成故。虛誑、離間、雜穢語三，許一一由三根究竟，以貪瞋等現在前時一一能令此三成故。諸惡業道何處起耶？頌曰：有情具名色，名身等處起。論曰：如前所說四節業道，三三一三隨其次第於有情等四處而生。謂殺等三有情處起，偷盜等三眾具處起，唯邪見一名色處起，虛誑語等三名身等處起。",
+   "T1559": "偈曰：邪見由無明。釋曰：若人起最重品癡，能成就邪見。偈曰：許所餘由三。釋曰：何者為餘？謂妄語、兩舌、無義語，此三由三惡根隨一成就，或由貪或由瞋或由癡。是業道約四節所說，謂三三一三，如此次第應知。偈曰：眾生受用依，名色及名聚。釋曰：殺等依止眾生起，邪婬等依止受用物起，邪見依止名色起，妄語等依止名聚起。"
+  },
+  "v072": {
+   "sa": "samaṃ prāk ca mṛtasyāsti na maulaḥ anyāśrayodayāt / senādiṣvekakāryatvāt sarve karttṛvadanvitāḥ // VAkK_4.72 //",
+   "sa-bhasya": "[242|23-242|24] yaḥ paraṃ maraṇānniyamayya samaṃ tena pūrvaṃ vā mriyate kimasya maulaḥ karmapatho bhavatyutāho na / [242|25] samaṃ prāk ca mṛtasyāsti na maulaḥ [242|26-242|27] ata evocyate \"syāt prayogaṃ kuryāt phalaṃ ca paripūrayenna ca prāṇātipātāvadyena spṛśyate / [242|27] āha / [242|27-243|02] syāt yathāpi tadvyaparopavaḥ pūrvaṃ saha vā kālaṃ kuryā\"diti kiṃ punastatkāraṇam nahi vadhye jīvati hantuḥ prāṇātipātāvadyenāsti yogo nāpi sahamṛtasya hantuḥ / [243|03] anyāśrayodayāt / [243|04] thenāśrayeṇa tatprayogaḥ kṛtaḥ sa ucchinno 'nya evāśrayo nikāyasabhāgabhinna utpannaḥ / [243|05] tasya prayoktṛtvāt karmapathena yogo na yuktaḥ / [243|05-243|06] yatsenāpātamṛgayāvaskandheṣu pareṣāṃ vadhārthaṃ bahavaḥ samagrāḥ patantyekaśca prāṇātipātaṃ karoti kastena samanvāgato bhavati / [243|07] senādiṣvekakāryatvāt sarve kattṛvadanvitāḥ // VAkK_4.72 // [243|08] yathaiva hi karttā tathā sarve samanvāgatā bhavantyekakāryatvāt / [243|08-243|09] arthato hi te 'yonyaṃ payoktāro bhavanti / [243|09-243|11] yastarhi balānnīyate so'pi samanvāgato bhavatyanyatra ya evaṃ naścitya yāyāt yāvajjīvitahetorapi prāṇinaṃ na haniṣyāmīti /",
+   "T1560": "俱死及前死，無根依別故。 軍等若同事，皆成如作者，",
+   "T1558": "有起加行定欲殺他，而與所殺生俱死或前死，亦得根本業道罪耶？頌曰：俱死及前死，無根依別故。論曰：若能殺者與所殺生俱時命終、或在前死，彼定不得根本業道。故有問言：頗有殺者起殺加行及令果滿，而彼不為殺罪觸耶？曰：有。云何？謂能殺者與所殺生俱死、前死。何緣如是？以所殺生其命猶存，不可令彼能殺生者成殺罪故。非能殺者其命已終可得殺罪，別依生故。謂殺加行所依止身今已斷滅，雖有別類身同分生，非罪依止。此曾未起殺生加行，成殺業道理不應然。若有多人集為軍眾欲殺怨敵、或獵獸等，於中隨有一殺生時，何人得成殺生業道？頌曰：軍等若同事，皆成如作者。論曰：於軍等中若隨有一作殺生事，如自作者，一切皆成殺生業道，由彼同許為一事故。如為一事展轉相教，故一殺生餘皆得罪。若有他力逼入此中，因即同心亦成殺罪。唯除若有立誓自要救自命緣亦不行殺，雖由他力逼在此中，而無殺心故無殺罪。今次應辯成業道相。謂齊何量名曰殺生？乃至齊何名為邪見？",
+   "T1559": "若人起定心，為殺彼人，或與彼同時死、或在彼前死，為有根本業道不？偈曰：俱死及前死，無根。釋曰：是故顯此問。若人行殺生事，果亦究竟，不犯殺生罪。有如此義不？有，若能殺人，或在前死、或同時死。若爾，何因？所殺人猶活未死，殺者與殺生罪不相應。若殺者同時死，亦不相應。云何不相應？偈曰：別依生。釋曰：由此依止，於彼行殺事。此依止已斷滅，有別依止生，異先聚同分。此依止不行殺事故，是故無與業道相應義。復次若為殺他故，集眾為軍、或掘坑或獵或偷破。多人聚集同為此事，於中一人若行殺生事，何人得殺生罪？偈曰：軍等同事故，悉得如作者。釋曰：如作者犯罪，如此一切人同犯一罪，共一事故。若由義，此彼更互相殺。若人由他勢力所逼引令入中，是人亦與此罪相應。若人依此誓去，謂隨有命，為救自命，我亦不殺。唯除此人。若人自作殺生事，此行幾量成業道？乃至邪見成業道？此相應說。"
+  },
+  "v073": {
+   "sa": "prāṇātipātaḥ saṃcintya parasyābhrāntimāraṇam / adattādānamanyasvasvīkriyā balacauryataḥ // VAkK_4.73 //",
+   "sa-bhasya": "[243|12-243|13] kiyatā punaḥ prāṇātipātaṃ svayaṃ kurvataḥ karmapatho bhavati kiyatā yāvanmithyādṛṣṭiḥ karmapathaḥ iti lakṣaṇaṃ vaktavyaṃ taducyate / [243|14] prāṇātipātaḥ saṃcintya parasyābhrāntimāraṇam / [243|15] yadi mārayiṣyāmyenamiti saṃjñāya paraṃ mārayati tameva ca mārayati nānyaṃ bhramitvā / [243|16] iyatā prāṇātipāto bhavati / [243|16-243|17] yastarhi saṃdigdho mārayati kimayaṃ prāṇī na prāṇīti sa evānyo veti so 'pyavaśyametaṃ niścayaṃ labdhvā tatra praharati / [243|17-243|18] yo 'stu so 'stviti kṛtamevānena tyāgacittaṃ bhavati / [243|18] kathaṃ kṣaṇikeṣu skandheṣu prāṇātipāto bhavati / [243|19] prāṇo nāma vāyuḥ kāyacittasaṃniśrito vartate / tamabhipātayati / [243|19-243|20] yathā pradīpaṃ nirodhayati ghaṇṭāsvanaṃ vā / [243|20] jīvitendriyaṃ vā prāṇāstannirodhayati / [243|20-243|21] yadyekasyāpi jīvitakṣaṇasyotpadyamānasyāntarāyaṃ karoti prāṇātipātāvadyena spṛśyate nānyathā / [243|22] kasya tajjīvitaṃ yastadabhāvānmṛto bhavati / [243|22-243|23] kasyeti ṣaṣṭhīṃ pudgalavāde vicārayiṣyāmaḥ / [243|23] uktaṃ tu bhagavatā [243|24-243|25] \"āyuruṣmā 'tha vijñānaṃ yadā kāyaṃ jahatyamī / apaviddhastadā śete yathā kāṣṭhamacetana\" // iti / [243|26] tasmātsendriyaḥ kāyo jīvatītyucyate anindriyo mṛta iti / [243|26-243|27] abuddhipūrvādapi prāṇivadhāt karturadharmo yathā 'gnisaṃyogāddāha iti nirgranthāḥ / [243|27-244|01] teṣāṃ paradāradarśane 'pyeṣa prasaṅgaḥ / [244|01-244|03] nirgranthaśiroluñcane ca kaṣṭatapodeśane ca śāstuḥ tadvisūcikāmaraṇe ca dāturvaidyānāṃ cāturapīḍane maraṇe ca mātṛgabhasthayoścānyonyaṃ duḥkhanimittatvāt / [244|03] vadhyasyāpi ca tatkriyāsaṃbandhādagnisvāśrayadāhavat / [244|03-244|04] kāryataścāprasaṅgastadasambandhāt / [244|04] pareṇāgnim sparśayatastenādāhavat / [244|04-244|05] acetanānāṃ ca kāṣṭhādīnāṃ gṛhapāte prāṇivadhāt pāpaprasaṅgo na vā dṛṣṭāntamātrātsiddhiriti / [244|06] uktaḥ prāṇātipātaḥ / [244|07] adattādānamanyasvasvīkriyā balacauryataḥ // VAkK_4.73 // [244|08] abhrāntyeti vartate / [244|08-244|09] yadi balādvā cauryeṇa vā parasvaṃ svīkaroti yatraiva ca balacauryābhiprāyeṇānyatra saṃjñāvibhramāt iyatā 'dattādānaṃ bhavati / [244|09-244|10] stūpādapaharato buddhāda dattādānam / [244|10] sarvaṃ hi tadbhagavatā parinirvāṇakāle parigṛthītamiti / [244|10-244|11] yeṣāṃ samrakṣyamityapare / [244|11-244|12] asvāmikaṃ ca nidhimuddharato viṣayasvāmikāt parivartakaṃ harataḥ kṛte karmaṇi sīmāprāptebhyaḥ akṛte sarvabuddhaśaikṣyebhyaḥ /",
+   "T1560": "殺生由故思，他想不誤殺。 不與取他物，力竊取屬己。",
+   "T1558": "且先分別殺生相者，頌曰：殺生由故思，他想不誤殺。論曰：要由先發欲殺故思，於他有情他有情想，作殺加行不誤而殺。謂唯殺彼不漫殺餘，齊此名為殺生業道。有猶豫殺亦成殺生，謂彼先於所欲殺境心懷猶豫為生非生？設復是生為彼非彼？後起決志，若是若非我定當殺。由心無顧，若殺有情亦成業道。於剎那滅蘊，如何成殺生？息風名生，依身心轉，若有令斷不更續生，如滅燈光、鈴聲名殺。或復生者即是命根，若有令斷不續名殺。謂以惡心隔斷他命，乃至一念應生不生，唯此非餘，殺罪所觸。此所斷命為屬於誰？謂命若無彼便死者，既標第六，非我而誰？破我論中當廣思擇。故薄伽梵所說頌言：壽煖及與識，三法捨身時， 所捨身僵仆，如木無思覺。故有根身名有命者，無根名死其理決然。離繫者言，不思而殺亦得殺罪。猶如觸火，設不先思亦被燒害。若爾汝等遇見他妻，或誤觸身亦應有罪。又善心者拔離繫髮，或師慈心勸修苦行，或因施主宿食不消，此等皆應獲苦他罪。又胎與母互為苦因，應母與胎有苦他罪。又所殺者既與殺合，亦應如火能燒自依，不應但令能殺得罪。又遣他殺，殺罪應無，如火不燒教觸火者。又諸木等應為罪觸，如舍等崩亦害生故。又非但喻，立義可成。已分別殺生。當辯不與取。頌曰：不與取他物，力竊取屬己。論曰：前不誤等如其所應，流至後門故不重說。謂要先發欲盜故思，於他物中起他物想，或力或竊起盜加行，不誤而取令屬己身，齊此名為不與取罪。若有盜取窣堵波物，彼於如來得偷盜罪，以佛臨欲入涅槃時，哀愍世間總受所施。有餘師說：望守護者。若有掘取無主伏藏，於國主邊得偷盜罪。若有盜取諸迴轉物，已作羯磨於界內僧、若羯磨未成，普於佛弟子得偷盜罪。餘例應思。已辯不與取。",
+   "T1559": "偈曰：殺生有故意，他想不亂殺。釋曰：若人有故意，我必應殺彼，於彼有彼想，唯殺彼不漫殺餘，由此三義殺生成業道。若爾有人，心疑不決而殺生，謂此為是眾生、為非眾生？為是彼、為非彼？此人於殺已決方殺，謂若是若非我必須殺。此人已作捨心，若殺生得殺生罪。於剎那剎那滅五陰中，云何斷波羅那？此名有何義？以風為義，此風依身依心起。若人斷此風，譬如風滅燈光、手滅鈴聲。斷此風亦爾，是名斷波羅那。或以命根為義，是一剎那命根正欲生，若遮礙此，即犯殺生罪；異此不犯。此命屬何人？由命斷彼死，說此命屬彼人。何物為彼？此義於破說我中當共思量。佛世尊說：「命根暖及識，若三棄捨身， 彼捨即永眠，如枯木無覺。」是故有命根身名活，無命根身名死。尼乾陀子說：若不以知為先殺生，殺者亦得罪，譬如不以知為先觸火亦被燒。於彼若遇見他婦及觸，此義亦應然。拔尼乾陀子髮，教彼修苦行。彼腹脹死，施主應得罪，母及胎互為困苦因故。犯罪人由與殺事相應故，如火燒自依。若人教他殺，不應得罪。譬如教他觸火，由教故自不被燒。無意土木等亦應得罪，如屋倒殺生故。又於犯死罪理，不應但由立譬得成。說殺生罪已。偈曰：偷盜於他物，力闇取屬己。釋曰：不亂言流。若人由強力，或由闇竊取他財物屬己，於他物中若有取意，由力由暗除亂取，因此量成盜業道。若盜藪抖波物，從佛得罪。何以故？一切供養物，於般涅槃時佛世尊悉已受。有餘師說：若人能護此物，從此人得罪。若掘窖得無主物，從國主得罪。若人偷迴轉物，若已作羯磨，從至不共住人得罪；若未作羯磨，從一切佛弟子得罪。"
+  },
+  "v074": {
+   "sa": "agamyagamanaṃ kāmamithyācāraścaturvidhaḥ / anyathāsaṃjñino vākyamarthābhijñe mṛṣāvacaḥ // VAkK_4.74 //",
+   "sa-bhasya": "[244|13] agamyagamanaṃ kāmamithyācāraścaturvidhaḥ / [244|14] catuṣprakāramagamyagamanaṃ kāmamithyācāraḥ / [244|14-244|15] agamyāṃ gacchati paraparigṛhītāṃ vā mātaraṃ duhitaraṃ vā mātṛpitṛsaṃbandhinīṃ vā / [244|15-244|16] anaṅge vā gacchati svāmapi bhāryām apāne mukhe vā / [244|16] adeśe vā gacchati prakāśe caitye vihāre vā / [244|17] akāle vā gacchati / kaḥ punaḥ akālaḥ / [244|17-244|18] garbhiṇīṃ vā gacchati pāyayantīṃ vā saniyamāṃ vā / [244|18] yadi bharturanujñayā saniyamā bhavatītyeke / abhrāntyeti vartate / [244|18-244|19] yadi svasaṃjñī parastriyaṃ yāyāt na syāt karmapathaḥ / [244|19-244|20] yadyanyaḥ parastrīsaṃjñayā 'nyāmabhigacchet paradāraprayogādvastuparibhogācca syādityeke / [244|20-244|21] anyatra prayogānna syāt prāṇāti pātavadityapare / [244|21] bhikṣuṇīṃ gacchataḥ kasyāntikāt kāmamithyācāraḥ / [244|21-244|22] viṣayasvāminaḥ / [244|22] tasya hi tanna marṣaṇīyam / tasyāpi saniyamā svabhāryeva tu sā na gamyā / [244|23] kumārīṃ gacchato yasya nisṛṣṭā no cedyasya rakṣā 'ntato rājñaḥ / [244|24] anyathāsaṃjñino vākyamarthābhijñe mṛṣāvacaḥ // VAkK_4.74 // [244|25-245|01] yadi yamarthaṃ bravīti tasminnanyathāsamjñī bhavati yaṃ cādhikṛtya bravīti sa tasya vākyasyārthābhijño bhavati tadvākyaṃ mṛṣāvādaḥ / [245|01] anabhijñe kiṃ syāt / [245|01-245|02] saṃbhinnapralāpaḥ syāt / [245|02] vākyamityucyate / [245|02-245|03] kadācicca bahavo varṇā vākyaṃ bhavantīti katamaḥ tatra karmapathaḥ / [245|03] paścimaḥ sahāvijñaptyā yatra cārthābhijño bhavati / pūrve tu varṇāḥ prayogaḥ / [245|04] arthābhijña ityucyate / [245|04-245|05] ki tāvadabhijñātārthe śrotari āhosvit abhijñātuṃ samarthe / [245|05] kiṃ cātaḥ / [245|05-245|06] yadyabhijñātārthe manovijñānaviṣayatvādvākyārthasya śrotravijñānena saha nirodhācca vāgvijñapteravijñaptireva syāt karmapathaḥ / [245|06-245|07] athābhijñātuṃ samarthe / [245|07] evaṃ doṣo na bhavati / [245|07-245|08] kathaṃ cābhijñātuṃ samartho 'pyutpannabhāva utpanne śrotravijñāne / [245|08] yathā na doṣastathā 'stu / [245|09] ṣodaśa vyavahārāḥ sūtra uktāḥ / [245|09-245|11] \"adṛṣṭe dṛṣṭavāditā aśrute 'mate 'vijñāte vijñātavāditā dṛṣṭe adṛṣṭavāditā yāvad vijñāte 'vijñātavāditā itīme 'nāryā aṣṭau vyavahārāḥ / [245|11-245|12] dṛṣṭe dṛṣṭavāditā yāvadvijñāte vijñātavāditā adṛṣṭ 'dṛṣṭavāditā yāvadavijñāte avijñātavāditā itīme āryā aṣṭau vyavahārāḥ /",
+   "T1560": "欲邪行四種，行所不應行。 染異想發言，解義虛誑語。",
+   "T1558": "當辯欲邪行。頌曰：欲邪行四種，行所不應行。論曰：總有四種行不應行，皆得名為欲邪行罪：一於非境行不應行，謂行於他所攝妻妾或母或父或父母親乃至或王所守護境。二於非道行不應行，謂於自妻口及餘道。三於非處行不應行，謂於寺中制多逈處。四於非時行不應行。非時者何？謂懷胎時、飲兒乳時、受齋戒時。設自妻妾亦犯邪行。有說：若夫許受齋戒而有所犯方謂非時。既不誤言，亦流至此。若於他婦謂是己妻，或於己妻謂為他婦，道非道等但有誤心，雖有所行而非業道。若於此他婦作餘他婦想，行非梵行成業道耶？有說亦成，以於他婦起婬加行及受用故。有說不成，如殺業道於此起加行，於餘究竟故。於苾芻尼行非梵行，為從何處得業道耶？此從國王不忍許故。於自妻妾受齋戒時尚不應行，況出家者。若於童女行非梵行，為從何處得業道耶？若已許他，於所許處；未許他者，於能護人；此及所餘，皆於王得。已辯欲邪行。當辯虛誑語。頌曰：染異想發言，解義虛誑語。論曰：於所說義異想發言，及所誑者解所說義，染心不誤成虛誑語。若所誑者未解言義，此言是何？是雜穢語。既虛誑語是所發言，有多字成言，何時成業道？與最後字俱生表聲及無表業成此業道。或隨何時所誑解義，表無表業成此業道。前字俱行皆此加行，所言解義定據何時？為據已聞正解名解？為據正聞能解名解？若爾何失？若據已聞正解名解，言所詮義意識所知，語表耳識俱時滅故，應此業道唯無表成。若據正聞能解名解，雖無有失然未了知，如何正聞可名能解？善言義者無迷亂緣，耳識已生名為能解，如無失者應取為宗。經說諸言略有十六，謂於不見不聞不覺不知事中言實見等，或於所見所聞所覺所知事中言不見等，如是八種名非聖言。若於不見乃至不知言不見等，或於所見乃至所知言實見等，如是八種名為聖言。",
+   "T1559": "偈曰：行非行邪婬，說此有四種。釋曰：四種行不應行名邪婬：一行不應行，謂他所攝，若母女父母親。二行不應行，謂非分，若自婦於下道及口。三行不應行，謂非處，若露處、支提處、修梵行處。四行不應行，謂非時，若自婦有胎時、飲兒時、受護時。若由夫聽許故得護，此為非時，餘部說如此。不亂言流。若往他婦所，作自婦想，不成業道。若作他婦想，往餘他婦所，餘師說由行於他婦及受用此類，故成業道別。處欲作，於別處行故，無業道罪，譬如殺生，餘師說如此。若於比丘尼行此事，從何處得罪？從國主得罪。何以故？此事非國主所忍許故。若自婦有戒尚不可行，何況比丘尼。若於童女行此事，於父母所許人得罪。若未許人，於守護人得罪，乃至於王得罪。偈曰：別想說此言，於解義妄語。釋曰：是其所說義，於此義中起別異想說言，所依人若解此言義，此言成妄語。若所依人不解此言義，此言云何？此言則成無義語。所說言者，有時多文字成語，於此語中何字成業道？最後字共無教成業道。或隨處，彼人已解義，前文字但是前分加行。說解義者，為得聞已解義、為得聞能解義？若爾，何有？若已解義，語義是意識境界故，言語與耳識俱滅故，應但以無教為業道。若能解義，則無此失。云何成能解？解語人在於耳識，此人為能解，如執無失可許。如此於經中說：言說有十六種，不見說見，乃至不知說知；見說不見，乃至知說不知。此八非聖言說。不見說不見，乃至不知說不知；已見說見，乃至已知說知，此八是聖言說。"
+  },
+  "v075": {
+   "sa": "cakṣuḥ śrotamanaścittairanubhūtaṃ tribhiśca yat / taddaṣṭaśrutavijñātaṃ mataṃ coktaṃ yathākramam // VAkK_4.75 //",
+   "sa-bhasya": "[245|12-245|13] tatraiṣāṃ dṛṣṭaśrutamatavijñātānāṃ kiṃ lakṣaṇam / [245|14-245|15] cakṣuḥ śrotramanaścittairanubhūtaṃ tribhiśca yat / taddṛṣṭaśrutavijñātaṃ mataṃ coktaṃ yathākramam // VAkK_4.75 // [245|16] yaccakṣurvijñānenānubhūtaṃ taddṛṣṭamityuktam / yacchrotravijñānena tacchrutam / [245|16-245|17] yanmano vijñānena tat vijñātam / [245|17] yat ghrāṇajihvākāyavijñānaistanmatam / kiṃ kāraṇam / [245|18] gandharasaspraṣṭavyānyavyākṛtatvānmṛtakalpāni / ata eteṣu matākhyeti vaibhāṣikāḥ / [245|19] kimatra jñāpakam / sūtraṃ yuktiśca / [245|19-245|21] sūtraṃ tāvat \"tatkiṃ manyase māhakīmātaḥ yāni tvayā cakṣuṣā rūpāṇi na dṛṣṭāni na dṛṣṭapūrvāṇi na paśyasi nāpi te evaṃ bhavati paśyeyamiti / [245|21-245|22] api nu te tannidānamutpannaśchando vā rāgo vā sneho vā yena vā ālayo vā nīyatiradhyavasānaṃ vā / [245|22] no bhadanta / [245|22-245|24] ye tvayā śrotreṇa śabdā na śrutā na śrutapūrvā vistareṇa yāvanmanasā dharmā na vijñātā vistareṇa yāvanno bhadanta / [245|24-245|25] atra ca te māhakīmātardṛṣṭe dṛṣṭamātraṃ bhaviṣyati śrute mate vijñāte vijñātapātramityu\"ktam / [245|25-245|26] atastriṣu viṣayeṣu dṛṣṭaśrutavijñātaśabdāpadeśādgandhādiṣu matākhyā amyate / [245|26-245|27] ata evaṃ cāniṣyamāṇe dṛṣṭādibhāvabāhyatvāt gandhādiṣu vyavahāro na syādityeṣā yuktiḥ / [245|27] sūtraṃ tāvajjñāpakamanyārthatvāt / [245|27-245|28] na hyatra sūtre bhagavān vyavahārānāṃ lakṣāṇaṃ śāsti sma / [245|28] kiṃ tarhi / [245|28-246|01] atra ca te ṣaḍvidhe viṣaye caturṣu vyavahāreṣu dṛṣṭādivyavahāramātraṃ bhaviṣyati na priyāpriyanimittādhyāropa ityayamatra sūtrārtho dṛśyate / [246|01] kiṃ punarḍṛṣṭaṃ kiṃ ca yāvadvijñātam / kecittāvadāhuḥ / [246|01-246|02] \"yat pañcabhirindriyaiḥ pratyakṣaṃ taddṛṣṭam / [246|02] yat parata āgamitaṃ tacchrutam / [246|02-246|03] yat svayaṃ yuktyanumānato rucitaṃ tanmatam / [246|03-246|04] yanmanaḥpratyakṣabhāvenādhiṣṭitaṃ pratyātmavedyaṃ tadvijñātami\"ti / [246|04] ete ca pañca viṣayāḥ pratyekaṃ dṛṣṭā iti vā kṛtvā vyavahrilyante / [246|05] śrutā matā vijñātā iti vā / [246|05-246|06] ṣaṣṭho 'nyatra dṛṣṭāditi nāsti gandhādiṣu vyavahārābhāvaprasaṅgaḥ / [246|06] tasmādyuktiṃrapyeṣā yuktirna bhavati / [246|06-246|07] pūrvācāryā evamāhuḥ / [246|07] yad dṛṣṭaṃ yat pratyakṣīkṛtaṃ cakṣuṣā / śrutaṃ yac chrotreṇa parataścākharitam / [246|08] mataṃ yat svayaṃ cintitam / vijñātaṃ yat pratyātmapratisaṃveditamadhigataṃ cotpannam / [246|09] prasaṅgena śāstraṃ pravartayatām / yaḥ kāyenānyathātvaṃ prāpyetsyānmṛṣāvādaḥ / [246|10] syāt / ata evocyate / \"syiānna kāyena parākrameta prāṇātipātāvadyena ca spṛśyeta / [246|11] syādvācā parākrameta syānna vācā parākrameta mṛṣāvādāvadyena ca spṛśyeta / [246|11-246|12] syāt kāyena parākrameta syānna kāyena na vācā parākrakmeta ubhayāvadyena ca spṛśyeta / [246|13] syāt ṛśīṇāṃ manaḥpradoṣeṇa poṣadhanidarśanaṃ cātre\"ti / [246|13-246|14] yadyubhayathā 'pi na parākrameta na cāvijñaptikāstyavijñaptiḥ kāmāvacarī kathaṃ tayoḥ karmapathaḥ siddhyati / [246|15] kartavyo 'tra yatnaḥ / gato mṛṣāvādaḥ /",
+   "T1560": "由眼耳意識，并餘三所證， 如次第名為，所見聞知覺",
+   "T1558": "何等名為所見等相？頌曰：由眼耳意識，并餘三所證， 如次第名為，所見聞知覺。論曰：毘婆沙師作如是說：若境由眼識所證名所見，若境由耳識所證名所聞，若境由意識所證名所知，若境由鼻識舌識及身識所證名所覺。所以然者，香味觸三無記性故如死無覺，故能證者偏立覺名。何證知然？由經理證。言由經者，謂契經說：佛告大母：汝意云何？諸所有色非汝眼見、非汝曾見、非汝當見、非希求見，汝為因此起欲起貪、起親起愛、起阿賴耶、起尼延底、起耽著不？不爾。大德！諸所有聲非汝耳聞，廣說乃至諸所有法非汝意知，廣說乃至，不爾。大德！復告大母：汝於此中應知所見，唯有所見應知所聞所覺所知，唯有所聞所覺所知。此經既於色聲法境說為所見所聞所知，准此定於香等三境總合建立一所覺名。若不許然，何名所覺？又香味觸在所見等外，於彼三境應不起言說。是名為理。此證不成，且經非證，經義別故。非此經中世尊為欲決判見等四所言相，然見此經所說義者，謂佛勸彼於六境中及於見等四所言事，應知但有所見等言，不應增益愛非愛相。若爾，何相名所見等？有餘師說：若是五根現所證境名為所見，若他傳說名為所聞，若運自心以種種理比度所許名為所覺，若意現證名為所知。於五境中一一容起見聞覺知四種言說，於第六境除見有三，由此覺名非無所目，香等三境言說非無，故彼理言亦為無理。先軌範師作如是說：眼所現見名為所見，從他傳聞名為所聞，自運己心諸所思搆名為所覺，自內所受及自所證名為所知。且止傍言，應申正論。頗有由身表異想義不由發語成虛誑語耶？曰：有。故論言：頗有不動身殺生罪觸耶？曰：有，謂發語。頗有不發語誑語罪觸耶？曰：有，謂動身。頗有不動身不發語二罪所觸耶？曰：有，謂仙人意憤及布灑他時。若不動身亦不發語，欲無無表離表而生，此二如何得成業道？於如是難應設劬勞。已辯虛誑語。",
+   "T1559": "此中見聞覺知相云何？偈曰：眼耳及意識，所證并餘三，此名見聞知，次第或說覺。釋曰：若眼識所證為見，耳識所證為聞，意識所證為知，鼻舌身識所證為覺。何以故？香味觸本性無記故，譬如死屍，是故緣彼識說為覺，毘婆沙師說如此。此中以何為證？有二種證，謂《阿含》及道理。《阿含》云：摩羅枳母！汝意云何？是色非汝眼昔所曾見、非今正所見、非汝作心我當應見，汝為因此色得起欲起、愛起、喜起、著起、結起貪不？不爾。婆檀多！是聲非汝耳昔所曾聞，乃至是法非汝意昔所曾知，廣說乃至。不爾。婆檀多！摩羅枳母！汝意云何？為於此中於見唯有見生，於聞唯有聞生，於覺唯有覺生，於知唯有知生。於經中說如此。既於三塵說見聞知，故知於餘三塵同立覺名。若不許如此，此三在見等三外故，於香等應無言說，是名道理。此經非證，有別義故。何以故？於此經中非佛世尊欲判四言說相故。說此言說何為？佛言：摩羅枳母！於六境界中，及於見等四種言說中，為但見等言說起、為更增足愛不愛等因？於此說中見經義如此。若爾，何相為見，乃至何相為知？有餘師說：五根所證為見，從他傳得為聞，是時所籌量自意所許為覺，自心所證為知。是五塵隨一所見故，因此義立見言說。若事非自所證，但從他傳得，說此名聞。若事約五塵，由自思量所立、自所許故，說此名覺。第六塵異五故，但意識所證，說此名知。是故於香等無無言說。是故汝所立道理，不成道理。先舊諸師說如此：眼根所證說名見，從他傳得說名聞，是自所思說名覺，對自身所受所得說名知。勿廣論此，更釋此論。若人由身顯義異，為有妄語不？有。是故阿毘達磨藏說：為有不由身行殺生事犯殺生罪不？有。若由言行，為有不由言行妄語事犯妄語罪不？有。若由身行，為有不由身口行此事犯殺生妄語罪不？有。如由仙人心忿責，此中引布薩譬為證。若由身口不行，無欲界無教，不以有教為先故。云何此無教成業道？汝今於中應作功用。說妄語已。"
+  },
+  "v076": {
+   "sa": "paiśunyaṃ kliṣṭacittasya vacanaṃ parabhedane / pārūṣyamapriyaṃ sarva kliṣṭaṃ bhinna pralāpitā // VAkK_4.76 //",
+   "sa-bhasya": "[246|16] paiśunyaṃ kliṣṭacittasya vacanaṃ parabhedane / [246|17] yat kliṣṭacittasya pareṣāṃ bhedāya vacanamaprītaye tat paiśunyam / [246|17-246|18] arthabhijña iti vartate abhrāntyeti ca / [246|19] pāruṣyamapriyaṃ [246|20] vacanat / kliṣṭacittasyeti vartate / arthābhijñe abhrāntyeti ca / [246|20-246|22] yat kliṣṭacittasya pareṣāmapriyavacanamarthābhijñe tatraiva ca yat vivakṣitaṃ tat pāruṣyam / [246|23] sarvaṃ kliṣṭaṃ bhinna pralāpitā // VAkK_4.76 // [246|24] vākyamityadhikāro vartate / sarvaṃ kliṣṭaṃ vacanaṃ saṃbhinnapralāpaḥ / [246|24-246|25] saiva saṃbhinnapralāpitā / [246|25] tadyogena hi saṃbhinnapralāpī bhavati /",
+   "T1560": "染心壞他語，說名離間語， 非愛麁惡語，諸染雜穢語，",
+   "T1558": "當辯餘三語。頌曰：染心壞他語，說名離間語， 非愛麁惡語，諸染雜穢語，",
+   "T1559": "偈曰：破語有染心，所說壞他愛。釋曰：解義言無亂言流。若有染污心，為壞他和合及相喜愛，是名破語。偈曰：惡語非他愛。釋曰：有染污心，解義不亂，此三言流。此三何義？若人有染污心，於解義人，是所欲說處、是所欲說語即說，是名惡語。偈曰：諸染非應語。釋曰：一切染污言，與義不相應故，名非應語。亦名散語，於義不相攝故。"
+  },
+  "v077": {
+   "sa": "ato 'nyat kliṣṭamityanye lapanāgītanāṭyavat / kuśāstavacca abhidhyā tu parasvaviṣamaspṛhā // VAkK_4.77 //",
+   "sa-bhasya": "[247|01] ato 'nyat kliṣṭamityanye [247|02] ato mṛṣāvādādikādvākkarmaṇo yadanyat kliṣṭaṃ vacanaṃ tatsaṃbhinnapralāpa ityapare / [247|03] lapanāgītanāṭyavat / [247|04] kuśāstravacca [247|05-247|06] tadyathā bhikṣurmithyājīvī lapanāṃ karoti raktāśca kecit gāyanti nāṭacye ca naṭāḥ pareṣāṃ rañjanārthaṃ pralapanti / [247|06] kukśāstrāṇi ca taddṛṣṭayo 'pi gadanti / [247|06-247|07] evaṃ paridevasaṃgaṇikādikamapi yadanyanmṛṣāvādādibhyaḥ kliṣṭaṃ vākkarma tatsaṃbhinnapralāpaḥ / [247|07-247|08] kathaṃ cakravartikāle gītaṃ cāsti na ca saṃbhinnapralāpaḥ / [247|08-247|09] naiṣkramyopasaṃhitāni hi tadānīṃ giyante sma na grāmyarasopasaṃhitāni / [247|09-247|10] tadāpyāvāhavivāhadyabhilāpasadbhāvādasti saṃbhinnapralāpo na karmapatha ityapare / [247|11] abhidhyā tu parasvaviṣamaspṛhā // VAkK_4.77 // [247|12-247|13] aho vata yat pareṣāṃ tanmama syāditi parasvebhyo yā viṣameṇānyāyena spṛhā svīkaranecchā balādvā copāyādvā sā 'bhidhyā karmapathaḥ / [247|13-247|14] sarvaiva kāmāvacarī tṛṣṇābhidhyetyapare / [247|14-247|15] tathā hi nivaraṇādhikāre kāmacchandamadhikṛtyoktaṃ sūtre \"so 'bhidhyāṃ loke prahāye\" tyevamādi / [247|15-247|16] yadyapi sarvābhidhyā natu sarvā karmapatha audārikaduṣcaritasaṃgrahādityapare / [247|16-247|17 mā bhūccakravartināmapyuttarakauravānāṃ pābhidhyā karmapatha iti /",
+   "T1560": "餘說異三染，佞歌邪論等。 惡欲他財貪，",
+   "T1558": "餘說異三染，佞歌邪論等。論曰：若染污心發壞他語，若他壞不壞俱成離間語。解義不誤，流至此中。若以染心發非愛語毀呰於他，名麁惡語。前染心語流至此故，解義不誤亦與前同。謂本期心所欲罵者，解所說義業道方成。一切染心所發諸語名雜穢語。所以者何？染所發言皆雜穢 故。唯前語字流至此中。有餘師說：異虛誑等前三種語，所有一切染心發言名雜穢語，此謂佞歌及邪論等。佞謂諂佞，如有苾芻邪命居懷發諂佞語。歌謂歌詠，如世有人以染污心諷吟相調，及倡伎者為悅他情以染污心作諸詞曲。言邪論者，謂廣辯說諸不正見所執言詞。等謂染心所發悲嘆，及諸世俗戲論言詞。但異前三染心所發，一切皆是雜穢語收。輪王現時亦有歌詠，如何不是雜穢語收？由彼語從出離心發，能引出離，非預染心。有餘師言：爾時亦有成嫁娶等所發染言，由過輕故不成業道。已辯三語。當辯意三。頌曰：惡欲他財貪，",
+   "T1559": "偈曰：餘說異三染。釋曰：有餘師說：從妄語等口業，若有染污，口業；異彼，是名非應語。偈曰：佞悲歌舞曲，邪論。釋曰：譬如邪命比丘為得利養作諂佞言，復有人為別離憂所逼作悲思言，復有人由欲染心故歌，復有舞兒於舞時為染污他作諸詞曲，復有人執邪論起見弘說此論，乃至俗話等言異妄語等三，所有染污言，皆名非應語。轉輪王時有歌，云何非非應語？是時彼人所歌，一切與出離義相應，不與邪味相應。是時有求婦迎婦等語，雖是非應語而非業道，餘師說如此。偈曰：貪欲者，他財不平欲。釋曰：於他財物非道理非平等求得，為屬自己，作是意願：如此等物皆悉屬我。或由力或由闇，此貪欲名業道。有餘師說：一切欲界愛欲皆是貪欲業道。何以故？於《五蓋經》依愛欲有如此言：此人捨於世間貪欲蓋。若一切愛皆是貪欲，非一切悉是業道，由攝重品惡故。勿一切轉輪王及北鳩婁人有貪欲業道，餘師說如此。"
+  },
+  "v078": {
+   "sa": "vyāpādaḥ sattvavidveṣaḥ nāstidṛṣṭiḥ śubhāśubhe / mithyādṛṣṭiḥ trayo hyatra panthānaḥ sapta karma ca // VAkK_4.78 //",
+   "sa-bhasya": "[247|18] vyāpādaḥ sattvavidveṣaḥ [247|19] sattveṣu vidveṣo vyāpādaḥ parapīḍākārapravṛttaḥ / [247|20] nāstidṛṣṭiḥ śubhāśubhe / [247|21] mithyādṛṣṭiḥ [247|22] śubhe cāśubhe ca karmaṇi yā nāstīti dṛṣṭiḥ sā mithyādṛṣṭiḥ / [247|22-247|24] tadyathā \"nāsti dattaṃ nāstīṣṭaṃ nāsti hutaṃ nāsti sucaritaṃ nāsti duścaritamityevamādi yāvanna santi loke 'hanta\" iti / [247|24-247|25] saiṣā sākalyena karmaphalāryāpavādikā mithyādṛṣṭirbhavati / [247|25] ādimātraṃ tu śloke darśitam / evaṃlakṣaṇā ete daśa karmapathāḥ / [248|01] karmapathā iti ko'rthaḥ / [248|02] trayo hyatra panthānaḥ sapta karma ca // VAkK_4.78 // [248|03] abhidhyādayo hi trayaḥ karmaṇaḥ panthāna iti karmapathāḥ / [248|03-248|04] tatsaṃprayogiṇī hi cetanā teṣāṃ vāhena vahati teṣāṃ gatyā gacchati / [248|04] tadvaśena tathābhisaṃskaraṇāt / [248|04-248|06] sapta tu prāṇātipātādayaḥ karma ca kāyavākkarmatvāt karmaṇaśca panthāna iti karmapathāstatsamutthānacetanāyāstānadhiṣṭhāya pravṛtteriti / [248|06] karmapathāścakarma ca karmapathāśceti karmapathāḥ / [248|07] asarūpāṇāmapyekaśeṣasiddheḥ / [248|07-248|08] evamanabhidhyādayaḥ prāṇātipātaviratyādayaśca jñeyāḥ / [248|08-248|09] prayogapṛṣṭāni karmāṇi karmapathāḥ yasmāttadarthaṃ tanmūlikā ca teṣāṃ pravṛttiḥ / [248|09-248|09-] yathaudārikaṃ ca grahaṇādityuktaṃ prāk / [248|09-248|10] yeṣāṃ cotkarṣāpakarṣeṇādhyātmikabāhyānāṃ bhāvānāmutkarṣāpakarṣau loke bhavataḥ / [248|10-248|11] ye tarhi dārṣṭāntikā abhidhyādīneva manaskarmecchanti teṣāṃ te kathaṃ karmapathāḥ / [248|11] ta eva hi praṣṭavyāḥ / [248|12] api tu śakyaṃ vaktuṃ karma ca te panthānaśca sugatidurgatīnāmiti karmapathāḥ / [248|12-248|13] itaretarāvāhanādvā / [248|13-248|14] ya ete daśākuśalāḥ karmapathāḥ sarve ete kuśalānāṃ karmaṇāṃ samudācāravirodhinaḥ /",
+   "T1560": "憎有情瞋恚， 撥善惡等見，名邪見業道。 此中三唯道，七業亦道故，",
+   "T1558": "憎有情瞋恚， 撥善惡等見，名邪見業道。論曰：於他財物惡欲名貪，謂於他財非理起欲，如何令彼屬我非他，起力竊心耽求他物，如是惡欲名貪業道。有餘師言：諸欲界愛皆貪業道。所以者何？《五蓋經》中依貪欲蓋，佛說應斷此世間貪，故知貪名總說欲愛。有說：欲愛雖盡名貪，而不可說皆成業道，此惡行中攝麁品故。勿輪王世及北俱盧所起欲貪成貪業道。於有情類憎恚名瞋，謂於他有情欲為傷害事，如是憎恚名瞋業道。於善惡等惡見撥無，此見名為邪見業道。如經說：無施與、無愛樂、無祠祀、無妙行、無惡行、無妙惡行業果異熟、無此世間無彼世間、無母無父、無化生有情、世間無沙門、或婆羅門是阿羅漢。彼經具顯謗業謗果謗聖邪見，此頌舉初等言攝後。如是已辯十業道相。依何義名業道？頌曰：此中三唯道，七業亦道故。論曰：十業道中後三唯道，業之道故立業道名。彼相應思說名為業，彼轉故轉、彼行故行，如彼勢力而造作故。前七是業，身語業故，亦業之道，思所遊故。由能等起身語業思，託身語業為境轉故。業業之道立業道名，故於此中言業道者，具顯業道業業道義。雖不同類而一為餘，於世典中俱極成故。離殺等七、無貪等三立業道名，類此應釋。此加行後起，何緣非業道？為此依此彼方轉故。又前說此攝麁品故。又若由此有減有增，令內外物有增有減，立為業道，異此不然。譬喻論師執貪瞋等即是意業，依何義釋彼名業道？應問彼師。然亦可言：彼是意業惡趣道故立業道名，或互相乘皆名業道。如是所說十惡業道，皆與善法現起相違。諸斷善根由何業道？",
+   "T1559": "偈曰：瞋恚捨眾生。釋曰：緣眾生過失起害捨心，於損傷他事中心強疾故成業道。偈曰：於善惡無見，邪見。釋曰：於善惡二業撥云無業，是名邪見。如經言：無施、無供養、無嗅多、無善行、無惡行，於世間無沙門婆羅門是阿羅漢。此邪見具足，謂撥業、撥果、撥聖人。於經中有多種文句，此偈但顯重。是十業道體相，如此業道是何義？偈曰：此後三，唯道七業道。釋曰：貪欲等三是業家道，故說業道，發起故意依彼起故。前七亦業亦道，能顯本意故，是彼種類故，是故名業，業道如前。無貪等及離殺生等，應知亦如此。前後二分云何非業道？由彼生，為成此，及依 此為根本故，如麁攝為業道故。此如前說。復次由彼增減，於世間一切內外物，勝劣顯現故，立彼為業道。若爾，譬喻部師執但貪愛等是意業，此三於彼云何成業道？汝應問彼師。此亦可答，彼是業亦是惡趣道故，彼名業道。復次更互相乘故，皆名業道。是所說十惡業道，此一切與善法行相違故，故說名惡。"
+  },
+  "v079": {
+   "sa": "mūlacchedastvasaddṛṣṭayā kāmāptotpattilābhinām / phalahetvapavādinyā sarvathā kramaśaḥ nṛṣu // VAkK_4.79 //",
+   "sa-bhasya": "[248|15] mūlacchedastvasaddṛṣṭyā [248|16] kuśalamūlacchedastu mithyādṛṣṭyā bhavatyadhimātraparipūrṇayā / [248|16-248|17] yattarhi śāstra uktaṃ \"katamānyadhimātrāṇyakuśalamūlāni / [248|17-248|18] yairakuśalamūlaiḥ kuśalamūlāni samucchinatti kāmavairāgyaṃ cānuprāpnuvan yāni tatprathamata upalikhatī\"ti / [248|18-248|20] akuśalamūlādhyāhṛtatvāt mithyādṛṣṭesteṣveva tatkarmāpadeśa eṣa kriyate tadyathāgnireva grāmaṃ dahani caurāstu tasyādhyāhārakā iti caurairgrāmo dagdha ityucyate / [248|21] katameṣāṃ kuśalamūlānāṃ samucchedo bhavati / [248|22] kāmāptotpattilābhinām / [248|23] kāmāvacarāṇi kuśalamūlāni samuchidyante / [248|23-248|24] rūpārūpyāvacarairasamanvāgatatvāt / [248|24] prajñaptibhāṣyaṃ tarhi kathaṃ nīyate / [248|24-248|25] \"iyatā 'nena pudgalena traidhātukāni kuśalamūlāli samucchinnāni bhavantī\"ti / [248|25-249|01] tatprāptidūrīkaraṇamabhisaṃdhāyaitaduktam / [249|01] saṃtatestadabhājanatvāpādanāt / [249|01-249|02] upapattipratilābhikānyeva ca samucchidyante / [249|02] prāyogikebhyaḥ pūrvaṃ parihīṇatvāt / [249|02-249|03] kimālambanayā mithyādṛṣṭyā samucchidyante [249|04] phalahetvapavādinyā [249|05-249|06] yā ca hetumapavadate nāsti sucaritaṃ nāsti duścaritamiti yā ca phalaṃ nāsti sucaritaduścaritānāṃ karmaṇāṃ phalavipāka iti / [249|06-249|07] ānantaryavimuktimārgasthānīye ete ityapare / [249|07-249|08] sāsravālambanayaiva nānāsravālambanayā sabhāgadhātvālambanayaiva ca na visabhāgadhātvālambanayā / [249|08] saṃprayogamātrānuśāyitvena durbalatvādityeke / [249|08-249|09] evaṃ tu varṇayanti / [249|10] sarvathā [249|11] navaprakārāṇyapi kuśalamūlāni sakṛtsamucchidyante / darśanaprahātavyavadityeke / [249|11-249|12] evaṃ tu varṇayanti / [249|13] kramaśaḥ [249|14] navaprakārayā mithyādṛṣṭyā navaprakārāṇi kuśalamūlāni samucchidyante / [249|14-249|15] bhāvanā heyakleśavat yāvadadhimātrādhimātrayā mṛdumṛdūnīti / [249|15-249|16] evamayaṃ granthaḥ pālito bhavati / [249|16] \"katamānyaṇusahagatāni kuśalamūlāni / āha / [249|16-249|18] yairakuśalamūlaiḥ kuśalāni samucchinnāni sarvapaścāt vijahāti yaiḥ vikīrṇaiḥ samucchinna kuśalamūla iti saṃkhyāṃ gacchatī\"ti / [249|18] asya tarhi granthasya ko nayaḥ / [249|18-249|19] \"katamānyadhiṃmātrādhimātrāṇyakuśalamūlāni / [249|19-249|20] yairakukśalamūlaiḥ kuśalamūlāni samucchinattī\"ti / [249|20] samāptimetat saṃdhāyoktam / tainiravaśeṣacchedāt / [249|20-249|21] eko 'pi hi prakāra steṣāmasamucchinnaḥ sarveṣāṃ punarutpattau hetuḥ syāditi / [249|21-249|22] darśanamārgavadabhyutthānena cchinattītyeke / [249|22] evaṃ tu varṇayantyubhayatheti / [249|22-249|23] pūrvaṃ saṃvaraṃ vijahāti paścāt kuśalamūlāni samucchinattītyeke / [249|23] evaṃ tu varṇayanti / [249|23-249|24] yasya cittasya phalasaṃvarastattyāgāttasya tyāga iti / [249|24] atha kuśalamūlāni samucchidyante [249|25] nṛṣu // VAkK_4.79 // [249|26] manuṣyeṣveva nāpāyeṣu / kliṣṭākliṣṭayoḥ prajñayoradṛḍhatvāt / [249|26-249|27] na deveṣu karmaphala pratyakṣatvāt / [249|27] triṣu dvīpeṣu nottarakurau / apāpāśayatvāt jambūdvīpa evetyapare / [249|28] teṣāmayaṃ grantho virudhyate / \"jāmbūdvīpakaḥ sarvālpairaṣṭābhirindriyaiḥ samanvāgataḥ / [250|01] evaṃ pūrvavidehako godānīyaka\" iti / tāni punaḥ",
+   "T1560": "唯邪見斷善，所斷欲生得， 撥因果一切，漸斷二俱捨。",
+   "T1558": "斷續善相差別云何？頌曰：唯邪見斷善，所斷欲生得， 撥因果一切，漸斷二俱捨。",
+   "T1559": "偈曰：斷根由邪見。釋曰：於十惡中由何惡斷善根？由最上上品圓滿邪見。若爾，於阿毘達磨藏中云何說言：何者最上上品惡根？是彼能斷滅善根。若人正至離欲欲界位，最初所除，由邪見為惡根所引起故，於惡根中立邪見事。譬如火能燒國土，劫能引火令起故，說國土為劫所燒。何者是所滅善根？偈曰：欲界生得善。釋曰：唯欲界中善根被斷，與色無色界善根不相應故。若爾，《假名分別論》云何將？彼論云：唯由此量，是人已斷三界善根，上界善根至得。依最遠相離義故說此言，由令相續非彼器故。唯生得善根被斷滅，是一切加行得善已退失故。此邪見能斷善根，緣何境界？偈曰：謂撥無因果。釋曰：此邪見若能撥因，謂無善惡行。若撥果，謂無善惡行業所有果報。此二邪見，似次第道及解脫道。餘部師說：如此緣有流為境不緣無流，緣同分界不緣非同分界，唯由相應隨眠故，故彼力弱。偈曰：一切次。釋曰：諸師分別說：如此一切邪見，九品善根一時能斷，譬如見諦滅惑。復有餘師說：次第斷，由九品邪見，九品善根被斷。譬如修道滅惑，乃至最上上品邪見，斷最下下品善根。若執如此，毘婆沙伽蘭他則被守護。伽蘭他言：何者善根？最細恒隨。是斷善根人，最後所斷。由彼斷滅，此人得斷善根名。若爾，此伽蘭他義云何將？伽蘭他言：何者最上上品惡根？若是惡根能除滅善根，名最上上品。約圓滿事故說此言。何以故？由此滅無餘故。無一品類在不被斷，為彼作生因。如見諦道中間不出觀，斷善根亦爾。復有餘師說：此事有二種。復有餘師說：先斷除護類善根，後斷自性善根。復有餘師說：若護是心果，由捨此心護亦被捨。於何處善根可斷滅？偈曰：人道。釋曰：於人道中，非惡道有，染無染智不堅牢故，於天道證見業果報故。於三洲非北鳩婁，彼本來無惡意故。餘師說：唯剡浮洲人。若執如此，與伽蘭他相違。伽蘭他云：剡浮洲人，若與最少根相應，唯與八根相應。東毘提訶、西瞿耶尼亦爾。"
+  },
+  "v080": {
+   "sa": "chinatti strī pumān dṛṣṭicaritaḥ so 'samanvayaḥ / saṃdhiḥ kāṅkṣāstidṛṣṭibhyāṃ nehānantaryakāriṇaḥ // VAkK_4.80 //",
+   "sa-bhasya": "[250|02] chinatti strī pumān [250|03] stri ca samucchinatti puruṣaśca mandacchandavīryaprajñatvāt na strītyapare [250|03-250|04] ayaṃ grantho virudhyeta [250|04-250|05] \"yaḥ strīndriyeṇa samanvāgato niyatamasāvaṣṭābhirindriyaiḥ samanvāgata\" iti [250|05] teṣāmapi tṛṣṇācarito na samucchinatti [250|05-250|06] calāśayatvāt [250|06] kastarhi [250|07] dṛṣṭicaritaḥ [250|08] dṛḍhagūḍhapāpāśayatvāt ata eva na śaṇḍādayastṛṣṇācarite pakṣyatvāt [250|08-250|09] āpāyikavacca [250|09] kiṃsvabhāvaḥ kuśalamūlasamucchedaḥ [250|10] so 'samanvayaḥ [250|11] yadā hi kuśalamūlānāṃ prāptirna punarutpadyate aprāptirapyutpadyate / [250|11-250|12] tasminnasamanvāgama utpanne samucchinnāni kuśalamūlānyucyante / [250|12-250|13] teṣāṃ samucchinnānāṃ kathaṃ punaḥ pratisaṃdhiḥ [250|14] saṃdhiḥ kāṅkṣāstidṛṣṭibhyāṃ / [250|15] yadā 'sya hetuphale vicikitsā cotpadyate / aṣṭidṛṣṭirvā samyak dṛṣṭirityarthaḥ / [250|16] tadā punaḥ tatprāptisamutpādāt pratisaṃdhitāni kuśalamūlānyucyante / [250|16-250|17] navaprakārāṇāṃ yugapat pratisaṃdhānaṃ krameṇa tu saṃmukhībhāva ārogyabalalābhavat / [250|17-250|18] sa punasteṣāṃ pratisaṃdhiḥ [250|19] nehānantaryakāriṇaḥ // VAkK_4.80 // [250|20] anyasyaiveha syādānantaryakāriṇastu neha syāt / [250|20-250|22] tameva saṃdhāyoktam \"abhavyo'yaṃ pudgalo dṛṣṭa eva dharme kuśalamūlāni pratisaṃdhātuṃ niyatamayaṃ navakebhyaścyavamāno vā upapadyamāno vā kuśalamūlāni pratisaṃdhāsyati\" iti / [250|22-250|24] upapadyamāno 'ntarābhavasthaścyavamānaścyutyabhimukhastatra punaryo hetubalena samucchinatti sa cyavamānaḥ pratisaṃdadhāti yaḥ pratyayabalena sa upapadyamānaḥ / [250|24-250|25] evaṃ yaḥ svabalena parabalena / [250|25] punarāha / [250|25-250|26] ya āśayavipannaḥ samucchinatti sa dṛṣṭe dharme pratisaṃdadhāti / [250|26] ya āśayaprayogavipannaḥ sa bhedātkāyasyeti / [250|26-251|01] evaṃ yo dṛṣṭivipanno dṛṣṭi śīlavipanna iti / [251|01] syātsamucchinna kuśalamūlo na mithyātvaniyata iti / [251|02] catuṣkoṭikam / prathamā koṭiḥ pūraṇādayaḥ / dvitīyā 'jātaśatruḥ / tṛtīyā devadattaḥ / [251|03] caturthyetānākārān sthāpayitvā / [251|03-251|04] kuśalamūlasamucchedikāyā mithyādṛṣṭeravīcau vipākaḥ / [251|04] ānantaryakāriṇāṃ tu tatra vā 'nyatra vā narake / [251|05] karmapathaprasaṅga evāyaṃ vartate /",
+   "T1560": "人三洲男女，見行斷非得， 續善疑有見，頓現除逆者。",
+   "T1558": "人三洲男女，見行斷非得， 續善疑有見，頓現除逆者。論曰：惡業道中唯有上品圓滿邪見能斷善根。若爾，何緣本論中說云何上品諸不善根，謂諸不善根能斷善根者？或離欲位最初所除，由不善根能引邪見，故邪見事推在彼根。如火燒村，火由賊起，故世間說彼賊燒村。何等善根為此所斷？謂唯欲界生得善根，色無色善先不成故。《施設足論》當云何通？如彼論言：唯由此量是人已斷三界善根，依上善根得更遠說，令此相續非彼器故。何緣唯斷生得善根？加行善根先已退故。緣何邪見能斷善根？謂定撥無因果邪見。撥無因者，謂定撥無妙行惡行。撥無果者，謂定撥無彼果異熟。有餘師說：此二邪見猶如無間解脫道別。有餘師說：斷善邪見唯緣有漏非無漏緣，唯自界緣不緣他界。由彼唯作相應隨眠，境不隨增，勢力劣故。如是說者通一切緣，隨因亦增，有強力故。有餘師說：九品善根由一剎那邪見頓斷，如見道斷見所斷惑。如是說者漸斷善根，謂九品善根由九品邪見逆順相對漸次而斷。如修道斷修所斷惑，即下下邪見能斷上上善根，乃至下下善根上上邪見所斷。若作是說，符本論文。如本論言：云何名微俱行善根？謂斷善根時最後所捨者，由捨彼故名斷善根。若爾，彼文何理復說：云何上品諸不善根？謂諸不善根能斷善根者。彼依究竟密說此言，由此善根斷無餘故。謂若猶有一品善根，餘品善根因斯可起，未可說彼名斷善根；斷究竟時方名斷善，故唯說上品名能斷善根。有餘師言：斷九品善終無中出如見道中。如是說者，通出不出。有餘師說：先捨律儀後斷善根，未易捨故。如是說者，若彼律儀是此品心所等起果，此品心斷捨彼律儀，以果與因品類同故。為在何處能斷善根？人趣三洲非在惡趣亦非天趣。所以者何？以惡趣中染不染慧不堅牢故，以天趣中現見善惡諸業果故。言三洲者，除北俱盧，彼無極惡阿世耶故。有餘師說：唯贍部洲。若爾，便違本論所說。如本論說：贍部洲人極少成八根，東西洲亦爾。如是斷善，依何類身？唯男女身，志意定故。有餘師說：亦非女身，欲勤慧等皆昧鈍故。若爾，便違本論所說。如本論說：若成女根定成八根，男根亦爾。為何行者能斷善根？唯見行人非愛行者，諸愛行者惡阿世耶極躁動故，諸見行者惡阿世耶極堅深故。由斯理趣，非扇搋等能斷善根，愛行類故。又此類人如惡趣故。此善根斷其體是何？善斷應知非得為體，以斷善位善得不生非得續生，替善根得非得生位，名斷善根。故斷善根非得為體。善根斷已由何復續？由疑有見。謂因果中有時生疑：此或應有？或生正見，定有非無。爾時善根得還續起，善得起故名續善根。有餘師言：九品漸續。如是說者，頓續善根然後後時漸漸現起，如頓除病氣力漸增。於現身中能續善不？亦有能續，除造逆人。經依彼人作如是說：彼定於現法，不能續善根。彼人定從地獄將歿、或即於彼將受生時能續善根，非餘位故。言將生位，謂中有中。將歿時言，謂彼將死。若由因力彼斷善根將死時續，若由緣力彼斷善根將生時續，由自他力應知亦爾。又意樂壞非加行壞斷善根者，是人現世能續善根。若意樂壞加行亦壞斷善根者，要身壞後方續善根。見壞戒不壞、見壞戒亦壞斷善根者，應知亦爾。有斷善根非墮邪定，應作四句。第一句者，謂布剌拏等。第二句者，謂未生怨等。第三句者，謂天授等。第四句者，謂除前相。已乘義便辯斷善根，今應復明本業道義。",
+   "T1559": "此善根，偈曰：能斷唯男女。釋曰：若斷善根，唯男女能斷。餘師說：智根、精進根昧鈍故，女人不斷。若爾，此執與伽蘭他則相違。伽蘭他云：若人與女根相應，此人必定與八根相應。於男女中貪愛行，不能斷善根，意地動弱故。若爾，何行人能斷？偈曰：見行。釋曰：此人惡意甚深堅牢故。是故黃門等不能斷，是貪愛行部類故，猶如惡道。此斷善根體相云何？偈曰：此非得。釋曰：是時善根至得斷不更生，非至得生。於非至得生時，說善根已斷。此善根已斷，云何更相續？偈曰：接善疑有見。釋曰：此人於因果中若生疑心、或生有見，此名正見。是時正見至得更起故，說接善根。昔時九品已斷，今一時相接，由次第現前，譬如得無病及力。是彼人接善根，偈曰：今非作無間。釋曰：餘斷善根人，於今生有接善根義。若作無間業人，今生無接善根義。依此人，故經中說：此人不應今生得接善根。此人或從地獄正退正生，是時應接善根。正生謂住中陰，正退謂將死。此中若由因力斷善根，是退時接善根。若由緣力斷善根，是正生時接善根。由自力、由他力亦爾。復次若人由自意壞斷善根，此人於現世得接善根。若人由自意壞及他教壞斷善根，此人於捨身後得接善根。若人由見壞，由見戒壞亦爾。有斷善根不墮邪定聚，此義有四句。第一句者，如富樓那等。第二句者，如未生怨王等。第三句者，如提婆達多等。第四句者，除前三句。"
+  },
+  "v081": {
+   "sa": "yugapadyāvadaṣṭābhiraśubhaiḥ saha vartate / cetanā daśabhiryāvacchubhaiḥ naikāṣṭapañcabhiḥ // VAkK_4.81 //",
+   "sa-bhasya": "[251|05-251|06] tatra vaktavyaṃ katibhiḥ karmapathaiḥ saha cetanā yugapadutpannā vartata iti / [251|07] yugapadyāvadaṣṭābhiraśubhaiḥ saha vartate / [251|08] cetanā [251|09] ekena tāvatsaha vartate / [251|09-251|10] vinā 'nyenābhidhyādisaṃmukhībhāve akliṣṭacetaso vā tatprayogeṇa rūpiṇāmanyatamaniṣṭhāgamane / [251|10] dvabhyāṃ saha vartate / [251|10-251|11] vyāpannacittasya prāṇivadhe abhidhyāviṣṭasya vā 'dattādāne kāmamithyācāre saṃbhinnapralāpe vā / [251|12] tribhiḥ saha vartate / vyāpannacittasya parakīya prāṇimāraṇāpaharaṇe yugapat / [251|12-251|13] na tarhīdānīmadattādānasya lobhenaiva niṣṭā sidhyati / [251|13-251|14] ananyacittasya tatsamāptau sa niyamo jñeyaḥ / [251|14-251|15] abhidhyādyāviṣṭasya ca tatprayogeṇa rūpidvayaniṣṭhāgamane tribhireva / [251|15] caturbhiḥ saha vartate / [251|15-251|16] bhedābhiprāyasyānṛta vacane paruṣavacane vā / [251|16] tatra himānasa eko bhavati vācikāstrayaḥ / [251|16-251|17] abhidhyādigatasya vā tatprayogeṇā nyarūpitraya niṣṭhāgamane / [251|17] evaṃ paṇcaṣaṭsaptabhiryo jayitavyā / [251|17-251|18] aṣṭābhiḥ saha vartate / [251|18] ṣaṭsu prayoggaṃ kṛtvā svayaṃ kāmabhithyācāraṃ kurvataḥ samaṃ niṣṭhāgamane / [251|19] evaṃ tāvadakuśalaiḥ / [251|20] daśabhiryāvacchubhaiḥ [251|21] kuśalaiḥ punaḥ karmapatharyāvat daśabhiḥ saha cetanā vartata ityutsargaṃ kṛtvā 'pavādaṃ karoti [251|22] naikāṣṭapañcabhiḥ // VAkK_4.81 // [251|23] ekenāṣṭābhi pañcabhiśca karmapathaiḥ saha na vartate / tatra dvābhyāṃ saha vartate / [251|23-252|01] kuśaleṣu pañcasu vijñāneṣu / [252|01] ārūpyasamāpattau ca kṣayānutpādajñānayoḥ / [252|01-252|02] tribhiḥ samyagdṛṣṭisaṃprayukte manovijñāne / [252|02-252|03] caturbhirakuśalāvyākṛtacittasyo pāsakaśrāmaṇerasaṃvarasamādāne / [252|03] ṣaḍbhiḥ kuśaleṣu pañcaṣu vijñānakāyeṣu tatsamādāne / [252|03-252|04] saptabhiḥ kuśale manovijñāne tatsamādāna eva akuśalāvyākṛtacittasya ca bhikṣusaṃvarasamādāne / [252|05] navabhiḥ kuśaleṣu pañcaṣu vijñāneṣu / [252|05-252|06] tatsamādāne kṣayānutpādajñānasaṃprayukte ca manovijñāne tasminneva ca dhyānasaṃgṛhīte / [252|06-252|07] daśabhistato 'nyatra kuśale manovijñāne bhikṣusaṃvarasamādāna eva / [252|07-252|09] sarvā ca dhyānānāsrava saṃvarasahavartinī cetanā 'nyatra kṣayānutpādajñānābhyām saṃvaranirmuktena tvekenāpi saha syādanya cittasyaikāṅgaviratisamādāne / [252|09-252|10] pañcāṣṭābhirapi syātkuśale manovijñāne dvipañcāṅgasamādāne yugapat /",
+   "T1560": "業道思俱轉，不善一至八， 善總開至十，別遮一八五。",
+   "T1558": "所說善惡二業道中，有幾並生與思俱轉？頌曰：業道思俱轉，不善一至八， 善總開至十，別遮一八五。論曰：於諸業道思俱轉中，且不善與思從一唯至八。一俱轉者，謂離所餘貪等三中隨一現起，若先加行造惡色業不染心時隨一究竟。二俱轉者，謂瞋心時究竟殺業，若起貪位成不與取、或欲邪行、或雜穢語。三俱轉者，謂以瞋心於屬他生俱時殺盜。若爾，所說偷盜業道由貪究竟，理應不成，依不異心所作究竟，故作如是決判應知，若先加行造惡色業貪等起時隨二究竟。四俱轉者，謂欲壞他說虛誑言或麁惡語，意業道一、語業道三。若先加行造惡色業，貪等現前隨三究竟。如是五六七皆如理應知。八俱轉者，謂先加行造作所餘六惡色業，自行邪欲俱時究竟，後三業道自力現前必不俱行，故無九十。如是已說不善業道與思俱轉數有不同。善業道與思，總開容至十。別據顯相，遮一八五。二俱轉者，謂善五識及依無色盡無生智現在前時無散善七。三俱轉者，謂與正見相應意識現在前時無七色善。四俱轉者，謂惡無記心現在前位，得近住近事勤策律儀。六俱轉者，謂善五識現在前時得上三戒。七俱轉者，謂善意識無隨轉色正見相應現在前時得上三戒，或惡無記心現前時得苾芻戒。九俱轉者，謂善五識現在前時得苾芻戒，或依無色盡無生智現在前時得苾芻戒，或靜慮攝盡無生智相應意識現在前時。十俱轉者，謂善意識無隨轉色正見相應現在前時得苾芻戒，或餘一切有隨轉色正見相應心正起位。別據顯相所遮如是，通據隱顯則無所遮。謂離律儀有一八五。一俱轉者，謂惡無記心現在前時得一支遠離。五俱轉者，謂善意識無隨轉色正見相應現在前時得二支等。八俱轉者，謂此意識現在前時得五支等。善惡業道於何界趣處？",
+   "T1559": "由分別安立業道，此中是義應說。幾種業道故意，與彼相應俱起？偈曰：故意俱乃至，與八惡業道。釋曰：有時故意與一惡業道俱起，離餘業道，若貪欲等起現前、若人無染污心，由先教他作有色業道，隨一成就時。與二俱起者，若人起瞋恚心殺生時、或貪欲所染心行盜及邪婬時、或說非應語。與三俱起者，若人起瞋恚心，於他眾生俱時殺盜。若爾，是時偷盜不由貪欲成就。若人心不異，成就業道時，應知前決義。若人貪欲等所染，由教他有色二業道成就時。如此等與三與四俱起者，若人有欲破他和合意，說妄語惡語，此中意業道隨一，口業道有三。有時貪欲等所染，由教他別三成就時。餘五六七，應知合如此義。與八俱起者，於六教他，自行邪婬，若彼共一時俱成。由惡業道義極於此。偈曰：若善乃至十。釋曰：若論故意與善業道相應不相應，乃至得與十業道相應。已作如此通說。為簡擇此故，更作別說。偈曰：不共一八五。釋曰：故意無與一八五業道相應義。此中與二相應者，於善五識起時、入無色定時、盡智無生智起時。與三相應者，與正見相應意識起時。與四相應者，惡心無記心起時，正受優婆塞護及沙彌護。與六相應者，善五識起時，受前二護。與七相應者，善意識起時，受前二護。或惡心或無記心起時，受比丘護。與九相應者，善五識起時，受比丘護。若意識與盡智無生智相應，是盡智無生智相應心與定相應。與十相應者，異此，於餘處善意識起時，受比丘護。一切定護無流護相應故意，離盡智無生智，若與非護所攝，亦得與一相應。若人異心受一遠離分，亦得與五八相應。若人善意識起時，一時受二遠離分，或受五遠離分。"
+  },
+  "v082": {
+   "sa": "bhinnapralāpapārūṣyavyāpādā narake dvidhā / samanvāgamato 'bhidhyāmithyādṛṣṭī kurau trayaḥ // VAkK_4.82 //",
+   "sa-bhasya": "[252|11-252|12] kasyāṃ gatau kati karmapathā akuśalā kuśalā vā saṃmukhībhāvataḥ samanvāgamato vā / [252|13] bhinnapralāpapāruṣyavyāpādā narake dvidhā / [252|14] ityete trayaḥ karmapathā narake dvābhyāṃ saprakārābhyāṃ santi / [252|14-252|15] saṃmukhībhāvataḥ samanvāgamabhāvataśca / [252|15] paridevanātsaṃbhinnapralāpaḥ / parasparaparitāpanātpāruṣyaṃ rukṣasaṃtānatayā / [252|16] parasparadveṣādvyāpādaḥ / [252|17] samanvāgamato 'bhidhyāmithyādṛṣṭī / [252|18] na saṃmukhībhāvataḥ / rañjanīyavastvabhāvātkarmaphalapratyakṣatvācca / [252|18-252|19] karmakṣayeṇa maraṇānna prāṇātipātaḥ / [252|19-252|20] dravyastrīparigrahābhāvānnadattādānakāmamithyācārau prayojanābhāvānna mṛṣāvādaḥ / [252|20] ata eva na paiśunyaṃ nityabhinnatvācca / [252|21] kurau trayaḥ // VAkK_4.82 // [252|22] samanvāgamata iti vartate / abhidhyāvyāpādamithyādṛṣṭayo na saṃmukhībhāvataḥ / [252|23-252|24] amamāparigrahatvāt snigdha saṃtānatvādāghātavastvabhāvādapāpāśayatvācca /",
+   "T1560": "不善地獄中，麁雜瞋通二， 貪邪見成就，北洲成後三。",
+   "T1558": "幾唯成就、幾亦通現行？頌曰：不善地獄中，麁雜瞋通二， 貪邪見成就，北洲成後三，",
+   "T1559": "復於何道幾業道，或惡或善，由現前及至得俱起？偈曰：非應語惡語，瞋於地獄二。釋曰：是三種業道，於地獄由二種義有：一由現前有，二由至得有。由悲泣有非應語，由互相罵有惡語，由相續惱互相憎故有瞋恚。偈曰：由至得貪欲，邪見。釋曰：若由至得有貪愛邪見，不由現前有，無可愛塵故、證知業果故。由業盡死故無殺生，不攝財及婦故，無偷盜邪婬。無用故無妄語，恒自無和合故無破語。偈曰：北洲三。釋曰：由至得言流。貪欲瞋恚邪見，不由現前有，無我所無攝故、相續軟滑故、瞋恚類境無故、無惡意故。"
+  },
+  "v083": {
+   "sa": "saptamaḥ svayamapyatra kāme 'nyatra daśāśubhāḥ / śubhāstrayastu sarvatra saṃmukhībhāvalābhataḥ // VAkK_4.83 //",
+   "sa-bhasya": "[252|25] saptamaḥ svayamapyatra [252|26] asaṃbhinnapralāpaḥ saṃmukhībhāvato 'pyasti / te hi kliṣṭacittāḥ kadācit gāyanti / [253|01] apāpāśayatvāt na prāṇatipātādayaḥ / [253|01-253|02] niyatāyuṣkatvāddravyastrīparigrahābhāvāt prayojanābhāvācca / [253|02] kathameṣāmabrahmacaryam / [253|02-253|03] te khalu yayā striyā sārdhaṃ rantukāmā bhavanti tāṃ bāhau gṛhītvā vṛkṣamūlamupasarpanti / [253|03-253|04] gamyā cet vṛkṣaśchādayati tāṃ te gacchanti / [253|04] agamyā cenna chādayati tāṃ te na gacchanti / [253|05] kāme 'nyatra daśāśubhāḥ / [253|06] svayamapīti vartate / [253|06-253|07] narakottarakurubhyāmanyatra kāmadhātau daśākuśalāḥ karmapathāḥ saṃmukhībhāvato 'pi vidyante / [253|07] tiryakpretadeveṣvasaṃvaranirmuktāḥ / [253|07-253|08] manuṣyeṣvasaṃvarasaṃgṛhītā api / [253|08] yadyapi devo devaṃ na mārayati anyagatisthaṃ tu mārayati / [253|08-253|09] devā api śiromadhyacchedāt bhriyanta ityapare / [253|09] uktā aśubhāḥ / [253|10] śubhāstrayastu sarvatra saṃmukhībhāva lābhataḥ // VAkK_4.83 // [253|11-253|12] pañcasu gatiṣu traidhātuke sarvatrānabhidhyā 'vyāpādasamyagdṛṣṭyaḥ saṃmukhībhāvataḥ samanvāgamataśca vidyante /",
+   "T1560": "雜語通現成，餘欲十通二， 善於一切處，後三通現成。",
+   "T1558": "雜語通現成，餘欲十通二。 善於一切處，後三通現成，",
+   "T1559": "偈曰：第七彼自有。釋曰：非應語於彼現前有。何以故？彼人有時起染污心歌，無惡意故、無殺生等、壽命定故、不攝財及婦故、無用故。彼人云何作非梵行？彼人若欲共此女人和合戲，即執彼手俱往樹下。此女若堪行，樹即密覆，便與交通。若不堪行，樹則不覆，即相背去。偈曰：於餘欲十惡。釋曰：自有言流。除地獄及北洲，於餘處十種惡業道，由現前亦有。於畜生鬼神天道中，有非不護業道。於人道中，不護所攝業道亦有。若天不能殺餘天，能殺餘道眾生。諸天若斬首斬腰，即便捨命。說惡業道已。偈曰：後三一切有，現前至得故。釋曰：於五道及三界，一切處無貪無瞋正見，由現前及至得皆有。"
+  },
+  "v084": {
+   "sa": "ārūpyāsaṃjñisattveṣu lābhataḥ sapta śeṣite / saṃmukhībhāvataścāpi hitvā sanarakān kurūn // VAkK_4.84 //",
+   "sa-bhasya": "[253|13] ārupyāsaṃjñisattveṣu lābhataḥ sapta [253|14] kāyikavācikāḥ sapta kuśalā ārūpyeṣvasaṃjñisattveṣu samanvāgamata eva / [253|14-253|16] ārūpyoopapannānāmāryāṇāmatītānāgatānāsravasaṃvarasamanvāgamāt / [253|16] asaṃjñisattvānāṃ ca dhyānasaṃvarasamanvāgamāt / [253|16-253|17] yadbhūmyā śrayamāryeṇānāsravaṃ śīlamutpāditaṃ nirodhitaṃ bhavati tenārūpyeṣvatītena samanvāgato bhavati / [253|18] pañca bhūmyāśrayeṇa tvanāgatena / [253|19] śeṣite / [253|20] saṃmukhībhāvataścāpi hitvā sanarakān kurun // VAkK_4.84 // [253|21] śesaḥ kṛtaḥ śeṣitaḥ / yo 'nyo dhātuḥ śeṣito gatirvā / [253|21-253|22] tatraite sapta kuśalāḥ karmapathāḥ saṃmukhībhāvato 'pi saṃvidyante 'nyatra narakottarakurubhyaḥ / [253|22-253|23] te punastiryakpreteṣu saṃvaranirmuktā rūpadhātau tu saṃvarasaṃgṛhītā anyatrobhayathā / [253|23-253|24] ta ete daśākuśalāḥ karmapathāḥ kuśalāśca",
+   "T1560": "無色無想天，前七唯成就， 餘處通成現，除地獄北洲，",
+   "T1558": "無色無想天，前七唯成就， 餘處通成現，除地獄北洲。論曰：且於不善十業道中，那落迦中三通二種。謂麁惡語、雜穢語、瞋三種皆通現行成就？由相罵故有麁惡語，由悲叫故有雜穢語，身心麁強𢤱悷不調，由互相憎故有瞋恚。貪及邪見成而不行，無可愛境故、現見業果故。業盡死故無殺業道，無攝財物及女人故。無不與取及欲邪行，以無用故無虛誑語，即由此故及常離故無離間語。北俱盧洲貪瞋邪見皆定成就而不現行，不攝我所故、身心柔軟故、無惱害事故、無惡意樂故。唯雜穢語通現及成，由彼有時染心歌詠，無惡意樂故。彼無殺生等，壽量定故、無攝財物及女人故、身心軟故及無用故，隨其所應。彼人云何行非梵行？謂彼男女互起染時，執手相牽往詣樹下，樹枝垂覆知是應行，樹不垂枝並愧而別。除前地獄、北俱盧洲，餘欲界中十皆通二。謂於欲界天、鬼、傍生及人三洲，十惡業道皆通成現，然有差別。謂天、鬼、傍生前七業道唯有處中攝無不律儀，人三洲中二種俱有。雖諸天眾無有殺天，而或有時殺害餘趣。有餘師說：天亦殺天，斬首截腰其命方斷。已說不善。善業道中無貪等三，於三界五趣皆通二種，謂成就、現行。身語七支無色無想，但容成就必不現行。謂聖有情生無色界，成就過未無漏律儀，無想有情必成過未第四靜慮靜慮律儀。然聖隨依何地依止曾起曾滅無漏律儀？生無色時成彼過去，若未來世依五地身，無漏律儀皆得成就。餘界趣處除地獄、北洲，七善皆通現行及成就，然有差別。謂鬼、傍生有離律儀處中業道，若於色界唯有律儀，三洲、欲天皆具二種。",
+   "T1559": "偈曰：無色無想天，由至得七。釋曰：身口七善業道，於無色界及無想天中但由至得有。聖人已生無色界，與過去未來無流護至得相應故。無想天與定護至得相應，隨所依止地，聖人所生及所捨無流護。若生無色界，與此過去護相應，與依五地未來護亦相應。偈曰：餘，由現前亦有，除地獄北洲。釋曰：餘者謂別界別道。於餘界餘道中，是七種善業道，由現前亦有，除地獄及北洲。是餘者，謂畜生、鬼神，於中唯有非護。於色界但護所攝，於餘處具有二種。復次是十種惡業道及善業道。"
+  },
+  "v085": {
+   "sa": "sarve 'dhipatiniṣyandavipākaphaladā matāḥ / duḥkhanānmāraṇādojonāśanāttrividhaṃ phalam // VAkK_4.85 //",
+   "sa-bhasya": "[253|25] sarve 'dhipatiniṣyandavipākaphaladā matāḥ / [253|26] akuśalaistāvatsarvairevāsevitabhāvitabahulīkṛtaiḥ narakeṣrapapadyate / tadeṣāṃ vipākaphalam / [254|01-254|05] sa ceditthaṃ tvamāgacchati manuṣyāṇāṃ sabhāgatāṃ praṇātipātenālpāyurbhavati adattādānena bhogavyasanī bhavatikāmamithyācārena sa saṃpannadāraḥ mṛṣāvādenābhyākhyānabahulaḥ paiśunyena mitrabhedo 'sya bhavati pāruṣyeṇāmanojñaśabdaśravaṇaṃ saṃbhinnapralāpenānādeyavākyaḥ abhidhyayā tīvrarāgaḥ vyāpādena tīvradveṣaḥ mithyādṛṣṭyā tīvramohaḥ / [254|05] tasyā mohabhūyastvāt / idameṣāṃ niḥṣyandaphalam / [254|05-254|06] alpamapyāyurmanuṣyeṣu kuśalaphalam / [254|06] tat kathaṃ prāṇātipātasya niḥṣyandaphalaṃ bhavati / [254|06-254|07] nocyate tadevāyustasya phalam [254|07] kiṃ tarhi / tenālpāyurbhavatīti / [254|07-254|08] ato 'ntarāyahetuḥ prāṇāti pātastasyāyuṣo bhavatīti veditavyam / [254|08-254|09] prāṇātīpātenātyāsevitena bāhyā bhāvā alpaujaso bhavantīti / [254|09-254|12] adattādānenāśanirajobahulāḥ kāmamithyācāreṇa rajo 'vakīrṇāḥ mṛṣāvādena durgandhāḥ paiśunyenotkūlanikūlāḥ pāruṣyeṇoparajāṅgalā pratikuṣṭāḥ pāpabhūmayaḥ saṃbhinnapralāpena viṣamartupariṇāmāḥ abhidhyayā śuṣkaphalāḥ vyāpādena kaṭukaphalā mithyādṛṣṭyā 'lpaphalā aphalā vā / [254|12] idameṣāmadhipatiphalam / [254|13] kiṃ tenaiva karmaṇā 'yamihālpāyurbhavatyathānyena / tenevetyeke / [254|13-254|14] tadvipākaphalamidaṃ niṣyandaphalamiti / [254|14] tatra prayogeṇeha maulelnetyeke / [254|14-254|15] pare saparivāragrahaṇāttu prāṇātipātenetyuktamiti / [254|15] yadapyetanniḥṣyandaphalamuktaṃ naitaddvayamativartate vipākaphalamadhipatiphalaṃ ca / [254|16] sādṛśyaviśeṣāttu tathoktam / [254|16-254|17] kiṃ punaḥ kāraṇameṣāṃ karmapathānāmetattrividhaphalamabhinivartate / [254|17-254|18] prāṇātipātaṃ hi tāvatkurvatā māryamāṇasya duḥkhamutpāditaṃ māritamojo nāśimato 'sya [254|19] duḥkhanānmāraṇādojonāśanāttrividhaṃ phalam // VAkK_4.85 // [254|20] parasya duḥkhanādvipākaphalena narake duḥkhito bhavati / [254|20-254|21] māraṇanniḥṣyandaphalenālpāyurbhavati / [254|21] ojonāśanādadhipati phalenālpaujaso bāhyā auṣadhayo bhavanti / [254|23] evamanyeṣvapi yojyam / [254|23-254|24] evaṃ kuśalānāmapi karmapathānāṃ phalatrayaṃ veditavyam prāṇātipātaviratyā āsevitayā bhāvitayā bahulīkṛtayā deveṣupapadyate / [254|24-254|25] sa ceditthantvamāgacchati manuṣyāṇāṃ sabhāgatāṃ dīrghāyurbhavatītyakuśalaviparyayeṇa sarvaṃ yojayitavyam / [254|25-254|26] yadbhagavatā \"mithyāvāṃimathyākarmānto mithyājīva\" ityuktaṃ ko 'yamanyastābhyāṃ mithyājīvaḥ / [254|26] nāyamanyo 'sti / tadeva tu",
+   "T1560": "皆能招異熟，等流增上果， 此令他受苦，斷命壞威故。",
+   "T1558": "不善善業道所得果云何？頌曰：皆能招異熟，等流增上果， 此令他受苦，斷命壞威故。論曰：且先分別十惡業道各招三果。其三者何？異熟、等流、增上別故。謂於十種若習若修若多所作，由此力故，生那落迦是異熟果。從彼出已來生此間，人同分中受等流果，謂殺生者壽量短促，不與取者資財乏匱，欲邪行者妻不貞良，虛誑語者多遭誹謗，離間語者親友乖穆，麁惡語者恒聞惡聲，雜穢語者言不威肅。貪者貪盛、瞋者瞋增、邪見者增癡，彼品癡增故。是名業道等流果別。人中短壽亦善業果，如何可說是殺等流？不言人壽即殺業果，但言由殺人壽量短，應知殺業與人命根作障礙因令不久住。此十所得增上果者，謂外所有諸資生具，由殺生故光澤鮮少，不與取故多遭霜雹，欲邪行故多諸塵埃，虛誑語故多諸臭穢，離間語故所居險曲，麁惡語故田多荊棘磽确醎鹵稼穡匪宜，雜穢語故時候變改。貪故果少、瞋故果辣，由邪見故果少或無。是名業道增上果別。為一殺業感那落迦異熟果已復令人趣壽量短促？為更有餘？有餘師言：即一殺業先感彼異熟後感此等流。有餘復言：二果因別，先謂加行、後謂根本。雖復總說一殺生言，而實通收根本眷屬。此中所說等流果言，非越異熟及增上果，據少相似假說等流。此十何緣各招三果？且初殺業於殺他位令他受苦斷命失威，謂殺生時令他受苦，故墮於地獄受苦異熟果，斷他命故來生人中受命短促為等流果，壞他威故感諸外物鮮少光澤為增上果。餘惡業道如理應思。由此應准知善業道三果，謂離殺等若習若修若多所作，由此力故，生於天中受異熟果。從彼歿已來生此間，人同分中受等流果，謂離殺者得壽命長。餘上相違如理應說。又契經說：八邪支中分色業為三，謂邪語業命。離邪語業邪命是何？",
+   "T1559": "偈曰：一切皆能與，增上流報果。釋曰：今且論惡。由一切十惡所事修習數起故，生於地獄，是名果報果。若受地獄報竟，得如此類，謂人道等聚同分，由斷命故，壽命短促；由偷盜故，有財物障難；由邪婬故，多怨憎，於妻妾有障礙；由妄語故，多被誹謗；由破語故，親友不和穆；由惡語故，恒聞不可愛聲；由非應語故，有理實言人不信受；由貪欲故，多重貪欲；由瞋恚故，多重瞋恚；由邪見故，闇鈍多癡。此見多無明故，是名十惡等流果。於人道中壽命若短促，亦是善業果。此云何是殺生等流果？不說人壽命是等流果。何者？由惡業令壽命減少。殺生是人道壽命障礙因，此義應知。增上果者，由殺生所事修習數起。一切外資生具無復勢味，由偷盜故，多霹靂多塵；由邪婬故，多塵垢；由妄語故，多臭穢；由破語故，外器有高深；由惡語故，其地惡味，高燥相違不宜一切；由非應語故，時節不調適，四大變異不平等；由貪欲故，一切所種菓實少弱；由瞋恚故，一切所生皆悉薟苦；由邪見故，一切資生或少果或無果，是名十惡增上果。為由此業今生壽命短促、為由別業？有餘師說：即是此業。何以故？昔時此業果報果已成，今時是其等流果。有餘師說：昔時由前分，今時由根本，由執共伴類故是所說。殺生等等流果者，非等流種類，由相似差別故說如此。復次云何十業道有三種果生？若人作殺生事，生被殺者苦故、斷彼命故、除彼勢味故。是故彼，偈曰：由困苦除命，滅勢味果三。釋曰，由困苦他故，有果報果故，於地獄受害困苦。由行殺故，故有等流果，今生可愛壽命短促。由滅他勢味故，有增上果。外草藥等勢味或無或弱。所餘業道三果，應知亦爾。善業道三果，應知亦如此。佛世尊所說：有邪語、邪業、邪命。有何邪命異於此二？無異此二。"
+  },
+  "v086": {
+   "sa": "lobhajaṃ kāyavākkarma mithyājīvaḥ pṛthak kṛtaḥ / duḥśodhatvāt pariṣkāralobhotthaṃ cet na sūtrataḥ // VAkK_4.86 //",
+   "sa-bhasya": "[255|01] lobhajaṃ kāyavākkarma mithyājīvaḥ [255|02] dveṣamohajau tu kāyavākkarmāntau / sa caiṣa tābhyāṃ [255|03] pṛthak kṛtaḥ / [255|04] duḥśodhatvāt [255|05] hārī hi lobhadharmaḥ / tatsamutthāt karmaṇaścittaṃ na surakṣyam / [255|05-255|06] ata ājīvo duḥkhaśodha ityādarotpādanārthaṃ tatrāsau pṛthagnirdiṣṭaḥ / [255|06] āha cātra [255|07-255|08] \"duḥśodhā gṛhiṇāṃ dṛṣṭirnityaṃ vividhadṛṣṭinā / ājīvo bhikṣuṇā caiva pareṣvāyattadṛṣṭine\"ti // [255|09] pariṣkāralobhotthaṃ cet [255|10] yo manyate jīvitpariṣkāralobhotthameva kāyavākkarma mithyājīvonānyat / [255|10-255|11] nahyātmaratinimittaṃ nṛttagītādi ājīvayoga iti tat [255|12] na sūtrataḥ // VAkK_4.86 // [255|13] śīlaskandhikāyāṃ hi bhagavatā hastiyuddha darśanādīnyapi mithyājīve nyastāni / [255|14] kiṃ kāraṇam / mithyaviṣayaparibhogāt / gatametat /",
+   "T1560": "貪生身語業，邪命難除故， 執命資貪生，違經故非理。",
+   "T1558": "雖離彼無而別說者，頌曰：貪生身語業，邪命難除故， 執命資貪生，違經故非理。論曰：瞋癡所生語身二業，如次名為邪語邪業。從貪所生身語二業，以難除故別立邪命。謂貪能奪諸有情心，彼所起業難可禁護。為於正命令殷重修，故佛離前別說為一。如有頌曰：俗邪見難除，由恒執異見， 道邪命難護，由資具屬他。有餘師執：緣命資具貪欲所生身語二業方名邪命，非餘貪生。所以者何？為自戲樂作歌舞等，非資命故。此違經故，理定不然。《戒蘊經》中觀象鬪等，世尊亦立在邪命中，邪受外境虛延命故。正語業命翻此應知。",
+   "T1559": "偈曰：貪生身口業，別立為邪命。釋曰：若於眾生從瞋癡生身口二業，名邪語邪業，異此二別立為邪命。偈曰：難治。釋曰：貪欲法通引眾生，是故從彼所生業中心難可禁護，是故正命不易可治。於中為生他慇重心故，今此二立為第三。此中說偈：「在家見難治，恒執種種見， 比丘命難治，資生屬他故。」偈曰：資貪生，若執。釋曰：若有人執命資糧，貪欲所生身口二業，名邪命非餘。何以故？為自身遊戲於舞歌等，不立為命資糧。偈曰：非經故。釋曰：是義不然。何以故？由經言：於戒聚經中，看象鬪等事，佛世尊安立於邪命中。何以故？由邪受用塵故。"
+  },
+  "v087": {
+   "sa": "prahāṇamārge samale saphalaṃ karma pañcabhiḥ / caturbhiramale anyacca sāsravaṃ yacchubhāśubham // VAkK_4.87 //",
+   "sa-bhasya": "[254|15] yāni pūrvaṃ pañca phalānyuktāni teṣāṃ katamat karma katibhiḥ phalaiḥ prahāṇam / [255|16] prahāṇamārge samale saphalaṃ karma pañcabhiḥ / [255|17] prahāṇārthaṃ mārgaḥ prahīyante vā 'nena kleśā iti prahāṇamārgaḥ ānantaryamārgaḥ / [255|18] tasminsāsrave yat karma tat pañcabhiḥ phalaiḥ saphalam / [255|18-255|19] tasya hi vipākaphalaṃ svabhūmāviṣṭo vipākaḥ / [255|19] niḥṣyandaphalaṃ samādhijā uttare sadṛśā dharmāḥ / [255|19-255|20] visaṃyogaphalaṃ visaṃyoga eva / [255|20] yattat prahāṇam / [255|20-255|21] puruṣakāraphalaṃ tadākṛṣṭā dharmastadyathā 'dhimuktimārgastatsahabhuvaśca / [255|21] yaccānāgataṃ bhāvyate tacca prahāṇam / [255|21-255|22] adhipatiphalaṃ svabhāvādanye sarvasaṃskārāḥ pūrvotpannavarjyāḥ / [255|23] caturbhiramale [255|24] anāsrave prahāṇamārge yatkarma taccaturbhiḥ phalaiḥ saphalaṃ vipākaphalaṃ hitvā / [255|25] anyacca sāsravaṃ yacchubhāśubham // VAkK_4.87 // [256|01-256|02] yaccānyat prahāṇamārgātsāsravaṃ kuśalaṃ karmaṃ yaccākuśalaṃ tadapi caturbhirvisaṃyogaphalaṃ hitvā /",
+   "T1560": "斷道有漏業，具足有五果， 無漏業有四，謂唯除異熟。 餘有漏善惡，亦四除離繫，",
+   "T1558": "如前所言果有五種，此中何業有幾果耶？頌曰：斷道有漏業，具足有五果， 無漏業有四，謂唯除異熟； 餘有漏善惡，亦四除離繫，",
+   "T1559": "此義已竟。先於前所說五種果，於中何業由幾果有果？偈曰：於滅道有垢，業有果由五。釋曰：為得滅故修此道，復由此道故惑滅故，說名滅道謂次第道。此道若有流，於中所有業，有五種果為果。何以故？此業於自地中所得可愛果，是名果報果。後時或等或勝相似法，是等流果。相離果者，謂擇滅心離諸結。功力果者，是道所引生諸法，謂解脫道及俱起諸法，未來應得餘法，及此擇滅。增上果者，離自性所餘有為法，除前生。偈曰：於無垢由四。釋曰：於無流滅道中業，由四果有果，除果報果。偈曰：有流餘善惡。釋曰：若善有流業，異於滅道及惡業，此二由四果有果，除相離果。"
+  },
+  "v088": {
+   "sa": "anāsravaṃ punaḥ śeṣaṃ tribhiravyākṛtaṃ ca yat / catvāri dve tathā trīṇi kuśalasya śubhādayaḥ // VAkK_4.88 //",
+   "sa-bhasya": "[256|03] anāsravaṃ punaḥ śeṣāṃ tribhiravyākṛtaṃ ca yat / [256|04] prahāṇamārgādanyadanāsravaṃ karma avyākṛtaṃ ca karma tribhirvipākavisaṃyogaphale hitvā / [256|05] catvāri dve tathā trīṇi kuśalasya śubhādayaḥ // VAkK_4.88 // [256|06] anukramamiti paścādvakṣyati / [256|06-256|07] kuśalsya karmaṇaḥ kuśalā dharmāścatvāri phalāni vipākaphalaṃ hitvā / [256|07] akuśalā dve puruṣakārādhipatiphale / [256|07-256|08] avyākṛtā strīṇi niḥṣyandavisaṃyogaphale hitvā /",
+   "T1560": "餘無漏無記，三除前所除。 善等於善等，初有四二三，",
+   "T1558": "餘無漏無記，三除前所除。論曰：道能證斷及能斷惑，得斷道名，即無間道。此道有二種，謂有漏、無漏。有漏道業具有五果。異熟果者，謂自地中斷道所招可愛異熟。等流果者，謂自地中後等若增諸相似法。離繫果者，謂此道力斷惑所證擇滅無為。士用果者，謂道所牽俱有解脫所修及斷。增上果者，謂離自性餘有為法。唯除前生。即斷道中無漏道業唯有四果，謂除異熟。餘有漏善及不善業亦有四果，謂除離繫。異前斷道，故說為餘。次後餘言例此應釋。謂餘無漏及無記業，唯有三果。除前所除，謂除前所除異熟及離繫。已總分別諸業有果，次辯異門業有果相，於中先辯善等三業。頌曰：善等於善等，初有四二三，",
+   "T1559": "偈曰：所餘無流業，由三無記爾。釋曰：所有無流業，若異滅道及無記業，由三果有果，除果報果及相離果。偈曰：四二及餘三，善業善等果。釋曰：此義應知次第，後當說之。有時善業以善法為果，則有四果，除果報果。若以惡法為果，則有二果，謂功力果、增上果。若以無記法為果，則有三果，除等流果及相離果。"
+  },
+  "v089": {
+   "sa": "aśubhasya śubhādyā dve trīṇi catvāryanukramam / avyākṛtasya dve trīṇi trīṇī caite śubhādayaḥ // VAkK_4.89 //",
+   "sa-bhasya": "[256|08] aśubhasya śubhādyā dve trīṇi catvāryanukramam / [256|10] yathākramamityarthaḥ / akuśalasya karmaṇaḥ kuśalā dharmā dve puruṣakārādhipatiphale / [256|11] akuśalāstrīṇi vipākavisaṃyogaphale hitvā / [256|11-256|12] avyākṛtāścatvāri visaṃyogaphalaṃ hitvā / [256|12-256|13] avyākṛte hi satkāyāntagrāhadṛṣṭī akuśalānāṃ sarvatragāṇāṃ duḥkhadarśana heyānāṃ ca niḥṣyandaphalam / [256|14] avyākṛtasya dve trīṇi trīṇi caite śubhādayaḥ // VAkK_4.89 // [256|15] avyākṛtasya karmaṇaḥ kuśalā dharmā dve puruṣakārādhipatiphalel / [256|15-256|16] akuśalāḥ trīṇi vipākavisaṃyogaphale hitvā / [256|16-256|17] akuśalā hi duḥkhadarśanādiheyā avyākṛtayordṛṣṭyoniḥrṣyandaphalam / [256|17] avyākṛtā dharmā etānyeva trīṇi /",
+   "T1560": "中有二三四，後二三三果。",
+   "T1558": "中有二三四，後二三三果。論曰：最後所說皆如次言，顯隨所應遍前門義。且善、不善、無記三業一一為因，如其次第對善、不善、無記三法辯有果數。後例應知。謂初善業以善法為四果，除異熟。以不善為二果，謂士用及增上。以無記為三果，除等流及離繫。中不善業以善法為二果，謂士用及增上。以不善為三果，除異熟及離繫。以無記為四果，除離繫。等流云何？謂遍行不善及見苦所斷餘不善業，以有身見、邊執見品諸無記法為等流故。後無記業以善法為二果，謂士用及增上。以不善為三果，除異熟及離繫。等流云何？謂有身見、邊執見品諸無記業，以諸不善為等流故。以無記為三果，除異熟及離繫。",
+   "T1559": "偈曰：若惡善等二，三四如次第。釋曰：此義應知次第。若惡業以善法為果，則有二果，謂功力果、增上果。若以惡法為果，則有三果，除果報果及相離果。若以無記法為果，則有四果，除相離果。等流果云何？謂無記身見、邊見，是見苦諦所滅，不善遍行惑等流果。偈曰：無記有二三，三復於善等。釋曰：若無記業以善法為果，則有二果，謂功力果及增上果。若以惡法為果，則有三果，除果報果及相離果。云何如此？見苦諦所滅不善惑，是無記二見等流果。若以無記法為果，則有三果。"
+  },
+  "v090": {
+   "sa": "sarve 'tītasya catvāri madhyamasyāpyanāgatāḥ / madhyamā dve ajātasya phalāni trīṇyanāgatāḥ // VAkK_4.90 //",
+   "sa-bhasya": "[256|18] sarve 'tītasya catvāri [256|19] sarva iti traiyadhvikāḥ / [256|19-256|20] atītasya karmaṇastraiyadvikāḥ dharmāścatvāri phalāni / [256|20] visaṃyogaphalalṃ hitvā / [256|21] madhyamasyāpyanāgatāḥ / [256|22] pratyutpannasyāpi karmaṇo 'nāgatā dharmāścatvāti phalānyetānyeva / [256|23] madhyamā dve [256|24] pratyutpannā dharmāḥ pratyupannasya dve puruṣakārādhipatiphale / [256|25] ajātasya phalāni triṇyanāgatāḥ // VAkK_4.90 // [257|01] anāgatasyānāgatāni trīṇi phalāni / niḥṣyandavisaṃyogaphale hitvā /",
+   "T1560": "過於三各四，現於未亦爾， 現於現二果，未於未果三，",
+   "T1558": "已辯三性，當辯三世。頌曰：過於三各四，現於未亦爾， 現於現二果，未於未果三。論曰：過去現在未來三業一一為因，如其所應以過去等為果別者，謂過去業以三世法各為四果，唯除離繫。現在業以未來為四果，如前說；以現在為二果，謂士用及增上。未來業以未來為三果，除等流及離繫。不說後業有前果者，前法定非後業果故。已辯三世。",
+   "T1559": "偈曰：過去一切四。釋曰：一切謂三世法。此法若為過去業果，各有四果，除相離果。偈曰：中業來果爾。釋曰：若現世業，以未來法為果，則有四果，如前。偈曰：中，果二。釋曰：若現世法為現世業果，但有二果，謂功力果及增上果。偈曰：來業，未來果有三。釋曰：若未來業以未來法為果，則有三果，除等流果及相離果。"
+  },
+  "v091": {
+   "sa": "svabhūmidharmāścatvāri trīṇi dve vānyabhūmikāḥ / śaikṣasya trīṇi śaikṣādyāḥ aśaikṣasya tu karmaṇaḥ // VAkK_4.91 //",
+   "sa-bhasya": "[257|02] svabhūmidharmāścatvāri [257|03] svabhūmikasya karmaṇaḥ svabhūmikā dharmāścatvāri phalāni visaṃyogaphalaṃ hitvā / [257|04] trīṇi dve vā 'nyabhūmikāḥ / [257|05] anyabhūmikā dharmā anāsravāścet trīṇi phalāni / vipākavisaṃyogaphale hitvā / [257|06] dhātvapatitatvāt / sāsravāścet dve puruṣakārādhipatiphale / [257|07] śaikṣasya trīṇi śaikṣādyāḥ [257|08] śaikṣasya karmaṇaḥ śaikṣā dharmāstrīṇi phalāni vipākavisaṃyogaphale hitvā / [257|08-257|09] aśaikṣā apyevam / [257|09] naivaśaikṣānāśaikṣā api vipākaniḥṣyandaphale hitvā / [257|10] aśaikṣasya tu karmaṇaḥ // VAkK_4.91 //",
+   "T1560": "同地有四果，異地二或三。 學於三各三，",
+   "T1558": "當辯諸地。頌曰：同地有四果，異地二或三。論曰：於諸地中隨何地業，以同地法為四果，除離繫。若是有漏，以異地法為二果，謂士用及增上。若是無漏，以異地法為三果，除異熟及離繫。不墮界故，不遮等流。已辯諸地，當辯學等。頌曰：學於三各三，",
+   "T1559": "偈曰：同地法有四。釋曰：除相離果，所餘皆有。偈曰：三二若異地。釋曰：異地業若無流，則有三果，除果報果及相離果，由不墮界故。若有流則有二果，謂功力果及增上果。偈曰：有學三學等。釋曰：若有學業以有學法為果，則有三果，除果報果及相離果。若以無學法為果，亦爾。若以非學非非學法為果，則有三果，除果報果及等流果。"
+  },
+  "v092": {
+   "sa": "dharmāḥ śaikṣādikā ekaṃ phalaṃ trīṇyapi ca dvayam / tābhyāmanyasya śaikṣādyā dve dve pañca phalāni ca // VAkK_4.92 //",
+   "sa-bhasya": "[257|11] dharmāḥ śaikṣādikā ekaṃ phalaṃ trīṇyapi ca dvayam / [257|12] aśaikṣasya karmaṇaḥ śaikṣā dharmāḥ ekamadhipatiphalam / [257|12-257|13] aśaikṣāstrīṇi vipākavisaṃyogaphale hitvā / [257|13] naivaśaikṣānāśaikṣā dve puruṣakārādhipatiphale / [257|14] tābhyāmanyasya śaikṣādyā dve dve pañca phalāni ca // VAkK_4.92 // [257|15-257|16] śaikṣāśaikṣābhyāmanyasya karmaṇo naivaśaikṣānāśaikṣasya śaikṣā dharmā dve puruṣakārādhipatiphale / [257|16] aśaikṣā apyevam / naivaśaikṣānāśaikṣāḥ pañca phalāni /",
+   "T1560": "無學一三二， 非學非無學，有二二五果，",
+   "T1558": "無學一三二， 非學非無學，有二二五果。論曰：學、無學、非學非無學三業一一為因，如其次第各以三法為果別者，謂學業以學法為三果，除異熟及離繫；以無學法為三亦爾；以非二為三果，除異熟及等流。無學業以學法為一果，謂增上；以無學為三果，除異熟及離繫；以非二為二果，謂士用及增上。非二業以學法為二果，謂士用及增上；以無學法為二亦爾，以非二為五果。",
+   "T1559": "偈曰：無學業學等，諸法但一果，或三果及二。釋曰：若無學業以有學法為果，則有一果，謂增上果。若以無學法為果，則有三果，除果報果及相離果。若以非學非非學法為果，則有二果，謂功力果及增上果。偈曰：異此二學等，二二及五果。釋曰：異學無學業，謂非學非無學業，若以有學法為果，則有二果，謂功力果及增上果。以無學法為果，亦爾。若以非學非無學法為果，則有五果。"
+  },
+  "v093": {
+   "sa": "trīṇi catvāri caikaṃ ca dṛggheyasya tadādayaḥ / te dve catvāryatha trīṇi bhāvanāheyakarmaṇaḥ // VAkK_4.93 //",
+   "sa-bhasya": "[257|17] trīṇi catvāri caikaṃ ca dṛgdheyasya tadādayaḥ / [257|18] darśanaheyasya karmaṇodarśanaheyā dharmāstrīṇi phalāni vipākavisaṃyogaphalehitvā / [257|19] bhāvanāheyāścatvāri visaṃyogaphalaṃ hitvā / apraheyā ekamadhipatiphalam / [257|20] te dve catvāryatha trīṇi bhāvanāheyakarmaṇaḥ // VAkK_4.93 // [257|21] bhāvanāheyasya karmaṇo darśanaheyā dharmā dve puruṣakārādhipatiphale / [257|21-257|22] bhāvanāheyāścatvāri visaṃyogaphalaṃ muktvā / [257|22] apraheyāstrīṇi vipākaniḥṣyandaphale muktvā /",
+   "T1560": "見所斷業等，一一各於三。 初有三四一，中二四三果，",
+   "T1558": "已辯學等，當辯見所斷等。頌曰：見所斷業等，一一各於三， 初有三四一，中二四三果，",
+   "T1559": "偈曰：三四果及一，見滅業彼等。釋曰：若見諦所滅業，以見諦所滅法為果，則有三果，除果報果及相離果。若以修道所滅法為果，則有四果，除相離果。若以非所滅法為果，則有一果，謂增上果。偈曰：二果四及三，修道所滅業。釋曰：若修道所滅業，以見諦所滅法為果，則有二果，謂功力果及增上果。若以修道所滅法為果，則有四果，除相離果。若以非所滅法為果，則有三果，除果報果及等流果。"
+  },
+  "v094": {
+   "sa": "apraheyasya te tvekaṃ dve catvāri yathākramam / ayogavihitaṃ kliṣṭaṃ vidhibhraṣṭaṃ ca kecana // VAkK_4.94 //",
+   "sa-bhasya": "[257|23] apraheyasya te tvekaṃ dve catvāri yathākramam / [257|24] apraheyasya karmaṇo darśanaheyā dharmā ekamadhipatiphalam / [257|24-258|01] bhāvanāheyā dve puruṣakārādhipatiphale / [258|01] apraheyāścatvāri vipākaphalaṃ muktvā / [258|01-258|02] punaryathākramagrahaṇamādyantavanmadhye 'pi jñāpanārtham / [258|02] eṣa hi peyāladharmaḥ / [258|03] karmanirdeśaprasaṅgenedamapi paripraśnyate / [258|03-258|04] śāstreṣu ayogavihitaṃ yogavihitam, naivayogavihitaṃ nāyogavihitaṃ ca karmoktam / [258|04] tasya kiṃ lakṣaṇam / [258|05] ayogavihitaṃ kliṣṭaṃ vidhibhraṣṭaṃ ca kecana // VAkK_4.94 // [258|06] kliṣṭaṃ karmāyogavihitamayoniśomanaskārasaṃbhūtatvādityeke / [258|07] vidhibhraṣṭamapītyapare / [258|07-258|08] yena yathā gantavyaṃ sthātavyaṃ bhoktavyaṃ pravicaritavyamityevamādi / [258|08] taccānyathā vidadhāti / tadayuktavidhānādayogavihitamiti / [258|08-258|09] kuśalaṃ karmaṃ yogavihitamavidhibhraṣṭaṃ cetyapare / [258|09] ubhābhyāmanyannobhayathā / [258|09-258|10] naivayogavihitaṃ nāyogavihitam / [258|11] kimekaṃ karma ekameva janmākṣipati atha naikamapi / [258|11-258|12] tathā kimekamapi karmaikaṃ janmākṣipatyathānekam / [258|12] eṣa hi siddhāntaḥ /",
+   "T1560": "後有一二四，皆如次應知。 染業不應作，有說亦壞軌， 應作業翻此，俱相違第三。",
+   "T1558": "後有一二四，皆如次應知。論曰：見所斷、修所斷、非所斷三業一一為因，如其次第各以三法為果別者，初見所斷業以見所斷法為三果，除異熟及離繫；以修所斷法為四果，除離繫；以非所斷法為一果，謂增上果。修所斷業以見所斷法為二果，謂士用及增上；以修所斷法為四果，除離繫；以非所斷法為三果，除異熟及等流。後非所斷業以見所斷法為一果，謂增上；以修所斷法為二果，謂士用及增上；以非所斷法為四果，除異熟。皆如次者，隨其所應遍上諸門，略法應爾。因辯諸業應復問言：如本論中所說三業，謂應作業、不應作業及非應作非不應作業，其相云何？頌曰：染業不應作，有說亦壞軌， 應作業翻此，俱相違第三。論曰：有說染業名不應作，以從非理作意所生。有餘師言：諸壞軌則身語意業亦不應作，謂諸所有應如是行、應如是住、應如是說、應如是著衣、應如是食等，若不如是名不應作，由彼不合世俗禮儀；與此相翻名應作業。有說善業名為應作，以從如理作意所生。有餘師言：諸合軌則身語意業亦名應作，俱違前二名為第三，隨其所應二說差別。為由一業但引一生、為引多生？",
+   "T1559": "偈曰：非滅業彼一，二四果次第。釋曰：非所滅業，若以見諦所滅法為果，則有一果，謂增上果。若以修道所滅法為果，則有二果，謂功力果及增上果。若以非所滅法為果，則有四果，除果報果。更說次第言者，應知於前中後，為顯因果重說諸義，由分別業相應義故。此業體相亦應問。於阿毘達磨藏中說有三業，謂非理作、如理作、非理非非理作。此業其相云何？偈曰：非理作有染，餘說非方次。釋曰：若業有染污，說名非理作，從不正思生故，餘師說如此。或有師說：失方便次第名非理作。若人應如此行、應如此住、應如此噉食、應如此著衣，如此等事若作不如，此名非理作。此業由非應理所造故，悉名非理作。一切善業名如理作。及不失方便次第，亦名如理作。異此二名非理非非理作業。為一業引一生、為一業引多生？復次為多業引一生、為一業引一生？若約此悉檀，應說如此。"
+  }
+ }
+}
