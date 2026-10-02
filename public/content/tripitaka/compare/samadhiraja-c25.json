@@ -1,0 +1,70 @@
+{
+ "slug": "samadhiraja-c25",
+ "title": "月燈三昧經・第25品 隨喜品（Anumodanā）",
+ "family": "sa",
+ "intro": "梵本〈Anumodanā〉＝藏譯第二十六章＝那連提耶舍本「成就善巧方便」：於眾生起親想、晝夜六時隨喜其福德；偈 SRS 25.1–15 列種種隨喜。",
+ "units": [
+  {
+   "id": "c25-1",
+   "label": "善巧方便：晝夜六時隨喜眾生福德"
+  },
+  {
+   "id": "c25-2",
+   "label": "偈：種種隨喜（25.1–15）"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sa",
+   "lang": "sa",
+   "label": "梵本",
+   "who": "Vaidya 校訂本（1961）・GRETIL"
+  },
+  {
+   "id": "bo",
+   "lang": "bo",
+   "label": "藏譯",
+   "who": "德格版 Toh 127・84000 翻譯記憶"
+  },
+  {
+   "id": "en",
+   "lang": "en",
+   "label": "84000 英譯",
+   "who": "譯自藏譯・與藏文逐句對齊"
+  },
+  {
+   "id": "T0639",
+   "lang": "lzh",
+   "label": "那連提耶舍本",
+   "who": "那連提耶舍譯《月燈三昧經》・557 年",
+   "work": "T0639"
+  }
+ ],
+ "works": [
+  "DKtoh0127",
+  "T0639"
+ ],
+ "anchors": [
+  {
+   "work": "T0639",
+   "range": [
+    "T15n0639_p0583b06",
+    "T15n0639_p0583b14"
+   ]
+  }
+ ],
+ "cells": {
+  "c25-1": {
+   "sa": "25 Anumodanāparivartaḥ | tatra bhagavān punareva candraprabhaṃ kumārabhūtamāmantrayate sma - tasmāttarhiṃ kumāra bodhisattvena mahāsattvenopāyakuśalena bhavitavyam | kathaṃ ca kumāra bodhisattvo mahāsattva upāyakuśalo bhavati? iha kumāra bodhisattvena mahāsattvena sarvasattvānāmantike jñātisaṃjñā utpādayitavyā | sarvasattvānāmantike jñāticittamupasthāpya yaḥ sarvasattvānāṃ kuśalamūlapuṇyaskandhastat sarvamanumodayitavyam | trirātryāstridivasasya sarvasattvānāṃ kuśalamūlapuṇyaskandhamanumodya sarvajñatārambaṇena cittotpādena teṣāmeva sarvasattvānāṃ niryātayitavyam | anena kuśalamūlena bodhisattvo mahāsattvaḥ kṣipramimaṃ samādhiṃ pratilabhate,kṣipraṃ cānuttarāṃ samyaksaṃbodhimabhisaṃbudhyate ||",
+   "bo": "དེ་ནས་ཡང་བཅོམ་ལྡན་འདས་ཀྱིས་ཟླ་འོད་གཞོན་ནུར་གྱུར་པ་ལ་བཀའ་སྩལ་པ། །གཞོན་ནུ་དེ་ལྟ་བས་ན་བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་ཏིང་ངེ་འཛིན་འདི་འདོད་པ་དང་། །མྱུར་དུ་བླ་ན་མེད་པ་ཡང་དག་པར་རྫོགས་པའི་བྱང་ཆུབ་མངོན་པར་རྫོགས་པར་འཚང་རྒྱ་བར་འདོད་པས་ཐབས་མཁས་པར་བྱའོ། །གཞོན་ ནུ་ཇི་ལྟར་ན་བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་ཐབས་མཁས་པ་ཡིན་ཞེ་ན། གཞོན་ནུ་འདི་ལ་བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོས་སེམས་ཅན་ཐམས་ཅད་ལ་ཉེ་དུའི་སེམས་ཉེ་བར་བཞག་སྟེ། སེམས་ཅན་ཐམས་ཅད་ཀྱི་དགེ་བའི་རྩ་བ་དང་། །བསོད་ནམས་ཀྱི་ཕུང་པོ་ཅི་ཡོད་པ་དེ་ལ་བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་དེས་རྗེས་སུ་ཡི་རང་བར་བྱས་ཏེ། ཉིན་ལན་གསུམ་མཚན་ལན་གསུམ་སེམས་ཅན་ཐམས་ཅད་ཀྱི་དགེ་བའི་རྩ་བ་དང་། བསོད་ནམས་ཀྱི་ཕུང་པོ་ལ་རྗེས་སུ་ཡི་རངས་ནས། ཐམས་ཅད་མཁྱེན་པ་ཉིད་ལ་དམིགས་པའི་སེམས་བསྐྱེད་པས་དགེ་བའི་རྩ་བ་དང་། བསོད་ནམས་ཀྱི་ཕུང་པོ་དེ་སེམས་ཅན་ཐམས་ཅད་ལ་གཏང་བར་བྱའོ། །གཞོན་ནུ་བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་དེ་ཐབས་མཁས་པ་ལས་བྱུང་བའི་བསོད་ནམས་ཀྱི་ཕུང་པོ་དང་ལྡན་པས་མྱུར་དུ་ཏིང་ངེ་འཛིན་འདི་འཐོབ་ཅིང་། མྱུར་དུ་བླ་ན་མེད་པ་ཡང་དག་པར་རྫོགས་པའི་བྱང་ཆུབ་མངོན་པར་རྫོགས་པར་འཚང་རྒྱའོ།",
+   "en": "Rejoicing Chapter 26  Then the Bhagavān said to the youth Candraprabha, “Therefore, young man, bodhisattva mahāsattvas who wish for this samādhi, and wish to attain quickly the highest, complete enlightenment of perfect buddhahood, should be skillful in methods. “Young man, in what way should bodhisattva mahāsattvas be skillful in methods? For that, young man, bodhisattva mahāsattvas focus their minds upon all beings. Those bodhisattva mahāsattvas rejoice in whatever roots of merit and accumulations of merit all beings have. Three times every day and three times every night they rejoice in whatever roots of merit and accumulations of merit all beings have, and the roots of merit and accumulation of merit that come from their taking omniscience as the focus of their aspiration they donate to all beings. “Young man, because those bodhisattva mahāsattva possess the accumulation of merit that comes from being skillful in methods, they will quickly attain this samādhi, and they will quickly attain the highest, complete enlightenment of perfect buddhahood.”",
+   "T0639": "爾時，世尊復告月光童子言：「菩薩摩訶薩應當成就善巧方便。童子！云何菩薩摩訶薩成就善巧方便？童子！是菩薩摩訶薩於一切眾生所而起親想，是諸眾生所有善聚而生隨喜，晝夜六時於彼福德而生隨喜；緣一切智，以緣一切智心於一切眾生所而生福德，是菩薩以此善根速得此三昧，成阿耨多羅三藐三菩提。」"
+  },
+  "c25-2": {
+   "sa": "atha khalu bhagavāṃstasyāṃ velāyāmimā gāthā abhāṣata - sarve mama jñātaya eti sattvāḥ yasteṣamastī pṛthu puṇyaskandhaḥ / rātrestrirevaṃ divasasya ca trīranumodamī emu janitva cittam // SRS_25.1 // anumodamī ye suviśuddhaśīlā ye jīvitārthe na karonti pāpam / adhimuktisaṃpanna ya bodhisattvā anumodamī teṣa ya kiṃci puṇyam // SRS_25.2 // anumodamī yeṣa prasādu buddhe dharme prasādo 'sti tathaiva saṃghe / anumodamī ye sugatasya pūjāṃ kurvanti bodhiṃ pratikāṅkṣamāṇāḥ // SRS_25.3 // anumodamī yeṣa na ātmadṛṣṭirna bhāvadṛṣṭirna ca jīvadṛṣṭiḥ / anumodamī yeṣa na pāpadṛṣṭirye śūnyatāṃ dṛṣṭva janenti tuṣṭim // SRS_25.4 // anumodamī ye sugatasya śāsane labhanti pravrajyopasaṃpadaṃ ca / alpeccha saṃtuṣṭa vane vasanti praśāntacāritra ye dhyānagocarāḥ // SRS_25.5 // anumodamī ekaka ye 'dvitīyā vane vasantī sada khaḍgabhūtāḥ / ājīvaśuddhāḥ sada alpakṛtyā ye jñātrahetorna na karenti kūhanām // SRS_25.6 // anumodamī yeṣa na saṃstavo 'sti na cāpi īrṣyā na kuleṣu tṛṣṇā / uttrasti traidhātuki nityakālam anopaliptā vicaranti loke // SRS_25.7 // anumodamī yeṣa prapañcu nāsti nirviṇṇa sarvāsu bhavopapattiṣu / avigṛhītā upaśāntacittā na durlabhasteṣa samādhireṣaḥ // SRS_25.8 // anumodamī ye gaṇadoṣa dṛṣṭvā sarvān vivādān parivarjayitvā / sevantyaraṇyaṃ vanamūlamāśritā vimuktisārāḥ sugatasya putrāḥ // SRS_25.9 // anumodamī ye viharantyaraṇye nātmānamutkarṣi parānna paṃsaye / anumodamī yeṣa pramādu nāsti ye apramattā ima buddhaśāsane // SRS_25.10 // yāvanta dharmāḥ pṛthu bodhipākṣikāḥ sarveṣa mūlaṃ hyayamapramādaḥ / ye buddhaputrāḥ sada apramattā na durlabhasteṣa ayaṃ samādhiḥ // SRS_25.11 // nidhānalābhaḥ sugatāna śāsanaṃ pravrajyalābho dvitīyaṃ nidhānam / śraddhāya lābhastṛtīyaṃ nidhānamayaṃ samādhiścaturthaṃ nidhānam // SRS_25.12 // śratvā imaṃ śūnyata buddhagocaraṃ tasyāpratikṣepu nidhānalambhaḥ / anantu pratibhānu nidhānalambho yā dhāraṇī tat paramaṃ nidhānam // SRS_25.13 // yāvanti dharmāḥ kuśalāḥ prakīrtitāḥ śīlaṃ śrutaṃ tyāgu tathaiva kṣāntiḥ / sarveṣa mūlaṃ hyayamapramādo nidhānalambhaḥ sugatena deśitaḥ // SRS_25.14 // ye apramattā iha buddhaśāsane samyak ca yeṣāṃ praṇidhānamasti / na durlabhasteṣa ayaṃ samādhirāsannabhūtā iha buddhaśāsane // SRS_25.15 // iti śrīsamādhirāje anumodanāparivarto nāma pañcaviṃśatitamaḥ ||",
+   "bo": "།དེ་ནས་བཅོམ་ལྡན་འདས་ཀྱིས་དེའི་ཚེ་ཚིགས་སུ་བཅད་པ་འདི་དག་གསུངས་སོ། །སེམས་ཅན་འདི་དག་ཐམས་ཅད་བདག་གི་གཉེན། །འདི་ཡི་བསོད་ནམས་མང་པོ་ཅི་ཡོད་པ། །ཉིན་ཡང་ལན་གསུམ་མཚན་ཡང་ལན་གསུམ་དུ། །བྱང་ཆུབ་སེམས་བསྐྱེད་རྗེས་སུ་ཡི་རང་ངོ་། །སུ་དག་སྲོག་གི་ཕྱིར་ཡང་སྡིག་མི་བྱེད། །ཚུལ་ཁྲིམས་རྣམ་པར་དག་ལ་ཡི་རང་ངོ་། །བྱང་ཆུབ་སེམས་དཔའ་མོས་པ་ཕུན་སུམ་ཚོགས། །དེ་དག་བསོད་ནམས་ཅི་ཡོད་ཡི་རང་ངོ་། །གང་དག་སངས་རྒྱས་དད་ཅིང་དེ་བཞིན་དུ། །ཆོས་དང་དགེ་འདུན་དད་ལ་ཡི་རང་ངོ་། །བྱང་ཆུབ་ཉིད་ནི་རབ་ཏུ་འདོད་པའི་ཕྱིར། །བདེ་གཤེགས་མཆོད་པ་བྱེད་ལ་ཡི་རང་ངོ་། །རྫོགས་པའི་བྱང་ཆུབ་གདུང་ནི་གནས་བྱའི་ཕྱིར། །སེམས་ཅན་དོན་དུ་བློ་གྲོས་ཆེན་པོ་ཡིས། །བླ་མེད་བྱང་ཆུབ་དམ་པ་མཆོག་ཏུ་ནི། །གང་གིས་སེམས་བསྐྱེད་དེ་ལ་ཡི་རང་ངོ་། །བྱང་ཆུབ་སེམས་དཔའ་སྙིང་རྗེས་ནོན་པ་ཡིས། །ནོར་དང་འབྲུ་དང་རིན་ཆེན་བཙུན་མོ་དང་། །སྲས་དང་སྲས་མོ་རྒྱལ་སྲིད་རྒྱས་པ་དང་། །བདག་གི་ཤ་ཡང་གཏོང་ལ་ཡི་རང་ངོ་། །ཤེས་རབ་ ཡོངས་སུ་བསྒོམས་པས་ལུས་དུལ་ཞིང་། །ཐབས་ལ་མཁས་པའི་བསླབ་པ་རབ་བསླབས་པས། །སེམས་ཅན་དོན་དུ་རབ་ཏུ་དགའ་སེམས་ཀྱིས། །བདག་གི་ལུས་ཀྱང་གཏོང་ལ་ཡི་རང་ངོ་། །གཅིག་པུ་གཉིས་སུ་མེད་པར་ནགས་གནས་ཤིང་། །རྟག་ཏུ་བསེ་རུ་ལྟར་གྱུར་འཚོ་བ་གཙང་། །ཁོར་མོར་བྱ་བ་ཉུང་ཞིང་སུ་དག་ནི། །ཁེ་ཕྱིར་ཚུལ་འཆོས་མེད་ལ་ཡི་རང་ངོ་། །སུ་དག་སྟེན་པར་མི་བྱེད་ཕྲག་དོག་མེད། །ཁྱིམ་ལ་སྲེད་པར་མི་བྱེད་རྟག་པར་ཡང་། །ཁམས་གསུམ་དག་ལ་རབ་ཏུ་འཇིགས་སྐྲག་སྟེ། །འཇིག་རྟེན་མ་ཆགས་སྤྱོད་ལ་ཡི་རང་ངོ་། །སྲིད་པར་སྐྱེ་བ་ཀུན་ལ་རབ་སྐྱོ་ཞིང་། །སུ་དག་སྤྲོས་པ་མེད་ལ་ཡི་རང་ངོ་། །རྩོད་པ་མེད་ཅིང་ཉེ་བར་ཞི་བའི་སེམས། །དེ་ལ་ཏིང་འཛིན་འདི་ནི་རྙེད་མི་དཀའ། །གང་གིས་འདུ་འཛི་ཉེས་པ་མཐོང་ནས་ནི། །རྩོད་པ་ཐམས་ཅད་ཡོངས་སྤངས་དགོན་པར་གནས། །ཤིང་དྲུང་གནས་ཤིང་རྣམ་གྲོལ་ལྷུར་བྱེད་པ། །བདེ་གཤེགས་སྲས་ལ་རྗེས་སུ་ཡི་རང་ངོ་། །བདག་ལ་མི་སྟོད་གཞན་ལ་མི་སྨོད་ཅིང་། །དགོན་པར་གནས་པ་དག་ལ་ཡི་རང་ངོ་། །སུ་དག་བསྟན་པ་འདི་ལ་བག་ཡོད་ཅིང་། །བག་མེད་སྤངས་པ་དེ་ལ་ཡི་རང་ངོ་། །བྱང་ཆུབ་ཕྱོགས་ཀྱི་ཆོས་རྣམས་ཇི་སྙེད་པ། །ཀུན་གྱི་རྩ་བ་བག་ཡོད་འདི་ཡིན་ཏེ། །སངས་རྒྱས་སྲས་གང་རྟག་ཏུ་བག་ཡོད་པ། །དེ་དག་ཏིང་འཛིན་འདི་ནི་རྙེད་མི་དཀའ། །བདེ་བར་གཤེགས་པའི་བསྟན་པ་གཏེར་རྙེད་ཡིན། །རབ་ཏུ་བྱུང་བ་གཏེར་ནི་གཉིས་པ་སྟེ། །དད་པ་རྙེད་པ་གཏེར་ནི་གསུམ་པ་ཡིན། །ཏིང་འཛིན་འདི་ནི་གཏེར་རྙེད་བཞི་པའོ། །སངས་རྒྱས་སྤྱོད་ཡུལ་སྟོང་པ་འདི་ཐོས་ནས། །འདི་ལ་མི་སྤོང་བ་ཡང་གཏེར་རྙེད་ཡིན། །སྤོབས་པ་མཐའ་ཡས་པ་ཡང་གཏེར་རྙེད་པ། །གཟུངས་རྣམས་གང་ཡིན་དེ་དག་གཏེར་གྱི་མཆོག །དགེ་བའི་ཆོས་རྣམས་ཇི་སྙེད་རྗོད་པ་དག །ཚུལ་ཁྲིམས་ཐོས་གཏོང་བཟོད་པ་དེ་བཞིན་ཏེ། །ཐམས་ཅད་ཀྱི་ཡང་རྩ་བ་བག་ཡོད་འདི། །གཏེར་རྙེད་ཡིན་པར་བདེ་བར་གཤེགས་པས་གསུངས། །སངས་རྒྱས་བསྟན་པ་འདི་ལ་བག་ཡོད་ཅིང་། །སུ་དག་ལ་ནི་ཡང་དག་སྨོན་ལམ་ཡོད། ། དེ་དག་ཏིང་འཛིན་འདི་ནི་རྙེད་མི་དཀའ། །སངས་རྒྱས་བསྟན་པ་འདི་ལ་ཉེ་བར་གྱུར།",
+   "en": "Thereupon the Bhagavān spoke these verses: “Three times a day and three times a night I develop the aspiration to enlightenment And rejoice in the entirety of the merit accumulated By all these beings who are my family. {1} “I rejoice in those who have pure conduct, Who will do nothing bad even to save their lives. I rejoice in whatever merit is possessed By bodhisattvas with perfect aspiration. {2} “I rejoice in those who have faith in the Buddha, Faith in the Dharma, and also the Saṅgha. I rejoice in those who make offerings to the Sugata Because of their desire for enlightenment. {3} “I rejoice in those who develop the aspiration For the highest, supreme, unsurpassable enlightenment, Doing so with great understanding, for the sake of beings, And so that the lineage of enlightenment will remain. {i} “I rejoice in the bodhisattvas overwhelmed by compassion Who give away their wealth, grain, and jewels, Their queens, sons, and daughters, Their vast kingdoms, and even their own flesh. {ii}  “I rejoice in those who give away their own bodies With joyful minds for the sake of beings, Having trained in the training of skillful methods And subdued their bodies through meditation on wisdom. {iii} “I rejoice in those who live in the forest, Always alone and solitary like a rhinoceros, Always with pure livelihood and few activities, Without acting hypocritically for the sake of reputation. {6} “I rejoice in those who have no entanglements, Who have no envy or yearning for a home, Who are always terrified of the three realms And act without attachment to the world. {7} “I rejoice in those who are without complication And are saddened by every rebirth into existence. This samādhi will not be difficult to attain For those who do not dispute but have peaceful minds. {8} “I rejoice in those who see the harmfulness of crowds, Who avoid every kind of disagreement, Who live in solitude, dwelling at the foot of trees, And who are heirs of the sugatas focused upon liberation. {9} “I rejoice in those who live in solitude, Neither praising themselves nor criticizing others. I rejoice in those who are not careless But careful in the Buddha’s teaching. {10} “That carefulness is the very root Of all the qualities of the aspects of enlightenment. This samādhi is not difficult to attain For any heirs of the Buddha who are always careful. {11} “The teaching of the Sugata is a treasure that has been found. Attaining homelessness is a second treasure. The attainment of faith is a third treasure. This samādhi is a fourth treasure. {12} “On learning of emptiness, of the field of activity of the buddhas, If it is not rejected, that is a treasure that has been found. Endless eloquence is a treasure that has been found, And any dhāraṇī is a supreme treasure. {13}  “That carefulness is the very root Of all the virtuous qualities that have been proclaimed, And of correct conduct, learning, giving, and patience. The Sugata has taught that it is a treasure that has been found. {14} “For those who are careful in the Buddha’s teaching, For those who have perfect aspirations, This samādhi will not be difficult to obtain. They are established in the Buddha’s teaching.” {15}",
+   "T0639": "爾時，世尊即於是時而說偈言：「於諸眾生為己親，所有一切福德聚， 晝夜六時於此善，常能起彼隨喜欲。 我隨喜彼淨持戒，乃至盡命不為惡， 菩薩具足清淨信，所有福德悉隨喜。 隨喜信樂諸佛者，於其法、僧信亦然； 隨喜能奉敬如來，為求無上菩提故； 隨喜無彼我見者，無眾生等及壽命； 隨喜能無諸惡見，聞勝空法深愛樂。 於佛法中起隨喜，得出家已受具戒， 少欲知足住林間，懷慈愍心猶如劍； 隨喜獨一無侶者，處林猶如刀入匣， 淨命常能少欲求，無有諂偽託親友； 隨喜樂靜離憒閙，於家親屬無愛戀， 於三界中常怖畏，遊行世間無染著； 隨喜離彼戲論者，厭惡一切受生死， 無有違諍行寂靜，得此三昧則不難； 隨喜能識善惡者，常離一切諍論事， 趣詣空閑林樹下，求聖解脫真佛子； 隨喜常在空閑者，不自稱譽輕毀他； 隨喜愛樂功德者，住於佛法不放逸。 所有助道諸功德，是不放逸為根本， 若有菩薩離放逸，得此三昧則不難。 得值佛法為一藏、又得出家第二藏、 淨信不濁第三藏、得此三昧第四藏。 聞於大空佛境界，聞而不謗為勝藏； 若得辯才為得藏，得此三昧亦勝藏。 我已說彼諸善法，謂戒、聞捨及忍辱， 是不放逸為根本，佛說名為最勝藏。 若有菩薩不放逸，即便具足諸辯才， 於佛智慧無疑惑，得此三昧則不難。"
+  }
+ }
+}

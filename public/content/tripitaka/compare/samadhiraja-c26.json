@@ -1,0 +1,104 @@
+{
+ "slug": "samadhiraja-c26",
+ "title": "月燈三昧經・第26品 布施功德品（Dānānuśaṃsā）",
+ "family": "sa",
+ "intro": "梵本〈Dānānuśaṃsā〉＝藏譯第二十七章。不放逸者成就淨戒、不離一切智心行六度；信樂布施有十種利益，偈 SRS 26.1–8。先公《佛說月燈三昧經》T0640 自此起（舍衛國祇樹給孤獨園為文殊師利說「十事」），無不放逸一段；其經序單列一節。",
+ "units": [
+  {
+   "id": "c26-0",
+   "label": "先公本經序：舍衛國・文殊在會"
+  },
+  {
+   "id": "c26-1",
+   "label": "不放逸・淨戒・不離一切智心行六度"
+  },
+  {
+   "id": "c26-2",
+   "label": "布施十種利益"
+  },
+  {
+   "id": "c26-3",
+   "label": "偈（26.1–8）"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sa",
+   "lang": "sa",
+   "label": "梵本",
+   "who": "Vaidya 校訂本（1961）・GRETIL"
+  },
+  {
+   "id": "bo",
+   "lang": "bo",
+   "label": "藏譯",
+   "who": "德格版 Toh 127・84000 翻譯記憶"
+  },
+  {
+   "id": "en",
+   "lang": "en",
+   "label": "84000 英譯",
+   "who": "譯自藏譯・與藏文逐句對齊"
+  },
+  {
+   "id": "T0639",
+   "lang": "lzh",
+   "label": "那連提耶舍本",
+   "who": "那連提耶舍譯《月燈三昧經》・557 年",
+   "work": "T0639"
+  },
+  {
+   "id": "T0640",
+   "lang": "lzh",
+   "label": "先公本",
+   "who": "劉宋先公譯《佛說月燈三昧經》（一名《文殊師利菩薩十事行經》）・高麗藏本",
+   "work": "T0640"
+  }
+ ],
+ "works": [
+  "DKtoh0127",
+  "T0639",
+  "T0640"
+ ],
+ "anchors": [
+  {
+   "work": "T0639",
+   "range": [
+    "T15n0639_p0583c15",
+    "T15n0639_p0584a03"
+   ]
+  },
+  {
+   "work": "T0640",
+   "range": [
+    "T15n0640_p0620a09",
+    "T15n0640_p0620a22"
+   ]
+  }
+ ],
+ "cells": {
+  "c26-0": {
+   "T0640": "聞如是：一時，佛在舍衛國，遊於祇樹給孤獨園，與大比丘眾五百人、六萬菩薩俱，及持央數諸天人。爾時，文殊師利菩薩在其眾會中坐。"
+  },
+  "c26-1": {
+   "sa": "26 Dānānuśaṃsāparivartaḥ | tasmāttarhi kumāra apramatto bhaviṣyāmītyevaṃ tvayā kumāra śikṣitavyam, apramattasya hi kumāra bodhisattvasya mahāsattvasya na durlabhā bhavatyanuttarā samyaksaṃbodhiḥ, kimaṅga punarayaṃ samādhiḥ | kathaṃ ca kumāra bodhisattvo mahāsattvaḥ apramatto bhavati? iha kumāra bodhisattvo mahāsattvaḥ pariśuddhaśīlo bhavati | iha kumāra pariśuddhaśīlo bodhisattvaḥ apramatto bhavati | iha kumāra bodhisattvo mahāsattvaḥ pariśuddhaśīlo bhavati | iha kumāra pariśuddhaśīlo bodhisattvo mahāsattvaḥ avirahito bhavati sarvajñatācittena ṣaṭsu pāramitāsu |",
+   "bo": "།རྗེས་སུ་ཡི་རང་བའི་ལེའུ་སྟེ་ཉི་ཤུ་དྲུག་པའོ།། །། དེ་ནས་ཡང་བཅོམ་ལྡན་འདས་ཀྱིས་ཟླ་འོད་གཞོན་ནུར་གྱུར་པ་ལ་བཀའ་སྩལ་པ། གཞོན་ནུ་དེ་ལྟ་བས་ན་བག་ཡོད་པར་བྱའོ་ཞེས་གཞོན་ནུ་ཁྱོད་ཀྱིས་དེ་ལྟར་བསླབ་པར་བྱའོ། །དེ་ཅིའི་ཕྱིར་ཞེ་ན། གཞོན་ནུ་བག་ཡོད་པའི་བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་ལ་བླ་ན་མེད་པ་ཡང་དག་པར་རྫོགས་པའི་བྱང་ཆུབ་ཀྱང་རྙེད་པར་མི་དཀའ་ན་ཏིང་ངེ་འཛིན་འདི་ལྟ་ཅི་སྨོས། གཞོན་ནུ་ཇི་ལྟར་ན་བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་བག་ཡོད་པ་ཡིན་ཞེ་ན། གཞོན་ནུ་འདི་ལ་བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་ཚུལ་ཁྲིམས་ཡོངས་སུ་དག་པ་ཡིན་ནོ། །གཞོན་ནུ་ཇི་ལྟར་ན་བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་ཚུལ་ཁྲིམས་ཡོངས་སུ་དག་པ་ཡིན་ཞེ་ན། གཞོན་ནུ་འདི་ལ་བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་ཚུལ་ཁྲིམས་ཡོངས་སུ་དག་པ་ནི་ཐམས་ཅད་མཁྱེན་པའི་སེམས་དང་མ་བྲལ་བས་ཕ་རོལ་ཏུ་ཕྱིན་པ་དྲུག་ལ་སྤྱོད་པ་ཡིན་ཏེ།",
+   "en": "Conclusion of the twenty-sixth chapter, “Rejoicing.”  The Benefits of Generosity Chapter 27 Then the Bhagavān said to the youth Candraprabha, “Young man, as it has been said, ‘Be careful,’ you, young man, should consequently train in that way. Why is that? Because, young man, for bodhisattva mahāsattvas who are careful, the highest, complete enlightenment is not difficult to attain, let alone this samādhi. “Young man, in what way should bodhisattva mahāsattvas be careful? For that, young man, bodhisattva mahāsattvas should have perfectly pure conduct. Young man, in what way should bodhisattva mahāsattvas have perfectly pure conduct? For that, young man, bodhisattva mahāsattvas who have perfectly pure conduct, never separating from an all-knowing mind, should practice the six perfections.",
+   "T0639": "「童子！以是義故，汝應住於不放逸行，是諸菩薩所應修學。何以故？不放逸者尚得阿耨多羅三藐三菩提，何況此三昧也？童子！云何菩薩住不放逸？童子！是菩薩成就善淨戒聚。童子！云何成就善淨戒聚？童子！是菩薩不捨一切智心學六波羅蜜。"
+  },
+  "c26-2": {
+   "sa": "tasyeme ānuśaṃsā bhavanti | tān śṛṇu, sādhu ca suṣṭhu ca manasikuru | bhāṣiṣye 'haṃ te | deśeme kumāra anuśaṃsā dānādhimuktasya bodhisattvasya mahāsattvasya | katame daśa? yaduta mātsaryakleśo 'sya nigṛhīto bhavati | tyāgānubṛṃhitaṃ cāsya cittaṃ sadā bhavati | bahujanasādhāraṇebhyaśca bhogebhyaḥ sāramādadāti | mahābhogeṣu ca kuleṣūpapadyate | jātamātrasya cāsya tyāgacittamāmukhībhavati | priyaśca bhavati catasṛṇāṃ parṣadāmū | viśāradaścāsaṃkucitaḥ parṣadamavagāhate | digvidikṣu cāsyodāro varṇakīrtiśabdaśloko loke 'bhyudgacchati | mṛdutaruṇahastapādaśca bhavati samacaraṇatalapratiṣṭhitaḥ | avirahitaśca bhavati kalyāṇamitrairyāvadbodhimaṇḍaniṣadanāt | ime kumāra daśānuśaṃsā dānādhimuktasya bodhisattvasya mahāsattvasya ||",
+   "bo": "དེའི་ཕན་ཡོན་འདི་དག་ཉོན་ཅིག་དང་ངས་ཁྱོད་ལ་བཤད་དོ། །གཞོན་ནུ་བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་སྦྱིན་པ་ལ་མོས་པའི་ཕན་ཡོན་ནི་བཅུ་སྟེ། བཅུ་གང་ཞེ་ན། འདི་ལྟ་སྟེ། དེའི་སེར་སྣའི་ཉོན་མོངས་པ་ཚར་བཅད་པ་ཡིན། དེའི་སེམས་རྟག་ཏུ་གཏོང་བའི་རྗེས་སུ་སྤེལ་བ་ཡིན། སྐྱེ་བོ་མང་པོ་དང་ཐུན་མོང་པའི་ལོངས་སྤྱོད་ལས་སྙིང་པོ་ལེན་པ་ཡིན། ལོངས་སྤྱོད་ཆེན་པོའི་རིགས་སུ་སྐྱེ་ཞིང་སྐྱེས་མ་ཐག་ཏུ་དེ་གཏོང་བའི་སེམས་མངོན་དུ་འགྱུར་བ་ཡིན། འཁོར་བཞི་རྣམས་ལ་ཕངས་ཤིང་སྡུག་པ་ཡིན། །འཇིགས་པ་མེད་ཅིང་ཞུམ་པ་མེད་པར་འཁོར་གྱི་ནང་དུ་འགྲོ། ཕྱོགས་དང་ཕྱོགས་མཚམས་སུ་དེའི་རྒྱ་ཆེར་བརྗོད་པའི་སྒྲ་ཚིགས་སུ་བཅད་པ་མངོན་པར་འབྱུང་། རྐང་ལག་འཇམ་ཞིང་གཞོན་པ་ཡིན། རྐང་མཐིལ་མཉམ་ཞིང་རབ་ཏུ་གནས་པ་ཡིན། བྱང་ཆུབ་ཀྱི་སྙིང་པོ་ལ་འདུག་གི་བར་དུ་དགེ་བའི་བཤེས་གཉེན་དང་མི་འབྲལ་བ་ཡིན་ཏེ། གཞོན་ནུ་བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་སྦྱིན་ པ་ལ་མོས་པའི་ལེགས་པ་ནི་འདི་བཅུའོ།",
+   "en": "Listen, for I shall teach you their benefits. “Young man, there are ten benefits for bodhisattva mahāsattvas who aspire to generosity. What are the ten benefits? They are: [1] the kleśa of avarice is overcome; [2] their minds are constantly devoted to generosity; [3] from the ordinary wealth of the populace they obtain what is essential; [4] they are reborn into a wealthy family, and as soon as they are born they have a mind that aspires to generosity; [5] they are beloved by the fourfold assembly; [6] they enter the assembly without fear or lack of confidence; [7] verses that praise their greatness spread to the cardinal and intermediate directions; [8] they have soft and youthful arms and legs; [9] they stand on feet with level soles; and [10] they are never apart from kalyāṇamitras until they are seated at the Bodhimaṇḍa. “Young man, those are the ten benefits for the bodhisattva mahāsattvas who aspire to generosity.”",
+   "T0639": "「童子！若菩薩不捨一切智心行六波羅蜜，所有利益，汝當諦聽，當為汝說。童子！菩薩信樂檀波羅蜜者有十種利益。何等為十？一者、降伏慳悋煩惱；二者、修習捨心相續；三者、共諸眾生同其資產，攝受堅固而至滅度；四者、生豪富家；五者、在所生處施心現前；六者、常為四眾之所愛樂；七者、處於四眾不怯、不畏；八者、勝名流布遍於諸方；九者、手足柔軟，足掌安平；十者、乃至道樹不離善知識，謂佛、菩薩、聲聞弟子。童子！是為菩薩信樂布施十種利益。」",
+   "T0640": "時，佛告文殊師利言：「童子！菩薩行布施有十事。何等為十？一者諦除嫉妬意；二者常清淨意布施；三者無數百千人不能奪其財；四者無上妙而終亡；五者生大豪貴家；六者所生處好布施；七者為四部眾所愛念；八者無所畏，入眾會亦無礙，十方皆聞其名聲；九者年少手足柔軟；十者常樂善知識，乃至坐佛樹下。童子！是為菩薩行布施十事。」"
+  },
+  "c26-3": {
+   "sa": "tatredamucyate - nigṛhītaṃ si mātsaryaṃ tyāgacittaṃ ca bṛṃhitam / ādattasāro bhavati samṛddhe jāyate kule // SRS_26.1 // jātamātrasya cittaṃ si tyāga eva pravartate / priyo bhavati sattvānāṃ gṛhapravrajitāna ca // SRS_26.2 // viśāradaśca parṣatsu ama rūpa saṃkramet / bhavatyudāraśabdo 'sya grāmeṣu nagareṣu ca // SRS_26.3 // mṛdū hastau ca pādau ca bhaviṣyanti na durlabhāḥ / kalyāṇamitrāṃllabhate buddhāṃśca śrāvakānapi // SRS_26.4 // mātsaryacittaṃ si na jātu bhoti tyāgeṣu citta ramate 'sya nityam / priyaśca bhoti bahusattvakoṭināṃ amatsarisyā imi ānuśaṃsāḥ // SRS_26.5 // mahādhane cāpi kule sa jāyate jātasya tyāge ramate mano 'sya / ādattasāraśca karoti kālamamatsarisyā imi ānuśaṃsāḥ // SRS_26.6 // viśāradaśco pariṣāṃ vigāhate udāraśabdo 'sya diśāsu yāti / mṛdu hastapādo 'sya sadaiva jāyate amatsarisyā imi ānuśaṃsāḥ // SRS_26.7 // kalyāṇamitrāsya na bhonti durlabhā buddhāṃśca yo paśyati śrāvakāṃśca / dṛṣṭvā ca tān pūjayate prasanno amatsarisyā imi ānuśaṃsāḥ // SRS_26.8 // iti śrīsamādhirāje dānānuśaṃsāparivarto nāma ṣaḍaviṃśatitamaḥ ||",
+   "bo": "།དེ་ལ་འདི་སྐད་ཅེས་བྱ་སྟེ། དེས་ནི་སེར་སྣ་ཚར་བཅད་ཅིང་། །གཏོང་བའི་སེམས་ཀྱང་རྣམ་པར་སྤེལ། །སྙིང་པོ་དག་ནི་བླངས་པར་འགྱུར། །ཤིན་ཏུ་འབྱོར་པའི་རིགས་སུ་སྐྱེ། །སྐྱེས་མ་ཐག་ཏུ་དེ་ཡི་སེམས། །གཏོང་བ་དག་ལ་ཤིན་ཏུ་འཇུག །རབ་ཏུ་བྱུང་དང་ཁྱིམ་པ་ཡི། །སེམས་ཅན་རྣམས་ལ་ཕངས་པར་འགྱུར། །འཇིགས་པ་མེད་ཅིང་འཁོར་དུ་ཡང་། །མ་ཞུམ་པར་ནི་ཉེ་བར་འགྲོ། །གྲོང་དང་གྲོང་ཁྱེར་རྣམས་སུ་ཡང་། །དེ་ཡི་སྒྲ་ནི་རྒྱ་ཆེར་འགྱུར། །རྐང་ལག་དག་ནི་འཇམ་པ་ཡང་། །རྙེད་དཀའ་བར་ནི་ཡོང་མི་འགྱུར། །སངས་རྒྱས་དང་ནི་ཉན་ཐོས་དང་། །དགེ་བའི་བཤེས་གཉེན་ཐོབ་པར་འགྱུར། །སེར་སྣའི་སེམས་ནི་ནམ་ཡང་མི་འབྱུང་སྟེ། །དེ་ཡི་སེམས་ནི་རྟག་ཏུ་གཏོང་ལ་དགའ། །སེམས་ཅན་བྱེ་བ་མང་ལ་ཕངས་པར་འགྱུར། །སེར་སྣ་མེད་པའི་ཕན་ཡོན་འདི་དག་ཡིན། །དེ་ནི་ནོར་མང་རིགས་སུ་སྐྱེ་བར་འགྱུར། །སྐྱེས་ནས་དེ་ཡི་ཡིད་ནི་གཏོང་ལ་དགའ། །སྙིང་པོ་བླངས་ནས་འཆི་བའི་དུས་བྱེད་འགྱུར། །སེར་སྣ་མེད་པའི་ཕན་ཡོན་འདི་དག་ཡིན། །འཇིགས་པ་མེད་པར་འཁོར་གྱི་ནང་དུ་འགྲོ། །ཕྱོགས་སུ་རྒྱ་ཆེར་དེ་ཡི་སྒྲ་ཡང་གྲགས། །དེ་ཡི་རྐང་ལག་རྟག་ཏུ་འཇམ་པར་འགྱུར། །སེར་སྣ་མེད་པའི་ཕན་ཡོན་འདི་དག་ཡིན། །དགེ་བའི་བཤེས་གཉེན་རྙེད་པར་མི་དཀའ་སྟེ། །དེས་ནི་སངས་རྒྱས་རྣམས་དང་ཉན་ཐོས་མཐོང་། །མཐོང་ནས་དེ་དག་དད་པས་མཆོད་པ་བྱེད། །སེར་སྣ་མེད་པའི་ཕན་ཡོན་འདི་དག་ཡིན།",
+   "en": "It was said: “Avarice is overcome. Their generosity increases. They are those who obtain the essentials And are reborn into a wealthy family. {1}  “As soon as they are born There is generosity in their minds. They are beloved by beings, Both the laity and mendicants. {2} “They enter the assembly Fearlessly and confidently. Their renown spreads Through the villages and towns. {3} “They have soft arms and legs That they gain without difficulty. They obtain kalyāṇamitras, Both buddhas and śrāvakas. {4} “They never have an avaricious mind; Their minds always delight in generosity. They are beloved by millions of beings. Those are the benefits of being without avarice. {5} “They are reborn into a family with great wealth. At birth they have minds that delight in generosity. They obtain the essentials and choose the time of passing away. Those are the benefits of being without avarice. {6} “Fearlessly they enter an assembly. Their renown spreads in all directions. They always have soft arms and legs. Those are the benefits of being without avarice. {7} “It is not difficult for them to obtain kalyāṇamitras. They also see buddhas and śrāvakas. Seeing them, they make offerings to them with faith. Those are the benefits of being without avarice.” {8}",
+   "T0639": "爾時，世尊即說偈言：「降伏於慳悋、增長布施心、 攝受施堅固，生在豪富家， 於其所生處，而能起捨心， 為在家出家，諸眾生愛樂， 若入大眾中，無畏不怯弱， 勝名聲遠布，遍城邑聚落， 手足恒柔軟，成就具足相， 值遇善知識，聲聞佛、菩薩。 常懷惠施心，未曾有悋惜， 為億眾生愛，是為捨慳利； 生在豪富族，心常樂布施， 攝受捨堅固，是為樂施利； 處在大眾數，勝名遍諸方， 手足柔軟好，是樂施之利； 遭遇善知識，謂佛、菩薩等， 見已競來供，是樂施之利。",
+   "T0640": "佛於是說偈言：「已遠除於嫉妬，意常好布施者； 持上妙而終亡，生即於豪富家。 所生處意常樂，而好喜於布施； 為眾生所愛念，居家者及出學。 於眾會無所畏，所至處無疑難； 其名聲遠而聞，於郡國及縣邑。 其手足常柔軟，所欲得不復難； 即為得善知識，諸佛及其弟子。 終不復生嫉妬意，意常好樂欲布施； 以持上妙而終亡，於是行事無嫉妬。 即生於大豪富家，意常喜樂而布施； 為若干億人所愛，好布施者有是行。 得善知識不復難，常見諸佛及弟子； 見已即樂供養之，其布施者有是行。」"
+  }
+ }
+}

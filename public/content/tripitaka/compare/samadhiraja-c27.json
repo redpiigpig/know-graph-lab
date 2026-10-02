@@ -1,0 +1,87 @@
+{
+ "slug": "samadhiraja-c27",
+ "title": "月燈三昧經・第27品 說戒品（Śīlanirdeśa）",
+ "family": "sa",
+ "intro": "梵本〈Śīlanirdeśa〉＝藏譯第二十八章：淨戒十種利益，偈 SRS 27.1–6。先公本「持戒清淨有十事」。",
+ "units": [
+  {
+   "id": "c27-1",
+   "label": "淨戒十種利益"
+  },
+  {
+   "id": "c27-2",
+   "label": "偈（27.1–6）"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sa",
+   "lang": "sa",
+   "label": "梵本",
+   "who": "Vaidya 校訂本（1961）・GRETIL"
+  },
+  {
+   "id": "bo",
+   "lang": "bo",
+   "label": "藏譯",
+   "who": "德格版 Toh 127・84000 翻譯記憶"
+  },
+  {
+   "id": "en",
+   "lang": "en",
+   "label": "84000 英譯",
+   "who": "譯自藏譯・與藏文逐句對齊"
+  },
+  {
+   "id": "T0639",
+   "lang": "lzh",
+   "label": "那連提耶舍本",
+   "who": "那連提耶舍譯《月燈三昧經》・557 年",
+   "work": "T0639"
+  },
+  {
+   "id": "T0640",
+   "lang": "lzh",
+   "label": "先公本",
+   "who": "劉宋先公譯《佛說月燈三昧經》（一名《文殊師利菩薩十事行經》）・高麗藏本",
+   "work": "T0640"
+  }
+ ],
+ "works": [
+  "DKtoh0127",
+  "T0639",
+  "T0640"
+ ],
+ "anchors": [
+  {
+   "work": "T0639",
+   "range": [
+    "T15n0639_p0584a19",
+    "T15n0639_p0584a25"
+   ]
+  },
+  {
+   "work": "T0640",
+   "range": [
+    "T15n0640_p0620b07",
+    "T15n0640_p0620b13"
+   ]
+  }
+ ],
+ "cells": {
+  "c27-1": {
+   "sa": "27 Śīlanirdeśaparivartaḥ | daśeme kumāra anuśaṃsāḥ pariśuddhaśīlasya bodhisattvasya mahāsattvasya | katame daśa? yaduta jñānaṃ ca pariśodhayati paripūrayati | buddhānāṃ bhagavatāmanuśikṣate | agarhito bhavati paṇḍitānām | pratijñāto na calati | pratipattau tiṣṭhati | saṃsārāt palāyate | nirvāṇamarpayati | niṣparyutthāno viharati | samādhiṃ pratilabhate | adaridraśca bhavati | ime kumāra daśānuśaṃsāḥ pariśuddhaśīlasya bodhisattvasya mahāsattvasya ||",
+   "bo": "།སྦྱིན་པའི་ཕན་ཡོན་གྱི་ལེའུ་སྟེ་ཉི་ཤུ་བདུན་པའོ།། །། གཞོན་ནུ་བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་ཚུལ་ཁྲིམས་ཡོངས་སུ་དག་པའི་ཕན་ཡོན་འདི་བཅུ་སྟེ། བཅུ་གང་ཞེ་ན། འདི་ལྟ་སྟེ། ཡེ་ཤེས་ཀྱིས་རྗེས་སུ་བསྐོར་ཅིང་ཡོངས་སུ་རྫོགས་པར་བྱེད་པ་དང་། སངས་རྒྱས་རྣམས་ཀྱི་རྗེས་སུ་སློབ་པ་དང་། མཁས་པ་རྣམས་ཀྱིས་མ་སྨད་པ་དང་། དམ་བཅས་པ་ལས་མི་གཡོ་བ་དང་། ནན་ཏན་ལ་གནས་པ་དང་འཁོར་བ་ལས་འབྱོར་པ་དང་མྱ་ངན་ལས་འདས་པ་ཐོབ་པར་བྱེད་པ་དང་ཀུན་ནས་ལྡང་ བ་མེད་པར་གནས་པ་དང་ཏིང་ངེ་འཛིན་རབ་ཏུ་འཐོབ་པ་དང་། མི་དབུལ་བར་འགྱུར་ཏེ། གཞོན་ནུ་བཅུ་པོ་འདི་དག་ནི་བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་ཚུལ་ཁྲིམས་ཡོངས་སུ་དག་པའི་ཕན་ཡོན་ནོ།",
+   "en": "Conclusion of the twenty-seventh chapter, “The Benefits of Generosity.”  The Teaching on Correct Conduct Chapter 28 “Young man, there are ten benefits for bodhisattva mahāsattvas from perfectly pure, correct conduct. What are the ten benefits? They are: [1] they devote themselves to wisdom and perfect it; [2] they follow the example of the buddhas; [3] they do not criticize the wise; [4] they do not waver from their vows; [5] they maintain their practice; [6] they turn away from saṃsāra; [7] they are led to attain nirvāṇa; [8] they live without faults arising; [9] they attain samādhi; and [10] they will never be poor. “Young man, those are the ten benefits for the bodhisattva mahāsattvas who have perfectly pure, correct conduct.”",
+   "T0639": "「童子！菩薩淨戒有十種利益。何等為十？一者、滿足一切智，二者、如佛所學而學，三者、智者不毀，四者、不退誓願，五者、安住於行，六者、棄捨生死，七者、慕樂涅槃，八者、得無纏心，九者、得勝三昧，十者、不乏信財。童子！是為十種淨戒利益。」",
+   "T0640": "佛語童子：「菩薩持戒清淨有十事。何等為十？一者具足其願，二者學佛道，三者常尊樂於黠慧，四者死不妄語，五者見世不轉意，六者棄生死，七者求泥洹，八者寂寞行，九者得三昧，十者無貧窮行。童子！是為菩薩十事清淨持戒。」"
+  },
+  "c27-2": {
+   "sa": "tatredamucyate - jñānaṃ ca paripūreti buddhānāmanuśikṣate / agarhitaḥ paṇḍitānāṃ bhoti nityaṃ viśāradaḥ // SRS_27.1 // pratijñāto na calati pratipattau ca tiṣṭhati / arpeti yena nirvāṇaṃ saṃsārātaḥ palāyate // SRS_27.2 // niṣparyutthito viharati samādhiṃ labhate laghu / adaridraśca bhavati śīlaskandhe pratiṣṭhitaḥ // SRS_27.3 // jñānaṃ ca tasyo paripūrṇu bhoti anuśikṣate cāti tathāgatānām / na cāsya nindāṃ prakaronti paṇḍitāḥ tathā hi tasyo pariśuddha śīlam // SRS_27.4 // pratijñāto 'sau na calāti paṇḍitaḥ tathā hi śūraḥ pratipattiye sthitaḥ / dṛṣṭvā ca saṃsāramanekadoṣaṃ palāyate nirvṛti yena yāti // SRS_27.5 // paryutthitaṃ cittu na bhoti tasya tathā hyasau śīlabale pratiṣṭhitaḥ / kṣipraṃ samādhiṃ labhate niraṅgaṇaṃ pariśuddhaśīlasyimi ānuśaṃsāḥ // SRS_27.6 // iti śrīsamādhirāje śīlanirdeśaparivarto nāma saptaviṃśatimaḥ ||",
+   "bo": "།དེ་ལ་འདི་སྐད་ཅེས་བྱ་སྟེ། ཡེ་ཤེས་ཡོངས་སུ་རྫོགས་བྱེད་ཅིང་། །སངས་རྒྱས་དག་གི་རྗེས་སུ་སློབ། །མཁས་པ་དག་གིས་མ་སྨད་པ། །རྟག་ཏུ་འཇིགས་པ་མེད་པར་འགྱུར། །དམ་བཅས་པ་ལས་མི་གཡོ་ཞིང་། །ནན་ཏན་ལ་ཡང་རབ་ཏུ་གནས། །མྱ་ངན་འདས་པ་ཐོབ་བྱེད་ཅིང་། །འཁོར་བ་ལས་ཀྱང་ཤིན་ཏུ་འབྱོར། །ཀུན་ནས་ལྡང་བ་མེད་གནས་ཤིང་། །ཏིང་ངེ་འཛིན་རྣམས་མྱུར་དུ་འཐོབ། །དབུལ་པོར་ཡང་ནི་མི་འགྱུར་ཏེ། །ཚུལ་ཁྲིམས་ཕུང་པོར་རབ་ཏུ་གནས། །དེ་ཡི་ཡེ་ཤེས་ཡོངས་སུ་རྫོགས་པར་འགྱུར། །དེ་བཞིན་གཤེགས་པ་རྣམས་ཀྱིས་རྗེས་སུ་སློབ། །དེ་ལྟར་དེ་ཡི་ཚུལ་ཁྲིམས་ཡོངས་དག་ཅིང་། །དེ་ལ་མཁས་པ་དག་ནི་སྨོད་མི་བྱེད། །དམ་བཅས་པ་ལས་མཁས་པ་མི་གཡོ་ཞིང་། །དེ་ལྟར་དཔའ་བོ་ནན་ཏན་གནས་པར་བྱེད། །འཁོར་བའི་ཉེས་པ་མང་པོ་མཐོང་ནས་ནི། །འབྱོལ་ཞིང་མྱ་ངན་འདའ་བར་དེ་ཡིས་འགྲོ། །དེ་ལྟར་ཚུལ་ཁྲིམས་སྟོབས་ལ་གནས་པས་ན། །དེ་ཡི་སེམས་ནི་ཀུན་ནས་ལྡང་མི་འགྱུར། །ཉོན་མོངས་མེད་པའི་ཏིང་འཛིན་མྱུར་དུ་འཐོབ། །ཚུལ་ཁྲིམས་དག་པའི་ཕན་ཡོན་འདི་དག་ཡིན། །ཚུལ་ཁྲིམས་ངེས་པར་བསྟན་པའི་ལེའུ་སྟེ་ཉི་ཤུ་བརྒྱད་པའོ།། །།",
+   "en": "It was said concerning this: “They bring wisdom to perfection, Follow the example of the buddhas, Do not criticize those who are wise, And they are always without fear. {1} “They do not waver from their vows, They maintain their practice, They are led to attain nirvāṇa, And they turn away from saṃsāra. {2} “They live without faults arising, They quickly attain samādhi, They will not be poor, And they maintain correct conduct. {3} “Their wisdom will be perfected, And they follow the example of the buddhas. They never make criticisms of the wise, And thus their conduct is completely pure. {4} “The wise ones never waver from their vows. The heroic ones maintain their practice. Seeing the many faults of saṃsāra They go toward nirvāṇa. {5}  “There are no faults that arise in their minds; Thus, they maintain the strength of correct conduct, And quickly attain an immaculate samādhi. Those are the benefits of pure, correct conduct.” {6} Conclusion of the twenty-eighth chapter, “The Teaching on Correct Conduct.”",
+   "T0639": "爾時，世尊即說偈言：「滿足一切智，如佛而修學， 智慧者不毀，常無有怖畏， 誓願不退轉，能安住勝行， 逃避生死處，欣慕趣涅槃， 安住無纏障，速得勝三昧， 住於淨戒聚，遠離諸貧窮。 其智恒清淨，修習佛所學， 不為聖者毀，以戒清淨故。 智者誓不退，勇健善住行， 見世種種過，避之趣滅道。 彼心無障礙，以住淨戒力， 速得離惱定，是為淨戒利。",
+   "T0640": "佛於是說偈言：「即具足其所願，學諸佛之道行； 常樂於尊智慧，亦無有恐懼時。 不復轉其所願，亦不轉慎諸行； 常棄遠於生死，則求索泥洹道。 常在寂寞處行，即便得於三昧； 而無有貧窮時，即立於持戒品。 其人即具所可願，是菩薩學諸佛道； 慧者於人不自稱，其人如是戒清淨。 持願甚堅不復難，終不復動所采建； 以見生死無數惡，便棄捐求泥洹道。 其意不復著所念，其人如是立戒彊； 得正剎土無不可，清淨戒者有是行。」"
+  }
+ }
+}
