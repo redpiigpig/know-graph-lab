@@ -6128,6 +6128,44 @@ _lk("lankavatara-c09", "陀羅尼品",
                                       ("l9-03", "大慧！我更為汝說陀羅尼"), ("l9-04", "「大慧！若有善男子、善女人，受持讀誦為他解說此陀羅尼，不為")],
       None)])
 
+# ── 中論逐頌：梵本 GRETIL《根本中頌》（MMK 品.頌）一頌一節；漢譯三本皆是「頌＋釋」：鳩摩羅什《中論》（青目釋）、
+#    波羅頗蜜多羅《般若燈論釋》（清辨釋）、惟淨等《大乘中觀釋論》（安慧釋，只存前十三品）。漢譯欄＝該頌起、到下一頌前的釋文；
+#    羅什本頌前的「問曰…答曰：」一併歸入該頌。般若燈論、安慧釋常把一頌拆成幾句分引，以首句出現處為準；
+#    安慧本頌文與梵本出入大，只在確定處分頌，不確定的頌留在上一節。切點由 scratchpad 的 mmkgen.py 依「頌號→段號」產生。
+_MMK_ZH = {"T1564": ("羅什本", "鳩摩羅什譯《中論》・青目釋・409 年"),
+           "T1566": ("般若燈論", "波羅頗蜜多羅譯《般若燈論釋》・清辨釋・630–632 年"),
+           "T1567": ("安慧釋論", "惟淨等譯《大乘中觀釋論》・安慧釋・宋")}
+
+
+def _mmk(k, units, sa_cuts, zh, end=None, intro=""):
+    head = zh["T1564"][0]
+    title = re.sub(r"^中論", "", head).split("（")[0]
+    n = len([u for u, _ in units if u != "m0"])
+    SETS[f"madhyamaka-c{k:02d}"] = {
+        "title": f"中論・{title}", "family": "sa", "extra_works": [],
+        "intro": (f"《根本中頌》第 {k} 品，梵本 {n} 頌，一頌一節（頌號依 GRETIL 本 MMK {k}.n）。漢譯三本都是頌連同注釋：鳩摩羅什《中論》（青目釋）、"
+                  "《般若燈論釋》（清辨釋）、《大乘中觀釋論》（安慧釋，僅前十三品）；漢譯欄自該頌起、到下一頌前的釋文止。" + intro),
+        "units": units,
+        "versions": [{"id": "sa", "lang": "sa", "label": "梵本", "who": "《根本中頌》・GRETIL",
+                      "src": {"gretil": "sa_nAgArjuna-mUlamadhyamakakArikA", "start": sa_cuts[0][1]} | ({"end": end} if end else {}),
+                      "cuts": sa_cuts}]
+                    + [{"id": w, "lang": "lzh", "label": _MMK_ZH[w][0], "who": _MMK_ZH[w][1],
+                        "src": {"work": w, "nodes": [h], "start": cuts[0][1]}, "cuts": cuts} | ({"reorder": True} if ro else {})
+                       for w, (h, cuts, ro) in zh.items()]}
+
+
+_mmk(1, [('m0', '歸敬頌・造論緣起'), ('m01', 'MMK 1.1'), ('m02', 'MMK 1.2'), ('m03', 'MMK 1.3'), ('m04', 'MMK 1.4'), ('m05', 'MMK 1.5'), ('m06', 'MMK 1.6'), ('m07', 'MMK 1.7'), ('m08', 'MMK 1.8'), ('m09', 'MMK 1.9'), ('m10', 'MMK 1.10'), ('m11', 'MMK 1.11'), ('m12', 'MMK 1.12'), ('m13', 'MMK 1.13'), ('m14', 'MMK 1.14')],
+     [('m01', 'na svato nāpi parato na dvābhyāṃ nāpy ahetutaḥ'), ('m02', 'catvāraḥ pratyayā hetur ārambaṇam anantaram'), ('m03', 'na hi svabhāvo bhāvānāṃ pratyayādiṣu vidyate'), ('m04', 'kriyā na pratyayavatī nāpratyayavatī kriyā'), ('m05', 'utpadyate pratītyemān itīme pratyayāḥ kila'), ('m06', "naivāsato naiva sataḥ pratyayo 'rthasya yujyate"), ('m07', 'na san nāsan na sad asan dharmo nirvartate yadā'), ('m08', 'anārambaṇa evāyaṃ san dharma upadiśyate'), ('m09', 'anutpanneṣu dharmeṣu nirodho nopapadyate'), ('m10', 'bhāvānāṃ niḥsvabhāvānāṃ na sattā vidyate yataḥ'), ('m11', 'na ca vyastasamasteṣu pratyayeṣvasti tat phalam'), ('m12', 'athāsad api tat tebhyaḥ pratyayebhyaḥ pravartate'), ('m13', 'phalaṃ ca pratyayamayaṃ pratyayāścāsvayaṃmayāḥ'), ('m14', 'tasmān na pratyayamayaṃ nāpratyayamayaṃ phalam')],
+     {'T1564': ('中論觀因緣品第一（十六偈）', [('m0', '不生亦不滅，'), ('m01', '問曰：諸法無'), ('m03', '「如諸法自性'), ('m02', '問曰：阿毘曇'), ('m04', '答曰：「果為'), ('m05', '「因是法生果'), ('m06', '「果先於緣中'), ('m07', '問曰：已總破'), ('m09', '「果若未生時'), ('m08', '「如諸佛所說'), ('m10', '「諸法無自性'), ('m11', '「略廣因緣中'), ('m12', '「若謂緣無果'), ('m13', '「若果從緣生'), ('m14', '果不從緣生，')], True), 'T1566': ('觀緣品第一之一（卷一）', [('m0', '普斷諸分別，'), ('m01', '「無時亦無處'), ('m02', '「因緣及緣緣'), ('m03', '「所有諸物體'), ('m04', '「緣中無作者'), ('m06', '「非定有定無'), ('m07', '「非有非非有'), ('m08', '「婆伽婆所說'), ('m09', '「不起諸法滅'), ('m10', '「諸法無自體'), ('m11', '「非一一和合'), ('m12', '「若果緣中無'), ('m13', '「緣及果自性'), ('m14', '「非無緣有果')], False), 'T1567': ('觀緣品第一', [('m0', '歸命一切智！'), ('m01', '「諸法不自生'), ('m03', '「如諸法自性'), ('m06', '「非有亦非無'), ('m08', '「於此無緣法'), ('m09', '「若法未生時'), ('m10', '「諸法無自性'), ('m12', '「若謂緣無果'), ('m13', '「若果從緣生'), ('m14', '「果不從緣生')], False)},
+     end="gataṃ na gamyate tāvad agataṃ naiva gamyate",
+     intro="羅什本次第：1.3 在 1.2 前、1.9 在 1.8 前（⇅）。般若燈論無 1.5 的頌文。")
+
+_mmk(2, [('m01', 'MMK 2.1'), ('m02', 'MMK 2.2'), ('m03', 'MMK 2.3'), ('m04', 'MMK 2.4'), ('m05', 'MMK 2.5'), ('m06', 'MMK 2.6'), ('m07', 'MMK 2.7'), ('m08', 'MMK 2.8'), ('m09', 'MMK 2.9'), ('m10', 'MMK 2.10'), ('m11', 'MMK 2.11'), ('m12', 'MMK 2.12'), ('m13', 'MMK 2.13'), ('m14', 'MMK 2.14'), ('m15', 'MMK 2.15'), ('m16', 'MMK 2.16'), ('m17', 'MMK 2.17'), ('m18', 'MMK 2.18'), ('m19', 'MMK 2.19'), ('m20', 'MMK 2.20'), ('m21', 'MMK 2.21'), ('m22', 'MMK 2.22'), ('m23', 'MMK 2.23'), ('m24', 'MMK 2.24'), ('m25', 'MMK 2.25')],
+     [('m01', 'gataṃ na gamyate tāvad agataṃ naiva gamyate'), ('m02', 'ceṣṭā yatra gatis tatra gamyamāne ca sā yataḥ'), ('m03', 'gamyamānasya gamanaṃ kathaṃ nāmopapatsyate'), ('m04', 'gamyamānasya gamanaṃ yasya tasya prasajyate'), ('m05', 'gamyamānasya gamane prasaktaṃ gamanadvayam'), ('m06', 'dvau gantārau prasajyete prasakte gamanadvaye'), ('m07', 'gantāraṃ cet tiraskṛtya gamanaṃ nopapadyate'), ('m08', 'gantā na gacchati tāvad agantā naiva gacchati'), ('m09', 'gantā tāvad gacchatīti katham evopapatsyate'), ('m10', 'pakṣo gantā gacchatīti yasya tasya prasajyate'), ('m11', 'gamane dve prasajyete gantā yadyuta gacchati'), ('m12', "gate nārabhyate gantuṃ gantuṃ nārabhyate 'gate"), ('m13', 'na pūrvaṃ gamanārambhād gamyamānaṃ na vā gatam'), ('m14', 'gataṃ kiṃ gamyamānaṃ kim agataṃ kiṃ vikalpyate'), ('m15', 'gantā na tiṣṭhati tāvad agantā naiva tiṣṭhati'), ('m16', 'gantā tāvat tiṣṭhatīti katham evopapatsyate'), ('m17', 'na tiṣṭhati gamyamānān na gatān nāgatād api'), ('m18', 'yad eva gamanaṃ gantā sa eveti na yujyate'), ('m19', 'yad eva gamanaṃ gantā sa eva hi bhaved yadi'), ('m20', 'anya eva punar gantā gater yadi vikalpyate'), ('m21', 'ekībhāvena vā siddhir nānābhāvena vā yayoḥ'), ('m22', 'gatyā yayājyate gantā gatiṃ tāṃ sa na gacchati'), ('m23', "gatyā yayājyate gantā tato 'nyāṃ sa na gacchati"), ('m24', 'sadbhūto gamanaṃ gantā triprakāraṃ na gacchati'), ('m25', 'gamanaṃ sadasadbhūtaḥ triprakāraṃ na gacchati')],
+     {'T1564': ('中論觀去來品第二（二十五偈）', [('m01', '問曰：世間眼'), ('m02', '問曰：「動處'), ('m03', '答曰：「云何'), ('m04', '「若言去時去'), ('m05', '「若去時有去'), ('m06', '問曰：若有二'), ('m07', '問曰：離去者'), ('m08', '「去者則不去'), ('m09', '問曰：若去者'), ('m11', '「若去者有去'), ('m10', '「若謂去者去'), ('m12', '「已去中無發'), ('m13', '「未發無去時'), ('m14', '無去無未去，'), ('m15', '問曰：若無去'), ('m16', '「去者若當住'), ('m17', '「去未去無住'), ('m18', '問曰：汝雖種'), ('m19', '問曰：一、異'), ('m20', '若謂於去法，有'), ('m21', '「去去者是二'), ('m22', '「因去知去者'), ('m23', '「因去知去者'), ('m24', '「決定有去者'), ('m25', '去法定不定，')], True), 'T1566': ('觀去來品第二', [('m01', '復次初品已說'), ('m02', '「非已去未去'), ('m03', '「若去時去者'), ('m04', '「說去時去者'), ('m05', '「若去時中去'), ('m06', '「若有二去法'), ('m07', '「離去者無去'), ('m08', '「彼去者不去'), ('m09', '「若謂去者去'), ('m10', '「去者去既空'), ('m11', '「去者與去合'), ('m12', '「已去中無發'), ('m13', '「未發無去時'), ('m14', '「無已去未去'), ('m15', '「去者則不住'), ('m16', '「去者若當住'), ('m17', '「去時則無住'), ('m18', '「去法即去者'), ('m19', '「若謂彼去法'), ('m20', '「若謂彼去法'), ('m21', '「去者及去二'), ('m22', '「因去了去者'), ('m23', '「因去了去者'), ('m24', '「有實無有實'), ('m25', '「是故去無性')], False), 'T1567': ('觀去來品第二之一', [('m01', '前品已止生義'), ('m02', '「動處則有去'), ('m03', '「云何於去時'), ('m05', '「若去時有去'), ('m06', '「若有二去法'), ('m07', '「若離於去者'), ('m08', '「去者即不去'), ('m09', '「若言去者去'), ('m12', '「已去中無發'), ('m14', '「去未去去時'), ('m15', '「去者即不住'), ('m16', '「去者若當住'), ('m17', '「去未去去時'), ('m18', '「去法即去者'), ('m19', '「若謂於去法'), ('m20', '「去法異去者'), ('m22', '「因去知去者'), ('m23', '「因去知去者'), ('m24', '「若實有去法'), ('m25', '「去法有不有')], False)},
+     end='darśanaṃ śravaṇaṃ ghrāṇaṃ rasanaṃ sparśanaṃ manaḥ',
+     intro='羅什本 2.10、2.11 次第互換（⇅）。般若燈論、安慧釋多半一句一引。')
+
 # ── 勝鬘經：梵本已佚（僅《寶性論》等引文）、藏譯 Toh 92 無 84000 TMX；以求那跋陀羅 T0353 十五章為骨架，
 #    對菩提流志《大寶積經》第四十八會〈勝鬘夫人會〉T0310。長章（攝受、一乘、勝鬘）依問答再分。
 _SRI_CH = ["如來真實義功德章第一", "十受章第二", "三願章第三", "攝受章第四", "一乘章第五", "無邊聖諦章第六", "如來藏章第七", "法身章第八",
