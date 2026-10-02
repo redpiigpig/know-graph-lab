@@ -1202,6 +1202,9 @@ B 線＝前人概論怎麼切（比較表）。一次派一個 Sonnet。
   `c:/tmp/accs_gen_*.raw.jsonl`。衣索比亞日課、科普特 Agpeya 英譯書目未核到。
 - 作者另要求（2026-10-02）：基督教史／教會史／教會研究／基督教研究「前五百篇」，十九世紀至今，要下載。
   走 [[research-data-top-papers]]；待作者定：只收論文或連專著（傾向都收）、四組分法、與「史學五百篇」連結。
+- 第八章備料完成（`sources_ch08.md`，65 筆；必備缺 23）；新增 13 本進獵表（Johnson、Yarnold、金口約翰《洗禮講道》、慈運理 LCC 24、
+  Gerrish、Jeremias、厄弗冷《樂園頌》、Osborne、Uzukwu、Chupungco、倫巴都《語錄》卷四、巴克萊《Apology》、救世軍《Handbook of Doctrine》）。
+  東正教《社會理念綱要》官方英譯網上公開；《教會社會訓導彙編》館藏掃描檔文字層是亂碼；香港聖神修院系列掃描品質差。
 - 補書不只 z-lib；先查站上既有（梵二 SC／DV 中拉英在 `data/creeds/ecumenical-councils/vatican-ii/`、
   奧斯堡信條與路德小教理在 `data/creeds/protestant-confessions/`、通諭中譯在 `data/encyclicals/`），
   再查 TRC／天主教在線目錄。館藏確認沒有：《天主教教理》全本中譯、《協同書》中譯、Schmemann、Bria、Brown 第二冊。
