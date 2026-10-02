@@ -37,7 +37,7 @@
   "monograph": 358,
   "chapter": 26
  },
- "built_at": "2026-10-02T05:22:04+00:00",
+ "built_at": "2026-10-02T06:07:58+00:00",
  "groups": [
   {
    "slug": "egyptology",
@@ -1909,7 +1909,7 @@
        "venue": "Transactions of the Society of Biblical Archaeology 2: 213–234",
        "type": "article",
        "lang": "en",
-       "note": "1872 年在大英博物館讀出吉伽美什第十一塊泥板的洪水段落，震動英國；聖經批判與亞述學從此綁在一起。",
+       "note": "1872 年在大英博物館讀出吉爾伽美什第十一塊泥板的洪水段落，震動英國；聖經批判與亞述學從此綁在一起。",
        "crossref": null,
        "in_library": false
       },
@@ -2706,7 +2706,7 @@
        "author_zh": "蒂蓋",
        "year": 1982,
        "title": "The Evolution of the Gilgamesh Epic",
-       "title_zh": "吉伽美什史詩的演變",
+       "title_zh": "吉爾伽美什史詩的演變",
        "venue": "Philadelphia: University of Pennsylvania Press",
        "type": "monograph",
        "lang": "en",
@@ -2832,11 +2832,11 @@
        "author_zh": "喬治",
        "year": 2003,
        "title": "The Babylonian Gilgamesh Epic: Introduction, Critical Edition and Cuneiform Texts",
-       "title_zh": "巴比倫吉伽美什史詩：導論、校本與楔文",
+       "title_zh": "巴比倫吉爾伽美什史詩：導論、校本與楔文",
        "venue": "Oxford: Oxford University Press，兩冊",
        "type": "monograph",
        "lang": "en",
-       "note": "吉伽美什的現代定本，取代了一百年的零散出版。",
+       "note": "吉爾伽美什的現代定本，取代了一百年的零散出版。",
        "crossref": null,
        "in_library": false
       },

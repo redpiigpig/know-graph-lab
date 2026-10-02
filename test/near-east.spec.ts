@@ -112,8 +112,8 @@ describe('古近東大藏經 — 統計與搜尋', () => {
     expect(Object.values(tallyStatus()).reduce((a, b) => a + b, 0)).toBe(total)
   })
 
-  it('搜尋吉伽美什找得到蘇美與阿卡德兩藏', () => {
-    const canons = new Set(searchTexts('吉伽美什').map(l => l.canon.key))
+  it('搜尋吉爾伽美什找得到蘇美與阿卡德兩藏', () => {
+    const canons = new Set(searchTexts('吉爾伽美什').map(l => l.canon.key))
     expect(canons.has('sumer')).toBe(true)
     expect(canons.has('akkad')).toBe(true)
   })

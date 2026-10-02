@@ -31,7 +31,7 @@ export const AKKAD_CANON: NeCanon = {
   terminus: '止於楔形文字的最後一塊泥板：烏魯克出土的天文曆書，約公元 75–80 年。',
   columns: { orig: 'available', en: 'available', zh: 'none' },
   summary:
-    '美索不達米亞宗教的主體。創世史詩在新年節對著馬杜克神像誦唸；吉伽美什史詩在書吏學校傳抄了一千五百年；'
+    '美索不達米亞宗教的主體。創世史詩在新年節對著馬杜克神像誦唸；吉爾伽美什史詩在書吏學校傳抄了一千五百年；'
     + '驅魔師的咒文、占卜師的肝卜手冊與天象兆書，則是神廟每天實際在用的「經」。'
     + '亞述巴尼拔在尼尼微收集的王家圖書館（前 7 世紀）保存了其中大半——圖書館在前 612 年焚毀，大火把泥板燒得更硬。',
   volumes: [
@@ -59,11 +59,11 @@ export const AKKAD_CANON: NeCanon = {
         },
         {
           key: 'gilgamesh',
-          label: '吉伽美什',
+          label: '吉爾伽美什',
           label_en: 'Gilgamesh',
           texts: [
-            { slug: 'gilgamesh-ob', title_zh: '吉伽美什史詩（古巴比倫版）', title_orig: 'Old Babylonian Gilgamesh (Šūtur eli šarrī)', era: '約前 1800', language: OB, status: 'fragment', note: '首行「超越諸王者」。賓館女主人西杜莉勸吉伽美什：「你所求的永生你找不到……讓你的妻子在你懷中歡喜。」此段標準版刪去。', bible: '傳 9:7–9' },
-            { slug: 'gilgamesh-sb', title_zh: '吉伽美什史詩（標準版）', title_orig: 'Ša naqba īmuru ("He who saw the Deep")', author: '傳為辛—勒克—烏寧尼編', era: '約前 1200', copies: '以亞述巴尼拔圖書館抄本為主，今仍有約五分之一缺文', language: SB, extent: '十二塊泥板，約 3,000 行', note: '「那見過深淵的人」。友誼、死亡與求永生；第十一塊泥板烏納皮什提親述洪水，放出鴿子、燕子、烏鴉探水。1872 年喬治‧史密斯在大英博物館讀出此段，震動英國。', bible: '創 6–9（放鳥探水）', xref: ['基督教大藏經‧前藏（吉爾伽美什史詩）'], seealso: ['gilgamesh-netherworld'] },
+            { slug: 'gilgamesh-ob', title_zh: '吉爾伽美什史詩（古巴比倫版）', title_orig: 'Old Babylonian Gilgamesh (Šūtur eli šarrī)', era: '約前 1800', language: OB, status: 'fragment', note: '首行「超越諸王者」。賓館女主人西杜莉勸吉爾伽美什：「你所求的永生你找不到……讓你的妻子在你懷中歡喜。」此段標準版刪去。', bible: '傳 9:7–9' },
+            { slug: 'gilgamesh-sb', title_zh: '吉爾伽美什史詩（標準版）', title_orig: 'Ša naqba īmuru ("He who saw the Deep")', author: '傳為辛—勒克—烏寧尼編', era: '約前 1200', copies: '以亞述巴尼拔圖書館抄本為主，今仍有約五分之一缺文', language: SB, extent: '十二塊泥板，約 3,000 行', note: '「那見過深淵的人」。友誼、死亡與求永生；第十一塊泥板烏納皮什提親述洪水，放出鴿子、燕子、烏鴉探水。1872 年喬治‧史密斯在大英博物館讀出此段，震動英國。', bible: '創 6–9（放鳥探水）', xref: ['基督教大藏經‧前藏（吉爾伽美什史詩）'], seealso: ['gilgamesh-netherworld'] },
           ],
         },
         {
@@ -72,8 +72,8 @@ export const AKKAD_CANON: NeCanon = {
           label_en: 'Netherworld',
           texts: [
             { slug: 'ishtar-descent', title_zh: '伊絲塔下冥府', title_orig: 'Ištar\'s Descent to the Netherworld', era: '中巴比倫成書', copies: '新亞述（尼尼微、亞述城）抄本', language: SB, extent: '約 140 行', note: '蘇美〈伊南娜入冥府〉的阿卡德語短本。女神下到「無返之地」，地上萬物停止交配；結尾提到杜牧茲節的哀哭與歸來。', seealso: ['inana-descent'] },
-            { slug: 'nergal-ereshkigal', title_zh: '涅伽與埃列什基伽', title_orig: 'Nergal and Ereškigal', copies: '阿瑪納抄本（前 14 世紀）與蘇丹特佩抄本（前 7 世紀）', language: AKK, note: '天神之子下到冥府，與冥界女王成婚而成為冥府之主。兩個版本相隔七百年，情節差異極大。' },
-            { slug: 'underworld-vision', title_zh: '亞述王子冥府夢', title_orig: 'The Underworld Vision of an Assyrian Prince', siglum: 'SAA 3 32', era: '前 7 世紀', language: NA, status: 'fragment', note: '王子庫瑪在夢中被帶到冥府，見到十五個怪異的冥界之神與涅伽的審判。古代近東唯一一份第一人稱的「遊地獄」。' },
+            { slug: 'nergal-ereshkigal', title_zh: '涅伽爾與埃列什基伽', title_orig: 'Nergal and Ereškigal', copies: '阿瑪納抄本（前 14 世紀）與蘇丹特佩抄本（前 7 世紀）', language: AKK, note: '天神之子下到冥府，與冥界女王成婚而成為冥府之主。兩個版本相隔七百年，情節差異極大。' },
+            { slug: 'underworld-vision', title_zh: '亞述王子冥府夢', title_orig: 'The Underworld Vision of an Assyrian Prince', siglum: 'SAA 3 32', era: '前 7 世紀', language: NA, status: 'fragment', note: '王子庫瑪在夢中被帶到冥府，見到十五個怪異的冥界之神與涅伽爾的審判。古代近東唯一一份第一人稱的「遊地獄」。' },
           ],
         },
         {
@@ -108,7 +108,7 @@ export const AKKAD_CANON: NeCanon = {
           texts: [
             { slug: 'shamash-hymn', title_zh: '沙馬什大頌', title_orig: 'The Great Hymn to Šamaš', siglum: 'BWL pp. 121–138', copies: '新亞述與新巴比倫抄本', language: SB, extent: '約 200 行', note: '太陽神照見萬邦，連異族、旅人、海上的人都在他看顧之下；收賄的法官、改秤的商人逃不過他。', bible: '詩 19；詩 139' },
             { slug: 'gula-hymn', title_zh: '布盧薩—拉比的古拉頌', title_orig: 'Gula Hymn of Bulluṭsa-rabi', copies: '新亞述', language: SB, note: '醫療女神第一人稱自述，輪流以十位女神之名出現。' },
-            { slug: 'marduk-syncretistic', title_zh: '眾神即馬杜克', title_orig: 'Syncretistic hymn: the gods as aspects of Marduk', siglum: 'CT 24 50（BM 47406）', era: '新巴比倫', language: SB, status: 'fragment', note: '「尼努塔是耕作的馬杜克，涅伽是戰爭的馬杜克，沙馬什是公義的馬杜克……」一張把眾神逐一化約為一神屬性的對照表。' },
+            { slug: 'marduk-syncretistic', title_zh: '眾神即馬杜克', title_orig: 'Syncretistic hymn: the gods as aspects of Marduk', siglum: 'CT 24 50（BM 47406）', era: '新巴比倫', language: SB, status: 'fragment', note: '「尼努塔是耕作的馬杜克，涅伽爾是戰爭的馬杜克，沙馬什是公義的馬杜克……」一張把眾神逐一化約為一神屬性的對照表。' },
             { slug: 'ishtar-prayer', title_zh: '伊絲塔大禱', title_orig: 'Great Prayer to Ištar (šuila Ištar 2)', copies: '新巴比倫抄本', language: SB, extent: '約 110 行', note: '「我向你祈求，眾女主之主……我的神與女神向我發怒，求你看顧我。」' },
             { slug: 'prayers-gods-night', title_zh: '夜間諸神禱', title_orig: 'Prayer to the Gods of the Night', copies: '古巴比倫', language: OB, note: '占卜師在夜裡向星辰禱告：「大人們入睡了，門閂上了……求你們在我所獻的羊羔上顯示真實。」' },
           ],

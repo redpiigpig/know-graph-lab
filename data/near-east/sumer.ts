@@ -141,8 +141,8 @@ export const SUMER_CANON: NeCanon = {
       name_en: 'Epics of Uruk',
       era: '成書約前 2100（烏爾第三王朝）',
       summary:
-        '烏魯克三代王恩美卡、盧伽班達、吉伽美什的故事。烏爾第三王朝的王自稱吉伽美什之弟，'
-        + '這些史詩因此也是王室的家譜。吉伽美什的五篇蘇美故事後來被巴比倫人改寫成一部史詩（見巴比倫亞述藏）。',
+        '烏魯克三代王恩美卡、盧伽班達、吉爾伽美什的故事。烏爾第三王朝的王自稱吉爾伽美什之弟，'
+        + '這些史詩因此也是王室的家譜。吉爾伽美什的五篇蘇美故事後來被巴比倫人改寫成一部史詩（見巴比倫亞述藏）。',
       divisions: [
         {
           key: 'enmerkar',
@@ -157,14 +157,14 @@ export const SUMER_CANON: NeCanon = {
         },
         {
           key: 'gilgamesh-sumerian',
-          label: '吉伽美什的蘇美故事',
+          label: '吉爾伽美什的蘇美故事',
           label_en: 'Sumerian Gilgamesh Poems',
           texts: [
-            { slug: 'gilgamesh-aga', title_zh: '吉伽美什與阿伽', title_orig: 'Gilgameš and Aga', siglum: 'ETCSL 1.8.1.1', copies: OB, language: SUM, note: '基什王圍攻烏魯克——唯一一篇沒有神話成分的吉伽美什故事，有「長老會與青年會」兩院議事的記載。' },
-            { slug: 'gilgamesh-huwawa', title_zh: '吉伽美什與胡瓦瓦', title_orig: 'Gilgameš and Ḫuwawa (Versions A, B)', siglum: 'ETCSL 1.8.1.5；1.8.1.5.1', copies: OB, language: SUM, note: '為了不朽的名聲，入雪松林斬殺森林守護者。' },
-            { slug: 'gilgamesh-bull', title_zh: '吉伽美什與天牛', title_orig: 'Gilgameš and the bull of heaven', siglum: 'ETCSL 1.8.1.2', copies: OB, language: SUM, status: 'fragment', note: '拒絕伊南娜之後，女神遣天牛報復。' },
-            { slug: 'gilgamesh-netherworld', title_zh: '吉伽美什、恩奇杜與冥府', title_orig: 'Gilgameš, Enkidu and the nether world', siglum: 'ETCSL 1.8.1.4', copies: OB, language: SUM, note: '恩奇杜下冥府取回遺落的球杖而回不來，其魂上來向吉伽美什逐一描述亡者的境遇：有七子者如何、無人祭祀者如何。巴比倫標準版第十二塊泥板即其後半的阿卡德語直譯。' },
-            { slug: 'gilgamesh-death', title_zh: '吉伽美什之死', title_orig: 'The death of Gilgameš', siglum: 'ETCSL 1.8.1.3', copies: OB, language: SUM, status: 'fragment', note: '眾神告訴臨終的英雄：你得了王權，但沒有得到永生。' },
+            { slug: 'gilgamesh-aga', title_zh: '吉爾伽美什與阿伽', title_orig: 'Gilgameš and Aga', siglum: 'ETCSL 1.8.1.1', copies: OB, language: SUM, note: '基什王圍攻烏魯克——唯一一篇沒有神話成分的吉爾伽美什故事，有「長老會與青年會」兩院議事的記載。' },
+            { slug: 'gilgamesh-huwawa', title_zh: '吉爾伽美什與胡瓦瓦', title_orig: 'Gilgameš and Ḫuwawa (Versions A, B)', siglum: 'ETCSL 1.8.1.5；1.8.1.5.1', copies: OB, language: SUM, note: '為了不朽的名聲，入雪松林斬殺森林守護者。' },
+            { slug: 'gilgamesh-bull', title_zh: '吉爾伽美什與天牛', title_orig: 'Gilgameš and the bull of heaven', siglum: 'ETCSL 1.8.1.2', copies: OB, language: SUM, status: 'fragment', note: '拒絕伊南娜之後，女神遣天牛報復。' },
+            { slug: 'gilgamesh-netherworld', title_zh: '吉爾伽美什、恩奇杜與冥府', title_orig: 'Gilgameš, Enkidu and the nether world', siglum: 'ETCSL 1.8.1.4', copies: OB, language: SUM, note: '恩奇杜下冥府取回遺落的球杖而回不來，其魂上來向吉爾伽美什逐一描述亡者的境遇：有七子者如何、無人祭祀者如何。巴比倫標準版第十二塊泥板即其後半的阿卡德語直譯。' },
+            { slug: 'gilgamesh-death', title_zh: '吉爾伽美什之死', title_orig: 'The death of Gilgameš', siglum: 'ETCSL 1.8.1.3', copies: OB, language: SUM, status: 'fragment', note: '眾神告訴臨終的英雄：你得了王權，但沒有得到永生。' },
           ],
         },
       ],
@@ -274,7 +274,7 @@ export const SUMER_CANON: NeCanon = {
           texts: [
             { slug: 'shuruppag', title_zh: '舒魯帕克訓言', title_orig: 'The instructions of Šuruppag', siglum: 'ETCSL 5.6.1', era: '約前 2500', copies: '阿布薩拉比赫期抄本（約前 2500）與古巴比倫抄本', language: SUM, note: '洪水英雄之父教子：「不要買驢子，若牠會叫……」現存最古的智慧文學。', seealso: ['sumerian-flood'] },
             { slug: 'man-and-god', title_zh: '人與其神', title_orig: 'A man and his god', siglum: 'ETCSL 5.2.4', copies: OB, language: SUM, extent: '約 140 行', note: '一個無故受苦的人向自己的保護神哭訴，終於得到回應——「蘇美的約伯」。', bible: '約伯記' },
-            { slug: 'early-rulers', title_zh: '古王之歌', title_orig: 'The poem of early rulers', siglum: 'ETCSL 5.2.5', copies: '古巴比倫抄本；另有烏加里特、埃馬爾出土的雙語抄本', language: SUM, note: '吉伽美什、阿伽、烏納皮什提如今在哪裡？——及時行樂之歌。', bible: '傳 1–2', seealso: ['harpers-song'] },
+            { slug: 'early-rulers', title_zh: '古王之歌', title_orig: 'The poem of early rulers', siglum: 'ETCSL 5.2.5', copies: '古巴比倫抄本；另有烏加里特、埃馬爾出土的雙語抄本', language: SUM, note: '吉爾伽美什、阿伽、烏納皮什提如今在哪裡？——及時行樂之歌。', bible: '傳 1–2', seealso: ['harpers-song'] },
             { slug: 'farmers-instructions', title_zh: '農夫訓言', title_orig: 'The farmer\'s instructions', siglum: 'ETCSL 5.6.3', copies: OB, language: SUM, note: '恩利爾之子尼努塔教人耕作一年的工序。' },
           ],
         },
@@ -315,7 +315,7 @@ export const SUMER_CANON: NeCanon = {
           texts: [
             { slug: 'sumerian-king-list', title_zh: '蘇美王表', title_orig: 'The Sumerian king list', siglum: 'ETCSL 2.1.1', era: '烏爾第三王朝成書，伊辛時代續修', copies: '古巴比倫抄本十餘件，以魏德納稜柱（WB 444）最完整', language: SUM, note: '洪水前諸王動輒在位數萬年，洪水後遞減——與創世記第五章的壽數遞減結構相同。', bible: '創 5；創 11:10–26' },
             { slug: 'lagash-rulers', title_zh: '拉格什諸王', title_orig: 'The rulers of Lagaš', siglum: 'ETCSL 2.1.2', copies: OB, language: SUM, note: '被蘇美王表刻意遺漏的拉格什，自己寫了一份王表回應，開頭從洪水之後人類不懂耕作寫起。' },
-            { slug: 'tummal', title_zh: '圖馬勒記', title_orig: 'The history of the Tummal', siglum: 'ETCSL 2.1.3', copies: OB, language: SUM, note: '尼普爾寧利爾聖所的歷代修建者名單，吉伽美什也在其中。' },
+            { slug: 'tummal', title_zh: '圖馬勒記', title_orig: 'The history of the Tummal', siglum: 'ETCSL 2.1.3', copies: OB, language: SUM, note: '尼普爾寧利爾聖所的歷代修建者名單，吉爾伽美什也在其中。' },
           ],
         },
       ],

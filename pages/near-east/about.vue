@@ -15,7 +15,7 @@
         <h2 class="text-lg font-bold text-gray-900 mb-2">一、這不是一個宗教，是七八個</h2>
         <p class="text-sm text-gray-600 leading-relaxed mb-2">
           希臘羅馬大藏經替一個沒有正典的宗教補做正典；本藏經面對的是一群宗教。它們彼此借神、借文類、借書吏學校——
-          巴比倫的吉伽美什在赫梯首都有三種語言的版本，迦南的海神神話以埃及文寫在紙草上——但各有自己的神廟體系與神譜。
+          巴比倫的吉爾伽美什在赫梯首都有三種語言的版本，迦南的海神神話以埃及文寫在紙草上——但各有自己的神廟體系與神譜。
         </p>
         <p class="text-sm text-gray-600 leading-relaxed">
           所以本藏經<b>不調和、不比附</b>，不把巴力、馬杜克、特舒布編成同一位「近東風暴神」，
@@ -61,7 +61,7 @@
       <section>
         <h2 class="text-lg font-bold text-gray-900 mb-2">四、泥板不是書：綴合本與兩個年代</h2>
         <p class="text-sm text-gray-600 leading-relaxed mb-2">
-          「吉伽美什史詩」不是一部古人手上拿得到的書，是現代學者從兩千年間幾百塊泥板綴合出來的學術物件，至今仍有約五分之一缺文。
+          「吉爾伽美什史詩」不是一部古人手上拿得到的書，是現代學者從兩千年間幾百塊泥板綴合出來的學術物件，至今仍有約五分之一缺文。
           所以存世狀態分六級，其中<b>綴合本</b>是古近東大型文學作品的常態：
         </p>
         <dl class="space-y-1.5 mb-3">
@@ -108,7 +108,7 @@
         <ul class="space-y-1.5 text-xs text-gray-600 leading-relaxed">
           <li class="break-words"><b class="text-gray-800">祆教經典</b>：波斯宗教一律歸那邊。阿契美尼德王室銘文、波斯波利斯泥板的祭祀記錄以互見相連。</li>
           <li class="break-words"><b class="text-gray-800">希臘羅馬大藏經</b>：普魯塔克《論伊西斯與奧西里斯》、琉善《論敘利亞女神》等在那邊是本經，在本藏經的附錄是外部證詞；同一部書在兩座圖書館各有位置。</li>
-          <li class="break-words"><b class="text-gray-800">基督教大藏經‧前藏</b>：已收埃努瑪‧埃利什、吉伽美什、亡靈書等，定位是「前基督教啟示母體」。本藏經不動那邊的資料，以互見相連。</li>
+          <li class="break-words"><b class="text-gray-800">基督教大藏經‧前藏</b>：已收埃努瑪‧埃利什、吉爾伽美什、亡靈書等，定位是「前基督教啟示母體」。本藏經不動那邊的資料，以互見相連。</li>
           <li class="break-words"><b class="text-gray-800">摩尼教經典</b>：阿爾—納迪姆《群書類述》兩邊都用到。</li>
         </ul>
       </section>

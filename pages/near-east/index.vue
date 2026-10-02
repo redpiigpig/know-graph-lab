@@ -59,7 +59,7 @@
         <div class="mb-6 p-4 bg-slate-900 border border-slate-800 rounded-xl">
           <div class="text-sm font-bold text-teal-300 mb-1">存世狀態一覽</div>
           <p class="text-[11px] text-slate-300 leading-relaxed mb-3">
-            「吉伽美什史詩」不是一部古人手上拿得到的書，是現代學者從兩千年間幾百塊泥板綴合出來的學術物件。
+            「吉爾伽美什史詩」不是一部古人手上拿得到的書，是現代學者從兩千年間幾百塊泥板綴合出來的學術物件。
             <b class="text-teal-300">綴合本</b>是古近東大型文學作品的常態；完整傳世的單一抄本反而少見。
           </p>
           <div class="flex flex-wrap gap-2">

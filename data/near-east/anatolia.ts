@@ -115,14 +115,14 @@ export const ANATOLIA_CANON: NeCanon = {
       name: '外來神話譯本',
       name_en: 'Translated Foreign Myths',
       era: '新赫梯時代',
-      summary: '赫梯書吏翻譯的美索不達米亞與迦南神話。這些譯本不是原作的忠實複製，而是改寫——吉伽美什在赫梯本裡多了安納托利亞的地名與神。',
+      summary: '赫梯書吏翻譯的美索不達米亞與迦南神話。這些譯本不是原作的忠實複製，而是改寫——吉爾伽美什在赫梯本裡多了安納托利亞的地名與神。',
       divisions: [
         {
           key: 'translations',
           label: '譯本',
           label_en: 'Translations',
           texts: [
-            { slug: 'gilgamesh-hittite', title_zh: '赫梯語吉伽美什', title_orig: 'Gilgameš (Akkadian, Hurrian, Hittite versions)', siglum: 'CTH 341', copies: NH, language: '阿卡德語、胡里特語、赫梯語三種', status: 'fragment', note: '哈圖沙同時藏有三種語言的吉伽美什——同一部史詩在一座城裡以三種語言流通。', seealso: ['gilgamesh-sb'] },
+            { slug: 'gilgamesh-hittite', title_zh: '赫梯語吉爾伽美什', title_orig: 'Gilgameš (Akkadian, Hurrian, Hittite versions)', siglum: 'CTH 341', copies: NH, language: '阿卡德語、胡里特語、赫梯語三種', status: 'fragment', note: '哈圖沙同時藏有三種語言的吉爾伽美什——同一部史詩在一座城裡以三種語言流通。', seealso: ['gilgamesh-sb'] },
             { slug: 'elkunirsa', title_zh: '埃勒庫尼薩與亞舍拉', title_orig: 'Elkunirša and Ašertu', siglum: 'CTH 342', copies: NH, language: HIT, status: 'fragment', note: '赫梯語寫的迦南神話：「伊勒，地的創造者」（ʾEl qōnē ʾarṣ）之妻亞舍拉勾引巴力不成，向丈夫反誣。', bible: '創 14:19「天地的主（創造者）」El ʿElyon qōnē šāmayim wāʾāreṣ；創 39', seealso: ['baal-cycle'] },
             { slug: 'atrahasis-hittite', title_zh: '赫梯語阿特拉哈西', title_orig: 'Atramḫasis', siglum: 'CTH 347', copies: NH, language: HIT, status: 'fragment', seealso: ['atrahasis'] },
           ],
