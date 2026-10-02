@@ -52,7 +52,7 @@ export const AKKAD_CANON: NeCanon = {
           texts: [
             { slug: 'enuma-elish', title_zh: '埃努瑪‧埃利什（天之高兮）', title_orig: 'Enūma eliš', era: '約前 1100（尼布甲尼撒一世迎回馬杜克神像前後，爭議）', copies: '新亞述與新巴比倫抄本為主', language: SB, extent: '七塊泥板，約 1,100 行', note: '「天之上未名、地之下未喚」。馬杜克殺原水之母提阿瑪特、剖屍為天地，以叛神金古之血造人，眾神為他建巴比倫，頌其五十個名號。', bible: '創 1（深淵 təhôm 與提阿瑪特同源）', xref: ['基督教大藏經‧前藏（埃努瑪‧埃利什）'], seealso: ['akitu', 'damascius-principles'] },
             { slug: 'enuma-elish-assyrian', title_zh: '亞述版創世史詩', title_orig: 'Assyrian recension of Enūma eliš', era: '前 8–7 世紀', copies: '亞述城出土抄本', language: SB, status: 'fragment', note: '把馬杜克的名字換成亞述爾——帝國換了，創世主就換了。' },
-            { slug: 'atrahasis', title_zh: '阿特拉哈西', title_orig: 'Atra-ḫasīs', era: '約前 1700（古巴比倫）', copies: '古巴比倫本（伊皮可—阿雅抄，約前 1635）與新亞述本', language: OB, extent: '三塊泥板，約 1,245 行', note: '低階神祇罷工，眾神殺一神以其血肉和泥造人；人太吵，神先降瘟疫、旱災，終降洪水。智者阿特拉哈西得恩基暗示造船。創世—洪水連成一線的「太古史」。', bible: '創 1–9', xref: ['基督教大藏經‧前藏（阿特拉哈西斯史詩）'], seealso: ['sumerian-flood', 'gilgamesh-sb'] },
+            { slug: 'atrahasis', title_zh: '阿特拉哈西斯', title_orig: 'Atra-ḫasīs', era: '約前 1700（古巴比倫）', copies: '古巴比倫本（伊皮可—阿雅抄，約前 1635）與新亞述本', language: OB, extent: '三塊泥板，約 1,245 行', note: '低階神祇罷工，眾神殺一神以其血肉和泥造人；人太吵，神先降瘟疫、旱災，終降洪水。智者阿特拉哈西斯得恩基暗示造船。創世—洪水連成一線的「太古史」。', bible: '創 1–9', xref: ['基督教大藏經‧前藏（阿特拉哈西斯史詩）'], seealso: ['sumerian-flood', 'gilgamesh-sb'] },
             { slug: 'eridu-founding', title_zh: '馬杜克創世（埃利都的奠立）', title_orig: 'The Founding of Eridu / Creation of the World by Marduk', era: '新巴比倫抄本', language: '蘇美—阿卡德雙語', status: 'whole', note: '「萬地皆海」之時，馬杜克在水面上鋪蘆葦、填土而造陸地。一段插在驅魔咒文開頭的創世記。', bible: '創 1:2' },
             { slug: 'dunnu-theogony', title_zh: '敦努神譜', title_orig: 'Theogony of Dunnu', siglum: 'BM 74329', era: '新巴比倫抄本', language: AKK, status: 'fragment', note: '神祇世代相弒、娶母娶姊而繼位——與赫梯的天界王權神話、希臘的赫西俄德神譜同一類型。', seealso: ['kumarbi-kingship'] },
           ],
@@ -72,7 +72,7 @@ export const AKKAD_CANON: NeCanon = {
           label_en: 'Netherworld',
           texts: [
             { slug: 'ishtar-descent', title_zh: '伊絲塔下冥府', title_orig: 'Ištar\'s Descent to the Netherworld', era: '中巴比倫成書', copies: '新亞述（尼尼微、亞述城）抄本', language: SB, extent: '約 140 行', note: '蘇美〈伊南娜入冥府〉的阿卡德語短本。女神下到「無返之地」，地上萬物停止交配；結尾提到杜牧茲節的哀哭與歸來。', seealso: ['inana-descent'] },
-            { slug: 'nergal-ereshkigal', title_zh: '涅伽爾與埃列什基伽', title_orig: 'Nergal and Ereškigal', copies: '阿瑪納抄本（前 14 世紀）與蘇丹特佩抄本（前 7 世紀）', language: AKK, note: '天神之子下到冥府，與冥界女王成婚而成為冥府之主。兩個版本相隔七百年，情節差異極大。' },
+            { slug: 'nergal-ereshkigal', title_zh: '涅伽爾與埃列什基伽爾', title_orig: 'Nergal and Ereškigal', copies: '阿瑪納抄本（前 14 世紀）與蘇丹特佩抄本（前 7 世紀）', language: AKK, note: '天神之子下到冥府，與冥界女王成婚而成為冥府之主。兩個版本相隔七百年，情節差異極大。' },
             { slug: 'underworld-vision', title_zh: '亞述王子冥府夢', title_orig: 'The Underworld Vision of an Assyrian Prince', siglum: 'SAA 3 32', era: '前 7 世紀', language: NA, status: 'fragment', note: '王子庫瑪在夢中被帶到冥府，見到十五個怪異的冥界之神與涅伽爾的審判。古代近東唯一一份第一人稱的「遊地獄」。' },
           ],
         },
@@ -81,7 +81,7 @@ export const AKKAD_CANON: NeCanon = {
           label: '英雄與智者',
           label_en: 'Heroes and Sages',
           texts: [
-            { slug: 'anzu', title_zh: '安祖神話', title_orig: 'Anzû', copies: '古巴比倫本與標準版', language: SB, extent: '三塊泥板', note: '獅首巨鳥盜走恩利爾的天命泥板，宇宙失序；尼努塔奉命奪回。', seealso: ['lugalbanda-anzud'] },
+            { slug: 'anzu', title_zh: '安祖神話', title_orig: 'Anzû', copies: '古巴比倫本與標準版', language: SB, extent: '三塊泥板', note: '獅首巨鳥盜走恩利爾的天命泥板，宇宙失序；尼努爾塔奉命奪回。', seealso: ['lugalbanda-anzud'] },
             { slug: 'etana', title_zh: '埃塔納', title_orig: 'Etana', copies: '古巴比倫、中亞述、新亞述三版', language: AKK, status: 'fragment', note: '無子的王乘鷹升天求「生子之草」。結局佚失。' },
             { slug: 'adapa', title_zh: '阿達帕', title_orig: 'Adapa', copies: '阿瑪納抄本與新亞述抄本', language: AKK, status: 'fragment', note: '埃利都的智者被召上天庭，聽了恩基的話拒食天神給的「生命之餅」與「生命之水」，錯失了永生。', bible: '創 3:22 生命樹' },
             { slug: 'erra', title_zh: '埃拉史詩', title_orig: 'Erra and Išum', author: '卡卜提—伊拉尼—馬杜克（自署，稱受夢中啟示一字不改）', era: '約前 8 世紀', language: SB, extent: '五塊泥板', note: '瘟疫與戰禍之神趁馬杜克離開寶座而肆虐巴比倫。作者聲稱全文是夜間所見異象——近東極少數由作者自稱啟示的文本，泥板本身被當護身符掛在屋裡。' },
@@ -108,7 +108,7 @@ export const AKKAD_CANON: NeCanon = {
           texts: [
             { slug: 'shamash-hymn', title_zh: '沙馬什大頌', title_orig: 'The Great Hymn to Šamaš', siglum: 'BWL pp. 121–138', copies: '新亞述與新巴比倫抄本', language: SB, extent: '約 200 行', note: '太陽神照見萬邦，連異族、旅人、海上的人都在他看顧之下；收賄的法官、改秤的商人逃不過他。', bible: '詩 19；詩 139' },
             { slug: 'gula-hymn', title_zh: '布盧薩—拉比的古拉頌', title_orig: 'Gula Hymn of Bulluṭsa-rabi', copies: '新亞述', language: SB, note: '醫療女神第一人稱自述，輪流以十位女神之名出現。' },
-            { slug: 'marduk-syncretistic', title_zh: '眾神即馬杜克', title_orig: 'Syncretistic hymn: the gods as aspects of Marduk', siglum: 'CT 24 50（BM 47406）', era: '新巴比倫', language: SB, status: 'fragment', note: '「尼努塔是耕作的馬杜克，涅伽爾是戰爭的馬杜克，沙馬什是公義的馬杜克……」一張把眾神逐一化約為一神屬性的對照表。' },
+            { slug: 'marduk-syncretistic', title_zh: '眾神即馬杜克', title_orig: 'Syncretistic hymn: the gods as aspects of Marduk', siglum: 'CT 24 50（BM 47406）', era: '新巴比倫', language: SB, status: 'fragment', note: '「尼努爾塔是耕作的馬杜克，涅伽爾是戰爭的馬杜克，沙馬什是公義的馬杜克……」一張把眾神逐一化約為一神屬性的對照表。' },
             { slug: 'ishtar-prayer', title_zh: '伊絲塔大禱', title_orig: 'Great Prayer to Ištar (šuila Ištar 2)', copies: '新巴比倫抄本', language: SB, extent: '約 110 行', note: '「我向你祈求，眾女主之主……我的神與女神向我發怒，求你看顧我。」' },
             { slug: 'prayers-gods-night', title_zh: '夜間諸神禱', title_orig: 'Prayer to the Gods of the Night', copies: '古巴比倫', language: OB, note: '占卜師在夜裡向星辰禱告：「大人們入睡了，門閂上了……求你們在我所獻的羊羔上顯示真實。」' },
           ],
@@ -150,7 +150,7 @@ export const AKKAD_CANON: NeCanon = {
             { slug: 'counsels-wisdom', title_zh: '智慧箴言', title_orig: 'Counsels of Wisdom', siglum: 'BWL pp. 96–107', copies: '新亞述', language: SB, note: '「不要以惡報惡，向行惡的人行善。」', bible: '箴 25:21–22；羅 12:17–21' },
             { slug: 'shupe-ameli', title_zh: '舒佩—阿美里訓言', title_orig: 'Instructions of Šūpê-amēli', copies: '烏加里特、埃馬爾、哈圖沙出土', language: '阿卡德語（另有赫梯語譯本）', note: '父親教子的訓言，在敘利亞與安納托利亞流通——書吏學校的國際教材。' },
             { slug: 'advice-prince', title_zh: '王者之鑑', title_orig: 'Advice to a Prince', siglum: 'BWL pp. 110–115', era: '約前 8 世紀', language: SB, note: '以占卜兆辭體寫成：「若王不聽公義，他的國將亂……」' },
-            { slug: 'ahiqar-akkadian', title_zh: '阿希卡的原型（阿哈—烏卡）', title_orig: 'Aba-Enlil-dari (Aḫu\'aqar) in the Uruk apkallu list', siglum: 'W 20030,7', era: '塞琉古時代泥板', language: AKK, status: 'fragment', note: '烏魯克的「智者表」記載以撒哈頓的大臣「亞蘭人稱之為阿希卡」——證實亞蘭文《阿希卡》的主角在楔形傳統裡有據。', seealso: ['ahiqar'] },
+            { slug: 'ahiqar-akkadian', title_zh: '阿希卡爾的原型（阿哈—烏卡）', title_orig: 'Aba-Enlil-dari (Aḫu\'aqar) in the Uruk apkallu list', siglum: 'W 20030,7', era: '塞琉古時代泥板', language: AKK, status: 'fragment', note: '烏魯克的「智者表」記載以撒哈頓的大臣「亞蘭人稱之為阿希卡爾」——證實亞蘭文《阿希卡爾》的主角在楔形傳統裡有據。', seealso: ['ahiqar'] },
           ],
         },
       ],

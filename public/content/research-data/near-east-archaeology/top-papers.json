@@ -21,7 +21,7 @@
  ],
  "total": 501,
  "verified": 156,
- "in_library": 15,
+ "in_library": 17,
  "langs": {
   "en": 389,
   "de": 75,
@@ -37,7 +37,7 @@
   "monograph": 358,
   "chapter": 26
  },
- "built_at": "2026-10-02T06:07:58+00:00",
+ "built_at": "2026-10-02T08:00:57+00:00",
  "groups": [
   {
    "slug": "egyptology",
@@ -45,7 +45,7 @@
    "icon": "☥",
    "desc": "象形文字解讀與埃及語言學、大型發掘與圖錄、宗教與喪葬文獻、王權與國家、年代學、阿瑪納時代、社會經濟史、努比亞與庫施",
    "count": 97,
-   "in_library": 1,
+   "in_library": 2,
    "verified": 16,
    "themes": [
     {
@@ -1614,7 +1614,7 @@
        "lang": "en",
        "note": "第一套英譯埃及歷史銘文全集，也是芝加哥東方研究所成立的前奏。",
        "crossref": null,
-       "in_library": false
+       "in_library": true
       },
       {
        "group": "egyptology",
@@ -2676,7 +2676,7 @@
        "author_zh": "蘭伯特、米勒德",
        "year": 1969,
        "title": "Atra-ḫasīs: The Babylonian Story of the Flood",
-       "title_zh": "阿特拉哈西：巴比倫的洪水故事",
+       "title_zh": "阿特拉哈西斯：巴比倫的洪水故事",
        "venue": "Oxford: Clarendon Press",
        "type": "monograph",
        "lang": "en",
@@ -4209,7 +4209,7 @@
        "author_zh": "居特博克",
        "year": 1956,
        "title": "The Deeds of Suppiluliuma as Told by His Son, Mursili II",
-       "title_zh": "穆西利二世所述蘇庇路里烏瑪的事蹟",
+       "title_zh": "穆爾西利二世所述蘇庇路里烏瑪的事蹟",
        "venue": "Journal of Cuneiform Studies 10: 41–68, 75–98, 107–130",
        "type": "article",
        "lang": "en",
@@ -4563,11 +4563,11 @@
        "author_zh": "居特博克",
        "year": 1946,
        "title": "Kumarbi: Mythen vom churritischen Kronos",
-       "title_zh": "庫瑪比：胡里特的克洛諾斯神話",
+       "title_zh": "庫瑪爾比：胡里特的克洛諾斯神話",
        "venue": "Zürich: Europa Verlag",
        "type": "monograph",
        "lang": "de",
-       "note": "把庫瑪比組詩與赫西俄德《神譜》並列，證明希臘神譜的閹割—吞食情節有近東來源。",
+       "note": "把庫瑪爾比組詩與赫西俄德《神譜》並列，證明希臘神譜的閹割—吞食情節有近東來源。",
        "crossref": null,
        "in_library": false
       },
@@ -4578,7 +4578,7 @@
        "author_zh": "居特博克",
        "year": 1948,
        "title": "The Hittite Version of the Hurrian Kumarbi Myths: Oriental Forerunners of Hesiod",
-       "title_zh": "胡里特庫瑪比神話的赫梯版本：赫西俄德的東方先驅",
+       "title_zh": "胡里特庫瑪爾比神話的赫梯版本：赫西俄德的東方先驅",
        "venue": "American Journal of Archaeology 52: 123–134",
        "type": "article",
        "lang": "en",
@@ -4967,7 +4967,7 @@
        "venue": "Revue d'assyriologie 68: 69–82",
        "type": "article",
        "lang": "en",
-       "note": "把胡里特尼卡讚歌的豎琴指法解讀成可演奏的旋律，世界最古樂譜的經典解讀之一。",
+       "note": "把胡里特尼卡勒讚歌的豎琴指法解讀成可演奏的旋律，世界最古樂譜的經典解讀之一。",
        "crossref": null,
        "in_library": false
       },
@@ -6938,7 +6938,7 @@
        "venue": "Oxford: Clarendon Press",
        "type": "monograph",
        "lang": "en",
-       "note": "腓尼基、亞蘭、摩押、納巴泰、帕米拉銘文的校譯選集，公有領域，至今可用。",
+       "note": "腓尼基、亞蘭、摩押、納巴泰、帕爾米拉銘文的校譯選集，公有領域，至今可用。",
        "crossref": null,
        "in_library": false
       },
@@ -7267,7 +7267,7 @@
    "icon": "🧭",
    "desc": "農業與新石器革命、城市與國家起源、青銅時代國際體系與崩潰、年代學與碳十四、景觀考古與遙測、古環境與古DNA、近東考古的殖民史與文化遺產",
    "count": 120,
-   "in_library": 3,
+   "in_library": 4,
    "verified": 60,
    "themes": [
     {
@@ -7779,7 +7779,7 @@
        "lang": "en",
        "note": "「水利社會」理論：大型灌溉需要專制國家。被近東考古反覆檢驗並大體否定，但定下了問題。",
        "crossref": null,
-       "in_library": false
+       "in_library": true
       },
       {
        "group": "general",
@@ -9539,7 +9539,7 @@
        "venue": "New York: Oxford University Press",
        "type": "monograph",
        "lang": "en",
-       "note": "世界遺產體制的政治學，帕米拉與伊拉克遺址遭毀是核心案例。",
+       "note": "世界遺產體制的政治學，帕爾米拉與伊拉克遺址遭毀是核心案例。",
        "crossref": null,
        "in_library": false
       }

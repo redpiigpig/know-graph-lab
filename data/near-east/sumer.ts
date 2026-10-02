@@ -9,7 +9,7 @@
 //   2026-10-02 逐條對過 etcsl.orinst.ox.ac.uk 的線上目錄。ETCSL 有轉寫與英文散文譯本，
 //   供非商業學術使用。
 //
-// 歸藏：依「成書語言」。蘇美—阿卡德雙語本（盧伽—埃、烏都格惡魔咒）歸此藏，
+// 歸藏：依「成書語言」。蘇美—阿卡德雙語本（盧伽爾—埃、烏都格惡魔咒）歸此藏，
 //   因為阿卡德語欄是後加的行間譯文。
 
 import type { NeCanon } from './types'
@@ -40,7 +40,7 @@ export const SUMER_CANON: NeCanon = {
       name_en: 'Myths',
       era: '成書約前 2100 – 前 1800',
       summary:
-        '恩基、恩利爾、伊南娜與尼努塔四組神話。蘇美的神不是遙遠的主宰，而是會醉、會病、會被騙、會挨罰的城邦之主——'
+        '恩基、恩利爾、伊南娜與尼努爾塔四組神話。蘇美的神不是遙遠的主宰，而是會醉、會病、會被騙、會挨罰的城邦之主——'
         + '每一位神都有一座城，神話常常就是城與城之間的關係史。',
       divisions: [
         {
@@ -48,7 +48,7 @@ export const SUMER_CANON: NeCanon = {
           label: '恩基神話',
           label_en: 'Enki',
           texts: [
-            { slug: 'enki-ninhursag', title_zh: '恩基與寧胡薩格', title_orig: 'Enki and Ninḫursaĝa', siglum: 'ETCSL 1.1.1', copies: OB, language: SUM, note: '迪爾蒙樂土，「獅子不殺生、狼不叼羊」。恩基吃了禁食的八株植物而病倒，女神為他身上八處病痛各生一神。', bible: '創 2–3 樂園；肋骨（蘇美語 ti 兼有「肋」與「生命」）之說出於此', xref: ['基督教大藏經‧前藏'] },
+            { slug: 'enki-ninhursag', title_zh: '恩基與寧胡爾薩格', title_orig: 'Enki and Ninḫursaĝa', siglum: 'ETCSL 1.1.1', copies: OB, language: SUM, note: '迪爾蒙樂土，「獅子不殺生、狼不叼羊」。恩基吃了禁食的八株植物而病倒，女神為他身上八處病痛各生一神。', bible: '創 2–3 樂園；肋骨（蘇美語 ti 兼有「肋」與「生命」）之說出於此', xref: ['基督教大藏經‧前藏'] },
             { slug: 'enki-ninmah', title_zh: '恩基與寧瑪赫', title_orig: 'Enki and Ninmaḫ', siglum: 'ETCSL 1.1.2', copies: OB, language: SUM, note: '眾神厭倦勞役，恩基以泥造人代神工作；酒宴中兩神比賽造殘缺之人，恩基為每一個都找到用處。', bible: '創 2:7 以泥造人' },
             { slug: 'enki-world-order', title_zh: '恩基與世界秩序', title_orig: 'Enki and the world order', siglum: 'ETCSL 1.1.3', copies: OB, language: SUM, note: '恩基巡行各地，分派職司給眾神、定立河流與耕作之法。伊南娜抱怨沒分到東西。' },
             { slug: 'enki-nibru', title_zh: '恩基往尼普爾之旅', title_orig: 'Enki\'s journey to Nibru', siglum: 'ETCSL 1.1.4', copies: OB, language: SUM, note: '恩基建成埃利都神廟後赴尼普爾，向恩利爾求祝福。' },
@@ -79,12 +79,12 @@ export const SUMER_CANON: NeCanon = {
         },
         {
           key: 'ninurta',
-          label: '尼努塔神話',
+          label: '尼努爾塔神話',
           label_en: 'Ninurta',
           texts: [
-            { slug: 'lugal-e', title_zh: '盧伽—埃（尼努塔的功業）', title_orig: 'Lugal-e / Ninurta\'s exploits', siglum: 'ETCSL 1.6.2', copies: '古巴比倫至新亞述、塞琉古抄本，後期附阿卡德語行間譯文', language: `${SUM}（附阿卡德語對譯）`, extent: '約 700 行', note: '戰神擊敗山中惡魔阿薩格，以石堆成山引水灌溉，並逐一判定群石的命運。', xref: ['基督教大藏經‧前藏（尼努塔頌詩）'] },
-            { slug: 'angim', title_zh: '尼努塔返回尼普爾', title_orig: 'Ninurta\'s return to Nibru (An-gim dim-ma)', siglum: 'ETCSL 1.6.1', copies: '古巴比倫至新亞述', language: `${SUM}（後期附阿卡德語對譯）`, note: '凱旋的戰神載著戰利品返回父神之城。' },
-            { slug: 'ninurta-turtle', title_zh: '尼努塔與烏龜', title_orig: 'Ninurta and the turtle', siglum: 'ETCSL 1.6.3', copies: OB, language: SUM, status: 'fragment', note: '驕傲的尼努塔被恩基造的烏龜拖入坑中——神也會被教訓。' },
+            { slug: 'lugal-e', title_zh: '盧伽爾—埃（尼努爾塔的功業）', title_orig: 'Lugal-e / Ninurta\'s exploits', siglum: 'ETCSL 1.6.2', copies: '古巴比倫至新亞述、塞琉古抄本，後期附阿卡德語行間譯文', language: `${SUM}（附阿卡德語對譯）`, extent: '約 700 行', note: '戰神擊敗山中惡魔阿薩格，以石堆成山引水灌溉，並逐一判定群石的命運。', xref: ['基督教大藏經‧前藏（尼努爾塔頌詩）'] },
+            { slug: 'angim', title_zh: '尼努爾塔返回尼普爾', title_orig: 'Ninurta\'s return to Nibru (An-gim dim-ma)', siglum: 'ETCSL 1.6.1', copies: '古巴比倫至新亞述', language: `${SUM}（後期附阿卡德語對譯）`, note: '凱旋的戰神載著戰利品返回父神之城。' },
+            { slug: 'ninurta-turtle', title_zh: '尼努爾塔與烏龜', title_orig: 'Ninurta and the turtle', siglum: 'ETCSL 1.6.3', copies: OB, language: SUM, status: 'fragment', note: '驕傲的尼努爾塔被恩基造的烏龜拖入坑中——神也會被教訓。' },
           ],
         },
         {
@@ -115,7 +115,7 @@ export const SUMER_CANON: NeCanon = {
           label: '入冥府',
           label_en: 'Descent',
           texts: [
-            { slug: 'inana-descent', title_zh: '伊南娜入冥府', title_orig: 'Inana\'s descent to the nether world', siglum: 'ETCSL 1.4.1', copies: OB, language: SUM, extent: '約 410 行', note: '女神穿過七道門、每門被脫去一件衣飾，赤身到姊姊埃列什基伽面前被殺，掛在釘上三日。得救後須找替身——她選了不為她哀悼的丈夫杜牧茲。', seealso: ['ishtar-descent'], bible: '結 8:14' },
+            { slug: 'inana-descent', title_zh: '伊南娜入冥府', title_orig: 'Inana\'s descent to the nether world', siglum: 'ETCSL 1.4.1', copies: OB, language: SUM, extent: '約 410 行', note: '女神穿過七道門、每門被脫去一件衣飾，赤身到姊姊埃列什基伽爾面前被殺，掛在釘上三日。得救後須找替身——她選了不為她哀悼的丈夫杜牧茲。', seealso: ['ishtar-descent'], bible: '結 8:14' },
             { slug: 'dumuzid-dream', title_zh: '杜牧茲之夢', title_orig: 'Dumuzid\'s dream', siglum: 'ETCSL 1.4.3', copies: OB, language: SUM, note: '牧人夢見自己的死，姊姊吉什提南娜解夢；冥界惡鬼追捕他，太陽神三度助他變形逃走。' },
             { slug: 'dumuzid-geshtinana', title_zh: '杜牧茲與吉什提南娜', title_orig: 'Dumuzid and Ĝeštin-ana', siglum: 'ETCSL 1.4.1.1', copies: OB, language: SUM, note: '姊姊願替弟弟在冥府服役半年——一年一死一生的季節循環。' },
           ],
@@ -141,18 +141,18 @@ export const SUMER_CANON: NeCanon = {
       name_en: 'Epics of Uruk',
       era: '成書約前 2100（烏爾第三王朝）',
       summary:
-        '烏魯克三代王恩美卡、盧伽班達、吉爾伽美什的故事。烏爾第三王朝的王自稱吉爾伽美什之弟，'
+        '烏魯克三代王恩美爾卡、盧伽爾班達、吉爾伽美什的故事。烏爾第三王朝的王自稱吉爾伽美什之弟，'
         + '這些史詩因此也是王室的家譜。吉爾伽美什的五篇蘇美故事後來被巴比倫人改寫成一部史詩（見巴比倫亞述藏）。',
       divisions: [
         {
           key: 'enmerkar',
-          label: '恩美卡與盧伽班達',
+          label: '恩美爾卡與盧伽爾班達',
           label_en: 'Enmerkar and Lugalbanda',
           texts: [
-            { slug: 'enmerkar-aratta', title_zh: '恩美卡與阿拉塔之主', title_orig: 'Enmerkar and the lord of Aratta', siglum: 'ETCSL 1.8.2.3', copies: OB, language: SUM, note: '口信太長使者記不住，恩美卡便把話刻在泥板上——蘇美人自己講的文字起源。另有「巧言之咒」：萬民原本同說一種語言。', bible: '創 11:1–9 巴別塔' },
-            { slug: 'enmerkar-ensuhgirana', title_zh: '恩美卡與恩蘇吉安納', title_orig: 'Enmerkar and En-suḫgir-ana', siglum: 'ETCSL 1.8.2.4', copies: OB, language: SUM, note: '兩城以巫術鬥法，爭伊南娜的眷顧。' },
-            { slug: 'lugalbanda-cave', title_zh: '盧伽班達在山洞', title_orig: 'Lugalbanda in the mountain cave', siglum: 'ETCSL 1.8.2.1', copies: OB, language: SUM, note: '病倒被遺棄在山洞的王子向日、月、星祈求而痊癒。' },
-            { slug: 'lugalbanda-anzud', title_zh: '盧伽班達與安祖鳥', title_orig: 'Lugalbanda and the Anzud bird', siglum: 'ETCSL 1.8.2.2', copies: OB, language: SUM, note: '王子餵養巨鳥的雛鳥，得到神行的能力。', seealso: ['anzu'] },
+            { slug: 'enmerkar-aratta', title_zh: '恩美爾卡與阿拉塔之主', title_orig: 'Enmerkar and the lord of Aratta', siglum: 'ETCSL 1.8.2.3', copies: OB, language: SUM, note: '口信太長使者記不住，恩美爾卡便把話刻在泥板上——蘇美人自己講的文字起源。另有「巧言之咒」：萬民原本同說一種語言。', bible: '創 11:1–9 巴別塔' },
+            { slug: 'enmerkar-ensuhgirana', title_zh: '恩美爾卡與恩蘇吉安納', title_orig: 'Enmerkar and En-suḫgir-ana', siglum: 'ETCSL 1.8.2.4', copies: OB, language: SUM, note: '兩城以巫術鬥法，爭伊南娜的眷顧。' },
+            { slug: 'lugalbanda-cave', title_zh: '盧伽爾班達在山洞', title_orig: 'Lugalbanda in the mountain cave', siglum: 'ETCSL 1.8.2.1', copies: OB, language: SUM, note: '病倒被遺棄在山洞的王子向日、月、星祈求而痊癒。' },
+            { slug: 'lugalbanda-anzud', title_zh: '盧伽爾班達與安祖鳥', title_orig: 'Lugalbanda and the Anzud bird', siglum: 'ETCSL 1.8.2.2', copies: OB, language: SUM, note: '王子餵養巨鳥的雛鳥，得到神行的能力。', seealso: ['anzu'] },
           ],
         },
         {
@@ -177,7 +177,7 @@ export const SUMER_CANON: NeCanon = {
       era: '約前 2600 – 前 1750',
       summary:
         '人類最早的署名作者恩赫杜安娜在此：阿卡德王薩爾貢之女、烏爾月神的女祭司，為四十二座神廟各作一頌，'
-        + '又為伊南娜寫下第一人稱的長篇禱詩。王頌則把王寫成神的愛子——烏爾第三王朝的舒吉王甚至自稱神。',
+        + '又為伊南娜寫下第一人稱的長篇禱詩。王頌則把王寫成神的愛子——烏爾第三王朝的舒爾吉王甚至自稱神。',
       divisions: [
         {
           key: 'temple',
@@ -214,9 +214,9 @@ export const SUMER_CANON: NeCanon = {
           label: '王頌',
           label_en: 'Royal Hymns',
           texts: [
-            { slug: 'urnamma-a', title_zh: '烏納姆之死', title_orig: 'The death of Ur-Namma (Ur-Namma A)', siglum: 'ETCSL 2.4.1.1', copies: OB, language: SUM, note: '烏爾第三王朝開國之王戰死，在冥府向七位冥界之神獻禮——王也會死、也要在冥府排座次。' },
-            { slug: 'shulgi-a', title_zh: '舒吉頌', title_orig: 'A praise poem of Šulgi (Šulgi A)', siglum: 'ETCSL 2.4.2.01', copies: OB, language: SUM, note: '王一日之內從尼普爾跑到烏爾再跑回來，同一天在兩城舉行節慶。王的自我神化。' },
-            { slug: 'shulgi-royal-hymns', title_zh: '舒吉王頌集', title_orig: 'Šulgi hymns', siglum: 'ETCSL 2.4.2.01–2.4.2.26', copies: OB, language: SUM, extent: '二十餘首', note: '書吏學校背誦最多的一組王頌。' },
+            { slug: 'urnamma-a', title_zh: '烏爾納姆之死', title_orig: 'The death of Ur-Namma (Ur-Namma A)', siglum: 'ETCSL 2.4.1.1', copies: OB, language: SUM, note: '烏爾第三王朝開國之王戰死，在冥府向七位冥界之神獻禮——王也會死、也要在冥府排座次。' },
+            { slug: 'shulgi-a', title_zh: '舒爾吉頌', title_orig: 'A praise poem of Šulgi (Šulgi A)', siglum: 'ETCSL 2.4.2.01', copies: OB, language: SUM, note: '王一日之內從尼普爾跑到烏爾再跑回來，同一天在兩城舉行節慶。王的自我神化。' },
+            { slug: 'shulgi-royal-hymns', title_zh: '舒爾吉王頌集', title_orig: 'Šulgi hymns', siglum: 'ETCSL 2.4.2.01–2.4.2.26', copies: OB, language: SUM, extent: '二十餘首', note: '書吏學校背誦最多的一組王頌。' },
             { slug: 'ishme-dagan-hymns', title_zh: '伊什美—達干王頌集', title_orig: 'Išme-Dagan hymns', siglum: 'ETCSL 2.5.4', copies: OB, language: SUM, extent: '二十餘首', note: '伊辛王朝延續烏爾第三王朝的王頌傳統。' },
           ],
         },
@@ -275,7 +275,7 @@ export const SUMER_CANON: NeCanon = {
             { slug: 'shuruppag', title_zh: '舒魯帕克訓言', title_orig: 'The instructions of Šuruppag', siglum: 'ETCSL 5.6.1', era: '約前 2500', copies: '阿布薩拉比赫期抄本（約前 2500）與古巴比倫抄本', language: SUM, note: '洪水英雄之父教子：「不要買驢子，若牠會叫……」現存最古的智慧文學。', seealso: ['sumerian-flood'] },
             { slug: 'man-and-god', title_zh: '人與其神', title_orig: 'A man and his god', siglum: 'ETCSL 5.2.4', copies: OB, language: SUM, extent: '約 140 行', note: '一個無故受苦的人向自己的保護神哭訴，終於得到回應——「蘇美的約伯」。', bible: '約伯記' },
             { slug: 'early-rulers', title_zh: '古王之歌', title_orig: 'The poem of early rulers', siglum: 'ETCSL 5.2.5', copies: '古巴比倫抄本；另有烏加里特、埃馬爾出土的雙語抄本', language: SUM, note: '吉爾伽美什、阿伽、烏納皮什提如今在哪裡？——及時行樂之歌。', bible: '傳 1–2', seealso: ['harpers-song'] },
-            { slug: 'farmers-instructions', title_zh: '農夫訓言', title_orig: 'The farmer\'s instructions', siglum: 'ETCSL 5.6.3', copies: OB, language: SUM, note: '恩利爾之子尼努塔教人耕作一年的工序。' },
+            { slug: 'farmers-instructions', title_zh: '農夫訓言', title_orig: 'The farmer\'s instructions', siglum: 'ETCSL 5.6.3', copies: OB, language: SUM, note: '恩利爾之子尼努爾塔教人耕作一年的工序。' },
           ],
         },
         {

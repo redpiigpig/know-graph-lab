@@ -61,7 +61,8 @@ description: 古近東大藏經（/near-east）的體例與維護 —— 埃及�
 - **例外：需要區別同名時保留「爾」**——神名 Ashur 作**亞述爾**，國名作亞述（使用者 10-02 定）。
 - **一般譯名優先於聖經譯名**：烏爾、埃蘭、蘇薩、杜牧茲；**赫梯**（非西台，取其銜接聖經「赫人」）。見 [[feedback_general_over_biblical_names]]。
 - 以上七條已回寫 `/translation-glossary`（`deities`／`place_names`），舊譯留在 `name_variants`。測試釘住資料裡不得出現舊譯。
-- 詞庫沒有的新名先照短譯原則擬，列在 `glossary-candidates.md` 標【提】，**不自行寫進詞庫**（見 [[feedback_glossary_ancient_name_priority]]）。
+- **已有通行譯法者照通行**（使用者 10-02 定：吉爾伽美什、涅伽爾、尼努爾塔、庫瑪爾比、帕爾米拉……全表見 `glossary-candidates.md`，已入詞庫）。短譯只用在**沒有通行譯名**的新名上。
+- 詞庫沒有、也沒有通行譯法的新名才照短譯擬，列在 `glossary-candidates.md` 標【提】，**不自行寫進詞庫**（見 [[feedback_glossary_ancient_name_priority]]）。
 
 ## 3. 三欄取源（未實作，按可行度）
 
@@ -88,7 +89,7 @@ description: 古近東大藏經（/near-east）的體例與維護 —— 埃及�
 
 ## 5. 待辦
 
-1. **使用者定奪**：`glossary-candidates.md` 的短譯候選（尤其吉爾伽美什、烏納姆 vs 城名烏爾、比布魯斯 vs 前藏的比布洛斯）。
+1. ✅ 譯名候選 2026-10-02 全部定案（照通行），已入詞庫。
 2. **補 `intro`**：100–200 字，照 [[hellenika-curate]] 的四要件。
 3. **核對未線上驗證的編號**（KTU、KAI、館藏號）。
 4. **三欄正文**：建議從蘇美藏 ETCSL 開始（原文英譯同源、編號已核）。

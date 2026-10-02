@@ -6,7 +6,7 @@
 // 所以哈圖沙的泥板庫裡有八種語言——赫梯語、哈梯語、盧維語、帕萊語、胡里特語、阿卡德語、蘇美語，
 // 以及印度—雅利安的神名。這一藏因此不能只叫「赫梯」：
 //   · 哈梯人是赫梯人到來之前的安納托利亞土著，赫梯的本土神話（伊盧揚卡、泰利皮努）多源自哈梯
-//   · 胡里特人的神話（庫瑪比組詩）與儀式（基茲瓦特納）在帝國後期取代了大半本土傳統
+//   · 胡里特人的神話（庫瑪爾比組詩）與儀式（基茲瓦特納）在帝國後期取代了大半本土傳統
 // 歸藏準則：出土於哈圖沙的胡里特語文本歸本藏；出土於烏加里特的胡里特讚歌也歸本藏（按宗教系統），
 //   烏加里特藏以互見指回。
 //
@@ -37,7 +37,7 @@ export const ANATOLIA_CANON: NeCanon = {
     '赫梯人把被征服各地的神連同儀式搬回首都，自稱「千神之國」。這一藏的特色是：'
     + '幾乎沒有「文學」，大半是國家宗教的實務檔案——節期儀程、巫婆的治病儀式、國王為瘟疫向神認罪的禱文、'
     + '神廟清點神像的清冊。神話多半是儀式的一部分，在節慶中念給神聽。'
-    + '胡里特人的天界王權神話（庫瑪比組詩）是赫西俄德《神譜》的近親，諸神世代以閹割與吞食相繼。',
+    + '胡里特人的天界王權神話（庫瑪爾比組詩）是赫西俄德《神譜》的近親，諸神世代以閹割與吞食相繼。',
   volumes: [
     {
       key: 'native-myths',
@@ -76,12 +76,12 @@ export const ANATOLIA_CANON: NeCanon = {
     {
       key: 'kumarbi',
       sigil: '赫二',
-      name: '庫瑪比組詩',
+      name: '庫瑪爾比組詩',
       name_en: 'The Kumarbi Cycle',
       era: '胡里特原作；赫梯語譯本為新赫梯抄本',
       summary:
-        '胡里特神話的「天界王權」系列，赫梯人譯成赫梯語並保存。天神阿拉盧、安努、庫瑪比、特舒布四代相繼，'
-        + '庫瑪比咬下安努的生殖器而懷了風暴神——這套閹割、吞食、以石代子的情節與赫西俄德的烏拉諾斯—克洛諾斯—宙斯幾乎一一對應，'
+        '胡里特神話的「天界王權」系列，赫梯人譯成赫梯語並保存。天神阿拉盧、安努、庫瑪爾比、特舒布四代相繼，'
+        + '庫瑪爾比咬下安努的生殖器而懷了風暴神——這套閹割、吞食、以石代子的情節與赫西俄德的烏拉諾斯—克洛諾斯—宙斯幾乎一一對應，'
         + '是希臘神話近東來源最有力的證據。',
       divisions: [
         {
@@ -89,12 +89,12 @@ export const ANATOLIA_CANON: NeCanon = {
           label: '天界王權',
           label_en: 'Kingship in Heaven',
           texts: [
-            { slug: 'kumarbi-kingship', title_zh: '起源之歌（天界王權）', title_orig: 'Song of Origins (Kingship in Heaven, Theogony)', siglum: 'CTH 344', copies: NH, language: HIT, status: 'fragment', note: '阿拉盧為王九年，安努推翻他；安努為王九年，庫瑪比咬下他的生殖器吞入腹中，懷上風暴神特舒布等三神。', xref: ['希臘羅馬大藏經 Α 神譜（赫西俄德）'], seealso: ['dunnu-theogony', 'philo-byblos'] },
-            { slug: 'ullikummi', title_zh: '烏利庫米之歌', title_orig: 'Song of Ullikummi', siglum: 'CTH 345', copies: NH, language: `${HIT}（另有胡里特語殘本）`, extent: '三塊泥板', note: '庫瑪比與巨石交合生下石巨人，立在背負天地的巨人肩上，一天長一肘，直頂天庭。恩基（埃阿）以分開天地的古刀割斷它的腳。' },
-            { slug: 'hedammu', title_zh: '赫達穆之歌', title_orig: 'Song of Hedammu', siglum: 'CTH 348', copies: NH, language: `${HIT}（另有胡里特語殘本）`, status: 'fragment', note: '庫瑪比娶海神之女生下吞噬一切的海蛇，伊絲塔以美色誘之。' },
-            { slug: 'song-silver', title_zh: '銀之歌', title_orig: 'Song of Silver', siglum: 'CTH 364', copies: NH, language: HIT, status: 'fragment', note: '庫瑪比與凡間女子所生的「銀」，被人嘲笑沒有父親。' },
+            { slug: 'kumarbi-kingship', title_zh: '起源之歌（天界王權）', title_orig: 'Song of Origins (Kingship in Heaven, Theogony)', siglum: 'CTH 344', copies: NH, language: HIT, status: 'fragment', note: '阿拉盧為王九年，安努推翻他；安努為王九年，庫瑪爾比咬下他的生殖器吞入腹中，懷上風暴神特舒布等三神。', xref: ['希臘羅馬大藏經 Α 神譜（赫西俄德）'], seealso: ['dunnu-theogony', 'philo-byblos'] },
+            { slug: 'ullikummi', title_zh: '烏利庫米之歌', title_orig: 'Song of Ullikummi', siglum: 'CTH 345', copies: NH, language: `${HIT}（另有胡里特語殘本）`, extent: '三塊泥板', note: '庫瑪爾比與巨石交合生下石巨人，立在背負天地的巨人肩上，一天長一肘，直頂天庭。恩基（埃阿）以分開天地的古刀割斷它的腳。' },
+            { slug: 'hedammu', title_zh: '赫達穆之歌', title_orig: 'Song of Hedammu', siglum: 'CTH 348', copies: NH, language: `${HIT}（另有胡里特語殘本）`, status: 'fragment', note: '庫瑪爾比娶海神之女生下吞噬一切的海蛇，伊絲塔以美色誘之。' },
+            { slug: 'song-silver', title_zh: '銀之歌', title_orig: 'Song of Silver', siglum: 'CTH 364', copies: NH, language: HIT, status: 'fragment', note: '庫瑪爾比與凡間女子所生的「銀」，被人嘲笑沒有父親。' },
             { slug: 'kal-kingship', title_zh: '守護神 KAL 的王權', title_orig: 'Song of the Protective God (KAL)', siglum: 'CTH 343', copies: NH, language: HIT, status: 'fragment', note: '一位小神篡得天庭王位，因怠慢獻祭而被廢。' },
-            { slug: 'kumarbi-fragments', title_zh: '庫瑪比神話殘篇', title_orig: 'Fragments of the Kumarbi myth', siglum: 'CTH 346', copies: NH, language: HIT, status: 'fragment' },
+            { slug: 'kumarbi-fragments', title_zh: '庫瑪爾比神話殘篇', title_orig: 'Fragments of the Kumarbi myth', siglum: 'CTH 346', copies: NH, language: HIT, status: 'fragment' },
           ],
         },
         {
@@ -124,7 +124,7 @@ export const ANATOLIA_CANON: NeCanon = {
           texts: [
             { slug: 'gilgamesh-hittite', title_zh: '赫梯語吉爾伽美什', title_orig: 'Gilgameš (Akkadian, Hurrian, Hittite versions)', siglum: 'CTH 341', copies: NH, language: '阿卡德語、胡里特語、赫梯語三種', status: 'fragment', note: '哈圖沙同時藏有三種語言的吉爾伽美什——同一部史詩在一座城裡以三種語言流通。', seealso: ['gilgamesh-sb'] },
             { slug: 'elkunirsa', title_zh: '埃勒庫尼薩與亞舍拉', title_orig: 'Elkunirša and Ašertu', siglum: 'CTH 342', copies: NH, language: HIT, status: 'fragment', note: '赫梯語寫的迦南神話：「伊勒，地的創造者」（ʾEl qōnē ʾarṣ）之妻亞舍拉勾引巴力不成，向丈夫反誣。', bible: '創 14:19「天地的主（創造者）」El ʿElyon qōnē šāmayim wāʾāreṣ；創 39', seealso: ['baal-cycle'] },
-            { slug: 'atrahasis-hittite', title_zh: '赫梯語阿特拉哈西', title_orig: 'Atramḫasis', siglum: 'CTH 347', copies: NH, language: HIT, status: 'fragment', seealso: ['atrahasis'] },
+            { slug: 'atrahasis-hittite', title_zh: '赫梯語阿特拉哈西斯', title_orig: 'Atramḫasis', siglum: 'CTH 347', copies: NH, language: HIT, status: 'fragment', seealso: ['atrahasis'] },
           ],
         },
       ],
@@ -136,7 +136,7 @@ export const ANATOLIA_CANON: NeCanon = {
       name_en: 'Prayers',
       era: '約前 1400 – 前 1200',
       summary:
-        '赫梯王的禱文是古代近東最坦白的認罪文獻：瘟疫肆虐二十年，穆西利二世查問神諭，'
+        '赫梯王的禱文是古代近東最坦白的認罪文獻：瘟疫肆虐二十年，穆爾西利二世查問神諭，'
         + '查出是父王違背誓約之罪，便以第一人稱向眾神認罪、陳情、討價還價。「父親的罪落到兒子身上」——同一個問題以西結書第十八章也問過。',
       divisions: [
         {
@@ -144,12 +144,12 @@ export const ANATOLIA_CANON: NeCanon = {
           label: '王室禱文',
           label_en: 'Royal Prayers',
           texts: [
-            { slug: 'plague-prayers', title_zh: '穆西利二世瘟疫禱文', title_orig: 'Plague Prayers of Muršili II', siglum: 'CTH 378', era: '約前 1320', copies: NH, language: HIT, extent: '五篇', note: '「哈圖沙的眾神啊，瘟疫已經二十年……若是因為我父親的罪，我承認了。」王把神諭查出的罪因逐條列出，並辯稱：「人死光了，誰來給你們獻祭？」', bible: '撒下 21:1–14（掃羅違約，大衛時饑荒三年）；結 18' },
+            { slug: 'plague-prayers', title_zh: '穆爾西利二世瘟疫禱文', title_orig: 'Plague Prayers of Muršili II', siglum: 'CTH 378', era: '約前 1320', copies: NH, language: HIT, extent: '五篇', note: '「哈圖沙的眾神啊，瘟疫已經二十年……若是因為我父親的罪，我承認了。」王把神諭查出的罪因逐條列出，並辯稱：「人死光了，誰來給你們獻祭？」', bible: '撒下 21:1–14（掃羅違約，大衛時饑荒三年）；結 18' },
             { slug: 'kantuzzili', title_zh: '坎圖齊利向太陽神禱', title_orig: 'Prayer of Kantuzzili to the Sun-god', siglum: 'CTH 373', era: '約前 1400', copies: NH, language: HIT, note: '「我從來沒有向神發假誓……我的神，為什麼讓我生病？」最早的赫梯語個人禱文之一，承襲巴比倫向沙馬什禱告的格式。', seealso: ['shamash-hymn'] },
             { slug: 'prayer-mortal-sun', title_zh: '凡人向太陽神的頌禱', title_orig: 'Hymn and prayer of a mortal to the Sun-god', siglum: 'CTH 372', copies: NH, language: HIT },
-            { slug: 'arnuwanda-asmunikal', title_zh: '阿努旺達一世與阿什穆尼卡向阿琳娜太陽女神禱', title_orig: 'Prayer of Arnuwanda I and Ašmunikal', siglum: 'CTH 375', era: '約前 1370', copies: NH, language: HIT, note: '王與王后哀訴北方卡什卡人攻掠神廟，「再沒有人為你們獻祭」。' },
+            { slug: 'arnuwanda-asmunikal', title_zh: '阿爾努旺達一世與阿什穆尼卡勒向阿琳娜太陽女神禱', title_orig: 'Prayer of Arnuwanda I and Ašmunikal', siglum: 'CTH 375', era: '約前 1370', copies: NH, language: HIT, note: '王與王后哀訴北方卡什卡人攻掠神廟，「再沒有人為你們獻祭」。' },
             { slug: 'arinna-hymns', title_zh: '阿琳娜太陽女神頌禱', title_orig: 'Hymns and prayers to the Sun-goddess of Arinna', siglum: 'CTH 376', copies: NH, language: HIT },
-            { slug: 'mursili-telipinu', title_zh: '穆西利二世向泰利皮努頌禱', title_orig: 'Hymn and prayer of Muršili II to Telipinu', siglum: 'CTH 377', copies: NH, language: HIT },
+            { slug: 'mursili-telipinu', title_zh: '穆爾西利二世向泰利皮努頌禱', title_orig: 'Hymn and prayer of Muršili II to Telipinu', siglum: 'CTH 377', copies: NH, language: HIT },
             { slug: 'muwatalli-assembly', title_zh: '穆瓦塔利二世向眾神禱', title_orig: 'Prayer of Muwatalli II to the assembly of gods', siglum: 'CTH 381', era: '約前 1290', copies: NH, language: HIT, note: '逐一點名百餘位神與其所在之城，一份禱文同時是帝國的宗教地圖。' },
             { slug: 'puduhepa-prayer', title_zh: '普杜赫帕王后禱文', title_orig: 'Prayer of Puduḫepa to the Sun-goddess of Arinna', siglum: 'CTH 384', era: '約前 1260', copies: NH, language: HIT, note: '王后為病重的丈夫哈圖西利三世向諸女神許願：若神延長他的壽命，她將獻上城鎮與金像。' },
             { slug: 'hattusili-puduhepa', title_zh: '哈圖西利三世與普杜赫帕向阿琳娜太陽女神禱', title_orig: 'Prayer of Ḫattušili III and Puduḫepa', siglum: 'CTH 383', copies: NH, language: HIT, status: 'fragment' },
@@ -170,7 +170,7 @@ export const ANATOLIA_CANON: NeCanon = {
           label: '讚歌',
           label_en: 'Hymns',
           texts: [
-            { slug: 'hurrian-hymn-nikkal', title_zh: '胡里特尼卡讚歌（第六號）', title_orig: 'Hurrian Hymn no. 6 to Nikkal', siglum: 'RS 15.30 + 15.49 + 17.387（h.6）', era: '約前 1400', language: HUR, provenance: '烏加里特王宮', status: 'fragment', note: '向果園女神尼卡祈求生育的禱歌，泥板下半是以巴比倫音名寫成的豎琴指法——現存最古、大體完整的樂譜。', seealso: ['nikkal-yarikh'] },
+            { slug: 'hurrian-hymn-nikkal', title_zh: '胡里特尼卡勒讚歌（第六號）', title_orig: 'Hurrian Hymn no. 6 to Nikkal', siglum: 'RS 15.30 + 15.49 + 17.387（h.6）', era: '約前 1400', language: HUR, provenance: '烏加里特王宮', status: 'fragment', note: '向果園女神尼卡勒祈求生育的禱歌，泥板下半是以巴比倫音名寫成的豎琴指法——現存最古、大體完整的樂譜。', seealso: ['nikkal-yarikh'] },
           ],
         },
       ],
@@ -220,7 +220,7 @@ export const ANATOLIA_CANON: NeCanon = {
             { slug: 'mastigga', title_zh: '馬斯提加儀式（化解家庭紛爭）', title_orig: 'Rituals of Maštigga of Kizzuwatna', siglum: 'CTH 404', copies: NH, language: HIT, note: '父子或兄弟因咒罵失和，巫婆以羊與小像為替身吸走詛咒。' },
             { slug: 'ammihatna', title_zh: '阿米哈特納儀式（除不潔）', title_orig: 'Ritual of Ammiḫatna of Kizzuwatna', siglum: 'CTH 471', copies: NH, language: HIT, note: '基茲瓦特納的胡里特祭司為神廟除污，與利未記的潔淨條例類型相近。', bible: '利 11–15' },
             { slug: 'itkalzi', title_zh: '洗口儀式（伊特卡齊）', title_orig: 'Mouth-washing ritual (itkaḫi-, itkalzi-)', siglum: 'CTH 777', copies: NH, language: `${HUR}（赫梯語儀程）`, extent: '二十二塊泥板', note: '胡里特語的大型淨化儀式系列。' },
-            { slug: 'mursili-aphasia', title_zh: '穆西利的失語症', title_orig: 'Muršili\'s Aphasia', siglum: 'CTH 486', copies: NH, language: HIT, note: '雷雨中王受驚口歪失語，占卜查出是風暴神所為，遂以牛為替身送往神廟。王的病歷與神諭並列。' },
+            { slug: 'mursili-aphasia', title_zh: '穆爾西利的失語症', title_orig: 'Muršili\'s Aphasia', siglum: 'CTH 486', copies: NH, language: HIT, note: '雷雨中王受驚口歪失語，占卜查出是風暴神所為，遂以牛為替身送往神廟。王的病歷與神諭並列。' },
           ],
         },
         {
@@ -261,7 +261,7 @@ export const ANATOLIA_CANON: NeCanon = {
           texts: [
             { slug: 'temple-instructions', title_zh: '祭司與神廟人員守則', title_orig: 'Instructions for Priests and Temple Personnel', siglum: 'CTH 264', copies: NH, language: HIT, note: '祭司夜間要守廟、要潔淨才可進廚房；「人和神的心一樣嗎？僕人在主人面前要潔淨，神也一樣。」偷吃祭肉者連同全家處死。', bible: '利 22；撒上 2:12–17 以利的兒子' },
             { slug: 'cult-inventories', title_zh: '神廟清冊', title_orig: 'Cult inventories (Tudḫaliya IV)', siglum: 'CTH 529–530', era: '約前 1230', copies: NH, language: HIT, status: 'fragment', note: '圖達利亞四世下令普查全國地方神廟：每城有幾尊神像、什麼材質、何時祭祀。王把千神納入中央管理。' },
-            { slug: 'samuha-reform', title_zh: '穆西利二世改革沙穆哈夜之女神祭', title_orig: 'Reform of the cult of the Goddess of the Night of Šamuḫa', siglum: 'CTH 482', copies: NH, language: HIT, note: '「分神」儀式：把神從舊廟請到新廟，用紅毛線一路鋪路。' },
+            { slug: 'samuha-reform', title_zh: '穆爾西利二世改革沙穆哈夜之女神祭', title_orig: 'Reform of the cult of the Goddess of the Night of Šamuḫa', siglum: 'CTH 482', copies: NH, language: HIT, note: '「分神」儀式：把神從舊廟請到新廟，用紅毛線一路鋪路。' },
             { slug: 'samuha-ritual', title_zh: '沙穆哈儀式', title_orig: 'Ritual of Šamuḫa', siglum: 'CTH 480', copies: NH, language: HIT, status: 'fragment' },
             { slug: 'yazilikaya', title_zh: '亞茲勒卡亞岩廟眾神浮雕', title_orig: 'Yazılıkaya rock sanctuary', era: '約前 1250（圖達利亞四世）', language: '盧維語象形文字（神名題記）', provenance: '哈圖沙東北露天岩廟', status: 'inscription', extent: '六十餘位神', note: '男神從左、女神從右兩列遊行，在中央由特舒布與赫帕特相會。胡里特萬神殿的一張石刻全圖。' },
           ],

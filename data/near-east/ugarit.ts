@@ -78,8 +78,8 @@ export const UGARIT_CANON: NeCanon = {
           label: '傳奇',
           label_en: 'Legends',
           texts: [
-            { slug: 'kirta', title_zh: '基塔傳奇', title_orig: 'Kirta Epic', siglum: 'KTU 1.14–1.16', author: '伊利米爾庫抄', language: UG, provenance: RS, status: 'fragment', extent: '三塊泥板', note: '王失去了全家，伊勒在夢中指示他出征迎娶公主；他途中向亞舍拉許願卻沒還願，因而病倒，兒子趁機要他讓位。', bible: '創 15、創 24 族長求子與求婚；伯 1 喪盡家人' },
-            { slug: 'aqhat', title_zh: '阿哈特傳奇', title_orig: 'Aqhat Epic', siglum: 'KTU 1.17–1.19', author: '伊利米爾庫抄', language: UG, provenance: RS, status: 'fragment', extent: '三塊泥板', note: '義人達尼伊勒「在城門口為寡婦伸冤、為孤兒斷案」，求得一子阿哈特。阿娜特想要阿哈特的神弓，許他永生被拒，便殺了他；姊姊帕吉特喬裝去為弟弟復仇，故事在此中斷。', bible: '結 14:14、28:3 的「但以理」（Dnʾl）與約伯、挪亞並列為古代義人' },
+            { slug: 'kirta', title_zh: '基爾塔傳奇', title_orig: 'Kirta Epic', siglum: 'KTU 1.14–1.16', author: '伊利米爾庫抄', language: UG, provenance: RS, status: 'fragment', extent: '三塊泥板', note: '王失去了全家，伊勒在夢中指示他出征迎娶公主；他途中向亞舍拉許願卻沒還願，因而病倒，兒子趁機要他讓位。', bible: '創 15、創 24 族長求子與求婚；伯 1 喪盡家人' },
+            { slug: 'aqhat', title_zh: '阿克哈特傳奇', title_orig: 'Aqhat Epic', siglum: 'KTU 1.17–1.19', author: '伊利米爾庫抄', language: UG, provenance: RS, status: 'fragment', extent: '三塊泥板', note: '義人達內爾「在城門口為寡婦伸冤、為孤兒斷案」，求得一子阿克哈特。阿娜特想要阿克哈特的神弓，許他永生被拒，便殺了他；姊姊帕吉特喬裝去為弟弟復仇，故事在此中斷。', bible: '結 14:14、28:3 的「但以理」（Dnʾl）與約伯、挪亞並列為古代義人' },
             { slug: 'rephaim', title_zh: '拉菲烏姆文', title_orig: 'Rephaim Texts', siglum: 'KTU 1.20–1.22', language: UG, provenance: RS, status: 'fragment', note: '伊勒召請「拉菲烏姆」（王室亡靈）乘車赴宴——祖先崇拜的神話化。', bible: '賽 14:9、26:14；伯 26:5 的「利乏音」（陰魂）' },
           ],
         },
@@ -98,8 +98,8 @@ export const UGARIT_CANON: NeCanon = {
           label: '短篇神話',
           label_en: 'Short Myths',
           texts: [
-            { slug: 'shahar-shalim', title_zh: '沙哈與沙林的誕生（嘉神之生）', title_orig: 'Birth of the Gracious Gods (Šaḥar and Šalim)', siglum: 'KTU 1.23', language: UG, provenance: RS, note: '伊勒在海邊與兩個女子交合，生下晨星沙哈與暮星沙林。附有演出的舞台指示。', bible: '賽 14:12「明亮之星，早晨之子」（ben-šaḥar）；「耶路撒冷」之名中的沙林（Šalim）' },
-            { slug: 'nikkal-yarikh', title_zh: '尼卡與亞里赫的婚禮', title_orig: 'Nikkal and Yarikh', siglum: 'KTU 1.24', language: UG, provenance: RS, note: '月神向果園女神提親、議聘金——一首為人間婚禮唱的神界婚歌。', seealso: ['hurrian-hymn-nikkal'] },
+            { slug: 'shahar-shalim', title_zh: '沙哈爾與沙利姆的誕生（嘉神之生）', title_orig: 'Birth of the Gracious Gods (Šaḥar and Šalim)', siglum: 'KTU 1.23', language: UG, provenance: RS, note: '伊勒在海邊與兩個女子交合，生下晨星沙哈爾與暮星沙利姆。附有演出的舞台指示。', bible: '賽 14:12「明亮之星，早晨之子」（ben-šaḥar）；「耶路撒冷」之名中的沙利姆（Šalim）' },
+            { slug: 'nikkal-yarikh', title_zh: '尼卡勒與亞里赫的婚禮', title_orig: 'Nikkal and Yarikh', siglum: 'KTU 1.24', language: UG, provenance: RS, note: '月神向果園女神提親、議聘金——一首為人間婚禮唱的神界婚歌。', seealso: ['hurrian-hymn-nikkal'] },
             { slug: 'el-marzeah', title_zh: '伊勒的盛宴（伊勒醉酒）', title_orig: 'El\'s Divine Feast (marzeaḥ)', siglum: 'KTU 1.114', language: UG, provenance: RS, note: '伊勒在「馬澤阿」宴會上喝到爛醉，倒在自己的糞便裡，背面附治宿醉的藥方。', bible: '摩 6:7；耶 16:5 的 marzeaḥ（「宴樂」「喪家」）' },
           ],
         },
