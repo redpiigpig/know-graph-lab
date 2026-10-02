@@ -1,0 +1,201 @@
+{
+ "slug": "pi-mn42",
+ "title": "鞞蘭若村婆羅門經",
+ "family": "pi",
+ "intro": "婆羅門居士問：何以有人死後墮惡趣、有人生善趣？佛答：行非法行（十不善）與行法行（十善）之故；行法行者願生人間大家、欲界與色界諸天、無色界乃至漏盡，皆能如願。MN 41（薩羅村）與 MN 42（鞞蘭若村）除了地點與聽眾，經文逐字相同，分作兩組各自並排。雜阿含 1042 把十不善、十善都只說「殺生乃至邪見」「離殺生乃至正見」，各放在身業一節；它分兩次問（先問墮地獄、再問生天），生天之問併入十善一節；願生的範圍另多四禪、四無量心與初果至神通。本組的雜阿含平行經是 1043，它只有序分與結尾，中間說「如上修多羅廣說」，所以把它所略的那一經（1042）也並列一欄。漢譯南傳本經也只譯了序分，正文註明「重覆四十一經」。",
+ "units": [
+  {
+   "id": "f00",
+   "label": "經題"
+  },
+  {
+   "id": "f01",
+   "label": "如是我聞・說法處"
+  },
+  {
+   "id": "f02",
+   "label": "婆羅門居士聞佛名稱（如來十號）"
+  },
+  {
+   "id": "f03",
+   "label": "往見佛，問：何因墮惡趣、何因生善趣"
+  },
+  {
+   "id": "f04",
+   "label": "略答：行非法行墮惡趣・行法行生善趣"
+  },
+  {
+   "id": "f05",
+   "label": "請廣說・佛許"
+  },
+  {
+   "id": "f06",
+   "label": "十不善之一：身三種非法行（殺、盜、邪婬）"
+  },
+  {
+   "id": "f07",
+   "label": "十不善之二：口四種非法行"
+  },
+  {
+   "id": "f08",
+   "label": "十不善之三：意三種非法行・結：墮惡趣"
+  },
+  {
+   "id": "f09",
+   "label": "十善之一：身三種法行"
+  },
+  {
+   "id": "f10",
+   "label": "十善之二：口四種法行"
+  },
+  {
+   "id": "f11",
+   "label": "十善之三：意三種法行・結：生善趣"
+  },
+  {
+   "id": "f12",
+   "label": "願生剎帝利、婆羅門、居士大家，皆得"
+  },
+  {
+   "id": "f13",
+   "label": "願生四天王天乃至梵眾天，皆得"
+  },
+  {
+   "id": "f14",
+   "label": "願生光天乃至非想非非想處，皆得（雜阿含另有四禪、四無量）"
+  },
+  {
+   "id": "f15",
+   "label": "願漏盡解脫，亦得（雜阿含並列初果至神通）"
+  },
+  {
+   "id": "f16",
+   "label": "讚歎・歸依為優婆塞"
+  },
+  {
+   "id": "f17",
+   "label": "尾題"
+  }
+ ],
+ "versions": [
+  {
+   "id": "pi",
+   "lang": "pi",
+   "label": "巴利 MN 42",
+   "who": "Mahāsaṅgīti 本・SuttaCentral"
+  },
+  {
+   "id": "zh-nan",
+   "lang": "lzh",
+   "label": "漢譯南傳",
+   "who": "元亨寺版・N10（譯自巴利）"
+  },
+  {
+   "id": "SA1043",
+   "lang": "lzh",
+   "label": "雜阿含 1043",
+   "who": "劉宋 求那跋陀羅譯・435–443 年",
+   "work": "T0099"
+  },
+  {
+   "id": "SA1042",
+   "lang": "lzh",
+   "label": "雜阿含 1042（1043 所略的本文）",
+   "who": "劉宋 求那跋陀羅譯・435–443 年",
+   "work": "T0099"
+  }
+ ],
+ "works": [
+  "T0099"
+ ],
+ "anchors": [
+  {
+   "work": "T0099",
+   "node": "（一〇四三）",
+   "uid": "T02n0099_p0273a28"
+  },
+  {
+   "work": "T0099",
+   "node": "（一〇四二）",
+   "uid": "T02n0099_p0272c18"
+  }
+ ],
+ "cells": {
+  "f00": {
+   "pi": "Majjhima Nikāya 42 Verañjakasutta",
+   "zh-nan": "第四十二　鞞蘭若村婆羅門經"
+  },
+  "f01": {
+   "pi": "Evaṁ me sutaṁ— ekaṁ samayaṁ bhagavā sāvatthiyaṁ viharati jetavane anāthapiṇḍikassa ārāme. Tena kho pana samayena verañjakā brāhmaṇagahapatikā sāvatthiyaṁ paṭivasanti kenacideva karaṇīyena.",
+   "zh-nan": "如是我聞。—— 一時，世尊住舍衛城之祇陀林給孤獨園。爾時，鞞蘭若村之婆羅門居士眾，因有要事住於舍衛城。",
+   "SA1043": "如是我聞：一時，佛在拘薩羅國人間遊行，住鞞羅磨聚落北身恕林中。",
+   "SA1042": "如是我聞：一時，佛在拘薩羅國人間遊行，住鞞羅磨聚落北身恕林中。"
+  },
+  "f02": {
+   "pi": "Assosuṁ kho verañjakā brāhmaṇagahapatikā: “samaṇo khalu, bho, gotamo sakyaputto sakyakulā pabbajito sāvatthiyaṁ viharati jetavane anāthapiṇḍikassa ārāme. Taṁ kho pana bhavantaṁ gotamaṁ evaṁ kalyāṇo kittisaddo abbhuggato: ‘itipi so bhagavā arahaṁ sammāsambuddho vijjācaraṇasampanno sugato lokavidū anuttaro purisadammasārathi satthā devamanussānaṁ buddho bhagavā’. So imaṁ lokaṁ sadevakaṁ samārakaṁ sabrahmakaṁ sassamaṇabrāhmaṇiṁ pajaṁ sadevamanussaṁ sayaṁ abhiññā sacchikatvā pavedeti. So dhammaṁ deseti ādikalyāṇaṁ majjhekalyāṇaṁ pariyosānakalyāṇaṁ sātthaṁ sabyañjanaṁ; kevalaparipuṇṇaṁ parisuddhaṁ brahmacariyaṁ pakāseti. Sādhu kho pana tathārūpānaṁ arahataṁ dassanaṁ hotī”ti.",
+   "zh-nan": "鞞蘭若村之婆羅門居士眾聞：「實釋迦族子，由釋迦族人出家之沙門瞿曇，住於舍衛城給孤獨園，彼尊者瞿曇有如是之大名稱：『如是，彼世尊是應供、等正覺、明行足、善逝、世間解、無上士、調御丈夫、天人師、佛、世尊。』彼包含此天、魔、梵天之世界，及沙門、婆羅門、天人之世界，自知、自證已而教化。彼說法初善、中善，終善、有義、有文，顯示完全具足清淨之梵行。若見如是之應供者為幸也。」",
+   "SA1043": "時，鞞羅磨聚落中，婆羅門長者聞世尊住鞞羅磨聚落身恕林中，聞已，乘白馬車，多將翼從，持金斗、傘蓋、金澡瓶，出鞞羅磨聚落，詣身恕林。"
+  },
+  "f03": {
+   "pi": "Atha kho verañjakā brāhmaṇagahapatikā yena bhagavā tenupasaṅkamiṁsu; upasaṅkamitvā appekacce bhagavantaṁ abhivādetvā ekamantaṁ nisīdiṁsu; appekacce bhagavatā saddhiṁ sammodiṁsu, sammodanīyaṁ kathaṁ sāraṇīyaṁ vītisāretvā ekamantaṁ nisīdiṁsu; appekacce yena bhagavā tenañjaliṁ paṇāmetvā ekamantaṁ nisīdiṁsu; appekacce bhagavato santike nāmagottaṁ sāvetvā ekamantaṁ nisīdiṁsu; appekacce tuṇhībhūtā ekamantaṁ nisīdiṁsu. Ekamantaṁ nisinnā kho verañjakā brāhmaṇagahapatikā bhagavantaṁ etadavocuṁ: “ko nu kho, bho gotama, hetu, ko paccayo yena m’idhekacce sattā kāyassa bhedā paraṁ maraṇā apāyaṁ duggatiṁ vinipātaṁ nirayaṁ upapajjanti? Ko pana, bho gotama, hetu, ko paccayo yena m’idhekacce sattā kāyassa bhedā paraṁ maraṇā sugatiṁ saggaṁ lokaṁ upapajjantī”ti?",
+   "zh-nan": "所以，鞞蘭若村之婆羅門居士眾，詣世尊住處。詣已，有人向世尊敬禮坐於一面；有人向世尊問訊，交換友誼禮讓之語，坐於一面；有人向世尊合掌，坐於一面；有人於世尊之面前報出姓名，坐於一面。坐於一面之鞞蘭若村婆羅門居士眾白世尊言：「卿瞿曇！以何因、何緣，於此處有一類之有情，身壞命終生於惡生、惡趣、墮處、地獄耶？又卿瞿曇！以何因、何緣，於此處有一類之有情身壞命終生於善趣、天界耶？」",
+   "SA1043": "至道口，下車步進，入於園門，至世尊前，面相問訊慰勞已，退坐一面，白佛言：「瞿曇！何因、何緣有人命終生地獄中，乃至生天？……」如上修多羅廣說。",
+   "SA1042": "鞞羅聚落婆羅門長者聞世尊住聚落北身恕林中，聞已，共相招集，往詣佛所，稽首佛足，退坐一面，白佛言：「世尊！何因、何緣有眾生身壞命終，生地獄中？」"
+  },
+  "f04": {
+   "pi": "“Adhammacariyāvisamacariyāhetu kho, gahapatayo, evam’idhekacce sattā kāyassa bhedā paraṁ maraṇā apāyaṁ duggatiṁ vinipātaṁ nirayaṁ upapajjanti. Dhammacariyāsamacariyāhetu kho, gahapatayo, evam’idhekacce sattā kāyassa bhedā paraṁ maraṇā sugatiṁ saggaṁ lokaṁ upapajjantī”ti.",
+   "zh-nan": "〔世尊曰：〕「居士等！因非法行、非正行，如是，於此有一類之有情，身壞命終生於惡生、惡趣、墮處、地獄。居士等！因法行、正行，如是，於此有一類有情，身壞命終生於善趣天界。」",
+   "SA1042": "佛告諸婆羅門長者：「行非法行、行危嶮行因緣故，身壞命終，生地獄中。」"
+  },
+  "f05": {
+   "pi": "“Na kho mayaṁ imassa bhoto gotamassa saṅkhittena bhāsitassa, vitthārena atthaṁ avibhattassa, vitthārena atthaṁ ājānāma. Sādhu no bhavaṁ gotamo tathā dhammaṁ desetu yathā mayaṁ imassa bhoto gotamassa saṅkhittena bhāsitassa, vitthārena atthaṁ avibhattassa, vitthārena atthaṁ ājāneyyāmā”ti. “Tena hi, gahapatayo, suṇātha sādhukaṁ manasi karotha, bhāsissāmī”ti. “Evaṁ, bho”ti kho verañjakā brāhmaṇagahapatikā bhagavato paccassosuṁ. Bhagavā etadavoca:",
+   "zh-nan": "〔彼等曰：〕「我等對尊者瞿曇之所略說，未能詳細分別理解其意義。如是，尊者瞿曇！能為我等說法則幸也，我等則對尊者瞿曇所略說義，得詳細分別理解其意義。」〔世尊曰：〕「居士等！若然，汝等諦聽、善思念之，予將說之。」鞞蘭若村之婆羅門居士眾應諾世尊。世尊乃說此：",
+   "SA1042": "諸婆羅門長者白佛：「行何等非法行、危嶮行，身壞命終，生地獄中？」"
+  },
+  "f06": {
+   "pi": "“Tividhaṁ kho, gahapatayo, kāyena adhammacārī visamacārī hoti, catubbidhaṁ vācāya adhammacārī visamacārī hoti, tividhaṁ manasā adhammacārī visamacārī hoti. Kathañca, gahapatayo, tividhaṁ kāyena adhammacārī visamacārī hoti? Idha, gahapatayo, ekacco pāṇātipātī hoti. Luddo lohitapāṇi hatappahate niviṭṭho adayāpanno pāṇabhūtesu. Adinnādāyī kho pana hoti. Yaṁ taṁ parassa paravittūpakaraṇaṁ … taṁ adinnaṁ theyyasaṅkhātaṁ ādātā hoti. Kāmesumicchācārī kho pana hoti. Yā tā māturakkhitā … tathārūpāsu cārittaṁ āpajjitā hoti. Evaṁ kho, gahapatayo, tividhaṁ kāyena adhammacārī visamacārī hoti.",
+   "zh-nan": "居士等依身有三種之非法行者、非正行者。…… 〔以下重覆四十一經第二段之初至終。但非法行、非正行代之為非法行者、非正行者。非法行者、非正行者代為以法行者、正行者，薩羅村人換為鞞蘭若村人〕……〔願師尊瞿曇！容認我等自今以後，終生歸依〔佛、法、僧〕。〕為優婆塞。",
+   "SA1042": "佛告婆羅門長者：「殺生，乃至邪見，具足十不善業因緣故。婆羅門！是非法行、危嶮行，身壞命終，生地獄中。」"
+  },
+  "f07": {
+   "pi": "Kathañca, gahapatayo, catubbidhaṁ vācāya adhammacārī visamacārī hoti? Idha, gahapatayo, ekacco musāvādī hoti. Sabhāgato vā … sampajānamusā bhāsitā hoti. Pisuṇavāco kho pana hoti. Ito sutvā amutra akkhātā … vaggakaraṇiṁ vācaṁ bhāsitā hoti. Pharusavāco kho pana hoti. Yā sā vācā aṇḍakā kakkasā … tathārūpiṁ vācaṁ bhāsitā hoti. Samphappalāpī kho pana hoti. Akālavādī … apariyantavatiṁ anatthasaṁhitaṁ. Evaṁ kho, gahapatayo, catubbidhaṁ vācāya adhammacārī visamacārī hoti."
+  },
+  "f08": {
+   "pi": "Kathañca, gahapatayo, tividhaṁ manasā adhammacārī visamacārī hoti? Idha, gahapatayo, ekacco abhijjhālu hoti …pe… taṁ mamassā’ti. Byāpannacitto kho pana hoti paduṭṭhamanasaṅkappo: ‘ime sattā haññantu vā … mā vā ahesun’ti. Micchādiṭṭhiko kho pana hoti viparītadassano: ‘natthi dinnaṁ, natthi yiṭṭhaṁ … sacchikatvā pavedentī’ti. Evaṁ kho, gahapatayo, tividhaṁ manasā adhammacārī visamacārī hoti. Evaṁ adhammacariyāvisamacariyāhetu kho, gahapatayo, evam’idhekacce sattā kāyassa bhedā paraṁ maraṇā apāyaṁ duggatiṁ vinipātaṁ nirayaṁ upapajjanti."
+  },
+  "f09": {
+   "pi": "Tividhaṁ kho, gahapatayo, kāyena dhammacārī samacārī hoti, catubbidhaṁ vācāya dhammacārī samacārī hoti, tividhaṁ manasā dhammacārī samacārī hoti. Kathañca, gahapatayo, tividhaṁ kāyena dhammacārī samacārī hoti? Idha, gahapatayo, ekacco pāṇātipātaṁ pahāya pāṇātipātā paṭivirato hoti, nihitadaṇḍo nihitasattho lajjī dayāpanno sabbapāṇabhūtahitānukampī viharati. Adinnādānaṁ pahāya adinnādānā paṭivirato hoti, yaṁ taṁ parassa … taṁ nādinnaṁ theyyasaṅkhātaṁ ādātā hoti. Kāmesumicchācāraṁ pahāya … tathārūpāsu na cārittaṁ āpajjitā hoti. Evaṁ kho, gahapatayo, tividhaṁ kāyena dhammacārī samacārī hoti.",
+   "SA1042": "婆羅門白佛：「何因緣諸眾生身壞命終，得生天上？」佛告婆羅門長者：「行法行、行正行，以是因緣故，身壞命終，得生天上。」復問：「世尊！行何等法行、何等正行，身壞命終，得生天上？」佛告婆羅門長者：「謂離殺生，乃至正見，十善業跡因緣故，身壞命終，得生天上。"
+  },
+  "f10": {
+   "pi": "Kathañca, gahapatayo, catubbidhaṁ vācāya dhammacārī samacārī hoti? Idha, gahapatayo, ekacco musāvādaṁ pahāya musāvādā paṭivirato hoti. Sabhāgato vā …pe… na sampajānamusā bhāsitā hoti. Pisuṇaṁ vācaṁ pahāya … samaggakaraṇiṁ vācaṁ bhāsitā hoti. Pharusaṁ vācaṁ pahāya … tathārūpaṁ vācaṁ bhāsitā hoti. Samphappalāpaṁ pahāya … kālena sāpadesaṁ pariyantavatiṁ atthasaṁhitaṁ. Evaṁ kho, gahapatayo, catubbidhaṁ vācāya dhammacārī samacārī hoti."
+  },
+  "f11": {
+   "pi": "Kathañca, gahapatayo, tividhaṁ manasā dhammacārī samacārī hoti? Idha, gahapatayo, ekacco anabhijjhālu hoti. Yaṁ taṁ parassa paravittūpakaraṇaṁ taṁ nābhijjhātā hoti: ‘aho vata yaṁ parassa, taṁ mamassā’ti. Abyāpannacitto kho pana hoti appaduṭṭhamanasaṅkappo: ‘ime sattā averā abyābajjhā anīghā sukhī attānaṁ pariharantū’ti. Sammādiṭṭhiko kho pana hoti aviparītadassano: ‘atthi dinnaṁ, atthi yiṭṭhaṁ … sayaṁ abhiññā sacchikatvā pavedentī’ti. Evaṁ kho, gahapatayo, tividhaṁ manasā dhammacārī samacārī hoti. Evaṁ dhammacariyāsamacariyāhetu kho, gahapatayo, evam’idhekacce sattā kāyassa bhedā paraṁ maraṇā sugatiṁ saggaṁ lokaṁ upapajjanti."
+  },
+  "f12": {
+   "pi": "Ākaṅkheyya ce, gahapatayo, dhammacārī samacārī: ‘aho vatāhaṁ kāyassa bhedā paraṁ maraṇā khattiyamahāsālānaṁ sahabyataṁ upapajjeyyan’ti; ṭhānaṁ kho panetaṁ vijjati, yaṁ so kāyassa bhedā paraṁ maraṇā khattiyamahāsālānaṁ sahabyataṁ upapajjeyya. Taṁ kissa hetu? Tathā hi so dhammacārī samacārī. Ākaṅkheyya ce, gahapatayo, dhammacārī samacārī: ‘aho vatāhaṁ kāyassa bhedā paraṁ maraṇā brāhmaṇamahāsālānaṁ …pe… gahapatimahāsālānaṁ sahabyataṁ upapajjeyyan’ti; ṭhānaṁ kho panetaṁ vijjati, yaṁ so kāyassa bhedā paraṁ maraṇā gahapatimahāsālānaṁ sahabyataṁ upapajjeyya. Taṁ kissa hetu? Tathā hi so dhammacārī samacārī.",
+   "SA1042": "婆羅門長者！若有行此法行、行此正行者，欲求剎利大性家、婆羅門大性家、居士大性家，悉得往生。所以者何？以法行、正行因緣故。"
+  },
+  "f13": {
+   "pi": "Ākaṅkheyya ce, gahapatayo, dhammacārī samacārī: ‘aho vatāhaṁ kāyassa bhedā paraṁ maraṇā cātumahārājikānaṁ devānaṁ sahabyataṁ upapajjeyyan’ti; ṭhānaṁ kho panetaṁ vijjati, yaṁ so kāyassa bhedā paraṁ maraṇā cātumahārājikānaṁ devānaṁ sahabyataṁ upapajjeyya. Taṁ kissa hetu? Tathā hi so dhammacārī samacārī. Ākaṅkheyya ce, gahapatayo, dhammacārī samacārī: ‘aho vatāhaṁ kāyassa bhedā paraṁ maraṇā tāvatiṁsānaṁ devānaṁ … yāmānaṁ devānaṁ … tusitānaṁ devānaṁ … nimmānaratīnaṁ devānaṁ … paranimmitavasavattīnaṁ devānaṁ … brahmakāyikānaṁ devānaṁ sahabyataṁ upapajjeyyan’ti; ṭhānaṁ kho panetaṁ vijjati, yaṁ so kāyassa bhedā paraṁ maraṇā brahmakāyikānaṁ devānaṁ sahabyataṁ upapajjeyya. Taṁ kissa hetu? Tathā hi so dhammacārī samacārī.",
+   "SA1042": "「若復欲求生四王、三十三天，乃至他化自在天，悉得往生。所以者何？以法行、正行故，行淨戒者，其心所願，悉自然得。「若復如是法行、正行者，欲求生梵天，亦得往生。所以者何？以行正行、法行故，持戒清淨，心離愛欲，所願必得。"
+  },
+  "f14": {
+   "pi": "Ākaṅkheyya ce, gahapatayo, dhammacārī samacārī: ‘aho vatāhaṁ kāyassa bhedā paraṁ maraṇā ābhānaṁ devānaṁ sahabyataṁ upapajjeyyan’ti; ṭhānaṁ kho panetaṁ vijjati, yaṁ so kāyassa bhedā paraṁ maraṇā ābhānaṁ devānaṁ sahabyataṁ upapajjeyya. Taṁ kissa hetu? Tathā hi so dhammacārī samacārī. Ākaṅkheyya ce, gahapatayo, dhammacārī samacārī: ‘aho vatāhaṁ kāyassa bhedā paraṁ maraṇā parittābhānaṁ devānaṁ …pe… appamāṇābhānaṁ devānaṁ … ābhassarānaṁ devānaṁ … parittasubhānaṁ devānaṁ … appamāṇasubhānaṁ devānaṁ … subhakiṇhānaṁ devānaṁ … vehapphalānaṁ devānaṁ … avihānaṁ devānaṁ … atappānaṁ devānaṁ … sudassānaṁ devānaṁ … sudassīnaṁ devānaṁ … akaniṭṭhānaṁ devānaṁ … ākāsānañcāyatanūpagānaṁ devānaṁ … viññāṇañcāyatanūpagānaṁ devānaṁ … ākiñcaññāyatanūpagānaṁ devānaṁ … nevasaññānāsaññāyatanūpagānaṁ devānaṁ sahabyataṁ upapajjeyyan’ti; ṭhānaṁ kho panetaṁ vijjati, yaṁ so kāyassa bhedā paraṁ maraṇā nevasaññānāsaññāyatanūpagānaṁ devānaṁ sahabyataṁ upapajjeyya. Taṁ kissa hetu? Tathā hi so dhammacārī samacārī.",
+   "SA1042": "「若復欲求往生光音、遍淨，乃至阿伽尼吒，亦復如是。所以者何？以彼持戒清淨，心離欲故。「若復欲求離欲、惡不善法，有覺有觀，乃至第四禪具足住，悉得成就。所以者何？以彼法行、正行故，持戒清淨，心離愛欲，所願必得。「欲求慈、悲、喜、捨，空入處、識入處、無所有入處、非想非非想入處皆悉得。所以者何？以法行、正行故，持戒清淨，心離愛欲，所願必得。"
+  },
+  "f15": {
+   "pi": "Ākaṅkheyya ce, gahapatayo, dhammacārī samacārī: ‘aho vatāhaṁ āsavānaṁ khayā anāsavaṁ cetovimuttiṁ paññāvimuttiṁ diṭṭheva dhamme sayaṁ abhiññā sacchikatvā upasampajja vihareyyan’ti; ṭhānaṁ kho panetaṁ vijjati, ‘yaṁ so āsavānaṁ khayā anāsavaṁ cetovimuttiṁ paññāvimuttiṁ diṭṭheva dhamme sayaṁ abhiññā sacchikatvā upasampajja vihareyya. Taṁ kissa hetu? Tathā hi so dhammacārī samacārī’”ti.",
+   "SA1042": "「欲求斷三結，得須陀洹、斯陀含、阿那含果，無量神通，天耳、他心智、宿命智、生死智、漏盡智皆悉得。所以者何？以法行、正行故，持戒、離欲，所願必得。」"
+  },
+  "f16": {
+   "pi": "Evaṁ vutte, verañjakā brāhmaṇagahapatikā bhagavantaṁ etadavocuṁ: “abhikkantaṁ, bho gotama, abhikkantaṁ, bho gotama. Seyyathāpi, bho gotama, nikkujjitaṁ vā ukkujjeyya, paṭicchannaṁ vā vivareyya, mūḷhassa vā maggaṁ ācikkheyya, andhakāre vā telapajjotaṁ dhāreyya: ‘cakkhumanto rūpāni dakkhantī’ti; evamevaṁ bhotā gotamena anekapariyāyena dhammo pakāsito. Ete mayaṁ bhavantaṁ gotamaṁ saraṇaṁ gacchāma dhammañca bhikkhusaṅghañca. Upāsake no bhavaṁ gotamo dhāretu ajjatagge pāṇupete saraṇaṁ gate”ti.",
+   "SA1043": "時，鞞羅磨婆羅門聞佛所說，歡喜隨喜，從坐起而去。",
+   "SA1042": "時，婆羅門長者聞佛所說，歡喜隨喜，作禮而去。"
+  },
+  "f17": {
+   "pi": "Verañjakasuttaṁ niṭṭhitaṁ dutiyaṁ."
+  }
+ }
+}
