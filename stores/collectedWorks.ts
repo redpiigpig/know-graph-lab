@@ -31888,7 +31888,7 @@ export const useCollectedWorksStore = defineStore('collectedWorks', () => {
     },
     {
           "slug": "bernard-lonergan",
-          "name": "伯納德‧洛納根",
+          "name": "郎尼根",
           "nameEn": "Bernard Lonergan",
           "nameOriginal": "Bernard Lonergan",
           "lifespan": "1904–1984",
