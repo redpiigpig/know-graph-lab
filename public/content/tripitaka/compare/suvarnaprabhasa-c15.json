@@ -1,0 +1,118 @@
+{
+ "slug": "suvarnaprabhasa-c15",
+ "title": "金光明經・授記品",
+ "family": "sa",
+ "intro": "梵本〈Daśadevaputrasahasravyākaraṇa〉＝藏譯第十五章＝曇無讖、合部、義淨〈授記品〉。佛為妙幢（信相）及二子銀相、銀光授記，十千天子亦同得記；菩提樹神問其何以未修六度而得記，佛答以聞經生淨信之宿因（下一品除病品即其本事）。",
+ "units": [
+  {
+   "id": "s15-00",
+   "label": "授記妙幢及二子・十千天子同得記"
+  },
+  {
+   "id": "s15-01",
+   "label": "菩提樹神問：十千天子何因得記"
+  },
+  {
+   "id": "s15-02",
+   "label": "佛答宿因"
+  },
+  {
+   "id": "s15-03",
+   "label": "品尾題"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sa",
+   "lang": "sa",
+   "label": "梵本",
+   "who": "Nobel 校訂本・GRETIL"
+  },
+  {
+   "id": "bo",
+   "lang": "bo",
+   "label": "藏譯",
+   "who": "德格版 Toh 557・84000 翻譯記憶"
+  },
+  {
+   "id": "en",
+   "lang": "en",
+   "label": "84000 英譯",
+   "who": "譯自藏譯・與藏文逐句對齊"
+  },
+  {
+   "id": "T0663",
+   "lang": "lzh",
+   "label": "曇無讖本",
+   "who": "曇無讖譯《金光明經》・五世紀初",
+   "work": "T0663"
+  },
+  {
+   "id": "T0664",
+   "lang": "lzh",
+   "label": "合部本",
+   "who": "寶貴合《合部金光明經》・597 年",
+   "work": "T0664"
+  },
+  {
+   "id": "T0665",
+   "lang": "lzh",
+   "label": "義淨本",
+   "who": "義淨譯《金光明最勝王經》・703 年",
+   "work": "T0665"
+  }
+ ],
+ "works": [
+  "T0663",
+  "T0664",
+  "T0665"
+ ],
+ "anchors": [
+  {
+   "work": "T0663",
+   "node": "金光明經授記品第十四",
+   "uid": "T16n0663_p0351a01"
+  },
+  {
+   "work": "T0664",
+   "node": "金光明經授記品第十九",
+   "uid": "T16n0664_p0394a11"
+  },
+  {
+   "work": "T0665",
+   "node": "金光明最勝王經授記品第二十三",
+   "uid": "T16n0665_p0447a02"
+  }
+ ],
+ "cells": {
+  "s15-00": {
+   "sa": "// Daśadevaputrasahasravyākaraṇaparivartaḥ // evamukte bodhisattvasamuccayā kuladevatā bhagavantametadavocat / kena bhadanta bhagavan hetunā kena kāraṇena kīdṛśenottaptavīryeṇa kuśalamūlena yasya kṛtatvādupacitatvādevatāni jvalanāntaratejorājapramukhāni daśadevaputrasahasrāṇyetarhi trāyastriśaddevabhavanādāgatāni bhagavato 'ntike dharmaśravaṇāyopasaṃkrāmanti / eteṣāṃ trayāṇāṃ satpuruṣāṇāṃ bodhisattvavyākaraṇaṃ śrutvā bodhau cittamutpādayanti / yathāyaṃ ruciraketuḥ satpuruṣo 'nāgate 'dhvani gaṇanāsamatikrānteṣvanekeṣvasaṃkhyeyakalpakoṭīniyutaśatasahasreṣvatikrānteṣu suvarṇaprabhāsitāyāṃ lokadhātāvanuttarāṃ samyakyaṃbodhimabhisaṃbhotsyate / suvarṇaratnākaracchatrakūṭo nāma tathāgato 'rhansamyaksaṃbuddho loka utpatsyate vidyācaraṇasaṃpannaḥ sugato lokavidanuttaraḥ puruṣadamyasārathiḥ śāstā devānāṃ ca manuṣyāṇāṃ ca buddho bhagavan / yāvattasya bhagavataḥ suvarṇaratnākaracchatrakūṭasya tathāgatasyārhataḥ samyaksaṃbuddhasya parinirvṛtasya saddharmāntarhite sarveṇa sarve sarvathā sarvaṃ tasya śāsanasyāntarhitasyāyaṃ rūpyaketurnāma dārakaḥ / tasya tathāgatasyānusaṃghau tatra caiva virajadhvajalokadhātau suvarṇajambudhvajakāñcanābho nāma tathāgato 'rhansamyaksaṃbuddho loka utpatsyate / yāvattasya suvarṇadhvajakāñcanāvabhāsasya tathāgatasyārhataḥ samyaksaṃbuddhasya parinirvṛtasya sarveṇa sarve sarvathā sarvaṃ tasya śāsanasyāntarhitasyāyaṃ rūpyaprabho dārakaḥ / tasya tathāgatasyonusaṃghau tatra caiva virajadhvajalokadhātāvanuttarāṃ samyaksaṃbodhimabhisaṃbhotsyate / suvarṇaśataraśmiprabhāsagarbho nāma tathāgato 'rhanasamyaksaṃbuddho loka utpasyate vidyācaraṇasampannaḥ sugato lokavidanuttaraḥ puruṣadamyasārathiḥ śāstā devānāṃ ca manuṣyāṇāṃ ca buddho bhagavān // te sarva etarhi bhagavatānuttarāyāṃ samyak saṃbodhau vyākṛtāḥ //",
+   "bo": "བཙུན་པ་བཅོམ་ལྡན་འདས་འབར་བའི་ཁྱད་པར་གྱི་གཟི་བརྗིད་རྒྱལ་པོ་ལ་སོགས་པ་ལྷའི་བུ་སྟོང་ཕྲག་བཅུ་པོ་དག་རྒྱུ་གང་དང་རྐྱེན་གང་དང་། དགེ་བའི་རྩ་བ་སྦྱངས་པ་ཅི་འདྲ་བ་དང་གང་བགྱིས་ཤིང་བསགས་པས། སྐྱེས་བུ་དམ་པ་གསུམ་པོ་འདི་དག་བྱང་ཆུབ་ཏུ་ལུང་བསྟན་པ་ཐོས་ནས། ད་ལྟར་སུམ་ཅུ་རྩ་གསུམ་གྱི་གནས་ནས་ལྷགས་ཏེ། བཅོམ་ལྡན་འདས་ལ་ཆོས་མཉན་པའི་སླད་དུ་མཆིས་ན། འདི་ལྟ་སྟེ་བྱང་ཆུབ་སེམས་དཔའ་མཛེས་པའི་ཏོག་སྐྱེས་བུ་དམ་པ་འདི་མ་འོངས་པའི་དུས་ན། བསྐལ་པ་བགྲང་བ་ལས་འདས་ པ་གྲངས་མ་མཆིས་པ་བྱེ་བ་ཁྲག་ཁྲིག་བརྒྱ་སྟོང་ཕྲག་དུ་མ་འདས་པ་ན། འཇིག་རྟེན་གྱི་ཁམས་གསེར་དུ་སྣང་བར་བླ་ན་མེད་པ་ཡང་དག་པར་རྫོགས་པའི་བྱང་ཆུབ་མངོན་པར་རྫོགས་པར་འཚང་རྒྱ་སྟེ། དེ་བཞིན་གཤེགས་པ་དགྲ་བཅོམ་པ་ཡང་དག་པར་རྫོགས་པའི་སངས་རྒྱས་མཁྱེན་པ་དང་ཞབས་སུ་ལྡན་པ། བདེ་བར་གཤེགས་པ། འཇིག་རྟེན་མཁྱེན་པ། སྐྱེས་བུ་འདུལ་བའི་ཁ་ལོ་སྒྱུར་བ། བླ་ན་མེད་པ་ལྷ་དང་མི་རྣམས་ཀྱི་སྟོན་པ། སངས་རྒྱས་བཅོམ་ལྡན་འདས་གསེར་དང་རིན་པོ་ཆེའི་འབྱུང་གནས་གདུགས་བརྩེགས་ཞེས་བྱ་བ་འཇིག་རྟེན་དུ་འབྱུང་ངོ་། །ཇི་ཙམ་ན་བཅོམ་ལྡན་འདས་དེ་བཞིན་གཤེགས་པ་དགྲ་བཅོམ་པ་ཡང་དག་པར་རྫོགས་པའི་སངས་རྒྱས་གསེར་དང་རིན་པོ་ཆེའི་འབྱུང་གནས་གདུགས་བརྩེགས་དེ་ཡོངས་སུ་མྱ་ངན་ལས་འདས་པའི་དམ་པའི་ཆོས་ནུབ་སྟེ། དེའི་བསྟན་པ་ཡོང་ཡེ་ཐམས་ཅད་ནུབ་པར་གྱུར་པ་ན། ཁྱེའུ་དངུལ་གྱི་ཏོག་འདི་དེ་བཞིན་གཤེགས་པ་དེའི་མཚམས་སྦྱོར་ཞིང་འཇིག་རྟེན་གྱི་ཁམས་རྡུལ་མེད་པའི་རྒྱལ་མཚན་དེ་ཉིད་དུ། དེ་བཞིན་གཤེགས་པ་དགྲ་བཅོམ་པ་ཡང་དག་པར་རྫོགས་པའི་སངས་རྒྱས་གསེར་འཛམ་བུའི་གསེར་གྱི་རྒྱལ་མཚན་གྱི་འོད་ཅེས་བྱ་བ་འཇིག་རྟེན་དུ་འབྱུང་ངོ་། །ཇི་ཙམ་ན་དེ་བཞིན་གཤེགས་པ་དགྲ་བཅོམ་པ་ཡང་དག་པར་རྫོགས་པའི་སངས་རྒྱས་གསེར་འཛམ་བུའི་གསེར་གྱི་རྒྱལ་མཚན་གྱི་འོད་དེ་ཡོངས་སུ་མྱ་ངན་ལས་འདས་ནས། དེ་ཡི་བསྟན་པ་ཡོང་ཡེ་ཐམས་ཅད་དུ་ནུབ་པའི་བར་དུ་གྱུར་པ་ན་ཁྱེའུ་དངུལ་གྱི་འོད་འདི། དེ་བཞིན་གཤེགས་པ་དེའི་མཚམས་སྦྱོར་ཞིང་འཇིག་རྟེན་གྱི་ཁམས་རྡུལ་དང་བྲལ་བའི་རྒྱལ་མཚན་དེ་ཉིད་དུ་བླ་ན་མེད་པ་ཡང་དག་པར་རྫོགས་པའི་བྱང་ཆུབ་མངོན་པར་རྫོགས་པར་འཚང་རྒྱ་སྟེ། དེ་བཞིན་གཤེགས་པ་དགྲ་བཅོམ་པ་ཡང་དག་པར་རྫོགས་པའི་སངས་རྒྱས་མཁྱེན་པ་དང་ཞབས་སུ་ལྡན་པ། བདེ་བར་གཤེགས་པ། འཇིག་རྟེན་མཁྱེན་པ། སྐྱེས་བུ་འདུལ་བའི་ཁ་ལོ་སྒྱུར་བ། བླ་ན་མེད་པ་ལྷ་དང་མི་རྣམས་ཀྱི་སྟོན་པ། སངས་རྒྱས་བཅོམ་ལྡན་འདས་གསེར་བརྒྱའི་འོད་ཟེར་གསེར་དུ་སྣང་བ་སྙིང་པོ་ཞེས་བྱ་བ་འཇིག་རྟེན་དུ་འབྱུང་ངོ་། ། ཞེས་དེ་དག་ཐམས་ཅད་བཅོམ་ལྡན་འདས་ཀྱིས་དེ་ ལྟར་བླ་ན་མེད་པ་ཡང་དག་པར་རྫོགས་པའི་བྱང་ཆུབ་ཏུ་ལུང་བསྟན་ཏོ། །",
+   "en": "Chapter 15: The Prophecy to Ten Thousand Devas  When the Bhagavat had said that, the noble goddess Bodhisattvasamuccayā asked him, “Venerable Bhagavat, through what cause and what condition, and through what accomplishment and accumulation of planting good roots, have Jvalanāntaratejorāja and these other ten thousand devas now come from the Trāyastriṃśa paradise, having heard the prophecy to these three sublime beings? “It was thus: this excellent being, the bodhisattva Ruciraketu, in a future time, after many hundreds of thousands of quintillions of asaṃkhyeyas of eons have passed, will attain the highest, most complete enlightenment of buddhahood in the world realm Suvarṇaprabhā. He will appear in that world as the tathāgata arhat samyaksaṃbuddha, the one with wisdom and virtuous conduct, the sugata, the one who knows the world’s beings, the unsurpassable guide who tames beings, the teacher of devas and humans, the buddha, the bhagavat by the name of Suvarṇaratnākaracchatrakūṭa. “When the tathāgata arhat samyaksaṃbuddha Suvarṇaratnākaracchatrakūṭa has passed into nirvāṇa and his Dharma has come to an end and his teachings have completely come to an end, at that time, this boy by the name of Rūpyaketu will appear as the tathāgata arhat samyaksaṃbuddha by the name of Suvarṇajambudhvajakāñcanābha in the world realm called Virajadhvajā. “When the tathāgata arhat samyaksaṃbuddha Suvarṇajambudhvajakāñcanābha has passed into nirvāṇa and his Dharma has come to an end and his teachings have completely come to an end, then this boy by the name of Rūpyaprabha will be the successor of that tathāgata, attaining the highest enlightenment of complete buddhahood in the world realm called Immaculate Banner, appearing as the tathāgata arhat samyaksaṃbuddha, the one with wisdom and virtuous conduct, the sugata, the one who knows the world’s beings, the unsurpassable guide who tames beings, the teacher of devas and humans, the buddha, the bhagavat by the name of Radiance of a Hundred Golden Lights. “All of that was the Bhagavat’s prophecy of their attainment of the highest, most complete enlightenment.",
+   "T0663": "爾時如來，將欲為是信相菩薩及其二子銀相、銀光，授阿耨多羅三藐三菩提記。是時即有十千天子，威德熾王而為上首，俱從忉利來至佛所，頂禮佛足却坐一面。爾時佛告信相菩薩：「汝於來世，過無量無邊百千萬億不可稱計那由他劫，金照世界，當成阿耨多羅三藐三菩提，號金寶蓋山王如來、應供、正遍知、明行足、善逝、世間解、無上士、調御丈夫、天人師、佛、世尊。乃至是佛般涅槃後，正法像法皆滅盡已，長子銀相，當於是界次補佛處，世界爾時轉名淨幢，佛名閻浮檀金幢光照明如來、應供、正遍知、明行足、善逝、世間解、無上士、調御丈夫、天人師、佛、世尊。乃至是佛般涅槃後，正法像法悉滅盡已，次子銀光，復於是後次補佛處，世界名字如本不異，佛號曰金光照如來、應供、正遍知、明行足、善逝、世間解、無上士、調御丈夫、天人師、佛、世尊。」是十千天子，聞三大士得受記莂，復聞如是金光明經，聞已歡喜生殷重心，心無垢累如淨琉璃，清淨無礙猶如虛空。爾時如來，知是十千天子善根成熟，即便與授菩提道記：「汝等天子！於當來世，過阿僧祇百千萬億那由他劫，於是世界，當成阿耨多羅三藐三菩提，同共一家一姓一名，號曰青目優鉢羅華香山如來、應供、正遍知、明行足、善逝、世間解、無上士、調御丈夫、天人師、佛、世尊，如是次第出現於世，凡一萬佛。」",
+   "T0664": "爾時，如來將欲為是信相菩薩及其二子銀相、銀光授阿耨多羅三藐三菩提記。是時即有十千天子，威德熾王而為上首，俱從忉利來至佛所，頂禮佛足，却坐一面。爾時，佛告信相菩薩：「汝於來世過無量無邊百千萬億不可稱計那由他劫，金照世界當成阿耨多羅三藐三菩提，號金寶蓋山王如來、應供、正遍知、明行足、善逝、世間解、無上士、調御丈夫、天人師、佛、世尊。乃至是佛般涅槃後、正法像法皆滅盡已，長子銀相當於是界次補佛處，世界爾時轉名淨幢，佛名閻浮檀金幢光照明如來、應供、正遍知、明行足、善逝、世間解、無上士、調御丈夫、天人師、佛、世尊。乃至是佛般涅槃後、正法像法悉滅盡已，次子銀光復於是後次補佛處，世界名字如本不異，佛號曰金光照如來、應供、正遍知、明行足、善逝、世間解、無上士、調御丈夫、天人師、佛、世尊。」是十千天子聞三大士得受記莂，復聞如是金光明經，聞已歡喜，生慇重心，心無垢累如淨琉璃、清淨無礙猶如虛空。爾時，如來知是十千天子善根成熟，即便與授菩提道記：「汝等天子於當來世過阿僧祇百千萬億那由他劫，於是世界當成阿耨多羅三藐三菩提，同共一家、一姓、一名，號曰青目優鉢羅華香山如來、應供、正遍知、明行足、善逝、世間解、無上士、調御丈夫、天人師、佛、世尊，如是次第出現於世，凡一萬佛。」",
+   "T0665": "爾時，如來於大眾中廣說法已，欲為妙幢菩薩及其二子銀幢銀光，授阿耨多羅三藐三菩提記。時有十千天子，最勝光明而為上首，俱從三十三天來至佛所，頂禮佛足，却坐一面，聽佛說法。爾時，佛告妙幢菩薩言：「汝於來世過無量無數百千萬億那庾多劫已，於金光明世界，當成阿耨多羅三藐三菩提，號金寶山王如來、應、正遍知、明行足、善逝、世間解、無上士、調御丈夫、天人師、佛、世尊，出現於世；時此如來般涅槃後，所有教法亦皆滅盡。時彼長子名曰銀幢，即於此界次補佛處，世界爾時轉名淨幢，當得作佛，名曰金幢光如來、應、正遍知、明行足、善逝、世間解、無上士、調御丈夫、天人師、佛、世尊。時此如來般涅槃後，所有教法亦皆滅盡。次子銀光即補佛處，還於此界當得作佛，號曰金光明如來、應、正遍知、明行足、善逝、世間解、無上士、調御丈夫、天人師、佛、世尊。」是時十千天子聞三大士得授記已，復聞如是最勝王經，心生歡喜，清淨無垢，猶如虛空。爾時，如來知是十千天子善根成熟，即便與授大菩提記：「汝等天子於當來世，過無量無數百千萬億那庾多劫，於最勝因陀羅高幢世界，得成阿耨多羅三藐三菩提，同一種姓，又同一名，號曰面目清淨優鉢羅香山，十號具足，如是次第十千諸佛出現於世。」"
+  },
+  "s15-01": {
+   "sa": "na caiteṣāṃ bhadanta bhagavajjvalanāntaratejorājapramukhānāṃ daśānāṃ devaputrasahasrāṇāṃ yāvadvistīrṇā bodhisatvacaryā abhūvan / na ṣaṭsu pāramitāsu pūrvaṃ caritavantaḥ śrutapūrvā abhūvan / nayanacaraṇottamāṅgapriyaputrabhāryāduhitaraḥ parityaktapūrvā na śrūyante / dhanadhānyahiraṇyasuvarṇamaṇimuktāvajravaiḍūryaśaṅkhaśilāpravāḍajātarūparajatamarakataratnāni (Bagchi 91) parityaktapūrvāṇi na śrūyante / nānānnapānavastrayānaśayanāsanabhavanavimānārāmapuṣkariṇītaḍāgāḥ parityaktapūrvā na śrūiyante / nānāhastigo 'śvavaḍavādāsīdāsāḥ parityaktapūrvā na śrūyante / yathā tānyanekāni bodhisattvakoṭīniyutaśatasahasrāṇi pūrveṣvasaṃkhyeyakalpakoṭīniyutaśatasahasreṣvanekānāmasaṃkhyeyatathāgatakoṭīniyutaśatasahasrāṇāmanekācintyaiḥ nānāvicitraiḥ pūjāśatasahasraiḥ sarvopakaraṇaiḥ pūjāṃ kariṣyanti / sarvaratnaparityāgāni parityajiṣyanti / karacaraṇanayanottamāṅgapriyaputrabhāryāduhitāparityāgāni kariṣyanti / dhanadhānyahiraṇyasuvarṇamaṇimuktāvaiḍūryaśaṅkhaśilāpravāḍarajatajātarūpāṇi parityāgāni parityajanti / annapānavastraśayanāsanabhavanavimānārāmodyānapuṣkariṇīhastigavāścavaḍavādāsīdāsaparityāgāni parityakṣyanti / anupūrveṇa ṣaṭpāramitāḥ paripūrayiṣyanti / anupūrveṇa ṣaṭpāramitāḥ paripūrayitvānekāni sukhaśatasahasrāṇyanubhaviṣyanti / yāvadbuddhebhyo bhagavadbhayaḥ tathāgatanāmadheye vyākaraṇaṃ pratilapsyante // tatkena bhadanta bhagavan hetunā kena kāraṇena kīdṛśenoptakuśalamūlena ca tāni jvalanāntarate jorājapramukhāni daśadevaputrasahasrāṇīha bhagavato 'ntikaṃ dharmaśravaṇāyopasaṃkrāmanti / tānyetarhi bhagavatānuttarāyāṃ samyaksaṃbodhau vyākṛtāni / yadutānāgate 'dhvanyanekeṣvasaṃkhyeyakalpakoṭīniyutaśatasahasreṣvatikrānteṣu tatreva śālendradhvajāgravatyāṃ lokadhātāvekakulagotraikanāmadheyenānupūrveṇānuttarāṃ samyaksaṃbodhimabhisaṃbhotsyante / prasannavadanotpalagandhakūṭānāmnā daśasu dikṣu daśabuddhasahasrāṇi loka utpatsyante vidyācaraṇasaṃpannāḥ sugatā lokavido 'nuttarāḥ puruṣadamyasārathayaḥ śāstāro devānāṃ ca manuṣyāṇāṃ ca buddhā bhagavantaḥ //",
+   "bo": "བཙུན་པ་བཅོམ་ལྡན་འདས་འབར་བའི་ཁྱད་པར་གྱི་གཟི་བརྗིད་རྒྱལ་པོ་ལ་སོགས་པ་ལྷའི་བུ་སྟོང་ཕྲག་བཅུ་པོ་དེ་དག་ནི་དེ་ཙམ་དུ་བྱང་ཆུབ་སེམས་དཔའི་སྤྱོད་པ་རླབས་པོ་ཆེ་ཡང་མ་གྱུར། སྔོན་ཕ་རོལ་ཏུ་ཕྱིན་པ་དྲུག་པོ་དག་ལ་སྤྱད་སྐད་ཀྱང་མི་གདའ། ལག་པ་དང་རྐང་པ་དང་མིག་དང་ཡན་ལག་གི་དམ་པ་མགོ་དང་། བུ་དང་ཆུང་མ་དང་བུ་མོ་ཕངས་པ་དག་སྔོན་ཡོངས་སུ་བཏང་སྐད་ཀྱང་མི་གདའ། ནོར་དང་འབྲུ་དང་། འགྲོན་བུ་དང་། གསེར་དང་། ནོར་བུ་དང་། མུ་ཏིག་དང་། བཻ་ཌཱུརྱ་དང་། དུང་དང་། མན་ཤེལ་དང་། བྱི་རུ་དང་། དངུལ་དང་། ས་ལེ་སྦྲམ་དང་། རིན་པོ་ཆེ་རྣམས་སྔོན་ཡོངས་སུ་བཏང་སྐད་ཀྱང་མི་གདའ། བཟའ་བ་དང་། བཏུང་བ་དང་། བཞོན་པ་དང་། གོས་དང་། མལ་ཆ་དང་། ཁང་ཁྱིམ་དང་། གཞལ་མེད་ཁང་དང་། ཀུན་དགའ་ར་བ་དང་། རྫིང་བུ་དང་། ལྟེང་ཀ་དག་སྔོན་ཡོངས་སུ་བཏང་སྐད་ཀྱང་མི་གདའ། གླང་པོ་ཆེ་དང་། བ་ལང་དང་། རྟ་ཕོ་རྒོད་དང་། བྲན་ཕོ་དང་། བྲན་མོ་སྣ་ཚོགས་སྔོན་ཡོངས་སུ་བཏང་སྐད་ཀྱང་མི་གདའ་འདི་ལྟ་སྟེ། བྱང་ཆུབ་སེམས་དཔའ་བྱེ་བ་ཁྲག་ཁྲིག་བརྒྱ་སྟོང་གྲངས་མ་མཆིས་པ་ཕྲག་དུ་མ་དེ་དག་ནི་སངས་རྒྱས་བཅོམ་ལྡན་འདས་རྣམས་ལས། དེ་བཞིན་གཤེགས་པའི་མིང་དུ་ལུང་མ་ཐོབ་ཀྱི་བར་དུ་སྔོན་བསྐལ་པ་བྱེ་བ་ཁྲག་ཁྲིག་བརྒྱ་སྟོང་ཕྲག་གྲངས་མ་མཆིས་པ་དུ་མ་ནས། དེ་བཞིན་གཤེགས་པ་བྱེ་བ་ཁྲག་ཁྲིག་བརྒྱ་སྟོང་ཕྲག་གྲངས་མ་མཆིས་པ་དུ་མ་དག་ལ་མཆོད་པ་སྣ་ཚོགས་ཐ་དད་པ་བརྒྱ་སྟོང་བསམ་གྱིས་མི་ཁྱབ་པ་ཕྲག་དུ་མ་དང་ཡོ་བྱད་ཐམས་ཅད་ཀྱིས་མཆོད་པ་བགྱིད། ཡོངས་སུ་བཏང་བར་བགྱི་བའི་དངོས་པོ་ཐམས་ཅད་ཀྱང་ཡོངས་སུ་གཏོང་ལ། ལག་པ་དང་། རྐང་པ་དང་། མིག་དང་། ཡན་ལག་གི་དམ་པ་མགོ་དང་བུ་དང་། ཆུང་མ་དང་། བུ་མོ་ཕངས་པ་ཡོངས་སུ་བཏང་བར་བགྱི་བ་རྣམས་ཀྱང་ཡོངས་སུ་གཏོང་། ནོར་དང་། འབྲུ་དང་། འགྲོན་བུ་དང་། གསེར་དང་། ནོར་བུ་དང་། མུ་ཏིག་དང་། བཻ་ཌཱུརྱ་དང་། དུང་དང་། མན་ཤེལ་དང་། བྱི་རུ་དང་། དངུལ་དང་། ས་ལེ་སྦྲམ་ཡོངས་སུ་བཏང་ བར་བགྱི་བ་རྣམས་ཡོངས་སུ་གཏོང་། བཟའ་བ་དང་། བཏུང་བ་དང་། བཞོན་པ་དང་། གོས་དང་། མལ་ཆ་དང་། སྟན་དང་། ཁང་ཁྱིམ་དང་། གཞལ་མེད་ཁང་དང་། ཀུན་དགའ་ར་བ་དང་། སྐྱེད་མོས་ཚལ་དང་། རྫིང་བུ་དང་། ལྟེང་ཀ་དང་། གླང་པོ་ཆེ་དང་། བ་ལང་དང་། རྟ་ཕོ་རྒོད་དང་། བྲན་ཕོ་དང་། བྲན་མོ་ཡོངས་སུ་བཏང་བར་བགྱི་བ་རྣམས་ཀྱང་ཡོངས་སུ་གཏོང་ཞིང་རིམ་གྱིས་ཕ་རོལ་ཏུ་ཕྱིན་པ་དྲུག་པོ་ཐམས་ཅད་ཡོངས་སུ་རྫོགས་པར་བགྱིད། རིམ་གྱིས་ཕ་རོལ་ཏུ་ཕྱིན་པ་དྲུག་པོ་དག་ཡོངས་སུ་རྫོགས་པར་བགྱིས་ནས་བདེ་བ་བརྒྱ་སྟོང་ཕྲག་མང་པོ་ཡང་མྱོང་བར་འགྱུར་ན། བཙུན་པ་བཅོམ་ལྡན་འདས་རྒྱུ་གང་དང་རྐྱེན་གང་དང་དགེ་བའི་རྩ་བ་སྦྱངས་པ་ཅི་འདྲ་བ་ཞིག་གིས་འབར་བའི་ཁྱད་པར་གྱི་གཟི་བརྗིད་རྒྱལ་པོ་ལ་སོགས་པ་ལྷའི་བུ་སྟོང་ཕྲག་བཅུ་པོ་འདི་དག །བཅོམ་ལྡན་འདས་ལ་ཆོས་ཉན་པའི་སླད་དུ་མཆིས་པ་འདི་དག་བཅོམ་ལྡན་འདས། འདི་ལྟར་མ་འོངས་པའི་དུས་ན་བསྐལ་པ་བྱེ་བ་ཁྲག་ཁྲིག་བརྒྱ་སྟོང་གྲངས་མེད་པ་དུ་མ་ན། འཇིག་རྟེན་གྱི་ཁམས་སཱ་ལའི་དབང་པོ་མཐོན་པོའི་རྒྱལ་མཚན་དང་ལྡན་པ་ཞེས་བྱ་བ་དེ་ཉིད་དུ་རིགས་དང་། རུས་གཅིག་པ་དང་། མིང་གཅིག་ཏུ་རིམ་གྱིས་བླ་ན་མེད་པ་ཡང་དག་པར་རྫོགས་པའི་བྱང་ཆུབ་མངོན་པར་རྫོགས་པར་འཚང་རྒྱ་བར་འགྱུར་ཏེ། རབ་ཏུ་དང་བའི་ཞལ་ཨུཏྤ་ལའི་དྲི་བརྩེགས་པ་ཞེས་བྱ་བར་སངས་རྒྱས་སྟོང་ཕྲག་བཅུ་འཇིག་རྟེན་དུ་འབྱུང་སྟེ། མཁྱེན་པ་དང་ཞབས་སུ་ལྡན་པ། བདེ་བར་གཤེགས་པ། འཇིག་རྟེན་མཁྱེན་པ། སྐྱེས་བུ་འདུལ་བའི་ཁ་ལོ་སྒྱུར་བ། བླ་ན་མེད་པ། ལྷ་དང་མི་རྣམས་ཀྱི་སྟོན་པ། སངས་རྒྱས་བཅོམ་ལྡན་འདས་སུ་འགྱུར་རོ་ཞེས་དེ་ལྟར་བླ་ན་མེད་པ་ཡང་དག་པར་རྫོགས་པའི་བྱང་ཆུབ་ཏུ་ལུང་བསྟན་ལགས།",
+   "en": "“Venerable Bhagavat, Jvalanāntaratejorāja and the rest of those ten thousand devas have not had such a great, extensive bodhisattva conduct as that. “It is not said that they have previously practiced the six perfections. “It is not said that they have previously given away their arms, legs, eyes, the supreme limb of the head, or their beloved sons, wives, and daughters. “It is not said that they have previously given away wealth, grain, cowries, gold, silver, jewels, pearls, beryl, conchs, crystals, coral, silver, or gold nuggets. “It is not said that they have previously given away food, drink, steeds, clothes, beds, seats, houses, divine palaces, parks, ponds, or pools. “It is not said that they have previously given away elephants, oxen, stallions, male servants, or female servants. “Countless hundreds of thousands of quintillions of bodhisattvas have, before they received from buddha bhagavats their names as tathāgatas, made countless hundreds of thousands of various offerings to countless hundreds of thousands of quintillions of tathāgatas for countless hundreds of thousands of quintillions of eons. They had given away all the things that could be given away. They had given away their arms, legs, eyes, the supreme limb of the head, and their beloved sons, wives, and daughters. They had given away wealth, grain, cowries, gold, silver, jewels, pearls, beryl, conchs, crystals, coral, silver, and gold nuggets. They had given away food, drink, steeds, clothes, beds, seats, houses, divine palaces, parks, pleasure groves, ponds, pools, elephants, oxen, stallions, male servants, and female servants. They had successively completed all the six perfections and, having successively completed all the six perfections, they experienced many hundreds of thousands of kinds of happiness. “Venerable Bhagavat, through what cause and what condition, through what manner of developing good roots, have Jvalanāntaratejorāja and the rest of these ten thousand devas who have come here to hear the Dharma from the Bhagavat been prophesied to successively appear, Bhagavat, in a future time, after many hundreds of thousands of quintillions of asaṃkhyeya eons, in a world realm called Śālendradhvajāgravatī, in the same family, in the same clan, and with the same name, to attain the highest, most complete enlightenment of perfect buddhahood as ten thousand buddhas by the name of Prasannavadanotpalagandhakūṭa, becoming tathāgatas, arhats, samyaksaṃbuddhas, with wisdom and virtuous conduct, sugatas, knowers of the world’s beings, unsurpassable guides who tame beings, teachers of devas and humans, buddhas, and bhagavats?”",
+   "T0663": "爾時道場菩提樹神，名等增益，白佛言：「世尊！是十千天子，於忉利宮為聽法故故來集此，云何如來便與授記？世尊！我未曾聞是諸天子修行具足六波羅蜜，亦未曾聞捨於手足頭目髓腦、所愛妻子財寶穀帛、金銀琉璃硨磲碼碯、真珠珊瑚珂貝璧玉、甘饌飲食衣服臥具、病瘦醫藥象馬車乘、殿堂屋宅園林泉池奴婢僕使，如餘無量百千菩薩，以種種資生供養之具，恭敬供養過去無量百千萬億那由他等諸佛世尊。如是菩薩於未來世，亦捨無量所重之物，頭目髓腦所愛妻子財寶穀帛乃至僕使，次第修行，成就具足六波羅蜜，成就是已備修苦行，動經無量無邊劫數，然後方得受菩提記。世尊！是天子等何因何緣，修行何等勝妙善根，從彼天來暫得聞法便得受記？惟願世尊，為我解說斷我疑網。」",
+   "T0664": "爾時，道場菩提樹神名等增益，白佛言：「世尊！是十千天子於忉利宮為聽法故故來集此，云何如來便與授記？世尊！我未曾聞是諸天子修行具足六波羅蜜，亦未曾聞捨於手、足、頭、目、髓、腦、所愛妻子、財寶、穀帛、金、銀、琉璃、車𤦲、馬碯、真珠、珊瑚、珂貝、璧玉、甘饌飲食、衣服、床臥、病瘦醫藥、象馬車乘、殿堂、屋宅、園林、泉池、奴婢、僕使。如餘無量百千菩薩，以種種資生供養之具，恭敬供養過去無量百千萬億那由他等諸佛世尊，如是菩薩於未來世亦捨無量所重之物，頭、目、髓、腦、所愛妻子、財寶穀帛乃至僕使，次第修行，成就具足六波羅蜜，成就是已，備修苦行動經無量無邊劫數，然後方得授菩提記。世尊！是天子等何因何緣、修行何等勝妙善根，從彼天來暫得聞法便得授記？唯願，世尊！為我解說，斷我疑網。」",
+   "T0665": "爾時，菩提樹神白佛言：「世尊！是十千天子從三十三天，為聽法故，來詣佛所，云何如來便與授記當得成佛？世尊！我未曾聞是諸天子具足修習六波羅蜜多、難行苦行、捨於手足、頭目髓腦、眷屬妻子、象馬車乘、奴婢僕使、宮殿園林、金銀、琉璃、車𤦲、瑪瑙、珊瑚、虎珀、璧玉、珂貝、飲食衣服、臥具醫藥，如餘無量百千菩薩，以諸供具供養過去無數百千萬億那庾多佛，如是菩薩各經無量無邊劫數，然後方得受菩提記。世尊！是諸天子，以何因緣，修何勝行，種何善根，從彼天來暫時聞法，便得授記？惟願世尊，為我解說斷除疑網。」"
+  },
+  "s15-02": {
+   "sa": "evamukte bhagavāṃstāṃ bodhisattvasamuccayāṃ kuladevatāmetadavocat / asti kuladevate saheturasti tatkāraṇam / asti taduptaṃ kuśalamūlaṃ yasya kṛtatvādupacitatvādetāni jvalanāntaratejorājapramukhāni (Bagchi 92) daśadevaputrasahasrāṇyetarhi trāyastriṃśadbhavanādiha dharmaśravaṇāyopasaṃkrāmanti / eteṣāṃ trayāṇāṃ satpuruṣāṇāmidaṃ bodhivyākaraṇaṃ śrutvā sahaśravaṇena kuladevate 'sya suvarṇaprabhāsottamasya sūtrendrarājasyāntike citrīkāraprītiprasādapratilabdhā bhavanti / tāvadvimalavaiḍuryasadṛśena pariśuddhacittena samanvāgatā bhavanti / vimalavipulavistīrṇagagaṇakalpasadṛśena gambhīreṇa cittaprasādena samanvāgatā bhavanti / aparimitaṃ ca puṇyaskandhaṃ parigṛhītavanto bhavanti tāvaccaityadaivate jvalanāntaratejorājapramukhāni daśadevaputrasahasrāṇi sahaśravaṇenāsya sūtrendrarājasyāntike citrīkāraprasādapratilabdhā bhavanti / tāvadvimalavaiḍūryasadṛśena pariśuddhena cittena samanvāgatā bhavanti yāvadyākaraṇabhūmimanuprāptāḥ / anena kuladevate dharmaśravaṇakuśalamūlapracayenāpi pūrvapraṇidhānavaśenaitāni jvalanāntaratejorājapramukhāni daśadevaputrasahasrāṇyetarhyanuttarāyāṃ samyaksaṃbodhau vyākṛtāni / katamāni ca kuladevate pūrvapraṇidhānānīti /",
+   "bo": "དེ་སྐད་ཅེས་གསོལ་པ་དང་། བཅོམ་ལྡན་འདས་ཀྱིས་རིགས་ཀྱི་ལྷ་མོ་བྱང་ཆུབ་ཡང་དག་པར་བསྡུས་པ་ལ་འདི་སྐད་ཅེས་བཀའ་སྩལ་ཏོ། །རིགས་ཀྱི་ལྷ་མོ་འབར་བའི་ཁྱད་པར་གྱི་གཟི་བརྗིད་རྒྱལ་པོ་ལ་སོགས་པ་ལྷའི་བུ་སྟོང་ཕྲག་བཅུ་པོ་འདི་དག་གང་བྱས་ཤིང་བསགས་པས་ཆོས་མཉན་པའི་ཕྱིར་ད་ལྟར་སུམ་ཅུ་རྩ་གསུམ་གྱི་གནས་ནས་འདིར་ལྷགས་པ་ དེའི་དགེ་བའི་རྩ་བ་སྦྱངས་པ་ཡོད། དེའི་རྒྱུ་ཡོད། དེའི་བྱེད་པ་ཡོད་དེ། རིགས་ཀྱི་ལྷ་མོ་སྐྱེས་བུ་དམ་པ་འདི་གསུམ་གྱི་བྱང་ཆུབ་ཏུ་ལུང་བསྟན་པ་འདི་ཐོས་ནས་ཐོས་མ་ཐག་ཏུ་གསེར་འོད་དམ་པ་མདོ་སྡེའི་དབང་པོའི་རྒྱལ་པོ་འདི་ལ་ཤིན་ཏུ་རི་མོ་བྱེད་ཅིང་དགའ་བ་དང་དང་བ་ཐོབ་པར་གྱུར་ཏེ་དེ་ཙམ་དུ་བཻ་ཌཱུརྱ་དྲི་མ་མེད་པ་ལྟར་ཡོངས་སུ་དག་པའི་སེམས་དང་ལྡན་པར་གྱུར་ཏོ། ། དྲི་མ་མེད་ལ་ཤིན་ཏུ་རྒྱ་ཆེ་ཞིང་རྒྱས་པའི་ནམ་མཁའ་ལྟར་ཟབ་པའི་སེམས་རབ་ཏུ་དང་བ་དང་ལྡན་པར་གྱུར་ཏོ། ། བསོད་ནམས་ཀྱི་ཕུང་པོ་དཔག་ཏུ་མེད་པ་ཡོངས་སུ་བཟུང་བ་དང་ལྡན་པར་གྱུར་ཏོ། ། རིགས་ཀྱི་ལྷ་མོ་འབར་བའི་ཁྱད་པར་གྱི་གཟི་བརྗིད་རྒྱལ་པོ་ལ་སོགས་པ་ལྷའི་བུ་སྟོང་ཕྲག་བཅུ་པོ་འདི་དག་དེ་ཙམ་དུ་གསེར་འོད་དམ་པ་མདོ་སྡེའི་དབང་པོའི་རྒྱལ་པོ་འདི་ཐོས་མ་ཐག་ཏུ་ལྷག་པར་རི་མོ་བྱེད་པ་དང་རབ་ཏུ་དང་བ་ཐོབ་པར་གྱུར་ཏོ། ། དེ་ཙམ་དུ་བཻ་ཌཱུརྱ་དྲི་མ་མེད་པ་ལྟར་ཡོངས་སུ་དག་པའི་སེམས་དང་ལྡན་པར་གྱུར་ཏེ། དེའི་ཕྱིར་ལུང་བསྟན་པའི་ས་རྗེས་སུ་ཐོབ་བོ། ། རིགས་ཀྱི་ལྷ་མོ་ཆོས་མཉན་པའི་དགེ་བའི་རྩ་བ་བསགས་པ་འདི་དང་སྔོན་གྱི་སྨོན་ལམ་གྱི་སྟོབས་ཀྱིས་འབར་བའི་ཁྱད་པར་གྱི་གཟི་བརྗིད་རྒྱལ་པོ་ལ་སོགས་པ་ལྷའི་བུ་སྟོང་ཕྲག་བཅུ་པོ་འདི་དག་ད་ལྟར་བླ་ན་མེད་པ་ཡང་དག་པར་རྫོགས་པའི་བྱང་ཆུབ་ཏུ་ལུང་བསྟན་པའི་ས་རྗེས་སུ་ཐོབ་བོ། །",
+   "en": "When she had asked that, the Bhagavat said, “Noble goddess, Jvalanāntaratejorāja and the rest of these ten thousand devas do have a development of good roots, do have a cause, and do have deeds that they have accomplished and accumulated, through which they have come here from the paradise of Trāyastriṃśa in order to hear the Dharma. “Noble goddess, when they heard the prophecy of the enlightenment of these three excellent beings, as soon as they heard it, they gained reverence for, delight in, and trust in this Lord King of Sūtras, the Sublime Golden Light, and just through that they had minds that were as completely pure as stainless beryl. They had profound, completely clear minds like pure, extremely vast, and expansive space. They possessed an immeasurable accumulation of merit. “Noble goddess, Jvalanāntaratejorāja and the rest of these ten thousand devas, in just that way, as soon as they heard this Lord King of Sūtras, the Sublime Golden Light, gained reverence for and trust in it. In just that way, they had minds that were as completely pure as stainless beryl, and therefore they attained the level of prophecy. “Noble goddess, it is through this accumulation of good roots and through the power of previous prayers that Jvalanāntaratejorāja and the rest of these ten thousand devas have now obtained the prophecy of their highest, most complete enlightenment.”",
+   "T0663": "爾時佛告樹神：「善女天！皆有因緣，有妙善根，以隨相修。何以故？以是天子於所住處捨五欲樂，故來聽是《金光明經》，既聞法已，於是經中淨心殷重如說修行，復得聞此三大菩薩受於記莂，亦以過去本昔發心誓願因緣，是故我今皆與受記，於未來世，當成阿耨多羅三藐三菩提。」",
+   "T0664": "爾時，佛告樹神：「善女天！皆有因緣、有妙善根，已隨相修。何以故？以是天子於所住處捨五欲樂故來聽是金光明經，既聞法已於是經中淨心慇重、如說修行，復得聞此三大菩薩授於記莂，亦以過去本昔發心誓願因緣。是故，我今皆與授記，於未來世當成阿耨多羅三藐三菩提。」",
+   "T0665": "佛告樹神：「善女天！如汝所說，皆從勝妙善根因緣，勤苦修已，方得授記。此諸天子，於妙天宮捨五欲樂，故來聽是《金光明經》，既聞法已，於是經中心生殷重，如淨琉璃無諸瑕穢，復得聞此三大菩薩授記之事，亦由過去久修正行誓願因緣，是故我今皆與授記，於未來世當成阿耨多羅三藐三菩提。」時彼樹神聞佛說已，歡喜信受。"
+  },
+  "s15-03": {
+   "sa": "iti śrīsuvarṇaprabhāsottamasūtrendrarāje daśadevaputrasahasravyākaraṇaparivartaḥ ṣoḍaśaḥ //",
+   "bo": "གསེར་འོད་དམ་པ་མདོ་སྡེའི་དབང་པོའི་རྒྱལ་པོ་ལས། ལྷའི་བུ་སྟོང་ཕྲག་བཅུ་ལུང་བསྟན་པ་ཞེས་བྱ་བའི་ལེའུ་སྟེ་བཅྭ་ལྔ་པའོ།། །།",
+   "en": "This concludes “The Prophecy to Ten Thousand Devas,” the fifteenth chapter of “The Lord King of Sūtras, the Sublime Golden Light.”"
+  }
+ }
+}

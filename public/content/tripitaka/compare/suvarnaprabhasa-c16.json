@@ -1,0 +1,139 @@
+{
+ "slug": "suvarnaprabhasa-c16",
+ "title": "金光明經・除病品",
+ "family": "sa",
+ "intro": "梵本〈Vyādhipraśamana〉＝藏譯第十六章＝曇無讖、合部、義淨〈除病品〉。過去寶勝（寶髻）佛像法中，持水長者之子流水見國中疫病，以偈問父四大增損、時節醫方，父以偈答（四時六節、風熱痰癊），流水遍行城邑治病。曇無讖、合部問答偈併為一段。",
+ "units": [
+  {
+   "id": "s16-00",
+   "label": "往昔天自在光王國・持水長者"
+  },
+  {
+   "id": "s16-01",
+   "label": "流水見眾生病苦・欲問醫方"
+  },
+  {
+   "id": "s16-02",
+   "label": "流水以偈問父"
+  },
+  {
+   "id": "s16-03",
+   "label": "父以偈答：四時六節・三病治法"
+  },
+  {
+   "id": "s16-04",
+   "label": "流水遍行城邑治病"
+  },
+  {
+   "id": "s16-05",
+   "label": "品尾題"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sa",
+   "lang": "sa",
+   "label": "梵本",
+   "who": "Nobel 校訂本・GRETIL"
+  },
+  {
+   "id": "bo",
+   "lang": "bo",
+   "label": "藏譯",
+   "who": "德格版 Toh 557・84000 翻譯記憶"
+  },
+  {
+   "id": "en",
+   "lang": "en",
+   "label": "84000 英譯",
+   "who": "譯自藏譯・與藏文逐句對齊"
+  },
+  {
+   "id": "T0663",
+   "lang": "lzh",
+   "label": "曇無讖本",
+   "who": "曇無讖譯《金光明經》・五世紀初",
+   "work": "T0663"
+  },
+  {
+   "id": "T0664",
+   "lang": "lzh",
+   "label": "合部本",
+   "who": "寶貴合《合部金光明經》・597 年",
+   "work": "T0664"
+  },
+  {
+   "id": "T0665",
+   "lang": "lzh",
+   "label": "義淨本",
+   "who": "義淨譯《金光明最勝王經》・703 年",
+   "work": "T0665"
+  }
+ ],
+ "works": [
+  "T0663",
+  "T0664",
+  "T0665"
+ ],
+ "anchors": [
+  {
+   "work": "T0663",
+   "node": "金光明經除病品第十五",
+   "uid": "T16n0663_p0351b23"
+  },
+  {
+   "work": "T0664",
+   "node": "金光明經除病品第二十",
+   "uid": "T16n0664_p0394c05"
+  },
+  {
+   "work": "T0665",
+   "node": "金光明最勝王經除病品第二十四",
+   "uid": "T16n0665_p0447b21"
+  }
+ ],
+ "cells": {
+  "s16-00": {
+   "sa": "// Vyādhipraśamanaparivartaḥ // bhūtapūrvaṃ kuladevate 'tīte 'dhvanyasaṃkhyeyatarairvipulairacintyairaprameyairyadāsīttena kālena tena samayena ratnaśikhī nāma tathāgato 'rhansamyaksaṃbuddho loka utpanno vidyācaraṇasaṃpannaḥ sugato lokavidanuttaraḥ puruṣadamyasārathiḥ śāstā devānāṃ ca manuṣyāṇāṃ ca buddho bhagavān / tena khalu punaḥ kuladevate kālena tena samayena tasya bhagavato ratnaśikhinastathāgatasyārhataḥ samyaksaṃbuddhasya parinirvṛtasya saddharmasyāntarhitasya saddharmapratirūpake parivartamāne sureśvaraprabho nāma rājā babhūva / dhārmiko dharmarājo dharmeṇa rājyaṃ pālayamāno nādharmeṇa mātāpitṛkalpaḥ sarvaviṣayavāsināṃ sattvānām // tena khalu punaḥ kuladevate kālena tena samayena tasya rājñaḥ sureśvaraprabhasya viṣaye jaṭiṃdharo nāma śreṣṭhī babhūva // vaidyaḥ cikitsakaḥ paramadhātukuśalo 'ṣṭāṅgenāyurvaidyaśāsreṇa samanvāgato babhūva / tena khalu kuladevate kālena tena samayena tasya jaṭiṃdharasya śreṣṭhino jalavāhano nāmnā śreṣṭhiputra utpanno babhūva / abhirūpaḥ prāsādiko darśanīyaḥ paramayā śubhavarṇapuṣkaratayā samanvāgato nānāśāstrakuśalaḥ sarvaśāstragatiṃgato lipisaṃkhyāgaṇanākuśalaḥ sarvaśilpī babhūva / tena khalu punaḥ kuladevate kālena tena samayena tasya rājñaḥ sureśvaraprabhasya viṣaye 'nekāni sattvaśatasahasrāṇi nānārogaspṛṣṭānyabhūvan / nānāvyādhiparipīḍitāni duḥkhāṃ tīvrāṃ kharāṃ kaṭukāmamanāpāṃ vedanāṃ vedayanti //",
+   "bo": "རིགས་ཀྱི་ལྷ་མོ་སྔོན་བྱུང་བ་འདས་པའི་དུས་བསྐལ་པ་གྲངས་མེད་པའི་ཡང་ཆེས་གྲངས་མེད་པ་རྒྱས་པ་བསམ་གྱིས་མི་ཁྱབ་པ་ཚད་མེད་པར་གྱུར་པ་དེའི་ཚེ་དེའི་དུས་ན་དེ་བཞིན་གཤེགས་པ་དགྲ་བཅོམ་པ་ཡང་དག་པར་རྫོགས་པའི་སངས་རྒྱས་མཁྱེན་པ་དང་ཞབས་སུ་ལྡན་པ། བདེ་བར་གཤེགས་པ། འཇིག་རྟེན་མཁྱེན་པ། སྐྱེས་བུ་འདུལ་བའི་ཁ་ལོ་སྒྱུར་བ། བླ་ན་མེད་པ། ལྷ་དང་མི་རྣམས་ཀྱི་སྟོན་པ། སངས་རྒྱས་བཅོམ་ལྡན་འདས་རིན་ཆེན་གཙུག་ཏོར་ཅན་ཞེས་བྱ་བ་འཇིག་རྟེན་དུ་བྱུང་ངོ་། །རིགས་ཀྱི་ལྷ་མོ་དེའི་ཚེ་དེའི་དུས་ན། དེ་བཞིན་གཤེགས་པ་དགྲ་བཅོམ་པ་ཡང་དག་པར་རྫོགས་པའི་སངས་རྒྱས་རིན་ཆེན་གཙུག་ཏོར་ཅན་དེ་ཡོངས་སུ་ མྱ་ངན་ལས་འདས་ནས་དམ་པའི་ཆོས་ནུབ་པར་གྱུར་ཏེ་དམ་པའི་ཆོས་ལྟར་བཅོས་པར་གྱུར་པ་ན་རྒྱལ་པོ་ལྷའི་དབང་ཕྱུག་འོད་ཅེས་བྱ་བ་ཆོས་ཅན་ཆོས་ཀྱི་རྒྱལ་པོ་ཆོས་ཀྱི་རྒྱལ་སྲིད་སྐྱོང་གིས་ཆོས་མ་ཡིན་པས་ནི་མ་ཡིན་ཏེ་ཡུལ་ཐམས་ཅད་ན་གནས་པའི་སེམས་ཅན་རྣམས་ཀྱི་ཕ་མ་ལྟ་བུར་གྱུར་པ་ཞིག་བྱུང་ངོ་། ། རིགས་ཀྱི་ལྷ་མོ་དེའི་ཚེ་དེའི་དུས་ན། རྒྱལ་པོ་ལྷའི་དབང་ཕྱུག་འོད་ཀྱི་ཡུལ་དུ་ཚོང་དཔོན་རལ་པ་འཛིན་ཅེས་བྱ་བ་སྨན་པ་གསོ་བར་བྱེད་པ། ཁམས་ལ་མཆོག་ཏུ་མཁས་པ། ཚེའི་རིག་བྱེད་ཡན་ལག་བརྒྱད་ཀྱི་རྒྱུད་དང་ལྡན་པ་ཞིག་བྱུང་བར་གྱུར་ཏོ། ། ཀྱེ་རིགས་ཀྱི་ལྷ་མོ་དེའི་ཚེ་དེའི་དུས་ན་ཚོང་དཔོན་རལ་པ་འཛིན་ཅེས་བྱ་བ་དེའི་བུ་ཆུ་འབེབས་ཞེས་བྱ་བ། གཟུགས་བཟང་བ། མཛེས་པ་བལྟ་ན་སྡུག་པ། ཁ་དོག་བཟང་པོ་རྒྱས་པ་མཆོག་དང་ལྡན་པ། བསྟན་བཅོས་སྣ་ཚོགས་ལ་མཁས་པ། བསྟན་བཅོས་ཐམས་ཅད་རྟོགས་པར་ཁོང་དུ་ཆུད་པ།",
+   "en": "Chapter 16: Ending Illness  “Noble goddess, in the past, in a time gone by—an inconceivable, vast number, more innumerable than an asaṃkhyeya of eons ago—at that time, in that time, the tathāgata arhat samyaksaṃbuddha, the one with wisdom and virtuous conduct, the sugata, the one who knows the world’s beings, the unsurpassable guide who tames beings, the teacher of devas and humans, the buddha, the bhagavat by the name of Ratnaśikhin appeared in the world. “Noble goddess, at that time, in that time, after the Tathāgata Arhat samyaksaṃbuddha Ratnaśikhin had passed into nirvāṇa and the Dharma had vanished and there was just the outer appearance of the Dharma, there was King Sureśvaraprabha, who followed the Dharma, who was a Dharma king, who ruled the kingdom through the Dharma and not through that which was not the Dharma, and who was like a father and mother to the beings who dwelled there. “Noble goddess, at that time, in that time, in the kingdom of King Sureśvaraprabha, there was a head merchant by the name of Jaṭiṃdhara. He was a doctor, a physician, perfectly skilled in the humors, and was endowed with all eight branches of the Āyurveda tradition. “O noble goddess, at that time, in that time, the head merchant Jaṭiṃdhara had a son named Jalavāhana, who had an excellent body; was attractive and handsome; had a perfect, well-developed, excellent complexion; was learned in various treatises; had the understanding of all treatises; and was perfectly trained in letters, numbers, finger-counting, and calculations.",
+   "T0663": "佛告道場菩提樹神：「善女天！諦聽，諦聽！善持憶念，我當為汝演說往昔誓願因緣。過去無量不可思議阿僧祇劫，爾時有佛出現於世，名曰寶勝如來、應供、正遍知、明行足、善逝、世間解、無上士、調御丈夫、天人師、佛、世尊。善女天！爾時是佛般涅槃後，正法滅已，於像法中，有王名曰天自在光王，修行正法如法治世，人民和順孝養父母。是王國中有一長者名曰持水，善知醫方救諸病苦，方便巧知四大增損。善女天！爾時持水長者家中，後生一子名曰流水，體貌殊勝端正第一，形色微妙威德具足，受性聰敏善解諸論，種種技藝書疏算計無不通達。是時國內天降疫病，有無量百千諸眾生等，皆無免者，為諸苦惱之所逼切。",
+   "T0664": "佛告道場菩提樹神：「善女天！諦聽諦聽，善持憶念，我當為汝演說往昔誓願因緣。過去無量不可思議阿僧祇劫，爾時有佛出現於世，名曰寶勝如來、應供、正遍知、明行足、善逝、世間解、無上士、調御丈夫、天人師、佛、世尊。「善女天！爾時，是佛般涅槃後、正法滅已，於像法中，有王名曰天自在光，修行正法，如法治世，人民和順，孝養父母。是王國中有一長者名曰持水，善知醫方救諸病苦、方便巧知四大增損。「善女天！爾時，持水大長者家中後生一子名曰流水，體貌殊勝，端正第一，形色微妙，威德具足，受性聰敏，善解諸論，種種伎藝、書疏、算計無不通達。是時國內天降疫病，有無量百千諸眾生等皆無免者，為諸苦惱之所逼切。",
+   "T0665": "佛告菩提樹神善女天：「諦聽！諦聽！善思念之。是十千天子本願因緣，今為汝說。善女天！過去無量不可思議阿僧企耶劫，爾時有佛出現於世，名曰寶髻如來、應、正遍知、明行足、善逝、世間解、無上士、調御丈夫、天人師、佛、世尊。善女天！時彼世尊般涅槃後，正法滅已，於像法中，有王名曰天自在光，常以正法化於人民，猶如父母。是王國中，有一長者名曰持水，善解醫明，妙通八術，眾生病苦，四大不調，咸能救療。善女天！爾時持水長者，唯有一子，名曰流水，顏容端正，人所樂觀，受性聰敏，妙閑諸論，書畫算印，無不通達。時王國內有無量百千諸眾生類，皆遇疫疾，眾苦所逼，乃至無有歡樂之心。善女天！爾時長者子流水，見是無量百千眾生受諸病苦，起大悲心，作如是念：『無量眾生為諸極苦之所逼迫，我父長者，雖善醫方，妙通八術，能療眾病，四大增損，然已衰邁，老耄虛羸，要假扶策，方能進步，不復能往城邑聚落救諸病苦。今有無量百千眾生，皆遇重病，無能救者，我今當至大醫父所，諮問治病醫方祕法，若得解已，當往城邑聚落之所，救諸眾生種種疾病，令於長夜得受安樂。』時長者子作是念已，即詣父所，稽首禮足，合掌恭敬，却住一面，即以伽他，請其父曰："
+  },
+  "s16-01": {
+   "sa": "tena khalu punaḥ kuladevate kālena tena samayena tasya jalavāhanasya śreṣṭhiputrasya teṣāmanekeṣāṃ sattvaśatasahasrāṇāṃ nānārogaspṛṣṭānāṃ nānāvyādhiparipiḍitānāmarthāya paramakāruṇyaṃ cittamutpanno babhūva / etānyanekāni sattvaśatasahasrāṇi nānārogaspṛṣṭāni nānāvyādhiparipīḍitānyetarhi duḥkhāṃ tīvrāṃ kharāṃ kaṭukāmamanāpāṃ vedanāṃ vedayanti / ayaṃ ca mama pitā jaṭiṃdharaḥ śreṣṭhī vaidyavicikitsakaḥ paramadhātukuśalo 'ṣṭāṅgāyurvaidyaśāstreṇa samanvāgato vṛddho jīrṇo (Bagchi 94) mahallako 'dhvagato vayo 'nuprāpto jīrṇamavasthāpya pravepamāṇaḥ kāyo yaṣṭimālambya yatra yatra sarvatra grāmanagaranigamarāṣṭrarājadhānīṣūpasaṃkrāmati / etānyanekāni sattvaśatasahasrāṇi nānārogaspṛṣṭāni nānāvyādhiparipīḍitāni nānāvyādhobhyaḥ parimocayituṃ yaṃ nūnamahamimameva pitaraṃ jaṭiṃdharamupasaṃkramitvādhikauśalyaṃ paripṛccheyam / yena dhātukauśalyena paripṛṣṭenāhaṃ sarvatra grāmanagaranigamajanapadarāṣṭrarājadhānīṣūpasaṃkramiṣyāmi / upasaṃkramya tānyanekāni sattvaśatasahasrāṇi nānārogaspṛṣṭāni nānāvyādhiparipīḍitāni nānāvyādhibhyaḥ parimocayiṣyāmi /",
+   "bo": "ཡི་གེ་དང་གྲངས་དང་ལག་རྩིས་དང་། རྩིས་རྣམས་ཤིན་ཏུ་བསླབས་པར་གྱུར་པ་ཞིག་བྱུང་ངོ་། །རིགས་ཀྱི་ལྷ་མོ་དེའི་ཚེ་དེའི་དུས་ན་རྒྱལ་པོ་ལྷའི་དབང་ཕྱུག་འོད་དེའི་ཡུལ་དེ་ན་སེམས་ཅན་བརྒྱ་སྟོང་ཕྲག་དུ་མ་ནད་སྣ་ཚོགས་ཀྱིས་བཏབ་པར་གྱུར་ཅིང་། ནད་སྣ་ཚོགས་ཀྱིས་ཡོངས་སུ་གཟིར་ཏེ། སྡུག་བསྔལ་མི་བཟད་པ་རྩུབ་པ་དྲག་པ་ཡིད་དུ་མི་འོང་བའི་ཚོར་བ་རྣམས་མྱོང་བར་གྱུར་ཏོ། ། རིགས་ཀྱི་ལྷ་མོ་དེའི་ཚེ་དེའི་དུས་ན་ཚོང་དཔོན་གྱི་བུ་ཆུ་འབེབས་དེ། སེམས་ཅན་ནད་སྣ་ཚོགས་ཀྱིས་བཏབ་པ། ནད་སྣ་ཚོགས་ཀྱིས་གཟིར་བ། བརྒྱ་སྟོང་ཕྲག་དུ་མ་དེ་དག་གི་དོན་གྱི་ཕྱིར། སྙིང་རྗེ་ཆེན་པོའི་སེམས་སྐྱེས་པར་གྱུར་ཏོ། །སེམས་ཅན་བརྒྱ་སྟོང་ཕྲག་དུ་མ་དེ་དག་ནི་ནད་སྣ་ཚོགས་ཀྱིས་བཏབ་ཅིང་ནད་སྣ་ཚོགས་ཀྱིས་གཟིར་བ། དེ་ལྟར་སྡུག་བསྔལ་མི་བཟད་པ་རྩུབ་པ་དྲུག་པོ་ཡིད་དུ་མི་འོང་བའི་ཚོར་བ་རྣམས་མྱོང་ལ། བདག་གི་ཕ་ཚོང་དཔོན་རལ་པ་འཛིན་སྨན་པ་གསོ་བར་བྱེད་པ། ཁམས་ལ་མཆོག་ཏུ་མཁས་པ། ཚེའི་རིག་བྱེད་ཡན་ལག་བརྒྱད་ཀྱི་རྒྱུད་དང་ལྡན་པ་འདི་ནི་རྒས་འཁོགས་གཏུགས་ལམ་དུ་ཞུགས། ན་ཚོད་རྗེས་སུ་ཐོབ་པ། འཁར་བ་ལ་བརྟེན་ཅིང་འདར་ཏེ། གྲོང་དང་། གྲོང་ཁྱེར་དང་། གྲོང་རྡལ་དང་། ལྗོངས་དང་།  ཡུལ་འཁོར་དང་། རྒྱལ་པོའི་ཕོ་བྲང་འཁོར་རྣམས་སུ་འགྲོ་མི་ནུས་ན། སེམས་ཅན་ནད་སྣ་ཚོགས་ཀྱིས་བཏབ་པ། ནད་སྣ་ཚོགས་ཀྱིས་གཟིར་བ་བརྒྱ་སྟོང་ཕྲག་དུ་མ་དེ་དག་ནད་སྣ་ཚོགས་ལས་ཡོངས་སུ་ཐར་བར་བྱ་བའི་ཕྱིར། བདག་ཉིད་བདག་གི་ཕ་རལ་པ་འཛིན་གྱི་གན་དུ་སོང་ལ་ནད་ཀྱི་ཕྱིར་ཁམས་ལ་མཁས་པར་བྱ་བ་ཡོངས་སུ་དྲིས་ཏེ། ཁམས་ལ་མཁས་པར་བྱ་བ་དྲིས་པ་དེས་བདག་གྲོང་དང་། གྲོང་ཁྱེར་དང་། ལྗོངས་དང་། ཡུལ་འཁོར་དང་། རྒྱལ་པོའི་ཕོ་བྲང་འཁོར་རྣམས་སུ་འགྲོ་བར་བྱའོ། ། སོང་ནས་ཀྱང་སེམས་ཅན་ནད་སྣ་ཚོགས་ཀྱིས་བཏབ་པ། ནད་སྣ་ཚོགས་ཀྱིས་གཟིར་བ། བརྒྱ་སྟོང་ཕྲག་དུ་མ་དག་ནད་སྣ་ཚོགས་ལས་ཡོངས་སུ་ཐར་བར་བྱའོ་སྙམ་ནས།",
+   "en": "“Noble goddess, at that time, in that time, many hundreds of thousands of beings living in the kingdom of King Sureśvaraprabha were afflicted by various illnesses, tormented by various illnesses, and were experiencing severe, terrible, unendurable, unpleasant sensations of suffering. “Noble goddess, at that time, in that time, there arose in Jalavāhana, the head merchant’s son, great compassion for those many hundreds of thousands of beings who were afflicted by various illnesses and tormented by various illnesses. He thought, ‘Those beings are experiencing severe, terrible, unendurable, unpleasant sensations of suffering, and my father, this head merchant Jaṭiṃdhara, who is a doctor, a physician, perfectly skilled in the humors, and endowed with all eight branches of the Āyurveda tradition, has become old, decrepit, and feeble. He has reached an advanced age, walks leaning on a stick, and is unable to go to the villages, the towns, the market towns, the countryside, the realm, or the royal capital. Therefore, in order to free those many hundreds of thousands of beings from the afflictions of various illnesses and the torments of various illnesses, I will go to my father, Jaṭiṃdhara, and question him so as to become skilled in the humors in order to heal illness. Having questioned him so as to become skilled in the humors, I will go to the villages, towns, market towns, countryside, realm, and royal capital. When I go there, I will free the many hundreds of thousands of beings from illness.’",
+   "T0663": "「善女天！爾時流水長者子，見是無量百千眾生受諸苦惱故，為是眾生生大悲心，作是思惟：『如是無量百千眾生受諸苦惱。我父長者，雖善醫方能救諸苦，方便巧知四太增損，年已衰邁老耄枯悴，皮緩面皺羸瘦顫掉，行來往反要因几杖，困頓疲乏不能至彼城邑聚落；而是無量百千眾生，復遇重病無能救者，我今當至大醫父所諮問治病醫方祕法，諮稟知已，當至城邑聚落村舍治諸眾生種種重病，悉令得脫無量諸苦。』",
+   "T0664": "「善女天！爾時，流水長者子見是無量百千眾生受諸苦惱故，為是眾生生大悲心，作是思惟：『如是無量百千眾生受諸苦惱，我父長者雖善解醫方、能救諸苦、方便巧知四大增損，年已衰邁，老耄枯悴，皮緩面皺，羸瘦戰掉，行來往反要因机杖，困頓疲乏不能至彼城邑、聚落，而是無量百千眾生復遇重病無能救者。我今當至大醫父所諮問治病醫方祕法，諮稟知已，當往城邑、聚落、村舍治諸眾生種種重病，悉令得脫無量諸苦。』時長者子思惟是已即至父所，頭面著地為父作禮，叉手却住，以四大增損而問於父。即說偈言："
+  },
+  "s16-02": {
+   "sa": "tena khalu punaḥ kuladevate kālena tena samayena jalavāhanaḥ śreṣṭhiputro yena svapitā jaṭiṃdharaḥ śreṣṭhī tenopajagāma / upetya svapiturjaṭiṃdharasya pādau śirasā vanditvā kṛtāñjalipuṭo bhūtvaikānte 'sthāt / ekānte sthito jalavāhanaḥ śreṣṭhiputraḥ svapitaraṃ jaṭiṃdharaṃ śreṣṭhinamimābhirgāthābhirdhātukauśalyaṃ pṛcchati sma // tānīndriyāṇi lakṣante parivartanti dhātavaḥ / kena kālena jāyante vyādhayaśca śarīriṇām // Suv_17.1 // bhojanaṃ ca kathaṃ bhuktvā kāle kāle sukhāvaham / yenāntaraśarīrasya kāyo 'gninopahanyate // Suv_17.2 // kathaṃ cikitsā kartavyā vāte pitte śleṣmike tathā / saṃnipāte samutpanne kathaṃ vyādhiśāntaye // Suv_17.3 // kiṃ kāle kupyate vātaḥ pittaṃ kupyate kadā / kiṃ kāle kupyate śleṣmā yena pīḍyanti mānavāḥ // Suv_17.4 //",
+   "bo": "རིགས་ཀྱི་ལྷ་མོ་དེའི་ཚེ་དེའི་དུས་ན། ཚོང་དཔོན་གྱི་བུ་ཆུ་འབེབས་རང་གི་ཕ་རལ་པ་འཛིན་ག་ལ་བ་དེར་སོང་སྟེ། ཕྱིན་ནས། རང་གི་ཕ་རལ་པ་འཛིན་གྱི་རྐང་པ་ལ་མགོ་བོས་ཕྱག་འཚལ་ཏེ་ཐལ་མོ་སྦྱར་ནས་ཕྱོགས་གཅིག་ཏུ་འདུག་གོ། ། ཕྱོགས་གཅིག་ཏུ་འདུག་ནས་ཀྱང་ཚོང་དཔོན་གྱི་བུ་ཆུ་འབེབས་ཀྱིས་རང་གི་ཕ་རལ་པ་འཛིན་ལ་ཚིགས་སུ་བཅད་པ་འདི་དག་གིས་ཁམས་ལ་མཁས་པར་བྱ་བ་དྲིས་པ། ཇི་ལྟར་དབང་པོ་འཛིན་འགྱུར་ཞིང་། །ཁམས་ཀྱི་རྣམས་ཀྱང་ཡོངས་སུ་འགྱུར། ། གང་གི་དུས་ན་ལུས་ཅན་ལ། །ནད་ཀྱི་རྣམས་ནི་འབྱུང་བར་འགྱུར། ། དུས་དང་དུས་མིན་ཟས་ཟོས་པ། །ཇི་ལྟ་བུར་ན་བདེ་བར་འགྱུར། །གང་གི་ལུས་ཀྱི་ནང་དུ་ནི། །ལུས་ཀྱི་མི་ལ་གནོད་མི་འགྱུར། ། རླུང་ལས་གྱུར་དང་མཁྲིས་གྱུར་དང་། །འདུས་ལས་གྱུར་དང་བད་ཀན་གྱུར། །ནད་རྣམས་ཞི་བར་བགྱི་སླད་དུ། །ཇི་ལྟ་བུར་ནི་གསོ་བར་བགྱི། ། གང་གིས་མི་ལ་གནོད་འགྱུར་བའི། །རླུང་ནི་གང་གི་དུས་ན་གཡོ། །གང་གི་དུས་ན་མཁྲིས་པ་གཡོ། །བད་ཀན་གང་གི་དུས་ན་གཡོ། །",
+   "en": "“Noble goddess, at that time, in that time, Jalavāhana, the head merchant’s son, went to his father, Jaṭiṃdhara, and having come to him, he bowed down his head in homage at his father’s feet, and with his palms together he sat to one side. When he had seated himself to one side, Jalavāhana, the head merchant’s son, recited these verses to his father, Jaṭiṃdhara, questioning him about skill in the humors:  “ ‘How are physical powers destroyed And how do the humors change? At what times do illnesses Arise within physical beings? “ ‘What foods should be eaten or not At different times for health, So that within someone’s body The body’s heat will not be harmed? “ ‘What are the medical practices For healing the illnesses That arise from air, from bile, From phlegm, and from their combination? “ ‘During which times does the air move, During which times does the bile move, And during which times does the phlegm move, Through which there will be harm to humans?’",
+   "T0663": "「時長者子思惟是已，即至父所頭面著地，為父作禮叉手却住，以四大增損而問於父，即說偈言：「『云何當知，四大諸根，衰損代謝， 而得諸病？云何當知，飲食時節， 若食食已，身火不滅？云何當知， 治風及熱，水過胏病及以等分？ 何時動風、何時動熱、何時動水， 以害眾生？』時父長者，即以偈頌， 解說醫方，而答其子：『三月是夏， 三月是秋，三月是冬，三月是春， 是十二月，三三而說。從如是數， 一歲四時；若二二說，足滿六時； 三三本攝，二二現時，隨是時節， 消息飲食，是能益身。醫方所說， 隨時歲中，諸根四大，代謝增損， 令身得病。有善醫師，隨順四時， 三月將養，調和六大，隨病飲食， 及以湯藥。多風病者，夏則發動； 其熱病者，秋則發動；等分病者， 冬則發動；其肺病者，春則增劇。 有風病者，夏則應服，肥膩醎酢， 及以熱食；有熱病者，秋服冷甜， 等分冬服，甜酢肥膩；肺病春服， 肥膩辛熱。飽食然後，則發肺病； 於食消時，則發熱病；食消已後， 則發風病。如是四大，隨三時發， 風病羸損，補以酥膩；熱病下藥， 服訶梨勒；等病應服，三種妙藥， 所謂甜辛，及以酥膩；肺病應服， 隨能吐藥。若風熱病，肺病等分， 違時而發，應當任師，籌量隨病， 飲食湯藥。』",
+   "T0664": "「『云何當知，四大諸根，衰損代謝， 而得諸病？云何當知，飲食時節， 若食食已，身火不滅？云何當知， 治風及熱、水過肺病、及以等分？ 何時動風、何時動熱、何時動水、 以害眾生？』時父長者，即以偈頌， 解說醫方，而答其子：『三月是夏、 三月是秋、三月是冬、三月是春。 是十二月，三三而說。從如是數， 一歲四時，若二二說，足滿六時。 三三本攝、二二現時，隨是時節， 消息飲食，是能益身，醫方所說。 隨時歲中，諸根四大，代謝增損， 令身得病。有善醫師，隨順四時， 三月將養，調和六大，隨病飲食、 及以湯藥。多風病者，夏則發動； 其熱病者，秋則發動；等分病者， 冬則發動。其肺病者，春則增劇； 有風病者，夏則應服，肥膩醎酢、 及以熱食；有熱病者，秋服冷甜； 等分冬服，甜酢肥膩；肺病春服， 肥膩辛熱。飽食然後，則發肺病； 於食消時，則發熱病；食消已後， 則發風病；如是四大，隨三時發。 風病羸損，補以蘇膩；熱病下藥， 服呵梨勒；等病應服，三種妙藥， 所謂甜、辛、及以蘇膩；肺病應服， 隨時吐藥。若風、熱病、肺病、等分， 違時而發，應當任師，籌量隨病， 飲食湯藥。』",
+   "T0665": "「『慈父當哀愍，我欲救眾生； 今請諸醫方，幸願為我說。 云何身衰壞，諸大有增損？ 復在何時中，能生諸疾病？ 云何噉飲食，得受於安樂， 能使內身中，火熱不衰損？ 眾生有四病，風黃熱痰癊， 及以總集病，云何而療治？ 何時風病起？何時熱病發？ 何時動痰癊？何時總集生？』"
+  },
+  "s16-03": {
+   "sa": "atha khalu jaṭiṃdharaḥ śreṣṭhī jalavāhanasya śreṣṭhiputrasyābhirgāthābhirdhātukauśalyaṃ viditvā deśayate sma // varṣā cātra trayo māsāstrayaśca śāradaṃ smṛtam / trayastathaiva hemāntastrayaśca grīṣmikastathā // Suv_17.5 // ityeva māsakramaḥ ṣaḍṛtūni saṃvatsaradvādaśamāsikaṃ smṛtam / annaṃ ca pānaṃ ca tathā ca jīryate vaidyāśca kauśalyasmṛtipradarśitāḥ // Suv_17.6 // te cāpi saṃvatsaraparvamantare parivartantīndriyadhātavo 'pi / parivartamānāni ca indriyāṇi vicitravyādhirbhavate śarīriṇām // Suv_17.7 // tatraiva vaidyasya catuḥ prakāraṃ trimāsaparvāntare ṣaḍṛtūni / ṣaḍdhātukauśalyaprajānitavyaṃ yathākramaṃ bhojanamauṣadhaṃ ca // Suv_17.8 // vātādhikārāḥ prabhavanti varṣe pattiprakopaḥ śaradi prasanne / hemantakāle tatha saṃnipātaṃ kaphādhikārāśca bhavanti grīṣme // Suv_17.9 // snigdhoṣṇalavaṇāmlarasāśca varṣe śaratsu snigdhaṃ madhuraṃ ca śītam / madhurāmlasnigdhaṃ ca hemantakāle rūkṣoṣṇakaṭukāni ca grīṣmakāle // Suv_17.10 // kaphādhikaḥ kupyati bhuktamātre pittādhikaṃ kupyati jīryamāṇe / vātādhikaḥ kupyati jīrṇamātre ityeva dhātutritayaprakopaḥ // Suv_17.11 // saṃbṛhaṇaṃ kurvatu nirātmakasya virecanaṃ pittavivardhanaṃ ca / triguṇopapannaṃ tatha saṃnipāte praśamaṃ ca kuryātkaphaparvamantare // Suv_17.12 // vātādhikaṃ paittikasannipāte kaphādhikaṃ parvasu jānitavyam / yatkāla yaddhātu yadāśrayaṃ ca tadannapānauṣadhi darśitavyamiti // Suv_17.13 //",
+   "bo": "དེ་ནས་ཚོང་དཔོན་རལ་པ་འཛིན་གྱིས་བུ་ཆུ་འབེབས་ལ་ཚིགས་སུ་བཅད་པ་འདི་དག་གིས་ཁམས་ལ་མཁས་པར་བྱ་བ་རྣམ་པར་བསྟན་ཏོ། །ཟླ་གསུམ་དབྱར་ཏེ་ཟླ་གསུམ་སྟོན་དུ་ཤེས། །གསུམ་ནི་དགུན་ཏེ་གསུམ་ནི་དཔྱིད་ཡིན་ནོ། ། དེ་ལྟར་ཟླ་བའི་གོ་རིམས་དུས་ནི་དྲུག །ལོ་གཅིག་ ལ་ནི་ཟླ་བ་བཅུ་གཉིས་འདོད། ། གསུམ་གསུམ་དུ་ནི་ཚིགས་རྣམས་བསྡུས་པར་ཤེས། །ཟླ་བ་གཉིས་གཉིས་ཤིང་ནི་དུས་སུ་བསྟན། ། ཟས་དང་སྐོམ་ནི་དེ་ལྟར་འཇུ་བར་འགྱུར། ། སྨན་པ་དང་ནི་ཁམས་དང་དུས་ཀྱང་བསྟན། ། དབང་པོ་དང་ནི་ཁམས་རྣམས་དེ་དག་ཀྱང་། །ལོ་གཅིག་ནང་གི་ཚིགས་ཚིགས་ཡོངས་སུ་འགྱུར། ། དབང་པོ་དག་ནི་ཡོངས་སུ་འགྱུར་བ་ན། །ལུས་ཅན་རྣམས་ལ་སྣ་ཚོགས་ནད་ཀྱང་འབྱུང་། ། དེ་ཉིད་ལ་ནི་སྨན་པས་ཟླ་གསུམ་བཞི། །ཚིགས་ཀྱི་བར་དང་དུས་དྲུག་རྣམས་དང་ནི། །ཁམས་དྲུག་མཁས་པར་བྱ་བ་ཤེས་པར་བྱ། །ཟས་སྐོམ་སྨན་རྣམས་གོ་རིམས་ཇི་བཞིན་ཏེ། ། རླུང་གི་ཤས་ཆེའི་ནད་ནི་དབྱར་ན་ལྡང་། ། སྟོན་དུ་གྱུར་པ་ན་ནི་མཁྲིས་པ་གཡོ། ། དགུན་གྱི་དུས་ན་དེ་བཞིན་འདུས་པ་སྟེ། །བད་ཀན་ཤས་ཆེའི་ནད་ནི་དཔྱིད་ན་ལྡང་། ། དབྱར་ནི་སྣུམ་དྲོ་ལན་ཚྭ་སྐྱུར་བའི་རོ། །སྟོན་ནི་མངར་དང་སྣུམ་དང་བསིལ་བག་གོ། །དགུན་ནི་མངར་དང་སྣུམ་དང་སྐྱུར་བ་སྟེ། །དཔྱིད་ཀྱི་དུས་ན་རྩུབ་དྲོ་ཚ་བའོ། ། བད་ཀན་ཆེ་བ་ཟོས་མ་ཐག་ཏུ་ལྡང་། ། མཁྲིས་པ་ཆེ་བ་འཇུ་བའི་དུས་ན་ལྡང་། ། རླུང་ཤས་ཆེ་བ་ཞུ་མ་ཐག་ཏུ་ལྡང་། ། ཁམས་གསུམ་གཡོ་བ་དེ་ནི་དེ་ལྟའོ། ། རླུང་གི་བདག་ཉིད་ལ་ནི་བཅུད་ཀྱིས་གསོ། ། བཀྲུ་སྨན་གྱིས་ནི་མཁྲིས་པ་བསལ་བར་བྱ། ། འདུས་པ་ལ་ནི་གསུམ་དང་མཐུན་ལྡན་པ། ། བད་ཀན་ཚིགས་སུ་བབས་ན་སྐྱུགས་སྨན་གཏང་། ། རླུང་ཤས་ཆེ་དང་མཁྲིས་དང་འདུས་པ་དང་། །བད་ཀན་ཤས་ཆེའི་ཚིགས་རྣམས་ཤེས་པར་བྱ། ། དུས་གང་ཁམས་གང་ལུས་ནི་གང་ཡིན་པ། །དེ་ཡི་སྨན་དང་བཟའ་བཏུང་བསྟེན་པར་བྱ། །",
+   "en": "“Then the head merchant, Jaṭiṃdhara, taught his son Jalavāhana skill in the humors by reciting these verses:  “ ‘Know three months to be summer and three months the autumn, And there are three that are winter and three that are spring. Similarly, there are said to be six seasons, And there are twelve months in one year. “ ‘Know that the months are divided into threes, And that pairs of months are taught. Food and drink are digested accordingly. Thus the physicians teach humors and time. “ ‘The faculties and the humors Are in groups within each year. It is when the faculties transform That various illnesses arise in beings. “ ‘Know that the physician must be skilled In the groups of three and four months, The six times and the six humors, And the food, drink, and medicines that correspond. “ ‘Illness that is primarily air arises in the summer. That which arises in the autumn is the movement of bile. Similarly, during the time of winter it is the aggregation, And illness that is primarily phlegm arises in spring. “ ‘In summer: oily, warm, salty, and sour tastes; In autumn: the sweet, the oily, and the cool; In winter: the sweet, the oily, and the sour; And in the time of spring, the astringent, pungent, and bitter. “ ‘That which is primarily phlegm arises immediately after eating. That which is primarily bile arises during digestion. That which is primarily air arises immediately after digestion. That which is the movement of all three humors is like that. “ ‘That which has the nature of air is healed by nutrition. Laxative medicines are what dispel bile illness. Aggregate illnesses will accord with all three. For the class of phlegm, give emetic medicines. “ ‘Know the groups that are primarily Air, bile, aggregation, or phlegm. Rely upon the medicines, food, and drink For whichever time, humor, and body.’",
+   "T0665": "「時彼長者聞子請已，復以伽他而答之曰：「『我今依古仙，所有療病法； 次第為汝說，善聽救眾生。 三月是春時，三月名為夏， 三月名秋分，三月謂冬時。 此據一年中，三三而別說； 二二為一節，便成歲六時。 初二是花時，三四名熱際； 五六名雨際，七八謂秋時； 九十是寒時，後二名氷雪； 既知如是別，授藥勿令差。 當隨此時中，調息於飲食； 入腹令消散，眾病則不生。 節氣若變改，四大有推移； 此時無藥資，必生於病苦。 醫人解四時，復知其六節； 明閑身七界，食藥使無差。 謂味界血肉，膏骨及髓腦； 病入此中時，知其可療不？ 病有四種別，謂風熱痰癊， 及以總集病，應知發動時。 春中痰癊動，夏內風病生， 秋時黃熱增，冬節三俱起。 春食澁熱辛，夏膩熱醎醋， 秋時冷甜膩，冬酸澁膩甜。 於此四時中，服藥及飲食； 若依如是味，眾病無由生。 食後病由癊，食消時由熱， 消後起由風，准時須識病。 既識病源已，隨病而設藥； 假令患狀殊，先須療其本。 風病服油膩，患熱利為良， 癊病應變吐，總集須三藥。 風熱癊俱有，是名為總集； 雖知病起時，應觀其本性。 如是觀知已，順時而授藥； 飲食藥無差，斯名善醫者。 復應知八術，總攝諸醫方； 於此若明閑，可療眾生病。 謂針刺傷破，身疾并鬼神； 惡毒及孩童，延年增氣力。 先觀彼形色，語言及性行； 然後問其夢，知風熱癊殊。 乾瘦少頭髮，其心無定住， 多語夢飛行，斯人是風性。 少年生白髮，多汗及多瞋， 聰明夢見火，斯人是熱性。 心定身平整，慮審頭津膩， 夢見水白物，是癊性應知。 總集性俱有，或二或具三， 隨有一偏增，應知是其性。 既知本性已，准病而授藥； 驗其無死相，方名可救人。 諸根倒取境，尊醫人起慢； 親友生瞋恚，是死相應知。 左眼白色變，舌黑鼻梁攲； 耳輪與舊殊，下脣垂向下。 訶梨勒一種，具足有六味； 能除一切病，無忌藥中王。 又三果三辛，諸藥中易得； 沙糖蜜蘇乳，此能療眾病。 自餘諸藥物，隨病可增加； 先起慈愍心，莫規於財利。 我已為汝說，療疾中要事； 以此救眾生，當獲無邊果。』"
+  },
+  "s16-04": {
+   "sa": "atha khalu jalavāhanaḥ śreṣṭhiputrastenaivaṃrūpeṇa naimittikena dhātukauśalyena paripṛṣṭena sarvāṣṭāṅgāyurvaidyamadhigato 'bhūt / tena khalu punaḥ kuladevate kālena tena samayena jalavāhanaḥ śreṣṭhiputro rājñaḥ sureśvaraprabhasya viṣaye sarvagrāmanagaranigamajanapadarāṣṭrarājadhānīṣūpasaṃkramitvā sarveṣāmanekeṣāṃ sattvaśatasahasrāṇāṃ nānārogaspṛṣṭānāṃ nānāvyādhiparipīḍitānāmevamāśvāsayāmāsa / mā bhaiṣurvaidyo 'smi vaidyo 'smītyātmānaṃ pratijñātavānahaṃ yuṣmākaṃ nānāvyādhibhyaḥ parimocayiṣyāmi / sahaśravaṇena kuladevate tasya jalavāhanasya śreṣṭhiputrasyedamevaṃrūpaṃ vacanaṃ vyāharamāṇasya sarvāṇi tānyanekāni sattvakoṭīniyutaśatasahasrāṇi mahāpraharṣajātāni babhūvuḥ / āśvāsaprāptānyacintyaprītisaumanasyena samanvāgatāni babhūvuḥ / tāni tena kālena tena samayena tayā praharṣayānekāni sattvakoṭīniyutaśatasahasrāṇi nānārogaspṛṣṭāni nānāvyādhiparipīḍitāni nānārogebhyaḥ parimocayitānyarogāṇi ca babhūvurvigatavyādhīni ca / yathā paurāṇena sthāmabalavīryeṇa samanvāgatāni babhūvuḥ / tena khalu punaḥ kuladevate kālena tena samayena teṣāmanekeṣāṃ ca sattvakoṭīniyutaśatasahasrāṇāṃ nānārogaspṛṣṭānāṃ nānāvyādhiparipīḍitānāṃ ye kecidgāḍhatareṇa spṛṣṭā ca babhūvuḥ / te sarve yena jalavāhanaḥ śreṣṭhiputrastenopasaṃkrānta upasaṃkramyaiva ye ca kiṃcitteṣāṃ (Bagchi 97) sattvakoṭīniyutaśatasahasrāṇāṃ nānārogaspṛṣṭānāṃ nānāvyādhiparipīḍitānāmauṣadhividhānānyabhinirdiśanti sma / tattāsu rājadhānīṣu sarvāṇi tānyanekāni sattvakoṭīniyutaśatasahasrāṇi nānārogaspṛṣṭāni nānāvyādhiparipīḍitāni jalavāhanena śreṣṭhiputreṇa nānāvyādhibhyaḥ parimocitāni babhūvuriti //",
+   "bo": "དེ་ནས་ཚོང་དཔོན་གྱི་བུ་ཆུ་འབེབས་ཀྱིས་ཁམས་ལ་མཁས་པར་བྱ་བ་འདི་ལྟ་བུ་དེ་ཙམ་ཞིག་ཡོངས་སུ་དྲིས་པ་དེས། ཚེའི་རིག་བྱེད་ཀྱི་ཡན་ལག་བརྒྱད་པོ་ཐམས་ཅད་ཁོང་དུ་ཆུད་པར་གྱུར་ཏོ། །རིགས་ཀྱི་ལྷ་མོ་དེའི་ཚེ་དེའི་དུས་ན། ཚོང་དཔོན་གྱི་བུ་ཆུ་འབེབས་རྒྱལ་པོ་ལྷའི་དབང་ཕྱུག་འོད་ཀྱི་ཡུལ་ན་གྲོང་དང་། གྲོང་ཁྱེར་དང་། གྲོང་རྡལ་དང་། ལྗོངས་དང་། ཡུལ་འཁོར་དང་། རྒྱལ་པོའི་ཕོ་བྲང་འཁོར་དེ་ཐམས་ཅད་དུ་སོང་ནས། སེམས་ཅན་ནད་སྣ་ཚོགས་ཀྱིས་བཏབ་པ། ནད་སྣ་ཚོགས་ཀྱིས་གཟིར་བ། བརྒྱ་ སྟོང་ཕྲག་དུ་མ་དེ་དག་ལ་ཁོ་བོ་ནི་སྨན་པའོ། །ཁོ་བོ་ནི་སྨན་པའོ་ཞེས་བདག་ཉིད་ཀྱིས་ཁས་འཆེས་ཏེ། ཁོ་བོས་ཁྱེད་རྣམས་ནད་སྣ་ཚོགས་ལས་ཡོངས་སུ་ཐར་བར་བྱའོ་ཞེས་དབུགས་ཕྱུང་ངོ་། ། རིགས་ཀྱི་ལྷ་མོ་ཚོང་དཔོན་གྱི་བུ་ཆུ་འབེབས་ཀྱིས། འདི་ལྟ་བུའི་ཚིག་བརྗོད་པ་དེ་ཐོས་མ་ཐག་ཏུ་སྲོག་ཆགས་བརྒྱ་སྟོང་ཕྲག་དུ་མ་དེ་དག་ཐམས་ཅད་རབ་ཏུ་དགའ་བ་ཆེན་པོ་སྐྱེས་པར་གྱུར་ཏོ། ། དབུགས་ཕྱིན་པ་རྙེད་ནས་ཀྱང་དགའ་བ་དང་བདེ་བ་དང་ཡིད་བདེ་བ་བསམ་གྱིས་མི་ཁྱབ་པ་དང་ལྡན་པར་གྱུར་ཏོ། ། དེའི་ཚེ་དེའི་དུས་ན་སེམས་ཅན་ནད་སྣ་ཚོགས་ཀྱིས་བཏབ་པ་ནད་སྣ་ཚོགས་ཀྱིས་གཟིར་བ་བརྒྱ་སྟོང་ཕྲག་དུ་མ་དེ་དག་ནད་སྣ་ཚོགས་ལས་ཡོངས་སུ་ཐར་ཏེ་ནད་མེད་པར་གྱུར་ཏོ། ། ནད་མེད་པར་གྱུར་ནས་ཀྱང་སྔ་མཁོ་བཞིན་དུ་མཐུ་དང་སྟོབས་དང་བརྩོན་འགྲུས་དང་ལྡན་པར་གྱུར་ཏོ། ། དེའི་ཚེ་དེའི་དུས་ན་སེམས་ཅན་ནད་སྣ་ཚོགས་ཀྱིས་བཏབ་པ་ནད་སྣ་ཚོགས་ཀྱིས་གཟིར་བ་བརྒྱ་སྟོང་ཕྲག་དུ་མ་དེ་དག་གི་ནང་ནས་གང་སུ་དག་ནད་དྲག་པོས་བཏབ་པ་དེ་དག་ཐམས་ཅད་ཚོང་དཔོན་གྱི་བུ་ཆུ་འབེབས་ག་ལ་བ་དེར་དོང་ནས་ཕྱིན་པ་དང་། སེམས་ཅན་ནད་སྣ་ཚོགས་ཀྱིས་བཏབ་པ། ནད་སྣ་ཚོགས་ཀྱིས་གཟིར་བ་བརྒྱ་སྟོང་ཕྲག་དུ་མ་དེ་དག་ལ་ཚོང་དཔོན་གྱི་བུ་ཆུ་འབེབས་ཀྱིས་སྨན་དཔྱད་གང་ཅི་བསྟན་པ་དེས། སེམས་ཅན་དེ་དག་ཐམས་ཅད་ཀྱི་ནད་ཐམས་ཅད་རབ་ཏུ་ཞི་བར་བྱས་སོ། ། ནད་མེད་པ་དང་ནད་ཉུང་བར་གྱུར་ནས་ཀྱང་སྔ་མཁོ་བཞིན་དུ་མཐུ་དང་སྟོབས་དང་བརྩོན་འགྲུས་དང་ལྡན་པར་གྱུར་ཏོ། །རིགས་ཀྱི་ལྷ་མོ་དེའི་ཚེ་དེའི་དུས་ན་རྒྱལ་པོ་ལྷའི་དབང་ཕྱུག་འོད་ཀྱི་ཡུལ་ན་གྲོང་དང་། གྲོང་ཁྱེར་དང་། གྲོང་རྡལ་དང་། ལྗོངས་དང་། ཡུལ་འཁོར་དང་། རྒྱལ་པོའི་ཕོ་བྲང་འཁོར་ཐམས་ཅད་ན་སེམས་ཅན་ནད་སྣ་ཚོགས་ཀྱིས་བཏབ་པ། ནད་སྣ་ཚོགས་ཀྱིས་གཟིར་བ། བརྒྱ་སྟོང་ཕྲག་དུ་མ་དེ་དག་ཐམས་ཅད་ཚོང་དཔོན་གྱི་བུ་ཆུ་འབེབས་ཀྱིས་ནད་སྣ་ཚོགས་ལས་ཡོངས་སུ་ཐར་བར་བྱས་པར་གྱུར་ཏོ། །",
+   "en": "“Jalavāhana, the head merchant’s son, through just this inquiry into skill in the humors became learned in all the eight branches of the Āyurveda. “Noble goddess, at that time, in that time, Jalavāhana, the head merchant’s son, went throughout all the villages, towns, market towns, countryside, realm, and the royal capital in the kingdom of King Sureśvaraprabha, and he said, ‘I will be a doctor for you many hundreds of thousands of beings who are afflicted by various illnesses and tormented by various illnesses. I promise to be your doctor, and I will free you from your various illnesses and bring you relief.’ “Noble goddess, when all those many hundreds of thousands of beings heard those words spoken by Jalavāhana, the head merchant’s son, they immediately felt great joy. They found relief and had inconceivable joy, happiness, and delight. “At that time, in that time, those many hundreds of thousands of beings who were afflicted by various illnesses and tormented by various illnesses were completely freed from their illness and became healthy. When they became healthy, they had the same power, strength, and vigor as before. “At that time, in that time, all those who were afflicted with severe illnesses among the many hundreds of thousands of beings that were afflicted by various illnesses and tormented by various illnesses went to Jalavāhana, the head merchant’s son. Jalavāhana, the head merchant’s son, cured all those beings of all their illnesses by using whatever medical treatments he had given the many hundreds of thousands of beings that were afflicted by various illnesses and tormented by various illnesses. They became free of illness, or their illness was diminished and they became healthy, and they had the same power, strength, and vigor as before. “Noble goddess, at that time, in that time, Jalavāhana, the head merchant’s son, freed from their various illnesses the many hundreds of thousands of beings who were afflicted by various illnesses and tormented by various illnesses throughout all the villages, towns, market towns, countryside, realm, and the royal capital in the kingdom of King Sureśvaraprabha.”",
+   "T0663": "「善女天！爾時流水長者子，問其父醫四大增損，因是得了一切醫方。時長者子知醫方已，遍至國內城邑聚落，在在處處隨有眾生病苦者所，軟言慰喻作如是言：『我是醫師，我是醫師，善知方藥，今當為汝療治救濟悉令除愈。』「善女天！爾時眾生聞長者子軟言慰喻許為治病，心生歡喜踊躍無量。時有百千無量眾生，遇極重病，直聞是言，心歡喜故，種種所患即得除差，平復如本氣力充實。「善女天！復有無量百千眾生，病苦深重難除差者，即共來至長者子所，時長者子，即以妙藥授之令服，服已除差亦得平復。「善女天！是長者子，於其國內治諸眾生所有病苦悉得除差。」",
+   "T0664": "「善女天！爾時，流水長者子問其父醫四大增損，因是得了一切醫方。時長者子知醫方已，遍至國內城邑聚落，在在處處隨有眾生病苦者所軟言慰喻，作如是言：『我是醫師。我是醫師善知方藥，今當為汝療治救濟，悉令除愈。』「善女天！爾時，眾生聞長者子軟語慰喻、許為治病，心生歡喜，踊躍無量。時有百千無量眾生遇極重病，得聞是言，心歡喜故，種種所患即得除差，平復如本，氣力充實。「善女天！復有無量百千眾生病苦深重、難除差者，即共來至長者子所，時長者子即以妙藥授之令服，服已除差，亦得平復。「善女天！是長者子於是國內治諸眾生，所有病苦悉得除差。」",
+   "T0665": "「善女天！爾時，長者子流水親問其父八術之要，四大增損，時節不同，餌藥方法，既善了知，自忖堪能救療眾病，即便遍至城邑聚落所在之處，隨有百千萬億病苦眾生，皆至其所，善言慰喻，作如是語：『我是醫人！我是醫人！善知方藥，今為汝等療治眾病，悉令除愈。』善女天！爾時眾人聞長者子善言慰喻，許為治病，時有無量百千眾生遇極重病，聞是語已，身心踊躍，得未曾有。以此因緣，所有病苦悉得蠲除，氣力充實，平復如本。善女天！爾時復有無量百千眾生，病苦深重難療治者，即共往詣長者子所，重請醫療。時長者子，即以妙藥令服皆蒙除差。善女天！是長者子於此國內，治百千萬億眾生病苦，悉得除差。」"
+  },
+  "s16-05": {
+   "sa": "iti śrīsuvarṇaprabhāsottamasūtrendrarāje vyādhipraśamana parivarto nāma saptadaśaḥ //",
+   "bo": "གསེར་འོད་དམ་པ་མདོ་སྡེའི་དབང་པོའི་རྒྱལ་པོ་ལས། ནད་རབ་ཏུ་ཞི་བར་བྱ་བའི་ལེའུ་ཞེས་བྱ་བ་སྟེ་བཅུ་དྲུག་པའོ།། །།འཕགས་པ་གསེར་འོད་དམ་པ་མདོ་སྡེའི་དབང་པོའི་རྒྱལ་པོ་ཞེས་བྱ་བ་ ཐེག་པ་ཆེན་པོའི་མདོ།",
+   "en": "This concludes “Ending Illness,” the sixteenth chapter of “The Lord King of Sūtras, the Sublime Golden Light.”"
+  }
+ }
+}
