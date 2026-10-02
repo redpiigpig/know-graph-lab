@@ -321,3 +321,27 @@ z-lib/ drop folder 的處理：
   另 17 本被 PyMuPDF 修復後打得開、**已入庫上 Drive** 才查出來）。`libgen_wanted.check_complete()` 現在核對
   Content-Length、PDF 要開得起來；`--retry-corrupt` 照帳本的 edition 重抓 `_corrupt/` 裡的殘檔。
   稽核已入庫的：看 PDF 結尾 4KB 有沒有 `%%EOF`，大小剛好是整數 MB 的幾乎都是殘檔。
+
+## 從專書書目批次產生抓書單（2026-10-02《神的歷史》《神的演化》《造神》）
+
+三本書的引用書目 → 抓書單 → 公開典藏／LibGen → drop 夾。腳本 `scripts/god_books_{extract,merge,archive,report}.py`，
+中繼在 `output/god_books/`，抓書單 `data/zlib-wanted/god-books-bibliography.jsonl`（source=`god-books-bibliography`，
+key=`godbib-`＋sha1(作者|書名)[:10]`），盤點 md 在 Drive `研究資料\神觀史與宗教起源\既有資料盤點.md`。
+
+流程：`extract`（造神＝書末 Chicago 體書目規則解析；神的歷史＝英文原著 PDF 尾註交 LLM；神的演化＝正文）→
+`merge`（去重、對 ebooks 表、產獵表）→ 出版年 ≤1930 先 `archive`（archive.org，免額度）→
+`libgen_wanted.py --sources god-books-bibliography --apply`（可加一支 `--reverse` 對跑）→ `merge` 再跑一次（吸收 archive 結果）→ `report`。
+
+踩到的坑：
+- 🚨 **「館內有這本書」不等於「館內有它的註釋與書目」。** 《神的演化》館內中譯本（DuXiu 掃描）只到「鳴謝」，書末「Note」頁
+  無正文，`c:/tmp/evo` 的 OCR 也到不了——書目只能退而求其次從正文抽被提到的書，**不是完整書目**，要補得取得英文原著的 Notes／Bibliography。
+  《神的歷史》館內中文版是大陸簡體排版、尾頁是出版社郵購廣告，同樣沒有註釋；書目改從館內英文原著 PDF 尾註抽。
+- 🚨 LLM 抽「書」會自己編中文書名（`zh` 欄）與把無作者的經典當書（Philo、Bhagavad Gita），`zh` 只當提示、不拿去比對或搜尋；
+  merge 時濾掉作者＝書名、書名 <8 字、聖經譯本、古典原典。
+- 館藏比對只比書名會把 Köhler／Preuss 兩本同名《Old Testament Theology》、Sampson《Writing Systems》對到別人的書：
+  **書名主體相符還要作者姓也在館內作者欄或書名裡**；只有館內書的 `original_title` 命中且主體 ≥12 字才免作者（中譯本作者欄是中文）。
+- Chicago 體書目解析：作者段的句點要跳過「名字縮寫（單一大寫字母）」；`Md.`／`D.C.` 這種出版地縮寫含句點，
+  切書名不能用「第一個含冒號的句子」，改取第一個句末、並以最後一段的年份判斷是書。正則字串裡的 `\b` 在非 raw 字串會變成退格字元（靜默失敗，全數判成「解析失敗」）。
+- archive.org 驗 OCR 取樣用 `Range: bytes=200000-500000`（小檔會回 416，要退回不帶 Range）；整本 DjVuTXT 抓下來驗會卡好幾分鐘。
+  大檔下載在 libgen 多支並跑時只有 ~100KB/s，一本百 MB 的 PDF 要十幾分鐘，整份獵表要排幾小時。
+- 抓書單照 `lang: orig` 只出原文一格；沒有為每本再出「中譯」一格（中譯書名不知道、純作者閘會抓到垃圾，見 zlib_wanted_from_bibliography.py 的警告）。

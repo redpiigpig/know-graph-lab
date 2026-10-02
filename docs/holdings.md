@@ -1,6 +1,6 @@
 # 資料總盤點（自動產生）
 
-產生時間：2026-09-28 03:43　指令：`python -X utf8 scripts/holdings_inventory.py`
+產生時間：2026-10-02 14:05　指令：`python -X utf8 scripts/holdings_inventory.py`
 
 > **做研究或收資料之前先讀這份**；查特定書刊用 `--find 關鍵字`。規模只代表檔案存在，內容能不能用（頁碼真假、有無文字層、「有全文」是否只是連結）要看下面各主題的盤點 md。外部來源與管線見 [data-sources.md](data-sources.md)。流程規則見 `.claude/skills/research-data-holdings/SKILL.md`。
 
@@ -15,29 +15,30 @@
 
 ## 二、Drive：`G:\我的雲端硬碟\資料\知識圖工作室`
 
-全部 190,589 個檔案。
+全部 215,570 個檔案。
 
 | 資料夾 | 檔數 | 容量 | 主要格式 | 最近更新 |
 |---|---:|---:|---|---|
 | (根目錄) | 1 | 2.5 KB |  |  |
-| _chunks | 8,360 | 13.5 GB | .jsonl×5871、.bak_printed×1157、.bak_pages×629 | 2026-09-28 |
-| _corpus | 56,390 | 17.3 GB | .pdf×28544、.txt×23410、.jpg×3252 | 2026-09-28 |
+| _chunks | 16,646 | 21.1 GB | .jsonl×6175、.bak_restructure×4741、.bak_chapters×1852 | 2026-10-02 |
+| _corpus | 69,344 | 23.3 GB | .pdf×38497、.txt×26411、.jpg×3252 | 2026-10-02 |
 | _repo-一次性腳本 | 149 | 123.8 MB | .py×44、.docx×43、.pdf×32 | 2026-09-19 |
-| _tripitaka | 7,798 | 880.1 MB | .json×4014、.jsonl×3784 | 2026-08-31 |
+| _tripitaka | 7,798 | 880.1 MB | .json×4014、.jsonl×3784 | 2026-10-01 |
 | _tripitaka_tibetan | 2,250 | 352.2 MB | .json×1125、.jsonl×1124、.gz×1 | 2026-09-16 |
-| 全集 | 4,721 | 2.7 GB | .html×3146、.docx×560、.htm×332 | 2026-09-28 |
-| 　佛學 | 4,247 | 947.7 MB | .html×3146、.htm×332、.docx×284 | 2026-09-24 |
-| 　哲學 | 78 | 26.5 MB | .docx×76、.epub×2 | 2026-09-28 |
-| 　宗教學 | 191 | 388.7 MB | .docx×98、.txt×59、.pdf×24 | 2026-09-28 |
-| 　宗教社會學 | 46 | 190.3 MB | .docx×23、.txt×12、.pdf×7 | 2026-09-28 |
-| 　心理學 | 48 | 230.4 MB | .docx×36、.epub×10、.pdf×2 | 2026-09-27 |
-| 　神學 | 111 | 958.4 MB | .pdf×68、.docx×43 | 2026-09-27 |
-| 學術活動紀錄 | 336 | 1.2 GB | .docx×146、.pdf×89、.txt×37 | 2026-09-04 |
+| 全集 | 4,761 | 2.7 GB | .html×3146、.docx×561、.htm×332 | 2026-10-02 |
+| 　佛學 | 4,255 | 976.2 MB | .html×3146、.htm×332、.docx×285 | 2026-10-01 |
+| 　哲學 | 78 | 26.2 MB | .docx×76、.epub×2 | 2026-10-02 |
+| 　基督宗教研究 | 30 | 30.1 MB | .txt×30 | 2026-10-01 |
+| 　宗教學 | 191 | 388.7 MB | .docx×98、.txt×59、.pdf×24 | 2026-10-02 |
+| 　宗教社會學 | 46 | 190.7 MB | .docx×23、.txt×12、.pdf×7 | 2026-10-01 |
+| 　心理學 | 48 | 230.7 MB | .docx×36、.epub×10、.pdf×2 | 2026-10-01 |
+| 　神學 | 113 | 960.6 MB | .pdf×68、.docx×43、.txt×2 | 2026-10-01 |
+| 學術活動紀錄 | 338 | 1.2 GB | .docx×147、.pdf×90、.txt×37 | 2026-10-02 |
 | 寫作計畫 | 213 | 56.5 MB | .html×71、.docx×60、.png×39 | 2026-09-18 |
 | 影片 | 1,040 | 15.8 GB | .jpg×650、.mp4×165、.png×42 | 2026-08-17 |
-| 教學 | 1,095 | 1.1 GB | .jpg×569、.pdf×217、.docx×127 | 2026-09-18 |
+| 教學 | 1,109 | 1.1 GB | .jpg×570、.pdf×220、.docx×129 | 2026-10-01 |
 | 照片 | 76,475 | 310.9 GB | .jpg×68931、.png×2195、.db×1758 | 2026-07-19 |
-| 研究資料 | 24,404 | 62.8 GB | .jpg×11334、.pdf×8764、.txt×1171 | 2026-09-28 |
+| 研究資料 | 25,140 | 64.2 GB | .jpg×11334、.pdf×9417、.txt×1251 | 2026-10-02 |
 | 　一貫道 | 38 | 107.9 MB | .pdf×35、.json×2、.md×1 | 2026-09-26 |
 | 　　_華藝帳本 | 2 | 1.4 KB | .json×2 | 2026-09-26 |
 | 　博論參考文獻 | 33 | 111.1 MB | .pdf×26、.md×3、.txt×2 | 2026-09-19 |
@@ -67,14 +68,14 @@
 | 　　論文資料 | 883 | 5.3 GB | .jpg×410、.pdf×385、.docx×82 | 2026-08-21 |
 | 　政教關係 | 61 | 7.9 MB | .jsonl×61 | 2026-09-24 |
 | 　　兩蔣日記目錄 | 61 | 7.9 MB | .jsonl×61 | 2026-09-24 |
-| 　民國與台灣佛教史 | 2,434 | 29.6 GB | .pdf×1771、.txt×605、.jsonl×25 | 2026-09-28 |
+| 　民國與台灣佛教史 | 2,517 | 29.6 GB | .pdf×1771、.txt×685、.jsonl×28 | 2026-10-02 |
 | 　　太虛研究 | 465 | 907.0 MB | .pdf×398、.txt×63、.md×2 | 2026-09-25 |
-| 　　民國佛教期刊文獻集成 | 790 | 26.5 GB | .txt×524、.pdf×234、.jsonl×25 | 2026-09-28 |
+| 　　民國佛教期刊文獻集成 | 873 | 26.5 GB | .txt×604、.pdf×234、.jsonl×28 | 2026-10-02 |
 | 　　海潮音 | 1,141 | 2.2 GB | .pdf×1139、.html×1、.tsv×1 | 2026-09-24 |
 | 　　道安法師遺集 | 37 | 27.2 MB | .txt×18、.html×18、.json×1 | 2026-09-24 |
 | 　無教會主義 | 156 | 254.9 MB | .pdf×156 | 2026-09-12 |
 | 　　_jp-kr | 74 | 85.0 MB | .pdf×74 | 2026-09-11 |
-| 　華藝期刊全文 | 5,816 | 9.4 GB | .pdf×5786、.json×30 | 2026-09-26 |
+| 　華藝期刊全文 | 6,469 | 10.8 GB | .pdf×6439、.json×30 | 2026-10-02 |
 | 　　中國大陸研究 | 2 | 1.7 MB | .json×1、.pdf×1 | 2026-09-26 |
 | 　　中華佛學學報 | 68 | 82.2 MB | .pdf×67、.json×1 | 2026-09-23 |
 | 　　中華佛學學報（舊刊名） | 114 | 270.4 MB | .pdf×113、.json×1 | 2026-09-23 |
@@ -82,68 +83,68 @@
 | 　　人間佛教研究 | 2 | 2.1 MB | .json×1、.pdf×1 | 2026-09-07 |
 | 　　佛光學報 | 2 | 2.5 MB | .json×1、.pdf×1 | 2026-09-07 |
 | 　　佛學研究中心學報 | 3 | 5.2 MB | .pdf×2、.json×1 | 2026-09-04 |
-| 　　台灣神學論刊 | 2 | 8.0 MB | .json×1、.pdf×1 | 2026-09-23 |
-| 　　宗教哲學 | 6 | 34.1 MB | .pdf×5、.json×1 | 2026-09-26 |
-| 　　建道學刊 | 1 | 103 B | .json×1 | 2026-09-23 |
+| 　　台灣神學論刊 | 17 | 175.0 MB | .pdf×16、.json×1 | 2026-10-01 |
+| 　　宗教哲學 | 15 | 93.3 MB | .pdf×14、.json×1 | 2026-10-01 |
+| 　　建道學刊 | 21 | 124.2 MB | .pdf×20、.json×1 | 2026-10-01 |
 | 　　弘誓雙月刊 | 53 | 133.0 MB | .pdf×52、.json×1 | 2026-09-23 |
-| 　　新世紀宗教研究 | 4 | 5.4 MB | .pdf×3、.json×1 | 2026-09-23 |
-| 　　新使者 | 2,943 | 4.6 GB | .pdf×2942、.json×1 | 2026-09-23 |
+| 　　新世紀宗教研究 | 5 | 8.6 MB | .pdf×4、.json×1 | 2026-10-01 |
+| 　　新使者 | 3,348 | 5.2 GB | .pdf×3347、.json×1 | 2026-10-02 |
 | 　　曠野 | 60 | 66.1 MB | .pdf×59、.json×1 | 2026-09-23 |
-| 　　校園 | 2,365 | 3.9 GB | .pdf×2364、.json×1 | 2026-09-23 |
+| 　　校園 | 2,365 | 3.9 GB | .pdf×2364、.json×1 | 2026-10-02 |
 | 　　民俗曲藝 | 20 | 55.1 MB | .pdf×19、.json×1 | 2026-09-26 |
 | 　　法印學報 | 10 | 23.9 MB | .pdf×9、.json×1 | 2026-09-23 |
 | 　　法鼓佛學學報 | 2 | 1.7 MB | .json×1、.pdf×1 | 2026-09-04 |
 | 　　浸神學刊 | 91 | 114.0 MB | .pdf×90、.json×1 | 2026-09-23 |
-| 　　漢語基督教學術論評 | 4 | 22.7 MB | .pdf×3、.json×1 | 2026-09-23 |
+| 　　漢語基督教學術論評 | 9 | 59.5 MB | .pdf×8、.json×1 | 2026-10-01 |
 | 　　玄奘佛學研究 | 14 | 24.3 MB | .pdf×13、.json×1 | 2026-09-23 |
-| 　　神學與教會 | 23 | 35.7 MB | .pdf×22、.json×1 | 2026-09-23 |
-| 　　神學論集 | 2 | 2.0 MB | .json×1、.pdf×1 | 2026-09-23 |
-| 　　臺灣宗教研究 | 7 | 11.9 MB | .pdf×6、.json×1 | 2026-09-26 |
-| 　　華人宗教研究 | 3 | 5.1 MB | .pdf×2、.json×1 | 2026-09-26 |
+| 　　神學與教會 | 28 | 42.6 MB | .pdf×27、.json×1 | 2026-10-01 |
+| 　　神學論集 | 22 | 58.0 MB | .pdf×21、.json×1 | 2026-10-01 |
+| 　　臺灣宗教研究 | 13 | 35.0 MB | .pdf×12、.json×1 | 2026-10-01 |
+| 　　華人宗教研究 | 7 | 14.4 MB | .pdf×6、.json×1 | 2026-10-01 |
 | 　　華梵人文學報 | 2 | 1.6 MB | .json×1、.pdf×1 | 2026-09-07 |
-| 　　華神期刊 | 1 | 99 B | .json×1 | 2026-09-23 |
-| 　　輔仁宗教研究 | 5 | 4.9 MB | .pdf×4、.json×1 | 2026-09-23 |
-| 　　道雜誌 | 2 | 1.4 MB | .json×1、.pdf×1 | 2026-09-23 |
-| 　　道風：基督教文化評論 | 3 | 15.1 MB | .pdf×2、.json×1 | 2026-09-23 |
+| 　　華神期刊 | 140 | 214.0 MB | .pdf×139、.json×1 | 2026-10-01 |
+| 　　輔仁宗教研究 | 11 | 12.9 MB | .pdf×10、.json×1 | 2026-10-01 |
+| 　　道雜誌 | 4 | 4.2 MB | .pdf×3、.json×1 | 2026-10-01 |
+| 　　道風：基督教文化評論 | 19 | 72.0 MB | .pdf×18、.json×1 | 2026-10-01 |
 | 經典對照與註釋 | 136 | 2.6 GB | .json×66、.epub×41、.pdf×29 | 2026-09-04 |
 | 語言 | 1,728 | 6.0 GB | .mp3×1375、.txt×256、.pdf×56 | 2026-09-27 |
 | 讀書會 | 29 | 149.7 MB | .pptx×29 | 2024-12-15 |
-| 電子圖書館 | 5,464 | 71.5 GB | .pdf×3631、.epub×886、.docx×535 | 2026-09-27 |
-| 　_待入庫 | 32 | 59.0 MB | .docx×29、.pdf×3 | 2026-08-26 |
-| 　_待審分類 | 41 | 582.2 MB | .pdf×27、.epub×14 | 2026-09-27 |
-| 　世界宗教 | 564 | 8.4 GB | .pdf×407、.epub×101、.docx×43 | 2026-09-27 |
-| 　人類生物學 | 76 | 1.4 GB | .epub×46、.pdf×30 | 2026-09-25 |
-| 　哲學 | 251 | 5.1 GB | .pdf×189、.epub×62 | 2026-09-27 |
-| 　宗教學 | 220 | 4.2 GB | .pdf×165、.epub×51、.txt×2 | 2026-09-27 |
-| 　心理學 | 34 | 440.2 MB | .epub×20、.pdf×14 | 2026-09-17 |
-| 　文學 | 56 | 400.4 MB | .epub×28、.pdf×24、.mobi×3 | 2026-09-26 |
-| 　歷史學 | 420 | 12.8 GB | .epub×213、.pdf×201、.mobi×6 | 2026-09-27 |
-| 　社會政治學 | 128 | 2.3 GB | .pdf×76、.epub×50、.azw3×2 | 2026-09-26 |
-| 　神學 | 3,607 | 34.8 GB | .pdf×2473、.docx×463、.epub×289 | 2026-09-27 |
-| 　自然科學 | 35 | 1.1 GB | .pdf×22、.epub×12、.azw3×1 | 2026-09-27 |
+| 電子圖書館 | 8,413 | 112.6 GB | .pdf×6406、.epub×1017、.docx×535 | 2026-10-02 |
+| 　_待入庫 | 33 | 59.0 MB | .docx×29、.pdf×3、.txt×1 | 2026-09-29 |
+| 　_待審分類 | 8 | 147.3 MB | .pdf×8 | 2026-10-02 |
+| 　世界宗教 | 733 | 14.8 GB | .pdf×549、.epub×109、.docx×43 | 2026-10-02 |
+| 　人類生物學 | 91 | 1.7 GB | .epub×49、.pdf×42 | 2026-10-02 |
+| 　哲學 | 448 | 7.4 GB | .pdf×374、.epub×74 | 2026-10-02 |
+| 　宗教學 | 401 | 6.3 GB | .pdf×320、.epub×77、.txt×2 | 2026-10-02 |
+| 　心理學 | 47 | 569.0 MB | .epub×24、.pdf×23 | 2026-10-02 |
+| 　文學 | 80 | 909.6 MB | .pdf×47、.epub×29、.mobi×3 | 2026-10-02 |
+| 　歷史學 | 1,002 | 21.3 GB | .pdf×748、.epub×229、.txt×16 | 2026-10-02 |
+| 　社會政治學 | 158 | 2.5 GB | .pdf×102、.epub×54、.azw3×2 | 2026-10-02 |
+| 　神學 | 5,362 | 55.8 GB | .pdf×4154、.docx×463、.epub×359 | 2026-10-02 |
+| 　自然科學 | 50 | 1.3 GB | .pdf×36、.epub×13、.azw3×1 | 2026-10-02 |
 
 ## 三、站上電子圖書館（Supabase `ebooks`）
 
-共 5,742 本。
+共 8,587 本。
 
-依 collection：（一般） 5,186、collected-works 556
+依 collection：（一般） 8,030、collected-works 557
 
 | 類別 | 本數 |
 |---|---:|
-| 神學 | 3,417 |
-| 世界宗教 | 940 |
-| 歷史學 | 414 |
-| 哲學 | 252 |
-| 宗教學 | 250 |
-| 社會政治學 | 127 |
+| 神學 | 5,165 |
+| 世界宗教 | 1,091 |
+| 歷史學 | 918 |
+| 哲學 | 449 |
+| 宗教學 | 431 |
+| 社會政治學 | 157 |
+| 人類生物學 | 90 |
 | （未分類） | 86 |
-| 人類生物學 | 75 |
-| 文學 | 55 |
-| 心理學 | 46 |
-| _待審分類 | 41 |
-| 自然科學 | 34 |
+| 文學 | 79 |
+| 心理學 | 59 |
+| 自然科學 | 49 |
+| _待審分類 | 7 |
 | 宗教社會學 | 3 |
-| 佛學 | 2 |
+| 佛學 | 3 |
 
 ## 四、R2
 
@@ -154,9 +155,10 @@
 | `corpus-index/` | 1 | 769.4 KB |
 | `dadaodao-fulltext/` | 537 | 42.0 MB |
 | `dadaodao-materials/` | 5 | 8.9 MB |
-| `ebook-chunks/` | 4,997 | 1.8 GB |
+| `ebook-chunks/` | 5,939 | 2.0 GB |
 | `evangelical-fulltext/` | 23,231 | 125.2 MB |
 | `fgs-dictionary/` | 3,252 | 29.3 MB |
+| `glossaries/` | 13 | 19.0 MB |
 | `herald/` | 18 | 73.6 MB |
 | `mukyokai-fulltext/` | 244 | 8.2 MB |
 | `mukyokai/` | 85 | 170.0 MB |
@@ -168,7 +170,7 @@
 | `pong-writings-pages/` | 2 | 103.2 KB |
 | `pong-writings-sources/` | 1 | 335.0 KB |
 | `pong-writings/` | 2 | 60.1 MB |
-| `progress/` | 1 | 6.7 KB |
+| `progress/` | 1 | 6.8 KB |
 | `qiangmian-ppt/` | 29 | 149.7 MB |
 | `research-private/dlbs/` | 400 | 19.4 MB |
 | `research-private/guoshiguan/` | 1 | 73.0 KB |
@@ -207,11 +209,15 @@
 | `public/content/research-data/corpus-terms.json` | 1 |
 | `public/content/research-data/evangelical/ct-articles.json` | 23,231 |
 | `public/content/research-data/evangelical/ct-index.json` | 12 |
+| `public/content/research-data/historiography/top-cited.json` | 493 |
+| `public/content/research-data/historiography/top-papers.json` | 5 |
 | `public/content/research-data/mukyokai/index.json` | 85 |
 | `public/content/research-data/mukyokai/nonchurch-index.json` | 159 |
+| `public/content/research-data/near-east-archaeology/top-cited.json` | 500 |
+| `public/content/research-data/near-east-archaeology/top-papers.json` | 5 |
 | `public/content/research-data/pct/airiti-shortlist.json` | 485 |
 | `public/content/research-data/pct/biblio-airiti.json` | 17 |
-| `public/content/research-data/pct/biblio-ndltd.json` | 28 |
+| `public/content/research-data/pct/biblio-ndltd.json` | 32 |
 | `public/content/research-data/pct/documents-index.json` | 121 |
 | `public/content/research-data/pct/laijohn-index.json` | 2,078 |
 | `public/content/research-data/pct/new-messenger-index.json` | 176 |
