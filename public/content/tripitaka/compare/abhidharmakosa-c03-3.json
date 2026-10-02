@@ -1,0 +1,381 @@
+{
+ "slug": "abhidharmakosa-c03-3",
+ "title": "俱舍論・分別世品（3.45–3.72）",
+ "family": "sa",
+ "intro": "《阿毘達磨俱舍論》第三品〈分別世品〉頌 3.45–3.72，一頌一節（頌號依 Pradhan 本，GRETIL 標 VAkK_品.頌）。五欄：梵本頌、梵本自釋（bhāṣya）、玄奘《俱舍論本頌》、玄奘《俱舍論》、真諦《俱舍釋論》；論本欄自該頌（含引出該頌的提問句）起、到下一頌前的釋文止。玄奘《俱舍論》常把數頌合為一個「頌曰」再一併解釋，區塊中按頌切開，釋文因此都落在區塊末頌；真諦本逐句引偈、隨句解釋，與梵本自釋的節奏相近。稱友 Yaśomitra《明了義釋》Sphuṭārthā 是自釋的疏，不收。",
+ "units": [
+  {
+   "id": "v045",
+   "label": "3.45　安立器世間"
+  },
+  {
+   "id": "v046",
+   "label": "3.46　次上水輪深"
+  },
+  {
+   "id": "v047",
+   "label": "3.47　此水金輪廣"
+  },
+  {
+   "id": "v048",
+   "label": "3.48　周圍此三倍"
+  },
+  {
+   "id": "v049",
+   "label": "3.49　頞濕縛羯拏"
+  },
+  {
+   "id": "v050",
+   "label": "3.50　蘇迷盧四寶"
+  },
+  {
+   "id": "v051",
+   "label": "3.51　餘八半半下"
+  },
+  {
+   "id": "v052",
+   "label": "3.52　四邊各三倍"
+  },
+  {
+   "id": "v053",
+   "label": "3.53　三洛叉二萬"
+  },
+  {
+   "id": "v054",
+   "label": "3.54　南邊有三半"
+  },
+  {
+   "id": "v055",
+   "label": "3.55　西瞿陀尼洲"
+  },
+  {
+   "id": "v056",
+   "label": "3.56　中洲復有八"
+  },
+  {
+   "id": "v057",
+   "label": "3.57　此北九黑山"
+  },
+  {
+   "id": "v058",
+   "label": "3.58　此下過二萬"
+  },
+  {
+   "id": "v059",
+   "label": "3.59　謂煻煨屍糞"
+  },
+  {
+   "id": "v060",
+   "label": "3.60　日月迷盧半"
+  },
+  {
+   "id": "v061",
+   "label": "3.61　雨際第二月"
+  },
+  {
+   "id": "v062",
+   "label": "3.62　晝夜增臘縛"
+  },
+  {
+   "id": "v063",
+   "label": "3.63　妙高層有四"
+  },
+  {
+   "id": "v064",
+   "label": "3.64　堅手及持鬘"
+  },
+  {
+   "id": "v065",
+   "label": "3.65　妙高頂八萬"
+  },
+  {
+   "id": "v066",
+   "label": "3.66　中宮名善見"
+  },
+  {
+   "id": "v067",
+   "label": "3.67　中有殊勝殿"
+  },
+  {
+   "id": "v068",
+   "label": "3.68　妙地居四方"
+  },
+  {
+   "id": "v069",
+   "label": "3.69　此上有色天"
+  },
+  {
+   "id": "v070",
+   "label": "3.70　初如五至十"
+  },
+  {
+   "id": "v071",
+   "label": "3.71　欲生三人天"
+  },
+  {
+   "id": "v072",
+   "label": "3.72　如彼去下量"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sa",
+   "lang": "sa",
+   "label": "梵本頌",
+   "who": "《阿毘達磨俱舍論本頌》Abhidharmakośakārikā・GRETIL（參 Pradhan 1975、Gokhale 1946）"
+  },
+  {
+   "id": "sa-bhasya",
+   "lang": "sa",
+   "label": "梵本自釋",
+   "who": "《阿毘達磨俱舍論》Abhidharmakośabhāṣya・GRETIL（Pradhan 1975，Hackett／Lusthaus 校）"
+  },
+  {
+   "id": "T1560",
+   "lang": "lzh",
+   "label": "玄奘頌本",
+   "who": "玄奘譯《阿毘達磨俱舍論本頌》・唐",
+   "work": "T1560"
+  },
+  {
+   "id": "T1558",
+   "lang": "lzh",
+   "label": "玄奘論本",
+   "who": "玄奘譯《阿毘達磨俱舍論》・唐 651–654 年",
+   "work": "T1558"
+  },
+  {
+   "id": "T1559",
+   "lang": "lzh",
+   "label": "真諦釋論",
+   "who": "真諦譯《阿毘達磨俱舍釋論》・陳 563–567 年",
+   "work": "T1559"
+  }
+ ],
+ "works": [
+  "T1558",
+  "T1559",
+  "T1560"
+ ],
+ "anchors": [
+  {
+   "work": "T1560",
+   "range": [
+    "T29n1560_p0313c11",
+    "T29n1560_p0313c11"
+   ]
+  },
+  {
+   "work": "T1558",
+   "range": [
+    "T29n1558_p0057a07",
+    "T29n1558_p0060c21"
+   ]
+  },
+  {
+   "work": "T1559",
+   "range": [
+    "T29n1559_p0214a15",
+    "T29n1559_p0218b15"
+   ]
+  }
+ ],
+ "cells": {
+  "v045": {
+   "sa": "tatra bhājanalokasya saṃniveśamuśantyadhaḥ / lakṣaṣoḍaśakodvedhamasaṃkhyaṃ vāyumaṇḍalam // VAkK_3.45 //",
+   "sa-bhasya": "[157|26-157|27] tatra bhājanalokasya saṃniveśamuśantyadhaḥ / lakṣaṣoḍaśakodvedhamasaṃkhyaṃ vāyumaṇḍalam // VAkK_3.45 // [158|01] trisāhasramahāsāhasralokadhātorevaṃ saṃniveśamicchanti / [158|01-158|02] yadutākāśaṣpratiṣṭhamadhastādvāyumaṇḍalamabhinirvṛttaṃ sarvasattvānām / [158|02-158|04] karmādhipatyena tasya yojanalakṣāṇāṃ ṣoḍaśakamudvedhaḥ pariṇāhenāsaṃkhyaṃ tathā ca dṛḍhaṃṃ yanmahālagno'pi vajreṇa bhettumaśaktaḥ / [158|04] tasyopariṣṭāt [158|05] apāmekādaśodvedhaṃ sahasrāṇi ca viṃśatiḥ // [158|06] maṇḍalamiti varttate / [158|06-158|07] tasmin vāyumaṇdale sattvānāṃ karmabhirmeghāḥ saṃbhūyākṣamātrābhirdhārābhirabhivarṣanti / [158|07] tat bhavatyaṣāṃ maṇḍalam / [158|07-158|08] tasya yojanānāmekādaśalakṣāṇyūrdhve'dho viṃśatiśca sahasrāṇi / [158|08] kathaṃ tā āpo na tiryaṅgvisravanti / [158|08-158|09] sattvānāṃ karmādhipatyena / [158|09-158|10] yathā hi bhuktaṃ pītamannaṃ pānaṃ ca nāpakvaṃ pakvāśayamāpatatī tyeke / [158|10] kusūlanyāyena vāyunā saṃdhāryanta iti nikāyāntarīyāḥ / [158|10-158|12] tāśca punarāpaḥ sattvānāṃ karmaprabhāvasaṃbhūtairvāyubhirāvartyamānā upariṣṭātkāñcanībhavanti pakvakṣīrīśarībhāvayogena / [158|12] tat bhavatyaṣāṃ maṇḍalam /",
+   "T1560": "安立器世間，風輪最居下， 其量廣無數，厚十六洛叉。",
+   "T1558": "器世間今當說。頌曰：安立器世間，風輪最居下， 其量廣無數，厚十六洛叉，",
+   "T1559": "偈曰：此中器世界，說於下依住，深十六洛沙，風輪廣無數。釋曰：三千大千世界，諸佛說深廣，謂依於空住下底風輪，由眾生增上業所生。此風輪厚十六洛沙由旬，縱廣無復數，堅實如此。若大諾那力人，以金剛杵懸擊擲之，金剛碎壞而風輪無損。"
+  },
+  "v046": {
+   "sa": "apāmekādaśodvedhaṃ sahasrāṇi ca viṃśatiḥ / aṣṭalakṣaucchrayaṃ paścāccheṣaṃ bhavati kāñcanam // VAkK_3.46 //",
+   "sa-bhasya": "[158|13] aṣṭalakṣocchrayaṃ paścāccheṣaṃ bhavati kāñcanam // VAkK_3.46 // [158|14] kiṃ ca śeṣam / trayo laklṣāḥ sahasrāṇi ca viṃśatiḥ / [158|14-158|15] sā kāñcanamayī mahī bhavatyapāmupariṣṭāt ukto jalakāñcanamaṇḍalocchrāyaḥ /",
+   "T1560": "次上水輪深，十一億二萬， 下八洛叉水，餘凝結成金。",
+   "T1558": "次上水輪深，十一億二萬， 下八洛叉水，餘凝結成金，",
+   "T1559": "於風輪上，偈曰：水輪深十一，復有二十千。釋曰：於風輪上，由眾生業增上，諸雲聚集雨雨滴如大柱。此水輪成，深十一洛沙二萬由旬。云何於中水輪不傍流散？由眾生業增上力故。譬如所食所飲，是諸食飲若未消時，不墮熟藏，餘師說如此。或如食道理故，由風所持故不流散，餘部說如此。復次此水由眾生業勝德所生，有別風大吹轉此水，於上成金，如熟乳上生膏。偈曰：水厚八洛沙，所餘皆是金。釋曰：所餘有幾許？三洛沙二萬由旬，是名金地輪，在水輪上。水輪并金地輪，厚量已說。"
+  },
+  "v047": {
+   "sa": "tiryak trīṇi sahasrāṇi sārdhaṃ śatacatuṣṭayam / lakṣadvādaśakaṃ caiva jalakāñcanamaṇḍalam // VAkK_3.47 //",
+   "sa-bhasya": "[158|16-158|17] tiryak trīṇi sahasrāṇi sārdhaṃ śatacatuṣṭayam / lakṣadvādaśakaṃ caiva jalakāñcanamaṇḍalam // VAkK_3.47 // [158|18] samānaṃ hyetadubhayaṃ vistārataḥ /",
+   "T1560": "此水金輪廣，徑十二洛叉， 三千四百半，",
+   "T1558": "此水金輪廣，徑十二洛叉， 三千四百半，",
+   "T1559": "偈曰：徑量有三千，復有四百半，有十二洛沙，水金輪廣爾。釋曰：此二輪徑量是同。"
+  },
+  "v048": {
+   "sa": "samantatastu triguṇaṃ tatra merūryugandharaḥ / īśādhāraḥ khadirakaḥ sudarśanagiristathā // VAkK_3.48 //",
+   "sa-bhasya": "[158|19] samantatastu triguṇaṃ [158|20-158|21] samantataḥ parikṣepeṇa tu parigaṇyamānaṃ triguṇaṃ jāyate ṣaṭtriṃśallakṣā daśasahasrāṇi sārdhāni ca trīṇi śatāni yojanānām / [158|21-158|22] yacca tatkāñcanamayaṃ mahīmaṇḍalamapāmupariṣṭāt saṃniviṣṭaṃ [158|23-158|24] tatra meruryugandharaḥ / īśādhāraḥ khadirakaḥ sudarśanagiristathā // VAkK_3.48 //",
+   "T1560": "周圍此三倍。 蘇迷盧處中，次踰健達羅， 伊沙馱羅山，朅地洛迦山， 蘇達梨舍那，",
+   "T1558": "周圍此三倍。論曰：許此三千大千世界如是安立形量不同。謂諸有情業增上力，先於最下依止虛空有風輪生，廣無數、厚十六億踰繕那。如是風輪其體堅密，假設有一大諾健那，以金剛輪奮威懸擊，金剛有碎風輪無損。又諸有情業增上力，起大雲雨澍風輪上，滴如車軸積水成輪。如是水輪於未凝結位，深十一億二萬踰繕那。如何水輪不傍流散？有餘師說：一切有情業力所持令不流散。如所飲食未熟變時，終不流移墮於熟藏。有餘部說：由風所持令不流散，如篅持穀。有情業力感別風起，搏擊此水上結成金，如熟乳停上凝成膜，故水輪減唯厚八洛叉，餘轉成金，厚三億二萬。二輪廣量其數是同，謂徑十二億三千四百半。周圍其邊數成三倍，謂周圍量成三十六億一萬三百五十踰繕那。頌曰：蘇迷盧處中，次踰健達羅， 伊沙馱羅山，朅地洛迦山， 蘇達梨舍那，",
+   "T1559": "偈曰：若周圍三倍。釋曰：若以邊量，數則成三倍，合三十六洛沙，一萬三百五十由旬。金地輪在水上。於此地中，偈曰：須彌婁山王，由乾陀羅山、伊沙陀羅山、佉特羅柯山、修騰婆那山、阿輸割那山、毘那多柯山、尼旻陀羅山。釋曰：如此等山依金地輪上住。八大山中央有須彌婁山，所餘山繞須彌婁住，一由乾陀羅、二伊沙陀羅、三佉特羅柯山、四修騰婆那、五阿輸割那、六毘那多柯、七尼旻陀羅。此須彌婁山，七山城所圍，最外山城名尼旻陀羅。"
+  },
+  "v049": {
+   "sa": "aśvakarṇo vinitako nimindharagiriḥ tataḥ / dvīpāḥ bahiścakravāḍaḥ sapta haimāḥ sa āyasaḥ // VAkK_3.49 //",
+   "sa-bhasya": "[159|01] aśvakarṇo vinitako nimindharagiriḥ [159|02] itīme kāñcanamaṇḍalapratiṣṭhā aṣṭau mahāparvatāḥ / madhye sumeruḥ / [159|02-159|03] śeṣāḥ sumeruparicāyāvasthitāḥ / [159|03-159|04] tasyānyasaptaparvataprākāraparikṣiptasya yo bāhyaḥ parvate nimindharagiriḥ / [159|05] tataḥ / [159|06] dvīpāḥ [159|07] tato bahiścatvāro dvīpāḥ / tebhyaḥ punaḥ [159|08] bahiścakravāḍaḥ [159|09] tena cāturdvipakaścakrīkṛtaḥ / teṣāṃ tu [159|10] sapta haimāḥ sa āyasaḥ // VAkK_3.49 // [159|11] yugandharādayaḥ sapta parvatāḥ sauvaṛṇāścakravāḍaḥ śastrakaḥ /",
+   "T1560": "頞濕縛羯拏， 毘那怛迦山，尼民達羅山。 於大洲等外，有鐵輪圍山， 前七金所成，",
+   "T1558": "頞濕縛羯拏， 毘那怛迦山，尼民達羅山， 於大洲等外，有鐵輪圍山， 前七金所成，",
+   "T1559": "偈曰：於四大洲外，復有輪圍山。釋曰：於第七山外有四大洲，於四大洲外復有鐵輪圍山。由此山故，世界相圓如輪。於中偈曰：七金此是鐵。釋曰：由乾陀羅等七山皆金所成，此最外圍山唯鐵所成。"
+  },
+  "v050": {
+   "sa": "catūratnamayo meruḥ jale 'śītisahasrake / magnāḥ ūrdhva jalāt merurbhūyo 'śītisahasrakaḥ // VAkK_3.50 //",
+   "sa-bhasya": "[159|12] catūratnamayo meruḥ [159|13] suvarṇamayo rūpyamayo vaidūryamayaḥ sphaṭikamayaśca yathāsaṃkhyaṃ caturṣu pārśveṣu / [159|13-159|14] yacca yanmayaṃ pārśvaṃ sumerostasyānubhāvena tadvarṇa tasyāṃ diśi nabho dṛśyate / [159|14-159|15] jāmbūdvīpakamasya pārśvaṃ vaidūryamayaṃ varṇayanti / [159|15-159|16] tasyeha prabhānurāgeṇa vaidūryamayaṃ nabho dṛśyata iti / [159|17] atha kathaṃ teṣāṃ saṃbhavaḥ / [159|17-159|18] kāñcanamayyāṃ pṛthivyāṃ punarvāridhārā atipatanti / [159|18-159|19] tā hyāpo nānāvidhabījagarbhā bahuvidhaprabhāvabhinnairvāyubhirmathyamānāstāṃ tāṃ jātiṃ pariṇamayanti / [159|19-159|20] evaṃ ca punaḥ pariṇamayanti yadbhinnajātīyasya kāryaviśeṣotpattāvasamavadhānena pratyayībhavanti / [159|20-159|21] na tu khalu yathā sāṃkhyānāṃ pariṇāmaḥ / [159|21] kathaṃ ca sāṃkhyānāṃ pariṇāmaḥ / [159|21-159|22] avasthitasya dravyasya dharmāntaranivṛttau dharmāntaraprādurbhāva iti / [159|22] kaścātra doṣaḥ / [159|22-159|23] sa eva hi dharmī na saṃvidyate yasyāvasthitasya dharmāṇāṃ pariṇāmaḥ kaspyeta / [159|23-159|24] kaścaiṃvamāha dharmebhyo'nyo dharmīti / [159|24] tasyaiva tu dravyasyānyathībhāvamātraṃ pariṇāmaḥ / [159|24-159|25] evamapyayuktam / [159|25] kimatrāyuktam / tadeva cedaṃ na cedaṃ tatheti apūrvaiṣā vāyo yuktiḥ / [159|25-159|26] evaṃ ca punaḥ saṃbhūtāḥ suvarṇādayaḥ karmaprabhāvāt preritairvāyubhiḥ samāhṛtya rāśīkriyante / [159|26-159|27] ta ete parvatāśca bhavanti dvīpāśca / [159|27] te punaḥ sumevadayaścakravāḍaparyantāḥ parvatāḥ [160|01] jale'śītisahasrake / [160|02] magnāḥ [160|03] kāñcanamayyāḥ pṛthivyā uparyaśītiyyojanasahasrāṇyudakaṃ tatra te magnāḥ / [160|04] ūrdhvaṃ jalāt merurbhūyo 'śītisahasrakaḥ // VAkK_3.50 // [160|05] iti hi meroḥ ṣaṣṭi yojanaśatasahasraṃ samucchrayaḥ /",
+   "T1560": "蘇迷盧四寶， 入水皆八萬，妙高出亦然，",
+   "T1558": "蘇迷盧四寶， 入水皆八萬，妙高出亦然，",
+   "T1559": "偈曰：四寶須彌婁。釋曰：約四邊，次第金、銀、琉璃、頗梨柯四寶所成。諸邊隨能成寶，類光明故，於諸方中空色顯現似於本寶。對剡浮洲須彌婁邊，琉璃寶所成，由此寶光映故，見空青色似於琉璃。復次云何如此等寶得生？於金地上，復有諸雲雨，水滴如車軸，此水為種種種子胎藏，有種種威德差別，風吹變此水，轉成種種類寶。如此轉變為生別種類事總別，由不先有及不並有道理能作因緣，不同僧佉外道所立轉變義。僧佉轉變者，此物先已住，轉成別法。若爾，有何失？此有法不可解。此法已住，由有於中分別諸餘法。何人說如此？從法有法異，此法類不異，唯成異相說名轉變。若爾，亦非道理。云何非道理？此物即是，即此不是，先未曾有。此言說道理，如此方便。金等諸寶已聚集生，有別風由業威力所起，此風能引取諸寶集在一處，即成山成洲。所取處成內外海、須彌婁等山，鐵輪圍為後。偈曰：入水八十千。釋曰：於金地上有水，深八萬由旬。此中諸山次第入中。偈曰：此山出水上，亦八萬由旬。釋曰：如此須彌婁山，高一十六萬由旬。"
+  },
+  "v051": {
+   "sa": "ardhārdhahāniraṣṭāsu samocchrāyaghanāśca te / śītāḥ saptāntarāṇyeṣāṃ ādyāśītisahasrikā // VAkK_3.51 //",
+   "sa-bhasya": "[160|06] ardhārdhahāniraṣṭāsu [160|07] jalādūrdhvaṃ yāvānsumerustato'rdhena yugandharaścatvāriṃśadyojanasahasrāṇi / [160|07-160|09] tato 'rdhena īśādhara ityevamanyeṣvapyardhārdhahānirveditavyā yāvannimindharārdhenārdhatrayodaśottarāṇi trīṇi yojanaśatāni cakravāḍaḥ / [160|10] samocchrāyaghanāśca te / [160|11] yāvāneva caiṣāṃ jalādūrdhvaṃ samucchrāyastāvāneva ghano vistāra ityarthaḥ / [160|12] śītāḥ saptāntarāṇyeṣāṃ [160|13-160|14] eṣāṃ ca nimindharāntanāṃ parvatānāṃ saptāntarāṇi sapta śītā ucyante pūrṇā aṣṭāṅgopetasya pānīyasya / [160|14-160|15] taddhi pānīyaṃ śītalaṃ ca svādu ca laghu ca mṛdu cācchaṃ ca niṣpratikaṃ ca pibataśca kaṇṭhaṃ na kṣiṇoti pītaṃ ca kukṣiṃ na vyābādhate / [160|16] tāsāṃ ca punaḥ [160|17] ādyāśītisahasrikā // VAkK_3.51 // [160|18] sumeruyugandharāntaraṃ prathamā śītā / aśītiryojanasahasrāṇi vaipulyena /",
+   "T1560": "餘八半半下，廣皆等高量。 山間有八海，前七名為內， 最初廣八萬，",
+   "T1558": "餘八半半下，廣皆等高量。論曰：於金輪上有九大山，妙高山王處中而住，餘八周匝繞妙高山。於八山中前七名內，第七山外有大洲等。此外復有鐵輪圍山，周匝如輪圍一世界。持雙等七唯金所成。妙高山王四寶為體，謂如次四面北、東、南、西，金、銀、吠琉璃、頗胝迦寶。隨寶威德色顯於空，故贍部洲空似吠琉璃色。如是寶等從何而生？亦諸有情業增上力。復大雲起雨金輪上滴如車軸，積水奔濤，其水即為眾寶種藏。由具種種威德猛風鑽擊變生眾寶類等。如是變水生寶等時，因滅果生，體不俱有，非如數論轉變所成。數論云何執轉變義？謂執有法自性常存，有餘法生、有餘法滅。如是轉變何理相違？謂必無容有法常住，可執別有法滅法生。誰言法外別有有法？唯即此法於轉變時異相所依名為有法。此亦非理。非理者何？即是此物而不如此，如是言義曾所未聞。如是變生金寶等已，復由業力引起別風，簡別寶等攝令聚集成山成洲，分水甘醎令別成立內海外海。如是九山住金輪上，入水量皆等八萬踰繕那，蘇迷盧山出水亦爾。餘八出水半半漸卑，謂初持雙出水四萬，乃至最後鐵輪圍山出水三百一十二半。如是九山一一廣量，各各與自出水量同。頌曰：山間有八海，前七名為內， 最初廣八萬，",
+   "T1559": "偈曰：八山半半下。釋曰：由乾陀羅山，從水上高四萬由旬，半下須彌婁山。伊沙陀羅山，半下由乾陀羅山。如此於諸山，應知次第半。下乃至鐵輪圍山，半下尼旻陀羅山，高三百一十二半由旬。偈曰：高廣量平等。釋曰：如諸山從水上高量，廣量亦爾。偈曰：其中間七海。釋曰：尼旻陀羅最為後，於彼中間有七海，遍滿八功德水。此水冷美輕軟清香，飲時不咽逆於喉，飲已利益內界不損於腹。此七海中，偈曰：初海八十千。釋曰：由乾陀羅內是第一海廣，八萬由旬。偈曰：說此名內海。釋曰：海有二種，一內、二外。"
+  },
+  "v052": {
+   "sa": "ābhyantaraḥ samudro 'sau triguṇaḥ sa tu pārśvataḥ / ardhārdhenāparāḥ śītāḥ śeṣaṃ bāhyo mahodadheḥ // VAkK_3.52 //",
+   "sa-bhasya": "[160|19] ābhyantaraḥ samudro'sau [160|20] dvau hi samudrāvābhyantaro bāhyaśca / tadā'sau śītā'bhyantaraḥ samudraḥ [160|21] triguṇaḥ sa tu pārśvataḥ / [160|22] aśītiryojanasahasrāṇyasya vaipulyamuktam / [160|22-160|23] pārśvatasriguṇo bhavati yugandharatīreṇa gaṇyamānaḥ catvāriṃśat sahasrāṇi lakṣadvayaṃ ca / [161|01] ardhārdhenāparāḥ śītāḥ [161|02-161|03] yugandharasyeṣādhārasya cāntaraṃ dvitīyā śītā ardhena prathamāyāścatvāriṃśat yojanasahasrāṇi / [161|03-161|04] tato 'rdhena punastṛtīyetyevamardhārdhenāparāḥ śītāḥ bhavanti / [161|04] yāvadardhatrayodaśaśatāni saptamī śītā / [161|04-161|05] dairdhyaṃ tu tāsāṃ na parisaṃkhyātamatibahuprakarṣavisarpaṇāt / [161|06] śeṣaṃ bāhyo mahodadheḥ // VAkK_3.52 // [161|07] kiṃ śeṣam / nimindharacakravāḍayorantaram / [161|07-161|08] taddhi bāhyo mahāsamudro lavaṇaṃ pūrṇaḥ hṣārodakasya / [161|08] sa khalu vistāreṇa yojanānāṃ",
+   "T1560": "四邊各三倍， 餘六半半陿，第八名為外，",
+   "T1558": "四邊各三倍， 餘六半半陿，第八名為外，",
+   "T1559": "此二山內海，偈曰：一一邊三倍。釋曰：已說此海廣八萬由旬，若約乾陀羅內邊數，一一邊三倍，此廣合成二洛沙四萬由旬。偈曰：餘海半半狹。釋曰：由乾陀羅、伊沙陀羅此二山中間是第二海，半狹初海，廣四萬由旬。半第二廣為第三，由此半半狹，應知餘廣量，乃至第七廣一千二百五十由旬。長量不說，由多量差別出故。偈曰：所餘名外海。釋曰：何者為餘？尼旻陀、羅鐵輪圍二山中間名外大海，此海醎遍滿醎烈味水。"
+  },
+  "v053": {
+   "sa": "lakṣatrayaṃ sahasrāṇi viṃśatirdve ca tatra tu / jambūdvīpo dvisāhasrastripārśvaḥ śakaṭākṛtiḥ // VAkK_3.53 //",
+   "sa-bhasya": "[161|09] lakṣatrayaṃ sahasrāṇi viṃśatirdve ca [161|10] tatra catvāro dvīpāścaturṣu sumerupārśveṣu / [161|11] tatra tu / [161|12] jambūdvīpo dvisāhasrastripārśvaḥ śakaṭākṛtiḥ // VAkK_3.53 // [161|13] sāhasrāṇi trīṇi pārśvānyasya śakaṭasyevākṛtiḥ / [161|13-161|15] tasya ca madhye kāñcanamayyāṃ pṛthivyāṃ vajrāsanamabhinirvṛttaṃ yasminniṣadya sarve bodhisattvā vajropamaṃ samādhimutpādayanti // [161|15] nahi tamanya āśrayaḥ pradeśo vā soḍhuṃ samarthaḥ /",
+   "T1560": "三洛叉二萬，二千踰繕那。 於中大洲相，南贍部如車， 三邊各二千，",
+   "T1558": "三洛叉二萬，二千踰繕那。論曰：妙高為初、輪圍最後，中間八海，前七名內。七中皆具八功德水：一甘、二冷、三軟、四輕、五清淨、六不臭、七飲時不損喉、八飲已不傷腹。如是七海初廣八萬，約持雙山內邊周量，於其四面數各三倍，謂各成二億四萬踰繕那。其餘六海量半半陿，謂第二海量廣四萬，乃至第七量廣一千二百五十。此等不說周圍量者，以煩多故。第八名外，醎水盈滿，量廣三億二萬二千。頌曰：於中大洲相，南贍部如車， 三邊各二千，",
+   "T1559": "此海約由旬數廣，偈曰：三洛沙二萬及二千。釋曰：大海量如此。偈曰：於中。釋曰：有四大洲，對須彌婁四邊。偈曰：剡浮洲二千，三邊相如車。釋曰：於此海中，剡浮洲一邊二千由旬，三邊等量，其相似車。於此洲中央，從金地上起金剛座，徹剡浮洲地，與上際平。一切菩薩皆於中坐，修習金剛三摩提。何以故？更無餘依止及處能堪受此三摩提。"
+  },
+  "v054": {
+   "sa": "sārdhatriyojanaṃ tvekaṃ prāgvideho 'rdhacandravat / pārśvatrayaṃ tathāsya ekaṃ sārdhaṃ triśatayojanam // VAkK_3.54 //",
+   "sa-bhasya": "[161|16] sārdhatriyojanaṃ tvekaṃ [161|17] cturthamasya pārśvaṃ sārdhāni trīṇi yojanāni / ata eva hyasau śakaṭākṛtiḥ / [161|18] prāgvideho'rdhacandravat / [161|19] itaḥ pūrveṇa sumerupārśve pūrvaṃ videho dvīpaḥ / so 'rdhacandra ivābhinirvṛttaḥ / [161|19-161|20] parimāṇatastu [161|21] pārśvatrayaṃ tathā 'sya [161|22] yathā jambūdvīpasya dve dve yojanasahasre / [161|23] ekaṃ sārdhaṃ triśatayojanam // VAkK_3.54 // [161|24] caturthaṃ pārśvaṃ sārdhāni trīṇi yojanaśatāni /",
+   "T1560": "南邊有三半。 東毘提訶洲，其相如半月， 三邊如贍部，東邊三百半。",
+   "T1558": "南邊有三半； 東毘提訶洲，其相如半月， 三邊如贍部，東邊三百半；",
+   "T1559": "偈曰：一三由旬半。釋曰：此第四邊廣量三由旬半，是故此洲似車相。偈曰：東洲如半月。釋曰：從此洲向東，對須彌婁邊有洲名弗婆毘提訶出海上，其相如半月。若約邊量，偈曰：三邊如。釋曰：此洲三邊如剡浮洲三邊，量各二千由旬。偈曰：一邊三百半由旬。釋曰：是第四邊，廣三百五十由旬。"
+  },
+  "v055": {
+   "sa": "godānīyaḥ sahasrāṇi sapta sārdhāni maṇḍalaḥ / sārdhe dve madhyamasya aṣṭau caturasraḥ kuruḥ samaḥ // VAkK_3.55 //",
+   "sa-bhasya": "[161|25] godānīyaḥ sahasrāṇi sapta sārdhāni maṇḍalaḥ / [162|01-162|02] itaḥ paścimena sumerupārśve 'paragodānīyo dvīpaḥ sārdhāni sapta yojanasahasrāṇi sākalyena / [162|02] maṇḍalaścāsau pūrṇacandravat / [162|03] sārdhe dve madhyamasya [162|04] madhyamasyārdhatṛtīye yojanasahasre / [162|05] aṣṭau caturasraḥ kuruḥ samaḥ // VAkK_3.55 // [162|06] iha uttareṇa sumerupārśve uttarakurudvīpaḥ / [162|06-162|07] so 'ṣṭau yojanasahasrāṇi sākalyena caturasraḥ / [162|07] kṛtyāpīṭhikāvat / [162|07-162|08] sarveṣu ca pārśveṣu samo yathaikaṃ pārśvaṃ dviyojanasahasre / [162|08] tathā 'nyāni stokamapi nādhikam / [162|08-162|09] yaśca dvīpo yadākṛtistadākṛtīnyeva tatra manuṣyāṇāṃ mukhāni / [162|10] teṣāṃ khalu dvīpānāmantarāle 'ntaradvīpā abhinirvṛttāḥ /",
+   "T1560": "西瞿陀尼洲，其相圓無缺， 徑二千五百，周圍此三倍。 北俱盧畟方，面各二千等，",
+   "T1558": "西瞿陀尼洲，其相圓無缺， 徑二千五百，周圍此三倍； 北俱盧畟方，面各二千等，",
+   "T1559": "偈曰：瞿陀尼相圓，七千半由旬。釋曰：從此洲向西，對須彌婁邊有洲名阿婆羅瞿陀尼洲，邊量七千五百由旬，此洲相圓如滿月。偈曰：徑量二千半。釋曰：中央廣二千五百由旬。偈曰：鳩婁八千等。釋曰：從此洲向北，對須彌婁邊有洲名欝多羅鳩婁洲，邊量八千由旬，四角畟方，其相似比陀訶，四邊量等，如一邊二千由旬，餘邊亦爾，無微毫增減。"
+  },
+  "v056": {
+   "sa": "dehā videhāḥ kuravaḥ kauravāścāmarāvarāḥ / aṣṭau tadantaradvīpā gāṭhā uttaramantriṇaḥ // VAkK_3.56 //",
+   "sa-bhasya": "[162|10-162|11] ke punaste kati cetyāha [162|12-162|13] dehā videhāḥ kuravaḥ kauravāścāmarāvarāḥ / aṣṭau tadantaradbvīpā gāṭhā uttaramantriṇaḥ // VAkK_3.56 // [162|14] tatra dehavidehau pūrvavidehaparivārau / kurukauravau uttarakuroḥ / [162|14-162|15] gāṭhottaramantriṇāvaparagodānīyasya / [162|15] cāmarāvarau jambūdvīpasya / sarve manuṣyairāvāsitāḥ / [162|15-162|16] eko rākṣasairityapare /",
+   "T1560": "中洲復有八，四洲邊各二。",
+   "T1558": "中洲復有八，四洲邊各二。論曰：於外海中大洲有四，謂於四面對妙高山。南贍部洲北廣南陿，三邊量等，其相如車。南邊唯廣三踰繕那半，三邊各有二千踰繕那。唯此洲中有金剛座，上窮地際下據金輪，一切菩薩將登正覺皆坐此座上起金剛喻定，以無餘依及餘處所有堅固力能持此故。東勝身洲東陿西廣，三邊量等，形如半月。東三百五十，三邊各二千。西牛貨洲圓如滿月，徑二千五百，周圍七千半。北俱盧洲形如方座，四邊量等，面各二千。等言為明無少增減。隨其洲相人面亦然。復有八中洲，是大洲眷屬，謂四大洲側各有二中洲。贍部洲邊二中洲者，一遮末羅洲、二筏羅遮末羅洲。勝身洲邊二中洲者，一提訶洲、二毘提訶洲。牛貨洲邊二中洲者，一舍搋洲、二嗢怛羅漫怛里拏洲。俱盧洲邊二中洲者，一矩拉婆洲、二憍拉婆洲。此一切洲皆人所住。",
+   "T1559": "隨諸洲相，於中住眾生面相亦爾。此四洲中間有諸別洲起，諸洲何名何處？偈曰：二提訶鳩婁、遮摩羅遮羅，中間有八洲，捨訶北䐽陀。釋曰：此中有洲，一提訶、二毘提訶，屬東毘提訶，是彼類故。又有二洲，一鳩婁、二高羅婆，屬北鳩婁，是彼類故。復有二洲，一捨陀訶、二欝多羅䐽陀，屬西瞿陀尼，是彼類故。復有二洲，一遮摩羅、二阿婆羅遮摩羅，屬剡浮洲，是彼類故。此諸洲皆是人所住處，唯阿婆羅遮摩羅一洲是羅剎住處。"
+  },
+  "v057": {
+   "sa": "ihottareṇa kīṭādri navakāddhimavān tataḥ / pañcāśadvistṛtāyāmaṃ saro 'rvāggandhamādanāt // VAkK_3.57 //",
+   "sa-bhasya": "[162|17] ihottareṇa kīṭādrinavakāddhimavān [162|18-162|19] ihaiva jambūdvīpe uttareṇāsya jambūdvīpasya kṛṣṇaparvatāstrayastānatikramyāpare trayaḥ punaśca traya iti navabhyaḥ kīṭaparvatebhyaḥ pareṇa himavān parvataḥ / [162|20] tataḥ / [162|21] pañcāśadvistṛtāyāmaṃ saro 'rvāggandhamādanāt // VAkK_3.57 // [162|22-162|23] tasmāddhimavataḥ pareṇānavataptaṃ nāma saro gandhamādanādarvāk yataścatasro nadyaḥ sravnti gaṅga sindhuḥ śītā vakṣuśca / [162|23-162|24] tasya pañcāśadyojanāni vistāraḥ pañcāśadāyāmaḥ / [162|24] pūrṇamaṣṭāṅgasyāṅgopetasyāmbhasaḥ / [162|24-162|25] durgamaṃ ca manuaṣyāṇāmanṛddhimatām / [162|25-162|26] tasyaiva cāntike jambūrabhinirvṛttā madhurasvādūni yasyāḥ phalāni tasyā adhikāreṇāyaṃ jambūdvīpa iti khyātaḥ / [162|26-162|27] tatphalādhikāreṇa vā jambūdvīpa iti / [162|28] narakāḥ kasminnavakāśe kiyatpramāṇāśca /",
+   "T1560": "此北九黑山，雪香醉山內， 無熱池縱廣，五十踰繕那。",
+   "T1558": "有說：唯一邏剎娑居。頌曰：此北九黑山，雪香醉山內， 無熱池縱廣，五十踰繕那。論曰：此贍部洲從中向北，三處各有三重黑山。有大雪山在黑山北，大雪山北有香醉山。雪北香南有大池水，名無熱惱，出四大河：一殑伽河、二信度河、三徙多河、四縛芻河。無熱惱池縱廣正等，面各五十踰繕那量，八功德水盈滿其中，非得通人無由能至。於此池側有贍部林，樹形高大其果甘美，依此林故名贍部洲，或依此果以立洲號。復於何處置㮈落迦、大㮈落迦？",
+   "T1559": "偈曰：此中向北地，九山邊雪山。釋曰：此剡浮洲中，向北地有三黑山，度三黑山復有三黑山，度三黑山復有三黑山，此山悉下故名蟻山。九山北邊有雪山，從雪山向北地。偈曰：香雪二山間，五十由旬池。釋曰：雪山北邊、香山南邊，此處最勝。其中有池名阿那婆怛多，從此池流出四大河，一恒伽、二辛頭、三私多、四薄搜。此池縱廣各五十由旬，遍滿八功德水，非人所行處，若有通慧人乃可得行。此池南邊山高二十五由旬，北邊山高五十由旬，此二山雜物所成。從香山北邊最勝處，有巖名難陀，七寶所成，縱廣各五十由旬，唯是象王所住處。從此度六國土及度七重林、七重河，度第七河更有二林形如半月，此林北生剡浮樹此樹高百由旬，此樹子若熟味美無等。由此樹最高子味最美，故洲因此立剡浮名。"
+  },
+  "v058": {
+   "sa": "adhaḥ sahasrairviśatyā tanmātro 'vīcirasya hi / tadūrdhvaṃ sapta narakāḥ sarve 'ṣṭau ṣoḍaśotsadāḥ // VAkK_3.58 //",
+   "sa-bhasya": "[163|01] adhaḥ sahasraiviṃśatyā tanmātro 'vīcirasya hi / [163|02-163|03] asyaiva jambūdvīpasyādho viṃśatyā yojanasahasrairavīcirmahānarako viṃśatisahasrapramāṇa evodvedhavistārābhyāmevamasyādharatalamitaścatvāriṃśatā yojanasahasrairbhavati / [163|03-163|04] duḥkhanirantaratvādavīciḥ / [163|04-163|05] anyeṣu sāntaraṃ duḥkham taddyathā saṃjīve cchinnāvabhinnasaṃpiṣṭaśarīrāṇāṃ śītalā vāyavo vānti punarapi tān sattvān saṃjīvayanti / [163|05-163|06] ata eva saṃjīvaḥ / [163|06] nāsmin sukhavīcirastītyavīcirityapare / [163|06-163|07] anyeṣvapi sukhā vedanā vipāko nāsti / [163|07] naiḥ ṣyandikī na vāryate / [163|08] tadūrdhvaṃ sapta narakāḥ [163|09] tasmādavīcerūrdhvaṃ sapta narakāḥ uparyupari saṃniviṣṭāḥ / [163|09-163|10] pratāpanastāpano mahārauravo rauravaḥ saṃghātaḥ kālasūtraḥ saṃjīvaśca / [163|10] avīcipārśveṣvityapare / te punaḥ [163|11] sarve 'ṣṭau ṣoḍaśotsadāḥ // VAkK_3.58 // [163|12] uktaṃ hi bhagavatā [163|13-163|14] \"ityete narakā aṣṭāvākhyātā duratikramāḥ / raudrakarmabhirākīrṇāḥ pratyekaṃ ṣoḍaśotsadāḥ // [163|15-163|16] catuskandhāścaturdvārā vibhaktā bhāgaśo 'sitāḥ / ayaḥprākāraparyantā ayasā prativarjitāḥ // [163|17-163|18] taptā caivāyasī bhumirjvalitā tejasā yutā / anekayojanaśatā sphuṭā tiṣṭhati arcciṣe\"ti / [163|19] ṣoḍaśotsadāḥ katame /",
+   "T1560": "此下過二萬，無間深廣同， 上七捺落迦，八增皆十六。",
+   "T1558": "何量有幾？頌曰：此下過二萬，無間深廣同， 上七㮈落迦，八增皆十六。",
+   "T1559": "地獄在何處？其數量復云何？偈曰：向下二十千，阿毘指廣爾。釋曰：於此剡浮洲下二十千由旬有地獄，名阿毘指，深廣各二十千由旬。若從底向上四十千由旬，於中苦受無間，故名阿毘指。何以故？於餘地獄苦受有間。如更活地獄中眾生，身已被斫破及撞擣，有冷風吹其還生，故名更活地獄。阿毘指中無如此事。有餘師說：於中無樂間苦，故名無間。何以故？於餘地獄雖無樂果報，不遮等流果故。偈曰：上有七地獄。釋曰：從此阿毘指地獄上，有七種地獄次第重累，一大燒、二燒、三大叫喚、四叫喚、五聚磕、六黑繩、七更活。餘部說：此七地獄在阿毘指地獄四邊。此八地獄，偈曰：八十六園。釋曰：此一切地獄，各各有十六園。佛世尊說：「如此八地獄，我說難可度， 滿極惡業人，各有十六園， 四面有四門，害具及量等。 鐵城所圍繞，六方皆鐵板， 鐵地悉燋熱，猛火恒洞燃， 無數百由旬，遍滿焰交徹。」"
+  },
+  "v059": {
+   "sa": "kukūlaṃ kuṇapaṃ cātha kṣuramārgādikaṃ nadī / teṣāṃ caturdiśaṃ śītā anye 'ṣṭāvarvudādayaḥ // VAkK_3.59 //",
+   "sa-bhasya": "[163|20] kukūlaṃ kuṇapaṃ cātha kṣuramārgādikaṃ nadī / [163|21] teṣāṃ caturdiśaṃ / [163|22] dvāre dvāre teṣāṃ catvāra utsadāḥ / kukūlaṃ jānumātram / [163|22-163|23] yatra teṣāṃ sattvānāṃ nikṣipte saṃśīryate tvaṅmāṃsaśoṇitamutkṣipte pāde punarapi saṃjāyate tvaṅmāṃsaśoṇitam / [163|24-163|25] kuṇapaṃ gūthamṛttikā yatra nyaṅkuṭā nāma prāṇinaḥ prativasanti sarvaśvetāḥ kṛṣṇaśirasaḥ sūcimukhāsteṣāṃ sattvānāṃ yāvadasthīni bhindanti / [163|25-164|01] kṣuradhārācito mahāpathaḥ yatra teṣāṃ sattvānā manvākrāmatāṃ nikṣipte pāde saṃchidyate tvaṅmāṃsaśoṇitamiti pūrvavat / [164|01-164|02] asipatravanaṃ yatra teṣāṃ sattvānāṃ tīkṣṇā asayaḥ saṃnipatanti aṅgapratyaṅgānyavakṛntanti śyāmaśabalāśca śvāno bhakṣayanti / [164|02-164|03] ayaḥśālmalīvanaṃ tīkṣṇaṣoḍśāṅgulakaṇṭakam / [164|03-164|04] teṣāṃ sattvānāmabhirohatāṃ kaṇṭakā avāṅmukhībhavantaḥ kāyaṃ bhindanti avataratāṃ cordhvībhavantaḥ / [164|04-164|05] ayastuṇḍāśca vāyasā akṣīṇyutpāṭyotpāṭya bhakṣayanti / [164|05-164|06] tadetat kṣuramārgādika trayaṃ śastrābhinipātaṃ sāmānyādekīkriyante / [164|06-164|08] caturtha utsado nadī vaitaraṇi pūrṇa taptasya kṣārodakasya yasyāṃ te sattvā asiśaktiprāsahastaiḥ puruṣairubhābhyāṃ tīrābhyāṃ prativāryamāṇā ūrdhvamapi gacchantaḥ svidyante pacyante adhastiryagapi gacchantaḥ svidyante pacyante / [164|09] tadyathā bahūdakāyāṃ sthālyāmagnāvadhiśritāyāṃ tilataṇḍuilādayaḥ / [164|09-164|10] sā hi mahānarakasya parikhevotpannā / [164|10] ta ete catvāra utsadā digbhedena ṣoḍaśocyante / [164|11] adhikayātanāsthānitvādutsadāḥ ityucyante / narakeṣu hi patitā eteṣu punaryātyante / [164|12] narakā varodhādurdhvameteṣu sīdantyutsadā ityapare / [164|13] praśnātpraśnāntaramupajāyate / [164|13-164|14] kiṃ te narakapālāḥ sattvasaṃkhyātā utāho neti / [164|14] netyeke / kathamidānīṃ ceṣṭante / [164|14-164|15] sattvānāṃ karmabhirvivarttanīvāyubījavat / [164|15] yattrhi bhadantadharmasubhūtinoktaṃ [164|16-164|17] \"krodhanāḥ krūrakarmāṇaḥ pāpābhirucayaśca ye / duḥkhiteṣu ca nandanti jāyante yamarākṣasā\" iti // [164|18-164|19] ye te yamenānuśiṣṭāḥ sattvān narakeṣu prakṣipanti ta ete yamarākṣasā uktā na tu ye kāraṇāḥ kārayantīti / [164|19] sattvasaṃkhyātā ityeke / tasyedānīṃ karmaṇaḥ kva vipākaḥ / [164|20-164|21] teṣveva narakeṣu hi ānantaryakāriṇāṃ vipākāvakāśastatra teṣāṃ ko vipratibandhaḥ / [164|21] kathamagninā na dahyante / agnernūnaṃ karmabhiḥ kṛtāvadhitvāt / [164|21-164|22] bhūtaviśeṣanirvṛttervā / [164|23] ime tāvaduṣṇā aṣṭau mahānarakā ucyante / [164|24] śītā anye 'ṣṭāvarvudādayaḥ // VAkK_3.59 // [164|25] anye śītanarakā aṣṭau / [164|25-165|01] tadyathā arvudo nirarvudaḥ aṭato hahavaḥ huhuvaḥ utpalaḥ padmo mahāpadmaśca / [165|01-165|02] teṣāṃ sattvānāṃ tīrvaśītābhihatānāṃ kāyaśabdavikārānurūpāṇyetāni nāmāni / [165|02] te 'pyasyaiva jambūdvīpasyādhastāt mahānarakāṇāṃ tiryak / [165|02-165|03] kuta iyato jambūdvīpasyādhastādavīcyādīnāmavakāśaḥ / [165|03-165|04] dhānyarāśivadadho viśālā hi dvīpāḥ / [165|04] ata eva mahāsamudro 'nupūrvanimnaḥ / [165|04-165|05] itīme ṣoḍaśa narakāḥ sarve sattvakarmādhipatyanirvṛttāḥ / [165|05-165|06] pratyekaṃ narakāstu svaiḥ svaiḥ karmabhirabhinirvṛttāḥ / [165|06] bahūnāṃ sattvānāṃ dvayorekasya vā / [165|06-165|07] teṣāmanekaprakalpo bhedaḥ sthānaṃ cāniyataṃ nadīparvatamarupradeśeṣvanyeṣu vā 'dhaśca bhāvāt / [165|07-165|08] eṣa tāvannarakabhājanānāṃ saṃniveśaḥ / [165|08] tiryañcaḥ sthalajalākāśagocarāḥ / [165|08-165|09] teṣāṃ kila mūlaṃ sthānaṃ mahāsamudrastato 'nyatra visṛtā iti / [165|09] pretānāṃ yamo rājā / [165|09-165|10] tasya jambūdvīpasyādhastāt pañcayojanaśatāntaraparicchinnā rājadhānī teṣāṃ mūlasthānaṃ tato 'nyatra visṛtāḥ / [165|11] kecit pretā maharddhikā daivīmiva śriyamudvahanti / śeṣā yathā pretāvadāne / [165|12] athemau candrārkau kasmin pratiṣṭhitau / vāyau / [165|12-165|13] vāyavo'ntarīkṣe sarvasattvasādhāraṇakarmādhipatyanirvṛttā āvartavat sumeruṃ parivartante / [165|13-165|14] candrārkatārāṇāṃ vordhvacāraḥ / [165|14] kiyadvīprakṛṣṭāvitaścandrārkau /",
+   "T1560": "謂煻煨屍糞，鋒刃烈河增， 各住彼四方，餘八寒地獄。",
+   "T1558": "謂煻煨屍糞，鋒刃烈河增， 各住彼四方，餘八寒地獄。論曰：此贍部洲下過二萬，有阿鼻旨大㮈落迦。深廣同前，謂各二萬故。彼底去此四萬踰繕那。以於其中受苦無間，非如餘七大㮈落迦受苦非恒，故名無間。且如等活㮈落迦中，諸有情身雖被種種斫刺磨擣，而彼暫遇涼風所吹還活如本，由斯理故立等活名。阿鼻旨中無如是事。有餘師說：阿鼻旨中無樂間苦故名無間，餘地獄中有樂間起，雖無異熟而有等流。七㮈落迦在無間上重累而住。其七者何？一者極熱、二者炎熱、三者大叫、四者號叫、五者眾合、六者黑繩、七者等活。有說：此七在無間傍。八㮈落迦增各十六，故薄伽梵說此頌言：此八㮈落迦，我說甚難越， 以熱鐵為地，周匝有鐵牆， 四面有四門，關閉以鐵扇， 巧安布分量，各有十六增， 多百踰繕那，滿中造惡者， 周遍焰交徹，猛火恒洞然。十六增者，八㮈落迦四面門外各有四所：一煻煨增，謂此增內煻煨沒膝，有情遊彼纔下足時，皮肉與血俱燋爛墜，舉足還生平復如本。二屍糞增，謂此增內屍糞泥滿，於中多有娘矩吒蟲，𭪿利如針身白頭黑，有情遊彼皆為此蟲鑽皮破骨𠯗食其髓。三鋒刃增，謂此增內復有三種：一刀刃路，謂於此中仰布刀刃以為大道，有情遊彼纔下足時，皮肉與血俱斷碎墜，舉足還生平復如本。二劍葉林，謂此林上純以銛利劍刃為葉，有情遊彼風吹葉墜，斬刺支體骨肉零落，有烏駁狗摣掣食之。三鐵刺林，謂此林上有利鐵刺長十六指，有情被逼上下樹時，其刺銛鋒下上鑱刺，有鐵𭪿鳥探啄有情眼睛心肝爭競而食。刀刃路等三種雖殊，而鐵杖同故一增攝。四烈河增，謂此增量廣，滿中熱醎水，有情入中或浮或沒，或逆或順或橫或轉，被蒸被煮骨肉糜爛。如大鑊中滿盛灰汁置麻米等，猛火下燃，麻等於中上下迴轉舉體糜爛，有情亦然。設欲逃亡，於兩岸上有諸獄卒，手執刀槍禦捍令迴，無由得出。此河如塹，前三似園，四面各四增，故言皆十六。此是增上被刑害所，故說名增，本地獄中適被害已重遭害故。有說：有情從地獄出更遭此苦，故說為增。今於此中因論生論。諸地獄卒是有情不？有說：非情。如何動作？有情業力，如成劫風。若爾，云何通彼大德法善現說？如彼頌言：心常懷忿毒，好集諸惡業， 見他苦欣悅，死作琰魔卒。琰魔王使諸邏剎娑擲諸有情置地獄者名琰魔卒。是實有情非地獄中害有情者，故地獄卒非實有情。有說：有情。若爾，此惡業何處受異熟？即地獄中，以地獄中尚容無間所感異熟，此何理遮？若爾，何緣火不燒彼？此定由業力所隔礙故，或感異大種故不被燒。熱㮈落迦已說有八。復有餘八寒㮈落迦。其八者何？一頞部陀、二尼剌部陀、三頞唽吒、四臛臛婆、五虎虎婆、六嗢鉢羅、七鉢特摩、八摩訶鉢特摩。此中有情嚴寒所逼，隨身聲變以立其名。此八并居贍部洲下，如前所說大地獄傍。此贍部洲其量無幾，下寧容受無間等耶？洲如穀聚，上尖下闊，是故大海漸陿漸深。如上所論十六地獄，一切有情增上業感。餘孤地獄各別業招，或多或二或一所止，差別多種、處所不定，或近江河山邊曠野，或在地下空及餘處。諸地獄器安布如是，本處在下、支𣲖不定。傍生住處謂水陸空，本處大海，後流餘處。諸鬼本處琰魔王國，於此贍部洲下過五百踰繕那有琰魔王國，縱廣量亦爾，從此展轉散居餘處。或有端嚴具大威德，受諸富樂自在如天，或有飢羸顏貌醜陋，如是等類廣說如經。",
+   "T1559": "何者為十六園？偈曰：熱灰及死屍，刃路等烈江，於彼四方異。釋曰：此八地獄四面，各各對門有四種園。一熱灰園，深皆沒膝，眾生於中若下脚血肉即皆爛盡，如臘滴赤鐵上，舉脚血肉還生。二死屍園，此園死屍遍滿，地皆是糞，於中有蟲名攘鳩多，身白頭黑口利如針，破彼眾生皮肉及骨，噉食其髓。三刀刃路園，有大路遍密有利刀刃，眾生於中若下脚血肉皆斷壞，舉脚血肉還生。復有劍葉林園，於中有赤利劍等仗，風吹墮落斫刺彼眾生身及身分。復有鐵苫摩利林，利刺長十六寸，於中眾生或上或下，若上刺頭則向下，若下刺頭則向上，刺彼眾生身血肉皆盡。於中復有烏色及駮色狗，各取彼眾生食之。復有鐵觜烏，啄食彼眾生心眼。此刀刃路等三眾生，同為杖所害故，合為一園。四烈灰汁江園，江名鞞多梨尼，遍滿極熱烈灰汁水，眾生若入其中，於兩岸上有人捉劍槊叉等仗，遮斷不令得上。眾生在中或踊向上或沈入下，或傍迴轉被蒸煮熟。譬如大鑊滿其中水下燃猛火，於中有米豆麻麥等被蒸煮熟，彼眾生亦爾。此江園似大地獄塹，此四園由方有異故成十六，是最極殺害困苦事處，故名園。有餘師說：從地獄內出入，彼更沒於苦，故名園。從問更生別問，此地獄卒為是眾生、為非眾生？說非眾生。若爾，彼云何行動？由眾生業，譬如成世界風等。若爾，云何大德達摩須部底說偈言：「恒瞋最麁業，於惡起愛樂， 見他苦生樂，必作閻摩卒。」是彼獄卒，由王教擲眾生於地獄中，故說彼為閻摩王羅剎，非前能作殺害事立為眾生。餘部說：彼悉是眾生。若爾，此業復於何處受報？當於此處受報。何以故？彼由宿惡業報故於此處生，於中更作惡業，即於中受報。若爾，作無間業眾生，所受果報處，彼在其中何法遮令不受此報？云何彼在火中而不被燒？汝作如此思不？業為彼屬火，故不被燒。生於此中，與餘不異，云何為卒？如此八種，說名熱地獄。偈曰：八寒地獄頞浮等。釋曰：復有餘八寒地獄，一頞浮陀、二尼剌浮陀、三阿吒吒、四阿波波、五漚睺睺（香侯反）、六欝波羅、七波頭摩、八分陀利柯。於此八中眾生極寒所逼，由身聲瘡變異相，故立此名。此八是剡浮洲下、大地獄傍。剡浮洲如此廣量，云何於中得容阿毘指等地獄處？諸洲向下廣，譬如穀聚，是故大海次第漸深。如此十六地獄，一切眾生增上業所起。有別處地獄，由眾生自業所起，或多人共聚，或二人或一人。此別地獄差別多種處所不定，或在江邊、或在山邊、或在曠野、或在餘處，地獄器本處在下。畜生行處有三，謂地、水、空，大海為本處，從海行於餘處。鬼神以閻摩王處為本處，此王處於剡浮洲向下深五百由旬，有大國土，縱廣亦五百由旬，是鬼神本所住處，從此本處散行餘處。於鬼神道中，有大福德業神通，受用富樂如天上所，餘諸鬼神如《餓鬼本業經》說。復次月日在於何處？在於風中。何以故？是風於空中由眾生共業增上所生，繞須彌婁山轉，如水洄澓，能制持日月及星。"
+  },
+  "v060": {
+   "sa": "ardhena meroścandrārkau pañcāśatsaikayojanau / ardharātro 'staṃgamanaṃ madhyānha udayaḥ sakṛta // VAkK_3.60 //",
+   "sa-bhasya": "[165|15] ardhena meroścandrārkau / [165|16] yugandharagirermūrdhnā samaṃ vahataḥ / kiṃ pramāṇau / yathākramaṃ [165|17] paṇcāśatsaikayojanau / [165|18] pañcāśat yojanāni candramaṇḍalasya pramāṇam / [165|18-165|19] saikāni pañcāśat sūryamaṇdalasya pramāṇam / [165|19] ekapañcāśadityarthaḥ / [165|19-165|20] tārakāvimānānāṃ yasyālpapramāṇaṃ pramāṇaṃ tasya krośaḥ / [165|20-165|21] sūryavimānasyādhastāt vahiḥ sphaṭikamaṇḍalaṃ taijasamabhinirvṛttaṃ tāpanaṃ prakāśanaṃ ca / [165|21-165|22] candravimānasyādhastādāpyaṃ śītalaṃ bhāsvaraṃ ca / [165|22-165|23] praṇīnāṃ karmabhirdṛṣṭiśarīraphalapuṣpasasyoṣadhīnāmanugrahārthamupaghātakārthaṃ yathāsaṃbhavam / [165|23] caturdvīpake ekaścandramāḥ kṛtyaṃ karotyekaḥ sūryaḥ / [165|23-165|24] kiṃ punaścaturdvīpeṣu sūryo yugapat kṛtyaṃ karoti / [165|24] netyāha / kiṃ tarhi / teṣu / [165|25] ardharātro'staṅgamanaṃ madhyāhna udayaḥ sakṛt // VAkK_3.60 // [165|26-165|27] yadottarakurāvardharātraṃ tadā pūrvavidehe sūryasyāstaṅgamanaṃ jambūdvīpe madhyāhno godānīye udayaḥ / [165|27] evamanyeṣvapi yojyam / sūryasyeha gatibhedena rātridivānāṃ vṛddhihrāsau / [165|28] tatra punaḥ",
+   "T1560": "日月迷盧半，五十一五十， 夜半日沒中，日出四洲等。",
+   "T1558": "日月所居量等義者，頌曰：日月迷盧半，五十一五十， 夜半日沒中，日出四洲等。",
+   "T1559": "從此洲向上，日月行高幾由旬？偈曰：日月彌婁半。釋曰：與由乾陀羅山頂齊，彼行如此。月日量云何？偈曰：五十一由旬。釋曰：月輪徑五十由旬，日輪徑五十一由旬，諸星輪量若最小徑一俱盧舍，若最大徑十六由旬。日輪下面外邊，頗梨抲寶所成，皆是火珠，此寶能炙能照。月輪下面外邊，月愛寶所成，皆是水珠，此寶能冷能照。由眾生業，於眼身果花穀苗草藥等損益中，如應有能。於四洲中唯一月能作損益事，一日亦爾。此一日於四洲為俱能作日所作事不？不爾。云何不爾？於中偈曰：夜半日沒中，日出同一時。釋曰：若於北鳩婁正半夜，是時於東毘提訶日正沒，於剡浮洲日正中，於西瞿陀尼日正出。於餘處例皆如此。於此洲中由日行有差別，夜剎那有時增有時減，日剎那亦爾。"
+  },
+  "v061": {
+   "sa": "prāvṛṇmāse dvitīye 'ntyanavamyāṃ vardhate niśā / hemantānāṃ caturthe tu hīyate aharviparyayāt // VAkK_3.61 //",
+   "sa-bhasya": "[166|01] prāvṛṇmāse dvitīye 'ntyanavamyāṃ vardhate niśā / [166|02] varṣāṇāṃ dvitīye māse bhādrapade dvitīyasya pakṣasya navamyāṃ vardhate rātriḥ / [166|03] hemantānāṃ caturthe tu hīyate [166|04] saiva hemantānāṃ caturthe māse punarhīyate / antyanavamyāmiti varttate / [166|04-166|05] phālgunamāsasya dvitīyapakṣanavamyām / [166|06] aharviparyayāt // VAkK_3.61 // [166|07] yadā rātrirvardhate tadā divaso hīyate / yadā rātrirhīyate tadā divaso vardhate / [166|08] kiyatyā mātrayā vardhate /",
+   "T1560": "雨際第二月，後九夜漸增， 寒第四亦然，夜減晝翻此。",
+   "T1558": "雨際第二月，後九夜漸增， 寒第四亦然，夜減晝翻此。",
+   "T1559": "此中復偈曰：雨際二後九，夜則漸漸長。釋曰：雨時第二月第二半第九日，從此去夜漸漸長。偈曰：寒際第四月夜短。釋曰：於冬時第四月第二半第九日，從此去夜漸短。偈曰：日翻此。釋曰：是時夜若增，是時日即減；是時夜若減，是時日即增。"
+  },
+  "v062": {
+   "sa": "lavaśo rātryaharvṛddhī dakṣiṇottarage ravau / svacchāyayārkasāmīpyādvikalendusamīkṣaṇam // VAkK_3.62 //",
+   "sa-bhasya": "[166|09] lavaśo rātryaharvṛddhī [166|10] lavaṃ lavaṃ rātrirvardhate divaso vā / te ca hānivṛddhī yathākramaṃ [166|11] dakṣiṇottarage ravau / [166|12] jambūdvipasya dakṣiṇaṃ pārśvaṃ gacchati bhāskare rātrivṛddhiḥ uttaraṃ gacchatyaharvṛddhiḥ / [166|13] śuklapakṣasyādau candramaso vikalaṃ maṇḍalaṃ dṛśyate / kiṃ tatra kāraṇam / [166|14] svacchāyayā 'rkasāmīpyādvikalendusamīkṣaṇam // VAkK_3.62 // [166|15-166|16] yadā hi saurasya vimānasyāsanne cāndramasaṃ vimānaṃ vahati tadā kila sauryo bhāsastasmin vimāne patanti / [166|16-166|17] tato 'parapārśve chāyā patantī vikalaṃ maṇḍalaṃ darśayatīti prājñaptiko nirdeśaḥ / [166|17-166|18] vāhayogaḥ sa tādṛśo bhavati yatkadācidvimānasyārdhaṃ dṛśyata iti pūrvācāryāḥ / [166|18-166|19] athaitāni sūryādivimānāni katame sattvā adhyāvasanti / [166|19] devāścāturmahārājakāyikāḥ / kimetānyeva teṣāṃ sthānāni / [166|20] vimānavāsināmetāni / bhūminivāsināṃ punaḥ sumerūpariṣaṇḍādīni / [166|20-166|21] kati cāsya pariṣaṇḍāḥ kiyatyo vā / [166|22] pariṣaṇḍāścatasro 'sya daśasāhasrikāntarāḥ / [166|23]/ daśayojanasahasrāṇyudgamyaikā / evaṃ yāvaccaturthī / tābhiḥ sumerorardhamākṣiptam / [166|24] tāśca tato yathāsaṃkhyaṃ",
+   "T1560": "晝夜增臘縛，行南北路時， 近日自影覆，故見月輪缺。",
+   "T1558": "晝夜增臘縛，行南北路時， 近日自影覆，故見月輪缺。論曰：日月眾星依何而住？依風而住。謂諸有情業增上力共引風起，繞妙高山空中旋環，運持日等令不停墜。彼所住去此幾踰繕那？持雙山頂齊妙高山半。日月徑量幾踰繕那？日五十一，月唯五十。星最小者唯一俱盧舍，其最大者十六踰繕那。日輪下面頗胝迦寶火珠所成，能熱能照；月輪下面頗胝迦寶水珠所成，能冷能照。隨有情業增上所生，能於眼身果花稼穡藥草等物，如其所應為益為損。唯一日月普於四洲作所作事、一日所作事為四洲同時不？不爾。云何？北洲夜半東洲日沒，南洲日中西洲日出。此四時等，餘例應知。日行此洲路有差別，故令晝夜有減有增。從雨際第二月後半第九日夜漸增，從寒際第四月後半第九日夜漸減，晝增減位與此相違。夜漸增時晝便漸減，夜若漸減晝則漸增。晝夜增時一晝夜增幾？增一臘縛。晝夜減亦然。日行此洲向南向北，如其次第夜增晝增。何故月輪於黑半末白半初位見有缺耶？世施設中作如是釋：以月宮殿行近日輪，月被日輪光所侵照，餘邊發影自覆月輪，令於爾時見不圓滿。先舊師釋：由日月輪行度不同現有圓缺。日等宮殿何有情居？四大天王所部天眾。是諸天眾唯住此耶？若空居天唯住如是日等宮殿，若地居天住妙高山諸層級等。有幾層級？其量云何？",
+   "T1559": "幾量增幾量減？偈曰：日夜長羅婆。釋曰：夜若增，增一羅婆，日增亦爾。此增次第應知。偈曰：日行南北時。釋曰：若日行剡浮洲南邊夜則長，若日行剡浮洲北邊日即長。於白半初，云何見月輪不圓？此有何因？偈曰：由自影近日，故見月不圓。釋曰：若月宮殿行近日宮殿，是時日光侵照月宮殿，由此日影覆月餘邊，是影顯月輪不圓。《分別世經》說如此。先舊諸師說：日月行相應有如此，有時見不圓及半。復次日等宮殿，何眾生於中住？四大天王所部天。此諸天為唯住此中，更有別處？若住宮殿，唯住此處；若依地住，在須彌婁山諸層中住。"
+  },
+  "v063": {
+   "sa": "pariṣaṇḍāścatasro 'sya daśasāhasrikāntarāḥ / ṣoḍaśāṣṭau sahasrāṇi catvāri dve ca nirgatāḥ // VAkK_3.63 //",
+   "sa-bhasya": "[167|01] ṣoḍaśāṣṭau sahasrāṇi catvāri dve ca nirgatāḥ // VAkK_3.63 // [167|02] prathamā pariṣaṇḍā ṣoḍaśa sahasrāṇi yojanānāṃ sumerornirgatā / [167|03] dvitīyā 'ṣṭau tṛtīyā catvāri caturthī dve /",
+   "T1560": "妙高層有四，相去各十千， 傍出十六千，八四二千量。",
+   "T1558": "何等諸天住何層級？頌曰：妙高層有四，相去各十千， 傍出十六千，八四二千量。",
+   "T1559": "此山有幾層？一一層其量云何？偈曰：山王層有四，相去各十千。釋曰：須彌婁山，從水際取初層，中間相去十千由旬，乃至第四層相去亦爾，由此四層山王半量層層所圍繞。此四層次第出，復有幾量？偈曰：十六八四二千由旬傍出。釋曰：初層從須彌婁傍出十六千由旬，第二八千，第三四千，第四二千由旬出。"
+  },
+  "v064": {
+   "sa": "karoṭapāṇayastāsu mālādhārāssadāmadāḥ / mahārājikadevāśca parvateṣvapi saptasu // VAkK_3.64 //",
+   "sa-bhasya": "[167|04] karoṭapāṇayastāsu mālādhārāssadāmadāḥ / [167|05] mahārājikadevāśca [167|06] prathamāyāṃ pariṣaṇḍāyāṃ karoṭapāṇayo nāma yakṣāḥ prativasanti / [167|06-167|07] dvitīyāyāṃ mālādhārāstṛtīyāyāṃ sadāmadāḥ sadāmattāḥ / [167|07] sarva ete caturmahārājakāyikāḥ / [167|07-167|08] caturthyāṃ tu catvāro mahārājāḥ svayaṃ prativasanti tatparicārāśca / [167|08-167|09] atastasyāṃ mahārājakāyikā devā ityuktam / [167|09] yathā pariṣaṇḍāsu caturmahārājakāyikā devā evaṃ [167|10] parvateṣvapi saptasu // VAkK_3.64 // [167|11] yugandharādiṣu parvateṣu teṣāṃ grāmanigamāḥ / ata evaiṣa devanikāyaḥ sarveṣāṃ mahiṣṭhaḥ /",
+   "T1560": "堅手及持鬘，恒憍大王眾， 如次居四級，亦住餘七山。",
+   "T1558": "堅手及持鬘，恒憍大王眾， 如次居四級，亦住餘七山。論曰：蘇迷盧山有四層級，始從水際盡第一層相去十千踰繕那量，如是乃至從第三層盡第四層亦十千量。此四層級從妙高山傍出圍繞盡其下半，最初層級出十六千，第二、第三、第四層級，如其次第八、四、二千。有藥叉神名為堅手住初層級，有名持鬘住第二級，有名恒憍住第三級，此三皆是四大天王所部天眾，第四層級四大天王及諸眷屬共所居止故，經依此說四大王眾天。如妙高山四外層級四大王眾及眷屬居，如是持雙、持軸山等七金山上亦有天居，是四大王所部封邑，是名依地住四大王眾天。於欲天中此天最廣。",
+   "T1559": "何眾生得住此中？偈曰：俱盧多波尼，持鬘恒醉神，諸四大王天。釋曰：有夜叉神名俱盧多波尼住初層，復有諸天神名持鬘住第二層，復有天神名恒醉住第三層，如此等皆是四大王天軍眾，四天王自身及餘眷屬住第四層。如於四層中四大王天眷屬住。偈曰：於餘山亦爾。釋曰：於由乾陀羅等七山小大國土，四大天王所餘眷屬住皆遍滿，是故四天王天眾皆依地住。三十三天住須彌婁頂。"
+  },
+  "v065": {
+   "sa": "merumūrdhni trayastriṃśāḥ sa cāśītisahasradik / vidikṣu kūṭāścatvāra uṣitā vajrapāṇibhiḥ // VAkK_3.65 //",
+   "sa-bhasya": "[167|12] merumūrdhni trayastriṃśāḥ [167|13] atha kiyānmerumūrdhā / [167|14] sa cāśītisahasradik / [165|15] ekaikapārśvamaśītisahasrāṇi yathaivādhastāt / [167|15] anye punarāhuḥ / [167|15-167|16] sa viṃśatisahasradik / [167|16] catvāri pārśvanyasya catasro diśaḥ / [167|16-167|17] ekaikaṃ pārśvaṃ viṃśatiryojanasahasrāṇi samantāt parikṣepeṇāśītiriti // [167|17] tasya ca [167|18] vidikṣu kūṭāścatvāra uṣitā vajrapāṇibhiḥ // VAkK_3.65 // [167|19] sūmerumūrdhno vidiśaḥ koṇāḥ / [167|19-167|20] tāsu pañcayojanaśatapramāṇāścatvāraḥ kūṭā abhyudgatā yeṣu vajrapāṇayo nāma yakṣāḥ prativasanti / [167|20] tasya ca merumūrdhnaḥ",
+   "T1560": "妙高頂八萬，三十三天居， 四角有四峯，金剛手所住。",
+   "T1558": "三十三天住在何處？頌曰：妙高頂八萬，三十三天居， 四角有四峯，金剛手所住。",
+   "T1559": "偈曰：三十三住頂，縱廣二十千。釋曰：於須彌婁山上，帝釋及三十三天住此最勝處。此處縱廣云何？有餘師說：一一邊各八萬由旬，如下際，此名最勝處。有餘師說：於須彌婁頂中央，一一邊各二萬由旬，周圍八萬由旬為最勝處，三十三天於其中住。偈曰：方角有四峯，金剛神所住。釋曰：須彌婁四維各有一峯，此峯徑五百由旬，高量亦爾。有夜叉神名金剛手，於此中住守護諸天。"
+  },
+  "v066": {
+   "sa": "madhye sārdhadvisāhasrapārśvamadhyardhayojanam / puraṃ sudarśanaṃ nāma haimaṃ citratalaṃ mṛdu // VAkK_3.66 //",
+   "sa-bhasya": "[167|21-167|22] madhye sārdhadvisāhasrapārśvamadhyardhayojanam / puraṃ sudarśanaṃ nāma haimaṃ citratalaṃ mṛdu // VAkK_3.66 // [167|23-167|24] sumerutalasya madhye sudarśanaṃ nāma nagaram dairdhye sārdhatṛtīyayojanasahasre ekaikaṃ parśvamucchrāyeṇādhyardhayojanam / [167|24-167|25] prākāraḥ sauvarṇa ekottareṇa dhātuśatenāsya bhumiścitritā / [167|25-167|26] tacca bhūmitalaṃ tūlapicuvat mṛdusaṃsparśaṃ pādakṣepotkṣepābhyāṃ natonnataṃ śakrasya devānāmindrasya rājadhānī /",
+   "T1560": "中宮名善見，周萬踰繕那， 高一半金城，雜飾地柔濡。",
+   "T1558": "中宮名善見，周萬踰繕那， 高一半金城，雜飾地柔軟。",
+   "T1559": "此須彌婁頂，偈曰：中央二千半，高一由旬半，有城名善見，金軟多愛相。釋曰：須彌婁山王頂，中央有大城名善見，縱廣各二千五百由旬，高一由旬半，皆金所成，百一種類寶之所莊飾，城地亦爾。地觸柔軟猶如綿聚，下足即沒舉足還滿。此城是帝釋所都之處。"
+  },
+  "v067": {
+   "sa": "sārdhadviśatapārśvo 'tra vaijayantaḥ bahiḥ punaḥ / taccaitrarathapāruṣyamiśranandanabhūṣitam // VAkK_3.67 //",
+   "sa-bhasya": "[168|01] sārdhadviśatapāśrvo 'tra vaijayantaḥ [168|02-168|04] śakrasya devānāmindrasya vaijayanto nāma prāsādo nagarasya madhye nānāratnasthānavidhānasaṃpadā sarvānyabhavanaśrīmahimnā hrepaṇo dairdhyeṇārdhatṛtīye yojanaśate pārśvaṃ pārśvam / [168|04] iyaṃ tāvannagarasyābhirāmatā / [168|05] bahiḥ punaḥ / [168|06] taccaitrarathapāruṣyamiśranandanabhūṣitam // VAkK_3.67 // [168|07] tasya hi nagarasya bahiścaturṣu pārśveṣu catvāryudyānādīni devānāṃ kriḍābhūmayaḥ / [168|08] caitrarathamudyānaṃ pāruṣyakaṃ miśrakāvaṇaṃ nandanavanaṃ ca / taistannagaraṃ bahiralaṅkṛtam /",
+   "T1560": "中有殊勝殿，周千踰繕那， 外四苑莊嚴，眾車麁雜喜。",
+   "T1558": "中有殊勝殿，周千踰繕那， 外四苑莊嚴，眾車麁雜喜。",
+   "T1559": "偈曰：一邊二百半，皮闍延多殿。釋曰：天帝釋所住宮殿在大城中央，名皮闍延多，由種種寶類所莊飾故。此處最勝，能映奪諸天宮殿可愛相貌。此殿縱廣各二百五十由旬。於大城內有如是等最勝可愛相。偈曰：外眾車惡口，雜喜園莊嚴。釋曰：城外四面最勝可愛處，有四種園，是諸天所遊戲處，一眾車園、二惡口園、三相雜園、四歡喜園，此園於外莊嚴大城。"
+  },
+  "v068": {
+   "sa": "viṃśatyantaritānyeṣāṃ subhūmīni caturdiśam / pūrvottare pārijātaḥ sudharmā dakṣiṇāvare // VAkK_3.68 //",
+   "sa-bhasya": "[168|09] viṃśatyantaritānyeṣāṃ subhūmīni caturdiśam / [168|10-168|11] eṣāṃ codyānānāṃ caturdiśaṃ catvāri sumūmīni viṃśatiyojanāntaritāni krīḍāsthānānyeva devānāṃ parasparaspardhayaiva śobhāṃ vitanvanti / [168|12] vahireva nagarasya pārśve [168|13] pūrvottare pārijātaḥ sudharmā dakṣiṇāvare // VAkK_3.68 // [168|14] pārijāto nāma kovidārastrāyastriṃśānāṃ devānāṃ kāmaratiprakarṣāśrayaḥ / [168|14-168|15] tasya pañca yojanāni mūlāhiniveśo yojanaśatamucchrāyaḥ/ [168|15-168|16] pañcāśat yojanāni śākhāpatrapalāśaṃ skaritvā tiṣṭhati / [168|16-168|17] tasya khalu sarvapariphullasya yojanaśatamanuvātaṃ gandho vāti pañcāśadyojana yojanāni prativātam / [168|17] yuktaṃ tāvadanuvātam / [168|17-168|18] prativātaṃ tu katham / [168|18] vṛkṣānatikramaṃ saṃdhāyoktamityeke / [168|18-168|19] nahi nāma sprativātaṃ vāto vāti / [168|19-168|20] tasyaiva tu sā gandhasya tādṛśo prabhāvasaṃpadeṣṭavyā yāt pratibadhyamāno'pi divyairmṛdumārutairgandhāntaraṃ saṃtanoti / [168|20-168|21] mandataratamasamārambhāttu saṃtāna āśveva samucchidyate yato na tathā viprakṛṣṭamadhvānaṃ prasarpati / [168|21-168|22] kiṃ punaḥ svabhūtāśrita evamapuṣpagandhasaṃtāno vartate utāho vāyuradhivāsito jāyate / [168|22] nātra niyamaḥ / [168|23] ubhayathāpi hyācāryeṣṭiḥ / yattarhi bhagavatoktaṃ [168|24-168|25] \"na puṣpagandhaḥ prativātameti na maulikastāgaraścāndano vā / satāṃ tu gandhaḥ prativātameti sarvā diśaḥ satpuruṣaḥ pravātī\"ti / [169|01] mānuṣyakaṃ puṣpagandhaṃ saṃdhāyoktam / taddhi pratītaṃ loke / [169|01-169|03] na ca tasya tādṛśī śaktiḥ mahīsāsakāstu pathanti \"yojanaśatamanuvātaṃ gandho vāti pañcāśadyojanāni prativātamiti / [169|03-169|04] sudharmā nāma devasabhā dakṣiṇapaścime digbhāge yasyāṃ niṣadya devāḥ kṛtyākṛtyaṃ samarthayanti / [169|04] eṣa tāvattridaśānāṃ bhājanasaṃniveśaḥ /",
+   "T1560": "妙地居四方，相去各二十， 東北圓生樹，西南善法堂。",
+   "T1558": "妙池居四方，相去各二十， 東北圓生樹，西南善法堂。論曰：三十三天住迷盧頂，其頂四面各八十千，與下四邊其量無別。有餘師說：周八十千，別說四邊各唯二萬。山頂四角各有一峯，其高廣量各有五百。有藥叉神名金剛手，於中止住守護諸天。於山頂中有宮名善見，面二千半，周萬踰繕那，金城量高一踰繕那半，其地平坦亦真金所成，俱用百一雜寶嚴飾，地觸柔軟如妬羅綿，於踐躡時隨足高下，是天帝釋所都大城。於其城中有殊勝殿，種種妙寶具足莊嚴，蔽餘天宮故名殊勝，面二百五十，周千踰繕那。是謂城中諸可愛事。城外四面四苑莊嚴，是彼諸天共遊戲處：一眾車苑、二麁惡苑、三雜林苑、四喜林苑，此為外飾莊嚴大城。四苑四邊有四妙池，中間各去苑二十踰繕那，是彼諸天勝遊戲處，諸天於彼捔勝歡娛。城外東北有圓生樹，是三十三天受欲樂勝所。盤根深廣五十踰繕那，聳幹上昇枝條傍布，高廣量等百踰繕那，挺葉開花妙香芬馥，順風熏滿百踰繕那，若逆風時猶遍五十。順風可爾，云何逆熏？有餘師言：香無逆熏義，依不越樹界故說逆熏。理實圓生有如是德，所流香氣能逆風熏，雖天和風力所擁遏。然能相續流趣餘方，漸劣漸微近處便歇，非能遠至如順風熏。如是花香，為依自地隨風相續轉至餘方、為但熏風別生香氣？此義無定，諸軌範師於此二門俱許無失。若爾，何故薄伽梵言：花香不能逆風熏，根莖等香亦復爾； 善士功德香芬馥，逆風流美遍諸方。據人間香故作是說，以世共了無如是能。化地部經說此香氣，順風熏滿百踰繕那，若無風時唯遍五十。外西南角有善法堂，三十三天時集於彼詳論如法不如法事。",
+   "T1559": "偈曰：中二十由旬，四善地四方。釋曰：眾車等園四方各有別處名善地，中間相去二十由旬，是諸天最勝希有遊戲處。如互相妬生可愛想，餘園所不及。大城外邊，偈曰：東北波利園，西南善法堂。釋曰：天中有樹名波利闍多，是三十三天欲塵遊戲最勝處。樹徑五由旬，高百由旬，枝葉至杪四邊各出五十由旬，周圍覆三百由旬。住此樹華開敷時，香順風薰滿百由旬，香逆風薰滿五十由旬，若順風薰。此乃可然。說逆風薰，云何可信？有餘師說：不過樹界故，故說此言。何以故？無香得逆風薰故。有餘師說：此一樹花香威德有如此事，謂天上調和香，風所遮隔，此香猶相續不斷。餘香若為風所吹，則漸歇薄乃至都盡，是故餘香去不得遠。相形比勝餘樹，故說此言。花香相續，為依止自四大能薰餘處、為但薰風不出餘處？此中無定，諸師許有二種。若爾，云何世尊說此偈？「花香非能逆風薰，根實諸香亦皆爾， 善人戒香逆風薰，正行芳流遍國界。」依人中香氣，故說此偈。何以故？此香是世間共知，無如此能。彌嬉沙塞部說：此香順風薰百由旬，逆風薰五十由旬。有諸天集會堂名善法，對大城西南角，諸天於中坐，論量世間應作不應作事。四大天王及三十三天，安立器世其相如此。"
+  },
+  "v069": {
+   "sa": "tata ūrdhva vimāneṣu devāḥ kāmabhujastu ṣaṭ / dvaṃdvāliṃṅganapāṇyāptivasitekṣitamaithunāḥ // VAkK_3.69 //",
+   "sa-bhasya": "[169|05] tataūrdhvaṃ vimāneṣu devāḥ [169|06] tridaśebhya ūrdhvaṃ devā vimāneṣu pratiṣṭhitāḥ / [169|06-169|07] te punaryāmāstuṣitā nirmāṇaratayaḥ paranirmitavaśavartinaśca brahmakāyikādayaśca pūrvoktāḥ ṣoḍaśasthānāntaragatāḥ / [169|08] ityete dvāviṃśatidevanikāyāḥ samāsena yeṣāṃ bhājanaṃ prajñāyate / [169|09] kāmabhujastu ṣaṭ / [169|10] teṣāṃ tu ṣaṭ kāmāvacarā devanikāyāḥ kāmān paribhuñjate na śeṣāḥ / [169|10-169|11] tadyathā caturmahārājakāyikā yāvat paranirmitavaśavartinaḥ / [169|11] te punaḥ [169|12] dvandvāliṅganapāṇyāptihasitekṣitamaithunāḥ // VAkK_3.69 // [169|13] dvandvena maithunaṃ bhūmisambaddhavāsinām / [169|13-169|14] cāturmahārājakāyikānāṃ trāyastriṅkśānāṃ yathā manuṣyāṇām / [169|14] teṣāṃ tu vāyunirmokṣāt dāhavigamaḥ śukrābhāvāt / [169|14-169|15] āliṅganena maithunaṃ yāmānāmāliṅganamātreṇa dāhavigamāt / [169|15-169|16] pāṇisaṃprāptyā tuṣitānāṃ hasitena nirmāṇaratīnāṃ prekṣitena paranirmitavaśavartinām / [169|16-169|17] svavartināṃ sarveṣāṃ dvandvasamāpattyā / [169|17] kālaparimānaṃ tu prajñaptāvuktamiti vaibhāṣikāḥ / [169|17-169|18] yāvadyāvadviṣayāṇāṃ tīvrataratā tāvattāvadrāgo'pi tīvrataraḥ / [169|18-169|19] yasya devasya devyā vā utsaṅge devakumāro devakanyā vā jāyate sa tayoḥ putro bhavati sā ca duhitā / [169|19-169|20] kiyatpramāṇo jāyate /",
+   "T1560": "此上有色天，住依空宮殿， 六受欲交抱，執手笑視淫。",
+   "T1558": "如是已辯三十三天所居外器，餘有色天眾所住器云何？頌曰：此上有色天，住依空宮殿。論曰：此前所說三十三天上有色諸天，住依空宮殿。云何名上有色諸天？謂夜摩天、覩史多天、樂變化天、他化自在天。及前所說梵眾天等有十六處，并前合有二十二天，皆依外器。如是所說諸天眾中，頌曰：六受欲交抱，執手笑視婬。論曰：唯六欲天受妙欲境，於中初二依地居天，形交成婬與人無別。然風氣泄熱惱便除，非如人間有餘不淨。夜摩天眾纔抱成婬，覩史多天但由執手，樂變化天唯相向笑，他化自在相視成婬。毘婆沙師作如是釋：六天皆以形交成婬。世施設中說相抱等，但為顯彼時量差別。以上諸天欲境轉妙、貪心轉捷故使之然。隨彼諸天男女膝上，有童男童女欻爾化生，即說為彼天所生男女。",
+   "T1559": "偈曰：從此上宮殿，天住。釋曰：三十三天上各有宮殿，所餘諸天依其中住。何者所餘？謂夜摩、兜率多、化樂、他化自在、梵眾等。如前所說，合有十六處。如此若略說，合二十二部諸天所。此等皆有別器世界。偈曰：六受欲。釋曰：於二十二中有六欲界天，能受用塵欲非餘，謂四大王天乃至他化自在天。此六天，偈曰：身交抱捉手，笑相視為婬。釋曰：依地住相應故，皆二身交為婬，謂四大王天及三十三天與人道不異，是諸天由風出故心熱即息，以無不淨故。夜摩天以相抱為婬，心熱即息。兜率陀天以捉手為婬，化樂天以共笑為婬，他化自在天以相視為婬，一切欲天同以二身交為婬。後相抱等四，從譬時量得名。《分別世經》說如此。向上諸天，如欲塵次第轉勝妙，欲樂亦爾，向上轉重。於男天膝上及女天膝上，若有童男童女天生，此童男童女即是二天之子。"
+  },
+  "v070": {
+   "sa": "pañcavarṣopamo yāvat daśavarṣopamaḥ śiśuḥ / saṃbhavatyeṣu saṃpūrṇāḥ savastrāścaiva rūpiṇaḥ // VAkK_3.70 //",
+   "sa-bhasya": "[169|21] pañcavarṣopamo yāvat daśavarṣopamaḥ śiśuḥ / [169|22] saṃbhavatyeṣu [169|23] yathāsaṃkhyaṃ ṣaṭsu devanikāyeṣu / te tu kṣipramevābhivardhante / [169|24] saṃpūrṇāḥ savastrāścaiva rūpiṇaḥ // VAkK_3.70 // [170|01] rūpāvacarā devāḥ saṃpūrṇakāyāḥ vastreṇa saṃvītā upapadyante / [170|01-170|02] sarve devā āryabhāṣābhāṣiṇaḥ / [170|02] tadatra kāmadhātau veditavyāḥ",
+   "T1560": "初如五至十，色圓滿有衣，",
+   "T1558": "初生天眾身量云何？頌曰：初如五至十，色圓滿有衣。論曰：且六欲諸天初生，如次如五六七八九十歲人，生已身形速得成滿。色界天眾於初生時，身量周圓具妙衣服。一切天眾皆作聖言，謂彼言詞同中印度。",
+   "T1559": "初生身量云何？偈曰：譬五年乃至，譬十年初生，生中。釋曰：次第於六欲天處，第一天新生天子，如人中五歲童子，乃至第六天新生天子，如人中十歲童子。此新生天子速得身量圓滿成就。偈曰：皆具根，有衣色界爾。釋曰：色界諸天具足身量，衣裳被服自然著體，以慚羞重故。一切天同中國語，說婆羅門言。於欲界中，此義應知。"
+  },
+  "v071": {
+   "sa": "kāmopapattayastistraḥ kāmadevāḥ samānuṣāḥ / sukhopapattayastistro navatridhyānabhūmayaḥ // VAkK_3.71 //",
+   "sa-bhasya": "[170|03] kāmopapattayastisraḥ kāmadevāḥ samānuṣāḥ / [170|04] kathaṃ kṛtvā / [170|04-170|05] santi sattvāḥ pratyupasthitakāmāḥ pratyupasthiteṣu kāmeṣvaiśvaryaṃ vaśe vartayanti / [170|05] tadyathā manuṣyāstadekatyāśca devāḥ / te punaścatvāro devanikāyāḥ / [170|06] santi sattvā nirmitakāmā nirmāya kāmānaiśvarya vaśe vartayanti / [170|06-170|07] tadyathā devā nirmāṇaratayaḥ / [170|07-170|08] santi sattvāḥ paranirmitakāmāḥ paranirmiteṣu kāmeṣvaiśvarya vaśe varttayanti / [170|08] tadyathā devāḥ paranirmitavaśavarttinaḥ / [170|08-170|10] tā etā yathot pannaparibhogitvāt yathecchātmanirmitaparibhogitvādyathecchātmapara nirmitaparibhogitvācca tisraḥ kāmopapattaya ityucyante / [170|10] rūpadhātau tu [170|11] sukhopapattayastriso navatridhyānabhūmayaḥ // VAkK_3.71 // [170|12] triṣu dhyāneṣu yā nava bhūmayaḥ tāstisraḥ sukhopapattayaḥ / [170|12-170|14] te hi devā vivekajena samādhijena ca prītisukhena ca niṣprītikena ca sukhena sukhaṃ viharanto dīrghamadhvānaṃ tiṣṭhanti / [170|14] ata etā nirduḥkhadīrghasukhatvātsukhā upapattayaḥ sukhopapattayaḥ / [170|14-170|15] dhyānāntarotpattau tu prītisukhābhāvātsukhopapattitvaṃ vicāryam / [170|16-170|17] yānyetāni devānāṃ dvāviṃśatisthānānyuktāni teṣāmadharāduttaraṃ kiyadviprakṛṣṭam / [170|17] naitat sarvaṃ yojanaparisaṃkhyayā sukaraṃ parisaṃkhyātum / api tu",
+   "T1560": "欲生三人天，樂生三九處。",
+   "T1558": "欲樂生別云何應知？頌曰：欲生三人天，樂生三九處。論曰：欲生三者，有諸有情樂受現前諸妙欲境，彼於如是現欲境中自在而轉，謂全人趣及下四天。有諸有情樂受自化諸妙欲境，彼於自化妙欲境中自在而轉，謂唯第五樂變化天。有諸有情樂受他化諸妙欲境，彼於他化妙欲境中自在而轉，謂第六他化自在天。依受如生現前欲境故，依受如樂自化欲境故，依受如樂他化欲境故，於欲界中分別欲生差別三種。樂生三者，三靜慮中於九處生受三種樂，謂彼安住離生喜樂、定生喜樂，離喜樂故，長時安住、長時離苦、長時受樂，故名樂生。生靜慮中間都無喜樂應思，何故亦號樂生天？",
+   "T1559": "偈曰：於欲生有三，欲界天及人。釋曰：云何三有諸眾生自然至得欲塵？於自然得欲塵中作增上自在，如諸人及諸餘天。諸餘天者，謂前四部天。有諸眾生化作欲塵，於化作塵中作增上自在，謂化樂天。有諸眾生他化作欲塵，於他化作欲塵中作增上自在，謂他化自在天。此生由能受用，如自然生塵故，由能受用如意自所化作塵故，由能受用如他化作塵故，約此欲塵故。欲界生有三。於色界中，偈曰：樂生亦有三，於三定九地。釋曰：於三定中有九地，是名三種樂生。何以故？是諸天由離生樂、由定生樂、由離喜生樂，長時安樂住，無苦長時樂故，故名樂生。於初定中間生無喜樂故，是樂生應思。是諸天二十二處，如前所說。從下向上相去幾許？是一切處不可皆以由旬數量其遠近。"
+  },
+  "v072": {
+   "sa": "sthānāt sthānadadho yāvattāvadūrdhvaṃ tatastataḥ / nordhva darśanamastyeṣāmanyatrarddhiparāśrayāt // VAkK_3.72 //",
+   "sa-bhasya": "[170|18] sthānāt sthānādadho yāvattāvadūrdhvaṃ tatastataḥ / [170|19-170|20] jambūdvīpāt prabhṛti yaduttaraṃ sthānaṃ tasmādyāvadadho jambūdvīpastāvat punastasmādūrdhvaṃ sthānāntaram / [170|20-170|21] tadyathā caturthī pariṣaṇḍā caturṇāṃ mahārājānāṃ mūlasthānamitaścatvāriṃśadyojanasahasrāṇi / [170|21-170|22] tasmādyāvadadhojambūdvīpastāvadūrdhvaṃ tridaśānāṃ sthānam tasmādapi yāvadadho jambūdvīpastāvadūrdhvaṃ yāmānāṃ sthānam / [170|23] tato'pi yāvadadho jambūdvīpastāvadūrdhvaṃ tuṣitānāṃ sthānamiti / [170|23-170|24] evaṃ vistareṇa sarvamanukramya sudarśanebhyo yāvadadho jambūdvīpastāvadūrdhvaṃmakaniṣṭhānāṃ sthānam / [170|25] tasmādūrdhvaṃ na punaḥ sthānamasti / ata eva jyeṣṭhabhūtvādakaniṣṭhā ucyante / [170|25-170|26] aghaniṣṭhā ityapare / [170|26] aghaṃ kila cittasthaṃ rūpaṃ tanmātraniṣṭheti / [170|27] kiṃ punaradharasthānopapannā urdhvāni vimānāni gatvā paśyanti [171|01] nordhvaṃ darśanamastyeṣāmanyatrarddhiparāśrayāt // VAkK_3.72 // [171|02] ṛddhyā vā trāyastriṃśā yāmān / gaccheyuḥ / [171|02-171|03] parāśrayeṇa vā yadvṛddhimatā nīyeran devena vā tatratyena / [171|03] evaṃ śeṣāḥ / [171|03-171|04] āgataṃ tūrdhvopapannaṃ paśyennatūrdhvadhātukaṃ nordhvabhūmikam / [171|04] yiathā spraṣṭavyaṃ na spṛśedaviṣayatvāt / [171|04-171|05] ata eva tenāsvena kāyenāgacchanti / [171|05-171|06] kiṃ tarhi nirmitenādharabhūmikena tadicchayā paśyedihatyamiveti nikāyāntarīyāḥ / [171|07] athaiṣāṃ yāmādivimānānāṃ kiyat pramāṇam / [171|07-171|08] caturṇāṃ tāvadyāvatsumerumūrdhnaḥ ityeke / [171|08] dviguṇottaramityapare / prathamaṃ tu dhyānaṃ yāvāṃścāturdvīpakaḥ / [171|08-171|09] dvitīyaṃ yāvān sāhasraścūḍiko lokadhātuḥ / [171|09] tṛtīyaṃ yāvān dvisāhasraḥ / [171|09-171|10] caturthaṃ yāvāṃsrisāhasra ityeke / [171|10] prathamādīni sāhasrādiparimāṇāni / [171|10-171|11] caturthaṃ tvaparimāṇamityapare /",
+   "T1560": "如彼去下量，去上數亦然， 離通力依他，下無升見上。",
+   "T1558": "所說諸天二十二處，上下相去其量云何？頌曰：如彼去下量，去上數亦然。論曰：一一中間踰繕那量，非易可數，但可總舉彼去下量，去上例然。隨從何天去下海量，彼上所至與去下同。謂妙高山從第四層級去下大海四萬踰繕那，是四大王本所住處，從彼上去三十三天，亦如彼天去下海量。如三十三天去下大海，上去夜摩天其量亦爾。如是乃至如善見天去下大海踰繕那量，從彼上去色究竟天亦與彼天去下海等。從此向上無復所居，此處最高名色究竟。有餘師說：彼名礙究竟天。彼謂礙名目積集色至彼礙盡，得究竟名。於下處生昇見上不？頌曰：離通力依他，下無昇見上。論曰：三十三天由自通力，能從本處昇夜摩天；或復依他，謂得通者及上天眾接往夜摩。所餘諸天昇上例爾，若來若至下見上天。然下眼不能覩上界上地，非其境界故。如不覺彼觸，是故從上地來下地時非自身來，要作下地化。有餘部說：彼下地天隨樂亦能見上地色，如生此界下見上天。夜摩等天宮依處量有幾？有餘師說：此上四天依處，量同妙高山頂。有餘師說：上倍倍增。有餘師言：初靜慮地宮殿依處等一四洲，第二靜慮等小千界，第三靜慮等中千界，第四靜慮等大千界。有餘師言：下三靜慮如次量等小中大千，第四靜慮量無邊際。",
+   "T1559": "雖然，偈曰：如此至彼量，向上例皆爾。釋曰：從剡浮洲等向上處，從此處向剡浮洲等，如相去量，從此處向上相去量亦爾。如第四層，四大天王所住處四萬由旬，從此如向剡浮洲相去量，從此向三十三天亦爾。從三十三天向剡浮洲相去量，從此向夜摩天亦爾。從夜摩天向剡浮洲相去量，從此向兜率多天亦爾。如此一切廣例皆爾。乃至從善見向剡浮洲相去量，從此向阿迦尼師吒亦爾。從阿迦尼師吒向上無復餘處，由此義故，此處勝於餘處，無處勝於此處，故名阿迦尼師吒。有餘師說：此處名阿伽尼師吒，色聚集住名阿伽，此處究竟名尼師吒。復有餘師說：此處名阿迦尼師吒，謂所行究竟。生下處眾生，為得往上地見上地宮殿不？偈曰：下天無能昇，離通慧依他。釋曰：三十三天或由通慧得往，夜摩天或由依他故得往，謂有通慧人所引接，或由上天所引接。所餘諸天亦爾。若諸天生在上地來下界，下地得見上天；若往上地則無所見，以非其境界故。如不能覺上地觸，於見色亦爾，是故彼不由自身來。雖然由作下地化身故來下地，故下地隨意得見。上地隨意得見下地，餘部說如此。復次夜摩等天宮其量云何？上四天如須彌婁山量，餘部說如此。復有餘師說：向上倍倍廣。復有餘師說：初定地量同一四洲世界，第二定地量同小千世界，第三定地量同二千世界，第四定地量同三千世界。復有餘師說：初定等三地量同一千等世界，第四定無復量。"
+  }
+ }
+}

@@ -1,0 +1,403 @@
+{
+ "slug": "abhidharmakosa-c03-4",
+ "title": "俱舍論・分別世品（3.73–3.102）",
+ "family": "sa",
+ "intro": "《阿毘達磨俱舍論》第三品〈分別世品〉頌 3.73–3.102，一頌一節（頌號依 Pradhan 本，GRETIL 標 VAkK_品.頌）。五欄：梵本頌、梵本自釋（bhāṣya）、玄奘《俱舍論本頌》、玄奘《俱舍論》、真諦《俱舍釋論》；論本欄自該頌（含引出該頌的提問句）起、到下一頌前的釋文止。玄奘《俱舍論》常把數頌合為一個「頌曰」再一併解釋，區塊中按頌切開，釋文因此都落在區塊末頌；真諦本逐句引偈、隨句解釋，與梵本自釋的節奏相近。稱友 Yaśomitra《明了義釋》Sphuṭārthā 是自釋的疏，不收。",
+ "units": [
+  {
+   "id": "v073",
+   "label": "3.73　四大洲日月"
+  },
+  {
+   "id": "v074",
+   "label": "3.74　此小千千倍"
+  },
+  {
+   "id": "v075",
+   "label": "3.75　贍部洲人量"
+  },
+  {
+   "id": "v076",
+   "label": "3.76　欲天俱盧舍"
+  },
+  {
+   "id": "v077",
+   "label": "3.77　初四增半半"
+  },
+  {
+   "id": "v078",
+   "label": "3.78　北洲定千年"
+  },
+  {
+   "id": "v079",
+   "label": "3.79　人間五十年"
+  },
+  {
+   "id": "v080",
+   "label": "3.80　上五倍倍增"
+  },
+  {
+   "id": "v081",
+   "label": "3.81　無色初二萬"
+  },
+  {
+   "id": "v082",
+   "label": "3.82　等活等上六"
+  },
+  {
+   "id": "v083",
+   "label": "3.83　極熱半中劫"
+  },
+  {
+   "id": "v084",
+   "label": "3.84　頞部陀壽量"
+  },
+  {
+   "id": "v085",
+   "label": "3.85　諸處有中夭"
+  },
+  {
+   "id": "v086",
+   "label": "3.86　極微微金水"
+  },
+  {
+   "id": "v087",
+   "label": "3.87　二十四指肘"
+  },
+  {
+   "id": "v088",
+   "label": "3.88　此八踰繕那"
+  },
+  {
+   "id": "v089",
+   "label": "3.89　此三十晝夜"
+  },
+  {
+   "id": "v090",
+   "label": "3.90　壞從獄不生"
+  },
+  {
+   "id": "v091",
+   "label": "3.91　中劫從無量"
+  },
+  {
+   "id": "v092",
+   "label": "3.92　後增至八萬"
+  },
+  {
+   "id": "v093",
+   "label": "3.93　成壞壞已空"
+  },
+  {
+   "id": "v094",
+   "label": "3.94　減八萬至百"
+  },
+  {
+   "id": "v095",
+   "label": "3.95　輪王八萬上"
+  },
+  {
+   "id": "v096",
+   "label": "3.96　一二三四洲"
+  },
+  {
+   "id": "v097",
+   "label": "3.97　相不正圓明"
+  },
+  {
+   "id": "v098",
+   "label": "3.98　由惰貯賊起"
+  },
+  {
+   "id": "v099",
+   "label": "3.99　刀疾饑如次"
+  },
+  {
+   "id": "v100",
+   "label": "3.100　三災火水風"
+  },
+  {
+   "id": "v101",
+   "label": "3.101　如次內災等"
+  },
+  {
+   "id": "v102",
+   "label": "3.102　要七火一水"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sa",
+   "lang": "sa",
+   "label": "梵本頌",
+   "who": "《阿毘達磨俱舍論本頌》Abhidharmakośakārikā・GRETIL（參 Pradhan 1975、Gokhale 1946）"
+  },
+  {
+   "id": "sa-bhasya",
+   "lang": "sa",
+   "label": "梵本自釋",
+   "who": "《阿毘達磨俱舍論》Abhidharmakośabhāṣya・GRETIL（Pradhan 1975，Hackett／Lusthaus 校）"
+  },
+  {
+   "id": "T1560",
+   "lang": "lzh",
+   "label": "玄奘頌本",
+   "who": "玄奘譯《阿毘達磨俱舍論本頌》・唐",
+   "work": "T1560"
+  },
+  {
+   "id": "T1558",
+   "lang": "lzh",
+   "label": "玄奘論本",
+   "who": "玄奘譯《阿毘達磨俱舍論》・唐 651–654 年",
+   "work": "T1558"
+  },
+  {
+   "id": "T1559",
+   "lang": "lzh",
+   "label": "真諦釋論",
+   "who": "真諦譯《阿毘達磨俱舍釋論》・陳 563–567 年",
+   "work": "T1559"
+  }
+ ],
+ "works": [
+  "T1558",
+  "T1559",
+  "T1560"
+ ],
+ "anchors": [
+  {
+   "work": "T1560",
+   "range": [
+    "T29n1560_p0313c11",
+    "T29n1560_p0313c11"
+   ]
+  },
+  {
+   "work": "T1558",
+   "range": [
+    "T29n1558_p0060c21",
+    "T29n1558_p0066b04"
+   ]
+  },
+  {
+   "work": "T1559",
+   "range": [
+    "T29n1559_p0218b21",
+    "T29n1559_p0225a07"
+   ]
+  }
+ ],
+ "cells": {
+  "v073": {
+   "sa": "caturdvīpakacandrārkamerukāmadivaukasām / brahmalokasahasraṃ ca sāhasraścūḍiko mataḥ // VAkK_3.73 //",
+   "sa-bhasya": "[171|12] atha ko'yaṃ sāhasraścūḍiko lokadhātuḥ ko dvisāhasrastrisāhasro vā / [171|13-171|14] caturdvīpakacandrārkamerukāmadivaukasām / brahmalokasahasraṃ ca sāhasraścūḍiko mataḥ // VAkK_3.73 // [171|15-171|17] sahasrañjaṃbūdvīpānāṃ pūrvavidehānāmaparagodānīyānāmuttarakuruṇāṃ sahasraṃ sūryāṇāṃ candrāṇāṃ sumerūṇāṃ sahasraṃ cāturmahārājakāyikānāṃ devānāṃ yāvat paranirmitavaśavartināṃ sahasraṃ brahmalokānāmayamucyate sāhasraścūḍiko lokadhātuḥ /",
+   "T1560": "四大洲日月，蘇迷盧欲天， 梵世各一千，名一小千界，",
+   "T1558": "齊何量說小中大千？頌曰：四大洲日月，蘇迷盧欲天， 梵世各一千，名一小千界；",
+   "T1559": "復次何義名小千世界、二千世界、三千世界？偈曰：四洲及月日，須彌婁欲界，梵處各一千，名小千世界。釋曰：一千剡浮洲，乃至一千北鳩婁，一千月日，一千須彌婁山，一千四大王天，乃至一千他化自在天，一千梵處，說此名小千世界。"
+  },
+  "v074": {
+   "sa": "tatsahasraṃ dvisāhasro lokadhātustu madhyamaḥ / tatsahasraṃ trisāhasraḥ samasaṃvartasaṃbhavaḥ // VAkK_3.74 //",
+   "sa-bhasya": "[171|18] tatsahasraṃ dvisāhasro lokadhātustu madhyamaḥ / [171|19] teṣāṃ cūḍikānāṃ lokadhātūnāṃ sahasraṃ dvisāhasro madhyamo lokadhātuḥ / [171|20] tatsahasraṃ trisāhasraḥ [171|21] teṣāṃ dvisāhasrāṇāṃ lokadhātūnāṃ sahasraṃ trisāhasramahāsāhasro lokadhātuḥ / [171|21-171|22] eṣa hi kṛtsnaḥ [171|23] samasaṃvartasaṃbhavaḥ // VAkK_3.74 // [171|24] samaṃ saṃvartate samaṃ vivartate / saṃbhavo hi vivartaḥ ityuttaratra vyākhyāsyate / [171|25-171|26] kiṃ khalu yathā bhājanānāṃ pramāṇabheda evaṃ tadvāsināmapi sattvānāṃ pramāṇabhedo'sti / [171|26] astītyāha / tatra tāvat",
+   "T1560": "此小千千倍，說名一中千， 此千倍大千，皆同一成壞。",
+   "T1558": "此小千千倍，說名一中千； 此千倍大千，皆同一成壞。論曰：千四大洲乃至梵世，如是總說為一小千，千倍小千名一中千界，千中千界總名一大千，如是大千同成同壞。同成壞相後當廣辯。如外器量別，身量亦別耶？亦別。",
+   "T1559": "偈曰：千倍此小千，名二千中世界。釋曰：更千倍小千世界，名二千中世界。偈曰：千倍三大千。釋曰：更千倍二千中世界，名三千大千世界。如此一切，偈曰：共同一壞成。釋曰：如此等世界，同有小大三災，此大千世界同壞同成，此義後當廣說。如器世界量不同，於中住眾生身量亦有差別不？有。"
+  },
+  "v075": {
+   "sa": "jāmbūdvīpāḥ pramāṇena catuḥsārdhatrihastakāḥ / dviguṇottaravṛddhayā tu purvagodottarāvhayāḥ // VAkK_3.75 //",
+   "sa-bhasya": "[171|27] jāmbūdvīpāḥ pramāṇena catuḥsārdhatrihastakāḥ / [171|28] jambūdvīpakā manuṣyāḥ pramāṇārdhacaturhastakāḥ kecittu caturhastakāḥ [172|01] dviguṇottaravṛddhyā tu pūrvagodottarāhvayāḥ // VAkK_3.75 // [172|02-172|03] pūrvavidehakā godānīkā uttarakauravāśca manuṣyā aṣṭaṣoḍaśadvātriṃśaddhastakā yathākramam /",
+   "T1560": "贍部洲人量，三肘半四肘， 東西北洲人，倍倍增如次。",
+   "T1558": "云何？頌曰：贍部洲人量，三肘半四肘； 東西北洲人，倍倍增如次。",
+   "T1559": "此中偈曰：剡浮洲人量，四肘三肘半。釋曰：剡浮洲人從多身長三肘半，或有人長四肘。偈曰：後後倍倍增，東西北洲人。釋曰：東毘提訶人身長八肘，西瞿陀尼人身長十六肘，北鳩婁人身長三十二肘。"
+  },
+  "v076": {
+   "sa": "pādabṛddhayā tanuryāva tsārdhakrośo divaukasām / kāmināṃ rūpiṇāṃ tvādau yojanārdhaṃ tataḥ param // VAkK_3.76 //",
+   "sa-bhasya": "[172|04] pādavṛddhyā tanuryāvatsārdhakrośo divaukasām / [172|05] kāmināṃ [172|06] pādaḥ krośasya caturtho bhagaḥ / [172|06-172|08] tanmātraṃ śarīraṃ cāturmahārājakāyikānāṃ dvau pādau trāyastriṃśānāṃ trayo yāmānāṃ catvārastuṣitānāṃ pañca nirmāṇaratīnāṃ adhyardhaḥ krośaḥ paranirmitavaśavartinām / [172|09] rupiṇāṃ tvādau yojanārdhaṃ [172|10] rūpiṇāṃ devānāṃ prathame sthāne brahmakāyikānāmardhayojanamātraṃ śarīram / [172|11] tataḥ param // VAkK_3.76 //",
+   "T1560": "欲天俱盧舍，四分一一增， 色天踰繕那，",
+   "T1558": "欲天俱盧舍，四分一一增； 色天踰繕那，",
+   "T1559": "若天云何？偈曰：身量四分增，乃至俱舍半欲界。釋曰：四大王天身長一俱盧舍四分之一，三十三天身長四分之二，夜摩天身長四分之三，兜帥多天身長四分，化樂天身長五分，他化自在天身長一俱盧舍半。偈曰：色界初半由旬次第。釋曰：色界諸天於初處梵眾天身長半由旬。"
+  },
+  "v077": {
+   "sa": "ardhārdhavṛddhi ūrdhva tu parīttābhebhya āśrayaḥ / dviguṇadviguṇā hitvānabhrakebhya striyojanam // VAkK_3.77 //",
+   "sa-bhasya": "[172|12] ardhārdhavṛddhiḥ [172|13] triṣu sthānesu brahmapurohitānāṃ yojanaṃ mahābrahmaṇo 'dhyardhaṃ parīttābhānāṃ dve yojane / [172|14-172|15] urdhvaṃ tu parīttābhebhya āśrayaḥ / dviguṇadviguṇā hitvā 'nabhrakebhya'striyojanam // VAkK_3.77 // [172|16] apramāṇābhānāṃ catvāri yojanāni / ābhāsvarāṇāmaṣṭau / [172|16-172|17] evaṃ dviguṇavṛddhyā yāvacchubhakṛtsnānāṃ catuḥṣaṣṭiḥ / [172|17-172|18] anabhrakāṇāṃ tato yojanatrayeṇa hīnaṃ dviguṇaṃ pañcaviṃśatiyojana śatam / [172|18-172|19] tasmāt pareṇa punaḥ puṇyaprasavānāṃ dviguṇaṃ dviguṇaṃ yāvadakaniṣṭhānāṃ ṣoḍaśayojanasahasrāṇi śarīram /",
+   "T1560": "初四增半半， 此上增倍倍，唯無雲減三。",
+   "T1558": "初四增半半； 此上增倍倍，唯無雲減三。論曰：贍部洲人身多長三肘半，於中少分有長四肘。東勝身人身長八肘，西牛貨人長十六肘，北俱盧人三十二肘。欲界六天最下身量一俱盧舍四分之一，如是後後一一分增，至第六天身一俱盧舍半。色天身量初梵眾天半踰繕那，梵輔全一，大梵一半，少光二全，此上餘天皆增倍倍，唯無雲減三踰繕那，謂無量光天倍增二至四，乃至色究竟增滿萬六千。身量既殊，壽量別不？亦別。",
+   "T1559": "從此次第，偈曰：半半增。釋曰，於三處半半增，梵先行天身長一由旬，大梵天身長一由旬半，少光天身長二由旬。偈曰：向上從少光，上身倍倍增，唯除無雲三由旬。釋曰：無量光天身長四由旬，遍光天身長八由旬，如此倍增由旬，乃至遍淨天身長六十四由旬。無雲天倍增減三由旬，身長一百二十五由旬。從此後福生等天更倍增，乃至阿迦尼師吒天身長十六千由旬。身量向後有如此差別，壽量亦有差別不？有。"
+  },
+  "v078": {
+   "sa": "sahasrāmāyuḥ kuruṣu dvayorardhārdhavarjitam / ihāniyatam ante tu daśābdāḥ ādito 'mitam // VAkK_3.78 //",
+   "sa-bhasya": "[172|20] evaṃ pramāṇabhinnānāṃ kimāyuṣo'pyasti bhedaḥ / astītyāha / [172|21] sahasramāyuḥ kuruṣu [172|22] varṣāṇām / [172|23] dvayorardhārdhavarjitam / [172|24] dvayordvipayorardhārdhaṃ varjayitvā pañca varṣaśatāni godānīyānām / [172|24-172|25] ardhatṛtīye varṣaśate pūrvavidehānām / [173|01] ihāniyatam [173|02] jambūdvīpe nāstyāyuṣo niyamaḥ kadācit bhūyo bhavati kadācidalpīyaḥ / [173|03] ante tu daśābdāḥ [173|04] abdaḥ saṃvatsaraḥ / ante hīyamānaṃ daśa varṣāṇyāyurbhavati / [173|05] ādito'mitam // VAkK_3.78 // [173|06] āditaḥ prāthamakalpikānaṃ manuṣyāṇāmaparimāṇamāyurbhavati / [173|06-173|07] sahasrādisaṃkhyayā parimātuṃ na śakyate / [173|08] uktaṃ manuṣyāṇāṃ devānāṃ vaktavyam / [173|08-173|09] taccāhorātraṃ vyavasthāpya śakyaṃ vaktumiti sa eva caiṣāṃ vyavasthāpyate /",
+   "T1560": "北洲定千年，西東半半減， 此洲壽不定，後十初叵量。",
+   "T1558": "云何？頌曰：北洲定千年，西東半半減， 此洲壽不定，後十初叵量。",
+   "T1559": "偈曰：北鳩婁千年，於二離半半。釋曰：北鳩婁人定壽千年，於西東二洲壽量半半減，西瞿陀尼壽五百年，東毘提訶壽二百五十年。偈曰：此不定。釋曰：於剡浮洲壽量不定，有時極多有時極少。多少云何？偈曰：最後十歲。釋曰：此壽漸減，最後唯有十歲。偈曰：初叵量。釋曰：劫初生眾生，壽命不可量，由千等數不能計量故。"
+  },
+  "v079": {
+   "sa": "nṛṇāṃ varṣāṇi pañcāśadahorātro divaukasām / kāme 'dharāṇāṃ tenāyuḥ pañcavarṣaśatāni tu // VAkK_3.79 //",
+   "sa-bhasya": "[173|10-173|11] nṛṇāṃ varṣāṇi pañcāśadahorātro divaukasām / kāme'dharāṇāṃ [173|12-173|13] yāni manuṣyāṇāṃ pañcāśadvarṣāṇi tāni kāmadhātāvadharāṇāṃ devānāṃ cāturmahārājakāyikānāmekaṃ rātrindivam / [173|14] tenāyuḥ pañcavarṣaśatāni tu // VAkK_3.79 // [173|15-173|16] tena tatastenāhorātreṇa teṣāṃ triṃśadrātrakeṇa māsena dvādaśamāsakena saṃvatsareṇa divyāni pañcavarṣaśatānyāyuḥ pramāṇam /",
+   "T1560": "人間五十年，下天一晝夜， 乘斯壽五百，",
+   "T1558": "人間五十年，下天一晝夜， 乘斯壽五百，",
+   "T1559": "說人壽已，今當說天壽。若先安立日夜，方得計諸天壽。天日夜云何？偈曰：人中五十年，彼天一日夜，欲下天。釋曰：人中五十年，於欲界最下天，謂四大王天，是一日一夜。偈曰：以此，彼壽五百年。釋曰：以此三十日夜立為一月，以十二月立為一年，以此五百年為彼天壽量。"
+  },
+  "v080": {
+   "sa": "dviguṇottaramurdhvānāmubhayaṃ rūpiṇāṃ punaḥ / nāstyahorātramāyustu kalpaiḥ svāśrayasaṃmitaiḥ // VAkK_3.80 //",
+   "sa-bhasya": "[173|17] dviguṇottaramūrdhvānāmubhayaṃ [173|18] ūrdhvānāṃ devānāmubhaya dviguṇottaramahorātraścāyuśca / kathaṃ kṛtvā / [173|18-173|19] yanmanuṣyāṇāṃ varṣaśataṃ tattrāyastriṃśānāṃ devānāmekaṃ rātrindivam / [173|19-173|20] tena rātrindivena divyaṃ varṣasahasramāyuḥ / [173|20] evaṃ yāmādīnāṃ yathākramam / [173|20-173|21] mānuṣyakāṇi dve catvāryaṣṭau ṣoḍaśa varṣaśatānyekaṃ rātrindivam / [173|21-173|22] tena rātrindevena dve catvāryaṣṭau ṣoḍaśa divyāni varṣasahasrāṇyāyuṣaḥ pramāṇam / [173|22] yugandharādūrvaṃ sūryācandramasorabhāvāt // [173|22-173|23] kathaṃ devānāmahorātravyavasthānamālokakṛtyaṃ vā / [173|23-173|24] puṣpāṇāṃ saṃkocavikāsātkumudabandhu vat śakunīnāṃ kūjanākūjanāt middhāpagamāgamācca ālokakṛtyaṃ svayaṃprabhatvāt / [173|25] uktamāyuḥ kāminām / [174|01] rūpiṇāṃ punaḥ / [174|02] nāstyahorātramāyustu kalpaiḥ svāśrayasaṃmitaiḥ // VAkK_3.80 // [174|03] yeṣāṃ rūpiṇāmardhayojanamāśrayaḥ teṣāmardhakalpamāyuḥ / yeṣāṃ yojanaṃ teṣāṃ kalpam / [174|03-174|05] evaṃ yasya yāvadyojanamāśrayastasya tāvatkalpamāyuryavadakaniṣṭhānāṃ ṣoḍaśakalpasahasrāṇyāyuḥ pramāṇam /",
+   "T1560": "上五倍倍增。 色無晝夜殊，劫數等身量，",
+   "T1558": "上五倍倍增。 色無晝夜殊，劫數等身量，",
+   "T1559": "偈曰：向上後倍增。釋曰：上地諸天倍增為日夜，以此日夜計彼壽量。彼壽云何？人中一百年，是三十三天一日一夜，以此日夜一千年，為彼天壽量。應知夜摩天等次第如此。人中二百四百八百十六百，為彼一日一夜，以此日夜二千四千八千十六千天年，次第為上天壽量。從由乾陀羅，向上無日月，諸天云何安立日夜？用明光事。云何得成？由花開花合，謂俱牟頭花、波頭摩花等。諸鳥有鳴不鳴，睡有來去，以此等事判日夜。用光明事者，身自然光，不須外光。說欲天壽量已。偈曰：色界無日月，由劫判彼壽，劫數如身量。釋曰：於色界中若有諸天身量半由旬，壽量則半劫。若身量一由旬，壽量則一劫。如此彼身隨由旬數，彼壽量劫數皆隨身量。乃至阿迦尼師吒天，以十六千大劫為壽量。"
+  },
+  "v081": {
+   "sa": "ārūpye viṃśatiḥ kalpasahasrāṇya dhikādhikam / mahākalpaḥ parīttābhāt prabhṛtyadharmadhastataḥ // VAkK_3.81 //",
+   "sa-bhasya": "[174|06] ārūpye viṃśatiḥ kalpasahasrāṇya dhikādhikam / [174|07] ākāśānantyāyatane viṃśatikalpasahasrāṇyāyuṣaḥ pramāṇam / [174|08] vijñānānantyāyatane tasmādadhikaṃ viṃśatiḥ sahasrāṇi / [174|08-174|09] ākiñcanyāyatane tasmādadhikaṃ viṃśatiḥ / [174|09] bhavāgre tasmādadhikaṃ viṃśatiḥ / [174|09-174|10] evaṃ teṣāṃ yathākramaṃ viṃśatiścatvāriṃśat ṣaṣṭiraśītiḥ kalpasahasrāṇyāyuḥpramāṇam / [174|11-174|12] katamo'tra kalpo veditavyaḥ kimantarakalpo'tha saṃvartakalpo'tha vivarttakalpo'tha mahākalpaḥ / [174|13] mahākalpaḥ parīttābhāt prabhṛtyardhamadhastataḥ // VAkK_3.81 // [174|14] parīttābhādeva nikāyāt prabhṛti mahākalpenāyuḥ veditavyam / [174|14-174|15] tasmādadho mahākalpasyārdha kalpīkṛtya mahābrahmādīnāmāyurvyavasthāpitam / [174|15] kathaṃ kṛtvā / [174|15-174|17] yacca loko viṃśatimantarakalpān vivartate yacca loko viṃśatimantarakalpānvivarta āste yacca viṃśatimantarakalpānsaṃvartate ime ṣaṣṭirantarakalpā mahābrahmaṇo'dhyardhaḥ kalpaḥ uktaḥ / [174|17-174|18] evaṃ ca kṛtvā mahākalpasyārdhaṃ catvāriṃśadantarakalpān kalpīkṛtya teṣāmāyuḥ pramāṇamuktam / [174|19] uktaṃ sugatāvāyuḥ pramāṇam / [174|20] durgatāvidānīṃ vaktavyam / tatra tāvat",
+   "T1560": "無色初二萬，後後二二增， 少光上下天，大全半為劫。",
+   "T1558": "無色初二萬，後後二二增， 少光上下天，大全半為劫。論曰：北俱盧人定壽千歲，西牛貨人壽五百歲，東勝身人壽二百五十歲，南贍部人壽無定限。劫減最後極壽十年，於劫初時人壽無量，百千等數不能計量。已說人間壽量長短。要先建立天上晝夜，方可算計天壽短長。天上云何建立晝夜？人五十歲為六天中最在下天一晝一夜，乘斯晝夜三十為月，十二月為歲，彼壽五百年。上五欲天漸俱增倍，謂人百歲為第二天一晝一夜，乘此晝夜成月及年彼壽千歲。夜摩等四隨次如人，二四八百千六百歲為一晝夜，乘此晝夜成月及年，如次彼壽二四八千萬六千歲。持雙以上日月並無，彼天云何建立晝夜及光明事？依何得成？依花開合建立晝夜，如拘物陀、鉢特摩等。又依諸鳥鳴靜差別，或依天眾寤寐不同，依自身光明成外光明事。已說欲界天壽短長。色界天中無晝夜別，但以劫數知壽短長。彼劫壽短長與身量數等，謂若身量半踰繕那，壽量半劫；若彼身量一踰繕那，壽量一劫；乃至身量長萬六千，壽量亦同萬六千劫。已說色界天壽短長。無色四天從下如次壽量二四六八萬劫。上所說劫其量云何？為壞為成？為中為大？少光以上大全為劫，自下諸天大半為劫。即由此故，說大梵王過梵輔天壽一劫半。謂以成住壞各二十中劫，六十中劫為一劫半，故以大半四十中劫為下三天所壽劫量。已說善趣壽量短長。",
+   "T1559": "偈曰：無色二十千，劫後二二增。釋曰：於空無邊入，壽量二十千劫。識無邊入，更增二十千劫。無所有入，更增二十千劫。有頂，更增二十千劫。此壽量二十、四十、六十、八十千劫，此中應知。云何為劫？為是別劫、為是壞劫、為是成劫、為是大劫？偈曰：從少光大劫，從此下半劫。釋曰：從少光梵處，應知壽量約大劫，從此下半大劫說名劫，以分別大梵等壽量。云何如此？是時世間二十別劫成，二十別劫成已住，二十別劫散集，是六十別劫，於大梵處說名一劫半，分別如此。已是半劫，謂四十別劫，立為一劫，說彼壽量。說善道壽量已，惡道壽量今當說。"
+  },
+  "v082": {
+   "sa": "kāmedevāyuṣā tulyā ahorātrā yathākramam / saṃjīvādiṣu ṣaṭsu āyustaisteṣāṃ kāmadevavat // VAkK_3.82 //",
+   "sa-bhasya": "[174|21-174|22] kāmadevāyuṣā tulyā ahorātrā yathākramam / saṃjīvādiṣu ṣaṭsu [174|23-174|24] yāvat ṣaṇṇāṃ kāmāvacarāṇāṃ devanikāyānāmāyuruktaṃ tena tulyā ahorātrāḥ ṣaṭṣu narakeṣu yathākramaṃ veditavyāḥ / [174|24-174|25] saṃjīve kālasūtre saṃghāte raurave mahāraurave tāpane ca / [174|26] āyustaisteṣāṃ kāmadevavat // VAkK_3.82 // [174|27-174|28] tairidānīṃ svairahorātraisteṣāṃ yathā ṣaṇṇāṃ kāmāvacarāṇāṃ devānāmāyustathaiva yathākramaṃ veditavyam / [174|28] kathaṃ kṛtvā / [174|28-174|29] yaddhi cāturmahārājakāyikānāmāyuḥ pramāṇaṃ tatsaṃjīvane mahānarake ekaṃ rātrindivaṃ / [174|29-175|01] tena yāvat dvādaśamāsakena saṃvatsareṇa tatratyāni pañcavarṣaśatānyāyuḥ / [175|01-175|02] yattrāyastriṃśānāmāyuḥ pramāṇaṃ tat kālasūtre mahānarake ekaṃ rātrindivam / [175|02-175|03] tena rātrindivena tasminvarṣasahasrāṇyāyuḥpramāṇaṃ / [175|03-175|04] evamanyeṣvapi yathāyogaṃ yojyaṃ yāvat paranirmitavaśavartināmāyuḥpramāṇaṃ tattulyenāhorātreṇa tāpane ṣoḍaśa varṣasahasrāṇyāyuḥpramāṇam /",
+   "T1560": "等活等上六，如次以欲天， 壽為一晝夜，壽量亦同彼。",
+   "T1558": "惡趣云何？頌曰：等活等上六，如次以欲天， 壽為一晝夜，壽量亦同彼。",
+   "T1559": "偈曰：與欲界天壽，日夜次第等，於更活等六，壽量如欲天。釋曰：如所說六欲天壽量，於六地獄日夜，應知次第皆等。六者，謂更活、黑繩、聚磕、叫喚、大叫喚、燒然，於彼由旬日夜等。六欲天壽量，應知於彼壽量亦等六天壽量。云何如此所說？四天王壽量，於更活地獄是一日一夜，以此日夜立月立年，以此五百年為其壽量。三十三天壽量，於黑繩地獄是一日一夜，以此日夜於中壽量足一千年。如此於餘處次第應知，乃至他化自在天壽量，於燒然地獄是一日一夜，以此日夜於中壽量足十六千年。"
+  },
+  "v083": {
+   "sa": "ardhaṃ pratāpane avīcāvantaḥkalpaṃ paraṃ punaḥ / kalpaṃ tiraścāṃ pretānāṃ māsānhā śatapañcakam // VAkK_3.83 //",
+   "sa-bhasya": "[175|05] ardhaṃ pratāpane [175|06] pratāpane mahānarake'ntarakalpasyārdhamāyuḥ pramāṇam / [175|07] avīcāvantaḥkalpaṃ [175|08] tiraścāṃ tu niyamo nāsti / [175|09] paraṃ punaḥ / [175|10] kalpaṃ tiraścāṃ [175|11] paramāyustiraścāmantarakalpaṃ tat punarnāgānāṃ nandopanandāśvatalīprabhṛtīnām / [175|11-175|13] uktaṃ hi bhagavatā \"aṣṭāvime bhikṣavo nāgā mahānāgāḥ kalpasthā dharaṇidharā\" iti vistaraḥ / [175|14] pretānāṃ māsāhnā śatapañcakam // VAkK_3.83 // [175|15] yo manuṣyāṇāṃ māsaḥ sa pretānāmahorātraḥ / [175|15-175|16] tenāhorātreṇa pañca varṣaśatānyāyuḥ /",
+   "T1560": "極熱半中劫，無間中劫全， 傍生極一中，鬼月日五百",
+   "T1558": "極熱半中劫，無間中劫全， 傍生極一中，鬼月日五百，",
+   "T1559": "偈曰：於大燒半劫，阿毘指別劫。釋曰：於大燒燃地獄壽量半別劫，於無間地獄壽量足一別劫。於畜生壽量無定。偈曰：畜生極別劫。釋曰：若畜生中最極長壽但一別劫，謂諸龍難陀、優波難陀、阿輸多利等。何以故？佛世尊說：比丘！有八部龍名大龍，皆一劫住持於地輪，廣說如經。偈曰：鬼日月五百。釋曰：人中一月，於鬼神是一日夜，以此日夜壽量五百年。"
+  },
+  "v084": {
+   "sa": "vāhādvarṣaśatenaikatiloddhārakṣayāyuṣaḥ / arvudā dviṃśatiguṇaprativṛddhayāyuṣaḥ pare // VAkK_3.84 //",
+   "sa-bhasya": "[175|16] śītanarakeṣvāyuṣaḥ kiṃ pramāṇam / [175|17-175|18] vāhādvarṣaśatenaikatiloddhārakṣayāyuṣaḥ / arvudādviṃśatiguṇaprativṛddhyāyuṣaḥ pare // VAkK_3.84 // [175|19-175|20] upamānamātreṇa teṣvāyurākhyātaṃ bhagavatā \"tadyathā bhikṣavaḥ iha syādviṃśatikhārīko māgadhakastilavāhaḥ pūrṇastilānāṃ cūḍikāvaddhaḥ / [175|20-175|22] tataḥ kaścideva varṣaśatasyātyayādekaṃ tilamapanayate kṣiprataraṃ bhikṣavaḥ saviṃśatikhārīko māgadhastilavāho'nenopakrameṇa parikṣayaṃ paryādānaṃ gacchet / [175|22] na tvevāhamarvudopapannānāmāyuṣaḥ paryantaṃ vadāmi / [175|22-175|24] yathā khalu bhikṣavo viṃśatirvudā evameko nirarvudo vistareṇa yathā khalu bhikṣavo viṃśatiḥ padyā evameko mahāpadma\" iti / [175|25] evameṣāmāyuṣmatāṃ sattvānāṃ kimastyaparipūrṇāyuṣāmantarā mṛtyurāhosvinna / [175|26] sarvatrāsti",
+   "T1560": "頞部陀壽量，如一婆訶麻， 百年除一盡，後後倍二十。",
+   "T1558": "頞部陀壽量，如一婆訶麻， 百年除一盡，後後倍二十。論曰：四大王等六欲天壽，如其次第為等活等六㮈落迦一晝一夜，壽量如次亦同彼天。謂四大王壽量五百，於等活地獄為一晝一夜，乘此晝夜成月及年，以如是年彼壽五百。乃至他化壽萬六千，於炎熱地獄為一晝一夜，乘此晝夜成月及年，彼壽如斯萬六千歲。極熱地獄壽半中劫，無間地獄壽一中劫。傍生壽量多無定限，若壽極長亦一中劫，謂難陀等諸大龍王。故世尊言：大龍有八，皆住一劫能持大地。鬼以人間一月為一日，乘此成月歲壽五百年。寒那落迦云何壽量？世尊寄喻顯彼壽言：如此人間佉梨二十成摩揭陀國一麻婆訶量，有置巨勝平滿其中，設復有能百年除一。如是巨勝易有盡期，生頞部陀壽量難盡。此二十倍為第二壽，如是後後二十倍增，是謂八寒地獄壽量。",
+   "T1559": "於寒地獄壽量云何？偈曰：從婆訶百年，除麻盡為壽，頞浮陀二十，倍倍後餘壽。釋曰：約譬喻，佛世尊說寒地獄壽量。如經言：比丘！譬如此中二十佉梨是摩伽陀量一，婆訶麻遍滿高出，從此有人一，百年度除一粒麻。比丘！如此二十佉梨一婆訶麻，由此方便，我說速得減盡。我未說於頞浮陀生眾生壽量得盡。比丘！如頞浮陀壽量，更二十倍為尼剌浮陀壽量。乃至比丘！二十倍波頭摩壽量，為分陀利柯壽量。如此等壽量，為有未具足於中間死不？一切處有。"
+  },
+  "v085": {
+   "sa": "kurubāhyo 'ntarāmṛtyuḥ paramāṇvakṣarakṣaṇāḥ / rūpanāmādhvaparyantāḥ paramāṇuraṇustathā // VAkK_3.85 //",
+   "sa-bhasya": "[176|01] kurubāhyo'ntarāmṛtyuḥ [176|02] uttarakuruṣu niyatāyuṣaḥ sattvā avaśyaṃ kṛtsnamāyurjīvanti / anyeṣu nāvaśyam / [176|03] pudgalānāṃ tu bahūnāṃ nāstyantareṇa kālakriyayā / [176|03-176|05] tuṣitastharsyakajātibaddhasya bodhisattvasya caramabhavikasattvasya jinādiṣṭasya jinabhutasya śraddhādharmānusāriṇo bodhisattvacakravarttimātrośca tadgarbhayorityevamādinām / [176|06-176|07] yojanapramaṇena sthānāni śarīrāṇi cotkāni varṣapramāṇenāyuruktaṃ tayośca pramāṇaṃ noktamiti vaktavyaṃ nānā ca sarveṣāṃ vavasthānamatastasyāpi paryanto vaktavyaḥ / [176|08] teṣāṃ samānākhyānārthamādiprakrama ārabhyate / [176|09] paramāṇvakṣarakṣaṇāḥ / [176|10] rūpanāmādhvaparyantāḥ [176|11] rūpasyāpacīyamānasya paryantaḥ paramāṇuḥ / [176|11-176|12] kālasya paryantaḥ kṣaṇo nāmnaḥ paryanto'kṣaraṃ tadyathā gauriti / [176|12] kṣaṇasya punaḥ kiṃ pramāṇam / [176|12-176|13] samagreṣu pratyayeṣu yāvatā dharmasyātmalābhaḥ gacchanvā dharmo yāvatā paramāṇoḥ paramāṇvantaraṃ gacchati / [176|13-176|14] balavatpuruṣāddhaṭmātreṇa pañcaṣaṣṭiḥ kṣaṇā atikrāmantītyābhidhārmikāḥ / [176|15] paramāṇuraṇustathā // VAkK_3.85 //",
+   "T1560": "諸處有中夭，除北俱盧洲。 極微字剎那，色名時極少，",
+   "T1558": "此諸壽量有中夭耶？頌曰：諸處有中夭，除北俱盧洲。論曰：諸處壽量皆有中夭，唯北俱盧定壽千歲。此約處說，非別有情，有別有情不中夭故。謂住覩史多天一生所繫菩薩，及最後有佛記佛使隨信法行菩薩輪王，母懷彼二胎時，此等如應皆無中夭。如是已約踰繕那等辯器世間身量差別。約年等辯壽量有殊，二量不同未說應說。此二建立無不依名，前二及名未詳極少，今應先辯三極少量。頌曰：極微字剎那，色名時極少。論曰：分析諸色至一極微，故一極微為色極少。如是分析諸名及時至一字剎那，為名時極少。一字名者，如說瞿名。何等名為一剎那量？眾緣和合法得自體頃，或有動法行度一極微。對法諸師說：如壯士一疾彈指頃六十五剎那，如是名為一剎那量。已知三極少，前二量云何？",
+   "T1559": "偈曰：除鳩婁中夭。釋曰：於北鳩婁洲，一切人壽量皆定，必具壽量盡方得捨命，於餘處壽命不定。若約別人，於中間多不得死，謂住兜帥多天一生補處菩薩最後生菩薩、佛所記、佛所使、信行、法行、菩薩母、轉輪王母正懷胎。如此等由由旬量說處所及身量已，由年量說壽命量已，此二齊量未說。如此一切用名分別，此名窮量，亦應顯說。為說此三，是故初立方便。偈曰：隣虛字剎那，色名時最極。釋曰：若分分析色極於隣虛，故隣虛是色極量。時量亦爾，極於剎那。名量亦爾，極於輕字，如伊短音。復次剎那者何量？若因緣已具足，隨時法得一生，是時名剎那。復次是法若行度一隣虛，是時名剎那。復次若有強力丈夫一彈指頃，經六十五剎那，阿毘達磨師說如此。"
+  },
+  "v086": {
+   "sa": "lohāpśaśā vigocchidrarajolikṣāstadudbhavāḥ / yavastathāṅgulīparva jñeyaṃ saptaguṇottaram // VAkK_3.86 //",
+   "sa-bhasya": "[176|16-176|17] lohāpaśaśāvigocchidrarajolikṣāstadudbhavāḥ / yavastathāṅgulīparva jñeyaṃ saptaguṇottaram // VAkK_3.86 // [176|18] etatparamāṇvādikaṃ saptaguṇottaraṃ veditavyam / sapta paramāṇavo'ṇuḥ / [176|18-176|19] saptāṇavo loharajaḥ / [176|19] tāni saptāvrajastāni sapta dāśarajastāni saptaiḍakarajaḥ / [176|19-176|20] tāni sapta gorajaḥ tāni sapta vātāyanacchidrarajaḥ / [176|20] tāni sapta likṣāstadudbhavā yūketyarthaḥ / [176|20-176|21] sapta yūkā yavaḥ / [176|21-176|22] sapta yavā aṅgulīparva trīṇi parvāṇyaṅgurīti prasiddhameveti noktam / [176|22] pārśvākṛtāstu /",
+   "T1560": "極微微金水，兔羊牛隙塵， 蟣虱麥指節，後後增七倍，",
+   "T1558": "今且辯前踰繕那等。頌曰：極微微金水，兔羊牛隙塵， 蟣虱麥指節，後後增七倍，",
+   "T1559": "於此中偈曰：七隣虛阿羺塵、鐵塵水兔羊、牛隙塵蟣虱、麥指節應知，後後七倍增。釋曰：以隣虛為初，應知後後皆七倍增。七隣虛為一阿羺，七阿羺為一鐵塵，七鐵塵為一水塵，七水塵為一兔塵，七兔塵為一羊塵，七羊塵為一牛塵，七牛塵為一隙光中塵，七隙光中塵為一蟣，七蟣為一虱，七虱為一麥，七麥為指一節，三節為一指。是世間所解故，偈中不說。"
+  },
+  "v087": {
+   "sa": "caturviśatiraṅgulyo hasto hastacatuṣṭayam / dhanuḥ pañcaśatānyeṣāṃ krośo raṇyaṃ ca tanmatam // VAkK_3.87 //",
+   "sa-bhasya": "[177|01] caturviṃśatiraṅgulyo hasto hastacatuṣṭayam / [177|02] dhanuḥ [177|03] vyāsenetyarthaḥ / [177|04] pañcaśatānyeṣāṃ krośo raṇyaṃ ca tanmatam // VAkK_3.87 // [177|05] manuṣāṃ pañca śatāni krośaḥ / krośamātraṃ ca grāmādi raṇyamiṣṭam /",
+   "T1560": "二十四指肘，四肘為弓量， 五百俱盧舍，",
+   "T1558": "二十四指肘，四肘為弓量， 五百俱盧舍，",
+   "T1559": "若橫並指，偈曰：二十四指量一肘，四肘一弓，五百弓俱盧舍，此名阿練若。釋曰：十二指為一搩手，二十四指為一肘，四肘名一尋，亦名一弓，五百弓為一俱盧舍，亦名村亦名阿練若。"
+  },
+  "v088": {
+   "sa": "te 'ṣṭau yojanamityāhuḥ viṃśaṃ kṣaṇaśataṃ punaḥ / tatkṣaṇaḥ te punaḥ ṣaṣṭirlavaḥ triṃśad guṇottarāḥ // VAkK_3.88 //",
+   "sa-bhasya": "[177|06] te'ṣṭau yojanamityāhuḥ / [177|07] uktaṃ yojanasya pramāṇam / varṣasyedānīmucyate / [177|08] viṃśaṃ kṣaṇaśataṃ punaḥ / [177|09] tatkṣaṇaḥ [177|10] kṣaṇānāṃ viṃśaṃ śatamekastatkṣaṇaḥ / [177|11] te punaḥ ṣaṣṭirlavaḥ / [177|12] tatkṣaṇāḥ ṣaṣṭirlava ityucyate / [177|13] triṃśadguṇottarāḥ // VAkK_3.88 //",
+   "T1560": "此八踰繕那。 百二十剎那，為怛剎那量， 臘縛此六十，此三十須臾。",
+   "T1558": "此八踰繕那。論曰：極微為初，指節為後，應知後後皆七倍增。謂七極微為一微量，積微至七為一金塵，積七金塵為水塵量，水塵積至七為一兔毛塵，積七兔毛塵為羊毛塵量，積羊毛塵七為一牛毛塵，積七牛毛塵為隙遊塵量，隙塵七為蟣，七蟣為一虱，七虱為穬麥，七麥為指節，三節為一指。世所極成，是故於頌中不別分別。二十四指橫布為肘，竪積四肘為弓謂尋，竪積五百弓為一俱盧舍，一俱盧舍許是從村至阿練若中間道量。說八俱盧舍為一踰繕那。如是已說踰繕那等。今當辯後年等量別。頌曰：百二十剎那，為怛剎那量， 臘縛此六十，此三十須臾，",
+   "T1559": "偈曰：此八一由旬。釋曰：此八俱盧舍為一由旬。說由旬量已，年量今當說。偈曰：百二十剎那，怛剎那。釋曰：一百二十剎那為一怛剎那。偈曰：六十說名一羅婆。釋曰：六十怛剎那說名一羅婆。偈曰：後三三十增，"
+  },
+  "v089": {
+   "sa": "trayo muhūrttāhorātramāsāḥ dvādaśamāsakaḥ / saṃvatsaraḥ sonarātraḥ kalpo bahuvidhaḥ smṛtaḥ // VAkK_3.89 //",
+   "sa-bhasya": "[177|14] trayo muhūrttāhorātramāsāḥ [177|15] triṃśallavā muhūrttastriśanmuhūrttā ahorātraḥ / [177|15-177|16] kadācittu rātriradhikā bhavati kadācidūnā kadācitsamā / [177|16] tridaśāhorātrā māsaḥ / [177|17] dvādaśamāsakaḥ / [177|18] saṃvatsaraḥ sonarātraḥ [177|19-177|20] catvāro māsā hemantānāṃ catvāro grīṣmāṇāṃ catvāro varṣāṇāmityete dvādaśa māsā saṃvatsaraḥ sārdhamūnarātraiḥ / [177|20] saṃvatsareṇa hi ṣaḍūnarātrā nipātyante / kathaṃ kṛtvā / [177|21] \"hemantagrīṣmavarṣāṇāmadhyardhe māsi nirgate / śeṣe'rdhamāse vidvadbhirūnarātro nipātyate //\" [177|23] uktaṃ varṣapramāṇam / [178|01] kalpasyedānīṃ vaktavyam / [178|02] kalpo bahuvidhaḥ smṛtaḥ // VAkK_3.89 // [178|03] antarakalpo saṃvarttakalpo vivartakalpo mahākalpaśceti / tatra tāvat",
+   "T1560": "此三十晝夜，三十晝夜月， 十二月為年，於中半減夜。 寒熱雨際中，一月半已度， 於所餘半月，智者知夜減。 應知有四劫，謂壞成中大，",
+   "T1558": "此三十晝夜，三十晝夜月， 十二月為年，於中半減夜。論曰：剎那百二十為一怛剎那，六十怛剎那為一臘縛，三十臘縛為一牟呼栗多，三十牟呼栗多為一晝夜。此晝夜有時增、有時減、有時等。三十晝夜為一月，總十二月為一年。於一年中分為三際，謂寒、熱、雨各有四月。十二月中六月減夜，以一年內夜總減六。云何如是？故有頌言：寒熱雨際中，一月半已度， 於所餘半月，智者知夜減。如是已辯剎那至年。劫量不同，今次當辯。頌曰：應知有四劫，謂壞成中大，",
+   "T1559": "是一牟休多，及一日夜月。釋曰：三十羅婆為一牟休多，三十牟休多為一日夜夜，有時長、有時短、有時等，三十日夜為一月。偈曰：十二月一年，一年共減夜。釋曰：寒際有四月，熱際有四月，雨際有四月。如此十二月，立為一年共減夜。何以故？有六減夜入一年中。云何如此？「寒熱雨三際，中月半已度， 於餘半月中，智人知減夜。」說年量已，劫量今當說。偈曰：說劫有多種。釋曰：別劫、壞劫、成劫、大劫。"
+  },
+  "v090": {
+   "sa": "saṃvarttakalpo narakasaṃbhavāt bhājanakṣayaḥ / vivartakalpaḥ prāgvāyoryāvannaraka saṃbhavaḥ // VAkK_3.90 //",
+   "sa-bhasya": "[178|04] saṃvarttakalpo narakāsaṃbhavāt bhājanakṣayaḥ / [178|05] narakeṣu hi sattvāsaṃbhavāt prabhṛti yāvat bhājanasaṃkṣayaḥ / dve hi saṃvarttanyau / [178|05-178|06] gatisaṃvartanī dhātusaṃvartanī ca / [178|06] punardve saṃvartanyau / sattvasaṃvartanī bhājanasaṃvartanī ca / [178|07] bhavati sa kālo yannarakeṣu sattvāścyavante nopapadyante / sa ārambhaḥ saṃvartakalpasya / [178|08] yadayaṃ loko viṃśatyantarakalpān vivṛtto'sthāt tanniryātaṃ vaktavyam / [178|08-178|09] yadviṃśatimantarakalpān saṃvartiṣyate tat pratipannaṃ vaktavyam / [178|09-178|10] yadā narakeṣvekasattvo nāvaśiṣṭo bhavati iyatā 'yaṃ lokaḥ saṃvṛtto bhavati / [178|10-178|11] yaduta narakasaṃvarttanyā yasya tadānīṃ niyataṃ narakavedanīyaṃ karma ghriyate sa lokadhātvantaranarakeṣu kṣipyate / [178|11-178|12] evaṃ tiryaksaṃvarttanī pretasaṃvarttanī ca vaktavyā / [178|12] mahāsamudragatāstiryañcaḥ pūrvaṃ saṃvartante / [178|12-178|13] manuṣyasahacariṣṇavastu taireva sārdhaṃ bhavanti / [178|13-178|16] sa kālo yanmanuṣyeṣvanyatamaḥ sattvaḥ svayamanācāryakaṃ dharmatāprātilambhikaṃ prathamaṃ dhyānaṃ samāpadyate sa tasmāt vyutthāya vācaṃ bhāṣate sukhaṃ vata vivekajaṃ prītisukhaṃ śāntaṃ vata vivekajaṃ prītisukhamiti / [178|16-178|17] taṃ ca śabdaṃ śrutvā anye'pi sattvāḥ samāpadyante / [178|17] kālaṃ kṛtvā brahmaloka upapadyante / [178|17-178|18] yadā jambūdvīpa ekasattvo'pi nāvaśiṣṭo bhavati iyatā'yaṃ lokaḥ saṃvṛtto bhavati yaduta jambūdvīpasaṃvartanyā / [178|18-178|19] evaṃ pūrvavidehagodānīyottarakurusaṃvartanyo vaktavyāḥ / [178|19-178|20] yadā manuṣyeṣvekasattvo'pi nāvaśiṣṭo bhavati iyatā'yaṃ lokaḥ saṃvṛtto bhavati yaduta manuṣyagatisaṃvarttanyā / [178|20-178|21] auttarakauravāstu kālaṃ kṛtvā kāmāvacareṣu deveṣūpapadyante / [178|21] tatra vairāgyābhāvāt / [178|21-178|22] evaṃ cāturmahārājakāyikeṣvapi deveṣu prathamaṃ dhyānaṃ samāpadya brahmaloka upapadyante / [178|22-178|24] yadā tatraikasattvo'pi nāvaśiṣṭo bhavati iyatā'yaṃ lokaḥ saṃvṛtto bhavati yaduta cāturmahārājakāyikasaṃvartanyā / [178|24-178|25] evaṃ yāvat paranirmitavaśavartisaṃvarttnyo vaktavyāḥ / [178|25-178|26] yadaikasattvo'pi kāmāvacareṣu deveṣu nāvaśiṣṭo bhavati iyatā'yaṃ lokaḥ saṃvṛtto bhavati yaduta kāmadhātusaṃvartanyā / [178|26-178|28] brahmaloke'pyanyatamaḥ sattvo dharmatāprātilambhikaṃ dvitīyaṃ dhyānaṃ samāpadyotthāya vācaṃ bhāṣate sukhaṃ vata samādhijaṃ prītisukhaṃ śāntaṃ vata samādhijaṃ prītisukhamiti / [178|28-179|01] taṃ śabdaṃ śrutvā'nye'pi sattvāḥ samāpadyante kālaṃ ca kṛtvā ābhāsvareṣu deveṣūpapadyante / [179|01-179|02] yadā brahmaloka ekasattvo'pi nāvaśiṣṭo bhavati iyatā'yaṃ lokaḥ saṃvṛtto bhavati yaduta sattvasaṃvartanyā / [179|02-179|04] tataḥ śūnye bhājane ita eva sāmantakāt sattvānāṃ tadākṣepake karmaṇi parikṣīṇe sapta sūryāḥ prādurbhūya krameṇa yāvat pṛthivīṃ sumeruṃ ca niḥśeṣaṃ dahanti / [179|04-179|05] tasmādevaṃ prajvalitādarcirvāyunā kṣiptaṃ śūnyaṃ brāhmaṃ vimānaṃ nirdahat paraiti / [179|05] tacca tadbhūmikamevārcirveditavyam / [179|05-179|06] nahi visabhāgā apakṣālāḥ kramante / [179|06] tatsaṃbaddhasaṃbhūtatvāttasmāttadityuktam / [179|06-179|07] kāmāvacaro hyagnī rūpāvacaramagniṃ saṃbadhnātīti / [179|07-179|08] evamanyasyāmapi saṃvartanyāṃ yathāyogaṃ veditavyamiti / [179|08-179|09] narakeṣu sattvānāṃ cyutyanutpādāt prabhṛti yāvat bhājanānāṃ saṃkṣaya eṣa kālaḥ / [179|10] vivartakalpaḥ prāgvāyoryāvannarakasaṃbhavaḥ // VAkK_3.90 // [179|11] thamādvāyoḥ prabhṛti yāvannarakeṣu sattvasambhavaḥ eṣa kālo vivartakalpa ityucyate / [179|12-179|14] tathā saṃvṛte hi loka ākāśamātrāvaśeṣaścira kālaṃ tiṣṭhati yāvat punarapi sattvānāṃ karmādhipatyena bhājanānāṃ pūrvanimittabhūtā ākāśe mandamandā vāyavaḥ syandante / [179|14-179|15] tadā yadayaṃ loko viṃśatimantarakalpān saṃvṛtto'sthāttanniryātaṃ vaktavyam / [179|15] yadviṃśatimantarakalpān vivarttiṣyate tadupayātaṃ vaktavyam / [179|16] tataste vāyavo vardhamānā yathoktaṃ vāyumaṇḍalaṃ jāyate / [179|16-179|17] tataḥ śanairyathoktakramavidhānaṃ sarvaṃ jāyate apmaṇḍalaṃ kāñcanamayī mahāpṛthivī dvīpāḥ sumervādayaśca / [179|17-179|18] prathamaṃ tu brāhma vimānamutpadyate / [179|18] tato yāvat yāmīyaṃ tato vāyumaṇḍalādīni / [179|18-179|19] iyatā'yaṃ loko vivṛtto bhavati yaduta bhājanavivartanyā / [179|19-179|20] athānyataraḥ sattva ābhāsvarebhyaścyutvā śūnye brāhme vimāna utpadyate / [179|20-179|21] anye'pi sattvāstataścyutvā brahmapurohiteṣūpapadyante / [179|21] tato brahmakāyikeṣu paranirmitavaśavartiṣu / [179|21-179|22] krameṇa yāvaduttarakurau godānīye pūrvavidehe jambūdvīpe preteṣu tiryakṣu narakeṣūpapadyante / [179|22-179|23] dharmatā hyeṣā yat paścāt saṃvartate tat pūrvaṃ vivarttate / [179|23-179|24] yadā narakeṣvekaḥ sattvo'pi prādurbhūto bhavati tadā yadayaṃ loko viṃśatimantarakalpān vivartate tanniryātaṃ bhavati / [179|24-179|25] yadviṃśatimantaralpān vivarttaḥ sthāsyati tadupayātaṃ bhavati /",
+   "T1560": "壞從獄不生，至外器都盡。 成劫從風起，至地獄初生，",
+   "T1558": "壞從獄不生，至外器都盡， 成劫從風起，至地獄初生，",
+   "T1559": "此中，偈曰：壞劫地獄盡，乃至器世滅。釋曰：於諸地獄中，從無復眾生，乃至器世界滅，是名壞劫。何以故？壞有二種：一道壞、二界壞。復有二種壞：一眾生壞、二器世界壞。有如此時，於此時中地獄眾生但死無復受生，此時是壞劫之初。是時世間二十別劫成已住，此住劫應知已度。更二十別劫，世間應壞。是壞，此時應知次第復至。若是時於地獄中無一眾生為餘，由此時量世間已壞，由地獄壞故。於此時中，若眾生有定業，必應於地獄受報，未盡業引此眾生於餘世界地獄受報。畜生壞劫、鬼神壞劫亦應作如此說。住大海畜生先壞，共人行畜生後壞。復有如此時，於人道中隨有一人，自然無師，法爾所得修入初定。此人從初定出，說如此言：善人！從離生喜樂最美妙。善友！從離生喜樂微細寂靜。餘人聞此言，復各修學此定。如此等人捨命後皆生梵處。若是時於剡浮洲無一眾生為餘，由此時量世間已壞，由剡浮洲壞敗。如此東毘提訶，西瞿陀尼，北鳩婁壞，亦應作如此說。若是時於人道無一人為餘，由此時量世間已壞，由人道壞故。北鳩婁人捨命生欲界天，於自地中無離欲故。如此於四大王天，修習初定已生於梵處。若是時於四大王天無一天為餘，由此時量世間已壞，由四大王天壞故。如此乃至他化自在天壞，亦應作如此說。若是時於欲界天無一天為餘，由此時量世間已壞，由欲界壞故。於梵處隨一眾生，法爾所得修入第二定，從此定出說如此言：此樂最美妙，謂定生喜樂。此樂最寂靜，謂定生喜樂。餘人聞此言，復各修學此定。如此等天捨命後皆生遍光天處。若是時於梵處無一眾生為餘，由此時量世間已壞，由眾生壞故。是時器世界皆空，從此時初定道所起，能感器世界業悉已謝滅。七日次第出，乃至燒大地及諸須彌婁山無復餘，從此猛火風吹光焰上燒梵處。如此光焰，應知是初定地同類。何以故？若災非同類則不能壞，由相應發故，故說此火能燒。何以故？是欲界火能接色界火故。此義於餘災，如理應知亦爾。從地獄中，由眾生死不更生，乃至器世界盡，經如此時說名壞劫。偈曰：成劫先於風，乃至地獄有。釋曰：從初風起，乃至於地獄有眾生，是名成劫。何以故？世間如此已壞，唯空為餘，於長時住。乃至後眾生業增上故，諸世界器先相初起，謂於空中有微細風漸漸而動，是時世間二十別劫壞已住。此壞劫應知已度，更二十別劫，世間應成。此成，是時應知次第復至。從是時諸風漸漸增大，乃至成就如前所說風輪，如前所說次第事一切皆成，謂水輪及大地金輪地輪，乃至諸洲、須彌婁山等，初成大梵天宮殿，次第乃至成夜摩天宮殿。從此後風輪起，由此時量應知世間已成，由器世界成故。是時隨有眾生，應作大梵王，從遍光天墮於大梵宮殿受生，餘諸眾生從彼次第墮，有生梵先行處、有生梵眾處、有生他化自在處。如此次第，乃至於北鳩婁、西瞿陀尼、東毘提訶、剡浮洲、鬼神道、畜生道、地獄道處受生。此是法爾，謂後世間壞，先世間成。是時若一眾生於地獄處受生，由此時量，世間二十別劫已成，此成劫應知已度。更二十別劫，世間應住。此住，是時應知次第復至。"
+  },
+  "v091": {
+   "sa": "antaḥ kalpo 'mitāt yavaddaśavarṣāyuṣaḥ tataḥ / utkarṣā apakarṣāśca kalpā aṣṭā daśāpare // VAkK_3.91 //",
+   "sa-bhasya": "[179|26] antaḥkalpo'mitāt yāvaddaśavarṣāyuṣaḥ [179|27-180|01] vivartamāne loke ekānna viṃśatirantarakalpā aparimitāyuṣāṃ manuṣyāṇāmatikrāmanti / [180|01-180|02] aparimitāyuṣāmeva kramatāṃ yāvaddaśavarṣāyuṣo bhavanti / [180|02] so'sau vivṛttānāṃ tiṣṭhatāṃ prathamo'ntarakalpaḥ / [180|03] tataḥ / [180|04] utkarṣā apakarṣāśca kalpā aṣṭādaśāpare // VAkK_3.91 // [180|05] tasmādapare'ṣṭādaśotkarṣā apakarṣāścāṣṭādaśāntarakalpā bhavanti / kathaṃ kṛtvā / [180|06] tebhyo hi daśavarṣāyuṣkebhya utkarṣaṃ gacchantaḥ krameṇāśītivarṣasahasrāyuṣo bhavanti / [180|07] punaścāpakarṣaṃ gacchanto daśavarṣāyuṣo bhavanti // evaṃ dvitīyo'ntarakalpaḥ / [180|07-180|08] evaṃ yāvadaṣṭādaśa /",
+   "T1560": "中劫從無量，減至壽唯十， 次增減十八，",
+   "T1558": "中劫從無量，減至壽唯十， 次增減十八，",
+   "T1559": "偈曰：別劫從無量，乃至成十歲。釋曰：從世間初成，十九別劫，於無量壽時中已度。此無量壽眾生，壽命漸減乃至十歲。世間已成及住，是住初別劫。偈曰：初下一別劫，次上下十八。釋曰：從此初住，後有十八上、十八下，為十八別劫。云何如此？從此十歲眾生壽命，若轉增上乃至八萬歲，復轉減下乃至十歲，是第二別劫。如此乃至十八。"
+  },
+  "v092": {
+   "sa": "utkarṣa ekaḥ te 'śītisahasrādyāvadāyuṣaḥ / iti loko vivṛtto 'yaṃ kalpāṃstiṣṭhati viṃśatim // VAkK_3.92 //",
+   "sa-bhasya": "[180|09] utkarṣa ekaḥ [180|10] ekāntarakalpo viṃśatitama utkarṣa evamapakarṣaḥ / [180|10-180|11] daśavarṣāyuṣkebhyo yāvadaśītivarṣāyuṣāṃ manuṣyāṇāmiti varttate / [180|11] athaite utkarṣāḥ kiyantaṃ prakarṣaṃ gacchanti / [180|12] te'śītisahasrādyāvadāyuṣaḥ / [180|13-180|14] nātaḥ pareṇa vardhante yāvāneva cānyeṣāmantarakalpānāmutkarṣāpakarṣakālastāvāneva prathamasyāpakarṣakālaḥ paścimasya cotkarṣakāla iti samānakālāḥ sarve bhavanti / [180|15] iti loko vivṛtto'yaṃ kalpāṃstiṣṭhati viṃśatim // VAkK_3.92 // [180|16] ityanenāntarakalpanyāyenāyaṃ viṃśatimantarakalpānvivṛttastiṣṭhati / [180|16-180|17] yāvantaṃ kālaṃ vivṛttastiṣṭhati tāvantameva kālaṃ",
+   "T1560": "後增至八萬， 如是成已住，名中二十劫。",
+   "T1558": "後增至八萬， 如是成已住，名中二十劫，",
+   "T1559": "偈曰：後上一別劫。釋曰：最後一上別劫，即住劫第二十別劫，如此若下從八萬乃至十歲。若爾，增上至幾量為究竟？偈曰：乃至壽八萬。釋曰：過此無復上。於十八劫中，如一上一下時量，初住下劫時量亦爾，最後上劫時量亦爾，是故一切時量平等。偈曰：世間如此成，住經二十劫。釋曰：由此別劫道理，世間二十別劫成已住。如成住時量，於如此等時。"
+  },
+  "v093": {
+   "sa": "vivartate 'tha saṃvṛtta āste saṃvartate samam / te hyaśītirmahākalpaḥ tadasaṃkhyatrayodbhavam // VAkK_3.93 //",
+   "sa-bhasya": "[180|18] vivartate'tha saṃvṛtta āste samvartate samam / [180|19] viṃśatimevāntarakalpān vivartate viṃśatiṃ saṃvartate viṃśatiṃ saṃvṛtta āste / [180|19-180|20] yadyapi tadānīmutkarṣā apakarṣāśca na pravartante kālastu samānaḥ parisaṃkhyāyate / [180|20-180|22] tatraikenāntara kalpena bhājanānyabhinivartante ekānnaviṃśatyā 'ntarakalpairāvāsyante ekenāntarakalpena bhājanāni vidhvasyante ekānnaviṃśatyā śūnyī bhavanti / [180|22-180|23] tā etā antarakalpānāṃ catasro viṃśatyo'śītirbhavanti / [180|24] te hyaśītirmahākalpaḥ [180|25] etanmahākalpasya pramāṇam / kalpaḥ kiṃsvabhāvaḥ / pañcaskandhasvabhāvaḥ / [180|25-181|01] yaducyate tribhirasaṃkhyeyaiḥ kalpānāṃ budhatvaṃ prāpyata\" iti / [181|01] tat katameṣāṃ kalpānām / [181|01-181|02] ya eva mahākalpo nirdiṣṭaḥ / [181|03] tadasaṃkhyatrayodbhavam // VAkK_3.93 //",
+   "T1560": "成壞壞已空，時皆等住劫， 八十中大劫，大劫三無數。",
+   "T1558": "成壞壞已空，時皆等住劫， 八十中大劫，大劫三無數。論曰：言壞劫者，謂從地獄有情不復生至外器都盡。壞有二種：一趣壞、二界壞。復有二種：一有情壞、二外器壞。謂此世間過於二十中劫住已，從此復有等住二十，壞劫便至。若時地獄有情命終無復新生，為壞劫始。乃至地獄無一有情，爾時名為地獄已壞。諸有地獄定受業者，業力引置他方獄中，由此准知傍生鬼趣。然各先壞本處住者，人天雜居者與人天同壞。若時人趣此洲一人，無師法然得初靜慮，從靜慮起唱如是言：離生喜樂，甚樂甚靜。餘人聞已皆入靜慮，命終並得生梵世中。乃至此洲有情都盡，是名已壞贍部洲人。東西二洲例此應說。北洲命盡生欲界天，由彼無能入定離欲。乃至人趣無一有情，爾時名為人趣已壞。若時天趣四大王天隨一法然得初靜慮，乃至並得生梵世中。爾時彼天有情都盡，是名已壞大王眾天。餘五欲天例同此說。乃至欲界無一有情，名欲界中有情已壞。若時梵世隨一有情，無師法然得二靜慮，從彼定起唱如是言：定生喜樂，甚樂甚靜。餘天聞已皆入彼靜慮，命終並得生極光淨天。乃至梵世中有情都盡，如是名已壞有情世間。唯器世間空曠而住。餘十方界一切有情，感此三千世界業盡，於此漸有七日輪現，諸海乾竭眾山洞然，洲渚三輪並從焚燎，風吹猛焰燒上天宮，乃至梵宮無遺灰燼。自地火焰燒自地宮，非他地災能壞他地，由相引起故作是言。下火風飄焚燒上地，謂欲界火猛焰上昇為緣引生色界火焰。餘災亦爾，如應當知。如是始從地獄漸減乃至器盡，總名壞劫。所言成劫，謂從風起乃至地獄始有情生。謂此世間災所壞已，二十中劫唯有虛空，過此長時次應復有等住二十，成劫便至。一切有情業增上力，空中漸有微細風生，是器世間將成前相。風漸增盛，成立如前所說風輪水金輪等，然初成立大梵王宮乃至夜摩宮。後起風輪等，是謂成立外器世間。初一有情極光淨歿，生大梵處為大梵王。後諸有情亦從彼歿，有生梵輔、有生梵眾、有生他化自在天宮。漸漸下生，乃至人趣俱盧、牛貨、勝身、贍部，後生餓鬼、傍生、地獄。法爾後壞，必最初成。若初一有情生無間獄二十中成劫應知已滿，此後復有二十中劫名成已住，次第而起，謂從風起造器世間，乃至後時有情漸住。此洲人壽經無量時，至住劫初壽方漸減。從無量減至極十年即名為初一住中劫，此後十八皆有增減，謂從十年增至八萬，復從八萬減至十年，爾乃名為第二中劫。次後十七例皆如是。於十八後，從十歲增極至八萬歲，名第二十劫。一切劫增無過八萬，一切劫減唯極十年。十八劫中一增一減，時量方等，初減後增故二十劫時量皆等。此總名為成已住劫。所餘成壞及壞已空，並無減增二十差別，然由時量與住劫同，准住各成二十中劫。成中初劫起器世間，後十九中有情漸住。壞中後劫減器世間，前十九中有情漸捨。如是所說成住壞空，各二十中積成八十，總此八十成大劫量。劫性是何？謂唯五蘊。經說三劫阿僧企耶精進修行方得成佛。於前所說四種劫中，積何劫成三劫無數？累前大劫為十百千，乃至積成三劫無數。既稱無數，何復言三？非無數言，顯不可數。《解脫經》說六十數中，阿僧企耶是其一數。云何六十？如彼經言：有一無餘數始為一，一十為十，十十為百，十百為千，十千為萬，十萬為洛叉，十洛叉為度洛叉，十度洛叉為俱胝，十俱胝為末陀，十末陀為阿庾多，十阿庾多為大阿庾多，十大阿庾多為那庾多，十那庾多為大那庾多，十大那庾多為鉢羅庾多，十鉢羅庾多為大鉢羅庾多，十大鉢羅庾多為矜羯羅，十矜羯羅為大矜羯羅，十大矜羯羅為頻跋羅，十頻跋羅為大頻跋羅，十大頻跋羅為阿芻婆，十阿芻婆為大阿芻婆，十大阿芻婆為毘婆訶，十毘婆訶為大毘婆訶，十大毘婆訶為嗢蹭伽，十嗢蹭伽為大嗢蹭伽，十大嗢蹭伽為婆喝那，十婆喝那為大婆喝那，十大婆喝那為地致婆，十地致婆為大地致婆，十大地致婆為醯都，十醯都為大醯都，十大醯都為羯臘婆，十羯臘婆為大羯臘婆，十大羯臘婆為印達羅，十印達羅為大印達羅，十大印達羅為三磨鉢耽，十三磨鉢耽為大三磨鉢耽，十大三磨鉢耽為揭底，十揭底為大揭底，十大揭底為拈筏羅闍，十拈筏羅闍為大拈筏羅闍，十大拈筏羅闍為姥達羅，十姥達羅為大姥達羅，十大姥達羅為跋藍，十跋藍為大跋藍，十大跋藍為珊若，十珊若為大珊若，十大珊若為毘步多，十毘步多為大毘步多，十大毘步多為跋邏攙，十跋邏攙為大跋邏攙，十大跋邏攙為阿僧企耶。於此數中忘失餘八，若數大劫至此數中阿僧企耶名劫無數。此劫無數復積至三，經中說為三劫無數。非諸算計，不能數知，故得說為三劫無數。何緣菩薩發願長時精進修行方期佛果？如何不許願長時修？無上菩提甚難可得，非多願行無容得成。菩薩要經三劫無數修大福德智慧資糧六波羅蜜多，多百千苦行方證無上正等菩提，是故定應發長時願。若餘方便亦得涅槃，何用為菩提久修多苦行？為欲利樂一切有情，故求菩提發長時願：云何令我具大堪能，於苦瀑流濟諸含識，故捨涅槃道求無上菩提。濟他有情於己何益？菩薩濟物遂己悲心，故以濟他即為己益。誰信菩薩有如是事？有懷潤己無大慈悲，於如是有情，此事實難信。無心潤己有大慈悲，於如是有情，此事非難信。如有久習無哀愍者，雖無益己而樂損他，世所同悉。如是菩薩久習慈悲，雖無利己而樂他益，如何不信？又如有情由數習力，於無我行不了有為，執以為我而生愛著，由此為因甘負眾苦，智者同悉。如是菩薩數習力故，捨自我愛增戀他心，由此為因甘負眾苦，如何不信？又由種姓異，有此志願起，以他苦為己苦、用他樂為己樂，不以自苦樂為己苦樂事，不見異益他而別有自益。依如是義故，有頌言：下士勤方便，恒求自身樂， 中士求滅苦，非樂苦依故， 上士恒勤求，自苦他安樂， 及他苦永滅，以他為己故。如是已辯劫量差別。",
+   "T1559": "偈曰：劫成及破壞，壞住皆平等。釋曰：二十別劫世間成，二十別劫世間壞，二十別劫壞已空住。雖於此三時無上下量劫，然此劫量皆平等，若算數平等故。此中由一別劫器世界成，由十九別劫此處成所住，由一別劫器世界被離，由十九別劫器世界空無眾生。如此別劫，有四種二十，合成八十。偈曰：八十名大劫。釋曰：若大劫其量如此。此劫以何法為自性？五陰為自性。於經中說：由劫三阿僧祇，諸佛得無上菩提果。此三阿僧祇，於四劫中為是何劫？此中所說是大劫。以此偈曰：大劫三僧祇。釋曰：由三劫阿僧祇，所求佛果方成。阿僧祇既無數邊，三數云何成？不應如此知。若爾，云何？雖然有六十數處，名一阿僧祇。於餘經中說如此。何者為六十？有第一數無第二數，是處名第一。十此第一，名第二處。十第二處名百，十百名千，十千名萬，十萬名洛沙，十洛沙名阿底洛沙，十阿底洛沙名俱胝，十俱胝名末持訶，十末持訶名阿由多，十阿由多名摩訶由多，十摩訶由多名那由多，十那由多名摩訶那由多，十摩訶那由多名波由多，十波由多名摩訶波由多，十摩訶波由多名欝僧伽，十欝僧伽名摩剡僧伽，十摩剡僧伽名婆訶那，十婆訶那名摩訶婆訶那，十摩訶婆訶那名知知婆，十知知婆名摩訶知知婆，十摩訶知知婆名醯兜，十醯兜名摩訶醯兜，十摩訶醯兜名柯羅婆，十柯羅婆名摩訶柯羅婆，十摩訶柯羅婆名因陀，十因陀名摩頭陀，十摩頭陀名婆末多，十婆末多名摩訶婆末多，十摩訶婆末多名伽知，十伽知名摩訶伽知，十摩訶伽知名絍婆，十絍婆名摩訶絍婆，十摩訶絍婆名物陀，十物陀名摩訶物陀，十摩訶物陀名婆羅，十婆羅名摩訶婆羅，十摩訶婆羅名社那，十社那名摩訶社那，十摩訶社那名毘休多，十毘休多名摩訶毘休多，十摩訶毘休多名婆洛沙，十婆洛沙名摩訶婆洛沙，十摩訶婆洛沙名阿僧祇。間中有八處忘失。如此大劫，次第數至第六十處，說名一阿僧祇。度一更如此數名第二，第三亦爾，故說三阿僧祇。非一切方便所不能數，故名阿僧祇。眾生先已發願，云何復須此最長時修行，方得無上菩提？如此事云何不應有？何以故？由大福德智慧資糧行，由六波羅蜜百萬難行道，於大劫三阿僧祇中，無上正覺果諸菩薩方得。若由別方便有解脫理，何用久修此大難行道？為他故須如此大功用。云何我等從大苦流，有能為拔濟他？由此意故久劫修行。由他利益，於己有何自利？是己自利，謂他利益，是己所樂故。君此事今何人能信？此事實難可信。若人荷負自身為重，於他無慈悲。若具智慧慈悲人，此事易信。譬如於世間有諸餘人，恒習惡過失，於中雖無自利益，欣樂他損惱事，眾所共見。如此復有餘人，恒習大悲，於中無自利益，欣樂行利益他事，是故此事可比。復次譬如世間凡夫，由長時數習故，於諸行法實非自我，不能了別諸行體相，於諸行中生起我愛，因此我愛恒荷負眾苦如此。復有餘人，於長時由數習智慧，於自相續棄捨自愛，於他增長自愛，因此愛故，為他荷負眾苦。是故應知，此義不異。復次有別性，如此種類起，由他苦故苦、由他樂故樂，不由自身故，彼不見他利益事異自利益。此中說偈：「下人求自樂，作種種方便， 中人求滅苦，非樂苦依故， 上人由自苦，樂他得安樂， 及他苦永滅，他苦自苦故。」"
+  },
+  "v094": {
+   "sa": "buddhatvam apakarṣe hi śatādyāvattadudbhavaḥ / dvayoḥ pratyekabuddhānāṃ khaḍgaḥ kalpaśatānvayaḥ // VAkK_3.94 //",
+   "sa-bhasya": "[181|04] buddhatvam [181|05] saṃkhyeyānāṃ kalpānāṃ trayeṇa / [181|05-181|06] kathamasaṃkhyeyasyāsati saṃkhyeyāvasāne punastritvamucyate / [181|06] naiadevaṃ veditavyaṃ / kiṃ tarhi / [181|06-181|07] \"ṣaṣṭiḥ sthānāntarāṇyasaṃkhyeyami\"ti muktakasūtraṃ paṭhyate / [181|07] katamāni ṣaṣṭiḥ / eko hyadvitīyaḥ prathamaṃ sthānāntaram / [181|08] ekakānāṃ daśako dvitīyam / daśa daśakāni śataṃ tṛtīyam / daśa śatāni sahasram / [181|09] daśa sahasrāṇi prabhedaḥ / daśa prabhedā lakṣam / [181|09-181|10] daśa lakṣā atilakṣaḥ / [181|10] daśātilakṣāḥ kauṭiḥ / daśa kauṭyo madhyaḥ/ daśa madhyā ayutam / [181|11] śāyutā mahāyutam / daśa mahāyutā niyutam / daśa niyutā mahāniyutam / [181|11-181|12] daśa mahāniyutāḥ prayutam / [181|12] daśa prayutā mahāprayutaḥ / daśa mahāprayutāḥ kaṅkaraḥ / [181|12-181|13] daśa kaṅkarā mahākaṅkaraḥ / [181|13] daśa mahākaṅkarā visvaraḥ / daśa visvarā mahāvisvaraḥ / [181|13-181|14] daśa mahāvisvarā akṣobhyaḥ / [181|14] daśākṣobhyā mahākṣobhyaḥ / daśa mahākṣobhyā vivāhaḥ / [181|15] daśa vivāhā mahāvivāhaḥ / daśa mahāvivāhā utsaṅgaḥ / daśotsaṅgā mahotsaṅgaḥ / [181|16] daśa mahotsaṅgā vāhanaḥ / daśa vāhanāni mahāvāhanam / [181|16-181|17] daśa mahāvāhanāni taṭibhaḥ / [181|17] daśa tiṭibhā mahātiṭibhaḥ / daśa mahātiṭibhā hetuḥ / [181|17-181|18] daśa hetavo mahāhetuḥ / [181|18] daśa mahāhetavaḥ karabhaḥ / daśa karabhā mahākarabhaḥ / [181|18-181|19] daśa mahākarabhā indraḥ / [181|19] daśendrā mahendraḥ / daśa mahendrāḥ samāptam / daśa samāptāni mahāsamāptam / [181|20] daśa mahāsamāptāni gatiḥ / daśa gatayo mahāgatiḥ / daśa mahāgatayo nimbarajaḥ / [181|20-181|21] daśa nimbarajāṃsi mahānimbarajaḥ / [181|21] daśa mahānimbarajāṃsi mudrā / daśa mudrā mahāmudrā / [181|21-181|22] daśa mahāmudrāḥ balam / [181|22] daśa balāni mahābalam / [181|22-181|23] daśa mahābalāni sajñā / [181|23] daśa saṃjñā mahāsaṃjñā / daśa mahāsaṃjñā vibhūtaḥ / daśa vibhūtā mahāvibhūtaḥ / [181|23-181|24] daśa mahāvibhūtā balākṣam / [181|24] daśa balākṣā mahābalākṣam / daśa mahābalākṣāṇyasamkhyam / [181|25] aṣṭakaṃ madhyādvistṛtam / [181|25-182|01] ityeteṣāṃ ṣaṣṭisthānāntaragatāṃ saṃkhyāmanuprāptāḥ kalpā asaṃkhyeyānityucyante / [182|01] tato vyāvṛtya punargaṇyante / [182|01-182|02] evaṃ trīṇi asaṃkhyeyānītyucyante / [182|02] na tu naiva parisaṃkhyātuṃ śakyanta iti / [182|03] kintu khalu kālaprakarṣeṇaiva kṛtapraṇidhānā bodhisattvā bodhimabhisaṃbudhyante / [182|04] kimetadeva bhaviṣyati / [182|04-182|05] mahatāṃ hi puṇyajñānasaṃbhāreṇa ṣaḍbhiḥ pāramitābhiḥ bahubhirduṣkaraśatasahasraistribhiḥ kalpāsaṃkhyeyairanuttarāṃ samyaksaṃbodhimabhisaṃbudhyante bodhisattvāḥ / [182|06] yadyapyanyathā'pyasti mokṣāvakāśaḥ kimarthaṃ ta iyantaṃ yatnamārabhante / [182|06-182|07] parārthaṃ ta iyantaṃ yatnamārabhante kathaṃ parānapi mahato duḥkhaughāt paritrātuṃ śaknuyāmiti / [182|07-182|08] ka eṣāṃ parārthena svārthaḥ / [182|08] eṣa eva teṣāṃ svārtho yaḥ parārthastasyābhimatatvāt / [182|08-182|09] idānīmetacchrāddhāsyate / [182|09] satyaṃ duḥśraddhānametadātmaṃbharibhirniṣkaruṇaiḥ / [182|09-182|11] kāruṇikaistu śraddhitamevaitat yathā ceha kecidabhyastanairdhṛṇyā asatyapi svārthe paravyasanābhiratā upalabhyante / [182|11-182|12] tathā punarabhyastakāruṇyā asatyapi svārthe parahitakriyābhirāmāḥ santīti saṃbhāvyam / [182|12-182|15] yathaiva cābhyāsavaśādanātmabhūteṣu saṃskāreṣu saṃskṛtalakṣaṇānabhijñā ātmasnehaṃ niveśya taddhetorduḥkhānyudvahanti evaṃ punarabhyāsavaśādātmasnehaṃ tebhyo nirvartya pareṣvapekṣāṃ vardhayitvā taddhetorduḥkhānyudvahantīti saṃbhāvyam / [182|15-182|16] gotrāntarameva hi tattathājātīyaṃ nirvartate yat pareṣāṃ duḥkhena duḥkhāyate sukhena sukhāyate nātmana iti / [182|16] na te punaḥ svārthamanyaṃ paśyanti / āha cātra [182|17-182|20] \"hīnaḥ prārthayate svasaṃtatigataṃ yaistairūpāyaḥ sukhaṃ madhyo duḥkhanivṛttimeva na sukhaṃ duḥkhāspadaṃ tadyataḥ / śreṣṭhaḥ prārthayate svasaṃtatigatairduḥkhaiḥ pareṣāṃ sukhaṃ duḥkhātyantanivṛttimeva ca yatastadduḥkhaduḥkhyeva saḥ //\" [182|21] kiṃ punarutkarṣā buddhā utpayante āhosvidapakarṣāḥ / [182|22] apakarṣe hi śatādyāvattadudbhavaḥ / [182|23-182|24] aśītivarṣaśatāyupi prajāyāmapakarṣe ārabdhe yāvadvarṣaśatāyuṣo manuṣyā bhavantyetasminnantare buddhā utpadyante / [182|24] kasmānnotkarṣakāle / tadā hi duḥsamudvejāḥ sattvā bhavanti / [183|01] kasmānna śatāt / [183|01-183|02] tadā hi pañca kaṣāyā abhyutsadā bhavanti / [183|02-183|03] tadyathā'yuṣkaṣāyaḥ kalpakaṣāyaḥ kleśakaṣāyaḥ dṛṣṭikaṣāyaḥ sattvakaṣāyaśca / [183|03] apakarṣasyādhastāt pratyavarā āyurādayaḥ kiṭabhūtatvāt kaṣāyā ucyante / [183|04] dvābhyāṃ hi jīvitopakaraṇavipattī yathākramam / dvābhyāṃ kuśalapakṣavīpattiḥ / [183|04-183|05] kāmasukhallikā'tmaklamathānuyogādhikārāt gṛhipravrajitapakṣayorvā / [183|05-183|06] ekenātmabhāvavīpattiḥ / [183|06] pramāṇarūpārogyabalavṛddhismṛtivīryadhairyabhraṃsāt / [183|07] atha pratyekabuddhānāṃ kasmin kāle utpādaḥ / [183|08] dvayoḥ pratyekabuddhānāṃ / [183|09] utkarṣe'yapakarṣe'pi / dvividhā hi pratyekabuddhā vargacāriṇaḥ khaḍgaviṣāṇakalpāśca / [183|10] tatra vargacāriṇaḥ śrāvakapūrviṇaḥ pratyekajinā ucyante / [183|10-183|11] pṛthagjanapūrviṇo'pi santītyapare / [183|11] ye'nyatrotpāditanirvedhabhāgīyā iha svayaṃ mārgamabhisaṃbudhyante / [183|11-183|14] tathāhi pūrvayogaṃ paṭhanti \"parvate kila pañcaśatāni tāpasānāṃ kaṣṭāni tapāṃsi tapyante sma yāvat pratyekabuddhasahoṣitena markaṭenāgamya tadīryāpathasaṃdarśanāt pratyekabodhimabhisaṃbanddhā\" iti / [183|14] nacāryāḥ santaḥ kaṣṭāni tapāṃsi tapyeran / [183|14-183|15] khaḍgaviṣāṇakalpāḥ punarekavihāriṇaḥ / [183|15] teṣāṃ pratyekabuddhānāṃ [183|16] khaḍgaḥ kalpaśatānvayaḥ // VAkK_3.94 // [183|17-183|18] mahākalpānāṃ śataṃ bodhisaṃbhāreṣu caritaḥ khaḍgaṃ viṣāṇakalpo bhavati / [183|18] vinopadeśenātmānamekaṃ pratibudhā iti pratyekabuddhāḥ / [183|18-183|19] te hyekamātmānaṃ damayanti nānyān / [183|19] kiṃ punaratra kāraṇam / [183|19-183|20] nahi tāvadaśaktā dharmaṃ deśayituṃ pratisaṃvitprāptatvāt / [183|20] śakyaṃ ca taiḥ pūrvabuddhānāṃ śāsanamanusmṛtyāpi dharmaṃ deśayitum / [183|21] nāpi niṣkaruṇāḥ / sattvānugrahārthamṛddherāviṣkaraṇāt / [183|21-183|22] nāpi sattvānāmabhavyatvāt / [183|22] tathā hi laukikamārga vītarāgāḥ saṃvidyante / kiṃ tarhi / [183|22-183|23] pūrvābhyāsavaśenālpotsukatā'dhimuktatvāt notsahante gambhīradharmagrahaṇāya pareṣāṃ vyāpartum / [183|24] anusroto gāminīnāṃ hi prajānāṃ duṣkaraṃ pratisroto nayanam / [183|24-183|25] gaṇaparikarṣaṇaprasaṅgaparihārārthaṃ ca vyākṣepasaṃsargabhīrutvāt / [184|01] atha cakravarttinaḥ kadotpadyante /",
+   "T1560": "減八萬至百，諸佛現世間， 獨覺增減時，麟角喻百劫，",
+   "T1558": "諸佛獨覺出現世間，為劫增時、為劫減位？頌曰：減八萬至百，諸佛現世間， 獨覺增減時，麟角喻百劫。論曰：從此洲人壽八萬歲，漸減乃至壽極百年，於此中間諸佛出現。何緣增位無佛出耶？有情樂增難教厭故。何緣減百無佛出耶？五濁極增難可化故。言五濁者：一壽濁、二劫濁、三煩惱濁、四見濁、五有情濁。劫減將末，壽等鄙下如滓穢故，說名為濁。由前二濁，如其次第，壽命資具極被衰損。由次二濁，善品衰損，以耽欲樂自苦行故，或損在家出家善故。由後一濁衰損自身，謂壞自身身量色力念智勤勇及無病故。獨覺出現通劫增減。然諸獨覺有二種殊：一者部行、二麟角喻。部行獨覺先是聲聞，得勝果時轉名獨勝。有餘說彼先是異生，曾修聲聞順決擇分，今自證道得獨勝名。由本事中說：一山處總有五百苦行外仙。有一獼猴曾與獨覺相近而住，見彼威儀，展轉遊行至外仙所，現先所見獨覺威儀。諸仙覩之咸生敬慕，須臾皆證獨覺菩提。若先是聖人，不應修苦行，麟角喻者謂必獨居。二獨覺中麟角喻者，要百大劫修菩提資糧，然後方成麟角喻獨覺。言獨覺者，謂現身中離稟至教唯自悟道，以能自調不調他故。何緣獨覺言不調他？非彼無能演說正法，以彼亦得無礙解故，又能憶念過去所聞諸佛所宣聖教理故。又不可說彼無慈悲，為攝有情現神通故。又不可說無受法機，爾時有情亦有能起世間離欲對治道故。雖有此理，由彼宿習少欣樂勝解無說希望故。又知有情難受深法，以順流既久難令逆流故。又避攝眾故，不為他宣說正法，怖諠雜故。輪王出世為在何時？",
+   "T1559": "為於劫上時諸佛出世、為於劫下時諸佛出世？偈曰：成佛於劫下，減八萬至百。釋曰：世間人壽八萬歲時，壽減正發，乃至人壽百歲，於此中間諸佛世尊出現於世。云何不於劫上時出？於此時中眾生難教厭離故。云何不於百下時出？於此時中五濁熾盛。何者為五濁？一命濁、二劫濁、三惑濁、四見濁、五眾生濁。下劫將末，命等五最麁最下已成滓故，說名為濁。由前二濁，次第損減壽命及損減樂具。復由二濁損減助善。何以故？因此二濁，有諸眾生多修習欲塵樂行及自苦行，能損在家出家助善。由後一濁，損減自身身量，色無病力智念正勤不動此德壞故。獨覺於何時出世？偈曰：上下時獨覺。釋曰：獨覺於上劫及下劫時皆得出世。何以故？獨覺有二種：一部行、二犀角喻。此中部行者，先是聲聞或名獨勝。有餘師說：有先是凡夫，後成部行獨覺。若此人於前世已修決擇分能善根，今生自然覺悟聖道。云何得知？於《本行經》中說：有一山處，有五百外仙，修難行苦行。乃至有一獼猴，與獨覺共住。後至外仙所，現獨覺威儀莊飾，五百外仙皆成獨覺。若先是聖人，不得修難行苦行。犀角喻者，謂獨自住。二種獨覺中，偈曰：犀角喻百劫。釋曰：足一百大劫，修行菩提資糧，方成犀角喻獨覺。云何名獨覺？離師正教，於一自身如理覺悟，故名獨覺。何以故？諸獨覺但調伏一身，不調伏他故。云何名犀角喻？於人天道最勝品中，貞實無等故。何因不覺悟他？諸獨覺非無能為他說法，具得四無礙解故。彼亦有能，能憶持往昔諸佛所說正教，及為他說故。彼亦非無慈悲，為利益他，恒現通慧故。不由眾生，不感聖果，故不為說。何以故？是時亦有修世道離欲諸仙，雖然亦由宿世數習故，由喜樂少求故，是故不能說正教令他受甚深法。何以故？隨愛流行世間，難可引濟令其逆流故、為離雜行攝部眾故、怖畏散亂雜談說故。"
+  },
+  "v095": {
+   "sa": "cakravartisamutpattirnādho 'śītisahasrakāt / suvarṇarūpyatāmrāyaścakriṇaḥ te 'dharakramāt // VAkK_3.95 //",
+   "sa-bhasya": "[184|02] cakravartisamutpattirnādho'śītisahasrakāt / [184|03] amite cāyuṣi manuṣyāṇāṃ yāvadaśītisahasrake cotpattiścakravarttināṃ nādhaḥ / [184|03-184|04] tasyāḥ sasyasaṃpadastadūnāyuṣāmabhājanatvāt / [184|04-184|05] rājyaṃ cakreṇa vartayituṃ śīlameṣāmiti cakravarttinaḥ / [184|05] te punaścaturvidhāḥ / [184|06] suvarṇarūpyatāmrāyaścakriṇaḥ [184|07] suvarṇarūpyatāmrāyaścakrkāṇi yeṣāṃ santi / [184|07-184|08] prathama eṣāmuttamo dvitīya upottamaḥ tṛtīyo madhyamaścaturtho 'dhamaḥ / [184|09] te 'dharakramāt // VAkK_3.95 //",
+   "T1560": "輪王八萬上，金銀銅鐵輪，",
+   "T1558": "幾種幾俱何威何相？頌曰：輪王八萬上，金銀銅鐵輪，",
+   "T1559": "復次轉輪王於二時中何時出世？偈曰：減八萬歲時，無轉輪王生。釋曰：人壽無量時乃至壽八萬歲，轉輪王生於世間，不減八萬時。何以故？若人壽減八萬，是人非此吉祥富樂器故。由輪成王位為法故，名轉輪王。此王有四種。偈曰：金銀銅鐵輪。釋曰：若人以金為輪，此人是上上品，以銀為輪是上品，以銅為輪是中品，以鐵為輪是下品。"
+  },
+  "v096": {
+   "sa": "ekadvitricaturdvīpāḥ na ca dvau saha buddhavat / pratyudyānasvayaṃyāna kalahāstrajitaḥ avadhāḥ // VAkK_3.96 //",
+   "sa-bhasya": "[184|10] ekadvitricaturdvīpāḥ [184|11] yasyāyasaṃ cakraṃ sa ekadvīpādhipatiḥ / yasya tāmramayaṃ sa dvayoḥ / [184|11-184|12] yasya rūpyamayaṃ sa trayāṇām / [184|12] yasya suvarṇmayaṃ sa caturdvīpādhipatiḥ / eṣa prājñaptiko nirdeśaḥ / [184|13] sūtre tu pradhānagrahaṇādekameva sauvarṇaṃ cakram / [184|13-184|16] \"yasya rājñaḥ kṣatriyasya mūrdhābhiṣiktasya tadaīva poṣadhe pañcadaśyāṃ śiraḥsnātasyopoṣadho poṣitasyopariprāsādatalagatasyāmātyagaṇaparivṛtasya pūrvasyāṃ diśi cakraratnaṃ prādurbhavati sahasrāraṃ sanābhikaṃ sanemikaṃ sarvākāraparipūrṇaṃ śubhakarmārakṛtaṃ divyaṃ sarvasauvarṇaṃ sa rājā bhavati cakravartī\"ti / [184|17] evaṃ caite cakravartina utpadyante / [184|18] na ca dvau saha buddhavat / [184|19-184|20] sūtra ukta\" masthānamanavakāśo yadapūrvācaramau dvau tathāgatāvarhantau samyaksaṃbuddhau loka utpadyeyātāṃ nedaṃ sthānaṃ vidyate sthānametadvidyate yadaikastathāgataḥ / [184|20-184|21] yathā tathāgata evaṃ cakravarttināvi\"ti / [184|21] idamatra saṃpradhāryam / [184|21-184|22] kimatra trisāhasramahāsāhasro lokadhāturloka iṣṭa utāho sarvalokadhātava iti / [184|22-184|23] nānyatra buddhā utpadyante ityeke / [184|23] kiṃ kāraṇam / [184|23-184|24] mā bhūt bhagavataḥ śaktivyāghātaḥ iti / [184|24] eka eva hi bhagavān sarvatra śaktaḥ / [184|24-184|25] yatra buddha eko na śaktaḥ syād vineyān vinetuṃ tatrā'nyo'pi na śakta iti / [184|25-184|27] uktaṃ ca sūtre \"sa cettvāṃ śāriputra kaścidupasaṃkramyaivaṃ pṛcchet asti kaścidetarhi śramaṇo vā brāhmaṇo vā samasamaḥ śramaṇena gotamena yadutābhisaṃbodhāya / [184|27-184|28] evaṃ ca pṛṣṭaḥ kiṃ vyākuryāḥ / [184|28-185|01] sa cenmāṃ bhadanta kaścidupasaṃkramyevaṃ pṛcchettasyāhaṃ pṛṣṭa evaṃ vyākuryā nāsti kaścidetarhhi śṛamaṇo vā brāhmaṇo vā samasamo bhagavatā yadutābhisaṃbodhāya / [185|01] tatkasya hetoḥ / [185|01-185|03] saṃmukhaṃ me bhagavato'ntikācchrutaṃ saṃmukhamudgṛhītaṃ asthānamanavakāso yadapūrvācaramau tathāgatau loka utpadyeyātāṃ nedaṃ sthānaṃ vidyata\" iti / [185|03-185|04] yattarhi bhagavatoktaṃ brahmasūtre \"yāvattrisāhasramahāsāhasrako loko vaśe me'tra vartata\" iti / [185|04] ābhiprāyika eṣa nirdeśaḥ / [185|04-185|05] ko'trābhiprāyaḥ tāvato'nabhisaṃskāreṇa vyavalokanāt / [185|05-185|06] abhisaṃskārena tvananto buddhānāṃ cakṣurviṣayaḥ / [185|06] santyevānyalokadhātuṣu buddhā iti nikāyāntarīyāḥ / kiṃ kāraṇam / [185|07] bahavo hi samaṃ saṃbhāreṣu pravartamānā dṛśyante / [185|07-185|09] na caikatra bahūnāṃ buddhānāṃ yugapat yoga utpattuṃ na cāsti tadut pattau kakścit pratibandhaḥ iti niyataṃ lokadhātvantareṣūtpadyante / [185|09-185|10] anantā lokadhātava iti na śakyaṃ bhagavatā kalpamapyāyurvirbhratā yitheha tathā'nyeṣvapi ananteṣu lokadhātuṣu vyāpartuṃ kiṃ punaḥ puruṣāyuṣam / [185|10-185|11] kathaṃ ceha buddho vyāpriyate / [185|11-185|13] asya pudgalasyedamindriyam iyatā kālelāmuṣmin deśe amuṃ pudgalamāgamyāsya doṣasya parihārādasyāṅgasyopasaṃhārādanena prayogeṇānutpannaṃ votpatsyate aparipūrṇaṃ vā paripūrayiṣyatīti / [185|13-185|15] yattvidaṃ sūtramatropanīta \"masthānamanavakāśo yadpūrvācaramau dvī tathāgatāvekatra loka utpadyeyātāmi\"ti tadevedaṃ saṃpradhāryate kimidamekaṃ lokadhātumadhikṛtyoktamāhosvit sarvāniti / [185|15-185|16] cakravartino'pi cāsya lokaddhātau na syādutpādaḥ / [185|16] sahotpattipratiṣedhāt buddhavat / [185|16-185|17] athaitat kṣamyate idaṃ tu kasmānna kṣamyate \"puṇyastu buddhānāṃ loka utpāda\" iti / [185|17-185|18] yadi bahūnāṃ bahuṣu syānna doṣaḥ syāt / [185|18] bhūyasāṃ lokānāmabhyudayena yogaḥ syānniḥśreyasena ca / [185|18-185|19] athaiṅkasminnapi kasmāt dvau tathāgatau na sahotpadyete / [185|19] prayojanābhāvāt praṇidhānavaśācca / [185|19-185|21] evaṃ hi bodhisattvāḥ praṇidhānaṃ kurvanti aho vatāhamandhe loke 'pariṇāyake buddho loka utpadyeyamanāthānāṃ nātha iti / [185|21] ādarābhitvarārthaṃ ca / [185|22-185|23] ekasminhi buddhe sutarāmādriyante durlabha īdṛśo'nya iti manyamānāḥ sutarāṃ cābhitvarante śāsanapratipattau mā'smin gate parinirvṛte vā 'nāthā bhūmeti / [185|24] athaite cakravartinaḥ suvarṇādimayaiścakraiḥ pṛthivīṃ jayantaḥ kathaṃ jayanti / yathākramaṃ [185|25] pratyudyānasvayaṃyāna kalahāstrajitaḥ [185|26] yasya sauvarṇa cakraṃ bhavati taṃ koṭarājānaḥ svayaṃ pratyudgacchanti / [185|26-186|01] ime devasya janapadāḥ ṛddhāśca sphītāśca kṣemāśca subhikṣāścākīrṇabahujanamanuṣyāśca / [186|01-186|02] tān devaḥ samanuśāstu / [186|02] vayaṃ devasyānuyātrikā bhaviṣyāma iti / [186|02-186|03] yasya rūpyamayaṃ sa svayameva teṣāmantikaṃ yāti paścādasya prahvībhavanti / [186|03-186|04] yasya tāmramayaṃ sa teṣāmantikaṃ gatvā kalahāyate paścāt prahvībhavanti / [186|04-186|05] yasya śastramayaṃ sa teṣāmantikaṃ gacchati anyonyaṃ śastrāṇyāvahanti paścānnamanti / [186|05] sarve tu cakravartinaḥ [186|06] avadhāḥ // VAkK_3.96 // [186|07-186|08] śastreṇāpi jayatāṃ badho na pravartate nirjitya ca sattvān daśasu kuśaleṣu karmapatheṣu pratiṣṭhāpayanti / [186|08] ata eva te niyataṃ deveṣūtpadyante / [186|08-186|09] sūtra uktaṃ \"rājñaścakravartino loke prādurbhāvātsaptānāṃ ratnānāṃ loke prādurbhāvo bhavati / [186|10-186|11] tadyathā cakraratnasya hastiratnasyāśvaratnasya maṇiratnasya strīratnasya gṛhapatiratnasya pariṇāyakaratnasye\"ti / [186|11] kathaṃ sattvasaṃkhyātā hastyādayaḥ parakīyeṇa karmaṇotpadyante / [186|12] na vai kaścit parakīyeṇotpadyate / [186|12-186|13] yena tu sattvena tatsaṃbandha saṃvartanīyaṃ karmopacitaṃ tasminnutpanne svānyevainaṃ karmāṇyutpādayanti / [186|13-186|14] kimeṣa evānyarājabhyaścakravartināṃ viśeṣaḥ / [186|14] anyo'pi viśeṣo'sti / [186|14-186|15] tadyathā dvātriṃśanmahāpuruṣalakṣaṇānyeṣāṃ bhavanti tadyathā buddhānām / [186|15] tatra tu",
+   "T1560": "一二三四洲，逆次獨如佛。 他迎自往伏，諍陣勝無害，",
+   "T1558": "一二三四洲，逆次獨如佛。 他迎自往伏，諍陣勝無害，",
+   "T1559": "偈曰：四隨下次第，一二三四洲。釋曰：若人以鐵為輪，此人為一洲王，以銅為輪為二洲王，以銀為輪為三洲王，以金為輪為四洲王。分別世中說如此。於經中由偏顯勝故，但說金輪。經言：若王生剎帝利種，已受灌頂位，於布薩時白半十五日，王從頭次第洗竟持八戒，布薩昇上高樓，大臣等集皆悉圍繞，於東方有輪寶出現，千輻具足有轂有輞，一切莊嚴無不圓備，如善巧工匠所作，一切皆金，來至王所。應知此王必是轉輪王。若餘轉輪王生亦爾。偈曰：非二俱如佛。釋曰：於經中說無處無位，謂無前無後二如來、阿羅呵、三若三佛陀出現世間。有處有位，若一如來、二如來，二轉輪王亦爾。此中是義應思：是所許處，為約大三千世界、為約一切世界？餘部說：諸佛世尊但一處出，餘處則無。何以故？勿許諸佛世尊功能有闕，是一世尊於一切處具有能故。若於一處一佛，不能荷負一切受化弟子，餘佛於中亦無有能。於經中說云：舍利弗！若有一人來至汝所，問汝言：大德！於今時為有沙門婆羅門與瞿曇沙門平等平等於無上菩提不？汝若被問，當云何答？世尊！若有一人來至我所作如此問，我若被問，應如此答：於今時無有沙門婆羅門與我世尊平等平等於無上菩提。何以故？世尊！我從世尊吉祥口證聞此言、證持此言：無處無位，謂無前無後二如來、阿羅訶、三若三佛陀出現世間。有處有位，若一。若爾，佛世尊於《梵王經》說，此義云何。經言：梵王！於三千大千世界中，我自在成此言，是不了說義。說何義不了？若如來約自性心，不作別故意，正說利益他等，於此境界皆自然成。若如來作別故意境界，則隨意無邊。有別部說：於餘世界各有諸佛如來。何以故？見多人共俱修菩提資糧。有多佛世尊於一處一時出現，無如此理。若出現餘處，則無有礙。是故必於餘世界等成正覺。若爾，此義中前所引經云：無處無時，謂無前無後，二如來出現於世。此義今云何將此義？今應思量：此經為約一世界說、為約一切世界說？若約一切世界說，轉輪王不應出餘世界，由遮俱生故，譬如如來。若汝忍如此，此義云何不忍？諸佛出現世，是大吉祥福。若多佛出多世界，無有過失，於世間無量眾生，得與大福德己利相應。若爾，於一佛田，云何二如來不俱出世？無用故、隨本願故，故諸菩薩發如此願：於盲世間，無將導、無救、無依，願我於中成佛，為眼及依，為令敬恭及疾行故。何以故？若一佛則生他極重恭敬。又令他思惟如此：餘佛最難可得。是故如所立教速疾修行，勿大師去已及般涅槃，我等無依止。復次是四種轉輪王，由金輪等制伏天下。云何能制伏次第？偈曰：他迎、自往彼、爭伏勝。釋曰：若王得金輪為具，剡浮洲諸國王各自來迎候，各云：我等國土，富樂平安豐壤，遍多人眾，皆屬天尊，願天尊教勅，我等皆是天尊翼從。若王得銀輪為具，王自往彼土，諸王皆下心歸伏。若王得銅輪為具，王往近彼土，遣使去還與共討爭，然後諸王方下心歸伏。若王得鐵輪為具，王自往彼土，擐甲捉仗示攻伐相，然後諸王方下心歸伏。一切轉輪王，偈曰：無害。釋曰：若捉仗制伏他土尚無殺害，何況餘王。伏天下已，一切眾生住王國土，王悉教令受持十善法，是故諸王死定生天。經中說：由轉輪聖王出現於世，世間則有七寶現生。何者為七？一輪寶、二象寶、三馬寶、四摩尼寶、五女寶、六長者寶、七大臣寶。象等諸寶是眾生類，云何由他業生？若無一眾生由他業生，此人先共造諸業，能感互相應報。此人若受生，餘眾生由自宿業生，與此人相應。此轉輪王與餘王，為唯七寶有差別、為更有餘差別？有餘差別，謂此四轉輪王有三十二大人相，餘王則無，譬如諸佛。若爾，王與佛何異？"
+  },
+  "v097": {
+   "sa": "deśasthottaptapūrṇatvairlakṣaṇātiśayo muneḥ / prāgāsan rūpivat sattvāḥ rasarāgāttataḥ śanaiḥ // VAkK_3.97 //",
+   "sa-bhasya": "[186|16] deśasthottaptapūrṇatvairlakṣaṇātiśayo muneḥ / [186|17] deśasthatarāṇi buddhānāṃ lakṣaṇāni / [186|17-186|18] uttaptatarāṇi saṃpūrṇatarāṇi cetyeṣa teṣāṃ viśeṣaḥ / [186|19] kiṃ khalu prāthamakalpikā api manuṣyāḥ sarājakā āsan / netyāha / [186|20] kiṃ tarhi / [186|21] prāgāsannupivat sattvāḥ [186|22] prathamakalpikā manuṣyā rūpāvacarā ivāsan / [186|22-186|24] sūtra uktaṃ \"te bhavanti rūpiṇo manomayāḥ sarvāṅgapratyaṅgopetā āvikalā ahīnendriyāḥ śubhā varṇasthāyinaḥ svayaṃ prabhā vihāyasaṃgamāḥ prītibhakṣaḥ prītyāhārā dīrghāyuṣo dīrghamadhvānaṃ tiṣṭhantī\"ti / [186|25] rasarāgāttataḥ śanaiḥ // VAkK_3.97 //",
+   "T1560": "相不正圓明，故與佛非等。 劫初如色天，後漸增貪味，",
+   "T1558": "相不正圓明，故與佛非等。論曰：從此洲人壽無量歲乃至八萬歲，有轉輪王生。減八萬時，有情富樂壽量損減、眾惡漸盛，非大人器，故無輪王。此王由輪旋轉應導威伏一切，名轉輪王。《施設足》中說有四種，金、銀、銅、鐵輪應別故。如其次第勝、上、中、下，逆次能王領一二三四洲，謂鐵輪王王一洲界，銅輪王二，銀輪王三，若金輪王王四洲界。契經就勝但說金輪，故契經言：若王生在剎帝利種紹灑頂位，於十五日受齋戒時，沐浴首身受勝齋戒，昇高臺殿臣僚輔翼，東方忽有金輪寶現。其輪千輻具足轂輞，眾相圓淨如巧匠成，舒妙光明來應王所。此王定是轉金輪王。轉餘輪王應知亦爾。輪王如佛，無二俱生，故契經言：無處無位非前非後有二如來、應、正等覺出現於世，有處有位唯一如來。如說如來，輪王亦爾。應審思擇，此唯一言，為據一三千、為約一切界？有說：餘界定無佛生。所以者何？勿薄伽梵功能有礙，唯一世尊普於十方能教化故。若有一處一佛於中無教化能，餘亦應爾。又世尊告舍利子言：設復有人來至汝所，問言：頗有梵志沙門，正於今時與喬答摩氏平等平等得無上覺耶？汝得彼問當云何答？時舍利子白世尊言：我得彼問當如是答：今時無有梵志沙門得無上菩提與我世尊等。所以然者，我從世尊親聞親持，無處無位非前非後有二如來應正等覺出現於世，有處有位唯一如來。若爾，何緣《梵王經》說：我今於此三千大千諸世界中得自在轉？彼有密意。密意者何？謂若世尊不起加行，唯能觀此三千大千；若時世尊發起加行，無邊世界皆佛眼境。天耳通等例此應知。有餘部師說：餘世界亦別有佛出現世間。所以者何？有多菩薩現俱修習菩提資糧，一界一時可無多佛，多界多佛何理能遮？故無邊界中有無邊佛現。若唯一佛，設住一劫時，尚不遍為一世界佛事，況同人壽能益無邊。然諸有情居無邊界，時處根性差別無邊，佛應遍觀此有情類。如是時處應見世尊，佛便應機現通說法，令其過失未生不生，諸有已生能令斷滅，令其功德未生得生，諸有已生能令圓滿。如何一佛此事頓成？是故同時定有多佛。然彼所引，無處無位非前非後有二如來出於世等。應共思擇，此言為說一界多界？若說多界，則轉輪王餘世界中亦應非有，以說如佛遮俱生故。若許輪王餘界別有，如何不許別界佛耶？佛出世間具吉祥福，多界多佛何過而遮？謂多界中諸佛俱現，便能饒益無量有情，令得增上生及決定勝道。若爾，何故一世界中無二如來俱時出現？以無用故。謂一界中一佛，足能饒益一切。又願力故，謂諸如來為菩薩時先發誓願：願我當在無救無依盲闇界中成等正覺，利益安樂一切有情，為救為依為眼為導。又令敬重故，謂一界中唯有一如來便深敬重。又令速行故，謂令如是知一切智尊甚為難遇，彼所立教應速修行，勿般涅槃或往餘處，便令我等無救無依。故一界中無二佛現。如是所說四種輪王，威定諸方亦有差別。謂金輪者，諸小國王各自來迎作如是請：我等國土寬廣豐饒，安隱富樂多諸人眾。唯願天尊親垂教勅，我等皆是天尊翼從。若銀輪王自往彼土，威嚴近至彼方臣伏。若銅輪王至彼國已，宣威競德彼方推勝。若鐵輪王亦至彼國，現威列陣剋勝便止。一切輪王皆無傷害，令伏得勝已，各安其所居，勸化令修十善業道，故輪王死定得生天。經說輪王出現於世，便有七寶出現世間。其七者何？一者輪寶、二者象寶、三者馬寶、四者珠寶、五者女寶、六者主藏臣寶、七者主兵臣寶。象等五寶有情數攝，如何他業生他有情，非他有情從他業起？然由先造互相屬業，於中若一稟自業生，餘亦俱時乘自業起。如是所說諸轉輪王，非唯有七寶與餘王別，亦有三十二大士相殊。若爾，輪王與佛何異？佛大士相處正明圓，王相不然，故有差別。劫初人眾為有王無？頌曰：劫初如色天，後漸增貪味，",
+   "T1559": "於中偈曰：處正明了圓，佛相餘無等。釋曰：佛三十二相有三德，與王相不同。三德者，一處極正不偏、二極明了不隱昧、三極圓滿無減缺。劫初諸人，為有王、為無王？無王。雖然，偈曰：初生如色界。釋曰：劫初生人，如色界眾生，各自在住。經中說：劫初生人，有色意生，具身身分，具根無減，色形可愛，自然光明，能飛行空中，喜樂為食，依喜樂於久長時住。偈曰：眾生漸貪味，"
+  },
+  "v098": {
+   "sa": "ālasyātsaṃnidhiṃ kṛtvā sāgrahaiḥ kṣetrapo bhṛtaḥ / tataḥ karmapathādhikyādapahrāse daśāyuṣaḥ // VAkK_3.98 //",
+   "sa-bhasya": "[186|26] ālasyātsamnidhim kṛtvā sāgrahaiḥ kṣetrapo bhṛtaḥ / [186|27] teṣāṃ tathābhūtānāṃ bhūmirasaḥ prādurbhūto madhusvādurasaḥ / [186|27-187|01] tasyānyatamo lolupajātīyaḥ sattvo gandhaṃ ghrātvā rasaṃ svāditavān bhakṣitavāṃśca / [187|01-187|02] tathā'nye'pi sattvāstathaivākārṣuḥ / [187|02] sa ārambhaḥ kavaḍīkārāhārasya / [187|02-187|03] teṣāṃ tadāhārābhyāsāt kharatvaṃ gurutvaṃ ca kāye'vakrāntaṃ prabhāvā antarhitāḥ / [187|03-187|04] tato'ndhakāra utpanne sūryācandramasau prādurbhūtau / [187|04-187|05] so'pyeṣāṃ bhūmirasa āsvādagṛddhānāṃ krameṇāntarhito bhūmiparpaṭakaṃ prādurbhūtam / [187|05] tatrāpi gṛddhāstadapyantarhitam / vanalatā prādurbhūtā / [187|05-187|06] tatrāpi gṛddhāḥ sā'pyantarhitā / [187|06] akṛṣṭoptaḥ śālirutpannastaṃ prabhuktāḥ / [187|06-187|08] tasyedānīmaudārikatvānniḥsyandanirvāhārthaṃ sattvānāṃ mūtrapurīṣamārgau saha strīpuruṣendriyābhyāṃ prādurbhūtau saṃsthānaṃ ca bhinnam / [187|08-187|09] teṣāmanyonyaṃ paśyatāṃ pūrvābhyāsavaśādayoniśomanaskāragrāhagrāsatāṃ gatānāṃ kāmarāga udīrṇo yato vipratipannāḥ / [187|09-187|10] eṣa ārambhaḥ kāmināṃ kāmabhūtagrahāveśasya / [187|10-187|11] te ca khalu taṃ śāliṃ sāyaṃ ca sāyamāśārthaṃ prātaśca prātarāśārthaṃ praveśayanti sma / [187|11] athānyatamaḥ sattvo'lasajātīyaḥ saṃnidhikāramakārṣīt / [187|12] anye'pi ca sattvāḥ saṃnidhikāramakārṣuḥ / [187|12-187|13] teṣāṃ tatra mamakāra utpanne sa śālirlūno lūno na punarjāyate sma / [187|13-187|14] tataḥ kṣetrāṇi pravibhajya sveṣvāgrahaṃ kṛtvā parakīyaṃ hartumārabdhāḥ / [187|14] prathama ārambhaścauryasya / [187|14-187|15] taisteṣāmaṅkuśārthaṃ sametyānyatamaḥ puruṣaviśeṣaḥ kṣetrāṇi pālayituṃ ṣaṣṭhabhāgena bhṛtaḥ / [187|15-187|16] tasya kṣetrāṇāmadhipatiḥ kṣatriyaḥ kṣatriya iti saṃjñotpannā / [187|16-187|17] mahājanakāyasya saṃmataḥ prajāṃ ca rañjayatīti mahāsaṃmato rājeti samjñotpannā / [187|17] eṣa ārambho rājaparaṃparāyāḥ / [187|17-187|18] tatra ye gṛhebhyo vahirmanasaḥ saṃvṛttāsteṣāṃ brāhmaṇā iti saṃjñotpannā / [187|18-187|19] athānyatamasya rājño lobhāt samvibhāgamakurvantaḥ sattvānāṃ tāskaryaṃ prācuryamāpannaṃ sa tān śastreṇopasaṃkramate sma / [187|20] tato'nye naivaṅkārakāḥ sma iti mṛṣā vācaṃ vaktumārabdhāḥ iti [187|21] tataḥ karmapathādhikyādapahrāse daśāyuṣaḥ // VAkK_3.98 // [187|22-187|23] tata evaṃ karmapathānāṃ vṛddhau satyāṃ krameṇa hrasatāṃ manusyāṇāṃ daśavarṣāyuṣo manuṣyāḥ saṃbhavanti / [187|23] ato'sya kṛtsnasyānarthaughasya dvau dharmau mūlayoniḥ rasarāga ālasyaṃ ca /",
+   "T1560": "由惰貯賊起，為防雇守田。 業道增壽減，至十三災現，",
+   "T1558": "由墮貯賊起，為防雇守田。論曰：劫初時人皆如色界，故契經說：劫初時人有色意成，支體圓滿諸根無缺，形色端嚴身帶光明，騰空自在飲食喜樂長壽久住。有如是類地味漸生，其味甘美其香欝馥。時有一人稟性耽味，嗅香起愛取甞便食，餘人隨學競取食之。爾時方名初受段食。資段食故身漸堅重，光明隱沒黑闇便生，日月眾星從茲出現。由漸耽味地味便隱，從斯復有地皮餅生。競耽食之，地餅復隱，爾時復有林藤出現。競耽食故，林藤復隱，有非耕種香稻自生，眾共取之以充所食。此食麁故，殘穢在身，為欲蠲除便生二道，因斯遂有男女根生。由二根殊形相亦異，宿習力故便相瞻視，因此遂生非理作意，欲貪鬼魅惑亂身心，失意猖狂行非梵行。人中欲鬼初發此時。爾時諸人隨食早晚隨取香稻無所貯積，後時有人稟性嬾惰，長取香稻貯擬後食，餘人隨學漸多停貯。由此於稻生我所心，各縱貪情多收無厭，故隨收處無復再生，遂共分田慮防遠盡。於己田分生悋護心，於他分田有懷侵奪，劫盜過起始於此時。為欲遮防共聚詳議，銓量眾內一有德人，各以所收六分之一，雇令防護封為田主，因斯故立剎帝利名。大眾欽承恩流率土，故復名大三末多王，自後諸王此王為首。時人或有情厭居家，樂在空閑精修戒行，因斯故得婆羅門名。後時有王貪悋財物，不能均給國土人民，故貧匱人多行賊事。王為禁止行輕重罰，為殺害業始於此時。時有罪人心怖刑罰，覆藏其過異想發言，虛誑語生此時為首。於劫減位有小三災。其相云何？頌曰：業道增壽減，至十三災現，",
+   "T1559": "為嬾惰儲畜，由財雇守田。釋曰：眾生已如此成，地味漸出，其味甘美勝細蜂蜜。於中有一人貪愛為性，聞地味香試取嘗之，遂便噉食，餘人次第隨學此事。初發段食在於此時。是時諸人由數習此食，於身生堅、重二觸，失先光明，從此有黑暗起，是時日月出現。由貪味故，是彼地味次第滅盡，地皮乾起，以此為食。於中起貪，又失此食。次生林藤，以此為食。於中起貪，又失此食。次生舍利，不由耕種自然而有，以此為食。此食最麁，變異有殘，為除此殘，生大小便道。此道與男女根俱生，相貌亦異。是時彼人互相瞻視，由隨先惑習氣起邪思惟，由邪思惟羅剎所吞，婬欲變異於心猛盛，即便犯罪，是婬欲鬼初發入心在於此時。是時彼人晚時為暝食，曉時為晝食，相要共取舍利。於中有一人嬾惰為性，長取舍利儲宿為食，餘人學之亦各儲宿。是時於中即生我所。因此我所，後取舍利，將已即盡，不復更生，是時彼人即共分田。於自分田生重貪惜，於他所得作侵損事，初發偷盜在於此時。為遣此失，皆共集聚，其中有一勝人，諸人各以所得六分之一，共雇此人為守田主，彼說此人為差（廁知反）多羅莎未（亡履反）。差多羅莎未故，得剎帝利名，大人眾所許，能染世間心，是故初生名摩訶先摩多王。一切王相傳，此王為初。於中若有人心出家外，是人得名婆羅門。後時有一王，由貪惜財物，於民不行分施恩事。諸人由貧乏故，多行盜事。王於此罪人好行刀杖，治罰事初發，殺害在於此時。是時罪人覆藏說言：我不作此事。初發妄語在於此時。偈曰：次由十惡增，壽減至十歲。釋曰：次第由此方便業道增長，故壽命漸減，於最後時，一切人皆壽十歲。是故一切災橫，二法為根本，謂貪味及嬾惰。是時人壽十歲，是別劫出盡。"
+  },
+  "v099": {
+   "sa": "kalpasya śastrarogābhyāṃ durbhikṣeṇa ca nirgamaḥ / divasān sapta māsāṃśca varṣāṇi ca yathākramam // VAkK_3.99 //",
+   "sa-bhasya": "[187|24] daśavaṛṣāyuṣāṃ manuṣyāṇāmantarakalpasya niryaṇaṃ bhavati / kathaṃ bhavatītyāha [187|25] kalpasya śastrarogābhyāṃ durbhikṣeṇa ca nirgamaḥ / [187|26] tribhirantarakalpasya niryāṇaṃ bhavati / śastreṇa rogeṇa durbhikṣeṇa ca / [187|26-188|02] antarakalpasya niryāṇakāle daśavarṣāyuṣo manuṣyāḥ adharmarāgaraktā bhavanti viṣamalobhāvibhūtā mithyādharmaparītāḥ / [188|02-188|03] teṣāṃ vyāpāda utkarṣa gato'nyonyaṃ sattvaṃ dṛṣṭvā tīvramāghātacittaṃ vadhakacittaṃ ca pratyupasthitaṃ bhavati / [188|03-188|05] tadyathedānīṃ mṛgalubdhakasyāraṇyakaṃ mṛgaṃ dṛṣṭvā te yadyadeva gṛhṇanti kāṣṭham vā loṣṭaṃ vā tatteṣāṃ tīkṣṇaṃ śastraṃ prādurbhavati / [188|05] te'nyonyaṃ sattvaṃ jīvitādvyaparopayanti / [188|05-188|06] punaḥ kalpasya niryāṇakāle daśavarṣāyuṣāṃ manuṣyāṇāṃ taireva doṣairamanuṣyā īti mutsṛjanti / [188|06-188|07] teṣāmasādhyā vyādhyādayaḥ prādurbhavanti yato mriyante / [188|07-188|08] punardaśavarṣāyuṣāṃ taireva doṣairdevā varṣaṃ notsṛjanti yato durbhikṣaṃ jāyate cañcaḥ śvetāsthi śalākāvṛttiḥ / [188|08] kathaṃ ca cañcaḥ / [188|09] dvābhyāṃ kāraṇābhyām / ya idānīṃ samavāyaḥ sa tadānīṃ cañca ityucyate / [188|09-188|10] samudgo'pi cañcaḥ / [188|10-188|11] te ca manuṣyā jighatsādaurbalyaparītāḥ sametya kālaṃ kurvanti samudreṣu cānāgatajanatā'nugrahārthaṃ bījānyavasthāpayanti / [188|11] atastaddurbhikṣaṃ cañcamityucyate / [188|12] kathaṃ śvetāsthi / dvābhyāṃ kāraṇābhyām / [188|12-188|14] teṣāṃ hi śuṣkarukṣakāyānāṃ kālaṃ kurvatāmāśvevāsthīni śvetāni bhavanti bubhukṣāhatāśca śvetānyasthīni saṃhṛtya kvāthayitvā pivanti / [188|14] kathaṃ śalākāvṛttiḥ / dvābhyāṃ kāraṇābhyām / [188|14-188|17] te hi sattvāḥ śalākoddeśikayā gṛheṣvāmirṣaṃ samvibhajante adya gṛhasvāmī bhokṣyate śvo gṛhasvāminītyevamādi dhānyasthānavivarebhyaśca śalākayā dhānyaphalāni niṣkṛṣya bahulodakena kvāthayitvā pivanti / [188|17] evaṃ varṇayanti / [188|17-188|19] yenaikāhamapi prāṇātīpātaviratiḥ samrakṣitā bhavati ekaharītakī vā saṃghāyaikapiṇḍapāto vā satkṛtyānupradatto bhavati sa teṣu śastrarogadurbhikṣāntarakalpeṣu notpadyata iti / [188|20] atha kiyantaṃ kālametāni śastrāghātarogadurbhikṣāṇi teṣāṃ sattvānāṃ bhavanti [188|21] divasān sapta māsāṃśca varṣāṇi ca ythākramam // VAkK_3.99 // [188|22] śastrakaḥ prāṇātipātaḥ sapta divasān bhavati / rogaḥ sapta māsāṃśca divasāṃśca / [188|23] durbhikṣaṃ saptavarṣāṇi ca māsāṃśca divasāmśceti samuccayārthaścakāraḥ / [188|23-188|24] tadā ca dvayordvīpayosteṣāṃ pratirūpakāṇi bhavanti / [188|24-188|25] vyāpāda udrekaprāpto bhavati vaivastryadaurbalye jighatsāpipāse ca / [188|25] yaduktamevamanyasyāmapi saṃvartanyāṃ veditavyam yathāyogamiti / [188|26] atha katīmāḥ saṃvartanyaḥ /",
+   "T1560": "刀疾饑如次，七日月年止。",
+   "T1558": "刀疾飢如次，七日月年止。論曰：從諸有情起虛誑語，諸惡業道後後轉增，故此洲人壽量漸減，乃至極十小三災現。故諸災患二法為本：一耽美食、二性嬾惰。此小三災中劫末起。三災者，一刀兵、二疾疫、三飢饉。謂中劫末十歲時，人為非法貪染污相續，不平等愛映蔽其心，邪法縈纏瞋毒增上，相見便起猛利害心。如今獵師見野禽獸，隨手所執皆成利刀，各逞兇狂互相殘害。又中劫末十歲時人，由具如前諸過失故，非人吐毒疾疫流行，遇輒命終難可救療。又中劫末十歲時人，亦具如前諸過失故，天龍忿責不降甘雨，由是世間久遭飢饉，既無支濟多分命終。是故說言，由飢饉故便有聚集白骨運籌。由二種因名有聚集：一人聚集，謂彼時人由極飢羸聚集而死。二種聚集，謂彼時人為益後人，輟其所食置於小篋擬為種子。故飢饉時名有聚集。言有白骨亦由二因：一彼時人身形枯燥，命終未久白骨便現。二彼時人飢饉所逼，聚集白骨煎汁飲之。有運籌言亦二因故，一由糧少行籌食之，謂一家中從長至幼，隨籌至日得少麁飡。二謂以籌挑故場蘊，得少穀粒多用水煎，分共飲之以濟餘命。然有至教說治彼方，謂若有能一晝一夜持不殺戒，於未來生決定不逢刀兵災起。若能以一訶梨怛雞，起殷淨心奉施僧眾，於當來世決定不逢疾疫災起。若有能以一摶之食，起殷淨心奉施僧眾，於當來世決定不逢飢饉災起。此三災起各經幾時？刀兵災起極唯七日，疾疫災起七月七日，飢饉七年七月七日，度此便止。人壽漸增，東西二洲有似災起，謂瞋增盛身力羸劣，數加飢渴，北洲總無。前說火災焚燒世界，餘災亦爾，如應當知。何者為餘？",
+   "T1559": "云何出盡？偈曰：是劫由杖疾，及餓災故出。釋曰：別劫有三因緣故出盡，一刀杖、二疾疫、三飢餓。別劫出盡時，是十歲人非法欲所染、不平等貪所逼、邪法所遍，是人瞋毒轉增上，若互相見即起極重瞋殺心，譬如今時獵鹿人見野鹿。是時諸人隨有所捉或木或草，於彼人悉成極利刀仗。彼人作是思惟：我今必應在前。是故更互相殺，由此皆死。復有別劫出盡時，是十歲人由罪過多故，鬼神起憎惡心，於彼作諸災橫，是故處處遭阿薩闍病，由此皆死。復有別劫出盡時，是十歲人由罪過多故，天神龍起憎惡心，不復降雨，是故處處飢餓窮困，由此皆死。是時有三糧：一旃遮糧、二白骨糧、三籌糧。名旃遮糧者，此有二因，今時聚集彼時名旃遮，又奩子名旃遮。是時諸人飢羸所逼，聚集聚集，皆飢餓死。又為護惜來歲糧及憐愍眷屬，於將來時藏舉少糧及種子置奩子中，故名旃遮糧。白骨糧者，亦有二因，是人身燥澁既久，死後少時骨即白色。又無食飢餓，取此白骨煮汁飲之。籌糧者，亦有二因，是時諸人由次第傳籌，家家分張糧食。今日家主食，明日婦食，如此次第。復次昔時曾有穀處，開坼以籌挑取，隨得穀粒，以多水煮之飲以為糧。於經中傳說如此。若人能於一日護離殺生，或能施一訶梨勒，或於大眾起恭敬心能施一食，是人於刀杖、疾疫、飢餓劫時，不於中生。刀杖、疾疫、飢餓三災，起各幾時？偈曰：七日及七月，七年次第盡。釋曰：由杖殺害眾生災於七日內起，疾疫災於七月七日內起，飢餓災於七年七月七日內起。是時於二洲人，亦有似三災事起，瞋恚於彼增長，至重黑瘦惡色，及身羸弱於彼亦起，飢渴亦起。是各各所說三災，於諸災中應知次第皆有。"
+  },
+  "v100": {
+   "sa": "saṃvartanyaḥ punastistro bhavantyagnyambuvāyubhiḥ / dhyānatrayaṃ dvitīyādi śīrṣa tāsāṃ yathākramam // VAkK_3.100 //",
+   "sa-bhasya": "[189|01] saṃvartanyaḥ punastisro bhavantyagnyambuvāyubhiḥ / [189|02] ekatra dhyāne sattvāḥ samaṃ saṃvartante etasyāmiti saṃvartanī / [189|02-189|03] saptabhiḥ sūryaistejaḥ saṃvartanī bhavati varṣodakenāpsaṃvartanī vāyuprakopādvāyusaṃvartanī / [189|04] tābhiśca bhājanānāṃ sukṣmo'pyavayavo nāvaśiṣyate / [189|04-189|05] atra tu kecitīrthaṅkarā icchanti / [189|05] paramāṇavo nityāste tadānīṃ śiṣyanta iti / kasmātta evamicchanti / [189|06] mā bhūdabījakaḥ sthūlānāṃ prādurbhāva iti / [189|06-189|07] nanu ca sattvānāṃ karmajaḥ prabhāvaviśiṣṭo vāyurbījamuktam / [189|07] sarvartanīśīrṣavāyurvātasya nimittaṃ bhaviṣyati / [189|07-189|08] \"vāyunā lokāntarebhyo bījānyāhriyanta\" iti mahīśāsakāḥ sūtre paṭhanti / [189|08-189|09] evamapi na te bījādibhyo'ṅkurādīnāmutpattimicchanti / [189|09] kiṃ tarhi // [189|09-189|10] svebhya evāvayavebhyasteṣāmapi svebhyaḥ / [189|10] evaṃ yāvat paramāṇubhyaḥ / [189|10-189|11] kimidaṃ bījādīnāmaṅkurādiṣu sāmarthyam / [189|11] na kiñcidanyatra tatparamāṇūpasarpaṇāt / [189|11-189|12] kiṃ punaḥ kāraṇaṃ ta evamicchanti / [189|12] nahi vijātīyātsaṃbhavo yukta iti / kasmānna yuktaḥ / [189|12-189|13] aniyamo hi syāt / [189|13] śaktiniyamānnaivaṃ bhaviṣyati / śabdapākajotpattivat / [189|13-189|14] citro hi guṇadharmo dravyaṃ tu naivam / [189|14-189|15] samānajātīyebhyaḥ eva hi dravyebhyaḥ samānajātīyānāṃ dṛṣṭa utpādastadyathā vīraṇebhyaḥ kaṭasya tantubhyaḥ paṭasyeti / [189|15] idamayuktaṃ vartate / [189|15-189|16] kimatrāyuktam yadasiddhaṃ sādhanāyodāhriyate / [189|16] kimatrāsiddham / [189|17] anyo vīraṇebhyaḥ kaṭo'nyaśca tantubhyaḥ paṭa iti / [189|17-189|18] ta eva hi te yathāsaṃniviṣṭāstāṃ tāṃ saṃjñāṃ labhnte / [189|18] pipīlikāpaṅktivat / kathaṃ gamyeta / [189|18-189|19] ekatantusaṃyoge paṭasyānupalambhāt / [189|19] ko hi tadā sataḥ paṭasyopalabdhau pratibandhaḥ / [189|19-189|20] akṛtsnavṛttau paṭabhāgo'tra syānna paṭaḥ / [189|20] samūhamātraṃ ca paṭaḥ syāt / kaśca tantubhyo'nyaḥ paṭabhāgaḥ / [189|20-189|21] anekā śrayasaṃyogāpekṣaṇe daśāmātrasaṃyoge paṭopalabdhiḥ syānna vā kadācit / [189|21-189|22] madhyaparabhāgānāmindriyeṇāsaṃnikarṣāt / [189|22-189|23] kramasaṃnikarṣe cāvayavānāṃ cakṣuḥsparśanābhyāmavayavavijñānaṃ na syāt / [189|23-189|24] tasmātkrameṇa saṃnikarṣādavayavivyavasāyādavayaveṣveva tadbuddhiralātacakravat / [189|24] bhinnarūpajātikriyeṣu tantuṣu paṭasya rūpādyasaṃbhavāt / [189|24-189|26] citrarūpāditve vijātīyārambho'pi syāt acitre ca pārśvāntare paṭasyādarśanaṃ citradarśanaṃ vā / [189|26] kriyā'pi citretyaticitram / [189|26-189|27] tāpaprakāśabhede vā'gniprabhāyā ādimadhyānte tadrūpasparśayoranupapattiḥ / [189|27-190|02] paramāṇvatīndriyatve'pi samastānāṃ pratyakṣatvaṃ yathā teṣāṃ kāryārambhakatvaṃ cakṣurādīnāṃ ca taimirikāṇāṃ ca vikīrṇakeśopalabdhiḥ / [190|02] teṣāṃ paramāṇuvadekaḥ deśo'tīndriyaḥ / [190|02-190|03] rūpādiṣveva ca paramāṇusaṃjñāniveśā ttadvināśe siddhaḥ paramāṇuvināśaḥ / [190|03-190|04] dravyaṃ hi paramāṇuranyacca rūpādibhyo dravyamiti na teṣaṃ vināśe tadvināśaḥ siddhyati / [190|04-190|05] ayuktamasyānyatvaṃ yāvatā na nirdhāryate kenacit imāni pṛthivyaptejāṃsi ima eṣāṃ rūpādaya iti / [190|06-190|07] cakṣuḥsparśanagrāhyāṇi ca prajñāyante dagdheṣu corṇākarpāsakusumbhakuṅkumādiṣu tadbuddhyabhāvādrūpādibhedeṣveva tadbuddhiḥ / [190|07-190|08] pākajotpattau ghaṭaparijñanaṃ saṃsthānasāmānyāt paṅktivat / [190|08] cihnamapaśyataḥ parijñānābhāvāt / [190|08-190|09] ko vā bālapralāpeṣvādaraḥ iti tiṣṭhatu tāvadevāpratiṣedhaḥ / [190|10] atha kasyāḥ saṃvartanyāḥ katamacchīrṣa bhavati / [190|11] dhyānatrayaṃ dvitīyādi śīrṣa tāsām yathākramam // VAkK_3.100 // [190|12] trīṇi saṃvartanīśīrṣāṇi / tejaḥsaṃvartanyā dvitīyaṃ dhyānaṃ śīrṣaṃ bhavatyadho dahyate / [190|13] apsaṃvartanyāstṛtīyaṃ dhyānaṃ śīrṣa bhavatyadhaḥ klidyate / [190|13-190|14] vāyusaṃvarttanyāścaturthaṃ dhyānaṃ śīrṣaṃ bhavatyadho vikīryate / [190|14] yaddhi saṃvartanyā upariṣṭāttacchīrṣamityucyate /",
+   "T1560": "三災火水風，上三定為頂，",
+   "T1558": "今當具辯。頌曰：三災火水風，上三定為頂，",
+   "T1559": "偈曰：散集劫有三，由火水風起。釋曰：於一一定處，眾生下散上集，故名散集劫。由七日出故有火災，由大雨水故有水災，由大風相違故有風災。由此三災，器世界極細分皆盡無餘。此中有餘外道師執說：如此隣虛常住，於此時中以此為餘。云何彼樂執此義？諸餘大物後更生時，勿彼生無種子。為不如此耶？是眾生業勢力所生風，由功能勝說為種子。復次災頭風亦為種子因。彌嬉沙塞部經中說：風從餘現成世界引載彼種子來。雖然，諸外道師不許芽等從種子生。若爾，彼執云何？從自分生，乃至自分從自隣虛生。若爾，種子等於芽等中有何功能？離安立隣虛無別功能，由芽隣虛從種子出故。何因彼許如此？從非同類因果生，此不應理。云何不應理？若爾，一切物生則應不定，是義不然，由功能定故，無不定義，譬如穀熟等。若是義不然。何以故？求那法種種不同，踏臘脾（𦿔也反）法不爾。若物欲生，必從同類物生，譬如從竹笪生、從縷衣生。今不相應義起。此中何義不相應？引不成就義證不成就義。此中何義不成就？笪異竹、衣異縷，此義不成就。何以故？是竹是縷，如此聚集故得別名，譬如蟻行。云何得知？於一縷和合中不見衣故。何以故？於中若衣實有，何法能障令不顯現？若不具有，但有衣分，此則非衣。何以故？唯聚集為衣故。復有何一分衣異於此縷？若由觀多依和合故衣成，唯縷和合中已應見衣。時無見有此衣，初中後不對根故，故知離縷無有別衣。若衣分分次第對根，不應說由眼由身證得為有分，由次第決證有分故。是故衣智但緣分起，譬如火輪。若縷有別色類事，衣無色等故，則衣不可得。若衣有種種色等別類，不生別類，此義不成，於無種種色等別邊不應見衣，或應即於此邊見種種色。衣縷有種種事，衣應無種種異，是故知衣無有別物。復次火光燒照等有差別，此光於初中後不應有色觸及事等隣虛。雖過根，若聚集則可證，如彼能作事。眼等諸根若生膚曀等，則不見散髮等，但見聚髮等。何以故？一髮等於彼過根故，譬如隣虛。是故知汝但於色等假立隣虛名。由此義故，色等滅時隣虛即同滅。若隣虛是物實異色等，不應與色同滅。若同滅，異義則不成。隨愚智類不可分別，此物是地水火風，此物中色聲香味觸是德。汝執言：諸物是眼耳所證。毛古貝紅花欝金若被燒，彼智即無，故知彼智但緣色等起。熟所生德起時，由形貌相似故，瓶智更生，譬如色行。何以知然？若人不見形貌不能知故。於嬰兒言何足可重。今且止破彼執。復次於三災中，何災何為頭？偈曰：三定二定等，次第三災頭。釋曰：諸災有三，火災以第二定為頭，下地燒然。水災以第三定為頭，下地爛壞。風災以第四定為頭，下地散滅。隨諸災上地說名災頭。"
+  },
+  "v101": {
+   "sa": "tadapakṣālasādharmyāt na caturthe 'styaniñjanāt / na nityaṃ saha sattvena tadvimānodayavyayāt // VAkK_3.101 //",
+   "sa-bhasya": "[190|14-190|16] kiṃ punaḥ kāraṇaṃ prathamadvitīyatṛtīyadhyānāni tejojalavāyubhirdhvasyante / [190|17] tadapakṣālasādhamryāt [190|18] pratheme hi dhyāne vitarkavicārā apakṣālāḥ / [190|18-190|19] te ca manasaḥ paridāhakatvādagnikalpāḥ / [190|19] dvitīye prītirapakṣālaḥ sā ca prasrabdhiyogenaśrayamṛdūkaraṇādapkalpāḥ / [190|20] ata evatasmin kṛtsnakāyakrauryāpagamāt duḥkhendriyasya nirodha uktaḥ sūtre / [190|21] tṛtīye dhyāne āśvāsapraśvāsāḥ / te ca vāyava eva / [190|21-190|22] iti yasyāṃ dhyānasamāpattau yathābhuta ādhyātmiko'pakṣālastasyām dhyānopapattau tathābhūto bāhya iti / [190|22-190|23] kasmāt pṛthivīsaṃvartanī na bhavati / [190|23-190|24] pṛthivyeva hi bhājanākhyā tasyāṃ tejojalavāyubhirvirodho na pṛthhivyeti / [190|24] atha caturthadhyāne kathaṃ na saṃvartanī / [190|25] na caturthe'styaniñjanāt / [190|26] caturthaṃ dhyānamādhyātmikāpakṣālarahitatvādāneñja muktaṃ bhagavatā / [190|26-190|27] ato'tra bāhyo'pakṣālo na pravartata iti nāstyatra saṃvartanī / [190|27] śuddhāvāsaprabhāvādityapare / [190|27-191|01] nahi taiḥ śakyamārupyān praveṣṭuṃ nāpyanyatra gantumiti / [191|01-191|02] nityaṃ tarhi caturthadhyānabhājanaṃ prāpnnoti / [191|03] na nityaṃ saha sattvena tadvimānodayavyayāt // VAkK_3.101 // [191|04] nahi caturthaṃ dhyānamekabhūmisaṃbaddham / kiṃ tarhi / [191|04-191|05] vicchinnasthānāntaraṃ tārakāvat / [191|05] tatrāpyayaṃ sattva upapadyeta cyaveta vā / [191|05-191|06] sa sārdhaṃ vimāneneti nāstyasya nityatvam /",
+   "T1560": "如次內災等，四無不動故。 然彼器非常，情俱生滅故，",
+   "T1558": "如次內災等，四無不動故， 然彼器非常，情俱生滅故，",
+   "T1559": "何因三定地由火水風破壞？偈曰：由等彼內災。釋曰：於初定地覺觀為內災，此覺觀能起心燋熱，與外火同。於第二定喜為內災，此喜與輕安觸相應，能令依止軟滑，與外水同。於此定中一切身強違觸滅故，說是苦根滅處。於第三定出入二息為內災，此即是風。於定於三摩跋提，若如實有此內災，於此定等必有如此外災。云何無地災？地名器世，此地與火水風相違，不與地相違。若爾，於第四定有何災？偈曰：四無不動故。釋曰：於第四定離內災故。佛世尊說：彼名不動。是故於中諸災不起，故彼無災。餘部說：由淨居天威力故無災。何以故？彼無復能得入無色界及住餘處受生，定於彼般涅槃故，於彼無災。若爾，第四定器應是常住。偈曰：無常眾生共，宮殿生滅故。釋曰：第四定不共一地相應。云何各各地住與他不共？譬如眾星，於中若有眾生，生及死墮，宮殿與彼俱生俱滅故，此地非常住。此三災起，次第云何？"
+  },
+  "v102": {
+   "sa": "saptāgninā adbhirekā evaṃ gate 'dbhiḥ saptake punaḥ / tejasā saptakaḥ paścādvāyusaṃvartanī tataḥ // VAkK_3.102 // abhidharmakośabhāṣye lokanirdeśo nāma tṛtīyaṃ kośasthānam samāptamiti / śrīlāmāvākasya yadatra puṇyam /",
+   "sa-bhasya": "[191|06] kena punaḥ krameṇaitāḥ saṃvartanyo bhavanti / nirantaraṃ tāvat [191|07] saptāgninā [191|08] sapta saṃvartanyastejasā bhavanti / tataḥ / [191|09] adbhirekā [191|10] saptānāṃ tejaḥsaṃvartanīnāmanantaramadbhiḥ saṃvartanī bhavati / [191|11] evaṃ gate'dbhiḥ saptake punaḥ / [191|12] tejasā saptakaḥ [191|13] etena krameṇāpsaṃvartanīnāṃ gate saptake punaḥ tejaḥsaṃvartanīnāṃ saptako bhavati / [191|14] paścādvāyusaṃvartanī tataḥ // VAkK_3.102 // [191|15] paścādekāvāyusaṃvartanī bhavati / kiṃ kāraṇam / [191|15-191|17] yathiva hi teṣāṃ sattvānāṃ samāpattiviśeṣādātmabhāvānāṃ sthitiviśeṣastathā bhājanānāmapāmiti tā etā bhavanti ṣaṭpañcāśattejaḥ saṃvartanyaḥ saptāpsaṃvarttanyaḥ ekā vāyusaṃvarttanī / [191|17-191|18] evaṃ ca prajñaptibhāṣyaṃ sunītaṃ bhavati \"catuḥṣaṣṭi kalpāḥ śubhakṛtsnānāṃ devānāmāyuḥpramāṇami\"ti / [191|19-191|20] \"ye dharmā hetuprabhavā hetum teṣāṃ tathāgatohyavadat / teṣāṃ ca yo nirodha evaṃvādī mahāśramaṇa\" // iti / [191|21] abhidharmakośabhāṣye lokanirdeśo nāma [191|22-191|23] tṛtīyaṃ kośasthānam samāptamiti /",
+   "T1560": "要七火一水，七水火後風。",
+   "T1558": "要七火一水，七水火後風。論曰：此大三災逼有情類，令捨下地集上天中。初火災興由七日現，次水災起由雨霖淫，後風災生由風相擊。此三災力壞器世間，乃至極微亦無餘在。一類外道執極微常，彼謂爾時餘極微在。何緣彼執猶有餘極微？勿後麁事生無種子故。豈不前說，由諸有情業所生風能為種子。或此即以前災頂風為緣、引生風為種子。又化地部契經中言：風從他方飄種來此。雖爾，不許芽等生時是種等因親所引起。若爾，芽等從何而生？從自分生。如是自分復從自分，展轉乃至最細有分從極微生。於芽等生中，種等有何力？除能引集芽等極微，種等更無生芽等力。何緣定作如是執耶？從異類生定不應理。不應何理？應無定故。功能定故，無不定失。如聲熟變等，從異類定生。德法有殊，實法不爾。現見實法唯從同類生，如藤生枝及縷生衣等。此非應理，非理者何？引不極成為能立故。今此所引何不極成？非許藤枝縷衣別故。即藤縷合，安布不同得枝衣名，如蟻行等。云何知爾？一縷合中曾不得衣，唯得縷故。有誰為障令不得衣？若一縷中無全衣轉，則應一縷上有衣分無衣。應許全衣唯集諸分，非更別有有分名衣。又如何知衣分異縷？若謂衣要待多所依合，於唯多經合應亦得衣。或應畢竟無得衣理，中及餘邊不對根故。若謂漸次皆可對根，則應眼身唯得諸分，不應說彼得有分衣故，即於諸分漸次了別，總起有分覺，如旋火輪。謂若離縷異色類業，衣色等三不可得故。若錦衣上色等屬衣，則應許實從異類起，一一縷色等無種種異故。或於一分無異色等，邊應不見衣，由彼顯衣故。或即彼分應見異色等，以衣必有異色等相故。彼許有分體唯是一，而有種種色類業殊，審有如斯甚為靈異。又於一火光明界中，遠近不同燒照有異，觸色差別應不得成。各別極微雖越根境，而共聚集可現根證，如彼所宗合能生果，或如眼等合能發識。又如瞖目視散髮時，若多相隣彼則能見，一一遠住便無見能。極微對根理亦應爾。又即於色等，立極微名故。色等壞時極微亦壞，極微實攝，色等德收，異體不應定俱時滅。此二體別，理必不然。以審觀時非離色等有別地等，故非體別。又彼宗中自許地等眼身所取，寧異色觸？又燒毛㲲紅花等時，彼覺則無，故毛等覺但緣色等差別而起，熟變生時形量等故。猶如行伍記識瓶盆，若不觀形不記識故。誰當採錄愚類狂言？故對彼宗廣諍應止。此三災頂為在何處？第二靜慮為火災頂，此下為火所焚燒故。第三靜慮為水災頂，此下為水所浸爛故。第四靜慮為風災頂，此下為風所飄散故。隨何災上，名彼災頂。何緣下三定遭火水風災？初二三定中，內災等彼故。謂初靜慮尋伺為內災，能燒惱心等，外火災故。第二靜慮喜受為內災，與輕安俱潤，身如水故，遍身麁重由此皆除故，經說苦根第二靜慮滅。第三靜慮動息為內災，息亦是風等，外風災故。若入此靜慮，有如是內災，生此靜慮時，遭是外災壞。何緣不立地亦為災？以器世間即是地故，但可火等與地相違，不可說言地還違地。第四靜慮何為外災？彼無外災，離內災故。由此佛說彼名不動，內外三災所不及故。有說：彼地有淨居天故，彼不遭諸災所壞。由彼不可生無色天，亦復不應更往餘處。若爾，彼地器應是常。不爾，與有情俱生俱滅故。謂彼天處無總地形，但如眾星居處各別。有情於彼生時死時，所住天宮隨起隨滅，是故彼器體亦非常。所說三災云何次第？要先無間起七火災，其次定應一水災起。此後無間復七火災，度七火災還有一水，如是乃至滿七水災。復七火災後風災起，如是總有八七火災、一七水災，一風災起。何緣如是？由彼有情所修定因於上漸勝，故感身壽其量漸長，由是所居亦漸久住。由此善釋《施設足》文遍淨天壽六十四劫。",
+   "T1559": "若無間，偈曰：七火一水災。釋曰：先七災由火起，後一災方由水起。如此次第，更七災由火起，隨七火災後各一水災起。偈曰：七水災已度，後復七火災。釋曰：由此次第七水災已度，後復七火災更次第起。偈曰：然後風災起。釋曰：從此後一風災起。何因如此？於彼眾生由定勝德，如自身住差別，所居處亦爾。此住幾時？經五十六火災一風災。若作如此義，《分別立世論》則被隨順。彼論云：六十四劫是遍淨天壽量。"
+  }
+ }
+}
