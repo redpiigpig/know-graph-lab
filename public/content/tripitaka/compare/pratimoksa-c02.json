@@ -1,0 +1,226 @@
+{
+ "slug": "pratimoksa-c02",
+ "title": "比丘戒本（二）四波羅夷",
+ "family": "pi",
+ "intro": "四波羅夷（他勝、斷頭）各部條數、次第全同：婬、盜、斷人命、妄說過人法。巴利、說一切有部梵本、大眾說出世部梵本、根本說一切有部梵本與六部漢譯並排。《僧祇戒本》每條之後附制戒因緣（「佛在毘舍離城，成佛五年冬分第五半月十二日…」：何處、成道第幾年、何時、為誰而制），大眾說出世部梵本同樣在每條後記「idaṃ bhagavatā veśālīyaṃ śikṣāpadaṃ prajñaptaṃ…」，兩本互證，皆歸入該條；梵本篇末的攝頌（uddāna）與根有戒經篇首的攝頌一樣只列條名，前者歸結說、後者歸總標。篇首總標、篇末結說與三問清淨各立一節；《五分戒本》結說與問清淨在同一段。",
+ "units": [
+  {
+   "id": "pj0",
+   "label": "總標：四波羅夷法半月半月說"
+  },
+  {
+   "id": "pj1",
+   "label": "波羅夷一・婬"
+  },
+  {
+   "id": "pj2",
+   "label": "波羅夷二・盜"
+  },
+  {
+   "id": "pj3",
+   "label": "波羅夷三・斷人命"
+  },
+  {
+   "id": "pj4",
+   "label": "波羅夷四・妄說過人法"
+  },
+  {
+   "id": "pjz",
+   "label": "結說・三問清淨"
+  }
+ ],
+ "versions": [
+  {
+   "id": "pi",
+   "lang": "pi",
+   "label": "巴利・上座部",
+   "who": "Theravāda Bhikkhupātimokkha・Mahāsaṅgīti 本（SuttaCentral）"
+  },
+  {
+   "id": "T1429",
+   "lang": "lzh",
+   "label": "四分戒本",
+   "who": "法藏部・後秦 佛陀耶舍譯《四分律比丘戒本》（唐 懷素集）",
+   "work": "T1429"
+  },
+  {
+   "id": "T1422a",
+   "lang": "lzh",
+   "label": "五分戒本",
+   "who": "化地部・劉宋 佛陀什等譯《彌沙塞五分戒本》",
+   "work": "T1422a"
+  },
+  {
+   "id": "sa-sarv",
+   "lang": "sa",
+   "label": "梵・說一切有部",
+   "who": "Sarvāstivāda Prātimokṣasūtra・von Simson 1986／2000（GRETIL）"
+  },
+  {
+   "id": "T1436",
+   "lang": "lzh",
+   "label": "十誦戒本",
+   "who": "說一切有部・姚秦 鳩摩羅什譯《十誦比丘波羅提木叉戒本》",
+   "work": "T1436"
+  },
+  {
+   "id": "sa-mahl",
+   "lang": "sa",
+   "label": "梵・大眾說出世部",
+   "who": "Mahāsāṃghika-Lokottaravāda Prātimokṣasūtra・Tatia 1976（GRETIL）"
+  },
+  {
+   "id": "T1426",
+   "lang": "lzh",
+   "label": "僧祇戒本",
+   "who": "大眾部・東晉 佛陀跋陀羅譯《摩訶僧祇律大比丘戒本》",
+   "work": "T1426"
+  },
+  {
+   "id": "T1460",
+   "lang": "lzh",
+   "label": "解脫戒經",
+   "who": "飲光部・元魏 般若流支譯",
+   "work": "T1460"
+  },
+  {
+   "id": "sa-mula",
+   "lang": "sa",
+   "label": "梵・根本說一切有部",
+   "who": "Mūlasarvāstivāda Prātimokṣasūtra・Banerjee 1954（GRETIL）"
+  },
+  {
+   "id": "T1454",
+   "lang": "lzh",
+   "label": "根有戒經",
+   "who": "根本說一切有部・唐 義淨譯《根本說一切有部戒經》",
+   "work": "T1454"
+  }
+ ],
+ "works": [
+  "T1422a",
+  "T1426",
+  "T1429",
+  "T1436",
+  "T1454",
+  "T1460"
+ ],
+ "anchors": [
+  {
+   "work": "T1429",
+   "range": [
+    "T22n1429_p1015c05",
+    "T22n1429_p1016a04"
+   ]
+  },
+  {
+   "work": "T1422a",
+   "range": [
+    "T22n1422a_p0195a08",
+    "T22n1422a_p0195a21"
+   ]
+  },
+  {
+   "work": "T1436",
+   "range": [
+    "T23n1436_p0471a03",
+    "T23n1436_p0471a23"
+   ]
+  },
+  {
+   "work": "T1426",
+   "range": [
+    "T22n1426_p0549b26",
+    "T22n1426_p0550a02"
+   ]
+  },
+  {
+   "work": "T1460",
+   "range": [
+    "T24n1460_p0659c23",
+    "T24n1460_p0660a14"
+   ]
+  },
+  {
+   "work": "T1454",
+   "range": [
+    "T24n1454_p0501a04",
+    "T24n1454_p0501a29"
+   ]
+  }
+ ],
+ "cells": {
+  "pj0": {
+   "pi": "Pārājikuddeso Tatrime cattāro pārājikā dhammā uddesaṁ āgacchanti.",
+   "T1429": "「諸大德！是四波羅夷法，半月半月說，戒經中來。",
+   "T1422a": "「諸大德！是四波羅夷法，半月半月戒經中說。",
+   "sa-sarv": "I. pārājikā dharmāḥ PrMoSū_Pār.0: ime punar āyuṣmantaś catvāraḥ pārājikā dharmā anvardhamāsaṃ prātimokṣasūtroddeśam āgacchanti /",
+   "T1436": "「諸大德！是四波羅夷法，半月半月波羅提木叉中說。",
+   "sa-mahl": "[I. catvāraḥ pārājikā dharmāḥ] ime kho punar āyuṣmanto catvāraḥ pārājikā dharmā anvardhamāsaṃ sūtre prātimokṣe uddeśam āgacchanti /",
+   "T1426": "「諸大德！是四波羅夷法，半月半月次說波羅提木叉。",
+   "T1460": "「諸大德！此四波羅夷法，半月半月說解脫戒經中來。",
+   "sa-mula": "catvāraḥ pārājikā dharmāḥ / ime khalu āyuṣmantaś catvāraḥ pārājikā dharmā anvardhamāsaṃ prātimokṣasūtroddeśam āgacchanti /",
+   "T1454": "「諸大德！此四波羅市迦法，半月半月戒經中說。」攝頌曰：若作不淨行，不與取斷人； 妄說上人法，斯皆不共住。"
+  },
+  "pj1": {
+   "pi": "Pārājika 1. Methunadhamma Yo pana bhikkhu bhikkhūnaṁ sikkhāsājīvasamāpanno sikkhaṁ appaccakkhāya dubbalyaṁ anāvikatvā methunaṁ dhammaṁ paṭiseveyya, antamaso tiracchānagatāyapi, pārājiko hoti asaṁvāso.",
+   "T1429": "「若比丘！共比丘同戒，若不還戒，戒羸，不自悔，犯不淨行，乃至共畜生。是比丘波羅夷，不共住。",
+   "T1422a": "「若比丘共諸比丘同學戒法，戒羸不捨，行婬法乃至共畜生，是比丘得波羅夷不共住。",
+   "sa-sarv": "PrMoSū_Pār.1: yaḥ punar bhikṣur bhikṣubhiḥ sārdhaṃ śikṣāsāmīcisamāpannaḥ śikṣām apratyākhyā(ya śi)kṣādaurbalyaṃ vānāviṣkṛtvā maithunaṃ dharmaṃ pratiṣeveta antatas tīryagyonigatayāpi sārdham ayaṃ bhikṣuḥ pārājiko bhavaty asaṃvāsyaḥ 1",
+   "T1436": "「若比丘，共諸比丘入戒法中，不還戒、戒羸不出，行婬法乃至共畜生，是比丘得波羅夷罪，不應共事。",
+   "sa-mahl": "PrMoSū(Mā-L)Pār.1. yo puna bhikṣu bhikṣūṇāṃ śikṣāsāmīcīsamāpanno śikṣām apratyākhyāya daurbalyam anāviṣkṛtvā maithunaṃ grāmyadharmaṃ pratiṣeveya antamaśato tiryagyonigatāyam api sādham ayaṃ bhikṣuḥ pārājiko bhavaty asaṃvāsyo, na labhate bhikṣūhi sārdhasaṃvāsaṃ / idaṃ bhagavatā veśālīyaṃ śikṣāpadaṃ prajñaptaṃ pañcavarṣābhisaṃbuddhena hemantapakṣe pañcame, divase dvādaśame, purebhaktam uttarāmukhaniṣaṇṇena dvyardhapauruṣāyāṃ cchāyāyāṃ, āyuṣmantaṃ yaśikaṃ kalandakaputram ārabhya / imasya ca śikṣāpadasya prajñaptir dharmo, yathāpraṇihitasya ca yā anuvartanatā ayam ucyate anudharmo /",
+   "T1426": "「若比丘，於和合僧中受具足戒，不還戒、戒羸不出、相行婬法乃至共畜生，是比丘波羅夷不共住。「佛在毘舍離城，成佛五年冬分第五半月十二日，食後東向坐一人半影，為長老耶奢伽蘭陀子制此戒。已制當隨順行，是名隨順法。",
+   "T1460": "「若比丘，共比丘同入戒法，戒羸不捨戒，作不淨行，習婬欲法，乃至共畜生，是比丘得波羅夷不應共住。",
+   "sa-mula": "Pār.1 (PrMoSū_Mū-Banerjee) yaḥ punar bhikṣur bhikṣūṇāṃ śikṣāsājīvasamāpannaḥ śikṣām apratyākhyāya śikṣādaurbalyam anāviṣkṛtyābrahmacaryaṃ maithunaṃ dharmaṃ pratisevate antatas tiryagyonigatayāpi sārdhaṃ, ayam api bhikṣuḥ pārājiko bhavaty asaṃvāsyaḥ /",
+   "T1454": "「若復苾芻，與諸苾芻同得學處，不捨學處、學羸不自說，作不淨行兩交會法，乃至共傍生，此苾芻亦得波羅市迦不應共住。"
+  },
+  "pj2": {
+   "pi": "Pārājika 2. Adinnādāna Yo pana bhikkhu gāmā vā araññā vā adinnaṁ theyyasaṅkhātaṁ ādiyeyya, yathārūpe adinnādāne rājāno coraṁ gahetvā haneyyuṁ vā bandheyyuṁ vā pabbājeyyuṁ vā corosi bālosi mūḷhosi thenosīti, tathārūpaṁ bhikkhu adinnaṁ ādiyamāno ayampi pārājiko hoti asaṁvāso.",
+   "T1429": "「若比丘！若在村落，若閑靜處，不與，盜心取。隨不與取法，若為王王大臣所捉，若殺、若縛、若驅出國：『汝是賊！汝癡！汝無所知。』是比丘波羅夷，不共住。",
+   "T1422a": "「若比丘，若聚落、若空地，盜心不與取。若王、若大臣，若捉、若縛、若殺、若擯，語言：『汝賊、汝小、汝癡。』是比丘得波羅夷不共住。",
+   "sa-sarv": "PrMoSū_Pār.2: yaḥ punar bhikṣur adattaṃ steyasaṃkhyātam ādadyād yathārūpeṇādattādānena rājā hy enaṃ gṛhītvā hanyād vā badhnīyād vā pravāsayed vā evaṃ cainaṃ vadec coro 'si bālo 'si mūḍho 'si steyo 'sīty evaṃrūpaṃ bhikṣur adattam ādadānaḥ pārājiko bhavaty asaṃvāsyaḥ 2",
+   "T1436": "「若比丘，若聚落中、若空地，不與取，名盜物。如不與物取故，若王、若王等，若捉、若殺、若縛、若擯，若輸金罪，若如是言：『咄！汝小兒！汝癡！汝賊！』如是相，比丘不與物取，是比丘得波羅夷罪，不應共事。",
+   "sa-mahl": "PrMoSū(Mā-L)Pār.2. yo puna bhikṣu grāmād vā araṇyād vā adinnam anyātakaṃ stainasaṃskāram ādiyeya yathārūpeṇādinnādānena [rā]jāno gṛhītvā haneṃsu vā bandheṃsu vā pravrājeṃsu vā hambho puruṣa coro 'si bālo 'si mūḍho 'si stainyo 'sīti vā vadeṃsu, tathārūpaṃ bhikṣur adinnam ādiyamāno ayam pi bhikṣuḥ pārājiko bhavaty asaṃvāsyo, na labhate bhikṣūhi sārdhasaṃvāsaṃ / idaṃ bhagavatā rājagṛhe śikṣāpadaṃ prajñaptaṃ ṣaḍvarṣābhisambuddhena hemantapakṣe dvitī[ye, di]vase navame, paścādbhaktaṃ purastān mukhaniṣaṇṇena aḍḍhātīyapauruṣāyāṃ cchāyāyām āyuṣmantaṃ dhanikaṃ kumbhakārajātīyam ārabhya rājānaṃ ca śreṇīyaṃ bimbasāraṃ pāṃsukūlikaṃ ca bhikṣaṃ / imasya ca śikṣāpadasya prajñaptir dharmo yathāpraṇihitasya ca yā anuvartanatā ayam ucyate anudharmo /",
+   "T1426": "「若比丘，於聚落中、若空地，不與取隨盜物，王或捉、或殺、或縛、或擯出，『咄男子！汝是賊！汝愚癡。』比丘如是不與取，是比丘波羅夷不共住。「佛在王舍城，成佛六年冬分第二半月十日，食後東向坐兩人半影，為瓦師子長老達膩伽，因洴沙王及糞掃衣比丘制此戒。已制當隨順行，是名隨順法。",
+   "T1460": "「若比丘，若在聚落、若空靜地，他物、不與，以盜心取。若王、若大臣，若捉、若害、若縛、若罰財、若驅出國、若與種種苦：『咄！汝是賊、汝無所知、汝癡、汝不與取。』是比丘得波羅夷不應共住。",
+   "sa-mula": "Pār.2 (PrMoSū_Mū-Banerjee) yaḥ punar bhikṣur grāmagatam araṇyagataṃ vā pareṣāṃ adattaṃ steyasaṃkhyātam ādadīta yadrūpeṇādattādānena rājā vainaṃ gṛhītvā rājamātro vā hanyād vā saṃbadhnīyād vā pravāsayed vā evaṃ cainaṃ vadet* -- tvaṃ bhoḥ puruṣa cauro 'si bālo 'si steno 'sīty evaṃrūpaṃ adattaṃ bhikṣuḥ ādadita, ayam api bhikṣuḥ pārājayiko bhavaty asaṃvāsyaḥ /",
+   "T1454": "「若復苾芻，若在聚落、若空閑處，他不與物以盜心取。如是盜時，若王、若大臣，若捉、若殺、若縛、驅擯、若呵責言：『咄男子！汝是賊，癡、無所知，作如是盜。』如是盜者，此苾芻亦得波羅市迦不應共住。"
+  },
+  "pj3": {
+   "pi": "Pārājika 3. Manussaviggaha Yo pana bhikkhu sañcicca manussaviggahaṁ jīvitā voropeyya, satthahārakaṁ vāssa pariyeseyya, maraṇavaṇṇaṁ vā saṁvaṇṇeyya, maraṇāya vā samādapeyya “ambho purisa kiṁ tuyhiminā pāpakena dujjīvitena, mataṁ te jīvitā seyyo”ti, iti cittamano cittasaṅkappo anekapariyāyena maraṇavaṇṇaṁ vā saṁvaṇṇeyya, maraṇāya vā samādapeyya, ayampi pārājiko hoti asaṁvāso.",
+   "T1429": "「若比丘！故自手斷人命，持刀授與人，歎譽死、快勸死：『咄！男子，用此惡活為？寧死不生。』作如是心思惟，種種方便，歎譽死、快勸死。是比丘波羅夷，不共住。",
+   "T1422a": "「若比丘，若人、若似人，若自殺、若與刀藥殺、若教人殺、若教自殺，譽死讚死：『咄人用惡活為？死勝生。』作是心隨心殺，如是種種因緣，彼因是死。是比丘得波羅夷不共住。",
+   "sa-sarv": "PrMoSū_Pār.3: yaḥ punar bhikṣur manuṣyaṃ svahastena saṃcintya jīvitād vyaparopayec chastraṃ vainam ādhārayec chastrādhārakaṃ vāsya paryeṣayed evaṃ vainaṃ vaded dhambhoḥ puruṣa kiṃ tavānena pāpakena durjīvitena mṛtaṃ te jīvitād varam iti cittānumataṃ cittasaṃkalpitam anekaparyāyeṇa maraṇāya samādāpayen maraṇavarṇaṃ vāsyānusaṃvarṇayet sa ca tenopakrameṇa kālaṃ kuryād ayam api bhikṣuḥ pārājiko bhavaty asaṃvāsyaḥ 3",
+   "T1436": "「若比丘，若人、若似人，故自手奪命，若自持刀與、若教人持與，若教死、若讚死，若如是語：『咄！人用惡活為？死勝生。』隨彼心樂死、種種因緣教死讚死，是人因是事死，是比丘得波羅夷罪，不應共事。",
+   "sa-mahl": "PrMoSū(Mā-L)Pār.3. yo puna bhikṣuḥ svahastaṃ manuṣyavigrahaṃ jīvitād vyaparopeya śastrahārakaṃ vāsya paryeṣeya, maraṇāya cainaṃ samādāpeya, maraṇavarṇaṃ vāsya saṃvarṇeya Ō hambho puruṣa kiṃ te iminā pāpakena durjīvitena dhigjīvitena, mṛtaṃ te jīvitāc chreyo Ō iti cittam alaṃ cittasaṃkalpam anekaparyāyeṇa maraṇāya vainaṃ samādāpeya maraṇavarṇaṃ vāsya saṃvarṇeya, so ca puruṣo tenopakrameṇa kālaṃ kuryān nānyena, ayaṃ pi bhikṣuḥ pārājiko bhavaty asaṃvāsyo, na labhate bhikṣūhi sārdhasaṃvāsaṃ / idaṃ bhagavatā veśālīyaṃ śikṣāpadaṃ prajñaptaṃ ṣaḍvarṣābhisambuddhena hemantapakṣe tṛtīye, divase daśame, paścādbhaktaṃ purastān mukhaniṣaṇṇena aḍḍhātīyapauruṣāyāṃ cchāyāyāṃ sambahulān gilānopasthāpakān bhikṣūn ārabhya mṛgadaṇḍikaṃ ca parivrājakaṃ / imasya ca śikṣāpadasya prajñaptir dharmo, yathāpraṇihitasya ca yā anuvartanatā ayam ucyate anudharmo /",
+   "T1426": "「若比丘，自手奪人命，求持刀與殺者，教死、歎死：『咄！人用惡活為？死勝生。』作是意作是想，方便歎譽死快，因是死非餘者，是比丘波羅夷不共住。「佛在毘舍離城，成佛六年冬分第三半月九日，食前北向坐一人半影，為眾多看病比丘因鹿杖外道制此戒。已制當隨順行，是名隨順法。",
+   "T1460": "「若比丘，若人、若似人，故自手斷其命，若自持刀、或求持刀，教死讚死，如是說：『咄男子！用此不善惡活為？死勝生。』隨彼所欲心所憶念，無量種種教死讚死，彼人因是事死，是比丘得波羅夷不應共住。",
+   "sa-mula": "Pār.3 (PrMoSū_Mū-Banerjee) yaḥ punar bhikṣur manuṣyaṃ vā manuṣyavigrahaṃ vā svahastena saṃcintya jīvitād vyaparopayet* / śastraṃ vainām ādhārayec chastradhārakaṃ vāsya paryeṣeta maraṇāya vainaṃ samādāpayen maraṇavarṇaṃ vāsyānusaṃvarṇayet* / evaṃ cainaṃ vadet* -- haṃbho puruṣa kiṃ tava pāpakenāśucinā durjīvitena mṛtaṃ te bho puruṣa jīvitād varam iti cintānumataiś cittasaṃkalpair anekaparyāyeṇa maraṇāya vainaṃ samādāpayen maraṇavarṇaṃ vāsya anusaṃvarṇayet sa ca tena kālaṃ kuryād ayam api bhikṣuḥ pārājiko bhavaty asaṃvāsyaḥ /",
+   "T1454": "「若復苾芻，若人、若人胎，故自手斷其命，或持刀授與，或自持刀、或求持刀者，若勸死、讚死，語言：『咄男子！何用此罪累不淨惡活為？汝今寧死，死勝生。』隨自心念，以餘言說勸讚令死。彼因死者，此苾芻亦得波羅市迦不應共住。"
+  },
+  "pj4": {
+   "pi": "Pārājika 4. Uttarimanussadhamma Yo pana bhikkhu anabhijānaṁ uttarimanussadhammaṁ attupanāyikaṁ alamariyañāṇadassanaṁ samudācareyya “iti jānāmi, iti passāmī”ti, tato aparena samayena samanuggāhīyamāno vā asamanuggāhīyamāno vā āpanno visuddhāpekkho evaṁ vadeyya “ajānamevaṁ āvuso avacaṁ jānāmi, apassaṁ passāmi, tucchaṁ musā vilapi”nti, aññatra adhimānā, ayampi pārājiko hoti asaṁvāso.",
+   "T1429": "「若比丘！實無所知，自稱言：『我得上人法，我已入聖智勝法，我知是，我見是。』彼於異時，若問、若不問，欲自清淨，故作是說：『我實不知不見，言知言見，虛誑妄語。』除增上慢。是比丘波羅夷，不共住。",
+   "T1422a": "「若比丘，不知不見過人法聖利滿足，自稱：『我如是知、如是見。』是比丘後時若問若不問，為出罪求清淨故，作是言：『我不知言知、不見言見，空誑妄語。』除增上慢，是比丘得波羅夷不共住。」",
+   "sa-sarv": "PrMoSū_Pār.4: yaḥ punar bhikṣur anabhijāna(n)n aparijānann uttarimanuṣyadharmam alamāryaviśeṣādhigamaṃ jñānaṃ vā darśanaṃ vā pratijānīyāj jānāmīti paśyāmīti so 'pareṇa samayena samanuyujyamāno vā asamanuyujyamāno vā evaṃ vaded ajānamāno 'ham avocaṃ jānāmīty apaśyann avocaṃ paśyāmīti tucchaṃ mṛṣā vilapitam anyatrābhimānād ayam api bhikṣuḥ pārājiko bhavaty asaṃvāsyaḥ 4 //",
+   "T1436": "「若比丘，空無所有，不知不見過人法聖利滿足，若知、若見作是語：『我如是知、如是見。』是比丘後時若問、若不問，為出罪求清淨故，作是言：『我不知言知、不見言見。』空誑妄語，是比丘得波羅夷罪，不應共事；除增上慢。",
+   "sa-mahl": "PrMoSū(Mā-L)Pār.4. yo puna bhikṣur anabhijānann aparijānann ātmopanāyikam uttarimanuṣyadharmam alamāryajñānadarśanaṃ viśeṣādhigamaṃ prātajāneya ita jānāmi ita paśyāmīti / so tad apareṇa samayena samanugrāhiyamāṇo vā asa[ma]nugrāhiyamāṇo vā āpanno viśuddhiprekṣo evam avaci Ō ajānann evāham āyuṣmanto avaci jānāmi, apaśyan paśyāmīti / iti tucchaṃ mṛṣā vilāpam anyatrābhimānāt* ayaṃ pi bhikṣuḥ pārājiko bhavaty asaṃvāsyo na labhate bhikṣūhi sārdhasaṃvāsaṃ / idaṃ bhagavatā śrāvastīyaṃ śikṣāpadaṃ prajñaptaṃ ṣaḍvarṣābhisambuddhena hemantapakṣe caturthe, divase trayodaśame, purebhaktaṃ uttarāmukhaniṣaṇṇena aḍḍhucchapauruṣāyāṃ cchāyāyāṃ saṃbahulān grāmavāsikān bhikṣūn ārabhya ābhiyānikaṃ ca bhikṣuṃ / imasya ca śikṣāpadasya prajñaptir dharmo, yathā praṇihitasya ca yā anuvartanatā ayam ucyate anudharmo /",
+   "T1426": "「若比丘，未知未見，自稱得過人聖法、知見殊勝：『我如是知、如是見。』彼於後時若檢校、若不檢校犯罪，欲求清淨故作是言：『長老！我不知言知、不見言見，虛誑不實語。』除增上慢，是比丘波羅夷不共住。「佛在舍衛國，成佛六年冬分第四半月十三日，食後東向坐三人半影，為聚落中眾多比丘及增上慢比丘制此戒。已制當隨順行，是名隨順法。」",
+   "T1460": "「若比丘，不知不見上人法，無聖智見勝法，自稱言：『我知我見。』彼於異時，若撿問、若不撿問，欲求清淨作如是說：『我實不知不見，言知言見，虛誑妄語。』除增上慢，是比丘得波羅夷不應共住。」",
+   "sa-mula": "Pār.4 (PrMoSū_Mū-Banerjee) yaḥ punar bhikṣur anabhijānann aparijānann asantam asaṃvidyamānam anuttaramanuṣyadharmam alamārya viśeṣādhigamaṃ jñānaṃ vā darśanaṃ sparśavihāratāṃ vā pratijānīyād idaṃ jānāmīdaṃ paśyāmīti sa pareṇa samayena samanuyujyamāno vā asamanuyujyamāno vā āpanno viśuddhiṃ prakṣyaivaṃ vaded ajānann evāham āyuṣmanto 'vocaṃ jānāmīty apaśyāmīti riktaṃ tucchaṃ mṛṣāvyapalapanam anyatrābhimānāt* ayam api bhikṣuḥ pārājiko bhavaty asaṃvāsyaḥ /",
+   "T1454": "「若復苾芻，實無知、無遍知，自知不得上人法、寂靜聖者、殊勝證悟智見安樂住，而言我知、我見。彼於異時，若問、若不問，欲自清淨故，作如是說：『諸具壽！我實不知不見，言知言見，虛誑妄語。』除增上慢，此苾芻亦得波羅市迦不應共住。"
+  },
+  "pjz": {
+   "pi": "Uddiṭṭhā kho āyasmanto cattāro pārājikā dhammā. Yesaṁ bhikkhu aññataraṁ vā aññataraṁ vā āpajjitvā na labhati bhikkhūhi saddhiṁ saṁvāsaṁ yathā pure, tathā pacchā, pārājiko hoti asaṁvāso. Tatthāyasmante pucchāmi, kaccittha parisuddhā, dutiyampi pucchāmi, kaccittha parisuddhā, tatiyampi pucchāmi, kaccittha parisuddhā, parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti. Pārājikaṁ niṭṭhitaṁ",
+   "T1429": "「諸大德！我已說四波羅夷法。若比丘犯一一波羅夷法，不得與諸比丘共住如前，後亦如是。是比丘得波羅夷罪，不應共住。「今問諸大德！是中清淨不？（第二第三亦如是說）。「諸大德！是中清淨，默然故，是事如是持。",
+   "T1422a": "「諸大德！已說四波羅夷法。若比丘犯一一戒，不得共住，如前後亦如是。是比丘得波羅夷罪，不應共住。今問諸大德是中清淨不？」（第二、第三亦如是說）「諸大德是中清淨，嘿然故，是事如是持。」",
+   "sa-sarv": "uddiṣṭā mayāyuṣmantaś catvāraḥ pārājikā dharmā yeṣāṃ bhikṣur anyatamānyatamaṃ dharmam āpanno na labhate bhikṣubhiḥ sārdhaṃ saṃvāsaṃ vā saṃbhogaṃ vā yathā pūrvaṃ tathā paścāt pārājiko bhavaty asaṃvāsyaḥ tatrāham āyuṣmataḥ pṛcchāmi kaccit sthātra pariśuddhā dvir api trir api pṛcchāmi kaccit sthātra pa(riśuddhāḥ pariśuddhā a)trāyuṣmanto yasmā(t) tūṣṇīm evam evāhaṃ dhārayāmi //",
+   "T1436": "「諸大德！已說四波羅夷法，若比丘犯一一法，是比丘不得共住，不得共事，如前後亦如是，是比丘得波羅夷罪，不應共事。」「今問諸大德是中清淨不？」第二、第三亦如是問：「是中清淨不？」「諸大德！是中清淨，默然故，是事如是持。」",
+   "sa-mahl": "uddānaṃ (1) maithunam (2) adinnādānaṃ (3) vadho manuṣyavigrahasyā- (4) bhūtena cottarimanuṣyadharmaṃ pratijānātīti / uddiṣṭāḥ kho punar āyuṣmanto catvāraḥ pārājikā dharmāḥ / yeṣāṃ bhikṣur ito 'nyatarām āpattim āpadyitvā pārājiko bhavaty asaṃvāsyo na labhate bhikṣūhi sārdhasaṃvāsaṃ / yathā pūrve tathā paścād yathā paścāt tathā pūrve pārājiko bhavaty asaṃvāsyo na labhate bhikṣūhi saṃvāsaṃ ḥ tatrāyuṣmanto pṛcchāmi kaccittha pariśuddhāḥ? dvitīyaṃ pi āyuṣmanto pṛcchāmi kaccittha pariśuddhāḥ? tṛtīyaṃ pi āyuṣmanto pṛcchāmi kaccittha pariśuddhāḥ? pariśuddhātrāyuṣmanto yasmāt tūṣṇīm evam etaṃ dhārayāmi ḥ",
+   "T1426": "「諸大德！已說四波羅夷法。今問諸大德！是中清淨不？是中清淨不？是中清淨不？」「諸大德！是中清淨，默然故，是事如是持。」（四事竟）",
+   "T1460": "「諸大德！我已說四波羅夷法。若比丘犯一一法，不得與比丘共住，如前波羅夷不應共住。今問諸大德是中清淨不？」（如是三說）「諸大德是中清淨，默然故，是事如是持。」",
+   "sa-mula": "uddiṣṭā mayāyuṣmantaś catvāraḥ pārājikā dharmā yeṣāṃ bhikṣur anyatamānyatamam āpattim adhyāpatya na labhate bhikṣubhiḥ sārdhaṃ saṃvāsaṃ bhogaṃ vā yathāpūrvaṃ ca tathāpaścāt pārājiko bhavaty asaṃvāsyaḥ / tatrāham āyuṣmantaḥ paripṛcchāmi -- kaścit sthātra pariśuddhāḥ dvir api trir api paripṛcchāmi -- kaścit sthātra pariśuddhāḥ pariśuddhā atrāyuṣmanto yasmāt tūṣṇīm evam etad dhārayāmi /",
+   "T1454": "「諸大德我已說四他勝法，苾芻於此隨犯一一事，不得與諸苾芻共住。如前，後亦如是得他勝罪不應共住。今問諸大德是中清淨不？」（如是三說）「諸大德！是中清淨，默然故，我今如是持。」"
+  }
+ }
+}
