@@ -8,7 +8,7 @@
 
 設定檔 data/research-data/<field>/top-cited.config.json：
   {"total": 500, "pools": [{"name": "環境史", "concept": "C197099058", "quota": 100}, …]}
-  pool 也可以用 "search" 取代 "concept"（另加 "within": 概念 ID 限縮）；"sources": [期刊 ID…] 限定期刊，
+  pool 也可以用 "search" 取代 "concept"（另加 "within": 概念 ID 限縮）；"tsearch" 只搜題名＋摘要（綜合期刊限縮優先用它）；"sources": [期刊 ID…] 限定期刊，
   可與 concept（"C1|C2" 表示或）並用。
 🚨 只靠 concept 會被 OpenAlex 的自動標籤帶偏（「深度歷史」抓到天文學、「環境史」抓到動物園生物學，
    而 Chakrabarty、Cronon 的經典反而漏掉）——先鎖領域期刊，綜合期刊再加 concept 限縮。
@@ -57,6 +57,10 @@ def fetch_pool(pool, want):
         flt.append('primary_location.source.id:' + '|'.join(pool['sources']))
     if pool.get('within'):
         flt.append('concepts.id:' + pool['within'])
+    # 🚨 "search" 連全文一起搜：近東考古首輪「埃及」池被 IntCal 校正曲線等通用方法論文佔滿（內文提到 Egypt 就中）。
+    #    "tsearch" 只搜題名＋摘要，綜合期刊限縮用這個。
+    if pool.get('tsearch'):
+        flt.append('title_and_abstract.search:' + pool['tsearch'])
     params = {'filter': ','.join(flt), 'sort': 'cited_by_count:desc', 'per-page': 200,
               'select': SELECT, 'mailto': MAILTO, 'cursor': '*'}
     if pool.get('search'):
@@ -142,8 +146,7 @@ def fetch(field, outdir):
         urls = (r.get('pdf_urls') or []) + ([r['oa_url']] if r['oa_url'] else [])
         if not urls:
             continue
-        sur = (r['author'] or '?').split(',')[0].split()[-1]
-        dest = od / f"{r['year']}_{safe(sur)}_{safe(r['title'])}.pdf"
+        dest = od / dest_name(r)
         if dest.exists():
             skip += 1
             continue
@@ -163,9 +166,39 @@ def fetch(field, outdir):
     print(f"下載 {ok}、已有 {skip}、非 PDF 或失敗 {bad}（失敗的多半是落地頁，留給校內瀏覽器那條）")
 
 
+def dest_name(r):
+    sur = (r['author'] or '?').split(',')[0].split()[-1]
+    return f"{r['year']}_{safe(sur)}_{safe(r['title'])}.pdf"
+
+
+def write_csv(field, outdir, name):
+    """給使用者在校內下載用的清單（UTF-8 BOM，Excel 直接開）。「已下載」看 outdir 裡有沒有 --fetch 存下的同名檔。"""
+    import csv
+    data = json.loads((ROOT / 'public/content/research-data' / field / 'top-cited.json').read_text(encoding='utf8'))
+    od = pathlib.Path(outdir)
+    have = {p.name for p in od.glob('*.pdf')}
+    out = od / name
+    with open(out, 'w', encoding='utf-8-sig', newline='') as f:
+        w = csv.writer(f)
+        w.writerow(['排名', '被引用次數', '組別', '年份', '作者', '篇名', '期刊', '卷期頁', 'DOI 連結', '開放取用', '已下載'])
+        for i, r in enumerate(data['items'], 1):
+            vol = ' '.join(x for x in [r.get('volume') or '', f"({r['issue']})" if r.get('issue') else ''] if x)
+            vp = f"{vol}: {r['pages']}" if r.get('pages') else vol
+            w.writerow([i, r['cited'], re.sub(r'（[^）]*期刊）$', '', r['pool']), r['year'], r['author'], r['title'],
+                        r['journal'], vp, f"https://doi.org/{r['doi']}" if r['doi'] else '',
+                        '是' if r['oa_url'] else '', '是' if dest_name(r) in have else ''])
+    print(f"清單 {out}（{len(data['items'])} 篇，已下載 {sum(1 for r in data['items'] if dest_name(r) in have)}）")
+
+
 if __name__ == '__main__':
     ap = argparse.ArgumentParser()
     ap.add_argument('field')
     ap.add_argument('--fetch', metavar='OUTDIR')
+    ap.add_argument('--csv', nargs=2, metavar=('OUTDIR', 'FILENAME'), help='在 OUTDIR 產校內下載清單 CSV')
     a = ap.parse_args()
-    fetch(a.field, a.fetch) if a.fetch else build(a.field)
+    if a.csv:
+        write_csv(a.field, *a.csv)
+    elif a.fetch:
+        fetch(a.field, a.fetch)
+    else:
+        build(a.field)

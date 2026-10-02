@@ -58,6 +58,7 @@ description: 古近東大藏經（/near-east）的體例與維護 —— 埃及�
 
 - **短譯**：省去只譯子音尾的「爾」「斯」——馬杜克（非馬爾杜克）。見 [[feedback_short_transliteration]]。
 - **伊絲塔**（Ishtar，使用者先說伊斯塔隨即改定伊絲塔）。
+- **例外：需要區別同名時保留「爾」**——神名 Ashur 作**亞述爾**，國名作亞述（使用者 10-02 定）。
 - **一般譯名優先於聖經譯名**：烏爾、埃蘭、蘇薩、杜牧茲；**赫梯**（非西台，取其銜接聖經「赫人」）。見 [[feedback_general_over_biblical_names]]。
 - 以上七條已回寫 `/translation-glossary`（`deities`／`place_names`），舊譯留在 `name_variants`。測試釘住資料裡不得出現舊譯。
 - 詞庫沒有的新名先照短譯原則擬，列在 `glossary-candidates.md` 標【提】，**不自行寫進詞庫**（見 [[feedback_glossary_ancient_name_priority]]）。
@@ -91,4 +92,6 @@ description: 古近東大藏經（/near-east）的體例與維護 —— 埃及�
 2. **補 `intro`**：100–200 字，照 [[hellenika-curate]] 的四要件。
 3. **核對未線上驗證的編號**（KTU、KAI、館藏號）。
 4. **三欄正文**：建議從蘇美藏 ETCSL 開始（原文英譯同源、編號已核）。
-5. 姊妹工作：研究資料 `/research-data` 的「近東考古」hub 與五百篇高引用論文，見 [[research-data-top-papers]]。
+5. ✅ 姊妹工作（2026-10-02 完成）：`/research-data/top-papers/near-east-archaeology`——研究史策展 501 筆＋OpenAlex 引用前 500 篇，
+   OA 全文 15 篇與校內下載 CSV 在 Drive `電子圖書館\歷史學\中央界域史\近東考古引用前五百期刊論文\`。見 [[research-data-top-papers]]。
+   策展清單的專著尚未進 z-lib 獵表、archive.org 尚未掃（照該 skill「清單之後怎麼拿到」走）。

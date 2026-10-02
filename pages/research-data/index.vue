@@ -61,6 +61,16 @@
           <span class="tool-badge bg-amber-50 text-amber-600">5 組</span>
         </NuxtLink>
 
+        <!-- 近東考古五百篇（埃及學／亞述學／赫梯與安納托利亞／烏加里特與黎凡特／總論與方法） -->
+        <NuxtLink to="/research-data/top-papers/near-east-archaeology" class="tool-card group border-teal-100 hover:border-teal-300 hover:shadow-teal-100">
+          <div class="tool-icon bg-teal-50 text-teal-600">🏺</div>
+          <div class="flex-1">
+            <h2 class="tool-title">近東考古五百篇</h2>
+            <p class="tool-desc">埃及學、亞述學、赫梯與安納托利亞、烏加里特與黎凡特、近東考古總論五組：依研究史策展的五百篇，另附 OpenAlex 引用前五百期刊論文排行</p>
+          </div>
+          <span class="tool-badge bg-teal-50 text-teal-600">5 組</span>
+        </NuxtLink>
+
         <!-- 台灣衛理公會研究資料 -->
         <NuxtLink to="/research-data/taiwan-methodist" class="tool-card group border-teal-100 hover:border-teal-300 hover:shadow-teal-100">
           <div class="tool-icon bg-teal-50 text-teal-600">⛪</div>

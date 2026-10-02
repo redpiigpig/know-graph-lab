@@ -1,0 +1,130 @@
+{
+  "total": 500,
+  "_note": "五組各約 100 篇（user 2026-10-02 定五組）。先鎖領域專門期刊，綜合期刊（JNES、JAOS、Antiquity、AJA…）再以 search 限縮。期刊 ID 由 OpenAlex sources API 查得（2026-10-02）。Orientalia、RA、AfO 在 OpenAlex 查無，未收。 綜合期刊池一律用 tsearch（只搜題名摘要），並排除 Radiocarbon、JAS 這類通用科學期刊——首輪被定年方法論文佔滿。",
+  "pools": [
+    {
+      "name": "埃及學（專門期刊）",
+      "sources": [
+        "S180173593",
+        "S50585835",
+        "S17866092",
+        "S90622156",
+        "S74068729",
+        "S4210225949",
+        "S60963043"
+      ],
+      "quota": 80
+    },
+    {
+      "name": "埃及學（綜合期刊）",
+      "sources": [
+        "S94891645",
+        "S146822473",
+        "S173880072",
+        "S152567572",
+        "S25370165"
+      ],
+      "quota": 20,
+      "tsearch": "Egypt OR Egyptian OR pharaonic OR Nubia"
+    },
+    {
+      "name": "亞述學（專門期刊）",
+      "sources": [
+        "S1008668990",
+        "S163255482",
+        "S4210177540",
+        "S89312022",
+        "S4210219154"
+      ],
+      "quota": 75
+    },
+    {
+      "name": "亞述學（綜合期刊）",
+      "sources": [
+        "S94891645",
+        "S146822473",
+        "S83511569",
+        "S4210196569",
+        "S160669930",
+        "S173880072",
+        "S152567572"
+      ],
+      "quota": 25,
+      "tsearch": "Mesopotamia OR Assyrian OR Babylonian OR Sumerian OR cuneiform OR Akkadian"
+    },
+    {
+      "name": "赫梯與安納托利亞（專門期刊）",
+      "sources": [
+        "S2764770367",
+        "S132622963"
+      ],
+      "quota": 60
+    },
+    {
+      "name": "赫梯與安納托利亞（綜合期刊）",
+      "sources": [
+        "S94891645",
+        "S146822473",
+        "S1008668990",
+        "S89312022",
+        "S163255482",
+        "S173880072",
+        "S152567572",
+        "S4210219403",
+        "S25370165",
+        "S97630619"
+      ],
+      "quota": 40,
+      "tsearch": "Hittite OR Anatolia OR Anatolian OR Hattusa OR Hurrian OR Luwian OR Urartu"
+    },
+    {
+      "name": "烏加里特與黎凡特（專門期刊）",
+      "sources": [
+        "S175413699",
+        "S40982841",
+        "S4210176419",
+        "S35124825",
+        "S100189291",
+        "S4306533648",
+        "S119757142"
+      ],
+      "quota": 80
+    },
+    {
+      "name": "烏加里特與黎凡特（綜合期刊）",
+      "sources": [
+        "S94891645",
+        "S146822473",
+        "S8795719",
+        "S83511569",
+        "S173880072",
+        "S152567572"
+      ],
+      "quota": 20,
+      "tsearch": "Ugarit OR Ugaritic OR Canaanite OR Phoenician OR Levant OR Aramaean"
+    },
+    {
+      "name": "近東考古總論與方法（專門期刊）",
+      "sources": [
+        "S4210219403",
+        "S4210196569",
+        "S28277835",
+        "S138946030"
+      ],
+      "quota": 50
+    },
+    {
+      "name": "近東考古總論與方法（綜合期刊）",
+      "sources": [
+        "S173880072",
+        "S152567572",
+        "S97630619",
+        "S25370165",
+        "S160669930",
+        "S94891645"
+      ],
+      "quota": 50,
+      "tsearch": "\"Near East\" OR \"Fertile Crescent\" OR \"Bronze Age collapse\" OR Mesopotamia OR Levant OR \"Neolithic Anatolia\""
+    }
+  ]
+}

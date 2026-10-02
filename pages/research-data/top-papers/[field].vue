@@ -32,6 +32,35 @@
           </div>
         </div>
 
+        <div v-if="cited" class="mb-5 inline-flex rounded-xl border border-gray-200 bg-white p-0.5 text-xs">
+          <button class="px-3 py-1.5 rounded-lg" :class="tab === 'curated' ? 'bg-slate-800 text-white' : 'text-gray-600'" @click="tab = 'curated'">研究史策展 {{ data.total }}</button>
+          <button class="px-3 py-1.5 rounded-lg" :class="tab === 'cited' ? 'bg-slate-800 text-white' : 'text-gray-600'" @click="tab = 'cited'">引用排行 {{ cited.n }}</button>
+        </div>
+
+        <!-- 引用排行：OpenAlex 被引用數前 N 篇期刊論文（scripts/top_cited_openalex.py） -->
+        <div v-if="cited && tab === 'cited'" class="space-y-5">
+          <p class="text-xs text-gray-400 leading-relaxed break-words">
+            依 OpenAlex 被引用次數排序的期刊論文（只收期刊論文，不含專著），各組先鎖領域專門期刊、再從綜合期刊以關鍵詞補入。
+            引用數偏向英語與近三十年，與上面依研究史策展的清單互補。標「開放取用」者已下載全文到 Drive。
+          </p>
+          <section v-for="g in citedGroups" :key="g.name" class="bg-white rounded-2xl border border-gray-100 p-6">
+            <h2 class="text-base font-bold text-gray-900 mb-3">{{ g.name }} <span class="text-gray-400 font-normal tabular-nums text-sm">{{ g.items.length }}</span></h2>
+            <ol class="space-y-2">
+              <li v-for="r in g.items" :key="r.openalex" class="text-xs text-gray-600 leading-relaxed flex gap-3">
+                <span class="shrink-0 w-12 text-right tabular-nums font-semibold text-gray-700">{{ r.cited.toLocaleString() }}</span>
+                <div class="min-w-0 flex-1 break-words">
+                  <span class="text-gray-400 tabular-nums">{{ r.year }}</span>
+                  {{ r.author }}，<span class="text-gray-800">{{ r.title }}</span>
+                  <span class="text-gray-400">，{{ r.journal }}<span v-if="r.volume"> {{ r.volume }}</span><span v-if="r.pages">: {{ r.pages }}</span></span>
+                  <a v-if="r.doi" :href="'https://doi.org/' + r.doi" target="_blank" rel="noopener" class="ml-1 px-1.5 rounded bg-sky-50 text-sky-700 hover:underline">DOI</a>
+                  <span v-if="r.oa_url" class="ml-1 px-1.5 rounded bg-emerald-50 text-emerald-700">開放取用</span>
+                </div>
+              </li>
+            </ol>
+          </section>
+        </div>
+
+        <template v-if="tab === 'curated'">
         <div class="mb-5 flex flex-wrap gap-2">
           <button v-for="g in data.groups" :key="g.slug" @click="scrollTo(g.slug)"
                   class="text-xs px-3 py-1.5 rounded-full bg-white border border-gray-200 hover:border-gray-400 text-gray-700">
@@ -82,6 +111,7 @@
             </div>
           </section>
         </div>
+        </template>
 
         <p class="mt-8 text-xs text-gray-400">
           資料 <code>data/research-data/{{ data.field }}/</code>，重建 <code>scripts/top_papers_build.py {{ data.field }}</code>；
@@ -111,6 +141,20 @@ const field = computed(() => String(route.params.field))
 const data = ref<Data | null>(null)
 const pending = ref(true)
 const q = ref('')
+const tab = ref<'curated' | 'cited'>('curated')
+
+interface CitedRow { pool: string; cited: number; year: number; author: string; title: string; journal: string; volume?: string; pages?: string; doi?: string; openalex: string; oa_url?: string }
+const cited = ref<{ n: number; items: CitedRow[] } | null>(null)
+// pool 名的「（專門期刊）／（綜合期刊）」只是取數管道，頁面上併成同一組；組內照引用數排
+const citedGroups = computed(() => {
+  const m = new Map<string, CitedRow[]>()
+  for (const r of cited.value?.items ?? []) {
+    const k = r.pool.replace(/（[^）]*期刊）$/, '')
+    if (!m.has(k)) m.set(k, [])
+    m.get(k)!.push(r)
+  }
+  return [...m].map(([name, items]) => ({ name, items: items.sort((a, b) => b.cited - a.cited) }))
+})
 
 const LANGS: Record<string, string> = {
   en: '英', de: '德', fr: '法', la: '拉丁', he: '希伯來', nl: '荷', es: '西', pt: '葡', it: '義', ru: '俄', ja: '日', zh: '中',
@@ -122,7 +166,7 @@ const typeLabel = (k: string) => TYPES[k] ?? k
 // tailwind safelist 裡有的色才可用；沒有就退回 slate
 const borderClass = computed(() => {
   const c = data.value?.color || 'slate'
-  return ({ rose: 'border-rose-300', amber: 'border-amber-300', sky: 'border-sky-300', emerald: 'border-emerald-300', indigo: 'border-indigo-300' } as Record<string, string>)[c] || 'border-slate-300'
+  return ({ rose: 'border-rose-300', amber: 'border-amber-300', sky: 'border-sky-300', emerald: 'border-emerald-300', indigo: 'border-indigo-300', teal: 'border-teal-300' } as Record<string, string>)[c] || 'border-slate-300'
 })
 
 const filteredThemes = (g: Group) => {
@@ -139,6 +183,9 @@ onMounted(async () => {
   try {
     data.value = await $fetch<Data>(`/content/research-data/${field.value}/top-papers.json`, { responseType: 'json' })
   } catch { data.value = null }
+  try {
+    cited.value = await $fetch(`/content/research-data/${field.value}/top-cited.json`, { responseType: 'json' })
+  } catch { cited.value = null }
   pending.value = false
 })
 

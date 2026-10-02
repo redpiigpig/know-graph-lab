@@ -107,7 +107,11 @@ scripts/top_cited_openalex.py <field> --fetch DIR    下載開放取用 PDF（�
    綜合期刊（AHR、P&P、CSSH…）再加 concept 限縮。期刊 ID 用 `api.openalex.org/sources?search=刊名` 查。
 2. **type=article 混著大量書評**（JSTOR 給書評發 DOI，掛的是那本書的引用數，例如 *Sweetness and Power* 書評 2,379 次）。
    濾法：頁數 ≥ 5，或頁數不明但有摘要；標題以 Review 開頭的丟掉。仍會漏網少數，交作者比對時再刪。
-3. **OA 的 `oa_url` 常是落地頁不是 PDF**（首輪 97 篇只抓到 40）。改成先試各 location 的 `pdf_url`。
+3. **綜合期刊池別用 `search`，用 `tsearch`**（2026-10-02 近東考古踩到）：`search` 連**全文**一起搜，
+   「埃及」池被 IntCal 校正曲線、貝葉斯定年等通用方法論文佔滿（內文提到 Egypt 就中）。`tsearch` 只搜題名＋摘要
+   （filter `title_and_abstract.search`），並把 Radiocarbon、JAS 這類通用科學期刊排除在綜合池外。
+   關鍵詞也別放太寬的詞（「Iron Age」帶進南印度新石器與希臘英雄崇拜）。**跑完一定要列每池前幾名用眼睛看。**
+4. **OA 的 `oa_url` 常是落地頁不是 PDF**（首輪 97 篇只抓到 40）。改成先試各 location 的 `pdf_url`。
    抓不到的留給 `doi_browser_fetch.mjs`（但校方多數西文期刊沒訂，見下節）。
 
 ### 論文資料庫與全文來源一覽（新領域照這張表選）
@@ -128,10 +132,18 @@ scripts/top_cited_openalex.py <field> --fetch DIR    下載開放取用 PDF（�
 | JSTOR／SAGE／OUP／T&F | 西文期刊全文 | 對腳本 403，校方多數沒訂 | ❌ 別寫自動下載 |
 | Google Scholar | 引用數 | 無 API、會封鎖 | ❌ 不用 |
 
-清單成品：引用排行另出一份 CSV（UTF-8 BOM，Excel 直接開）放在 PDF 同夾，欄位＝排名／被引用次數／組別／年份／作者／
+清單成品：引用排行另出一份 CSV（`--csv OUTDIR 檔名`，2026-10-02 起由腳本產，不再臨時寫）（UTF-8 BOM，Excel 直接開）放在 PDF 同夾，欄位＝排名／被引用次數／組別／年份／作者／
 篇名／期刊／卷期頁／DOI 連結／開放取用／已下載。史學例：`電子圖書館\歷史學\史學理論\史學引用前五百期刊論文\史學引用前五百期刊論文清單.csv`。
 
 首例（史學，`historiography`）：策展 486 筆（Crossref 核到 135、館內已有 52）；引用排行 493 篇（OA 97 篇）。
+
+第二例（近東考古，`near-east-archaeology`，2026-10-02）：五組＝埃及學／亞述學（蘇美巴比倫亞述合一）／赫梯與安納托利亞／
+烏加里特與黎凡特／總論與方法（user 選五組）。策展 501 筆；引用排行 500 篇（OA 46、實際抓到 PDF 15，其餘是落地頁）。
+Drive：`電子圖書館\歷史學\中央界域史\近東考古引用前五百期刊論文\`（該層已有埃及史、美索不達米亞史，照史學那份命名）。
+OpenAlex 查無 Orientalia、RA、AfO 三份重要刊物，那幾份的經典只能靠策展清單收。
+
+**頁面**：通用頁 `[field].vue` 2026-10-02 起有「研究史策展／引用排行」兩個分頁；有 `top-cited.json` 的領域自動出現第二頁，
+pool 名的「（專門期刊）／（綜合期刊）」在頁面上併成同一組。
 
 ## 清單之後怎麼「拿到」（2026-09-26 實測）
 
