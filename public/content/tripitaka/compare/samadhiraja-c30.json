@@ -1,0 +1,70 @@
+{
+ "slug": "samadhiraja-c30",
+ "title": "月燈三昧經・第30品 功德品（Anuśaṃsā）",
+ "family": "sa",
+ "intro": "梵本〈Anuśaṃsā〉＝藏譯第三十一章：欲知一切眾生言音與諸根差別者應持此三昧；偈 SRS 30.1–10 說持此無垢三昧者之功德。藏譯末多一頌（TMX {i}）。",
+ "units": [
+  {
+   "id": "c30-1",
+   "label": "欲知眾生言音・諸根差別者應持此三昧"
+  },
+  {
+   "id": "c30-2",
+   "label": "偈：持無垢三昧之功德（30.1–10）"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sa",
+   "lang": "sa",
+   "label": "梵本",
+   "who": "Vaidya 校訂本（1961）・GRETIL"
+  },
+  {
+   "id": "bo",
+   "lang": "bo",
+   "label": "藏譯",
+   "who": "德格版 Toh 127・84000 翻譯記憶"
+  },
+  {
+   "id": "en",
+   "lang": "en",
+   "label": "84000 英譯",
+   "who": "譯自藏譯・與藏文逐句對齊"
+  },
+  {
+   "id": "T0639",
+   "lang": "lzh",
+   "label": "那連提耶舍本",
+   "who": "那連提耶舍譯《月燈三昧經》・557 年",
+   "work": "T0639"
+  }
+ ],
+ "works": [
+  "DKtoh0127",
+  "T0639"
+ ],
+ "anchors": [
+  {
+   "work": "T0639",
+   "range": [
+    "T15n0639_p0590a07",
+    "T15n0639_p0590a12"
+   ]
+  }
+ ],
+ "cells": {
+  "c30-1": {
+   "sa": "30 Anuśaṃsāparivartaḥ | atha khalu bhagavān punareva candraprabhaṃ kumārabhūtamāmantrayate sma - tasmāttarhi kumāra ya ākāṅkṣed bodhisattvo mahāsattvaḥ - kimityahaṃ sarvasattvānāṃ rutamadhigaccheyamindriyāṇāṃ ca parāparajñatāṃ vijñāya dharmaṃ deśayeyamiti,tena kumāra bodhisattvena mahāsattvena ayaṃ sarvadharmasvabhāvasamatāvipañcitaḥ samādhiḥ śrotavya udgrahītavyaḥ paryavāptavyo dhārayitavyo vācayitavyaḥ araṇābhāvanayā bhāvayitavyo bahulīkartavyaḥ parebhyaśca vistareṇa saṃprakāśayitavyaḥ ||",
+   "bo": "།གཟི་བརྗིད་ཚོགས་ཀྱི་རྒྱལ་པོའི་ལེའུ་སྟེ་སུམ་ཅུ་པའོ།། །།དེ་ནས་ཡང་བཅོམ་ལྡན་འདས་ཀྱིས་ཟླ་འོད་གཞོན་ནུར་གྱུར་པ་ལ་བཀའ་སྩལ་པ། གཞོན་ནུ་དེ་ལྟ་བས་ན་བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་གང་ཅི་ནས་བདག་སེམས་ཅན་ཐམས་ཅད་ཀྱི་སྒྲ་དང་སྐད་ཤེས་པ་རྟོགས་ཤིང་། དབང་པོ་མཆོག་དང་མཆོག་མ་ཡིན་པ་རྣམ་པར་རིག་ནས་ཆོས་བསྟན་ཏོ་སྙམ་པའི་བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་དེས་གཞོན་ནུ་ཆོས་ཐམས་ཅད་ཀྱི་རང་བཞིན་མཉམ་པ་ཉིད་རྣམ་པར་སྤྲོས་པའི་ཏིང་ངེ་འཛིན་འདི་མཉན་པར་བྱ། གཟུང་བར་བྱ། ཀུན་ཆུབ་པར་བྱ། བཅང་བར་བྱ། བཀླག་པར་བྱ། རབ་ཏུ་གདོན་པར་བྱ། ལུང་མནོད་ཅིང་ཁ་ཏོན་དུ་བྱ། ཉོན་མོངས་པ་མེད་པའི་བསྒོམ་པས་བསྒོམ་པར་བྱ། མང་དུ་བྱ། གཞན་ལ་ཡང་རྒྱ་ཆེར་རབ་ཏུ་བསྟན་པར་བྱའོ། །དེ་ནས་ཡང་བཅོམ་ལྡན་འདས་ཀྱིས་དེའི་ཚེ་ཚིགས་སུ་བཅད་པ་འདི་དག་གསུངས་སོ།",
+   "en": "Conclusion of the thirtieth chapter, “Tejaguṇarāja.”  Benefits Chapter 31 Then the Bhagavān said to the youth Candraprabha, “Therefore, young man, bodhisattva mahāsattvas who think, ‘I shall understand the languages of all beings and, knowing their higher or lesser capabilities, I will teach them the Dharma,’ those bodhisattva mahāsattvas should listen to the samādhi, the revealed equality of the nature of all phenomena, learn it, understand it, keep it, recite it to others, promote it, proclaim it, chant it, meditate on it with unadulterated meditation, promulgate it, and make it widely known to others.” Thereupon the Bhagavān spoke these verses:",
+   "T0639": "「童子！以是義故，菩薩摩訶薩若欲知一切眾生言音，及知一切眾生諸根差別、前後不同而應說法，童子！彼人於此三昧應當受持、讀誦、廣為人說。又，為攝一切眾生故，應當修習方便相應。」"
+  },
+  "c30-2": {
+   "sa": "atha khalu bhagavāṃstasyāṃ velāyāmimā gāthā abhāṣata - aparimita atīta nāyakāstena dṛṣṭāḥ puratu katha prayuktā pṛcchitā lokanāthāḥ / pravara kuśalamūle tiṣṭhato bodhisattvo imu virajasamādhiṃ dhārayan mokṣakāmaḥ // SRS_30.1 // labhati sukha praṇītaṃ divyamānuṣyakaṃ co labhati paramapūjāṃ divyamānuṣyakāṃ so / labhati sukha praṇītaṃ dhyānasaukhyāryasaukhyam imu viraja samādhiṃ dhārayan mokṣakāmaḥ // SRS_30.2 // varṇu śruṇiya udāraṃ harṣu tasyo na bhoti na pi ca punaravarṇe maṅkubhāvaṃ nigacchet / śailopamu akampeyyo aṣṭabhirlokadharmair imu viraja samādhiṃ dhārayan mokṣakāmaḥ // SRS_30.3 // akhilamadhuravāṇī ślakṣṇavācā suyuktā apagatabhrukuṭiśco pūrvaālāpi bhoti / satatasmitamukhaśco śikṣito nāyakānām imu virajasamādhiṃ dhārayan mokṣakāmaḥ // SRS_30.4 // bhavati sa sukhavāsaḥ sūrataḥ snigdhacitto bhavati sada sudānto dāntabhūmisthitaśca / sumadhura priyavāṇī snigdhasatyābhidhāyī imu virajasamādhiṃ dhārayan bodhikāmaḥ // SRS_30.5 // na ca sa katha karotī vaigrahīṃ no vivādān apagatakhila doṣā varjitāstena śeṣāḥ / pramuditu sada bhotī sūrato mārdavaśca imu viraja samādhiṃ dhārayan bodhikāmaḥ // SRS_30.6 // bhavati ca sada vidvāṃstyāgi nityābhiyuktaḥ sudukhita jana dṛṣṭvā teṣamannaṃ dadāti / priyataru parityaktuṃ bhoti nityaṃ sudātā imu virajasamādhiṃ dhārayan bodhikāmaḥ // SRS_30.7 // devaśatasahasrāṇa spṛhāṃ ye saṃjanentī nāga asura yakṣā nityupasthāyakāsya / vani pavani vasante rakṣa tasyā karontī imu viraja samādhiṃ yo naro dhārayati // SRS_30.8 // bhaṇi vacanamasaktaṃ brahmadhoṣasvaro 'sau haṃsaravitaghoṣaḥ kinnarodgītaghoṣaḥ / pañcaśatasvarāṅgo harṣaṇīyasvaraśco bhavati naditaśabdo ghuṣṭaśabdaḥ suśabdaḥ // SRS_30.9 // yāvatatu pṛthu kṣatrāṇa naraḥ kaścideva sūkṣma raja kareyyā śakya te lakṣaṇāya / tatu bahutaru tasyo ye svarā niścarantī imu viraja samādhiṃ yo naro dhārayāti // SRS_30.10 // iti śrīsamādhirāje 'nuśaṃsāparivarto nāma triṃśatitamaḥ || 30 ||",
+   "bo": "།ཐར་པ་འདོད་པ་ཏིང་འཛིན་རྡུལ་བྲལ་འདི་འཛིན་ན། །དེས་ནི་འདས་པའི་འདྲེན་པ་ཚད་མེད་རྣམས་ཀྱང་མཐོང་། །སྔོན་གྱི་སྲིད་པར་བརྩོན་བྱས་འཇིག་རྟེན་མགོན་པོས་དྲིས། །བྱང་ཆུབ་སེམས་དཔའ་དགེ་བའི་རྩ་བ་མཆོག་ལ་གནས། །ཐར་པ་འདོད་པ་ཏིང་འཛིན་རྡུལ་བྲལ་འདི་འཛིན་ན། །ལྷ་དང་མི་ཡི་བདེ་བ་ གྱ་ནོམ་རྙེད་པར་འགྱུར། །ལྷ་དང་མི་ཡི་མཆོད་པ་དམ་པ་དེས་འཐོབ་སྟེ། །བསམ་གཏན་བདེ་དང་འཕགས་པའི་བདེ་བ་མཆོག་ཀྱང་འཐོབ། །ཐར་པ་འདོད་པ་ཏིང་འཛིན་རྡུལ་བྲལ་འདི་འཛིན་ན། །བསྔགས་པ་རྒྱ་ཆེར་ཐོས་ཀྱང་དེ་ནི་དགའ་མི་འགྱུར། །མི་སྙན་པ་དག་ཐོས་ཀྱང་ཞུམ་པར་མི་འགྱུར་ཏེ། །འཇིག་རྟེན་ཆོས་བརྒྱད་དག་གིས་མི་རྒུལ་རི་བོ་བཞིན། །ཐར་པ་འདོད་པ་ཏིང་འཛིན་རྡུལ་བྲལ་འདི་འཛིན་ན། །དགེ་ཞིང་མཉེན་པར་སྨྲ་ལ་འཇམ་པའི་ཚིག་དང་ལྡན། །ཁྲོ་གཉེར་མེད་ཅིང་རྟག་ཏུ་གསོང་པོར་སྨྲ་བར་འགྱུར། །བཞིན་ཡང་འཛུམ་ཞིང་འདྲེན་པ་དག་གི་རྗེས་སུ་སློབ། །ཐར་པ་འདོད་པ་ཏིང་འཛིན་རྡུལ་བྲལ་འདི་འཛིན་ན། །དེས་ཤིང་འགྲོགས་ན་བདེ་ལ་འཇམ་པའི་སེམས་སུ་འགྱུར། །རྟག་པར་རབ་ཏུ་དུལ་ཞིང་དུལ་བའི་ས་ལ་གནས། །འཇམ་ཞིང་དགའ་བའི་ཚིག་སྨྲ་ཤིན་ཏུ་བདེ་བར་ཟེར། །ཐར་པ་འདོད་པ་ཏིང་འཛིན་རྡུལ་བྲལ་འདི་འཛིན་ན། །དེ་ནི་གཏམ་བྱེད་འགྱུར་ཡང་རྩོད་ཅིང་འཐབ་པ་མེད། །ཞེ་སྡང་ཐ་བ་དེ་དག་མ་ལུས་རྣམ་སྤངས་ཏེ། །རྟག་པར་རབ་ཏུ་དགའ་ཞིང་དེས་ལ་མཉེན་པ་ཡིན། །ཐར་པ་འདོད་པ་ཏིང་འཛིན་རྡུལ་བྲལ་འདི་འཛིན་ན། །མཁས་པ་རྟག་ཏུ་གཏོང་ལ་མོས་པར་རབ་འགྱུར་ཏེ། །ཤིན་ཏུ་སྡུག་བསྔལ་སྐྱེ་བོ་མཐོང་ནས་ཁ་ཟས་སྦྱིན། །གཏོང་ལ་ཤིན་ཏུ་དགའ་ཞིང་བདག་ཉིད་སྤྱོད་མི་དགའ། །ཐར་པ་འདོད་པ་ཏིང་འཛིན་རྡུལ་བྲལ་འདི་འཛིན་ན། །ལྷ་ཡང་བརྒྱ་སྟོང་དེ་ལ་སྨོན་པ་ཤིན་ཏུ་སྐྱེད། །ཀླུ་དང་ལྷ་མིན་གནོད་སྦྱིན་རྟག་ཏུ་གཡོག་བྱེད་དེ། །ནགས་དང་ནགས་འདབས་གནས་པ་དེ་ལ་སྲུང་བར་བྱེད། །ཚིག་ནི་ཐོགས་པ་མེད་ཅིང་ཚངས་པའི་སྒྲ་དབྱངས་ཏེ། །ངང་པའི་སྒྲ་སྐད་མིའམ་ཅི་ཡི་གླུ་ཡི་དབྱངས། །དབྱངས་ཀྱི་ཡན་ལག་ལྔ་བརྒྱ་དགའ་བའི་སྒྲ་སྐད་དེ། །སྒྲ་སྒྲགས་ཤིན་ཏུ་གྲགས་པའི་སྒྲ་ཡི་མཆོག་ཏུ་འགྱུར། །ཇི་སྙེད་ཞིང་རྣམས་དེ་དག་སྐྱེས་བུ་ལ་ལ་ཡིས། །ཕྲ་བའི་རྡུལ་དུ་བྱས་པ་ཤེས་པར་ནུས་ཀྱང་ནི། །ཏིང་འཛིན་རྡུལ་བྲལ་མཆོག་འདི་མི་གང་འཛིན་པ་དག །དེ་ཡི་དབྱངས་སྒྲ་དེ་བས་ཤིན་ཏུ་མང་བར་འགྱུར། །ཏིང་འཛིན་རྡུལ་བྲལ་འདི་ཡང་མི་གང་འཛིན་པ་ནི། །དབང་བཅུ་འཐོབ་ཅིང་ས་ཡང་བརྒྱད་དང་གཉིས་འཐོབ་སྟེ། །མཁས་པས་སངས་རྒྱས་ཆོས་རྣམས་ བསམ་ཡས་འཐོབ་པར་འགྱུར། །བདུད་རྣམས་ཐམས་ཅད་བཏུལ་ནས་བྱང་ཆུབ་དམ་པ་རིག །ཕན་ཡོན་གྱི་ལེའུ་སྟེ་སུམ་ཅུ་རྩ་གཅིག་པའོ།། །།",
+   "en": "“They who, desiring liberation, possess this stainless samādhi See the countless guides of the past, Ask those lords of the world about their previous practice, And those bodhisattvas dwell in supreme roots of merit. {1} “They who, desiring liberation, possess this stainless samādhi Obtain the highest happiness of devas and humans, Obtain the supreme offerings of devas and humans, And obtain the happiness of dhyāna, the supreme, noble happiness. {2} “They who, desiring liberation, possess this stainless samādhi Do not become thrilled on hearing the highest praises, Do not become saddened by being criticized, And like a mountain are unmoved by the eight worldly concerns. {3} “They who, desiring liberation, possess this stainless samādhi Speak perfectly pleasantly, with gentle words, Do not frown, always speak sincerely, Have a smiling face, and have been instructed by the guides. {4} “They who, desiring liberation, possess this stainless samādhi Are pleasant, good company, have a gentle mind, Are always restrained and established in self-discipline, And are very gentle, have pleasing speech, and speak tenderly. {5} “They who, desiring liberation, possess this stainless samādhi Do not quarrel or cause conflict when they speak. They have freed themselves from all stubbornness and anger And are always joyful, pleasant, and gentle. {6} “They who, desiring liberation, possess this stainless samādhi Are always wise and are constantly motivated to generosity. When they see beings in great suffering they give them their food; They delight in giving to others, and not in their own enjoyment. {7} “They who, desiring liberation, possess this stainless samādhi Are admired by a hundred thousand devas, Are always attended by nāgas, asuras, and yakṣas, And are protected by those who dwell in the forest and its environs. {8} “They speak with unimpeded words, like the voice of Brahmā, Have a voice like the song of a goose, a voice like a kinnara’s song, Have the fifty aspects of speech and have a sound that brings joy, And have a resounding voice, a proclaiming voice, a perfect voice. {9}  “Even if someone knew how to reduce All the worlds into their smallest particles, They who possess this supreme, stainless samādhi Would voice sounds that were even more numerous. {10} “They who possess this stainless samādhi Attain the ten powers, and attain the eight and two bhūmis. The wise ones attain the inconceivable qualities of a buddha, Subjugate all māras, and reach the highest enlightenment.” {i}  Conclusion of the thirty-first chapter, “Benefits.”",
+   "T0639": "爾時，世尊即說偈言：「若人曾見無量佛，亦曾諮問是三昧， 是勝智人持此定，住第一善而不動； 得於人天上妙樂，常得他人勝供養， 又得禪定涅槃樂，是不放逸持定故； 聞他讚已不生欣，若被罵辱亦無恚， 八法不動猶如山，樂求解脫持定故； 口初不說無義語，離瞋、傲慢及諍論， 忍辱調伏心歡喜，由不放逸持定故； 其言柔軟諦審實，舒顏和悅先慰問， 見諸眾生常含笑，以持勝淨三昧故； 心常調伏不惱他，善攝五根持戒淨， 住實少言利可愛，以持淨勝三昧故； 常捨廣施無悋心，飢渴眾生令飽滿， 自食不欣施他喜，善業人持直定故； 為多百千諸天愛，夜叉、修羅、龍恭敬， 獨處林中恒守護，勇猛持是勝定故； 樂在寂靜離音聲，龍、阿修羅恒親覲， 一切無能怖畏者，以不放逸持定故； 其聲猶如梵天音，又如眾鵝可樂聲， 亦如五百美妙音，名聞遍彰諸世間。 大地所有諸微塵，功德過於彼塵數， 利益眾生功德藏，以修如是寂定故。"
+  }
+ }
+}
