@@ -94,6 +94,17 @@ End-to-end pipeline from Drive folder → reader at `/ebook/[id]`. Single SKILL 
   近 3 天新解析、沒 `.bak_restructure` 的書依序：印刷頁碼→書籤章節→（無章才）讀目錄頁補章節→合併逐頁塊→（整頁一段才）重抽段落
   →一章一頁＋分頁＋段號→補註腳（規則）。每步子行程限時 15 分鐘，log 在 `scripts/logs/postprocess_*.log`，做過的記 `scripts/state/postprocess_done.txt`。
   章節不可靠的書仍會被 restructure 擋下（看 log），不硬切；對照書（有 source_text／sources）不走這支。
+- **每日模型補註腳**（10-02 起，排程 `KGL_Footnote_Relink` 每天 04:30）：`scripts/relink_footnotes_daily.py`
+  → 全館 `--scan`（約 12 分鐘，`footnote_gaps.tsv` 多一欄「型」A–F）→ 只挑 A／C／D 型且有 `.bak_restructure` 的書，
+  神學／宗教學／世界宗教優先 → 規則＋模型（Gemini→NVIDIA）。模型連續 2 次失敗或到 `--max-calls`（400）就停，已補的照寫回；
+  15 分鐘內有人寫過的檔跳過。log `output/relink/daily.log`，每則模型落點印「前 24 字【^N】｜註文前 40 字」供人眼抽查。
+  🚨 10-02 前的版本有兩個靜默失效：①模型區間要求 N±1 已連好，連續缺號整本 0 則（加爾文缺 1,706 全跳過）→ 改「最近已連註號」寬區間（只給模型；規則仍用窄區間）；
+  ②引擎失敗回 `engine-failed …` 不含 429 字樣，額度用完後整批空跑。
+  🚨 模型會硬放：抽樣看到①正文用 ①② 圈號的塊，分隔線下的 (N) 是別頁錯配來的，模型照樣塞（赫爾墨斯的計謀 9/9 錯）→ 有圈號的塊不送；
+  ②全書註文堆在一塊（加爾文書尾）→ 缺號 >30 且每則 <200 字正文就不送；③英文斷字中間「cor-[^27]」、標題行尾 → `place_after` 拒絕；
+  ④prompt 要模型先答 `related`，false 不放。10-02 已上線的 32 則人工看過，拆掉 5 則錯的（`output/relink/unlink_wrong.py`）。
+  E 型（註文平均 <40 字，問題清單）不算缺口；F 型（正文零註號）留給 PDF 上標線——但《印度的宗教》《上帝之城》吳飛譯、《馬丁·路德的神學》
+  都是**無文字層的掃描 PDF**，PyMuPDF 讀不到上標，該法對它們不適用。
 - 🚨 **會改寫同一本書的腳本不可並行**（重建、重抽段落、補註腳）：讀到寫到一半的檔會把殘缺內容寫回。
   10-01 用 `output/restructure/night_relay.py` 依序接力。
 - 中文書的複製引用改中文格式（作者著，譯者譯，《書名》（出版社，年），頁 N）；原本英文 Chicago 會把中文全濾掉只剩「(1901), p. 6.」。

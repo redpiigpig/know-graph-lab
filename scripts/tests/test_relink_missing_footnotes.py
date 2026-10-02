@@ -55,3 +55,29 @@ def test_gap_count():
     rule = "\n" + "—" * 20 + "\n"
     chunks = [{"content": "正文[^1]又一句" + rule + "(1) 註一\n(2) 註二"}]
     assert rl.gap_count(chunks) == (2, 1)
+
+
+def test_segment_wide_uses_nearest_linked_refs():
+    body = "甲[^1]乙丙丁戊[^5]己"
+    assert rl.segment(body, 3) is None                  # 窄：2、4 都沒連，不猜
+    lo, hi = rl.segment(body, 3, wide=True)
+    assert body[lo:hi] == "乙丙丁戊"
+
+
+def test_segment_wide_without_refs_is_whole_body():
+    assert rl.segment("全塊沒有任何註號", 2, wide=True) == (0, 8)
+
+
+def test_book_type():
+    rule = "\n" + "—" * 20 + "\n"
+    long_note = "這是一則相當長的註釋內容，引用某書某頁並加以說明其論點與出處，讓平均長度超過四十字的門檻。"
+    a = [{"content": "正文[^1]又一句" + rule + f"(1) {long_note}\n(2) {long_note}"}]
+    e = [{"content": "正文沒有註號" + rule + "(1) 何謂善？\n(2) 何謂惡？"}]
+    f = [{"content": "正文沒有註號" + rule + f"(1) {long_note}"}]
+    assert (rl.book_type(a), rl.book_type(e), rl.book_type(f)) == ("A", "E", "F")
+
+
+def test_place_after_rejects_hyphen_break_and_heading():
+    assert rl.place_after("so that they learned to hold themselves cor-\nrectly", "hold themselves cor-", 27) is None
+    assert rl.place_after("## 二十一\n復活使我們稱義\n正文", "復活使我們稱義", 1) is not None
+    assert rl.place_after("## 復活使我們稱義\n正文", "復活使我們稱義", 1) is None
