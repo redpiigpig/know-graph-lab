@@ -1181,6 +1181,10 @@ B 線＝前人概論怎麼切（比較表）。一次派一個 Sonnet。
   ③每個傳統以終末收尾，第六章「終末」節只講信經末條的教義內容；第九章維持教會的現況與前景，不講宇宙終局。
   大綱 v3：`output/christianity-intro/outline_v3.md`。相關書 9 種進獵表。
 - 作者要求補做天主教在線三件：80 筆失敗重試、簡轉繁、大藏經分類提案重出（2026-10-02 派代理）。
+- 第五章備料完成（`sources_ch05.md`，64 筆，含 §0 創造、§7 終末；必備缺 19）；新增 7 本進獵表（Lee Levine 會堂、
+  Old、Smalley、West、González《Santa Biblia》、Metzger《Early Versions》、Ullendorff）。觀察：§3 經課表最薄（耶路撒冷、
+  拜占庭經課一手無、無中文）；馬克西姆線全在獵表；哥德／亞美尼亞／喬治亞／科普特譯本只靠 Metzger；中文十誡專書、
+  思高學會專書、中文《彌撒讀經》查不到可核條目。🚨 獵表裡同名他書：Amy-Jill Levine≠Lee Levine、Brock 導論≠《Bible in the Syriac Tradition》。
 - 補書不只 z-lib；先查站上既有（梵二 SC／DV 中拉英在 `data/creeds/ecumenical-councils/vatican-ii/`、
   奧斯堡信條與路德小教理在 `data/creeds/protestant-confessions/`、通諭中譯在 `data/encyclicals/`），
   再查 TRC／天主教在線目錄。館藏確認沒有：《天主教教理》全本中譯、《協同書》中譯、Schmemann、Bria、Brown 第二冊。
