@@ -1,0 +1,139 @@
+{
+ "slug": "lankavatara-c08",
+ "title": "楞伽經・斷食肉品",
+ "family": "sa",
+ "intro": "梵本第八品〈Māṃsabhakṣaṇa〉＝菩提流支〈遮食肉品〉＝實叉難陀〈斷食肉品〉＝求那跋陀羅卷四末（四卷本至此終）。眾生輪迴中皆曾為親屬；肉由精血所成、眾生見之驚怖、令世人謗法、臭如燒屍、障修行與呪術、諸天遠離；佛所許者唯粳米麥豆等淨食；食肉之王師子蘇陀娑（師子奴）、帝釋化鷹逐鴿、斑足王；人不食則無殺，世無不從命來之肉，未來比丘妄稱佛許食肉。求那跋陀羅本把諸過併作一長串「不應食肉」，無淨食、帝釋、斑足；菩提流支本另有諸羅剎聞法捨肉一段。",
+ "units": [
+  {
+   "id": "l8-01",
+   "label": "品題・大慧請說食不食肉功德過失"
+  },
+  {
+   "id": "l8-02",
+   "label": "皆曾為親屬・雜賣之肉"
+  },
+  {
+   "id": "l8-03",
+   "label": "精血不淨・眾生驚怖・謗法・臭穢・障修行"
+  },
+  {
+   "id": "l8-04",
+   "label": "佛所許之淨食"
+  },
+  {
+   "id": "l8-05",
+   "label": "師子蘇陀娑王・帝釋化鷹・斑足王"
+  },
+  {
+   "id": "l8-06",
+   "label": "不食則無殺・未來比丘謗佛許食"
+  },
+  {
+   "id": "l8-07",
+   "label": "偈（8.1–24）"
+  },
+  {
+   "id": "l8-08",
+   "label": "品尾題"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sa",
+   "lang": "sa",
+   "label": "梵本",
+   "who": "Vaidya 校訂本（1963）・GRETIL"
+  },
+  {
+   "id": "T0670",
+   "lang": "lzh",
+   "label": "四卷本",
+   "who": "求那跋陀羅譯《楞伽阿跋多羅寶經》・443 年",
+   "work": "T0670"
+  },
+  {
+   "id": "T0671",
+   "lang": "lzh",
+   "label": "十卷本",
+   "who": "菩提流支譯《入楞伽經》・513 年",
+   "work": "T0671"
+  },
+  {
+   "id": "T0672",
+   "lang": "lzh",
+   "label": "七卷本",
+   "who": "實叉難陀譯《大乘入楞伽經》・700–704 年",
+   "work": "T0672"
+  }
+ ],
+ "works": [
+  "T0670",
+  "T0671",
+  "T0672"
+ ],
+ "anchors": [
+  {
+   "work": "T0671",
+   "node": "入楞伽經遮食肉品第十六",
+   "uid": "T16n0671_p0561a20"
+  },
+  {
+   "work": "T0672",
+   "node": "大乘入楞伽經斷食肉品第八",
+   "uid": "T16n0672_p0622c28"
+  },
+  {
+   "work": "T0670",
+   "range": [
+    "T16n0670_p0513b22",
+    "T16n0670_p0514a15"
+   ]
+  }
+ ],
+ "cells": {
+  "l8-01": {
+   "sa": "māṃsabhakṣaṇaparivarto nāmāṣṭamaḥ / atha khalu mahāmatirbodhisattvo mahāsattvo bhagavantaṃ gāthābhiḥ paripṛcchaya punarapyadhyeṣate sma - deśayatu me bhagavāṃstathāgato 'rhan samyaksaṃbuddho māṃsabhakṣaṇe guṇadoṣam, yena ahaṃ ca anye ca bodhisattvā mahāsattvā anāgatapratyutpannakāle sattvānāṃ kravyādasattvagativāsanāvāsitānāṃ māṃsabhojagṛddhāṇāṃ rasatṛṣṇāprahāṇāya dharmaṃ deśayāma, yathā ca te kravyādabhojinaḥ sattvā virāgya rasatṛṣṇāṃ dharmarasāhārakāṅkṣayā sarvasattvaikaputrakapremānugatāḥ parasparaṃ mahāmaitrīṃ pratilabheran / pratilabhya sarvabodhisattvabhūmiṣu kṛtayogyāḥ kṣipramanuttarāṃ samyaksaṃbodhimabhisaṃbudhyeran / śrāvakapratyekabuddhabhūmyā vā viśramya anuttarāṃ tāthāgatīṃ bhūmimupasarpayeyuḥ / durākhyātadharmairapi tāvadbhagavannanyatīrthikairlokāyatadṛṣṭyabhiniviṣṭaiḥ sadasatpakṣocchedaśāśvatavādibhirmāsaṃ nivāryate bhakṣyamāṇam / svayaṃ ca na bhakṣyate, prāgeva kṛpaikarase samyaksaṃbuddhe praṇīte lokanāthe / tava śāsane māṃsaṃ svayaṃ ca bhakṣyate, bhakṣyamāṇaṃ ca na nivāryate / tatsādhu bhagavān sarvalokānukampakaḥ sarvasattvaiputrakasamadarśī mahākāruṇiko 'nukampāmupādāya māṃsabhakṣaṇe guṇadeṣān deśayatu me, yathā ahaṃ ca anye ca bodhisattvāstathatvāya sattvebhyo dharmaṃ deśayema / bhagavānāha - tena hi mahāmate śṛṇu, sādhu ca suṣṭhu ca manasikuru / bhāṣiṣye 'haṃ te / sādhu bhagavanniti mahāmatirbodhisattvo mahāsattvo bhagavataḥ pratyaśrauṣīt //",
+   "T0670": "爾時，大慧菩薩以偈問言：「彼諸菩薩等，志求佛道者， 酒肉及與葱，飲食為云何？ 惟願無上尊，哀愍為演說。 愚夫所貪著，臭穢無名稱， 虎狼所甘嗜，云何而可食？ 食者生諸過，不食為福善， 惟願為我說，食不食罪福。」大慧菩薩說偈問已，復白佛言：「惟願世尊，為我等說食不食肉功德過惡。我及諸菩薩於現在未來，當為種種悕望食肉眾生，分別說法，令彼眾生慈心相向。得慈心已，各於住地清淨明了，疾得究竟無上菩提。聲聞、緣覺自地止息已，亦復逮成無上菩提。惡邪論法，諸外道輩，邪見斷常，顛倒計著，尚有遮法，不聽食肉。況復如來，世間救護，正法成就，而食肉耶？」佛告大慧：「善哉，善哉！諦聽，諦聽！善思念之，當為汝說。」大慧白佛：「唯然受教。」",
+   "T0671": "爾時聖者大慧菩薩摩訶薩白佛言：「世尊！我觀世間生死流轉怨結相連墮諸惡道，皆由食肉更相殺害，增長貪瞋不得出離甚為大苦。世尊！食肉之人斷大慈種，修聖道者不應得食。世尊！諸外道等說邪見法盧迦耶陀墮俗之論，墮於斷常有無見中皆遮食肉，自己不食不聽他食，云何如來清淨法中修梵行者，自食他食一切不制？如來世尊於諸眾生慈悲一等，云何而聽以肉為食？善哉世尊！哀愍世間願為我說食肉之過不食功德，我及一切諸菩薩等聞已，得依如實修行廣宣流布，令諸現在未來眾生一切識知。」",
+   "T0672": "爾時大慧菩薩摩訶薩復白佛言：「世尊！願為我說食不食肉功德過失，我及諸菩薩摩訶薩知其義已，為未來現在報習所熏食肉眾生而演說之，令捨肉味求於法味；於一切眾生起大慈心，更相親愛如一子想，住菩薩地得阿耨多羅三藐三菩提；或二乘地暫時止息，究竟當成無上正覺。世尊！路迦耶等諸外道輩，起有無見執著斷常，尚有遮禁不聽食肉，何況如來、應、正等覺，大悲含育世所依怙，而許自他俱食肉耶？善哉世尊！具大慈悲哀愍世間，等觀眾生猶如一子，願為解說食肉過惡、不食功德，令我及與諸菩薩等，聞已奉行廣為他說。」爾時大慧菩薩重說頌言：「菩薩摩訶薩，志求無上覺； 酒肉及與葱，為食為不食？ 愚夫貪嗜肉，臭穢無名稱； 與彼惡獸同，云何而可食？ 食者有何過？不食有何德？ 惟願最勝尊，為我具開演。」"
+  },
+  "l8-02": {
+   "sa": "bhagavāṃstasyaitadavocat - aparimitairmahāmate kāraṇairmāṃsaṃ sarvamabhakṣyaṃ kṛpātmano bodhisattvasya / tebhyastūpadeśamātraṃ vakṣyāmi / iha mahāmate anena dīrgheṇādhvanā saṃsaratāṃ prāṇināṃ nāstyasau kaścitsattvaḥ sulabharūpo yo na mātābhūtpitā vā bhrātā vā bhaginī vā putro vā duhitā vā anyatarānyataro vā svajanabandhubandhūbhūto vā / tasya anyajanmaparivṛttāśrayasya mṛgapaśupakṣiyonyantarbhūtasya bandhorbandhubhūtasya vā sarvabhūtātmabhūtānupāgantukāmena sarvajantuprāṇibhūtasaṃbhūtaṃ māṃsaṃ kathamiva bhakṣyaṃ syādbuddhadharmakāmena bodhisattvena mahāsattvena? rākṣasasyāpi mahāmate tathāgatānāmimāṃ dharmasudharmatāmupaśrutya upagatarakṣabhāvāḥ kṛpālavā bhavanti māṃsabhakṣaṇavinivṛttāḥ, kimuta dharmakāmā janāḥ / evaṃ tāvanmahāmate teṣu teṣu jātiparivarteṣu sarvasattvāḥ svajanabandhubhāvasaṃjñāḥ sarvasattvaikaputrakasaṃjñābhāvanārthaṃ māṃsaṃ sarvamabhakṣyam / kṛpātmano bodhisattvasyābhakṣyaṃ māṃsam / vyabhicārādapi mahāmate māṃsaṃ sarvamabhakṣyaṃ cāritravato bodhisattvasya / śvakharoṣṭrāśvabalīvardamānuṣamāṃsādīni hi mahāmate lokasyābhakṣyāṇi māṃsāni / tāni ca mahāmate vīthyantareṣvaurabhrikā bhakṣyāṇīti kṛtvā mūlyahetorvikrīyante yataḥ, tato 'pi mahāmate māṃsamabhakṣyaṃ bodhisattvasya //",
+   "T0670": "佛告大慧：「有無量因緣不應食肉，然我今當為汝略說。謂：一切眾生從本已來，展轉因緣，常為六親，以親想故，不應食肉。驢騾駱駝狐狗牛馬人獸等肉，屠者雜賣故，不應食肉。",
+   "T0671": "佛告聖者大慧菩薩言：「善哉！善哉！善哉大慧！汝大慈悲愍眾生故能問此義，汝今諦聽當為汝說。」大慧菩薩白佛言：「善哉世尊！唯然受教。」佛告大慧：「夫食肉者有無量過，諸菩薩摩訶薩修大慈悲不得食肉，食與不食功德罪過我說少分，汝今諦聽。大慧！我觀眾生從無始來食肉習故，貪著肉味更相殺害，遠離賢聖受生死苦；捨肉味者聞正法味，於菩薩地如實修行速得阿耨多羅三藐三菩提，復令眾生入於聲聞辟支佛地止息之處，息已令入如來之地。大慧！如是等利慈心為本，食肉之人斷大慈種，云何當得如是大利？是故，大慧！我觀眾生輪迴六道，同在生死共相生育，迭為父母兄弟姊妹，若男若女中表內外六親眷屬，或生餘道善道惡道常為眷屬，以是因緣我觀眾生更相噉肉無非親者，由貪肉味迭互相噉，常生害心增長苦業流轉生死不得出離。」佛說是時，諸惡羅剎聞佛所說，悉捨惡心止不食肉，迭相勸發慈悲之心，護眾生命過自護身，捨離一切諸肉不食，悲泣流淚而白佛言：「世尊！我聞佛說諦觀六道，我所噉肉皆是我親，乃知食肉眾生大怨斷大慈種，長不善業是大苦本。世尊！我從今日斷不食肉，及我眷屬亦不聽食；如來弟子有不食者，我當晝夜親近擁護，若食肉者，我當與作大不饒益。」佛言：「大慧！羅剎惡鬼常食肉者，聞我所說尚發慈心捨肉不食，況我弟子行善法者當聽食肉，若食肉者，當知即是眾生大怨斷我聖種。大慧！若我弟子聞我所說，不諦觀察而食肉者，當知即是旃陀羅種，非我弟子我非其師。是故，大慧！若欲與我作眷屬者，一切諸肉悉不應食。",
+   "T0672": "爾時佛告大慧菩薩摩訶薩言：「大慧！諦聽！諦聽！善思念之。吾當為汝分別解說。大慧！一切諸肉有無量緣，菩薩於中當生悲愍，不應噉食，我今為汝說其少分。大慧！一切眾生從無始來，在生死中輪迴不息，靡不曾作父母兄弟男女眷屬，乃至朋友親愛侍使，易生而受鳥獸等身，云何於中取之而食？大慧！菩薩摩訶薩觀諸眾生同於己身，念肉皆從有命中來，云何而食？大慧！諸羅剎等聞我此說尚應斷肉，況樂法人。大慧！菩薩摩訶薩在在生處，觀諸眾生皆是親屬，乃至慈念如一子想，是故不應食一切肉。大慧！衢路市肆諸賣肉人，或將犬馬人牛等肉，為求利故而販鬻之，如是雜穢云何可食？"
+  },
+  "l8-03": {
+   "sa": "śukraśoṇitasaṃbhavādapi mahāmate śucikāmatāmupādāya bodhisattvasya māṃsamabhakṣyam / udvejanakaratvādapi mahāmate bhūtānāṃ maitrīmicchato yogino māṃsaṃ sarvamabhakṣyaṃ bodhisattvasya / tadyathāpi mahāmate ḍombacāṇḍālakaivartādīn piśitāśinaḥ sattvān dūrata eva dṛṣṭvā śvānaḥ prabhayanti bhayena, maraṇaprāptāścaike bhavanti - asmānapi mārayiṣyantīti / evameva mahāmate anye 'pi khabhūjalasaṃniśritān sūkṣmajantavo ye māṃsāśino darśanāddūrādeva paṭunā ghrāṇenāghrāya gandhaṃ rākṣasasyeva mānuṣā drutamapasarpanti, maraṇasaṃdehāścaike bhavanti / tasmādapi ca mahāmate udvejanakaratvānmahāmaitrīvihāriṇo yogino māṃsamabhakṣyaṃ bodhisattvasya anāryajanajuṣṭaṃ durgandham / akīrtikaratvādapi mahāmate āryajanavivarjitatvācca māṃsamabhakṣyaṃ bodhisattvasya / ṛṣibhojanāhāro hi mahāmate āryajano na māṃsarudhirāhāraḥ, ityato 'pi bodhisattvasya māṃsamabhakṣyam // bahujanacittānurakṣaṇatayāpi apavādaparihāraṃ cecchataḥ śāsanasya mahāmate māṃsamabhakṣyaṃ kṛpātmano bodhisattvasya / tadyathā mahāmate bhavanti loke śāsanāpavādavaktāraḥ / kiṃcitteṣāṃ śrāmaṇyam, kuto vā brāhmaṇyam? yannāmaite pūrvarṣibhojanānyapāsya kravyādā ivāmiṣāhārāḥ paripūrṇakukṣayaḥ khabhūmijalasaṃniśritān sūkṣmāṃstrāsayanto jantūn samutrāsayanta imaṃ lokaṃ samantataḥ paryaṭanti / nihatameṣāṃ śrāmaṇyam, dhvastameṣāṃ brāhmaṇyam, nāstyeṣāṃ dharmo na vinayaḥ, ityanekaprakārapratihatacetasaḥ śāsanamevāpavadanti / tasmādbahujanacittānurakṣaṇatayāpi apavādaparihāraṃ cecchataḥ śāsanasya mahāmate māṃsaṃṃ sarvamabhakṣyaṃ kṛpātmano bodhisattvasya // mṛtaśavadurgandhapratikūlasāmānyādapi mahāmate māṃsamabhakṣyaṃ bodhisattvasya / mṛtasyāpi hi mahāmate manuṣyasya māṃse dahyamāne tadanyaprāṇimāṃse ca, na kaścidgandhaviśeṣaḥ / samamubhayamāṃsayordahyamānayordaurgandhyam / ato 'pi mahāmate śucikāmasya yoginaḥ sarvaṃ māṃsamabhakṣyaṃ bodhisattvasya // śmaśānikānāṃ ca mahāmate araṇyavanaprasthānyamanuṣyāvacarāṇi prāntāni śayanāsanānyadhyāvasatāṃ yogināṃ yogācārāṇāṃ maitrīvihāriṇāṃ vidyādharāṇāṃ vidyāṃ sādhayitukāmānāṃ vidyāsādhanamokṣavighnakaratvānmahāyānasaṃprasthitānāṃ kulaputrāṇāṃ kuladuhitṝṇāṃ ca sarvayogasādhanāntarāyakaramityapi samanupaśyatāṃ mahāmate svaparātmahitakāmasya māṃsaṃ sarvamabhakṣyaṃ bodhisattvasya / rūpālambanavijñānapratyayāsvādajanakatvādapi sarvabhūtātmabhūtasya kṛpātmanaḥ sarvaṃ māṃsamabhakṣyaṃ bodhisattvasya / devatā api cainaṃ parivarjayantīti kṛtvā mahāmate kṛpātmanaḥ sarvaṃ māṃsamabhakṣyaṃ bodhisattvasya / mukhaṃ cāsya paramadurgandhi ihaiva tāvajjanmani, ityapi kṛtvā mahāmate kṛpātmanaḥ sarvaṃ māṃsamabhakṣyaṃ bodhisattvasya / duḥkhaṃ svapiti, duḥkhaṃ pratibudhyate / pāpakāṃśca romaharṣaṇān svapnān paśyanti / śūnyāgārasthitasya caikākino rahogatasya viharato 'syāmanuṣyāstejo haranti / utrasyantyapi, kadācitsaṃtrasyantyapi, saṃtrāsamakasmāccāpadyante, āhāre ca mātrāṃ na jānāti nāpyaśitapītakhāditākhāditasya samyagrasapariṇāmapuṣṭyādi samāsādayati, krimijantupracurakuṣṭhanidānakoṣṭhaśca bhavati vyādhibahulam, na ca pratikūlasaṃjñāṃ pratilabhate / putramāṃsabhaiṣajyavadāhāraṃ deśayaṃścāhaṃ mahāmate kathamiva anāryajanasevitamāryajanavivarjitamevamanekadoṣāvahamanekaguṇavivarjitamanṛṣibhojanapraṇītamakalpyaṃ māṃsarudhirāhāraṃ śiṣyebhyo 'nujñāpyāmi?",
+   "T0670": "不淨氣分所生長故，不應食肉。眾生聞氣，悉生恐怖，如旃陀羅及譚婆等，狗見憎惡，驚怖群吠故，不應食肉。又令修行者慈心不生故，不應食肉。凡愚所嗜，臭穢不淨，無善名稱故，不應食肉。令諸呪術不成就故，不應食肉。以殺生者，見形起識，深味著故，不應食肉。彼食肉者，諸天所棄故，不應食肉。令口氣臭故，不應食肉。多惡夢故，不應食肉。空閑林中虎狼聞香故，不應食肉。令飲食無節量故，不應食肉。令修行者不生厭離故不應食肉。我常說言，凡所飲食作食子肉想，作服藥想故，不應食肉。聽食肉者，無有是處。",
+   "T0671": "「復次，大慧！菩薩應觀一切是肉，皆依父母膿血不淨赤白和合生不淨身，是故菩薩觀肉不淨不應食肉。「復次，大慧！食肉之人，眾生聞氣悉皆驚怖逃走遠離，是故菩薩修如實行，為化眾生不應食肉。大慧！譬如旃陀羅獵師屠兒捕魚鳥人一切行處，眾生遙見作如是念：『我今定死，而此來者是大惡人，不識罪福斷眾生命，求現前利今來至此為覓我等，今我等身悉皆有肉，是故今來我等定死。』大慧！由人食肉能令眾生見者皆生如是驚怖。大慧！一切虛空地中眾生，見食肉者皆生驚怖，而起疑念：『我於今者為死為活？如是惡人不修慈心，亦如豺狼遊行世間常覓肉食，如牛噉草蜣蜋逐糞不知飽足，我身是肉正是其食不應逢見。』即捨逃走離之遠去，如人畏懼羅剎無異。大慧！食肉之人，能令眾生見者皆生如是驚怖，當知食肉眾生大怨，是故菩薩修行慈悲，為攝眾生不應食彼，非聖慧人所食之味，惡名流布聖人呵嘖。是故，大慧！菩薩為攝諸眾生故不應食肉。「復次，大慧！菩薩為護眾生信心不應食肉。何以故？大慧！言菩薩者眾生皆知，是佛如來慈心之種，能與眾生作歸依處，聞者自然不生疑怖，生親友想善知識想不怖畏想，言得歸依處得安隱處得善導師。大慧！由不食肉能生眾生如是信心，若食肉者眾生即失一切信心，便言世間無可信者斷於信根。是故，大慧！菩薩為護眾生信心一切諸肉悉不應食。「復次，大慧！我諸弟子，為護世間謗三寶故不應食肉。何以故？世間有人見食肉故，謗毀三寶作如是言：『於佛法中，何處當有真實沙門婆羅門修梵行者？捨於聖人本所應食，食眾生肉，猶如羅剎食肉滿腹醉眠不動，依世凡人豪貴勢力覓肉食噉，如羅剎王驚怖眾生。』是故處處唱如是言：『何處當有真實沙門婆羅門修淨行者？』無法無沙門無毘尼無淨行者，生如是等無量無邊惡不善心，斷我法輪絕滅聖種，一切皆由食肉者過。是故，大慧！我弟子者，為護惡人毀謗三寶，乃至不應生念肉想，何況食肉。「復次，大慧！菩薩為求清淨佛土教化眾生不應食肉，應觀諸肉如人死屍，眼不欲見不用聞氣，何況可嗅而著口中，一切諸肉亦復如是。大慧！如燒死屍臭氣不淨，與燒餘肉臭穢無異，云何於中有食不食？是故，大慧！菩薩為求清淨佛土教化眾生不應食肉。「復次，大慧！菩薩為求出離生死，應當專念慈悲之行，少欲知足厭世間苦速求解脫，當捨憒閙就於空閑，住屍陀林阿蘭若處，塚間樹下獨坐思惟，觀諸世間無一可樂，妻子眷屬如枷鎖想，宮殿臺觀如牢獄想，觀諸珍寶如糞聚想，見諸飲食如膿血想，受諸飲食如塗癰瘡，趣得存命繫念聖道不為貪味，酒肉葱韮蒜薤臭味悉捨不食。大慧！若如是者是真修行，堪受一切人天供養；若於世間不生厭離，貪著滋味酒肉葷辛得便噉食，不應受於世間信施。「復次，大慧！有諸眾生過去曾修無量因緣，有微善根得聞我法，信心出家在我法中，過去曾作羅剎眷屬，虎狼師子猫狸中生，雖在我法食肉餘習見食肉者歡喜親近，入諸城邑聚落塔寺飲酒噉肉以為歡樂，諸天下觀猶如羅剎爭噉死屍等無有異，而不自知已失我眾成羅剎眷屬，雖服袈裟剃除鬚髮，有命者見心生恐怖如畏羅剎。是故，大慧！若以我為師者，一切諸肉悉不應食。「復次，大慧！世間邪見諸呪術師若其食肉呪術不成，為成邪術尚不食肉，況我弟子為求如來無上聖道出世解脫，修大慈悲精勤苦行猶恐不得，何處當有如是解脫為彼癡人食肉而得？是故，大慧！我諸弟子為求出世解脫樂故不應食肉。「復次，大慧！食肉能起色力，食味人多貪著，應當諦觀，一切世間有身命者，各自寶重畏於死苦，護惜身命人畜無別，寧當樂存疥野干身，不能捨命受諸天樂。何以故？畏死苦故。大慧！以是觀察死為大苦是可畏法，自身畏死云何當得而食他肉？是故，大慧！欲食肉者先自念身，次觀眾生，不應食肉。「復次，大慧！夫食肉者，諸天遠離，何況聖人，是故菩薩為見聖人，當修慈悲不應食肉。大慧！食肉之人睡眠亦苦起時亦苦，若於夢中見種種惡，驚怖毛竪心常不安，無慈心故乏諸善力，若其獨在空閑之處，多為非人而伺其便，虎狼師子亦來伺求欲食其肉，心常驚怖不得安隱。「復次，大慧！諸食肉者貪心難滿，食不知量不能消化，增益四大口氣腥臊，腹中多有無量惡蟲，身多瘡癬白癩病疾種種不淨，現在凡夫不憙聞見，何況未來無病香潔人身可得。復次，大慧！我說凡夫為求淨命噉於淨食，尚應生心如子肉想，何況聽食非聖人食。聖人離者以肉能生無量諸過，失於出世一切功德，云何言我聽諸弟子食諸肉血不淨等味？言我聽者是則謗我。",
+   "T0672": "「大慧！一切諸肉皆是精血污穢所成，求清淨人，云何取食？大慧！食肉之人眾生見之悉皆驚怖，修慈心者云何食肉？大慧！譬如獵師及旃陀羅，捕魚網鳥諸惡人等，狗見驚吠獸見奔走，空飛水住一切眾生，若有見之咸作是念：『此人氣息猶如羅剎，今來至此必當殺我。』為護命故悉皆走避。食肉之人亦復如是，是故菩薩為修慈行不應食肉。大慧！夫食肉者，身體臭穢惡名流布，賢聖善人不用親狎，是故菩薩不應食肉。大慧！夫血肉者，眾仙所棄群聖不食，是故菩薩不應食肉。大慧！菩薩為護眾生信心，令於佛法不生譏謗，以慈愍故不應食肉。大慧！若我弟子食噉於肉，令諸世人悉懷譏謗，而作是言：『云何沙門修淨行人，棄捨天仙所食之味，猶如惡獸食肉滿腹，遊行世間，令諸眾生悉懷驚怖，壞清淨行，失沙門道？是故當知佛法之中無調伏行。』菩薩慈愍為護眾生，令不生於如是之心，不應食肉。大慧！如燒人肉其氣臭穢，與燒餘肉等無差別，云何於中有食不食？是故一切樂清淨者不應食肉。大慧！諸善男女塚間樹下阿蘭若處寂靜修行，或住慈心或持呪術，或求解脫或趣大乘，以食肉故，一切障礙不得成就，是故菩薩欲利自他不應食肉。大慧！夫食肉者，見其形色則已生於貪滋味心，菩薩慈念一切眾生猶如己身，云何見之而作食想？是故菩薩不應食肉。大慧！夫食肉者諸天遠離，口氣常臭，睡夢不安覺已憂悚，夜叉惡鬼奪其精氣，心多驚怖，食不知足，增長疾病易生瘡癬，恒被諸蟲之所唼食，不能於食深生厭離。大慧！我常說言：『凡所食噉作子肉想。』餘食尚然，云何而聽弟子食肉。大慧！肉非美好、肉不清淨，生諸罪惡敗諸功德，諸仙聖人之所棄捨，云何而許弟子食耶？若言許食，此人謗我。"
+  },
+  "l8-04": {
+   "sa": "anujñātavān punarahaṃ mahāmate sarvāryajanasevitamanāryajanavivarjitamanekaguṇavāhakamanekadoṣavivarjitaṃ sarvapūrvarṣipraṇītaṃ bhojanam, yaduta śāliyavagodhūmamudgamāṣamasūrādisarpistailamadhuphāṇitaguḍakhaṇḍamatsyaṇḍikādiṣu samupapadyamānaṃ bhojanaṃ kalpyamiti kṛtvā / na ca mahāmate anāgate 'dhvani ekeṣāṃ mohapuruṣāṇāṃ vividhavinayavikalpavādināṃ kravyādakulavāsitāvāsitānāṃ rasatṛṣṇāvyavasitānāmidaṃ praṇītaṃ bhojanaṃ pratibhāṣyate / na tu mahāmate pūrvajinakṛtādhikārāṇāmavaropitakuśalamūlānāṃ śrāddhānāmavikalpānāṃ bahulānāṃ śākyakulakulīnānāṃ kulaputrāṇāṃ kuladuhitṝṇāṃ kāyajīvitabhogānadhyavasitānāmarasagṛdhrāṇāmalolupānāṃ kṛpālūnāṃ sarvabhūtātmabhūtatāmupagantukāmānāṃ sarvasattvaikaputrakapriyadarśināṃ bodhisattvānāṃ mahāsattvānamiti vadāmi //",
+   "T0671": "大慧！我聽弟子食諸聖人所應食食，非謂聖人遠離之食，聖食能生無量功德遠離諸過。大慧！過去現在聖人食者，所謂粳米大小麥豆，種種油蜜，甘蔗甘蔗汁，騫陀末干提等，隨時得者聽食為淨。大慧！於未來世有愚癡人，說種種毘尼言得食肉，因於過去食肉熏習愛著肉味，隨自心見作如是說，非佛聖人說為美食。大慧！不食肉者，要因過去供養諸佛種諸善根，能信佛語堅住毘尼信諸因果，至於身口能自節量，不為世間貪著諸味，見食肉者能生慈心。",
+   "T0672": "「大慧！淨美食者，應知則是粳米粟米大小麥豆蘇油石蜜，如是等類，此是過去諸佛所許，我所稱說。我種性中諸善男女，心懷淨信久植善根，於身命財不生貪著，慈愍一切猶如己身，如是之人之所應食，非諸惡習虎狼性者心所愛重。"
+  },
+  "l8-05": {
+   "sa": "bhūtapūrvaṃ mahāmate atīte 'dhvani rājābhūtsiṃhasaudāso nāma / sa māṃsabhojanāhārātiprasaṅgena pratisevamāno rasatṛṣṇādhyavasānaparamatayā māṃsāni mānuṣyāṇyapi bhakṣitavān / tannidānaṃ ca mitrāmātyajñātibandhuvargeṇāpi parityaktaḥ, prāgeva paurajānapadaiḥ / svarājyaviṣayaparityāgācca mahadvayasanamāsāditavān māṃsahetoḥ // indreṇāpi ca mahāmate devādhipatyaṃ prāptena (pūrvābhūtvā) pūrvajanmamāṃsādavāsanādoṣācchyenarūpamāsthāya kapotaveṣarūpadhārī viśvakarmā samabhidruto 'bhūt / tulāyāṃ cātmānamāropita āsīt / yasmādrājā anaparādhibhūtānukampakaḥ śibī duḥkhena mahatā lambhitaḥ / tadevamanekajanmābhyastamapi mahāmate devendrabhūtasya śakrasyāpi sataḥ svaparadoṣāvahanamabhūt, prāgeva tadanyeṣām // anyeṣāṃ ca mahāmate narendrabhūtānāṃ satāmaśvenāpahṛtānāmaṭavyāṃ paryaṭamānānāṃ siṃhyā saha maithunaṃ gatavatāṃ jīvitabhayādapatyāni cotpāditavantaḥ siṃhasaṃvāsānvayātkalmāṣapādaprabhṛtayo nṛpaputrāḥ pūrvajanmamāṃsādadoṣavāsanatayā manuṣyendrabhūtā api santo māṃsādā abhūvan / ihaiva ca mahāmate janmani saptakuṭīrake 'pi grāme pracuramāṃsalaulyādatiprasaṅgena niṣevamānā mānuṣamāṃsādā ghorā ḍākā vā ḍākinyaśca saṃjāyante / jātiparivarte ca mahāmate tathaiva māṃsarasādhyavasānatayā siṃhavyāghradvīpivṛkatarakṣumārjārajambukolūkādipracuramāṃsādayoniṣu pracuratarapiśitāśanā rākṣasādighoratarayoniṣu vinipātyante / yatra vinipatitānāṃ duḥkhena mānuṣyayonirapi samāpadyate, prāgave nirvṛtiḥ / ityevamādayo mahāmate māṃsādadoṣāḥ prāgeva niṣevamānānāṃ samupajāyante, viparyayācca bhūyāṃso guṇāḥ / na ca mahāmate bālapṛthagjanā etāṃścānyāṃśca guṇadoṣānavabudhyante / evamādiguṇadoṣadarśanānmahāmate māṃsaṃ sarvamabhakṣyaṃ kṛpātmano bodhisattvasyeti vadāmi //",
+   "T0670": "「復次，大慧！過去有王，名師子蘇陀娑，食種種肉，遂至食人，臣民不堪，即便謀反，斷其奉祿。以食肉者有如是過故，不應食肉。",
+   "T0671": "大慧！我憶過去有王名師子奴，食種種肉愛著肉味，次第乃至食於人肉，因食人肉父母兄弟妻子眷屬皆悉捨離，一切臣民國土聚落即便謀反共斷其命。以食肉者有如是過，是故不應食一切肉。復次，大慧！自在天王化身為鴿，釋提桓因是諸天主，因於過去食肉習氣，化身作鷹驚逐此鴿，鴿來投我，我於爾時作尸毘王，憐愍眾生更相食噉，稱己身肉與鷹代鴿，割肉不足身上秤上受大苦惱。大慧！如是無量世來食肉熏習，自身他身有如是過，何況無愧常食肉者。大慧！復有餘王不食肉者，乘馬遊戲為馬驚波牽入深山，失於侍從不知歸路，不食肉故師子虎狼見無害心，與雌師子共行欲事，乃至生子斑足王等，以過去世食肉熏習，及作人王亦常食肉，在七家村多樂食肉，食肉太過遂食人肉，生諸男女盡為羅剎。大慧！食肉眾生依於過去食肉熏習，多生羅剎師子虎狼豺豹猫狸鵄梟雕鷲鷹鷂等中，有命之類各自護身不令得便，受飢餓苦常生惡心念食他肉，命終復墮惡道，受生人身難得，何況當有得涅槃道？",
+   "T0672": "「大慧！過去有王名師子生，耽著肉味食種種肉，如是不已遂至食人，臣民不堪悉皆離叛，亡失國位受大苦惱。大慧！釋提桓因處天王位，以於過去食肉餘習，變身為鷹而逐於鴿。我時作王名曰尸毘，愍念其鴿，自割身肉以代其命。「大慧！帝釋餘習尚惱眾生，況餘無慚常食肉者。當知食肉自惱惱他，是故菩薩不應食肉。大慧！昔有一王乘馬遊獵，馬驚奔逸入於山險，既無歸路又絕人居，有牝師子與同遊處，遂行醜行生諸子息，其最長者名曰班足，後得作王領七億家，食肉餘習非肉不食，初食禽獸後乃至人，所生男女悉是羅剎。轉此身已，復生師子豺狼虎豹雕鷲等中，欲求人身終不可得，況出生死涅槃之道。"
+  },
+  "l8-06": {
+   "sa": "yadi ca mahāmate māṃsaṃ na kathaṃcana kecana bhakṣayeyuḥ, na tannidānaṃ ghāteran / mūlyahetorhi mahāmate prāyaḥ prāṇino niraparādhino vadhyante svalpādanyahetoḥ / kaṣṭaṃ mahāmate rasatṛṣṇāyāmatisevatāṃ māṃsāni mānuṣānyapi mānuṣairbhakṣyante, kiṃ punaritaramṛgapakṣiprāṇisaṃbhūtamāṃsāni / prāyo mahāmate māṃsarasatṛṣṇārtairidaṃ tathā tathā jālayantramāviddhaṃ mohapuruṣaiḥ, yacchākunikaurabhrakakaivartādayaḥ khecarabhūcarajalacarān prāṇino 'naparādhino 'nekaprakāraṃ mūlyahetorviśasanti / na caiṣāṃ mahāmate kiṃkanīkṛtarūkṣacetasāṃ rākṣasānāmiva gataghṛṇānāṃ kadācidapi prāṇiṣu prāṇisaṃjñayā ghātayatāṃ bhakṣayatāṃ na ghṛṇotpadyate // na ca mahāmate akṛtakamakāritamasaṃkalpitaṃ nāma māṃsaṃ kalpyamasti yadupādāya anujānīyāṃ śrāvakebhyaḥ / bhaviṣyanti tu punarmahāmate anāgate 'dhvani mamaiva śāsane pravrajitvā śākyaputrīyatvaṃ pratijānānāḥ kāṣāyadhvajadhāriṇo mohapuruṣā mithyāvitarkopahatacetaso vividhavinayavikalpavādinaḥ satkāyadṛṣṭiyuktā rasatṛṣṇādhyavasitāstāṃ tāṃ māṃsabhakṣaṇahetvābhāsāṃ granthayiṣyanti / mama cābhūtābhyākhyānaṃ dātavyaṃ maṃsyante / tattadarthotpattinidānaṃ kalpayitvā vakṣyanti - iyamarthotpattirasminnidāne, bhagavatā māṃsabhojanamanujñātaṃ kalpyamiti / praṇītabhojaneṣu coktam, svayaṃ ca kila tathāgatena paribhuktamiti / na ca mahāmate kutracitsūtre pratisevitavyamityanujñātam, praṇītabhojaneṣu vā deśitaṃ kalpyamiti // yadi tu mahāmate anujñātukāmatā me syāt, kalpyaṃ vā me śrāvakāṇāṃ pratisevituṃ syāt, nāhaṃ maitrīvihāriṇāṃ yogināṃ yogācārāṇāṃ śmaśānikānāṃ mahāyānasaṃprasthitānāṃ kulaputrāṇāṃ kuladuhitṝṇāṃ ca sarvasattvaikaputrakasaṃjñābhāvanārthaṃ sarvāmāṃsabhakṣaṇapratiṣedhaṃ kuryām, kṛtavāṃśca / asmin mahāmate dharmakāmānāṃ kulaputrāṇāṃ kuladuhitṝṇāṃ ca sarvayānasaṃprasthitānāṃ śmaśānikānāṃ maitrīvihāriṇāmāraṇyakānāṃ yogināṃ yogācārāṇāṃ sarvayogasādhanāya sarvasattvaikaputrakasaṃjñābhāvanārthaṃ sarvamāṃsapratiṣedham // tatra tatra deśanāpāṭhe śikṣāpadānāmanupūrvībandhaṃ niḥśreṇīpadavinyāsayogena trikoṭiṃ baddhvā na taduddiśya kṛtāni pratiṣiddhāni / tato daśaprakṛtimṛtānyapi māṃsāni pratiṣiddhāni / iha tu sūtre sarveṇa sarvaṃ sarvathā sarvaṃ nirupāyena sarvaṃ pratiṣiddham / yato 'haṃ mahāmate māṃsabhojanaṃ na kasyacidanujñātavān, nānujānāmi, nānujñāsyāmi / akalpyaṃ mahāmate pravrajitānāṃ māṃsabhojanamiti vadāmi / yadapi ca mahāmate mamābhyākhyānaṃ dātavyaṃ maṃsyante tathāgatenāpi paribhuktamiti, tadanyeṣāṃ mahāmate mohapuruṣāṇāṃ svakarmadoṣāvaraṇāvṛtānāṃ dīrgharātramanarthāyāhitāya saṃvartakaṃ bhaviṣyati / na hi mahāmate āryaśrāvakāḥ prākṛtamanuṣyāhāramāharanti, kuta eva māṃsarudhirāhāramakalpyam / dharmāhārā hi mahāmate mama śrāvakāḥ pratyekabuddhā bodhisattvāśca nāmiṣāhārāḥ, prāgeva tathāgatāḥ / dharmakāyā hi mahāmate tathāgatā dharmāhārasthitayo nāmiṣakāyā na sarvāmiṣāhārasthitayo vāntasarvabhavopakaraṇatṛṣṇaiṣaṇāvāsanāḥ sarvakleśadoṣavāsanāpagatāḥ suvimuktacittaprajñāḥ sarvajñāḥ sarvadarśinaḥ sarvasattvaikaputrakasamadarśino mahākāruṇikāḥ / so 'haṃ mahāmate sarvasattvaikaputrakasaṃjñī san kathamiva svaputramāṃsamanujñāsyāmi paribhoktuṃ śrāvakebhyaḥ, kuta eva svayaṃ paribhoktum? anujñātavānasmi śrāvakebhyaḥ svayaṃ vā paribhuktavāniti mahāmate nedaṃ sthānaṃ vidyate //",
+   "T0670": "「復次，大慧！凡諸殺者，為財利故、殺生屠販。彼諸愚癡食肉眾生，以錢為網而捕諸肉。彼殺生者，若以財物，若以鈎網，取彼空行水陸眾生，種種殺害，屠販求利。大慧！亦無不教不求不想，而有魚肉。以是義故，不應食肉。大慧！我有時說，遮五種肉，或制十種。今於此經，一切種、一切時，開除方便，一切悉斷。大慧！如來、應供、等正覺，尚無所食，況食魚肉？亦不教人。以大悲前行故，視一切眾生，猶如一子，是故不聽令食子肉。」",
+   "T0671": "「大慧當知！食肉之人有如是等無量諸過，不食肉者即是無量功德之聚。大慧！而諸凡夫不知如是食肉之過不食功德，我今略說不聽食肉。大慧！若一切人不食肉者，亦無有人殺害眾生，由人食肉若無可食處處求買，為財利者殺以販賣，為買者殺，是故買者與殺無異，是故食肉能障聖道。大慧！食肉之人愛著肉味，至無畜生乃食人肉，何況麞鹿雉兔鵝鴈猪羊雞狗駝驢象馬龍蛇魚鼈，水陸有命得而不食，由著肉味設諸方便殺害眾生，造作種種罝羅機網，羅山罝地截河堰海，遍諸水陸安置罟網機撥坑埳弓刀毒箭間無空處，虛空地水種種眾生皆被殺害，為食肉故。大慧！獵師屠兒食肉人等，惡心堅固能行不忍，見諸眾生形體鮮肥膚肉充悅生食味心，更相指示言是可噉，不生一念不忍之心，是故我說食肉之人斷大慈種。「大慧！我觀世間無有是肉而非命者，自己不殺不教人殺他不為殺，不從命來而是肉者，無有是處。若有是肉不從命出而是美食，我以何故不聽人食？遍求世間無如是肉，是故我說食肉是罪，斷如來種故不聽食。「大慧！我涅槃後於未來世法欲滅時，於我法中有出家者，剃除鬚髮自稱我是沙門釋子，披我袈裟癡如小兒，自稱律師墮在二邊，種種虛妄覺觀亂心貪著肉味，隨自心見說毘尼中言得食肉，亦謗我言諸佛如來聽人食肉，亦說因制而聽食肉，亦謗我言如來世尊亦自食肉。大慧！我於《象腋》、《央掘魔》、《涅槃》、《大雲》等一切修多羅中不聽食肉，亦不說肉入於食味。大慧！我若聽諸聲聞弟子肉為食者，我終不得口常讚歎修大慈悲行如實行者，亦不讚歎屍陀林中頭陀行者，亦不讚歎修行大乘住大乘者，亦不讚歎不食肉者，我不自食不聽他食，是故我勸修菩薩行歎不食肉，勸觀眾生應如一子，云何唱言我聽食肉？我為弟子修三乘行者速得果故，遮一切肉悉不聽食，云何說言我毘尼中聽人食肉？又復說言如來餘修多羅中說三種肉聽人食者，當知是人不解毘尼次第斷故唱言得食。何以故？大慧！肉有二種，一者、他殺；二者、自死。以世人言有肉得食有不得者，象馬龍蛇人鬼獼猴猪狗及牛，言不得食餘者得食，屠兒不問得食不得，一切盡殺處處衒賣，眾生無過橫被殺害，是故我制他殺自死悉不得食。見聞疑者所謂他殺，不見聞疑者所謂自死。是故，大慧！我毘尼中唱如是言：『凡所有肉，於一切沙門釋子皆不淨食，污清淨命障聖道分，無有方便而可得食。』若有說言佛毘尼中說三種肉為不聽食非為聽食，當知是人堅住毘尼是不謗我。大慧！今此楞伽修多羅中，一切時一切肉，亦無方便而可得食。是故，大慧！我遮食肉不為一人，現在未來一切不得。是故，大慧！若彼癡人自言律師，言毘尼中聽人食肉，亦謗我言如來自食，彼愚癡人成大罪障，長夜墮於無利益處無聖人處不聞法處，亦不得見現在未來賢聖弟子，況當得見諸佛如來。大慧！諸聲聞人常所應食，米麵油蜜種種麻豆能生淨命，非法貯畜非法受取，我說不淨尚不聽食，何況聽食血肉不淨。大慧！我諸聲聞辟支佛菩薩弟子食於法食，非食飲食何況如來。大慧！諸佛如來法食法住非飲食身，非諸一切飲食住身，離諸資生愛有求等，遠離一切煩惱習過，善分別知心心智慧一切智一切見，見諸眾生平等憐愍。是故，大慧！我見一切諸眾生等猶如一子，云何而聽以肉為食？亦不隨喜，何況自食。大慧！如是一切葱韮蒜薤臭穢不淨能障聖道，亦障世間人天淨處，何況諸佛淨土果報；酒亦如是，能障聖道能損善業能生諸過。是故，大慧！求聖道者酒肉葱韮及蒜薤等能熏之味悉不應食。」",
+   "T0672": "「大慧！夫食肉者有如是等無量過失，斷而不食獲大功德，凡愚不知如是損益，是故我今為汝開演，凡是肉者悉不應食。大慧！凡殺生者多為人食，人若不食亦無殺事，是故食肉與殺同罪。奇哉世間貪著肉味，於人身肉尚取食之，況於鳥獸有不食者，以貪味故廣設方便，罝羅網罟處處安施，水陸飛行皆被殺害，設自不食為貪價直而作是事。「大慧！世復有人心無慈愍，專行慘暴猶如羅剎，若見眾生其身充盛，便生肉想言此可食。大慧！世無有肉，非是自殺亦非他殺，心不疑殺而可食者，以是義故我許聲聞食如是肉。大慧！未來之世有愚癡人，於我法中而為出家，妄說毘尼壞亂正法，誹謗於我言聽食肉亦自曾食。大慧！我若聽許聲聞食肉，我則非是住慈心者，修觀行者，行頭陀者，趣大乘者，云何而勸諸善男子及善女人，於諸眾生生一子想斷一切肉？大慧！我於諸處說遮十種許三種者，是漸禁斷令其修學；今此經中自死他殺，凡是肉者一切悉斷。大慧！我不曾許弟子食肉，亦不現許亦不當許。大慧！凡是肉食，於出家人悉是不淨。「大慧！若有癡人，謗言如來聽許食肉亦自食者，當知是人惡業所纏，必當永墮不饒益處。大慧！我之所有諸聖弟子，尚不食於凡夫段食，況食血肉不淨之食。大慧！聲聞緣覺及諸菩薩尚惟法食，豈況如來。大慧！如來法身非雜食身。大慧！我已斷除一切煩惱，我已浣滌一切習氣，我已善擇諸心智慧，大悲平等普觀眾生猶如一子。云何而許聲聞弟子食於子肉？何況自食。作是說者無有是處。」"
+  },
+  "l8-07": {
+   "sa": "tatredamucyate - madyaṃ māṃsaṃ palāṇḍuṃ na bhakṣayeyaṃ mahāmune / bodhisattvairmahāsattvairbhāṣadbhirjinapuṃgavaiḥ // Lank_8.1 // anāryajuṣṭadurgandhamakīrtikarameva ca / kravyādabhojanaṃ māṃsaṃ brūhyabhakṣyaṃ mahāmune // Lank_8.2 // bhakṣyamāṇe ca ye deṣā abhakṣye tu guṇāśca ye / mahāmate nibodha tvaṃ ye doṣā māṃsabhakṣaṇe // Lank_8.3 // svājanyādvyabhicārācca śukraśoṇitasaṃbhavāt / udvejanīyaṃ bhūtānāṃ yogī māṃsaṃ vivarjayet // Lank_8.4 // māṃsāni ca palāṇḍūṃśca madyāni vividhāni ca / gṛñjanaṃ laśunaṃ caiva yogī nityaṃ vivarjayet // Lank_8.5 // mrakṣaṇaṃ varjayettailaṃ śalyaviddheṣu na svapet / chidrācchidreṣu sattvānāṃ yacca sthānaṃ mahadbhayam // Lank_8.6 // āhārājjāyate darpaḥ saṃkalpo darpasaṃbhavaḥ / saṃkalpajanito rājastasmādapi na bhakṣayet // Lank_8.7 // saṃkalpājjāyate rāgaścittaṃ rāgeṇa muhyate / mūḍhasya saṃgatirbhavati jāyate na ca mucyate // Lank_8.8 // lābhārthaṃ hanyate sattvo māṃsārthaṃ dīyate dhanam / ubhau tau pāpakarmāṇau pacyete rauravādiṣu // Lank_8.9 // yo 'tikramya munervākyaṃ māṃsaṃ bhakṣati durmatiḥ / lokadvayavināśārthaṃ dīkṣitaḥ śākyaśāsane // Lank_8.10 // te yānti paramaṃ ghoraṃ narakaṃ pāpakarmiṇaḥ / rauravādiṣu raudreṣu pacyante māṃsakhādakāḥ // Lank_8.11 // trikoṭiśuddhamāṃsaṃ vai akalpitamayācitam / acoditaṃ ca naivāsti tasmānmāṃsaṃ na bhakṣayet // Lank_8.12 // māṃsaṃ na bhakṣayedyogī mayā buddhaiśca garhitam / anyonyabhakṣaṇāḥ sattvāḥ kravyādakulasaṃbhavāḥ // Lank_8.13 // durgandhiḥ kutsanīyaśca unmattaścāpi jāyate / caṇḍālapukkasakule ḍombeṣu ca punaḥ punaḥ // Lank_8.14 // ḍākinījātiyonyāśca māṃsāde jāyate kule / rākṣasīmārjārayonau ca jāyate 'sau naro 'dhamaḥ // Lank_8.15 // hastikakṣye mahāmedhe nirvāṇāṅgulimālike / laṅkāvatārasūtre ca mayā māṃsaṃ vivarjitam // Lank_8.16 // buddhaiśca bodhisattvaiśca śrāvakaiśca vigarhitam / khādate yadi nairlajjyādunmatto jāyate sadā // Lank_8.17 // brāhmaṇeṣu ca jāyeta atha vā yogināṃ kule / prajñāvān dhanavāṃścaiva māṃsādyānāṃ vivarjanāt // Lank_8.18 // dṛṣṭaśrutaviśaṅkābhiḥ sarvaṃ māṃsaṃ vivarjayet / tārkikā nāvabudhyante kravyādakulasaṃbhavāḥ // Lank_8.19 // yathaiva rāgo mokṣasya antarāyakaro bhavet / tathaiva māṃsamadyādyā antarāyakaro bhavet // Lank_8.20 // vakṣyantyanāgate kāle māṃsādā mohavādinaḥ / kalpikaṃ niravadyaṃ ca māṃsaṃ buddhānuvarṇitam // Lank_8.21 // bhaiṣajyaṃ māṃsamāhāraṃ putramāṃsopamaṃ punaḥ / mātrayā pratikūlaṃ ca yogī piṇḍaṃ samācaret // Lank_8.22 // maitrīvihāriṇāṃ nityaṃ sarvathāṃ garhitaṃ mayā / siṃhavyāghravṛkādyaiśca saha ekatra saṃbhavet // Lank_8.23 // tasmānna bhakṣayenmāṃsamudvejanakaraṃ nṛṇām / mokṣadharmaviruddhatvādāryāṇāmeṣa vai dhvajaḥ // Lank_8.24 //",
+   "T0670": "爾時，世尊欲重宣此義而說偈言：「曾悉為親屬，鄙穢不淨雜， 不淨所生長，聞氣悉恐怖。 一切肉與葱，及諸韮蒜等， 種種放逸酒，修行常遠離。 亦常離麻油，及諸穿孔床， 以彼諸細蟲，於中極恐怖。 飲食生放逸，放逸生諸覺， 從覺生貪欲，是故不應食。 由食生貪欲，貪令心迷醉， 迷醉長愛欲，生死不解脫。 為利殺眾生，以財網諸肉， 二俱是惡業，死墮叫呼獄。 若無教想求，則無三淨肉， 彼非無因有，是故不應食。 彼諸修行者，由是悉離遠， 十方佛世尊，一切咸呵責。 展轉更相食，死墮虎狼類， 臭穢可厭惡，所生常愚癡。 多生栴陀羅，獵師譚婆種， 或生陀夷尼，及諸肉食性， 羅剎猫狸等，遍於是中生。 縛象與大雲，央掘利魔羅， 及此楞伽經，我悉制斷肉。 諸佛及菩薩，聲聞所呵責， 食已無慚愧，生生常癡冥。 先說見聞疑，已斷一切肉， 妄想不覺知，故生食肉處。 如彼貪欲過，障礙聖解脫， 酒肉葱韮蒜，悉為聖道障。 未來世眾生，於肉愚癡說， 言此淨無罪，佛聽我等食。 食如服藥想，亦如食子肉， 知足生厭離，修行行乞食。 安住慈心者，我說常厭離， 虎狼諸惡獸，恒可同遊止。 若食諸血肉，眾生悉恐怖， 是故修行者，慈心不食肉。 食肉無慈悲，永背正解脫， 及違聖表相，是故不應食。 得生梵志種，及諸修行處， 智慧富貴家，斯由不食肉。」",
+   "T0671": "爾時世尊重說偈言：「大慧菩薩問：『酒肉葱韮蒜， 佛言是不淨，一切不聽食。 羅剎等食噉，非聖所食味； 食者聖呵嘖，及惡名流布。 願佛分別說，食不食罪福？』 『大慧！汝諦聽，我說食中過， 酒肉葱韮蒜，是障聖道分。 我觀三界中，及得聖道眾； 無始世界來，展轉莫非親。 云何於其中，而有食不食？ 觀肉所從來，出處最不淨； 膿血和雜生，尿屎膿涕合， 修行淨行者，當觀不應食。 種種肉及葱，酒亦不得飲， 種種韮及蒜，修行常遠離。 常遠離麻油，穿孔床不眠， 飛揚諸細蟲，斷害他命故。 肉食長身力，由力生邪念， 邪念生貪欲，故不聽食肉。 由食肉生貪，貪心致迷醉； 迷醉長愛欲，不解脫生死。 為利殺眾生，為肉追錢財； 彼二人惡業，死墮叫喚獄。 三種名淨肉，不見聞不疑； 世無如是肉，生墮食肉中。 臭穢可厭患，常生顛狂中； 多生旃陀羅，獵師屠兒家。 或生羅剎女，及諸食肉處； 羅剎猫狸種，食肉生彼中。 《象腋》與《大雲》，《涅槃》、《勝鬘經》； 及《入楞伽經》，我不聽食肉。 諸佛及菩薩，聲聞亦呵嘖； 食肉無慚愧，生生常顛狂。 先說見聞疑，已斷一切肉； 妄想不覺知，故生食肉想。 如彼貪欲過，障礙聖解脫； 酒肉葱韮蒜，悉為聖道障。 未來世眾生，於肉愚癡說； 言此淨無罪，佛聽我等食。 淨食如藥想，猶如食子肉； 知足生厭離，修行行乞食。 安住慈心者，我說常厭離； 師子豺虎狼，恒可同遊止。 食肉見者怖，云何而可食？ 是故修行者，慈心不食肉。 食肉斷慈心，離涅槃解脫； 及違聖人教，故不聽食肉。 不食生梵種，及諸修行道； 智慧及富貴，斯由不食肉。』」",
+   "T0672": "爾時世尊重說頌言：「悉曾為親屬，眾穢所成長， 恐怖諸含生，是故不應食。 一切肉與葱，韮蒜及諸酒； 如是不淨物，修行者遠離。 亦常離麻油，及諸穿孔床； 以彼諸細蟲，於中大驚怖。 飲食生放逸，放逸生邪覺； 從覺生於貪，是故不應食。 邪覺生貪故，心為貪所醉； 心醉長愛欲，生死不解脫。 為利殺眾生，以財取諸肉； 二俱是惡業，死墮叫喚獄。 不想不教求，此三種名淨； 世無如是肉，食者我訶責。 更互相食噉，死墮惡獸中； 臭穢而癲狂，是故不應食。 獵師旃茶羅，屠兒羅剎娑； 此等種中生，斯皆食肉報。 食已無慚愧，生生常癲狂； 諸佛及菩薩，聲聞所嫌惡。 《象脇》與《大雲》，《涅槃》、《央掘摩》， 及此《楞伽經》，我皆制斷肉。 先說見聞疑，已斷一切肉； 以其惡習故，愚者妄分別。 如貪障解脫，肉等亦復然； 若有食之者，不能入聖道。 未來世眾生，於肉愚癡說； 言此淨無罪，佛聽我等食。 淨食尚如藥，猶如子肉想； 是故修行者，知量而行乞。 食肉背解脫，及違聖表相； 令眾生生怖，是故不應食。 安住慈心者，我說常厭離； 師子及虎狼，應共同遊止。 若於酒肉等，一切皆不食； 必生賢聖中，豐財具智慧。」"
+  },
+  "l8-08": {
+   "sa": "iti laṅkāvatārātsarvabuddhapravacanahṛdayānmāṃsabhakṣaṇaparivarto 'ṣṭamaḥ //"
+  }
+ }
+}
