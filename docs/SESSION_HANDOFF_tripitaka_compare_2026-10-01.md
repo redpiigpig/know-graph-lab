@@ -149,7 +149,7 @@
 4. 其他候選（未排定，動手前先問使用者）：藏譯系長經的自動版逐部改人工、巴利系短經自動版抽查。
 5. ✅ 巴利系自動版抽查（docs/tripitaka_pali_auto_audit_2026-10-02.md）→ 判 C 與邊界的 **31 組已撤下**（剩 222 組）；
    撤下的 MN／DN 與 SN 長篇日後改人工。
-6. ✅ **悲華經**全經（karunapundarika-*，14 組 263 節，agent 做）；**月燈三昧經**（samadhiraja-cNN）agent 進行中。
+6. ✅ **悲華經**全經（karunapundarika-*，14 組 263 節，agent 做）；✅ **月燈三昧經**全經四十品（samadhiraja-c01～c40，198 節，agent 做）。
    🚨 新的 SET 一律寫在 `scripts/tripitaka_compare_sets/<部>.py`（主檔以自身全域 exec），並行的 agent／session
    各改各的檔，不再同改七千行主檔。
 工具：scratchpad 的 `look.py`（節點首尾／找字／印段）、`scan.py`（句首字掃描＋同節字數比）、`gatha.py`（偈頌逐頌清單）、
