@@ -1,0 +1,116 @@
+{
+ "slug": "suvarnaprabhasa-c19",
+ "title": "金光明經・讚佛品（十方菩薩讚歎）",
+ "family": "sa",
+ "intro": "梵本〈Sarvatathāgatastava〉前段＝藏譯第十九章＝曇無讖、合部〈讚佛品〉前段＝義淨〈十方菩薩讚歎品〉。無量菩薩詣金寶蓋山王如來（寶山佛）所，以偈讚佛身相功德。梵本此品與下一品（妙幢讚佛）同為一品。",
+ "units": [
+  {
+   "id": "s19-00",
+   "label": "諸菩薩詣佛所禮敬"
+  },
+  {
+   "id": "s19-01",
+   "label": "讚佛偈"
+  },
+  {
+   "id": "s19-01x",
+   "label": "義淨：佛讚諸菩薩"
+  },
+  {
+   "id": "s19-02",
+   "label": "品尾題（藏）"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sa",
+   "lang": "sa",
+   "label": "梵本",
+   "who": "Nobel 校訂本・GRETIL"
+  },
+  {
+   "id": "bo",
+   "lang": "bo",
+   "label": "藏譯",
+   "who": "德格版 Toh 557・84000 翻譯記憶"
+  },
+  {
+   "id": "en",
+   "lang": "en",
+   "label": "84000 英譯",
+   "who": "譯自藏譯・與藏文逐句對齊"
+  },
+  {
+   "id": "T0663",
+   "lang": "lzh",
+   "label": "曇無讖本",
+   "who": "曇無讖譯《金光明經》・五世紀初",
+   "work": "T0663"
+  },
+  {
+   "id": "T0664",
+   "lang": "lzh",
+   "label": "合部本",
+   "who": "寶貴合《合部金光明經》・597 年",
+   "work": "T0664"
+  },
+  {
+   "id": "T0665",
+   "lang": "lzh",
+   "label": "義淨本",
+   "who": "義淨譯《金光明最勝王經》・703 年",
+   "work": "T0665"
+  }
+ ],
+ "works": [
+  "T0663",
+  "T0664",
+  "T0665"
+ ],
+ "anchors": [
+  {
+   "work": "T0665",
+   "node": "金光明最勝王經十方菩薩讚歎品第二十七",
+   "uid": "T16n0665_p0454b27"
+  },
+  {
+   "work": "T0663",
+   "range": [
+    "T16n0663_p0356c24",
+    "T16n0663_p0356c28"
+   ]
+  },
+  {
+   "work": "T0664",
+   "range": [
+    "T16n0664_p0399c25",
+    "T16n0664_p0399c29"
+   ]
+  }
+ ],
+ "cells": {
+  "s19-00": {
+   "sa": "// Sarvatathāgatastavaparivartaḥ // atha khalu tānyanekāni bodhisattvaśatasahasrāṇi yena suvarṇaratnākaracchatrakūṭastathāgatastenopasaṃkrāntāḥ / upasaṃkramya tasya suvarṇaratnākaracchatrakūṭasya tathāgarasya pādau śirasā banditvaikānte sthitāni kṛtāñ alibhūtāni taṃ suvarṇaratnākaracchatrakūṭaṃ tathāgatamabhiṣṭavitsuḥ //",
+   "bo": "དེ་ནས་བྱང་ཆུབ་སེམས་དཔའ་བརྒྱ་སྟོང་ཕྲག་དུ་མ་དེ་དག ། དེ་བཞིན་གཤེགས་པ་གསེར་དང་རིན་པོ་ཆེའི་འབྱུང་གནས་གདུགས་བརྩེགས་ག་ལ་བ་དེར་སོང་སྟེ་ཕྱིན་ནས། བཅོམ་ལྡན་འདས་དེ་བཞིན་གཤེགས་པ་གསེར་དང་རིན་པོ་ཆེའི་འབྱུང་གནས་གདུགས་བརྩེགས་ཀྱི་ཞབས་ལ་མགོ་བོས་ཕྱག་འཚལ་ཏེ་ཕྱོགས་གཅིག་ཏུ་འཁོད་དོ། །",
+   "en": "Chapter 19: Praise by All Bodhisattvas  Then those hundreds of thousands of bodhisattvas went to where the Tathāgata Suvarṇaratnākaracchatrakūṭa was. When they arrived, they bowed down their heads to the feet of the Bhagavat Tathāgata Suvarṇaratnākaracchatrakūṭa and arranged themselves to one side.",
+   "T0663": "爾時無量百千萬億諸菩薩眾，從此世界至金寶蓋山王如來國土，到彼土已五體投地，為佛作禮却住一面，合掌向佛異口同音，而讚歎曰：",
+   "T0664": "爾時，無量百千萬億諸菩薩眾，從此世界至金寶蓋山王如來國土。到彼土已，五體投地為佛作禮，却一面立，向佛合掌，異口同音而讚歎曰：",
+   "T0665": "爾時，釋迦牟尼如來說是經時，於十方世界有無量百千萬億諸菩薩眾，各從本土詣鷲峯山，至世尊所，五輪著地，禮世尊已，一心合掌，異口同音而讚歎曰："
+  },
+  "s19-01": {
+   "sa": "suvarṇavarṇo inatyaktakāya suvarṇavarṇo vyavabhāsitāṅga / suvarṇavarṇo girivā munīndra suvarṇavarṇo munipuṇḍarīka // Suv_20.1 // sulakṣaṇairlakṣaṇa bhuṣitāṅgaṃ suvicitravyañ anavicitritāṅga / suvirā itaṃ kāñcanasuprabhāsaṃ sunirmalaṃ saumyamivācalendrama // Suv_20.2 // brahmeśvaraṃ susvarabrahmaghoṣaṃ siṃheśvaraṃ gar itameghaghoṣam / ṣaṣṭayaṅgavaccātasvaranirmaleśvaraṃ mayūrakalaviṅkarutasvarā itam // Suv_20.3 // sunirmalaṃ suvimalate asuprabhaṃ puṇyaṃ śatalakṣaṇasamalaṃkṛtaṃ inam / suvimalasunirmalasāgaraṃ inaṃ sumerusarvasugaṇācitaṃ inam // Suv_20.4 // paramasattvahitānukampanaṃ paramaṃ lokeṣu sukhasya dāyakam / paramārthasya sudeśakaṃ inaṃ parinirvāṇasukhapradeśakam // Suv_20.5 // amṛtasya sukhasya dāyakaṃ maitrībalavīrya upāyavantam / na śakyaṃ sataguravasamudrasāgarabahukalpasahasrakoṭibhirekaikaṃ tava prakāśitum // Suv_20.6 // etatsaṃkṣiptaṃ mayā prakāśitaṃ kiṃ cidguṇabinduguṇārṇavodbhavam / yacca samupacitapuṇyasaṃcayaṃ tena sattvaḥ prāpnyatu bodhimuttamām // Suv_20.7 //",
+   "bo": "ཕྱོགས་གཅིག་ཏུ་འཁོད་ནས་ཀྱང་བྱང་ཆུབ་སེམས་དཔའ་བརྒྱ་སྟོང་ཕྲག་དུ་མ་དེ་དག་གིས་ཐལ་མོ་སྦྱར་ཏེ། དེ་བཞིན་གཤེགས་པ་གསེར་དང་རིན་པོ་ཆེའི་འབྱུང་གནས་གདུགས་བརྩེགས་ དེ་ལ་ཚིགས་སུ་བཅད་པ་འདི་དག་གིས་མངོན་པར་བསྟོད་དོ། །རྒྱལ་བའི་སྐུ་མདོག་བཙོ་མའི་གསེར་འདྲ་སྟེ། །སྐུ་ལུས་གསེར་གྱི་མདོག་ཏུ་རྣམ་པར་གདའ། །གསེར་གྱི་རི་དབང་ལྟ་བུའི་གསེར་གྱི་མདོག ། ཐུབ་པ་པདྨ་དཀར་པོ་གསེར་མདོག་ཅན། ། བཟང་པོའི་མཚན་གྱིས་སྐུ་ལུས་རབ་ཏུ་བརྒྱན། །དཔེ་བྱད་སྣ་ཚོགས་བཟང་པོས་སྐུ་ལུས་སྤྲས། ། གསེར་གྱི་འོད་ལྟར་མཛེས་པ་རྣམ་པར་འབར། ། ཤིན་ཏུ་དྲི་མེད་ཞི་བ་རི་དབང་འདྲ། ། ཚངས་པའི་སྒྲ་དང་སྒྲ་སྙན་ཚངས་པའི་དབྱངས། ། སེང་གེའི་སྒྲ་དང་འབྲུག་སྒྲ་བསྒྲགས་པའི་དབྱངས། ། ཡན་ལག་དྲུག་ཅུ་བསྒྲགས་སྒྲ་དྲི་མེད་སྒྲ། ། རྒྱལ་དབྱངས་རྨ་བྱ་ཀ་ལ་པིང་ཀའི་སྒྲ། ། ཤིན་ཏུ་དྲི་མེད་དྲི་བྲལ་གཟི་འོད་མཛེས། ། རྒྱལ་བ་བསོད་ནམས་བརྒྱ་པའི་མཚན་གྱིས་བརྒྱན། ། མཁྱེན་པའི་རྒྱ་མཚོ་དྲི་མེད་དྲི་བྲལ་མཆོག ། རྒྱལ་བ་ཡོན་ཏན་ཀུན་ལྡན་རི་རབ་འདྲ། ། སེམས་ཅན་རྣམས་ལ་ཕན་པར་ཐུགས་བརྩེ་མཆོག ། འཇིག་རྟེན་དག་ན་བདེ་བ་སྦྱིན་པའི་མཆོག ། རྒྱལ་བ་དམ་པའི་དོན་རྣམས་སྟོན་པ་སྟེ། ། མྱ་ངན་འདས་པའི་བདེ་ལ་འཛུད་པ་ལགས། ། འཆི་བ་མེད་པའི་བདེ་བ་སྩོལ་བ་སྟེ། །རྒྱལ་བ་བདུད་རྩིའི་ཆོས་ནི་རབ་ཏུ་སྟོན། །འཆི་བ་མེད་པའི་གྲོང་ཁྱེར་འཛུད་པ་སྟེ། ། བདེ་བ་ཀུན་གྱི་འབྱུང་གནས་བདེ་བའི་གནས། ། རྒྱལ་བས་འགྲོ་བ་སྡུག་བསྔལ་ཐར་བར་མཛོད། །སྡུག་བསྔལ་རྒྱ་མཚོ་ལས་ནི་སྐྱེ་དགུ་སྒྲོལ། ། ཞི་བའི་ལམ་ལ་སྐྱེ་དགུ་རབ་ཏུ་འཛུད། ། སྐྱེ་དགུ་རྣམས་ལ་བདེ་བ་ཀུན་སྩོལ་བ། ། ཁྱོད་ལ་དཔེ་ནི་བགྱི་བར་མི་ནུས་ཏེ། ། ཇི་སྙེད་འདྲེན་པའི་ཡོན་ཏན་ཡེ་ཤེས་མཚོ། ། སྲོག་ཆགས་ཀུན་ལ་ཁྱོད་ཀྱི་ཐུགས་རྗེ་དང་། །བྱམས་པའི་སྟོབས་དང་ཐབས་དང་བརྩོན་འགྲུས་དང་། ། ཁྱོད་ཀྱི་ཡོན་ཏན་ཡེ་ཤེས་རྒྱ་མཚོ་ལས། །བསྐལ་པ་བྱེ་བ་སྟོང་ཕྲག་མང་པོར་ཡང་། །ཡོན་ཏན་ཐིགས་པ་གཅིག་ཙམ་རབ་བསྟན་པར། །ལྷར་བཅས་འགྲོ་བའི་ནང་ན་ནུས་མ་མཆིས། ། ཡོན་ཏན་མཚོ་ལས་ཡོན་ཏན་ཐིགས་བླངས་ཏེ། །དེ་ལྟར་བདག་གིས་མདོར་བསྡུས་ཅུང་ཟད་བཤད། ། བདག་གིས་བསོད་ནམས་གང་བསགས་དེ་ཡིས་ནི། །སེམས་ཅན་དེ་དག་བྱང་ཆུབ་མཆོག་རེག་ཤོག །",
+   "en": "Having arranged themselves to one side, those hundreds of thousands of bodhisattvas placed their palms together and praised the Tathāgata Suvarṇaratnākaracchatrakūṭa with these verses:  “The color of the Jina’s body is like refined gold; Your body is completely the color of gold, A golden color like a golden lord of mountains. You are a muni, a white lotus, the color of gold. “Your body is adorned by the excellent signs; Your body is beautified by the various excellent features. You are shining with beautiful golden light. You are stainless and peaceful like the lord of mountains. “You have Brahmā’s voice, the beautiful voice of Brahmā. You have the roar of a lion, a voice of resounding thunder. You have the voice with sixty qualities, a stainless voice. You have a jina’s voice, the peacock and the kalaviṅka’s sound. “You have completely stainless, immaculate, beautiful, bright light. You are a jina adorned by the signs of a hundred qualities. Your ocean of wisdom is stainless, perfectly free of stain. You are a jina like Sumeru, endowed with all qualities. “You have the supreme compassion for benefiting beings. You are the supreme bringer of happiness to the worlds. You are a jina who teaches the sublime meaning. You are a guide toward the bliss of nirvāṇa. “You bestow the bliss of deathlessness; You are a jina who teaches the Dharma of deathlessness; You are a guide for the city of deathlessness. You are the source of all happiness, the basis of happiness. “You are a jina who frees beings from suffering; You liberate beings from the ocean of suffering. You lead beings on the path to peace. You bestow all happiness upon beings. “There is no analogy that will serve for you. You are an ocean of wisdom with the qualities of all guides. You have the power, methods, and diligence Of compassion and love for all beings. “There is no one among beings, including devas, Who even in thousands of millions of eons Would be able to teach even one drop of the qualities From your ocean of wisdom and qualities. “I have taken a drop of qualities from the ocean of your qualities And in that way have taught a little of it briefly. Through whatever merit I have accumulated, May those beings reach the supreme enlightenment.”",
+   "T0663": "「如來之身，金色微妙，其明照耀， 如金山王；身淨柔軟，如金蓮華； 無量妙相，以自莊嚴；隨形之好， 光飾其體；淨絜無比，如紫金山； 圓足無垢，如淨滿月；其音清徹， 妙如梵聲——師子吼聲、大雷震聲， 六種清淨，微妙音聲；迦陵頻伽， 孔雀之聲，清淨無垢，威德具足； 百福相好，莊嚴其身，光明遠照， 無有齊限，智慧寂滅，無諸愛習。 世尊成就，無量功德，譬如大海， 須彌寶山，為諸眾生，生憐愍心， 於未來世，能與快樂。如來所說， 第一深義，能令眾生，寂滅安隱； 能與眾生，無量快樂；能演無上， 甘露妙法；能開無上，甘露法門； 能入一切，無患窟宅；能令眾生， 悉得解脫，度於三有，無量苦海， 安住正道，無諸憂苦。如來世尊， 功德智慧，大慈悲力，精進方便， 如是無量，不可稱計。我等今者， 不能說有，諸天世人，於無量劫， 盡思度量，不能得知，如來所有， 功德智慧，無量大海，一滴少分。 我今略讚，如來功德，百千億分， 不能宣一；若我功德，得聚集者， 迴與眾生，證無上道。」",
+   "T0664": "「如來之身，金色微妙，其明照曜， 如金山王；身淨柔軟，如金蓮花， 無量妙相，以自莊嚴；隨形之好， 光飾其體，淨潔無比，如紫金山； 圓足無垢，如淨滿月；其音清徹， 妙如梵聲、師子吼聲、大雷震聲、 六種清淨，微妙音聲，迦陵、頻伽、 孔雀之聲。清淨無垢，威德具足， 百福相好，莊嚴其身。光明遠照， 無有齊限，智慧寂滅，無諸愛習。 世尊成就，無量功德，譬如大海、 須彌寶山。為諸眾生，生憐愍心， 於未來世，能與快樂。如來所說， 第一深義，能令眾生，寂滅安隱； 能與眾生，無量快樂；能演無上， 甘露妙法；能開無上，甘露法門； 能入一切，無患窟宅；能令眾生， 悉得解脫，度於三有，無量苦海， 安住正道，無諸憂苦。如來世尊， 功德、智慧、大慈悲力、精進、方便， 如是無量，不可稱計，我等今者， 不能說喻。諸天世人，於無量劫， 盡思度量，不能得知，如來所有， 功德智慧。無量大海，一渧少分， 我今略讚，如來功德，百千億分， 不能宣一。若我功德，得聚集者， 迴與眾生，證無上道。」",
+   "T0665": "「佛身微妙真金色，其光普照等金山； 清淨柔軟若蓮華，無量妙彩而嚴飾。 三十二相遍莊嚴，八十種好皆圓備； 光明昞著無與等，離垢猶如淨滿月。 其聲清徹甚微妙，如師子吼震雷音； 八種微妙應群機，超勝迦陵頻伽等。 百福妙相以嚴容，光明具足淨無垢； 智慧澄明如大海，功德廣大若虛空。 圓光遍滿十方界，隨緣普濟諸有情； 煩惱愛染習皆除，法炬恒然不休息。 哀愍利益諸眾生，現在未來能與樂； 常為宣說第一義，令證涅槃真寂靜。 佛說甘露殊勝法，能與甘露微妙義； 引入甘露涅槃城，令受甘露無為樂。 常於生死大海中，解脫一切眾生苦； 令彼能住安隱路，恒與難思如意樂。 如來德海甚深廣，非諸譬喻所能知； 於眾常起大悲心，方便精勤恒不息。 如來智海無邊際，一切人天共測量； 假使千萬億劫中，不能得知其少分。 我今略讚佛功德，於德海中唯一渧； 迴斯福聚施群生，皆願速證菩提果。」"
+  },
+  "s19-01x": {
+   "T0665": "爾時，世尊告諸菩薩言：「善哉！善哉！汝等善能如是讚佛功德，利益有情，廣興佛事，能滅諸罪，生無量福。」"
+  },
+  "s19-02": {
+   "bo": "གསེར་འོད་དམ་པ་མདོ་སྡེའི་ དབང་པོའི་རྒྱལ་པོ་ལས། བྱང་ཆུབ་སེམས་དཔའ་ཐམས་ཅད་ཀྱིས་བསྟོད་པའི་ལེའུ་ཞེས་བྱ་བ་སྟེ་བཅུ་དགུ་པའོ།། །།",
+   "en": "This concludes “Praise by All Bodhisattvas,” the nineteenth chapter of “The Lord King of the Sūtras, the Sublime Golden Light.”"
+  }
+ }
+}

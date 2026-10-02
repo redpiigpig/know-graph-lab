@@ -1,0 +1,105 @@
+{
+ "slug": "suvarnaprabhasa-c20",
+ "title": "金光明經・讚佛品（妙幢讚歎）",
+ "family": "sa",
+ "intro": "梵本〈Sarvatathāgatastava〉後段＝藏譯第二十章＝曇無讖、合部〈讚佛品〉中段＝義淨〈妙幢菩薩讚歎品〉。妙幢（信相）菩薩以偈讚佛百福相好。",
+ "units": [
+  {
+   "id": "s20-00",
+   "label": "妙幢菩薩讚佛偈"
+  },
+  {
+   "id": "s20-00x",
+   "label": "義淨：佛讚妙幢"
+  },
+  {
+   "id": "s20-01",
+   "label": "品尾題"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sa",
+   "lang": "sa",
+   "label": "梵本",
+   "who": "Nobel 校訂本・GRETIL"
+  },
+  {
+   "id": "bo",
+   "lang": "bo",
+   "label": "藏譯",
+   "who": "德格版 Toh 557・84000 翻譯記憶"
+  },
+  {
+   "id": "en",
+   "lang": "en",
+   "label": "84000 英譯",
+   "who": "譯自藏譯・與藏文逐句對齊"
+  },
+  {
+   "id": "T0663",
+   "lang": "lzh",
+   "label": "曇無讖本",
+   "who": "曇無讖譯《金光明經》・五世紀初",
+   "work": "T0663"
+  },
+  {
+   "id": "T0664",
+   "lang": "lzh",
+   "label": "合部本",
+   "who": "寶貴合《合部金光明經》・597 年",
+   "work": "T0664"
+  },
+  {
+   "id": "T0665",
+   "lang": "lzh",
+   "label": "義淨本",
+   "who": "義淨譯《金光明最勝王經》・703 年",
+   "work": "T0665"
+  }
+ ],
+ "works": [
+  "T0663",
+  "T0664",
+  "T0665"
+ ],
+ "anchors": [
+  {
+   "work": "T0665",
+   "node": "金光明最勝王經妙幢菩薩讚歎品第二十八",
+   "uid": "T16n0665_p0454c28"
+  },
+  {
+   "work": "T0663",
+   "range": [
+    "T16n0663_p0357a26",
+    "T16n0663_p0357a28"
+   ]
+  },
+  {
+   "work": "T0664",
+   "range": [
+    "T16n0664_p0400a27",
+    "T16n0664_p0400a29"
+   ]
+  }
+ ],
+ "cells": {
+  "s20-00": {
+   "sa": "atha khalu ruciraketubodhisattva utthāyāsanādekāṃsamuttarāsaṅgaṃ prāvaritvā dakṣiṃṇa ānu maṇḍalaṃ pṛthivyāṃ pratiṣṭhāpya yena bhagavāṃstenāñ aliṃ praṇamayitvā tasyāṃ velāyāmimābhirgāthābhiramyastāvīt / sa tvaṃ munīndra śatapuṇyalakṣaṇa sahasraśrīcāruguṇairalaṃkṛtam / udāravarṇavarasaumyadarśana sahasraraśmiriva prasūyate // Suv_20.8 // anekaraśmi valanākulaprabhaṃ vicitraratnākularatnasaṃnibha / nīlāvadātāpyavakāñcanābhaṃ vaiḍūryatāmrāraṇasphaṭikābham // Suv_20.9 // na bhāsate va ramivendraparvatān prabhāvilāsābhiranantakoṭibhiḥ / prasīda me sendrapracaṇḍabhānunā pratapyase sattvasukhācarairiti // Suv_20.10 // prasannavarṇendriyacārudarśana ātaptarūpa anakāntarūpa / apūrvavarṇo vira o virā ase yathaiva muktaṃ bhramarākulaprabham // Suv_20.11 // viśuddhakāruṇyaguṇairalaṃkṛtaṃ samānamaitrībalapuṇyasaṃcitam / vicitrapūrṇairanuvyañ anārcitaṃ samādhibodhyaṅgaguṇairalaṃkṛtam // Suv_20.12 // tvayā hi prahlādakarī sukhaṃkarī śubhākaraṃ sarvasukhākarāgamam / vicitragambhīraguṇairalaṃkṛtaṃ virocase kṣetrasahasrakoṭiṣu // Suv_20.13 // virā ase tvaṃ dyumaṇīrivāṃśubhiḥ yatho valaṃ tvaṃ gagaṇe 'rkamaṇḍalam / meruryathā sarvaguṇairupetaḥ saṃdṛśyase sarvatrilokadhātuṣu // Suv_20.14 // gokṣīraśaṅkhakumudendusaṃnibhaḥ tuṣārapadmābhasupāṇḍura prabhaḥ dantāvaliste mukhato virā ate sadrā ahaṃsairiva cāntarīkṣam // Suv_20.15 // tvatsaumyavakrendumukhāntare sthitaṃ pradakṣiṇāvarta sukuṇḍalīnam / vaiḍūryavarṇaimaṇitorṇaraśmibhirvirocate sūrya ivāntarīkṣe // Suv_20.16 //",
+   "bo": "དེ་ནས་བྱང་ཆུབ་སེམས་དཔའ་མཛེས་པའི་ཏོག་སྟན་ལས་ལངས་ཏེ། བླ་གོས་ཕྲག་པ་གཅིག་ཏུ་གཟར་ནས་པུས་མོ་གཡས་པའི་ལྷ་ང་ས་ལ་བཙུགས་ཏེ། བཅོམ་ལྡན་འདས་ག་ལ་བ་དེ་ལོགས་སུ་ཐལ་མོ་སྦྱར་བ་བཏུད་ནས་ཚིགས་སུ་བཅད་པ་འདི་དག་གིས་བཅོམ་ལྡན་འདས་ལ་མངོན་པར་བསྟོད་དོ། །ཐུབ་དབང་ཁྱོད་ནི་བསོད་ནམས་བརྒྱ་པའི་མཚན། །དཔལ་སྟོང་མཛེས་པའི་ཡོན་ཏན་རྣམས་ཀྱིས་བརྒྱན། ། ཁ་དོག་རྒྱ་ཆེན་མཆོག་ཏུ་ཞི་བ་སྟོན། །ཉི་མ་སྟོང་ལྟར་འོད་ནི་རྣམ་པར་འཕྲོ། ། འོད་ཟེར་དུ་མ་འབར་བས་འོད་ཀྱིས་ཁྱབ། །ཁ་དོག་སྣ་ཚོགས་དང་བས་རིན་ཆེན་འདྲ། །སྔོན་པོ་དཀར་པོ་གསེར་འོད་བཻ་ཌཱུརྱ། །ཟངས་དང་སྐྱ་རེངས་ཤེལ་གྱི་འོད་ལྟ་བུས། ། རྡོ་རྗེ་རི་དབང་རི་རབ་ཐལ་མཛད་ཅིང་། །ཞིང་རྣམས་བྱེ་བ་དུ་མར་སྣང་མཛད་དེ། །སྡུག་བསྔལ་མི་བཟད་དྲག་པོ་ཞི་བར་མཛད། །བདེ་བ་མཆོག་གིས་སེམས་ཅན་ཚིམ་པར་མཛད། ། མདོག་དང་དབང་པོ་གསལ་བག་བལྟ་ན་མཛེས། ། གཟུགས་བལྟས་མི་ངོམས་སྐྱེ་བོས་བལྟ་ན་དགའ། ། རྨ་བྱའི་མདོག་འདྲའི་དབུ་སྐྲ་རྣམ་པར་མཛེས། །བུང་བ་མང་པོས་གང་བའི་འོད་དང་འདྲ། ། ཐུགས་རྗེ་རྣམ་དག་ཡོན་ཏན་རྣམས་ཀྱིས་བརྒྱན། ། ཏིང་འཛིན་བྱམས་པ་བསོད་ནམས་དམ་པ་བསགས། ། དཔེ་བྱད་བཟང་དང་ཁ་དོག་སྣ་ཚོགས་ལྡན། ། ཏིང་འཛིན་བྱང་ཆུབ་ཡན་ལག་ཡོན་ཏན་བརྒྱན། ། ཁྱོད་ནི་རབ་ཏུ་ཚིམ་མཛད་ཕན་པ་མཛད། །བདེ་མཛད་བདེ་བ་ཀུན་གྱི་འབྱུང་གནས་འབྱུང་། ། ཡོན་ཏན་ཟབ་མོ་སྣ་ཚོགས་རྣམས་ཀྱིས་བརྒྱན། །ཞིང་རྣམས་བྱེ་བ་དག་དུ་ལྷང་ངེ་སྟེ། ། མེ་ཡི་འོད་ལྟར་འོད་ཟེར་རྣམས་ཀྱིས་མཛེས། །ཇི་ལྟར་ནམ་མཁར་ཉི་དཀྱིལ་རྫོགས་པ་བཞིན། ། རི་རབ་ལྟ་བུར་ཡོན་ཏན་ཀུན་ལྡན་པར། །འཇིག་རྟེན་ཁམས་རྣམས་ཀུན་ཏུ་རབ་ཏུ་གདའ། ། བ་ཞོ་ཀུ་མུ་ད་དུང་ཟླ་འདྲ་ཞིང་། །ཁ་བའི་མདོག་དང་དཀར་པོ་བཟང་འདྲ་བའི། །ཚེམས་ཀྱི་ཕྲེང་བས་ཁྱོད་ཀྱི་ཞལ་མཛེས་པ། །ངང་པའི་རྒྱལ་པོ་བར་སྣང་ཇི་བཞིན་ནོ། ། ཁྱོད་ཀྱི་ཞི་ཞལ་མཚམས་ནས་ཟླ་བ་འདྲ། །གཡས་ སུ་འཁྱིལ་ཞིང་ཁོང་ཆུད་འདྲ་བ་ལགས། ། བཻ་ཌཱུརྱ་འདྲའི་སྤུ་འོད་དཀར་རྣམས་ཀྱིས། །ནམ་མཁའི་དཀྱིལ་ན་ཉི་མ་ལྟ་བུར་མཛེས། །",
+   "en": "Chapter 20: The Praise of All Tathāgatas  Then the bodhisattva Ruciraketu rose from his seat and, with his upper robe over one shoulder, knelt on his right knee with palms together, bowed toward the Bhagavat, and then praised the Bhagavat through these verses:  “Lord of munis, you have the signs of a hundred merits; You are adorned by the qualities of a thousand beautiful splendors. You have an exalted color, you manifest supreme peace, And you shine with light like a thousand suns. “You pervade with light by radiating numerous light rays Filled with various colors, so that you resemble a jewel; You have blue, white, golden, and beryl lights, And lights like copper, the dawn, and crystals. “They reach the vajra mountain, lord of mountains, Sumeru, And they illuminate numerous millions of realms And bring to an end fierce, terrible suffering, And bring perfect happiness that satisfies beings. “You have a bright color and sense organs that are beautiful to behold. Beings delight to see you and never tire of looking at your body. Your hair is so beautiful and has the colors of a peacock, Gleaming as if it were a mass of numerous bees. “You are adorned by the qualities of completely pure compassion. You have an accumulation of sublime samādhi, love, and merit. You are endowed with the various excellent features and colors. You are adorned by the qualities of samādhi and enlightenment. “You bring complete satisfaction and bring benefit; You bring happiness and bring the source of all happiness. You are adorned by various profound qualities, And you brighten millions of realms. “You are beautified by light rays that are like firelight; You are like the complete disk of the sun in the sky. You possess all qualities, like Mount Sumeru, And you appear throughout all world realms. “Your face is made beautiful by the rows of your teeth That are like cow curd, white water lilies, and the moon; They have an excellent whiteness, like the color of snow, And resemble the kings of geese in the sky. “A hair like white beryl curls to the right, Within your peaceful, moon-like face. Its white light is as beautiful As the sun in the middle of the sky.”",
+   "T0663": "爾時信相菩薩，即於此會從座而起，偏袒右肩右膝著地，合掌向佛而說讚言：「世尊百福，相好微妙，功德千數， 莊嚴其身，色淨遠照，視之無厭； 如日千光，彌滿虛空，光明熾盛， 無量無邊；猶如無數，珍寶大聚， 其明五色，青紅赤白，琉璃頗梨， 如融真金，光明赫奕，通徹諸山， 悉能遠照，無量佛土；能滅眾生， 無量苦惱，又與眾生，上妙快樂。 諸根清淨，微妙第一，眾生見者， 無有厭足。髮紺柔軟，猶孔雀項， 如諸蜂王，集在蓮華；清淨大悲， 功德莊嚴，無量三昧，及以大慈， 如是功德，悉以聚集；相好妙色， 嚴飾其身，種種功德，助成菩提。 如來悉能，調伏眾生，令心柔軟， 受諸快樂；種種深妙，功德莊嚴； 亦為十方，諸佛所讚，其光遠照， 遍於諸方，猶如日月，充滿虛空； 功德成就，如須彌山，在在示現， 於諸世界。齒白齊密，猶如珂雪； 其德如日，處空明顯；眉間毫相， 右旋宛轉，光明流出，如琉璃珠， 其色微妙，如日處空。」",
+   "T0664": "爾時，信相菩薩即於此會從坐而起，偏袒右肩，右膝著地，合掌向佛而說讚言：「世尊百福，相好微妙，功德千數， 莊嚴其身，色淨遠照，視之無厭。 如日千光，彌滿虛空，光明熾盛， 無量無邊。猶如無數，珍寶大聚， 其明五色，青、紅、赤、白、琉璃、頗梨， 如融真金。光明赫奕，通徹諸山， 悉能遠照，無量佛土。能滅眾生， 無量苦惱，又與眾生，上妙快樂。 諸根清淨，微妙第一，眾生見者， 無有厭足。髮紺柔軟，猶孔雀項； 如諸蜂王，集在蓮華。清淨大悲、 功德莊嚴、無量三昧、及以大慈， 如是功德，悉以聚集。相好妙色， 嚴飾其身，種種功德，助成菩提。 如來悉能，調伏眾生，令心柔軟， 受諸快樂。種種深妙，功德莊嚴， 亦為十方，諸佛所讚。其光遠照， 遍於諸方，猶如日、月，充滿虛空； 功德成就，如須彌山，在在示現， 於諸世界；齒白齊整，猶如珂雪； 其德如日，處空明顯；眉間毫相， 右旋宛轉，光明流出，如琉璃珠， 其色微妙，如日處空。」",
+   "T0665": "爾時，妙幢菩薩即從座起，偏袒右肩，右膝著地，合掌向佛，而說讚曰：「牟尼百福相圓滿，無量功德以嚴身。 廣大清淨人樂觀，猶如千日光明照； 焰彩無邊光熾盛，如妙寶聚相端嚴。 如日初出映虛空，紅白分明間金色； 亦如金山光普照，悉能周遍百千土。 能滅眾生無量苦，皆與無邊勝妙樂； 諸相具足悉嚴淨，眾生樂覩無厭足。 頭髮柔軟紺青色，猶如黑蜂集妙華； 大喜大捨淨莊嚴，大慈大悲皆具足。 眾妙相好為嚴飾，菩提分法之所成； 如來能施眾福利，令彼常獲大安樂。 種種妙德共莊嚴，光明普照千萬土； 如來光相極圓滿，猶如赫日遍空中。 佛如須彌功德具，示現能周於十方； 如來金口妙端嚴，齒白齊密如珂雪。 如來面貌無倫匹，眉間毫相常右旋； 光潤鮮白等頗梨，猶如滿月居空界。」"
+  },
+  "s20-00x": {
+   "T0665": "佛告妙幢菩薩：「汝能如是讚佛，功德不可思議，利益一切，令未知者隨順修學。」"
+  },
+  "s20-01": {
+   "sa": "iti śrīsuvarṇaprabhāsottamasūtrendrarā e sarvatathāgatastavaparivarto nāma viṃśatitamaḥ //",
+   "bo": "གསེར་འོད་དམ་པ་མདོ་སྡེའི་དབང་པོའི་རྒྱལ་པོ་ལས། དེ་བཞིན་གཤེགས་པ་ཐམས་ཅད་ལ་བསྟོད་པའི་ལེའུ་ཞེས་བྱ་བ་སྟེ་ཉི་ཤུ་པའོ།། །།དེ་ནས་རིགས་ཀྱི་ལྷ་མོ་བྱང་ཆུབ་ཡང་དག་པར་བསྡུས་པས།",
+   "en": "This concludes “The Praise of All Tathāgatas,” the twentieth chapter of “The Lord King of Sūtras, the Sublime Golden Light.”"
+  }
+ }
+}
