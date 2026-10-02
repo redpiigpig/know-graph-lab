@@ -1,0 +1,90 @@
+{
+ "slug": "samadhiraja-c40",
+ "title": "月燈三昧經・第40品 囑累品（Parīndanā）",
+ "family": "sa",
+ "intro": "梵本〈Parīndanā〉＝藏譯第四十章後段＝那連提耶舍本卷末：偈三頌（佛法廣大）、說法利益、大地震動、天說聞經之利；囑累阿難，經名「入大悲」「一切法體性平等無戲論三昧」；大眾歡喜奉行。梵本經尾題後附緣起偈（ye dharmā hetuprabhavā…）；藏譯附譯跋；那連提耶舍本卷末 CBETA 存疑校記不收。",
+ "units": [
+  {
+   "id": "c40-1",
+   "label": "偈：佛法廣大（40.1–3）"
+  },
+  {
+   "id": "c40-2",
+   "label": "說法利益・大地震動・天讚聞經"
+  },
+  {
+   "id": "c40-3",
+   "label": "囑累阿難・經名"
+  },
+  {
+   "id": "c40-4",
+   "label": "歡喜奉行・經尾題"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sa",
+   "lang": "sa",
+   "label": "梵本",
+   "who": "Vaidya 校訂本（1961）・GRETIL"
+  },
+  {
+   "id": "bo",
+   "lang": "bo",
+   "label": "藏譯",
+   "who": "德格版 Toh 127・84000 翻譯記憶"
+  },
+  {
+   "id": "en",
+   "lang": "en",
+   "label": "84000 英譯",
+   "who": "譯自藏譯・與藏文逐句對齊"
+  },
+  {
+   "id": "T0639",
+   "lang": "lzh",
+   "label": "那連提耶舍本",
+   "who": "那連提耶舍譯《月燈三昧經》・557 年",
+   "work": "T0639"
+  }
+ ],
+ "works": [
+  "DKtoh0127",
+  "T0639"
+ ],
+ "anchors": [
+  {
+   "work": "T0639",
+   "range": [
+    "T15n0639_p0619b29",
+    "T15n0639_p0619c24"
+   ]
+  }
+ ],
+ "cells": {
+  "c40-1": {
+   "sa": "40 Parīndanāparivartaḥ | atha khalu bhagavāṃstasyāṃ velāyāmimā gāthā abhāṣata - vipulā buddhadharmā hi vipulo deśito nayaḥ / vipulaṃ dharma deśitvā vipulāṃllabhate guṇān // SRS_40.1 // yathā vipulamākāśamevaṃ dharmāṇa lakṣaṇam / ratnāni vipulānyatra tasmādvaipulyamucyate // SRS_40.2 // vipulā cari sattvānāṃ vipulā teṣu deśitā / vipulo āgamo yasya tasmādvaipulyamucyate // SRS_40.3 //",
+   "bo": "།དེ་ནས་བཅོམ་ལྡན་འདས་ཀྱིས་དེའི་ཚེ་ཚིགས་སུ་བཅད་པ་འདི་དག་གསུངས་སོ། །སངས་རྒྱས་ཆོས་ནི་རྒྱ་ཆེ་སྟེ། །ཚུལ་ཡང་རྒྱ་ཆེར་བསྟན་པ་ཡིན། །ཆོས་རྣམས་རྒྱ་ཆེར་བསྟན་པས་ན། །ཡོན་ཏན་རྒྱ་ཆེན་ཐོབ་པར་འགྱུར། །ཇི་ལྟར་ནམ་མཁའ་རྒྱ་ཆེ་བ། །ཆོས་ཀྱི་མཚན་ཉིད་དེ་བཞིན་ཏེ། །རིན་ཆེན་འོད་ཟེར་རྒྱ་ཆེན་གང་། །དེ་ཕྱིར་ཤིན་ཏུ་རྒྱས་ཞེས་བྱ། ། སེམས་ཅན་སྤྱོད་པ་རྒྱ་ཆེ་སྟེ། །དེ་དག་བསྟན་པའང་རྒྱ་ཆེའོ། །ལུང་གི་དོན་ཡང་རྒྱ་ཆེ་བས། །དེ་ཕྱིར་ཤིན་ཏུ་རྒྱས་ཞེས་བྱ།",
+   "en": "Thereupon the Bhagavān spoke these verses: “The Buddha’s Dharma is vast. The teaching of its practice is vast. When the Dharma is taught in a vast way The qualities attained will be vast. {1}  “The characteristics of the Dharma Are just as vast as space. It contains vast jewels and light rays And therefore it is called vast. {2} “The ways beings act are vast, The teachings for them are vast, The meaning of the scripture is vast, And therefore it is called vast.” {3}",
+   "T0639": "爾時，世尊而說偈言：「佛法智無量，演說無窮盡， 廣說諸法已，普獲諸功德。 廣大如虛空，是法相如是， 此為究竟寶，故名為方廣； 眾生行無邊，為說法亦廣， 無盡阿含義，故號為方廣。」"
+  },
+  "c40-2": {
+   "sa": "asmin khalu punaḥ sarvadharmasvabhāvasamatāvipañcitasamādhinirdeśe dharmaparyāye bhāṣyamāṇe aprameyaiḥ sattvairanuttarāyāṃ samyaksaṃbodhau cittānyutpāditāni, aprameyāśca sattvā avaivartikā abhūvannanuttarāyāṃ samyaksaṃbodhau | aprameyāṇāṃ ca sattvānāṃ pratyekabodhau ciattamutpannam | aprameyāṇāṃ ca sattvānāmarhattvaphalasākṣātkriyāyāṃ cittānyutpannāni | ayaṃ ca trisāhasramahāsāhasralokadhātuḥ ṣaḍavikāraṃ kampitaḥ prakampitaḥ saṃprakampitaḥ | calitaḥ pracalitaḥ saṃpracalitaḥ | vedhitaḥ pravedhitaḥ | saṃpravedhitaḥ | kṣumitaḥ prakṣubhitaḥ saṃprakṣubhitaḥ | raṇitaḥ praraṇitaḥ saṃpraraṇitaḥ | garjitaḥ pragarjitaḥ saṃpragarjitaḥ | pūrvā digavanamati paścimā digunnamati | paścimā digavanamati pūrvā digunnamati| uttarā digunnamati dakṣiṇā digavanamati | uttarā digavanamati dakṣiṇā digunnamati | antādavanamati madhyādunnamati | madhyādavanamati antādunnamati | aprameyasya cāvabhāsasya loke prādurbhāvo 'bhūt | mahacca divyagandhavarṣamabhiprāvarṣat | devatāśca mahāntaṃ divyaṃ puṣpavarṣamutsṛjanti sma | divyāni ca tūryaśatasahasrāṇyuparyantarīkṣe bhrāmayanti | evaṃ ca vācamabhāṣanta - sulabdhā lābhāsteṣāṃ sattvānāṃ ya imaṃ mahākaruṇāvatāradharmaparyāyaṃ śroṣyanti | bahubuddhaparyupāsitāste sattvā bhaviṣyanti ya imaṃ sarvadharmasvabhāvasamatāvipañcitasamādhiṃ punaḥ punaḥ śroṣyanti, śrutvā ca likhiṣyanti udgrahīṣyanti dhārayiṣyanti paryavāpsyanti araṇābhāvanayā bhāvayiṣyanti, bahulīkariṣyanti, parebhyaśca vistareṇa saṃprakāśayiṣyanti | sarvasatvānāṃ te dakṣiṇīyā bhaviṣyanti ||",
+   "bo": "།ཆོས་ཐམས་ཅད་ཀྱི་རང་བཞིན་མཉམ་པ་ཉིད་རྣམ་པར་སྤྲོས་པའི་ཏིང་ངེ་འཛིན་ངེས་པར་བསྟན་པའི་ཆོས་ཀྱི་རྣམ་གྲངས་འདི་བཅོམ་ལྡན་འདས་ཀྱིས་བཤད་པ་ན་སེམས་ཅན་དཔག་ཏུ་མེད་པ་དག་གིས་བླ་ན་མེད་པ་ཡང་དག་པར་རྫོགས་པའི་བྱང་ཆུབ་ཏུ་སེམས་བསྐྱེད་དོ། །སེམས་ཅན་དཔག་ཏུ་མེད་པ་དག་ཀྱང་བླ་ན་མེད་པ་ཡང་དག་པར་རྫོགས་པའི་བྱང་ཆུབ་ལས་ཕྱིར་མི་ལྡོག་པར་གྱུར་ཏོ། །སེམས་ཅན་དཔག་ཏུ་མེད་པ་དག་རང་བྱང་ཆུབ་ཏུ་སེམས་སྐྱེས་སོ། །སེམས་ཅན་དཔག་ཏུ་མེད་པ་དག་དགྲ་བཅོམ་པའི་འབྲས་བུ་མངོན་དུ་བྱ་བ་ལ་སེམས་སྐྱེས་སོ། །སྟོང་གསུམ་གྱི་སྟོང་ཆེན་པོའི་འཇིག་རྟེན་གྱི་ཁམས་འདི་ཡང་རྣམ་པ་དྲུག་ཏུ་གཡོས་རབ་ཏུ་གཡོས། ཀུན་ཏུ་རབ་ཏུ་གཡོས། འགུལ་རབ་ཏུ་འགུལ། ཀུན་ཏུ་རབ་ཏུ་འགུལ། ལྡེག་རབ་ཏུ་ལྡེག །ཀུན་ཏུ་རབ་ཏུ་ལྡེག །འཁྲུགས་རབ་ཏུ་འཁྲུགས། ཀུན་ཏུ་རབ་ཏུ་འཁྲུགས། ཆེམ་ཆེམ་རབ་ཏུ་ཆེམ་ཆེམ། ཀུན་ཏུ་རབ་ཏུ་ཆེམ་ཆེམ། འུར་འུར་རབ་ཏུ་འུར་འུར། ཀུན་ཏུ་རབ་ཏུ་འུར་འུར། ཤར་ཕྱོགས་དམའ་ན་ནུབ་ཕྱོགས་མཐོ། ནུབ་ཕྱོགས་དམའ་ན་ཤར་ཕྱོགས་མཐོ། བྱང་ཕྱོགས་དམའ་ན་ལྷོ་ཕྱོགས་མཐོ། ལྷོ་ཕྱོགས་དམའ་ན་བྱང་ཕྱོགས་མཐོ། མཐའ་དམའ་ན་དབུས་མཐོ། དབུས་དམའ་ན་མཐའ་མཐོ་སྟེ། འཇིག་རྟེན་ཀུན་ཏུ་སྣང་བ་དཔག་ཏུ་མེད་པ་དག་བྱུང་བར་གྱུར་ཏོ། །ལྷའི་སྤོས་ཀྱི་ཆར་ཆེན་པོ་ཡང་མངོན་པར་བབ་བོ། །ལྷ་དག་ཀྱང་མེ་ཏོག་གི་ཆར་ཆེན་པོ་འབེབས་སོ། །ལྷའི་སིལ་སྙན་བརྒྱ་སྟོང་དག་ཀྱང་སྟེང་གི་བར་སྣང་ལ་རྡུང་ངོ་། །ལྷའི་ན་བཟའ་དག་ཀྱང་སྟེང་གི་ནམ་མཁའ་ལ་གཡོགས་ཤིང་ཚིག་འདི་སྐད་ཅེས་ཟེར་རོ། །གང་གིས་སྙིང་རྗེ་ཆེན་པོ་ལ་འཇུག་པའི་ཆོས་ཀྱི་རྣམ་གྲངས་འདི་ཐོས་པར་འགྱུར་བའི་སེམས་ཅན་དེ་དག་ནི་རྙེད་པ་ལེགས་པར་རྙེད་པ་ཡིན་ཏེ། སེམས་ཅན་དེ་དག་སངས་རྒྱས་མང་པོ་ལ་བསྙེན་བཀུར་བྱས་པར་འགྱུར་རོ། །གང་གིས་ཆོས་ཐམས་ཅད་ཀྱི་རང་བཞིན་མཉམ་པ་ཉིད་ རྣམ་པར་སྤྲོས་པའི་ཏིང་ངེ་འཛིན་འདི་ཐོས་པར་འགྱུར་ཞིང་ཐོས་ནས་ཀྱང་ཡི་གེར་འདྲི་བ་དང་། འཛིན་པ་དང་། འཆང་བ་དང་། ཀློག་པ་དང་། ཀུན་ཆུབ་པར་བྱེད་པ་དང་། ཉོན་མོངས་པ་མེད་པར་སྒོམ་པས་བསྒོམ་པ་དང་། མང་དུ་བྱེད་པ་དང་། གཞན་ལ་ཡང་རྒྱ་ཆེར་ཡང་དག་པར་རབ་ཏུ་སྟོན་པ་དེ་དག་ནི་སེམས་ཅན་ཐམས་ཅད་ཀྱི་སྦྱིན་གནས་སུ་འགྱུར་རོ།",
+   "en": "When the Bhagavān taught this Dharma teaching of the samādhi, the revealed equality of the nature of all phenomena, countless beings developed the aspiration for complete enlightenment. Countless beings attained irreversibility from the highest, complete enlightenment. Countless beings developed the aspiration for their own enlightenment. Countless beings developed the aspiration for attaining the result of becoming an arhat. This universe of a thousand million worlds shook in six ways. It trembled, trembled strongly, and trembled intensely; it quivered, quivered strongly, and quivered intensely; it shook, shook strongly, and shook intensely; it shuddered, shuddered strongly, and shuddered intensely; it quaked, quaked strongly, and quaked intensely; the east sank and the west rose, the west sank and the east rose, the north sank and the south rose, the south sank and the north rose, the perimeter sank and the center rose, and the center sank and the perimeter rose. In all the world there shone an immeasurable radiance, there fell a great rain of divine incense, the devas threw down a great rain of flowers, hundreds of thousands of divine musical instruments were played up in the sky, the sky above was covered with divine food, and these words were spoken: “The beings who hear this Dharma teaching on entering great compassion will easily reach attainment, and those beings will serve and honor many buddhas. “Those who hear this samādhi, the revealed equality of the nature of all phenomena, and, having heard it, write it out, possess it, keep it, recite it to others, promote it, meditate on it with unadulterated meditation, promulgate it, and teach it extensively to others will become the subject of offerings from all beings.”",
+   "T0639": "說此法時，無量眾生悉發阿耨多羅三藐三菩提心、無量眾生於菩提得不退轉、無量眾生發辟支佛心、無量眾生證於三果。復於此三千大千世界六種震動，雨天妙香、灑散天花、擊作百千萬種諸天音樂、於虛空中雨諸天衣，旋轉而下作如是言：「是諸眾生聞此法故，獲大善利；是諸眾生於無量佛所宿殖善本故，聞此法歡喜受持、讀誦、書寫、為人解說，與一切眾生作上福田、成就利益一切眾生，不斷佛種；是諸眾生決定能為菩提先道，聞是法門起如實行。」"
+  },
+  "c40-3": {
+   "sa": "atha khalu bhagavānāyuṣmantamānandamāmantrayate sma - udgṛhvīṣva tvamānanda imaṃ dharmaparyāyaṃ dhāraya vācaya paryavāpnuhi, pareṣāṃ ca vistareṇa saṃprakāśaya | atha khalvāyuṣmānānado bhagavantametadavocat - ko nāmāyaṃ bhagavan dharmaparyāyaḥ, kathaṃ caina dhārayāmi? bhagavānāha - mahākaruṇāvatāro nāmānanda idaṃ sūtraṃ dhāraya | sarvadharmasamatāvipañcito nāma samādhiriti dhāraya | ānanda āha - udgṛhīto me bhagavannayaṃ dharmaparyāya iti ||",
+   "bo": "།དེ་ནས་བཅོམ་ལྡན་འདས་ཀྱིས་ཚེ་དང་ལྡན་པ་ཀུན་དགའ་བོ་ལ་བཀའ་སྩལ་པ། ཀུན་དགའ་བོ་ཆོས་ཀྱི་རྣམ་གྲངས་འདི་ཁྱོད་ཀྱིས་ཟུང་ཤིག །ལྷོགས་ཤིག །ཀུན་ཆུབ་པར་གྱིས་ཤིག །གཞན་དག་ལ་ཡང་རྒྱ་ཆེར་ཡང་དག་པར་རབ་ཏུ་སྟོན་ཅིག །དེ་ནས་བཅོམ་ལྡན་འདས་ལ་ཚེ་དང་ལྡན་པ་ཀུན་དགའ་བོས་འདི་སྐད་ཅེས་གསོལ་ཏོ། །བཅོམ་ལྡན་འདས་ཆོས་ཀྱི་རྣམ་གྲངས་འདིའི་མིང་ཅི་ལགས། ཇི་ལྟར་གཟུང་བར་བགྱི། བཅོམ་ལྡན་འདས་ཀྱིས་བཀའ་སྩལ་པ། ཀུན་དགའ་བོ་མདོ་སྡེ་འདི་སྙིང་རྗེ་ཆེན་པོ་ལ་འཇུག་པ་ཞེས་བྱ་བར་ཟུང་ཤིག །ཆོས་ཐམས་ཅད་ཀྱི་རང་བཞིན་མཉམ་པ་ཉིད་རྣམ་པར་སྤྲོས་པའི་ཏིང་ངེ་འཛིན་ཞེས་བྱ་བར་ཡང་ཟུང་ཤིག །ཀུན་དགའ་བོས་གསོལ་པ། བཅོམ་ལྡན་འདས་ཆོས་ཀྱི་རྣམ་གྲངས་འདི་བདག་གིས་བཟུང་ལགས་སོ།",
+   "en": "Then the Bhagavān said to Brother Ānanda, “Ānanda, you must hold this Dharma teaching, recite it, promulgate it, and teach it extensively to others.” Then Brother Ānanda asked the Bhagavān, “What is the name of this teaching? In what way shall I keep it?” The Bhagavān said, “Ānanda, you should keep this sūtra as having the name Entering Great Compassion. You should also keep this sūtra as having the name The Samādhi, the Revealed Equality of the Nature of All Phenomena.” Ānanda said, “Bhagavān, I shall keep this Dharma teaching.”",
+   "T0639": "爾時，佛告阿難：「汝當受持如是法門，讀誦、受持、書寫、為人廣說。」阿難白佛言：「當何名斯經？云何奉持？」佛告阿難：「是經名為『入於大悲』，汝當受持；名為『一切諸法體性平等無戲論三昧』，汝當受持。」阿難白佛言：「如佛勅旨，我當受持此法門。」"
+  },
+  "c40-4": {
+   "sa": "idamavocad bhagavān | āttamanāścandraprabhaḥ kumārabhūta āyuṣmāṃścānandaḥ tāścatasraḥ parṣado bhikṣubhikṣuṇyupāsakopāsikāḥ aneke ca śuddhāvāsakāyikā devaputrāḥ sadevamānuṣāsuragandharvaśca loko bhagavato bhāṣitamabhyanandanniti || ityāryasarvadharmasvabhāvasamatāvipañcitāt samādheryathālabdhaṃ samādhirājaṃ nāma mahāyānasūtraṃ parivarto nāma catvāriṃśatitamaṃ samāptam || 40 || * * * * * * ye dharmā hetuprabhavā hetusteṣāṃ tathāgato hyavadat | teṣāṃ ca yo nirodha evaṃ vādī mahāśramaṇaḥ ||",
+   "bo": "།བཅོམ་ལྡན་འདས་ཀྱིས་དེ་སྐད་ཅེས་བཀའ་སྩལ་པ་དང་། ཟླ་འོད་གཞོན་ནུར་གྱུར་པ་དང་། ཚེ་དང་ལྡན་པ་ཀུན་དགའ་བོ་དང་། འཁོར་བཞི་པོ་དགེ་སློང་དང་། དགེ་སློང་མ་དང་། དགེ་བསྙེན་དང་། དགེ་བསྙེན་མ་དེ་དག་དང་། གནས་གཙང་མའི་རིས་ཀྱི་ལྷའི་བུ་དུ་མ་དག་དང་། ལྷ་དང་། མི་དང་། ལྷ་མ་ཡིན་དང་། དྲི་ཟར་བཅས་པའི་འཇིག་རྟེན་ཡི་རངས་ཏེ། བཅོམ་ལྡན་འདས་ཀྱིས་གསུངས་པ་ལ་མངོན་པར་བསྟོད་དོ།། །། ཆོས་ཐམས་ཅད་ཀྱི་རང་བཞིན་མཉམ་པ་ཉིད་རྣམ་པར་སྤྲོས་པའི་ཏིང་ངེ་འཛིན་ཇི་སྙེད་པ་རྫོགས་སྷོ།། །། རྒྱ་གར་གྱི་མཁན་པོ་ཤཱི་ལེན་དྲ་བོ་དྷི་དང་། ཞུ་ཆེན་གྱི་ལོཙྪ་བ་བན་དེ་དྷརྨ་ཏཱ་ཤཱི་ལས་བསྒྱུར་ཅིང་ཞུས་ཏེ། སྐད་གསར་ཆད་ཀྱིས་ཀྱང་བཅོས་ནས་གཏན་ལ་ཕབ་པ།། །།",
+   "en": "The Bhagavān, having spoken those words, the youth Candraprabha, Brother Ānanda, the fourfold assembly of bhikṣus, bhikṣuṇīs, upāsakas, and upāsikās, the devas of Śuddhāvāsa, and the world with its devas, humans, asuras, and gandharvas rejoiced and praised the words of the Bhagavān. “The Samādhi, the Revealed Equality of the Nature of All Phenomena,” is concluded. Colophon The Indian preceptor Śrīlendrabodhi, and the chief editor Lotsawa Bandé Dharmatāśīla, translated and revised this work. It was later modified and finalized in terms of the new translation.",
+   "T0639": "說此經已，爾時月光童子歡喜踊躍，阿逸多菩薩等八十億那由他菩薩，長老阿難及諸四眾——比丘、比丘尼、優婆塞、優婆夷——淨居天子、娑婆世界主梵天王，及天帝釋、四天王等諸天、世人、阿修羅眾，聞佛所說，歡喜奉行。"
+  }
+ }
+}
