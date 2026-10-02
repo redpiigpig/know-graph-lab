@@ -1242,6 +1242,10 @@ B 線＝前人概論怎麼切（比較表）。一次派一個 Sonnet。
   Χριστός（Christos）、λόγος（logos）。不要只寫拉丁轉寫。
   🚨 希伯來文是由右至左的文字，夾在中文裡時雙向排版會把後面的括號轉寫甩到左邊（看起來像「（māšîaḥ）מָשִׁיחַ」）。
   檔案裡順序是對的，是顯示問題：純文字／markdown 在希伯來字前後加 U+200E（LRM）；HTML 一律包 `<span lang="he" dir="rtl">…</span>`。
+- ✅ 第 2 節 v4 作者認可（「這樣還可以了」），2026-10-02 寫完**第一章全章初稿**：`output/christianity-intro/draft_ch01.md`
+  （正文約 13,500 字＋進階補充約 2,100 字；§1 被崇拜的那一位／§2 他從哪裡來／§3 在加利利／§4 上耶路撒冷／§5 最早的宣認；
+  進階：福音書以外的記載、四福音成書、歷史耶穌研究三波、最早的基督敬拜；課後討論 5 題）。經文全由 `course_quote_bible`
+  取並逐句核；小普林尼 10.96 拉丁原文已核；普里耶內碑文（OGIS 458）待核。館藏已到：Hurtado、Theissen–Merz、Schweitzer、Meier 卷二。
 - 補書不只 z-lib；先查站上既有（梵二 SC／DV 中拉英在 `data/creeds/ecumenical-councils/vatican-ii/`、
   奧斯堡信條與路德小教理在 `data/creeds/protestant-confessions/`、通諭中譯在 `data/encyclicals/`），
   再查 TRC／天主教在線目錄。館藏確認沒有：《天主教教理》全本中譯、《協同書》中譯、Schmemann、Bria、Brown 第二冊。
