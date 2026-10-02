@@ -1169,6 +1169,11 @@ B 線＝前人概論怎麼切（比較表）。一次派一個 Sonnet。
   （Moffett 卷二、Oberman、O'Malley、Hsia、Neill、Hempton、Ajayi、Stanley、Mullin–Richey、Koschorke）。
   發現：Drive `_corpus\edinburgh`（1910 愛丁堡報告）與 `_corpus\ecumenical`（WCC 文獻 1,452 檔）已在手，普世運動一手不必再找。
   待作者定：日本切支丹（Boxer、Elison、Higashibaba）、韓國、剛果、衣索比亞（Páez）、哈里斯、宋尚節傳是否補進 §5、§7。
+- 第五章備料 10-01 夜撞額度上限中斷，10-02 10:20 續跑。
+- **作者新構想（2026-10-02，討論中、未定案）**：引用馬克西姆（認信者）的宇宙基督論與東正教禮拜觀，把「以基督為中心的崇拜與傳統」
+  詮釋成**完整的基督教世界觀**，不只是宗教活動描述——第四章的時間與空間從教會年曆、聖地延伸到整個宇宙的神聖地理與歷史；
+  四傳統各自**貫穿整個聖史**（創造→以色列→基督→教會→終末）。我的轉述與待決問題見對話；館藏：馬克西姆、Balthasar
+  《Kosmische Liturgie》、Thunberg、Zizioulas、Ratzinger《禮儀的精神》全無（「Mystagogy」也查不到，ch04 備料說館藏有要再核）。
 - 補書不只 z-lib；先查站上既有（梵二 SC／DV 中拉英在 `data/creeds/ecumenical-councils/vatican-ii/`、
   奧斯堡信條與路德小教理在 `data/creeds/protestant-confessions/`、通諭中譯在 `data/encyclicals/`），
   再查 TRC／天主教在線目錄。館藏確認沒有：《天主教教理》全本中譯、《協同書》中譯、Schmemann、Bria、Brown 第二冊。
