@@ -128,6 +128,9 @@ scripts/top_cited_openalex.py <field> --fetch DIR    下載開放取用 PDF（�
 | JSTOR／SAGE／OUP／T&F | 西文期刊全文 | 對腳本 403，校方多數沒訂 | ❌ 別寫自動下載 |
 | Google Scholar | 引用數 | 無 API、會封鎖 | ❌ 不用 |
 
+清單成品：引用排行另出一份 CSV（UTF-8 BOM，Excel 直接開）放在 PDF 同夾，欄位＝排名／被引用次數／組別／年份／作者／
+篇名／期刊／卷期頁／DOI 連結／開放取用／已下載。史學例：`電子圖書館\歷史學\史學理論\史學引用前五百期刊論文\史學引用前五百期刊論文清單.csv`。
+
 首例（史學，`historiography`）：策展 486 筆（Crossref 核到 135、館內已有 52）；引用排行 493 篇（OA 97 篇）。
 
 ## 清單之後怎麼「拿到」（2026-09-26 實測）
