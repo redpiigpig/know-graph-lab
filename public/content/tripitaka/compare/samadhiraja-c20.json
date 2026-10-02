@@ -1,0 +1,70 @@
+{
+ "slug": "samadhiraja-c20",
+ "title": "月燈三昧經・第20品 因陀羅幢相王佛品（Indraketudhvajarāja）",
+ "family": "sa",
+ "intro": "梵本〈Indraketudhvajarāja〉＝藏譯第二十章。長行勸依一切善根、離惡知識、近善知識；偈頌 SRS 20.1–11：過去因陀羅幢相王佛說此三昧，囑法師護戒如摩尼珠。那連提耶舍本此 11 頌與下品本事偈同在一段偈中，第 12 頌起屬下品。",
+ "units": [
+  {
+   "id": "c20-1",
+   "label": "長行：依善根・離惡知識・近善知識"
+  },
+  {
+   "id": "c20-2",
+   "label": "偈：因陀羅幢相王佛說此三昧（20.1–11）"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sa",
+   "lang": "sa",
+   "label": "梵本",
+   "who": "Vaidya 校訂本（1961）・GRETIL"
+  },
+  {
+   "id": "bo",
+   "lang": "bo",
+   "label": "藏譯",
+   "who": "德格版 Toh 127・84000 翻譯記憶"
+  },
+  {
+   "id": "en",
+   "lang": "en",
+   "label": "84000 英譯",
+   "who": "譯自藏譯・與藏文逐句對齊"
+  },
+  {
+   "id": "T0639",
+   "lang": "lzh",
+   "label": "那連提耶舍本",
+   "who": "那連提耶舍譯《月燈三昧經》・557 年",
+   "work": "T0639"
+  }
+ ],
+ "works": [
+  "DKtoh0127",
+  "T0639"
+ ],
+ "anchors": [
+  {
+   "work": "T0639",
+   "range": [
+    "T15n0639_p0575a13",
+    "T15n0639_p0575a23"
+   ]
+  }
+ ],
+ "cells": {
+  "c20-1": {
+   "sa": "20 Indraketudhvajarājaparivartaḥ || tatra khalu bhagavāṃścandraprabhaṃ kumārabhūtamāmantrayate sma - tasmāttarhi kumāra bodhisattvena mahāsattvena sarvakuśalamūlaśikṣāguṇadharmaniśritena bhavitavyam | asaṃsargabahulena ca bhavitavyam, pāpamitraparivarjakena kalyāṇamitrasaṃniśritena paripṛcchakajātīyena dharmaparyeṣṭyāmatṛptena prāmodyabahulena dharmārthikena dharmakāmena dharmaratena dharmaparigrāhakeṇa dharmānudharmapratipannena | śāstṛsaṃjñā anena sarvabodhisattveṣūtpādayitavyā | yasya cāntikādimaṃ dharmaparyāyaṃ śṛṇoti, tena tasyāntike prītigauravaṃ śāstṛsaṃjñā cotpāditavyā| yaḥ kumāra bodhisattvo mahāsattva imān dharmān samādāya vartate, sa kṣipramanācchedyapratibhāvaniryāto bhavati | acintyabuddhadharmādhimuktaśca bhavati | gambhīreṣu ca dharmeṣu nidhyaptiṃ gacchati | ālokabhūtaśca bhavati sadevakasya lokasya kāṅkṣāvimativicikitsāndhakāravidhamanatayā ||",
+   "bo": "།སངས་རྒྱས་ཀྱི་ཆོས་བསམ་གྱིས་མི་ཁྱབ་པ་ངེས་པར་བསྟན་པའི་ལེའུ་སྟེ་བཅུ་དགུ་པའོ།། །། དེ་ནས་ཡང་བཅོམ་ལྡན་འདས་ཀྱིས་ཟླ་འོད་གཞོན་ནུར་གྱུར་པ་ལ་བཀའ་སྩལ་པ། གཞོན་ནུ་དེ་ལྟ་བས་ན་བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་སྙིང་རྗེ་ཆེན་པོ་ལ་འཇུག་པའི་ཆོས་ཀྱི་རྣམ་གྲངས་འདི་འདོད་པ་དང་། མྱུར་དུ་བླ་ན་མེད་པ་ཡང་དག་པར་རྫོགས་པའི་བྱང་ཆུབ་མངོན་པར་རྫོགས་པར་འཚང་རྒྱ་བར་འདོད་པས་དགེ་བའི་རྩ་བ་དང་བསླབས་པ་དང་ཡོན་ཏན་གྱི་ཚོགས་ཐམས་ཅད་གདོན་མི་ཟ་ཞིང་ཚུལ་ཁྲིམས་ཤིན་ཏུ་ཡོངས་སུ་དག་པར་བྱའོ། །འདུ་འཛི་མེད་པ་མང་ཞིང་སྡིག་པའི་གྲོགས་པོ་ཡོངས་སུ་སྤོང་བ་དང་དགེ་བའི་བཤེས་གཉེན་ལ་རྟེན་པ་དང་ཡོངས་སུ་འདྲི་བའི་རང་བཞིན་ཅན་དང་ཆོས་ཚོལ་བ་ལ་བརྩོན་པ་དང་ཆོས་ལ་དོན་དུ་གཉེར་བ་དང་ཆོས་འདོད་པ་དང་ཆོས་ལ་དགའ་བ་དང་ཆོས་ཡོངས་སུ་འཛིན་པ་དང་ཆོས་ཀྱི་རྗེས་སུ་འཐུན་པའི་ཆོས་ལ་ཞུགས་པའི་བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོས་གཞོན་ནུ་སེམས་ཅན་ཐམས་ཅད་ལ་སྙིང་རྗེ་ཆེན་པོ་བསྐྱེད་དེ། བླ་ན་མེད་པ་ཡང་དག་པར་རྫོགས་པའི་བྱང་ཆུབ་ཏུ་སེམས་བསྐྱེད་པར་བྱའོ། །གཞན་ཡང་གཞོན་ནུ་བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་སྙིང་རྗེ་ཆེན་པོ་ལ་འཇུག་པའི་ཆོས་ཀྱི་རྣམ་གྲངས་འདི་འདོད་པ་དང་མྱུར་དུ་བླ་ན་མེད་པ་ཡང་དག་པར་རྫོགས་པའི་བྱང་ཆུབ་མངོན་པར་རྫོགས་པར་འཚང་རྒྱ་བར་འདོད་པས་བརྩོན་འགྲུས་བརྩམས་ཤིང་ལུས་དང་སྲོག་ལ་མི་ལྟ་བར་བྱ་སྟེ། གང་སྙིང་རྗེ་ཆེན་པོ་ལ་འཇུག་པའི་ཆོས་ཀྱི་རྣམ་གྲངས་འདི་སྟོན་པའི་དགེ་བའི་བཤེས་གཉེན་དེ་དག་རྒྱུན་མི་ཆད་པར་ཡོངས་སུ་བཙལ་བར་བྱ། གཡོ་མེད་པས་བསྙེན་པར་བྱ། བསྟེན་པར་བྱ། རིམ་གྲོར་བྱ་སྟེ། གཞོན་ནུ་བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོས་དགེ་བའི་བཤེས་གཉེན་དག་ལྷག་པའི་བསམ་པས་ཡོངས་སུ་བཙལ་ནས་ཀྱང་དེ་དག་ལས་སྙིང་རྗེ་ཆེན་པོ་ལ་འཇུག་པའི་ཆོས་ཀྱི་རྣམ་གྲངས་འདི་མཉན་པར་བྱ། གཟུང་བར་བྱ། ཀུན་ཆུབ་པར་བྱ། བཅང་བར་བྱ། ཀླག་པར་བྱ། རབ་ཏུ་གདོན་པར་བྱ། ལུང་མནོད་ཅིང་ཁ་ཏོན་དུ་བྱ། ཉོན་མོངས་པ་ མེད་པར་བསྒོམ་པས་བསྒོམ་པར་བྱ། མང་དུ་བྱ་གཞན་དག་ལ་ཡང་རྒྱ་ཆེར་རབ་ཏུ་བསྟན་པར་བྱའོ། །གང་ལས་སྙིང་རྗེ་ཆེན་པོ་ལ་འཇུག་པའི་ཆོས་ཀྱི་རྣམ་གྲངས་འདི་ཐོས་པ་དེ་ལ་དགའ་བ་དང་གུས་པས་སྟོན་པར་འདུ་ཤེས་བསྐྱེད་པར་བྱའོ། །གཞོན་ནུ་ནམ་བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་དགེ་བའི་བཤེས་གཉེན་ཡོངས་སུ་ཚོལ་བ་དང་སྲི་ཞུ་བྱ་བ་དང་གཡོག་བྱ་བ་ལ་ཡིད་མི་སྐྱོ་བར་གྱུར་པ་དེའི་ཚེ་གཞོན་ནུ་བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་དེ་བདེ་བར་བླ་ན་མེད་པ་ཡང་དག་པར་རྫོགས་པའི་བྱང་ཆུབ་མངོན་པར་རྫོགས་པར་འཚང་རྒྱའོ། །བདེ་བར་སྙིང་རྗེ་ཆེན་པོ་ལ་འཇུག་པའི་ཆོས་ཀྱི་རྣམ་གྲངས་འདི་འཐོབ་བོ། །གཞོན་ནུ་དེ་ལྟ་བས་ན་མགོ་དང་གོས་ལ་མེ་འབར་བ་བཞིན་དུ་བྱས་ཏེ་རྟག་པར་དགེ་བའི་བཤེས་གཉེན་ཡོངས་སུ་བཙལ་བར་བྱ། གཡོ་མེད་པས་བསྟེན་པར་བྱ། བསྙེན་པར་བྱ། རིམ་གྲོར་བྱའོ། །དེ་ཅིའི་ཕྱིར་ཞེ་ན། གཞོན་ནུ་བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་རྣམས་ཀྱི་བླ་ན་མེད་པ་ཡང་དག་པར་རྫོགས་པའི་བྱང་ཆུབ་ཀྱང་དགེ་བའི་བཤེས་གཉེན་གྱི་ཁར་ལས་ན། སྙིང་རྗེ་ཆེན་པོ་ལ་འཇུག་པའི་ཆོས་ཀྱི་རྣམ་གྲངས་འདི་ལྟ་ཅི་སྨོས། གཞོན་ནུ་དེ་ལྟ་བས་ན་ཁྱོད་ཀྱིས་དགེ་བའི་བཤེས་གཉེན་ཡོངས་སུ་བཙལ་བ་དང་སྲི་ཞུ་བྱ་བ་དང་གཡོག་བྱ་བ་ལ་ཡིད་ཡོངས་སུ་མི་སྐྱོ་བར་བྱའོ་ཞེས་གཞོན་ནུ་ཁྱོད་ཀྱིས་རྟག་ཏུ་དེ་ལྟར་བསླབ་པར་བྱའོ།",
+   "en": "Conclusion of the nineteenth chapter, “The Teaching of the Inconceivable Dharma of the Buddha.”  Indraketudhvajarāja Chapter 20 Then the Bhagavān said to the youth Candraprabha, “Young man, in that way bodhisattva mahāsattvas who wish for this Dharma teaching of entering great compassion and wish to attain the highest, complete enlightenment of perfect buddhahood quickly should rely upon all roots of merit, training, qualities, and completely pure conduct. “Bodhisattva mahāsattvas who have few involvements, avoid bad companions, rely on kalyāṇamitras, have an inquiring nature, unrelentingly seek the Dharma, have the Dharma as their goal, desire the Dharma, delight in the Dharma, obtain the Dharma, and practice the Dharma in accord with the Dharma will, young man, develop great compassion for beings and will develop the aspiration for the highest, complete enlightenment. “Moreover, young man, bodhisattva mahāsattvas who wish for this Dharma teaching of entering great compassion and wish to attain the highest, complete enlightenment of perfect buddhahood quickly should be diligent, without regard for life or body, and should continuously seek kalyāṇamitras who teach this Dharma teaching of entering great compassion, and unwaveringly serve them, rely upon them, and honor them. “Young man, bodhisattva mahāsattvas who with a higher motivation seek kalyāṇamitras should hear from them the Dharma teaching of entering great compassion, and should obtain it, understand it, preserve it, recite it to others, promote it, proclaim it, chant it, meditate on it with unadulterated meditation, promulgate it, and make it widely known to others. They should, with joy and veneration, perceive as the Teacher the person from whom they hear this Dharma teaching on entering great compassion. “Young man, when bodhisattva mahāsattvas search for kalyāṇamitras, and respect them and serve them without weariness, at that time, young man, those bodhisattva mahāsattvas easily attain the highest, complete enlightenment of perfect buddhahood and they obtain this Dharma teaching on easily entering great compassion. “Young man, in that way bodhisattva mahāsattvas should constantly seek for kalyāṇamitras as if their head or clothing were on fire, and unwaveringly attend upon them, serve them, and venerate them. “Why is that? Young man, for bodhisattva mahāsattvas the highest, complete enlightenment of perfect buddhahood, not even to speak of this Dharma teaching on entering great compassion, depends upon kalyāṇamitras. “Therefore, young man, you should always practice by thinking, ‘I will not weary of seeking kalyāṇamitras, venerating them, and serving them.’ ”",
+   "T0639": "爾時，佛告月光童子言：「菩薩摩訶薩於諸善根、功德、法利，應善決定、應不多事、應離惡知識、應依善知識、善知識所應常諮問、樂聞於法無有厭足、應當欣喜、常應求法、常攝於法、應說正法、應善巧諮問菩薩、於菩薩所起於師想、於法師所應當尊重如己師想。童子！若有菩薩能受行此法，是人得不思議具足辯才、得信深入不可思議佛法之海，於不思議甚深佛法心得決定、於人天中能作照明。」"
+  },
+  "c20-2": {
+   "sa": "atha khalu bhagavāṃstasyāṃ velāyāmimā gāthā abhāṣata - abhyatīta bahukalpakoṭiyo aprameya atulā acintiyāḥ / yad abhūṣi dvipadānamuttamo indraketudhvajarāja nāyakaḥ // SRS_20.1 // so samādhimimu śāntu deśayi yatra nāsti naru jīva pudgalaḥ / māya budbuda marīci vidyutā sarva dharma dakacandrasaṃnibhāḥ // SRS_20.2 // nāsti sattva manujo ca labhyate kālu kṛtva paraloki gacchi yo / no ca karma kṛtu vipraṇaśyate kṛṣṇa śukla phala deti tādṛśam // SRS_20.3 // eṣa yukti nayadvāra bhadrakaṃ sūkṣma durdṛśu jināna gocarā / yatra akṣarapadaṃ na labhyate buddhabodhi bhagavān prajānati // SRS_20.4 // dhāraṇī vipulajñānasaṃcayā sūtrakoṭiniyutāna āgatā / buddhakoṭiniyutāna gocarastaṃ samādhi bhagavān prabhāṣate // SRS_20.5 // āturāṇamaya vyādhimocako bodhisattvasamudānitaṃ dhanam / sarvabuddhastuta saṃprakāśito devakoṭiniyutehi pūjitaḥ // SRS_20.6 // sarva bālajana bhūtacodanā tīrthikehi parivarjitaḥ sadā / śreṣṭha śīladhanu buddhavarṇitaṃ vidyuteva gagane na lipyate // SRS_20.7 // yehi pūjita jināna koṭiyo dānaśīlacaritā vicakṣaṇāḥ / pāpamitra puri yehi varjitā teṣa paitṛkadhanaṃ niruttaram // SRS_20.8 // tatra bhikṣu sthitu dharmabhāṇako brahmacāri sugatasya aurasaḥ / śrutva dharmamimamānulomikaṃ citta pādesi ya lokanāyakaḥ // SRS_20.9 // indraketudhvajarāju nāyako adhyabhāṣi abhu dharmabhāṇakam / bhikṣubhāva paramaṃ ti duṣkaraṃ cittupāda vara agrabodhaye // SRS_20.10 // śīlu rakṣa maṇiratnasaṃnibhaṃ mitra seva sada ānulomikam / pāpamitra na kadāci sevato buddhajñānamacireṇa lapsyase // SRS_20.11 // iti śrīsamādhirāje indraketudhvajarājaparivarto nāma viṃśatitamaḥ ||",
+   "bo": "།དེ་ནས་དེའི་ཚེ་བཅོམ་ལྡན་འདས་ཀྱིས་སྙིང་རྗེ་ཆེན་པོ་ལ་འཇུག་པའི་ཆོས་ཀྱི་རྣམ་གྲངས་འདི་ཉིད་ཤིན་ཏུ་བརྗོད་པའི་ཕྱིར་ཟླ་འོད་གཞོན་ནུར་གྱུར་པ་ལ་སྔོན་བྱུང་བ་བསྟན་པ་ཚིགས་སུ་བཅད་པའི་དབྱངས་ཀྱིས་རྒྱ་ཆེར་ཡང་དག་པར་རབ་ཏུ་བསྟན་ཏོ། །འདས་པའི་བསྐལ་པ་བྱེ་བ་མང་པོ་སྟེ། །དཔག་ཏུ་མེད་ཅིང་གཞལ་མེད་བསམ་མི་ཁྱབ། །དེ་ཚེ་དབང་ཏོག་རྒྱལ་མཚན་རྒྱལ་པོ་ཞེས། །འདྲེན་པ་རྐང་གཉིས་གཙོ་བོ་བྱུང་བར་གྱུར། །དེས་ནི་ཏིང་འཛིན་ཞི་བ་འདི་བཤད་དེ། །དེ་ལ་མི་དང་སྲོག་དང་གང་ཟག་མེད། །སྒྱུ་མ་ཆུ་བུར་སྨིག་རྒྱུ་གློག་འདྲ་ཞིང་། །ཆོས་རྣམས་ཐམས་ཅད་ཆུ་ཡི་ཟླ་བ་བཞིན། །ཤི་ནས་འཇིག་རྟེན་ཕ་རོལ་འགྲོ་བ་ཡི། །སེམས་ཅན་ཤེད་ལས་སྐྱེས་པ་མི་ དམིགས་ཀྱང་། །ལས་རྣམས་བྱས་པ་མེད་པར་མི་འགྱུར་ཏེ། །དཀར་གནག་ཇི་བཞིན་འབྲས་བུ་སྨིན་པར་བྱེད། །རིགས་པའི་ཚུལ་གྱི་སྒོ་འདི་བཟང་པོ་སྟེ། །ཕྲ་ཞིང་མཐོང་དཀའ་རྒྱལ་བའི་སྤྱོད་ཡུལ་ཡིན། །གང་ལ་ཡི་གེའི་ཚིག་ཀྱང་མི་དམིགས་པ། །སངས་རྒྱས་བྱང་ཆུབ་ཉིད་ནི་བཅོམ་ལྡན་མཁྱེན། །ཡངས་པའི་གཟུངས་དང་ཡེ་ཤེས་བསགས་པ་སྟེ། །མདོ་སྡེ་བྱེ་བ་ཁྲག་ཁྲིག་རྣམས་ཀྱང་འབྱུང་། །སངས་རྒྱས་བྱེ་བ་ཁྲག་ཁྲིག་སྤྱོད་ཡུལ་ཏེ། །ཏིང་འཛིན་འདི་ནི་བཅོམ་ལྡན་རབ་ཏུ་འཆད། །འདི་ནི་ན་བ་ནད་ལས་ཐར་བྱེད་པ། །བྱང་ཆུབ་སེམས་དཔས་བསྒྲུབས་པའི་ནོར་ཡིན་ཏེ། །སངས་རྒྱས་ཀུན་གྱིས་བསྟོད་ཅིང་རབ་ཏུ་བསྔགས། །བྱེ་བ་ཁྲག་ཁྲིག་ལྷ་ཡིས་རབ་ཏུ་མཆོད། །སྐྱེ་བོ་བྱིས་པ་ཀུན་ལ་ཡང་དག་སྟོན། །མུ་སྟེགས་ཅན་གྱིས་རྟག་པར་ཡོངས་སུ་སྤངས། །ཚུལ་ཁྲིམས་ནོར་ནི་མཆོག་ཏུ་སངས་རྒྱས་གསུངས། །ནམ་མཁའ་ལ་ནི་གློག་བཞིན་ཆགས་མི་འགྱུར། །གང་གིས་རྒྱལ་བ་བྱེ་བ་རབ་མཆོད་ཅིང་། །སྦྱིན་དང་ཚུལ་ཁྲིམས་སྤྱད་པ་མཁས་པ་དང་། །སྔན་ཆད་སྡིག་པའི་གྲོགས་པོ་སྤངས་པ་དག །དེ་དག་གི་ནི་བླ་མེད་ཕ་རོལ་ནོར། །དེ་ན་དགེ་སློང་ཆོས་སྨྲ་འདུག་པ་དག ། ཚངས་པར་སྤྱོད་པ་བདེ་གཤེགས་ཐུགས་ཀྱི་སྲས། །རྗེས་སུ་འཐུན་པའི་ཆོས་འདི་ཐོས་ནས་ནི། །འཇིག་རྟེན་འདྲེན་པར་སེམས་ཀྱང་བསྐྱེད་པར་གྱུར། །འདྲེན་པ་དབང་ཏོག་རྒྱལ་མཚན་རྒྱལ་པོ་ཡིས། །ཆོས་སྨྲ་དེ་ལ་ཡང་ནི་ཚིག་གསུངས་པ། །དགེ་སློང་དངོས་པོ་མཆོག་ཏུ་བྱ་དཀའ་ཡིས། །བྱང་ཆུབ་དམ་པ་མཆོག་ལ་སེམས་སྐྱེད་ཅིག །ནོར་བུ་རིན་ཆེན་འདྲ་བར་ཚུལ་ཁྲིམས་སྲུངས། །རྗེས་སུ་འཐུན་པའི་གྲོགས་ལ་རྟག་པར་སྟེན། །སྡིག་པའི་གྲོགས་ལ་ནམ་ཡང་མ་བསྟེན་དང་། །སངས་རྒྱས་ཡེ་ཤེས་རིང་པོར་མི་ཐོགས་འཐོབ། །དབང་པོ་ཏོག་གི་རྒྱལ་མཚན་རྒྱལ་བའི་དྲུང་། །གང་གིས་བྱང་ཆུབ་སེམས་མཆོག་བསྐྱེད་པ་ནི། །དེ་དག་ཐམས་ཅད་ཆོས་སྨྲར་རབ་འགྱུར་ཏེ། །ཚངས་པར་སྤྱོད་པ་བདེ་གཤེགས་ཐུགས་ཀྱི་སྲས།",
+   "en": "Thereupon the Bhagavān, in order to make clear this Dharma teaching on entering great compassion, gave the youth Candraprabha the teaching that had been given in the past in detail in the form of the following verses:  “Many incalculable, innumerable, Inconceivable millions of eons in the past, There was the highest of humans, The Guide named Indraketudhvajarāja. {1} “He taught this samādhi of peace In which there is no human, soul, or person: ‘All phenomena are like the moon on water, Illusions, bubbles, mirages, and lightning. {2}  “ ‘There is no human, no descendant of Manu, to be found Who goes to the next world when his time has come to an end. However, the karma that has been created will not disappear, But will give corresponding black or white results. {3} “ ‘This is the excellent doorway of the way of logic, The subtle, difficult-to-see realm of experience of the jinas. The Bhagavān knows the enlightenment of buddhahood In which there are there no words or letters to be found. {4} “ ‘Vast retention and the accumulation of wisdom Come from a hundred thousand trillion sūtras. The Bhagavān teaches the samādhi That is the field of experience of a hundred thousand trillion buddhas. {5} “ ‘This frees the sick from their illness. It is the wealth accomplished by bodhisattvas. It is praised and extolled by all buddhas; A hundred thousand trillion devas make offerings to it. {6} “ ‘It is condemned by all foolish beings, And the tīrthikas always reject it. It is the supreme wealth of conduct that is praised by the buddhas. It is as undefiled as lightning in the sky. {7} “ ‘Those who make offerings to millions of jinas Are wise in the practice of generosity and correct conduct, Have forsaken their previous bad companions, And have an unsurpassable inheritance of wealth.’ {8} “There was present a bhikṣu, a dharmabhāṇaka, A celibate who was the heart son of the Sugata. When he had heard this benevolent Dharma, He developed the aspiration to be a guide of the world. {9} “The Guide, Indraketudhvajarāja, Said to the dharmabhāṇaka, ‘Bhikṣu, develop the supreme, difficult-to-attain Motivation for the highest enlightenment. {10}  “ ‘Maintain the conduct that is like a precious jewel, Always depend on favorable friends, Never depend on friends whose actions are evil And before long you will attain buddha wisdom.’ {11}  “The one who developed the aspiration to enlightenment In the presence of Indraketudhvajarāja Became a supreme dharmabhāṇaka, A celibate who was the heart son of the Sugata.” {12}",
+   "T0639": "爾時，世尊而說偈言：「於過去世多億劫，不可稱量不思議， 爾時有佛兩足尊，號因陀羅幡幢王。 彼時佛說此三昧，謂無眾生、無壽命， 猶如泡沫及炎電，諸法亦如水中月。 眾生壽命不可得，於此界沒他世生， 所作之業無失壞，黑白業報亦不亡。 因果相應勝法門，微細難見佛境界， 文字句義不可得，是妙菩提佛所說。 積聚總持大智慧，億那由經從定出， 那由他佛所行道，如此三昧佛所說， 善能滅壞諸病患，集眾菩薩功德財， 一切諸佛咸稱讚，億那由天所供養。 於諸凡夫說實語，常遠一切外道法， 諸佛所讚勝戒財，如空中電難可執。 過去無量億佛所，智者修行於戒施， 久遠遠離惡知識，得於無上父資財。 彼有比丘是法師，修行梵行慧日子， 聞於此法而隨順，發於最上菩提心。 彼因陀羅幡幢佛，告彼法師比丘言： 『比丘！比丘第一難，於彼菩提發心難。 護戒猶如摩尼珠，習近善友順菩提， 於惡知識恒遠離，速得無上菩提果。』"
+  }
+ }
+}
