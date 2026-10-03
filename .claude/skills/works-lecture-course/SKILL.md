@@ -1278,6 +1278,7 @@ B 線＝前人概論怎麼切（比較表）。一次派一個 Sonnet。
   🚨 我寫作時對字數的感覺嚴重高估（自以為每章 15k，實際 7–10k），**一律用 `[一-鿿]` 計數後再回報**。
 - **2026-10-03 作者選方案 1：逐章擴寫，交新 session**。交接 `docs/SESSION_HANDOFF_christianity_intro_2026-10-03.md`。
   作者另問：有無教父說若未墮落亞當夏娃會在樂園「吃聖餐」、生命樹即基督身體——派代理查證，結果 `output/christianity-intro/research_tree_of_life.md`；有原文才進 ch08 §1。
+  **定案（2026-10-03）**：作者「以厄弗冷和馬克西姆的說法寫進去」→ ch08 §1 改寫為厄弗冷（樂園頌 III.9、VI.8 已核；創世記註釋 II.23、對觀福音註釋 XXI.25 據 Brock 轉引）＋奧古斯丁 13.21 一句＋馬克西姆 QThal 60「道成肉身為萬物受造的目的」；刪「教父讀獸皮＝洗禮」。
 - ✅ 小標（2026-10-02）：**導論用功能性小標**（本書的定位與讀者／第一序與第二序／本書的結構及其神學意涵／名詞的約定／體例說明），正文各章小標用意象式。
 - 補書不只 z-lib；先查站上既有（梵二 SC／DV 中拉英在 `data/creeds/ecumenical-councils/vatican-ii/`、
   奧斯堡信條與路德小教理在 `data/creeds/protestant-confessions/`、通諭中譯在 `data/encyclicals/`），
