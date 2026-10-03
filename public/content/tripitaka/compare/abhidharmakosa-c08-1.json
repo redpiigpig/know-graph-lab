@@ -1,0 +1,326 @@
+{
+ "slug": "abhidharmakosa-c08-1",
+ "title": "俱舍論・分別定品（8.1–8.23）",
+ "family": "sa",
+ "intro": "《阿毘達磨俱舍論》第八品〈分別定品〉頌 8.1–8.23，一頌一節（頌號依 Pradhan 本，GRETIL 標 VAkK_品.頌）。五欄：梵本頌、梵本自釋（bhāṣya）、玄奘《俱舍論本頌》、玄奘《俱舍論》、真諦《俱舍釋論》；論本欄自該頌（含引出該頌的提問句）起、到下一頌前的釋文止。玄奘《俱舍論》常把數頌合為一個「頌曰」再一併解釋，區塊中按頌切開，釋文因此都落在區塊末頌；真諦本逐句引偈、隨句解釋，與梵本自釋的節奏相近。稱友 Yaśomitra《明了義釋》Sphuṭārthā 是自釋的疏，不收。",
+ "units": [
+  {
+   "id": "v001",
+   "label": "8.1　靜慮四各二"
+  },
+  {
+   "id": "v002",
+   "label": "8.2　初具伺喜樂"
+  },
+  {
+   "id": "v003",
+   "label": "8.3　并上三近分"
+  },
+  {
+   "id": "v004",
+   "label": "8.4　空無邊等三"
+  },
+  {
+   "id": "v005",
+   "label": "8.5　此本等至八"
+  },
+  {
+   "id": "v006",
+   "label": "8.6　味謂愛相應"
+  },
+  {
+   "id": "v007",
+   "label": "8.7　靜慮初五支"
+  },
+  {
+   "id": "v008",
+   "label": "8.8　第三具五支"
+  },
+  {
+   "id": "v009",
+   "label": "8.9　此實事十一"
+  },
+  {
+   "id": "v010",
+   "label": "8.10　染如次從初"
+  },
+  {
+   "id": "v011",
+   "label": "8.11　第四名不動"
+  },
+  {
+   "id": "v012",
+   "label": "8.12　生靜慮從初"
+  },
+  {
+   "id": "v013",
+   "label": "8.13　生上三靜慮"
+  },
+  {
+   "id": "v014",
+   "label": "8.14　全不成而得"
+  },
+  {
+   "id": "v015",
+   "label": "8.15　無漏次生善"
+  },
+  {
+   "id": "v016",
+   "label": "8.16　染生自淨染"
+  },
+  {
+   "id": "v017",
+   "label": "8.17　淨定有四種"
+  },
+  {
+   "id": "v018",
+   "label": "8.18　互相望如次"
+  },
+  {
+   "id": "v019",
+   "label": "8.19　至間超為成"
+  },
+  {
+   "id": "v020",
+   "label": "8.20　唯生有頂聖"
+  },
+  {
+   "id": "v021",
+   "label": "8.21　根本善無色"
+  },
+  {
+   "id": "v022",
+   "label": "8.22　近分八捨淨"
+  },
+  {
+   "id": "v023",
+   "label": "8.23　具三唯捨受"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sa",
+   "lang": "sa",
+   "label": "梵本頌",
+   "who": "《阿毘達磨俱舍論本頌》Abhidharmakośakārikā・GRETIL（參 Pradhan 1975、Gokhale 1946）"
+  },
+  {
+   "id": "sa-bhasya",
+   "lang": "sa",
+   "label": "梵本自釋",
+   "who": "《阿毘達磨俱舍論》Abhidharmakośabhāṣya・GRETIL（Pradhan 1975，Hackett／Lusthaus 校）"
+  },
+  {
+   "id": "T1560",
+   "lang": "lzh",
+   "label": "玄奘頌本",
+   "who": "玄奘譯《阿毘達磨俱舍論本頌》・唐",
+   "work": "T1560"
+  },
+  {
+   "id": "T1558",
+   "lang": "lzh",
+   "label": "玄奘論本",
+   "who": "玄奘譯《阿毘達磨俱舍論》・唐 651–654 年",
+   "work": "T1558"
+  },
+  {
+   "id": "T1559",
+   "lang": "lzh",
+   "label": "真諦釋論",
+   "who": "真諦譯《阿毘達磨俱舍釋論》・陳 563–567 年",
+   "work": "T1559"
+  }
+ ],
+ "works": [
+  "T1558",
+  "T1559",
+  "T1560"
+ ],
+ "anchors": [
+  {
+   "work": "T1560",
+   "range": [
+    "T29n1560_p0324a05",
+    "T29n1560_p0324a05"
+   ]
+  },
+  {
+   "work": "T1558",
+   "range": [
+    "T29n1558_p0145a20",
+    "T29n1558_p0149c09"
+   ]
+  },
+  {
+   "work": "T1559",
+   "range": [
+    "T29n1559_p0296b08",
+    "T29n1559_p0301b03"
+   ]
+  }
+ ],
+ "cells": {
+  "v001": {
+   "sa": "aṣṭamaṃ kośasthānam oṃ namo buddhāya // dvidhā dhyānāni catvāri proktāstadupapattayaḥ / samāpattiḥ śubhaikāgyraṃ pañcaskandhāstu sānugam // VAkK_8.1 //",
+   "sa-bhasya": "aṣṭamaṃ kośasthānam ===================================================================== oṃ namo buddhāya ===================================================================== [432|02-432|03] jñānādhikāreṇa jñānamayānāṃ guṇānāṃ kṛto nirdeśaḥ / [432|03-432|04] asya svabhāvānāṃ tu kartavya ityādita eva dhyānānyārabhyante sarvaguṇāśrayatvāt / [432|05] dvidhā dhyānāni [432|06] samāsato dvividhāni dhyānānyupapattisamāpattidhyānabhedāt / tāni punaḥ [432|07] catvāri [432|08] prathamaṃ dhyānaṃ yāvaccaturtham / tatra dhyānopapattayaḥ punarna vaktavyāḥ / [432|08-432|09] lokanirdeśakośasthāne hi [432|10] proktāstadupapattayaḥ / [432|11] kathaṃ proktāḥ / [432|12] \"pṛthak pṛthak / [432|13] dhyānaṃ tribhūmikaṃ tatra caturtha tvaṣṭabhūmikami\"ti / [432|14] samāpattidhyānaṃ tu vaktavyam / ata ucyate [432|15] samāpattiḥ śubhaikāgyraṃ [432|16] abhedena kuśalacittaikāgratā dhyānam / samādhisvabhāvatvāt / [432|17] pañcaskandhāstu sānugam // VAkK_8.1 // [432|18] saparivāraṃ tu pañcaskandhasvabhāvaṃ veditavyam / keyamekāgratā nāma / ekālambanatā / [432|19] evaṃ tarhi cittānyevaikālambanāni samādhirna caitasikaṃ dharmāntaramiti prāpnoti / [433|01] na cittānyeva samādhiḥ / yena tu tānyekāgrāṇi vartante sa dharmaḥ samādhiḥ / [433|01-433|02] saiva cittaikāgratā / [433|02-433|03] nanu ca kṣaṇikatvātsarvaṃ cittamekāgraṃ dvitīyasya tasmādavikṣepa iti cet / [433|03] saṃprayukte samādhivaiyarthyam / [433|03-433|04] yata eva ca smādhistata eva cittānāmekālambanatvaṃ kiṃ neṣyate / [433|04-433|05] mahābhūmikatvācca samādheḥ sarvacittānāmekāgratāprasaṅgaḥ / [433|05] na durbalatvātsamādheḥ / cittānyevaikāgrāṇi samādhiḥ / [433|06-433|07] tathā hyadhicittaṃ śikṣā cittapariśuddhipradhānaṃ ca sūtre catvāri dhyānānyuktānītyapare / [433|08] dhyānamiti ko'rthaḥ / dhyāyantyaneneti / prajānantītyarthaḥ / [433|08-433|09] samāhitacittasya yathābhūtaprajñānāt / [433|09] cintanārtho hyeṣa dhātuḥ / cintanaṃ ca prajñeti siddhāntaḥ / [433|09-433|10] evaṃ tarhi sarvasamādhidhyānaprasaṅgaḥ / [433|10] na / prakarṣayukte tannāmavidhānādbhāskaravat / [433|10-433|11] kaśca prakarṣayuktaḥ / [433|11] yo 'ṅgasamāyuktaḥ samādhiḥ / [433|11-433|12] sa hi śamathavipaśyanābhyāṃ yuganddhavāhitvāddṛṣṭadharmasukhavihāra uktaḥ sukhā ca pratipaditi / [433|12] sutarāṃ tena dhyāyanti / [433|13] kliṣṭasya kathaṃ dhyānatvam / mithyopanidhyānāt / atiprasaṅgaḥ / [433|13-433|14] na / tatpratirūpa eva tatsaṃjñāvineveśāt pūtibījavat / [433|14] uktāni cākuśalāni dhyānānyapi bhagavatā / [433|15] kīdṛśaṃ punaḥ kuśalamaikāgyraṃ prathamaṃ dhyānaṃ kīdṛśaṃ yāvaccaturtham / [433|15-433|16] prathamaṃ tāvat",
+   "T1560": "靜慮四各二，於中生已說， 定謂善一境，并伴五蘊性。",
+   "T1558": "已說諸智所成功德，餘性功德今次當辯，於中先辯所依止定。且諸定內靜慮云何？頌曰：靜慮四各二，於中生已說， 定謂善一境，并伴五蘊性，",
+   "T1559": "由依止智慧一切功德，謂智慧種類，分別說已，別性類功德今當分別說。是故最初依定應作分別說，由一切功德依止彼故。偈曰：四定有二種。釋曰：若略說，定有二種，由生得定、修得定差別故。復次此定唯有四種，謂初定、二定、三定、四定。此中受生中定不應更說。於分別世間品中，偈曰：生得定已說。釋曰：云何說？各各定三地，四定有八地。修得定必定應說，故說此言。偈曰：修定善一類。釋曰：若不分別，唯心善一類名定，是三摩提性故。偈曰：共伴類五陰。釋曰：若分別諸定共隨行相應法，應知五陰為性。何法名一類？謂一境等。若爾，唯心一境成定，非別類心法成定。不說諸心是定，由彼法諸心成一類故，說彼法為定，彼法名一類。為不如此耶？一切心剎那剎那滅故，皆是一類。若汝言：第二心從此境不散故，是一類。是義不然，於相應法中定大地應無用，由此是三摩提，是故諸心共緣一境。汝何故不許此義？若言由定大地故諸心成一類，應立一切心皆成一類，此亦成失。是義不然，由此定勢力弱故。經部師說：是心同一類，故說名定。何以故？三摩提者，謂依心學，心清淨為勝，經中說名四定。餘師說：如此定者，名持訶那。持訶那是何義？由此得知得見，故名持訶那。何以故？若心得定，則能如實知見。此名以思量為義，思者即是般若。此悉檀作如此說。若爾，一切三摩提皆應名持訶那，由一類能令如實知見故。是義不然，於勝類中立彼名故，譬如作光名曰。於中與何勝法類相應？若定與分相應，此定則與勝類相應。何以故？此共奢摩他、毘鉢舍那雙生起故，故說為現法安樂住及遲速樂行。由彼最明了思量故，故彼是勝類。若善一類名持訶那，有染污云何名持訶那？由邪思惟故。若爾，則有大過之失。是義不然，於相似中由但立名故，譬如壞種子，故佛世尊亦說惡法為持訶那。"
+  },
+  "v002": {
+   "sa": "vicāraprītisukhavat pūrvapūrvāṅgavarjitam / tathārūpyāḥ catuskandhāḥ adhobhūmivivekajāḥ // VAkK_8.2 //",
+   "sa-bhasya": "[433|17] vicāraprītisukhavat [433|18] vicāraprītisukhasaṃyuktaṃ kuśalamaikāgyraṃ tat prathamaṃ dhyānam / [433|18-433|19] vicāravacanādvitarko 'pyukto bhavati / [433|19] sāhacaryāddhūmāgnivat / [433|19-433|20] na hi prītisukhavānvicāro vinā vitarkeṇāsti / [433|20] śeṣaṃ punrdhyānatrayaṃ [433|21] pūrvapūrvāṅgavarjitam / [433|22] śubhaikāgryam iti vartate / [433|22-433|23] vicāravivarjitaṃ prītisukhavat dvitīyaṃ vicāraprītivarjitaṃ tṛtīyaṃ vicāraprītisukhavarjitaṃ caturthamiti / [433|23-433|24] yathā dhyānāni [433|25] tathārūpyāḥ [434|01] kena prakāreṇa / ete 'pi hi dvidhā upapattisamāpattitaḥ / [434|01-434|02] catvāraśca eṣāmapi copapattaya uktāḥ / [434|02-434|03] samāpattyārupyāsvabhedena kuśalaikāgratāsvabhāvā ityanena prakāreṇa saparivārāḥ [434|04] catuskandhāḥ [434|05] anuparivartirūpābhāvāt [434|06] adhobhūmivivekajāḥ // VAkK_8.2 // [434|07] caturthadhyānavivekajaṃ hyākāśānantyāyatanam / [434|07-434|08] tadvivekajaṃ vijñānānantyāyatanam / [434|08] tadvivekajamākiñcanyāyatanam / [434|08-434|09] tadvivekajaṃ naivasaṃjñānāsamjñāyatanamityevaṃ catvāra ārupyāḥ / [434|09] ko 'yaṃ viveko nāma / yena mārgeṇādhastādvimucyate / [434|09-434|10] vairāgyagamanāt / [434|10] ta eva cārupyāḥ",
+   "T1560": "初具伺喜樂，後漸離前支， 無色亦如是，四蘊離下地。",
+   "T1558": "初具伺喜樂，後漸離前支。論曰：一切功德多依靜慮，故應先辯靜慮差別。此總有四種，謂初二三四，四各有二，謂定及生。生靜慮體世品已說，謂第四八，前三各三。定靜慮體總而言之是善性攝心一境性，以善等持為自性故；若并助伴，五蘊為性。何名一境性？謂專一所緣。若爾，即心專一境位，依之建立三摩地名，不應別有餘心所法。別法令心於一境轉名三摩地，非體即心。豈不諸心剎那滅故皆一境轉，何用等持？若謂令心於第二念不散亂故須有等持，則於相應等持無用。又由此故三摩地成。寧不即由斯心於一境轉？又三摩地是大地法，應一切心皆一境轉。不爾，餘品等持劣故。有餘師說：即心一境相續轉時名三摩地，契經說此為增上心學故，心清淨最勝即四靜慮故。依何義故立靜慮名？由此寂靜能審慮故。審慮即是實了知義，如說心在定，能如實了知，審慮義中置地界故。此宗審慮以慧為體。若爾，諸等持皆應名靜慮。不爾，唯勝方立此名。如世間言發光名日，非螢燭等亦得日名。靜慮如何獨名為勝？諸等持內唯此攝支，止觀均行最能審慮，得現法樂住及樂通行名，故此等持獨名靜慮。若爾，染污寧得此名？由彼亦能邪審慮故，是則應有太過之失。無太過失，要相似中方立名故，如敗種等。世尊亦說有惡靜慮。若一境性是靜慮體，依何相立初二三四？具伺喜樂建立為初，由此已明亦具尋義，必俱行故，如煙與火。非伺有喜樂，而不與尋俱。漸離前支立二三四，離伺有二，離二有樂，具離三種。如其次第，故一境性分為四種。已辯靜慮。無色云何？頌曰：無色亦如是，四蘊離下地，",
+   "T1559": "復次是善一類，有何相名初定？乃至是善一類，有何相名第四定？偈曰：有觀及喜樂。釋曰：覺觀喜樂相應善一類，說名初定。由說觀覺，即被說覺觀，如火及烟相應行故。有不相離相離故，無有觀有喜樂與覺相離。所餘三定，偈曰：前前分所離。釋曰：善一類言流。覺觀所離但有喜樂，是第二定。覺觀喜所離但有樂，是第三定。覺觀喜樂所離但有捨，是第四定。如說四定。偈曰：無色爾。釋曰：無色有幾種？義與定同。彼亦有二種，由修得、生得故。亦有四種，由減損想故。是彼生得，於前已說，謂無色界無處。由生有四種，聚同分及命，依此心相續，修得無色定。若不分別，但以善一類為性。由此義，無色定與四定同。偈曰：四陰。釋曰：若分別諸定共隨行相應法，應知四陰為性，無隨行色故。偈曰：寂離下地生。釋曰：空遍入從寂離第四定生，識遍入從寂離空遍入生，無所有遍入從寂離識遍入生，非想非非想遍入從寂離無所有遍入生。無色定由此故成四。何法名寂離？由此道彼解脫他地故，說此道名寂離。彼定至得離欲故，是四無色定。"
+  },
+  "v003": {
+   "sa": "vibhūtarūpasaṃjñākhyāḥ saha sāmantakaistribhiḥ / nārūpye rūpasadbhāvaḥ rūpotpattistu cittataḥ // VAkK_8.3 //",
+   "sa-bhasya": "[434|11] vibhūtarūpasaṃjñākhyāḥ saha sāmantakaistribhiḥ / [434|12] ākāśānantyāyatanasāmantakaṃ caturthadhyānālambanatvādvibhūtarūpasaṃjñākhyāṃ na labhate / [434|13] na hi tatra rūpasaṃjñā vibhūtā na vigatetyarthaḥ / [434|13-434|14] yaduktaṃ \"catuskandhā\" iti sādhyaṃ tāvadetadārupyeṣu rūpaṃ nāstīti / [434|14] yadi hi syātkathamārupyā ucyeran / [434|14-434|15] īṣadrūpatvā dāpiṅgalavat / [434|15] kīdṛśaṃ tāvadīṣadrūpaṃ tatreṣyate / [434|15-434|16] yadi kāyavāk saṃvaramātraṃ kathaṃ tadabhāve tatsaṃvarau bhaviṣyataḥ / [434|16] na cāsati bhūte bhautikaṃ yujyate / [434|17] anāsravasaṃvaravaccet / sāsravabhūtasadbhāvāt / smāpattāvapi tatpratiṣedha uktaḥ / [434|18] atha kāyo 'pyastīndriyāṇyapi rūpīṇi / kathaṃ tadīṣadrūpā iṣyante / [434|18-434|19] parimāṇālpatvāccet / [434|19] udakajantukeṣvapyadṛśyarupeṣu prasaṅgaḥ / acchatvāccet / [434|19-434|20] antarābhavarūpāvacareṣvapi prasaṅgaḥ / [434|20] yato nācchataraṃ cet / bhavāgramevārupyaṃ syāt / [434|20-434|21] samāpattivattadupapattiviśeṣāt / [434|21-434|22] dhyānopapattirūpasyāpi cādharabhūmikendriyāgrahaṇāt kastatra viśeṣaḥ / [434|22] dvayoranvarthā saṃjñā nārupyadhātoriti cet / kā 'tra yuktiḥ / [434|22-434|25] āyuruṣmaṇoḥ saṃsṛṣṭavacanānnaḍakalāpīdvayavannāmarūpayoranyonyaniśritavacanā \"dvijñānapratyayaṃ nāmarūpami\"ti vacanāt anyatrarūpādyāvatsaṃskārebhyo vijñānasyāgatigatipratiṣedhāccārūpyeṣu rūpāstitvasiddhiriti cet / [434|25] na / [434|25-434|26] saṃpradhāryaṃ tāvadetadyadidamāyuruṣmaṇoḥ saṃsṛṣṭatvamuktam / [434|26] kimidaṃ kāmāvacaramāyuḥ saṃdhāyoktamāhosvitsarvamiti / [434|26-435|01] yacca nāmarūpayoranyonyāśritatvamuktaṃ kimidaṃ kāmarūpāvacaraṃ nāma saṃdhāyoktamāhosvitsarvamiti / [435|01-435|02] yacca vijñānapratyayaṃ nāmarūpamuktaṃ kimatra sarva vijñānaṃ nāmarūpasya pratyayamuktamāhosvitsarve nāmarūpaṃ vijñānapratyayamiti / [435|03] yaccānyatra rūpādibhyo vijñānasyāgatipratiṣedhaḥ / [435|03-435|04] kimatra sarvaireva tairvinā tatpratiṣedha āhosvit ekenāpīti / [435|04] aviśeṣavacanānna saṃpradhāryamiti cet / [435|04-435|05] atiprasaṅgaḥ / [435|05] bāhyasyāpi hyaṣmaṇa āyuṣā binā bhāvo na prāpnoti / [435|05-435|06] bāhyasyāpi ca rūpasya nāmāśritatvamaviśeṣavacanāt / [435|06-435|07] caturvijñānasthitivaccāhāracatuṣkavacanādrūpārupyadhātvorapi kavaḍīkārāhāraprasaṅgaḥ / [435|07-435|08] \"atikramya devān kavaḍīkārā hārabhakṣāni\"ti vacanāt prītyāhāravacanāccāprasaṅga iti cet / [435|08-435|09] ārupyeṣvapi rūpasyāprasaṅgaḥ / [435|09] \"rūpāṇāṃ niḥsaraṇamārupyāḥ\" / [435|09-435|10] \"ye te śāntā vimokṣā atikramya rūpāṇyārupyāḥ\" / [435|10-435|11] \"arupiṇaḥ santi sattvāḥ sarvaśo rūpasaṃjñānāṃ samatikramādi\"ti vacanāt / [435|11] sati hi rupe svaṃ rūpamavaśyaṃ saṃjānīranniti / [435|11-435|12] audārikamadhobhūmikaṃ rūpamabhisaṃdhāyoktamiti cet / [435|12] kavaḍīkāre 'pi tulyam / [435|12-435|13] dhyānānāmapi cādhobhūminiḥsaraṇatvādārupya prasaṅgaḥ / [435|13] vedanādiniḥsaraṇaṃ ca kiṃ noktāḥ / [435|14] adhobhūmikavedanāniḥsaraṇāt / rūpajātiṃ tu kutsnāmatikrāntā na vedanādijātim / [435|15] ato rūpāṇāṃ niḥsaraṇamuktāḥ / [435|15-435|16] bhavena bhavasyāniḥsaraṇavacanaṃ tu tenaiva tasyāniḥsaraṇādasarvānatyanta niḥsaraṇācca / [435|16-435|17] dhyānesu coktaṃ bhagavatā \"yattatra bhavati rūpagataṃ vā yāvadvijñānagataṃ veti / [435|17-435|18] ārupyeṣu tūktaṃ \"yattatra bhavati vedanāgataṃ vā yāvadvijñānagataṃ ve\"ti / [435|18-435|19] satyāṃ tesu rūpajātau kasmādrūpagataṃ veti nāvakṣyat / [435|19] tasmāt [435|20] nārupye rūpasadbhāvaḥ [435|21] kathamidānīmanalpakalpocchinnādrūpāt punarapi rupotpattistataḥ pracyutānām / [435|22] rupotpattistu cittataḥ // VAkK_8.3 // [435|23] rūpasya cittādevotpattistadvipākahetuparibhāvitāllabdhavṛttitaḥ / [435|23-435|24] kathamanāśritya rūpaṃ cittaṃ vartate / [435|24] kasmānna vartitavyam / ihaivamadarśanāt / [435|24-435|25] kavaḍīkārāntareṇā 'pi vinā rūpadhātau na vartitavyam / [435|25] kiṃ kāraṇam / ihaivamadarśanāt / [435|25-435|26] uktaṃ ca pūrvaṃ yathā vartate / [435|26] gatametadidaṃ vaktavyam / [436|01-436|02] kimepāmākāśānantyāyatanādīnāmākāśādaya evālambanaṃ yata evaṃ samākhyāyate /",
+   "T1560": "并上三近分，總名除色想， 無色謂無色，後色起從心。",
+   "T1558": "并上三近分，總名除色想， 無色謂無色，後色起從心。",
+   "T1559": "偈曰：制伏色想名，共三種近分。釋曰：空遍入近分定，緣第四定為境界故，未得制伏色想名。何以故？於中制伏色想未竟故，未得滅離。是前所說，無色界但有四陰。此言不成就，謂於無色界無色。若無色界有色，云何說為無色界？由色細故，譬如阿賓伽羅執彼所有色。其相云何？若唯有身口護色。身口既無，云何得有身口護色？若無四大，說有四大所造色，無如此義。若汝言：如無流護。是義不然，由有流四大有故。於說彼三摩跋提中乃至有撥言，謂無色等想。若彼有身，必定有色根，云何許彼有細色？若汝執由身量極細故說無色，於不可見色水蟲應成無色。若汝執彼色極淨故說無色，於中陰及色界亦應立為無色。若汝執由無勝彼淨色故說無色，則但有頂成無色，所餘應非。何以故？如修三摩跋提，三摩跋提生差別亦爾。彼定生色，由非下地根所取故。於彼有何差別？若汝言二界名隨義立，第三界名非隨義立。此中以何道理為證？由說壽命煖觸相應故，如二蘆束互相依持。名色及識，由說互相依故，於十二緣生中說依識名色生、依名色識生。復有別證，離色乃至離行，由撥識去來故，是故於無色界有色義成。是義不然，應更思量故。此義必定應共思量，謂說壽命暖觸相應義，此言為依欲界壽命說、為依一切壽命說？名色及識互相依言，為依欲界色界識說、為依一切識說？說名色依識生言、說識依名色生言，此中為一切識以名色為依、一切名色以識為依？為不皆爾？此中說離色等撥識去來言，為離一切色等撥識去來義、為隨離一？若汝言：由佛不分別故，不可自分別思量。是義不然，有大過之失故，是外煖觸不應成與壽命相離。復次外色應依止名，由不分別說故。由佛說四識住及四食，於色無色界應有段食及色識住。若汝言：說過用段食諸天，及說喜食諸天。由此言故，無大過之失。於無色亦應爾，不應立有色，由佛說無色是一切色出離故。如經言：是寂靜解脫，過一切色是無色。復有說有眾生無色。復有說由過一切色想及有礙想故，知無色界中無色。何以故？若彼實有色，彼必定應生想分別自色。若汝執觀下地麁色故說無色。是義不然。何以故？於段食中此義應同，四定出離下地故，於中應立無色。云何不說彼是受等出離？由是下地受等出離故。彼已過一切種色類，不過一切種受等類，是故說彼但是色出離非受等。由有不說出離有者，由有不得出離有故，不能出離一切有及永出離有故。復次佛世尊，於色定中，說言於色定中若有色類乃至識類。於無色定中，說言於無色定中若有受類乃至識類。於無色界若有色類，云何不說若有色類言耶？是故偈曰：無色定無色。釋曰：由此二證，應知於無色界必定無色。說有色者，此是邪言，與理相違故。若爾，於彼中無量劫色相續已斷絕，後從彼退時，色云何更生？偈曰：更生色從心。釋曰：色從心更生。昔時色報因所熏習故，此心有功能生於今色。若不依止色，心云何得生起？云何不得生起？此中非所曾見故。若爾，離段食，於色界中不應得生起。何以故？此中非所曾見故。於前已說，此依止能令彼心相續生起。說此義已，復次此義今當說。為空無邊入等必定以空等為境界故說彼以此名、為不爾？非。此云何？"
+  },
+  "v004": {
+   "sa": "ākāśānantyavijñānanatyākiṃcanyasaṃjñakāḥ / tathāprayogāt māndyāttu nasaṃjñānāpyasaṃjñakaḥ // VAkK_8.4 //",
+   "sa-bhasya": "[436|02] na hi / kathaṃ tarhi / trayastāvat / [436|03] ākāśānantyavijñānānantyākiñcanyasaṃjñakāḥ / [436|04] tathāprayogāt [436|05-436|06] anantamākāśamanantaṃ vijñānaṃ nāsti kiñcidityeva manasikurvāṇasteṣu prayujyante yathāsaṃkhyam / [436|06] ata eṣāmetāḥ saṃjñā iti / [436|07] māndyāktu nasaṃjñanāpyasaṃjñakaḥ // VAkK_8.4 // [436|08] mṛdutvāttu saṃjñāyā naivasaṃjñānāsaṃjñāyatanamuktam / [436|08-436|09] na hi sā paṭvī saṃjñā na ca punarnaiva saṃjñeti / [436|09-436|10] \"yadyapi tatrāpyevaṃ prayujyante saṃjñārogaḥ saṃjñāgaṇdaḥ saṃjñāśalyaḥ āsaṃjñikasaṃmohaḥ etacchāntametatpraṇītaṃ yaduta naivasaṃjñānāsaṃjñāyatanamiti /",
+   "T1560": "空無邊等三，名從加行立， 非想非非想，昧劣故立名。",
+   "T1558": "空無邊等三，名從加行立， 非想非非想，昧劣故立名。論曰：此與靜慮數自性同，謂四各二。生如前說，即世品說由生有四。定無色體，總而言之亦善性攝心一境性。依此故說亦如是言。然助伴中此除色蘊，無色無有隨轉色故。雖一境性體相無差，離下地生故分四種。謂若已離第四靜慮生立空無邊處，乃至已離無所有處生立非想非非想處。離名何義？謂由此道解脫下地惑，是離下染義。即此四根本并上三近分，總說名為除去色想。空處近分未得此名，緣下地色起色想故。皆無色故立無色名，此因不成，許有色故。若爾，何故立無色名？由彼色微故名無色，如微黃物亦名無黃。許彼界中色有何相？若彼唯有身語律儀。身語既無，律儀寧有？又無大種，何有造色？若謂如有無漏律儀。不爾，無漏依有漏大種故，又彼定中亦遮有故。若許於彼有色根身，如何可言彼色微少？若謂於彼身量小故，水細蟲極微亦應名無色，亦身量小不可見故。若謂彼身極清妙故，中有色界應名無色。若謂彼身清妙中極，應唯有頂得無色名。如定生身有勝劣故，又生靜慮所有色身非下地根所能取故，與彼何異不名無色？若謂欲色隨義立名，無色不然。此有何理？若謂經說壽煖合故，又說名色與識相依如二蘆束相依住故，又說名色識為緣故，又遮離色乃至離行識有來有去故，由此無色有色理成。此證不成，應審思故。謂所引教應共審思，且契經言壽煖合者，為約一切界、為約欲界說？名色與識相依住者，為約一切界、為約欲色說？所說名色識為緣者，為說一切識皆為名色緣、為說名色生無不緣於識？遮離色至行識有來去者，為遮隨離一、為遮離一切？若謂契經言無簡別，不應於此更致審思。此說不然，太過失故。謂應外煖亦與壽合。又應外名色依識識為緣。又說四食如四識住，色無色界應有段食。若謂經說有一類天超段食故，又說彼天喜為食故，無斯過者，則無色界不應有色，契經說彼出離色故。又契經言：無色解脫最為寂靜，超諸色故。又契經說：無色有情，一切色想皆超越故。若無色界實有色者，定應彼色自相可知，如何可言超色想等？若謂觀下麁色故說，則於段食亦應許然。又諸靜慮超下麁色，亦應可說出離色言，是則亦應名無色界。又亦應說出離受等，彼亦超下麁受等故。經既不說，知無色中遍超色類，非超受等。由此定知，彼界無色。然契經中說有不出有者，於自地有不能出故，非遍出故、非永出故。又薄伽梵於靜慮中說有色類乃至識類，於無色中說有受類乃至識類，不說有色。若無色中實有色者，何不如靜慮說有色類言？故所立因無不成過。在彼多劫色相續斷，後歿生下色從何生？此從心生，非從色起。謂昔所起色異熟因熏習在心，功能今熟，是故今色從彼心生。彼無色身心依何轉？離身何不轉？下曾不見故。色界無段食，身復依何轉？下亦不見身離段食轉故。又先說彼心轉所依，已釋總名，空無邊等從緣空等得別名耶？不爾。云何？下三無色，如其次第修加行時，思無邊空及無邊識、無所有故建立三名。立第四名由想昧劣，謂無明勝想得非想名，有昧劣想故名非非想。雖加行時亦作是念：諸想如病如箭如癰。若想全無便同癡闇，唯有非想非非想中與上相違寂靜美妙，而不就此加行立名。以若詰言何緣加行作如是念？必應答言以於彼處想昧劣故。由此昧劣故，是立名正因。已辯無色。",
+   "T1559": "前三者，偈曰：空無邊及識，無邊無所有，由加行立名。釋曰：空無邊、識無邊、無所有，彼作如此思惟：得修觀行，因此加行。是故彼如次第得此三名。偈曰：昧故非想非。釋曰：由想軟昧故，說名非想非非想。何以故？彼想不明了、非全無想。若彼於中修如此觀行，想即是病、想即是癰、想即是刺，無想即是癡闇，是寂靜、是美妙，謂非想非非想入。雖然，不由此加行立名。云何？彼執如此觀行，決定應釋曰相微細故。此義於前已說。"
+  },
+  "v005": {
+   "sa": "iti maulaṃ samāpattidravyamaṣṭavidhaṃ tridhā / sapta āsvādanavacchuddhānāsravāṇi aṣṭamaṃ dvidhā // VAkK_8.5 //",
+   "sa-bhasya": "[436|11] kasmāttu taistadevaṃ gṛhyata ityavaśyamidaṃ vaktavyaṃ jāyate / mṛdutvātsaṃjñāmityetadevoktam / [436|12] iti maulaṃ samāpattidravyamaṣṭavidhaṃ [436|13-436|14] ityetānyaṣṭau maulāni samāpattidravyāṇi yaduta catvāri dhyānāni catvāra ārupyā iti / [436|14] teṣāṃ punaḥ [436|15] tridhā / [436|16] sapta [436|17] bhavāgrādanyāni sapta trividhāni / [436|18] āsvādanāvacchūddhānāsravāṇi [436|19] āsvādanāsaṃprayuktāni śuddhakānyanāsravāṇi ca / [437|01] aṣṭamaṃ dvidhā // VAkK_8.5 // [437|02] bhavāgramāsvādanāsaṃprayuktaṃ śuddhakaṃ ca / anāsrava nāsti / tatra punaḥ",
+   "T1560": "此本等至八，前七各有三， 謂味淨無漏，後味淨二種。",
+   "T1558": "云何等至？頌曰：此本等至八，前七各有三， 謂味淨無漏，後味淨二種，",
+   "T1559": "偈曰：如此根本定，八物。釋曰：根本定若約實法：唯有八物：謂四色定、四無色定。此中偈曰：有三種，七。釋曰：除有頂，所餘七定各有三種。何者為三？偈曰：有噉，清淨、無流。釋曰：此七定有與噉味相應，有清淨、有無流。偈曰：第八，二。釋曰：第八是有頂，此定有二種，有與噉味相應，有清淨，無無流。"
+  },
+  "v006": {
+   "sa": "āsvādanāsaṃprayuktaṃ satṛṣṇaṃ laukikaṃ śubham / śuddhakaṃ tattadāsvādyaṃ lokattaramanāsravam // VAkK_8.6 //",
+   "sa-bhasya": "[437|03] āsvādanāsaṃprayuktaṃ satṛṣṇaṃ [437|04] tṛṣṇā hyāsvādanā / [437|05] laukikaṃ śubham / [437|06] śuddhakaṃ [437|07-437|08] laukikaṃ kuśalaṃ samāpattidravyaṃ śuddhakamuccayate 'lobhādi śuddhadharmayogāt / [437|08] kiṃ punastenāsvādanāsaṃprayuktenāsvādyate / [437|09] tattadāsvādyaṃ [437|10] tacchuddhakaṃ samāpattidravyaṃ tenāsvādyate samanantarātītam / [437|10-437|11] yadāsvādayati tasmādvyutthito yenāsvādayati tatsamāpannaḥ / [437|12] lokattaramanāsravam // VAkK_8.6 // [437|13] yallokottaraṃ samāpattidravyaṃ tadanāsravam / [437|13-437|14] eṣāṃ ca samāpattidravyāṇāṃ dhyānānyeva bhavanti nārupyāḥ / [437|14] tatra",
+   "T1560": "味謂愛相應，淨謂世間善， 此即所味著，無漏謂出世。",
+   "T1558": "味謂愛相應，淨謂世間善， 此即所味著，無漏謂出世。論曰：此上所辯靜慮無色。根本等至總有八種，於中前七各具有三，有頂等至唯有二種，此地昧劣無無漏故。初味等至，謂愛相應，愛能味著故名為味，彼相應故此得味名。淨等至名目世善定，與無貪等諸白淨法相應起故，此得淨名。即味相應所味著境，此無間滅彼味定生。緣過去淨深生味著，爾時雖名出所味定，於能味定得名為入。無漏定者，謂出世定，愛不緣故非所味著。如是所說八等至中靜慮攝支，非諸無色。",
+   "T1559": "復次此中，偈曰：噉味相應定，有愛。釋曰：噉味謂貪愛味是定所有功德，緣此起愛欲心。愛欲即是能噉故，說貪愛所染污定，名與噉味相應。偈曰：世間淨，清淨。釋曰：世間定法若善為性，說名清淨，與無貪等白淨法相應故。復次此中何定是噉味相應所噉？偈曰：是堪噉。釋曰：是所堪噉即是清淨三摩跋提法。此法是彼所噉，必從一剎那等已滅。若是所噉則已出，彼能噉即是所修觀。偈曰：出世定無流。釋曰：出世三摩跋提法是名無流。此三摩跋提法中，唯四持訶那有分，四無色定無分。"
+  },
+  "v007": {
+   "sa": "pañcādye tarkacārau ca prītisaukhyasamādhayaḥ / prītyādayaḥ prasādaśca dvitīye 'ṅgacatuṣṭayam // VAkK_8.7 //",
+   "sa-bhasya": "[437|15] pañcādye [437|16] prathame bhāge pañcāṅgāni / [437|17] tarkacārau ca prītisaukhyasamādhayaḥ / [437|18-437|19] vitarko vicāraḥ prītiḥ sukhaṃ cittaikāgratā cetyetāni pañcāṅgāni samādhiḥ kilāṅgaṃ dhyānaṃ ca / [437|19] śeṣāṇyaṅgānīti / [437|19-437|20] yathā caturaṅgā senā evaṃ pañcāṅgaṃ dhyānam / [438|01] prītyādayaḥ prasādaśca dvitīye 'ṅgacatuṣṭayam // VAkK_8.7 // [438|02] dvitīye dhyāne catvāryaṅgāni / [438|02-438|03] adhyātmasaṃprasādaḥ prītiḥ sukhaṃ cittekāgratā ca /",
+   "T1560": "靜慮初五支，尋伺喜樂定， 第二有四支，內淨喜樂定，",
+   "T1558": "於四靜慮各有幾支？頌曰：靜慮初五支，尋伺喜樂定； 第二有四支，內淨喜樂定；",
+   "T1559": "此中偈曰：於初有五分。釋曰：初持訶那中有五分。五者，偈曰：覺觀喜樂住。釋曰：覺觀喜樂善一類，此五於定能引治安，依體故說為五分。此五分中第五，彼說亦定亦分，所餘但分非定。若實說如四分軍，五分持訶那亦爾。偈曰：憙等及內淨，於第二四分。釋曰：於第二持訶那有四分，一內澄淨、二憙、三樂、四善一類，此四應知如前。"
+  },
+  "v008": {
+   "sa": "tṛtīye pañca tūpekṣā smṛtiḥ prajñā sukhaṃ sthitiḥ / catvāryante 'sukhāduḥkhopekṣāsmṛtisamādhayaḥ // VAkK_8.8 //",
+   "sa-bhasya": "[438|04] tṛtīye pañca tūpekṣā smṛtiḥ prajñā sukhaṃ sthitiḥ / [438|05] tṛtīye tu dhyāne pañcāṅgāni / upekṣā smṛtiḥ saṃprajñānaṃ sukhaṃ smādhiśca / [438|06] samādhiparyāyo hi sthitiḥ / \"samyaksamādhiḥ katamaḥ / [438|06-438|07] yā cittasya sthiti\"riti sūtre vacanāt / [438|08] catvāryante 'sukhāduḥkhopekṣāsmṛtisamādhayaḥ // VAkK_8.8 // [438|09] caturthaṃ dhyānamantyam / tatra catvāryaṅgāni / [438|09-438|10] aduḥkhāsukhā vedanā upekṣāpariśuddhiḥ smṛtipariśuddhiḥ samādhiśca / [438|10-438|11] tānyetānyaṣṭādaśa dhyānāṅgāni bhavanti / [438|11] prathamatṛtīyayoḥ pañcāṅgatvāt / dvitīyacaturthayoścaturaṅgatvāt / [438|12] nāmata evam /",
+   "T1560": "第三具五支，捨念慧樂定， 第四有四支，捨念中受定。",
+   "T1558": "第三具五支，捨念慧樂定； 第四有四支，捨念中受定。論曰：唯淨無漏四靜慮中初具五支：一尋、二伺、三喜、四樂、五等持。此中等持頌說為定，等持與定名異體同，故契經說心定等定名正等持。此亦名為心一境性，義如前釋。傳說唯定是靜慮亦靜慮支，餘四支是靜慮支非靜慮。如實義者，如四支軍，餘靜慮支應知亦爾。第二靜慮唯有四支：一內等淨、二喜、三樂、四等持。第三靜慮具有五支：一行捨、二正念、三正慧、四受樂、五等持。第四靜慮唯有四支：一行捨清淨、二念清淨、三非苦樂受、四等持。",
+   "T1559": "偈曰：第三有五分，捨念慧樂住。釋曰：於第三持訶那有五分，一捨、二念、三慧、四樂、五住，住即是善一類。何以故？住是三摩提別名故。如經言：何者為三摩提？是心住於正境於正位。由此經故，知住是三摩提別名。偈曰：最後有四分，中受捨念住。釋曰：第四持訶那是最後，於中有四分，謂非苦非樂受、捨清淨念、清淨、善一類。若依如此文，定分有十八，初定三定各有五分，二定四定各有四分故，如此數由名立。"
+  },
+  "v009": {
+   "sa": "dravyato daśa caikaṃ ca prasrabdhi sukhamādyayoḥ / śraddhā prasādaḥ prītistu saumanasyaṃ dvidhāgamāt // VAkK_8.9 //",
+   "sa-bhasya": "[438|13] dravyato daśa caikaṃ ca [438|14] dravyata etānyekādaśa bhavanti / prāthamadhyānikāni pañca / [438|14-438|15] dvitīye 'dhyātmasaṃprasādo vardhate / [438|15] tṛtīye upekṣāsmṛtisaṃprajñānasukhāni / caturthe 'duḥkhāsukhā vedaneti / [438|16] ata evocyate yānyaṅgāni prathame dhyāne dvitīye 'pi tānīti catuṣkoṭikam / [438|16-438|917] prathamā koṭirvitarkavicārau / [438|17] dvitīyā adhyātmasaṃprasādaḥ / [438|17-438|18] tṛtīyā prītiḥ sukhaṃ cittaikāgratā ca / [438|18] caturthī koṭiruktanirmuktā dharmā iti / [438|18-438|19] evaṃ sarvāṇi dhyānāṅgāni parasparaṃ yojyāni / [438|19] kasmāt / tṛtīye dhyāne sukhaṃ dravyāntaramucyate / [438|19-438|20] yasmāttadvedanāsukhaṃ dhyānayostu [438|21] prasrabdhisukhamādyayoḥ / [438|22] prathamadvitīyayostu dhyānayoḥ prasrabdhisukhamityuktam / [438|22-438|23] iha prasrabdhisukhaṃ tatra vedanāsukhamiti kuta etat / [438|23] dvayordhyānasamāpattyoḥ sukhendriyāyogāt / [438|24] na hi tattayoḥ kāyikaṃ yujyate / samāpannasya vijñānakāyābhāvāt / [438|24-438|25] nāpi caitasikaṃ prītivacanāt / [438|25] prītirhi saumanasyam / [438|25-438|26] na ca sukhasaumanasyayoryaugapadyamasti / [438|26] na cāpi tayoḥ paryāyeṇa dhyāne vṛttiryuktā pañcāṅgavacanāditi / [439|01] apare punarāhuḥ / [439|01-439|02] nāstyeva caitasikaṃ sukhendriyaṃ triṣvapi hi dhyāneṣu / [439|02] kāyikameva sukhamaṅgaṃ vyavasthāpitamiti / [439|02-439|03] yattarhi sutra uktaṃ \"sukhendriyaṃ katamat / [439|03-439|04] yatsukhavedanīyena sparśena spṛṣṭasyotpadyate kāyikaṃ caitasikaṃ sātaṃ veditaṃ vedanāgatamidamucyate sukhendriyami\"ti / [439|04] adhyāropita eṣa pāṭhaḥ / [439|05] kenāpi sarvanikāyāntareṣu kāyikamityeva pāṭhāt / [439|05-439|06] \"sukhaṃ ca kāyena pratisaṃvedayata\" iti svaśabdena vacanācca / [439|06] manaskāyeneticet / evamuktvā ko guṇaḥ / [439|06-439|07] caturthe dhyāne prasrabdhibhūyastve 'pi sukhāvacanācca / [439|07-439|08] sukhavedanānukūlā prasrabdhiḥ sukhamiti cet / [439|08] tṛtīye prasrabdhisukhāvacanaṃ kasmāt / upekṣopahatatvāditi cet / [439|08-439|09] na upekṣayaiva tadvṛddhiḥ / [439|09] pūrvikābhyastādviśeṣāt / [439|09-439|11] \"yasminsamaye āryaśrāvakaḥ pravivekajāṃ prītiṃ kāyena sākṣātkṛtvopasaṃpadya viharatī\"tyatra sūtre prasrabdhisukhayoḥ pṛthagvacanānna prasrabdhireva sukham / [439|11] samāpannasya katham kāyavijñānamiti cet / [439|12] samādhiviśeṣajena prasrabdhisaṃjñakena sukhavedanīyena vāyunā kāyasphuraṇāt / [439|12-439|13] bahirvikṣepāssamādhibraṃśa iti cet / [439|13] na / [439|13-439|14] samādhijasyāntaḥkāyasaṃbhūtasya kāyasukhasya samādhyanukūlatvāt / [439|14-439|15] kāyavijñā nakāle vyutthitaḥ syāditi cet / [439|15] na / ata eva / [439|15-439|16] kāmāvacareṇa kāyendriyeṇa rūpāvacaraspraṣṭavyavijñānānutpattiriti cet / [439|16] na / prasrabdhivijñānasyotpatteḥ / [439|16-439|17] anāsrave api spraṣṭavyakāyavijñāne syātām / [439|17] mā bhūtkiñcidaṅgaṃ sāsravaṃ kiñcidanāsravamiti cet / [439|18] kāyikaprasrabdhivodhyaṅga vacanāt / iṣṭe bodhyaṅgānukūlatvāditi cet / [439|19] anāsravatvamapyevam / \"sāsravā dharmāḥ katame / [439|19-439|20] cakṣuryāvadeva spraṣṭavyami\"tyasya sūtrasya virodhāditi cet / [439|20] na / anyaspraṣṭavya kāyavijñānābhisaṃdhivacanāt / [439|21] na cānāsrave kiñcidaṅgaṃ sāsravaṃ kicidanāsravaṃ syāditi cet / [439|21-439|22] ayaugapadyātko doṣaḥ sukhaprītyasamavadhānānna pañcāṅgaṃ syāditi cet / [439|22-439|23] na saṃbhavaṃ pratyupadeśāndvitarkavicāravat / [439|23] sādhyamiti cet / [439|23-439|24] siddhaṃ cittasyaudārikasūkṣmatayorvirodhāt doṣāvacanācca / [439|24-439|25] tasmādyānyeva prathamadhyāne pañcāṅgāni teṣāṃ dvitricaturaṅgāpakarṣeṇa dvitīyādidhyānavyavasthānam / [439|25-440|01] ata eva ca prathame dhyāne pañcānāmaṅgatvamuktam / [440|01] tadapakarṣeṇottaradhyānavyavasthāpanāt / na tu saṃjñādīnāmaṅgatvamuktam / [440|02] kimartha vā pañcānāmevāṅgatvamuktam / upakārakatvāditi cet / na / [440|02-440|03] vitarkavicārābhyāṃ smṛtiprajñayorapakārakataratvāt / [440|03] astyeṣa ekeṣāṃ vādaḥ / [440|03-440|04] naiva tu pūrvācāryā evaṃ nirdiśanti sma yāvantaḥ prajñāntam / [440|04] tasmādvicāryametat / [440|04-440|05] adhyātmasaṃprasādo nāma ka eṣa dharmaḥ / [440|05-440|06] vitarka-vicāra-kṣobha-virahāt praśāntavāhitā saṃtater adhyātmasaṃprasādaḥ / [440|06-440|07] sormikeva hi nadī vitarkavicārakṣobhitā saṃtatir aprasannā vartate iti / [440|07-440|08] na tarhi sa dravyāntaram iti kathaṃ dravyata ekādaśāṅgāni bhavanti / [440|08] tasmāttarhi [440|09] śraddhā prasādaḥ [440|10] tasya hi dvitīyadhyānalātsamāhibhūminihsaraṇe saṃpratyaya utpadyate/ [440|10-440|11] so 'tradhyātmasaṃprasāda iti / [440|11] naiva hi vitarkavicārasamādhayo nāpyadhātmasaṃprasādo dravyāntarāṇītyapare/ [440|11-440|12] kathamasati dravyāntaratve caitasikatvaṃ siddhyati / [440|12] avasthāviseso hi nāma cetasaścetasiko bhavati / [440|13] natveṣa śastrasiddhāntaḥ / yaduktaṃ \"prītirhi saumanasyam\" iti / [440|13-440|14] kathamidaṃ gamyate / kimanyat bhavatu / [440|14] yathecchanti nikāyāntarīyāḥ dharmāntarameva caitasikaṃ prītiḥ [440|14-440|15] saumanasyaṃ tu triṣvapi dhyāneṣu sukhamiti / [440|15] [440|14-440|15] yathecchanti nikāyāntarīyāḥ dharmāntarameva caitasikaṃ prītiḥ saumanasyaṃ tu triṣvapi dhyānesu sukhamiti / [440|15-440|16] na vai sukhaṃ dhyāneṣu saumanasyaṃ yujyate / [440|17] prītistu saumanasyaṃ dvidhāgamāt // VAkK_8.9 // [440|18-440|19] uktaṃ hi bhagavatā aviparītakasūtre tṛtīyaṃ dhyānamuktvā \"atrāsyotpannaṃ saumanasyendriyamapariśeṣaṃ nirudhyata iti / [440|19-440|20] caturthe ca dhyāne sukhendriyaṃ nirudhyata\" ityuktam / [440|20-440|21] punaścoktaṃ \"sukhasya ca prahāṇāt duḥkhasya ca prahāṇātpūrvameva ca saumanasyadaurmanasyayorastaṅgamādi\"tyato 'pi na tṛtīye dhyāne saumanasyendriyamasti / [440|22] tasmāt prītireva saumansyaṃ na sukham / [441|01-441|02] kiṃ punaḥ kliṣṭeṣvapi dhyāneṣu yathāvihitānyaṅgāni bhavanti /",
+   "T1560": "此實事十一，初二樂輕安， 內淨即信根，喜即是喜受。",
+   "T1558": "靜慮支名既有十八，於中實事總有幾種？頌曰：此實事十一，初二樂輕安， 內淨即信根，喜即是喜受。論曰：此支實事唯有十一，謂初五支即五實事。第二靜慮三支如前，增內淨支足前為六。第三靜慮等持如前，增餘四支足前為十。第四靜慮三支如前，增非苦樂支足前為十一。由此故說，有是初支非第二支，應作四句。第一句謂尋伺。第二句謂內淨。第三句謂喜、樂、等持。第四句。謂除前餘法。餘支相對，如理應思。何故第三說增樂受？由初二樂，輕安攝故。何理為證知是輕安？初二定中無樂根故。非初二定有身受樂，正在定中無五識故。亦無心受樂，以說有喜故。喜即喜受，無一心中二受俱行，故無樂受。不可喜樂更互現前，說具五支及四支故。有說：無有心受樂根，三靜慮中說樂支者，皆是身受所攝樂根。若爾，何故有契經說：云何樂根？謂順樂觸力所引生身心樂受。有餘於此增益心言，諸部經中唯說身故。又第三定所立樂支，契經自說為身所受樂故。若謂於此說意為身，此說身名為有何德？又第四定輕安倍增，而不說彼有樂支故。若謂輕安要順樂受方名為樂，第三靜慮輕安順樂應是樂支。若謂彼輕安為行捨所損。不爾，行捨增輕安故。又彼輕安勝前二故。又契經說：若於爾時諸聖弟子於離生喜身作證具足住，彼於爾時已斷五法，修習五法皆得圓滿，廣說乃至何等名為所修五法？一歡、二喜、三輕安、四樂、五三摩地。此經輕安與樂別說，故初二樂非即輕安。若言定中寧有身識？有亦無失，許在定中有輕安風勝定所起，順生樂受遍觸身故。若謂外散故應失壞定者，無如是失，此輕安風從勝定生，引內身樂還能順起三摩地故。若謂起身識應名出定者，此難不然，由前因故。若謂依止欲界身根不應得生色界觸識，緣輕安識，許生無過。若爾，正在無漏定中觸及身識應成無漏。勿所立支少分有漏、少分無漏，成違理失。無違理失。所以者何？許說身輕安是覺支攝故。若謂順彼故說覺支，無漏亦應許如是說。若謂許說，便違契經。如契經言：諸所有眼乃至廣說。此經中說十五界全皆有漏故，無違經過，此約餘觸及餘身識密意說故。如何無漏靜慮現前，少支有漏、少支無漏？起不俱時，斯有何失。若謂喜樂不俱起故，應無五支及四支理。此亦無過，約容有說有喜樂支，如有尋伺。若謂尋伺亦許俱起，於不俱起為喻不成。此非不成，心之麁細互相違故不應俱起。又於不俱起不能說過故。由此可說，依初五支減二三四立第二等，即由此理初說五支，擬漸離前、建立後故。無漸減故，不說想等。或應說何故初唯立五支？若謂此五資初定勝故立為支。此不應理，念慧能資勝尋伺故。雖有一類作如是說，然非古昔諸軌範師共施設故，應審思擇。應說何法名內等淨？此定遠離尋伺鼓動，相續清淨轉，名為內等淨。若有尋伺鼓動，相續不清淨轉，如河有浪。若爾，此應無有別體，如何許有十一實事？是故應說此即信根。謂若證得第二靜慮，則於定地亦可離中有深信生，名內等淨。信是淨相，故立淨名。離外均流，故名內等。淨而內等，故立內等淨名。有餘師言：此內等淨等持尋伺皆無別體。若無別體，心所應不成，心分位殊亦得名心所。雖有此理，非我所宗。如上所言，喜即喜受。以何為證知決定然？汝等豈言喜非喜受，如餘部許，我亦許然。餘部云何許非喜受？謂別有喜是心所法，三定中樂皆是喜受，故喜、喜受其體各異。非三定樂可名喜受，二阿笈摩分明證故。如辯顛倒契經中說：漸無餘滅憂等五根，第三定中無餘滅喜，於第四定無餘滅樂。又餘經說：第四靜慮斷樂斷苦先喜憂沒。故第三定必無喜根，由此喜受是喜非樂。如是所說諸靜慮支，染靜慮中為皆有不？不爾。",
+   "T1559": "若由實物，偈曰：實物有十一。釋曰：初定分有五，於第二內澄淨增，於第三捨念、慧、樂增，於第四非苦非樂受增，由此義故有十一，是故說。若分在於初定，於第二為是分不？有四句。第一句是覺觀，第二句是內澄淨，第三句是喜樂善一類，第四句除前所說是餘法。如此一切定分，皆應以四句更互相攝。云何於第三定中說樂為別物？由此樂於第三定成受樂。於前二定中，偈曰：輕安樂前二。釋曰：於第一第二定，是輕安說名樂。於前二輕安樂，於第三是受樂。此義云何成？前二持訶那與樂根不相應故。何以故？於前二定中所說樂，不應成身樂，入觀人五識不有故。不可立為心樂，已說為喜故。喜者謂心踊躍。喜樂二種，一時俱生，無如此義。喜樂或於定中遞互生起。此不可執，由說定有五分故。有餘師說：於前三定中，心地樂根皆悉不有，但安立身樂根以為彼分。若爾，經中云何說如此？經云：何者為樂根？緣能起樂觸，身心受樂。所愛勝受類，說此名樂根。此文不知何人所增加。何以故？於一切部中唯有身樂文故。文言修觀人由身正受樂，此義由自名所說故。若汝執由心身受者，若作此說得何功德？於第四定輕安最極，不說為樂故。若汝言：是輕安隨順樂受故，亦得說名樂。是義不然，第三定中何故不說輕安名樂？若汝言：由為捨所損害故。是義不然，由捨彼增進故，品類勝前二故。復次由經輕安與樂有差別，如經言：是時聖弟子，從輕安生喜，由身證已生起，此已於其中住。於此經中由別說輕安及樂，是故知輕安非樂。若汝言：正入觀人身識云何生？此不相違。何以故？有風從三摩提生，名輕安，與樂受相符，依內起遍滿身故。若汝言：由外散亂即便退定。是義不然，從定生，依內身起，由此身樂與定相隨故，無有退義。若汝言：身識起時，觀行人即出定。是義不然，由前言所成故。若汝言：由欲界所生身根，色界相應觸識不應得生。是義不然，自輕安識生故。若爾，身根所領觸及身識，應成無流。勿有一分有流、一分無流。由說身輕安為覺分，是義可然。若汝言：由隨順覺分故說為覺分。無流義亦應爾。若汝言：此執與經相違。經云：何者名有流法？一切眼根乃至觸塵。是故相違。是義不然，由依別觸身識別意說故。若汝言：於無流法，無一分有流一分無流。是義不然，不俱時起故。於中復有何失？若汝言：樂及喜不並起故，初定應無五分。是義不然，依應有義說故，譬如說覺觀。若汝言：此義未成，由譬不成就故。是義不然，由麁細二心一時相違故。由汝不說此義中過失故，是故於初定五分中，由減二三四分故，安立第二定等。由此義故，於初定說有五分。為欲減前安立後定故，是故不減想等？若不爾，云何唯五為分？若汝言：由有益故立別分。是義不然，覺觀二法於念慧中最有益故。有諸部師作如此諍論。宿舊諸師不說如此，不隨可知所有法立為定分。是故彼執應須思量。何法名內澄淨？覺觀散動滅離故，相續清淨流，說名內澄淨。何以故？如江有浪。由覺觀散動故，此相續生起，不得清淨。若爾，此非別物，云何由此實物定分有十一？是故偈曰：信根內淨。釋曰：有別物謂信根，此人由得第二定地故，於出離寂靜地中生起決信故，此中說信根，為內澄淨。有餘師說：覺觀三摩提內澄淨，悉非別物。若彼非實別物，云何成心法？心位差別。有時說為心法，由心成故。阿毘達磨悉檀不說如此，是汝所說。喜者是適心，此義云何可知？若不爾，欲以何法為別？如別部所許。別部云何許？彼執有別心法名喜適心，是三定中樂。若非於三定中樂，應成適心。偈曰：喜、適心由二證。釋曰：佛世尊於《毘波利多經》中說：第三定已，於中先生適心根滅盡無餘。於第四定中，樂根滅盡無餘。佛復於餘經中說：由樂根苦根滅故，於前憂根適心根滅故，廣說如經。由此二證，於第三定中，必定無有適心根，是故喜根即是適心根非樂。"
+  },
+  "v010": {
+   "sa": "kliṣṭeṣva satprītisukhaṃ prasādaḥ saṃpradhīḥ smṛtiḥ / upekṣāsmṛtiśuddhiśca kecit prasrabdhyupekṣaṇe // VAkK_8.10 //",
+   "sa-bhasya": "[441|02] na hi kiṃ teṣu na vidyate / [441|03] kliṣṭeṣvasatprītisukhaṃ prasādaḥ saṃpradhīḥ smṛṭiḥ / [441|04] upekṣāsmṛtiśuddhiśca [441|05] prathame dhyāne vivekajaṃ prītisukhaṃ nāsti / kleśāviviktatvāt / [441|05-441|06] dvitīye dhyāne 'dhyātmasaṃprasādo nāsti / [441|06] kleśāvilatvāt / tṛtīye smṛtisaṃprajanyaṃ nāsti / [441|07] kliṣṭasukhasaṃbrhamitatvāt / ccaturthe upekṣāsmṛtipariśuddhirnāsti / kleśamalinatvāt / [441|08] evaṃ tāvat kecidāhuḥ / [441|09] kecit prasrabdhyupekṣaṇe // VAkK_8.10 // [441|10] kecitpunaḥ prathamadvitīyayoḥ kliṣṭayoḥ prasrabdhirnāsti / [441|10-441|11] tṛtīyacaturthayorupekṣā nāsti / [441|11] kuśalalmahābhūmikatvādanayoriti / [441|11-441|12] trīṇi ca dhyānāni señjitāni uktāni bhagavatā / [441|12] sāpakṣālatvāt /",
+   "T1560": "染如次從初，無喜樂內淨， 正念慧捨念，餘說無安捨。",
+   "T1558": "云何？頌曰：染如次從初，無喜樂內淨， 正念慧捨念，餘說無安捨。論曰：如上所說諸靜慮支，染靜慮中非皆具有。且有一類隨相說言：初染中無離生喜樂，非離煩惱而得生故。第二染中無內等淨，彼為煩惱所擾濁故。第三染中無正念慧，彼為染樂所迷亂故。第四染中無捨念淨，彼為煩惱所染污故。有餘師說：初二染中但無輕安，後二染中但無行捨，大善攝故。契經中說：三定有動，第四不動。",
+   "T1559": "如清淨定中所說分，於染污定為有不？不有。何分於彼不有？偈曰：染污無喜樂，內澄淨念慧，及捨念清淨。釋曰：若定有染污，初定無寂離生喜樂，不能寂離惑故。第二定無內澄淨，由惑所染濁故。第三定無念慧，由染污樂所亂故。第四定無捨清淨念，清淨由與惑相應故。有餘師說：唯如此。偈曰：餘說無輕捨。釋曰：有餘師說，初定二定若有染污則無輕安，第三第四定若有染污則無捨，由此二法是善大地故。佛世尊說：三定有動變，由有過失故。"
+  },
+  "v011": {
+   "sa": "aṣṭāpakṣālamuktatvādāniñjaṃ tu caturthakam / vitarkacārau śvāsau ca sukhādi ca catuṣṭayam // VAkK_8.11 //",
+   "sa-bhasya": "[441|13] aṣṭāpakṣālamuktatvādāniñjaṃ tu caturthakam / [441|14] ke punaste 'pakṣālāḥ / [441|15] vitarkacārau śvāsau ca sukhādi ca catuṣṭayam // VAkK_8.11 // [441|16] vitarkavicārau sukhaduḥkhe saumanasyadaurmanasye śvāsapraśvāsāśca / [441|16-441|17] eṣāmaṣṭānāmeko'pyapakṣālaścaturthe nāstyatastadāneñjyamuktam / [441|17-441|18] vitarkavicāraprītisukhairakampanīyatvādāneñjyaṃ caturthaṃ dhyānaṃ sūtre nirvāta pradīpanidarśanādityapare / [441|19] dvayordhyānayoḥ saumanasyamuktaṃ prītivacanāt / tṛtīye sukhaṃ caturthe upekṣā / [441|20] taskiṃ yā dhyānasamāpattiṣu vedanāstā eva dhyānopapattiṣu /",
+   "T1560": "第四名不動，離八災患故， 八者謂尋伺，四受入出息。",
+   "T1558": "依何義說？頌曰：第四名不動，離八災患故， 八者謂尋伺，四受入出息。論曰：下三靜慮名有動者，有災患故。第四靜慮名不動者，無災患故。災患有八，其八者何？尋、伺、四受、入息、出息。此八災患第四都無，故佛世尊說為不動。然契經說：第四靜慮不為尋伺喜樂所動。有餘師說：第四靜慮如密室燈照而無動。如定靜慮，所有諸受生亦爾不？不爾。",
+   "T1559": "偈曰：離八過失故，說第四不動。釋曰：何者為八過失？偈曰：覺觀及二息，餘樂等四種。釋曰：覺、觀、樂、苦、喜、憂、出息、入息，此八是諸定過失。此八過失中隨一過失，於第四定中無，是故唯說第四定為不動，覺觀喜樂等所不能動變故。故經中說：第四定為不動，譬如內密室無風燈光。餘師說如此。"
+  },
+  "v012": {
+   "sa": "saumanasyasukhopekṣā upekṣāsumanaskate / sukhopekṣe upekṣā pravido dhyānopapattiṣu // VAkK_8.12 //",
+   "sa-bhasya": "[441|21] netyāha / kiṃ tarhi / [442|01-442|02] saumanasyasukhopekṣā upekṣāsumanaskate / sukhhopekṣe upekṣā pravido dhyānopapattiṣu // VAkK_8.12 // [442|03] prathamadhyānotpatto tisro vedanāḥ / [442|03-442|04] sukhaṃ trivijñānakāyikaṃ saumanasyaṃ manobhūmikam / [442|04] upekṣā caturvijñānakāyikī / [442|04-442|05] dvitīyadhyānopapattau dve vedane saumanasyopekṣe manobhūmike / [442|05] sukhaṃ nāstyasya vijñānakāyābhāvāt / [442|05-442|06] tṛtīyadhyānopapattī dve vedane / [442|06] sukhopekṣe manobhūmike / caturthadhyānopapattāvupekṣaiva / [442|07-442|08] yadi dvitīyādiṣu dhyāneṣu trayo vijñānakāyā na saṃvidyante vitarkavicārau ca katham te paśyanti yāvatspṛśanti katham cāvijñapti samutthāpayanti / [442|08-442|09] na ve keṣūpapannānāṃ cakṣurvijñānādayona santi /",
+   "T1560": "生靜慮從初，有喜樂捨受， 及喜捨樂捨，唯捨受如次。",
+   "T1558": "云何？頌曰：生靜慮從初，有喜樂捨受， 及喜捨樂捨，唯捨受如次。論曰：生靜慮中初有三受：一喜受，意識相應；二樂受，三識相應；三捨受，四識相應。第二有二，謂喜與捨，意識相應無有樂受，無餘識故、心悅麁故。第三有二，謂樂與捨，意識相應。第四有一，謂唯捨受，意識相應。是謂定生受有差別。上三靜慮無三識身及無尋伺，如何生彼能見聞觸及起表業？非生彼地無眼識等，但非彼繫。",
+   "T1559": "於前二定說有適心受，由與喜相應故，第三樂第四捨。如修觀定中受，於生得定中受為如此不？非。此云何？偈曰：喜受樂捨受，捨受及喜受，樂捨及捨受，"
+  },
+  "v013": {
+   "sa": "kāyākṣiśrotravijñānaṃ vijñaptyutthāpakaṃ ca yat / dvitīyādau tadādyāptaṃ akliṣṭāvyākṛtaṃ ca tat // VAkK_8.13 //",
+   "sa-bhasya": "[442|09] na tu svabhūmikāḥ / kiṃ tarhi / [442|10] kāyākṣiśrotravijñānaṃ vijñaptyutthāpakaṃ ca yat / [442|11] dvitīyādau tadādyāptaṃ [442|12-442|13] prathamadhyānabhūmikaṃ cakṣuḥśrotrakāyavijñānaṃ vijñaptisamutthāpakaṃ ca dvitīyādiṣu ca dhyāneṣu saṃmukhīkurvanti / [442|13-442|14] nirmāṇacittavadyena te paśyanti yāvadvijñapti samutthāpayanti / [442|15] akliṣṭāvyākṛtaṃ ca tat // VAkK_8.13 // [442|16-442|17] anivṛtāvyākṛtaṃ ca tat prathamadhyānabhūmikaṃ vijñānaṃ veditavyaṃ yatte saṃmukhīkurvanti / [442|17] na kliṣṭaṃ vītarāgatvānna kuśalaṃ hīnatvāditi / [442|18] avasitaṃ dhyānakāryam /",
+   "T1560": "生上三靜慮，起三識表心， 皆初靜慮攝，唯無覆無記。",
+   "T1558": "所以者何？頌曰：生上三靜慮，起三識表心， 皆初靜慮攝，唯無覆無記。論曰：生上三地起三識身及發表心皆初定繫。生上起下如起化心，故能見聞觸及發表，此四唯是無覆無記。不起下染，已離染故。不起下善，以下劣故。如是別釋靜慮事已。",
+   "T1559": "生得定諸受。釋曰：於初生得定中有三受，一樂受，與三識俱起；二喜受，以意識為地；三捨受，與四識相應起。於第二生得定中有二受，謂喜及捨。此二以意識為地，無樂，餘識不有故。於第三生得定中有二受，謂樂、捨，此二以意識為地。於第四生得定中，唯有捨受。由如此義，生得定受與修得定受不同。於第二定等，若無三識及覺，彼眾生云何得見聞觸？彼復云何得起有教身口業？不說於彼受生眾生眼識等不有。雖有，不屬二定等地。此云何？偈曰：眼耳身三識，身口業緣起，二等初定得。釋曰：眼等三識及能起有教業識，於第二定等雖不有，彼能令現前，譬如變化心，彼由此識能見聞觸及能起有教業。偈曰：此無染無記。釋曰：此四識，無染污亦無記。第二定等眾生所引四識令現前，此四識應知以初定為地。非有染污，由彼離欲下地故，非善下劣品故。"
+  },
+  "v014": {
+   "sa": "atadvān labhate śuddhaṃ vairāgyeṇopapattitaḥ / anāsravaṃ tu vairāgyāt kliṣṭaṃ hānyupapattitaḥ // VAkK_8.14 //",
+   "sa-bhasya": "[442|19] atha śuddhakādīnāṃ dhyānārupyāṇāṃ kathaṃ lābhaḥ / [442|20] atadvān labhate śuddhaṃ vairāgyeṇopapattitaḥ / [442|21] asamanvāgatastena śuddhakaṃ dhayanamārupyaṃ vā pratilabhate / adhobhūmivairāgyādvā / [442|22] adhobhūmyupapattito vā / anyatra bhavāgrāt / na hi tasyopapattito lābhaḥ / [442|23] atadvāniti kimartha samanvāgataḥ / [442|23-442|24] śuddhakena prayogato 'pi nirvedhabhāgīyaṃ śuddhakaṃ pratilabhate parihāṇito vā hānabhāgīyam / [442|24-443|01] ata evocyate \"syācchuddhakaṃ dhyānaṃ vairāgyeṇa pratilabheta vairāgyeṇa vijahyāt / [443|01] evaṃ parihāṇyā copapattyā ca / [443|02] syāddhānabhāgīyaṃ prathamaṃ dhayānam / taddhi kāmavairāgyeṇa labhyate / [443|02-443|03] brahmalokavairāgyeṇa tyajyate / [443|03] brahmalokavairāgyaparihāṇyā labhyate / kāmavairāgyaprahāṇyā tyajyate / [443|04] upariṣṭādbrahmaloka utpadyamāno labhate / [443|04-443|05] tasmāt punaḥ kāmadhātāvupapapadyamāno vijahātīti / [443|06] anāsravaṃ tu vairāgyāt [443|07] atadvān labhate iti vartate / [443|07-443|08] tadvāṃstu kṣayajñānato 'pyaśaikṣaṃ labhate indriyasaṃcārato 'pi śaikṣaśaikṣam / [443|08] nanu ca niyāmā vakrāntito 'pyanāsravaṃ prathamato labhate / [443|09] nāvaśyamānupūrvikeṇālābhāt / yathā tvavaśyaṃ labhate tathoktam / [443|10] kliṣṭaṃ hānyupapattitaḥ // VAkK_8.14 // [443|11] atadvān labhata ityevānuvartate / [443|11-443|12] parihāṇito yadi tadvairāgyātparihīyate / [443|12] upapattito yadyuparibhūmeradharāyāmupapadyate / [443|13] katamasmātsamāpattidravyādanantaraṃ katyupapadyante / [443|13-443|14] anāsravaprathamadhyānāntaraṃ ṣaḍutpadyante / [443|14] svabhūmike śuddhakānāsrave dvitīyatṛtīyadhyānabhūmike ca / [443|14-443|15] ākiñcanyāyatanānantaraṃ sapta / [443|15-443|16] svabhūmike śuddhakānāsrave vijñānākāśānantyāyatanabhūmike ca / [443|16] bhavāgraṃ śuddhakamevānāsravābhāvāt / dvitīyadhyānāntaramaṣṭau / [443|16-443|17] svabhūmike śuddhakānāsrave tṛtīyacaturthaprathamadhyānabhūmike ca / [443|17] vijñānānantyāyatanānantaraṃ nava / [443|18-443|19] svabhūmike dve ākāśānantyāyatanacaturthadhyānabhūmikāni catvāri ākiñcanyāyatanabhavāgrabhūmikāni trīṇīti / [443|19] evamanyadhyānārupyānantaraṃ daśa dravyāṇi yojyāni / [443|20] eṣa tu saṃkṣepaḥ /",
+   "T1560": "全不成而得，淨由離染生， 無漏由離染，染由生及退。",
+   "T1558": "淨等等至初得云何？頌曰：全不成而得，淨由離染生， 無漏由離染，染由生及退。論曰：八本等至隨其所應，若全不成而獲得者，淨由離染及由受生，謂在下地離下地染，及從上地生自地時。下七皆然。有頂不爾，唯由離染無由生故。遮何故說全不成言？為遮已成更得少分，如由加行得順決擇分等，及由退得順退分定。即依此義作是問言：頗有淨定由離染得？由離染捨、由退由生，為問亦爾。曰：有，謂順退分。且初靜慮順退分攝，離欲染時得，離自染時捨，退離自染得，退離欲染捨。從上生自得，從自生下捨。餘地所攝，應如理思。無漏但由離染故得，謂聖離下染，得上地無漏。此亦但據全不成者，若先已成，餘時亦得，謂盡智位得無學道，於練根時得學無學。餘加行及退，皆如理應思。豈不由入正性離生，亦名初得無漏等至？此非決定。以次第者，爾時未得根本定故。此中但論決定得者，染由受生及退故得。謂上地沒生下地時得下地染，及於此地離染退時得此地染。",
+   "T1559": "說定事已。復次清淨等四色定及四無色定至得云何？偈曰：不得得清淨，由離欲及生。釋曰，若人不至得彼，此人能得清淨四色定及四無色定，或由離欲下地、或由受生下地，除有頂。何以故？清淨有頂不由受生得故。不得者，此言云何？若人未曾得及捨至得，由加行能得清淨，或得決擇分清淨，由退故得退分定。是故毘婆沙中說此言：為有如此不？或由離欲至得清淨定，或由離欲棄捨清淨定，由退墮及受生亦爾。說有，約退墮分初定，論此六義。何以故？由離欲得此故，由離欲大梵處棄捨此故，由退墮大梵處離欲得此故，由退墮離欲欲界棄捨此故，由捨上大梵處受生得此故，由從此退墮受生欲界棄捨此故。偈曰：無流由離欲。釋曰：不得得此言流。若人已曾得，由盡智更得無學無流。若由修練根道，或得有學、或得無學。為不如此耶；由入正定聚，初得無流。次第修觀人，不必定由未曾得得此無流定。如必定應得，是今所說。偈曰：染污退生得。釋曰：不得得此言流。由退得者，若人退此離欲，更還得此。由受生得者，從上地更生下地。復次從何定法，後幾種定次第得生？從無流初定，後有六定無間得生：於自地清淨定無流定為二，於第二第三定亦各有二。從無所有入，後次第生有七：於自地清淨無流為二，識無邊入、空無邊入亦各有二，於有頂但有清淨無無流。從第二定，後次第生有八：於自地清淨無流為二，於第三第四及初定亦各有二。從識無邊入，後次第生有九：自地有二，空無邊入及第四定有四，無所有入及有頂有三。由如此方所餘色無色定，次第十十定法，應如此知。此中是略攝。"
+  },
+  "v015": {
+   "sa": "tṛtīyādyāvadūrdhvādho 'nāsravānantaraṃ śubham / utpadyate tathā śuddhāt kliṭaṃ cāpi svabhūmikam // VAkK_8.15 //",
+   "sa-bhasya": "[443|21] tṛtīyādyāvadūrdhvādho 'nāsravānantaraṃ śubham / [443|22] utpadyate [444|01-444|02] śubhagrahaṇena śuddhamanāsravaṃ ca gṛhyate kuśalatvāt anāsravasya samāpatti dravyasyānantaraṃ svabhūmike ca śuddhānāsrave utpadyete / [444|02] ūrdhvādhobhūmike ca tṛtīvādyāvat / [444|03] vyutkrāntakasamāpattāro hi tṛtīyāt pareṇa laṅghayituṃ notsahante / [444|03-444|04] anvayajñānānantaraṃ cārupyān samāpadyante na dharmajñānānantaram / [444|04-444|05] tasyādharāśrayālambanatvāditi / [444|05] yathā cānāsravādanantaramuktam veditavyam / [444|06] tathā śuddhāt kliṭaṃ cāpi svabhūmikam // VAkK_8.15 // [444|07] svabhūmikaṃ kliṣṭamadhikaṃ śuddhakādanantaramutpadyate / śeṣaṃ yathaivānāsravāt / [444|07-444|08] anāsravasya hi samanantaraṃ kliṣṭotpattirnāstīti /",
+   "T1560": "無漏次生善，上下至第三， 淨次生亦然，兼生自地染。",
+   "T1558": "何等至後生幾等至？頌曰：無漏次生善，上下至第三， 淨次生亦然，兼生自地染。",
+   "T1559": "偈曰：從第三上下，無流後善生。釋曰：由說善性清淨及無流皆彼攝，同是善性故。無流定法，後次第或依自地二種定法生，謂清淨、無流。或上地下地，乃至第三亦爾。何以故？超修觀人過第三處，求超不得成。云何如此？由過遠故。從類智，次第能修無色定觀。從法智，次第不得如此，以下地依止為境界故。如說從無流次第生諸定，所餘應知亦爾。偈曰：從淨生亦爾，長染污自地。釋曰：此中生自地染污定長於前，此從清淨定後次第得生。所餘諸義如無流。何以故？無流定後染污不得生故。"
+  },
+  "v016": {
+   "sa": "kliṣṭāt svaṃ śuddakaṃ kliṣṭaṃ evaṃ cādharaśuddhakam / cyutau tu śuddhakāt kliṣṭaṃ sarvaṃ kliṣṭāttu nottaram // VAkK_8.16 //",
+   "sa-bhasya": "[444|09] kliṣṭāt svaṃ śuddhakaṃ kliṣṭaṃ [444|10] kliṣṭātsamāpattidravyādanantaraṃ svabhūmike śuddhakakliṣṭe utpadyete / [444|11] evaṃ cādharaśuddhakam / [444|12] kleśotpīḍito hyadharamapi samāpattiṃ śuddhakaṃ bahu manyate / [444|12-444|13] yadi kliṣṭaṃ paricchidyādhaḥ saṃcarati / [444|13] kuśalātsaṃcarito bhavati na kliṣṭāt / athāparicchidya kathaṃ saṃcarati / [444|14-444|15] pūrvāvedhāt pūrvaṃ hi sa evaṅkāmo bhavati varamadhastāt śuddhakaṃ nopariṣṭāt kliṣṭamiti / [444|15] pūrvābhiprāyaṃ ca saṃtatiranuvartate sattvānām / [444|15-444|16] praṇidhāya suptasyābhipretakālaprabodhavat / [444|16] anāsravaṃ tu kliṣṭādanantaraṃ sarvathā notpadyate / [444|16-444|17] samāpattikālaṃ pratyetaduktam / [444|17-444|18] śuddhakāt kliṣṭācca samanantaraṃ svabhūmikameva kliṣṭamutpadyate nānyabhūmikamiti / [444|19] cyutau tu śuddhakāt kliṣṭaṃ sarvaṃ [444|20] cyutikāle tu upapattilābhikācchuddhakādanantaraṃ sarvabhūmikaṃ kliṣṭamutpadyate / [444|21] kliṣṭāttu nottaram // VAkK_8.16 // [445|01] kliṣṭāttu dhyānārūpyādanantaraṃ cyutikāle svādharabhūmikaṃ kliṣṭamutpadyate / [445|01-445|02] nordhvabhūmikam / [445|02-445|03] na ca sarvasmācchuddhakādanāśravaṃ samāpattidravyamutpadyate /",
+   "T1560": "染生自淨染，并下一地淨， 死淨生一切，染生自下染。",
+   "T1558": "染生自淨染，并下一地淨， 死淨生一切，染生自下染。論曰：無漏次生自上下善，善言具攝淨及無漏。然於上下各至第三，遠故無能超生第四。故於無漏七等至中，從初靜慮無間生六，謂自二三各淨無漏。無所有處無間生七，謂自下六上地唯淨。第二靜慮無間生八，謂自上六并下地二。識無邊處無間生九，謂自下六并上地三。第三四空無間生十，謂上下八并自地二。類智無間能生無色。法智不然，依緣下故。從淨等至所生亦然，而各兼生自地染污故。有頂淨無間生六，謂自淨染、下淨無漏。從初靜慮無間生七。無所有八，第二定九，識處生十，餘生十一。從染等至生自淨染并生次下一地淨定。謂為自地煩惱所逼，於下淨定亦生尊重，故有從染生次下淨。若於染淨能正了知，可能從染轉生下淨；非諸染污能正了知，如何彼能從染生淨？先願力故。謂先願言：寧得下淨不須上染。先願勢力隨相續轉，故後從染生下淨定。如先立願方趣睡眠，至所期時便能覺寤。無漏與染必不相生，淨俱相生故三有別。如是所說淨染生染，但約在定淨及染說。若生淨染，生染不然，謂命終時從生得淨，一一無間生一切染。若從生染，一一無間能生自地一切下染，不生上者未離下故。所言從淨生無漏者，為一切種皆能生耶？不爾。",
+   "T1559": "偈曰：從污自地淨，染。釋曰：從染污定，後次第於自地清淨及染污定得生。偈曰：一下地淨。釋曰：若人為惑所逼，下地若清淨，於中亦生尊重。若人已了別此定，謂此定染污行於下地定，則從善行於善，不從染污。若不分別，云何得行於下地清淨定？由前引心力。何以故？此人於前有如此欲樂，謂寧得下地清淨，不用上地染污。是先意欲眾生，相續亦能隨逐。譬如人先發願方眠，如所要期時即覺。若無流從染污後一切種次第不得生，此言約修觀時說，謂從清淨定及染污定後次第自地染污定生，非於餘地。偈曰：退時從淨染，一切。釋曰：死墮時從生得清淨定，後次第一切地染污定生。偈曰：染非上。釋曰：從染污四色定四無色定後死墮時，次第自地下地染污定生，非上地。"
+  },
+  "v017": {
+   "sa": "caturdhā śuddhakaṃ hānabhāgīyādi yathākramam / kleśotpattisvabhūmyūrdhvānāsravānuguṇaṃ hi tat // VAkK_8.17 //",
+   "sa-bhasya": "[445|03] kiṃ tarhi / [445|04] caturdhā śuddhakaṃ hānabhāgīyādi [445|05] hānabhāgīyaṃ viśeṣabhāgīyaṃ sthitibhāgīyaṃ nirvedhabhāgīyamiti caturvidhaṃ śuddhakam / [445|06] bhavāgraṃ tu trividhamanyatra viśeṣabhāgīyāt / kimasya lakṣaṇam / [445|07-445|08] yathākramam / kleśotpattisvabhūmyūrdhvānāsravānuguṇaṃ hi tat // VAkK_8.17 // [445|09-445|10] kleśotpattyanuguṇaṃ hānabhāgīyaṃ svabhūmyanuguṇaṃ sthitibhāgīyamūrdhvabhūmyanuguṇaṃ viśeṣabhāgīyamanāsravānuguṇaṃ nirvedhabhāgīyam / [445|10] tasmādanāsravamutpadyate /",
+   "T1560": "淨定有四種，謂即順退分， 順住順勝進，順決擇分攝。 如次順煩惱，自上地無漏，",
+   "T1558": "云何？頌曰：淨定有四種，謂即順退分， 順住順勝進，順決擇分攝。 如次順煩惱，自上地無漏，",
+   "T1559": "復次非從一切清淨定後無流定生。若爾，此義云何？偈曰：清淨定有四，退分等。釋曰：退墮分、安住分、增進分、決擇分，清淨定有此四種。有頂有三種，除決擇分故。此四，其相云何？偈曰：次第，或生自上地，無流隨得故。釋曰：若此定功德隨順煩惱生，名退墮分。若此定功德隨順自地，名安住分。若此定功德隨順上地，名增進分。若此定功德隨順無流，名決擇分。是故說此定名無流。"
+  },
+  "v018": {
+   "sa": "dve trīṇi trīṇi caikaṃ ca hāna bhāgādyanantaram / gatvāgamya dvidhā bhūmīraṣṭau śliṣṭai kalaṅghitāḥ // VAkK_8.18 //",
+   "sa-bhasya": "[445|11] athaiṣāṃ caturṇā kati kasmādanantaramutpadyante / [445|12] dve trīṇi trīṇi caikaṃ ca hāna bhāgādyanantaram / [445|13] hānabhāgīyaṃ hānabhāk / tasmādanantaraṃ dve utpadyete / hānisthitibhāgīye / [445|13-445|14] sthitibhāgīyānantaraṃ trīṇyanyatra nirvedhabhāgīyāt / [445|14-445|15] viśeṣabhāgīyādanantaraṃ trīṇyanyatra hānabhāgīyāt nirvedhabhāgīyādanantaraṃ tadevaikamiti / [445|16] kathaṃ vyutkrāntakasamāpattirutpadyate / [445|17] gatvāgamya dvidhā bhūmīraṣṭau śliṣṭaikalaṅghitāḥ // VAkK_8.18 //",
+   "T1560": "互相望如次，生二三三一。 二類定順逆，均間次及超，",
+   "T1558": "互相望如次，生二三三一。論曰：諸淨等至總有四種：一順退分攝、二順住分攝、三順勝進分攝、四順決擇分攝。地各有四，有頂唯三，由彼更無上地可趣故，彼地無有順勝進分攝。於此四中唯第四分能生無漏。所以者何？由此四種有如是相，順退分能順煩惱，順住分能順自地，順勝進分能順上地，順決擇分能順無漏，故諸無漏唯從此生。此四相望互相生者，初能生二，謂順退住。第二生三，除順決擇。第三生三，除順退分。第四生一，謂自非餘。如上所言淨及無漏，皆能上下超至第三。行者如何修超等至？頌曰：二類定順逆，均間次及超，",
+   "T1559": "此四種定中，幾定從幾定後次第生？偈曰：二三三及一，從退等次第。釋曰：退墮分定後次第二定得生，謂退墮分及安住分。安住分定後次第三定得生，除決擇分。增進分定後次第三定得生，除退墮分。所餘次第得生。決擇分定後次第一定得生，謂決擇分定。修超定觀，云何得成？偈曰：去來於二類，八地密超一，"
+  },
+  "v019": {
+   "sa": "vyutkrāntakasamāpattirvisabhāgatṛtīyagā / svādhobhūmyāśrayā eva dhyānārūpyāḥ vṛthādharam // VAkK_8.19 //",
+   "sa-bhasya": "[445|18] vyutkrāntakasamāpattirvisabhāgatṛtīyagā / [445|19] gatvetyanulomaṃ samāpadya / āgamyeti pratilomaṃ samāpadya / [445|19-446|01] dvidheti sāsravānāsravā bhūmīḥ / [446|01] aṣṭāviti dhyānārupyasamāpattīḥ / śliṣṭā ityanukrameṇa / [446|01-446|02] ekalaṅghitā ityekāmekāmutkramya / [446|02-446|03] sāsravā aṣṭau bhūmiranulomapratilomasamāpattito nirjitya anāsravāśca sapta / [446|03-446|04] paścātsāsravāt prathamāddhyānāt sāsravaṃ tṛtīyaṃ samāpadyate / [446|04] tasmādākāśānantyāyatanaṃ tasmādākṃicanyāvatanam / [446|04-446|05] evaṃ punaḥ pratilomaṃ nirjitya anāsravā apyekalaṅghitā anulomapratilomaṃ ca samāpadyate / [446|06] ayaṃ prayogo vyutkrāntakasamāpatteḥ / [446|06-446|07] yadā tu prathamātsāsravāt tṛtīyamanāsravaṃ dhyānaṃ samāpadyate tasmātsāsravamākāśānantyāyatanaṃ tasmādanāsravamākiñcanyāyatanam / [446|08] evaṃ punaḥ pratilomam / tadā visabhāgatṛtīyadravyagamanādabhiniṣpannā bhavati / [446|08-446|09] ativiprakṛṣṭatvānna caturthī samāpadyate / [446|09-446|10] tāṃ ca triṣu dvīpeṣu asamayavimukta evārhannutpādayati / [446|10] niḥkleśatvātsamādhivaśitvācca / [446|10-446|11] dṛṣṭiprāptasya yadyapi tīkṣṇendriyatvāt samādhau vaśitvaṃ na tu niṣkleśaḥ / [446|11-446|12] samayavimukto yadyapi niḥkleśo natvasya samādhau vaśitvamiti / [446|13] kenāśrayeṇa kati dhyānārupyāḥ saṃmukhīkriyante / [446|14] svādhobhūmyāśrayā eva [446|15] dhyānāśrayā eva [446|16] dhyānārūpyāḥ [446|17] bhavāgraṃ bhavāgre ca saṃmukhīkriyate adhaśca yāvatkāmadhātau / [446|17-446|18] śeṣāṇi svasyāṃ bhūmāvadhaśceti / [446|18-446|19] kiṃ kāraṇamūrdhvopapanno nādharāṃ samāpatti saṃmukhīkaroti / [446|19] tasmāttasya [446|20] vṛthā'dharam // VAkK_8.19 // [446|21] nahi tasyādhareṇa samāpattidravyeṇa kiñcit prayojanaṃ vidhīyate / [445|21-446|21] nihīnatvāt / [446|22] utsarga kṛtvā 'pavādaṃ karoti",
+   "T1560": "至間超為成，三洲利無學。 諸定依自下，非上無用故，",
+   "T1558": "至間超為成，三洲利無學。論曰：本善等至分為二類：一者有漏、二者無漏。往上名順，還下名逆。同類名均，異類名間。相隣名次，越一名超。謂觀行者修超定時，先於有漏八地等至順逆均次現前數習，次於無漏七地等至順逆均次現前數習，次於有漏無漏等至順逆間次現前數習，次於有漏順逆均超現前數習，次於無漏順逆均超現前數習，是名修習超加行滿。後於有漏無漏等至順逆間超，名超定成。此中超者唯能超一，遠故無能超入第四。修超等至唯人三洲、不時解脫諸阿羅漢，定自在故、無煩惱故。時解脫者雖無煩惱定不自在，諸見至者雖定自在有餘煩惱，故皆不能修超等至。此諸等至依何身起？頌曰：諸定依自下，非上無用故，",
+   "T1559": "修超諸定觀，行非等分三。釋曰：去者，謂次第修觀。來者，謂逆修觀。於二類者，謂有流、無流。八地者，謂四色定、四無色定。密者，謂上下次第。超一者，謂過一一地。先於有流八地或順或逆修觀，修觀成熟已，次於七無流地修觀亦爾。修觀成熟已，後時為成就。於修自在故，從有流初定超入有流第三定，從有流第三定超入空無邊入，從空無邊入超入無所有入，次更如此逆超。若此修已成熟，後於無流定修順逆超一亦爾。應如此次第修順逆觀，為超定加行。是時若從有流初定，能入無流第三定。從無流第三定，能入有流空無邊入。從有流空無邊入，能入無流無所有入。次修逆超亦如此。是時非等分第三定中去來成故，超修定得成。由最遠故，第四不可超修。此修於三洲中是非時解脫阿羅漢所修得惑滅盡故，於定有自在故。見至聖人彼根雖利，於定若有自在，彼惑未盡故不得修。時解脫阿羅漢惑雖已盡，於定不得自在，亦不得修。由何依止，有幾色定無色定可令現前？偈曰：自下地，依止色無色。釋曰：有頂定於有頂處可修令現前，於下地乃至欲界皆能修令現前。如判有頂，所餘諸定，於自地及下地皆得修令現前。云何如此？若人生於上地，不能令下地諸定現前。何以故？於此人，偈曰：非下。釋曰：生上地人，下地定於彼無毫釐用，由下劣被輕故。說通義已，此中更說別義。"
+  },
+  "v020": {
+   "sa": "āryākiṃcanyasāṃmukhyāt bhavāgre tvāsravakṣayaḥ / satṛṣṇāḥ svabhavālambāḥ dhyānaṃ sadviṣayaṃ śubham // VAkK_8.20 //",
+   "sa-bhasya": "[446|23] āryākiñcanyasāṃmukhyāt bhavāgre tvāsravakṣayaḥ / [446|24] bhavāgre tūpapannasyānāsravākiñcanyāyatanasaṃmukhībhāvādāsravakṣayo bhavati / [446|24-446|25] kathaṃ tatropapannasya tatsaṃmukhībhāvaḥ / [446|25] svasyābhāvāttasya cābhyāsāt / [447|01] athaiṣāṃ dhyānārūpyāṇāṃ kimālambanam / [447|02] satṛṣṇāḥ svabhavālambāḥ [447|03] āsvādanāsaṃprayuktāḥ svabhūmikaṃ bhavamālambante / bhavagrahaṇena sāsravaṃ vastu gṛhyate / [447|04] nādharamālambante vītarāgatvānnottaraṃ tṛṣṇāparichinnatvāt bhūmīnām / [447|04-447|05] nānāsravaṃ kuśalatvaprasaṅgāditi / [447|06] dhyānaṃ sadviṣayaṃ śubham // VAkK_8.20 // [447|07] kuśalaṃ dhyānaṃ śubhakamanāsravaṃ ca / tat sarvālambanaṃ yatkiñcidasti saṃskṛtamasaṃskṛtaṃ vā /",
+   "T1560": "唯生有頂聖，起下盡餘惑。 味定緣自繫，淨無漏遍緣，",
+   "T1558": "唯生有頂聖，起下盡餘惑。論曰：諸等至起依自下身。依上地身無容起下，上地起下無所用故、自有勝定故、下勢力劣故、已棄捨故、可厭毀故。總相雖然，若委細說聖生有頂必起無漏無所有處，為盡自地所餘煩惱、自無聖道欣樂起故、唯無所有最隣近故，起彼現前盡餘煩惱。此諸等至緣何境生？頌曰：味定緣自繫，淨無漏遍緣，",
+   "T1559": "偈曰：聖現無所有，入於有頂流盡。釋曰：若聖人已生有頂，由現前修無流無所有入，至得流盡。云何已生有頂，能現前修無流無所有入？於自地無故，此熟所悉故得現前修。復次色定、無色定，所緣何境？偈曰：有愛自有境。釋曰：若定與噉味相應，說名有愛，緣自地有起。有言者顯取有流境，不能緣下地，已離欲故。不能緣上地，由諸地貪愛各所隔礙故。不能緣無流為境，應成清淨故。偈曰：善定遍有境。釋曰：若定以善為性，謂清淨及無流，此定以一切法為境，彼境實有物，謂有為無為。"
+  },
+  "v021": {
+   "sa": "na maulāḥ kuśalārūpyāḥ sāsravādharagocarāḥ / anāsraveṇa hīyante kleśāḥ sāmantakena ca // VAkK_8.21 //",
+   "sa-bhasya": "[447|08] na maulāḥ kuśalārūpyāḥ sāsravādharagocarāḥ / [447|09-447|10] maulānāṃ kuśalārūpyāṇāmadhobhūmikaṃ sāsravaṃ vastu nālambanaṃ svordhvabhūmyālambanatvāt / [447|10] anāsravaṃ tvālambanam / [447|10-447|11] sarvānvayajñānapakṣyo na dharmajñānapakṣo nādhobhūminirodhaḥ / [447|11] sāmantakānantaryamārgāṇāṃ tvadharā bhūmirālambanam / [447|11-447|12] eṣāṃ ca punastrividhānāṃ dhyānānāṃ rūpyārūpyāṇām [447|13] anāsraveṇa hīyante kleśāḥ [447|14] na śuddhakena / kuta eva kliṣṭena / vītarāgatvānnādhaḥ / [447|14-447|15] tasyaiva tadapratipakṣatvānna svabhūmau / [447|15] viśiṣṭataratvānnordhvamiti / [447|16] samantakena ca // VAkK_8.21 // [447|17] dhyānārūpyasāmantakena ca kleśāḥ prahīyante śuddhakenāpi / adhobhūmipratipakṣatvāt /",
+   "T1560": "根本善無色，不緣下有漏。 無漏能斷惑，及諸淨近分，",
+   "T1558": "根本善無色，不緣下有漏。論曰：味定但緣自地有漏，必無緣下，已離染故。亦不緣上，愛地別故。不緣無漏，應成善故。淨及無漏俱能遍緣自上下地有為無為，皆為境故。有差別者，無記無為非無漏境。根本地攝善無色定，不緣下地諸有漏法，自上地法無不能緣。雖亦能緣下地無漏，緣類智品道，不緣法智品，亦不能緣下地法滅。無色近分亦緣下地，彼無間道必緣下故。味淨無漏三等至中，何等力能斷諸煩惱？頌曰：無漏能斷惑，及諸淨近分。論曰：諸無漏定皆能斷惑，本淨尚無能，況諸染能斷。不能斷下，已離染故。不能斷自，自所縛故。不能斷上，以勝己故。若淨近分亦能斷惑，以皆能斷次下地故。中間攝淨亦不能斷。",
+   "T1559": "偈曰：本善色無色，非有流下境。釋曰：根本清淨色定及無色定，下地有流法非彼境界，緣自地及上地為境界故。若無流為境界，一切類智種類是彼境界，非法智種類，非下地滅。若近分定及無間道，以下地為境界。此三種色定無色定中，何定能滅惑？偈曰：由無流惑滅。釋曰：惑滅不由清淨定，何況由染污定。由此下界惑不得滅，於下未離欲故，自不能對治自故，是故不能滅自地惑。由最勝故，不能滅上地惑。但由無流定得滅。復次偈曰：及諸定近分。釋曰：由色無色近分清淨定，諸惑亦得滅，是下地對治故。"
+  },
+  "v022": {
+   "sa": "aṣṭau sāmantakānyeṣāṃ śuddhāduḥkhāsukhāni hi / ārya cādyaṃ tridhā kecit atarka dhyānamantaram // VAkK_8.22 //",
+   "sa-bhasya": "[447|18] kati punaḥ sāmantakāni / [447|19] aṣṭau sāmantakānyeṣāṃ [447|20] ekaikasyaikaikaṃ yena tatpraveśaḥ / kiṃ tānyapi trividhāni tathaiva ca teṣu vedanā / [447|21] netyucyate / [447|22] śuddhāduḥkhāsukhāni hi / [448|01-448|02] śuddhakāni ca tānyupekṣendriyasaṃprayuktāni ca yantabāhyatvādadhobhūmyudvegānapagamāt vairāgyapathatvācca nāsvādanāsaṃprayuktāni / [448|03] āryaṃ cādyaṃ [448|04-448|05] ādyaṃ sāmantakamanāgamyaṃ tacchuddhakaṃ cānāsravaṃ ca yadyapi sāmantakacittena pratisaṃdhibandhaḥ kliṣṭo bhavati / [448|05] samāhitasya tu kliṣṭatvaṃ pratiṣidhyate / [448|06] tridhā kecit [448|07] kecitpunaricchanti / [448|07-448|08] āsvādanāsaṃprayuktamapyanāgamyaṃ sāmantakaṃ cocyate dhyānāntaraṃ ca / [448|08] kimidamekārthamāhosvinnānārtham / sāmantakaṃ hi vairāgyamārgaḥ / [448|09] atarka dhyānamantaram // VAkK_8.22 // [448|10] dhyānameva hi vitarkāsaṃprayuktaṃ dhyānāntaraṃ dhyānaviśeṣatvāt / [448|10-448|11] ata eva dvitīyādiṣu dhyāneṣu na vyayasthāpyate viśeṣābhāvāditi / [448|11] tatpunardhyānāntaraṃ",
+   "T1560": "近分八捨淨，初亦聖或三。 中靜慮無尋，",
+   "T1558": "近分有幾；何受相應；於味等三為皆具不；頌曰：近分八捨淨，初亦聖或三。論曰：諸近分定亦有八種，與八根本為入門故。一切唯一捨受相應，作功用轉故、未離下怖故。此八近分皆淨定攝，唯初近分亦通無漏。皆無有味，離染道故。雖近分心有結生染，而遮定染故作是說。有說：未至定亦有味相應，未起根本亦貪此故，由此未至具有三種。中間靜慮與諸近分為無別義、為亦有殊？義亦有殊，謂諸近分為離下染是入初因，中定不然。復有別義，頌曰：中靜慮無尋，",
+   "T1559": "此近分有幾種？偈曰：彼定近分八。釋曰：隨一一定，近分亦爾，依近分得入根本故。近分為如根本有三種不？近分受為如根本受不？非。偈曰：清淨非苦樂。釋曰：彼近分定但是清淨一類，與捨受相應，由功用所引故、未離下地厭怖故、離欲為果故，是故唯捨受無噉味。偈曰：初聖。釋曰：最初近分定，名非至定。此有二種，有清淨、有無流。若由近分心結生，即有染污。若入觀，必無染污，由前已遮故。偈曰：餘說三。釋曰：有餘師說，非至近分定亦與噉味相應。此中有說名近分定，有說名中間定。此二名為一義、為有別義？有別義。何以故？近分者是離欲道。偈曰：無覺中間定。釋曰：此定與覺不相應，說名中間定。與二定異故、由勝初定故，於初定中不立。於第二定等中亦非所立，由無勝類故。"
+  },
+  "v023": {
+   "sa": "tridhā aduḥkhāsukhaṃtacca mahābrahmaphalaṃ ca tat / savitarkavicāro 'dhaḥsamādhiḥ parato 'dvayaḥ // VAkK_8.23 //",
+   "sa-bhasya": "[448|12] tridhā [448|13] āsvādanāsaṃprayuktam śuddhakamanāsravaṃ ca / [448|14] aduḥkhāsukhaṃ tacca [448|15] nātra sukhaṃ duḥkhamityaduḥkhāsukhamupekṣendriyasaṃprayuktamityarthaḥ / [448|15-448|16] na prītisaṃprayuktaṃ sābhisaṃskāravāhitvāt / [448|16] ata eva duḥkhā pratipat / [448|16-448|17] tasya tarhi dhyānāntarasya kaḥ phalaviśeṣaḥ / [448|17] taddhi [448|18] mahābrahmaphalaṃ ca tat / [448|19] tāṃ hi dhyānāntarikāṃ bhāvayitvā mahābrahmā bhavati / [448|19-448|20] punaḥ sarvasamādhīn saṃkalayya trayaḥ samādhayaḥ uktāḥ sūtre / [448|20] savitarkaḥ savicāraḥ samādhiḥ / avitarko vicāramātraḥ / [449|01] avitarko 'vicāra iti / [449|01-449|02] tatra dhyānāntaraṃ tāvadavitarko vicāramātraḥ samādhhiriti jñāpitam / [449|02] vitarkamātrapratiṣedhāt / tataḥ [449|03] savitarkavicāro'dhaḥsamādhiḥ [449|04] tasmāddhyānāntarādadhaḥsamādhiḥ savitarkaḥ savicāraḥ / prathamaṃ dhyānamanāgamyaṃ ca / [449|05] parato 'dvayaḥ // VAkK_8.23 // [449|06] nātra dvayamastītyadvayaḥ / pareṇa tu dhyānāntarātsamādhiravitarko 'vicāraḥ / [449|06-449|07] dvitīyadhyānasāmantakādyāvat bhavāgram / [449|07] punastrayaḥ uktāḥ / [449|07-449|08] śūnyatāsamādhirapraṇihita ānimittaśca / [449|08] tatra",
+   "T1560": "具三唯捨受， 初下有尋伺，中唯伺上無。",
+   "T1558": "具三唯捨受。論曰：初本近分尋伺相應，上七定中皆無尋伺，唯中靜慮有伺無尋，故彼勝初未及第二，依此義故立中間名。由此上無中間靜慮，一地升降無如此故。此定具有味等三種，以有勝德可愛味故。同諸近分唯捨相應，非喜相應功用轉故。由此說是苦通行攝。此定能招大梵處果，多修習者為大梵故。已說等至。云何等持？經說等持總有三種：一有尋有伺、二無尋唯伺、三無尋無伺。其相云何？頌曰：初下有尋伺，中唯伺上無。論曰：有尋有伺三摩地者，謂與尋伺相應等持，此初靜慮及未至攝。無尋唯伺三摩地者，謂唯與伺相應等持，此即靜慮中間地攝。無尋無伺三摩地者，謂非尋伺相應等持，此從第二靜慮近分乃至非想非非想攝。契經復說三種等持：一空、二無願、三無相。",
+   "T1559": "復次此中間定，有幾種有幾受？偈曰：三種無苦樂。釋曰：此定或與噉味相應、或清淨、或無流，是無苦無樂受，與捨根相應故。不與喜根相應，大功用所引故，故說為苦遲速行。此中間定果差別云何？偈曰：大梵王為果。釋曰：若人修習上品中間定，受大梵王報。復次攝一切諸定。於經中說有三定：一有覺有觀三摩提、二無覺有觀三摩提、三無覺無觀三摩提。此中中間定，即是無覺有觀三摩提，由此經第二言所證，但遮覺故。從此定，偈曰：有覺觀此下。釋曰：從此向下所有諸定悉名有覺有觀，謂初定及依初定餘定。偈曰：此上定無二。釋曰：於彼中無二，謂過中間定，向上餘定無覺觀二。從第二定近分，乃至有頂皆無二。復次經中說：三摩提有三種，謂空定、無願定、無相定。"
+  }
+ }
+}
