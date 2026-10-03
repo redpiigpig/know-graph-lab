@@ -202,6 +202,7 @@ description: 《基督宗教譜系學》成書管線（/works/christian-genealog
   ✅ 10-01 改從 LibGen（libgen.li：edition.php→ads.php?md5→get.php，常回 500 要重試）與 archive.org 公開本抓進 z-lib/
   共 20 檔（含邢福增《反帝．愛國．屬靈人》，2-up 掃描）；去處總表 `output/christian-genealogy/missing66_where.md`，
   輔大神圖紙本與「哪裡都沒有」的約 17 本也列在那。愛任紐 SC 版不抓（館內已有 ANF 與中譯）。
+  10-02～03 改走 LibGen 整批直抓，交接見 `docs/SESSION_HANDOFF_book_harvest_2026-10-03.md`。
   期刊論文 277 篇的臺大館內可下載清單：`output/christian-genealogy/articles_ntu_checklist.md`（可下載 150／OA 37／無 87）。
 * 🚨 **不再試寫**（使用者 10-01）：等資料找齊、定義都定好，再全部一起寫。`data/christian-genealogy/drafts/c4-s04-patriarchate.html`
   只當材料（法規引文已逐字核對可沿用），**不是書稿**。被退的原因：第一部的文字寫了「依本書在第二部所採的定義」——
