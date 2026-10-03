@@ -1,0 +1,97 @@
+{
+ "slug": "pancavimsati-c33",
+ "title": "大品般若・第33品 述成品",
+ "family": "sa",
+ "intro": "羅什〈述成品〉＝放光〈供養品〉＝第二會〈福生品〉＝梵本 PSP 2-3 之 68–69＝藏譯第十九章前段（TMX 9572–9588）。佛述成釋提桓因所言：書持供養般若者得無量福，以諸佛一切智、五波羅蜜、十八空乃至三乘皆從般若生；其福勝前供養七寶塔百千萬分，般若在世則三寶不滅，十善、四禪乃至轉法輪皆現於世。",
+ "units": [
+  {
+   "id": "c33-01",
+   "label": "佛述成：書持供養般若福無量・一切功德皆從般若生"
+  },
+  {
+   "id": "c33-02",
+   "label": "勝前供養七寶塔・般若在世則三寶不滅、諸善法現世"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sa",
+   "lang": "sa",
+   "label": "梵本",
+   "who": "Kimura 校訂本（依現觀莊嚴論改訂之修訂本）・GRETIL"
+  },
+  {
+   "id": "T0223",
+   "lang": "lzh",
+   "label": "羅什本",
+   "who": "姚秦・鳩摩羅什譯《摩訶般若波羅蜜經》・404 年",
+   "work": "T0223"
+  },
+  {
+   "id": "T0221",
+   "lang": "lzh",
+   "label": "放光本",
+   "who": "西晉・無羅叉共竺叔蘭譯《放光般若經》・291 年",
+   "work": "T0221"
+  },
+  {
+   "id": "T0220c",
+   "lang": "lzh",
+   "label": "玄奘・第二會",
+   "who": "唐・玄奘譯《大般若經》第二會（卷 401–478）・660–663 年",
+   "work": "T0220c"
+  },
+  {
+   "id": "bo",
+   "lang": "bo",
+   "label": "藏譯",
+   "who": "德格版 Toh 9《聖般若波羅蜜多二萬五千頌》・84000"
+  },
+  {
+   "id": "en",
+   "lang": "en",
+   "label": "84000 英譯",
+   "who": "譯自藏譯・與藏文逐句對齊"
+  }
+ ],
+ "works": [
+  "T0220c",
+  "T0221",
+  "T0223"
+ ],
+ "anchors": [
+  {
+   "work": "T0223",
+   "node": "摩訶般若波羅蜜經述成品第三十三",
+   "uid": "T08n0223_p0285c23"
+  },
+  {
+   "work": "T0221",
+   "node": "摩訶般若波羅蜜供養品第三十四",
+   "uid": "T08n0221_p0047c17"
+  },
+  {
+   "work": "T0220c",
+   "node": "第二分福生品第三十一",
+   "uid": "T07n0220c_p0155a24"
+  }
+ ],
+ "cells": {
+  "c33-01": {
+   "sa": "atha khalu bhagavān śakraṃ devānām indram etad avocat: evam etat kauśikaivam etat, bahu te kulaputrāḥ kuladuhitaro vā tatonidānaṃ bahutaraṃ puṇyaṃ prasaviṣyanti. aprameyam asaṃkhyeyam acintyam atulyam aparimāṇaṃ ya imāṃ prajñāpāramitāṃ likhitvā pustakagatāṃ kṛtvā udgṛhīṣyanti dhārayiṣyanti vācayiṣyanti paryavāpsyanti yoniśaś ca manasikariṣyanti uttare ca satkariṣyanti gurukariṣyanti mānayiṣyanti pūjayiṣyanti arcayiṣyanti apacāyiṣyanti puṣpadhūpagandhamālyavilepanacūrṇacīvaracchatradhvajapatākābhiḥ. tat kasya hetoḥ? prajñāpāramitā nirjātā hi kauśika tathāgatānām arhatāṃ samyaksaṃbuddhānāṃ pañca pāramitā sarvaśūnyatāḥ sarvasamādhayaḥ sarvadhāraṇīmukhāni saptatriṃśad bodhipakṣyā dharmā apramāṇadhyānārūpyasamāpattaya āryasatyāni daśabalavaiśāradyapratisaṃvido 'ṣṭādaśāveṇikabuddhadharmāḥ pañca cakṣūṃṣi ṣaḍ abhijñā aṣṭa vimokṣā navānupūrvavihāra samāpattayaḥ sattvaparipāko buddhakṣetrasaṃpat, prajñāpāramitānirjātā hi kauśika mārgākārajñatā sarvajñatā sarvākārajñatā, prajñāpāramitānirjātaṃ hi (PSP_2-3:68) kauśika śrāvakayānaṃ pratyekabuddhayānaṃ, prajñāpāramitānirjātā hi kauśika anuttarā samyaksaṃbodhiḥ.",
+   "T0223": "爾時佛告釋提桓因言：「如是，如是！憍尸迦！是諸善男子、善女人書持是般若波羅蜜經卷，受學親近讀誦說、正憶念，加復供養華香瓔珞搗香澤香幢蓋伎樂，當得無量無數不可思議不可稱量無邊福德。何以故？諸佛一切智、一切種智，皆從般若波羅蜜中生。諸菩薩摩訶薩禪那波羅蜜、毘梨耶波羅蜜、羼提波羅蜜、尸羅波羅蜜、檀那波羅蜜，皆從般若波羅蜜中生。內空乃至無法有法空，四念處乃至十八不共法，皆從般若波羅蜜中生。諸佛五眼皆從般若波羅蜜中生。成就眾生、淨佛國土，道種智、一切種智諸佛法，皆從般若波羅蜜中生。聲聞乘、辟支佛乘、佛乘，皆從般若波羅蜜中生。",
+   "T0221": "佛告釋提桓因言：「如是，拘翼！善男子、善女人供養般若波羅蜜，書持經卷，受學諷誦念習守行者，若復能盡力供養，名花、擣香澤香雜香、繒綵花蓋、所有幢幡，所得功德不可計量、不可思議、不可稱限。是善男子、善女人所得如是。何以故？諸如來、無所著、等正覺皆從般若波羅蜜中出生；薩云若、五波羅蜜，皆從般若波羅蜜出生；從內外空至有無空，皆從般若波羅蜜出生；三十七品、佛十八法、如來五眼，教授眾生、淨佛國土，道慧、薩云若慧，皆從般若波羅蜜出生。聲聞、辟支佛、佛乘無上等正覺道，皆從般若波羅蜜出生。",
+   "T0220c": "爾時，佛告天帝釋言：「如是！如是！如汝所說。憍尸迦！若善男子、善女人等不離一切智智心，以無所得而為方便，於此般若波羅蜜多，至心聽聞、受持、讀誦、精勤修學、如理思惟，廣為有情宣說流布，或有書寫種種莊嚴，供養恭敬、尊重讚歎，復以種種上妙花鬘、塗散等香、衣服、瓔珞、寶幢、幡蓋、諸妙、珍奇、伎樂、燈明而為供養，所生福聚無量無邊不可思議不可稱計。何以故？憍尸迦！以此般若波羅蜜多能辦如來、應、正等覺一切智、道相智、一切相智，亦辦布施波羅蜜多乃至般若波羅蜜多，亦辦內空乃至無性自性空，亦辦四念住廣說乃至十八佛不共法，亦辦五眼、六神通，亦辦一切三摩地門、陀羅尼門，亦辦成熟有情、嚴淨佛土，亦辦一切聲聞、獨覺及無上乘，亦辦如來、應、正等覺所證無上正等菩提。",
+   "bo": "དེ་ནས་བཅོམ་ལྡན་འདས་ཀྱིས། ལྷའི་དབང་པོ་བརྒྱ་བྱིན་ལ་འདི་སྐད་ཅེས་བཀའ་སྩལ་ཏོ། །ཀཽ་ཤི་ཀ་དེ་དེ་བཞིན་ནོ། །དེ་དེ་བཞིན་ཏེ། རིགས་ཀྱི་བུའམ། རིགས་ཀྱི་བུ་མོ་དེ་དག་གི་བསོད་ནམས་མང་དུ་འཕེལ་ལོ། །གང་གིས་ཤེས་རབ་ཀྱི་ཕ་རོལ་དུ་ ཕྱིན་པ་འདི་བྲིས་ཤིང་གླེགས་བམ་དུ་བྱས་ཏེ་འཛིན་ཅིང་འཆང་བ་དང་། ཀློག་ཅིང་ཀུན་ཆུབ་པར་བྱེད་པ་དང་། ཚུལ་བཞིན་དུ་ཡིད་ལ་བྱེད་ཅིང་། གོང་དུ་མེ་ཏོག་དང་། ཕྲེང་བ་དང་། སྤོས་དང་། བྱུག་པ་དང་། ཕྱེ་མ་དང་། ན་བཟའ་དང་། གདུགས་དང་། རྒྱལ་མཚན་དང་། བ་དན་དང་། སིལ་སྙན་སྣ་ཚོགས་ཀྱིས་རིམ་གྲོར་བྱས། བཀུར་སྟིར་བྱས། བསྟི་སྟང་དུ་བྱས། མཆོད་པར་བྱས་ན། དེའི་ཕྱིར་རིགས་ཀྱི་བུ་འམ། རིགས་ཀྱི་བུ་མོ་དེ་དག་གི་བསོད་ནམས་ནི་ཚད་མེད་གྲངས་མེད་བསམ་གྱིས་མི་ཁྱབ་མཚུངས་པ་མེད། དཔག་ཏུ་མེད་པར་འཕེལ་ལོ། །དེ་ཅིའི་ཕྱིར་ཞེ་ན། །ཀཽ་ཤི་ཀ་ཤེས་རབ་ཀྱི་ཕ་རོལ་ཏུ་ཕྱིན་པ་ལས་བྱུང་བ་ནི། དེ་བཞིན་གཤེགས་པ་དགྲ་བཅོམ་པ་ཡང་དག་པར་རྫོགས་པའི་སངས་རྒྱས་རྣམས་ཀྱི་རྣམ་པ་ཐམས་ཅད་མཁྱེན་པ་ཉིད་དོ། །ཤེས་རབ་ཀྱི་ཕ་རོལ་དུ་ཕྱིན་པ་ལས་བྱུང་བ་ནི་ཕ་རོལ་དུ་ཕྱིན་པ་ལྔ་དང་། ནང་སྟོང་པ་ཉིད་དང་། དངོས་པོ་མེད་པའི་ངོ་བོ་ཉིད་སྟོང་པ་ཉིད་ཀྱི་བར་དང་། དྲན་པ་ཉེ་བར་གཞག་པ་དང་། ཡང་དག་པར་སྤོང་བ་དང་། རྫུ་འཕྲུལ་གྱི་རྐང་པ་དང་། དབང་པོ་དང་། སྟོབས་དང་། བྱང་ཆུབ་ཀྱི་ཡན་ལག་དང་། འཕགས་པའི་ལམ་ཡན་ལག་བརྒྱད་པ་དང་། འཕགས་པའི་བདེན་པ་དང་། བསམ་གཏན་དང་། ཚད་མེད་པ་དང་། གཟུགས་མེད་པའི་སྙོམས་པར་འཇུག་པ་དང་། རྣམ་པར་ཐར་པ་བརྒྱད་དང་། མཐར་གྱིས་གནས་པའི་སྙོམས་པར་འཇུག་པ་དགུ་དང་། རྣམ་པར་ཐར་པའི་སྒོ་སྟོང་པ་ཉིད་དང་། མཚན་མ་མེད་པ་དང་། སྨོན་པ་མེད་པ་དང་། མངོན་པར་ཤེས་པ་རྣམས་དང་། ཏིང་ངེ་འཛིན་རྣམས་དང་། གཟུངས་ཀྱི་སྒོ་རྣམས་དང་། དེ་བཞིན་གཤེགས་པའི་སྟོབས་རྣམས་དང་། མི་འཇིགས་པ་རྣམས་དང་། སོ་སོ་ཡང་དག་པར་རིག་པ་རྣམས་དང་། བྱམས་པ་ཆེན་པོ་དང་། སྙིང་རྗེ་ཆེན་པོ་དང་། སངས་རྒྱས་ཀྱི་ཆོས་མ་འདྲེས་པ་རྣམས་དང་། དེ་བཞིན་གཤེགས་པའི་སྤྱན་ལྔ་དང་། སེམས་ཅན་ཡོངས་སུ་སྨིན་པ་དང་། སངས་རྒྱས་ཀྱི་ཞིང་ཡོངས་སུ་དག་པའོ།། ཀཽ་ཤི་ཀ་ཤེས་རབ་ཀྱི་ཕ་རོལ་དུ་ཕྱིན་པ་ལས་བྱུང་བ་ནི། ཐམས་ཅད་ཤེས་པ་ཉིད་དང་། ལམ་གྱི་རྣམ་པ་ཤེས་པ་དང་། རྣམ་པ་ཐམས་ཅད་མཁྱེན་པ་ཉིད་དོ། །ཀཽ་ཤི་ཀ་ཤེས་རབ་ཀྱི་ཕ་རོལ་དུ་ཕྱིན་པ་ལས་བྱུང་བ་ནི་ཉན་ཐོས་ཀྱི་ཐེག་པ་དང་། རང་སངས་རྒྱས་ཀྱི་ཐེག་པ་དང་། ཐེག་པ་ཆེན་པོའོ། །ཀཽ་ཤི་ཀ་ཤེས་རབ་ཀྱི་ཕ་རོལ་དུ་ཕྱིན་པ་ལས་བྱུང་བ་ནི་བླ་ན་མེད་པ་ཡང་དག་པར་རྫོགས་པའི་བྱང་ཆུབ་བོ། །ཀཽ་ཤི་ཀ་དེ་བས་ན་རིགས་ཀྱི་བུའམ། རིགས་ཀྱི་བུ་མོ་གང་ལ་ལས་ཤེས་རབ་ཀྱི་ཕ་རོལ་དུ་ཕྱིན་པ་འདི་བྲིས་ཏེ། གླེགས་བམ་དུ་བྱས་ཤིང་འཛིན་པ་དང་། འཆང་བ་དང་། ཀློག་པ་དང་། ཀུན་ཆུབ་པར་བྱེད་པ་དང་། ཚུལ་བཞིན་དུ་ཡིད་ལ་བྱེད་ཅིང་། མེ་ཏོག་དང་། ཕྲེང་བ་དང་། སྤོས་དང་། བྱུག་པ་དང་། ཕྱེ་མ་དང་། ན་བཟའ་དང་། གདུགས་དང་། རྒྱལ་མཚན་དང་། བ་དན་དང་།",
+   "en": "Chapter 19  Then the Blessed One replied to Śakra, mighty lord of the gods, “Kauśika, it is so! It is so! The merit of those noble sons or noble daughters will increase manifold. If any of them were to commit this perfection of wisdom to writing, making it into a book, and then take up, uphold, recite, master, and focus their attention correctly on it, and in addition were then to serve, respect, honor, and worship it with flowers, garlands, perfumes, unguents, powders, robes, parasols, victory banners, ribbons, and various musical sounds, the merit of those noble sons or noble daughters would be immeasurable, uncountable, inconceivable, incomparable, and it would increase inestimably. If you ask why, Kauśika, the all-aspect omniscience of the tathāgatas, arhats, completely awakened buddhas has originated from the perfection of wisdom. The other five perfections, the emptiness of internal phenomena, [the other aspects of emptiness] up to and including the emptiness of the essential nature of nonentities, the applications of mindfulness, the correct exertions, the supports for miraculous ability, the faculties, the powers, the branches of enlightenment, the noble eightfold path, the truths of the noble ones, the meditative concentrations, the immeasurable attitudes, the formless absorptions, the eight aspects of liberation, the nine serial steps of meditative absorption, the gateways to liberation—emptiness, signlessness, and wishlessness—the extrasensory powers, the meditative stabilities, the dhāraṇī gateways, the powers of the tathāgatas, the fearlessnesses, the kinds of exact knowledge, great loving kindness, great compassion, the distinct qualities of the buddhas, the five eyes of the tathāgatas, the maturation of beings, and the refinement of the buddhafields have all originated from the perfection of wisdom. “ Kauśika, knowledge of all the dharmas, knowledge of the path, and all-aspect omniscience have all originated from the perfection of wisdom. { Ki.II-III: 68} Kauśika, the vehicle of the śrāvakas, the vehicle of the pratyekabuddhas, and the Great Vehicle have all originated from the perfection of wisdom. Kauśika, unsurpassed, complete enlightenment has originated from the perfection of wisdom. “"
+  },
+  "c33-02": {
+   "sa": "tasmāt tarhi kauśika yo hi kaścit kulaputro vā kuladuhitā vā imāṃ prajñāpāramitāṃ likhitvā pustakagatāṃ kṛtvā udgṛhīṣyati dhārayiṣyati vācayiṣyati paryavāpsyati yoniśaś ca manasikariṣyati tāṃ ca satkariṣyati gurukariṣyati mānayiṣyati pūjayiṣyati arcayiṣyati apacāyiṣyati puṣpadhūpagandhamālyavilepanacūrṇacīvaracchatradhvajapatākāvaijayantībhiḥ, asya puṇyābhisaṃskārasyāsau paurvakaḥ puṇyābhisaṃskāraḥ śatatamīm api kalāṃ nopaiti, sahasratamīm api śatasahasratamīm api yāvat koṭiniyutaśatasahasratamīm api kalāṃ nopaiti, saṃkhyām api kalām api gaṇanām apy upamām apy upaniṣadam apy upaniśām api na kṣamate. tat kasya hetor? yāvad iyaṃ hi kauśika prajñāpāramitā jāmbūdvīpe sthāsyati tāvad na buddharatnasyāntardhānaṃ bhaviṣyati na dharmaratnasya na saṃgharatnasyāntardhānaṃ bhaviṣyati, tāvad daśa kuśalāḥ karmapathā loke bhaviṣyanti catvāri dhyānāni catvāry apramāṇāni catasra ārūpyasamāpattayaḥ, dānapāramitāyāḥ śīlapāramitāyāḥ kṣāntipāramitāyā vīryapāramitāyā dhyānapāramitāyāḥ prajñāpāramitāyāḥ smṛtyupasthānasamyakprahāṇarddhipādendriyabalabodhyaṅgamārgānām āryasatyānāṃ ṣaṇṇām abhijñānām aṣṭānāṃ vimokṣāṇāṃ navānupūrvavihārasamāpattīnāṃ catasṛṇāṃ pratisaṃvidāṃ daśānāṃ tathāgatabalānāṃ caturṇāṃ vaiśāradyānām aṣṭādaśānām āveṇikānāṃ buddhadharmāṇāṃ mārgākārajñatāyāḥ sarvajñatāyāḥ sarvākārajñatāyāḥ kṣatryamahāśālakulānāṃ brāhmaṇamahāśālakulānāṃ gṛhapatimahāśālakulānāṃ cāturmahārājakāyikānāṃ devānāṃ trāyastriṃśānāṃ yāmānāṃ tuṣitānāṃ nirmāṇaratīnāṃ paranirmitavaśavartināṃ devānāṃ loke prādurbhāvo bhavati yāvad akaniṣṭhānāṃ devānāṃ loke prādurbhāvo bhavati, srotaāpattiphalasya sakṛdāgāmiphalasyānāgāmiphalasyārhattvasya pratyekabuddhānāṃ bodhisattvānāṃ mahāsattvānāṃ samudāgamo bhavati. anuttarasya buddhajñānasya dharmacakrapravartanasya sattvaparipākasya buddhakṣetrapariśuddhiś ca prajñāyate. iti svaparārthādhimuktimṛdumṛddhī",
+   "T0223": "以是故，憍尸迦！善男子、善女人書持是般若波羅蜜經卷，親近讀誦說、正憶念，加復供養花香乃至伎樂，過出前供養七寶塔，百分千分萬分百千萬分不及一，乃至算數、譬喻所不能及。何以故？憍尸迦！若般若波羅蜜在於世者，佛寶、法寶、比丘僧寶終不滅。若般若波羅蜜在於世者，十善道、四禪、四無量心、四無色定，檀那波羅蜜乃至般若波羅蜜，四念處乃至十八不共法，一切智、一切種智，皆現於世。若般若波羅蜜在於世者，世間便有剎利大姓、婆羅門大姓、居士大家，四天王天乃至阿迦尼吒諸天，須陀洹果乃至阿羅漢果，辟支佛道、菩薩摩訶薩、無上佛道，轉法輪，成就眾生、淨佛國土。」",
+   "T0221": "如是，拘翼！若有善男子、善女人書寫般若波羅蜜，持經卷學受諷誦念守習行，復加供養名花擣香、繒綵幡蓋，其功德福過出前所供養舍利七寶塔上，百千萬倍巨億萬倍，計空不及不可為譬喻。何以故？般若波羅蜜在於世者，三寶終無斷絕時；般若波羅蜜不在世者，三寶便斷絕。般若波羅蜜住於世者，便知有十戒功德、四等、四禪及四空定、六波羅蜜、三十七品、佛十八法、薩云若慧，便知有剎利種、婆羅門種、大姓長者種，便知有四天王及阿迦膩吒天，便知有須陀洹道至羅漢、辟支佛道，便知有菩薩摩訶薩之徑路，便知有無上佛慧，便知有轉法輪，便知有教化眾生、淨佛國土。」",
+   "T0220c": "「以是故，憍尸迦！若善男子、善女人等不離一切智智心，以無所得而為方便，於此般若波羅蜜多，至心聽聞、受持、讀誦、精勤修學、如理思惟，廣為有情宣說流布，或有書寫種種莊嚴，乃至燈明而為供養。以前所造窣堵波福比此福聚，百分不及一，千分不及一，百千分不及一，乃至鄔波尼殺曇分亦不及一。何以故？憍尸迦！若此般若波羅蜜多甚深經典人中流布，即此世間佛寶、法寶、苾芻僧寶終不隱沒；若此般若波羅蜜多甚深經典人中住者，世間常有十善業道，若四靜慮、四無量、四無色定，若布施波羅蜜多乃至般若波羅蜜多，若內空乃至無性自性空，若四念住廣說乃至十八佛不共法，若一切三摩地門、陀羅尼門，若一切智、道相智、一切相智，若剎帝利大族、婆羅門大族、長者大族、居士大族，若四大王眾天乃至非想非非想處天，若聲聞乘、獨覺乘、無上乘，若預流、一來、不還、阿羅漢、獨覺，若菩薩摩訶薩成熟有情、嚴淨佛土，若諸如來、應、正等覺證得無上正等菩提、轉妙法輪度無量眾，如是勝事終不隱沒。」",
+   "bo": "སིལ་སྙན་སྣ་ཚོགས་ཀྱིས་རིམ་གྲོར་བྱས། བཀུར་སྟིར་བྱས། བསྟི་སྟང་དུ་བྱས། མཆོད་པར་བྱས་ན། བསོད་ནམས་མངོན་པར་འདུ་བྱ་བ་འདི་ལ་བསོད་ནམས་མངོན་པར་འདུ་བྱ་བ་སྔ་མས་བརྒྱའི་ཆར་ཡང་ཉེ་བར་མི་འགྲོའོ། །སྟོང་གི་ཆ་དང་། བརྒྱ་ཕྲག་སྟོང་གི་ཆ་དང་བྱེ་བའི་ཆ་དང་། བྱེ་བ་བརྒྱའི་ཆ་དང་། བྱེ་བ་སྟོང་གི་ཆ་དང་། བྱེ་བ་བརྒྱ་ཕྲག་སྟོང་གི་ཆ་དང་། གྲངས་དང་། ཆ་དང་། བགྲང་བ་དང་། དཔེར་ཡང་ཉེ་བར་མི་འགྲོ། རྒྱུར་ཡང་མི་བཟོད་དོ། །དེ་ཅིའི་ཕྱིར་ཞེ་ན། ཀཽ་ཤི་ཀ་ཤེས་རབ་ཀྱི་ཕ་རོལ་དུ་ཕྱིན་པ་འདི་ཇི་སྲིད་དུ་འཛམ་བུའི་གླིང་དུ་གནས་པ་དེ་སྲིད་དུ། སངས་རྒྱས་དཀོན་མཆོག་ནུབ་པར་མི་འགྱུར་རོ། །ཆོས་དཀོན་མཆོག་ནུབ་པར་མི་འགྱུར་རོ། །དགེ་འདུན་དཀོན་མཆོག་ནུབ་པར་མི་འགྱུར་རོ། །དེ་སྲིད་དུ་དགེ་བ་བཅུའི་ལས་ཀྱི་ལམ་དང་། བསམ་གཏན་བཞི་དང་། ཚད་མེད་པ་བཞི་དང་། གཟུགས་མེད་པའི་སྙོམས་པར་འཇུག་པ་བཞི་དང་། མངོན་པར་ཤེས་པ་ལྔ་དང་། སྦྱིན་པའི་ཕ་རོལ་དུ་ཕྱིན་པ་དང་། ཚུལ་ཁྲིམས་ཀྱི་ཕ་རོལ་དུ་ཕྱིན་པ་དང་། བཟོད་པའི་ཕ་རོལ་དུ་ཕྱིན་པ་དང་། བརྩོན་འགྲུས་ཀྱི་ཕ་རོལ་དུ་ཕྱིན་པ་དང་།  བསམ་གཏན་གྱི་ཕ་རོལ་དུ་ཕྱིན་པ་དང་། ཤེས་རབ་ཀྱི་ཕ་རོལ་དུ་ཕྱིན་པ་དང་། ནང་སྟོང་པ་ཉིད་དང་། དངོས་པོ་མེད་པའི་ངོ་བོ་ཉིད་སྟོང་པ་ཉིད་ཀྱི་བར་དང་། དྲན་པ་ཉེ་བར་གཞག་པ་རྣམས་དང་། ཡང་དག་པར་སྤོང་བ་རྣམས་དང་། རྫུ་འཕྲུལ་གྱི་རྐང་པ་རྣམས་དང་། དབང་པོ་རྣམས་དང་། སྟོབས་རྣམས་དང་། བྱང་ཆུབ་ཀྱི་ཡན་ལག་རྣམས་དང་། འཕགས་པའི་ལམ་ཡན་ལག་བརྒྱད་པ་དང་། འཕགས་པའི་བདེན་པ་རྣམས་དང་། བསམ་གཏན་རྣམས་དང་། ཚད་མེད་པ་རྣམས་དང་། གཟུགས་མེད་པའི་སྙོམས་པར་འཇུག་པ་རྣམས་དང་། རྣམ་པར་ཐར་པ་རྣམས་དང་། མཐར་གྱིས་གནས་པའི་སྙོམས་པར་འཇུག་པ་དགུ་དང་། རྣམ་པར་ཐར་པའི་སྒོ་སྟོང་པ་ཉིད་དང་། མཚན་མ་མེད་པ་དང་། སྨོན་པ་མེད་པ་དང་། མངོན་པར་ཤེས་པ་དང་། ཏིང་ངེ་འཛིན་རྣམས་དང་། གཟུངས་ཀྱི་སྒོ་རྣམས་དང་། དེ་བཞིན་གཤེགས་པའི་སྟོབས་རྣམས་དང་། མི་འཇིགས་པ་རྣམས་དང་། སོ་སོ་ཡང་དག་པར་རིག་པ་རྣམས་དང་། བྱམས་པ་ཆེན་པོ་དང་། སྙིང་རྗེ་ཆེན་པོ་དང་། སངས་རྒྱས་ཀྱི་ཆོས་མ་འདྲེས་པ་བཅྭོ་བརྒྱད་དང་། རྣམ་པ་ཐམས་ཅད་མཁྱེན་པ་ཉིད་ཀྱི་བར་དུ་འཇིག་རྟེན་དུ་འབྱུང་བར་འགྱུར་རོ། །དེ་སྲིད་དུ་རྒྱལ་རིགས་ཆེ་ཞིང་མཐོ་བ་རྣམས་དང་། བྲམ་ཟེའི་རིགས་ཆེ་ཞིང་མཐོ་བ་རྣམས་དང་། ཁྱིམ་བདག་གི་རིགས་ཆེ་ཞིང་མཐོ་བ་རྣམས་དང་། རྒྱལ་ཆེན་བཞིའི་རིས་ཀྱི་ལྷ་རྣམས་དང་། སུམ་ཅུ་རྩ་གསུམ་དང་། མཚེ་མ་དང་། དགའ་ལྡན་དང་། འཕྲུལ་དགའ་དང་། གཞན་འཕྲུལ་དབང་བྱེད་དང་། འོག་མིན་གྱི་བར་གྱི་ལྷ་རྣམས་འཇིག་རྟེན་དུ་འབྱུང་བར་འགྱུར་རོ། །རྒྱུན་དུ་ཞུགས་པ་རྣམས་དང་། ལན་ཅིག་ཕྱིར་འོང་བ་རྣམས་དང་། ཕྱིར་མི་འོང་བ་རྣམས་དང་། དགྲ་བཅོམ་པ་རྣམས་དང་། རང་སངས་རྒྱས་རྣམས་དང་། ཡང་དག་པར་རྫོགས་པའི་སངས་རྒྱས་རྣམས་འཇིག་རྟེན་དུ་འབྱུང་བར་འགྱུར་རོ། །བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་རྣམས་འབྱུང་བ་ཡོད་དོ། །བླ་ན་མེད་པའི་ སངས་རྒྱས་ཀྱི་ཡེ་ཤེས་དང་། ཆོས་ཀྱི་འཁོར་ལོ་བསྐོར་བ་དང་། སེམས་ཅན་ཡོངས་སུ་སྨིན་པ་དང་། སངས་རྒྱས་ཀྱི་ཞིང་ཡོངས་སུ་དག་པ་ཡོད་དོ།",
+   "en": "Kauśika, so it is that if any noble sons or noble daughters were to commit this perfection of wisdom to writing, making it into a book, and then take up, uphold, recite, master, and focus their attention correctly on it, and in addition were then to serve, respect, honor, and worship it with flowers, garlands, perfumes, unguents, powders, robes, parasols, victory banners, ribbons, and various musical sounds, the merit accrued by the former [acts of building stūpas] would come nowhere near even a hundredth part of this merit that is now accrued. It would come nowhere near even a thousandth part of it, or a hundred thousandth part, a billionth part, a ten billionth part, a trillionth part, or any number, fraction, calculation, or exemplar. It would stand no comparison. If you ask why, Kauśika, as long as this perfection of wisdom dwells in Jambudvīpa, the precious jewel of the Buddha will not disappear, the precious jewel of the Dharma will not disappear, and the precious jewel of the Saṅgha will not disappear. “[ As long this perfection of wisdom dwells in Jambudvīpa], the paths of the ten virtuous actions, the four meditative concentrations, the four immeasurable attitudes, the four formless absorptions, the five extrasensory powers, the perfection of generosity, the perfection of ethical discipline, the perfection of tolerance, the perfection of perseverance, the perfection of meditative concentration, the perfection of wisdom, the emptiness of internal phenomena, [the other aspects of emptiness], up to and including the emptiness of the essential nature of nonentities, the applications of mindfulness, the correct exertions, the supports for miraculous ability, the faculties, the powers, the branches of enlightenment, the noble eightfold path, the truths of the noble ones, the meditative concentrations, the immeasurable attitudes, the formless absorptions, the aspects of liberation, the nine serial steps of meditative absorption, the gateways to liberation—emptiness, signlessness, and wishlessness—the extrasensory powers, the meditative stabilities, the dhāraṇī gateways, the powers of the tathāgatas, the fearlessnesses, the kinds of exact knowledge, great loving kindness, great compassion, the eighteen distinct qualities of the buddhas, and [all the fruits and realizations], up to and including all-aspect omniscience, will appear in the world. “[ As long this perfection of wisdom dwells in Jambudvīpa], the great and lofty royal families, the great and lofty priestly families, the great and lofty householder families, the gods of the Caturmahārājakāyika realm, and the gods of the Trayastriṃśa, Yāma, Tuṣita, Nirmāṇarata, and Paranirmitavaśavartin realms, and [of all other realms], up to and including Akaniṣṭha, will appear in the world.  “[ As long this perfection of wisdom dwells in Jambudvīpa], those who have entered the stream to nirvāṇa, those who are destined for only one more rebirth, those who are no longer subject to rebirth, and those who are arhats, pratyekabuddhas, bodhisattvas, and completely awakened buddhas will appear in the world. “[ As long this perfection of wisdom dwells in Jambudvīpa], bodhisattva great beings will be discerned, and the wisdom of unsurpassed buddhahood, the turning of the wheel of the Dharma, the maturation of beings, and the refinement of the buddhafields will be discerned.”"
+  }
+ }
+}
