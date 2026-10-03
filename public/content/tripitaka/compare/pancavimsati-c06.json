@@ -1,0 +1,112 @@
+{
+ "slug": "pancavimsati-c06",
+ "title": "大品般若・第6品 舌相品",
+ "family": "sa",
+ "intro": "羅什〈舌相品〉＝放光〈舌相光品〉＝光讚〈授決品〉＝第二會〈舌根相品〉＝梵本 PSP 1-1: 107–110＝藏譯第二章末。佛出舌相，光照十方，諸方菩薩問其佛、來詣娑婆散花成臺；會中百千萬億人願未來亦如是說法，得無生法忍，佛笑授記號覺花。梵本此段末有「iti ṣaḍabhijñāvavādaḥ」科目；藏譯第二章〈舍利子〉至此結束。",
+ "units": [
+  {
+   "id": "c06-01",
+   "label": "出舌相放光遍照十方・諸方菩薩問佛・持花香來詣・散花成臺"
+  },
+  {
+   "id": "c06-02",
+   "label": "會眾願未來亦如是說法・得無生法忍・佛笑授記覺花佛"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sa",
+   "lang": "sa",
+   "label": "梵本",
+   "who": "Kimura 校訂本（依現觀莊嚴論改訂之修訂本）・GRETIL"
+  },
+  {
+   "id": "T0223",
+   "lang": "lzh",
+   "label": "羅什本",
+   "who": "姚秦・鳩摩羅什譯《摩訶般若波羅蜜經》・404 年",
+   "work": "T0223"
+  },
+  {
+   "id": "T0221",
+   "lang": "lzh",
+   "label": "放光本",
+   "who": "西晉・無羅叉共竺叔蘭譯《放光般若經》・291 年",
+   "work": "T0221"
+  },
+  {
+   "id": "T0222",
+   "lang": "lzh",
+   "label": "光讚本",
+   "who": "西晉・竺法護譯《光讚經》（殘本）・286 年",
+   "work": "T0222"
+  },
+  {
+   "id": "T0220c",
+   "lang": "lzh",
+   "label": "玄奘・第二會",
+   "who": "唐・玄奘譯《大般若經》第二會（卷 401–478）・660–663 年",
+   "work": "T0220c"
+  },
+  {
+   "id": "bo",
+   "lang": "bo",
+   "label": "藏譯",
+   "who": "德格版 Toh 9《聖般若波羅蜜多二萬五千頌》・84000"
+  },
+  {
+   "id": "en",
+   "lang": "en",
+   "label": "84000 英譯",
+   "who": "譯自藏譯・與藏文逐句對齊"
+  }
+ ],
+ "works": [
+  "T0220c",
+  "T0221",
+  "T0222",
+  "T0223"
+ ],
+ "anchors": [
+  {
+   "work": "T0223",
+   "node": "摩訶般若波羅蜜經舌相品第六",
+   "uid": "T08n0223_p0230a19"
+  },
+  {
+   "work": "T0221",
+   "node": "摩訶般若波羅蜜舌相光品第八",
+   "uid": "T08n0221_p0010c23"
+  },
+  {
+   "work": "T0222",
+   "node": "摩訶般若波羅蜜授決品第五",
+   "uid": "T08n0222_p0161c02"
+  },
+  {
+   "work": "T0220c",
+   "node": "第二分舌根相品第五",
+   "uid": "T07n0220c_p0028a17"
+  }
+ ],
+ "cells": {
+  "c06-01": {
+   "sa": "atha khalu bhagavāṃs tasyāṃ velāyāṃ jihvendriyaṃ nirnāmayitvā imaṃ trisāhasraṃ mahāsāhasraṃ lokadhātuṃ jihvendriyeṇācchādayāmāsa. atha khalu tato jihvendriyād anekavarṇā nānāvarṇā arciṣo niśceruḥ, niḥsṛtya pūrvasyāṃ diśi gaṅgānadībālukopamān lokadhātūn ābhayāvabhāsayāmāsuḥ. evaṃ dakṣiṇasyāṃ diśi gaṅgānadībālukopamān lokadhātūn ābhayāvabhāsayāmāsuḥ, paścimāyāṃ diśi gaṅgānadībālukopamān lokadhātūn ābhayāvabhāsayāmāsuḥ, uttarasyāṃ diśi gaṅgānadībālukopamān lokadhātūn ābhayāvabhāsayāmāsuḥ, uttarapūrvasyāṃ diśi gaṅgānadībālukopamān lokadhātūn ābhayāvabhāsayāmāsuḥ, pūrvadakṣiṇasyāṃ diśi gaṅgānadībālukopamān lokadhātūn ābhayāvabhāsayāmāsuḥ, dakṣiṇapaścimāyāṃ diśi gaṅgānadībālukopamān lokadhātūn ābhayāvabhāsayāmāsuḥ, paścimottarasyāṃ diśi gaṅgānadībālukopamān lokadhātūn ābhayāvabhāsayāmāsuḥ, adhastād diśi gaṅgānadībālukopamān lokadhātūn ābhayāvabhāsayāmāsuḥ, ūrdhvaṃ diśi gaṅgānadībālukopamān lokadhātūn ābhayāvabhāsayāmāsuḥ, atha khalu pūrvasyāṃ yāvad ūrdhvaṃ diśi gaṅgānadībālukopamebhyo buddhakṣetrebhyo 'prameyāsaṃkhyeyā bodhisattvās tān prabhāvyūhān dṛṣṭvā svakasvakeṣu buddhakṣetreṣu buddhān bhagavataḥ paripṛcchanti sma: kasyāyaṃ bhagavann anubhāvo yenāyam eva prabhāvabhāsaḥ saṃdṛśyate? te buddhā bhagavantas tān bodhisattvān mahāsattvān evam āhuḥ: eṣa kulaputrāḥ paścime yāvad adho digbhāge sahāyāṃ lokadhātau śākyamunir nāma tathāgato 'rhan samyaksaṃbuddḥs tiṣṭhati dhriyate yāpayati, tena jihvendriyaṃ nirṇamayya pūrvasyāṃ diśi gaṅgānadībālukopamā iokadhātavo (PSP1-1: 108) 'vabhāsena sphuṭīkṛtā yāvad ūrdhvaṃ diśi, evaṃ daśasu dikṣu gaṅgānadībālukopamā lokadhātavo 'vabhāsena sphuṭīkṛtā yad uta bodhisattvānāṃ mahāsattvānāṃ prajñāpāramitāṃ deśanāya saṃprakāśanāya. te bodhisattvās tāṃs tathāgatān evam āhuḥ: gamiṣyāmo vayaṃ bhagavaṃs tāṃ sahālokadhātuṃ taṃ bhagavantaṃ śākyamuniṃ tathāgataṃ darśanāya vandanāya paryupāsanāya, tāṃś ca daśadiksaṃnipatitān bodhisattvān mahāsattvāṃs tāṃ ca prajñāpāramitāṃ śravaṇāya. te buddhā bhagavanta āhuḥ: gacchata kulaputrā yasyedānīṃ kālaṃ manyadhvam. atha khalu te bodhisattvā mahāsattvā daśabhyo digbhyaḥ puṣpadhūpagandhamālyavilepanacūrṇacīvaracchatradhvajapatākāvaijayantīr gṛhītvā nānāratnasuvarṇarūpyapuṣpapuṭāni ca gṛhītvā mahatyā tūryatāḍāvacarasaṃgītyā bhagavantaṃ śākyamunim upasaṃkrāntā abhūvan. atha khalu cāturmahārājakāyikā devās trayastriṃśā devā yāmā devās tuṣitā devā nirmāṇaratayo devāḥ paranirmitavaśavartino devā brahmapurohitā devā mahābrahmāṇo devāḥ parīttābhā devā apramāṇābhā devā ābhāsvarā devāḥ parīttaśubhā devā apramāṇaśubhā devāḥ śubhakṛtsnā devā anabhrakā devāḥ puṇyaprasavā devā bṛhatphalā devā asaṃjñisattvā devāḥ śuddhābhāsā devā aspṛhā devā atapā devāḥ sudṛśā devāḥ sudarśanā devā akaniṣṭhāś ca devā divyapuṣpadhūpagandhamālyavilepanacūrṇacīvaracchatradhvajapatākā utpalakumudapuṇḍarīkamāndāravakesaratamālapatrāṇi gṛhītvā yena bhagavāṃs tenopasaṃkrāman. atha khalu te bodhisattvās te ca devās taiḥ puṣpadhūpagandhamālyavilepanais tathāgatam arhantaṃ samyaksaṃbuddham avakiranti sma. atha khalu tāni puṣpāṇi vaihāyasam abhyudgamyāsya trisāhasramahāsāhasrasya lokadhātor upariṣṭāt puṣpakūṭāgāraḥ saṃsthito 'bhūt catusthūṇaś caturasro bhāgataḥ suvibhakto ramaṇīyo manoramaḥ.",
+   "T0223": "爾時世尊出舌相遍覆三千大千世界，從其舌相出無數無量色光明，普照十方如恒河沙等諸佛世界。是時，東方如恒河沙等世界中無量無數諸菩薩見是大光明，各各白其佛言：「世尊！是誰力故，有是大光明普照諸佛世界？」諸佛告諸菩薩言：「諸善男子！西方有世界名娑婆，是中有佛名釋迦牟尼，是其舌相出大光明，普照東方如恒河沙等諸佛世界，南西北方四維上下亦復如是，為諸菩薩摩訶薩說般若波羅蜜故。」是時諸菩薩各白其佛言：「我欲往供養釋迦牟尼佛及諸菩薩摩訶薩，并欲聽般若波羅蜜。」諸佛告諸菩薩：「善男子！汝自知時。」是時，諸菩薩摩訶薩持諸供養具，無量花蓋幢幡、瓔珞眾香、金銀寶花，向娑婆世界，詣釋迦牟尼佛所。爾時四天王諸天乃至阿迦尼吒諸天，各持天上天香末香澤香、天樹香葉香、天種種蓮花青赤紅白，向釋迦牟尼佛所。是諸菩薩摩訶薩及諸天所散諸花，於三千大千世界虛空中化成四柱大寶臺，種種異色莊嚴分明。",
+   "T0221": "爾時世尊出廣長舌相，普遍三千大千世界。於其舌根出種種無央數百千光明，徹照十方各一恒沙國。是時東方及十方國土無央數諸菩薩，見是光明，各各自白其佛：「是何瑞應，有是大光明？」佛告諸菩薩言：「西方去是度一恒邊沙，有佛世界，名沙訶，其佛號釋迦文。出舌相光明，為諸菩薩說般若波羅蜜。今有是應。」於是十方恒沙國諸菩薩各白其佛言：「我等欲往見釋迦文及諸菩薩，并欲聞般若波羅蜜。」諸佛各各告諸菩薩言：「欲往隨意。」於是諸菩薩各各取諸名華名香、種種幢幡珍寶華蓋，發其國土來詣忍界。諸四天王乃至阿迦膩吒天，各持天上諸名香華來詣佛所。諸天人諸菩薩皆悉來至，見釋迦文佛已，各各供養散諸名華。所散華寶，即於佛上在虛空中化成四柱臺。其臺高顯，四面窓向。臺遍三千大千剎土，各各莫不見有好臺，羅列分別不相障蔽，其臺妙好交露莊嚴，未曾所有。",
+   "T0222": "於是世尊即出舌本，覆三千大千世界。從其舌本出無央數光明之耀，照於東方諸佛世界。應時東方江河沙等諸佛國土，而無央數不可計會諸菩薩摩訶薩覩光明，各各在其佛土自往咨啟諸佛世尊，而問斯誼：「唯，天中天！是何威神而令此土光明普照？」於時其國諸如來眾，各各告菩薩摩訶薩：「善男子！欲知此變，西方去此江河沙等諸佛世界，有佛土名曰忍界，其佛號釋迦文怛薩阿竭、阿羅訶、三耶三佛，出舌本光明，照于東方江河沙等世尊世界，普令照曜周及十方。所以然者，為諸菩薩摩訶薩講般若波羅蜜。」於時彼土菩薩摩訶薩各自啟佛：「唯然，大聖！我等欲往稽首歸命釋迦文如來及諸菩薩摩訶薩，并欲聽省般若波羅蜜。」其佛告曰：「往，善男子！從仁擇時，如爾所欲。」時諸菩薩啟佛見聽，各各自取眾蓋幢幡、香華敷飾、雜香擣香、金花銀花，往詣釋迦文怛薩阿竭、阿羅呵、三耶三佛，稽首佛足，各以所齎眾蓋幢幡、香華敷飾、雜香擣香、金華銀華，用散佛上及諸菩薩諸聲聞上。八方上下亦無央數不可計會諸菩薩摩訶薩，各各自於其國啟白世尊：「此之威曜，何所從來？」諸佛告曰：「有佛號名釋迦文尼怛薩阿竭、阿羅呵、三耶三佛，出舌本光明之德，各照十方江河沙等諸佛國土，是其威曜。」時諸菩薩各啟其佛：「欲往稽首釋迦文見諸菩薩。」諸佛告曰：「往，族姓子！從仁擇時，如志所欲。」諸菩薩眾各齎供養，往詣釋迦文怛薩阿竭、阿羅訶、三耶三佛，稽首作禮。進上所齎，却坐一面，聽佛所說。於時四大王天上諸天人，忉利天、焰天、兜率天、尼摩羅天、波羅尼蜜天，上至阿迦膩吒天，各齎天花、天香天擣香天雜香、青蓮華紅蓮花黃蓮華白蓮華，皆以天上微妙香華，各各執持往詣佛所。於時諸天上及諸菩薩，各各齎持香花雜香擣香，各各供養奉散如來、至真、等正覺上。於時所散華香，上在虛空化為宮殿在於四方，而於虛空中向于四面，微妙分明，皆以眾寶人所悅樂。",
+   "T0220c": "爾時，世尊現舌根相，量等三千大千世界。從此舌相復出無數種種色光，遍照十方殑伽沙等諸佛世界。爾時，東方殑伽沙等諸佛土中，一一各有無量無數菩薩摩訶薩，見此大光心懷猶豫，各各往詣自界佛所，稽首恭敬白言：「世尊！是誰威力，復以何緣，有此大光照諸佛土？」時，彼彼佛各各報言：「於此西方有佛世界名曰堪忍，佛號釋迦牟尼如來、應、正等覺、明行圓滿、善逝、世間解、無上丈夫、調御士、天人師、佛、薄伽梵，今為菩薩摩訶薩眾宣說般若波羅蜜多，現舌根相，量等三千大千世界。從彼舌相復出無數種種色光，遍照十方殑伽沙等諸佛世界。今所見光即是彼佛舌相所現。」時，彼彼界無量無數菩薩摩訶薩聞是事已，歡喜踴躍歎未曾有，各白佛言：「我等欲往堪忍世界，觀禮供養釋迦牟尼如來、應、正等覺及諸菩薩摩訶薩眾，并聽般若波羅蜜多，唯願世尊哀愍聽許！」時，彼彼佛各各報言：「今正是時，隨汝意往。」時，諸菩薩摩訶薩眾既蒙聽許，各禮佛足右繞七匝，嚴持無量寶幢、幡蓋、衣服、瓔珞、香鬘、珍寶、金銀等花，奏擊種種上妙音樂，經須臾間至此佛所，供養恭敬、尊重讚歎佛菩薩已遶百千匝，頂禮雙足退坐一面。南西北方四維上下殑伽沙等諸佛土中，一一各有無量無數菩薩摩訶薩亦復如是。爾時，四大王眾天、三十三天、夜摩天、覩史多天、樂變化天、他化自在天、梵眾天、梵輔天、梵會天、大梵天、光天、少光天、無量光天、極光淨天、淨天、少淨天、無量淨天、遍淨天、廣天、少廣天、無量廣天、廣果天、無繁天、無熱天、善現天、善見天、色究竟天，各持無量種種香鬘，所謂澤香、末香、燒香、樹香、葉香、諸雜和香，悅意花鬘、生類花鬘、龍錢花鬘并無量種雜類花鬘，及持無量上妙天花、嗢鉢羅花、鉢特摩花、俱某陀花、奔荼利花、微妙音花、大微妙音花及餘無量天妙香花來詣佛所，供養恭敬、尊重讚歎佛菩薩已繞百千匝，頂禮雙足却住一面。爾時，十方諸來菩薩摩訶薩眾及餘無量欲、色界天，所獻種種寶幢、幡蓋、衣服、瓔珞、珍寶、香花及諸音樂，以佛神力上踴空中，合成臺蓋，量等三千大千世界，臺頂四角各有寶幢，臺蓋、寶幢皆垂瓔珞，勝幡妙綵、珍異花鬘，種種莊嚴甚可愛樂。",
+   "bo": "།དེ་ནས་བཅོམ་ལྡན་འདས་ཀྱིས་དེའི་ཚེ་ཞལ་གྱི་སྒོ་ནས་ལྗགས་ཀྱི་དབང་པོ་བཀྲམ་སྟེ་སྟོང་གསུམ་གྱི་སྟོང་ཆེན་པོའི་འཇིག་རྟེན་གྱི་ཁམས་འདི་ཁྱབ་པར་མཛད་དོ། །དེ་ནས་དེའི་ཚེ་ལྗགས་ཀྱི་དབང་པོ་དེ་ལས་འོད་འཕྲོ་བ་ཁ་དོག་དུ་མ་དང་ཁ་དོག་སྣ་ཚོགས་སུ་ལྡན་པ་མང་པོ་བྱུང་བར་གྱུར་ཏོ། །དེ་བྱུང་ནས་ཤར་ཕྱོགས་ཀྱི་འཇིག་རྟེན་གྱི་ཁམས་གངྒཱའི་ཀླུང་གི་བྱེ་མ་སྙེད་སྣང་བ་ཆེན་པོས་རྒྱས་པར་གྱུར་ཏོ། །ལྷོ་དང་ནུབ་དང་བྱང་དང་བྱང་ཤར་དང་ཤར་ལྷོ་དང་ལྷོ་ནུབ་དང་ནུབ་བྱང་དང་འོག་དང་སྟེང་གི་ཕྱོགས་ཀྱི་ཕྱོགས་རེ་རེ་ཞིང་། འཇིག་རྟེན་གྱི་ཁམས་གངྒཱའི་ཀླུང་གི་བྱེ་མ་སྙེད་སྣང་བ་ཆེན་པོས་རྒྱས་པར་གྱུར་ཏོ། །དེ་ནས་ཤར་ཕྱོགས་ཀྱི་འཇིག་རྟེན་གྱི་ཁམས་གངྒཱའི་ཀླུང་གི་བྱེ་མ་སྙེད་པོ་དེ་དག་གི་བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་དག་གིས་འོད་རྣམ་པར་ཕྱེ་བ་དེ་མཐོང་ནས། རང་རང་གི་སངས་རྒྱས་ཀྱི་ཞིང་གི །སངས་རྒྱས་བཅོམ་ལྡན་འདས་ལ་ཞུས་ཏེ། བཅོམ་ལྡན་འདས་འདི་ལྟར་འཇིག་རྟེན་གྱི་ཁམས་འདི་དག་སྣང་བ་ཆེན་པོས་བལྟམ་པ་འདི་སུའི་མཐུ་ལགས་ཞེས་ཡོངས་སུ་དྲིས་སོ། །སངས་རྒྱས་བཅོམ་ལྡན་འདས་དེ་དག་གིས་བཀའ་སྩལ་པ། རིགས་ཀྱི་བུ་དག་འདི་ནས་ནུབ་ཕྱོགས་ལོགས་ན་འཇིག་རྟེན་གྱི་ཁམས་མི་མཇེད་ཅེས་བྱ་བ་ཡོད་དེ། དེ་ན་དེ་བཞིན་གཤེགས་པ་དགྲ་བཅོམ་པ་ཡང་དག་པར་རྫོགས་པའི་སངས་རྒྱས་ཤཱཀྱ་ཐུབ་པ་ཞེས་བྱ་བ་བཞུགས་ཏེ། དེས་ཞལ་གྱི་སྒོ་ནས་ལྗགས་ཀྱི་དབང་པོ་བཀྲམ་སྟེ། བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་རྣམས་ལ་ཤེས་རབ་ཀྱི་ཕ་རོལ་དུ་ཕྱིན་པ་བསྟན་པའི་ཕྱིར། འཇིག་རྟེན་གྱི་ཁམས་གངྒཱའི་ཀླུང་གི་བྱེ་མ་སྙེད་པོ་འདི་དག་སྣང་བ་ཆེན་པོས་ཁྱབ་པར་མཛད་དོ། །བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་རྣམས་ལ་ཤེས་རབ་ཀྱི་ཕ་རོལ་ཏུ་ཕྱིན་ པ་བསྟན་པའི་ཕྱིར། ཕྱོགས་བཅུའི་ཕྱོགས་རེ་རེའི་བར་དུ་འཇིག་རྟེན་གྱི་ཁམས་གངྒཱའི་ཀླུང་གི་བྱེ་མ་སྙེད་པོ་འདི་དག་སྣང་བ་ཆེན་པོས་ཁྱབ་པར་མཛད་དོ། །དེ་ནས་བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་དེ་དག་གིས་སངས་རྒྱས་བཅོམ་ལྡན་འདས་དེ་དག་ལ་འདི་སྐད་ཅེས་གསོལ་ཏོ། །བཅོམ་ལྡན་འདས་དེ་ལྟ་ལགས་ན་བདག་ཅག་ཀྱང་། བཅོམ་ལྡན་འདས་དེ་བཞིན་གཤེགས་པ་དགྲ་བཅོམ་པ་ཡང་དག་པར་རྫོགས་པའི་སངས་རྒྱས་ཤཱཀྱ་ཐུབ་པ་དེ་བལྟ་བ་དང་དེ་ལ་ཕྱག་བགྱི་བ་དང་བསྙེན་བཀུར་བ་དང་། བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་ཕྱོགས་བཅུ་ནས་འདུས་པ་དེ་དག་ཀྱང་བལྟ་བ་དང་། ཤེས་རབ་ཀྱི་ཕ་རོལ་དུ་ཕྱིན་པ་དེ་ཡང་མཉན་པའི་སླད་དུ་མཆིའོ། །སངས་རྒྱས་བཅོམ་ལྡན་འདས་དེ་དག་གིས་བཀའ་སྩལ་པ། རིགས་ཀྱི་བུ་དག་དེའི་དུས་ལ་བབ་པར་ཤེས་ན་དེང་ཤིག ། དེ་ནས་བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་དེ་དག་གིས། དེ་བཞིན་གཤེགས་པ་དགྲ་བཅོམ་པ་ཡང་དག་པར་རྫོགས་པའི་སངས་རྒྱས་དེ་དག་གི་ཞབས་ལ་སྤྱི་བོས་ཕྱག་འཚལ་ནས། ལན་བདུན་དུ་གཡས་ཕྱོགས་ནས་བསྐོར་བ་བྱས་ཏེ། ཕྱོགས་བཅུ་ནས་གདུགས་དང་རྒྱལ་མཚན་དང་ལྷའི་བ་དན་དང་། མེ་ཏོག་དང་ཕྲེང་བ་དང་སྤོས་དང་བྱུག་པ་དང་བདུག་པ་དང་། ཕྱེ་མ་དང་ན་བཟའ་དང་གསེར་གྱི་མེ་ཏོག་དང་དངུལ་གྱི་མེ་ཏོག་ལ་སོགས་པ་རྣམ་པ་དུ་མ་ཁྱེར་ཏེ། གླུ་དང་རོལ་མོ་བརྡུང་བ་དང་དཀྲོལ་བ་མང་པོས། བཅོམ་ལྡན་འདས་དེ་བཞིན་གཤེགས་པ་དགྲ་བཅོམ་པ་ཡང་དག་པར་རྫོགས་པའི་སངས་རྒྱས་ཤཱཀྱ་ཐུབ་པ་དེ་གང་ན་བ་དེར་འདོང་ངོ་། །དེ་ནས་རྒྱལ་ཆེན་བཞིའི་རིས་ཀྱི་ལྷ་རྣམས་དང་། སུམ་ཅུ་རྩ་གསུམ་དང་། མཚེ་མ་དང་། དགའ་ལྡན་དང་། འཕྲུལ་དགའ་དང་། གཞན་འཕྲུལ་དབང་བྱེད་དང་། ཚངས་རིས་དང་། ཚངས་ལྷ་ཉེ་ཕན་དང་། ཚངས་པ་ཀུན་འཁོར་དང་། ཚངས་ཆེན་དང་། སྣང་བ་དང་། ཆུང་སྣང་དང་། ཚད་མེད་སྣང་བ་དང་། ཀུན་སྣང་དང་བ་དང་། དགེ་བ་ དང་། ཆུང་དགེ་དང་། ཚད་མེད་དགེ་བ་དང་། དགེ་རྒྱས་དང་། ཆེ་བ་དང་། ཆུང་ཆེ་དང་། ཚད་མེད་ཆེ་བ་དང་། འབྲས་བུ་ཆེ་བ་དང་། གནས་གཙང་མ་པ་ཤིན་ཏུ་མཐོང་བ་དང་། གྱ་ནོམ་སྣང་བ་དང་། མི་ཆེ་བ་དང་། མི་གདུང་བ་དང་། འོག་མིན་གྱི་ལྷ་རྣམས་ཀྱང་ལྷ་རྫས་ཀྱི་མེ་ཏོག་དང་། ཕྲེང་བ་དང་། སྤོས་དང་། བྱུག་པ་དང་། བདུག་པ་དང་། ཕྱེ་མ་དང་། ལྷ་རྫས་ཀྱི་མེ་ཏོག་ཨུཏྤལ་དང་། པད་མོ་དང་། ཀུ་མུད་དང་། བུན་ད་རི་ཀ་དང་། ལྷ་རྫས་ཀྱི་མེ་ཏོག་མན་དཱ་ར་བ་དང་མན་དཱ་ར་བ་ཆེན་པོ་དང་། ཀེ་ས་ར་དང་ཏ་མ་ལའི་ལོ་མ་མང་པོ་ཁྱེར་ཏེ། བཅོམ་ལྡན་འདས་དེ་བཞིན་གཤེགས་པ་དགྲ་བཅོམ་པ་ཡང་དག་པར་རྫོགས་པའི་སངས་རྒྱས་ཤཱཀྱ་ཐུབ་པ་གང་ན་བ་དེར་དོང་སྟེ། དེ་ནས་བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་དེ་དག་དང་། ལྷ་དེ་དག་གིས་མེ་ཏོག་དང་ཕྲེང་བ་དང་སྤོས་དང་བྱུག་པ་དང་བདུག་པ་དང་ཕྱེ་མ་དང་ན་བཟའ་དང་གདུགས་དང་རྒྱལ་མཚན་དང་ལྷའི་བ་དན་དེ་དག་གིས། བཅོམ་ལྡན་འདས་དེ་བཞིན་གཤེགས་པ་དགྲ་བཅོམ་པ་ཡང་དག་པར་རྫོགས་པའི་སངས་རྒྱས་ཤཱཀྱ་ཐུབ་པ་ལ་གཏོར་ཏོ། །མངོན་པར་གཏོར་ཏོ། །དེ་ནས་མེ་ཏོག་ལ་སོགས་པ་དེ་དག་སྟོང་གསུམ་གྱི་སྟོང་ཆེན་པོའི་འཇིག་རྟེན་གྱི་ཁམས་འདིའི་སྟེང་གི་ནམ་མཁའ་ལ་མངོན་པར་འཕགས་ཏེ། མེ་ཏོག་གི་ཁང་པ་བརྩེགས་པ། གྲུ་བཞི་ཀ་བ་བཞི་དང་ལྡན་པ། ཆ་ཀུན་དུ་མཉམ་པ།",
+   "en": "Thereupon the Blessed One extended his tongue from his mouth, covering this great trichiliocosm. Manifold lights of many diverse colors emanated from his tongue, and, having emanated, they permeated the world systems of the eastern direction, numerous as the grains of sand of the river Gaṅgā, with great luminosity. { Dt.96} They permeated the world systems of each of the southern, western, northern, northeastern, southeastern, southwestern, and northwestern directions, along with the nadir and the zenith, numerous as the grains of sand of the river Gaṅgā, with great luminosity. Then, when the bodhisattva great beings of those world systems of the eastern direction, numerous as the grains of sand of the river Gaṅgā, had seen that well-distinguished light, they asked the lord buddhas of their respective buddhafields, “Blessed Lord, whose power is this that causes these world systems to be manifested with great light in this manner?” Those lord buddhas replied, “Noble children, in the western direction from here, there is a world system called Patient Endurance. There, the tathāgata, arhat, completely awakened buddha named Śākyamuni resides. Extending his tongue from his mouth, he has suffused these world systems [of the eastern direction], numerous as the grains of sand of the river Gaṅgā, with great light in order to reveal the perfection of wisdom to bodhisattva great beings. He has suffused all the other world systems, up to and including those of each of the ten directions, with great light in order to reveal the perfection of wisdom to bodhisattva great beings.” Then those bodhisattva great beings asked those lord buddhas, “Blessed Lord, since that is the case, we too should go to see that tathāgata, arhat, completely awakened Buddha Śākyamuni, to pay homage to him and venerate him, and also to see those bodhisattva great beings who have assembled from the ten directions, and, indeed, to listen to the perfection of wisdom.” The lord buddhas replied, “Noble children, you may proceed since I know that it is timely.” Those bodhisattva great beings then bowed their heads toward the feet of the tathāgatas, arhats, completely awakened buddhas, and circumambulated them from the right seven times. From the ten directions they brought many parasols, victory banners, divine ribbons, flowers, garlands, perfumes, unguents, incense, powders, robes, golden flowers, silver flowers, and so forth, and approached the place where the Blessed One, the tathāgata, arhat, completely awakened Buddha Śākyamuni, was seated, while singing songs and beating and ringing their musical instruments. Then the gods of Caturmahārājakāyika, and the gods of Trayastriṃśa, Yāma, Tuṣita, Nirmāṇarata, Paranirmitavaśavartin, Brahmakāyika, Brahmapurohita, Brahmapariṣadya, Mahābrahmā, Ābha, Parīttābha, Apramāṇābha, Ābhāsvara, Śubha, Parīttaśubha, Apramāṇaśubha, Śubhakṛtsna, Bṛhat, Parīttabṛhat, Apramāṇabṛhat, Bṛhatphala, and the Pure Abodes of Avṛha, Atapa, Sudṛśa, Sudarśana, {Dt.97} and Akaniṣṭha also brought many divine flowers, garlands, perfumes, unguents, incense, powders, divine blue lotuses, day lotuses, night lotuses, white lotuses, divine coral flowers, large coral flowers, crocuses, and mangosteen leaves, and set out for the place where the Blessed One, the tathāgata, arhat, completely awakened Buddha Śākyamuni, was seated. There those bodhisattva great beings and those gods scattered and showered those flowers, garlands, perfumes, unguents, incense, powders, robes, parasols, victory banners, and divine ribbons upon the Blessed One, the tathāgata, arhat, completely awakened Buddha Śākyamuni. Their offerings then ascended into the sky above this great trichiliocosm, forming a towering mansion of flowers, square in shape, with four pillars, well proportioned, excellently distinguished, delightful, and pleasant."
+  },
+  "c06-02": {
+   "sa": "atha khalu tataḥ parṣadaḥ prāṇikoṭīniyutaśatasahasram utthāyāsanād ekāṃsam uttarāsaṅgaṃ kṛtvā dakṣiṇaṃ jānumaṇḍalaṃ pṛthivyāṃ (PSP1-1: 109) pratiṣṭhāpya yena bhagavāṃs tenāñjaliṃ praṇamya bhagavantam etad avocat: vayaṃ bhagavann anāgate 'dhvani evaṃrūpāṇāṃ dharmāṇāṃ lābhino bhavema yathā tathāgato 'rhan samyaksaṃbuddhaḥ, evaṃ ca śrāvakagaṇaṃ parikarṣema evaṃ ca parṣadi dharmaṃ deśayema yac caitarhi tathāgato bhagavān dharmaṃ deśayati. atha khalu bhagavāṃs teṣāṃ kulaputrāṇām āsayaṃ viditvā sarvadharmāṇāṃ cānutpādāyānirodhāyānabhisaṃskārāyāprādurbhāvāya kṣāntiṃ viditvā smitam akarot. atha tato 'nekavarṇā raśmayo bhagavato mukhadvārān niścaritās te sarvāvantaṃ lokaṃ pradakṣiṇīkṛtya punar evāgatā bhagavato mūrdhany antardhīyante sma. atha khalv āyuṣmān ānanda utthāyāsanād ekāṃsam uttarāsaṅgaṃ kṛtvā dakṣiṇaṃ janumaṇḍalaṃ pṛthivyāṃ pratiṣṭhāpya yena bhagavāṃs tenāñjaliṃ praṇamya bhagavantam etad avocat: ko bhagavan hetuḥ kaḥ pratyayaḥ smitasya pradurbhāvāya? atha khalu bhagavān āyuṣmantam ānandam etad avocat: etad ānanda prāṇikoṭīniyutaśatasahasram aṣṭaṣaṣṭyā kalpakoṭībhir bodhyaṅgapuṣpanāmānas tathāgatā arhantaḥ samyaksaṃbuddhā loka utpatsyante puṣpākare kalpe. iti ṣaḍabhijñāvavādaḥ",
+   "T0223": "是時釋迦牟尼佛眾中有十萬億人，皆從座起，合掌白佛言：「世尊！我等於未來世中亦當得如是法，如今釋迦牟尼佛弟子、侍從、大眾、說法亦爾。」是時，佛知善男子至心於一切諸法不生不滅、不出不作，得是法忍。佛便微笑，種種色光從口中出。阿難白佛言：「世尊！何因緣故微笑？」佛告阿難：「是眾中十萬億人，於諸法中得無生忍。是諸人於未來世，過六十八億劫當作佛，劫名花積，佛皆號覺花。」",
+   "T0221": "於是坐中諸億百千人，各各從坐起，長跪叉手前白佛言：「唯，世尊，願使吾等於當來世逮得法利，當如世尊今於百千眾圍繞說法，所現感動亦當如是。」佛於是知諸大眾各已有仍堪任於諸法無所從生法忍。佛便笑。阿難白佛：「何因緣笑？願聞其意。」佛告阿難：「是億百千眾皆得無所從生法忍，却後六十八億劫劫名散華，皆當作佛，號覺華如來、無所著、等正覺。」",
+   "T0222": "於眾會億百千姟，皆共叉手自歸命佛，而問世尊：「唯，天中天！我等之身當來之世，願得法利亦復如是，如怛薩阿竭、阿羅呵、三耶三佛，諸聲聞眾亦當如是，為諸會者講說經法，如今所演。」爾時世尊知善男子心之所念，覩一切法永無所起亦無所行，一切諸法無所逮得，見心所忍，佛應時笑。賢者阿難前白佛言：「佛何因笑？笑當有意。」佛告阿難：「今此眾會億百千姟人，皆悉逮得不起法忍，過於當來六十八億劫，當得作佛，號曰覺華怛薩阿竭、阿羅訶、三耶三佛，明行成為、善逝、世間解、無上士、道法御、天人師，號佛、世尊，劫名華事，世界曰嚴華。」",
+   "T0220c": "爾時，會中有百千俱胝那庾多眾皆從座起，合掌恭敬而白佛言：「世尊！我等未來願當作佛，相好威德如今世尊。國土莊嚴，聲聞、菩薩、人、天眾會，所轉法輪，皆如今佛。」爾時，世尊知其心願，已於諸法悟無生忍，了達一切不生不滅、無作無為，即便微笑，面門復出種種色光。時，阿難陀即從座起，合掌恭敬白言：「世尊！何因何緣現此微笑？諸佛現笑非無因緣！」佛告阿難：「是從座起百千俱胝那庾多眾，已於諸法悟無生忍，了達一切不生不滅、無作無為。彼於當來經六十八俱胝大劫勤修菩薩行，妙法花劫中當得作佛，皆同一號，謂覺分花如來、應、正等覺、明行圓滿、善逝、世間解、無上丈夫、調御士、天人師、佛、薄伽梵。」",
+   "bo": "ཤིན་ཏུ་རྣམ་པར་ཕྱེ་བ། མདངས་དགའ་ཞིང་ཡིད་དུ་འོང་བར་རེད་དེ་འདུག་གོ །དེ་ནས་འཁོར་དེའི་ནང་ནས་སྲོག་ཆགས་བྱེ་བ་ཁྲག་ཁྲིག་བརྒྱ་སྟོང་དུ་མས་མི་སྐྱེ་བའི་ཆོས་ལ་བཟོད་པ་རབ་ཏུ་ཐོབ་པོ། །དེ་ནས་དེ་དག་སྟན་ལས་ལངས་ནས། བཅོམ་ལྡན་འདས་གང་ན་བ་དེར་ཐལ་མོ་སྦྱར་བས་བཏུད་དེ། བཅོམ་ལྡན་འདས་ལ་འདི་སྐད་ཅེས་གསོལ་ཏོ། །བཅོམ་ལྡན་འདས་བདག་ཅག་ཀྱང་མ་འོངས་པའི་དུས་ན། དེ་བཞིན་གཤེགས་པ་དགྲ་བཅོམ་པ་ཡང་དག་པར་རྫོགས་པའི་སངས་རྒྱས་ཀྱིས་གང་བརྙེས་པར་གྱུར་པའི་ཆོས་ཀྱི་རྣམ་པ་དེ་ལྟ་བུ་ཐམས་ཅད་ཐོབ་ པར་གྱུར་ཏེ། ཉན་ཐོས་ཀྱི་དགེ་འདུན་ནི་འདི་ལྟ་བུ་ཡོངས་སུ་བསྡུ་བར་བགྱིའོ། །ད་ལྟར་འདིར་དེ་བཞིན་གཤེགས་པས་ཆོས་ཇི་ལྟར་བསྟན་པ་དེ་བཞིན་དུ། འཁོར་འདི་དང་འདྲ་བར་ནི་ཆོས་བསྟན་པར་བགྱིའོ། །ཞེས་སྨོན་ལམ་བཏབ་པོ། །དེ་ནས་བཅོམ་ལྡན་འདས་ཀྱིས་རིགས་ཀྱི་བུ་དེ་དག་གི་བསམ་པ་ཐུགས་སུ་ཆུད་དེ། ཆོས་ཐམས་ཅད་ལ་སྐྱེ་བ་མེད་པ་དང་། འགག་པ་མེད་པ་དང་། མངོན་པར་འདུ་བྱ་བ་མེད་པ་དང་། འབྱུང་བ་མེད་པ་ལ་བཟོད་པར་གྱུར་པ་མཁྱེན་ནས་ཞལ་འཛུམ་པ་མཛད་དོ། །དེ་ནས་ཚེ་དང་ལྡན་པ་ཀུན་དགའ་བོ་སྟན་ལས་ལངས་ཏེ། བླ་གོས་ཕྲག་པ་གཅིག་ལ་གཟར་ནས་པུས་མོ་གཡས་པའི་ལྷ་ང་ས་ལ་བཙུགས་ཏེ། བཅོམ་ལྡན་འདས་གང་ན་བ་དེར་ཐལ་མོ་སྦྱར་བས་བཏུད་དེ། བཅོམ་ལྡན་འདས་ལ་འདི་སྐད་ཅེས་གསོལ་ཏོ། །བཅོམ་ལྡན་འདས་སངས་རྒྱས་བཅོམ་ལྡན་འདས་རྣམས་ནི་རྒྱུ་དང་རྐྱེན་མ་མཆིས་པར་བཞད་པ་མི་མཛད་ན། ཅིའི་རྒྱུ་ཅིའི་རྐྱེན་གྱིས་ཞལ་འཛུམ་པ་མཛད། བཅོམ་ལྡན་འདས་ཀྱིས་བཀའ་སྩལ་པ། ཀུན་དགའ་བོ་འཁོར་འདིའི་ནང་ནས་སྲོག་ཆགས་བྱེ་བ་ཁྲག་ཁྲིག་བརྒྱ་ཕྲག་སྟོང་གིས་མི་སྐྱེ་བའི་ཆོས་ལ་བཟོད་པ་ཐོབ་པར་གྱུར་ཏོ། །དེ་དག་ནི་མ་འོངས་པའི་དུས་ན་བསྐལ་པ་བྱེ་བ་ཁྲག་ཁྲིག་ཕྲག་དྲུག་ཅུ་རྩ་བརྒྱད་ན་བསྐལ་པ་མེ་ཏོག་གི་འབྱུང་གནས་ཞེས་བྱ་བ་ལ། དེ་བཞིན་གཤེགས་པ་དགྲ་བཅོམ་པ་ཡང་དག་པར་རྫོགས་པའི་སངས་རྒྱས་བྱང་ཆུབ་ཀྱི་ཡན་ལག་མེ་ཏོག་ཅེས་བྱ་བ་ཤ་སྟག་འཇིག་རྟེན་དུ་འབྱུང་བར་འགྱུར་རོ། །ཤེས་རབ་ཀྱི་ཕ་རོལ་དུ་ཕྱིན་པ་སྟོང་ཕྲག་ཉི་ཤུ་ལྔ་པ་ལས། ཤཱ་རིའི་བུའི་ལེའུ་སྟེ་གཉིས་པའོ།། །།",
+   "en": "Thereupon, within that assembly, many hundred billion trillion living beings attained acceptance of the nonarising nature of phenomena. Standing up from their seats, with their hands placed together, they bowed toward the place where the Blessed One was seated, and made the following aspiration in the presence of the Blessed One: “Blessed Lord, in the future, we too will obtain all aspects of the Dharma such as these that the tathāgata, arhat, completely awakened Buddha has obtained. We will convene a saṅgha of śrāvakas such as this. We will teach the Dharma in an assembly like this, just as the Tathāgata is demonstrating the Dharma here at the present time.” The Blessed One understood the wishes of those noble children, and, knowing that they would become receptive to [the truth that] all phenomena are nonarising, unceasing, unconditioned, and unoriginated, he smiled. Thereupon, the venerable Ānanda, rising from his seat, with his upper robe over one shoulder, {Dt.98} rested his right knee on the ground, and, placing his hands together in the gesture of homage, bowed toward the Blessed One, and asked, “Blessed Lord, since the tathāgatas, arhats, completely awakened buddhas do not smile without reason and circumstances, what is the reason and what are the circumstances for your smile?” The Blessed One replied, “Ānanda, a hundred billion trillion living beings in this assembly will attain acceptance of the nonarising nature of phenomena. In the future, when sixty-eight million trillion eons have passed, during the eon called Puṣpākara, they will all become manifest in the world as tathāgatas, arhats, completely awakened buddhas named Abhibodhyaṅgapuṣpa.” This completes the second chapter, “Śāriputra,” from “The Perfection of Wisdom in Twenty-Five Thousand Lines.”"
+  }
+ }
+}
