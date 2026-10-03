@@ -1,0 +1,161 @@
+{
+ "slug": "astasahasrika-c13",
+ "title": "八千頌般若・第13品 不可思議品（Acintya）",
+ "family": "sa",
+ "intro": "梵本第十三品＝道行〈不可計品〉＝大明度〈不可計品〉＝施護〈不思議品〉；羅什在〈相無相品〉中段（自「般若為大事故出」起）、第五會在〈甚深相品〉中段、第四會為〈不思議等品〉＋〈譬喻品〉開頭（「實為大事現世間不」至諸天禮退）。道行、大明度、羅什、第四、五會各取到須菩提問「信解者從何處來」之前（該問屬梵本第十四品）。般若為大事、不可思議、不可稱、不可量、無等等事而出；如來法與色等一切法皆不可思議；說時比丘、比丘尼得阿羅漢；般若不為攝受一切智而出（灌頂王喻）；欲色界天子讚歎禮退。",
+ "units": [
+  {
+   "id": "c13-01",
+   "label": "般若為大事、不可思議、不可稱、不可量、無等等事出"
+  },
+  {
+   "id": "c13-02",
+   "label": "但如來法不可思議耶・五蘊一切法皆不可思議（虛空喻）・說時比丘得道"
+  },
+  {
+   "id": "c13-03",
+   "label": "般若實為大事出・不攝受五蘊乃至一切智（灌頂王喻）"
+  },
+  {
+   "id": "c13-04",
+   "label": "欲色界天子讚歎・聞者功德・禮佛還宮"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sa",
+   "lang": "sa",
+   "label": "梵本",
+   "who": "Vaidya 校訂本（1960）・GRETIL"
+  },
+  {
+   "id": "T0224",
+   "lang": "lzh",
+   "label": "道行般若經",
+   "who": "後漢・支婁迦讖譯《道行般若經》・179 年",
+   "work": "T0224"
+  },
+  {
+   "id": "T0225",
+   "lang": "lzh",
+   "label": "大明度經",
+   "who": "吳・支謙譯《大明度經》（第一品夾注）・三世紀",
+   "work": "T0225"
+  },
+  {
+   "id": "T0227",
+   "lang": "lzh",
+   "label": "羅什本",
+   "who": "姚秦・鳩摩羅什譯《小品般若波羅蜜經》・408 年",
+   "work": "T0227"
+  },
+  {
+   "id": "T0220d",
+   "lang": "lzh",
+   "label": "玄奘・第四會",
+   "who": "唐・玄奘譯《大般若經》第四會（卷 538–555）・663 年",
+   "work": "T0220d"
+  },
+  {
+   "id": "T0220d-5",
+   "lang": "lzh",
+   "label": "玄奘・第五會",
+   "who": "唐・玄奘譯《大般若經》第五會（卷 556–565）・663 年",
+   "work": "T0220d"
+  },
+  {
+   "id": "T0228",
+   "lang": "lzh",
+   "label": "施護本",
+   "who": "宋・施護譯《佛母出生三法藏般若波羅蜜多經》・十世紀末",
+   "work": "T0228"
+  }
+ ],
+ "works": [
+  "T0220d",
+  "T0224",
+  "T0225",
+  "T0227",
+  "T0228"
+ ],
+ "anchors": [
+  {
+   "work": "T0228",
+   "node": "不思議品第十三",
+   "uid": "T08n0228_p0632b13"
+  },
+  {
+   "work": "T0224",
+   "range": [
+    "T08n0224_p0450c10",
+    "T08n0224_p0451b09"
+   ]
+  },
+  {
+   "work": "T0225",
+   "range": [
+    "T08n0225_p0492b11",
+    "T08n0225_p0492c10"
+   ]
+  },
+  {
+   "work": "T0227",
+   "range": [
+    "T08n0227_p0559a14",
+    "T08n0227_p0559c19"
+   ]
+  },
+  {
+   "work": "T0220d",
+   "range": [
+    "T07n0220d_p0818a06",
+    "T07n0220d_p0819b05"
+   ]
+  },
+  {
+   "work": "T0220d",
+   "range": [
+    "T07n0220d_p0895b17",
+    "T07n0220d_p0896b21"
+   ]
+  }
+ ],
+ "cells": {
+  "c13-01": {
+   "sa": "ASP_13: acintyaparivartastrayodaśaḥ / atha khalvāyuṣmān subhūtirbhagavantametadavocat - gambhīrā bhagavan prajñāpāramitā / mahākṛtyena bateyaṃ bhagavan prajñāpāramitā pratyupasthitā / acintyakṛtyenātulyakṛtyenāprameyakṛtyenāsaṃkhyeyakṛtyenāsamasamakṛtyena bateyaṃ bhagavan prajñāpāramitā pratyupasthitā / bhagavānāha - evametatsubhūte, evam etat / mahākṛtyeneyaṃ subhūte prajñāpāramitā pratyupasthitā / acintyakṛtyenātulyakṛtyenāprameyakṛtyenāsaṃkhyeyakṛtyenāsamasamakṛtyeneyaṃ subhūte prajñāpāramitā pratyupasthitā / kathaṃ ca subhūte acintyakṛtyeneyaṃ prajñāpāramitā pratyupasthitā? acintyaṃ hi subhūte tathāgatatvaṃ buddhatvaṃ svayaṃbhūtvaṃ sarvajñatvam / evaṃ hi subhūte acintyakṛtyeneyaṃ prajñāpāramitā pratyupasthitā / na hīdaṃ śakyaṃ cittena cintayitum / tatkasya hetoḥ? na hi cittaṃ vā cetanā vā caitasiko vā atra dharmaḥ pravartate / kathaṃ ca subhūte atulyakṛtyeneyaṃ prajñāpāramitā pratyupasthitā? na śakyaṃ subhūte tathāgatatvaṃ buddhatvaṃ svayaṃbhūtvaṃ sarvajñatvaṃ cintayituṃ vā tulayituṃ vā / evaṃ hi subhūte atulyakṛtyeneyaṃ prajñāpāramitā pratyupasthitā / kathaṃ ca subhūte aprameyakṛtyeneyaṃ prajñāpāramitā pratyupasthitā? aprameyaṃ hi subhūte tathāgatatvaṃ buddhatvaṃ svayaṃbhūtvaṃ sarvajñatvam / evaṃ hi subhūte aprameyakṛtyeneyaṃ prajñāpāramitā pratyupasthitā / kathaṃ ca subhūte asaṃkhyeyakṛtyeneyaṃ prajñāpāramitā pratyupasthitā? asaṃkhyeyaṃ hi subhūte tathāgatatvaṃ buddhatvaṃ svayaṃbhūtvaṃ sarvajñatvam / evaṃ hi subhūte asaṃkhyeyakṛtyeneyaṃ prajñāpāramitā pratyupasthitā / kathaṃ ca subhūte asamasamakṛtyeneyaṃ prajñāpāramitā pratyupasthitā? nāsti subhūte tathāgatasyārhataḥ samyaksaṃbuddhasya svayaṃbhuvaḥ sarvajñasya samaḥ, kutaḥ punaruttaraḥ? evaṃ hi subhūte asamasamakṛtyeneyaṃ prajñāpāramitā pratyupasthitā //",
+   "T0224": "須菩提白佛言：「極大究竟般若波羅蜜，不可計究竟，不可量究竟，無有與等者究竟，無有邊究竟。」佛言：「極大究竟般若波羅蜜，不可計究竟，不可量究竟，無有與等者究竟，無有邊究竟，安隱般若波羅蜜，不可計究竟，怛薩阿竭無師薩芸若，是故般若波羅蜜不可計究竟。何等般若波羅蜜不可量究竟？不可量怛薩阿竭無師薩芸若，不可議、不可稱，是故般若波羅蜜不可量究竟。何等般若波羅蜜安隱究竟無有與等者？怛薩阿竭誰能過者，是故般若波羅蜜無有與等者究竟。何等般若波羅蜜無有邊究竟？無有邊怛薩阿竭無師薩芸若，是故般若波羅蜜無有邊究竟。」",
+   "T0225": "善業白佛言：「極大究竟明度，無極無量、無與等者。」佛言：「然！如來無師一切智，是故明度不可稱量，安隱究竟，無與等者。」",
+   "T0227": "須菩提白佛言：「世尊！般若波羅蜜為大事故出，般若波羅蜜為不可思議事、不可稱事、不可量事、無等等事故出。」佛言：「如是，如是！須菩提！般若波羅蜜為大事故出，為不可思議事、不可稱事、不可量事、無等等事故出。須菩提！云何般若波羅蜜為大事故出？為不可思議事、不可稱事、不可量事、無等等事故出？須菩提！如來法、佛法、自然法、一切智人法，廣大不可思議，不可籌量。是故，須菩提！般若波羅蜜為大事不可思議事故出。云何般若波羅蜜為不可稱事、不可量事故出？須菩提！如來法、佛法、自然法、一切智人法，不可稱，不可量。是故，須菩提！般若波羅蜜為不可稱、不可量事故出。云何般若波羅蜜為無等等事故出？須菩提！一切無與如來等者，何況有勝。是故，須菩提！般若波羅蜜為無等等事故出。」",
+   "T0220d": "爾時，具壽善現便白佛言：「世尊！甚深般若波羅蜜多為大事故出現世間，為不可思議事故出現世間，為不可稱量事故出現世間，為無數量事故出現世間，為無等等事故出現世間。」佛告善現：「如是！如是！如汝所說。善現！云何甚深般若波羅蜜多為大事故出現世間？謂諸如來、應、正等覺，皆以濟拔一切有情，無時暫捨而為大事，甚深般若波羅蜜多為此事故出現世間。善現！云何甚深般若波羅蜜多為不可思議事故、不可稱量事故、無數量事故、無等等事故出現世間？謂諸如來、應、正等覺所有佛性、如來性、自然覺性、一切智性，皆不可思議、不可稱量、無數量、無等等，甚深般若波羅蜜多為此事故出現世間。」",
+   "T0220d-5": "爾時，善現便白佛言：「甚深般若波羅蜜多為大事故出現世間，為不可思議事故、不可稱量事故、無數量事故、無等等事故出現世間。」佛告善現：「如是！如是！如汝所說。善現！云何甚深般若波羅蜜多為大事故出現世間？謂諸如來、應、正等覺，皆以濟拔一切有情無時暫捨而為大事，甚深般若波羅蜜多為此事故出現世間。「善現！云何甚深般若波羅蜜多為不可思議事故、不可稱量事故、無數量事故、無等等事故出現世間？謂諸如來、應、正等覺所有佛性、如來性、自然覺性、一切智性，皆不可思議、不可稱量、無數量、無等等，甚深般若波羅蜜多，為此事故出現世間。」",
+   "T0228": "爾時，尊者須菩提白佛言：「世尊！此般若波羅蜜多最上甚深，為大事故出，為不可思議事、不可稱事、不可量事、不可數事、無等等事故出。」佛言：「須菩提！如是，如是！般若波羅蜜多最上甚深，為大事故出，為不可思議事、不可稱事、不可量事、不可數事、無等等事故出。「須菩提！云何為不可思議事故出？所謂如來法、佛法、自然智法、一切智法，如是諸法不可思議，非心非心數法可轉，此中無分別，是故般若波羅蜜多，為不可思議事故出。「須菩提！云何為不可稱事故出？所謂如來法、佛法、自然智法、一切智法，如是諸法非心所稱，是故般若波羅蜜多為不可稱事故出。「須菩提！云何為不可量事故出？所謂如來法、佛法、自然智法、一切智法，如是諸法出過諸量、無有限量，是故般若波羅蜜多為不可量事故出。「須菩提！云何為不可數事故出？所謂如來法、佛法、自然智法、一切智法，如是諸法出過諸數非數所及，是故般若波羅蜜多為不可數事故出。「須菩提！云何為無等等事故出？所謂如來法、佛法、自然智法、一切智法，如是諸法無有等者況復過上，是故般若波羅蜜多為無等等事故出。」"
+  },
+  "c13-02": {
+   "sa": "sthaviraḥ subhūtirāha - kiṃ punarbhagavaṃstathāgatatvamevācintyamatulyamaprameyamasaṃkhyeyamasamasamam? evaṃ buddhatvameva svayaṃbhūtvameva sarvajñatvameva atulyamaprameyamasaṃkhyeyamasamasamam, utāho rūpamapyacintyamatulyamaprameyamasaṃkhyeyamasamasamam? evaṃ vedanāpi saṃjñāpi saṃskārā apiḥ? vijñānamapyacintyamatulyamaprameyamasaṃkhyeyamasamasamam, utāho sarvadharmā apyacintyā atulyā aprameyā asaṃkhyeyā asamasamāḥ? evamukte bhagavānāyuṣmantaṃ subhūtimetadavocat - evametatsubhūte, evam etat / rūpam api subhūte acintyamatulyamaprameyamasaṃkhyeyamasamasamam / evaṃ vedanāpi saṃjñāpi saṃskārā api / vijñānam api subhūte acintyamatulyamaprameyamasaṃkhyeyamasamasamam / evaṃ sarvadharmā api subhūte acintyā atulyā aprameyā asaṃkhyeyā asamasamāḥ / tatkasya hetoḥ? rūpasya hi subhūte yā dharmatā, na tatra cittaṃ na cetanā na caitasikā dharmā na tulanā / evaṃ vedanāyāḥ saṃjñāyāḥ saṃskārāṇām / vijñānasya hi subhūte yā dharmatā, na tatra cittaṃ na cetanā na caitasikā dharmā na tulanā / sarvadharmāṇāṃ hi subhūte yā dharmatā, na tatra cittaṃ na cetanā na caitasikā dharmā na tulanā / evaṃ hi subhūte rūpamapyacintyamatulyam / evaṃ vedanāpi saṃjñāpi saṃskārā api / vijñānamapyacintyamatulyam / evaṃ sarvadharmā apyacintyā atulyāḥ / rūpam api subhūte aprameyam / evaṃ vedanāpi saṃjñāpi saṃskārā api / vijñānam api subhūte aprameyam, sarvadharmā api subhūte aprameyāḥ / tatkasya hetoḥ? rūpasya hi subhūte pramāṇaṃ na prajñāyate / evaṃ vedanāyāḥ saṃjñāyāḥ saṃskārāṇām / vijñānasya hi subhūte pramāṇaṃ na prajñāyate / sarvadharmāṇām api hi subhūte pramāṇaṃ na prajñāyate / kena kāraṇena subhūte rūpasya pramāṇaṃ na prajñāyate? kena kāraṇena vedanāyāḥ saṃjñāyāḥ saṃskārāṇām? kena kāraṇena subhūte vijñānasya pramāṇaṃ na prajñāyate? kena kāraṇena subhūte sarvadharmāṇām api pramāṇaṃ na prajñāyate? rūpasya hi subhūte pramāṇaṃ na vidyate / evaṃ vedanāyāḥ saṃjñāyāḥ saṃskārāṇām / vijñānasya hi subhūte pramāṇaṃ na vidyate / sarvadharmāṇām api hi subhūte pramāṇaṃ na vidyate / kena kāraṇena subhūte rūpasya pramāṇaṃ na vidyate? evaṃ vedanāyāḥ saṃjñāyāḥ saṃskārāṇām? kena kāraṇena subhūte vijñānasya pramāṇaṃ na vidyate? kena kāreṇena subhūte sarvadharmāṇām api pramāṇaṃ na vidyate? apramāṇatvātsubhūte sarvadharmāṇām / rūpam api subhūte asaṃkhyeyam / evaṃ vedanā saṃjñā saṃskārāḥ / vijñānam api subhūte asaṃkhyeyam / sarvadharmā api subhūte asaṃkhyeyāḥ, gaṇanāsamatikrāntatvāt / rūpamapi subhūte asamasamam / evaṃ vedanā saṃjñā saṃskārāḥ / vijñānam api subhūte asamasamam / evaṃ sarvadharmā api subhūte asamasamāḥ, ākāśasamatvātsubhūte sarvadharmāṇām / tatkiṃ manyase subhūte api tu astyākāśasya samo vā gaṇanā vā pramāṇaṃ vā tulyaṃ vā cittaṃ vā caitasikā vā dharmāḥ? subhūtirāha - no hīdaṃ bhagavan / bhagavānāha - evameva subhūte anena paryāyeṇa sarvadharmā api acintyā atulyā aprameyā asaṃkhyeyā asamasamāḥ / ete ca subhūte tathāgatadharmā acintyāścittoparamatvāt, atulyāstulanāsamatikrāntatvāt / acintyā atulyā iti subhūte vijñānagatasyaitaddharmasyādhivacanam / evamaprameyā asaṃkhyeyā asamasamā iti subhūte samasaṃkhyāpramāṇoparamatvādaprameyā asaṃkhyeyā asamasamāstathāgatadharmāḥ / ākāśasamāsaṃkhyeyāprameyatayā asamasamā asaṃkhyeyā aprameyā ete dharmāḥ / ākāśatulyatayā atulyā asamavahitā bateme dharmāḥ / tasmātsubhūte atulyā ete dharmā ucyante / ākāśācintyatayā acintyā ete dharmāḥ / ākāśātulyatayā atulyā ete dharmāḥ / ākāśāprameyatayā aprameyā ete dharmāḥ / ākāśāsaṃkhyeyatayā asaṃkhyeyā ete dharmāḥ / ākāśāsamasamatayā asamasamā ete dharmāḥ / asyāṃ khalu punaracintyatāyāmatulyatāyāmaprameyatāyāmasaṃkhyeyatāyāmasamasamatāyāṃ bhāṣyamāṇāyāṃ pañcānāṃ bhikṣuśatānāmanupādāya āsravebhyaścittāni vimuktāni, viṃśateś ca bhikṣuṇīśatānām anupādāya āsravebhyaś cittāni vimuktāni, ṣaṣṭeścopāsakaśatānāṃ virajo vigatamalaṃ dharmeṣu dharmacakṣurviśuddham, triṃśateścopāsikānāṃ virajo vigatamalaṃ dharmeṣu dharmacakṣurviśuddham, viṃśatyā ca bodhisattvairanutpattikeṣu dharmeṣu kṣāntiḥ pratilabdhābhūt / te ca bhagavatā ihaiva bhadrakalpe vyākṛtā anuttarāyāṃ samyaksaṃbodhau / ye 'pi te upāsakā upāsikāś ca yeṣāṃ virajo vigatamalaṃ dharmeṣu dharmacakṣurviśuddham, te 'pi bhagavatā vyākṛtāḥ / teṣāmapyanupādāyāsravebhyaścittaṃ vimokṣyate //",
+   "T0224": "須菩提白佛言：「云何怛薩阿竭無師薩芸若，不可計、不可量、無邊？」佛言：「色痛痒思想生死識不可計，諸法亦不可計，諸法了無所法，正是中不可計；色痛痒思想生死識不可思，諸法亦不可量；色痛痒思想生死識無有邊，諸法亦無有邊；色痛痒思想生死識邊幅了不可得，諸法邊幅了不可得。用何等故，色痛痒思想生死識無有邊幅，諸法無有邊幅；色痛痒思想生死識邊幅了不可得無有盡處，諸法邊幅了不可得無有盡處？用何等故，色痛痒思想生死識諸法了不可得，邊幅無有盡處時云何？」佛言：「空處可計盡不耶？」須菩提言：「空不可計盡。」佛言：「諸法不可計、不可稱、無有邊幅，用是故，怛薩阿竭法如是比，不可計、不可稱、無有邊。怛薩阿竭發心起學，不可計、不可稱、無有邊，本無心無念。譬如空無心無念，有心有念因隨是生死無有邊。怛薩阿竭法如空無有邊，是法如空不可計，作是說不可計、不可稱、無有邊。」佛說是經時，五百比丘僧、三十比丘尼，皆得阿羅漢，六十優婆塞、三十優婆夷，皆得須陀洹道，三十菩薩皆逮得無所從生法樂，皆當於是婆羅劫中受決。",
+   "T0225": "善業白佛言：「云何，天中天！如來無師一切知無量無邊？」佛言：「五陰不可計量，諸法亦爾。五陰無邊，諸法邊幅無獲其際者。用何等故，五陰、諸法亦盡處。云何，善業！虛空可計盡不？」對曰：「不可盡，天中天！」佛言：「諸法亦然。用是故，如來法、諸法無邊量。用法無量故，發心起學無量明度。如是本無心念。譬如虛空，無心無念，有心有念。」因隨作是說不可稱計時，五百比丘、二十比丘尼得應儀，六十清信士、清信女皆得溝港，二十闓士逮得無所從生法樂，皆當於是賢劫中受決。",
+   "T0227": "「世尊！但如來法、佛法、自然法、一切智人法，不可思議，不可稱，不可量；色亦不可思議，不可稱，不可量；受、想、行、識亦不可思議，不可稱，不可量。」「須菩提！色亦不可思議，不可稱，不可量；受、想、行、識亦不可思議，不可稱，不可量；一切法亦不可思議，不可稱，不可量。何以故？須菩提！諸法實相中，無心無心數法。須菩提！色不可稱，受、想、行、識亦不可稱，一切法亦不可稱。此中無有分別故。須菩提！色不可量，受、想、行、識亦不可量，一切法亦不可量。須菩提！何以故？色不可量，受、想、行、識不可量，一切法不可量。須菩提！色量無所有，不可得；受、想、行、識量無所有，不可得；一切法量無所有，不可得。須菩提！何以故？色量無所有，不可得；受、想、行、識量無所有，不可得；一切法量無所有，不可得。須菩提！色無所有故，受、想、行、識無所有故，一切法無所有故，量不可得。須菩提！於意云何，虛空有心心數法不？」「不也，世尊！」「須菩提！以是因緣，一切法不可思議。滅諸籌量故，名不可思議；滅諸稱故，名不可稱。須菩提！稱者，即是識業。須菩提！無量者，過諸量故。須菩提！如虛空不可思議，不可稱，不可量。諸如來法、佛法、自然法、一切智人法，亦如是不可思議、不可稱、不可量。」說是不可思議無等等法時，五百比丘、二十比丘尼，不受一切法故，漏盡心得解脫；六萬優婆塞、三萬優婆夷，於諸法中得法眼淨；二十菩薩得無生法忍，於此賢劫皆當成佛。",
+   "T0220d": "爾時，善現復白佛言：「為但如來、應、正等覺所有佛性、如來性、自然覺性、一切智性不可思議、不可稱量、無數量、無等等，為色、受、想、行、識乃至一切法亦不可思議、不可稱量、無數量、無等等？」佛告善現：「非但如來、應、正等覺所有佛性、如來性、自然覺性、一切智性不可思議、不可稱量、無數量、無等等，色、受、想、行、識乃至一切法亦不可思議、不可稱量、無數量、無等等。所以者何？於一切法真實性中，心及心所皆不可得。「善現當知！諸所有色、受、想、行、識及一切法皆不可施設故，不可思議、不可稱量、無數量、無等等。何以故？如是諸法無自性故、不可得故、自性空故。復次，善現！諸所有色、受、想、行、識及一切法皆不可得故，不可思議、不可稱量、無數量、無等等。何以故？如是諸法無限量故、無所有故、自性空故。復次，善現！諸所有色、受、想、行、識及一切法皆無限量故，不可思議、不可稱量、無數量、無等等。」具壽善現便白佛言：「何因緣故，所有諸色、受、想、行、識及一切法皆無限量？」佛告善現：「於意云何？虛空為有心、心所法能限量不？」善現對曰：「不也！世尊！」佛告善現：「諸所有色、受、想、行、識及一切法亦復如是，自性空故，心、心所法不能限量。由此因緣，諸所有色、受、想、行、識及一切法無限量故，皆不可思議、不可稱量、無數量、無等等。「善現當知！以一切法皆不可思議、不可稱量、無數量、無等等故，一切如來、應、正等覺所有佛法、如來法、自然覺法、一切智法亦不可思議、不可稱量、無數量、無等等。善現當知！如是諸法皆不可思議，思議滅故；不可稱量，稱量滅故；無數量，數量滅故；無等等，等等滅故。善現當知！如是諸法皆不可思議，過思議故；不可稱量，過稱量故；無數量，過數量故；無等等，過等等故。善現當知！不可思議、不可稱量、無數量、無等等者，但有增語都無真實。善現當知！不可思議、不可稱量、無數量、無等等者，皆如虛空都無所有。由此因緣，一切如來、應、正等覺所有佛法、如來法、自然覺法、一切智法皆不可思議、不可稱量、無數量、無等等，聲聞、獨覺、世間天、人、阿素洛等皆悉不能思議、稱量、數量、等等此諸法故。」佛說如是不可思議、不可稱量、無數量、無等等法時，眾中有五百苾芻、二千苾芻尼不受諸漏心得解脫，復有六十鄔波索迦、三十鄔波斯迦於諸法中遠塵離垢生淨法眼，復有二萬菩薩摩訶薩得無生法忍，世尊記彼於賢劫中得受無上正等菩提不退轉記；即前所說鄔波索迦、鄔波斯迦於諸法中遠塵離垢生淨法眼者，佛亦記彼不久當證永盡諸漏心慧解脫。",
+   "T0220d-5": "具壽善現復白佛言：「為但如來、應、正等覺所有佛性、如來性、自然覺性、一切智性，不可思議、不可稱量、無數量、無等等；為色、受、想、行、識乃至一切法，亦不可思議、不可稱量、無數量、無等等？」佛告善現：「非但如來、應、正等覺所有佛性、如來性、自然覺性、一切智性，不可思議、不可稱量、無數量、無等等；色、受、想、行、識乃至一切法，亦不可思議、不可稱量、無數量、無等等。所以者何？於一切法真實性中，心及心所皆不可得。「善現當知！諸所有色、受、想、行、識及一切法皆不可施設故，不可思議、不可稱量、無數量、無等等。何以故？如是諸法無自性故、不可得故、自性空故。復次，善現！諸所有色、受、想、行、識及一切法皆不可得故，不可思議、不可稱量、無數量、無等等。何以故？如是諸法無限量故、無所有故、自性空故。復次，善現！諸所有色、受、想、行、識及一切法皆無限量故，不可思議、不可稱量、無數量、無等等。」具壽善現便白佛言：「何因緣故，諸所有色、受、想、行、識及一切法皆無限量？」佛告善現：「於意云何？虛空為有心、心所法能限量不？」善現對曰：「不也！世尊！」佛告善現：「諸所有色、受、想、行、識及一切法亦復如是，自性空故，心、心所法不能限量。由此因緣，諸所有色、受、想、行、識及一切法無限量故，皆不可思議、不可稱量、無數量、無等等。善現當知！以一切法皆不可思議、不可稱量、無數量、無等等故，一切如來、應、正等覺所有佛法、如來法、自然覺法、一切智法亦不可思議、不可稱量、無數量、無等等。「善現當知！如是諸法皆不可思議，思議滅故；不可稱量，稱量滅故；無數量，數量滅故；無等等，等等滅故。善現當知！如是諸法皆不可思議，過思議故；不可稱量，過稱量故；無數量，過數量故；無等等，過等等故。善現當知！不可思議、不可稱量、無數量、無等等者，但有增語都無真實。善現當知！不可思議、不可稱量、無數量、無等等者，皆如虛空都無所有。由此因緣，一切如來、應、正等覺所有佛法、如來法、自然覺法、一切智法皆不可思議、不可稱量、無數量、無等等。聲聞、獨覺、世間天、人、阿素洛等，皆悉不能思議、稱量、數量、等等此諸法故。」如來說此不可思議、不可稱量、無數量、無等等法時，會中有五百苾芻、二十苾芻尼，諸漏永盡心得解脫；復有六萬鄔波索迦、三萬鄔波斯迦，於諸法中遠塵離垢生淨法眼；復有二十菩薩摩訶薩得無生法忍，世尊記彼於賢劫中當得作佛度有情眾。",
+   "T0228": "復次，須菩提白佛言：「世尊！若如來法、佛法、自然智法、一切智法，如是諸法不可思議、不可稱、不可量、不可數、無等等者。彼色亦不可思議、不可稱、不可量、不可數、無等等，受、想、行、識亦不可思議、不可稱、不可量、不可數、無等等耶？」佛告尊者須菩提言：「如是，如是！須菩提！色不可思議、不可稱、不可量、不可數、無等等故，受、想、行、識不可思議、不可稱、不可量、不可數、無等等，乃至一切法亦不可思議、不可稱、不可量、不可數、無等等。何以故？色於法性中無心無心數法故，受、想、行、識於法性中無心無心數法，乃至一切法於法性中亦無心無心數法。「須菩提！色、受、想、行、識於法性中以無心無心數法故，不可思議、不可稱，乃至一切法亦不可思議、不可稱。須菩提！色、受、想、行、識不可量故，乃至一切法亦不可量。何以故？色、受、想、行、識量不可得，乃至一切法量亦不可得。以不可得故，即色、受、想、行、識乃至一切法無所作。以無所作故，即色、受、想、行、識乃至一切法無所生。以無所生故，是故色、受、想、行、識乃至一切法皆不可量。須菩提！色、受、想、行、識不可數故，乃至一切法亦不可數。何以故？出過數分故。須菩提！色、受、想、行、識無等等故，乃至一切法亦無等等。何以故？如虛空平等故，一切法亦然。「復次，須菩提！於汝意云何？虛空有心、心數法不？」須菩提言：「不也，世尊！」佛言：「須菩提！彼一切法亦復如是。虛空不可思議故一切法亦不可思議，虛空不可稱故一切法亦不可稱，虛空不可量故一切法亦不可量，虛空不可數故一切法亦不可數，虛空無等等故一切法亦無等等。是故諸法離諸分別，若分別者皆是識業。「須菩提！滅諸籌量名不可思議，非所稱故名不可稱，無有量故名不可量，過諸數故名不可數，如虛空故名無等等。以是緣故，當知如來法、佛法、自然智法、一切智法，乃至一切法皆如虛空，不可思議、不可稱、不可量、不可數、無等等。」說是不可思議乃至無等等法門時，會中有五百苾芻、二十苾芻尼，不受諸法，得諸漏盡，心善解脫。六十優婆塞、三十優婆夷，遠塵離垢，得法眼淨。即於佛前皆得授記。二十菩薩悉證無生法忍，而諸菩薩於此賢劫，當得成就阿耨多羅三藐三菩提果。"
+  },
+  "c13-03": {
+   "sa": "atha khalvāyuṣmān subhūtirbhagavantametadavocat - gambhīrā bhagavan prajñāpāramitā / mahākṛtyena bateyaṃ bhagavan prajñāpāramitā pratyupasthitā / evamukte bhagavānāyuṣmantaṃ subhūtimetadavocat - evametatsubhūte, evam etat / gambhīrā subhūte prajñāpāramitā / mahākṛtyeneyaṃ subhūte prajñāpāramitā pratyupasthitā / tatkasya hetoḥ? atra hi subhūte sarvajñatā samāyuktā, atra pratyekabuddhabhūmiḥ samāyuktā, atra sarvaśrāvakabhūmiḥ samāyuktā / tadyathāpi nāma subhūte rājñaḥ kṣatriyasya mūrdhābhiṣiktasya janapadasthāmavīryaprāptasya yāni tāni rājakṛtyāni, yāni ca nagarakṛtyāni, yāni ca janapadakṛtyāni, sarvāṇi tāni amātyasamāyuktāni bhavanti / alpotsukastato rājā bhavatyapahṛtabhāraḥ / evameva subhūte ye kecidbuddhadharmā vā pratyekabuddhadharmā vā śrāvakadharmā vā, sarve te prajñāpāramitāsamāyuktāḥ / prajñāpāramitā tatra kṛtyaṃ karoti / anena subhūte paryāyeṇa mahākṛtyeneyaṃ prajñāpāramitā pratyupasthitā rūpasyāparigrahāya anabhiniveśāya / evaṃ vedanāyāḥ saṃjñāyāḥ saṃskārāṇām / vijñānasyāparigrahāya anabhiniveśāya, srotaāpattiphalasyāparigrahāyānabhiniveśāya, evaṃ sakṛdāgāmiphalasyānāgāmiphalasyārhattvaphalasyāparigrahāyānabhiniveśāya, pratyekabodheraparigrahāyānabhiniveśāya, sarvajñatāyā aparigrahāyānabhiniveśāya prajñāpāramitā pratyupasthitā // subhūtirāha - kathaṃ bhagavan sarvajñatāyā aparigrahāyānabhiniveśāya prajñāpāramitā pratyupasthitā? bhagavānāha - tatkiṃ manyase subhūte samanupaśyasi tvamarhattvaṃ yatra parigrahaṃ vā abhiniveśaṃ vā kuryāḥ? subhūtirāha - no hīdaṃ bhagavan / nāhaṃ bhagavaṃstaṃ dharmaṃ samanupaśyāmi yaṃ parigṛhṇīyāmabhiniveśeyaṃ vā arhattvamiti / bhagavānāha - evametatsubhūte, evam etat / aham api subhūte tathāgatatvaṃ na samanupaśyāmi / so 'haṃ subhūte tathāgatatvamasamanupaśyan na parigṛhṇāmi nābhiniveśe / tasmāttarhi subhūte sarvajñatāpyaparigrahā anabhiniveśā / subhūtirāha - sarvajñatāpi bhagavan aparigrahā anabhiniveśeti? mā bhagavan navayānasaṃprasthitāḥ parīttakuśalamūlā bodhisattvā mahāsattvā imaṃ nirdeśaṃ śrutvā utrasiṣuḥ saṃtrasiṣuḥ saṃtrāsamāpatsyante / api tu khalu punarbhagavan ye bodhisattvā mahāsattvā hetusaṃpannāḥ pūrvajinakṛtādhikārā dīrgharātrāvaropitakuśalamūlā bhaviṣyanti, ta imāṃ gambhīrāṃ prajñāpāramitāṃ śrutvā adhimokṣyanti / bhagavānāha - evametatsubhūte, evam etat //",
+   "T0224": "須菩提白佛言：「般若波羅蜜甚深極大安隱究竟。」佛言：「般若波羅蜜甚深極大安隱究竟，薩芸若、須陀洹、斯陀含、阿那含、阿羅漢、辟支佛道，悉從是經出。譬如遮迦越王所當為者，一切傍臣所有郡國人民皆屬王，亦無所復憂。阿羅漢、辟支佛、佛，若諸法，皆從般若波羅蜜中出，皆是經所立。」佛言：「色痛痒思想生死識，不受不入，須陀洹、斯陀含、阿那含、阿羅漢、辟支佛、薩芸若道，不受不入。」須菩提問佛言：「何等薩芸若不受？何等薩芸若不入？」佛言：「云何，須菩提！見若羅漢所入處不？」須菩提言：「不見，天中天！不見是法我所入處。」佛言：「善哉，須菩提！我亦不見怛薩阿竭所入處。如我怛薩阿竭無所入，薩芸若無所入處。」",
+   "T0225": "對曰：「甚深，天中天！明度，極大安隱究竟。」佛言：「如爾云矣。出一切智、諸闓士、緣一覺道，悉從中出。譬若轉輪聖王，一切國土皆為臣隷，王無所憂。佛法、緣一覺法、應儀法皆從中出。立五陰不受不入，溝港、頻來、不還、應儀、緣一覺、一切智道，不受不入。」善業問：「何等一切智不受不入？」佛言：「云何，若見應儀等所入不？」對曰：「不見也，天中天！」佛言：「善哉，善哉！我亦不見如來所入處。如我無所入，一切智亦無所入。」",
+   "T0227": "爾時須菩提白佛言：「世尊！是深般若波羅蜜為大事故出，乃至為無等等事故出。」佛言：「如是，如是！須菩提！是深般若波羅蜜為大事故出，乃至為無等等事故出。諸佛薩婆若，皆在般若波羅蜜中；一切聲聞、辟支佛地，皆在般若波羅蜜中。須菩提！譬如灌頂剎帝利王，若諸城事，諸聚落事，皆付大臣，王無所憂。如是，須菩提！諸如來亦如是。所有聲聞事、辟支佛事、佛事，皆在般若波羅蜜中，般若波羅蜜能成辦其事。是故，須菩提！當知般若波羅蜜為大事故出，乃至為無等等事故出。須菩提！般若波羅蜜不受不著色故出，不受不著受、想、行、識故出，不受不著須陀洹果、斯陀含果、阿那含果、阿羅漢果、辟支佛道故出，乃至薩婆若亦不受不著故出。」須菩提白佛言：「世尊！云何般若波羅蜜，不受薩婆若，不著薩婆若？」「須菩提！於意云何，汝見阿羅漢法可受可著不？」「不也，世尊！我不見是法可生著者。」佛言：「善哉，善哉！須菩提！我亦不見如來法。以不見故，不受不著。是故，須菩提！薩婆若，不可受，不可著。」",
+   "T0220d": "爾時，具壽善現復白佛言：「世尊！甚深般若波羅蜜多實為大事現世間不？」佛告善現：「如是！如是！甚深般若波羅蜜多實為大事出現世間。所以者何？甚深般若波羅蜜多實能成辦一切智智，實能成辦諸獨覺地，實能成辦諸聲聞地。善現當知！如剎帝利灌頂大王，威德自在降伏一切，以諸國事付囑大臣，端拱無為安隱快樂，諸佛亦爾，為大法王，威德自在降伏一切，以諸佛法、若獨覺法、若聲聞法，悉皆付囑甚深般若波羅蜜多普令成辦。是故，善現！甚深般若波羅蜜多實為大事出現世間。「善現當知！甚深般若波羅蜜多不為攝受、執著色故出現世間，不為攝受、執著受、想、行、識故出現世間；不為攝受、執著預流果故出現世間，不為攝受、執著一來、不還、阿羅漢果故出現世間；不為攝受、執著獨覺菩提故出現世間，亦不為攝受、執著一切智智故出現世間。」具壽善現即白佛言：「云何如是甚深般若波羅蜜多亦不為攝受、執著一切智智故出現世間？」佛告善現：「於意云何？汝頗見有阿羅漢果可攝受、執著不？」善現答言：「不也！世尊！我不見有阿羅漢果可於其中攝受、執著。」佛告善現：「善哉！善哉！我亦不見有如來法可於其中攝受、執著。是故，善現！甚深般若波羅蜜多亦不為攝受、執著一切智智故出現世間。」具壽善現復白佛言：「若甚深般若波羅蜜多亦不為攝受、執著一切智智故出現世間者，新學大乘諸菩薩眾，聞如是說心便驚怖不能信受。若因圓滿，曾於過去無量佛所發弘誓願，長夜積集殊勝善根，諸菩薩眾聞如是說乃能信受。」佛告善現：「如是！如是！如汝所說。由此因緣，甚深般若波羅蜜多不應輒為新學大乘諸菩薩說。」",
+   "T0220d-5": "爾時，善現復白佛言：「甚深般若波羅蜜多實為大事出世間不？」佛告善現：「如是！如是！甚深般若波羅蜜多實為大事出於世間。所以者何？甚深般若波羅蜜多具能成辦一切智地，若聲聞地、若獨覺地皆在此攝。「善現當知！如剎帝利灌頂大王，威德自在降伏一切，以諸國事付囑大臣，端拱無為安隱受樂。如來亦爾，為大法王，威德自在降伏一切，以諸佛法、若獨覺法、若聲聞法，悉皆付囑甚深般若波羅蜜多，普令成辦。是故，善現！甚深般若波羅蜜多實為大事出於世間。「善現當知！甚深般若波羅蜜多不為攝受執著色故乃至識故出於世間，不為攝受執著預流果故乃至一切智智故出於世間。」具壽善現便白佛言：「云何般若波羅蜜多亦不為攝受執著一切智智故出於世間？」佛言：「善現！於意云何？汝頗見有阿羅漢果可攝受執著不？」善現對曰：「不也！世尊！我不見有阿羅漢果可於其中攝受執著。」佛言：「善現！善哉！善哉！我亦不見有如來法可於其中攝受執著。是故，善現！甚深般若波羅蜜多亦不為攝受執著一切智智故出於世間。」",
+   "T0228": "爾時，尊者須菩提白佛言：「世尊！般若波羅蜜多最上甚深。佛先所說為大事故出，其相云何？」佛言：「須菩提！般若波羅蜜多為大事故出者，汝今當知，所謂佛法、緣覺法、聲聞法，皆住般若波羅蜜多中。須菩提！譬如世間剎帝利王子，得灌頂已處於王位。所有王事及國城事、人民事等，皆付大臣，臣受命已統攝而行。般若波羅蜜多亦復如是，所有佛法、緣覺法、聲聞法，皆住般若波羅蜜多中，而般若波羅蜜多統攝諸法。如是等法名為大事，是故般若波羅蜜多為大事故出。「復次，須菩提！般若波羅蜜多不受不著色故出，不受不著受、想、行、識故出，不受不著須陀洹果、斯陀含果、阿那含果、阿羅漢果故出，不受不著緣覺果故出，不受不著一切智故出。」須菩提白佛言：「世尊！云何般若波羅蜜多不受不著一切智故出耶？」佛言：「須菩提！於汝意云何？汝所證得阿羅漢法，有所見耶？可受可著耶？」須菩提言：「不也，世尊！我所證法，是中無見，亦不可受，亦不可著。」佛言：「須菩提！般若波羅蜜多亦復如是。所有如來法乃至一切智法，是諸法中，悉無所見不受不著，是故般若波羅蜜多不受不著一切智故出。」爾時，尊者須菩提白佛言：「世尊！如佛所說，般若波羅蜜多不受不著，最上甚深希有難得。世尊！彼初住大乘菩薩摩訶薩，若聞是說，不驚不怖亦不退失，生信解者，當知是菩薩具足正因，於先佛所已種善根，是故於今得聞此甚深般若波羅蜜多，亦復不生驚怖，心淨信解。」佛言：「須菩提！如是，如是！如汝所說。」"
+  },
+  "c13-04": {
+   "sa": "atha khalu te kāmāvacarā rūpāvarāś ca devaputrā bhagavantametadavocan - gambhīrā bhagavan prajñāpāramitā, durdṛśā duranubodhā / pūrvajinakṛtādhikārā dīrgharātrāvaropitakuśalamūlāste bhagavan sattvā bhaviṣyanti, ya enāṃ gambhīrāṃ prajñāpāramitāmadhimokṣyanti / sacedbhagavaṃstrisāhasramahāsāhasre lokadhātau ye sattvāḥ, te sarve śraddhānusāribhūmau kalpaṃ vā kalpāvaśeṣaṃ vā careyuḥ yaśceha gambhīrāyāṃ prajñāpāramitāyāmekadivasam api kṣāntiṃ rocayedgaveṣeta cintayettulayedupaparīkṣeta upanidhyāyet, ayameva bhagavaṃstebhyaḥ śreyān / evamukte bhagavāṃstān kāmāvacarān rūpāvacarāṃś ca devaputrānāmantrayāmāsa - yadi devaputrāḥ kaścideva kulaputro vā kuladuhitā vā imāṃ gambhīrāṃ prajñāpāramitāṃ śṛṇuyāt, yāvadasya devaputrāḥ kṣiprataraṃ nirvāṇaṃ pratikāṅkṣitavyam, na tveva teṣāṃ śraddhānusāribhūmau kalpaṃ vā kalpāvaśeṣaṃ vā caratām / atha khalu te kāmāvacarā rūpāvacarāś ca devaputrā bhagavantametadavocan - mahāpāramiteyaṃ bhagavan yaduta prajñāpāramitā / ityuktvā bhagavataḥ pādau śirasā abhivandya bhagavantaṃ triḥ pradakṣiṇīkṛtya bhagavato 'ntikād gamiṣyāma ityārocya prakrāntāḥ / te 'vidūraṃ gatvā antarhitāḥ / kāmāvacarāś ca devaputrāḥ kāmadhātau prātiṣṭhantaḥ, rūpāvacarāś ca devaputrā brahmaloke prātiṣṭhanteti // āryāṣṭasāhasrikāyāṃ prajñāpāramitāyāmacintyaparivarto nāma trayodaśaḥ //",
+   "T0224": "愛欲天子梵天子俱白佛言：「天中天！般若波羅蜜甚深難了，過去佛時所作功德，是輩人於是間聞深般若波羅蜜信者，正使三千大千國土人，一切所當為者皆信，皆信已來行過一劫，於是深般若波羅蜜中樂一日念，無量深出彼德有餘。」佛語愛欲天子、梵天子：「正使復有人聞深般若波羅蜜，以得證，決所信樂過一劫，其功德不及是輩。」愛欲天子、梵天子皆前，以頭面著佛足，繞三匝而去，却行久遠，乃旋各歸天上，歌歎佛說功德。",
+   "T0225": "愛欲天子、梵天子俱白佛言：「甚深，天中天！明度難了也。正使三千國土人民，過去佛時所作功德，一切皆信已具足過一劫，方是深明度中樂一日念不可量，深出彼德有餘。」佛告諸天子：「正使復有賢人，聞是深法已得證，疾使彼輩所信樂過一劫，其功德不及是也。」諸天子聞是，頭面著佛足，繞稍稍却遠，俱不復現，各自還去。",
+   "T0227": "爾時欲色界諸天子白佛言：「世尊！是深般若波羅蜜，難解難得，若能信解深般若波羅蜜者，當知是人，已於先世供養諸佛。世尊！若三千大千世界眾生，皆作信行，於信行地中修行，若一劫，若減一劫，若人一日，行深般若波羅蜜。籌量思惟，觀忍通利，是福為勝。」佛告諸天子：「若善男子、善女人，聞是深般若波羅蜜，疾得涅槃，是人於信行地中修行，若一劫，若減一劫，所不能及。」爾時欲色界諸天子頭面禮佛足，繞佛而出。去此不遠，忽然不現。欲界諸天子還至欲天，色界諸天子還至色天。",
+   "T0220d": "爾時，欲界、色界天子俱白佛言：「如是般若波羅蜜多最為甚深，難見難覺，極難信解。若諸有情，曾於過去無量佛所發弘誓願，多種善根，事多善友，乃能信解甚深般若波羅蜜多。假使三千大千世界諸有情類，一切皆成隨信行等，彼有情類若經一劫若一劫餘修自地行，不如有人一日於此甚深般若波羅蜜多忍樂思惟稱量觀察，所獲功德勝彼無量。」爾時，佛告諸天子言：「如是！如是！如汝所說。天子當知！若善男子、善女人等聞深般若波羅蜜多，疾得涅槃，勝前所說隨信行等若經一劫若一劫餘修自地行，況忍樂等！」時，諸天子聞佛所說，歡喜踊躍頂禮世尊，右遶三匝，辭佛還宮，去會未遠忽然不現，隨所屬界各住本宮，勸進諸天修殊勝行。",
+   "T0220d-5": "爾時，欲界梵世天子俱白佛言：「如是般若波羅蜜多最為甚深，難見難覺極難信解。若諸有情曾於過去無量佛所，發弘誓願、多種善根乃能信解。假使三千大千世界諸有情類，一切皆成隨信行等，彼有情類若經一劫若一劫餘修自地行，不如有人一日於此甚深般若波羅蜜多忍樂、思惟、稱量、觀察，所獲功德勝彼無量。」爾時，佛告諸天子言：「如是！如是！如汝所說。天子當知！若善男子、善女人等聞深般若波羅蜜多疾得涅槃，勝前所說隨信行等若經一劫若一劫餘修自地行，況忍樂等！」時，諸天子聞佛所說，歡喜踊躍頂禮如來，右遶三匝辭退還宮，去眾未遠忽然不現，隨所屬界各住本宮，勸進諸天修殊勝行。",
+   "T0228": "爾時，欲色界諸天子等白佛言：「世尊！此般若波羅蜜多正法，最上甚深難解難入。若人得聞此甚深般若波羅蜜多正法生信解者，當知是人於先佛所已種善根。世尊！正使三千大千世界所有眾生，一一已住信行地者，是諸眾生若滿一劫、若減一劫如理修行，不如有人能一日中於此般若波羅蜜多正法，如理思惟安住忍法，是人功德倍勝於前。」佛告諸天子言：「如是，如是！般若波羅蜜多正法最上甚深，正使三千大千世界所有眾生，一一已住信行地者，若滿一劫、若減一劫如理修行，不如有人於此般若波羅蜜多正法，如理思惟安住忍法，是人功德倍勝於前。是故汝等於此正法，尊重恭敬如理修行。」是時欲色界中諸天子等各白佛言：「世尊！大波羅蜜多是般若波羅蜜多，最上甚深希有難得，我等各各隨喜頂受。」彼諸天子如是稱讚已，即各頭面禮世尊足，右繞三匝出離佛會，去此不遠隱身不現，各各還復彼彼天中。"
+  }
+ }
+}
