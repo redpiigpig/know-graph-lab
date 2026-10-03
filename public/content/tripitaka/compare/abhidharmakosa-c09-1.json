@@ -1,0 +1,158 @@
+{
+ "slug": "abhidharmakosa-c09-1",
+ "title": "俱舍論・破執我品（一）",
+ "family": "sa",
+ "intro": "《阿毘達磨俱舍論》第九品〈破執我品〉（梵 Pudgalaviniścaya，附於第八品之後、無頌）。梵本自釋（Pradhan 頁 461–479）＋玄奘《俱舍論》＋真諦《俱舍釋論》〈破說我品〉；無本頌，依自釋的論辯段落分節（先破犢子部不可說補特伽羅，次破勝論等外道實我，末答無我何以憶念、造業、受果）。真諦本把第八品末三頌（8.41–43「大師世眼久已閉」等）移在本品之首，單列為 p00；玄奘本這三頌在定品末（見 c08-2）。",
+ "units": [
+  {
+   "id": "p00",
+   "label": "（真諦本品首：定品末三頌 8.41–43）"
+  },
+  {
+   "id": "p01",
+   "label": "解脫唯依無我；我非現量比量所得"
+  },
+  {
+   "id": "p02",
+   "label": "犢子部補特伽羅：實有假有之徵"
+  },
+  {
+   "id": "p03",
+   "label": "依薪立火喻"
+  },
+  {
+   "id": "p04",
+   "label": "不可說與五種爾焰、施設所託"
+  },
+  {
+   "id": "p05",
+   "label": "補特伽羅是何識所識"
+  },
+  {
+   "id": "p06",
+   "label": "了義經證：人契經、十二處、頻毘娑羅、世羅、婆拕梨、執我五失"
+  },
+  {
+   "id": "p07",
+   "label": "「我部不誦」非量"
+  },
+  {
+   "id": "p08",
+   "label": "一切法非我、四倒、諸見與宿住唯緣五取蘊"
+  },
+  {
+   "id": "p09",
+   "label": "佛一切智約相續說"
+  },
+  {
+   "id": "p10",
+   "label": "重擔經"
+  },
+  {
+   "id": "p11",
+   "label": "化生有情、一人生世間、取別蘊而生"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sa-bhasya",
+   "lang": "sa",
+   "label": "梵本自釋",
+   "who": "《阿毘達磨俱舍論》Abhidharmakośabhāṣya・GRETIL（Pradhan 1975，Hackett／Lusthaus 校）"
+  },
+  {
+   "id": "T1558",
+   "lang": "lzh",
+   "label": "玄奘論本",
+   "who": "玄奘譯《阿毘達磨俱舍論》・唐 651–654 年",
+   "work": "T1558"
+  },
+  {
+   "id": "T1559",
+   "lang": "lzh",
+   "label": "真諦釋論",
+   "who": "真諦譯《阿毘達磨俱舍釋論》・陳 563–567 年",
+   "work": "T1559"
+  }
+ ],
+ "works": [
+  "T1558",
+  "T1559"
+ ],
+ "anchors": [
+  {
+   "work": "T1558",
+   "range": [
+    "T29n1558_p0152b25",
+    "T29n1558_p0155a27"
+   ]
+  },
+  {
+   "work": "T1559",
+   "range": [
+    "T29n1559_p0304a19",
+    "T29n1559_p0307a12"
+   ]
+  }
+ ],
+ "cells": {
+  "p00": {
+   "T1559": "大師世間眼已閉，又證教人稍滅散， 不見實義無制人，由不如思動亂法。 自覺已入最妙靜，荷負教人隨入滅， 世間無主能壞德，無鉤制惑隨意行。 若知佛法壽，將盡已至喉， 是惑力盛時，求脫勿放逸。"
+  },
+  "p01": {
+   "sa-bhasya": "navamaṃ kośasthānam ===================================================================== namo buddhāya ===================================================================== [461|02] kiṃ khalvato 'nyatra mokṣo nāsti / nāsti / [461|02-461|03] kiṃ kāraṇam / [461|03] vitathātmadṛṣṭiniviṣṭatvāt / [461|03-461|04] nahi te skandhasaṃtāna evātmaprajñaptiṃ vyavasyanti / [461|04] kiṃ tarhi / [461|04-461|05] dravyāntaramevātmānaṃ parikalpayanti ātmagrāhaprabhavāśca sarvakleśā iti / [461|05-461|06] kathaṃ punaridaṃ gamyate skandhasaṃtāna evedamātmābhidhānaṃ vartate nānyasminnabhidheya iti / [461|06] pratyakṣānumānābhāvāt / [461|06-461|07] ye hi dharmāḥ santi teṣāṃ pratyakṣamupalabdhirbhavatyasatyantarāye / [461|07] tadyathā ṣaṇṇāṃ viṣayāṇāṃ manasaśca / anumānaṃ ca / [461|08] tadyathā pañcānāmindriyāṇām / tatredamanumānam / [461|08-461|09] sati kāraṇe kāraṇāntarasyābhāve kāryasyābhāvo dṛṣṭo bhāve ca punarbhāvistadyathāṅkurasya / [461|09-461|11] satyeva cābhāsaprāpte viṣaye manaskāre ca kāraṇe viṣayagrahaṇasyābhāvo dṛṣṭaḥ punaśca bhāvo 'ndhavadhirādīnāmanandhāvadhirādīnāṃ ca / [461|11-461|12] atastatrāpi kāraṇāntarasyābhāvo bhāvaśca niścīyate / [461|12] yacca tatkāraṇāntaraṃ tadindriyamityetadanumānam / [461|12-461|13] na caivamātmano 'stīti nāstyātmā /",
+   "T1558": "越此依餘，豈無解脫？理必無有。所以者何？虛妄我執所迷亂故。謂此法外諸所執我，非即於蘊相續假立執有真實離蘊我故。由我執力諸煩惱生，三有輪迴無容解脫。以何為證？知諸我名，唯召蘊相續，非別目我體。於彼所計離蘊我中，無有真實現比量故。謂若我體別有實物，如餘有法。若無障緣，應現量得如六境意，或比量得如五色根。言五色根比量得者，如世現見，雖有眾緣，由闕別緣，果便非有，不闕便有，如種生芽。如是亦見，雖有現境作意等緣，而諸盲聾不盲聾等識不起起，定知別緣有闕不闕。此別緣者即眼等根，如是名為色根比量。於離蘊我二量都無，由此證知無真我體。",
+   "T1559": "離此法於餘法為無得解脫耶？無。云何如此？非如我見，誑於心故。何以故？彼人不於五陰相續中假立我言故。何為？由彼分別有別實物名我一切，或以我執為生本故，於餘法無解脫義。云何得知如此？但於五陰相續中假起我言，非於餘義，由我非證比二量所知故。餘法若實有若無障礙，必定由證量得知，譬如六塵及心。或由比量得知，譬如五根。此中如此比知，若有因緣，餘因緣不有故不見事生，若有則見事生。色塵等緣若具有，能障礙法若悉不有，盲聾等人及非盲聾等人，於色等塵眼等識不生生故，可得比量別因不有。有義別因即是眼等根。如此證量及比量，於我不有故，是故說決定無我。"
+  },
+  "p02": {
+   "sa-bhasya": "[461|14] yattrhi vātsīputriyāḥ pudgalaṃ santimicchanti / vicāryaṃ tāvadetat / [461|14-461|15] kiṃ te dravyata icchantyāhosvit prajñaptitaḥ / [461|15] kiṃ cedaṃ dravyata iti kiṃ vā prajñaptitaḥ / [461|16] rūpādivat bhāvāntaraṃ cet dravyataḥ / [461|16-461|17] kṣīrādivat samudāyaścet prajñaptitaḥ / [461|17] kiṃ cātaḥ / yadi tāvat dravyataḥ / [461|17-461|18] saṃbhinna svabhāvatvāt skandhebhyo 'nyo vaktavya itaretaraskandhavat / [461|18] kāraṇaṃ cāsya vaktavyam / asaṃskṛto vā / [461|19] atastīrthikadṛṣṭiprasaṅgo niṣprayojanatvaṃ ca / atha prajñaptitaḥ / vayamapyevaṃ trūmaḥ / [461|20] naiva hi dravyato 'sti nāpi prajñaptitaḥ / kiṃ tarhi / [461|20-461|21] ādhyātmikānupāttānvarttamānān skandhānupādāya pudgalaḥ prajñapyate / [461|21-461|22] tadidamandhavacanamanunmīlitārthaṃ na budhyāmahe / [461|22] kimidamupādāyeti / [461|22-461|23] yadyayamarhtaḥ skandhānāṃ lakṣyate teṣveva pudgalaprajñaptiḥ prāpnoti / [461|23] yathā rūpādīnālamvya teṣveva kṣīraprajñaptiḥ / [461|23-461|24] athāyamarthaḥ skandhān pratīyeti / [461|24] skandhānāṃ pudgalaprajñaptikāraṇatvāt / sa eva doṣaḥ /",
+   "T1558": "然犢子部執有補特伽羅，其體與蘊不一不異。此應思擇，為實為假。實有假有相別云何？別有事物是實有相，如色聲等。但有聚集是假有相，如乳酪等。許實許假各有何失？體若是實應與蘊異，有別性故，如別別蘊。又有實體必應有因，或應是無為，便同外道見。又應無用，徒執實有。體若是假，便同我說。非我所立補特伽羅，如仁所徵實有假有？但可依內現在世攝有執受諸蘊立補特伽羅。如是謬言，於義未顯。我猶不了，如何名依？若攬諸蘊是此依義，既攬諸蘊成補特伽羅，則補特伽羅應成假有，如乳酪等攬色等成。若因諸蘊是此依義，既因諸蘊立補特伽羅，則補特伽羅亦同此失，",
+   "T1559": "是跋私弗多羅部所說：必定有我，與五陰不一不異。此言宜應簡擇。為彼執由實物故有、由假名故有？實有相云何？假有相云何？若如色等別有，名實有物。若如乳等但聚集有，名假名有。若由實物有，與陰別性故，應說與陰有異。譬如別別陰，必定須說此我因。若無因，即是無為，則同外論師說，亦無別用。若汝執由假名有故有，此說最勝。我等亦說如此。我等立我有，不由實有說有，亦不由假名有說有。此何為？約內所取現世諸陰執說為我。今此別言，於義復不開顯，非我等所解。此約言顯何義？若義如此，謂緣諸陰，於諸陰中假名說我。此義應成，譬如緣色等物假名說乳。復次若義如此，謂因諸陰故，我言成諸陰。是說我言因故，此執亦同前失。"
+  },
+  "p03": {
+   "sa-bhasya": "[p46|124-46125] na sa evaṃ prajñapyate / [461|25] kathaṃ tarhi yathendhanamupādāyāgniḥ / [461|25-462|01] kathaṃ cendhanamupādāyāgniḥ prajñapyate / [462|01-462|02] na hi vinendhanenāgniḥ prajñapyate na cānya indhanādagniḥ śakyate prajñapayituṃ nāpyananyaḥ / [462|02] yadi hānyaḥ syādanuṣṇamindhanaṃ syāt / [462|02-462|03] athānanyaḥ syāddāhyameva dāhakaṃ syāt / [462|03] evaṃ na ca vinā skanvaiḥ pudgalaḥ prajñapyate / [462|03-462|04] na cānyaḥ skandhebhyaḥ śakyate pratijñātuṃ śāśvataprasaṅgāt / [462|04] nāpyananya ucchedaprasaṅgaditi / [462|05] aṅga tāvadbrūhi kigindhanaṃ ko 'nniriti / [462|05-462|06] tato jñāsyāmaḥ kathamindhanamupādāyāgniḥ prajñapyata iti / [462|06-462|07] kimatra vaktavyaṃ dāhyamindhanaṃ dāhako 'gniḥ / [462|07] etadevātra vaktavyaṃ kiṃ dāhyaṃ kok dāhaka iti / [462|07-462|08] loke hi tāvadapradīptaṃ kāṣṭḥādikamindhanamucyate dāhyaṃ ca / [462|08] pradīptamagnirdāhakaśca / [462|08-462|09] yacca bhasvaraṃ coṣṇaṃ ca bhṛśaṃ ca tena hi tadidhyate dhyate ca / [462|09] saṃtativikārāpādānāt / [462|09-462|10] taccobhayamaṣṭadravyakaṃ taccegdhanaṃ pratītyāgnirutpadyate / [462|10-462|11] yathā kṣīraṃ pratītya dadhi madhu pratītyaśuktam / [462|11] tasmādhigdhanamupādāyetyucyate / anyaśca sa tasmādbhinnakālatvāt / [462|11-462|12] yadi caiyaṃ pudgalaḥ skandhān pratītyotpadyate sa tebhyo 'nyaścānityaśca prāpnoti / [462|12-462|14] atha punastatraiva kāṣṭhādau pradīpte yadīṣṇyaṃ tadagnistatsahajātāni trīṇi bhūtānīndhanamiṣyante / [462|14] tayorapi siddhamanyatvaṃ lakṣaṇabhedāt / [462|15] upādāyārthastu vaktavyaḥ / kathaṃ tadindhanamupādāya so 'gniḥ prajñapyata iti / [462|16] na hi tattasya kāraṇaṃ nāpi tat prajñapteḥ / agnireva hi tatprajñapteḥ kāraṇam / [462|17] yadyāśrayārtha upādāyārthaḥ sahabhāvārtho vā / [462|17-462|18] skandhā apyevaṃ pudgalasyāśrayasahabhūtāḥ prāpnuvantīti vispaṣṭamanyatvaṃ pratijñāyate / [462|18-462|19] tadabhāve ca pudgalābhāvaḥ prāpnoti / [462|19] indhanabhāva ivāgnyabhāvaḥ / [462|20] yattu taduktaṃ yadīndhanādanyo 'gniḥ syādanuṣṇamindhanaṃ syāditi / [462|20-462|21] kimidamuṣṇaṃ nāma / [462|21-462|22] yadi tāvādīṣṇyam anuṣṇamevendhanamanyabhūtasvabhāvatvāt / [462|22] atha yadauṣṇyavat / [462|22-462|23] anyadapi taduṣṇasvabhāvādagneruṣṇaṃ sidhyatyīṣṇyayogāditi / [462|23] nāstyanyatve doṣaḥ / [462|23-462|24] atha punaḥ sarvameva tat pradīptaṃ kāṣṭhādikamindhanaṃ cāgniśceṣyate / [462|25] tadupādāyārthaśca vaktavyaḥ / skandhā eva ca pudgalā ityananyatvamanivāryaṃ prāpnoti / [462|26] tasmānna sidhyatyetat / [462|26-463|01] yathendhanamupādāyāgniḥ prajñapyate evaṃ skadhānupādāya pudgalaḥ iti /",
+   "T1558": "不如是立。所立云何？此如世間依薪立火，如何立火可說依薪？謂非離薪可立有火，而薪與火非異非一。若火異薪，薪應不熱。若火與薪一，所燒即能燒。如是不離蘊立補特伽羅。然補特伽羅與蘊非異一，若與蘊異體應是常，若與蘊一體應成斷。仁今於此且應定說，何者為火？何者為薪？令我了知火依薪義。何所應說？若說應言所燒是薪、能燒是火。此復應說何者所燒、何者能燒、名薪名火？且世共了。諸不炎熾所然之物，名所燒薪。諸有光明極熱炎熾能然之物，名能燒火。此能燒然彼物相續，令其後後異前前故。此彼雖俱八事為體，而緣薪故火方得生，如緣乳酒生於酪酢，故世共說依薪有火。若依此理火則異薪，後火前薪時各別故。若汝所計補特伽羅，如火依薪依諸蘊者，則定應說緣蘊而生，體異諸蘊，成無常住。若謂即於炎熾木等煖觸名火，餘事名薪，是則火薪俱時而起，應成異體，相有異故。應說依義，此既俱生，如何可言依薪立火？謂非此火用薪為因，各從自因俱時生故。亦非此火名因薪立，以立火名因煖觸故。若謂所說火依薪言，為顯俱生或依止義，是則應許補特伽羅與蘊俱生或依止蘊。已分明許體與蘊異，理則應許。若許蘊無，補特伽羅體亦非有，如薪非有火體亦無。而不許然，故釋非理。然彼於此自設難言：若火異薪，薪應不熱。彼應定說熱體謂何？若彼釋言熱謂煖觸，則薪非熱，體相異故。若復釋言熱謂煖合，則應異體亦得熱名，以實火名唯目煖觸，餘與煖合皆得熱名。是則分明許薪名熱。雖薪火異而過不成，如何此中舉以為難？若謂木等遍炎熾時說名為薪亦名為火，是則應說依義謂何？補特伽羅與色等蘊定應是一，無理能遮。故彼所言如依薪立火，如是依蘊立補特伽羅，進退推徵，理不成立。",
+   "T1559": "我等說我不如此。若不爾，云何？如約薪執說火，約陰執說人亦爾。云何約薪執說火？若離薪火不可執說，不可立火與薪有異、與薪無異。若火異薪，薪應不熱。若火不異薪，所燒應即是能燒。如此離諸陰，不可執說人，亦不可說人異諸陰，由有常過失故。亦不可說人與諸陰不異，由有斷過失故。善友願汝為我說，何物為薪？何物為火？後我當得知約薪執說火義。此中何所應說？所燒是薪，能燒是火。若有應說，必如此說。此中汝須更決說，何物是所燒？何物是能燒？於世間中可然物說名薪，亦名所燒。若然，能燒光最熱說名火。何以故？此物能然彼、能燒彼，由能變異彼相續後不如本故。此二各有八物所成。緣薪火得生，譬如緣乳酪生、緣摩偷酢生，是故言約薪熱說火。若爾，則知火與薪異，由不同時故。若人如火，必定緣陰生，異於陰則成無常。復次若於然薪中是熱觸說名火，所餘三大與此共生，許此名薪。此二互有差別，明了易知，由相有異故。約薪有火義，汝今應說。云何約薪熱說火？何以故？此薪非是火因，亦非熱說火因。何以故？但火是熱說火因。若汝說：約言是依止義、或共有義。若爾，諸陰於人應成依止、應成共生，彼互差別亦明了易知。復次若陰滅，人應即滅，譬如薪滅火即滅。是汝所說，若火異薪，薪應不熱。此中何物名熱？若汝說：熱性名熱。薪應不熱，別火性故。復次若汝說：若有熱性名熱。此物雖與熱性火異，此復成熱，與熱性相應故，是故於別異無過失。復次若汝言：正然物說名薪，亦說名火。是故約義，汝今應說。若是陰即是人，此不異義，即至不可遮，是故此譬不成。如前云約薪執說火，約陰執說人亦爾。"
+  },
+  "p04": {
+   "sa-bhasya": "[463|01-463|02] yadi cāyamanyaḥ skandhebhyo na vaktavyaḥ \"pañcavidhaṃ jñeyamatītānāgataṃ pratyupannamasaṃskṛtamavaktavyami\"ti na vaktavyaṃ prāpnoti / [463|02-463|03] naiva hi tadatītādibhyaḥ pañcamaṃ nāpañcamaṃ vaktavyam / [463|03-463|04] yadā ca pudgalaḥ prajñapyate ki tāvatskandhānupalabhya prajñapyate āhosvit pudgalam / [463|04-463|05] yadi tāvat skandhāṃsteṣveva pudgalaprajñaptiḥ prāpnoti / [463|05] pudgalasyānupalambhāt / [463|05-463|06] atha pudgalaṃ kathamasya skandhānupādāya prajñaptirbhavati / [463|06] pudgala eva hi tasyā upādānaṃ prāpnoti / [463|06-463|07] atha mataṃ satsu skandheṣu pudgala upalabhyate tataḥ skandhānupādāyāsya prajñaptirucyata iti / [463|07-463|08] tadevaṃ rūpasyāpi cakṣurmanaskārālokeṣu satsūpalambhāt tānupādāya prajñaptirbaktavyā / [463|08-463|09] rūpavacca pudgalasyānyatvaṃ spaṣṭam /",
+   "T1558": "又彼若許補特伽羅與蘊一異俱不可說，則彼所許三世無為及不可說五種爾焰亦應不可說，以補特伽羅不可說第五及非第五故。又彼施設補特伽羅，應更礭陳為何所託？若言託蘊假義已成，以施設補特伽羅不託補特伽羅故。若言此施設託補特伽羅，如何上言依諸蘊立理，則但應說依補特伽羅。既不許然，故唯託蘊。若謂有蘊此則可知，故我上言此依蘊立。是則諸色有眼等緣方可了知，故應言依眼等。",
+   "T1559": "復次若不可說人與陰異，所知有五種，謂過去、未來、現在、無為、不可言，此應不可說。何以故？此所知於過去等，不可說為第五及非第五故。是時汝等執，說人為觀諸陰執說人、為觀人執說人？若觀諸陰執說人名，但約陰中執說人名，由人不可得故。若觀人執說人，云何言約陰執說人？何以故？此執說但人是所緣境故。若汝言諸陰若有人則可知，是故言約陰執說有人。若爾，眼根思惟光明等，若有是時，此色方可知，亦應約眼根等執說色。是有此義。"
+  },
+  "p05": {
+   "sa-bhasya": "[463|10] idaṃ tāvadvaktavyam / [463|10-463|11] ṣaṇṇāṃ vijñānānāṃ katamena pudgalo vijñeyaḥ / [463|11] ṣaḍbhirapītyucyate / kathaṃ kṛtvā / [463|11-463|13] cakṣurvijñeyāni cedrūpāṇi pratītyapudgalaṃ pratibhāvayati cakṣurvijñeyaḥ pudgalo vaktavyaḥ no tu vaktavyo rūpāṇi vāno vā / [463|13-463|14] evaṃ yāvat manovijñeyān ceddharmān pratītya pudgalaṃ prativibhāvayati manovijñeyaḥ pudgalo vaktavyo no tu vaktavyo dharmā vā no vā / [463|14-463|15] evaṃ tarhi kṣīrādibhiḥ samānaḥ prāpnoti / [463|15-463|17] cakṣurvijñeyāni cedrūpāṇi pratītya kṣīraṃ vibhāvayatyudakaṃ vā cakṣurvijñeyaṃ kṣīramudakaṃ ceti vaktavyaṃ no tu vaktavyaṃ rūpāṇi vā no vā / [463|17] evaṃ ghrāṇajihvākāyavijñeyaṃ vaktavyaṃ no tu vaktavyaṃ spraṣṭavyāni vā no vā / [463|18] mābhūt kṣīrodakayoścatuṣṭvaprasaṅga iti / [463|18-463|19] ato yathā rūpādīnyeva kṣīramudakaṃ vā prajñapyate samastānyevaṃ skandhāḥ pudgala iti siddham / [463|20] yaccocyate cakṣurvijñeyāni rūpāṇi pratītya pudgalaṃ prativibhāvayatīti / [463|21] ko 'sya vākyasyārthaḥ / [463|21-463|22] kiṃ tāvadrūpāṇi pudgalopalabdheḥ kāraṇaṃ bhavatiti āhosvidrūpāṇyupalabhamānaḥ pudgalamupalabhata iti / [463|22-463|23] yadi rūpāṇi pudgalopalabdheḥ kāraṇaṃ bhavanti sa ca tebhyo 'nyo na vaktavyaḥ / [463|23-463|24] evaṃ tarhi rūpamapyālokacakṣurmanaskārebhyo 'nyanna vaktavyam / [463|24-463|25] teṣāṃ tadupalabdhikāraṇatvāt / [463|25] atha rūpāṇyupalabhamānaḥ pudgalamupalabhate / [463|25-463|26] kiṃ tayaivopalabdhyopalabhate āhosvidanyayā / [463|26] yadi tayaiva / [463|26-463|27] rūpādabhinnasvabhāvaḥ pudgalaḥ prāpnoti rūpa eva vā tatprajñāptiḥ / [463|27] idaṃ ca rūpamayaṃ pudgalaḥ kathamidaṃ gamyate / athaivaṃ na paricchidyate / [464|01] kathamidaṃ pratijñāyate rūpamapyasti pudgalo 'pyastīti / [464|01-464|02] upalabdhivaśena hi tasyāstitvaṃ pratijñāyate / [464|02] evaṃ yāvaddharmebhyo vaktavyam / [464|02-464|03] athānyayā bhinnakālo palambhādanyo rūpātprāpnoti / [464|03] nīlādiya pītaṃ kṣaṇādiva ca kṣaṇāntaram / [464|03-464|04] evaṃ yāvaddharmebhyo vaktavyam / [464|04] atha rūpapudgalavaktadupalabdhyorapyanyānanyatvamavaktavyam / [464|05] tena tarhi saṃskṛte 'pyavaktavyaṃ bhavatīti siddhāntabhedaḥ / [464|05-464|06] yadi cāyamasti no tu vaktavyo rūpāṇi vā to vā / [464|06-464|07] kiṃ tarhi bhagavatoktaṃ \"rūpamanātmā yāvadvijñānamanātme\"ti / [464|08] yena cāyaṃ cakṣurvijñānena pudgala upalabhyate / [464|08-464|09] kiṃ tadrūpāṇi pratītyotpadyate āhosvit pudgalamubhayaṃ vā / [464|09] yadi rūpāṇi pratītyotpadyate / [464|09-464|10] notsahiṣyate pudgalaṃ vijñātuṃ śabdādivat / [464|10-464|11] yameva hi viṣayaṃ cakṣurvijñāneṣu pratītyotpadyate vijñānaṃ sa eva tasyālambanapratyayaḥ / [464|11-464|12] atha pudgalaṃ pratītyotpadyate ubhayaṃ vā / [464|12] idamutsūtram / [464|12-464|13] sūtre hi nirdhāritaṃ dvayaṃ pratītya vijñānasyotpādo bhavatīti / [464|13] \"tathā cakṣurbhikṣo hetū rūpāṇi pratyayaścakṣurvijñānasyotpādāya / [464|13-464|14] tatkasya hetoḥ / [464|14] yatkiñcit bhikṣo cakṣurvijñānaṃ sarvaṃ taccakṣuḥ pratītya rūpāṇi ceti / [464|15] anityaśca pudgala evaṃ prāpnoti / [464|15-464|16] \"ye hi hetayo ye pratyayā vijñānasyotpādāya te 'pyanityā\" iti sūtre vacanāt / [464|16-464|17] atha pudgalo na tasyālambanaṃ na tarhi tena vijñeyaḥ / [464|18] yadi ca pudgalaḥ ṣaḍvijñānavijñeyaḥ pratijñāyate / [464|18-464|19] sa śrotravijñānavijñeyatvādrūpādanyaḥ prāpnoti śabdhavat / [464|19-464|20] caturvijñānavijñeyatvācchabdādanyaḥ prāpnoti rūpavat / [464|20] evamanyebhyo 'pi yojyam / idaṃ ca sūtrapadaṃ vādhitaṃ bhavati / [464|20-464|22] \"yānīmāni brāhmaṇa pañcendriyāṇi nānāgocarāṇi nānāviṣayāṇi svaṃ svaṃ gocaraviṣyaṃ pratyanubhavanti / [464|22] nānyadanyasya gocaraviṣyaṃ pratyanubhavati / [464|22-464|23] tadyathā cakṣurindriyaṃ śrotrendriyaṃ ghrāṇendriyaṃ jihvendriyaṃ kāyendriyam / [464|23-464|24] mana eṣaṃ pañcānāmindriyāṇāṃ gocaraviṣayaṃ pratyanubhavati manaścaiṣāṃ pratisaraṇami\"ti / [464|24] na vā pudgalo viṣayaḥ / [464|24-464|25] na cedviṣayo na tarhi vijñeyaḥ / [464|25-464|26] yadyevaṃ manaindriyasyāpyavyabhicāraḥ prāpnoti / [464|26-464|27] ṣaḍimānīndriyāṇi nānāgocarāṇi nānāviṣayāṇi svaṃ svaṃ gocaraviṣayamākāṅkṣantī tyuktaṃ ṣaṭprāṇakopame / [464|27] na ttrendriyamemvendriyaṃ kṛtvoktam / [464|27-465|01] pañcānāṃ darśanādyā kāṅkṣaṇāsaṃbhavāt tadvijñānānāṃ ca / [465|01-465|02] atastadādhipatyādhyākṛtamatra manovijñānendriyaṃ kṛtvoktam / [465|02-465|03] yacca tatkevalaṃ mana ādhipatyādhyākṛtaṃ manovijñānaṃ naivaṃ tadanyeṣāṃ viṣayamākāṅkṣatyato nāstyeṣa doṣaḥ / [465|03-465|06] uktaṃ ca bhagavatā \"sarvābhijñeyaṃ vo bhikṣavo dharmaparyāyaṃ deśayiṣyāmī\"tyuktvā cakṣurabhijñeyaṃ rūpāṇi cakṣurvijñānaṃ cakṣuḥsaṃsparśo yadapi taccakṣuḥsaṃsparśapratyayamadhyātmamutpadyate veditaṃ suḥkhaṃ vā aduḥkhāsukhaṃ vā yāvat manaḥsaṃsparśapratyayam / [465|06-465|07] ayamucyate sarvābhijñeyaparijñeyo dharmaparyāyaḥ iti / [465|07] ata etāvadevābhijñeyaṃ pratijñeyaṃ cetyavardhāryate na pudgalaḥ / [465|07-465|08] tasmādvijñeyo 'pyasau na bhavati / [465|08] prajñāvijñānayoḥ samānaviṣayatvāt /",
+   "T1558": "又且應說，補特伽羅是六識中何識所識？六識所識。所以者何？若於一時眼識識色，因茲知有補特伽羅，說此名為眼識所識，而不可說與色一異。乃至一時意識識法，因茲知有補特伽羅，說此名為意識所識，而不可說與法一異。若爾，所計補特伽羅應同乳等唯假施設。謂如眼識識諸色時，因此若能知有乳等，便說乳等眼識所識，而不可說與色一異。乃至身識說諸觸時，因此若能知有乳等，便說乳等身識所識，而不可說與觸一異。勿乳等成四或非四所成。由此應成總依諸蘊假施設有補特伽羅，猶如世間總依色等施設乳等，是假非實。又彼所說，若於一時眼識識色，因茲知有補特伽羅。此言何義？為說諸色是了補特伽羅因？為了色時補特伽羅亦可了？若說諸色是了此因，然不可言此異色者，是則諸色以眼及明作意等緣為了因故，應不可說色異眼等。若了色時此亦可了，為色能了即了此耶？為於此中別有能了？若色能了即能了此，則應許此體即是色，或唯於色假立於此。或不應有如是分別，如是類是色、如是類是此。若無如是二種分別，如何立有色、有補特伽羅，有情必由分別立故。若於此中別有能了，了時別故此應異色，如黃異青前異後等。乃至於法徵難亦然。若彼救言：如此與色不可定說是一是異，二種能了相望亦然，能了不應是有為攝。若許爾者，便壞自宗。又若實有補特伽羅，而不可說色非色者，世尊何故作如是言：色乃至識皆無有我。又彼既許補特伽羅眼識所得，如是眼識於色此俱為緣何起？若緣色起，則不應說眼識能了補特伽羅，此非眼識緣，如聲處等故。謂若有識緣此境起，即用此境為所緣緣，補特伽羅非眼識緣者，如何可說為眼識所緣？故此定非眼識所了。若眼識起緣此或俱，便違經說。以契經中定判識起由二緣故。又契經說：苾芻當知，眼因色緣能生眼識。諸所有眼識皆緣眼色故。又若爾者，補特伽羅應是無常，契經說故。謂契經說：諸因諸緣能生識者皆無常性。若彼遂謂補特伽羅非識所緣，應非所識，若非所識應非所知，若非所知如何立有？若不立有便壞自宗。又若許為六識所識，眼識識故應異聲等，猶如色，耳識識故，應異色等，譬如聲。餘識所識，為難准此。又立此為六識所識，便違經說。如契經言：梵志當知，五根行處境界各別，各唯受用自所行處及自境界，非有異根亦能受用異根行處及異境界。五根謂眼耳鼻舌身，意兼受用五根行處及彼境界，彼依意故。或不應執補特伽羅是五根境，如是便非五識所識，有違宗過。若爾，意根境亦應別。如六生喻契經中言：如是六根行處境界各有差別，各別樂求自所行處及自境界。非此中說眼等六根，眼等五根及所生識無有勢力樂見等故。但說眼等增上勢力所引意識名眼等根，獨行意根增上勢力所引意識，不能樂求眼等五根所行境界。故此經義無違前失。又世尊說：苾芻當知，吾今為汝具足演說一切所達所知法門。其體是何？謂諸眼色眼識眼觸，眼觸為緣內所生受，或樂或苦不苦不樂。廣說乃至。意觸為緣內所生受，或樂、或苦、不苦不樂，是名一切所達所知。由此經文，決判一切所達知法唯有爾所，此中無有補特伽羅，故補特伽羅亦應非所識，以慧與識境必同故。",
+   "T1559": "汝應說，人於六識中，是何識所知？彼說由六識所知。此義云何？若緣眼所知色分別觀人，應說此人是眼所知，不可說即色非即色。乃至若緣意所知法分別觀人，應說此人是意所知，不可說即法非即法。若爾，此人應成與乳等同。若緣眼所知色分別觀乳、或觀水等，應說乳水是眼所知，不可說即色非即色。如此應說。鼻舌身所知亦爾，乃至不可說即觸非即觸。勿乳水等非四物所成，此非所許義。是故如色等具物假說名乳及水等，如此亦應具諸陰假說名人，此義應成。是汝所說，緣眼所知色分別觀人。此言有何義？為色是觀察人智因、為正證知色即證知人？若色是人智因，亦不可說人異於彼。若爾，色與光明眼根覺觀等，亦應不可說異，彼是色智因故。若正證知色即證知人，為即由色證智證知人、為由別智？若即由色證智證知人，人與色不應成異性，或於色但假說人。若不爾，若由一智所證知，此人非色、此色非人，此二云何可分別？若不能如此分別，云何強立此言，謂色是有、人亦是有。何以故？由隨證知，可說彼有。如色乃至於法，亦應說如此。若由別智分別此二，別時所得故，人應成異色，譬如黃色異青等。又如前後剎那，乃至於法亦應說如此。若汝言：如色及人，一異不可說，能證知。此二智一異亦不可說，是故此智亦不可說是有為，則破自悉檀。若說人是有，但不可說即色非即色，云何佛世尊說：色無我乃至識亦無我。是汝所說：眼識能證見人。此識為緣色生？為緣人生？為緣二生？若爾，何有？若緣色生，則不能緣人生，譬如聲等。何以故？若緣此塵此識得生，唯此塵是此識緣緣。若緣人及二，此執與經不相應故，則為佛經所違。何以故？經中已決判此義，唯依緣二法諸識得生。復有別經，亦違此執。經云：比丘：眼是因、色是緣，能生眼識。何以故？一切所有眼識，唯因眼緣色生。若如汝所執，此人應成無常。何以故？是因是緣能生眼識，彼皆無常。由此經言故，若汝執人非眼識境，人則非眼識所知。復次若汝立義，人是六識所知，此人由耳識所知故。應成異色，譬如聲由眼識所知故，應成異聲。譬如色，於餘塵應知亦如此。復次此經文句，違汝所執。經云：婆羅門！是五根各別行處、各別境界，是因自行處境界，彼各各受用，非別根能受用別根行處境界，謂眼根耳根鼻根舌根身根。心能受用五根行處境界，是故心是彼所依止。人非境界，若非境界，不應是六識所知。若爾，意根應成別，不通。經云：有六種根，各別行處、各別境界，樂欲自自行處境界。此言於六眾生我譬中說，是義不然，於此經中不定說六根為根，是五根樂欲見等事不有故，彼識亦爾。彼增上處所引意識，立此為根，故說名根。是獨類心增上緣所引意識，此識非能樂欲受用餘根行處境界，是故無失。復次佛世尊說：比丘！我今為汝等說一切所應知、一切所應識法門。眼根是所應知、是所應識，色眼識眼觸。由眼觸因緣，於內生受，謂苦、樂、不苦不樂等。乃至由意觸因緣，於內生受，謂苦、樂、不苦不樂等。是名一切所應知、一切所應識法門。由此經，若有所應知及所應識，決唯此量，不出於此。於中不說人，是故人決定非所應知，智及識境界同故。"
+  },
+  "p06": {
+   "sa-bhasya": "[465|08-465|09] cakṣuṣa ca pudgalaṃ paśyām iti paśyanta paudgalikā anātmanā ātmānaṃ paśyāma iti dṛṣṭisthānamāpannā bhavanti / [465|10] sūtre ca bhagavatā nītametat / \"skandheṣveva pudgalādhye\"ti mānuṣyakasūtram / [465|11-465|13] \"cakṣuḥpratītya rūpāṇi cotpadyate cakṣurvijñānaṃ trayāṇāṃ saṃnipātaḥ sparśaḥ sparśasahajātā vedanā saṃjñā cetanā itīme catvāro rupiṇaḥ skandhāśvakṣurindriyaṃ ca rūpametāvanmanuṣyatvamucyate / [465|13-465|14] atreyaṃ saṃjñā sattvo naro manuṣyo mānavaśca poṣaḥ puruṣaḥ pudgalo jīvo janturiti / [465|14-465|15] atreyaṃ pratijñā ahaṃ cakṣuṣā rūpāṇi paśyāmīti / [465|15-465|16] atrāyaṃ vyavahāra ityapi sa āyuṣmānevaṃnāmā evañjātya evaṅgotra evamāhāra evaṃsukhaduḥkhapratisaṃvedī evandīrghāyurevañcirasthitika evamāyuḥparyanta iti / [465|16-465|17] iti hi bhikṣavaḥ saṃjñāmātrakamevaita dvyavahāramātrakamevaitat / [465|17-465|18] sarva ime dharmāḥ anityāḥ saṃskṛtāśceti tāḥ pratītyasamutpannā iti / [465|18] nītārthaṃ ca sūtraṃ pratisaraṇamuktaṃ bhagavatā / [465|19] tasmānna punaḥ parīkṣyate / [465|19-465|20] tathā coktaṃ \"sarvamastīti brāhmaṇa yāvadeva dvādaśāyanānī\"ti / [465|20] yadi cāyaṃ pudgalo nāyatanaṃ na sostīti siddham / [465|20-465|21] athāyatanaṃ na tarhyavaktavyaḥ / [465|21-465|22] teṣāmapi caivaṃ paśyato \"yāvatā bhikṣo cakṣuryāvatā rūpāṇi vistareṇa etāvatā bhikṣo tathāgataḥ sarvaṃ ca prajñāpayati sarvaprajñaptiṃ ce\"ti / [465|22-465|25] bimbisārasūtre coktam \"ātmā ātmeti bhikṣavo bālo 'śrutavān pṛthagjanaḥ prajñaptimanupatito na tvātrā tmā vā ātmīyaṃ vā duḥkhamidamutpadya mānamutpadyate\" iti vistaraḥ / [465|25] śailayāpyarhantyā māramārabhyoktaṃ / [466|01-466|04] \"manyase ki nu sattveti māradṛṣṭigataṃ hi te / śūnyaḥ saṃskārapuñjo 'yaṃ nahi sattvjotra vidyate // yathaiva hyaṅgasaṃbhārātsaṃjñā ratha iti smṛtā / evaṃ skandhānupādāya saṃvṛtyā sattva ucyate\" // iti / [466|05] kṣadrake 'pi cāgame dāridrabrāhmaṇamathikṛtyoktaṃ [466|06-466|07] śṛṇu tvaṃ svādare dharmaḥ sarvagranthipramocanam / yathā saṃkliśyate cittaṃ yathā cittaṃ viśudhyati // [466|08-466|09] ātmaiva hyātmano nāsti viparītena kalpyate / nāstīha sattva ātmā vā dharmāstvete sahetukāḥ // [466|10-466|11] dvādaśaiva bhavāṅgāni skandhāyatanadhātavaḥ / vicintya sarvāṇyetāni pudgalo nopalabhyate // [466|12-466|13] śūnyamadhyātmakaṃ paśya śūnyaṃ paśya bahirgatam / na labhyate so 'pi kaścidyo bhāvayati śūnyatāmi\"ti / [466|14] tathoktaṃ \"pañcādīnavā ātmopalambhe / ātmadṛṣṭirbhavati sattvadṛṣṭiḥ / [466|15] nirviśeṣo bhavati tīrthikaiḥ sārdham / unmārgapratipanno bhavati / [466|15-466|16] śūnyatāyāmasya cittaṃ na praskandati na prasīdati na saṃtiṣṭhate na vimucyate / [466|16-466|17] āryadharmā asya na vyavadāyanta\" iti /",
+   "T1558": "諸謂眼見補特伽羅，應知眼根見此所有，於見非我謂見我故，彼便蹎墜惡見深坑。故佛經中自決此義，謂唯於諸蘊說補特伽羅。如人契經作如是說：眼及色為緣生於眼識，三和合觸俱起受想思。於中後四是無色蘊，初眼及色名為色蘊，唯由此量說名為人。即於此中隨義差別假立名想，或謂有情不悅意生儒童、養者、命者、生者、補特伽羅，亦自稱言我眼見色。復隨世俗說，此具壽有如是名、如是種族、如是姓類、如是飲食、如是受樂、如是受苦、如是長壽、如是久住、如是壽際。苾芻當知，此唯名想，此唯自稱，但隨世俗假施設有。如是一切無常有為，從眾緣生、由思所造。世尊恒勅依了義經，此經了義，不應異釋。又薄伽梵告梵志言：我說一切有唯是十二處。若數取趣非是處攝，無體理成。若是處攝，則不應言是不可說。彼部所誦契經亦言：諸所有眼、諸所有色，廣說乃至苾芻當知，如來齊此施設一切建立一切有自體法。此中無有補特伽羅，如何可說此有實體。頻毘婆羅契經亦說：諸有愚昧無聞異生，隨逐假名計為我者，此中無有我我所性，唯有一切眾苦法體將正已生，乃至廣說。有阿羅漢苾芻尼名世羅，為魔王說：汝墮惡見趣，於空行聚中， 妄執有有情，智者達非有。 如即攬眾分，假想立為車， 世俗立有情，應知攬諸蘊。世尊於《雜阿笈摩》中為婆羅門婆拕梨說：婆拕梨諦聽，能解諸結法， 謂依心故染，亦依心故淨。 我實無我性，顛倒故執有， 無有情無我，唯有有因法。 謂十二有支，所攝蘊處界， 審思此一切，無補特伽羅， 既觀內是空，觀外空亦爾， 能修空觀者，亦都不可得。經說：執我有五種失，謂起我見及有情見墮惡見趣，同諸外道越路而行，於空性中心不悟入、不能淨信、不能安住、不得解脫，聖法於彼不能清淨。",
+   "T1559": "執我諸人說云：我等由眼見人，於非我所見有我故。彼則墮我見處深坑。於經中佛世尊自了義說云：但於五陰，說假名人。於《人經》中說：依眼、緣色生眼識，由三和合生觸，共生受想作意等。是四種無色陰，及眼根并色，唯如此量說名人。於此中立諸名，謂薩埵、那羅、摩㝹、闍摩那婆、弗伽羅時婆、布灑善斗。於中立言，我由眼見色。於中有世傳云：此命者，如此名、如此姓、如此種類、如此食、如此受苦樂、如此長壽、如此久住、如此壽際。比丘！如此事，唯名為量、唯言為量、唯傳為量。如此等一切法無常有為，故意所造，由因緣生。如此了義經，於此執中佛世尊說為依為量，此經不可更別思量。復次有別經說：婆羅門！若說一切有，唯是十二入。若人非人所攝，此人必定不有。此義則成，若入入攝，非不可言。於彼部中有如此經。經言：比丘！若所有眼、若所有色，廣說如經，由唯此量。比丘！諸佛如來說一切有窮、顯一切說。又《頻琵娑羅經》中說：比丘！嬰兒無聞凡夫，隨逐假名我言，此中無我無我所，唯苦欲生得生，廣說如經。有阿羅漢比丘尼名世羅，對魔王說此偈言：「如從和合分，於中說車名， 如此依諸陰，假名說眾生。」於少分阿含中，為波遮利婆羅門說此偈言：「波遮利汝聽，能解諸結法， 由此心有染，復由此心淨。 我者無我體，顛倒故分別， 無我無眾生，唯法謂因果。 有分唯十二，唯有陰入界， 熟思尋此法，人實不可得。 如觀內是空，觀外亦如是， 此二不可得，能修及空義。」復有經說：我執中有五種過失，謂起我見眾生見，墮於見處，與外道不異，僻行邪道心，不入空義、不生淨信，心於中不住，於此人聖法不得清淨。"
+  },
+  "p07": {
+   "sa-bhasya": "[466|17] na vaita evaṃ grandhaṃ pramāṇaṃ kurvanti / kiṃ kāraṇam / [466|17-466|18] nāsmākamayaṃ nikāye paṭhacyata iti / [466|18-466|19] kiṃ punasteṣāṃ nikāya eva pramāṇamāhosvidbuddhavacanam / [466|19] yadi nikāya eva pramāṇaṃ na tarhi teṣāṃ budhaḥ śāstā / [466|19-466|20] na ca te śākyaputrīyā bhavanti / [466|20] atha buddhavacanaṃ pramāṇam / ayaṃ granthaḥ kasmānna pramāṇam / [466|21] nahi kilaitat buddhavacanamiti / kiṃ kāraṇam / nāsmākaṃ nikāye paṭhacyata iti / [466|22] ayamanyāyo vartate / ko 'trānyāyaḥ / [466|22-466|24] yo hi granthaḥ sarveṣu nikāyāntareṣvāmnāyate na ca sūtraṃ dharmatāṃ vā bādhate so 'smābhirapāṭhānna buddhavacanamiti vacanaṃ kevalaṃ sāhasamātram /",
+   "T1558": "此皆非量。所以者何？於我部中曾不誦故。汝宗許是量，為部為佛言？若部是量，佛非汝師、汝非釋子。若佛言者，此皆佛言，如何非量。彼謂：此說皆非真佛言。所以者何？我部不誦故。此極非理。非理者何？如是經文諸部皆誦，不違法性及餘契經，而敢於中輒興誹撥，我不誦故非真佛言。唯縱兇狂，故極非理。",
+   "T1559": "彼不以此文為依量。何以故？此文於我部中非所誦說。為以部為依量、為以佛言為依量？若取部為依量，佛世尊於彼則非正教師，彼便非釋迦種子。若取佛言為依量，如此等文句，云何不取為依量？彼云：如此等文句，非是佛言。云何非佛言？於我部中非昔所誦故，於今非理事起。此中有何非理？此文句是一切餘部所讀誦，此文句不違佛經及法爾。由我等不讀誦故，此非佛言。此言一向非正思量，但由強作。"
+  },
+  "p08": {
+   "sa-bhasya": "[466|24] kiṃ cedamapi teṣāṃ sūtraṃ nāsti \"sarvadharmā anātāna\" iti / [467|01] syāt matam / naiva hi pudgalo dharma ucyate nāpyanyo dharmāditi / [467|01-467|02] evaṃ tarhi na manovijñeyaḥ sidhyati / [467|02] dvayaṃ pratītya vijñānasyotpādaḥ ityavadhāraṇāt / [467|02-467|03] iha caivaṃ vikalpyate \"anātmanyāteti saṃjñāviparyāsa ścittaviparyāso dṛṣṭiviparyāsa\" iti / [467|04] anātmanyātmeti viparyāso na tvātmani kiṃ ca punaḥ / [467|04-467|05] \"nātmā skandhāyatanadhātavaḥ\" yattāvaduktaṃ prāk \"no tu vaktavyaṃ rūpāṇi vā no ve\"ti tattāvadaśocam / [467|05-467|07] uktaṃ ca sūtrāntare \"ye kecit bhikṣavaḥ śramaṇā vā brāhmaṇā vā ātmeti samanupaśyantaḥ samanupaśyanti sarve ta imāneva pañcopādānaskandhāni\"ti / [467|08] tasmātsarva evānātmanyātmagrāhaḥ / [467|08-467|10] tathoktaṃ \"ye kecidanekavidhaṃ pūrvanivāsaṃ samanusmarantaḥ samanusmārṣuḥ samanusmaranti samanusmariṣyanti vā punaḥ sarve ta imāneva opañcopādanaskandhāni\"ti / [467|10-467|11] yadyevamidaṃ kasmādāha \"rūpavānahamabhūvamatīte adhvanī\"ti / [467|11] evamanekavidhaṃ ye samanusmarantīti pradarśayati / [467|11-467|12] yadi tu rūpavantaṃ pudgalaṃ paśyetsatkāyadṛṣṭiprasaṅgaḥ syāt / [467|12] apāṭha eva tvanna śaraṇaṃ syāt / [467|12-467|13] tasmāt prajñāptisatpudgalo rāśidhārāvat /",
+   "T1558": "又於彼部豈無此經，謂一切法皆非我性。若彼意謂補特伽羅與所依法不一不異，故說一切法皆非我。既爾，應非意識所識，二緣生識經決判故。又於餘經如何會釋？謂契經說：非我計我此中具有想心見倒。計我成倒，說於非我，不言於我，何煩會釋。非我者何？謂蘊處界。便違前說補特伽羅與色等蘊不一不異。又餘經說：苾芻當知，一切沙門婆羅門等諸有執我等隨觀見，一切唯於五取蘊起。故無依我起於我見，但於非我法妄分別為我。又餘經言：諸有已憶正憶當憶種種宿住，一切唯於五取蘊起，故定無有補特伽羅。若爾，何緣此經復說我於過去世有如是色等？此經為顯能憶宿生一相續中有種種事。若見實有補特伽羅於過去生能有色等，如何非墮起身見失？或應誹撥言無此經，是故此經依總假我，言有色等如聚如流。",
+   "T1559": "於彼為無此經耶？謂一切法無我。若汝言：不說人是法，不說人異法。若爾，此人應成非意識所知。緣二識得生，由經文決故。於此文中，汝云何分別救難？經言：於無我我執，是想倒、心倒、見倒。於無我我執，是顛倒非於我。何者非我？諸陰入界。汝於前云：不可說我是色非色。此言最不可忍。何以故？於餘經說：比丘！若有沙門婆羅門觀執有我，彼一切但依五取陰起此觀執。是故一切不於我起我執。復有經說：若有諸人能憶種種宿住，已憶、正憶、當憶，彼一切唯依五陰。若爾，此經云何說此言：我如此色等，於宿世已生。此言為顯能憶宿住人能憶多種宿住。若見人有色，應墮身見過失。若不說我，一切色等則無屬處故說。此言不為顯我，是故人是假名有，譬如聚流等。"
+  },
+  "p09": {
+   "sa-bhasya": "[467|14] yadyevaṃ tarhi na buddhaḥ sarvajñaḥ prapnoti / [467|14-467|15] na hi kiñcictrittamasti caittā vā yatsarvaṃ jānīyāt / [467|15] kṣaṇikatvāt / pudgalastu jānīyāt / [467|15-467|16] evaṃ tarhi cittavināśe pudgalasyāvināśābhyupagamāt nityatvamasyābhyupetaṃ bhavati / [467|16-467|17] naiva ca vayaṃ sarvatra jñānasaṃmukhībhāvād buddhaṃ sarvajñamācakṣmahe / [467|17] kiṃ tarhi / sāmarthyāt [467|17-467|19] yā hyasau buddhākhyā saṃtatistasyā idamasti sāmarthyaṃ yadābhogamātreṇāviparītaṃ jñānamutpadyate yatreṣṭam / [467|19] āha cātra / [467|20-467|21] saṃtānena samarthatvādyathāgniḥ sarvabhuṅmataḥ tathā sarvavideṣṭavyo 'sakṛtsarvasya vedanāt / [467|22] kathamidaṃ gamyate / atītādivacanāt / [467|23-467|24] \"ye cābhyatītāḥ saṃbuddhā ye ca buddhā anāgatāḥ / yaśca etarhhi saṃbuddho bahūnāṃ śokanāśana\" iti / [468|01] skandhā eva ca traiyadhvikā iṣyante na pudgalā yuṣmābhiḥ /",
+   "T1558": "若爾，世尊應非一切智，無心心所能知一切法剎那剎那異生滅故。若許有我可能遍知，補特伽羅則應常住，許心滅時此不滅故，如是便越汝所許宗。我等不言佛於一切能頓遍知故名一切智者，但約相續有堪能故，謂得佛名諸蘊相續成就如是殊勝堪能，纔作意時於所欲知境無倒智起故名一切智，非於一念能頓遍知。故於此中有如是頌：由相續有能，如火食一切， 如是一切智，非由頓遍知。如何得知約相續說知一切法，非我遍知？說佛世尊有三世故。於何處說？如有頌言：若過去諸佛，若未來諸佛， 若現在諸佛，皆滅眾生憂。汝宗唯許蘊有三世，非數取趣，故定應爾。",
+   "T1559": "若爾，佛世尊不應成一切智人。何以故？無有心及心法能知一切法剎那剎那生滅故，是故人能知。若爾，心滅時，由執人不滅故，汝則已信許人是常住。我等不說於一切境由智一時現前，佛世尊是一切智。若不爾，此云何？是相續稱為佛，有如此勝能，於隨所欲知境中，唯由迴心生智無倒故，稱一切智。此中說偈：「由相續有能，稱火食一切； 說遍知亦然，不由俱悉解。」此義云何可知？由說過去等世故。如偈曰：「是過去諸佛，是未來諸佛， 是現在世佛，能除眾生憂。」汝等但許五陰有三世，非許人。"
+  },
+  "p10": {
+   "sa-bhasya": "[468|01-468|02] yadi skandhā eva pudgalāḥ kasmādidamāha / [468|02-468|03] \"bhāraṃ ca vo bhikṣavo deśayiṣyāmi bhārādānaṃ ca bhāranikṣepaṇaṃ ca bhārahāraṃ ce\"ti / [468|03] kasmādidaṃ na vaktavyaṃ syāt / [468|03-468|04] na hi bhāra eva bhārahāro yuktaḥ / [468|04] kiṃ kāraṇam / nahyevaṃ dṛśyata iti / avaktavyo 'pi na yuktaḥ / [468|05] kiṃ kāraṇam / na hyevaṃ dṛśyate / bhārādānasyāpi skandhāsaṃgrahaprasaṅgācca / [468|06] ityarthameva bhārahāraṃ nirdideśa bhagavān / [468|06-468|07] \"yo 'sāvāyupmānevaṃnāmā yāvadevañcirasthitika evamāyuḥparyantaḥ\" sa eṣa yathā vijñāyeta / [468|07-468|08] mānyathā vijñāyi nityo vā avaktavyaṃ veti / [468|08-468|09] skandhā eva ca skandhānāmupadhātāya saṃvartante pūrvakā uttareṣāmiti bhāraṃ ca bhārahāraṃ ca kṛtvoktāḥ / [468|09] upaghātārtho hi bhāra iti /",
+   "T1558": "若唯五取蘊名補特伽羅，何故世尊作如是說：吾今為汝說諸重擔、取捨重擔、荷重擔者。何緣於此佛不應說？不應重擔即名能荷。所以者何？曾未見故。不可說事亦不應說。所以者何？亦未見故。又取重擔應非蘊攝，重擔自取，曾未見故。然經說愛名取擔者，既即蘊攝，荷者應然，即於諸蘊立數取趣。然恐謂此補特伽羅是不可說常住實有，故此經後佛自釋言：但隨世俗，說此具壽有如是名，乃至廣說。如上所引人經文句，為令了此補特伽羅，可說無常非實有性。即五取蘊自相逼害得重擔名。前前剎那引後後故名為荷者，故非實有補特伽羅。",
+   "T1559": "若唯五陰名人，云何說此經？經云：我今為汝說重擔、取重擔、捨重擔、荷負重擔。云何此言不可說？重擔不能自荷負重擔故。云何不能此事？非所曾見故不可言，亦不可言此事非所曾見故。復次應立取重擔非陰所攝，為成此義故。佛世尊分別荷負重擔人，是命者，如此名、如此姓，乃至如此久住及壽際。應知是名荷負重擔，勿作別物意知，或執為常住、或執為不可言。諸陰自能滅諸陰，謂前陰於後陰，為顯荷負重擔義，故說此文。"
+  },
+  "p11": {
+   "sa-bhasya": "[468|10] asty eva pudgalo yasmād uktaṃ \"nāsti sattva upapāduka iti mithyādṛṣṭiḥ\" / [468|11] kaścaivam āha nāsti sattva upapāduka iti / [468|11-468|12] sattvastu yathā 'sti tathā vibhakto bhagavateti brūmo mānuṣyakasūtre / [468|12-468|13] tasmād yaḥ paratropapādukasattvākhyaskandhasaṃtānāpavādaṃ karoti tasyaiṣā mithyādṛṣṭir nāsti sattva upapāduka iti / [468|14] skandhānām upapādukatvāt / [468|14-468|15] athaiṣā mithyādṛṣṭiḥ pudgalāpavādikā satī kiṃprahātavyā bhavet / [468|15] nahyeṣā darśanabhāvanāprahātavyā yujyate / pudgalasya sattveṣvantarbhāvāt / [468|16] \"ekaḥ pudgalo loka utpadyamāna utpadyate\" iti vacanāt na skandhā iti cet / [468|17] na / samudāye 'pyekopacārādekatilaikataṇḍulavat ekarāśyekavacanavacca / [468|18] saṃskṛta iti vā pudgalo vaktavya utpatīmattvābhyupagamāt / [468|18-468|19] na sa evamutpadyate yathā skandhā apūrvaprādurbhāvāt / [468|19] kiṃ tarhi / skandhāntaropādānāt / [468|19-468|20] yathā yājñiko jāto vaiyākaraṇo jāta ityucyate vidyopādānāt / [468|20-468|21] bhikṣurjātaḥ parivrājako jāta iti liṅgopādānāt / [468|21] buddhojāto vyādhito jāta ityavasthāntaropādānāditi / [468|22] na pratikṣepāt sūtra eva hi pratikṣiptaṃ bhagavatā paramārthaśūnyatāyām / [468|22-468|23] \"iti hibhikṣavo 'sti karmāsti vipākaḥ kārakastu nopalabhyate / [468|23-468|24] ya imāṃśca skandhānnikṣipati anyāṃśca skandhān pratisaṃdadhātyanyatra dharmasaṃketāditi / [468|24-468|25] phalgusūtre coktam \"upādatta iti phalgu na vadāmīti / [468|25-468|26] tasmānnāsti skandhānāṃ kaścidupādātā nāpi nikṣiptā / [468|26-469|01] kaṃ ca tāvadbhavānyājñikaṃ yāvadvacyā dhita madhimucyate / [469|01] dṛṣṭātaṃ karoti pudgalaṃ yadi / so 'siddhaḥ / atha cittacaittāḥ / na / [469|02] teṣāṃ pratikṣaṇamapūrvotpattireva / atha śarīram / tasyāpi tathā / [469|02-469|03] śarīravidyāliṅgavacca skandhapudgalayoranyatvamāpadyate / [469|03] jīrṇa śarīrāntarameva jyādhitaṃ ca / [469|03-469|04] pratiṣiddho hi sāṃkhyīyaḥ pariṇāmavādaḥ / [469|04] tasmādadṛṣṭāntā ete / [469|05-469|06] yadi ca skandhānāmapūrvotpādo na pudgalasyeṣyate so 'nyaśca tebhyo nityaśca sphuṭaṃ dīpito bhavati / [469|06] pañca skandhā ekaḥ pudgala iti brūvatā kathamanyatvaṃ nocyate / [469|07] kathaṃ tāvat bhūtāni catvāri rūpaṃ tvekaṃ na ca bhūtebhyyo 'nyadrūpam / pākṣika eṣa doṣaḥ / [469|08] katamasminpakṣa / bhūtamātrikapakṣe / [469|08-469|09] tathāpi tu yathā bhūtamātraṃ rūpamevaṃ skandhamātraṃ pudgala ityabhyupetaṃ bhavati /",
+   "T1558": "補特伽羅定應實有，以契經說諸有撥無化生有情邪見攝故。誰言無有化生有情？如佛所言：我說有故。謂蘊相續能往後世，不由胎卵濕名化生有情。撥此為無，故邪見攝。化生諸蘊，理實有故。又許此邪見謗補特伽羅。汝等應言，是何所斷？見修所斷。理並不然，補特伽羅非諦攝故，邪見不應修所斷故。若謂經說有一補特伽羅生在世間，應非蘊者，亦不應理，此於總中假說一故，如世間說一麻一米一聚一言。或補特伽羅應許有為攝，以契經說生世間故。非此言生如蘊新起，依何義說生在世間？依此今時取別蘊義，如世間說能祠者生、記論者生，取明論故。又如世說有苾芻生、有外道生，取儀式故。或如世說有老者生，有病者生，取別位故。佛已遮故，此救不成。如勝義空契經中說：有業有異熟，作者不可得。謂能捨此蘊，及能續餘蘊，唯除法假。故佛已遮。頗勒具那契經亦說：我終不說有能取者。故定無一補特伽羅能於世間取捨諸蘊。又汝所引祠者等生，其體是何而能喻此？若執是我，彼不極成。若心心所，彼念念滅、新新生故，取捨不成。若許是身，亦如心等。又如明等與身有異，蘊亦應異補特伽羅。老病二身各與前別，數論轉變如前已遣，故彼所引為喻不成。又許蘊生非數取趣，則定許此異蘊及常。又此唯一，蘊體有五，寧不說此與蘊有異？大種有四，造色唯一，寧言造色不異大種？是彼宗過。何謂彼宗？諸計造色即大種論。設如彼見，應作是質：如諸造色即四大種，亦應即五蘊立補特伽羅。",
+   "T1559": "必定有人。何以故？由此經言：無自然生眾生，此執是邪見。何人說無自然生眾生？如佛世尊分別眾生，我說亦爾。是故若人撥無於餘生中自然生五陰相續，世一間立名自然生眾生，說此人起邪見。謂無自然生眾生，由有諸陰自然生故，是汝所說撥人邪見。見何諦所滅？此邪見不應由見諦滅，亦不應由修道滅。何以故？人不屬四諦攝故。若汝言：有別經為證，顯人非陰。經言：一人於世間向生，生為利益安樂多人，廣說如經。由此經言，故人非陰。是義不然，由於聚中假說一故，譬如說一麻一米；或於一聚說一言，如說一山一屋。應說人即是有為，由汝許有生故。如陰先未有後有，人生不爾。不爾云何？生由取別陰故，譬如延若師生、毘伽羅論師生，由取明處故說名生。又如比丘生、道人生，由取相故說名生。又如老者已生、病者已生，由取別位故說名生。是義不然，由被撥故。於經中佛世尊已撥此義。何經？於《真實空經》。經云：比丘！如此有業有果報，作者不可得，實無有故。是能棄捨此陰、往取彼陰，唯除於法世流布語所立人。又於《頗求那經》中說：我亦不說眾生能取陰，唯諸法相續起。由此經是故知，無有一人能取諸陰、能捨諸陰。汝今信執何延若師生乃至病者生，立為人譬。若執我，此不成就，非有故。若執心及心法，彼剎那剎那，未曾有有故，不可為譬。若執身亦如心，如身明相，陰及人應成差別。老病此二是別身，是僧佉所立變異義，於前已破。是故延若師等不成譬。若汝執諸陰有未有有義，人則不爾。若爾，人應異陰，亦是常住。此義分明所顯。汝說陰五人一，云何不說人與陰異？汝云何說四大色一？色不異四大，如此是立義過失。何者立義？立唯有大義。雖然，如唯四大是色，如此唯五陰是人，此義已許。"
+  }
+ }
+}
