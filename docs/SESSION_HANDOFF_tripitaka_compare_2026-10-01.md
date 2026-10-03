@@ -172,7 +172,7 @@
    ＝第二會〈第二分成辦品第四十八〉＝藏譯第三十四章（TMX 13822 起，第三十五章 13971 起）；梵本起點第 3490 段
    「atha khalv āyuṣmān subhūtir bhagavantam etad avocat: gambhīreyaṃ bhagavan prajñāpāramitā, mahākṛtyeneyaṃ」。
    品次對照與切點不另成檔，都在 pancavimsati.py 各品 intro 與 SET；後續品名查 C:/tmp/cbeta/out/T0223／T0221／T0220c.toc.json（第二會看第一層「第二分…品第N之一」）。
-   光讚 T0222 殘本只到 c29。梵本是 Kimura 依《現觀莊嚴論》改訂本（GRETIL ），列舉常被重排或併段（c38 四果比較移位、c44 百波羅蜜併一段）。
+   光讚 T0222 殘本只到 c29。梵本是 Kimura 依《現觀莊嚴論》改訂本（GRETIL `sa_paJcaviMzatisAhasrikA-prajJApAramitA1-8`），列舉常被重排或併段（c38 四果比較移位、c44 百波羅蜜併一段）。
 9. 仍可做、未排定（動手前先問使用者）：
    - 十宗要典其餘有異譯的：仁王經（羅什 T0245、不空 T0246）、大日經（T0848＋藏）、金剛頂經（梵 STTS＋T0882／T0865／T0866）、
      菩薩地（梵 Bodhisattvabhūmi＋瑜伽菩薩地＋地持 T1581＋善戒 T1582）、六祖壇經（敦煌 T2007 對宗寶 T2008，版本對讀非異譯）。
