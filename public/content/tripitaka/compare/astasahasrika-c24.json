@@ -1,0 +1,183 @@
+{
+ "slug": "astasahasrika-c24",
+ "title": "八千頌般若・第24品 增上慢品（Abhimāna）",
+ "family": "sa",
+ "intro": "梵本第二十四品＝第四會〈無雜無異品〉＝施護〈增上慢品〉；道行、大明度為上一品末句＋〈貢高品〉，鈔經只有〈釋提桓因品〉末一段（鈔經至此止），羅什為〈深心求菩提品〉末句＋〈恭敬菩薩品〉前段，第五會為〈勝意樂品〉末句＋〈修學品〉前段（後兩本取到「為盡故學」之前）。菩薩學般若時諸魔疑怖、放風火恐怖；魔得便者：聞不信、心疑、離善友、受邪法、勸他勿學；自恃遠離或名姓功德而輕他菩薩；與聲聞諍、未受記者於已受記者起瞋，隨念劫數；阿難問可悔否：能悔則可，菩薩相視當如佛。古譯多以一段總說輕他與諍訟，不另分節。",
+ "units": [
+  {
+   "id": "c24-01",
+   "label": "菩薩學般若時諸魔疑怖・放風火恐怖"
+  },
+  {
+   "id": "c24-02",
+   "label": "魔得便者：聞不信、心疑、離善友、受邪法、勸他勿學"
+  },
+  {
+   "id": "c24-03",
+   "label": "自恃遠離、名姓、杜多功德而輕他菩薩"
+  },
+  {
+   "id": "c24-04",
+   "label": "與聲聞諍・未受記者於已受記者起瞋"
+  },
+  {
+   "id": "c24-05",
+   "label": "阿難問可悔否・菩薩共住相視如佛"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sa",
+   "lang": "sa",
+   "label": "梵本",
+   "who": "Vaidya 校訂本（1960）・GRETIL"
+  },
+  {
+   "id": "T0224",
+   "lang": "lzh",
+   "label": "道行般若經",
+   "who": "後漢・支婁迦讖譯《道行般若經》・179 年",
+   "work": "T0224"
+  },
+  {
+   "id": "T0225",
+   "lang": "lzh",
+   "label": "大明度經",
+   "who": "吳・支謙譯《大明度經》（第一品夾注）・三世紀",
+   "work": "T0225"
+  },
+  {
+   "id": "T0226",
+   "lang": "lzh",
+   "label": "摩訶般若鈔經",
+   "who": "前秦・曇摩蜱共竺佛念譯《摩訶般若鈔經》（殘本）・382 年",
+   "work": "T0226"
+  },
+  {
+   "id": "T0227",
+   "lang": "lzh",
+   "label": "羅什本",
+   "who": "姚秦・鳩摩羅什譯《小品般若波羅蜜經》・408 年",
+   "work": "T0227"
+  },
+  {
+   "id": "T0220d",
+   "lang": "lzh",
+   "label": "玄奘・第四會",
+   "who": "唐・玄奘譯《大般若經》第四會（卷 538–555）・663 年",
+   "work": "T0220d"
+  },
+  {
+   "id": "T0220d-5",
+   "lang": "lzh",
+   "label": "玄奘・第五會",
+   "who": "唐・玄奘譯《大般若經》第五會（卷 556–565）・663 年",
+   "work": "T0220d"
+  },
+  {
+   "id": "T0228",
+   "lang": "lzh",
+   "label": "施護本",
+   "who": "宋・施護譯《佛母出生三法藏般若波羅蜜多經》・十世紀末",
+   "work": "T0228"
+  }
+ ],
+ "works": [
+  "T0220d",
+  "T0224",
+  "T0225",
+  "T0226",
+  "T0227",
+  "T0228"
+ ],
+ "anchors": [
+  {
+   "work": "T0220d",
+   "node": "第四分無雜無異品第二十四",
+   "uid": "T07n0220d_p0843c23"
+  },
+  {
+   "work": "T0228",
+   "node": "增上慢品第二十四",
+   "uid": "T08n0228_p0657a15"
+  },
+  {
+   "work": "T0224",
+   "range": [
+    "T08n0224_p0463c25",
+    "T08n0224_p0464c03"
+   ]
+  },
+  {
+   "work": "T0225",
+   "range": [
+    "T08n0225_p0500b08",
+    "T08n0225_p0500c05"
+   ]
+  },
+  {
+   "work": "T0226",
+   "range": [
+    "T08n0226_p0536c05",
+    "T08n0226_p0536c05"
+   ]
+  },
+  {
+   "work": "T0227",
+   "range": [
+    "T08n0227_p0573a24",
+    "T08n0227_p0573c25"
+   ]
+  },
+  {
+   "work": "T0220d",
+   "range": [
+    "T07n0220d_p0912b13",
+    "T07n0220d_p0913b16"
+   ]
+  }
+ ],
+ "cells": {
+  "c24-01": {
+   "sa": "ASP_24: abhimānaparivartaścaturviṃśatitamaḥ / atha khalu bhagavān punarapyāyuṣmantamānandamāmantrayate sma - yasmin khalu punarānanda samaye bodhisattvo mahāsattvaḥ prajñāpāramitāyāṃ śikṣate, prajñāpāramitāyāṃ yogamāpadyate, prajñāpāramitāṃ bhāvayati, tasmin ānanda samaye ye trisāhasramahāsāhasre lokadhātau mārāḥ pāpīyāṃsaḥ, te sarve saṃśayitā bhavanti - kimayaṃ bodhisattvo mahāsattvo 'ntarā bhūtakoṭiṃ sākṣātkariṣyati śrāvakabhūmau vā pratyekabuddhabhūmau vā, utāho anuttarāṃ samyaksaṃbodhimabhisaṃbhotsyate iti / punaraparamānanda tasmin samaye mārāḥ pāpīyāṃsaḥ śokaśalyaviddhā bhavanti yasmin samaye bodhisattvo mahāsattvaḥ prajñāpāramitāvihāreṇa viharati / punaraparamānanda yasmin samaye bodhisattvo mahāsattvaḥ prajñāpāramitāyāṃ carati, prajñāpāramitāyāṃ yogamāpadyate, prajñāpāramitāṃ bhāvayati, tasmin samaye mārāḥ pāpīyāṃso bodhisattvasya mahāsattvasya viheṭhāmupasaṃharanti, bhayaṃ saṃjanayanti, ulkāpātān diśi diśyutsṛjanti, digdāhānupadarśayanti - apyeva nāma ayaṃ bodhisattvo mahāsattvo 'valīyeta vā romaharṣo vā asya bhavet, yenāsyaikacittotpādo 'pi kṣīyeta anuttarāyāṃ samyaksaṃbodheriti / tatra ānanda na sarvasya bodhisattvasya mahāsattvasya māraḥ pāpīyānupasaṃkrāmati viheṭhanābhiprāyaḥ, api tu kasyacidupasaṃkrāmati, kasyacinnopasaṃkrāmati //",
+   "T0224": "正是中，阿難！或時菩薩摩訶薩深念般若波羅蜜，行般若波羅蜜，行學般若波羅蜜。當是時，三千大千國土中弊魔，一切心中皆愁毒，欲共壞亂是菩薩摩訶薩，自共議言：『當何以使是菩薩便中道取證阿羅漢、辟支佛道，莫使成作佛？』」佛語阿難：「菩薩隨時欲學般若波羅蜜，隨法欲行般若波羅蜜，是時一佛界中魔，各各驚自念言：『欲使菩薩中道得阿羅漢果，莫疾使得阿耨多羅三耶三菩，疾使得佛。』「復次，阿難！弊魔愁毒為憂，見菩薩習行於般若波羅蜜。「復次，阿難！是時諸弊魔四面放火風，恐怖是菩薩，若令畏懼，衣毛當起，使心一反，亂念轉復。」佛語阿難：「魔不遍行亂菩薩，若有行亂者，有不行亂者。」",
+   "T0225": "佛言：「是中，阿難！或時闓士大士深念求學明度，三千國土中邪，一切皆悉愁毒，欲共壞亂，使中道取證。」佛告阿難：「闓士隨時各學明度無極，隨法行之。是時一佛界邪，各驚念言：『我使闓士中道得應儀，莫使得無上正真。』弊邪見闓士習行明度，深為愁毒，四面放火，怖諸闓士念心一轉。」",
+   "T0226": "或時，阿難！菩薩摩訶薩於是深念般若波羅蜜行，便念學般若波羅蜜。爾時三千大千剎土中弊魔，一切皆為愁毒，欲使菩薩摩訶薩中道以本際作證，令得聲聞若辟支佛道。若使得阿耨多羅三耶三菩，疾成阿惟三佛。」",
+   "T0227": "阿難！菩薩學般若波羅蜜，修習般若波羅蜜時，三千大千世界，諸魔皆生疑惑：『是菩薩，為當中道證實際，墮聲聞、辟支佛地？為當直至阿耨多羅三藐三菩提？』」佛告阿難：「若菩薩不離般若波羅蜜行，爾時惡魔憂惱如箭入心，放大雨雹，雷電霹靂，欲令菩薩驚怖毛竪，其心退沒，於阿耨多羅三藐三菩提，乃至一念錯亂。阿難！惡魔不必普欲惱亂一切菩薩。」",
+   "T0220d": "爾時，佛告阿難陀言：「若時菩薩摩訶薩思惟般若波羅蜜多，習學般若波羅蜜多，修行般若波羅蜜多。是時，三千大千世界一切惡魔皆生猶豫，咸作是念：『此菩薩摩訶薩為於中間證於實際，退墮聲聞或獨覺地？為趣無上正等菩提，能盡未來利樂一切？』「復次，慶喜！若時菩薩摩訶薩安住般若波羅蜜多，是時惡魔生大憂苦，身心戰慄如中毒箭。「復次，慶喜！若時菩薩摩訶薩修行般若波羅蜜多，是時惡魔來到其所，化作種種可怖畏事，所謂刀劍、惡獸、毒蛇，猛火熾燃四方俱發，欲令菩薩身心驚懼，迷失無上正等覺心，於所修行心生退屈，乃至發起一念亂意，障礙無上正等菩提，是彼惡魔深心所願。」",
+   "T0220d-5": "慶喜當知！若時菩薩於深般若波羅蜜多思惟修學，三千世界一切惡魔皆生疑怖，咸作是念：『此諸菩薩為於中間便證實際，墮二乘地？為趣無上正等菩提轉妙法輪，空我境界？』」「復次，慶喜！若時菩薩修學般若波羅蜜多，晝夜精勤常不捨離。時，魔眷屬如箭入心，怖戰憂惶不任自處。「復次，慶喜！若時菩薩修學般若波羅蜜多，晝夜精勤將至究竟。時，魔眷屬來至其所，化作種種可怖畏事，欲令菩薩身心驚惶，於大菩提暫退便足。",
+   "T0228": "爾時，世尊復告尊者阿難言：「當知菩薩摩訶薩修般若波羅蜜多時，行般若波羅蜜多時，所有三千大千世界一切惡魔皆生疑念：『菩薩摩訶薩修行是般若波羅蜜多，為當中道取證聲聞、緣覺果耶？為當決定直至阿耨多羅三藐三菩提耶？』阿難！彼諸惡魔或時若見菩薩摩訶薩修行般若波羅蜜多故，決定直至阿耨多羅三藐三菩提者，諸魔即時憂愁苦惱如箭入心。「復次，阿難！菩薩摩訶薩修般若波羅蜜多時，行般若波羅蜜多時，有諸惡魔來菩薩所生嬈亂心，以彼魔力化諸雷雹風雨等相，周徧方處，欲令菩薩怖畏散亂，乃至欲令菩薩於一念中退失阿耨多羅三藐三菩提心。阿難！當知惡魔不必普能嬈亂一切菩薩。」"
+  },
+  "c24-02": {
+   "sa": "ānanda āha - kiyadrūpasya bhagavan bodhisattvasya mahāsattvasya upasaṃkrāmati māraḥ pāpīyān viheṭhanābhiprāyaḥ? bhagavānāha - yena ānanda bodhisattvena mahāsattvena pūrvāntataḥ prajñāpāramitāyāṃ bhāṣyamāṇāyāmadhimukticittaṃ notpāditaṃ bhavati, asya ānanda bodhisattvasya mahāsattvasya māraḥ pāpīyānupasaṃkrāmati viheṭhanābhiprāyaḥ, avatāraṃ cāsya labhate // punaraparamānanda yo bodhisattvo mahāsattvo gambhīrāyāṃ prajñāpāramitāyāṃ bhāṣyamāṇāyāṃ saṃśayaprāpto bhavati, vimatimutpādayati - syādveyaṃ prajñāpāramitā, evaṃ na vā syāditi, asyāpyānanda bodhisattvasya mahāsattvasya māraḥ pāpīyānupasaṃkrāmati viheṭhanābhiprāyaḥ, avatāraṃ cāsya labhate // punaraparamānanda yo bodhisattvo mahāsattvaḥ kalyāṇamitravirahito bhavati, pāpamitraparigṛhītaś ca bhavati, sa gambhīrāṇi gambhīrāṇi sthānāni prajñāpāramitāyāṃ bhāṣyamāṇāyāṃ na śṛṇoti, aśṛṇvanna jānāti, ajānanna paripṛcchati - kathaṃ prajñāpāramitā bhāvayitavyeti, asyāpyānanda bodhisattvasya mahāsattvasya māraḥ pāpīyānupasaṃkrāmati viheṭhanābhiprāyaḥ, avatāraṃ cāsya labhate // punaraparamānanda yo bodhisattvo mahāsattvo 'saddharmaparigrāhakamālīno bhavati - eṣa mama sahāyakaḥ, sarvārtheṣu māṃ na parityajati, bahavo 'pi bodhisattvā mahāsattvā mamānye 'pi sahāyakāḥ santi / na ca punaste mamābhiprāyaṃ paripūrayanti / ayaṃ tu mayā pratirūpaḥ sahāyo labdhaḥ / ayaṃ mamābhiprāyaṃ paripūrayiṣyati / asyāpyānanda bodhisattvasya mahāsattvasya māraḥ pāpīyānupasaṃkrāmati viheṭhanābhiprāyaḥ, avatāraṃ cāsya labhate // punaraparamānanda yo bodhisattvo mahāsattvo 'syāṃ gambhīrāyāṃ prajñāpāramitāyāṃ bhāṣyamāṇāyāmanyaṃ bodhisattvamevaṃ vadet - gambhīrā bateyaṃ prajñāpāramitā / kiṃ tavainayā śrutayā? na hyevamatra yujyamānamanyeṣu sūtrānteṣu yathā tathāgatena bhāṣitam / ahamapyasyāmagādhamāsvādaṃ na labhe / kiṃ tavainayā śrutayā likhitayā veti? evamanyān api bodhisattvān mahāsattvān vivecayate / asyāpyānanda bodhisattvasya mahāsattvasya māraḥ pāpīyānupasaṃkrāmati viheṭhanābhiprāyaḥ, avatāraṃ cāsya labhate //",
+   "T0224": "阿難白佛言：「何等菩薩為魔所亂？」佛語阿難：「若有菩薩聞深般若波羅蜜不樂者，弊魔便行往壞。「復次，阿難！若有菩薩聞深般若波羅蜜心狐疑者，自念：『若有無有耶？』如是，阿難！菩薩為弊魔所得便。「復次，阿難！若有菩薩遠離於善師，是菩薩所聞般若波羅蜜深事不欲聞也，亦不了也，亦不知也，何因守般若波羅蜜？用是故，阿難！是菩薩弊魔所得便者。「復次，阿難！若有菩薩與惡師從事，用是故，弊魔得菩薩便。是菩薩言：『正是我所喜師也，當成我所願，餘多有菩薩非我善厚也。』用是故，弊魔便復得菩薩。「復次，阿難！聞是深般若波羅蜜時，教餘菩薩：『用是為學，用是為寫，我尚不了其事，汝能了耶？』若有時菩薩與異菩薩轉相輕易言：『我所行是也，汝所行非也。』爾時諸弊魔歡欣踊躍，是時弊魔便作異被服像來，歎菩薩言：『汝於某國生某種姓家。』是菩薩聞是語，便輕易餘成就不貢高菩薩。是貢高菩薩功德薄少，無阿惟越致相也。是菩薩於阿惟越致中功德少，自貢高，輕餘菩薩言：『卿不及我所行。』用是故，弊魔大歡欣言：『今泥犁、禽獸、薜荔墮者不少。』弊魔當復增其念，所語所說，多有信用者，聞之者無不隨其言者，作是學者瞋恚益增，心所作為顛倒。用是故，身口心所作為輕反。用是故，其人在泥犁、禽獸、薜荔中罪益增。用是故，弊魔大歡欣踊躍無有極。若求菩薩道家，與求羅漢道人共諍，爾時弊魔自念：『菩薩離薩芸若遠，離遠亦不大遠。』菩薩又與菩薩共諍，爾時弊魔念言：『兩離佛遠。』」",
+   "T0225": "佛言：「邪不身遍行亂。闓士若遠離善師，為邪所亂愁毒。以不深解明度，心狐疑念：『有之？無乎？昔所翫習而今惡聞，或結不知，將以何緣守明度乎？』疑網自蔽，邪得其便，教餘闓士言：『若用是為寫學，我尚不了其事，若能了乎？』自言所行是，若所行非，所為顛倒。用是故，其人在地獄、禽獸、餓鬼中，其罪日增。如是邪大歡喜。若闓士與行應儀道諍，又與闓士共諍，時邪言兩，離佛遠矣。若未得不退轉闓士與不退轉諍，隨念恚恨，心一轉念，轉却一劫，雖有是惡，不捨一切智。劫數無極，始當從初發意起。」",
+   "T0227": "「世尊！何等菩薩為惡魔所亂？」「阿難！有菩薩先世聞說深般若波羅蜜，不能信受。如是之人，惡魔惱亂而得其便。「復次，阿難！若菩薩聞深般若波羅蜜時，心生疑惑，有是深般若波羅蜜耶？無耶？阿難！如是菩薩亦為惡魔之所得便。「復次，阿難！有菩薩離善知識，為惡知識所得，是人不聞深般若波羅蜜中義。以不聞故，不知不見，云何應行般若波羅蜜？云何應修般若波羅蜜？阿難！是人亦為惡魔得便。「復次，阿難！若菩薩受持邪法，是人亦為惡魔得便。惡魔作是念：『是人助我，亦令餘人助我，亦能滿我所願。』阿難！是人亦為惡魔得便。「復次，阿難！菩薩云何為惡魔得便？若菩薩聞深般若波羅蜜，語餘菩薩言：『是般若波羅蜜甚深，我等猶尚不能得底，汝等何用聞為！』是人亦為惡魔得便。阿難！若菩薩輕餘菩薩言：『我是遠離行者，汝等無此功德。』爾時惡魔甚大歡喜踊躍。阿難！若有眾菩薩為惡魔稱其名字，得是名字故，輕餘清淨善心菩薩，是等無有阿毘跋致菩薩功德相貌，而假託阿毘跋致功德，增長煩惱，自高其身，而下他人，作是言：『我有所功德，汝無是事。』爾時惡魔即大歡喜，作是念：『我之宮殿，則為不空，增益地獄、餓鬼、畜生。』惡魔加其神力故，是人所語，人皆信受。信受已，隨所見學，隨所說行。隨所見學，隨所說行已，亦復增益煩惱。如是人等，以顛倒心故，所起身口意業果報皆苦，以是因緣故，增益地獄、餓鬼、畜生。阿難！惡魔見是利益，亦大歡喜。阿難！若求佛道者，與聲聞人共諍。惡魔復作是念：『是人雖遠離薩婆若而不大遠。』阿難！若菩薩共菩薩諍，惡魔即大歡喜，作是念：『是人兩離薩婆若遠。』阿難！若不得受記菩薩，瞋恨受記者，而共諍競，惡口罵詈，若愛惜薩婆若，隨其起念，一念却一劫，爾乃還得發大莊嚴。」",
+   "T0220d": "爾時，慶喜便白佛言：「為諸菩薩摩訶薩修行般若波羅蜜多時皆為惡魔之所擾亂？為有擾亂、不擾亂者？」佛告慶喜：「非諸菩薩摩訶薩修行般若波羅蜜多時皆為惡魔之所擾亂，然有擾亂、不擾亂者。」具壽慶喜復白佛言：「何等菩薩摩訶薩修行般若波羅蜜多時，為諸惡魔之所擾亂？何等菩薩摩訶薩修行般若波羅蜜多時，不為惡魔之所擾亂？」佛告慶喜：「若菩薩摩訶薩先世聞說甚深般若波羅蜜多，無信解心、毀訾、誹謗，是菩薩摩訶薩修行般若波羅蜜多時，便為惡魔之所擾亂。若菩薩摩訶薩先世聞說甚深般若波羅蜜多，有信解心、不起毀謗，是菩薩摩訶薩修行般若波羅蜜多時，不為惡魔之所擾亂。「復次，慶喜！若菩薩摩訶薩聞說如是甚深般若波羅蜜多，疑惑猶豫為有為無、為實不實？是菩薩摩訶薩修行般若波羅蜜多時，便為惡魔之所擾亂。若菩薩摩訶薩聞說如是甚深般若波羅蜜多，其心都無疑惑猶豫、信定實有，是菩薩摩訶薩修行般若波羅蜜多時，不為惡魔之所擾亂。「復次，慶喜！若菩薩摩訶薩遠離善友，為諸惡友之所攝持，不聞般若波羅蜜多甚深義處，由不聞故不能解了，不解了故不能修習，不修習故不能請問：云何應修甚深般若波羅蜜多？云何應學甚深般若波羅蜜多？是菩薩摩訶薩修行般若波羅蜜多時，便為惡魔之所擾亂。若菩薩摩訶薩親近善友，不為惡友之所攝持，得聞般若波羅蜜多甚深義處，由得聞故便能解了，由解了故即能修習，由修習故便能請問：云何應修甚深般若波羅蜜多？云何應學甚深般若波羅蜜多？是菩薩摩訶薩修行般若波羅蜜多時，不為惡魔之所擾亂。「復次，慶喜！若菩薩摩訶薩遠離般若波羅蜜多，攝受、讚歎非真妙法，是菩薩摩訶薩修行般若波羅蜜多時，便為惡魔之所擾亂。若菩薩摩訶薩親近般若波羅蜜多，不攝、不讚非真妙法，是菩薩摩訶薩修行般若波羅蜜多時，不為惡魔之所擾亂。「復次，慶喜！若菩薩摩訶薩遠離般若波羅蜜多，於真妙法毀呰、誹謗。爾時，惡魔便作是念：『今此菩薩與我為伴，由彼毀謗真妙法故，便有無量初學大乘諸菩薩眾於真妙法亦生毀謗，由此因緣我願圓滿。雖有無量新學大乘諸菩薩眾與我為伴，然不能令我願滿足，今此菩薩與我為伴，令我所願一切滿足，故此菩薩是我真伴，我應攝受令增勢力。』是菩薩摩訶薩修行般若波羅蜜多時，便為惡魔之所擾亂。若菩薩摩訶薩親近般若波羅蜜多，於真妙法讚歎信受，亦令無量新學大乘諸菩薩眾於真妙法讚歎信受，由此惡魔愁憂驚怖，是菩薩摩訶薩修行般若波羅蜜多時，不為惡魔之所擾亂。「復次，慶喜！若菩薩摩訶薩聞說般若波羅蜜多甚深經時，作如是語：『如是般若波羅蜜多理趣甚深、難見、難覺，何用宣說、聽聞、受持、讀誦、思惟、精勤修學、書寫流布此經典為？我尚不能得其源底，況餘薄福淺智者哉！』時，有無量新學大乘諸菩薩等，聞其所說心皆驚怖，便退無上正等覺心，墮於聲聞或獨覺地。是菩薩摩訶薩修行般若波羅蜜多時，便為惡魔之所擾亂。若菩薩摩訶薩聞說般若波羅蜜多甚深經時，作如是語：『如是般若波羅蜜多理趣甚深難見難覺，若不宣說、聽聞、受持、讀誦、思惟、精勤修學、書寫流布，能證無上正等菩提必無是處。』時，有無量新學大乘諸菩薩等，聞其所說歡喜踊躍，便於般若波羅蜜多常樂聽聞、受持、讀誦、令善通利、如理思惟、精進修行、為他演說、書寫流布，求趣無上正等菩提，是菩薩摩訶薩修行般若波羅蜜多時，不為惡魔之所擾亂。",
+   "T0220d-5": "「復次，慶喜！非諸菩薩修學般若波羅蜜多，皆為惡魔之所擾亂。若諸菩薩先世聞此甚深般若波羅蜜多，無信解心毀訾誹謗，是諸菩薩修學般若波羅蜜多，便為惡魔之所擾亂。「復次，慶喜！若諸菩薩聞深般若波羅蜜多，疑惑猶豫為有為無，是諸菩薩修學般若波羅蜜多，便為惡魔之所擾亂。「復次，慶喜！若諸菩薩遠離善友，惡友攝持，不聞般若波羅蜜多甚深義處，由不聞故不知不見，云何修學甚深般若波羅蜜多？是諸菩薩修學般若波羅蜜多，便為惡魔之所擾亂。「復次，慶喜！若諸菩薩攝受邪法，爾時，惡魔便作是念：『今此菩薩與我為伴，令無量人棄捨正法滿我所願。』是諸菩薩修學般若波羅蜜多，便為惡魔之所擾亂。「復次，慶喜！若諸菩薩聞說般若波羅蜜多甚深經時，告餘菩薩：『如是般若波羅蜜多理趣甚深、難信難解，何用書寫、受持、讀誦？我尚不能得其源底，況餘薄福淺智者哉！』是諸菩薩修學般若波羅蜜多，便為惡魔之所擾亂。",
+   "T0228": "阿難白佛言：「世尊！何等菩薩為魔所嬈？」佛言：「阿難！若菩薩於先世中曾得聞是般若波羅蜜多法門，雖復聞已不生信解。阿難！當知是菩薩即有惡魔而來嬈亂，為彼諸魔伺得其便。「復次，阿難！若菩薩摩訶薩聞此甚深般若波羅蜜多法門時，心生疑念：『有是般若波羅蜜多法門耶？無是般若波羅蜜多法門耶？』阿難！當知是菩薩即有惡魔而來嬈亂，為彼諸魔伺得其便。「復次，阿難！若菩薩摩訶薩遠離善知識，親近惡知識，以近惡知識故，聞此甚深般若波羅蜜多法門不生信解，又復不能請問其義，但作是念：『我今何能修此般若波羅蜜多？』阿難！當知是菩薩即有惡魔而來嬈亂，為彼諸魔伺得其便。「復次，阿難！若菩薩摩訶薩受彼邪法、隨邪法行，彼諸惡魔知是事已心生歡喜，即作是念：『此人助我，亦令餘人同來助我，而復令我圓滿所願隨順我意。』阿難！當知是菩薩即有惡魔而來嬈亂，為彼諸魔伺得其便。「復次，阿難！若菩薩摩訶薩聞此甚深般若波羅蜜多法門已，謂餘菩薩言：『此般若波羅蜜多甚深難解，我尚不能得其源底，汝今何用更修習耶？但於餘經佛所說者聽受修習，必當於彼而得法味。』由此菩薩作是說已，諸餘菩薩即起遠離般若波羅蜜多心。阿難！當知作是說者即有惡魔而來嬈亂，為彼諸魔伺得其便。"
+  },
+  "c24-03": {
+   "sa": "punaraparamānanda yasmin samaye bodhisattvo mahāsattvo 'nyān bodhisattvānavamanyate - ahaṃ vivekavihāreṇa viharāmi, nānye vivekavihāreṇa viharanti, nānyeṣāṃ vivekavihārāḥ saṃvidyante iti / tasminnānanda samaye māraḥ pāpīyāṃstuṣṭa udagra āttamanāḥ pramuditaḥ prītisaumanasyajāto bhavati, saṃharṣajāto harṣitacittaḥ prītiprāmodyajāto bhavati / tatkasya hetoḥ? dūrīkarotyeṣo 'nuttarāṃ samyaksaṃbodhimiti // punaraparamānanda yasmin samaye bodhisattvasya mahāsattvasya nāmagrahaṇaṃ vā gotragrahaṇaṃ vā dhutaguṇaparikīrtanaṃ vā bhavati, evaṃ sa tāvanmātrakeṇa tato 'nyān bodhisattvān mahāsattvān peśalān kalyāṇadharmaṇo 'vamanyate / te ca tasya guṇā na saṃvidyante, ye 'vinivartanīyānāṃ bodhisattvānāṃ mahāsattvānāṃ prajñāpāramitāyāṃ caratāṃ guṇāḥ, te ākārāstāni liṅgāni tāni nimittāni tasya na saṃvidyante / so 'saṃvidyamāneṣvavinivartanīyaguṇeṣu kleśamutpādayati, yaduta ātmānamutkrośayati, parān paṃsayati - na khalvete teṣu dharmeṣu saṃdṛśyante, yatrāhaṃ saṃdṛśya iti / tatra mārāṇāṃ pāpīyasāmevaṃ bhavati - na śūnyāni mārabhavanāni bhaviṣyanti, utsadāni bhaviṣyanti / mahānirayāstiryañcaḥ pretaviṣayā āsurāś ca kāyā utsadā bhaviṣyantīti / tathā ca māraḥ pāpīyānadhiṣṭhāsyati, yathā te bodhisattvā mahāsattvā evaṃ pravṛttā adhyākrāntā lābhasatkāreṇa bhaviṣyanti, ādeyavacanāś ca bhaviṣyanti / te tayā ādeyavacanatayā bahujanaṃ grāhayiṣyanti / teṣāṃ ca sa mahājanaḥ śrotavyaṃ śraddhātavyaṃ maṃsyate / te dṛṣṭvā śrutvā ca teṣāmanukṛtimāpatsyante / te dṛṣṭaśrutānukṛtimāpadyamānā na tathatvāya śikṣiṣyante, na tathatvāya pratipatsyante, na tathatvāya yogamāpatsyante / evaṃ te na tathatāyāṃ śikṣamāṇā na tathatāyāṃ pratipadyamānā na tathatāyāṃ yogamāpadyamānāḥ saṃkleśaṃ vivardhayiṣyanti / evaṃ te viparyastayā cittasaṃtatyā yadyadeva karma ārapsyante kāyena vā vācā vā manasā vā, tatsarvamanirdiṣṭatvāya akāntatvāya apriyatvāya amanaāpatvāya saṃvartsyate / evaṃ te mahānirayā utsadā bhaviṣyanti, tiryañcaḥ pretaviṣayā āsurāś ca kāyāḥ, mārabhavanāni cotsadāni bhaviṣyanti / imamapyānanda arthavaśaṃ saṃpaśyan māraḥ pāpīyāṃstuṣṭa udagra āttamanāḥ pramuditaḥ prītisaumanasyajāto bhavati //",
+   "T0220d": "「復次，慶喜！若菩薩摩訶薩恃己所有功德善根，輕餘菩薩摩訶薩眾，謂作是言：『我能安住真遠離行，汝等皆無。我能修習真遠離行，汝等不能。』爾時，惡魔歡喜踊躍言：『此菩薩是吾伴侶，流轉生死未有出期。所以者何？是諸菩薩恃己所有功德善根，輕餘菩薩摩訶薩眾，便遠無上正等菩提，不能精勤空我境界。』是菩薩摩訶薩修行般若波羅蜜多時，便為惡魔之所擾亂。若菩薩摩訶薩不恃己有功德善根，輕餘菩薩摩訶薩眾，雖常精進修諸善法，而不執著諸善法相，是菩薩摩訶薩修行般若波羅蜜多時，不為惡魔之所擾亂。「復次，慶喜！若菩薩摩訶薩自恃名姓及所修習杜多功德，輕蔑諸餘修勝善法諸菩薩眾，常自讚歎、毀呰他人，實無不退轉菩薩摩訶薩諸行、狀、相而謂實有，起諸煩惱言：『汝等無菩薩名姓，唯我獨有。』由增上慢輕餘菩薩。爾時，惡魔便大歡喜，作如是念：『今此菩薩令我國土宮殿不空，增益地獄、傍生、鬼界。』是時，惡魔助其神力，令轉增益威勢辯才，由此多人信受其語，因斯勸發同彼惡見，同惡見已隨彼邪學，隨邪學已煩惱熾盛，心顛倒故，諸所發起身、語、意業皆能感得不可愛樂衰損苦果。由此因緣，增長地獄、傍生、鬼界，令魔宮殿國土充滿，由此惡魔歡喜踊躍，諸有所作隨意自在，是菩薩摩訶薩修行般若波羅蜜多時，便為惡魔之所擾亂。若菩薩摩訶薩不恃己有虛妄姓名及所修習杜多功德，輕蔑諸餘修勝善法諸菩薩眾，於諸功德離增上慢，常不自讚亦不毀他，能善覺知諸惡魔事，是菩薩摩訶薩修行般若波羅蜜多時，不為惡魔之所擾亂。",
+   "T0220d-5": "「復次，慶喜！若諸菩薩輕餘菩薩，謂作是言：『我能安住真遠離行，汝等皆無。』爾時，惡魔歡喜慶快，是諸菩薩修學般若波羅蜜多，便為惡魔之所擾亂。「復次，慶喜！若時菩薩自恃名姓及所修行杜多功德，輕蔑諸餘修勝善法諸菩薩眾，常自稱讚毀訾他人，無不退轉諸行、狀、相而謂自有，起煩惱業。爾時，惡魔便大歡喜，作如是念：『今此菩薩令我境土宮殿不空，增益地獄、傍生、鬼界。』是時，惡魔助其神力，令轉增益威力辯才，由此多人信受其語，因斯勸發同彼惡見，同惡見已隨彼邪學，隨邪學已煩惱熾盛。心顛倒故，所起三業皆能感得不可愛果，由此因緣增長惡趣，令魔宮殿轉更充滿，由此惡魔歡喜踊躍，諸有所作隨意自在，是諸菩薩修學般若波羅蜜多，便為惡魔之所擾亂。",
+   "T0228": "「復次，阿難！若菩薩摩訶薩作如是念：『我是修真遠離行者，餘諸菩薩非遠離行。』即時惡魔知是念已，生大歡喜適悅慶快。何以故？彼菩薩隨所起念，即退失阿耨多羅三藐三菩提，以如是退失故，魔心生喜。「又復，阿難！有諸惡魔來菩薩所，稱讚菩薩名字族氏、頭陀功德乃至種種功德相貌。菩薩聞是稱讚已，隨有所著，起增上慢及諸慢心，貢高自大輕餘菩薩，由是因緣增長煩惱。而此菩薩為彼惡魔力所加故，諸有言說人皆信受，隨信受已如所說學、如所說行，若見若聞如是學者，如是行者皆不真實，以不實故起顛倒心，由是心故身語心業皆不清淨。以此因緣而能增長地獄、餓鬼、畜生等趣。彼惡魔眾見是利故，心大歡喜適悅慶快，即作是念：『今我宮殿誠所不空，由彼因緣能增長故。』阿難！當知是菩薩不能具足功德相貌，非行般若波羅蜜多，非是住不退轉者。何以故？增上慢心起諸過失。是菩薩當有惡魔而來嬈亂，為彼諸魔伺得其便。"
+  },
+  "c24-04": {
+   "sa": "punaraparamānanda yasmin samaye bodhisattvo mahāsattvaḥ śrāvakayānikena pudgalena sārdhaṃ kalahāyati vivadati vigṛhṇīte ākrośet paribhāṣeta vyāpadyeta doṣamutpādayati, tasmin samaye mārasya pāpīyasa evaṃ bhavati - dūrīkariṣyati batāyaṃ kulaputraḥ sarvajñatām, atidūre sthāsyati sarvajñatāyāḥ sacetpunarbodhisattvayānikaḥ pudgalo 'nyena bodhisattvayānikena pudgalena sārdhaṃ kalahāyati vivadati vigṛhṇīte ākrośati paribhāṣate vyāpadyate doṣamutpādayati, tatra māraḥ pāpīyān bhūyasyā mātrayā tuṣṭo bhavati, udagra āttamanāḥ pramuditaḥ prītisaumanasyajāto bhavati / evaṃ cāsya bhavati - ubhāvapyetau bodhisattvau dūre sthāsyataḥ sarvajñatāyā iti // punaraparamānanda yo bodhisattvo mahāsattvo vyākṛto 'vyākṛtena bodhisattvena mahāsattvena sārdhaṃ kalahāyet vivadet vigṛhṇīyāt ākrośet paribhāṣeta vyāpadyeta doṣamutpādayet, cittaṃ cāghātayet, tena bodhisattvena mahāsattvena cittotpāde tāvata eva kalpān saṃnāhaḥ saṃnāhyaḥ, sacedasyāparityaktā sarvajñatā //",
+   "T0224": "佛語阿難：「未得阿惟越致菩薩，與阿惟越致菩薩共諍，罵詈阿惟越致菩薩。是菩薩罵，以隨心所念，轉懷怨恨，心一轉念，聽却一劫。菩薩雖有是惡念，不捨薩芸若，却無數劫極，甫當更復從發意起。」",
+   "T0220d": "「復次，慶喜！若時菩薩摩訶薩與求聲聞、獨覺乘者更相毀蔑、鬪諍、誹謗，是時惡魔見此事已，便作是念：『今此菩薩雖遠無上正等菩提而不極遠，雖近地獄、傍生、鬼界而不甚近。』作是念已，雖生歡喜而不踊躍。若時菩薩摩訶薩與諸菩薩摩訶薩眾更相毀蔑、鬪諍、誹謗，是時惡魔見此事已，便作是念：『此二菩薩極遠無上正等菩提，甚近地獄、傍生、鬼界。』作是念已歡喜踊躍，增其威勢，令二朋黨鬪諍不息，使餘無量無邊有情皆於大乘深心厭離，是菩薩摩訶薩修行般若波羅蜜多時，便為惡魔之所擾亂。若菩薩摩訶薩與求聲聞、獨覺乘者不相毀蔑、鬪諍、誹謗，方便化導令趣大乘，或令勤修自乘勝善，與求無上正等菩提善男子等不相毀蔑、鬪諍、誹謗，更相教誨修勝善法，速趣無上正等菩提，轉妙法輪度有情眾，是菩薩摩訶薩修行般若波羅蜜多時，不為惡魔之所擾亂。「復次，慶喜！若菩薩摩訶薩未得無上正等菩提不退轉記，於得無上正等菩提不退轉記諸菩薩摩訶薩起損害心，鬪諍、輕蔑、罵辱、誹謗，是菩薩摩訶薩隨起爾所念不饒益心，還退爾所劫曾修勝行，經爾所時遠離善友，還受爾所生死繫縛。若不棄捨大菩提心，還爾所劫被弘誓鎧，勤修勝行時無間斷，然後乃補所退功德。」",
+   "T0220d-5": "「復次，慶喜！若時菩薩與求聲聞、獨覺乘者更相毀蔑、鬪諍、誹謗，爾時惡魔便作是念：『今此菩薩雖遠菩提而不極遠，雖近惡趣而不甚近。』若時菩薩與菩薩乘善男子等更相毀蔑、鬪諍、誹謗，爾時惡魔便作是念：『此二菩薩極遠菩提甚近惡趣。』作是念已歡喜踊躍，增其威勢，令二朋黨鬪諍不息，使餘無量無邊有情皆於大乘深心厭離，是諸菩薩修學般若波羅蜜多，便為惡魔之所擾亂。「復次，慶喜！若諸菩薩未得菩提不退轉記，於得菩提不退轉記諸菩薩所起損害心，鬪諍、輕蔑、罵辱、誹謗，是諸菩薩隨起爾所念不饒益心，還退爾所劫曾修勝行，經爾所時遠離善友，還受爾所生死繫縛。若不棄捨大菩提心，還爾所劫被弘誓鎧勤修勝行時無間斷，然後乃補爾所功德。」",
+   "T0228": "「復次，阿難！若菩薩乘人與聲聞乘人共相鬪諍，互出惡言輕易呵毀。爾時惡魔知是事已，即作是念：『彼菩薩乘人由此因緣，雖復遠離一切智，其所遠離非大非久。』若菩薩乘人與菩薩乘人共相鬪諍，互出惡言輕易呵毀者，爾時惡魔知是事已，心大歡喜適悅慶快而作是念：『此菩薩乘人由是因緣，久久遠離彼一切智。』「復次，阿難！若有未得授記菩薩，於餘已得授記菩薩起瞋恨心，隨所起心有退轉失，起一念退一劫，而後畢是隨念劫數，若不捨一切智心，或遇善知識故，還復發起被精進鎧。」"
+  },
+  "c24-05": {
+   "sa": "evamukte āyuṣmānānando bhagavantametadavocat - asti bhagavaṃsteṣāṃ cittotpādānāṃ kiṃcinniḥsaraṇam, utāho tāvata eva kalpānavaśyaṃ tena bodhisattvena mahāsattvena saṃnāhaḥ saṃnahyaḥ? bhagavānāha - saniḥsaraṇamānanda mayā dharmo deśitaḥ śrāvakayānikānāṃ pratyekabuddhayānikānāṃ bodhisattvayānikānāṃ ca pudgalānām / tatra ānanda yo 'yaṃ bodhisattvayānikaḥ pudgalo bodhisattvayānikena pudgalena sārdhaṃ kalahāyitvā vivaditvā vigṛhya ākruśya paribhāṣya vyāpadya doṣamutpādya na pratideśayati, nāyatyāṃ saṃbarāya pratipadyate, anuśayaṃ vahati, anuśayabaddho viharati, nāhamānanda tasya pudgalasya niḥsaraṇaṃ vadāmi / avaśyaṃ tena ānanda pudgalena punareva tāvata eva kalpān saṃnāhaḥ saṃnahyaḥ / yaḥ punarānanda bodhisattvayānikaḥ pudgalo bodhisattvayānikena pudgalena sārdhaṃ kalahāyitvā vivaditvā vigṛhya ākruśya paribhāṣya vyāpadya doṣamutpādya pratideśayati, pratideśya āyatyāṃ saṃvarāya pratipadyate, evaṃ ca cittamutpādayati - yena mayā sarvasattvānāṃ vigrahā vivādā virodhā utsārayitavyā nidhyāpayitavyāḥ praśamayitavyāḥ, so 'haṃ nāma svayameva vivadāmi / lābhā me durlabdhā na sulabdhāḥ, yo 'haṃ jalpite pratijalpāmi / yena mayā sarvasattvānāṃ saṃkramabhūtena bhavitavyam, so 'haṃ pareṣu tvamity api vācaṃ bhāṣe, paruṣaṃ vā karkaśaṃ vā prativaco dadāmi / idam api mayā naiva vaktavyam / jaḍasadṛśena eḍamūkasamena mayā kalahavigrahavivādeṣu bhavitavyam, parato duruktāni durāgatāni durbhāṣitāni bhāṣyamāṇāni śṛṇvatā cittaṃ nāghātayitavyam / pareṣāmantike na mamaitatsādhu, na caitanmamāṃ pratirūpam, yo 'haṃ parasya doṣāntaraṃ saṃjāne / etad api me na pratirūpam, yadahaṃ pareṣa doṣāntaram api śrotavyaṃ manye / tatkasya hetoḥ? na mayā adhyāśayo vikopayitavyaḥ, yena mayā sarvasattvāḥ sarvasukhopadhānaiḥ sukhayitavyāḥ, parinirvāpayitavyāś ca anuttarāṃ samyaksaṃbodhimabhisaṃbudhya, sa nāmāhaṃ vyāpadye / na ca mayā svaparāddheṣv api pareṣu vyāpattavyam / sa nāmāhaṃ kṣobhaṃ gacchāmi / idaṃ mayā na karaṇīyam / dṛḍhaparākramatayā parākrāntavyam / na ca mayā jīvitāntarāye 'pi kriyamāṇe kṣobhaḥ karaṇīyaḥ, na bhrukuṭirmukhe utpādayitavyeti / asyāhamānanda bodhisattvasya mahāsattvasya niḥsaraṇaṃ vadāmi / evaṃ cānanda bodhisattvena mahāsattvena śrāvakayānikānām api pudgalānāmantike sthātavyam, yathā na kasyacitsattvasyāntike kṣubhyeta, evameva ca sarvasattvānāmantike sthātavyam / kathaṃ cānanda bodhisattvena mahāsattvena apareṣāṃ bodhisattvayānikānāṃ pudgalānāmantike sthātavyam? tadyathāpi nāma ānanda śāstari / ete mama bodhisattvā mahāsattvāḥ śāstāra ityevaṃ sthātavyam / ekayānasamārūḍhā bateme mama bodhisattvā mahāsattvāḥ, ekamārgasamārūḍhā bateme mama bodhisattvā mahāsattvāḥ, samānābhiprāyā bateme mama bodhisattvā mahāsattvāḥ, samayānasaṃprasthitā bateme mama bodhisattvā mahāsattvāḥ / yatraibhiḥ śikṣitavyam, tatra mayā śikṣitavyam / yathaiva caibhiḥ śikṣitavyam, tathaiva mayā śikṣitavyam / sacetpunareṣāṃ kaścidvyavakīrṇavihāreṇa vihariṣyati, na mayā vyavakīrṇavihāreṇa vihartavyam / sacetpunarete 'vyavakīrṇavihāreṇa vihariṣyanti sarvajñatāpratisaṃyuktairmanasikāraiḥ, mayāpyevaṃ śikṣitavyam / evaṃ sarvajñatāyāṃ śikṣamāṇasya ānanda bodhisattvasya mahāsattvasya antarāyo na bhavatyanuttarāyāḥ samyaksaṃbodheḥ, kṣipraṃ ca anuttarāṃ samyaksaṃbodhimabhisaṃbudhyate iti // āryāṣṭasāhasrikāyāṃ prajñāpāramitāyāmabhimānaparivarto nāma caturviṃśatitamaḥ //",
+   "T0224": "阿難白佛言：「心所念惡寧可得中悔不？當乃却就爾所劫乎？」佛語阿難：「於我法中，廣大極可得悔。」佛語阿難：「若有菩薩念惡有恨，自歡欣，復語他人，是人不可復使悔也。若有菩薩若罵詈瞋恨，自念：『咄！我所作無狀。』後終不敢復作是。復自考責：『人道難得，用是故，悉當忍於人？何況乃當與人共諍言乎？我當為十方人作橋，令悉蹈我上度去。我有是意，寧當復與人共諍耶？住立當如聾羊，諸惡悉當忍，諸惡心不當犯。我作佛時悉當安十方人得般泥洹，我不復與人共諍，瞋恚於人，為用羅漢道故。』」阿難白佛言：「菩薩、菩薩自相與共止，法當云何？」佛語阿難：「菩薩、菩薩轉相視，當如視佛，心念言：『共一師、共一船、共一道，是所學，我亦當學。』如是若有餘菩薩欲喜學羅漢、辟支佛道，若與從事，設有是人者，我不與從事；其有世世欲求佛道者，當與相隨如是學，為共一法學。」",
+   "T0225": "阿難白佛言：「心所念惡，寧可悔不？乃當却就爾所劫？」佛言：「我法廣大，可得悔。若闓士念惡有恨，又喜以教彼，斯人不可使悔也。誤有恚罵，即慚悔過：『我當為十方人作橋梁，令得泥洹。寧可有惡意與人諍耶？當如啞羊諸惡忍之。』心不當起恚為應儀道者。」阿難白佛言：「闓士大士與相共止，法當云何？」佛言：「相視當如視佛。心念，當言：『共一師、一船、一道，彼所學，我亦當學。』欲喜應儀、緣一覺道者，不與同願；其有忍苦欲求佛者，當與相隨。若此為一法學也。」",
+   "T0227": "阿難白佛言：「世尊！如是罪者，可得悔不？要當畢其隨念劫數，爾乃還得發大莊嚴。」佛言：「有出。我說菩薩、聲聞皆有出罪法。不說無出。阿難！若菩薩共菩薩諍，惡口罵詈，不相悔謝，結恨在心。我不說此人有出罪法。是人若愛惜薩婆若，畢其隨念劫數，亦復還得發大莊嚴。阿難！若菩薩共菩薩諍，惡口罵詈，即相悔謝，後不復作。作是念：『我應謙下一切眾生。我若瞋諍，加報於人，則為大失。我應當為一切眾生，而作橋梁。我尚不應輕汝他人，何況加報！應如聾瘂，不應自壞深心。我得阿耨多羅三藐三菩提時，當度是等。云何加忿，自起瞋礙。』阿難！求菩薩道者，於聲聞人，乃至不應生於瞋礙。」阿難白佛言：「世尊！菩薩與菩薩共住，其法云何？」佛言：「相視當如佛想，是我大師，同載一乘，共一道行。如彼所學，我亦應學。彼若雜行，非我所學。若彼清淨學，應薩婆若念，我亦應學。菩薩若如是學，是名同學。」",
+   "T0220d": "爾時，慶喜便白佛言：「是菩薩摩訶薩所起惡心生死罪苦，為要流轉經爾所時，為於中間亦得出離？是菩薩摩訶薩所退勝行，為要精勤經爾所劫被弘誓鎧，修諸勝行時無間斷，然後乃補所退功德，為於中間有復本義？」佛告慶喜：「我為菩薩、獨覺、聲聞說有出罪還補善法。「慶喜當知！若菩薩摩訶薩未得無上正等菩提不退轉記，於得無上正等菩提不退轉記諸菩薩摩訶薩起損害心，鬪諍、輕蔑、毀辱、誹謗，後無慚愧懷惡不捨，不能如法發露悔過。我說彼類於其中間無有出罪還補善義，要爾所劫流轉生死，遠離善友眾苦所縛。若不棄捨大菩提心，要爾所劫被弘誓鎧，勤修勝行時無間斷，然後乃補所退功德。「若菩薩摩訶薩未得無上正等菩提不退轉記，於得無上正等菩提不退轉記諸菩薩摩訶薩起損害心，鬪諍、輕蔑、毀辱、誹謗，後生慚愧心不繫惡，尋能如法發露悔過，作如是念：『我今已得難得人身，何容復起如是過惡失大善利？我應饒益一切有情，何容於中反作衰損？我應恭敬一切有情如僕事主，何容於中反生憍慢、毀辱、凌蔑？我應忍受一切有情捶打訶罵，何容於彼反以暴惡身語加報？我應和解一切有情令相敬愛，何容復起勃惡語言與彼乖爭？我應堪耐一切有情長時履踐，猶如道路亦如橋樑，何容於彼反加凌辱？我求無上正等菩提，為拔有情生死大苦，令得究竟安樂涅槃，何容反欲加之以苦？我應從今盡未來際，如癡、如瘂、如聾、如盲，於諸有情無所分別。假使斬截頭足手臂、挑目、割耳、劓鼻、截舌、鋸解一切身分支體，於彼有情終不起惡。若我起惡，則便退壞所發無上正等覺心，障礙所求一切智智，不能利益安樂有情。』慶喜當知！是菩薩摩訶薩我說中間亦有出罪還補善義，非要經於爾所劫數流轉生死。惡魔於彼不能擾亂，疾證無上正等菩提。「復次，慶喜！諸菩薩摩訶薩與求聲聞、獨覺乘者不應交涉，設與交涉不應共住，設與共住不應與彼論義決擇。所以者何？若與彼類論義決擇，或當發起忿恚等心，或復令生麁惡言說；然諸菩薩於有情類不應發起忿恚等心，亦不應生麁惡言說，設被斬斫首足身分亦不應起忿恚惡言。所以者何？諸菩薩摩訶薩應作是念：『我求無上正等菩提，為拔有情生死眾苦，令得究竟利益安樂，何容於彼翻為惡事？』慶喜當知！若菩薩摩訶薩於有情類起忿恚心、發麁惡言，便礙無上正等菩提，亦壞無邊菩薩行法。是故菩薩摩訶薩眾欲得無上正等菩提，於諸有情不應忿恚，亦不應起麁惡言說。」爾時，慶喜便白佛言：「諸菩薩摩訶薩與菩薩摩訶薩云何共住？」佛告慶喜：「諸菩薩摩訶薩與菩薩摩訶薩共住相視應如大師。所以者何？諸菩薩摩訶薩與菩薩摩訶薩展轉相視，應作是念：『彼是我等真善知識，與我為伴同乘一舡、同行一道、同一所趣、同一事業，我等與彼學時、學處及所學法、若由此學皆無有異。』復作是念：『彼諸菩薩為我等說大菩提道，即我良伴亦我導師。若彼菩薩摩訶薩住雜作意，遠離一切智智相應作意，我當於中不同彼學。若彼菩薩摩訶薩離雜作意，不離一切智智相應作意，我當於中常同彼學。』慶喜當知！若菩薩摩訶薩能如是學，菩提資糧疾得圓滿，速證無上正等菩提，於其中間無障無難。」",
+   "T0220d-5": "爾時，慶喜便白佛言：「是諸菩薩所起惡心生死罪苦，為要流轉經爾所時，為於中間亦得出離？是諸菩薩所退勝行，為要精勤經爾所劫時無間斷然後乃補，為於中間有復本義？」佛告慶喜：「我為菩薩、獨覺、聲聞，說有出罪還補善法。「慶喜當知！若諸菩薩造此罪後，心無慚愧懷惡不捨，不能如法發露悔過。我說彼類，於其中間無出罪苦還補善義。「若諸菩薩造此罪後，深生慚愧心不繫惡，尋能如法發露悔過，作如是念：『我今已得難得人身，何容復起如是過惡失大善利？我應饒益一切有情，何乃於中反作衰損？我應恭敬一切有情如僕事主，何乃於中反生憍慢、毀辱、凌蔑？我應忍受一切有情捶打訶罵，何容於彼反以暴惡身語加報？我應和解一切有情令相敬愛，何容復起勃惡語言與彼乖諍？我應堪耐一切有情長時履踐，猶如道路亦如橋梁，何容於彼反加凌辱？我求無上正等菩提，為拔有情生死大苦，令得究竟安樂涅槃，何容反欲加之以苦？我應從今盡未來際，如愚、如啞、如聾、如盲，於諸有情無所分別。假使斬截頭足手臂、挑目、割耳、劓鼻、截舌、鋸解一切身分支體，於彼有情終不起惡。若我起惡，即便退壞所發無上正等覺心，障礙所求一切智智，不能利益安樂有情。』慶喜當知！是諸菩薩，我說中間有出罪苦還補善義，非要經於爾所劫數，惡魔於彼不能擾亂，疾證無上正等菩提。「復次，慶喜！諸菩薩眾與求聲聞、獨覺乘者不應交涉，設與交涉不應共住，設與共住不應與彼論義決擇，勿因此故起忿恚心，或復令生麁惡言說，便礙無上正等菩提，亦壞無邊菩薩行法。若諸菩薩與菩薩乘善男子等共住相視，尊重敬事應如大師，復作是念：『彼是我等真淨善友，同載一船、同一所趣、同行一道、同一事業，學時、學處及所學法、若由此學皆無有異。』復作是念：『若彼菩薩住雜作意，我當於中不同彼學；若彼菩薩離雜作意，我當於中常同彼學。』若諸菩薩如是學時，疾證所求一切智智。」",
+   "T0228": "爾時，尊者阿難白佛言：「世尊！若起是罪者，佛聽悔不？」佛言：「阿難！今我法中說有出罪法，所有聲聞、緣覺、菩薩乘中，我各說有彼出罪法。阿難！當知若菩薩乘人與菩薩乘人共相鬪諍，互出惡言輕易呵毀已，不相悔捨，復懷瞋恨結縛於心者，我不說彼有出罪法。阿難！若菩薩乘人與菩薩乘人共相鬪諍，乃至呵毀已即相悔捨者，我當為彼說出罪法。阿難！又菩薩應作是念：『我於一切眾生當行慈忍，設彼起惡來相陵辱，我尚不生一念瞋心況復加報，我或暫起瞋恨心者深為大失。何以故？我當為一切眾生作大橋梁普令得度，我常於彼一切眾生如善作意，設聞惡言不生恚心，於自於他皆悉平等，自有過失勿加於他，他有過失如自所作常生悔懼。何以故？我欲普令一切眾生得大安樂。若有眾生多瞋惱者，願我當得阿耨多羅三藐三菩提時，度脫彼等。我於一切處見彼所有求菩提者，我於爾時歡喜瞻視，面目熈怡無顰蹙相。我心堅固不為一切瞋惱所動。』阿難！若菩薩乘人能生如是心者，當知是為修菩薩行者。「又復，阿難！諸菩薩摩訶薩於聲聞人所，不應生起諸輕慢心，乃至一切眾生亦復不應生輕慢想。」阿難白佛言：「世尊！菩薩與菩薩云何共住？」佛言：「阿難！菩薩共住，當互觀視猶如佛想，是我大師，同載一乘、同行一道。彼菩薩摩訶薩若有所學我亦隨學，平等安住菩薩乘中，如菩薩法如理修學。彼若雜學非我所學，彼若清淨學能與一切智如理相應者，我亦如是學。阿難！菩薩摩訶薩能如是學者，是為同學，所應共住。如是學者，必證阿耨多羅三藐三菩提。」"
+  }
+ }
+}
