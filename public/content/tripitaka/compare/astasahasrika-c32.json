@@ -1,0 +1,113 @@
+{
+ "slug": "astasahasrika-c32",
+ "title": "八千頌般若・第32品 囑累品（Parīndanā）",
+ "family": "sa",
+ "intro": "梵本第三十二品＝施護〈囑累品〉＝羅什〈囑累品〉（第二十九）＝道行〈囑累品〉＝大明度〈囑累阿難品〉；施護、道行、大明度各自上一品末（佛總結常啼求法）起；道行、大明度 c32-01 只此一句，常啼得三昧之事已在 c31-06。常啼得六百萬三昧門，見十方諸佛；佛以般若囑累阿難，愛佛當愛般若；大眾歡喜信受。梵本卷末另有經題、緣起偈與施主題記，併入 c32-03。",
+ "units": [
+  {
+   "id": "c32-01",
+   "label": "常啼得六百萬三昧門・見十方佛・求般若當如常啼"
+  },
+  {
+   "id": "c32-02",
+   "label": "以般若囑累阿難・愛佛當愛般若"
+  },
+  {
+   "id": "c32-03",
+   "label": "大眾歡喜信受（梵本卷末題記）"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sa",
+   "lang": "sa",
+   "label": "梵本",
+   "who": "Vaidya 校訂本（1960）・GRETIL"
+  },
+  {
+   "id": "T0224",
+   "lang": "lzh",
+   "label": "道行般若經",
+   "who": "後漢・支婁迦讖譯《道行般若經》・179 年",
+   "work": "T0224"
+  },
+  {
+   "id": "T0225",
+   "lang": "lzh",
+   "label": "大明度經",
+   "who": "吳・支謙譯《大明度經》（第一品夾注）・三世紀",
+   "work": "T0225"
+  },
+  {
+   "id": "T0227",
+   "lang": "lzh",
+   "label": "羅什本",
+   "who": "姚秦・鳩摩羅什譯《小品般若波羅蜜經》・408 年",
+   "work": "T0227"
+  },
+  {
+   "id": "T0228",
+   "lang": "lzh",
+   "label": "施護本",
+   "who": "宋・施護譯《佛母出生三法藏般若波羅蜜多經》・十世紀末",
+   "work": "T0228"
+  }
+ ],
+ "works": [
+  "T0224",
+  "T0225",
+  "T0227",
+  "T0228"
+ ],
+ "anchors": [
+  {
+   "work": "T0227",
+   "node": "摩訶般若波羅蜜囑累品第二十九",
+   "uid": "T08n0227_p0586b06"
+  },
+  {
+   "work": "T0224",
+   "range": [
+    "T08n0224_p0477b19",
+    "T08n0224_p0478b12"
+   ]
+  },
+  {
+   "work": "T0225",
+   "range": [
+    "T08n0225_p0507c23",
+    "T08n0225_p0508b09"
+   ]
+  },
+  {
+   "work": "T0228",
+   "range": [
+    "T08n0228_p0676b04",
+    "T08n0228_p0676c11"
+   ]
+  }
+ ],
+ "cells": {
+  "c32-01": {
+   "sa": "ASP_32: parīndanāparivarto dvātriṃśattamaḥ / sahapratilabdhānāṃ ca subhūte ṣaṣṭyāḥ samādhimukhaśatasahasrāṇāṃ sadāprarudito bodhisattvo mahāsattvaḥ pūrvasyāṃ diśi, dakṣiṇasyāṃ paścimāyāmuttarasyāṃ diśi, vidikṣu adha ūrdhvaṃ ca diśi daśasu dikṣu gaṅgānadīvālukopameṣu trisāhasramahāsāhasreṣu lokadhātuṣu gaṅgānadīvālukopamān buddhān bhagavataḥ paśyati sma bhikṣusaṃghaparivṛtān bodhisattvaguṇapuraskṛtān etaireva nayairebhireva nāmabhiretairevākṣarairimāmeva prajñāpāramitāṃ bhāṣamāṇān / tadyathāpi nāma ahametarhi asminneva trisāhasramahāsāhasre lokadhātau dharmaṃ deśayāmi bhikṣusaṃghaparivṛto bodhisattvagaṇapuraskṛtaḥ, ebhireva nayairebhireva nāmabhirebhirevākṣarairimāmeva prajñāpāramitāṃ bhāṣe / so 'cintyena bāhuśrutyena śrutasāgaratayā ca samanvāgato 'bhūt, sarvāsu ca jātiṣu na jātu buddhavirahito 'bhūt / yatra yatra buddhā bhagavantaḥ saṃmukhībhūtā bhavanti, tatra tatropapadyate sma / avirahitaś ca bhavati sma buddhairbhagavadbhiḥ, antataḥ svapnāntaragato 'pi / sarve ca anena akṣaṇā vivarjitāḥ, kṣaṇasaṃpaccārāgitā //",
+   "T0224": "佛語須菩提：「若有菩薩在事欲得佛者，若見現在佛，若佛般泥洹後，欲索般若波羅蜜者，常精進，常當恭敬於般若波羅蜜，當如是薩陀波倫菩薩。」",
+   "T0225": "佛告善業：「闓士疾欲得佛者，索明度無極，精進恭敬如普慈闓士。」",
+   "T0227": "爾時佛告須菩提：「薩陀波崙菩薩得六百萬三昧門已，即見十方如恒河沙等世界諸佛，與大比丘眾，恭敬圍繞，皆以是文字章句相貌，說般若波羅蜜。如我今於此三千大千世界，與諸大眾恭敬圍繞，以是文字章句相貌，說般若波羅蜜。薩陀波崙從是已後，多聞智慧，不可思議。如大海水，世世所生，不離諸佛，現在諸佛，常生其所，一切眾難皆悉得斷。「須菩提！當知是般若波羅蜜因緣，能具足菩薩道。是故諸菩薩，若欲得一切智慧，應當信受般若波羅蜜，讀誦正憶念，如說修行，廣為人說。亦當了了書寫經卷，供養恭敬，尊重讚歎，華香瓔珞、末香塗香、幡蓋伎樂等，則是我教。」",
+   "T0228": "爾時，佛告須菩提言：「如我所說，彼常啼菩薩摩訶薩以如是等種種方便精進堅固，勤求般若波羅蜜多。而彼菩薩於彼法上菩薩摩訶薩所，得聞般若波羅蜜多，得入諸三摩地門，從三摩地出已即得多聞具足，如大海水深廣無邊，於現生中常得見佛，世世所生生諸佛剎，乃至於剎那間亦不暫離諸佛世尊。須菩提！當知求般若波羅蜜多者，有如是等功德利益。是故今我法中菩薩摩訶薩諸求般若波羅蜜多者，亦應如是求。」"
+  },
+  "c32-02": {
+   "sa": "tatra khalu punarbhagavānāyuṣmantamānandamāmantrayate sma - tadanenāpi te ānanda paryāyeṇa evaṃ veditavyam - ityapīyaṃ prajñāpāramitā bodhisattvānāṃ mahāsattvānāṃ sarvajñajñānasyāhāriketi / tasmāttarhi ānanda bodhisattvairmahāsattvaiḥ sarvajñajñānaṃ pratilabdhukāmairasyāṃ prajñāpāramitāyāṃ caritavyam / iyaṃ prajñāpāramitā śrotavyā udgrahītavyā dhārayitavyā vācayitavyā paryavāptavyā pravartayitavyā deśayitavyopadeṣṭavyoddeṣṭavyā svādhyātavyā likhitavyā / tathāgatādhiṣṭhānena mahāpustake pravyaktapravyaktairakṣaraiḥ sulikhitāṃ kṛtvā satkartavyā gurukartavyā mānayitavyā pūjayitavyā arcayitavyā apacāyitavyā puṣpairdhūpairgandhairmālyairvilepanaiścūrṇaiścīvarairvādyairvastraiśchatrairdhvajairghaṇṭābhiḥ patākābhiḥ, samantācca dīpamālābhiḥ, bahuvidhābhiś ca pūjābhiḥ / iyamasmākamantikādānanda anuśāsanī / tatkasya hetoḥ? atra hi prajñāpāramitāyāṃ sarvajñajñānapariniṣpattirbhaviṣyati / tatkiṃ manyase ānanda śāstā te tathāgataḥ? ānanda āha - śāstā me bhagavan, śāstā me sugata / evamukte bhagavānāyuṣmantamānandametadavocat - śāstā te ānanda tathāgataḥ / paricarito 'smyānanda tvayā maitreṇa kāyakarmaṇā manaāpena, maitreṇa vākkarmaṇā manaāpena, maitreṇa manaḥkarmaṇā manaāpena / tasmāttarhi ānanda yathaiva tvayā mamaitarhi tiṣṭhato dhriyamāṇasya yāpayato 'smin samucchraye prema ca prasādaś ca gauravaṃ ca kṛtam, tathaiva tvayā ānanda mamātyayādasyāṃ prajñāpāramitāyāṃ kartavyam / dvir api trir api te ānanda parīndāmi anuparīndāmi enāṃ prajñāpāramitām, yatheyaṃ nāntardhīyeta, yathā nāsyāṃ tvamanyaḥ puruṣaḥ syāḥ / yāvadānanda iyaṃ prajñāpāramitā loke pracariṣyati, tāvattathāgatastiṣṭhatīti veditavyam / tāvattathāgato dharmaṃ deśayatīti veditavyam / avirahitāste ānanda sattvā buddhadarśanena dharmaśravaṇena saṃghopasthānena ca veditavyam / tathāgatāntikāvacarāste ānanda sattvā veditavyāḥ, ya enāṃ prajñāpāramita śroṣyantyudgrahīṣyanti dhārayiṣyanti vācayiṣyanti paryavāpsyanti pravartayiṣyanti deśayiṣyantyupadekṣyantyuddekṣyanti svādhyāsyanti likhiṣyanti satkariṣyanti gurukariṣyanti mānayiṣyanti pūjayiṣyantyarcayiṣyantyapacāyiṣyanti puṣpadhūpagandhamālyavilepanacūrṇacīvaracchatradhvajaghaṇṭāpatākābhiḥ, samantācca dīpamālābhiḥ, bahuvidhābhiś ca pūjābhiriti //",
+   "T0224": "佛以手撫阿難肩三反，佛語阿難：「我囑累汝是般若波羅蜜，諦持諦念。阿難！是般若波羅蜜以相累，常持諦了了，取字諦了了，念書作字莫使缺減，諦視書莫左右望，一切恐是有難，諦是經中莫令字少。我累汝阿難是般若波羅蜜。何以故？是經，阿難！怛薩阿竭、阿羅訶、三耶三佛，過去、當來、今現在無有盡經藏，是經鎮諸法，悉從是經中出諸所有。阿難！怛薩阿竭、阿羅訶、三耶三佛，過去、當來、今現在所為人民說經，所出不可計經卷，種種異慧，若干種經卷，所見人民，若干種所喜，各各隨所行，人民道經所入慧所說，過去、當來、今現在所說，是一切皆從是般若波羅蜜藏中出諸所有經法。阿難！若干種所見相，種種所行，若干種根，若干種黠，若干種癡，若干種慧，人民輩所求盡所求慧，怛薩阿竭悉都盧。阿難！悉從般若波羅蜜中出，悉知曉如是。阿難！般若波羅蜜是怛薩阿竭、阿羅訶、三耶三佛母，是諸慧明，是我身，皆從是中出，從是中生。」佛語阿難：「汝敬我所語、敬我法，若敬愛承事我，汝自敬身於佛，汝有慈於佛，汝有孝於佛，一切恭敬於佛所，汝持是慈孝恭敬於般若波羅蜜中。如是，阿難！汝恭敬於是中，悉為供養諸佛已，持是累汝。阿難！汝所當作者悉為已，汝身亦有慈，口亦有慈，心亦有慈，汝有孝於佛，不言無有孝；汝常得佛時，不言不得時；汝常如法，不言不如法；汝心常淨潔無瑕穢，汝見佛不言不見佛，汝如是，悉為報佛恩已。我語汝，阿難！是般若波羅蜜從中亡一字，汝捨汝擬不書，汝虛，以無有慈孝於佛所，汝以不復見我。阿難！汝以不復恭敬於佛。阿難！汝以不復隨佛教。阿難！汝以不復承事用。」佛言：「阿難！汝所恭敬於佛以來，為了無復有供養佛，設從是般若波羅蜜中，亡一句一言若擬置，以為背佛恩。」佛語阿難：「是般若波羅蜜，汝諦受諦念，用慈孝於佛故，承用教故，都盧是過去、當來、今現在佛天中天所施教，用是供養，若於薩和薩為極大慈，具諸菩薩當視如見佛，當恭敬諸佛法。汝以親近持佛藏，作是諦念：『於是般若波羅蜜，當諦取，莫得失一字。』佛般泥洹後，汝當護是經莫令減少，當持授與菩薩摩訶薩是諸佛經藏。阿難！我手付汝，汝當持授與菩薩摩訶薩持是。阿難！菩薩所作功德，勤苦死生牢獄悉破壞，諸無知者為繫著悉得救解，諸魔官屬無不降伏，諸所欲法悉除去，正上佛坐，作阿耨多羅三耶三菩，以成佛道，諸人民無目者愚癡者悉當開解。」佛語阿難：「正第一大道無有兩正，是阿耨多羅三耶三菩阿惟三佛慧，是為般若波羅蜜決。」佛語阿難：「我般泥洹後，都盧三千大千國界其中人民，汝悉教入經法中，悉令成就得阿羅漢道，日日教乃爾所人，如是一劫若百劫，悉為說經令般泥洹。雖爾，汝常不具足承事我，汝不如持是般若波羅蜜中一句教菩薩學，如是為具足承事佛已，為具足供養。」佛言：「我今於是稱譽汝，囑累般若波羅蜜，至一劫百劫不能竟，我今麁演說耳。」佛語阿難：「我今問汝，汝當說。」佛從袈裟中出金色臂，舉右手著阿難頭上，摩阿難頭，持手著阿難肩上，語阿難言：「云何，阿難！汝慈於佛不？」阿難言：「佛天中天，自當知。」如是至三。佛復問阿難：「云何，阿難！汝孝於佛不？」如是復三。阿難言：「佛天中天，自當知。」佛言：「如是，阿難！汝有慈於佛，所以為報佛恩。阿難！汝極尊般若波羅蜜致重敬，慈於是句，心所念句，當令了了分明心所念，餘悉棄之，一切心於是中。書具經正字頭角所，持時學時，當諦授與菩薩摩訶薩，與好長素卷，善書令經上下句相得，書時當得好筆書好素上，當自歸承事作禮供養，好香成搗雜香澤香繒綵華蓋旗幡，悉如天上所有香，著油麻中，所淨潔油麻好燈炷，自歸頭面著地，却然燈炷，加敬作禮承事。」",
+   "T0225": "佛告阿難：「以明度無極經囑累汝。諦持念了取，字句莫使缺減左右顧望。此是無盡經藏鎮，諸法悉從中出。無量經卷種種異慧，所見人民若干種所喜、所行道經、所入慧，一切皆從是明度藏中出。若干種所見相、種種所行，若干種根癡種、慧種。人民所求盡所求慧，如來悉知從明度中出。是經，如來無所著正真道最正覺母，是慧眼并我身，皆從是出生。」佛言：「阿難！若敬我所說法，為敬事我。若自敬身，有慈孝於佛，持是奉事明度，悉為供養諸佛已。若身口心有慈孝於佛，不言無孝。若常得佛儀，常如法，心常淨，無瑕穢。若見佛，不言不見。如是悉為報佛恩已。我語若，阿難！是明度中忘一句一字，捨之不書，若為不見我、不敬於佛，為無供養，為背佛恩。」佛言：「阿難！若諦受諦念明度，用慈孝於佛故。承用教故，此乃往古來今佛天中天之所施教也。用是供養者，若於眾生為大慈，為以親近持佛藏。佛滅度後，若當護是經，莫令減少。我手付若，當受闓士大士。闓士大士持是所致，諸勤苦生死牢獄悉破壞，諸無智者為癡所繫著悉得放解，諸邪官屬無不降伏，諸所欲法悉除去，上佛座作無上正真道。人民無目者、愚癡者，悉與闓士與正法，第一大道無兩正法，無上正真道最正覺慧，是為明度決。我滅度後，三千國土其中人民，若悉教入法中，悉令成就得應儀道，曰教示乃爾所人。如是一劫若百劫為說經，令得滅度。雖爾，尚不足為承事我。不如持一句教闓士，為具供養佛已。」佛言：「我今於是稱譽若，囑累明度，至一劫百劫不能竟，麁捔說耳。」佛從袈裟中出臂，舉右手著阿難頭上摩頭，又以著阿難肩上：「云何，阿難！若慈於佛不？」阿難言：「佛天中天自當知之。」如是至三。佛復問：「云何，若孝於佛不？」復三。阿難言：「佛天中天自當知之。」佛言：「若以弘慈報恩備矣，尊奉明法恭矣。受經義句當令分明，心所念，餘棄之。一心於是中書經，正字畫、治句逗，取時、持時、學時、當諦受。與闓士，令經上下句逗相得，書時好筆好素上。當自歸，承事作禮，供養花香擣香燒香澤香繒蓋幡。譬如天上所有潔淨香，著麻油中好燈炷。自歸，頭面著地，却然炷加敬，作禮承事。」",
+   "T0227": "爾時佛告阿難：「於意云何？佛是汝大師不？」「世尊！佛是我大師，如來是我大師。」佛告阿難：「我是汝大師，汝是我弟子。汝以身口意業，於今現在供養恭敬，尊重於我。我滅度後，汝當以是供養恭敬，尊重般若波羅蜜。第二第三亦如是說。我以般若波羅蜜囑累於汝，慎莫忘失，莫作最後斷種人也。阿難！隨爾所時般若波羅蜜在世，當知爾所時有佛在世說法。阿難！若有書寫般若波羅蜜，受持讀誦，正憶念，如所說行，廣為人說，供養恭敬，尊重讚歎，華香乃至伎樂，當知是人，不離見佛，不離聞法，常親近佛。」",
+   "T0228": "爾時，佛告尊者阿難言：「汝今當知，般若波羅蜜多者是諸佛母，出生諸佛一切智智。阿難！若欲行般若波羅蜜多者，應當於此甚深正法受持讀誦、記念思惟、為人演說，乃至書寫一句一偈置清淨處，以寶函盛尊重恭敬，即以種種金銀珍寶、香華燈塗、幢幡寶蓋等廣大供養，乃至一香一華一禮一讚，隨其所應恭敬供養。當知是人則受我教，我所稱讚。阿難！佛是汝大師不？」阿難白佛言：「世尊！佛是我大師！我是佛弟子。」佛言：「阿難！汝今是我弟子，汝於現世給侍恭敬尊重於我，我涅槃後，汝當恭敬尊重供養此般若波羅蜜多甚深正法，是即恭敬尊重於我，是為最大報佛恩者。阿難！我今以是般若波羅蜜多甚深正法付囑於汝，汝當受持慎勿忘失，宣通流布使不斷絕。阿難！汝當精進助宣此法，莫作末後斷佛種人。」第二第三如是囑累。阿難白佛言：「如世尊勅，我當奉持。如世尊勅，我當奉持。」如是三白已。佛言：「阿難！當知隨爾所時此般若波羅蜜多正法在世，即爾所時諸佛世尊在世說法。又復，阿難！若有善男子、善女人於此般若波羅蜜多甚深正法，愛樂恭敬、受持讀誦、記念思惟、為人演說，乃至書寫尊重供養者，當知是善男子、善女人，世世所生常得見佛聽受正法。」"
+  },
+  "c32-03": {
+   "sa": "idamavocadbhagavān āttamanāḥ / te ca maitreyapramukhā bodhisattvā mahāsattvāḥ āyuṣmāṃś ca subhūtirāyuṣmāṃś ca śāriputraḥ āyuṣmāṃścānandaḥ śakraś ca devānāmindraḥ sadevamānuṣāsuragaruḍagandharvaś ca loko bhagavato bhāṣitamabhyanandanniti // āryāṣṭasāhasrikāyāṃ prajñāpāramitāyāṃ parīndanāparivarto nāma dvātriṃśattamaḥ // samāptā ceyaṃ bhagavatyā āryāṣṭasāhasrikāyāḥ prajñāpāramitā sarvatathāgatajananī bodhisattvapratyekajinaśrāvakāṇāṃ mātā, dharmamudrā dharmolkā dharmanābhirdharmabherī dharmanetrī dharmaratnanidhānam akṣayo dharmaḥ acintyādbhutadarśananakṣatramālā sadevamānuṣāsuragandharvalokavanditā sarvasukhaheturiti // prajñāpāramitāṃ samyagudgṛhya paryavāpya ca dhārayitvā pravartya enāṃ viharantu sadārthina iti // ye dharmā hetuprabhāvā hetusteṣāṃ tathāgato hyavadat / teṣāṃ ca yo nirodha evaṃvādī mahāśramaṇaḥ // deyadharmo 'yaṃ pravaramahāyānayāyinyāḥ paramopāsikasaurājrasutalakṣmīdharasya / yadatra puṇyaṃ tadbhavatvācāryopādhyāyamātāpitṛpūrvaṃgamaṃ kṛtvā sakalasattvarāśeranuttarajñānāvāptaye iti //",
+   "T0224": "佛說是般若波羅蜜時，在羅閱祇耆闍崛山中，在眾弟子央坐。佛年三十得佛，十二月十五日過食後說經。佛說經已，諸弟子、諸菩薩，諸天、諸阿須倫、諸龍鬼神諸人民，皆大歡欣，為佛作禮而去。",
+   "T0225": "佛說明度無極時，在王舍鷄山中眾弟子，諸闓士中央坐。佛年三十，得佛十二月十五日過食後，說經畢。諸弟子、闓士，諸天、質諒神、龍、鬼王、人民，皆大歡喜，前為佛作禮而去。",
+   "T0227": "佛說般若波羅蜜已，彌勒等諸菩薩摩訶薩，舍利弗、須菩提、目揵連、摩訶迦葉等諸聲聞眾，一切世間天、人、阿修羅等，聞佛所說，歡喜信受。",
+   "T0228": "佛說此經已，慈氏等諸菩薩摩訶薩，尊者須菩提、尊者舍利子、尊者阿難等諸大聲聞眾，并帝釋天主等，乃至一切世間天、人、阿修羅等，聞佛所說，皆大歡喜，信受奉行。"
+  }
+ }
+}
