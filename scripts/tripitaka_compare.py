@@ -7100,8 +7100,12 @@ SETS["sarvadharmapravrtti"] = {
 
 # 各部另檔：scripts/tripitaka_compare_sets/<部>.py，以本檔全域（SETS、_bo、_z…）執行。
 # 並行的 session／agent 各寫各的檔，不必同改這支七千行的檔。
+# 某個檔壞了（例如別的 agent 正改到一半）只跳過那一檔，不擋其他部的建置。
 for _f in sorted((Path(__file__).parent / "tripitaka_compare_sets").glob("*.py")):
-    exec(compile(_f.read_text(encoding="utf-8"), str(_f), "exec"), globals())
+    try:
+        exec(compile(_f.read_text(encoding="utf-8"), str(_f), "exec"), globals())
+    except Exception as _e:
+        print(f"⚠ 略過 {_f.name}：{type(_e).__name__}: {_e}", file=sys.stderr)
 
 
 # ── 讀原文 ──────────────────────────────────────────────────────────────────
