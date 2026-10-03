@@ -1,0 +1,149 @@
+{
+ "slug": "astasahasrika-c25",
+ "title": "八千頌般若・第25品 學品（Śikṣā）",
+ "family": "sa",
+ "intro": "梵本第二十五品＝道行〈學品〉＝大明度〈學品〉＝第四會〈迅速品〉＝施護〈學品〉；羅什在〈恭敬菩薩品〉末＋〈無慳煩惱品〉前段、第五會在〈修學品〉末＋〈根栽品〉前段（取到帝釋念「菩薩尚勝一切眾生」之前）。鈔經已止。為盡、無生、離、滅而學即學一切智（如來真如不可盡）；一切法本淨，菩薩得何清淨；學般若者如轉輪王、帝釋、梵王之少（金寶少、鹹鹵多）；學般若者不生慳、瞋、破戒等心，攝一切波羅蜜（身見攝六十二見喻），彈指頃修學勝於三千界菩薩供養；亦學聲聞功德而不住。古譯（道行、大明度、羅什）無「少者喻」一節，第五會亦無「本淨」之問。",
+ "units": [
+  {
+   "id": "c25-01",
+   "label": "何處學一切智・為盡、無生、離、滅而學"
+  },
+  {
+   "id": "c25-02",
+   "label": "一切法本淨・菩薩得何清淨"
+  },
+  {
+   "id": "c25-03",
+   "label": "學般若者少（轉輪王、帝釋、梵王；金寶與鹹鹵喻）"
+  },
+  {
+   "id": "c25-04",
+   "label": "學般若不生慳瞋等心・攝諸波羅蜜・彈指頃福勝・學聲聞功德而不住"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sa",
+   "lang": "sa",
+   "label": "梵本",
+   "who": "Vaidya 校訂本（1960）・GRETIL"
+  },
+  {
+   "id": "T0224",
+   "lang": "lzh",
+   "label": "道行般若經",
+   "who": "後漢・支婁迦讖譯《道行般若經》・179 年",
+   "work": "T0224"
+  },
+  {
+   "id": "T0225",
+   "lang": "lzh",
+   "label": "大明度經",
+   "who": "吳・支謙譯《大明度經》（第一品夾注）・三世紀",
+   "work": "T0225"
+  },
+  {
+   "id": "T0227",
+   "lang": "lzh",
+   "label": "羅什本",
+   "who": "姚秦・鳩摩羅什譯《小品般若波羅蜜經》・408 年",
+   "work": "T0227"
+  },
+  {
+   "id": "T0220d",
+   "lang": "lzh",
+   "label": "玄奘・第四會",
+   "who": "唐・玄奘譯《大般若經》第四會（卷 538–555）・663 年",
+   "work": "T0220d"
+  },
+  {
+   "id": "T0220d-5",
+   "lang": "lzh",
+   "label": "玄奘・第五會",
+   "who": "唐・玄奘譯《大般若經》第五會（卷 556–565）・663 年",
+   "work": "T0220d"
+  },
+  {
+   "id": "T0228",
+   "lang": "lzh",
+   "label": "施護本",
+   "who": "宋・施護譯《佛母出生三法藏般若波羅蜜多經》・十世紀末",
+   "work": "T0228"
+  }
+ ],
+ "works": [
+  "T0220d",
+  "T0224",
+  "T0225",
+  "T0227",
+  "T0228"
+ ],
+ "anchors": [
+  {
+   "work": "T0224",
+   "node": "摩訶般若波羅蜜道行經學品第二十二",
+   "uid": "T08n0224_p0464c08"
+  },
+  {
+   "work": "T0225",
+   "node": "學品第二十二",
+   "uid": "T08n0225_p0500c08"
+  },
+  {
+   "work": "T0220d",
+   "node": "第四分迅速品第二十五之一",
+   "uid": "T07n0220d_p0846a23"
+  },
+  {
+   "work": "T0228",
+   "node": "學品第二十五",
+   "uid": "T08n0228_p0658b15"
+  },
+  {
+   "work": "T0227",
+   "range": [
+    "T08n0227_p0574a05",
+    "T08n0227_p0574c18"
+   ]
+  },
+  {
+   "work": "T0220d",
+   "range": [
+    "T07n0220d_p0913b27",
+    "T07n0220d_p0914b06"
+   ]
+  }
+ ],
+ "cells": {
+  "c25-01": {
+   "sa": "ASP_25: śikṣāparivartaḥ pañcaviṃśatitamaḥ / atha khalvāyuṣmān subhūtirbhagavantametadavocat - kva punarbhagavan śikṣamāṇo bodhisattvo mahāsattvaḥ sarvajñatāyāṃ śikṣate? bhagavānāha - sacetsubhūte bodhisattvo mahāsattvaḥ kṣaye śikṣate, sarvajñatāyāṃ śikṣate / evamanutpāde 'nirodhe 'jātau abhāve viveke virāge ākāśe dharmadhātau / sacetsubhūte bodhisattvo mahāsattvo nirvāṇe śikṣate, sarvajñatāyāṃ śikṣate / subhūtirāha - kiṃ kāraṇaṃ bhagavan bodhisattvo mahāsattvaḥ kṣaye śikṣamāṇaḥ śikṣate sarvajñatāyām, evamanutpāde 'nirodhe 'jātau abhāve viveke virāge ākāśe dharmadhātau nirvāṇe śikṣamāṇaḥ śikṣate sarvajñatāyām? evamukte bhagavānāyuṣmantaṃ subhūtimetadavocat - yatsubhūte evaṃ vadasi - kiṃ kāraṇaṃ bodhisattvo mahāsattvaḥ kṣaye śikṣamāṇaḥ śikṣate sarvajñatāyām / evamanutpāde 'nirodhe 'jātau abhāve viveke virāge ākāśe dharmadhātau nirvāṇe śikṣamāṇaḥ śikṣate sarvajñatāyāmiti? tatkiṃ manyase subhūte yā tathāgatasya tathatā yayā tathatayā tathāgatastathāgata iti prabhāvyate, api nu sā kṣīyate? subhūtirāha - no hīdaṃ bhagavan / tatkasya hetoḥ? na hi bhagavan kṣayaḥ kṣīyate / akṣayo hi bhagavan kṣayaḥ / bhagavānāha - tatkiṃ manyase subhūte yā tathāgatasya tathatā yayā tathatayā tathāgatastathāgata iti prabhāvyate, api nu sā utpadyate vā nirudhyate vā jāyate vā bhavati vā vibhavati vā vivicyate vā rajyate vā virajyate vā ākāśībhavati vā dharmībhavati vā? āha - no hīdaṃ bhagavan / bhagavānāha - tatkiṃ manyase subhūte yā tathāgatasya tathatā yayā tathatayā tathāgatastathāgata iti prabhāvyate, api nu sā nirvāti? āha - no hīdaṃ bhagavan / bhagavānāha - tasmāttarhi subhūte evaṃ śikṣamāṇo bodhisattvo mahāsattvaḥ na tathatā kṣīyate ityevaṃ śikṣate / evaṃ śikṣamāṇaḥ subhūte bodhisattvo mahāsattvaḥ śikṣate sarvajñatāyām / evaṃ śikṣamāṇaḥ śikṣate prajñāpāramitāyām, śikṣate buddhabhūmau, śikṣate baleṣu, śikṣate vaiśāradyeṣu, śikṣate sarvabuddhadharmeṣu, śikṣate sarvajñajñāne / evaṃ śikṣamāṇaḥ subhūte bodhisattvo mahāsattvaḥ sarvaśikṣāpāramitāmanuprāpsyati / evaṃ śikṣamāṇaḥ subhūte bodhisattvo mahāsattvo na śakyo māreṇa vā māraparṣadā vā mārakāyikābhirvā devatābhirabhimarditum / evaṃ śikṣamāṇaḥ subhūte bodhisattvo mahāsattvaḥ kṣipramavinivartanīyadharmatāmanuprāpsyati / evaṃ śikṣamāṇaḥ subhūte bodhisattvo mahāsattvaḥ kṣipraṃ bodhimaṇḍe niṣatsyati / evaṃ śikṣamāṇaḥ subhūte bodhisattvo mahāsattvaḥ svake gocare carati / evaṃ śikṣamāṇaḥ subhūte bodhisattvo mahāsattvaḥ śikṣate nāthakarakeṣu dharmeṣu, śikṣate mahāmaitryām, mahākaruṇāyāṃ śikṣate, mahāmuditāyāṃ śikṣate, mahopekṣāyāṃ śikṣate / evaṃ śikṣamāṇaḥ subhūte bodhisattvo mahāsattvaḥ śikṣate triparivartasya dvādaśākārasya dharmacakrasya pravartanāya / evaṃ śikṣamāṇaḥ subhūte bodhisattvo mahāsattvaḥ sarvadhātuṃ nonīkariṣyāmīti śikṣate / evaṃ śikṣamāṇaḥ subhūte bodhisattvo mahāsattvastathāgatavaṃśasyānupacchedāya śikṣate / evaṃ śikṣamāṇaḥ subhūte bodhisattvo mahāsattvo 'mṛtadhātudvāraṃ vivariṣyāmīti śikṣate / neyaṃ subhūte udārā śikṣā śakyā hīnasattvena śikṣitum / na hi alpasthāmnā śakyamasyāṃ śikṣāyāṃ śikṣitum / tatkasya hetoḥ? sarvasattvasārā hi te subhūte, sarvasattvanāthakāmā hi te subhūte, ye 'syāṃ śikṣāyāṃ śikṣante / sarvasattvābhyudgatatāṃ te 'nuprāptukāmāḥ, ya iha śikṣante / evaṃ śikṣamāṇaḥ subhūte bodhisattvo mahāsattvo na nirayeṣūpapadyate, na tiryagyoniṣūpapadyate, na pretaviṣayeṣūpapadyate, nāsureṣu kāyeṣūpapadyate, na pratyantajanapadeṣūpapadyate, na caṇḍālakuleṣūpapadyate, na śākunikakuleṣūpapadyate, na niṣādadhīvaraurabhrikakuleṣūpapadyate, nāpyanyeṣvevaṃrūpeṣu hīnajātikeṣu hīnakarmaseviṣu vā kuleṣūpapadyate / evaṃ śikṣamāṇaḥ subhūte bodhisattvo mahāsattvo nāndho bhavati, na badhiro bhavati, na kāṇo bhavati, na kuṇṭho bhavati, na kubjo bhavati, na kuṇirbhavati, na laṅgo bhavati, na khañjo bhavati, na jaḍo bhavati, na lolo bhavati, na lollo bhavati, na kallo bhavati, na hīnāṅgo bhavati, na vikalāṅgo bhavati, na vikṛtāṅgo bhavati, na durbalo bhavati, na durvarṇo bhavati, na duḥsaṃsthāno bhavati, na hīnendriyo bhavati, na vikalendriyo bhavati / sarvākāraparipūrṇendriyo bhavati, svarasaṃpanno bhavati / evaṃ śikṣamāṇaḥ subhūte bodhisattvo mahāsattvo na prāṇātipātī bhavati, nādattādāyī bhavati, na kāmamithyācārī bhavati, na mṛṣāvādī bhavati, na piśunavāgbhavati, na paruṣavāgbhavati, na saṃbhinnapralāpī bhavati, nābhidhyālurbhavati, na vyāpannacitto bhavati, na mithyādṛṣṭiko bhavati, na mithyājīvena jīvikāṃ kalpayati / evaṃ śikṣamāṇaḥ subhūte bodhisattvo mahāsattvo na dīrghāyuṣkeṣu deveṣūpapadyate, na duḥśīlaparigrāhako bhavati, nābhūtadharmaparigrāhako bhavati, na dhyānasamāpattivaśenopapadyate / tatkasya hetoḥ? asti hi tasyopāyakauśalyaṃ yenopāyakauśalyena samanvāgato bodhisattvo mahāsattvo na dīrghāyuṣkeṣu deveṣūpapadyate / tatpunaḥ subhūte upāyakauśalyaṃ bodhisattvasya mahāsattvasya katamat? yaduta iyameva prajñāpāramitā / tathā ca atropāyakauśalye yogamāpadyate, yathā anyenopāyakauśalyena samanvāgato bodhisattvo mahāsattvo dhyānāni ca samāpadyate, na ca dhyānavaśenopapadyate / evaṃ śikṣamāṇaḥ subhūte bodhisattvo mahāsattvo balapariśuddhiṃ nigacchati, vaiśāradyapariśuddhiṃ nigacchati, sarvabuddhadharmapariśuddhiṃ nigacchati, tāmanuprāpnoti //",
+   "T0224": "須菩提白佛言：「菩薩學無常為學薩芸若？學無所生為學薩芸若？學去離婬為學薩芸若？學滅為學薩芸若？」佛語須菩提：「汝所問：『學無常為學薩芸若？』者，於須菩提意云何，是怛薩阿竭本無，隨因緣得怛薩阿竭，本無字寧有盡時不？」須菩提白佛言：「不，佛言不。」佛語須菩提：「為學薩芸若，如是學為學般若波羅蜜，如是學為學怛薩阿竭陀，為學力，為學無所畏，為學諸佛法。菩薩學如是者，悉行諸學法。菩薩摩訶薩作是學，魔及魔官屬不能中道壞；菩薩如是學，為疾得阿惟越致；菩薩如是學者，為疾近佛樹下坐；菩薩如是學，為悉學佛道；菩薩如是學，為習法也；菩薩如是學，為極大慈哀。如是為學等心。菩薩學如是，三合十二法輪為轉；菩薩學如是，為學度滅十方天下人；菩薩學如是，為學甘露法門。」佛語須菩提：「不懈怠人乃能學是，作是學為學十方天下人道。菩薩學如是者，不入泥犁、禽獸、薜荔中；菩薩學如是，終不生邊地；如是學，不復生愚癡貧窮中；如是學，不復盲聾瘖痾歐；如是學，為不毀十戒；如是學，為不隨解除卜問；如是學，遠離不持戒人。菩薩如是學，不願生尼惟先天上。何以故？菩薩有漚惒拘舍羅故，般若波羅蜜何等漚惒拘舍羅？從般若波羅蜜中出漚惒拘舍羅，持漚惒拘舍羅，滅神入禪，不隨禪法。菩薩學如是，為得淨力，為得無所畏力，為得佛法淨力。」",
+   "T0225": "善業白佛言：「闓士學無常，為學一切智？學無所生、學去婬妷、學滅度，為學一切智？」佛告善業：「若所問：『學無常，為學一切智？』者，云何是如來本無隨因緣得？如來本無字，寧有盡時不？」對曰：「不也。」「如此為學一切智明度無極。如來地十種力、四無所畏，為悉學諸佛法。闓士大士作是學，邪及官屬不能中壞，疾得不退轉，為近佛樹下坐。為學佛道，為學習法。慈悲喜護普濟群生，學三合十二法輪為轉，學滅度十方人，為稍稍上至佛道，學入甘露法門。不懈怠之人乃能學是。作是學者，為學十方人導，死不入地獄、禽獸、餓鬼，終不生邊地愚癡貧窮中，不受眾痛之疾，不毀十戒，不從流俗婬祠，遠不持十戒人，不願生不想天上。從明度中出變謀明慧威神，入禪不隨禪、不隨禪法。闓士學如是，為得淨力、無所畏力、佛法淨力。」",
+   "T0227": "爾時須菩提白佛言：「世尊！若菩薩為盡學，則學薩婆若；為無生學，為離學，為滅學，則學薩婆若。」佛告須菩提：「如汝所說，菩薩為盡學，則學薩婆若；為無生學，為離學，為滅學，則學薩婆若者。須菩提！於意云何？如來以如，得名如來。是如非盡非離非滅耶？」「如是，世尊！」「須菩提！如是學者，名為學薩婆若。學薩婆若，為學般若波羅蜜，學佛地十力、四無所畏、十八不共法。須菩提！菩薩如是學者，則到諸學彼岸。如是學者，魔若魔民不能降伏。如是學者，疾得阿毘跋致。如是學者，疾坐道場。如是學者，學自行處。如是學者，學救護法。如是學者，學大慈大悲。如是學者，學三轉十二相法輪。如是學者，學度眾生。如是學者，學不斷佛種。如是學者，學開甘露門。須菩提！凡夫下劣，不能如是學。欲調御一切眾生者，能如是學。須菩提！菩薩如是學者，不墮地獄、畜生、餓鬼，不生邊地。如是學者，不生旃陀羅家，不生竹草作家，不生除糞人家，不生諸餘貧賤之家。須菩提！菩薩如是學者，不盲不瞎，不睞眼，不痤短，不聾啞，不頑鈍，不形殘，身根具足。須菩提！菩薩如是學者，不奪他命，不盜他物，不邪婬，不妄語，不兩舌，不惡口，不無益語，不貪嫉，不瞋惱，不邪見，不邪命活，不畜邪見眷屬，不畜破戒眷屬。須菩提！菩薩如是學者，不生長壽天。何以故？菩薩成就方便故。何等為方便？所謂從般若波羅蜜起，雖能入禪，而不隨禪生。須菩提！菩薩如是學者，得佛清淨力，清淨無畏。」",
+   "T0220d": "爾時，具壽善現便白佛言：「世尊！若菩薩摩訶薩為盡故學，是學一切智智不？若菩薩摩訶薩為不生故學，是學一切智智不？若菩薩摩訶薩為滅故學，是學一切智智不？若菩薩摩訶薩為不起故學，是學一切智智不？若菩薩摩訶薩為非有故學，是學一切智智不？若菩薩摩訶薩為遠離故學，是學一切智智不？若菩薩摩訶薩為離染故學，是學一切智智不？若菩薩摩訶薩為虛空故學，是學一切智智不？若菩薩摩訶薩為法界故學，是學一切智智不？若菩薩摩訶薩為涅槃故學，是學一切智智不？」佛告善現：「若菩薩摩訶薩如是學時，非學一切智智。」具壽善現復白佛言：「何緣菩薩摩訶薩如是學時，非學一切智智？」佛告善現：「於意云何？佛證真如極圓滿故，說名如來、應、正等覺，如是真如可說為盡，乃至可說為涅槃不？」善現對曰：「不也！世尊！所以者何？真如離相不可說盡，乃至不可說為涅槃。」佛告善現：「是故菩薩摩訶薩如是學時，非學一切智智。善現當知！若菩薩摩訶薩不為盡故學，是學一切智智，乃至不為涅槃故學，是學一切智智。所以者何？佛證真如極圓滿故，說名如來、應、正等覺，爾時證得一切智智真如非盡乃至涅槃。是故菩薩摩訶薩如是學時，是學一切智智。「善現當知！若菩薩摩訶薩如是學時，是學般若波羅蜜多方便善巧，是學佛地，是學十力、四無所畏、四無礙解、大慈、大悲、大喜、大捨、十八佛不共法及餘無量無邊佛法，即為已學一切智智。「善現當知！若菩薩摩訶薩如是學時，至一切學究竟彼岸。「善現當知！若菩薩摩訶薩如是學時，一切天、魔及諸外道皆不能伏。「善現當知！若菩薩摩訶薩如是學時，速得菩薩不退法性。「善現當知！若菩薩摩訶薩如是學時，速住菩薩不退轉地。「善現當知！若菩薩摩訶薩如是學時，速當安坐妙菩提座。「善現當知！若菩薩摩訶薩如是學時，行自祖父如來行處。「善現當知！若菩薩摩訶薩如是學時，即為已學與諸有情為依護法，是學大慈、大悲性故。「善現當知！若菩薩摩訶薩如是學時，是學三轉、十二行相無上法輪。「善現當知！若菩薩摩訶薩如是學時，是學安處百千俱胝諸有情界，令住涅槃畢竟安樂。「善現當知！若菩薩摩訶薩如是學時，是學不斷如來種姓。「善現當知！若菩薩摩訶薩如是學時，是學諸佛開甘露門。「善現當知！若菩薩摩訶薩如是學時，是學安立無量無數無邊有情住三乘法。「善現當知！若菩薩摩訶薩如是學時，是學示現一切有情究竟寂滅真無為界，是為修學一切智智。「善現當知！如是學者，下劣有情所不能學。所以者何？如是學者，欲善拔濟一切有情生死大苦，欲善安立一切有情廣大勝事，欲與有情同受畢竟利益安樂，欲與有情同證無上正等菩提，欲與有情同學自利利他妙行，如太虛空無斷無盡。「復次，善現！若菩薩摩訶薩如是學時，決定不墮一切地獄、傍生、鬼界、阿素洛中，決定不生邊地達絮蔑戾車中，決定不生旃荼羅家、補羯娑家及餘種種貧窮、下賤、不律儀家，決定不生種種工巧、妓樂、商賈、雜穢之家。「復次，善現！若菩薩摩訶薩如是學時，隨所生處終不盲聾、瘖瘂、攣躄、根支殘缺、背僂、癲癎、癰疽、疥癩、痔漏、惡瘡，不長不短亦不黧黑，及無種種穢惡瘡病。「復次，善現！若菩薩摩訶薩如是學時，生生常得眷屬圓滿、諸根圓滿、支體圓滿，音聲清亮、形貌端嚴，言詞威肅眾人愛敬。「復次，善現！若菩薩摩訶薩如是學時，所生之處離害生命，離不與取，離欲邪行，離虛誑語，離麁惡語，離離間語，離雜穢語，亦離貪欲、瞋恚、邪見，終不攝受虛妄邪法，不以邪法而自活命，亦不攝受破戒、惡見、謗法有情以為親友。「復次，善現！若菩薩摩訶薩如是學時，終不生於耽樂少慧長壽天處。所以者何？是菩薩摩訶薩成就方便善巧勢力，由此方便善巧勢力，雖能數入靜慮、無量及無色定，而不隨彼勢力受生。甚深般若波羅蜜多所攝受故，成就如是方便善巧，於諸定中雖常獲得入出自在，而不隨彼諸定勢力生長壽天，廢修菩薩摩訶薩行。「復次，善現！若菩薩摩訶薩如是學時，得清淨力、清淨無畏、清淨佛法。」",
+   "T0220d-5": "爾時，善現便白佛言：「若諸菩薩為盡故學，為不生故學，為離故學，為滅故學，是學一切智智不？」佛告善現：「若諸菩薩如是學時，非學一切智智。」具壽善現復白佛言：「何緣菩薩如是學時，非學一切智智？」佛告善現：「於意云何？佛證真如極圓滿故，說名如來、應、正等覺，如是真如可說為盡乃至滅不？」善現對曰：「不也！世尊！何以故？真如無相，不可說盡乃至滅故。」佛告善現：「是故菩薩如是學時，非學一切智智。若諸菩薩不為盡故學，乃至不為滅故學，如是學時，是學一切智智，亦學般若波羅蜜多，亦學佛地、力、無畏等無邊佛法。善現當知！若諸菩薩如是學時，至一切學究竟彼岸，天魔外道皆不能伏，息除諸惡眾善圓滿，少分有情能如是學，是故菩薩欲墮極少有情數者，當勤修學甚深般若波羅蜜多方便善巧。」",
+   "T0228": "爾時，尊者須菩提白佛言：「世尊！菩薩摩訶薩欲學一切智，當云何學？」佛言：「須菩提！菩薩摩訶薩若盡學則學一切智，若離學則學一切智。若無生無滅無起無染無性，如虛空法界寂靜等學，則學一切智。」須菩提白佛言：「世尊！若菩薩摩訶薩盡學離學乃至法界寂靜等學，則學一切智者，是等當云何作？」佛言：「須菩提！汝若如是說，是等云何作者。須菩提！於汝意云何，如來證如如故得名如來，是如有盡、有所作不？」須菩提言：「不也，世尊！何以故？如無盡相亦無所作。」佛言：「須菩提！於汝意云何，如來證如如故得名如來，是如有生有滅有起有染有得有證不？」須菩提言：「不也，世尊！」佛言：「須菩提！菩薩摩訶薩學一切智亦復如是。須菩提！是故菩薩摩訶薩若如是學者不盡如相，如是學者是學一切智，如是學者是學般若波羅蜜多，如是學者是學佛地，如是學者是學佛十力、四無所畏等一切佛法乃至一切智智，如是學者能到諸學彼岸，如是學者普能降伏魔及魔眾，如是學者速得不退轉法，如是學者速坐道場，如是學者是學三轉十二行相法輪，如是學者學自所行，如是學者學為他作所依怙法，如是學者是學大慈大悲大喜大捨，如是學者學度眾生界，如是學者是學不斷佛種，如是學者學開甘露門。須菩提！此廣大學是最上學，凡夫下劣人不能如是學。若有能調御一切眾生，欲與一切眾生為依怙者，欲出過一切眾生界者，彼能如是學。若如是學者，不墮地獄、餓鬼、畜生等趣，不生阿修羅界，不生邊地，不生旃陀羅族，不生下姓種族，不生種種卑賤巧業等族。如是學者，不失一目不盲兩目，亦不角睞，不聾不啞，不傴僂，不攣躄。不醜陋，不麁惡，不形殘，不異相，亦無疥癩癰疽乾痟等病，不壞諸根人相圓滿，音聲清巧眾所愛樂。須菩提！又菩薩摩訶薩如是學者，不害他命，不盜他物，不行邪染，不虛妄言亦不兩舌復不惡口，不無義語，不生貪著，不起瞋惱，不住邪見，不邪命活，不修邪命法，不畜破戒眷屬，不近非法者，不生長壽天，雖入諸禪而不隨禪生。何以故？菩薩以能成就善巧方便故。而菩薩成就何等善巧方便？所謂從般若波羅蜜多相應出生善巧方便，是故菩薩雖入諸禪而不隨禪生。須菩提！菩薩摩訶薩能如是學者，即得清淨十力、清淨四無所畏乃至清淨一切佛法。」"
+  },
+  "c25-02": {
+   "sa": "āyuṣmān subhūtirāha - yadā bhagavan sarvadharmā evaṃ prakṛtipariśuddhāḥ, tatkatamasya bhagavan dharmasya bodhisattvo mahāsattvo balapariśuddhiṃ nigacchati, vaiśāradyapariśuddhiṃ nigacchati, sarvabuddhadharmapariśuddhiṃ nigacchati, tāmanuprāpnoti? evamukte bhagavānāyuṣmantaṃ subhūtimetadavocat - evametatsubhūte, evam etat / tatkasya hetoḥ? sarvadharmā hi subhūte prakṛtyaiva pariśuddhāḥ / evaṃ subhūte prakṛtipariśuddheṣu sarvadharmeṣu bodhisattvasya mahāsattvasya prajñāpāramitāyāṃ śikṣamāṇasya yā asaṃsīdanatā anavalīnatā, iyaṃ sā subhūte prajñāpāramitā / evaṃ subhūte bālapṛthagjanā enān dharmānajānanto 'paśyanto dharmāṇāṃ dharmatāṃ na jānanti, na paśyanti / teṣāṃ sattvānāṃ kṛtaśaḥ subhūte bodhisattvā mahāsattvā vyāyacchante, vīryamārabhante - vayamevamajānakān sattvān jānayiṣyāmaḥ, vayamevamapaśyakān sattvān paśyayiṣyāmaḥ ityatra śikṣāyāṃ śikṣante / atra śikṣāyāṃ śikṣamāṇā bodhisattvā mahāsattvā balānyanuprāpnuvanti, vaiśāradyānyanuprāpnuvanti / sarvabuddhadharmānanuprāpnuvanti / evaṃ śikṣamāṇāḥ subhūte bodhisattvā mahāsattvāḥ parasattvānāṃ parapudgalānāṃ cittacaritavispanditāni yathābhūtaṃ prajānanti / yathābhūtaṃ prajānantaḥ paracittacaritajñatāyāḥ pāraṃ gacchanti / tadyathāpi nāma subhūte alpakāste mahāpṛthivyāṃ pṛthivīpradeśāḥ ye 'pagatapāṣāṇāḥ, yatra suvarṇaṃ vā jātarūpaṃ vā rajataṃ votpadyate / atha khalu punarbahutarakāste mahāpṛthivyāṃ pṛthivīpradeśāḥ, ya ūṣarā ujjaṅgalā vividhatṛṇakāṇḍakaṇṭakādhānāḥ / evameva subhūte alpakāste bodhisattvā mahāsattvāḥ sattvanikāye saṃvidyante, ye 'syāṃ sarvajñatāśikṣāyāṃ śikṣante yaduta prajñāpāramitāśikṣāyām / atha khalu bahutarakāste sattvāḥ sattvanikāye saṃvidyante, ye śrāvakapratyekabuddhaśikṣāyāṃ śikṣante //",
+   "T0224": "須菩提白佛言：「佛所有諸法本皆淨，何等為菩薩得法淨？」佛語須菩提：「菩薩學如是，為學無所得淨法諸法淨。如是，須菩提！菩薩行般若波羅蜜時不悔不厭，是為行般若波羅蜜。未得道者愚癡，不曉是法，不見是事，菩薩用人故常精進，人見我亦當効我精進，用是故，菩薩得力、精進、無所畏。菩薩作是學，悉知十方天下人心意所念，無能過者。譬如地出金銀。少所處出耳。如是，須菩提！少所人隨般若波羅蜜法教學。譬若，須菩提！少所人索遮迦越羅處，索小國王多。如是，須菩提！少所人隨般若波羅蜜法教學，從是中多索阿羅漢、辟支佛者；有初發意菩薩，少有隨般若波羅蜜教者；既有學般若波羅蜜，少有得阿惟越致者。菩薩當作是念：『我當力學慕及阿惟越致。』",
+   "T0225": "善業白佛言：「諸法本皆淨，何等闓士為得法淨？」佛言：「闓士學如斯，為學無所得淨法諸法淨。如是闓士行明度時，不悔不厭是為行。未得道者愚癡，不曉是法、不見其事。闓士用人故，常精進，人當効我，用是得力、精進、無所畏。作是學一切智者，若出金之地，其地少耳。又如索轉輪聖王之人少耳，小王者多。從是中多索應儀、緣一覺者，既有初發意者，闓士少有隨明度教得不退轉者。闓士當力學及不退轉。闓士行明度，不以恚意向人，不求人短，心無慳貪，不毀戒、懷恨、懈怠、迷亂，心無癡冥。學明度，為照明諸度，悉入其門，道德備足。如人言：『是我所。』便外著十二品。悉供養一佛界中人盡壽命，不如守明度淨定彈指頃。何以故？從是疾得無上正真道，能給視十方窮孤，求佛之境界，佛之智慧，如師子獨步。欲得佛處，當學明度。學明度者，為學諸法。」善業言：「闓士復學應儀法耶？」佛言：「闓士學一切智，應儀功德不於中住。闓士學，十方人無能過者，於一切智中不壞不滅。若念持是明度當得一切智，為不行。明度無極，無相之行也。」",
+   "T0227": "「世尊！若一切法，本淨相者，菩薩復得何等清淨法？」佛言：「如是，如是！須菩提！一切法本清淨相，菩薩於是本淨相法中，行般若波羅蜜，不驚不怖，不沒不退，是名清淨般若波羅蜜。須菩提！凡夫不知不見一切法本清淨相，是故菩薩發勤精進，於是中學，得清淨諸力，諸無畏。須菩提！菩薩如是學者，悉能通達一切眾生心、心所行。須菩提！譬如少所地，出閻浮檀金，眾生聚中，亦少能如是學般若波羅蜜。譬如眾生，少有能起轉輪王業，多有能起諸小王業。如是，須菩提！少有眾生能行般若波羅蜜道，多有發聲聞、辟支佛乘。須菩提！少有眾生能學阿耨多羅三藐三菩提心者。於學阿耨多羅三藐三菩提中，少能如說行者。於如說行中，少能隨學般若波羅蜜者。於隨學中，少能得阿毘跋致者。是故，須菩提！菩薩欲在少中之少，當學般若波羅蜜，修習般若波羅蜜。」",
+   "T0220d": "具壽善現便白佛言：「若一切法本性清淨，云何菩薩摩訶薩眾如是學時，復能證得清淨諸力、清淨無畏、清淨佛法？」佛告善現：「如是！如是！如汝所說。諸法本來自性清淨。是菩薩摩訶薩於一切法本性淨中，精勤修學甚深般若波羅蜜多方便善巧，如實通達心不沈沒亦無滯礙，遠離一切煩惱染著。故說菩薩如是學時，於一切法復得清淨，由此因緣得清淨力、清淨無畏、清淨佛法。「復次，善現！雖一切法本性清淨，而諸異生不知、見、覺。是菩薩摩訶薩為欲令彼知、見、覺故，發勤精進修行般若波羅蜜多方便善巧，作如是念：『我於諸法本性清淨知、見、覺已，如實開悟一切有情，令於諸法本性清淨亦知、見、覺。』是菩薩摩訶薩如是學時，得清淨力、清淨無畏、清淨佛法。「復次，善現！若菩薩摩訶薩如是學時，於諸有情心行差別皆能通達至極彼岸，方便善巧令諸有情知一切法本性清淨，證得畢竟清涼涅槃。",
+   "T0228": "須菩提白佛言：「世尊！一切法自性本來清淨，菩薩摩訶薩云何復得清淨十力、清淨四無所畏乃至清淨一切佛法耶？」佛告須菩提言：「如是，如是！須菩提！一切法自性本來清淨，菩薩摩訶薩於是一切法自性本來清淨中，如理修學般若波羅蜜多，不驚不怖不退不沒。須菩提！彼諸愚異生等於如是法不知不見，以不知不見故無所覺了。是故菩薩摩訶薩發勤精進於中修學，自所學已，令諸異生等於是法中如理修學、實知實見。菩薩摩訶薩由如是學故，即得清淨十力、清淨四無所畏乃至清淨一切佛法。須菩提！菩薩摩訶薩如是學者，悉能了知一切眾生心心所行。須菩提！譬如大地少出閻浮檀金，多諸荊棘砂礫草木等類。一切眾生亦復如是，於眾生聚中少能愛樂修學般若波羅蜜多者，多有愛樂修學聲聞、緣覺法門。須菩提！又如眾生聚中少有修彼輪王業者，但多修彼諸小王業。須菩提！當知眾生聚中少有行於般若波羅蜜多道者，多有行於聲聞、緣覺道者，亦復如是。"
+  },
+  "c25-03": {
+   "sa": "punaraparaṃ subhūte tadyathāpi nāma alpakāste sattvāḥ sattvanikāye saṃvidyante, ye cakravartirājyasaṃvartanīyaṃ karma samādāya vartante / atha khalu bahutarakāste sattvāḥ sattvanikāye saṃvidyante, ye koṭṭarājyasaṃvartanīyaṃ karma samādāya vartante / evameva subhūte alpakāste bodhisattvā mahāsattvāḥ sattvanikāye saṃvidyante, ye imaṃ mārgamārūḍhā yaduta prajñāpāramitāmārgam, anuttarāṃ samyaksaṃbodhimabhisaṃbhotsyāmahe iti / atha khalu bahutarakāste sattvāḥ sattvanikāye saṃvidyante, ye śrāvakapratyekabuddhamārgamārūḍhāḥ // punaraparaṃ subhūte tadyathāpi nāma alpakāste sattvāḥ sattvanikāye saṃvidyante, ye śakrasaṃvartanīyaṃ karma samādāya vartante / atha khalu bahutarakāste sattvāḥ sattvanikāye saṃvidyante, ye devalokasaṃvartanīyaṃ karma samādāya vartante / evameva subhūte alpakāste bodhisattvā mahāsattvāḥ sattvanikāye saṃvidyante, ye 'syāṃ prajñāpāramitāśikṣāyāṃ śikṣante / atha khalu bahutarakāste bodhisattvā mahāsattvāḥ sattvanikāye saṃvidyante, ye śrāvakapratyekabuddhaśikṣāyāṃ śikṣante // punaraparaṃ subhūte tadyathāpi nāma alpakāste sattvāḥ sattvanikāye saṃvidyante, ye brahmasaṃvartanīyaṃ karma samādāya vartante / atha khalu bahutarakāste sattvāḥ sattvanikāye saṃvidyante, ye brahmapārṣadyasaṃvartanīyaṃ karma samādāya vartante / evameva subhūte alpakāste bodhisattvā mahāsattvāḥ sattvanikāye saṃvidyante, ye 'vinivartanīyā anuttarāyāṃ samyaksaṃbodheḥ / atha khalu bahutarakāste bodhisattvā mahāsattvāḥ sattvanikāye saṃvidyante, ye vivartante 'nuttarāyāḥ samyaksaṃbodheḥ / tasmāttarhi subhūte alpakāste sattvāḥ sattvanikāye saṃvidyante, ye 'nuttarāyāṃ samyaksaṃbodhau saṃprasthitāḥ / tebhyo 'pi subhūte alpebhyo 'lpatarakāste sattvāḥ, ye tathatvāya pratipadyante / tebhyo 'pi subhūte alpatarakebhyastathatvāya pratipadyamānebhyo 'lpatamāste ye prajñāpāramitāyāṃ yogamāpadyante / tebhyo 'pi subhūte alpatamebhyaḥ prajñāpāramitāyāṃ yogamāpadyamānebhyo 'lpatamāste bodhisattvā mahāsattvāḥ, ye 'vinivartanīyā anuttarāyāṃ samyaksaṃbodheḥ / tasmāttarhi subhūte bodhisattvena mahāsattvena ya ete 'lpatamebhyo 'lpatamā avinivartanīyā bodhisattvā mahāsattvāḥ, teṣu gaṇanāṃ gantukāmena ihaiva prajñāpāramitāyāṃ śikṣitavyam, yogamāpattavyam //",
+   "T0220d": "「善現當知！譬如大地少處出生金銀等寶，多處出生鹹鹵等物，諸有情類亦復如是，少學般若波羅蜜多，多學聲聞、獨覺地法。善現當知！譬如人趣少分能作轉輪王業，多分能作諸小王業，諸有情類亦復如是，少分能修一切智智道，多分能修聲聞、獨覺道。善現當知！譬如欲界地居天中，少分能造天帝釋業，多分能造餘天眾業，諸有情類亦復如是，少求無上正等菩提，多求聲聞、獨覺乘果。善現當知！譬如色界初靜慮中，少分能修大梵王業，多分能修梵天眾業，諸有情類亦復如是，少於無上正等菩提得不退轉，多於無上正等菩提猶有退轉。「是故，善現！諸有情類少分能發大菩提心，於中轉少能修菩薩摩訶薩行，於中轉少能學般若波羅蜜多，於中轉少能於般若波羅蜜多方便善巧，於中極少能於無上正等菩提得不退轉。是故，善現！若菩薩摩訶薩欲墮極少有情數者，當勤修學甚深般若波羅蜜多方便善巧，令於無上正等菩提得不退轉，疾證無上正等菩提。",
+   "T0228": "「須菩提！又如眾生聚中少有修彼帝釋福業，但多修彼諸天子業。須菩提！當知眾生聚中少有修習般若波羅蜜多行者，多有修習聲聞、緣覺行者，亦復如是。須菩提！又如眾生聚中少有修彼梵王福業，但多修彼諸梵眾業。須菩提！當知眾生聚中少有不退轉於阿耨多羅三藐三菩提者，多有退轉於阿耨多羅三藐三菩提者，亦復如是。須菩提！以是義故，當知眾生聚中少有能發阿耨多羅三藐三菩提心者，於少能發心中又復少能如理修行者，於少能修行中又復少能修習般若波羅蜜多相應行者，於少能修習相應行中又復少能於阿耨多羅三藐三菩提住不退轉者。須菩提！是故諸菩薩摩訶薩若欲在少中少者，應當修習般若波羅蜜多。"
+  },
+  "c25-04": {
+   "sa": "punaraparaṃ subhūte bodhisattvasya mahāsattvasya evaṃ prajñāpāramitāyāṃ śikṣamāṇasya na khilasahagataṃ cittamutpadyate, na vicikitsāsahagataṃ cittamutpadyate, nerṣyāmātsaryasahagataṃ cittamutpadyate, na dauḥśīlyasahagataṃ cittamutpadyate, na vyāpādasahagataṃ cittamutpadyate, na kausīdyasahagataṃ cittamutpadyate, na vikṣepasahagataṃ cittamutpadyate, na dauṣprajñasahagataṃ cittamutpadyate / evaṃ hi subhūte prajñāpāramitāyāṃ śikṣamāṇena bodhisattvena mahāsattvena sarvāḥ pāramitā saṃgṛhītā bhavanti, sarvāḥ pāramitā udgṛhītā bhavanti, sarvāḥ pāramitā anugatā bhavanti / sarvāḥ pāramitā antargatā bhavanti / tadyathāpi nāma subhūte satkāyadṛṣṭau dvāṣaṣṭidṛṣṭigatānyantargatāni bhavanti, evameva subhūte prajñāpāramitāyāṃ śikṣamāṇasya bodhisattvasya mahāsattvasya tasyāṃ sarvāḥ pāramitā antargatā bhavanti / tadyathāpi nāma subhūte puruṣasya jīvitendriye pravartamāne sarvāṇīndriyāṇyantargatāni bhavanti, evameva subhūte bodhisattvasya mahāsattvasya prajñāpāramitāyāṃ śikṣamāṇasya sarvakuśalā dharmā antargatā bhavanti / tadyathāpi nāma subhūte puruṣasya jīvitendriye niruddhe sarvāṇīndriyāṇi niruddhāni bhavanti, evameva subhūte bodhisattvasya mahāsattvasya prajñāpāramitāyāṃ śikṣamāṇasya ajñāne niruddhe sarve 'kuśalā dharmā niruddhā bhavanti, sarvāś ca tadanyāḥ pāramitā antargatāḥ parigṛhītā bhavanti / tasmāttarhi subhūte bodhisattvena mahāsattvena sarvāḥ pāramitāḥ parigrahītukāmena prajñāpāramitāyāṃ śikṣitavyam / prajñāpāramitāyāṃ śikṣamāṇaḥ subhūte bodhisattvo mahāsattvaḥ sarvasattvānāmagratāyāṃ śikṣate / tatkasya hetoḥ? puṇyāgratvāt / tatkiṃ manyase subhūte yāvantastrisāhasramahāsāhasre lokadhātau sarvasattvāḥ sattvasaṃgraheṇa saṃgṛhyamāṇāḥ, api nu te bahavo bhavanti? subhūtirāha - jāmbūdvīpakā eva tāvadbhagavan bahavaḥ sattvā bhavanti, kaḥ punarvādo ye trisāhasramahāsāhasre lokadhātau sattvāḥ / bhagavānāha - yaḥ subhūte eko bodhisattvo mahāsattvo yāvajjīvaṃ tiṣṭhaṃstān sarvasattvān cīvarapiṇḍapātaśayanāsanaglānapratyayabhaiṣajyapariṣkāraiḥ sarvasukhopadhānaiścopatiṣṭhet, tatkiṃ manyase subhūte api nu sa bodhisattvo mahāsattvastatonidānaṃ bahutaraṃ puṇyaṃ prasavati? subhūtirāha - bahu bhagavan, bahu sugata / bhagavānāha - ataḥ sa subhūte bodhisattvo mahāsattvastatonidānaṃ bahutaraṃ puṇyaṃ prasavati, ya imāṃ prajñāpāramitāmantaśo 'cchaṭāsaṃghātamātrakam api bhāvayet / tatkasya hetoḥ? evaṃ mahārthikā hi subhūte prajñāpāramitā bodhisattvasya mahāsattvasya anuttarāyāḥ samyaksaṃbodherāhārikā / tasmāttarhi subhūte bodhisattvena mahāsattvena anuttarāṃ samyaksaṃbodhimabhisaṃboddhukāmena sarvasattvānāmanuttaratāṃ gantukāmena sarvasattvānāmanāthānāṃ nāthena bhavitukāmena buddhaviṣayamanuprāptukāmena buddhavṛṣabhitāmanugantukāmena buddhavikrīḍitaṃ vikrīḍitukāmena buddhasiṃhanādaṃ naditukāmena buddhasaṃpattimanuprāptukāmena trisāhasramahāsāhasre lokadhātau dharmasāṃkathyaṃ kartukāmena bodhisattvena mahāsattvena prajñāpāramitāyāṃ śikṣitavyam / prajñāpāramitāyāṃ subhūte śikṣamāṇasya bodhisattvasya mahāsattvasya nāhaṃ tāṃ saṃpattiṃ samanupaśyāmi, yā tena na śikṣitā bhavati / subhūtirāha - kiṃ punarbhagavan śrāvakasaṃpattir api tena bodhisattvena mahāsattvena śikṣitā bhavati? bhagavānāha - śrāvakasaṃpattir api subhūte tena bodhisattvena mahāsattvena śikṣitā bhavati / na khalu punaḥ subhūte bodhisattvo mahāsattvaḥ śrāvakasaṃpatyāṃ sthāsyāmīti śikṣate, śrāvakasaṃpattirvā me bhaviṣyatīti naivaṃ śikṣate / ye 'pi te subhūte śrāvakagaṇāḥ, tān api sa jānāti, na ca tatrāvatiṣṭhate / evaṃ ca vyavacārayati, na ca prativahati - mayāpyete śrāvakaguṇā deśayitavyāḥ prakāśayitavyā iti śikṣate / evaṃ śikṣamāṇaḥ subhūte bodhisattvo mahāsattvaḥ sadevamānuṣāsurasya lokasya dakṣiṇīyatāṃ gacchati / evaṃ śikṣamāṇaḥ subhūte bodhisattvo mahāsattvaḥ sarvāṃstato 'nyān dakṣiṇīyān śrāvakapratisaṃyuktān pratyekabuddhapratisaṃyuktāṃścābhibhavati, sarvajñatā cāsya āsannībhavati / evaṃ śikṣamāṇaḥ subhūte bodhisattvo mahāsattvo na riñcati, prajñāpāramitāṃ carati prajñāpāramitāyāmavirahitaḥ prajñāpāramitāvihāreṇa / evaṃ caran subhūte bodhisattvo mahāsattvo 'parihāṇadharmā aparihāṇadharmeti veditavyaḥ / sarvajñatāyā dūrīkaroti śrāvakabhūmim, pratyekabuddhabhūmiṃ ca, āsannībhavatyanuttarāyāḥ samyaksaṃbodheḥ / sacetpunarasyaivaṃ bhavati - iyaṃ sā prajñāpāramitā imāṃ sarvajñatāmāhariṣyati, ityevaṃ saṃjānīte, carati prajñāpāramitām / atha tām api prajñāpāramitāṃ na saṃjānīte - iyaṃ sā prajñāpāramitā, asya vā prajñāpāramitā sarvajñatāmāhariṣyatīti vā, evam api subhūte bodhisattvo mahāsattvo na saṃjānīte, na samanupaśyati / sacedevaṃ carati bodhisattvo mahāsattvaḥ, carati prajñāpāramitāyāmiti // āryāṣṭasāhasrikāyāṃ prajñāpāramitāyāṃ śikṣāparivarto nāma pañcaviṃśatitamaḥ //",
+   "T0224": "「復次，須菩提！行般若波羅蜜，不持瞋恚意向人，不求他人短，心無慳貪，心不毀誡，心不懷恨，心不懈，心不迷亂，心不愚癡。時菩薩學般若波羅蜜時，諸波羅蜜皆悉屬。學般若波羅蜜為照諸波羅蜜，為悉入諸波羅蜜，學般若波羅蜜，為具足餘波羅蜜。譬如人言：『是我所便，外著十二品。』如是，須菩提！菩薩學般若波羅蜜皆悉屬。譬如，須菩提！人死時命盡，身諸根悉滅。如是，須菩提！菩薩學般若波羅蜜，為學諸波羅蜜皆悉屬。菩薩欲學度諸波羅蜜，當學般若波羅蜜。菩薩欲學般若波羅蜜，為學無極。於須菩提意云何，一佛界中所有人寧多不？」須菩提報佛言：「甚多。」佛言：「若有菩薩供養一佛界中乃爾所人，供養自盡壽命，其福寧多不？」須菩提白佛言：「甚多。」佛語須菩提：「不如菩薩守般若波羅蜜如兩指相彈頃。」佛語須菩提：「般若波羅蜜極尊，用是故疾得佛。如是，須菩提！菩薩欲得阿耨多羅三耶三菩，為十方人中獨尊，給施十方貧窮孤獨者，欲求佛境界者，欲得佛智慧所樂者，欲得如師子獨鳴者，欲得佛處者，悉欲得是者，當學般若波羅蜜。菩薩學般若波羅蜜者，為悉學餘法。」須菩提白佛言：「菩薩為復學阿羅漢法耶？」佛語須菩提：「雖知阿羅漢法，不樂行、不學阿羅漢所作功德，云何當得也？阿羅漢所行，菩薩悉知，不學、不行、不於中住。菩薩作是學，天上天下無有能過者，悉過阿羅漢、辟支佛上，如是為近薩芸若。菩薩作是學，不離般若波羅蜜遠也，為行般若波羅蜜。菩薩作是學，於薩芸若法中不增不減，離阿羅漢、辟支佛道。菩薩若復作是念：『持是般若波羅蜜，當得薩芸若。』有小想為不行般若波羅蜜，亦不有般若波羅蜜之相。當持得薩芸若，亦無念，亦無見，亦無所想，是為行般若波羅蜜。」",
+   "T0227": "佛告須菩提：「若菩薩如是學般若波羅蜜，則不生煩惱心，不生慳心，不生破戒心，不生瞋惱心，不生懈怠心，不生散亂心，不生愚癡心。須菩提！菩薩如是學，皆攝諸波羅蜜。須菩提！譬如六十二見，皆攝在身見中。須菩提！菩薩學般若波羅蜜時，皆攝諸波羅蜜。譬如人死，命根滅故，諸根皆滅。如是，須菩提！菩薩學般若波羅蜜，皆攝諸波羅蜜。是故，須菩提！菩薩若欲攝諸波羅蜜，當學般若波羅蜜。須菩提！菩薩學般若波羅蜜，即於一切眾生中最為上首。須菩提！於意云何？三千大千世界眾生寧為多不？」「世尊！閻浮提眾生尚多，何況三千大千世界？」「須菩提！是眾生皆為菩薩。若有一人，盡形壽供養衣服飲食臥具醫藥，須菩提！於意云何？是人以是因緣得福多不？」「甚多，甚多！世尊！」「須菩提！若有菩薩如彈指頃，修習般若波羅蜜，福勝於彼。如是，須菩提！般若波羅蜜大利益諸菩薩，能助阿耨多羅三藐三菩提。是故，須菩提！若菩薩欲得阿耨多羅三藐三菩提，欲於一切眾生中為無上者，欲為一切眾生作救護，欲得具足佛法，欲得佛所行處，欲得佛所遊戲，欲得佛師子吼，欲得三千大千世界大會講法，當學般若波羅蜜。須菩提！我不見菩薩學般若波羅蜜，不得如是具足之利。」「世尊！是菩薩亦得具足聲聞利耶？」「須菩提！菩薩亦學具足聲聞利，但不願住聲聞法中，欲具足諸功德必皆能知，但不於中住，作是念：『我亦當說是聲聞功德，教化眾生。』若菩薩如是學者，能為一切世間天、人、阿修羅作福田，於聲聞、辟支佛福田為最殊勝。菩薩如是學者，得近薩婆若，不捨般若波羅蜜，不離般若波羅蜜。菩薩如是行般若波羅蜜，名為不退於薩婆若，遠聲聞、辟支佛地，近阿耨多羅三藐三菩提。是菩薩，若作是念：『此是般若波羅蜜，是某般若波羅蜜，當得薩婆若。』如是亦分別，即不行般若波羅蜜。若菩薩不分別般若波羅蜜，不見般若波羅蜜，不言此是般若波羅蜜，是某般若波羅蜜，當得薩婆若。如是亦不見不聞，不覺不知，即行般若波羅蜜。」",
+   "T0220d": "「復次，善現！若菩薩摩訶薩如是修學甚深般若波羅蜜多方便善巧，不起栽蘖俱行之心，不起疑惑俱行之心，不起慳悋俱行之心，不起犯戒俱行之心，不起忿恚俱行之心，不起懈怠俱行之心，不起散亂俱行之心，不起惡慧俱行之心。「復次，善現！若菩薩摩訶薩如是修學甚深般若波羅蜜多方便善巧，能攝一切波羅蜜多，能集一切波羅蜜多，能導一切波羅蜜多。所以者何？甚深般若波羅蜜多中含容一切波羅蜜多故。善現當知！如偽身見普能攝受六十二見，甚深般若波羅蜜多亦復如是，含容一切波羅蜜多。若菩薩摩訶薩能正修學甚深般若波羅蜜多方便善巧，能引一切波羅蜜多令漸增長。善現當知！譬如命根能持諸根，甚深般若波羅蜜多亦復如是，能持一切殊勝善法。所以者何？若菩薩摩訶薩能正修學甚深般若波羅蜜多，普能攝持一切善法。善現當知！如命根滅諸根隨滅，甚深般若波羅蜜多亦復如是。若菩薩摩訶薩退失如是甚深般若波羅蜜多，則為退失一切善法。若菩薩摩訶薩能正修學甚深般若波羅蜜多，普能滅除諸不善法。是故，善現！若菩薩摩訶薩欲至一切波羅蜜多究竟彼岸，應勤修學甚深般若波羅蜜多。「復次，善現！若菩薩摩訶薩能勤修學甚深般若波羅蜜多，於諸有情最上、最勝。所以者何？是菩薩摩訶薩能勤修學甚深般若波羅蜜多無上法故。「復次，善現！於意云何？於此三千大千世界諸有情類寧為多不？」善現對曰：「贍部洲中諸有情類尚多無數，何況三千大千世界諸有情類寧不為多！」佛告善現：「如是！如是！如汝所說。善現當知！假使三千大千世界諸有情類，非前非後皆得人身。得人身已，非前非後皆發無上正等覺心，修諸菩薩摩訶薩行。修行滿已，非前非後皆得無上正等菩提。有菩薩摩訶薩盡其形壽，能以上妙衣服、飲食、房舍、臥具、病緣醫藥及諸資財，供養恭敬、尊重讚歎此諸如來、應、正等覺。於意云何？是菩薩摩訶薩由此因緣得福多不？」善現對曰：「甚多！世尊！甚多！善逝！」佛告善現：「若菩薩摩訶薩能修如是甚深般若波羅蜜多，經彈指頃所獲功德，甚多於前無量無數。所以者何？甚深般若波羅蜜多具大義用，能令菩薩摩訶薩眾疾證無上正等菩提。是故，善現！若菩薩摩訶薩欲證無上正等菩提，欲為一切有情上首，欲普饒益一切有情，無救護者為作救護，無歸依者為作歸依，無投趣者為作投趣，無眼目者為作眼目，無光明者為作光明，失正路者示以正路，未涅槃者令得涅槃，當學如是甚深般若波羅蜜多。「復次，善現！若菩薩摩訶薩欲行諸佛所行境界，欲居諸佛大仙尊位，欲遊戲佛所遊戲處，欲作諸佛大師子吼，欲擊諸佛無上法鼓，欲扣諸佛無上法鍾，欲吹諸佛無上法螺，欲昇諸佛無上法座，欲演諸佛無上法義，欲決一切有情疑網，欲入諸佛甘露法界，欲受諸佛微妙法樂，欲證諸佛圓淨功德，欲以一音為三千界一切有情宣說正法，普令一切獲大饒益，當學如是甚深般若波羅蜜多。「復次，善現！若菩薩摩訶薩修學如是甚深般若波羅蜜多，無有一切世、出世間功德勝利而不能得。所以者何？甚深般若波羅蜜多是一切種功德善根所依處故。善現當知！我曾不見有菩薩摩訶薩勤修如是甚深般若波羅蜜多，而不能得世、出世間功德勝利。」爾時，善現便白佛言：「諸菩薩摩訶薩修學如是甚深般若波羅蜜多，豈亦能得聲聞、獨覺功德善根？」佛告善現：「聲聞、獨覺功德善根，此諸菩薩摩訶薩眾亦皆能得，但於其中無住無著，以勝智見正觀察已，超過聲聞及獨覺地，趣入菩薩正性離生故。此菩薩摩訶薩眾無有一切功德善根而不能得。「復次，善現！諸菩薩摩訶薩於一切種聲聞、獨覺功德善根皆應修學，雖於其中不求作證，而於一切欲善通達，為彼有情宣說開示。「復次，善現！若菩薩摩訶薩如是學時，則為隣近一切智智，速證無上正等菩提，能盡未來利樂一切。「復次，善現！若菩薩摩訶薩如是學時，則為一切世間天、人、阿素洛等真淨福田，超諸世間沙門、梵志、聲聞、獨覺福田之上，疾能證得一切智智。「復次，善現！若菩薩摩訶薩如是學時，隨所生處，不捨如是甚深般若波羅蜜多，不離如是甚深般若波羅蜜多，常行如是甚深般若波羅蜜多。「復次，善現！若菩薩摩訶薩能行如是甚深般若波羅蜜多，當知已於一切智智得不退轉，於一切法能正覺知，遠離聲聞、獨覺等地，親近無上正等菩提。「復次，善現！若菩薩摩訶薩行深般若波羅蜜多時，作如是念：『此是般若波羅蜜多，此是修時，此是修處。我能修此甚深般若波羅蜜多，我由如是甚深般若波羅蜜多，棄捨如是所應捨法，當能引發一切智智。』是菩薩摩訶薩非行般若波羅蜜多，亦於般若波羅蜜多不能解了。所以者何？甚深般若波羅蜜多不作是念：『我是般若波羅蜜多，此是修時，此是修處，此是修者，此是般若波羅蜜多所遠離法，此是般若波羅蜜多所照了法，此是般若波羅蜜多所證無上正等菩提。』若如是知，是行般若波羅蜜多。「復次，善現！若菩薩摩訶薩行深般若波羅蜜多時，作如是念：『此非般若波羅蜜多，此非修時，此非修處，此非修者，非由般若波羅蜜多遠離一切所應捨法，非由般若波羅蜜多能證無上正等菩提。所以者何？以一切法皆住真如無差別故。』善現當知！若菩薩摩訶薩於一切法都無分別、無所覺了，是行般若波羅蜜多。」",
+   "T0220d-5": "「復次，善現！若諸菩薩如是修學甚深般若波羅蜜多方便善巧，不起根栽俱行之心，不起慳悋、犯戒、瞋忿、懈怠、散動、惡慧、猶豫俱行之心。「復次，善現！若諸菩薩如是修學甚深般若波羅蜜多方便善巧，能攝一切波羅蜜多。譬如身見能具攝受六十二見，如是般若波羅蜜多攝受一切波羅蜜多。譬如命根遍能攝受所餘諸根，命根滅時諸根隨滅，如是般若波羅蜜多攝受一切波羅蜜多，若失般若波羅蜜多則失一切波羅蜜多。所以者何？甚深般若波羅蜜多能持一切殊勝善法，能滅一切惡不善法。是故，善現！若諸菩薩欲攝一切波羅蜜多，應學般若波羅蜜多。若諸菩薩能學般若波羅蜜多，於諸有情最尊最勝。「復次，善現！於意云何？於此三千大千世界諸有情類寧為多不？」善現對曰：「甚多！世尊！贍部洲中諸有情類其數尚多，況三千界！」佛告善現：「假使三千大千世界一切有情皆成菩薩，一一皆以上妙樂具，盡壽供養一切有情。於意云何？是諸菩薩由此因緣得福多不？」善現對曰：「甚多！世尊！」佛告善現：「若有菩薩修學般若波羅蜜多如彈指頃，其福勝彼無量無邊。所以者何？甚深般若波羅蜜多具大義用，能攝無上正等菩提。是故，善現！若諸菩薩欲證無上正等菩提，欲為一切有情上首，欲普饒益一切有情，欲為一切有情依怙，欲證一切圓滿佛法，欲行諸佛所行境界，欲遊戲佛所遊戲處，欲作諸佛大師子吼，欲以一音為三千界一切有情宣說正法普令一切獲大饒益，當學般若波羅蜜多。善現當知！我曾不見有諸菩薩修學般若波羅蜜多，而不能得世、出世間功德勝利。」爾時，善現便白佛言：「菩薩修學甚深般若波羅蜜多，豈亦能得聲聞、獨覺功德善根？」佛告善現：「聲聞、獨覺功德善根，此菩薩眾亦皆能得，但於其中心不樂住；以勝智見無倒觀察，超過聲聞及獨覺地，為彼開示令皆證得。「復次，善現！若諸菩薩如是學時，則為一切世間天、人、阿素洛等真淨福田，超諸世間聲聞、獨覺福田之上，疾能證得一切智智，常不捨離甚深般若波羅蜜多。菩薩若能修行般若波羅蜜多，當知已於一切智智得不退轉，遠離聲聞、獨覺等地，親近無上正等菩提。「善現當知！若諸菩薩作如是念：『此是般若波羅蜜多，我由般若波羅蜜多，當能引發一切智智。』是諸菩薩非行般若波羅蜜多，亦於般若波羅蜜多不知不見。若諸菩薩不作是念：『此是般若波羅蜜多，我由般若波羅蜜多，當能引發一切智智。』是諸菩薩是行般若波羅蜜多，亦於般若波羅蜜多能知能見。「復次，善現！若諸菩薩不見般若波羅蜜多，不聞、不覺、不知般若波羅蜜多，於不見、聞、覺、知諸法亦不分別，是行般若波羅蜜多。」",
+   "T0228": "「復次，須菩提！若菩薩摩訶薩修學是般若波羅蜜多者，不生雜染心、不生疑惑心、不生憎嫉心、不生慳悋心、不生破戒心、不生瞋惱心、不生懈怠心、不生散亂心、不生愚癡心。又，須菩提！菩薩摩訶薩應修學是般若波羅蜜多。何以故？此般若波羅蜜多能護諸波羅蜜多、能受諸波羅蜜多、能取諸波羅蜜多、能集諸波羅蜜多、能攝諸波羅蜜多。須菩提！譬如六十二見，身見中攝，諸波羅蜜多於般若波羅蜜多中攝，亦復如是。須菩提！又如士夫所有諸根，皆悉於其命根中攝，一切善法皆於般若波羅蜜多中攝，亦復如是。須菩提！又如士夫命根滅時諸根皆滅，菩薩摩訶薩亦復如是，若智慧滅時一切善法而亦隨滅。須菩提！是故菩薩摩訶薩若欲護諸波羅蜜多，若欲攝諸波羅蜜多者，應當修學是般若波羅蜜多。又，菩薩摩訶薩若欲於一切眾生中福德最勝為上首者，應當修學是般若波羅蜜多。」復次，佛言：「須菩提！於汝意云何，三千大千世界一切眾生是為多不？」須菩提白佛言：「世尊！但此閻浮提中所有眾生尚多無數，何況三千大千世界一切眾生。」佛言：「須菩提！假使如是三千大千世界一切眾生，一一修行皆住菩薩地，或有一人盡其壽命，以諸飲食、衣服、臥具、醫藥及餘樂具，供養如是三千大千世界諸菩薩眾。此人以是因緣得福多不？」須菩提言：「甚多，世尊！甚多，善逝！」佛言：「須菩提！若復有人於一彈指頃能修行是般若波羅蜜多者，其所得福倍勝於前。何以故？般若波羅蜜多廣大利益諸菩薩摩訶薩，復能護助阿耨多羅三藐三菩提故。須菩提！是故諸菩薩摩訶薩若欲於一切眾生中最勝無上，若欲與一切眾生為所依怙，若欲偏入諸佛境界，若欲具足佛功德法，若欲得佛遊戲神通，若欲作佛大師子吼，若欲得佛諸所行處，若欲普以三千大千世界大會說法。須菩提！菩薩摩訶薩若欲成就如是等功德利者，應學是般若波羅蜜多。學是般若波羅蜜多，不能圓滿諸功德利者，無有是處。」須菩提白佛言：「世尊！菩薩摩訶薩亦具足聲聞功德利耶？」佛言：「須菩提！菩薩摩訶薩亦學是聲聞法，亦具足聲聞功德之利。須菩提！菩薩摩訶薩雖如是學、如是知、得如是利，而不於中生住著心。菩薩摩訶薩亦說彼聲聞法，而不取是法。須菩提！若菩薩摩訶薩如是學者，能為一切世間天、人、阿修羅等作大福田，而菩薩所作福田最上最勝，過餘聲聞、緣覺所有福田。須菩提！如是學者是行般若波羅蜜多，得近一切智，不捨般若波羅蜜多，不離般若波羅蜜多。如是學者不退失一切智，遠離聲聞、緣覺心，得近阿耨多羅三藐三菩提。須菩提！若菩薩摩訶薩作是念：『此是般若波羅蜜多，此名般若波羅蜜多，學是般若波羅蜜多故當得一切智。』須菩提！若如是分別者，不名修學般若波羅蜜多。若菩薩摩訶薩於般若波羅蜜多不生分別，無知無見亦無所得，以如是不分別、無知見、無所得故，是名修學般若波羅蜜多。」"
+  }
+ }
+}
