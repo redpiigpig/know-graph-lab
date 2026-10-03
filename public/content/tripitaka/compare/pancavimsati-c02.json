@@ -1,0 +1,153 @@
+{
+ "slug": "pancavimsati-c02",
+ "title": "大品般若・第2品 奉鉢品",
+ "family": "sa",
+ "intro": "羅什〈奉鉢品〉＝放光〈無見品〉＝光讚〈順空品〉＝第二會〈歡喜品〉後半＋〈觀照品〉開頭＝梵本 PSP 1-1: 50–54（現觀「發心」末段與「教授」開頭）＝藏譯第二章中段。前半是菩薩具足上述功德時四天王奉鉢、諸天護其梵行，舍利弗問菩薩是否必有父母妻子，佛以幻師化作五欲為喻；後半是舍利弗問「云何行般若」，佛答不見菩薩、菩薩字、般若，色即是空，但有名字。第二會把「云何行般若」一段放在〈觀照品〉品首，故該欄跨兩品。梵本在幻師喻後有「iti uktaś cittotpādaḥ」（發心已說）一句科目。",
+ "units": [
+  {
+   "id": "c02-01",
+   "label": "四天王奉鉢・欲界諸天給侍・梵天請轉法輪"
+  },
+  {
+   "id": "c02-02",
+   "label": "善男子女人願為父母眷屬・諸天護菩薩離欲常修梵行"
+  },
+  {
+   "id": "c02-03",
+   "label": "舍利弗問菩薩要有父母妻子・三類菩薩・幻師化作五欲喻・訶欲"
+  },
+  {
+   "id": "c02-04",
+   "label": "舍利弗問云何行般若：不見菩薩、菩薩字、般若・菩薩性空・色即是空"
+  },
+  {
+   "id": "c02-05",
+   "label": "但有名字謂為菩提、菩薩、空・諸法無生無滅無垢無淨・不見故不著"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sa",
+   "lang": "sa",
+   "label": "梵本",
+   "who": "Kimura 校訂本（依現觀莊嚴論改訂之修訂本）・GRETIL"
+  },
+  {
+   "id": "T0223",
+   "lang": "lzh",
+   "label": "羅什本",
+   "who": "姚秦・鳩摩羅什譯《摩訶般若波羅蜜經》・404 年",
+   "work": "T0223"
+  },
+  {
+   "id": "T0221",
+   "lang": "lzh",
+   "label": "放光本",
+   "who": "西晉・無羅叉共竺叔蘭譯《放光般若經》・291 年",
+   "work": "T0221"
+  },
+  {
+   "id": "T0222",
+   "lang": "lzh",
+   "label": "光讚本",
+   "who": "西晉・竺法護譯《光讚經》（殘本）・286 年",
+   "work": "T0222"
+  },
+  {
+   "id": "T0220c",
+   "lang": "lzh",
+   "label": "玄奘・第二會",
+   "who": "唐・玄奘譯《大般若經》第二會（卷 401–478）・660–663 年",
+   "work": "T0220c"
+  },
+  {
+   "id": "bo",
+   "lang": "bo",
+   "label": "藏譯",
+   "who": "德格版 Toh 9《聖般若波羅蜜多二萬五千頌》・84000"
+  },
+  {
+   "id": "en",
+   "lang": "en",
+   "label": "84000 英譯",
+   "who": "譯自藏譯・與藏文逐句對齊"
+  }
+ ],
+ "works": [
+  "T0220c",
+  "T0221",
+  "T0222",
+  "T0223"
+ ],
+ "anchors": [
+  {
+   "work": "T0223",
+   "node": "摩訶般若波羅蜜經奉鉢品第二",
+   "uid": "T08n0223_p0221a21"
+  },
+  {
+   "work": "T0221",
+   "node": "摩訶般若波羅蜜無見品第二",
+   "uid": "T08n0221_p0004b17"
+  },
+  {
+   "work": "T0222",
+   "node": "摩訶般若波羅蜜順空品第二",
+   "uid": "T08n0222_p0151c08"
+  },
+  {
+   "work": "T0220c",
+   "range": [
+    "T07n0220c_p0011a10",
+    "T07n0220c_p0011b27"
+   ]
+  }
+ ],
+ "cells": {
+  "c02-01": {
+   "sa": "yasmin samaye śāriputra bodhisattvo mahāsattvaḥ prajñāpāramitāyāṃ carann imān guṇān utpādayati, tadā ye trisāhasramahāsāhasre lokadhātau mahārājānas ta evaṃ cintayanti, vayam asmai bodhisattvāya catvāri pātrāṇi dāsyāmaḥ, yathā dattāni pūrvakair mahārājaiḥ pūrvakāṇāṃ tathāgatānāṃ trayastriṃśāś ca devā āttamanaskā bhavanti yāmās tuṣitā nirmāṇaratayaḥ paranirmitavaśavartino devā utsukā bhaviṣyanti, vayam asya bodhisattvasya mahāsattvasyopasthānaparicaryāḥ kariṣyāma iti, evam āsurāḥ kāyāḥ parihāsyante divyāḥ kāyāḥ abhivardhiṣyante. āttamanaskāś ca trisāhasramahāsāhasre lokadhātau bhavanti brahmapāriṣadyā brahmapurohitā mahābrahmāṇaḥ, āttamanaskā bhavanti parīttābhā apramāṇābhāś ca ābhāsvarāḥ parīttaśubhā apramāṇaśubhāḥ śubhakṛtsnā anabhrakāḥ puṇyaprasavā bṛhatphalā asaṃjñisattvāḥ śuddhābhāsā avṛhā atapāḥ sudṛśāḥ sudarśanā akaniṣṭhāś ca devās teṣām evaṃ bhavati, vayam enam abhisaṃbuddham adhyeṣiṣyāmo dharmacakrapravartanāya,",
+   "T0223": "佛告舍利弗：「若菩薩摩訶薩行般若波羅蜜能作是功德，是時四天王皆大歡喜，意念言：『我等當以四鉢奉上菩薩，如前天王奉先佛鉢。』三十三天乃至他化自在天亦皆歡喜，意念言：『我等當給侍供養菩薩，減損阿修羅種，增益諸天眾。』三千大千國土四天王天乃至阿迦尼吒天皆大歡喜，意念言：『我等當請是菩薩轉法輪。』",
+   "T0221": "「復次，舍利弗！菩薩摩訶薩行般若波羅蜜，發是念時，四天王皆歡喜意念言：『我曹亦當復以四鉢奉上菩薩，如前王法奉諸佛鉢。』忉利天王及第六天王皆歡喜意念言：『是菩薩成佛時，我曹亦當奉侍給使，減損阿須倫種、增益諸天眾。』三千大千國土中諸阿迦膩吒天各各歡喜亦復念言：『是菩薩摩訶薩行般若波羅蜜成作佛時，我曹亦當勸助，請佛使轉法輪。』",
+   "T0222": "佛告舍利弗：「菩薩摩訶薩行般若波羅蜜時，興斯之德，四天王即時歡喜：『我等當立四枚之鉢，四天王前以所奉進過去怛薩阿竭、阿羅訶、三耶三佛，亦當貢上學道法者。』時忉利天亦復踊躍，焰天、兜率天、尼摩羅天、波羅尼蜜天：『吾等悉當奉事供養此善男子，阿須倫身則為減損，長益諸天身。』三千大千世界，上至阿迦膩吒天，莫不踊躍：『吾等請勸使轉法輪。』",
+   "T0220c": "「復次，舍利子！若菩薩摩訶薩修行般若波羅蜜多，既能成辦如是功德，爾時，三千大千世界四大天王皆大歡喜，咸作是念：『我等今者當以四鉢奉此菩薩，如昔天王奉先佛鉢。』是時，三千大千世界三十三天、夜摩天、覩史多天、樂變化天、他化自在天皆大歡喜，咸作是念：『我等皆當給侍供養如是菩薩，令阿素洛凶黨損減，使諸天眾眷屬增益。』是時，三千大千世界梵眾天、梵輔天、梵會天、大梵天、光天、少光天、無量光天、極光淨天、淨天、少淨天、無量淨天、遍淨天、廣天、少廣天、無量廣天、廣果天、無繁天、無熱天、善現天、善見天、色究竟天，歡喜欣慶咸作是念：『我等當請如是菩薩速證無上正等菩提，轉妙法輪利樂一切。』",
+   "bo": "།ཤ་ར་དྭ་ཏིའི་བུ་གང་གི་ཚེ་དེ་ལྟར་བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་ཤེས་རབ་ཀྱི་ཕ་རོལ་དུ་ཕྱིན་པ་ལ་སྤྱོད་ཅིང་། ཡོན་ཏན་འདི་དག་བསྒྲུབ་པར་འགྱུར་བ་དེའི་ཚེ། རྒྱལ་པོ་ཆེན་པོ་བཞི་ཡང་གང་སྔོན་གྱི་དེ་བཞིན་གཤེགས་པ་རྣམས་ལ། སྔོན་གྱི་རྒྱལ་པོ་ཆེན་པོ་རྣམས་ཀྱིས་ཕུལ་བའི་ལྷུང་བཟེད་རྣམས་བདག་ཅག་གིས་ཀྱང་འདི་ལ་དབུལ་བར་བྱའོ་ཞེས་དགའ་བར་འགྱུར་རོ། །བདག་ཅག་གིས་འདི་ལ་རིམ་གྲོ་དང་བསྟི་སྟང་དུ་བྱའོ་ཞེས་སུམ་ཅུ་རྩ་གསུམ་པའི་ལྷ་རྣམས་དང་། མཚེ་མ་དང་། དགའ་ལྡན་དང་། འཕྲུལ་དགའ་དང་། གཞན་འཕྲུལ་དབང་བྱེད་ཀྱི་ལྷ་རྣམས་ཀྱང་དགའ་བར་འགྱུར་རོ། །དེ་ལྟར་ལྷ་མ་ཡིན་གྱི་རིས་རྣམས་ནི་འགྲིབ་པར་འགྱུར། ལྷའི་རིས་རྣམས་ནི་འཕེལ་བར་འགྱུར་ཏེ། འདི་མངོན་པར་སངས་རྒྱས་ནས་ཆོས་ཀྱི་འཁོར་ལོ་བསྐོར་བའི་དོན་དུ་བདག་ཅག་གིས་གསོལ་བ་གདབ་པར་བྱའོ་ཞེས་ཚངས་རིས་ཀྱི་ལྷ་རྣམས་དང་། ཀུན་སྣང་དང་བ་དང་། དགེ་རྒྱས་དང་། འབྲས་བུ་ཆེ་བ་དང་མི་ཆེ་བ་དང་། མི་གདུང་བ་དང་། ཤིན་ཏུ་མཐོང་བ་དང་། གྱ་ནོམ་སྣང་བ་དང་། འོག་མིན་གྱི་ལྷ་རྣམས་ཀྱང་ དགའ་བར་འགྱུར་རོ། །ཤ་ར་དྭ་ཏིའི་བུ་གང་གི་ཚེ།",
+   "en": "Dt.35}  “Śāradvatīputra, at that time when bodhisattva great beings practice the perfection of wisdom and accomplish these enlightened attributes, the Four Great Kings will also rejoice, saying, ‘We too will offer them the alms bowls that the great kings of the past offered to the tathāgatas of the past.’ The gods of the Trayastriṃśa realm and the gods of the Yāma, Tuṣita, Nirmāṇarata, and Paranirmitavaśavartin realms will also rejoice, saying, ‘We will serve and honor them.’ The gods of Brahmakāyika and the gods of Ābhāsvara, Śubhakṛtsna, Bṛhatphala, Avṛha, Atapa, Sudṛśa, Sudarśana, and Akaniṣṭha will also rejoice, saying, ‘The realms of the asuras will decline! The realms of the gods will flourish! We pray that after these bodhisattvas have attained manifest buddhahood they will turn the wheel of the Dharma!’ “"
+  },
+  "c02-02": {
+   "sa": "yasmin samaye śāriputra bodhisattvo mahāsattvaḥ prajñāpāramitāyāṃ caran vivardhate ṣaḍbhiḥ pāramitābhiḥ, tasmin samaya āttamanaskā bhavanti bodhisattvayānikāḥ kulaputrāḥ kuladuhitaraś ca vayam asya mātāpitarau bhaviṣyāmo bhāryāputrajñātisālohitā iti. āttamanaskā bhavanti catvāro mahārājāno devās trayastriṃśā devā yāmā devās tuṣitā devā nirmāṇaratayo devāḥ paranirmitavaśavartino devā brahmapārṣadyā devā brahmapurohitā devā mahābrahmāṇo (PSP1-1: 52) devāḥ parīttaśubhā devā apramāṇaśubhā devā ābhāsvarā devāḥ śubhakṛtsnā devā anabhrakā devāḥ puṇyaprasavā devā bṛhatphalā devā asaṃjñisattvā devāḥ śuddhāvāsā devā aspṛhā devā atapā devāḥ sudṛśā devāḥ sudarśanā devā akaniṣṭhāś ca devā bodhisattvasya mahāsattvasya maithunadharmaparivarjanena, atha yaḥ prathamacittotpādam upādāya bodhisattvo mahāsattvo brahmacārī bhavati, na saṃyojanīyair dharmaiḥ saṃyujyate, tasyaivaṃ bhavati abrahmacāriṇaḥ sa khalu punaḥ kāmān pratisevamāṇasya brahmalokopapatter apy antarāyo bhavati, kaḥ punar vādo 'nuttarāyāḥ samyaksaṃbodheḥ, tasmāt tarhi bodhisattvena mahāsattvena brahmacāriṇaiva gṛhād abhiniṣkramyānuttarā samyaksaṃbodhir abhisaṃboddhavyā nābrahmacāriṇā.",
+   "T0223": "舍利弗！是菩薩摩訶薩行般若波羅蜜增益六波羅蜜時，諸善男子、善女人各各歡喜，念言：『我等當為是人作父母妻子、親族知識。』爾時四天王天乃至阿迦尼吒天皆大歡喜，各自念言：『我等當作方便，令是菩薩離於婬欲，從初發意常作童真，莫使與色欲共會，若受五欲障生梵天，何況阿耨多羅三藐三菩提。』以是故，舍利弗！菩薩摩訶薩斷婬欲出家者，應得阿耨多羅三藐三菩提非不斷。」",
+   "T0221": "如是，舍利弗！菩薩摩訶薩行般若波羅蜜時，於六波羅蜜轉增益具足。善男子、善女人各各歡喜意自念言：『我當為是菩薩作父母兄弟、妻子眷屬、朋友知識。』爾時四天王及諸阿迦膩吒天各各念言：『當使是菩薩常修梵行，從初發意至成作佛，莫使與色欲共會。犯欲者失梵行，況行道者？是菩薩常修梵行者必成至佛，不從犯欲而得成道。』」",
+   "T0222": "舍利弗！菩薩摩訶薩行般若波羅蜜時，則為長益，具六波羅蜜。善男子、善女人歡喜悅豫：『吾等當為父母之慈、妻子親屬朋友親厚之慈，父母兄弟妻子親厚知友愛，敬喜見之。』四天王、忉利天、焰天、兜率天、尼摩羅天、波羅尼蜜天，上至阿迦膩吒天，不令菩薩與塵欲相值，發心往詣承事作禮：『吾等亦當使得清淨梵天行、離穢濁行，無習婬欲，致生于梵天。』無有放逸而績放逸，諸有色者，不能進至阿耨多羅三耶三菩，是故菩薩以淨梵行棄捐家業，乃逮阿耨多羅三耶三菩阿惟三佛，不以穢濁而得佛道。」",
+   "T0220c": "「舍利子！若菩薩摩訶薩修行般若波羅蜜多，增益六種波羅蜜多時，彼世界諸善男子、善女人等皆大歡喜咸作是念：『我等當為如是菩薩作父母、兄弟、妻子、眷屬、知識、朋友。』時，彼世界四大王眾天乃至色究竟天，歡喜慶幸咸作是念：『我等當設種種方便，令是菩薩離非梵行，從初發心乃至成佛常修梵行。所以者何？若染色欲生於梵天尚能為障，況得無上正等菩提！』是故菩薩斷欲出家修梵行者，能得無上正等菩提，非不斷者。」",
+   "bo": "བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་ཤེས་རབ་ཀྱི་ཕ་རོལ་དུ་ཕྱིན་པ་ལ་སྤྱོད་ཅིང་། ཕ་རོལ་དུ་ཕྱིན་པ་དྲུག་གིས་རྣམ་པར་འཕེལ་བར་འགྱུར་བ་དེའི་ཚེ། བྱང་ཆུབ་སེམས་དཔའི་ཐེག་པ་པའི་རིགས་ཀྱི་བུ་དང་རིགས་ཀྱི་བུ་མོ་རྣམས་ཀྱང་། བདག་ཅག་ནི་སེམས་ཅན་ཆེན་པོ་འདིའི་ཕ་དང་མ་དང་ཕུ་ནུ་དང་། སྲིང་མོ་དང་། ཆུང་མ་དང་། བུ་དང་བུ་མོ་དང་མཛའ་བོ་དང་བློན་པོ་དང་གཉེན་བཤེས་དང་གྲོགས་པོ་དང་བཤེས་པར་འགྱུར་རོ་སྙམ་སྟེ། དགའ་བར་འགྱུར་རོ། །བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་དེ་ལ་བཙུན་མོའི་འཁོར་དབུལ་ལོ་ཞེས། རྒྱལ་པོ་ཆེན་པོ་བཞི་དང་། རྒྱལ་པོ་ཆེན་པོ་བཞིའི་རིས་ཀྱི་ལྷ་དང་། སུམ་ཅུ་རྩ་གསུམ་དང་། མཚེ་མ་དང་། དགའ་ལྡན་དང་། འཕྲུལ་དགའ་དང་། གཞན་འཕྲུལ་དབང་བྱེད་དང་། ཚངས་རིས་དང་། ཚངས་ལྷ་ཉེ་ཕན་དང་། ཚངས་པ་ཀུན་འཁོར་དང་། ཚངས་ཆེན་དང་། སྣང་བ་དང་། ཆུང་སྣང་དང་། ཚད་མེད་སྣང་བ་དང་། ཀུན་སྣང་དང་བ་དང་། དགེ་བ་དང་། ཆུང་དགེ་དང་། ཚད་མེད་དགེ་བ་དང་། དགེ་རྒྱས་དང་། ཆེ་བ་དང་། ཆུང་ཆེ་དང་། ཚད་མེད་ཆེ་བ་དང་། འབྲས་བུ་ཆེ་བ་དང་། མི་ཆེ་བ་དང་། མི་གདུང་བ་དང་། གྱ་ནོམ་སྣང་བ་དང་། ཤིན་ཏུ་མཐོང་བ་དང་། འོག་མིན་གྱི་ལྷ་རྣམས་ཀྱང་དགའ་བར་འགྱུར་ཏེ། དེ་ནི་སེམས་ཅན་རྣམས་བྱང་ཆུབ་ལ་འགོད་པའི་ཕྱིར་ཚངས་པར་སྤྱོད་པ་ཡིན་ཏེ། འདུ་བའི་ཆོས་རྣམས་ཀྱིས་ཡོངས་སུ་བསྡུ་བ་མ་ཡིན་ནོ། །དེ་ནི་འདི་ལྟར་སྨོན་ཏེ་བདག་གིས་སེམས་དང་པོ་བསྐྱེད་ནས་ཚངས་པར་སྤྱད་དེ། ཚངས་པར་མི་སྤྱོད་པ་མེད་པར་བྱའོ། །དེ་ཅིའི་ཕྱིར་ཞེ་ན། འདོད་པ་ལ་བསྟེན་པ་ནི། ཚངས་པའི་འཇིག་རྟེན་དུ་སྐྱེ་བ་ལ་ཡང་བར་དུ་གཅོད་ན། བླ་ན་མེད་པ་ཡང་དག་པར་རྫོགས་པའི་བྱང་ཆུབ་ལ་ལྟ་ཅི་སྨོས། དེ་བས་ན་བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོས་ནི་མངོན་པར་བྱུང་ནས་ཚངས་པར་སྤྱད་དེ། བླ་ན་མེད་པ་ཡང་དག་པར་ རྫོགས་པའི་བྱང་ཆུབ་ཏུ་མངོན་པར་རྫོགས་པར་འཚང་རྒྱ་བར་བྱའི། ཚངས་པར་མི་སྤྱོད་པར་མི་བྱའོ།",
+   "en": "Śāradvatīputra, at that time when bodhisattva great beings practice the perfection of wisdom and flourish through the six perfections, the noble sons and noble daughters who follow the vehicle of the bodhisattvas will also rejoice, saying, ‘We will become their father, mother, brother, sister, wife, son, daughter, confidant, advisor, relative, acquaintance, and friend.’ { Dt.36}  “The Four Great Kings, the gods of the Caturmahārājakāyika realm, and the gods of Trayastriṃśa, Yāma, Tuṣita, Nirmāṇarata, Paranirmitavaśavartin, Brahmakāyika, Brahmapurohita, Brahmapariṣadya, Mahābrahmā, Ābha, Parīttābha, Apramāṇābha, Ābhāsvara, Śubha, Parīttaśubha, Apramāṇaśubha, Śubhakṛtsna, Bṛhat, Parīttabṛhat, Apramāṇabṛhat, and Bṛhatphala, Avṛha, Atapa, Sudṛśa, Sudarśana, and Akaniṣṭha will also rejoice, saying, ‘This bodhisattva great being has given up his entourage of queens.’ “ In order to establish beings in enlightenment, they maintain chaste conduct. They are not bound by fettering concerns. They aspire that they might maintain chaste conduct from the time when they first begin to set their mind on enlightenment onward, and that they might avoid all conduct that is not chaste. If you ask why, since the pursuit of sensual pleasures may even interrupt rebirth in the Brahmā worlds, what need one say about unsurpassed, complete enlightenment! Therefore, bodhisattva great beings who maintain chaste conduct from the time when they renounce the world will attain consummate buddhahood in unsurpassed, complete enlightenment. They will not do so with conduct that is not chaste.”"
+  },
+  "c02-03": {
+   "sa": "evam ukte āyuṣmān śāriputro bhagavantam etad avocat: kiṃ punar bhagavann avaśyaṃ bodhisattvasya mātāpitṛbhyāṃ bhavitavyaṃ bhāryāputrajñātisālohitair bhavitavyam? evam ukte bhagavān āyuṣmantaṃ śāriputram etad avocat: keṣāṃcic chāriputra bodhisattvānāṃ mahāsattvānāṃ mātāpitarau bhavataḥ bhāryāputrajñātisālohitā vā, keṣāñcid bodhisattvānāṃ mahāsattvānāṃ prathamacittotpādam upādāya brahmacaryasamādānan te kumārabhūtā eva bodhisattvacārikāṃ caranto 'nuttarāṃ samyaksaṃbodhim abhisaṃbudhyante, kecid bodhisattvā mahāsattvā upāyakauśalyena ca pañca kāmaguṇān paribhujyābhiniṣkramyānuttarāṃ samyaksaṃbodhim abhisaṃbudhyante, tadyathāpi nāma śāriputra dakṣo māyākāro vā māyākārāntevāsī vā suśikṣito bhaven māyāyāṃ, sa pañca kāmaguṇān abhinirmāya taiḥ pañcabhiḥ kāmaguṇai ramet krīḍet paricaret, tat kiṃ manyase? śāriputra api nu tena māyākāreṇa vā māyākārāntevāsinā vā pañca kāmaguṇā āsvāditāḥ paribhuktā bhaveyuḥ. śāriputra āha: no hīdaṃ bhagavan, bhagavān āha: evam eva śāriputra bodhisattvo mahāsattva upāyakauśalyena ca pañca kāmaguṇān paribhuṅkte sattvānāṃ paripākahetoḥ, na punar bodhisattvo mahāsattvaḥ kāmaguṇair lipyate, anena paryāyeṇa bodhisattvo mahāsattvaḥ kāmānām avarṇaṃ bhāṣate, ādīptāḥ kāmā jugupsitāḥ kāmā badhakāḥ kāmāḥ pratyarthikāḥ kāmāḥ, evaṃ hi śāriputra bodhisattvo mahāsattvaḥ sattvaparipākahetoḥ pañca kāmaguṇān upādadāti. iti dharmakāmasahagato mahāmeghopamaḥ iti uktaś cittotpādaḥ",
+   "T0223": "舍利弗白佛言：「世尊！菩薩摩訶薩要當有父母妻子、親族知識耶？」佛告舍利弗：「或有菩薩有父母妻子、親族知識。或有菩薩從初發心斷婬欲修童真行，乃至得阿耨多羅三藐三菩提不犯色欲。或有菩薩方便力故受五欲已，出家得阿耨多羅三藐三菩提。譬如幻師若幻弟子，善知幻法幻作五欲於中共相娛樂。於汝意云何，是人於此五欲頗有實受不？」舍利弗言：「不也，世尊！」佛告舍利弗：「菩薩摩訶薩以方便力故化作五欲，於中受樂成就眾生，亦復如是。是菩薩摩訶薩不染於欲，種種因緣毀呰五欲，欲為熾然、欲為穢惡、欲為毀壞、欲為如怨。是故，舍利弗！當知菩薩為眾生故受五欲。」",
+   "T0221": "舍利弗白佛言：「菩薩要當有父母妻子眷屬耶？」佛告舍利弗：「菩薩或有父母、無妻子；或有菩薩從初發意作童男行，至成作佛不娶妻色。或有菩薩以漚惒拘舍羅於五欲中示現發阿耨多羅三耶三菩意出家。舍利弗！譬如幻師善於幻法，化作五樂色欲，於中自恣共相娛樂。於意云何，是幻師所作，寧有所服食者不？」舍利弗言：「不也，世尊！幻無所有。」「如是，舍利弗！菩薩以漚惒拘舍羅示現有欲，於色欲中育養一切，無所沾污——觀欲如火，譬如怨家；說欲之惡，志常穢之。菩薩雖在欲中示現，常作是念：『行權菩薩尚作是意，何況新學發意者乎？』」",
+   "T0222": "賢者舍利弗白世尊曰：「菩薩之法，必當有父母妻子、親厚知友耶？」佛告舍利弗：「若有菩薩，必當有父母，不應有妻子，或初發意淨修梵行成為童真，至成阿耨多羅三耶三菩阿惟三佛。或有菩薩，以漚惒拘舍羅習於五欲，然後捨家逮得阿耨多羅三耶三菩阿惟三佛。譬如巧黠幻師及與弟子，善學幻術化造五欲，以此五樂而用自娛戲笑為行。於舍利弗意云何，其幻師者寧為服習於五欲乎？」舍利弗白：「不也，天中天！」佛言：「如是，舍利弗！菩薩摩訶薩以漚惒拘舍羅習於五欲勸化眾生，其菩薩摩訶薩不為五欲之所沾污。菩薩摩訶薩以無央數事嗟歎愛欲，或有毀呰欲為然熾、愛欲瑕穢、欲為仇怨、欲為怨敵。如是，舍利弗！菩薩摩訶薩度眾生故，而為分別此五欲事。」",
+   "T0220c": "時，舍利子白佛言：「世尊！諸菩薩摩訶薩為決定有父母、妻子、諸親友耶？」佛言：「舍利子！或有菩薩具有父母、妻子、眷屬而修菩薩摩訶薩行；或有菩薩摩訶薩無有妻子，從初發心乃至成佛，常修梵行不壞童真；或有菩薩摩訶薩方便善巧示受五欲，厭捨出家，方得無上正等菩提。「舍利子！譬如幻師若彼弟子，善於幻術幻作五欲，於中自恣共相娛樂。於意云何？是幻所作為有實不？」舍利子言：「不也！世尊！」佛言：「舍利子！菩薩摩訶薩亦復如是方便善巧，為欲成熟諸有情故化受五欲，然此菩薩摩訶薩於五欲中深生厭患，不為五欲之所染污，以無量門訶毀諸欲：欲為熾然燒身心故，欲為穢惡染自他故，欲為魁膾於去、來、今常為害故，欲為怨敵長夜伺求作衰損故，欲如草炬，欲如苦果，欲如劍刃，欲如火聚，欲如毒器，欲如幻惑，欲如暗井。菩薩摩訶薩以如是等無量過門訶毀諸欲，既善了知諸欲過失，寧有真實受諸欲事？但為饒益所化有情，方便善巧示受諸欲。」",
+   "bo": "།དེ་སྐད་ཅེས་བཀའ་སྩལ་པ་དང་། ཚེ་དང་ལྡན་པ་ཤ་ར་དྭ་ཏིའི་བུས་བཅོམ་ལྡན་འདས་ལ་འདི་སྐད་ཅེས་གསོལ་ཏོ། །ཅི་ལགས། བཅོམ་ལྡན་འདས་བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་ལ་ཕ་དང་། མ་དང་མཆིས་བྲང་དང་བུ་དང་བུ་མོ་གདོན་མི་འཚལ་བར་འཚལ་ལམ། བཅོམ་ལྡན་འདས་ཀྱིས་བཀའ་སྩལ་པ། ཤ་ར་དྭ་ཏིའི་བུ་བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་ལ་ལ་ལ་ནི་ཕ་དང་མ་གདོན་མི་ཟ་བར་དགོས་ཀྱི་བུ་དང་བུ་མོ་དང་ཆུང་མ་མི་དགོས་སོ། །ལ་ལ་ལ་ནི་ཕ་དང་མ་དང་ཆུང་མ་དང་བུ་དང་བུ་མོ་དག་ཀྱང་གདོན་མི་ཟ་བར་དགོས་སོ། །ཤ་ར་དྭ་ཏིའི་བུ་བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་ལ་ལ་ནི་སེམས་དང་པོ་བསྐྱེད་ཕྱིན་ཆད་ཚངས་པར་སྤྱོད་པ་ཡང་དག་པར་ལེན་ཏེ། བླ་ན་མེད་པ་ཡང་དག་པར་རྫོགས་པའི་བྱང་ཆུབ་ཏུ་མངོན་པར་སངས་རྒྱས་ཀྱི་བར་དུ་གཞོན་ནུར་གྱུར་པར་འཁོད་དོ། །བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་ལ་ལ་ནི་ཐབས་མཁས་པས་སེམས་ཅན་ཡོངས་སུ་སྨིན་པར་བྱ་བའི་ཕྱིར། འདོད་པའི་ཡོན་ཏན་ལྔ་ལ་ཡོངས་སུ་སྤྱད་དེ། ཆུང་མའི་འཁོར་གྱི་ནང་ནས་མངོན་པར་བྱུང་ནས། བླ་ན་མེད་པ་ཡང་དག་པར་རྫོགས་པའི་བྱང་ཆུབ་ཏུ་མངོན་པར་འཚང་རྒྱའོ། །ཤ་ར་དྭ་ཏིའི་བུ་བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་ཤེས་རབ་ཀྱི་ཕ་རོལ་དུ་ཕྱིན་པ་ཟབ་མོ་ལ་རྣམ་པར་སྤྱོད་པ། འདོད་པའི་ཉོན་མོངས་པ་དང་བྲལ་བ། ལ་ལ་ནི་སེམས་ཅན་ཡོངས་སུ་སྨིན་པར་བྱ་བའི་ཕྱིར། འདོད་པའི་ཡོན་ཏན་ལ་ཡོངས་སུ་སྤྱོད་པ་ཡང་སྟོན་ཏེ་ཉམས་ཀྱིས་ཡོངས་སུ་སྤྱོད་པ་མེད་དོ། །ཤ་ར་དྭ་ཏིའི་བུ་འདི་ལྟ་སྟེ་དཔེར་ན། སྒྱུ་མའི་མཁན་པོ་འམ། སྒྱུ་མའི་མཁན་པོའི་མཆན་བུ་མཁས་པ། སྒྱུ་མའི་སྔགས་དང་སྦྱོར་ཐབས་ཀྱི་ཚུལ་ལ་ཤིན་ཏུ་བསླབས་པ་དེ་ལྟ་བུ་ཞིག་གིས། འདོད་པའི་ཡོན་ཏན་ལྔ་མངོན་པར་སྤྲུལ་ཏེ། འདོད་པའི་ཡོན་ཏན་ལྔ་པོ་དེ་དག་ལ་བདག་ཉིད་ རྩེ་ཞིང་དགའ་བ་དང་ཡོངས་སུ་སྤྱོད་པ་བསྟན་ན། ཤ་ར་དྭ་ཏིའི་བུ་དེ་ལ་ཇི་སྙམ་དུ་སེམས། སྒྱུ་མའི་མཁན་པོ་དང་། སྒྱུ་མའི་མཁན་པོའི་མཆན་བུ་དེས་འདོད་པའི་ཡོན་ཏན་ལྔ་ལ་ཡོངས་སུ་སྤྱོད་པ་ཡོད་དམ། གསོལ་པ། བཅོམ་ལྡན་འདས་དེ་ལྟ་བུ་མ་མཆིས་སོ། །བཅོམ་ལྡན་འདས་ཀྱིས་བཀའ་སྩལ་པ། ཤ་ར་དྭ་ཏིའི་བུ་དེ་བཞིན་དུ་བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་ཐེག་པ་ཆེན་པོའི་སྒྱུ་མ་ལ་ཤིན་ཏུ་བསླབས་པ། ཆོས་ཉིད་སྒྱུ་མ་ལྟ་བུས་རྣམ་པར་སྤྱོད་པ་རབ་ཏུ་ཐོབ་པ། ཉོན་མོངས་པ་ཐམས་ཅད་དང་བྲལ་བ་དག་ཀྱང་། འདུལ་བའི་སེམས་ཅན་ཡོངས་སུ་སྨིན་པར་བྱ་བའི་ཕྱིར། སྙིང་རྗེ་ཆེན་པོའི་དབང་གིས་འདོད་པའི་ཡོན་ཏན་ལ་ཡོངས་སུ་སྤྱོད་པ་ཡང་སྟོན་ཏེ། དེ་དག་དེ་དང་འགྲོགས་པ་ཡང་མེད། དེས་འགྲོ་བར་འགྱུར་བ་ཡང་མེད་དོ། །ཤ་ར་དྭ་ཏིའི་བུ་བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་རྣམས་ནི་རྣམ་གྲངས་དུ་མས་འདོད་པ་རྣམས་ལ་སྐྱོན་དུ་བརྗོད་དེ། འདོད་པ་རྣམས་ནི་ཀུན་ནས་འབར་བའོ། །འདོད་པ་རྣམས་ནི་རབ་ཏུ་སྨད་པའོ། །འདོད་པ་རྣམས་ནི་གསོད་པའོ། །འདོད་པ་རྣམས་ནི་དགྲའོ། །འདོད་པ་རྣམས་ནི་ཕྱིར་རྒོལ་བའོ། །འདོད་པ་རྣམས་ནི་རྩྭའི་སྒྲོན་མ་ལྟ་བུའོ། །འདོད་པ་རྣམས་ནི་ཀིམ་པ་ཀའི་འབྲས་བུ་ལྟ་བུའོ། །འདོད་པ་རྣམས་ནི་རལ་གྲིའི་སོ་ལྟ་བུའོ། །འདོད་པ་རྣམས་ནི་མེ་མདག་སྤུངས་པ་ལྟ་བུའོ། །འདོད་པ་རྣམས་ནི་དུག་གི་ལོ་མ་ལྟ་བུའོ། །འདོད་པ་རྣམས་ནི་མཆིལ་པ་ལྟ་བུའོ། །འདོད་པ་རྣམས་ནི་མི་གཙང་བའི་རླུབས་ལྟ་བུའོ་ཞེས་དེ་ལྟར་ཤ་ར་དྭ་ཏིའི་བུ་བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་རྣམས་འདོད་པ་རྣམས་ཡོངས་སུ་ཤེས་ཀྱང་སེམས་ཅན་ཐབས་མཁས་པ་མ་ཡིན་པ་རྣམས་ཡོངས་སུ་སྨིན་པར་བྱ་བའི་དོན་དུ་འདོད་པའི་ཡོན་ཏན་ལྔ་ལས་སྐྱོ་བར་བྱ་བ་དང་། འདོད་པའི་ཡོན་ཏན་ལྔ་དང་བྲལ་བའི་ཕྱིར་འདོད་པའི་ཡོན་ཏན་ལྔ་ཉེ་བར་སྟོན་ཏེ། དེ་དག་གིས་མྱོས་པར་འགྱུར་བ་ཡང་མེད། བག་མེད་པར་འགྱུར་བ་ཡང་མེད། འདོད་པའི་རྒྱུ་དང་འདོད་པའི་གཞིས་ སྡིག་ཏོའི་ལས་བྱེད་པར་འགྱུར་བ་ཡང་མེད་དོ།",
+   "en": "The venerable Śāradvatīputra then asked the Blessed One, “Blessed Lord, is it definite that bodhisattva great beings will have a father, mother, wife, sons, and daughters?” “ Śāradvatīputra,” replied the Blessed One, “there are some bodhisattva great beings who definitely need to have a father and mother, but who do not need to have sons, daughters, and wives. There are some who definitely need to have a father and mother, and also wives, sons, and daughters. Śāradvatīputra, there are some bodhisattva great beings who maintain chaste conduct from the time when they first begin to set their mind on enlightenment onward, and who live as youthful ones until they have attained consummate buddhahood in unsurpassed, complete enlightenment. There are some bodhisattva great beings who have engaged in the pleasures of the five senses in order to bring beings to maturation through skillful means. After leaving the family circle behind, they then attain consummate buddhahood in unsurpassed, complete enlightenment. Śāradvatīputra, bodhisattva great beings who practice the profound perfection of wisdom are without the afflicted mental states associated with desire. Although some of them may engage in the pleasures of the senses in order to bring beings to maturation, they display this activity but do not relish it. { Dt.37} Śāradvatīputra, if, as an analogy, an illusionist or the apprentice of an illusionist extremely well trained in magical spells and techniques were to conjure the five pleasures of the senses, and were then to reveal himself playing with, delighting in, and enjoying those five pleasures of the senses, do you think, Śāradvatīputra, that that illusionist or apprentice of an illusionist would have actually enjoyed the five pleasures of the senses?” “ He would not, Blessed Lord!” “ In the same way, Śāradvatīputra,” continued the Blessed One, “bodhisattva great beings who have trained extremely well in the magical display of the Great Vehicle acquire the ability to enjoy reality as a magical display. Although they are free from all afflicted mental states, in order to bring beings who are to be trained to maturation they may also teach the enjoyment of the pleasures of the senses by the power of their great compassion. They neither associate with those pleasures nor are they propelled toward them. Śāradvatīputra, bodhisattva great beings speak of the defects of attachments using many descriptive expressions: ‘Attachments are all ablaze! Attachments are debased! Attachments are murderous! Attachments are inimical! Attachments are aggressive! Attachments are like a lamp of straw! Attachments are like the fruit of the snake gourd! Attachments are like the blade of a sword! Attachments are like a mass of fire! Attachments are like smoldering leaves! Attachments are like an iron hook! Attachments are like a cesspit!’ So it is, Śāradvatīputra, that although bodhisattva great beings understand attachments, in order that unskilled beings might be brought to maturation, they may teach the sensual pleasures since they are disillusioned with the five sensual pleasures and free of the five sensual pleasures. They neither become intoxicated, nor do they become careless, nor do they engage in negative actions by reason of attachment or on the basis of attachment.”"
+  },
+  "c02-04": {
+   "sa": "evam ukte āyuṣmān śāriputro bhagavantam etad avocat: kathaṃ bhagavan bodhisattvena mahāsattvena prajñāpāramitāyāṃ caritavyam? evam ukte bhagavān āyuṣmantaṃ śāriputram etad avocat: iha śāriputra bodhisattvo mahāsattvaḥ prajñāpāramitāyāṃ caran bodhisattva eva samāno bodhisattvaṃ na samanupaśyati, bodhisattvanāmāpi na samanupaśyati, bodhisattvacaryām api na samanupaśyati, prajñāpāramitām api na samanupaśyati, rūpam api na samanupaśyati, evaṃ vedanāṃ saṃjñāṃ saṃskārān vijñānam api na samanupaśyati, tat kasya hetoḥ? tathā hi bodhisattvo mahāsattvo bodhisattvasvabhāvena śūnyaḥ prajñāpāramitā prajñāpāramitāsvabhāvena śūnyaḥ. tat kasya hetoḥ? prakṛtir asyaiṣā, tathā hi śūnyatayā na rūpaṃ śūnyaṃ, na vedanā na saṃjñā na saṃskārā na vijñānaṃ śūnyatayā śūnyaṃ, nānyatra rūpāc chūnyatā, nānyatra vedanāyāḥ śūnyatā, nānyatra saṃjñāyāḥ śūnyatā, nānyatra saṃskārebhyaḥ śūnyatā, nānyatra vijñānāc chūnyatā. tat kasya hetoḥ? rūpam eva śūnyatā, vedanaiva śūnyatā, saṃjñaiva śūnyatā, saṃskārā eva śūnyatā, vijñānam eva śūnyatā, śūnyataiva rūpaṃ, śūnyataiva vedanā, śūnyataiva saṃjñā, śūnyataiva saṃskārāḥ, śūnyataiva vijñānam.",
+   "T0223": "舍利弗白佛言：「菩薩摩訶薩云何應行般若波羅蜜？」佛告舍利弗：「菩薩摩訶薩行般若波羅蜜時，不見菩薩、不見菩薩字，不見般若波羅蜜，亦不見我行般若波羅蜜，亦不見我不行般若波羅蜜。何以故？菩薩、菩薩字性空，空中無色，無受想行識；離色亦無空，離受想行識亦無空。色即是空，空即是色；受想行識即是空，空即是識。",
+   "T0221": "舍利弗白佛言：「菩薩當云何行般若波羅蜜？」佛告舍利弗：「菩薩行般若波羅蜜者，不見有菩薩，亦不見字，亦不見般若波羅蜜。悉無所見，亦不見不行者。何以故？菩薩空，字亦空；空無有五陰。何謂五陰？色陰、痛陰、想陰、行陰、識陰。五陰則是空，空則是五陰。",
+   "T0222": "舍利弗白佛：「唯，天中天！云何菩薩摩訶薩行般若波羅蜜？」佛告舍利弗：「菩薩摩訶薩行般若波羅蜜，不見菩薩亦不見菩薩字，亦不見般若波羅蜜，亦不見行般若波羅蜜字，亦不見非行。所以者何？菩薩之字自然空。其為空者，無色、無痛痒思想生死識，不復異色空，不復異痛痒思想生死識空。如色空、痛痒思想生死識亦空。所謂空者，色則為空，痛痒思想生死識亦自然。",
+   "T0220c": "爾時，舍利子白佛言：「世尊！諸菩薩摩訶薩應云何修行般若波羅蜜多？」佛言：「舍利子！菩薩摩訶薩修行般若波羅蜜多時，應如是觀：『實有菩薩不見有菩薩，不見菩薩名；不見般若波羅蜜多，不見般若波羅蜜多名；不見行，不見不行。』何以故？舍利子！菩薩自性空，菩薩名空。所以者何？色自性空，不由空故。色空非色，色不離空，空不離色，色即是空，空即是色。受、想、行、識自性空，不由空故。受、想、行、識空非受、想、行、識，受、想、行、識不離空，空不離受、想、行、識，受、想、行、識即是空，空即是受、想、行、識。",
+   "bo": "།དེ་སྐད་ཅེས་བཀའ་སྩལ་པ་དང་། ཚེ་དང་ལྡན་པ་ཤ་ར་དྭ་ཏིའི་བུས། བཅོམ་ལྡན་འདས་ལ་འདི་སྐད་ཅེས་གསོལ་ཏོ། །བཅོམ་ལྡན་འདས་ཇི་ལྟར་ན་བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོས་ཤེས་རབ་ཀྱི་ཕ་རོལ་དུ་ཕྱིན་པ་ལ་སྤྱད་པར་བགྱི། བཅོམ་ལྡན་འདས་ཀྱིས་བཀའ་སྩལ་པ། ཤ་ར་དྭ་ཏིའི་བུ་འདི་ལ་བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་ཤེས་རབ་ཀྱི་ཕ་རོལ་ཏུ་ཕྱིན་པ་ལ་སྤྱོད་པའི་ཚེ། བྱང་ཆུབ་སེམས་དཔའ་ཡང་དག་པར་རྗེས་སུ་མི་མཐོང་ངོ་། །བྱང་ཆུབ་སེམས་དཔའི་མིང་ཡང་ཡང་དག་པར་རྗེས་སུ་མི་མཐོང་ངོ་། །བྱང་ཆུབ་སེམས་དཔའི་སྤྱོད་པ་ཡང་ཡང་དག་པར་རྗེས་སུ་མི་མཐོང་ངོ་། །ཤེས་རབ་ཀྱི་ཕ་རོལ་དུ་ཕྱིན་པ་ཡང་ཡང་དག་པར་རྗེས་སུ་མི་མཐོང་ངོ་། །ཤེས་རབ་ཀྱི་ཕ་རོལ་དུ་ཕྱིན་པའི་མིང་ཡང་ཡང་དག་པར་རྗེས་སུ་མི་མཐོང་ངོ་། །སྤྱོད་ཅེས་བྱ་བར་ཡང་ཡང་དག་པར་རྗེས་སུ་མི་མཐོང་ངོ་། །མི་སྤྱོད་ཅེས་བྱ་བར་ཡང་ཡང་དག་པར་རྗེས་སུ་མི་མཐོང་ངོ་། །སྤྱོད་པ་དང་མི་སྤྱོད་པ་ཞེས་བྱ་བར་ཡང་ཡང་དག་པར་རྗེས་སུ་མི་མཐོང་ངོ་། །སྤྱོད་པ་ཡང་མ་ཡིན་མི་སྤྱོད་པ་ཡང་མ་ཡིན་ཞེས་བྱ་བར་ཡང་ཡང་དག་པར་རྗེས་སུ་མི་མཐོང་ངོ་། །གཟུགས་ཀྱང་ཡང་དག་པར་རྗེས་སུ་མི་མཐོང་ངོ་། །ཚོར་བ་ཡང་ཡང་དག་པར་རྗེས་སུ་མི་མཐོང་ངོ་། །འདུ་ཤེས་ཀྱང་ཡང་དག་པར་རྗེས་སུ་མི་མཐོང་ངོ་། །འདུ་བྱེད་ཀྱང་ཡང་དག་པར་རྗེས་སུ་མི་མཐོང་ངོ་། །རྣམ་པར་ཤེས་པ་ཡང་ཡང་དག་པར་རྗེས་སུ་མི་མཐོང་ངོ་། །དེ་ཅིའི་ཕྱིར་ཞེ་ན། ཤ་ར་དྭ་ཏིའི་བུ་དེ་ནི་འདི་ལྟར་བྱང་ཆུབ་སེམས་དཔའ་ཡང་བྱང་ཆུབ་སེམས་དཔའི་རང་བཞིན་གྱིས་སྟོང་ངོ་། །བྱང་ཆུབ་སེམས་དཔའི་མིང་ཡང་བྱང་ཆུབ་སེམས་དཔའི་མིང་གིས་སྟོང་ངོ་། །དེ་ཅིའི་ཕྱིར་ཞེ་ན། དེའི་རང་བཞིན་ནི་དེ་ཡིན་ཏེ། དེ་ནི་འདི་ལྟར་སྟོང་པ་ཉིད་ཀྱིས་གཟུགས་སྟོང་པ་མ་ཡིན། གཟུགས་ལས་གུད་ན་ཡང་སྟོང་པ་ཉིད་མེད་དེ། གཟུགས་ཉིད་ཀྱང་སྟོང་པ་ཉིད་དོ། །སྟོང་པ་ཉིད་ཀྱང་གཟུགས་སོ། །སྟོང་པ་ཉིད་ཀྱིས་ཚོར་བ་སྟོང་ པ་མ་ཡིན། ཚོར་བ་ལས་གུད་ན་ཡང་སྟོང་པ་ཉིད་མེད་དེ། ཚོར་བ་ཉིད་ཀྱང་སྟོང་པ་ཉིད་དོ། །སྟོང་པ་ཉིད་ཀྱང་ཚོར་བའོ། །སྟོང་པ་ཉིད་ཀྱིས་འདུ་ཤེས་སྟོང་པ་མ་ཡིན། འདུ་ཤེས་ལས་གུད་ན་ཡང་སྟོང་པ་ཉིད་མེད་དེ། འདུ་ཤེས་ཉིད་ཀྱང་སྟོང་པ་ཉིད་དོ། །སྟོང་པ་ཉིད་ཀྱང་འདུ་ཤེས་སོ། །སྟོང་པ་ཉིད་ཀྱིས་འདུ་བྱེད་སྟོང་པ་མ་ཡིན། འདུ་བྱེད་ལས་གུད་ན་ཡང་སྟོང་པ་ཉིད་མེད་དེ། འདུ་བྱེད་ཉིད་ཀྱང་སྟོང་པ་ཉིད་དོ། །སྟོང་པ་ཉིད་ཀྱང་འདུ་བྱེད་དོ། །སྟོང་པ་ཉིད་ཀྱིས་རྣམ་པར་ཤེས་པ་སྟོང་པ་མ་ཡིན། རྣམ་པར་ཤེས་པ་ལས་གུད་ན་ཡང་སྟོང་པ་ཉིད་མེད་དེ། རྣམ་པར་ཤེས་པ་ཉིད་ཀྱང་སྟོང་པ་ཉིད་དོ། །སྟོང་པ་ཉིད་ཀྱང་རྣམ་པར་ཤེས་པའོ།",
+   "en": "The venerable Śāradvatīputra then asked the Blessed One, “Blessed Lord, how should bodhisattva great beings practice the perfection of wisdom?” “ Śāradvatīputra,” replied the Blessed One, “in this regard, when bodhisattva great beings practice the perfection of wisdom, they do not observe a bodhisattva. Nor do they observe the term bodhisattva. Nor do they observe the conduct of a bodhisattva. Nor do they observe the perfection of wisdom. Nor do they observe the term perfection of wisdom. Nor do they observe the term practicing, and neither do they observe not practicing, nor observe both practicing and not practicing, nor even observe neither practicing nor not practicing. They also do not observe physical form. Nor do they observe feelings. Nor do they observe perceptions. Nor do they observe formative predispositions. Nor do they observe consciousness. { Dt.38} If you ask why, Śāradvatīputra, it is because even bodhisattvas are empty of the inherent existence of bodhisattvas. Even the term bodhisattva is empty of the term bodhisattva. If you ask why, it is because such is their intrinsic nature. It is not owing to emptiness that physical forms are empty, nor is emptiness anything other than physical forms. The nature of physical forms is indeed emptiness. Emptiness is indeed physical forms. It is not owing to emptiness that feelings are empty, nor is emptiness anything other than feelings. The nature of feelings is indeed emptiness. Emptiness is indeed feelings. It is not owing to emptiness that perceptions are empty, nor is emptiness anything other than perceptions. The nature of perceptions is indeed emptiness. Emptiness is indeed perceptions. It is not owing to emptiness that formative predispositions are empty, nor is emptiness anything other than formative predispositions. The nature of formative predispositions is indeed emptiness. Emptiness is indeed formative predispositions. It is not owing to emptiness that consciousness is empty, nor is emptiness anything other than consciousness. The nature of consciousness is indeed emptiness. Emptiness is indeed consciousness."
+  },
+  "c02-05": {
+   "sa": "tat kasya hetoḥ? tathā hi nāmamātram idaṃ yad idaṃ bodhisattva iti, nāmamātram idaṃ yad idaṃ prajñāpāramiteti, nāmamātram idaṃ yad idaṃ rūpaṃ vedanā saṃjñā saṃskārā vijñānaṃ, tathā hi māyopamaṃ rūpaṃ vedanā saṃjñā saṃskārā vijñānaṃ, māyā ca nāmamātraṃ na deśasthā na pradeśasthā asadasaṃbhūtaṃ vitathadarśanasamaṃ, māyādarśanasvabhāvasya hi (PSP1-1: 54) notpādo na nirodho na saṃkleśo na vyavadānam, evaṃ prajñāpāramitāyāṃ caran bodhisattvo mahāsattva utpādam api na samanupaśyati, nirodham api na samanupaśyati, saṃkleśam api na samanupaśyati, vyavadānam api na samanupaśyati. tat kasya hetoḥ? tathā hi kṛtrimaṃ nāma pratidharmaṃ, te ca kalpitāḥ, āgantukena nāmadheyena vyavahriyante, tāni bodhisattvaḥ prajñāpāramitāyāṃ caran sarvanāmāni na samanupaśyati asamanupaśyan nābhiniviśate.",
+   "T0223": "何以故？舍利弗！但有名字故謂為菩提，但有名字故謂為菩薩，但有名字故謂為空。所以者何？諸法實性無生無滅、無垢無淨故。菩薩摩訶薩如是行，亦不見生亦不見滅，亦不見垢亦不見淨。何以故？名字是因緣和合作法，但分別憶想假名說。是故菩薩摩訶薩行般若波羅蜜時，不見一切名字，不見故不著。」",
+   "T0221": "何以故？但字耳。以字故名為道，以字故名為菩薩，以字故名為空，以字故名為五陰；其實亦不生亦不滅，亦無著亦無斷。菩薩作如是行者，亦不見生亦不見滅，亦不見著亦不見斷。何以故？但以空為法立名，假號為字耳。菩薩行般若波羅蜜，不見諸法之字，以無所見故無所入。",
+   "T0222": "所以者何？所謂菩薩但假號耳，所謂道者則亦假號，所謂空者則亦假號。其法自然，不起不滅亦無塵勞，無所依倚、無所諍訟。若有菩薩所行如是，不見所起亦不見所滅，不見所猗、不見所訟。所以者何？誑詐立字因遊客想，或想念故而致此法。從何立字？但託虛言。曉了如是，菩薩摩訶薩則為行般若波羅蜜，一切不見有名號也，已無所見亦非不見，則無所猗，則為行般若波羅蜜。」",
+   "T0220c": "何以故？舍利子！此但有名謂為菩提，此但有名謂為薩埵，此但有名謂為菩薩，此但有名謂之為空，此但有名謂之為色、受、想、行、識，如是自性無生無滅、無染無淨。菩薩摩訶薩如是修行般若波羅蜜多，不見生、不見滅、不見染、不見淨。何以故？但假立客名分別於法，而起分別假立客名，隨起言說，如如言說，如是如是生起執著。菩薩摩訶薩修行般若波羅蜜多時，於如是等一切不見，由不見故不生執著。",
+   "bo": "།དེ་ཅིའི་ཕྱིར་ཞེ་ན། དེ་ནི་འདི་ལྟ་སྟེ། བྱང་ཆུབ་ཅེས་བྱ་བ་འདི་ཡང་མིང་ཙམ་མོ། །འདི་ལྟ་སྟེ། བྱང་ཆུབ་སེམས་དཔའ་ཞེས་བྱ་བ་འདི་ཡང་མིང་ཙམ་མོ། །འདི་ལྟ་སྟེ། སྟོང་པ་ཉིད་ཅེས་བྱ་བ་འདི་ཡང་མིང་ཙམ་མོ། །འདི་ལྟ་སྟེ། གཟུགས་དང་། ཚོར་བ་དང་། འདུ་ཤེས་དང་། འདུ་བྱེད་དང་། རྣམ་པར་ཤེས་པ་ཞེས་བྱ་བ་འདི་ཡང་མིང་ཙམ་མོ། །དེ་ཡང་འདི་ལྟར་གཟུགས་ནི་སྒྱུ་མ་ལྟ་བུའོ། །ཚོར་བ་དང་འདུ་ཤེས་དང་འདུ་བྱེད་དང་རྣམ་པར་ཤེས་པ་ནི་སྒྱུ་མ་ལྟ་བུའོ། །སྒྱུ་མ་ནི་མིང་ཙམ་སྟེ། ཕྱོགས་ན་གནས་པ་ཡང་མ་ཡིན། ཡུལ་ན་གནས་པ་ཡང་མ་ཡིན་པས། སྒྱུ་མ་མཐོང་བ་ནི་ཡོད་པ་མ་ཡིན་ཏེ། བྱུང་བ་མ་ཡིན། ལོག་པར་གྱུར་པ། རང་བཞིན་མེད་པ། ངོ་བོ་ཉིད་མེད་པ། མ་སྐྱེས་པ། མ་འགགས་པ། གནས་མེད་པ། འཕེལ་བ་མེད་པ། འགྲིབ་པ་མེད་པ། ཀུན་ནས་ཉོན་མོངས་པ་མེད་པ། རྣམ་པར་བྱང་བ་མེད་པ་སྟེ། དེ་ལྟར་སྤྱོད་པའི་བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་ནི་ཆོས་གང་ཡང་སྐྱེ་བ་ཡང་དག་པར་རྗེས་སུ་མི་མཐོང་ངོ་། །འགག་པ་ཡང་དག་པར་རྗེས་སུ་མི་མཐོང་ངོ་། །གནས་པ་ཡང་དག་པར་རྗེས་སུ་མི་མཐོང་ངོ་། །འཕེལ་བ་ཡང་དག་པར་རྗེས་སུ་མི་མཐོང་ ངོ་། །འགྲིབ་པ་ཡང་དག་པར་རྗེས་སུ་མི་མཐོང་ངོ་། །ཀུན་ནས་ཉོན་མོངས་པ་ཡང་དག་པར་རྗེས་སུ་མི་མཐོང་ངོ་། །རྣམ་པར་བྱང་བ་ཡང་དག་པར་རྗེས་སུ་མི་མཐོང་ངོ་། །གཟུགས་ཡང་དག་པར་རྗེས་སུ་མི་མཐོང་ངོ་། །ཚོར་བ་དང་འདུ་ཤེས་དང་འདུ་བྱེད་དང་རྣམ་པར་ཤེས་པ་ཡང་དག་པར་རྗེས་སུ་མི་མཐོང་ངོ་། །གང་ལ་བྱང་ཆུབ་ཅེས་བྱ་བ་འམ་བྱང་ཆུབ་སེམས་དཔའ་ཞེས་བྱ་བ་དེ་ཡང་ཡང་དག་པར་རྗེས་སུ་མི་མཐོང་ངོ་། །དེ་ཅིའི་ཕྱིར་ཞེ་ན། དེ་ནི་འདི་ལྟར་ཆོས་རྣམས་སོ་སོའི་མིང་སྒྱུ་མ་སྟེ། རྣམ་པར་བརྟགས་པ་དེ་དག་འཕྲལ་དུ་བྱུང་བའི་མིང་ཡང་ཡང་དག་པ་མ་ཡིན་པ་ལས་ཡོངས་སུ་བརྟགས་པ་ཐ་སྙད་དུ་བརྗོད་དོ། །ཐ་སྙད་ཀྱི་རྒྱུས་མངོན་བར་ཞེན་པར་གྱུར་པས། དེའི་ཕྱིར་བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་ཤེས་རབ་ཀྱི་ཕ་རོལ་དུ་ཕྱིན་པ་ལ་སྤྱོད་པའི་ཚེ། ཆོས་ཐམས་ཅད་ཡང་དག་པར་རྗེས་སུ་མི་མཐོང་སྟེ་དམིགས་པ་མེད་དོ། །ཡང་དག་པར་རྗེས་སུ་མ་མཐོང་ལ་དམིགས་པ་མེད་པས་རློམ་སེམས་མེད་དོ། །མངོན་པར་ཞེན་པ་མེད་དོ།",
+   "en": "If you ask why, it is because even enlightenment is merely a name. Likewise, even bodhisattva is merely a name. Even emptiness is merely a name. Likewise, even these—physical forms, feelings, perceptions, formative predispositions, and consciousness—are merely names. “ Moreover, physical forms are like a magical display. Feelings, perceptions, formative predispositions, and consciousness are like a magical display. Magical displays are merely names. They are not located in any direction, nor are they located in any place. Magical displays that are seen do not exist. They have not arisen. They are false. They are without inherent existence. They are without essential nature, nonarising, nonceasing, nondwelling, without increase, without decrease, without affliction, and without purification. Bodhisattva great beings who practice accordingly do not observe any phenomenon that arises. They do not observe anything that ceases. They do not observe anything that remains. They do not observe anything that increases. They do not observe anything that decreases. They do not observe anything that is afflicted. They do not observe anything that is purified. They do not observe physical forms. They do not observe feelings, perceptions, formative predispositions, or consciousness. They do not even observe anything that is ‘enlightenment’ or a ‘bodhisattva.’ If you ask why, it is because phenomena are a magical display of distinct names. Even these designations, these names that have adventitiously arisen, are not genuine, but imputations used as conventions. It is the conventions that are the basis of fixation. For this reason, when bodhisattva great beings practice the perfection of wisdom, they do not observe any phenomena and do not apprehend anything. Since they do not observe anything and do not apprehend anything, they do not give rise to any conceits. They are without fixations. “"
+  }
+ }
+}
