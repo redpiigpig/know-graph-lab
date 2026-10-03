@@ -67,4 +67,5 @@ CCEL 教父集中譯本。10-02 量測（`output/relink/bi_health.py`）發現�
 - `KGL_Footnote_Relink`（04:30，每日模型補註腳）：會讀 DO_NOT_TOUCH，跟 lane 不衝突。
 - 538 本無文字層 PDF 的 MinerU 重轉錄：`output/restructure/night3_relay.py`（等 GPU 空就跑 `requeue_reocr --from-ledger --engine mineru`），
   log `output/restructure/night3_reocr.log`。10-03 修了 `mineru_ocr.py`（先複製成本機 ASCII 檔名再丟 MinerU——路徑含全形逗號／《》時
-  它回「No supported documents found」，被當環境錯誤整場停，一夜零進度）。⚠️ 修正尚未實跑驗證：10-03 03:00 起別的 mineru queue --limit 1000 佔著 GPU，night3 還在排隊；接手先看 night3_reocr.log 第一本有沒有過。詳見 `docs/SESSION_HANDOFF_ebook_quality_2026-10-02.md`。
+  它回「No supported documents found」，被當環境錯誤整場停，一夜零進度）。⚠️ 修正尚未實跑驗證：10-03 03:00 起別的 mineru queue --limit 1000 佔著 GPU，night3 還在排隊；接手先看 night3_reocr.log 第一本有沒有過。佔 GPU 的是 fleet_keeper 新加的 `mineru-queue` lane（commit 52b14bd3，吃圖書館 OCR 佇列 272 本），
+  它會一直重拉，night3 要等它吃完才輪得到——這是排隊不是故障；兩批都是有用的工作，別停它。詳見 `docs/SESSION_HANDOFF_ebook_quality_2026-10-02.md`。
