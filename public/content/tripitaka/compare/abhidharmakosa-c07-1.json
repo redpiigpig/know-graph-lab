@@ -1,0 +1,271 @@
+{
+ "slug": "abhidharmakosa-c07-1",
+ "title": "俱舍論・分別智品（7.1–7.18）",
+ "family": "sa",
+ "intro": "《阿毘達磨俱舍論》第七品〈分別智品〉頌 7.1–7.18，一頌一節（頌號依 Pradhan 本，GRETIL 標 VAkK_品.頌）。五欄：梵本頌、梵本自釋（bhāṣya）、玄奘《俱舍論本頌》、玄奘《俱舍論》、真諦《俱舍釋論》；論本欄自該頌（含引出該頌的提問句）起、到下一頌前的釋文止。玄奘《俱舍論》常把數頌合為一個「頌曰」再一併解釋，區塊中按頌切開，釋文因此都落在區塊末頌；真諦本逐句引偈、隨句解釋，與梵本自釋的節奏相近。稱友 Yaśomitra《明了義釋》Sphuṭārthā 是自釋的疏，不收。",
+ "units": [
+  {
+   "id": "v001",
+   "label": "7.1　聖慧忍非智"
+  },
+  {
+   "id": "v002",
+   "label": "7.2　智十總有二"
+  },
+  {
+   "id": "v003",
+   "label": "7.3　世俗遍為境"
+  },
+  {
+   "id": "v004",
+   "label": "7.4　法類由境別"
+  },
+  {
+   "id": "v005",
+   "label": "7.5　初唯苦集類"
+  },
+  {
+   "id": "v006",
+   "label": "7.6　法類不相知"
+  },
+  {
+   "id": "v007",
+   "label": "7.7　智於四聖諦"
+  },
+  {
+   "id": "v008",
+   "label": "7.8　由自性對治"
+  },
+  {
+   "id": "v009",
+   "label": "7.9　緣滅道法智"
+  },
+  {
+   "id": "v010",
+   "label": "7.10　法智及類智"
+  },
+  {
+   "id": "v011",
+   "label": "7.11　他心智無漏"
+  },
+  {
+   "id": "v012",
+   "label": "7.12　盡無生十四"
+  },
+  {
+   "id": "v013",
+   "label": "7.13　行相實十六"
+  },
+  {
+   "id": "v014",
+   "label": "7.14　性俗三九善"
+  },
+  {
+   "id": "v015",
+   "label": "7.15　現起所依身"
+  },
+  {
+   "id": "v016",
+   "label": "7.16　諸智念住攝"
+  },
+  {
+   "id": "v017",
+   "label": "7.17　諸智互相緣"
+  },
+  {
+   "id": "v018",
+   "label": "7.18　謂三界無漏"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sa",
+   "lang": "sa",
+   "label": "梵本頌",
+   "who": "《阿毘達磨俱舍論本頌》Abhidharmakośakārikā・GRETIL（參 Pradhan 1975、Gokhale 1946）"
+  },
+  {
+   "id": "sa-bhasya",
+   "lang": "sa",
+   "label": "梵本自釋",
+   "who": "《阿毘達磨俱舍論》Abhidharmakośabhāṣya・GRETIL（Pradhan 1975，Hackett／Lusthaus 校）"
+  },
+  {
+   "id": "T1560",
+   "lang": "lzh",
+   "label": "玄奘頌本",
+   "who": "玄奘譯《阿毘達磨俱舍論本頌》・唐",
+   "work": "T1560"
+  },
+  {
+   "id": "T1558",
+   "lang": "lzh",
+   "label": "玄奘論本",
+   "who": "玄奘譯《阿毘達磨俱舍論》・唐 651–654 年",
+   "work": "T1558"
+  },
+  {
+   "id": "T1559",
+   "lang": "lzh",
+   "label": "真諦釋論",
+   "who": "真諦譯《阿毘達磨俱舍釋論》・陳 563–567 年",
+   "work": "T1559"
+  }
+ ],
+ "works": [
+  "T1558",
+  "T1559",
+  "T1560"
+ ],
+ "anchors": [
+  {
+   "work": "T1560",
+   "range": [
+    "T29n1560_p0322b27",
+    "T29n1560_p0322b27"
+   ]
+  },
+  {
+   "work": "T1558",
+   "range": [
+    "T29n1558_p0134b21",
+    "T29n1558_p0138a25"
+   ]
+  },
+  {
+   "work": "T1559",
+   "range": [
+    "T29n1559_p0285c13",
+    "T29n1559_p0289b16"
+   ]
+  }
+ ],
+ "cells": {
+  "v001": {
+   "sa": "saptamaṃ kośasthānam namo buddhāya // nāmalā kṣāntayo jñānaṃ kṣayānutpādadhīrna dak / tadanyobhayathāryā dhīḥ anyā jñānaṃ dṛśaśca ṣaṭ // VAkK_7.1 //",
+   "sa-bhasya": "saptamaṃ kośasthānam ===================================================================== namo buddhāya ===================================================================== [391|02] kṣāntayaścocyante jñānāni ca samyagdṛṣṭiḥ samyagjñānaṃ ca / [391|03] kiṃ punaḥ kṣāntayo na jñānaṃ samyagjñānaṃ ca na dṛṣṭiḥ / [391|04] nāmalā kṣāntayo jñānaṃ [391|05] tatpraheyasya vicikitsā 'nuśayasyāgrahīṇatvāt / [391|05-391|06] dṛṣṭayastu tā santiraṇātmakattvāt yathā ca kṣāntayo dṛṣṭirna jñānamevaṃ punaḥ [391|07] kṣayānutpādadhīrna dak / [391|08] kṣayānamanutpādajñānaṃ ca na dṛṣṭirasantīraṇāparimārgaṇāśayatvāt / [391|09] tadnyobhayathāryā dhīḥ [391|10] kṣāntikṣayānutpādajñānebhyo 'nyā 'nāsravā prajñā dṛṣṭiḥ jñānaṃ ca / [391|11] anyā jñānaṃ [391|12] laukikī prajñā sarvaiva jñānam / [391|13] dṛśaśca ṣaṭ // VAkK_7.1 // [391|14] pañca dṛṣṭayo laukikī ca samyagdṛṣṭiḥ / [391|14-391|15] eṣā ṣaḍvidhā laukikī prajñādṛṣṭiḥ anyā na dṛṣṭiḥ / [391|15] jñānaṃ tveṣā cānyā ca / kiyatā sarvajñānasaṃgrahaḥ / daśabhirjñānaiḥ / [591|16]39116] samāsena tu",
+   "T1560": "聖慧忍非智，盡無生非見， 餘二有漏慧，皆智六見性。",
+   "T1558": "前品初說諸忍諸智，於後復說正見正智。為有忍非智耶？為有智非見耶？頌曰：聖慧忍非智，盡無生非見， 餘二有漏慧，皆智六見性。論曰：慧有二種，有漏、無漏，唯無漏慧立以聖名。此聖慧中八忍非智性，自所斷疑未已斷故。可見性攝，推度性故。盡與無生二智非見性，已息求心不推度故。所餘皆通智見二性，已斷自疑、推度性故。諸有漏慧皆智性攝，於中唯六亦是見性，謂五染污見、世正見為六。如是所說聖有漏慧，皆擇法故並慧性攝。智有幾種？",
+   "T1559": "已說諸忍及諸智已，說正見及正智。諸忍為非智，正智為非正見耶？偈曰：無垢忍非智。釋曰：是前所說八種無流忍非智，是所應滅隨眠疑惑未滅故可說彼名見，決度尋覓為體性故，如忍但是見性非智。如此，偈曰：盡無生非見。釋曰：盡智、無生智非見，非決度尋覓為性故。偈曰：異彼聖智二。釋曰：異於忍及盡智無生智，所餘無流般若，亦見亦智。偈曰：餘智。釋曰：世間般若一切皆是智。偈曰：見有六。釋曰：五見及世間正見，此六種世間般若，名見亦智，所餘非見但智。由幾量能攝一切智？由十智。若略攝，十智唯有二智。"
+  },
+  "v002": {
+   "sa": "sāsravānāsravaṃ jñānaṃ ādyaṃ saṃvṛtijñāpakam / anāsravaṃ dvidhā dharmajñānamanvayameva ca // VAkK_7.2 //",
+   "sa-bhasya": "[391|17] sāsravānāsravaṃ jñānaṃ [391|18] tayoḥ punaḥ [391|19] ādyaṃ saṃvṛtijñāpakam / [392|01] yatsāsravaṃ tatsaṃvṛtijñānam / prāyeṇa ghaṭapaṭastrīpuruṣādisaṃvṛtigrahāt / [392|01-392|02] ajñānasaṃvṛtatvāt ityapare / [392|03] anāsravaṃ dvidhā dharmajñānamanvayameva ca // VAkK_7.2 // [392|04] anāsrvaṃ jñānaṃ dvidhā bhidyate / dharmajñānamanvayajñānaṃ ca / [392|04-392|05] evagete dve jñāne trīṇi bhavanti / [392|05] saṃvṛtijñānaṃ dharmajñānaṃ ca / tatra",
+   "T1560": "智十總有二，有漏無漏別， 有漏稱世俗，無漏名法類。",
+   "T1558": "相別云何？頌曰：智十總有二，有漏無漏別， 有漏稱世俗，無漏名法類。",
+   "T1559": "偈曰：有流無流智。釋曰：一切智不出二性，謂世智、出世智。此二中，偈曰：第一名俗智。釋曰：有流智說名世俗智。何以故？此智由多緣瓶衣男女等俗類為境故。偈曰：無流智有二，法智及類智。釋曰：無流分為二智，謂法智、類智。以此二智合前成三智，謂世俗智、法智、類智。"
+  },
+  "v003": {
+   "sa": "sāṃvṛtaṃ sarvaviṣayaṃ kāmaduḥkhādigocaram / dharmākhyam anvayajñānaṃ tūrdhvaduḥkhādigocaram // VAkK_7.3 //",
+   "sa-bhasya": "[392|06] sāṃvṛtaṃ sarvaviṣayaṃ [392|07] saṃvṛtijñānasya sarvadharmāḥ saṣkṛtāsaṃskṛtā ālambanaṃ saṃbhavataḥ / [392|08] kāmaduḥkhadigocaram / [392|09] dharmakhyam [392|10] dharmajñānasya kāmāvacaraṃ dukhaṃ tatsamudayanirodhapratipakṣāścālambanam / [392|11] anvayajñānaṃ tūrdhvaduḥkhādigocaram // VAkK_7.3 // [392|12] anvayajñānasya rūpārupyāvacaraṃ duḥkhaṃ tatsamudayanirodhapratipakṣāścālambanam /",
+   "T1560": "世俗遍為境，法智及類智， 如次欲上界，苦等諦為境。",
+   "T1558": "世俗遍為境，法智及類智， 如次欲上界，苦等諦為境。論曰：智有十種攝一切智：一世俗智、二法智、三類智、四苦智、五集智、六滅智、七道智、八他心智、九盡智、十無生智。如是十智總唯二種，有漏、無漏性差別故。如是二智相別有三，謂世俗智、法智、類智。前有漏智總名世俗，多取瓶等世俗境故。後無漏智分法、類別。三中世俗遍，以一切有為無為為所緣境。法類二種如其次第，以欲上界四諦為境。",
+   "T1559": "此中偈曰：俗智一切境。釋曰：一切有為無為法皆是俗智境。偈曰：欲苦等為境，法智。釋曰：法智者，於欲界中以苦、苦集、苦滅、苦滅對治為境。偈曰：若類智，上苦等為境。釋曰：類智者，於色無色界中，以苦、苦集、苦滅、苦滅對治為境。"
+  },
+  "v004": {
+   "sa": "te eva satyabhedena catvāri ete caturvidhe / anutpādakṣayajñāne te punaḥ prathamodite // VAkK_7.4 //",
+   "sa-bhasya": "[392|13] te eva satyabhedena catvāri [392|14] te eva dharmajñānānvayajñāne satyabhedena punaścatvāri jñānāni bhavanti / [392|14-392|15] duḥkhasamudayanirodhamārgajñānāni / [392|15] tadālambanatvāt / [392|16] ete caturvidhe / [392|17] anutpādakṣayajñāne [392|18-392|19] ete eva dharmajñānānvayajñāne caturvidhe adṛṣṭisvabhāve kṣayajñānamanutpādajñānaṃ cocyate / [392|20] te punaḥ prathamodite // VAkK_7.4 //",
+   "T1560": "法類由境別，立苦等四名， 皆通盡無生，",
+   "T1558": "即於如是二種智中，頌曰：法類由境別，立苦等四名， 皆通盡無生，",
+   "T1559": "偈曰：此二由諦異，成四。釋曰：法智類智由諦有差別故成四智，謂苦智、集滅道智，由緣四諦起故。偈曰：四更二，名盡無生智。釋曰：法智類智由境已成四種，於中若非無學正見為性，名盡智、無生智。偈曰：此智復初生，"
+  },
+  "v005": {
+   "sa": "duḥkhahetvanvayajñāne caturbhyaḥ paracittavit / bhūmyakṣapudgalotkrāntaṃ naṣṭājātaṃ na vetti tat // VAkK_7.5 //",
+   "sa-bhasya": "[393|01] duḥkhahetvanvayajñāne [393|02-393|03] prathamotpanne tu kṣayajñānānutpādajñāne duḥkhasamudayānvayajñāne duḥkhasamudayākārairbhāvāgrikaskandhālambanatvāt / [393|03] kim khalu vajropamo 'pi tābhyāmekālamvano 'sti / [393|04] yadi duḥkhasamudayālamvano bhavati / atha nirodhamārgālambano naikālambanaḥ / [393|05] caturbhyaḥ paracittavit / [393|06] vettīti vit jñānam / paracittajñānaṃ caturbhyo jñānebhyo draṣṭavyam / [393|06-393|07] dharmānvayajñānamārgaḥ saṃvṛtijñānebhyaḥ / [393|07] tasya punarayaṃ niyamaḥ [393|08] bhūmyakṣapudgalotkrāntam naṣṭājātaṃ na veti tat // VAkK_7.5 // [393|09] bhūmyatikrāntaṃ na jānātīti / [393|09-393|10] adharadhyānabhūmikenottaradhyānabhūmikamindriyātikrāntaṃ na jānāti / [393|10-393|11] śraddhādhimuktasamayamuktamārgeṇa dṛṣṭiprāptāsamayavimuktārga pudgalotkrāntaṃ na jānāti / [393|11-393|12] anāgāmyahañcchāvaka pratyekabuddhabuddhamārggaṇāmadhareṇottaraṃ naṣṭājātaṃ na jānāti / [393|12-393|13] atītānāgataṃ vartamānapara cittacaittaviṣayatvāt / [393|13] kiṃ ca bhūyaḥ [393|14] ta dharmānvayadhīpakṣyamanyo 'nyaṃ [393|15] dharmajñānapakṣyaṃ paracittajñānamanvayajñānapakṣyaṃ cittaṃ na jānāti / [393|15-393|16] anvayajñānapakṣyaṃ ca dharmajñānapakṣyaṃ na jānāti / [393|16] kāmadhāturdhvadhātupratikṣālambanatvāttayoḥ / [393|16-393|17] darśanamārge paracittajñānaṃ nāsti / [393|17] tadālambanaṃ tvasti / [393|17-393|18] tatra paracittajñānena darjñanamārga jñātukāmaḥ prayogaṃ kṛtvā prathamau",
+   "T1560": "初唯苦集類。 法類道世俗，有成他心智， 於勝地根位，去來世不知。",
+   "T1558": "初唯苦集類。論曰：法智、類智由境差別分為苦、集、滅、道四智。如是六智若無學攝，非見性者名盡、無生。此二初生唯苦、集類，以緣苦、集六種行相觀有頂蘊為境界故。金剛喻定境同此耶？緣苦、集因，緣滅、道異。於前所說九種智中，頌曰：法類道世俗，有成他心智， 於勝地根位，去來世不知，",
+   "T1559": "苦集類智性。釋曰：此二智若初生，名盡智、無生智，以苦集類智為性。由苦集各四行相，緣有頂陰為境界故。金剛譬三摩提與此二所緣境同不？若金剛譬三摩提，緣苦集為境，則與二智同境；若緣滅道為境，則與二智不同。偈曰：從四他心智。釋曰：他心智從四智成，謂法、類、道、世俗智。此他心智，更須決判。偈曰：過地根人上。釋曰：若過地心，下地不能知上，謂下地定心不能知上地定心。若過根，軟根不能知上，謂信樂得人及時解脫人道，不能知見至得人及非時解脫人道。若過人，下人不能知上人心，謂阿那含、阿羅漢聲聞、獨覺佛道下不能知上。偈曰：滅未生不知。釋曰：若過去未來他心，他心智則不能知，以現在他心為境界故。"
+  },
+  "v006": {
+   "sa": "ta dharmānvayadhīpakṣyamanyo 'nyaṃ darśanakṣaṇau / śrāvako vetti khaṅgastrīn sarvānbuddho 'prayogataḥ // VAkK_7.6 //",
+   "sa-bhasya": "[393|19-393|20] darśanakṣaṇau / śrāvako vetti khaṅgastrīn sarvānbuddho 'prayogataḥ // VAkK_7.6 // [393|21] śrāvako darśanamārgāt paracittajñānena dvau kṣaṇau jānāti / [393|21-393|22] duḥkhe dharmajñānakṣāntiṃ dharmajñānaṃ ca / [393|22] anvayajñānapakṣālambanasyānyaprayogasādhyatvāt / [393|22-394|01] yāvacca sa tatra prayogamāra mate tāvadayaṃ ṣoḍaśacittamanuprāpto bhavatītyantarā na jānāti / [394|01-394|02] pratyekabuddhastrīn kṣaṇān / [394|02] prathamau ca dvāvaṣṭamaṃ ca samudayānvayajñānaṃ mṛduprayogatvāt / [394|03] prathamadvitīyapañcadaśānityapare / [394|03-394|04] buddhastu sarvāneva darśanamārgakṣaṇānaprayogeṇa jānāti /",
+   "T1560": "法類不相知，聲聞麟喻佛， 如次知見道，二三念一切。",
+   "T1558": "法類不相知，聲聞麟喻佛， 如次知見道，二三念一切。論曰：有法類道及世俗智成他心智，餘則不然。此智於境有決定相，謂不知勝及去來心。勝心有三，謂地、根、位。地謂下地智不知上地心。根謂信解時解脫根智不知見至不時解脫心。位謂不還聲聞應果、獨覺大覺。前前位智不知後後勝位者心，此智不知去來心者唯以現在他相續中能緣心等為境界故。又法類品不互相知，謂法智攝諸他心智不知類品，類智所攝諸他心智不知法品，由法類智以欲上界全分對治為所緣故。此他心智見道中無，總觀諦理極速轉故，然皆容作此智所緣。若諸有情將入見道，聲聞獨覺預修加行，為欲知彼見道位心。彼諸有情入見道位，聲聞法分加行若滿，知彼見道初二念心。若為更知類分心故，別修加行至加行滿，彼已度至第十六心，雖知此心非知見道。麟喻法分加行若滿，知彼見道初二念心。若為更知類分心故，別修加行至加行滿，知彼第八集類智心。以此但由下加行故。有說：知初二及第十五心，世尊欲知不由加行，於彼見道一切能知。",
+   "T1559": "復有何非所知？偈曰：法類互不知。釋曰：法智種性他心智不能知類智種性他心，類智種性他心智不能知法智種性他心。何以故？此二心以欲界上界對治為境界故。於見位中無他心智通，以時促故。見位得為他心智境。此中若人由他心智欲知見道心，先作加行已。偈曰：見位初二念，聲聞犀喻二，佛自然具知。釋曰：若聲聞修他心智，欲知見道中他心，得知前二剎那心，謂法智忍、法智，知類智種性境，別加行所成故。是時於中修彼他心智方便，此修觀人已度至第十六心，於中間不能得知。若犀角喻獨覺，欲知見道中他心，得知三剎那心，謂前二心及第八集類智心，由加行軟故。餘師說：知第一二第十五心。佛世尊，一切見道剎那心，不由加行心知，但以自性心知。"
+  },
+  "v007": {
+   "sa": "kṣayajñānaṃ hi satyeṣu parijñātādiniścayaḥ / na parijñeyamityādiranutpādamatirmatā // VAkK_7.7 //",
+   "sa-bhasya": "[394|05] atha kṣayajñānānutpādajñānayoḥ ko viśeṣaḥ / [394|06-394|07] kṣayajñānaṃ hi satyeṣu parijñātādiniścayaḥ / na parijñeyamityādiranutpādamatirmatā // VAkK_7.7 // [394|08] kṣayajñānaṃ katamat / duḥkhaṃ me parijñātamiti jānāti / [394|08-394|09] samudayaḥ prahīṇo nirodhaḥ sākṣātakṛto mārgo bhāvita iti jānāti / [394|09-394|10] tadupādāya yat jñānaṃ darśanaṃ vidyā buddhirbodhiḥ prajñā āloko 'bhisamayamidamucyate kṣayajñānam / [394|10-394|11] anutpādajñānaṃ katamat / [394|11-394|12] duḥkhaṃ me parijñātaṃ na pounaḥ parijñeyamiti jānāti yāvat mārgo bhāvito na punarbhāvayitavya iti / [394|12] tadupādāye\"ti vistareṇoktaṃ śāstre / [394|12-394|13] kathamanāsraveṇa jñānenaivaṃ jānāti / [394|13] tatpṛṣṭhalabdhena vyutthita evaṃ jānāti / [394|13-394|14] atastadviśeṣeṇa tayorviśeṣaḥ / [394|14] śāstre jñāpiota iti kāśmīrāḥ / [394|14-394|15] anāsraveṇāpyevaṃ jānātītyapare darśanavacanaṃ tu bhāṣyākṣepāt / [394|15] jpratyakṣavṛttitvādvā / [394|15-394|16] ata evoktaṃ \"yāvat jñānaṃ darśanamapi tadi\"ti / [394|16-394|18] ityetāni daśa jñānāni bhavanti yaduta dharmajñānamanvayajñānaṃ saṃvṛtijñānaṃ duḥkhajñānaṃ samudayañṇyānaṃ nirodhajñānaṃ mārgajñānaṃ paracittajñānaṃ kṣayajñānamanutpādajñānaṃ ca / [394|18-394|19] tatra saṃvṛtijñānamekaṃ jñānamekasya ca bhāgaḥ / [394|19] dharmajñānamekaṃ jñānaṃ saptānāṃ ca bhāgaḥ / [394|19-394|20] duḥkhasamudayanirodhamārga kṣayānutpādaparacittajñānānām / [394|20] evamanvayajñānam / [394|20-394|21] duḥkhajñānamekaṃ jñānaṃ caturṇā ca bhāgaḥ / [394|21] dharmānvayakṣayānutpādajñānānām / evaṃ samudayanirodhajñāne caturṇāṃ bhāgaḥ / [394|22] mārgajñānamekaṃ jñānaṃ pañcānāṃ ca bhāgaḥ / caturṇāmanantaroktānāṃ paracittasya ca / [394|23] paracittajñanamekaṃ jñānaṃ caturṇāṃ ca bhāgaḥ / dharmānvayamārga saṃvṛtijñānānām / [394|24] kṣayajñānamekaṃ jñānaṃ ṣaṇṇāṃ ca bhāgaḥ / dharmānvayaduḥkhasamudayanirodhamārgajñānānām / [394|25] evamanutpādajñānam /",
+   "T1560": "智於四聖諦，知我已知等， 不應更知等，如次盡無生。",
+   "T1558": "盡、無生智二相何別？頌曰：智於四聖諦，知我已知等， 不應更知等，如次盡無生。論曰：如本論說：云何盡智？謂無學位若正自知：我已知苦、我已斷集、我已證滅、我已修道，由此所有智、見、明、覺、解、慧、光、觀，是名盡智。云何無生智？謂正自知：我已知苦，不應更知，廣說乃至我已修道，不應更修，由此所有廣說乃至是名無生智。如何無漏智可作如是知？迦濕彌羅諸論師說：從二智出後得智中作如是知，故無有失。由此後得二智別故，表前觀中二智差別。有說：無漏智亦作如是知，然說見言乘言便故，或於諦理現照轉故。由此本論亦作是言。且諸智亦是見。如是十智相攝云何？謂世俗智攝一全一少分，法類智各攝一全七少分，苦集滅智各攝一全四少分，道智攝一全五少分，他心智攝一全四少分，盡無生智各攝一全六少分。",
+   "T1559": "復次盡智、無生智，此二有何差別？偈曰：盡智於四諦，已知等決知，不更應知等，說名無生智。釋曰：阿毘達磨藏云：何者盡智？苦諦我已知厭，集諦我已斷除，滅諦我已證得，道諦我已修習。以此義，是知見明覺慧解先正對觀，是名盡智。何者無生智？苦諦我已知厭不更知厭，乃至道諦我已修習不更修習。以此義，是知乃至正對觀，是名無生智。云何由無流智得知如此？由無流智後智，出觀已得知如此，由後智有差別故，立盡無生智有差別，罽賓國阿毘達磨師說如此。有餘師說：由無流智得知此義。說盡無生智為見者，為以一切名釋此義故。復次由證智為性故名見。是故阿毘達磨藏中說：若法是智，即此法是見。復次為顯今所說見異前所說見，如此名十智，謂法智、類智、世俗智、他心智、苦智、集智、滅智、道智、盡智、無生智。此中世俗智是一智一智分，法智是一智七智分，類智亦爾。苦智是一智四智分，集智滅智亦爾，道智是一智是五智分。他心智是一智四智分，盡智是一智六智分，無生智亦爾。"
+  },
+  "v008": {
+   "sa": "svabhāvapratipakṣābhyāmākārākāragocarāt / prayogakṛtakṛtyatvahetūpacayato daśa // VAkK_7.8 //",
+   "sa-bhasya": "[394|16-394|26] kasmāt punaretāni vīṇi santi daśa vyavasthāpyante / [395|01-395|02] svabhāvapratipakṣānyāmākārākāragocarāt / prayogakṛtakṛtyatvahetūpacayoto daśa // VAkK_7.8 // [395|03] saptabhiḥ kila kāraṇairdaśa jñānāni vyavasthāpyante / [395|03-395|04] svabhāvataḥ saṃvṛtijñānamaparamārthajñānatvāt / [395|04] pratipakṣato dharmānvayajñāne / kāmathāturdhvadhātupratipakṣatvāt / [395|05] ākārato duḥkhasamudayajñāne / ālambanābhedāt / [395|05-395|06] ākārālambanato nirodhamārgajñāne / [395|06] ākārālambanabhedāt / prayogataḥ paracittajñānam / na hi tena caittā na jñāyate / [395|07] cittajñānārthe tu prayuktasyābhiniṣpatteḥ paracittajñānamuktam / [395|07-395|08] kṛtakṛtyataḥ kṣayajñānaṃ kṛtakṛtyasaṃtānotpatteḥ / [395|08-395|09] prathamataḥ hetūpacayato 'nutpādajñānaṃ sarvānāsravahetukatvāditi / [395|10] sakalasya sakalapratipakṣatvāt kāmadhātupratīpakṣo dharmajñānamityuktam / [395|11] api tu",
+   "T1560": "由自性對治，行相行相境， 加行辦因圓，故建立十智。",
+   "T1558": "何緣二智建立為十？頌曰：由自性對治，行相行相境， 加行辦因圓，故建立十智。論曰：由七緣故立二為十：一自性故立世俗智，非勝義智為自性故。二對治故立法類智，全能對治欲上界故。三行相故立苦集智，此二智境體無別故。四行相境故立滅道智，此二行相境俱有別故。五加行故立他心智，非此不知他心所法，本修加行為知他心，雖成滿時亦知心所，而約加行故立他心智名。六事辦故建立盡智，事辦身中最初生故。七因圓故立無生智，一切聖道為因生故。",
+   "T1559": "云何智唯三，安立為十？偈曰：由自性對治，行相行相境，加行作事辦，因圓故說十。釋曰：彼說由七種因緣，安立智成十。一由自性故安立世俗智，非能知真實義故。二由對治故安立法類二智，由能對治欲界上界故。三由所緣相異故安立苦集二智，不由境界體異故。四由所緣相及境界體異故安立滅道二智。五由加行異故安立他心智。何以故？由此智他心法非所知故、唯欲知他心故，修加行人得他心智。六由作事已辦故安立盡智，由事已辦人相續初生故。七由因緣圓滿故安立無生智，以一切無流法為因故。是一切三界具對治故，於前已說，法智唯能對治欲界。"
+  },
+  "v009": {
+   "sa": "dharmajñānanirodhe yanmārge vā bhāvanāpathe / tridhātupratipakṣastat kāmadhāto 'stu nānvayam // VAkK_7.9 //",
+   "sa-bhasya": "[395|12] dharmajñānanirodhe yanmārge vā bhāvanāpathe / [395|13] tridhātupratipakṣastat [395|14] nirodhamārgajñāne bhāvanāmārgasaṃgṛhīte tridhātupratipakṣaḥ / [395|15] kāmadhātostu nānvayam // VAkK_7.9 // [395|16] anvayajñānam tu sarvathā nāsti kāmadhātuporatipakṣaḥ [395|17] eṣāṃ daśānāṃ jñānānāṃ",
+   "T1560": "緣滅道法智，於修道位中， 兼治上修斷，類無能治欲。",
+   "T1558": "如上所言法智類智，全能對治欲上界法，為有少分治上欲耶？頌曰：緣滅道法智，於修道位中， 兼治上修斷，類無能治欲。論曰：修道所攝滅道法智，兼能對治上界修斷，欲之滅道勝上界故，已除自怨能兼他故。由此類智無能治欲。",
+   "T1559": "復次偈曰：法智於滅諦，及道諦修道，是三界對治。釋曰：滅道二法智，若修道所攝，能對治三界。偈曰：類智非欲治。釋曰：類智一向不能對治欲界，此智異二，故說具對治。"
+  },
+  "v010": {
+   "sa": "dharmajñānānvayajñānaṃ ṣoḍaśākāram anyathā / tathā ca sāṃvṛtaṃ svaiḥ svaiḥ satyākāraiścatuṣṭayam // VAkK_7.10 //",
+   "sa-bhasya": "[395|18] dharmajñānānvayajñānaṃ ṣoḍḍaśākāram [395|19] tān purastādupadekṣyāmaḥ / [395|20] anyathā / [395|21] tathā ca sāṃvṛtaṃ [395|22] saṃvṛtijñānaṃ ṣoḍaśākāramanyathākāraṃ ca sarvadharmāṇāṃ svasāmānyalakṣaṇādigrahaṇāt / [395|23] svaiḥ svaiḥ satyākāraiścatuṣṭayam // VAkK_7.10 // [396|01-396|02] duḥkhasamudayanirodhamārga jñānāni svaiḥ svaiḥ satyākāraiḥ pravartanta ityekaikaṃ caturākāraṃ bhavanti /",
+   "T1560": "法智及類智，行相俱十六， 世俗此及餘，四諦智各四。",
+   "T1558": "於此十智中誰有何行相？頌曰：法智及類智，行相俱十六， 世俗此及餘，四諦智各四。",
+   "T1559": "此十種智中，幾智有行相，復有幾行相？偈曰：法智及類智，有十六行相。釋曰：此二智一一皆具十六行相，此行相後當說。偈曰：俗智如不如。釋曰：世俗智有十六行相，有別相能緣一切法，通相別相等故。偈曰：由自諦相四。釋曰：苦集滅道智，由緣自諦行相起故，一一有四行相。"
+  },
+  "v011": {
+   "sa": "tathā paramanojñānaṃ nirmalaṃ samalaṃ punaḥ / jñeyasvalakṣaṇākāraṃ ekaikadravyagocaram // VAkK_7.11 //",
+   "sa-bhasya": "[396|03] tathā paramatojñānaṃ nirmalaṃ [396|04] anāsravaṃ paracittajñānaṃ tatheva / svasatyākāratvāccuturākāraṃ mārgajñānatvāt / [396|05] samalaṃ punaḥ / [396|06] śeyasvalakṣaṇākāraṃ [396|07] sāsravaṃ paracittajñānaṃ jñeyānāṃ cittacaittānāṃ yat svalakṣaṇam tadākārayati / [396|08] svalakṣaṇagrāhakatvāt / labhayamapi tu [396|09] ekaikadravyagocaram // VAkK_7.11 // [396|10-396|11] yadā cittaṃ gṛhlāti na tadā cittānāṃ yadā vedanāṃ na tadā saṃjñāmityevamādi / [396|11-396|12] yattarhi bhagavatīktam \"sarāgaṃ cittaṃ sarāgaṃ cittamiti yathābhūtaṃ prajānātī\"tyevamādi / [396|12] na tayordugapadgrahaṇam / vastramalāyugāpadgrahaṇavat / [396|12-396|13] sarāgaṃ cittamiti dvidhā sarāgatā / [396|13] saṃsṛṣṭasarāgatā saṃyoiga sarāgatā ca / [396|13-396|14] tatra sarāgaṃ saṃprayuktaṃ cittaṃ dvābhyāṃ sarāgaṃ tato 'nyatsāsravaṃ saṃyogasarāgatayā sarāgam / [396|14-396|15] atra tu sūtre rāgasaṃprayuktaṃ sarāgaṃ rāgapratipakṣī vigatarāgamityeke / [396|15-396|16] yadi hi rāgeṇāsaṃprayuktaṃ vigatarāgaṃ syādanyakleśasamprayuktamapi syāt / [396|16-396|17] evaṃ tarhi tadapratipakṣaḥ sāsravaṃ cittamakliṣṭaṃ naiva sarāgaṃ na vigatarāgaṃ syādityevamādi / [396|17-396|18] tasmādrāgasaṃprayuktatayā 'pi sarāgaṃ cittamatreṣṭavyamityapare / [396|18-396|19] evaṃ yāvatsamohaṃ vigatamohaṃ ca veditavyam / [396|19] saṃkṣiptaṃ kuśalamālambanābhisaṃkṣepāt / [396|19-396|20] vikṣiptaṃ kliṣṭaṃ vikṣepasaṃprayogāt / [396|20] saṃkṣiptaṃ middhasaṃprayuktaṃ vikṣiptamanyata kliṣṭamiti pāścāttyāḥ / [396|21] tadetanna varṇayanti / tadeva hi cittaṃ saṃkṣiptavikṣiptaṃ syāt kliṣṭamiddhasaṃprayīgāt / [396|22] śāstravirodhaśca syāt / \"saṃkṣiptaṃ cittaṃ yathābhūtaṃ prajānāti / [396|22-396|23] tajjñānaṃ catvāri jñānāni dharmajñānamanvayajñānaṃ saṃvṛtijñānaṃ mārgajñānami\"ti / [396|24] līnaṃ cittaṃ kliṣṭaṃ kauśīdyasaṃprayogāt / pragṛhītaṃ kuśalaṃ vīryasaṃprayogāt / [396|24-396|25] parītāṃ kliṣṭaṃ vyavadānaparīttairniṣevitatvāt / [396|25] mahadgataṃ kuśalaṃ tadviparyayāt / [396|25-397|01] mūlamūlyaparivārānuparivartakavalālpavahutvācca / [397|01-397|02] kliṣṭacittaṃ dvābhyāmakuśalamūlābhyāṃ samulam / [397|02] kuśalaṃ tribhiḥ kuśalamūlaiḥ / kliṣṭamalpamūlyamayatna-sādhyatvāt / [397|03] kuśalaṃ bhumūlyaṃ vahābhisaṃskārasādhyatvāt / [397|03-397|04] kliṣṭaṃ tajjātīyānāgatabhāvanā 'bhāvānna mahāparivāraṃ tribhiśca skandhaiḥ sānuparivartam / [397|04-397|05] kuśalaṃ tu mahāparivāraṃ caturbhiśca skandhaiḥ sānuparivartam / [397|05-397|06] alpabalaṃ khalvapi kliṣṭaṃ bahubalaṃ kuśalam / [397|06] ekayā hi duḥkhe dharmajñānakṣāntyā daśānuśayātyantasamudghātaḥ kriyate / [397|07] tasmādapi kliṣṭam parīttaṃ kuśalaṃ mahadgatam / uddhataṃ kliṣṭamauddhatyasaṃprayogāt / [397|08] anuddhataṃ kukśalaṃ tatpratipakṣatvāt / evamabyupaśāntṃ vyupaśāntaṃ ca / [397|08-397|09] asamāhitaṃ kliṣṭaṃ vikṣepasaṃprayogāt / [397|09] samāhitaṃ kuśalaṃ tatpratipakṣatvāt / [397|09-397|10] abhāvitaṃ kliṣṭaṃ pratilambhatiṣevaṇabhāvanābhyāmabhāvitatvāt / [397|10-397|11] bhāvitaṃ kuśalaṃ tābhyāṃ bhāvitatvāt vimuktaṃ kliṣṭaṃ svabhāvasaṃtānavimuktibhyāmavimuktatvāt / [397|12] vimuktaṃ kuśalaṃ tābhayaṃ vimuktatvāditi vaibhāṣikāḥ / evaṃ tu sūtraṃ nānulomitaṃ bhavati / [397|13] eṣāṃ ca padānāṃ nārthaviśeṣa ukto bhavati / [397|13-397|14] sūtra uktaṃ \"kathaṃ cittamadhyātmaṃ saṃkṣiptaṃ bhavati / [397|14-397|15] yaccittam styānamiddhasahagatamadhyātmaṃ saṃnirodhasahagataṃ no tu vipaśyanayā samanvāgatam / [397|15-397|16] kathaṃ vahirvikṣiptaṃ bhavati / [397|16] yaccittaṃ pañcasu kāmaguṇeṣvanuvikṣiptaṃ bhavatyanuvisṛtami\"ti / [397|16-397|17] nanu coktaṃ tadeva cittaṃ saṃkṣiptaṃ syādvikṣiptaṃ ceti / [397|17-397|18] uktamidamayuktaṃ tūktaṃ viddhasahagatasya kliṣṭasya vikṣiptatvāpratijñānāt / [397|18] nanu coktaṃ śāstravirodhaḥ syāditi / [397|18-397|19] varaṃ śāstravirodho na sūtravirīdhaḥ / [397|19] kathameṣāṃ padānāṃ nārthaviśeṣa ukto bhavati / [397|20-397|21] vikṣiptalilinoddhatāvyupaśāntāsamāhitābhāvitāvimuktānāṃ cittānāmabhinnalakṣaṇavacanāt saṃkṣiptapragṛhītādīnāṃ ca / [397|21] na vai noktaḥ padānāmarthaviśeṣo bhavati / [397|21-397|22] kliṣṭasāmānye 'pi taddoṣasaṃdarśanāt / [397|22-397|23] ityapyetat kliṣṭaṃ cittaṃ vikṣiptaṃ līnamiti vistaraḥ / [397|23-397|24] evaṃ kuśalasyāpi guṇaviśeṣasaṃdarśanādukta evarthaviśeṣo bhavati / [397|24] sūtravirodhasyāparihārānnaiṣa eṣāṃ padānāmarthaḥ / [397|24-397|25] yadi ca sūtre tadeva līnaṃ cittaṃ tadevoddhatamityabhipretaṃ syāt idaṃ noktaṃ syāt / [397|25-397|27] \"yasminsamaye līnaṃ cittaṃ bhavati layābhirśaṅka vā akālastasminsamaye prasrabdhisamādhyupekṣāsaṃvodhyaṅgānāṃ bhāvanāyāḥ / [397|27-397|28] yasminsagaye uddhātaṃ cittaṃ bhavati auddhatyābhiśaṅki vā akālastasminsamaye dharmavicayavīryaprītisaṃvodhyaṅgānāṃ bhāvanāyā\" iti / [397|28-398|01] kiṃ punarvodhyaṅgānāṃ vyagrā bhāvanā / [398|01] manasikaraṇaṃ teṣāṃ bhāvaneṣṭā na saṃmukhībhāva ityadoṣa eṣaḥ / [398|01-398|02] kauśīdyādhikamatra cittaṃ līnamityuktam / [398|02] auddhatyādhikaṃ coddhatamityavirodhaḥ / [398|02-398|03] tayostu sahabhāvāttadeva cittaṃ līnaṃ tadevoddhatamiti brūmaḥ / [398|03] nābhiprayikaṃ vacanaṃ vāryate / [398|03-398|04] sūtre tu nāyamabhiprāya iti brūmaḥ / [398|04] yattūktaṃ \"sarvameva rāgasaṃprayuktaṃ cittaṃ sarāgami\"ti / [398|05] katamaccittaṃ rāgasaṃprayuktam / rāgaprāptisahitaṃ cet / [398|05-398|06] asāsravamiti sarāgaṃ prāpnoti śaikṣacittam / [398|06] rāgālambanaṃ cet / arhato 'pi sāsravaṃ cittaṃ sarāgamiti gṛhlīyāt / [398|07] rāgālambanatvāt kathaṃ vā tatsāsravam / [398|07-398|08] sāmānya kleśālambanatvāditi cet / [398|08] evamapi samohaṃ gṛhlīyānmohālambanatvāt / [398|08-398|09] na ca paracittajñānaṃ prāptyālambanaṃ nāpi taccittālambanaṃ rāgālambanam / [398|09-398|10] tasmānna rāgasaṃprayogātsarāgaṃ cittamatreṣṭam / [398|10] kiṃ tarhi / [398|10-398|11] rāgasaṃprayuktaṃ cittaṃ sarāgamasaṃprayuktaṃ vigatarāgamiti sūtrābhigrāyo dṛśyate / [398|11-398|12] yat tūktaṃ \"vigatarāgamasya taccittaṃ bhavati vigatadveṣaṃ vigatamohamanāvarttikadharmi kāmabhave rūpabhave ārupyabhave\" iti / [398|13] tatra tatpraptivigamaṃ saṃdhāyoktam / [398|13-398|14] nanu coktam anyakleśasaṃprayuktamapi cittaṃ rāgaviprayuktatvādvigatarāgaṃ syādi\"ti / [398|14] etenābhisaṃdhinā na doṣaḥ / [398|14-398|15] na tu tadvigatarāgamiti kṛtvā gṛhyate / [398|15] kiṃ tarhi / sadveṣaṃ samohamityevamādi / [398|15-398|16] alaṃ prasaṅgena siddhānto varṇyatām / [398|17] kiṃ paracittajñānaṃ paracittasyākāramālambanaṃ vā gṛhlāti / [398|17-398|19] na gṛhlāti ākāralambananirapekṣaṃṃ hi tadraktamidaṃ cittamiti jānāti natvamuṣmin rupe raktamiti jānāti / [398|19-398|20] anyathā hi tadrūpālambanamapi syāt tadālambanaṃ ca paracittaṃ gṛhlataḥ svabhāvagrahaṇaṃ prāpnuyāt / [398|20-398|22] sarvaṃ ca paracittajñānaṃ dravyasvalakṣaṇacittacaittapratyutpannaparasaṃtatikāmarūpapratisaṃyuktāpratisaṃyuktaviṣayaṃ darśanamārgapratiṣiddhaṃ bhāvanāmārga upalabhyate / [398|22-398|23] śūnyatā 'nimittasamādhi viprayuktaṃ kṣayānutpādajñānāsaṃgṛhītamānantaryamārga pratiṣiddhaṃ ca vedittavyam / [398|23] uktaṃ paracittajñānam /",
+   "T1560": "他心智無漏，唯四謂緣道， 有漏自相緣，俱但緣一事。",
+   "T1558": "他心智無漏，唯四謂緣道， 有漏自相緣，俱但緣一事。",
+   "T1559": "偈曰：他心智亦爾，無垢。釋曰：無流他心智亦如此，由緣自諦行相故，亦成四行相，唯道智故。偈曰：復有垢，如應知自相。釋曰：若有流他心智，是自所應知心及心法如。如彼相，思想亦爾，能取別相為境故。此二種，偈曰：緣一物為境。釋曰：是時若緣心為境，不能緣心法為境。若緣受，不能緣想，如此等。若爾，云何佛世尊說：若心有欲，如實能知此心有欲。如此等心及心法，不得一時取，譬如衣及衣垢非俱時取故。有欲心者，有欲有二種：一相雜有欲、二相應有欲。此中若心與欲相雜，由二義有欲。若異此有流心，由相應義是故有欲。此經中所說有欲，是相應有欲。若欲對治，說名無欲。餘師說如此。何以故？若與欲相應說名無欲，何有與別惑相雜，亦應成無欲。是義不然。何以故？此心非欲對治故。若無染污心，非有欲非無欲，不應成無欲。如此等，是故與欲相應心，此中說名有欲。乃至有癡無癡等，應知亦爾。略心者是善心，由境界少故。散心者是染污心，與散亂相應故。復次略心者與睡眠相應，散心者所餘有染污心，西國諸師說如此。毘婆沙師不許作此說。彼說：此一心亦略亦散，染污睡眠相應故。若爾，則與阿毘達磨藏相違。彼藏云：若如實知略心，此智成四智，謂法智、類智、世俗智、道智。下劣心者是染污心，與懶惰相應故。上勝心者是善心，與精進相應故。小行心者是染污心，或善小淨品所治故。大行心者翻於前心，由根價伴類隨從力少多故。何以故？若有染污心則與二根相應，若善心則與三善根相應。若染污心則少價，不由功用所成故。若善心則大價，由多功用所成故。若染污心，無未來同類修故，無多伴類。若善心，有過去未來同類修故，有多伴類。若染污心則少隨從，三陰所隨從故。若善心則多隨從，四陰所隨從故。染污心力少，彼所斷善根更相續故。善心力多，由一剎那苦法智忍生，能殺害十惑永不生故。是故有染污心說名小，善心說名大。動心者是染污心，與掉起相應故。不動心者是善心，能對治彼故。非寂靜心寂靜心亦爾。非定心者是染污心，與散亂相應故。定心者是善心，能對治彼故。非修心者是染污心，非生修及事修所修故。修心者是善心，生事二修所修故。非解脫心者是染污心，由非自性解脫、相續解脫所解脫故。解脫心者是善心，由二解脫所解脫故。毘婆沙師說如此。若作此解，則不隨順經，亦不能釋如此文句差別義。云何不隨順經？如經言：云何心於內成略？若心與羸弱睡眠相應、或於內攝持相應，不與毘鉢舍那相應。云何心於外成散？若心於五欲塵倒亂馳動故。於前不已說耶？此心亦略亦散，已說不應理，說睡眠相應染污心不立為散故。於前不已說耶？與阿毘達磨藏相違。阿毘達磨藏相違，此亦可然，但勿與經相違。云何不能釋文句差別義？不說散下劣動不寂靜不定非修非解脫，心差別義故。略上勝等亦爾。若非不已說諸文句差別義，同是染污心，由顯彼過失差別故。同是善心，由顯彼功德差別故。是故彼義差別已說。不救經相違故，此所說義，非文句義。若於經中許此心是下劣，心即是動心，汝釋可然。經中不說此義。經言：是時若心下劣、或疑欲下劣，於此時中輕安三摩提捨覺分非是修時。是時若心馳動、或疑欲馳動，於此時中擇法、精進、喜覺分非是修時。諸覺分為有散心修，不思量彼，此中說名修，由能令現前故，是故無失。此中若心由懶惰勝，說名下劣。若心由掉起勝，說名馳動。是故無失，如此等或共生故。是故我等說：若心下劣即有馳動，此語與密意相應，我亦不遮。於經中意不爾故，我說如此。是汝所說，一切欲相應心說名有欲。何心與欲相應？若汝言：欲至得相應故，說與欲相應。無流心應成有欲，謂有學心。若言：緣欲為境界說名有欲。阿羅漢心亦應有欲。何以故？此心有時緣有流心分別有欲，由緣欲為境界故。是心云何得成有流？若汝言：緣通惑為境故，是故說有欲。若爾，是心但有癡，非是有欲，由緣癡為境界故。緣他心為境界，心不緣至得為境界，非此心境界，緣欲為境界，是故不由欲相應故心有欲，此中應知。若爾，有欲心云何？與欲相雜是名有欲，不與欲相雜是名無欲，見經意如此。餘經中所說：是人心無欲無瞋無癡，不迴轉為法，於欲界色界無色界依欲等至得滅。故說此文。若爾，於前為不已說耶？若心與別惑相雜，由但不與欲相雜故，應成無欲。由此經意則無過失，不得取此心為無欲。云何不取？由經已說此心有瞋有癡等故。勿復廣論，應說本悉檀，為取他心行相、為取他心所緣境？不取此二為境，不觀行相境界起故。但知此心有欲，不能知色等境是心生欲處。若不爾，此心則緣色等為境界。若取他心緣色等為境，他心智應成取自性。一切他心智知物別相，謂心及心法，現世他相續。欲色相應不相應為境界，於見位被遮，於修位中得，非空無相不相應法盡智無生智所攝，無間道所遮，此義應知。說他心智已。"
+  },
+  "v012": {
+   "sa": "śeṣe caturdaśākāre śūnyānātmavivarjite / nāmalaḥ ṣoḍaśabhyo 'nya ākāraḥ anye 'sti śāstrataḥ // VAkK_7.12 //",
+   "sa-bhasya": "[399|01] śeṣe caturdaśākāre śūnyānātmavivarjite / [399|02] kṣayānutpādajñāne śeṣe te caturdaśākāre śūnyānātmakārau varjayitvā / [399|02-399|04] pāramārthikayorapi saṃvṛtibhajanāt śīṇā me jātirnāparamasmādbhavaṃ prajānāmīti tadvalānuvyavahārataḥ / [399|05] kimanāsravaḥ svalakṣaṇākāro 'styatha na / kāśmīrāṇāṃ tāvat [399|06] nāmalaḥ ṣoḍaśabhyo 'nya ākāraḥ [399|07] nāstyanāsravākāraḥ ṣoḍaśākāranirmuktaḥ / [399|08] anye 'sti śāstrataḥ // VAkK_7.12 // [399|09] śranye punarastītyāhurvahirdeśakāḥ / kathaṃ gamyate / śāstrataḥ iti / [399|09-399|10] śāstre hyevamāha / [399|10] \"syādapratisaṃyuktena cittena kāmapratisaṃyuktāndharmānvijānīyāt / [399|11] anityato duḥkhataḥ śūnyato 'nātmataḥ hetutaḥ samudayataḥ prabhavataḥ pratyayataḥ / [399|11-399|12] astyetasthānamastyetadvastviti / [399|12] yogavihitatī vijānoyādi\"ti / [399|12-399|14] nāsyāyamartho yadastyetatsthānamastyetadvastvityevaṃ vijānīyāditi api tvastyetat sthānamastyetadvastu yadanityādito vijānīyāditi cet / [399|14] na/ anyatrāvacanāt / [399|15] eṣa cecchāstrārtho 'bhaviṣyat / [399|15-399|16] yadidaṃ paṭhacyate \"syāddarśanaprahātavyena cittena kāmapratisaṃyuktāndharmānvijānīyāditi / [399|16] āha / vijānīyāt / [399|16-399|18] ātmata ātmīyata ucchedataḥ śāśvatataḥ ahetuto 'kriyāto 'pavādato 'grataḥ śreṣṭhato viśiṣṭataḥ paramataḥ śuddhito muktito nairyāṇikataḥ kāṅkṣāto vimatito vicikitsātaḥ / [399|18-399|19] rajyeta dviṣyānmanyeta muhyedayogavihitato vijānīyādi\"ti / [399|19] atrāpyevaṃ pāṭho 'bhaviṣyat / [399|19-399|20] astyetat sthānamastyetadvastviti / [399|20] na tvevaṃ paṭhacyate / tasmānnāsyāyamarthaḥ / [399|21] kiṃ punarime ṣoḍaśākārā nāmata āhosvit dravyataḥ / [399|21-399|22] sapta dravyato nāmataḥ ṣoḍaśetyeke / [399|22] duḥkhakārāścatvāraḥ samudayanirodhamārgākārāṇāmekakadravyatvāt / [399|23] evaṃ tu varṇayanti /",
+   "T1560": "盡無生十四，謂離空非我， 淨無越十六，餘說有論故。",
+   "T1558": "盡無生十四，謂離空非我。論曰：法智、類智一一具有非常、苦等十六行相，十六行相後當廣釋。世智有此及更有餘，能緣一切法自共相等故。苦等四智一一各有緣自諦境四種行相。他心智中，若無漏者唯有緣道四種行相，由此即是道智攝故；若有漏者取自所緣心心所法自相境故。如境自相行相亦爾，故此非前十六所攝。如是二種於一切時一念但緣一事為境，謂緣心時不緣心所，緣受等時不緣想等。若爾，何故薄伽梵說：如實了知有貪心等。非俱時取貪等及心，如不俱時取衣及垢。有貪心者，二義有貪：一貪相應、二貪所繫。貪相應心具由二義，餘有漏心唯貪所繫。有說：經言有貪心者，唯說第一貪相應心。離貪心者，謂治貪心。若貪不相應名離貪心者，餘惑相應者應得離貪名。若爾，有心非貪對治不染污性，應許此心非有貪心離貪心等。是故應許餘師所說，為貪所繫名有貪心，乃至有癡離癡亦爾。毘婆沙師作如是說：聚心者謂善心，此於所緣不馳散故。散心者謂染心，此與散動相應起故。西方諸師作如是說：眠相應者名為聚心，餘染污心說名為散。此不應理，諸染污心若與眠相應，應通聚散故。又應違害本論所言：如實知聚心，具足有四智，謂法智、類智、世俗智、道智。沈心者謂染心，此與懈怠相應起故。策心者謂善心，此與正勤相應起故。小心者謂染心，少淨品者所好習故。大心者謂善心，多淨品者所好習故。或由根價眷屬隨轉力用少多故名小大，染心根少，極二相應故；善心根多，恒三相應故。染心價少，非功用成故；善心價多，大資糧成故。染心眷屬少，無未來修故；善心眷屬多，有未來修故。染心隨轉少，唯三蘊故；善心隨轉多，通四蘊故。染心力用少，所斷善根必還續故；善心力用多，忍必永斷諸隨眠故。由此染善得小大名。掉心者謂染心，掉舉相應故。不掉心者謂善心，能治彼故。不靜靜心應知亦爾。不定心者謂染心，散動相應故；定心者謂善心，能治彼故。不修心者謂染心，得修習修俱不攝故；修心者謂善心，容有二修故。不解脫心者謂染心，自性相續不解脫故；解脫心者謂善心，自性相續容解脫故。如是所釋不順契經，亦不能辯諸句別義。如何此釋不順契經？經言：此心云何內聚？謂心若與惛眠俱行，或內相應有止無觀。云何外散？謂心遊涉五妙欲境隨散隨流，或內相應有觀無止。豈不前說染心眠俱便有一心通聚散過？雖說，非理，不許眠俱諸染污心是散心故。豈不又說本論相違？寧違論文，勿違經說。如何不辯諸句別義？謂依此釋不能辯了散等聚等八異相故。依我所釋非不能辯此契經中八句別義，謂雖散等同是染心，而為顯其過失差別，及雖聚等同是善心，而為顯其功德差別，故依八義別立八名。既不能通所違經說，所辯句義理亦不成。又若沈心即掉心者，經不應說若於爾時心沈，恐沈修安定捨三覺支者名非時修。若於爾時心掉，恐掉修擇進喜名非時修。豈修覺支有散別理？此據作意欲修名修，非現前修，故無有失。豈不我說亦不違經？雖諸染心皆名沈掉，懈怠增者經說沈心，掉舉增者經說掉心，據恒相應我說體一，隨自意語誰復能遮？然實此經意不如是。前說一切貪所繫心皆名有貪心。貪繫是何義？若貪得隨故，有學無漏心應名有貪，貪得隨故。若貪所緣故，無學有漏心應名有貪，貪所緣故。若不許彼為貪所緣，云何彼心可成有漏？若謂由為共相惑緣應名有癡，癡所緣故。然他心智不緣貪得，亦不可說緣緣心貪。寧知他心是有貪等？故非貪繫名有貪心。若爾，云何？今詳經意，貪相應故名有貪心，貪不相應名離貪等。若爾，何故餘契經言：離貪瞋癡心，不還墮三有。依離得說，故無有過。豈不於前已破此說？餘惑相應者，應得離貪名，彼亦與貪不相應故。若依此意，許亦無違。然不說為離貪心者，彼屬有瞋有癡等故。且止傍論，應述本宗。此所明他心智，為亦能取他心所緣，及亦取他心能緣行相不？俱不能取，知彼心時不觀彼所緣能緣行相故。謂但知彼有染等心，不知彼心所染色等，亦不知彼能緣行相。不爾，他心智應亦緣色等，又亦應有能自緣失。諸他心智有決定相，謂唯能取欲色界繫及非所繫他相續中現在同類心心所法一實自相為所緣境。空無相不相應，盡無生所不攝，不在見道無間道中，餘所不遮如應容有。盡無生智除空非我，各具有餘十四行相，由此二智雖勝義攝，而涉於世俗欲離空非我。謂由彼力於出觀時作如是言：我生已盡、梵行已立、所作已辦、不受後有。為有無漏越此十六更是所餘行相攝不？頌曰：淨無越十六，餘說有論故。論曰：迦濕彌羅國諸論師言：無無漏行相越此十六。外國師說：更有所餘無漏行相越於十六。云何知然？由本論故。如本論說：頗有不繫心能了別欲界繫法耶？曰：能了別，謂非常故、苦故、空故、非我故、因故、集故、生故、緣故，有是處、有是事，如理所引了別。若謂彼文不為顯示不繫心了別欲界繫法時，除前所明八行相外，別有有是處、有是事行相，但為顯示作八行相斯有是處、斯有是事。此釋不然，餘不說故。謂若彼論依此意說，應於餘處亦說此言，然彼餘文但作是說：頗有見斷心能了別欲界繫法耶？曰：能了別，謂我故、我所故、斷故、常故、無因故、無作故、損減故、尊故、勝故、上故、第一故、能清淨故、能解脫故、能出離故、惑故、疑故、猶豫故、貪故、瞋故、慢故、癡故，不如理所引了別。此等亦應說有是處等言，既無此言，故釋非理。十六行相實事有幾？",
+   "T1559": "偈曰：後二十四相，空無我所雜。釋曰：後二者，謂盡智、無生智。此二智行相有十四，離空無我二行相故。此二雖緣真如，多緣虛假知我生已盡，我不見從此後更受別有，由觀中智力故，出觀說如此言。為有無流別行相心、為無？若依罽賓國師說，偈曰：無淨出十六行相。釋曰：彼說無無流行相出四諦十六行相心。偈曰：餘師有。釋曰：西國師說，阿毘達磨藏中說：異十六心別有無流心。云何得知？彼藏云：若不相應心，為得知與欲界相應法不？得知，由無常苦空無我，或由因集有緣得知。或有是處有是義，由道理相應故得知。無是處無是義，由道理不相應故得知。此執非彼藏義，謂有是處有是義由道理相應故得知等。此何為有是處有是義？由無常等相故得知，是彼藏義。是義不然。何以故？於餘文中不說此義故。如此執若是彼藏義，此文句於餘處亦必定應說。彼藏云：由見諦所滅心，為知與欲界相應法不？得知。由我由我所、由斷由常、由無因由無事由非撥、由勝由上由無等由極由淨、由解脫由出離、由不決由二心由疑、由愛著由瞋恚由高慢由不了，由如此非理相應得知。若為結前，此文句中應說前文句，謂有是處有是義等。由不說故，是故知非是此義。四諦十六行相，為由名有十六、為由實物有十六？餘師說：由實物唯有七，由名有十六，集滅道行相各共顯一物故。毘婆沙師說不爾。彼說云何？"
+  },
+  "v013": {
+   "sa": "dravyataḥ ṣoḍaśākārāḥ prajñākāraḥ tayā saha / ākārayanti sālambāḥ sarvamākāryate tu sat // VAkK_7.13 //",
+   "sa-bhasya": "[400|01] dravyataḥ ṣoḍaśākārāḥ [400|02] tatpratyayādhīnatvāt anityam / ṣīḍātmakatvāt duḥkham / [400|02-400|03] ātmīyadṛṣṭivipakṣeṇa śūnyam / [400|03] ātmadṛṣṭivipakṣeṇānātmā / heturvījadharmayogena / [400|03-400|04] samudayaḥ prādurbhāvayoigena / [400|04] prabhavaḥ prabandhayogena / [400|04-400|05] abhiniṣpādanārthena pratyayaḥ / [400|05-400|06] tadyathā mṛtpiṇdadaṇdacatrasūtrodakasamavāyāt ghaṭābhiniṣpattirbhavati tadvaditi / [400|06] akndhoparamatvāt nirodhaḥ / agninirvāṣaṇāt śāntaḥ / [400|06-400|07] nirūpadravtvāt praṇītaḥ / [400|07] sarvāpakṣālavimuktatvānniḥ saraṇamiti / gamanārthena mārgaḥ / [400|07-400|08] yogayuktatvānnyāyaḥ / [400|08] samyakpratipādanārthena pratipat / atyantasamatikramaṇānnairyāṇika iti / [400|09] athavā anātyantikatvādanityam / abhinyāsabhūtatvāt duḥkham / [400|09-400|010] antarvyāpārapuruṣaparahitattvācchūnyam / [400|10] akāmakāritvādanātmā / [400|10-400|010] heturāgamanayogena / [400|10-400|11] samudaya unmajjanayogena / [400|11] prabhavaḥ prasaraṇayogena / pratisaraṇārghena pratyaya iti / [400|11-400|12] asaṃbandhaḥ saṃbandhoparamatvānnirodhaḥ / [400|12] trisaṃskṛtalakṣaṇavimuktatvācchāntaḥ / [400|12-400|13] kuśalatvāt praṇītaḥ / [400|13] paramāśvāsatvānniḥ saraṇamiti / kumārgavipakṣeṇa mārgaḥ / [400|13-400|14] anyāyavipakṣeṇa nyāyaḥ / [400|14] nirvāṇapurāvirodhanārthena pratipat / sarvabhavapratipakṣatvānnairyāṇikaḥ / [400|15] ityeṣāṃ vyākhyānamanekaparyāyaḥ / yathābhipretaṃ pravakṣyāmaḥ / udayavyayatvādanityam / [400|16] pratikūlabhāvāt / duḥkham / ātmarahitatvācchūnyam / svayamanātmatvādanātma / [400|17] hetusamudayaprabhavapratyayatvaṃ tu yadeva sūtra uktam / [400|17-400|18] \"ime pañcopādānaskandhāśchandamūlakāśchandasamudayāśchandajātīyāśchandaprabhavā\" iti / [400|18-400|19] prabhavaśabdaḥ kevalaṃ paścāt paṭhitavyaḥ śāstre / [400|19] kaḥ punareṣāṃ viśeṣaḥ / caturvidho hi cchandaḥ / [400|20] asmītyabhedenātmabhāvcchandaḥ / syāmityabhedena punarbhavacchandaḥ / [400|20-400|21] ityaṃ syāmiti bhedena punarbhavacchandaḥ / [400|21] pratisaṃdhivandhacchandaścaturthaḥ / karmābhisaṃskāracchando vā / [400|22] tatra prathomo duḥkhasyādikāraṇatvānmūlahetuḥ / phalasyeva vījam / [400|22-400|23] dvitīyaḥ samudayastena tatsamudāgamātphalasyevāṅkurādiprasavaḥ / [400|23-400|24] tṛtīyastajjātīyaduḥkhapratyayaḥ / [400|24] phalasyeva kṣotrodakapāśyādikam / [400|24-400|26] kṣetrādivaśena hi phalasya gandharasavīryavipākaprabhāvabhedā bhavanti caturthaḥ prabhavastataḥ eva tatsaṃbhavāt phalasyeva puṣpāvasānamiti / [400|26] athavā / [400|26-401|01] tṛṣṇāvicaritānāṃ dvau pañcakau dvau catuṣkau catvāraśchandāḥ / [401|01-401|02] \"asmīti bhikṣavaḥ sāti itthamasmīti bhavati evamasmīti bhavati anyathā 'smīti sadasmīti asadasmīti / [401|02-401|03] bhaviṣyāmītyasya bhavati na bhaviṣyāmi itthaṃ bhaviṣyāmi evaṃ bhaviṣyāmi evaṃ bhaviṣyāmi śranyathā bhaviṣyāmi / [401|04-401|05] syāmityasya bhavati itthaṃ syām evaṃ syām anyathā syām apitu syām apītthaṃ syām apyevaṃ syām apyanyathā syāmityasya bhavati / [401|06] pravṛttyuparmatvānnirodhaḥ / nirduḥkhatvācchantaḥ / [401|06-401|07] \"iti hi bhikṣavo duḥkhāḥ saṃskārāḥ śāntaṃ nirvāṇami\"ti vacanāta / [401|07] niruttaratvāt praṇītaḥ / [401|07-401|08] apunarāvṛttitvānniḥsaraṇam / [401|08] pathibhūtatvānmārgaḥ / yathābhūtapravṛttatvānnyāyaḥ / [401|08-401|09] pratiniyatatvāt pratipat / [401|09] yathoktam [401|10] \"eṣa mārgo hi nāstyanyo darśanasya viśuddhaya\" iti [401|11] atyantaniryāṇānnairyāṇikaḥ / [401|11-401|12] athavā nityasukhātmīyātmadṛṣṭicaritānāṃ pratipakṣeṇānityaduḥkhaśunyānātmākārāḥ / [401|12-401|13] ahetvekahetupariṇāmabuddhipūrvaka dṛṣṭicaritānāṃ pratipakṣeṇa hetusamudayaprabhavapratyayākārāḥ / [401|13-401|14] nāsti mokṣa iti dṛṣṭicaritānāṃ nirodhākāraḥ / [401|14] duḥkho mokṣa iti dṛṣṭicaritānāṃ śāntākāraḥ / [401|14-401|15] dhyānasukhapraṇītadṛṣṭicaritānāṃ praṇītākāraḥ / [401|15-401|16] punaḥ punaḥ parihāṇito nātyantiko mokṣa iti dṛṣṭicaritānāṃ niḥsaraṇākāraḥ / [401|16-401|17] nāsti mārgaḥ kumārgo 'yamanyo mārgaḥ punarāvartī mārga iti dṛṣṭicaritānāṃ mārganyāyapratipannairyāṇikākārā iti / [401|18] ākāro nāma ka eṣa dharmaḥ / [401|19] prajñākāraḥ [401|20] evaṃ tarhi prajñā sākārā na bhaviṣyati / prajñāntarāsaṃyogāt / evaṃ tu yuktaṃ syāt / [401|21] sarveṣāṃ cittacaittānāmālambanagrahaṇaprakāra ākāra iti / [401|22] atha kiṃ prajñaivākārayati netyāha / kiṃ tarhi / [401|23] tayā saha / [401|24] ākāraynti sālambāḥ [402|01] prajñā cānye ca sarve sālambanā dharmā ākārayanti / [402|02] sarvamākāryate tu sat // VAkK_7.13 // [402|03] yatkiñcidasti sarvamākāryate / [402|03-402|04] tadevaṃ kṛtvā siddhaṃ bhavati prajñā ākāraścākārayati cākāryante ca / [402|04-402|05] ālambanā ākāryanta eveti / [402|06] ataḥ parameṣāṃ jñānānāṃ kuśalādibhedaṃ nirvekṣyāmaḥ /",
+   "T1560": "行相實十六，此體唯是慧， 能行有所緣，所行諸有法。",
+   "T1558": "何謂行相能行所行？頌曰：行相實十六，此體唯是慧， 能行有所緣，所行諸有法。論曰：有餘師說：十六行相名雖十六實事唯七，謂緣苦諦名實俱四，緣餘三諦名四實一。如是說者實亦十六，謂苦聖諦有四相：一非常、二苦、三空、四非我，待緣故非常，逼迫性故苦，違我所見故空，違我見故非我。集聖諦有四相：一因、二集、三生、四緣，如種理故因，等現理故集，相續理故生，成辦理故緣，譬如泥團輪繩水等眾緣和合成辦瓶等。滅聖諦有四相：一滅、二靜、三妙、四離，諸蘊盡故滅，三火息故靜，無眾患故妙，脫眾災故離。道聖諦有四相：一道、二如、三行、四出，通行義故道，契正理故如，正趣向故行，能永超故出。又非究竟故非常，如荷重擔故苦，內離士夫故空，不自在故非我。牽引義故因，出現義故集，滋產義故生，為依義故緣。不續相續斷故滅，離三有為相故靜，勝義善故妙，極安隱故離。治邪道故道，治不如故如，趣入涅槃宮故行，棄捨一切有故出。如是古釋既非一門，故隨所樂更為別釋。生滅故非常，違聖心故苦，於此無我故空，自非我故非我。因集生緣如經所釋，謂五取蘊以欲為根、以欲為集、以欲為類、以欲為生，唯此生聲應在後說，與論為異。此四體相差別云何？由隨位別四欲有異：一執現總我起總自體欲、二執當總我起總後有欲、三執當別我起別後有欲、四執續生我起續生時欲。或執造業我起造業時欲，第一於苦是初因，故說名為因，如種子於果。第二於苦等招集，故說名為集，如芽等於果。第三於苦為別緣，故說名為緣，如田等於果，謂由田水糞等力故令果味勢熟德別生。第四於苦能近生，故說名為生，如華蘂於果。或如契經說：有二五二四愛行為四種欲。執現總我有五種異：一執我現決定有、二執我現如是有、三執我現變異有、四執我現有、五執我現無。執當總我亦有五異：一執我當決定有、二執我當如是有、三執我當變異有、四執我當有、五執我當無。執當別我有四種異：一執我當別有、二執我當決定別有、三執我當如是別有、四執我當變異別有。執續生我等亦有四種異：一執我亦當有、二執我亦當決定有、三執我亦當如是有、四執我亦當變異有。流轉斷故滅，眾苦息故靜。如說苾芻諸行皆苦，唯有涅槃最為寂靜，更無上故妙，不退轉故離。如正道故道，如實轉故如，定能趣故行。如說此道能至清淨，餘見必無至清淨理，永離有故出。又為治常樂我所我見故修非常苦空非我行相，為治無因一因變因知先因見，故修因、集、生、緣行相。為治解脫是無見，故修滅行相。為治解脫是苦見，故修靜行相。為治靜慮及等至樂是妙見，故修妙行相。為治解脫是數退墮非永見，故修離行相。為治無道邪道餘道退道見，故修道、如、行、出行相。如是行相以慧為體。若爾，慧應非有行相，以慧與慧不相應故。由此應言諸心心所取境類別皆名行相，慧及諸餘心心所法有所緣故皆是能行，一切有法皆是所行。由此三門體有寬陿，慧通行相、能行、所行，餘心心所唯能所行，諸餘有法唯是所行。",
+   "T1559": "偈曰：實物有十六。釋曰：此中隨屬緣故無常，逼惱為性故苦，對治我所執故空，對治我見故非我，同種子法道理故因，和合顯現行故集，生所顯故有相應能成故緣，譬如土聚弋輪繩水等聚集故能成瓶等果。此法亦爾，諸陰斷絕故滅，能殺三火故靜，無災橫故妙，出一切過失外故離，由行義故道，與理相應故如，正所成就故行，一向過度故出。復次一向不定故無常，負重故苦，由人所離故空，不如意作故非我，來義故因，生起故集，行相應故有，為勝依故緣，無相應相應斷故滅，三有為相所離故靜，真實善故妙，極至止息故離，能對治邪道故道，能對治不如故如。順趣涅槃土故行，一切有對治故出。如我等所信受今當說，生滅為法故無常，違意故苦，我所離故空，自非我故非我，因集有緣。如經中說：是五取陰，依欲為根、依欲為集、依欲為生、依欲為有。有名應在後說。此四於欲有何差別？愛欲有四種，於自體稱我起愛欲，名自體無差別愛欲；謂我應生，名無差別後有愛欲；謂我應生如此如此，名有差別後有愛欲，結生愛欲，名受生愛欲。此中第一是苦初因似根，譬如於果種子故名因。第二由前所引譬，如果初出芽等，故名集。第三是如此種類苦緣，譬如於果田水土等為緣。何以故？由隨田等緣，於果中香味力熟威德差別得成，故名緣等。四即是生，從此生成故。譬如於果華終故名有，於《愛欲行經》中有二五二四有四欲。生起事盡故滅，無苦故靜。如經言：比丘！如此諸行皆苦，唯涅槃寂靜。無上故妙，不更迴轉故離，由成路故道，如實生起故如，定淨故行。如經偈言：唯此道無餘，能清淨見故。永破有故出。復次為對治常樂我所我見行故，修無常苦空無我行相。為對治無因一因轉變因知先因見行故，修因集有緣行相。為對治無解脫見行故，修滅行相為對治計解脫。為苦見行故，修靜行相。為對治於定起美妙見行故，修妙行相。為對治數數退故解脫非極定見行故，修離行相。為對治無道邪道有餘道此道更迴轉見行故，修道如行出行相。行相是何法？偈曰：行相謂智慧。釋曰：若爾，行相不成智慧，智慧與別智慧不相應故。若執如此，則應道理，謂一切心及心法，於境界中取差別名行相。為但智慧能取境差別耶？非。云何？偈曰：共此緣境法。釋曰：般若及一切有境界法皆能取境差別。偈曰：所取別有法。釋曰：若法是有，一切必定取差別所取。若如此執，此義則成智慧是行相。復由取差別能觀有法，復為餘法所觀，所餘有境界法，由取差別能觀有法，復為餘法所觀。若無境界法，但是取差別所觀。從此後是十種智。今當說善等差別。"
+  },
+  "v014": {
+   "sa": "tridhādyaṃ kuśalānyanyāni ādyaṃ sarvāsu bhūmiṣu / dharmākhyaṃ ṣaṭsu navasu tvanvayākhyaṃ tathaiva ṣaṭ // VAkK_7.14 //",
+   "sa-bhasya": "[402|07] tridhādyaṃ kuśalānyanyāni [402|08] saṃvṛtijñānaṃ ślokādau bhavatvādādyam / tattrividham / [402|08-402|09] kuśalākuśalāvyākṛtam / [402|09] anyāni nava jñānāni kuśalānyeva / [402|10] ādyaṃ sarvāsu bhūmiṣu / [402|11] kāmadhātī yāvadbhavāgre / [402|12] dharmākhyaṃ ṣaṭsu [402|13] dharmajñānaṃ caturṣu dhyāneṣvanāgamye dhyānāntare ca / [402|14] navasu tvanvayākhyaṃ [402|15] anvayajñānaṃ tāsveva ca ṣaṭsu bhūmiṣvārupyatraye ca / [402|16] tathaiva ṣaṭ // VAkK_7.14 // [402|17] duḥkhasamudayanirodhamārgakṣayānutpādajñānānyapyetāsveva navasu bhūmiṣvabhedena / [402|18] bhedena punrdharmajñānasaṃgṛhītāni ṣaṭsu anvayajñāna saṃgṛhītāni navasu /",
+   "T1560": "性俗三九善，依地俗一切， 他心智唯四，法六餘七九。",
+   "T1558": "已辨十智行相差別，當辨性攝依他依身。頌曰：性俗三九善，依地俗一切， 他心智唯四，法六餘十九，",
+   "T1559": "偈曰：初智三餘善。釋曰：是一初智謂世俗智，最先所說故言初。此智有三性，謂善惡無記，所餘九智唯是善性。偈曰：此智通諸地。釋曰：一切地者，謂欲界乃至有頂。偈曰：法智六地。釋曰：法智於四定及未至、中間定所得。偈曰：類，九地。釋曰：類智於前六地及三無色所得。偈曰：復六智。釋曰：苦、集、滅、道、盡、無生此六智，若通論亦於九地所得。若別論，法智所攝則於六地得，若類智所攝則於九地得。"
+  },
+  "v015": {
+   "sa": "dhyāneṣvanyamanojñānaṃ kāmarūpāśrayaṃ ca tat / kāmāśrayaṃ tu dharmākhyam anyattraidhātukāśrayam // VAkK_7.15 //",
+   "sa-bhasya": "[402|19] dhyāneṣvanyamanojñānaṃ [403|01] paracittajñānaṃ caturṣveva dhyāneṣu nānyatra / [403|02] kāmarūpāśrayaṃ ca tat / [403|03] kāmarūpadhātvośca tat paracittajñānaṃ saṃmukhīkriyate / [403|04] kāmāśrayaṃ tu dharmāruyam [403|05] dharmajñānaṃ tu kāmadhātvāśrayameva / na rūpārupyadhātvoḥ saṃmukhīkriyate / [403|06] anyattraidhātukāśrayam // VAkK_7.15 // [403|07] kiṃ punaranyat / paracittajñānaṃ dharmajñānanirmuktam / kṛto bhūmyaśrayanirdeśaḥ /",
+   "T1560": "現起所依身，他心依欲色， 法智但依欲，餘八通三界。",
+   "T1558": "現起所依身，他心依欲色， 法智但依欲，餘八通三界。論曰：如是十智三性攝者，謂世俗通三性，餘九智唯是善。依地別者，謂世俗智通依欲界乃至有頂，他心智唯依四根本靜慮，法智依此四及未至、中間，餘依此六地及下三無色。依身別者，謂他心智依欲色界俱可現前，法智但依欲界現起，餘八智現起通依三界身。",
+   "T1559": "偈曰：四定他心智。釋曰：他心智但於四定得，非餘處。偈曰：欲色身依止。釋曰：此他心智於欲色界得，修令現前。偈曰：法智依欲身。釋曰：法智但依欲界身現前，非於色無色界身可令現前。偈曰：餘智依三界。釋曰：何者為餘智？除他心智及法智，所餘八智分別諸智地及依止已。以四念處攝諸智今當說。"
+  },
+  "v016": {
+   "sa": "smṛtyupasthānamekaṃ dhīrnirodhe paracittadhīḥ / trīṇi catvāri śeṣāṇi dharmadhīgocaro nava // VAkK_7.16 //",
+   "sa-bhasya": "[403|08] smṛtyupasthānasaṃgraho vaktavyaḥ / so 'yamucyate / [403|09] smṛtyupasthānamekaṃ dhīrnirodhe [403|10] dhīḥ prajñā jñānamiti paryāyāḥ / nirodhajñānamekaṃ dharmasmṛtyupasthānam / [403|11] paracittadhīḥ / [403|12] trīṇi [403|13] paracittajñānaṃ trīṇi vedanācittadharmasmṛtyupasthānāni / [403|14] catvāri śeṣāṇi [403|15] nirodhaparacittajñānābhyāmanyāni jñānāni catvāri smṛtyupasthānāni [403|16] katamasya jñānasya kati jñānānyālambanam / [403|17] dharmadhīgocaro nava // VAkK_7.16 // [403|18] dharmajñānasya nava jñānānyālambanamanyatrānvayajñānāt /",
+   "T1560": "諸智念住攝，滅智唯最後， 他心智後三，餘八智通四。",
+   "T1558": "已辯性地身，當辯念住攝。頌曰：諸智念住攝，滅智唯最後， 他心智後三，餘八智通四。論曰：滅智攝在法念住中，他心智後三攝，所餘八皆通四。",
+   "T1559": "偈曰：念處一滅智。釋曰：是一滅智名法念處。偈曰：他心智三念。釋曰：他心智若緣他心起，必定緣受想行等。偈曰：所餘四念處。釋曰：除滅智、他心智，所餘八智通四念處攝。"
+  },
+  "v017": {
+   "sa": "nava mārgānvayadhiyoḥ duḥkhahetudhiyordvayam / caturṇāṃ daśa naikasya yojyā dharmāḥ punardaśa // VAkK_7.17 //",
+   "sa-bhasya": "[404|01] nava mārgānvayadiyoḥ [404|02] anvayajñānasyāpi nava jñānānyālambanamanyatra dharmajñānāt / [404|02-404|03] mārgajñānasyāpi nava jñānānyālambanamanyatra saṃvṛtijñānāt / [404|04] duḥkhahetudhiyordvayam / [404|05] duḥkhasamudayajñānayordve saṃvṛtiparacitajñāne ālambanam / [404|06] caturṇāṃ daśa [404|07] saṃvṛtiparacittakṣayānutpādajñānānāṃ daśa jñānānyālambanam / [404|08] naikasya [404|09] ekasya nirodhajñānasya naiva jñānamālambanam / [404|10] yojyā dharmāḥ punardaśa // VAkK_7.17 // [404|11] katame daśa /",
+   "T1560": "諸智互相緣，法類道各九， 苦集智各二，四皆十滅非。 所緣總有十，",
+   "T1558": "如是十智展轉相望，一一當言幾智為境？頌曰：諸智互相緣，法類道各九， 苦集智各二，四皆十滅非。論曰：法智能緣九智為境，除類智。類智能緣九智為境，除法智。道智能緣九智為境，除世俗智，非道攝故。苦集二智一一能緣二智為境，謂俗、他心。世俗、他心、盡、無生智皆緣十智為境。滅智不緣諸智為境，唯以擇滅為所緣故。十智所緣總有幾法？何智幾法為所緣境？頌曰：所緣總有十，",
+   "T1559": "何智幾智為所緣境？偈曰：法智境九智。釋曰：法智緣九智為境，除類智。偈曰：類道智境九。釋曰：類智亦緣九智為境，除法智。道智亦緣九智為境，除世俗智。偈曰：苦集智境二。釋曰：世俗智若他心智是有流，此二智是苦集智境。偈曰：四智十。釋曰：世俗智、他心智、盡智、無生智此四智，緣十智為境。偈曰：非一。釋曰：唯一滅智，不緣智為境，緣無為法為境故。偈曰：應合法有十。釋曰：為分別智境，於十種法中應合十智。"
+  },
+  "v018": {
+   "sa": "traidhātukāmalā dharmā akṛtāśca dvidhā dvidhā / sāṃvṛtaṃ svakalāpānyadekaṃ vidyādanātmataḥ // VAkK_7.18 //",
+   "sa-bhasya": "[404|12] traidhātu kāmalā dharmā akṛtāśca dvidhā dvidhā / [404|13] saṃkṛtā dharmā aṣṭadhā kriyante / [404|13-404|14] kāmarūpārupyāvacarānāsravāṇāṃ saṃprayuktaviprayuktabhedāt / [404|14] asaṃskṛtā dvidhā kriyante / kuśalāvyākṛtabhedāt / [404|14-404|15] ime daśa dharmāḥ kathaṃ yojyāḥ kasya jñānasya katyālambanamiti / [404|15-404|16] tatra saṃvṛtijñānasya sarve daśa dharmā ālambanam / [404|16] dharmajñānasya pañca / kāmāvacarānāsravā ścatvāraḥ kuśalaṃ cāsaṃskṛtam / [404|17] anvayajñānasya sapta / rūpārupyāvacarānāsravāḥ ṣaṭ kuśalaṃ cāsaṃskṛtam / [404|17-404|18] duḥkhasamudayajñānayoḥ kāmarūpārupyāvacarāḥ ṣaṭ / [404|18] nirodhajñānasyaikaḥ / [404|18-404|19] kuśalamevāsaṃskṛtam / [404|19] mārgajñānasya dvāvanāsravau / paracittajñānasya trayaḥ / [404|19-404|20] kāmarūpāvacarānāsravāḥ saṃprayuktāḥ / [404|20-404|21] kṣayānutpādajñānayoḥ nava dharmā ālambanamavyākṛtamasaṃskṛtaṃ muktvā / [404|22] syādekena jñānena sarvadharmān jānīyāt / na syāt / api tu [405|01] sāṃvṛtaṃ svakalāpānyadekaṃ vidyādanātmataḥ // VAkK_7.18 // [405|02-405|03] saṃvṛtijñānaṃ svasmātkalāpādanyān sarvadharmānanātvato jānīyāt sarvadharmā anātmāna iti / [405|03] jsvabhāvastatsahabhuvaśca dharmāstasya svakalāpaḥ / [405|03-405|04] teṣāmagrahaṇaṃ viṣayaviṣayibhedādekālambanatvāditi / [405|04] saṃnikṛṣṭatvācca / [405|04-405|05] tacca kāmāvacaraṃ śrutacintāmayaṃ rūpāvacaraṃ śrutamayam bhāvanāmayam / [405|05-405|06] tasya vyavacchinnabhūmyālambanatvāt / [405|06] anyathā hi yugapatsarvato vairāgyaṃ syāt / gatametat / [405|07] idaṃ tu vaktavyam / kaḥ katibhirjñānaiḥ samanvāgata iti / [405|07-405|08] pṛthagjanastāvadekena samanvāgataḥ / [405|08] saṃvṛtijñānena / vītarāgastu paracittajñānenāpi / āryaḥ punaḥ /",
+   "T1560": "謂三界無漏， 無為各有二，俗緣十法五。 類七苦集六，滅緣一道二， 他心智緣三，盡無生各九。 俗智除自品，總緣一切法， 為非我行相，唯聞思所成。",
+   "T1558": "謂三界無漏， 無為各有二，俗緣十法五， 類七苦集六，滅緣一道二， 他心智緣三，盡無生各九。論曰：十智所緣總有十法，謂有為法分為八種，三界所繫無漏有為各有相應不相應故。無為分二種，善、無記別故。俗智總緣十法為境。法智緣五，謂欲界二、無漏道二及善無為。類智緣七，謂色無色無漏道六及善無為。苦集智各緣三界所繫六。滅智緣一，謂善無為。道智緣二，謂無漏道。他心智緣欲色無漏三相應法。盡無生智緣有為八及善無為。頗有一念智緣一切法不？不爾。豈不非我觀智知一切法皆非我耶？此亦不能緣一切法。不緣何法？此體是何？頌曰：俗智除自品，總緣一切法， 為非我行相，唯聞思所成。論曰：以世俗智觀一切法為非我時猶除自品，自品謂自體相應俱有法，境、有境別故。同一所緣故，相隣近故，非此智所緣。此智唯是欲色界攝，聞思所成非修所成，修所成慧地別緣故，若異此者應頓離染。已辯所緣。",
+   "T1559": "何者十法？偈曰：三界無流法，無為二二種。釋曰：有為法分為八，欲界、色界、無色界、無流界，與心相應、與心不相應差別故。無為分為二，善、無記差別故。是名十法。此云何合？何智緣幾法為境？此中世俗智，緣一切十法為境。法智，緣五法為境，欲界及無流四法、善無為法。類智緣七法為境，色界、無色界及無流六法、善無為法。苦智集智，緣欲界、色界、無色界六法為境。滅智，但緣善無為一法為境。道智，緣無流二法為境。他心智，緣三法為境，欲界、色界及無流相應法。盡智、無生智，緣九法為境，除無記無為。由一智能知一切法不？不得。雖不得，偈曰：世智除類初，一智由無我。釋曰：世俗智除自類初剎那，一切餘法由無我相能解，謂一切法無我。是自體及自體共生諸法，名自類，不能緣此法，有境界及境界有差別故、共一境界故、最近同時故。此智若是欲界智，是聞思二慧。若是色界智，但是聞慧非修慧。修慧緣別地為境故。此義已度，是義今當說。何人與幾智相應？若凡夫人，但與一世俗智相應。若離欲凡夫人，與他心智相應。"
+  }
+ }
+}
