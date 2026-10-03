@@ -1,0 +1,200 @@
+{
+ "slug": "astasahasrika-c14",
+ "title": "八千頌般若・第14品 譬喻品（Aupamya）",
+ "family": "sa",
+ "intro": "梵本第十四品＝施護〈譬喻品〉；道行、大明度為上一品〈不可計品〉末＋〈譬喻品〉，羅什為〈相無相品〉末＋〈船喻品〉，第五會為〈甚深相品〉末＋〈船等喻品〉，第四會在〈譬喻品〉後段（自「聞深般若能生信解」起）。信解者如新生犢不離母、從他方佛土或兜率天來；前世聞而不問者今生疑悔、信心易退；四喻：海中船破得板得渡、坏瓶與熟瓶取水、未修治之船與已修治之船、百二十歲老病人得二人扶持。第五會只舉熟瓶、善巧商人（成就一面）。",
+ "units": [
+  {
+   "id": "c14-01",
+   "label": "信解者從何處來・如新生犢不離母"
+  },
+  {
+   "id": "c14-02",
+   "label": "從他方佛土或兜率天彌勒所來"
+  },
+  {
+   "id": "c14-03",
+   "label": "前世聞而不問・今生疑悔、心如輕毛"
+  },
+  {
+   "id": "c14-04",
+   "label": "海中船破：得板浮囊則渡"
+  },
+  {
+   "id": "c14-05",
+   "label": "坏瓶與熟瓶取水"
+  },
+  {
+   "id": "c14-06",
+   "label": "未修治之船與已修治之船載寶"
+  },
+  {
+   "id": "c14-07",
+   "label": "百二十歲老病人得二健人扶起"
+  }
+ ],
+ "versions": [
+  {
+   "id": "sa",
+   "lang": "sa",
+   "label": "梵本",
+   "who": "Vaidya 校訂本（1960）・GRETIL"
+  },
+  {
+   "id": "T0224",
+   "lang": "lzh",
+   "label": "道行般若經",
+   "who": "後漢・支婁迦讖譯《道行般若經》・179 年",
+   "work": "T0224"
+  },
+  {
+   "id": "T0225",
+   "lang": "lzh",
+   "label": "大明度經",
+   "who": "吳・支謙譯《大明度經》（第一品夾注）・三世紀",
+   "work": "T0225"
+  },
+  {
+   "id": "T0227",
+   "lang": "lzh",
+   "label": "羅什本",
+   "who": "姚秦・鳩摩羅什譯《小品般若波羅蜜經》・408 年",
+   "work": "T0227"
+  },
+  {
+   "id": "T0220d",
+   "lang": "lzh",
+   "label": "玄奘・第四會",
+   "who": "唐・玄奘譯《大般若經》第四會（卷 538–555）・663 年",
+   "work": "T0220d"
+  },
+  {
+   "id": "T0220d-5",
+   "lang": "lzh",
+   "label": "玄奘・第五會",
+   "who": "唐・玄奘譯《大般若經》第五會（卷 556–565）・663 年",
+   "work": "T0220d"
+  },
+  {
+   "id": "T0228",
+   "lang": "lzh",
+   "label": "施護本",
+   "who": "宋・施護譯《佛母出生三法藏般若波羅蜜多經》・十世紀末",
+   "work": "T0228"
+  }
+ ],
+ "works": [
+  "T0220d",
+  "T0224",
+  "T0225",
+  "T0227",
+  "T0228"
+ ],
+ "anchors": [
+  {
+   "work": "T0228",
+   "node": "譬喻品第十四",
+   "uid": "T08n0228_p0633c24"
+  },
+  {
+   "work": "T0224",
+   "range": [
+    "T08n0224_p0451b12",
+    "T08n0224_p0452a27"
+   ]
+  },
+  {
+   "work": "T0225",
+   "range": [
+    "T08n0225_p0492c11",
+    "T08n0225_p0493a19"
+   ]
+  },
+  {
+   "work": "T0227",
+   "range": [
+    "T08n0227_p0560a01",
+    "T08n0227_p0560c15"
+   ]
+  },
+  {
+   "work": "T0220d",
+   "range": [
+    "T07n0220d_p0819b09",
+    "T07n0220d_p0820c02"
+   ]
+  },
+  {
+   "work": "T0220d",
+   "range": [
+    "T07n0220d_p0896b24",
+    "T07n0220d_p0897a27"
+   ]
+  }
+ ],
+ "cells": {
+  "c14-01": {
+   "sa": "ASP_14: aupamyaparivartaścaturdaśaḥ / atha khalvāyuṣmān subhūtirbhagavantametadavocat - yo bhagavan bodhisattvo mahāsattvaḥ sahaśravaṇenaiva asyāṃ gambhīrāyāṃ prajñāpāramitāyāmadhimucyate nāvalīyate na saṃlīyate nāvatiṣṭhate na dhandhāyati na vicikitsati na kāṅkṣati, abhinandati ca prajñāpāramitām, sa bhagavan kutaścyutvā kutropapannaḥ? bhagavānāha - yaḥ subhūte bodhisattvo mahāsattvaḥ sahaśravaṇenaiva asyāṃ gambhīrāyāṃ prajñāpāramitāyāmadhimokṣyate nāvaleṣyate na saṃleṣyate nāvasthāsyate na dhandhāyiṣyati na vicikitsiṣyati na kāṅkṣiṣyati, abhinandiṣyati ca darśanaṃ śravaṇaṃ ca, dhārayiṣyati bhāvayiṣyatyenāṃ gambhīrāṃ prajñāpāramitām, prajñāpāramitāpratisaṃyuktāṃś ca manasikārānna vihāsyati, na vipṛṣṭhīkariṣyati mānasam, chandaṃ janayiṣyatyudgrahītuṃ dhārayituṃ vācayituṃ paryavāptuṃ pravartayitum, kariṣyatyanubandham, anugamiṣyati dharmabhāṇakaṃ notsrakṣyati / tadyathāpi nāma subhūte taruṇavatsā gaurnotsṛjati vatsam, evameva subhūte yo bodhisattvo mahāsattva enāṃ gambhīrāṃ prajñāpāramitāṃ śrutvā tāvanna prahāsyati dharmabhāṇakaṃ yāvadasyeyaṃ prajñāpāramitā kāyagatā vā bhaviṣyati pustakagatā vā, ayaṃ subhūte bodhisattvo mahāsattvo manuṣyebhya eva cyuto manuṣyeṣvevopapannaḥ //",
+   "T0224": "須菩提白佛言：「若有菩薩信深般若波羅蜜者，從何所來而生是間？」佛言：「如是信者，心無有疑，不厭、不喜、樂聞，念不欲遠離經師，譬如新生犢子心終不遠離其母，是菩薩從人道中來生是間，前世學人，今來復得深般若波羅蜜，便信樂不遠離也。」",
+   "T0225": "善業白佛：「若有闓士大士信是明度者，從何所來生？」佛言：「譬如新生犢子不離母，如是闓士大士聞明度已，終不離經師，為從人道中來生。」",
+   "T0227": "爾時須菩提白佛言：「世尊！若菩薩能信解深般若波羅蜜，是人於何命終，來生此間？」佛告須菩提：「若菩薩聞是深般若波羅蜜，即時信解，不疑不悔不難，樂見樂聞，常行是念，不離說般若波羅蜜者。須菩提！譬如新產犢子，不離其母。菩薩亦如是，聞深般若波羅蜜，不離說法者，乃至得讀誦書寫般若波羅蜜。須菩提！當知是菩薩人中，命終還生人中。」",
+   "T0220d": "爾時，善現復白佛言：「若菩薩摩訶薩聞深般若波羅蜜多能生信解，不沈、不沒、不迷、不悶，無惑、無疑、無取、無執，歡喜聽受、恭敬供養，從何處沒來生此間？」佛告善現：「若菩薩摩訶薩聞深般若波羅蜜多，能生信解，不沈、不沒、不迷、不悶，無惑、無疑、無取、無執，歡喜聽受、恭敬供養，樂見、樂聞、受持、讀誦，常不遠離甚深般若波羅蜜多及彼相應，殊勝作意，愛樂隨逐能說法者，如犢隨母未嘗暫離，乃至未得甚深般若波羅蜜多所有義趣，究竟通利，能為他說，終不遠離甚深般若波羅蜜多及說法師，經須臾頃，是菩薩摩訶薩從人中沒來生此間，乘宿勝因能成是事。」",
+   "T0220d-5": "具壽善現便白佛言：「若諸菩薩能於般若波羅蜜多深生信解，從何處沒來生此間？」佛告善現：「若諸菩薩聞深般若波羅蜜多，能生信解不疑不悶，樂見、樂聞、憶念、思惟甚深義趣，常樂隨逐能說法者，如犢隨母曾無暫離，乃至未得甚深般若波羅蜜多相應義趣究竟通利能為他說，終不遠離甚深般若波羅蜜多及說法師經須臾頃，是諸菩薩從人中沒來生此間，依宿勝因能成是事。」",
+   "T0228": "爾時，尊者須菩提白佛言：「世尊！若菩薩摩訶薩聞此甚深般若波羅蜜多正法，不驚不怖、不退不失、不疑不難、不悔不沒、心生信解者，是菩薩於何處沒而來生此？」佛告須菩提：「若菩薩摩訶薩聞此甚深般若波羅蜜多正法，不驚不怖不退不失、不疑不難不悔不沒，心生信解者，是菩薩於彼最上人中沒已而來生此，復得聞是甚深般若波羅蜜多正法，愛樂聽受，不暫捨離彼說法者。譬如新生犢子不離其母，須菩提！菩薩摩訶薩亦復如是。於此甚深般若波羅蜜多正法，心淨信解愛樂聽受，而不暫離彼說法者。以不離其說法者故，即不棄捨般若波羅蜜多。」"
+  },
+  "c14-02": {
+   "sa": "subhūtirāha - syādbhagavan etaireva guṇaiḥ samanvāgato bodhisattvo mahāsattvo 'nyebhyo buddhakṣetrebhyaścyuta ihopapannaḥ? bhagavānāha - syātsubhūte bodhisattvo mahāsattvo 'nyebhyo buddhakṣetrebhyo 'nyān buddhān bhagavataḥ paryupāsya paripṛcchya paripraśnīkṛtya tebhyaścyuta ihopapannaḥ, etaireva guṇaiḥ samanvāgato veditavyaḥ / punaraparaṃ subhūte yo bodhisattvo mahāsattvastuṣitebhyo devebhyaścyuta ihopapannaḥ, so 'pyetaireva guṇaiḥ samanvāgato veditavyaḥ / yena maitreyo bodhisattvo mahāsattvaḥ paryupāsitaḥ paripṛṣṭaḥ paripṛcchitaḥ paripraśnīkṛtaḥ imāṃ prajñāpāramitāmārabhya, so 'pyetaireva guṇaiḥ samanvāgato veditavyaḥ / yena khalu punaḥ subhūte bodhisattvena mahāsattvena pūrvāntata iyaṃ gambhīrā prajñāpāramitā śrutā, na tu paripṛṣṭā bhavet, na paripṛcchitā na paripraśnīkṛtā, tasya punar api manuṣyeṣvevopapannasya asyāṃ gambhīrāyāṃ prajñāpāramitāyāṃ bhāṣyamāṇāyāṃ bhavati kāṅkṣāyitatvam, bhavati dhandhāyitatvam, bhavati cittasyāvalīnatā, veditavyametatsubhūte, ayaṃ bodhisattvaḥ pūrvāntato 'pyaparipṛcchakajātīyo 'bhūt / tatkasya hetoḥ? tathā hi asyāṃ asyāṃ gambhīrāyāṃ prajñāpāramitāyāṃ bhāṣyamāṇāyāṃ bhavati kāṅkṣāyitatvam, bhavati dhandhāyitatvam, bhavati cittasyāvalīnateti //",
+   "T0224": "須菩提白佛言：「若有菩薩有時還其功德，若復從他方佛剎來，若供養佛，乃有從彼來生是間者無？」佛言：「有，是輩菩薩於他方佛剎供養佛，復從彼來生是間，持是功德於是間便逮得深般若波羅蜜。若復有菩薩從兜術天上來生是間，或從彌勒菩薩聞是深經中慧，今來生是間，持是功德今逮得深般若波羅蜜。",
+   "T0225": "善業白言：「若有逮是功德，有從他方佛剎來生者無？」佛言：「有他方佛剎供養已，從彼來生。若於兜術天上從慈氏闓士問慧，今欲求是法不懈，持是功德，復還得是經。",
+   "T0227": "「世尊！頗有菩薩，成就如是功德因緣，於他方世界，供養諸佛，於彼命終，來生此間不？」「須菩提！有菩薩成就如是功德，於他方世界，供養諸佛，於彼命終，來生此間。復次，須菩提！有菩薩成就如是功德，於兜率天上，聞彌勒菩薩，說般若波羅蜜，問其中事，於彼命終，來生此間。",
+   "T0220d": "具壽善現復白佛言：「頗有成就如是功德諸菩薩摩訶薩，供養承事他方佛已，從彼處沒來生此耶？」佛告善現：「有菩薩摩訶薩供養承事他方佛已，從彼處沒來生此間，成就如是殊勝功德。所以者何？是菩薩摩訶薩先從他方無量佛所，聞深般若波羅蜜多能生信解，恭敬供養、書寫、受持，請問其中甚深義趣，修習、思惟、廣為他說，從彼處沒來生此間，乘昔善根能辦是事。「復次，善現！有菩薩摩訶薩從覩史多天眾同分沒來生人中，彼亦成就如是功德。所以者何？是菩薩摩訶薩先世已於覩史多天慈氏菩薩摩訶薩所，聞深般若波羅蜜多能生信解、恭敬供養，請問其中甚深義趣，修習、思惟、廣為他說，從彼處沒來生此間，乘昔善根能辦是事。",
+   "T0220d-5": "爾時，善現復白佛言：「頗有菩薩成就如是殊勝功德，承事供養他方佛已，從彼處沒來生此耶？」佛告善現：「有諸菩薩成就如是殊勝功德，承事供養他方佛已，從彼處沒來生此間。「復次，善現！有諸菩薩成就如是殊勝功德，先世已於喜足天上，承事供養慈氏菩薩，聞深般若波羅蜜多，請問其中甚深義趣，從彼處沒來生此間。",
+   "T0228": "須菩提白佛言：「世尊！若有菩薩摩訶薩具足如是功德者，豈不從於他方佛剎沒已生此耶？」佛言：「須菩提！如是，如是！若有菩薩摩訶薩具足如是功德者，當知已於他方佛剎彼彼佛所，恭敬聽受此甚深法，而復於中請問其義，從彼沒已而來生此。以是因緣，今得聞此甚深般若波羅蜜多正法時，亦復具足如是功德。「復次，須菩提！有諸菩薩於知足天上慈氏菩薩摩訶薩所，聞此甚深般若波羅蜜多正法，不疑不難，而復於中請問其義。以是因緣，於彼沒已而來生此。今得聞此甚深般若波羅蜜多正法時，亦復具足如是功德。"
+  },
+  "c14-03": {
+   "sa": "punaraparaṃ subhūte yena bodhisattvena mahāsattveneyaṃ gambhīrā prajñāpāramitā pūrvāntato 'pi śrutā bhavati, paryupāsitā paripṛṣṭā paripṛcchitā paripraśnīkṛtā ca bhavati, ekaṃ vā dinaṃ dve vā trīṇi vā catvāri vā pañca vā dināni, tasya tāvatkālikī śraddhā bhavati, saṃhriyate ca, punarevāsaṃhāryā ca bhavati paripṛcchayā / tatkasya hetoḥ? evaṃ hyetatsubhūte bhavati - yena pūrvaṃ na saṃparipṛṣṭā bhavatīyaṃ prajñāpāramitā, na saṃparipṛcchitā, na saṃparipraśnīkṛtā, na cānuvartitā bhavati, tasya kaṃcitkālaṃ chando 'nuvartate asyāṃ gambhīrāyāṃ prajñāpāramitāyāṃ śravaṇāya, kaṃcitkālaṃ chando na bhavati / sa punarevotkṣipyate 'vasīdati / tasya calācalā buddhirbhavati / tūlapicūpamaś ca sa bhavati / so 'yaṃ bodhisattvo 'cirayānasaṃprasthito veditavyaḥ / navena yānenāgataḥ sa bodhisattvastāṃ śraddhāṃ taṃ prasādaṃ taṃ chandaṃ prahāsyati, yadutaināṃ gambhīrāṃ prajñāpāramitāṃ nānugrahīṣyati nānuvartiṣyate nānuparivārayiṣyati / tasya dvayorbhūmyoranyatarā bhūmiḥ pratikāṅkṣitavyā - śrāvakabhūmirvā pratyekabuddhabhūmirvā /",
+   "T0224": "若復有菩薩前世佛時，聞深般若波羅蜜不問中慧，來生是間，聞深般若波羅蜜心便有疑，不信樂，不問中慧。何以故？前世有疑故。若復有菩薩，前世聞深般若波羅蜜，問中慧一日二日三日若至七日，持是功德，今復逮得深般若波羅蜜，常樂聞喜問信受。若復有菩薩，有時欲聞般若波羅蜜，或不欲聞，其心亂數數轉，如稱乍低乍仰，是輩人適學未發故，使少信不樂得深般若波羅蜜，便厭不欲學棄捨去，如是終不成就，墮羅漢、辟支佛道中。」",
+   "T0225": "若有前世時聞，不問中慧，今生聞是經，於中有疑、厭、不信樂，其人前世不從師問中事。復次，闓士大士前世時聞是，問其中慧，若一日二三日至五日，持是功德，今復還得是經，便信樂之。若有欲樂聞時，用是亂故，其心數轉，如稱乍低乍仰，從新學來，如是少信樂，當墮兩處——應儀、緣一覺道中。」",
+   "T0227": "復次，須菩提！若人先世聞是深般若波羅蜜，不問其義，是人若生人中，心續疑悔難決。須菩提！當知是人，於前世不問所致。何以故？於是般若波羅蜜中，心疑悔難決故。復次，須菩提！若人先世，若一日、若二日、三日、四日、五日，聞是深般若波羅蜜，問其中事，而不隨所說行，是人轉身，續得聞深般若波羅蜜，問其中事，信心無礙。若離法師，不復問難，還為因緣所牽，失深般若波羅蜜。何以故？須菩提！法應爾。若人雖能問難是深般若波羅蜜，不能隨所說行。或時樂聞深般若波羅蜜，或時不樂，其心輕躁，如少㲲毳，當知是菩薩新發大乘，是菩薩信心清淨，若不為般若波羅蜜所護，於二地中，當墮一處，若聲聞地，若辟支佛地。」",
+   "T0220d": "「復次，善現！有菩薩乘善男子等，雖於前世得聞般若波羅蜜多，而不請問甚深義趣，今生人中，聞說如是甚深般若波羅蜜多，其心迷悶、疑惑、沈沒，或生異解難可開悟。所以者何？不了義者心多迷悶、疑惑、沈沒。「復次，善現！有菩薩乘善男子等，雖於前世得聞般若波羅蜜多，亦曾請問甚深義趣或經一日、二日、三日、四日、五日，而不精進如說修行。今生人中，聞說如是甚深般若波羅蜜多，雖經少時其心堅固無能壞者，若離所聞甚深般若波羅蜜多及說法師請問深義，尋便退失心生猶豫。所以者何？此菩薩乘善男子等，雖於前世得聞般若波羅蜜多，亦能請問甚深義趣，而不精進如說修行，故於今生於深般若波羅蜜多，或時樂聞或時不樂，或時堅固或時退失，其心輕動進退非恒，如堵羅綿隨風飄轉。當知如是住菩薩乘善男子等新學大乘，雖有信心而不堅淨，於深般若波羅蜜多不能長時信樂，隨轉彼於二地或隨墮一，所謂聲聞及獨覺地。",
+   "T0220d-5": "「復次，善現！有諸菩薩先世雖聞甚深般若波羅蜜多，而於其中不能請問甚深義趣，今生人中，聞說般若波羅蜜多，疑惑、迷悶、難可開悟。所以者何？不了義者心多疑惑、迷悶、難喻。「復次，善現！有諸菩薩先世雖聞甚深般若波羅蜜多，亦曾請問其中義趣，或經一日乃至五日，而不精進如說修行。今生人中，聞說如是甚深般若波羅蜜多，雖經少時，其心堅固無能壞者，若離般若波羅蜜多及說法師請問深義，尋便退失。所以者何！此諸菩薩雖於前世得聞般若波羅蜜多，亦能請問甚深義趣，而不精進如說修行故，於今生於深般若波羅蜜多，或時樂聞或時不樂，或時堅固或時退失，其心輕動進退非恒，如堵羅綿隨風飄轉。如是菩薩新學大乘，雖有信心而不堅淨，於深般若波羅蜜多不能長時信樂隨轉，於二乘地或當墮一。",
+   "T0228": "「復次，須菩提！若菩薩摩訶薩於先世中雖復曾聞此甚深法，不能如實請問其義，心生疑悔者，當知是菩薩轉身生此，設得聞是甚深正法，亦復於中心生疑悔。何以故？以其先世不問所致故。「復次，須菩提！若菩薩摩訶薩，於先世中聞此甚深般若波羅蜜多正法時，能一日二日三四五日，發生淨信請問其義者，是菩薩轉身生此，聞是正法，心即信解離諸疑悔，亦復於中請問其義。何以故？法爾如是故。「復次，須菩提！若有菩薩於先世中，雖得聞此甚深般若波羅蜜多正法，不能決定請問其義，亦復不能隨所說行。是故今時於此甚深般若波羅蜜多正法，或時樂聞或不樂聞，其心輕動不能決定，猶如輕妙㲲衣隨風所轉。須菩提！當知此菩薩初住大乘法中，心不清淨不能發生決定信解，不取般若波羅蜜多，不隨般若波羅蜜多行，是故於彼聲聞、緣覺二地之中隨墮一處。"
+  },
+  "c14-04": {
+   "sa": "tadyathāpi nāma subhūte mahāsamudragatāyāṃ nāvi bhinnāyāṃ te tatra kāṣṭhaṃ vā na gṛhṇanti phalakaṃ vā, mṛtaśarīraṃ vā nādhyālambante, veditavyam etat - aprāptā evaite pāramudake kālaṃ kariṣyantīti / ye khalu punaḥ subhūte mahāsamudragatāyāṃ nāvi bhinnāyāṃ tatra kāṣṭhaṃ vā gṛhṇanti phalakaṃ vā, mṛtaśarīraṃ vā adhyālambante, veditavyametatsubhūte - naite udake kālaṃ kariṣyanti, svastinā anantarāyeṇa pāramuttariṣyanti, akṣatāścānupahatāś ca sthale sthāsyantīti / evameva subhūte yo bodhisattvaḥ śraddhāmātrakeṇa prasādamātrakeṇa premamātrakeṇa chandamātrakeṇa samanvāgataḥ sa ca prajñāpāramitāṃ nādhyālambate, veditavyametatsubhūte antaraivaiṣa vyadhvani vyavasādamāpatsyate, aprāpta eva sarvajñatāṃ śrāvakatve pratyekabuddhatve vā sthāsyatīti / yeṣāṃ khalu punaḥ subhūte bodhisattvānāṃ mahāsattvānāmasti śraddhā, asti kṣāntiḥ, asti ruciḥ, asti chandaḥ, asti vīryam, astyapramādaḥ, astyadhimuktiḥ, astyadhyāśayaḥ, asti tyāgaḥ, asti gauravam, asti prītiḥ, asti prāmodyam, asti prasādaḥ, asti prema, astyanikṣiptadhuratā anuttarāṃ samyaksaṃbodhimabhisaṃboddhum, te ca prajñāpāramitāmadhyālambante / evaṃ teṣāṃ sā śraddhā sā kṣāntiḥ sā rūciḥ sa cchandaḥ tadvīryaṃ so 'pramādaḥ sādhimuktiḥ so 'dhyāśayaḥ sa tyāgaḥ tadgauravaṃ sā prītiḥ tatprāmodyaṃ sa prasādaḥ tatprema sā anikṣiptadhuratā anuttarāṃ samyaksaṃbodhimabhisaṃboddhum / te ca prajñāpāramitāṃ prāpya sarvajñatāyāṃ sthāsyanti /",
+   "T0224": "佛言：「譬如大海中船卒破壞，知中人皆當墮水沒死，終不能得度。是船中有板若檣，有健者得之，騎其上順流墮深得出，知是人終不沒水中死也。何以故？用得板檣故。菩薩有信樂、有定行、有精進，欲逮阿耨多羅三耶三菩，不得深般若波羅蜜，不學漚惒拘舍羅，是菩薩便墮阿羅漢、辟支佛道中。菩薩有信樂、有定行、有精進，欲逮阿耨多羅三耶三菩，得深般若波羅蜜，學漚惒拘舍羅，是菩薩終不中道懈惰，過出阿羅漢、辟支佛道去，正在阿耨多羅三耶三菩中住。",
+   "T0225": "佛告善業：「譬若大海中船卒壞，其船中人不取板檣，不能得渡，必於水死。若得板若檣，有健者乘騎，便不死。當知順隨海水出也。闓士大士有信樂、有定行、有精進，欲得無上正真道而不得明度，變謀明慧不得學，當中道得應儀、緣一覺道。其有信樂、定行、精進，欲逮無上正真道，得學明度權慧者，終不中道懈，過出應儀、緣一覺去，正在無上正真道中立。",
+   "T0227": "爾時佛告須菩提：「譬如大海中船卒破，其中人若不取木，若板，若浮囊，若死屍，當知是人不到彼岸，沒水而死。須菩提！其中人若取木板、浮囊、死屍，當知是人，不沒水死，安隱無惱，得至彼岸。須菩提！菩薩亦如是，於阿耨多羅三藐三菩提，有信，有忍，有樂，有淨心，有深心，有欲，有解，有捨，有精進，不取般若波羅蜜，當知是人中道退沒，墮聲聞、辟支佛地。須菩提！若菩薩於阿耨多羅三藐三菩提，有信，有忍，有樂，有淨心，有深心，有欲，有解，有捨，有精進，取般若波羅蜜。為般若波羅蜜所守護故，中道不退，過聲聞、辟支佛地，當住阿耨多羅三藐三菩提。",
+   "T0220d": "「善現當知！如泛大海所乘船破，其中諸人若不取木器物、浮囊、板片、死屍為依附者，定知溺死不至彼岸。若能取木器物、浮囊、板片、死屍為所依附，當知是類終不沒死，得至安隱大海彼岸，無損無害受諸快樂。住菩薩乘善男子等亦復如是，有於大乘雖成少分信敬愛樂，而不攝受甚深般若波羅蜜多為所依附。當知彼類中道退沒，不能證得一切智智，謂墮聲聞或獨覺地。若於大乘有信、有忍、有樂、有欲、有精進、有勝解、有不放逸、有勝意樂、有捨、有敬、有欣、有喜、有清淨心、有於無上正等菩提不捨善軛，復能攝受甚深般若波羅蜜多為所依附。當知此類終不中道退入聲聞或獨覺地，定證無上正等菩提，能盡未來利樂一切。",
+   "T0220d-5": "「復次，善現！譬如商侶遊泛大海，其船卒破，於中諸人若能取木器物、浮囊、板片、死屍為所依附，當知彼類終不沒死，得至安隱大海彼岸，無損無害受諸快樂。諸菩薩眾亦復如是，若於大乘有信、有忍、有樂、有欲，有精進、有勝解，有不放逸、有勝意樂，有捨、有敬、有清淨心，有於無上正等菩提不捨善軛，復能攝受甚深般若波羅蜜多為所依附，當知此類終不中道退入聲聞或獨覺地，定證無上正等菩提。",
+   "T0228": "「復次，須菩提！譬如有人乘船入海，船忽破壞，是人若不取彼浮囊或木或板等，當知是人即於中路沒水而死，由此因緣不到彼岸。須菩提！菩薩摩訶薩亦復如是。於阿耨多羅三藐三菩提，有信有忍、有愛有欲、有解有行、有喜有樂、有捨有精進，有尊重、有深心、有淨心，離放逸、不散亂。雖具如是功德，若不得般若波羅蜜多善巧方便所護念者，是菩薩即不能成就一切智果，於其中路有所退失。須菩提！云何名為中路？又復退失何法？須菩提！中路者所謂聲聞、緣覺之地；所退失者謂一切智果。「須菩提！又如有人乘船入海，於其中路船忽破壞，是人即時取彼浮囊或木或板等。當知是人得離難事，不為海水所溺而死，獲大安隱到於彼岸。「須菩提！菩薩摩訶薩亦復如是。於阿耨多羅三藐三菩提，有信有忍、有愛有欲、有解有行、有喜有樂、有捨有精進，有尊重、有深心、有淨心，離放逸、不散亂。具足如是功德已，復得般若波羅蜜多善巧方便所護念者，是菩薩於其中路無所退失，不墮聲聞、緣覺之地，即能成就一切智果。"
+  },
+  "c14-05": {
+   "sa": "tadyathāpi nāma subhūte strī va puruṣo vā aparipakvena ghaṭenodakaṃ parivahet, veditavyametatsubhūte - nāyaṃ ghaṭaściramanuvartsyate, kṣiprameva paribhetsyate, pravileṣyate iti / tatkasya hetoḥ? yathāpi nāma tadaparipakvatvāddhaṭasya, sa bhūmiparyavasāna eva bhaviṣyatīti / evameva subhūte kiṃcāpi bodhisattvasya asti śraddhā asti kṣāntiḥ asti rūciḥ asti chandaḥ asti vīryam astyapramādaḥ, astyadhimuktiḥ astyadhyāśayaḥ asti tyāgaḥ / asti gauravam, asti prītiḥ asti prāmodyam, asti prasādaḥ, asti prema, astyanikṣiptadhuratā anuttarāṃ samyaksaṃbodhimabhisaṃboddhum / sa ca prajñāpāramitayā upāyakauśalyena ca aparigṛhīto bhavati, veditavyametatsubhūte ayaṃ bodhisattvo 'ntarā vyadhvani vyavasādamāpatsyata iti / kaś ca subhūte bodhisattvasyāntarā vyadhvani vyavasādaḥ - śrāvakabhūmirvā pratyekabuddhabhūmirvā? tadyathāpi nāma subhūte strī vā puruṣo vā suparipakvena ghaṭena nadīto vā sarasto vā taḍāgato vā udapānādvā tato 'nyebhyo vā udakādhārebhya udakaṃ parivahet, tasya tadudakaṃ parivahato veditavyametatsubhūte svastinā anantarāyeṇa ayaṃ ghaṭo gṛhaṃ gamiṣyatīti / tatkasya hetoḥ? yathāpi nāma suparipakvatvāddhaṭasya / evameva subhūte yasya bodhisattvasya asti śraddhā asti kṣāntiḥ asti ruciḥ asti chandaḥ, asti vīryam, astyapramādaḥ, astyadhimuktiḥ astyadhyāśayaḥ, asti tyāgaḥ, asti gauravam, asti prītiḥ asti prāmodyam, asti prasādaḥ, asti premaḥ astyanikṣiptadhuratā anuttarāṃ samyaksaṃbodhimabhisaṃboddhum / sa ca prajñāpāramitayā upāyakauśalyena ca parigṛhīto bhavati / veditavyametatsubhūte nāyaṃ bodhisattvo mahāsattvo 'ntarā vyadhvani vyavasādamāpatsyate / akṣato 'nupahataḥ sarvajñatāyāṃ sthāsyatīti /",
+   "T0224": "譬如有人持坏瓶行取水，知是瓶不能久，當道壞。何以故。瓶未成故。若有菩薩有信樂、有定行、有精進，欲逮阿耨多羅三耶三菩，不得深般若波羅蜜，不學漚惒拘舍羅，是菩薩終不能逮薩芸若，便中道厭却，墮阿羅漢、辟支佛道中。譬若有人持成瓶行取水，知當安隱持水來歸至也。何以故？其瓶已成故。若有菩薩有信樂、有定行、有精進，欲逮阿耨多羅三耶三菩，得深般若波羅蜜，學漚惒拘舍羅，知是菩薩終不中道懈墯休止恣心，正上阿耨多羅三耶三菩。",
+   "T0225": "譬若士女持坏瓶取水，知不久必壞。所以然者，未成故。學不逮此深法，終不能逮一切智，便中道厭却，墮二道中。譬若持瓦瓶行擔水，安隱歸至。何以故？已成故。學得深法，知終不中道息，恣心上無上正真道。",
+   "T0227": "「須菩提！譬如有人，持坏瓶詣河井池泉取水，當知是瓶，爛壞不久還歸於地。何以故？瓶未熟故。須菩提！菩薩亦如是，於阿耨多羅三藐三菩提有信，有忍，有樂，有淨心，有深心，有欲，有解，有捨，有精進，不為般若波羅蜜方便所護故，當知是人未得薩婆若，中道退轉。須菩提！云何為菩薩中道退轉？所謂若墮聲聞地，若墮辟支佛地。須菩提！譬如有人持熟瓶詣河井池泉取水，當知是瓶，堅固不壞，持水而歸。何以故？是瓶熟故。須菩提！菩薩亦如是。於阿耨多羅三藐三菩提有信，有忍，有樂，有淨心，有深心，有欲，有解，有捨，有精進，為般若波羅蜜方便所護故，當知是菩薩不中道退轉，安隱得到薩婆若。",
+   "T0220d": "「復次，善現！如有男子或諸女人，執持坏瓶詣河取水，若池、若井、若泉、若渠，當知此瓶不久爛壞。何以故？是瓶未熟，不堪盛水，終歸地故。如是，善現！有菩薩乘善男子等，雖於大乘有信、有忍、有樂、有欲、有精進、有勝解、有不放逸、有勝意樂、有捨、有敬、有欣、有喜、有清淨心、有於無上正等菩提不捨善軛，而不攝受甚深般若波羅蜜多方便善巧，當知彼類中道退沒，不能證得一切智智，謂墮聲聞或獨覺地。「復次，善現！如有男子或諸女人，持燒熟瓶詣河取水，若池、若井、若泉、若渠，當知此瓶終不爛壞。何以故？是瓶善熟，堪任盛水，極堅牢故。如是，善現！有菩薩乘善男子等，若於大乘有信、有忍，廣說乃至有於無上正等菩提不捨善軛，復能攝受甚深般若波羅蜜多方便善巧，當知此類終不中道退入聲聞或獨覺地，定證無上正等菩提，能盡未來利樂一切。",
+   "T0220d-5": "「復次，善現！如有男子或諸女人，持燒熟瓶詣河取水，若池、若井、若泉、若渠，當知此瓶終不爛壞。何以故？是瓶善熟堪任盛水，極堅牢故。諸菩薩眾亦復如是，若於大乘有信、有忍、有樂、有欲，有精進、有勝解，有不放逸、有勝意樂，有捨、有敬、有清淨心，有於無上正等菩提不捨善軛，復能攝受甚深般若波羅蜜多方便善巧，當知此類終不中道退入聲聞或獨覺地，定證無上正等菩提。",
+   "T0228": "「復次，須菩提！又如有人持以坏瓶詣於河池井泉欲取其水，是瓶不久中路破壞，以是因緣水不能得。何以故？瓶未成熟，是故破壞還歸於地。須菩提！菩薩摩訶薩亦復如是，於阿耨多羅三藐三菩提，有信有忍有愛有欲、有解有行有喜有樂、有捨有精進、有尊重有深心有淨心、離放逸不散亂，雖具如是功德，若不得般若波羅蜜多善巧方便所護念者，是菩薩於其中路有所退失，墮於聲聞、緣覺之地，不能成就一切智果。「須菩提！又如有人持以熟瓶詣於河池井泉欲取其水，是人隨所往處即能得水，得已持歸，是瓶堅牢無所破壞。何以故？瓶已熟故。須菩提！菩薩摩訶薩亦復如是。於阿耨多羅三藐三菩提，有信有忍有欲有愛、有解有行有喜有樂、有捨有精進有尊重、有淨心有深心、離放逸不散亂，具足如是功德已，復得般若波羅蜜多善巧方便所護念者，當知是菩薩於其中路無所退失，不墮聲聞、緣覺之地，即能成就一切智果。"
+  },
+  "c14-06": {
+   "sa": "tadyathāpi nāma subhūte duṣprajñajātīyaḥ puruṣaḥ sāmudrikāṃ nāvamanākoṭitāmaparikarmakṛtāṃ cirabandhanabaddhāmudake 'vatārya samāropitabhāṇḍāṃ paripūrṇāṃ bhārārtāmabhirūḍhaḥ syāt, veditavyametatsubhūte - evaṃdharmeyaṃ naurbhaviṣyati, yaduta udake 'saṃtīrṇabhāṇḍaiva saṃsatsyatīti / tasyānyena bhāṇḍaṃ bhaviṣyati, anyena sā naurvipatsyate iti / evaṃ sa sārthavāho 'nupāyakuśalo dauṣprajñena mahatā arthaviyogena samanvāgato bhaviṣyati, mahataś ca ratnākarātparihīṇo bhaviṣyatīti / evameva subhūte kiṃcāpi bodhisattvasya asti śraddhā asti kṣāntiḥ, asti ruciḥ asti chandaḥ, asti vīryam, astyapramādaḥ, astyadhimuktiḥ astyadhyāśayaḥ, asti tyāgaḥ, asti gauravam, asti prītiḥ, asti prāmodyam, asti prasādaḥ, asti prema, astyanikṣiptadhuratā anuttarāṃ samyaksaṃbodhimabhisaṃboddhum, sa ca prajñāpāramitayā upāyakauśalyena ca virahito bhavati, veditavyametatsubhūte aprāpta evāyaṃ bodhisattvaḥ sarvajñatāratnākaramantarā saṃsatsyati, vyavasādamāpatsyate, mahataḥ svārthātparihīṇo bhaviṣyati, mahataś ca parārtharatnarāśeḥ parihīṇo bhaviṣyati, yaduta sarvajñatāmahārtharatnākarātparihīṇatvāditi / kā punaḥ subhūte bodhisattvasya antarā vyadhvani saṃsīdanā? yaduta śrāvakabhūmirvā pratyekabuddhabhūmirvā / tadyathāpi nāma subhūte paṇḍitajātīyaḥ sārthavāhaḥ sāmudrikāṃ nāvaṃ subaddhāṃ bandhayitvā svākoṭitāmākoṭayitvā suparikarmakṛtāṃ kṛtvā udake 'vatārya bhāṇḍamāropya pūrṇāṃ kṛtvā samaṃ yojayitvā yuktena vātenābhipretāṃ diśamanupūrveṇa gacchet, tatastadyānamiti, veditavyametatsubhūte neyaṃ naurudake saṃsatsyati / gamiṣyatīyaṃ naustaṃ pradeśaṃ yatrānayā gantavyam / mahālābhena cāyaṃ sārthavāhaḥ saṃyokṣyate yaduta laukikai ratnairiti / evameva subhūte yasya bodhisattvasya mahāsattvasya asti śraddhā asti kṣāntiḥ asti ruci chandaḥ asti vīryam, astyapramādaḥ astyadhimuktiḥ, astyādhyāśayaḥ, asti tyāgaḥ, asti gauravam, asti prītiḥ asti prāmodyam, asti prasādaḥ, asti prema, astyanikṣiptadhuratā anuttarāṃ samyaksaṃbodhimabhisaṃboddhum, sa ca prajñāpāramitayā parigṛhīta upāyakauśalyena cāvirahito bhavati, veditavyametatsubhūte nāyaṃ bodhisattvo mahāsattvo 'ntarā vyadhvani saṃsatsyati, na vyavasādamāpatsyate, sthāsyatyayaṃ bodhisattvo mahāsattvo 'nuttarāyāṃ samyaksaṃbodhau / tatkasya hetoḥ? evaṃ hyetatsubhūte bhavati - yato 'sya bodhisattvasya mahāsattvasya asti śraddhā, asti kṣāntiḥ, asti ruciḥ, asti chandaḥ, asti vīryam, astyapramādaḥ, astyadhimuktiḥ astyadhyāśayaḥ, asti tyāgaḥ, asti gauravam, asti asti prītiḥ, asti prāmodyam, asti prasādaḥ, asti prema, astyanikṣiptadhuratā anuttarāṃ samyaksaṃbodhimabhisaṃboddhum / ete cāsya dharmāḥ prajñāpāramitayā parigṛhītā upāyakauśalyena cāvirahitā na śrāvakabhūmiṃ na pratyekabuddhabhūmiṃ vā pratipatsyante / api tu yena sarvajñatā, tenaite dharmā abhimukhāḥ saṃprasthitāḥ tato 'syā anuttarāyāḥ samyaksaṃbodherabhisaṃbodhāya bhaviṣyantīti /",
+   "T0224": "譬若大海中有故壞船不補治之，便推著水中，取財物置其中，欲乘有所至，知是船終不能至，便中道壞，亡散財物。若有菩薩有信樂、有定行、有精進，欲逮阿耨多羅三耶三菩，不得深般若波羅蜜，不學漚惒拘舍羅，知是菩薩中道厭、便亡失名珍寶，更棄大珍寶去。何所為大珍寶？佛是也。是菩薩便中道墮阿羅漢、辟支佛道中。譬若有𭶑人，拖張海邊故壞船補治之，以推著水中，持財物置其中，便乘欲有所至，知是船不中道壞，必到所至處。若有菩薩有信樂、有定行、有精進，欲逮阿耨多羅三耶三菩，得學深般若波羅蜜漚惒拘舍羅，知是菩薩終不中道懈惰，正在阿耨多羅三耶三菩中住。何以故？是菩薩一心有信樂、有定行、有精進故，終不復墮羅漢、辟支佛道中，正向佛門。",
+   "T0225": "譬若大海中船，不善護，以財物着中，至於道壞，財物離散，亡其重寶。如是闓士大士正使至意學，不得深法，當知中道厭，便亡名寶，中道懈怠，墮二道中。譬若有人施張大海中故船，補治，持財物著中，有所至，不中道壞，必到其處。如是闓士大士有信樂、定行、精進學，又得深法，終不中懈，正上無上正真道中立，終不墮兩道，正向佛門。",
+   "T0227": "「須菩提！譬如大海中船，未被莊治，推著水邊，載諸財物。當知是船，中道漏沒，散失財物，以是賈客無方便故，多失財物，自致憂惱。須菩提！菩薩亦如是。於阿耨多羅三藐三菩提，有信乃至有精進，不為般若波羅蜜方便所護故，未到薩婆若，中道而退，失於大寶，而自憂惱。失大珍寶，中道沒者，墮聲聞、辟支佛地；失大珍寶者，失薩婆若寶。須菩提！譬如大海邊船，莊治堅牢，推著水中，載諸財物，當知是船，不中道沒，隨所至處，必能得到。須菩提！菩薩亦如是。於阿耨多羅三藐三菩提，有信乃至有精進，為般若波羅蜜方便所護故，當知是菩薩不中道退轉，於阿耨多羅三藐三菩提。何以故？須菩提！法應爾。若菩薩於阿耨多羅三藐三菩提，有信乃至有精進，為般若波羅蜜方便所護故，不墮聲聞、辟支佛地，但以是諸功德，向阿耨多羅三藐三菩提。",
+   "T0220d": "「復次，善現！如有商人無善巧智，船在海岸未固修營，即持財物安置其上，牽入水中速便進發，當知是船中道壞沒，人船財物各散異處，如是商人無善巧智，喪失身命及諸財寶。如是，善現！有菩薩乘善男子等，雖於大乘有信、有忍，廣說乃至有於無上正等菩提不捨善軛，而不攝受甚深般若波羅蜜多方便善巧，當知彼類中道退沒，不能證得一切智智，謂墮聲聞或獨覺地。「復次，善現！如有商人有善巧智，先在海岸固修船已，方牽入水知無穿穴，後持財物置上而去，當知是船必不壞沒，人物安隱達所至處。如是，善現！有菩薩乘善男子等，若於大乘有信、有忍，廣說乃至有於無上正等菩提不捨善軛，復能攝受甚深般若波羅蜜多方便善巧，當知此類終不中道退入聲聞或獨覺地，定證無上正等菩提，能盡未來利樂一切。何以故？若菩薩乘善男子等，能於大乘有信、有忍，廣說乃至有於無上正等菩提不捨善軛，復能攝受甚深般若波羅蜜多方便善巧，中間法爾不墮聲聞及獨覺地，必證無上正等菩提，與諸有情常作饒益。",
+   "T0220d-5": "「復次，善現！如有商人具善巧智，先在海邊固修船已，方牽入水知無穿穴，後持財物置上而行，當知彼船必不壞沒，人物安隱達所至處。諸菩薩眾亦復如是，若於大乘有信、有忍、有樂、有欲，有精進、有勝解，有不放逸、有勝意樂，有捨、有敬、有清淨心，有於無上正等菩提不捨善軛，復能攝受甚深般若波羅蜜多方便善巧，當知此類終不中道退入聲聞或獨覺地，定證無上正等菩提。",
+   "T0228": "「復次，須菩提！又如世間有諸商人少智少慧，於大海邊隨取一船，載諸財物入於海中，是船不久踈漏破壞。何以故？本所造作不能堅牢，船諸所用亦不能備，由彼商人無智慧故，不能覺了，取以載物，於其中路船既破壞財復散沒，商人爾時徒自憂惱。須菩提！菩薩摩訶薩亦復如是。於阿耨多羅三藐三菩提，有忍有信乃至離放逸不散亂，雖具如是功德，若不得般若波羅蜜多善巧方便所護念者，當知是菩薩於其中路有所退失。須菩提！中路退者，所謂墮於聲聞、緣覺之地，失者所謂失彼一切智寶，於自利行及利他行皆不成就。「須菩提！又如有諸商人有智有慧，於大海邊求妙好船，知本造作堅固圓滿，船諸所用悉已備者，取以載物入於大海，是船無難，隨所往處皆悉得至，而彼財物亦不散沒。何以故？由彼商人有智慧故，於其中路不生憂惱。須菩提！菩薩摩訶薩亦復如是。於阿耨多羅三藐三菩提，有信有忍乃至離放逸不散亂，具足如是功德已，復得般若波羅蜜多善巧方便所護念者，當知是菩薩於其中路無所退失，不墮聲聞、緣覺之地，即能成就一切智果。"
+  },
+  "c14-07": {
+   "sa": "tadyathāpi nāma subhūte kaścideva puruṣo jīrṇo vṛddho mahallakaḥ saviṃśativarṣaśatiko jātyā bhavet, tasya kaścideva śarīre vyādhirutpadyeta vātato vā pittato vā śleṣmato vā saṃnipātato vā / tatkiṃ manyase subhūte api nu sa puruṣo 'parigṛhīto mañcāduttiṣṭhet? subhūtirāha - no hīdaṃ bhagavan / bhagavānāha - sacetpunaḥ subhūte sa puruṣo mañcāduttiṣṭhet, atha ca punarna pratibalo 'rdhakrośāntaram api prakramitum / sa tayā jarayā tena ca vyādhinā kṣapito yady api mañcāduttiṣṭhet, tathāpi punarapratibalaḥ sa puruṣaḥ prakramaṇāya / evameva subhūte kiṃcāpi bodhisattvasya asti śraddhā, asti kṣāntiḥ, asti ruciḥ, asti chandaḥ, asti vīryam, astyapramādaḥ, astyadhimuktiḥ, astyadhyāśayaḥ, asti tyāgaḥ, asti gauravam, asti prītiḥ, asti prāmodyam, asti prema, astyanikṣiptadhuratā anuttarāṃ samyaksaṃbodhimabhisaṃboddhum / sa ca prajñāpāramitayā aparigṛhīta upāyakauśalyena ca virahito bhavati, kiṃcāpi saṃprasthito 'nuttarāṃ samyaksaṃbodhimabhisaṃboddhum / atha ca punaḥ subhūte evaṃ veditavyam - ayaṃ bodhisattvo 'ntarā vyadhvani saṃsatsyati, vyavasādamāpatsyate, yaduta śrāvakabhūmau vā pratyekabuddhabhūmau vā sthāsyatīti / tatkasya hetoḥ? yathāpi nāma prajñāpāramitayā aparigṛhītatvādupāyakauśalyena ca virahitatvāt / tadyathāpi nāma subhūte sa eva puruṣo jīrṇo vṛddho mahallakaḥ saviṃśativarṣaśatiko jātyā bhavet, tasya śarīre kaścideva vyādhirūtpadyeta vātato vā pittato vā śleṣmato vā saṃnipātato vā, sa ca mañcāduttiṣṭhet / tamenaṃ dvau balavantau puruṣau vāmadakṣiṇābhyāṃ pārśvābhyāṃ svadhyālambitamadhyālambya suparigṛhītaṃ parigṛhya evaṃ vadetām - gaccha tvaṃ bhoḥ puruṣa yenākāṅkṣasi yāvaccākāṅkṣasi gantum, anuparigṛhītastvamāvābhyām, na tavāntarāmārge patanabhayaṃ bhaviṣyati, yāvanna tvaṃ tadadhiṣṭhānamanuprāpto bhaviṣyasi, yatra tvayā gantavyamiti / evameva subhūte yasya bodhisattvasya mahāsattvasya asti śraddhā, asti kṣāntiḥ, asti ruciḥ asti chandaḥ, asti vīryam, astyapramādaḥ, astyadhimuktiḥ, astyadhyāśayaḥ, asti tyāgaḥ, asti gauravam, asti prītiḥ, asti prāmodyam, asti prasādaḥ, asti prema astyanikṣiptadhuratā anuttarāṃ samyaksaṃbodhimabhisaṃboddhum, sa ca prajñāpāramitayā anuparigṛhīto bhavati, upāyakauśalyasamanvāgataś ca bhavati / veditavyametatsubhūte nāyaṃ bodhisattvo mahāsattvo 'ntarā vyadhvani saṃsatsyati, na vyavasādamāpatsyate, pratibalo 'yaṃ bodhisattvo mahāsattvastatsthānamanuprāptuṃ yadutānuttaraṃ samyaksaṃbodhisthānamiti // āryāṣṭasāhasrikāyāṃ prajñāpāramitāyāmaupamyaparivarto nāma caturdaśaḥ //",
+   "T0224": "譬若有人年百二十歲，老極身體不安，若病寒熱寢臥床褥，此人寧能自起居不？」須菩提言：「不能也。何以故？是人老極無勢力故，正使病愈，由不能自起居行步。」佛言：「菩薩有信樂、有定行、有精進，欲逮阿耨多羅三耶三菩，不得學深般若波羅蜜漚惒拘舍羅者，終不能至佛，當中道休墮阿羅漢、辟支佛道中。何以故？不得學深般若波羅蜜漚惒拘舍羅故。」佛言：「但是人風寒病愈身體強健，意欲起行，有兩健人各扶一掖各持一臂，徐共持行。其人語病者言：『安意莫恐，我自相扶持在所至到，義不中道相棄。』如是人能到所欲至處不？」須菩提言：「菩薩有信樂、有定行、有精進，欲逮阿耨多羅三耶三菩，得深般若波羅蜜，學漚惒拘舍羅，是菩薩終不中道懈墯，能究竟於是中得阿耨多羅三耶三菩。」",
+   "T0225": "譬如人年老而身病。云何，是人能從床自起不？」善業言：「不能，天中天！或時起無力，不能自致，正使病愈能自起，會不能行步。」佛言：「如是，闓士大士具如上所行學，不得深法而欲逮無上正真道，終不至佛，當中道懈，墮二道中。譬如老病人除愈，欲起行，有健人來扶持之，告曰：『無恐，我自相送，終不中道相棄，送著所樂處。』如是，具有上行闓士學得此深明度無極、變謀明慧，當知終不中道懈，必能究竟於中得無上正真道。」",
+   "T0227": "「須菩提！譬如老人，年百二十，而有雜病，風寒冷熱。須菩提！於意云何？是人能從床起不？」「不也，世尊！」「須菩提！是人或時能起。」「世尊！假令能起，不能遠行，若十里、二十里。何以故？是人已為老病所侵，雖復能起，不能遠行。」「須菩提！菩薩亦如是。雖發阿耨多羅三藐三菩提心，乃至有精進。於阿耨多羅三藐三菩提，有信乃至有精進，不為般若波羅蜜方便所護故，未得薩婆若，中道退轉，墮聲聞、辟支佛地。須菩提！是百二十歲老人，若有風寒冷熱之病，欲從床起，有二健人，各扶一腋，安慰之言：『隨意所至，我等好相扶持，勿懼中道有所墜落。』須菩提！菩薩亦如是。於阿耨多羅三藐三菩提，有信乃至有精進，為般若波羅蜜方便所護故，當知是菩薩不中道退轉，能至阿耨多羅三藐三菩提。」",
+   "T0220d": "「復次，善現！譬如有人年百二十，老耄衰朽復加眾病，所謂風病、熱病、痰病或三雜病。於意云何？是老病人頗從床座自能起不？」善現對曰：「不也！世尊！」佛告善現：「是人設有扶令起立，亦無力行一俱盧舍、或二、或三。何以故？極老病故。如是，善現！有菩薩乘善男子等，設於大乘有信、有忍，廣說乃至有於無上正等菩提不捨善軛，若不攝受甚深般若波羅蜜多方便善巧，當知彼類不證無上正等菩提，退墮聲聞或獨覺地。何以故？遠離般若波羅蜜多方便善巧，法應爾故。「復次，善現！譬如有人年百二十，老耄衰朽復加眾病，謂風、熱、痰或三雜病，是老病人欲從床座起往他處而自不能。有二健人各扶一腋，徐策令起而告之言：『莫有所難，隨意欲往，我等兩人終不相棄，必達所趣安隱無損。』如是，善現！有菩薩乘善男子等，若於大乘有信、有忍，廣說乃至有於無上正等菩提不捨善軛，復能攝受甚深般若波羅蜜多方便善巧，當知此類終不中道退墮聲聞或獨覺地，定證無上正等菩提，轉妙法輪度有情眾。」",
+   "T0220d-5": "「復次，善現！譬如有人年百二十，老耄衰朽復加眾病，謂風、熱、痰或三雜病，是老病人欲從床座起往他處而自不能。有二健人各扶一腋，徐策令起而告之言：『莫有所難，隨意欲往，今我二人終不相棄，必達所趣安隱無損。』諸菩薩眾亦復如是，若於大乘有信、有忍、有樂、有欲，有精進、有勝解，有不放逸、有勝意樂，有捨、有敬、有清淨心，有於無上正等菩提不捨善軛，復能攝受甚深般若波羅蜜多方便善巧，當知此類終不中道退入聲聞或獨覺地，定證無上正等菩提。與上相違是名黑品。」",
+   "T0228": "「復次，須菩提！又如世間百二十歲老人，忽於一時為彼風癀痰𤸌諸病侵惱，以是因緣忍苦于床。須菩提！於汝意云何？是人若時無人扶侍，當能從床而自起不？」須菩提言：「不也，世尊！」佛言：「須菩提！是人設或能從床起，亦不能行一里二里乃至由旬。何以故？已為老病所侵惱故。須菩提！菩薩摩訶薩亦復如是。於阿耨多羅三藐三菩提，有信有忍乃至離放逸不散亂，雖具如是功德，若不得般若波羅蜜多善巧方便所護念者，當知是菩薩於其中路有所退失，墮於聲聞、緣覺之地，不能成就一切智果。「又，須菩提！而彼百二十歲老人，雖復有疾忍苦于床，若時有二力士，來謂其言：『我等二人各於左右扶侍於汝，汝速當起隨有所往。令汝得至，勿憂中路有所退失。』時老病人受其語故，能從床起隨往得至。須菩提！菩薩摩訶薩亦復如是。於阿耨多羅三藐三菩提，有信有忍乃至離放逸不散亂，具足如是功德已，復得般若波羅蜜多善巧方便所護念者，當知是菩薩於其中路無所退失，不墮聲聞、緣覺之地，即能成就一切智果。何以故？法爾如是故。須菩提！若諸菩薩摩訶薩，於阿耨多羅三藐三菩提，有信有忍乃至離放逸不散亂，具足如是功德已，復得般若波羅蜜多善巧方便所護念者，當知是菩薩決定不墮聲聞緣覺之地，即能成就一切智果，皆悉以是功德迴向阿耨多羅三藐三菩提。」"
+  }
+ }
+}
