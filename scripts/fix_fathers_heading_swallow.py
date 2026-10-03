@@ -61,7 +61,12 @@ def fathers_ebook_ids() -> list[str]:
     vue = Path(__file__).parent.parent / "pages" / "fathers" / "index.vue"
     ids = _re.findall(r"[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}",
                       vue.read_text(encoding="utf-8"))
-    return list(dict.fromkeys(ids))
+    ids = list(dict.fromkeys(ids))
+    # 2026-10-02：中英逐列重新對齊（fathers_realign_volume.py）做過的卷、或正在處理的卷（DO_NOT_TOUCH_ids.txt）
+    # 一律不碰——這支會往 content 多插標題列，破壞「中英列數相等」，而且讀寫窗口很長會蓋掉對齊結果。
+    dnt = Path(__file__).parent.parent / "output" / "restructure" / "DO_NOT_TOUCH_ids.txt"
+    skip = set(dnt.read_text(encoding="utf-8").split()) if dnt.exists() else set()
+    return [i for i in ids if i not in skip and not (CH / f"{i}.jsonl.bak_realign").exists()]
 
 
 def load_targets() -> dict[str, list[int]]:
