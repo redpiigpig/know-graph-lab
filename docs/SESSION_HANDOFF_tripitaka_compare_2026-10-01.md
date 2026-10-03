@@ -152,7 +152,33 @@
    巴利系剩下 222 組自動版仍未人工核；審計的 B? 佇列 86 組是下一批候選。
 6. ✅ **悲華經**全經（karunapundarika-*，14 組 263 節，agent 做）；✅ **月燈三昧經**全經四十品（samadhiraja-c01～c40，198 節，agent 做）。
    🚨 新的 SET 一律寫在 `scripts/tripitaka_compare_sets/<部>.py`（主檔以自身全域 exec），並行的 agent／session
-   各改各的檔，不再同改七千行主檔。
+   各改各的檔，不再同改七千行主檔。主檔載入時某檔壞掉只略過該檔並印 ⚠（2026-10-03 起），建置看到 ⚠ 先修自己的檔。
+7. ✅ **漢傳十宗要典**（2026-10-02～03，agent 做，各列做法與陷阱見 SKILL 異譯對讀表）：
+   | 宗 | 經論 | slug | 規模 |
+   |---|---|---|---|
+   | 法相唯識 | 唯識三十頌 | trimsika | 33 節（梵、安慧釋梵、玄奘頌、轉識論、成唯識論） |
+   | 法相唯識 | 唯識二十論 | vimsatika | 28 節（梵、流支、真諦、玄奘） |
+   | 法相唯識 | 辯中邊論 | madhyantavibhaga-c01～c05 | 111 節（自動版 sa-madhyantavibhaga-* 已撤） |
+   | 華嚴／起信 | 大乘起信論 | qixinlun | 34 節（真諦、實叉難陀） |
+   | 攝論 | 攝大乘論 | mahayanasamgraha-c01～c10 | 142 節（扇多、真諦、玄奘） |
+   | 律宗 | 比丘戒本 | pratimoksa-c01～c10 | 315 節（巴、梵三部、漢六部） |
+   | 密宗 | 理趣經 | adhyardhasatika | 37 節（梵＋六漢譯） |
+   | 俱舍 | 俱舍論 | abhidharmakosa-c01-1～c09-2 | 33 組 621 節 |
+   | 天台／涅槃 | 大般涅槃經 | mahaparinirvana-c01～c25 | 26 組 203 節（前十七品三本、後八品北南兩本） |
+   | 三論／般若 | 小品般若 | astasahasrika-c01～c32 | 261 節 |
+   | 三論／般若 | 大品般若 | pancavimsati-c01～c49 | ⏸ 49／90 品 235 節，**暫停**（2026-10-03 使用者喊停），見下一條 |
+8. ⏸ **大品般若**（羅什九十品為骨架；梵、放光、光讚、羅什、第二會、藏英；SET 在 `scripts/tripitaka_compare_sets/pancavimsati.py`）：
+   已完成 **c01～c49**（羅什第 1～49 品，49 組 235 節，最後 125f40f0）。**下一個從 c50〈成辦品〉接**：羅什〈成辦品第五十〉＝放光〈大事興品第五十一〉
+   ＝第二會〈第二分成辦品第四十八〉＝藏譯第三十四章（TMX 13822 起，第三十五章 13971 起）；梵本起點第 3490 段
+   「atha khalv āyuṣmān subhūtir bhagavantam etad avocat: gambhīreyaṃ bhagavan prajñāpāramitā, mahākṛtyeneyaṃ」。
+   品次對照與切點不另成檔，都在 pancavimsati.py 各品 intro 與 SET；後續品名查 C:/tmp/cbeta/out/T0223／T0221／T0220c.toc.json（第二會看第一層「第二分…品第N之一」）。
+   光讚 T0222 殘本只到 c29。梵本是 Kimura 依《現觀莊嚴論》改訂本（GRETIL ），列舉常被重排或併段（c38 四果比較移位、c44 百波羅蜜併一段）。
+9. 仍可做、未排定（動手前先問使用者）：
+   - 十宗要典其餘有異譯的：仁王經（羅什 T0245、不空 T0246）、大日經（T0848＋藏）、金剛頂經（梵 STTS＋T0882／T0865／T0866）、
+     菩薩地（梵 Bodhisattvabhūmi＋瑜伽菩薩地＋地持 T1581＋善戒 T1582）、六祖壇經（敦煌 T2007 對宗寶 T2008，版本對讀非異譯）。
+   - 長部遊行經（DN16＋長阿含 2＋T0005／6／7＋梵 MPS），巴利系剩 222 組自動版（審計 B? 佇列 86 組）。
+   - 涅槃經 T0374 卷末〈高野山出涅槃經梵文斷片〉可當四相品 c07-1 的梵本欄（未收）。
+   - 比丘戒本的 bilara 讀法是 sets 檔裡的猴子補丁，宜由主檔正式支援 `src: {"sc": uid}`。
 工具：scratchpad 的 `look.py`（節點首尾／找字／印段）、`scan.py`（句首字掃描＋同節字數比）、`gatha.py`（偈頌逐頌清單）、
 `ggen.py`（偈頌切點產生器）、`gv.py`（看指定頌）是 session 暫存，新 session 要重寫；邏輯都很短（見 SKILL）。
 🚨 多 session 共用 working tree：2026-10-02 本 session 兩組尚未 commit 的編輯被別的 session 整檔還原（reflog 查不到、stash 也沒有）。
