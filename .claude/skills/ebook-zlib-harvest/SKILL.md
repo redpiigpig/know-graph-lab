@@ -351,6 +351,11 @@ z-lib/ drop folder 的處理：
   **人工點一次驗證**。`scripts/annas_search.mjs --file q.txt --out hits.json` 用持久 profile `c:/tmp/annas_profile`，卡驗證時
   會等最多 10 分鐘並印「等待人工驗證」，且約 30 筆後會再跳一次。🚨 結果列的書名連結是 `a.js-vim-focus`；頁面另有一排
   「最近下載」也是 `/md5/` 連結——抓錯會每筆都回剛好 12 筆無關的書。
+- 🚨 **2026-10-03 Anna's 慢速下載頁改版**：Slow Partner Server 頁不再給可點的連結，改成純文字「To download, copy this URL and then paste it in your browser's URL bar」，
+  `annas_download.mjs` 因此全部回 `no-link`（其他伺服器回 562B 錯誤頁 `not-file`）。要修得改抓那段文字裡的網址，而改程式要重開視窗＝使用者再點一次驗證，先問。
+  另外 `annas_search.mjs` 跑約 12 筆後驗證頁會再跳，**之後每筆都是 0 筆**——那不是查無，要重查；查詢與下載共用 profile 不能並開，**先查完再開下載器**。
+- **LibGen 比對太嚴時人工挑版本**：`libgen_wanted.search(q)` 列候選、照 `edition` 挑，再 `libgen_wanted.download(row, name)` 並手寫帳本一行
+  （`pick.via: libgen-manual`）。10-03 古近東英譯缺件用這招補到 5 本（含被自動比對抓錯的艾倫《金字塔文》——自動那次抓成同作者的《金字塔文語法》）。
 - **獵表改走 LibGen 直接抓**：`scripts/libgen_wanted.py --sources a,b --apply`（不加 `--apply` 只查不下）。對得上
   （expect 是書名子字串＋作者姓吻合）就下載進 z-lib/ 並在帳本記 `status: downloaded, pick.via: libgen`，z-lib 排程即跳過。
   同一份清單可再開一支 `--reverse` 從尾端倒著跑、會合時自停。10-01 首輪：cw30 中譯本 22/109、三套全集 11/107、

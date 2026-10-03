@@ -89,7 +89,7 @@ PRIORITY = {
     "gods-coordinates-core": 2,
     "gods-coordinates": 2,
     # 古近東大藏經的英譯欄（使用者 10-02「去找英文」）：赫梯、烏加里特、現代埃及譯本沒有公有領域替代，
-    # 只能靠這份。36 筆，檔案 data/zlib-wanted/near-east-translations.jsonl。
+    # 只能靠這份。71 筆（第二批補各卷專門校譯本），檔案 data/zlib-wanted/near-east-translations.jsonl。
     "near-east-translations": 2,
     # 史學五百篇（策展清單裡館內沒有的專著）。使用者 10-02：全部下載，與諸神的座標同層。
     "historiography-top500": 2,

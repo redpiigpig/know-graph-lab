@@ -71,9 +71,10 @@ description: 古近東大藏經（/near-east）的體例與維護 —— 埃及�
 | 路 | 涵蓋 | 狀態 |
 |---|---|---|
 | ① 線上開放語料 | 蘇美藏 69 條（ETCSL 轉寫＋英譯） | ✅ **已上架**，5,429 段，`/near-east/text/<slug>` |
-| ① 線上開放語料 | 新亞述先知、王子冥府夢、以撒哈頓銘文（ORACC：SAAo／RINAP，CC BY-SA） | 未做。🚨 ORACC 的 json 下載包**只有轉寫**，英譯要逐篇抓 `oracc.museum.upenn.edu/<project>/<P號>/html` |
+| ① 線上開放語料 | 新亞述先知 SAA 9（11 篇）、王子冥府夢 SAA 3 32 | ✅ 已上架（`scripts/near_east_oracc.py`）。其餘 ORACC 專案（RINAP 以撒哈頓等）未做。🚨 ORACC 的 json 下載包**只有轉寫**，英譯要逐篇抓 `oracc.museum.upenn.edu/<project>/<P號>/html` |
 | ② 公有領域舊譯 | 古騰堡九部（Thompson 吉爾伽美什 1928、Budge 亡靈書／創世傳說／諸神傳說、King 1918、Smith 1876、Erman 1927 英譯、Harper 1901、Wilson 1901） | ✅ 已下載到 Drive `經典對照與註釋\古近東大藏經－公有領域英譯底本\`（txt＋epub），**尚未切段對齊** |
-| ③ 現代標準譯本 | 赫梯、烏加里特、現代埃及譯本、阿卡德選集、ANET、COS 共 36 部 | ⏳ z-lib 獵表 `data/zlib-wanted/near-east-translations.jsonl`，source `near-east-translations` 第 2 層 |
+| ③ 現代標準譯本 | 赫梯、烏加里特、埃及、阿卡德、ANET、COS 與各卷專門校譯本共 75 部 | ✅ **66 部到手**（10-03；LibGen 自動＋人工挑、z-lib 四帳號），落 z-lib/ 收件夾由每日入庫上 Drive。缺 9 部見獵表 `data/zlib-wanted/near-east-translations.jsonl` 未下載者 |
+| ② 補 | archive.org 1930 年前公有領域英譯與校本 37 部＋分卷（Breasted、Luckenbill、King、Thompson、Budge、Griffith、Cowley、Cory…） | ✅ 同存 Drive 英譯底本夾（104 PDF／2 GB，含同書不同掃描本）|
 
 🚨 sacred-texts.com 對腳本一律回 403，公有領域舊譯改走古騰堡。赫梯與烏加里特**沒有**公有領域英譯，只能靠第③路。
 
