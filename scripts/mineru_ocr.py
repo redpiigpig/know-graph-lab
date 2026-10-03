@@ -169,7 +169,12 @@ def run_mineru(pdf: Path, out_dir: Path, lang: str = "ch",
     """跑一次 MinerU，回傳 {頁索引: 文字}。頁索引以**送進去的 PDF** 為準。"""
     if not MINERU_EXE.exists():
         raise RuntimeError(f"找不到 MinerU：{MINERU_EXE}（venv 沒建好？跑 check 看看）")
-    argv = [str(MINERU_EXE), "-p", str(pdf), "-o", str(out_dir),
+    # 🚨 先複製到本機 ASCII 檔名再丟給 MinerU：路徑含全形逗號／《》時它回「No supported documents found」
+    #    （2026-10-02《奧古斯丁的時間觀》，被當環境錯誤整場停，538 本一夜零進度）；也省掉零碎讀 Drive 卡住。
+    local = out_dir / "src.pdf"
+    out_dir.mkdir(parents=True, exist_ok=True)
+    shutil.copyfile(pdf, local)
+    argv = [str(MINERU_EXE), "-p", str(local), "-o", str(out_dir / "out"),
             "-b", "pipeline", "-m", "ocr", "-l", lang]
     if start is not None:
         argv += ["-s", str(start)]
